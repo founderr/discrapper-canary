@@ -19,12 +19,12 @@ var i = n(120356),
     _ = n(689938),
     E = n(3910);
 function f(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconComponent: h, themeable: p = !1, disabled: I = !1, isActive: m = !1, tooltipPosition: T = 'top', shouldShowTooltip: S = !0, forceTooltipOpen: g = !1, buttonRef: A, grow: N, 'aria-label': O } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconComponent: h, themeable: p = !1, disabled: I = !1, isActive: m = !1, tooltipPosition: T = 'top', shouldShowTooltip: S = !0, forceTooltipOpen: g = !1, buttonRef: A, grow: N, 'aria-label': R } = e;
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Tooltip, {
             position: T,
             text: t,
-            'aria-label': O,
+            'aria-label': R,
             shouldShow: S,
             forceOpen: g,
             children: (e) => {
@@ -59,7 +59,7 @@ function f(e) {
                     wrapperClassName: _,
                     buttonRef: A,
                     grow: N,
-                    'aria-label': O,
+                    'aria-label': R,
                     ...g,
                     children: (0, r.jsx)(h, {
                         className: a()(E.controlIcon, f, {

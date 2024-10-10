@@ -12,7 +12,7 @@ n.d(t, {
         return D;
     },
     wi: function () {
-        return O;
+        return R;
     }
 }),
     n(789020),
@@ -48,7 +48,7 @@ function g(e) {
         ...e,
         timestamp: new Date(e.timestamp),
         editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
-        attachments: R(e),
+        attachments: O(e),
         embeds: C(e),
         components: (0, s.uZ)(null !== (t = e.components) && void 0 !== t ? t : [], { includeEmojiSrc: !1 }),
         codedLinks: e.type === T.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
@@ -56,8 +56,8 @@ function g(e) {
 }
 function A(e) {
     var t, n, r, i, a, s, l, h, m, A;
-    let { reactions: N, interactionData: O } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        R = g(e),
+    let { reactions: N, interactionData: R } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        O = g(e),
         C = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         D = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         b = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
@@ -74,7 +74,7 @@ function A(e) {
         (A = 0),
         new c.ZP({
             ...e,
-            ...R.toJS(),
+            ...O.toJS(),
             author: P,
             webhookId: e.webhook_id,
             blocked: E.Z.isBlockedForMessage(e) || (null != G && E.Z.isBlocked(G)),
@@ -93,11 +93,11 @@ function A(e) {
             giftCodes: (0, p.Fp)(e) ? (0, p.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, p.Q_)(e.content),
             content: B,
             referralTrialOfferId: k,
-            call: v(e.call, R.timestamp),
+            call: v(e.call, O.timestamp),
             messageSnapshots: y(e),
             reactions: L(null != N ? N : e.reactions, e.poll),
             interaction: x,
-            interactionData: null != O ? O : e.interaction_data,
+            interactionData: null != R ? R : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
             purchaseNotification: e.purchase_notification,
@@ -119,7 +119,7 @@ function N(e, t) {
               ...t
           };
 }
-function O(e, t) {
+function R(e, t) {
     if (null != t.edited_timestamp)
         return A(t, {
             reactions: e.reactions,
@@ -127,7 +127,7 @@ function O(e, t) {
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', v(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', R(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', C(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', y(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new d.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if ((null != t.call && (n = n.set('call', v(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', O(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', C(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', y(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new d.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
         var i;
         n = n.set('reactions', L(null !== (i = e.reactions) && void 0 !== i ? i : t.reactions));
     }
@@ -152,7 +152,7 @@ function O(e, t) {
         n
     );
 }
-function R(e) {
+function O(e) {
     return null == e.attachments
         ? []
         : e.attachments.map((e) => ({

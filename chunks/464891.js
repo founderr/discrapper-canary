@@ -33,8 +33,8 @@ var r = n(735250),
     g = n(518950),
     A = n(484459),
     N = n(184301),
-    O = n(740492),
-    R = n(430824),
+    R = n(740492),
+    O = n(430824),
     v = n(496675),
     C = n(594174),
     L = n(768581),
@@ -189,18 +189,18 @@ function K(e) {
     let { message: t, repliedMessage: n, compact: a = !1, renderPopout: I, showTimestampOnHover: S, roleIcon: A, subscribeToGroupId: w, hideTimestamp: V, className: j, channel: K } = e,
         z = i.useMemo(() => (null != I ? (e) => I(e, t) : void 0), [I, t]),
         [, q] = (0, f.ZP)(t.author.id, e.guildId),
-        Q = (0, l.e7)([R.Z], () => R.Z.getGuild(e.guildId), [e.guildId]),
+        Q = (0, l.e7)([O.Z], () => O.Z.getGuild(e.guildId), [e.guildId]),
         X = null != t.author && null != Q && v.Z.canManageUser(k.Plq.MODERATE_MEMBERS, t.author, Q),
         $ = q && X,
         J = (function (e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: _, showCommunicationDisabledStyles: E = !1, className: f } = e,
-                { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: S, onClickAvatar: A, onPopoutRequestClose: R, showAvatarPopout: v } = a,
+                { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: S, onClickAvatar: A, onPopoutRequestClose: O, showAvatarPopout: v } = a,
                 [C, D] = i.useState(!1),
                 { analyticsLocations: b } = (0, d.ZP)(c.Z.AVATAR),
-                M = (0, l.e7)([O.ZP], () => {
+                M = (0, l.e7)([R.ZP], () => {
                     var e;
-                    return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : O.ZP.displayCompactAvatars;
+                    return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : R.ZP.displayCompactAvatars;
                 }),
                 P = null != h.messageReference && null != h.webhookId && h.hasFlag(k.iLy.IS_CROSSPOST),
                 U = h.author,
@@ -263,7 +263,7 @@ function K(e) {
                             renderPopout: _,
                             shouldShow: v,
                             position: o.tq ? 'window_center' : 'right',
-                            onRequestClose: R,
+                            onRequestClose: O,
                             children: (e) =>
                                 H({
                                     ...F,
@@ -300,9 +300,9 @@ function K(e) {
             handleRenderPopout: z,
             showCommunicationDisabledStyles: $
         }),
-        ee = (0, l.e7)([O.ZP], () => {
+        ee = (0, l.e7)([R.ZP], () => {
             var t;
-            return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : O.ZP.displayCompactAvatars;
+            return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : R.ZP.displayCompactAvatars;
         }),
         et =
             (!a || ee) && null != A && null != Q

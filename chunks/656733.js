@@ -36,7 +36,7 @@ let E = {
 function N(e) {
     return e.replace(/^https?:/, '');
 }
-class O extends (r = o.ZP.Store) {
+class R extends (r = o.ZP.Store) {
     getAnalyticsID() {
         return p;
     }
@@ -63,7 +63,7 @@ class O extends (r = o.ZP.Store) {
     }
 }
 (s = 'GIFPickerViewStore'),
-    (a = 'displayName') in (i = O)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -71,7 +71,7 @@ class O extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new O(c.Z, {
+    (t.Z = new R(c.Z, {
         GIF_PICKER_INITIALIZE: function (e) {
             p = e.analyticsID;
         },

@@ -2,15 +2,15 @@ var t,
     r,
     n,
     a = (e.exports = {});
-function o() {
+function _() {
     throw Error('setTimeout has not been defined');
 }
-function i() {
+function o() {
     throw Error('clearTimeout has not been defined');
 }
-function _(e) {
+function i(e) {
     if (t === setTimeout) return setTimeout(e, 0);
-    if ((t === o || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
+    if ((t === _ || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
     try {
         return t(e, 0);
     } catch (r) {
@@ -23,35 +23,35 @@ function _(e) {
 }
 !(function () {
     try {
-        t = 'function' == typeof setTimeout ? setTimeout : o;
+        t = 'function' == typeof setTimeout ? setTimeout : _;
     } catch (e) {
-        t = o;
+        t = _;
     }
     try {
-        r = 'function' == typeof clearTimeout ? clearTimeout : i;
+        r = 'function' == typeof clearTimeout ? clearTimeout : o;
     } catch (e) {
-        r = i;
+        r = o;
     }
 })();
 var E = [],
-    s = !1,
-    c = -1;
+    c = !1,
+    s = -1;
 function I() {
-    if (!!s && !!n) (s = !1), n.length ? (E = n.concat(E)) : (c = -1), E.length && u();
+    if (!!c && !!n) (c = !1), n.length ? (E = n.concat(E)) : (s = -1), E.length && u();
 }
 function u() {
-    if (!s) {
-        var e = _(I);
-        s = !0;
+    if (!c) {
+        var e = i(I);
+        c = !0;
         for (var t = E.length; t; ) {
-            for (n = E, E = []; ++c < t; ) n && n[c].run();
-            (c = -1), (t = E.length);
+            for (n = E, E = []; ++s < t; ) n && n[s].run();
+            (s = -1), (t = E.length);
         }
         (n = null),
-            (s = !1),
+            (c = !1),
             !(function (e) {
                 if (r === clearTimeout) return clearTimeout(e);
-                if ((r === i || !r) && clearTimeout) return (r = clearTimeout), clearTimeout(e);
+                if ((r === o || !r) && clearTimeout) return (r = clearTimeout), clearTimeout(e);
                 try {
                     r(e);
                 } catch (t) {
@@ -71,7 +71,7 @@ function R() {}
 (a.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-    E.push(new l(e, t)), 1 === E.length && !s && _(u);
+    E.push(new l(e, t)), 1 === E.length && !c && i(u);
 }),
     (l.prototype.run = function () {
         this.fun.apply(null, this.array);

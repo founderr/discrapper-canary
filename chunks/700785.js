@@ -126,8 +126,8 @@ let S = a.vB(0),
     g = a.$e(...i().values(T.Plq)),
     A = a.$e(T.Plq.CREATE_INSTANT_INVITE, T.Plq.CHANGE_NICKNAME, T.Plq.VIEW_CHANNEL, T.Plq.SEND_MESSAGES, T.Plq.EMBED_LINKS, T.Plq.ATTACH_FILES, T.Plq.READ_MESSAGE_HISTORY, T.Plq.MENTION_EVERYONE, T.Plq.USE_EXTERNAL_EMOJIS, T.Plq.USE_EXTERNAL_STICKERS, T.Plq.ADD_REACTIONS, T.Plq.CREATE_PUBLIC_THREADS, T.Plq.CREATE_PRIVATE_THREADS, T.Plq.SEND_MESSAGES_IN_THREADS, T.Plq.SEND_POLLS, T.Plq.CONNECT, T.Plq.SPEAK, T.Plq.USE_VAD, T.Plq.STREAM, T.Plq.USE_EMBEDDED_ACTIVITIES, T.Plq.USE_SOUNDBOARD, T.Plq.REQUEST_TO_SPEAK, T.Plq.USE_APPLICATION_COMMANDS, T.Plq.CREATE_GUILD_EXPRESSIONS, T.Plq.CREATE_EVENTS, T.Plq.USE_EXTERNAL_APPS),
     N = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY),
-    O = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.SEND_MESSAGES, T.Plq.CONNECT, T.Plq.SPEAK, T.Plq.STREAM, T.Plq.USE_EMBEDDED_ACTIVITIES, T.Plq.USE_EXTERNAL_APPS, T.Plq.USE_EXTERNAL_EMOJIS, T.Plq.USE_EXTERNAL_SOUNDS, T.Plq.USE_EXTERNAL_STICKERS, T.Plq.USE_SOUNDBOARD, T.Plq.USE_VAD),
-    R = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY),
+    R = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.SEND_MESSAGES, T.Plq.CONNECT, T.Plq.SPEAK, T.Plq.STREAM, T.Plq.USE_EMBEDDED_ACTIVITIES, T.Plq.USE_EXTERNAL_APPS, T.Plq.USE_EXTERNAL_EMOJIS, T.Plq.USE_EXTERNAL_SOUNDS, T.Plq.USE_EXTERNAL_STICKERS, T.Plq.USE_SOUNDBOARD, T.Plq.USE_VAD),
+    O = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY),
     v = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY, T.Plq.CHANGE_NICKNAME),
     C = a.$e(T.Plq.MANAGE_GUILD, T.Plq.MANAGE_ROLES, T.Plq.ADMINISTRATOR, T.Plq.BAN_MEMBERS, T.Plq.MANAGE_NICKNAMES, T.Plq.CREATE_GUILD_EXPRESSIONS, T.Plq.MANAGE_GUILD_EXPRESSIONS, T.Plq.MANAGE_WEBHOOKS, T.Plq.VIEW_AUDIT_LOG);
 function L(e, t, n) {
@@ -151,7 +151,7 @@ function y(e, t, n, r) {
         let s = r[t.userId];
         null != s && ((n = a.Od(n, s.deny)), (n = a.IH(n, s.allow)));
         let u = a.e$(n, T.Plq.ADMINISTRATOR);
-        (0, o.EY)(t) && !u && (n = a.hX(n, v)), (0, l.b)(t) && !u && (n = a.hX(n, R));
+        (0, o.EY)(t) && !u && (n = a.hX(n, v)), (0, l.b)(t) && !u && (n = a.hX(n, O));
     }
     return n;
 }
@@ -171,7 +171,7 @@ function D(e) {
             let t = s[n.roles[e]];
             void 0 !== t && (_ = a.IH(_, t.permissions));
         }
-    return (_ = a.e$(_, T.Plq.ADMINISTRATOR) ? g : y(r.id, n, _, i)), (c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = a.hX(_, u)), h.ZP.isCurrentUserGuest(r.id) && (_ = a.hX(_, O)), L(_, r, t, o);
+    return (_ = a.e$(_, T.Plq.ADMINISTRATOR) ? g : y(r.id, n, _, i)), (c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = a.hX(_, u)), h.ZP.isCurrentUserGuest(r.id) && (_ = a.hX(_, R)), L(_, r, t, o);
 }
 function b(e) {
     var t, n, r;

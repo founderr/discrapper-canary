@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(530),
     A = n(679332),
     N = n(544989),
-    O = n(171368),
-    R = n(228168),
+    R = n(171368),
+    O = n(228168),
     v = n(689938),
     C = n(451563);
 function L(e) {
@@ -48,7 +48,7 @@ function L(e) {
     }, [k, b]);
     let F = () => {
             null == M || M(),
-                (0, O.openUserProfileModal)({
+                (0, R.openUserProfileModal)({
                     sourceAnalyticsLocations: x,
                     ...G
                 });
@@ -65,10 +65,10 @@ function L(e) {
                     (0, r.jsxs)(S.Z, {
                         user: t,
                         displayProfile: w,
-                        profileType: R.y0.BITE_SIZE,
+                        profileType: O.y0.BITE_SIZE,
                         children: [
                             (0, r.jsx)(N.Z, {
-                                profileType: R.y0.BITE_SIZE,
+                                profileType: O.y0.BITE_SIZE,
                                 children: (0, r.jsx)(A.Z, {
                                     user: t,
                                     viewProfileItem: V
@@ -94,14 +94,14 @@ function L(e) {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
-                                        profileType: R.y0.BITE_SIZE
+                                        profileType: O.y0.BITE_SIZE
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
                                         channelId: L,
-                                        profileType: R.y0.BITE_SIZE,
+                                        profileType: O.y0.BITE_SIZE,
                                         onOpenProfile: V ? F : void 0
                                     }),
                                     t.isClyde() && (0, r.jsx)(c.Z, { className: C.headerTag })
@@ -113,12 +113,12 @@ function L(e) {
                                 children: [
                                     (0, r.jsx)(g.Z, {
                                         user: t,
-                                        profileType: R.y0.BITE_SIZE,
+                                        profileType: O.y0.BITE_SIZE,
                                         nickname: _.ZP.getName(n, L, t),
                                         onOpenProfile: V ? F : void 0,
                                         tags: (0, r.jsx)(I.Z, {
                                             displayProfile: w,
-                                            profileType: R.y0.BITE_SIZE,
+                                            profileType: O.y0.BITE_SIZE,
                                             onClose: M
                                         })
                                     }),

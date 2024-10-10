@@ -20,15 +20,15 @@ var i = n(512722),
     g = n(569545),
     A = n(70722),
     N = n(981631),
-    O = n(65154);
-let R = {},
+    R = n(65154);
+let O = {},
     v = new _.V7(),
     C = !1,
     L = window.document.createElement('canvas');
 (L.width = 512), (L.height = 288);
 let y = L.getContext('2d');
 function D() {
-    v.stop(), null != r && (c.Z.removeSink(r, R), (r = null));
+    v.stop(), null != r && (c.Z.removeSink(r, O), (r = null));
 }
 let b = o().debounce((e, t, n, r) => {
     M(
@@ -68,9 +68,9 @@ async function M(e, t) {
                                       ? n.getNextVideoOutputFrame(e).then(o, (t) => {
                                             if (r === e) throw t;
                                         })
-                                      : c.Z.addSink(e, R, o);
+                                      : c.Z.addSink(e, O, o);
                               }).finally(() => {
-                                  !i && c.Z.removeSink(e, R);
+                                  !i && c.Z.removeSink(e, O);
                               });
                           }
                         : function (e, t) {
@@ -156,7 +156,7 @@ t.Z = {
             E.Z.subscribe('STREAM_DELETE', D),
             E.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: a, context: s } = e;
-                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (D(), (r = a), b(a, t, n, i));
+                !(null == a || s !== R.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (D(), (r = a), b(a, t, n, i));
             }),
             E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

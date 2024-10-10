@@ -1,6 +1,6 @@
 n.d(t, {
     B1: function () {
-        return R;
+        return O;
     },
     DR: function () {
         return I;
@@ -15,7 +15,7 @@ n.d(t, {
         return C;
     },
     fK: function () {
-        return O;
+        return R;
     },
     jr: function () {
         return N;
@@ -141,7 +141,7 @@ let p = (e) => {
             );
         }
     },
-    O = async (e) => {
+    R = async (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CLAIM',
             skuId: e
@@ -168,7 +168,7 @@ let p = (e) => {
             );
         }
     },
-    R = async (e, t) => {
+    O = async (e, t) => {
         try {
             return (
                 await a.tn.get({

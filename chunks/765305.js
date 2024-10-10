@@ -1,6 +1,6 @@
 n.d(t, {
     $I: function () {
-        return O;
+        return R;
     },
     Fc: function () {
         return y;
@@ -33,7 +33,7 @@ n.d(t, {
         return s;
     },
     nz: function () {
-        return R;
+        return O;
     },
     p: function () {
         return T;
@@ -83,9 +83,9 @@ let T = 100,
     A = 'Guild Events Modal',
     N = '-1';
 ((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');
-let O = new Set([3, 4]);
+let R = new Set([3, 4]);
 ((d = i || (i = {}))[(d.NONE = 0)] = 'NONE'), (d[(d.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (d[(d.VOICE = 2)] = 'VOICE'), (d[(d.EXTERNAL = 3)] = 'EXTERNAL'), (d[(d.PRIME_TIME = 4)] = 'PRIME_TIME'), ((_ = a || (a = {}))[(_.EVENT_START = 1)] = 'EVENT_START'), ((E = s || (s = {}))[(E.PUBLIC = 1)] = 'PUBLIC'), (E[(E.GUILD_ONLY = 2)] = 'GUILD_ONLY');
-let R = {
+let O = {
         1: m.d4z.GUILD_STAGE_VOICE,
         2: m.d4z.GUILD_VOICE
     },

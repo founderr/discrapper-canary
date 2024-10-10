@@ -21,7 +21,7 @@ n.d(t, {
         return D;
     },
     Y$: function () {
-        return R;
+        return O;
     },
     Yn: function () {
         return y;
@@ -42,7 +42,7 @@ n.d(t, {
         return A;
     },
     yJ: function () {
-        return O;
+        return R;
     },
     ye: function () {
         return g;
@@ -89,10 +89,10 @@ function N(e) {
     var t;
     return m(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, f.udG.PROMOTED);
 }
-function O(e) {
+function R(e) {
     return m(e) && g(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
-function R(e) {
+function O(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: E = s.bB.APPLICATION_LAUNCHER } = e,
         { channel: f } = a,
         h = async () => {
@@ -149,7 +149,7 @@ function C(e) {
     return !!m(e) && (e instanceof u.Z ? e.isMonetized : e.is_monetized);
 }
 function L(e) {
-    let t = O(e);
+    let t = R(e);
     return null != t && t.displays_advertisements;
 }
 function y(e) {

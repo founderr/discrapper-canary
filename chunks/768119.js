@@ -51,8 +51,8 @@ function S(e, t) {
 let g = 'SearchStore',
     A = !1,
     N = {},
-    O = null;
-function R(e) {
+    R = null;
+function O(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
@@ -67,8 +67,8 @@ function v(e) {
     null != n.searchFetcher && n.searchFetcher.cancel(), delete I[t];
 }
 function C(e) {
-    if (e === O) return !1;
-    null != e && null == I[e] && m(e), (O = e);
+    if (e === R) return !1;
+    null != e && null == I[e] && m(e), (R = e);
 }
 class L extends (r = u.ZP.Store) {
     initialize() {
@@ -84,17 +84,17 @@ class L extends (r = u.ZP.Store) {
         A = !!c.K.get('tokenized');
     }
     getCurrentSearchId() {
-        return O;
+        return R;
     }
     isActive() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : O;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R;
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
         return A;
     }
     getSearchType(e) {
-        return S(null != e ? e : O, (e) => e.searchType);
+        return S(null != e ? e : R, (e) => e.searchType);
     }
     getRawResults(e) {
         return S(e, (e) => e.rawResults);
@@ -190,7 +190,7 @@ class L extends (r = u.ZP.Store) {
                 (s.query = l().omit(a, 'type')),
                 (s.offset = null !== (n = a.offset) && void 0 !== n ? n : 0),
                 (s.showBlockedResults = !1),
-                R({
+                O({
                     type: 'SEARCH_ADD_HISTORY',
                     searchId: i,
                     query: r
@@ -268,7 +268,7 @@ class L extends (r = u.ZP.Store) {
             C(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            return null != O && v({ searchId: O });
+            return null != R && v({ searchId: R });
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
@@ -278,7 +278,7 @@ class L extends (r = u.ZP.Store) {
             let { searchId: t, query: n } = e;
             null != N[t] && ((N[t] = N[t].filter((e) => e !== n)), c.K.set(g, { history: N }));
         },
-        SEARCH_ADD_HISTORY: R,
+        SEARCH_ADD_HISTORY: O,
         LOGOUT: function () {
             c.K.remove(g), (N = {});
         },

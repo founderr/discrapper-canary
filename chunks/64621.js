@@ -25,13 +25,13 @@ function S(e) {
     var t, n;
     let { sourceType: S, children: g, user: A } = e,
         { profileType: N } = (0, E.z)(),
-        { avatarReactReplyEnabled: O, statusReactReplyEnabled: R } = (0, _.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, _.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         v = (0, a.e7)([d.default], () => {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === A.id;
         }),
-        C = S === f.n_.AVATAR && O,
-        L = S === f.n_.STATUS && !O && R,
+        C = S === f.n_.AVATAR && R,
+        L = S === f.n_.STATUS && !R && O,
         y = !v && N === f.y0.BITE_SIZE && (C || L),
         [D, b] = i.useState(!1);
     (0, l.Z)(() => b(!0), y ? 200 : null);
@@ -43,8 +43,8 @@ function S(e) {
         className: G,
         content: k,
         header: B
-    } = ((t = R),
-    (n = O),
+    } = ((t = O),
+    (n = R),
     t && n
         ? {
               asset: m,

@@ -17,7 +17,7 @@ var r = n(735250),
     d = n(686546),
     _ = n(977148);
 let E = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: S, tooltipPosition: g = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': L, 'aria-haspopup': y } = e,
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: S, tooltipPosition: g = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: R, 'aria-label': O, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': L, 'aria-haspopup': y } = e,
             D = (0, r.jsx)(p, {
                 x: 0,
                 y: 0,
@@ -29,7 +29,7 @@ let E = (e) => {
                 secondaryColorClass: null != h ? h : void 0,
                 color: null != E ? E : 'currentColor'
             }),
-            b = R;
+            b = O;
         return (
             null == b && 'string' == typeof T && (b = T),
             (0, r.jsx)(u.Tooltip, {
@@ -73,7 +73,7 @@ let E = (e) => {
                                   [_.clickable]: !o && null != I,
                                   [_.selected]: a
                               }),
-                              role: O,
+                              role: R,
                               'aria-label': b,
                               'aria-hidden': v,
                               'aria-checked': C,

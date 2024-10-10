@@ -21,8 +21,8 @@ t.Z = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
         A = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         N = (0, o.e7)([f.Z], () => f.Z.boostSlots),
-        { analyticsLocations: O } = (0, c.ZP)(),
-        R = i.useMemo(
+        { analyticsLocations: R } = (0, c.ZP)(),
+        O = i.useMemo(
             () =>
                 Object.keys(N).filter((e) => {
                     let t = N[e];
@@ -58,11 +58,11 @@ t.Z = function (e) {
                             })
                         ]
                     }),
-                    R.length > 0
+                    O.length > 0
                         ? (0, r.jsx)(u.Text, {
                               className: g.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: R.length })
+                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: O.length })
                           })
                         : null
                 ]
@@ -104,7 +104,7 @@ t.Z = function (e) {
                                       initialPlanId: null,
                                       subscriptionTier: T.Si.TIER_2,
                                       isGift: !0,
-                                      analyticsLocations: O,
+                                      analyticsLocations: R,
                                       analyticsObject: {
                                           page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
                                           section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -133,7 +133,7 @@ t.Z = function (e) {
                                   (0, _.Z)({
                                       initialPlanId: null,
                                       subscriptionTier: T.Si.TIER_2,
-                                      analyticsLocations: O,
+                                      analyticsLocations: R,
                                       analyticsObject: {
                                           page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
                                           section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,

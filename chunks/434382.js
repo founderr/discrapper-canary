@@ -103,7 +103,7 @@ function A() {
 function N() {
     T(), (f = new Map()), (h = new Set()), (p = new Map()), A();
 }
-class O extends a.Z {
+class R extends a.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
@@ -126,4 +126,4 @@ class O extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new O();
+t.Z = new R();

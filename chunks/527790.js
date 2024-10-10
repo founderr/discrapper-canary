@@ -26,8 +26,8 @@ var i = n(120356),
     g = n(168524),
     A = n(960870),
     N = n(139793),
-    O = n(579264),
-    R = n(502762),
+    R = n(579264),
+    O = n(502762),
     v = n(652853),
     C = n(194811),
     L = n(373826),
@@ -44,7 +44,7 @@ function U(e) {
             entry: n,
             showCoverImage: !1
         }),
-        { appName: O } = (0, T.n)(n),
+        { appName: R } = (0, T.n)(n),
         C = (0, g.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
@@ -65,7 +65,7 @@ function U(e) {
         }),
         U = () => (n.content_type === s.s.TOP_GAME ? p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == C
-        ? (0, r.jsxs)(R.Z.Overlay, {
+        ? (0, r.jsxs)(O.Z.Overlay, {
               className: a()(P.card, l),
               ref: M,
               children: [
@@ -85,7 +85,7 @@ function U(e) {
                                       (0, r.jsx)('div', {
                                           children: (0, r.jsx)(L.Z, {
                                               variant: 'heading-sm/semibold',
-                                              text: O
+                                              text: R
                                           })
                                       }),
                                       (0, r.jsx)(m.Gk, {
@@ -100,7 +100,7 @@ function U(e) {
                   })
               ]
           })
-        : (0, r.jsxs)(R.Z.Overlay, {
+        : (0, r.jsxs)(O.Z.Overlay, {
               className: a()(P.card, l),
               ref: M,
               children: [
@@ -127,7 +127,7 @@ function U(e) {
                                           },
                                           children: (0, r.jsx)(L.Z, {
                                               variant: 'heading-sm/semibold',
-                                              text: O
+                                              text: R
                                           })
                                       }),
                                       (0, r.jsx)(m.Gk, {
@@ -159,7 +159,7 @@ function w(e) {
             userId: t.id,
             onAction: f
         });
-    return (0, r.jsxs)(R.Z.Overlay, {
+    return (0, r.jsxs)(O.Z.Overlay, {
         className: a()(P.card, s),
         ref: h,
         children: [
@@ -221,8 +221,8 @@ function x(e) {
         }),
         g = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
     if (null == g) return null;
-    let O = null !== (i = null === (n = g.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : g.title;
-    return (0, r.jsxs)(R.Z.Overlay, {
+    let R = null !== (i = null === (n = g.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : g.title;
+    return (0, r.jsxs)(O.Z.Overlay, {
         className: a()(P.card, d),
         ref: S,
         children: [
@@ -242,7 +242,7 @@ function x(e) {
                                 (0, r.jsx)('div', {
                                     children: (0, r.jsx)(L.Z, {
                                         variant: 'heading-sm/semibold',
-                                        text: O
+                                        text: R
                                     })
                                 }),
                                 (0, r.jsx)(m.Gk, {
@@ -274,7 +274,7 @@ function G(e) {
             userId: t.id,
             onAction: f
         });
-    return (0, r.jsxs)(R.Z.Overlay, {
+    return (0, r.jsxs)(O.Z.Overlay, {
         className: a()(P.card, s),
         ref: p,
         children: [
@@ -320,7 +320,7 @@ function k(e) {
     let { user: t, entry: n, className: i, onClose: a, hideContextMenu: s = !1 } = e,
         { analyticsLocations: o } = (0, u.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { profileType: c } = (0, v.z)();
-    return (0, O.Z)(n)
+    return (0, R.Z)(n)
         ? (0, r.jsx)(u.Gt, {
               value: o,
               children: (0, r.jsx)(y.Z, {

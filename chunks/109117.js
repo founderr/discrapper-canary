@@ -35,10 +35,10 @@ async function _() {
             function N(e) {
                 return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
             }
-            function O(e) {
+            function R(e) {
                 return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
             }
-            let R = {
+            let O = {
                 did_crash: t,
                 renderer_crash_reason: null !== (c = null == n ? void 0 : n.rendererCrashReason) && void 0 !== c ? c : null,
                 renderer_crash_exit_code: null !== (d = null == n ? void 0 : n.rendererCrashExitCode) && void 0 !== d ? d : null,
@@ -47,8 +47,8 @@ async function _() {
                 was_sending_stream: N(r.X4.IsSendingStream),
                 was_receiving_video: N(r.X4.IsReceivingVideo),
                 was_receiving_stream: N(r.X4.IsReceivingStream),
-                video_media_session_id: O(r.X4.VideoMediaSessionId),
-                stream_media_session_id: O(r.X4.StreamMediaSessionId),
+                video_media_session_id: R(r.X4.VideoMediaSessionId),
+                stream_media_session_id: R(r.X4.StreamMediaSessionId),
                 last_memory_usage_kb: null !== (_ = null == n ? void 0 : null === (i = n.lastMemoryInformation) || void 0 === i ? void 0 : i.memoryUsageKB) && void 0 !== _ ? _ : null,
                 last_used_js_heap_size_kb: null !== (E = null == n ? void 0 : null === (a = n.lastMemoryInformation) || void 0 === a ? void 0 : a.usedJSHeapSizeKB) && void 0 !== E ? E : null,
                 last_memory_usage_uptime: null !== (f = null == n ? void 0 : null === (s = n.lastMemoryInformation) || void 0 === s ? void 0 : s.uptimeSeconds) && void 0 !== f ? f : null,
@@ -64,7 +64,7 @@ async function _() {
                     minidump_relative_crash_address: null,
                     minidump_exception_module_version: null,
                     minidump_exception_module_code_id: null,
-                    ...R
+                    ...O
                 };
             console.log('AppCrashedFatalReport lastCrash:', n, e);
             let v = null == n ? void 0 : n.minidumpInformation;
@@ -75,7 +75,7 @@ async function _() {
                 minidump_relative_crash_address: null !== (S = null == v ? void 0 : v.relativeCrashAddress) && void 0 !== S ? S : null,
                 minidump_exception_module_version: null !== (g = null == v ? void 0 : v.exceptionModuleVersion) && void 0 !== g ? g : null,
                 minidump_exception_module_code_id: null !== (A = null == v ? void 0 : v.exceptionModuleCodeId) && void 0 !== A ? A : null,
-                ...R
+                ...O
             };
         })(a, s, n);
     o.default.track(u.rMx.APP_NATIVE_CRASH, l), i.K.set(d, { lastId: null == n ? void 0 : n.id }), s && setTimeout(async () => await E(), 10000);

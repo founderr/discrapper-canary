@@ -28,8 +28,8 @@ var r = n(392711),
     g = n(626135),
     A = n(756315),
     N = n(569545),
-    O = n(297733),
-    R = n(981631),
+    R = n(297733),
+    O = n(981631),
     v = n(65154);
 function C(e, t, n) {
     return (
@@ -123,7 +123,7 @@ class y extends o.Z {
                         streamKey: this._streamKey
                     })
                 ),
-                e === R.hes.RTC_CONNECTED)
+                e === O.hes.RTC_CONNECTED)
             ) {
                 var r;
                 null === (r = this._connection) ||
@@ -133,7 +133,7 @@ class y extends o.Z {
                             T = this.getRTCConnectionId(),
                             A = this.getGoLiveSource();
                         (0, S.q)().then((S) => {
-                            var N, O, C;
+                            var N, R, C;
                             let L = null;
                             if (null != S) {
                                 let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = S;
@@ -148,7 +148,7 @@ class y extends o.Z {
                             let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
                                 D = (null == A ? void 0 : null === (N = A.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(A.desktopSource.sourcePid) : null,
                                 { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(D);
-                            g.default.track(R.rMx.SCREENSHARE_FINISHED, {
+                            g.default.track(O.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
                                 hybrid_dxgi_frames: n,
@@ -169,7 +169,7 @@ class y extends o.Z {
                                 screens: d,
                                 windows: f,
                                 activity: h,
-                                soundshare_session: null !== (C = null == A ? void 0 : null === (O = A.desktopSource) || void 0 === O ? void 0 : O.soundshareSession) && void 0 !== C ? C : void 0,
+                                soundshare_session: null !== (C = null == A ? void 0 : null === (R = A.desktopSource) || void 0 === R ? void 0 : R.soundshareSession) && void 0 !== C ? C : void 0,
                                 share_game_name: b,
                                 share_game_id: M,
                                 share_game_exe: P,
@@ -239,8 +239,8 @@ class y extends o.Z {
         };
     }
     _trackVideoStartStats() {
-        let e = this.isOwner ? (0, O.Z)() : null;
-        g.default.track(R.rMx.VIDEO_STREAM_STARTED, {
+        let e = this.isOwner ? (0, R.Z)() : null;
+        g.default.track(O.rMx.VIDEO_STREAM_STARTED, {
             ...this._getStreamAnalyticsProperties(),
             ...e,
             connection_type: I.Z.getType(),
@@ -269,7 +269,7 @@ class y extends o.Z {
         s.getOutboundStats().forEach((t) => {
             var r;
             (null !== (r = t.num_frames) && void 0 !== r ? r : 0) > 0 &&
-                g.default.track(R.rMx.VIDEO_STREAM_ENDED, {
+                g.default.track(O.rMx.VIDEO_STREAM_ENDED, {
                     ...a,
                     ...i,
                     ...this._videoStreamStats.getStats(),
@@ -290,7 +290,7 @@ class y extends o.Z {
                 var r;
                 let o = s.getInboundStats(t);
                 (null !== (r = null == o ? void 0 : o.num_frames) && void 0 !== r ? r : 0) > 0 &&
-                    g.default.track(R.rMx.VIDEO_STREAM_ENDED, {
+                    g.default.track(O.rMx.VIDEO_STREAM_ENDED, {
                         ...a,
                         ...i,
                         ...this._videoStreamStats.getStats(),

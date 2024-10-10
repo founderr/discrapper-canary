@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(689938),
     A = n(393480);
 let N = 'text-sm/medium',
-    O = 36,
-    R = 144;
+    R = 36,
+    O = 144;
 function v(e) {
     var t;
     let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: v = !0, onCloseProfile: C } = e,
@@ -46,8 +46,8 @@ function v(e) {
         Z = H && !V,
         Y = H ? 1.25 : 0,
         j = 18 + Y,
-        W = R + Y,
-        K = O + Y,
+        W = O + Y,
+        K = R + Y,
         z = H || V,
         q = p && !z,
         Q = p && z,

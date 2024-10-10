@@ -21,7 +21,7 @@ n.d(t, {
         return C;
     },
     Wf: function () {
-        return R;
+        return O;
     },
     eT: function () {
         return v;
@@ -36,7 +36,7 @@ n.d(t, {
         return T;
     },
     nE: function () {
-        return O;
+        return R;
     },
     pf: function () {
         return A;
@@ -296,13 +296,13 @@ async function N(e, t) {
         }
     }
 }
-function O(e) {
+function R(e) {
     a.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
     });
 }
-async function R(e) {
+async function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
         let n = await i.tn.post({

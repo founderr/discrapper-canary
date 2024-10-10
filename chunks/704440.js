@@ -26,8 +26,8 @@ var r = n(735250),
     g = n(689938),
     A = n(776222),
     N = n(751599),
-    O = n(397293),
-    R = n(352175),
+    R = n(397293),
+    O = n(352175),
     v = n(90351);
 let C = async (e, t, n) => {
         n(!0),
@@ -58,7 +58,7 @@ let C = async (e, t, n) => {
                         }),
                         (0, r.jsx)('img', {
                             alt: '',
-                            src: l ? O : R,
+                            src: l ? R : O,
                             className: A.confirmationImage
                         }),
                         (0, r.jsx)(c.Heading, {
@@ -111,7 +111,7 @@ let C = async (e, t, n) => {
 function y(e) {
     let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
         [u, d] = i.useState(!1),
-        [I, R] = i.useState(!1),
+        [I, O] = i.useState(!1),
         y = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
         { analyticsLocations: D } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
         { enabled: b } = m.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
@@ -134,7 +134,7 @@ function y(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: b ? O : v,
+                                src: b ? R : v,
                                 className: A.generalBodyImage
                             }),
                             (0, r.jsxs)('div', {
@@ -183,7 +183,7 @@ function y(e) {
                             submitting: I,
                             onClick: () => {
                                 o
-                                    ? C(y, a, R)
+                                    ? C(y, a, O)
                                     : (d(!0),
                                       f.default.track(S.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: D,

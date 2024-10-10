@@ -1,12 +1,12 @@
 r.d(t, {
     i: function () {
-        return _;
+        return i;
     }
 });
 var n = r(573736),
     a = r(886115),
-    o = r(151122);
-function i(e) {
+    _ = r(151122);
+function o(e) {
     return {
         ...e,
         path: 'path' in e && Array.isArray(e.path) ? e.path.join('.') : void 0,
@@ -14,24 +14,24 @@ function i(e) {
         unionErrors: 'unionErrors' in e ? JSON.stringify(e.unionErrors) : void 0
     };
 }
-let _ = (0, o._I)((e = {}) => {
+let i = (0, _._I)((e = {}) => {
     let t = e.limit || 10;
     return {
         name: 'ZodErrors',
         processEvent(e, r) {
-            var o, _, E, s;
+            var _, i, E, c;
             return (
-                (o = t),
-                (_ = e),
+                (_ = t),
+                (i = e),
                 (E = r),
-                _.exception && _.exception.values && E && E.originalException && ((s = E.originalException), (0, n.VZ)(s) && 'ZodError' === s.name && Array.isArray(s.errors)) && 0 !== E.originalException.issues.length
+                i.exception && i.exception.values && E && E.originalException && ((c = E.originalException), (0, n.VZ)(c) && 'ZodError' === c.name && Array.isArray(c.errors)) && 0 !== E.originalException.issues.length
                     ? {
-                          ..._,
+                          ...i,
                           exception: {
-                              ..._.exception,
+                              ...i.exception,
                               values: [
                                   {
-                                      ..._.exception.values[0],
+                                      ...i.exception.values[0],
                                       value: (function (e) {
                                           let t = new Set();
                                           for (let r of e.issues) r.path && r.path[0] && t.add(r.path[0]);
@@ -39,15 +39,15 @@ let _ = (0, o._I)((e = {}) => {
                                           return `Failed to validate keys: ${(0, a.$G)(r.join(', '), 100)}`;
                                       })(E.originalException)
                                   },
-                                  ..._.exception.values.slice(1)
+                                  ...i.exception.values.slice(1)
                               ]
                           },
                           extra: {
-                              ..._.extra,
-                              'zoderror.issues': E.originalException.errors.slice(0, o).map(i)
+                              ...i.extra,
+                              'zoderror.issues': E.originalException.errors.slice(0, _).map(o)
                           }
                       }
-                    : _
+                    : i
             );
         }
     };

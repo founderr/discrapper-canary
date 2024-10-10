@@ -45,14 +45,14 @@ var r,
     g = n(630388),
     A = n(709054),
     N = n(968437),
-    O = n(665906),
-    R = n(456077),
+    R = n(665906),
+    O = n(456077),
     v = n(124368),
     C = n(981631),
     L = n(689938);
 function y(e) {
-    let t = (0, O.NE)(e);
-    return (0, O.Xu)(e) ? (t ? 2 : 3) : 1;
+    let t = (0, R.NE)(e);
+    return (0, R.Xu)(e) ? (t ? 2 : 3) : 1;
 }
 function D(e, t) {
     var n;
@@ -71,7 +71,7 @@ function M(e, t) {
     if ('' !== d) return b(d, 80);
     {
         let t = f.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0),
-            n = (0, R.Z)(t.split('\n')[0], !0);
+            n = (0, O.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let r = [];
         for (;;) {
@@ -103,8 +103,8 @@ function P(e) {
                 let e = M(t, n);
                 g = '' !== e ? e : L.Z.Messages.THREAD;
             }
-            let O = (0, N.WD)(t),
-                R = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)),
+            let R = (0, N.WD)(t),
+                O = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)),
                 v = await x(t, () => {
                     let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                     return s.tn.post({
@@ -112,7 +112,7 @@ function P(e) {
                         body: {
                             name: g,
                             type: S ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
-                            auto_archive_duration: O,
+                            auto_archive_duration: R,
                             location: o
                         }
                     });
@@ -121,7 +121,7 @@ function P(e) {
                 channelId: v.id,
                 limit: C.AQB
             }),
-                v !== R &&
+                v !== O &&
                     (u.Z.clearDraft(t.id, I.d.ThreadSettings),
                     u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
                     null == l || l(v),

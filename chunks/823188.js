@@ -46,8 +46,8 @@ var _ = n(120356),
     g = n(100527),
     A = n(906732),
     N = n(535322),
-    O = n(706454),
-    R = n(594174),
+    R = n(706454),
+    O = n(594174),
     v = n(78839),
     C = n(709586),
     L = n(483444),
@@ -203,9 +203,9 @@ function et(e) {
     var t, n, r, i, a, s, o;
     let { isGift: l, premiumTier: u, offerTierMatchesCard: c, offerType: _, showYearlyPrice: E, priceOptions: f, textVariant: I, className: m, shouldUseTaglineXPCopy: S } = e,
         g = (0, p.e7)([v.ZP], () => v.ZP.getPremiumTypeSubscription()),
-        A = (0, p.e7)([R.default], () => R.default.getCurrentUser()),
+        A = (0, p.e7)([O.default], () => O.default.getCurrentUser()),
         N = (0, U.t7)(),
-        O = (0, U.lr)(),
+        R = (0, U.lr)(),
         C = u === j.p9.TIER_0 ? j.Si.TIER_0 : j.Si.TIER_2,
         L = (null == g ? void 0 : g.trialId) != null ? (null == A ? void 0 : A.premiumType) : N ? j.p9.TIER_2 : null,
         y = (0, B.N)(),
@@ -228,13 +228,13 @@ function et(e) {
                           })
                         : g.planIdFromItems === j.Xh.PREMIUM_YEAR_TIER_2
                           ? K.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                                percent: null !== (t = null == O ? void 0 : O.percentage) && void 0 !== t ? t : j.Bo,
+                                percent: null !== (t = null == R ? void 0 : R.percentage) && void 0 !== t ? t : j.Bo,
                                 regularPrice: a
                             })
                           : K.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                                percent: null !== (n = null == O ? void 0 : O.percentage) && void 0 !== n ? n : j.M_,
+                                percent: null !== (n = null == R ? void 0 : R.percentage) && void 0 !== n ? n : j.M_,
                                 regularPrice: a,
-                                numMonths: null !== (r = null == O ? void 0 : O.duration) && void 0 !== r ? r : j.rt
+                                numMonths: null !== (r = null == R ? void 0 : R.duration) && void 0 !== r ? r : j.rt
                             })
             })
         });
@@ -342,7 +342,7 @@ function er(e) {
     var t;
     let { showWumpus: n, shouldUseTaglineXPCopy: r, ctaButton: i, showYearlyPrice: a, className: s, isGift: o = !1, priceOptions: l, variant: u } = e,
         c = (0, p.e7)([v.ZP], () => v.ZP.getPremiumTypeSubscription()),
-        _ = (0, p.e7)([R.default], () => R.default.getCurrentUser()),
+        _ = (0, p.e7)([O.default], () => O.default.getCurrentUser()),
         f = (0, B.N)(),
         h = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         I = (null == c ? void 0 : c.trialId) != null,
@@ -439,7 +439,7 @@ function er(e) {
 }
 function ei(e) {
     let { featureSet: t = 0, isModal: n = !1, isGift: r = !1 } = e,
-        i = (0, p.e7)([O.default], () => O.default.locale),
+        i = (0, p.e7)([R.default], () => R.default.locale),
         a = (0, p.e7)([P.Z], () => P.Z.affinities),
         s = n && !r && a.length > 0;
     switch (t) {
@@ -543,16 +543,16 @@ function ea(e) {
     var t;
     let { showWumpus: n, ctaButton: r, showYearlyPrice: i, featureSet: a = 0, className: s, isGift: o = !1, isModal: l = !1, priceOptions: u, showHalloweenGift: c = !1, shouldUseTaglineXPCopy: _ = !1, variant: f } = e,
         h = (0, p.e7)([v.ZP], () => v.ZP.getPremiumTypeSubscription()),
-        I = (0, p.e7)([R.default], () => R.default.getCurrentUser()),
+        I = (0, p.e7)([O.default], () => O.default.getCurrentUser()),
         g = (0, B.N)(),
         A = null == g ? void 0 : null === (t = g.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         N = (null == h ? void 0 : h.trialId) != null ? (null == I ? void 0 : I.premiumType) : null,
-        O = (0, U.Nx)(),
+        R = (0, U.Nx)(),
         C = (0, k.Ng)(),
         y = (0, U.t7)(),
         D = null != A || null != N ? 0 : null != C || y ? 1 : null,
         b = (0, V.Vi)(),
-        M = !o && O,
+        M = !o && R,
         P = (0, V.W1)(),
         w = (0, m.ap)((0, S.ZP)()),
         F = w ? 5 : 2,

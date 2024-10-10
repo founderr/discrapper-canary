@@ -9,13 +9,13 @@ n.d(t, {
         return y;
     },
     ZP: function () {
-        return O;
+        return R;
     },
     _Z: function () {
         return C;
     },
     c7: function () {
-        return R;
+        return O;
     },
     j3: function () {
         return D;
@@ -43,7 +43,7 @@ var r = n(735250),
     g = n(981631),
     A = n(689938),
     N = n(193310);
-function O(e) {
+function R(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o } = e;
     return (
         (0, h.Tt)({ location: A.Z.Messages.OAUTH2_TITLE }),
@@ -70,8 +70,8 @@ function O(e) {
         })
     );
 }
-function R(e) {
-    return (0, r.jsx)(O, {
+function O(e) {
+    return (0, r.jsx)(R, {
         ...e,
         headerClassName: N.headerSuccess
     });
@@ -99,7 +99,7 @@ function v(e) {
         });
     return (0, r.jsx)('div', {
         className: N.authorizedSuccessWrapper,
-        children: (0, r.jsx)(R, {
+        children: (0, r.jsx)(O, {
             message: s,
             footer: l,
             ...a
@@ -134,13 +134,13 @@ function C(e) {
         }, [null == n ? void 0 : n.id, s, l]),
         h = E.zQ.useExperiment({ location: 'OAuth2AuthorizedSuccess' }, { autoTrackExposure: !1 }).enabled,
         S = null != t,
-        O = null == t && h && (!c || null != l);
+        R = null == t && h && (!c || null != l);
     return null != t || null != s
         ? (0, r.jsxs)('div', {
               className: N.buttonsContainer,
               children: [
                   null != s
-                      ? S || O
+                      ? S || R
                           ? (0, r.jsx)(_.Button, {
                                 size: _.Button.Sizes.SMALL,
                                 look: _.Button.Looks.LINK,
@@ -161,7 +161,7 @@ function C(e) {
                           onClick: o,
                           children: (null == t ? void 0 : t.name.length) > 30 ? A.Z.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : A.Z.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({ guildName: null == t ? void 0 : t.name })
                       }),
-                  O &&
+                  R &&
                       (0, r.jsx)(_.Button, {
                           color: _.Button.Colors.BRAND,
                           onClick: d,
@@ -172,7 +172,7 @@ function C(e) {
         : null;
 }
 function L(e) {
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(R, {
         ...e,
         headerClassName: N.headerFailure
     });

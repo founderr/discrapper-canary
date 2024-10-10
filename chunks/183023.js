@@ -37,8 +37,8 @@ var r = n(735250),
     g = n(231053),
     A = n(944386),
     N = n(565138),
-    O = n(372769),
-    R = n(889564),
+    R = n(372769),
+    O = n(889564),
     v = n(687476),
     C = n(761966),
     L = n(563927),
@@ -180,7 +180,7 @@ let W = () => ({
                         (0, r.jsxs)(p.Z, {
                             align: p.Z.Align.CENTER,
                             children: [
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(R.Z, {
                                     guild: t,
                                     className: j.guildBadge
                                 }),
@@ -248,12 +248,12 @@ let W = () => ({
     },
     Q = (e) => {
         var t, n, a;
-        let { node: u, sourceType: I, expressionSourceApplication: S, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: O, closePopout: L, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
+        let { node: u, sourceType: I, expressionSourceApplication: S, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: R, closePopout: L, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
             K = (0, l.e7)([U.default], () => U.default.getCurrentUser()),
             q = (0, l.e7)([P.Z], () => P.Z.getGuildId()),
             Q = k.ZP.isPremium(K),
-            $ = null != q && (q === (null == N ? void 0 : N.id) || q === (null == O ? void 0 : O.id)),
-            J = null != O,
+            $ = null != q && (q === (null == N ? void 0 : N.id) || q === (null == R ? void 0 : R.id)),
+            J = null != R,
             ee = null !== (t = null == N ? void 0 : N.isDiscoverable()) && void 0 !== t && t;
         x && ((Q = !0), (ee = !0), (J = !1), ($ = !1));
         let et = W(),
@@ -270,8 +270,8 @@ let W = () => ({
                               userIsRoleSubscriber: !1
                           }
                         : {
-                              isRoleSubscriptionEmoji: R.yH(M),
-                              isUnusableRoleSubscriptionEmoji: R.Fv(M, null != q ? q : void 0),
+                              isRoleSubscriptionEmoji: O.yH(M),
+                              isUnusableRoleSubscriptionEmoji: O.Fv(M, null != q ? q : void 0),
                               userIsRoleSubscriber: v.Z.getUserSubscriptionRoles(M.guildId).size > 0
                           },
                 [M, q]
@@ -395,7 +395,7 @@ let W = () => ({
                                     size: c.Button.Sizes.SMALL,
                                     fullWidth: !0,
                                     onClick: () => {
-                                        L(), (null == O ? void 0 : O.id) != null && d.Z.transitionToGuildSync(O.id, { sourceLocationStack: [E.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, H.oC.ROLE_SUBSCRIPTIONS);
+                                        L(), (null == R ? void 0 : R.id) != null && d.Z.transitionToGuildSync(R.id, { sourceLocationStack: [E.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, H.oC.ROLE_SUBSCRIPTIONS);
                                     },
                                     children: ei ? Y.Z.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : Y.Z.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                                 })
@@ -417,7 +417,7 @@ let W = () => ({
                                     children: J ? Y.Z.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : Y.Z.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                                 }),
                                 (0, r.jsx)(z, {
-                                    expressionSourceGuild: null != N ? N : g.JO.createFromGuildRecord(O),
+                                    expressionSourceGuild: null != N ? N : g.JO.createFromGuildRecord(R),
                                     hasJoinedExpressionSourceGuild: J,
                                     isDisplayingJoinGuildButtonInPopout: e_
                                 }),

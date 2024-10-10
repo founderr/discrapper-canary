@@ -28,10 +28,10 @@ function m(e) {
         N = i.useCallback(() => {
             S(!0);
         }, []),
-        O = i.useCallback(() => {
+        R = i.useCallback(() => {
             S(!1);
         }, []),
-        R = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 var r;
                 S(!1);
@@ -52,12 +52,12 @@ function m(e) {
     return (i.useEffect(() => {
         let e = A.current;
         return (
-            null == g && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', O, !1), null == e || e.addEventListener('drop', R, !1)),
+            null == g && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', R, !1), null == e || e.addEventListener('drop', O, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', O, !1), null == e || e.removeEventListener('drop', R, !1);
+                null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', R, !1), null == e || e.removeEventListener('drop', O, !1);
             }
         );
-    }, [g, N, O, R]),
+    }, [g, N, R, O]),
     null != g)
         ? (0, r.jsx)(f.Z, {
               channelId: t,

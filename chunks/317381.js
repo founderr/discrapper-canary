@@ -44,8 +44,8 @@ let g = {
     },
     A = [],
     N = [],
-    O = new Map(),
     R = new Map(),
+    O = new Map(),
     v = new Map(),
     C = new Map(),
     L = new Map(),
@@ -73,7 +73,7 @@ function k(e) {
         P = b.some((e) => e === M),
         x = null === (t = N.find((e) => e.userId === M)) || void 0 === t ? void 0 : t.sessionId,
         k = N.some((e) => (0, h.J)(e)),
-        B = O.get(p),
+        B = R.get(p),
         F = {
             applicationId: p,
             channelId: o,
@@ -87,12 +87,12 @@ function k(e) {
         };
     P &&
         null != B &&
-        O.set(B.applicationId, {
+        R.set(B.applicationId, {
             ...B,
             ...F
         });
     null != B && o === B.channelId && p === (null == B ? void 0 : B.applicationId) && ((!P && Array.from(B.userIds).some((e) => e === M)) || !k)
-        ? (O.delete(p), _.S.dispatch(T.CkL.RELEASE_ACTIVITY_WEB_VIEW))
+        ? (R.delete(p), _.S.dispatch(T.CkL.RELEASE_ACTIVITY_WEB_VIEW))
         : P &&
           (null == B || B.applicationId !== p || B.channelId !== o) &&
           x === l.default.getSessionId() &&
@@ -101,14 +101,14 @@ function k(e) {
               let { channelId: i, applicationId: a, launchId: s, compositeInstanceId: o, location: E, participants: h, isFirstActivityInChannel: p, isStart: S } = e,
                   g = (0, f.Z)(a),
                   A = l.default.getSessionId();
-              if (null == g || null == A || (null === (t = O.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
+              if (null == g || null == A || (null === (t = R.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
               let N = u.Z.getChannel(i),
-                  R = null == N ? void 0 : N.getGuildId(),
+                  O = null == N ? void 0 : N.getGuildId(),
                   v = d.default.getCurrentUser();
-              if ((null == R && !(null !== (n = null == N ? void 0 : N.isPrivate()) && void 0 !== n && n)) || null == v) return !1;
+              if ((null == O && !(null !== (n = null == N ? void 0 : N.isPrivate()) && void 0 !== n && n)) || null == v) return !1;
               r = i;
               let C = {
-                  guildId: R,
+                  guildId: O,
                   channelId: i,
                   applicationId: a,
                   url: g,
@@ -119,7 +119,7 @@ function k(e) {
                   compositeInstanceId: o,
                   location: E
               };
-              O.set(a, C),
+              R.set(a, C),
                   _.S.dispatch(T.CkL.OPEN_EMBEDDED_ACTIVITY, {
                       channelId: i,
                       applicationId: a,
@@ -142,8 +142,8 @@ function k(e) {
           });
     let V = (null !== (i = v.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== p),
         Z = G(s),
-        Y = (null !== (a = R.get(Z)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === p && e.channelId === o));
-    b.length > 0 && (V.push(F), Y.push(F)), v.set(o, V), R.set(Z, Y);
+        Y = (null !== (a = O.get(Z)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === p && e.channelId === o));
+    b.length > 0 && (V.push(F), Y.push(F)), v.set(o, V), O.set(Z, Y);
 }
 function B(e) {
     let t = e.activity_instances;
@@ -191,7 +191,7 @@ class Z extends (i = a.ZP.PersistedStore) {
     getSelfEmbeddedActivityForChannel(e) {
         var t;
         return null !==
-            (t = Array.from(O.values()).find((t) => {
+            (t = Array.from(R.values()).find((t) => {
                 let { channelId: n } = t;
                 return e === n;
             })) && void 0 !== t
@@ -199,11 +199,11 @@ class Z extends (i = a.ZP.PersistedStore) {
             : null;
     }
     getSelfEmbeddedActivities() {
-        return O;
+        return R;
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
-        return null !== (t = R.get(e)) && void 0 !== t ? t : A;
+        return null !== (t = O.get(e)) && void 0 !== t ? t : A;
     }
     getEmbeddedActivitiesForChannel(e) {
         var t;
@@ -318,7 +318,7 @@ let Y = new Z(s.Z, {
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t } = e;
-        v.clear(), R.clear(), t.forEach((e) => B(e));
+        v.clear(), O.clear(), t.forEach((e) => B(e));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
@@ -331,8 +331,8 @@ let Y = new Z(s.Z, {
         if (null != n) {
             var r;
             let e = G(n),
-                i = (null !== (r = R.get(e)) && void 0 !== r ? r : []).filter((e) => e.channelId !== t.id);
-            R.set(e, i);
+                i = (null !== (r = O.get(e)) && void 0 !== r ? r : []).filter((e) => e.channelId !== t.id);
+            O.set(e, i);
         }
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
@@ -359,8 +359,8 @@ let Y = new Z(s.Z, {
     },
     EMBEDDED_ACTIVITY_CLOSE: function (e) {
         let { applicationId: t } = e,
-            n = O.get(t);
-        O.delete(t), (null == n ? void 0 : n.channelId) === r && (r = void 0);
+            n = R.get(t);
+        R.delete(t), (null == n ? void 0 : n.channelId) === r && (r = void 0);
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e;
@@ -383,15 +383,15 @@ let Y = new Z(s.Z, {
         var t;
         let { activity: n } = e;
         if (null == n) return !1;
-        let r = O.get(null !== (t = n.application_id) && void 0 !== t ? t : '');
+        let r = R.get(null !== (t = n.application_id) && void 0 !== t ? t : '');
         if (null == r) return !1;
-        O.set(r.applicationId, { ...r });
+        R.set(r.applicationId, { ...r });
     },
     EMBEDDED_ACTIVITY_SET_CONFIG: function (e) {
         let { applicationId: t, config: n } = e,
-            r = O.get(t);
+            r = R.get(t);
         null != r &&
-            O.set(r.applicationId, {
+            R.set(r.applicationId, {
                 ...r,
                 config: n
             });
@@ -468,7 +468,7 @@ let Y = new Z(s.Z, {
         let { channel: t } = e;
         if (
             void 0 ===
-            Array.from(O.values()).find((e) => {
+            Array.from(R.values()).find((e) => {
                 let { channelId: n } = e;
                 return t.id === n;
             })

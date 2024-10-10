@@ -33,7 +33,7 @@ n.d(t, {
         return f;
     },
     gE: function () {
-        return O;
+        return R;
     },
     qb: function () {
         return d;
@@ -110,16 +110,16 @@ var r = n(686942),
         var n = new Date(e);
         return [(0, r.Sk)(n.getUTCFullYear().toString(), 4, '0'), (0, r.Sk)(n.getUTCMonth() + 1, 2, '0'), (0, r.Sk)(n.getUTCDate(), 2, '0'), 'T', (0, r.Sk)(n.getUTCHours(), 2, '0'), (0, r.Sk)(n.getUTCMinutes(), 2, '0'), (0, r.Sk)(n.getUTCSeconds(), 2, '0'), t ? 'Z' : ''].join('');
     },
-    O = function (e) {
+    R = function (e) {
         var t = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(e);
         if (!t) throw Error('Invalid UNTIL value: '.concat(e));
         return new Date(Date.UTC(parseInt(t[1], 10), parseInt(t[2], 10) - 1, parseInt(t[3], 10), parseInt(t[5], 10) || 0, parseInt(t[6], 10) || 0, parseInt(t[7], 10) || 0));
     },
-    R = function (e, t) {
+    O = function (e, t) {
         return e.toLocaleString('sv-SE', { timeZone: t }).replace(' ', 'T') + 'Z';
     },
     v = function (e, t) {
-        var n = new Date(R(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
-            r = new Date(R(e, null != t ? t : 'UTC')).getTime() - n.getTime();
+        var n = new Date(O(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
+            r = new Date(O(e, null != t ? t : 'UTC')).getTime() - n.getTime();
         return new Date(e.getTime() - r);
     };

@@ -5,8 +5,8 @@ var T,
     g,
     A,
     N = n(392711),
-    O = n(754700),
-    R = n(887003),
+    R = n(754700),
+    O = n(887003),
     v = n(442837),
     C = n(481060),
     L = n(570140),
@@ -30,7 +30,7 @@ function w(e, t) {
             var n, r, i, a;
             if (null != t.userStatus)
                 for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
-                    if (!(0, N.isNil)(s)) O.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && _.delete(e));
+                    if (!(0, N.isNil)(s)) R.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && _.delete(e));
                 }
         })(e, t),
             a.set(e, r);
@@ -224,7 +224,7 @@ class F extends (T = v.ZP.Store) {
                             var t;
                             let { entitlements: n } = e,
                                 r = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-                            return (null == r ? void 0 : r.tag) !== R.w.REWARD_CODE ? null : r.rewardCode;
+                            return (null == r ? void 0 : r.tag) !== O.w.REWARD_CODE ? null : r.rewardCode;
                         })({ entitlements: t });
                         null != n && x(e, n),
                             w(e, {

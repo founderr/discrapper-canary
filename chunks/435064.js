@@ -32,8 +32,8 @@ let m = 'default',
     g = [],
     A = 0,
     N = null,
-    O = null,
-    R = {},
+    R = null,
+    O = {},
     v = null,
     C = null,
     L = {},
@@ -86,7 +86,7 @@ class M extends (r = i.ZP.DeviceSettingsStore) {
         return D.clipsSettings;
     }
     getLastClipsSession() {
-        return O;
+        return R;
     }
     getClipsWarningShown(e) {
         return N === e;
@@ -118,15 +118,15 @@ class M extends (r = i.ZP.DeviceSettingsStore) {
     }
     isClipsEnabledForUser(e) {
         var t, n;
-        return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n;
+        return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n;
     }
     isVoiceRecordingAllowedForUser(e) {
         var t, n;
-        return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n;
+        return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n;
     }
     isViewerClippingAllowedForUser(e) {
         var t, n;
-        return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n;
+        return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n;
     }
     isDecoupledGameClippingEnabled() {
         var e, t;
@@ -257,11 +257,11 @@ let P = new M(a.Z, {
         var t, n;
         let { clip: r } = e;
         (A = Math.max(A - 1, 0)),
-            (O = {
+            (R = {
                 applicationName: r.applicationName,
                 ended: !1,
-                ...O,
-                newClipIds: [...(null !== (t = null == O ? void 0 : O.newClipIds) && void 0 !== t ? t : []), r.id]
+                ...R,
+                newClipIds: [...(null !== (t = null == R ? void 0 : R.newClipIds) && void 0 !== t ? t : []), r.id]
             }),
             (D = {
                 ...D,
@@ -317,7 +317,7 @@ let P = new M(a.Z, {
             r = null !== (i = null == e ? void 0 : e.name) && void 0 !== i ? i : r;
         }
         if (null == r || '' === r) return !1;
-        O = {
+        R = {
             applicationName: r,
             newClipIds: [],
             ended: !1
@@ -325,18 +325,18 @@ let P = new M(a.Z, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        if (((C = null), (L[t] = []), null == O || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
-        O =
-            0 === O.newClipIds.length
+        if (((C = null), (L[t] = []), null == R || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
+        R =
+            0 === R.newClipIds.length
                 ? null
                 : {
-                      ...O,
+                      ...R,
                       ended: !0
                   };
     },
     CLIPS_CLEAR_CLIPS_SESSION: function () {
-        if (null == O) return !1;
-        O = null;
+        if (null == R) return !1;
+        R = null;
     },
     CLIPS_CLEAR_NEW_CLIP_IDS: function () {
         D.newClipIds = [];
@@ -360,7 +360,7 @@ let P = new M(a.Z, {
             }
     },
     RTC_CONNECTION_FLAGS: function (e) {
-        R[e.userId] = {
+        O[e.userId] = {
             clipsEnabled: (0, d.yE)(e.flags, h.BVn.CLIPS_ENABLED),
             allowVoiceRecording: (0, d.yE)(e.flags, h.BVn.ALLOW_VOICE_RECORDING),
             allowAnyViewerClips: (0, d.yE)(e.flags, h.BVn.ALLOW_ANY_VIEWER_CLIPS)
@@ -384,7 +384,7 @@ let P = new M(a.Z, {
     CLIPS_INIT: function (e) {
         let { applicationName: t } = e;
         if (((v = null), !D.clipsSettings.clipsEnabled)) return !1;
-        O = {
+        R = {
             applicationName: t,
             newClipIds: [],
             ended: !1

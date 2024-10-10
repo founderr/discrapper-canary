@@ -91,7 +91,7 @@ function H(e) {
             }),
             m
                 ? (0, i.jsx)(r.F, {})
-                : (0, i.jsx)(B, {
+                : (0, i.jsx)(D, {
                       channel: l,
                       command: o,
                       sectionName: c
@@ -150,7 +150,7 @@ function U() {
         children: l
     });
 }
-function B(e) {
+function D(e) {
     let { channel: n, command: t, sectionName: l } = e,
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
@@ -205,7 +205,7 @@ function B(e) {
         ]
     });
 }
-function D(e) {
+function B(e) {
     let { channel: n, commands: t, section: a, headerName: l, sectionName: o, children: r } = e;
     return 0 === t.length
         ? null
@@ -287,14 +287,14 @@ function k(e) {
         ? (0, i.jsxs)('ul', {
               className: j.contentContainer,
               children: [
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(B, {
                       channel: t,
                       section: _,
                       commands: N,
                       headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                       sectionName: o
                   }),
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(B, {
                       channel: t,
                       section: _,
                       commands: p.current ? Z : A,

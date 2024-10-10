@@ -29,8 +29,8 @@ var r,
     g = n(311476),
     A = n(165583),
     N = n(587446),
-    O = n(210887),
-    R = n(740492),
+    R = n(210887),
+    O = n(740492),
     v = n(626135),
     C = n(238302),
     L = n(514361),
@@ -218,7 +218,7 @@ let k = Object.freeze({
             ((T === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && m(!0);
         }, [T, r, u]);
         let { enabled: N } = g.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
-            O = (e, t) => {
+            R = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
                     F({
@@ -275,7 +275,7 @@ let k = Object.freeze({
                         {
                             preset: e,
                             isSelected: u === e.id,
-                            onSelect: () => O(e, n),
+                            onSelect: () => R(e, n),
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
@@ -298,7 +298,7 @@ let k = Object.freeze({
                             (0, a.jsx)(y.DR, {
                                 preset: e,
                                 isSelected: u === d.Us.EASTER_EGG,
-                                onSelect: () => O(e)
+                                onSelect: () => R(e)
                             }),
                             (0, a.jsx)(_.LottieAnimation, {
                                 importData: t,
@@ -315,7 +315,7 @@ let k = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: r } = s.useContext(B),
             { analyticsLocations: i } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [o, l, u] = (0, c.Wu)([O.Z, R.ZP, L.Z], () => [O.Z.theme, null == L.Z.gradientPreset, R.ZP.useSystemTheme === P.K.ON]),
+            [o, l, u] = (0, c.Wu)([R.Z, O.ZP, L.Z], () => [R.Z.theme, null == L.Z.gradientPreset, O.ZP.useSystemTheme === P.K.ON]),
             d = (e) => {
                 (0, C.xs)(),
                     F({

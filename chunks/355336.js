@@ -24,24 +24,24 @@ function c(e, t) {
         let { children: d, className: _, onResize: E, contentClassName: f, onScroll: h, dir: p = 'ltr', fade: I = !1, customTheme: m = !1, style: T, ...S } = t,
             g = i.useRef(null),
             A = i.useRef(null),
-            [N, O] = i.useState(!1),
-            { scrollerRef: R, getScrollerState: v } = (0, l.Ke)(),
-            C = (0, l.t2)(R);
+            [N, R] = i.useState(!1),
+            { scrollerRef: O, getScrollerState: v } = (0, l.Ke)(),
+            C = (0, l.t2)(O);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => R.current,
+                getScrollerNode: () => O.current,
                 isScrolling: () => null != g.current,
                 getScrollerState: v,
-                ...(0, l.Ue)(R, v, C)
+                ...(0, l.Ue)(O, v, C)
             }),
-            [R, v, C]
+            [O, v, C]
         );
         let L = i.useCallback(
             (e) => {
-                null == g.current ? O(!0) : clearTimeout(g.current),
+                null == g.current ? R(!0) : clearTimeout(g.current),
                     (g.current = setTimeout(() => {
-                        (g.current = null), O(!1);
+                        (g.current = null), R(!1);
                     }, 200)),
                     null != h && h(e);
             },
@@ -50,7 +50,7 @@ function c(e, t) {
         return (
             i.useEffect(() => () => clearTimeout(g.current), []),
             (0, l.zn)({
-                ref: R,
+                ref: O,
                 key: 'container',
                 onUpdate: E,
                 resizeObserver: a,
@@ -64,7 +64,7 @@ function c(e, t) {
                 listenerMap: n
             }),
             (0, r.jsx)('div', {
-                ref: R,
+                ref: O,
                 className: s()(_, {
                     [u.fade]: I,
                     [u.customTheme]: m,

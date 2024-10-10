@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(271668),
     A = n(404295),
     N = n(931981),
-    O = n(326133),
-    R = n(570220),
+    R = n(326133),
+    O = n(570220),
     v = n(28546),
     C = n(805680),
     L = n(151574),
@@ -61,7 +61,7 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em, eT, eS;
-        let { textValue: eg, richValue: eA, className: eN, innerClassName: eO, editorClassName: eR, id: ev, required: eC, disabled: eL, placeholder: ey, accessibilityLabel: eD, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e5 } = e;
+        let { textValue: eg, richValue: eA, className: eN, innerClassName: eR, editorClassName: eO, id: ev, required: eC, disabled: eL, placeholder: ey, accessibilityLabel: eD, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e5 } = e;
         u()(null != eM, 'chat input type must be set');
         let { analyticsLocations: e6 } = (0, T.ZP)(m.Z.CHANNEL_TEXT_AREA),
             e7 = (function (e) {
@@ -186,8 +186,8 @@ t.Z = i.memo(
                 );
             })(e9, eg, eA),
             {
-                submitting: tO,
-                submit: tR,
+                submitting: tR,
+                submit: tO,
                 handleSubmit: tv
             } = (function (e, t, a, s) {
                 let [o, l] = i.useState(!1),
@@ -263,7 +263,7 @@ t.Z = i.memo(
                 };
             })();
         let tD =
-            ((ep = tR),
+            ((ep = tO),
             (eI = eM),
             (em = e9),
             i.useCallback(
@@ -400,7 +400,7 @@ t.Z = i.memo(
             })(eM, tA, e9);
         (0, K.S)(tA, eb.guild_id, eb.id);
         let tY = null != ex,
-            tj = (tu && !((to || tl) && t_)) || (tO && (null === (el = eM.submit) || void 0 === el ? void 0 : el.useDisabledStylesOnSubmit)),
+            tj = (tu && !((to || tl) && t_)) || (tR && (null === (el = eM.submit) || void 0 === el ? void 0 : el.useDisabledStylesOnSubmit)),
             tW = null;
         null != ta ? (tW = null == ew ? void 0 : ew(ta, ts, eo.attachButton)) : (!tu || td) && (tW = null == eU ? void 0 : eU(tY, eo.attachButton));
         let tK = tf && null != eA && !tu && eM.showCharacterCount && null == ta,
@@ -415,7 +415,7 @@ t.Z = i.memo(
             tQ = (0, N.e)(eb),
             tX = null != ta || null != ex || tQ,
             t$ = !!(null === (eu = eM.emojis) || void 0 === eu ? void 0 : eu.button) && tw <= 44;
-        return (0, r.jsx)(R.f6, {
+        return (0, r.jsx)(O.f6, {
             value: tA,
             children: (0, r.jsxs)(T.Gt, {
                 value: e6,
@@ -452,7 +452,7 @@ t.Z = i.memo(
                             (0, r.jsxs)('div', {
                                 ref: te,
                                 onScroll: tU,
-                                className: s()(eO, {
+                                className: s()(eR, {
                                     [eo.scrollableContainer]: !0,
                                     [eo.themedBackground]: !e2,
                                     [eo.hasConnectedBar]: tX
@@ -507,7 +507,7 @@ t.Z = i.memo(
                                                     onBlur: eB,
                                                     onFocus: eF,
                                                     onKeyDown: eV,
-                                                    onSubmit: tR,
+                                                    onSubmit: tO,
                                                     onTab: tG,
                                                     onEnter: tk,
                                                     onMoveSelection: tB,
@@ -523,7 +523,7 @@ t.Z = i.memo(
                                                             [eo.textAreaThreadCreation]: eM === z.I.THREAD_CREATION,
                                                             [eo.profileBioInput]: eM === z.I.PROFILE_BIO_INPUT
                                                         },
-                                                        eR
+                                                        eO
                                                     ),
                                                     'aria-labelledby': e$
                                                 })
@@ -547,7 +547,7 @@ t.Z = i.memo(
                                       channel: eb,
                                       canOnlyUseTextCommands: tY
                                   }),
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(R.Z, {
                                 ref: tC,
                                 channel: eb,
                                 canMentionRoles: ej,
@@ -561,7 +561,7 @@ t.Z = i.memo(
                                 type: eM,
                                 targetRef: e7,
                                 editorRef: e9,
-                                onSendMessage: tR,
+                                onSendMessage: tO,
                                 onSendSticker: tM,
                                 onVisibilityChange: tH,
                                 editorHeight: tw,

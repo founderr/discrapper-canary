@@ -41,7 +41,7 @@ let p = {
     }
 };
 t.Z = s.memo(function (e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: S, onMouseLeave: g, onFocus: A, onBlur: N, pulse: O, sparkle: R, notification: v, 'aria-label': C, 'aria-expanded': L, 'aria-haspopup': y, 'aria-controls': D } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: S, onMouseLeave: g, onFocus: A, onBlur: N, pulse: R, sparkle: O, notification: v, 'aria-label': C, 'aria-expanded': L, 'aria-haspopup': y, 'aria-controls': D } = e,
         b = (0, _.Q)('ChannelTextAreaButton'),
         M = (0, c.useTransition)(null != I, {
             ...p,
@@ -74,7 +74,7 @@ t.Z = s.memo(function (e) {
         'aria-controls': D,
         disabled: n,
         className: l()(t, { [h.active]: T }),
-        innerClassName: l()(h.button, r, { [h.pulseButton]: O }),
+        innerClassName: l()(h.button, r, { [h.pulseButton]: R }),
         onClick: m,
         onMouseEnter: S,
         onMouseLeave: g,
@@ -107,7 +107,7 @@ t.Z = s.memo(function (e) {
                                 className: l()(h.buttonWrapper, i),
                                 children: P({
                                     component: (0, a.jsx)(o, {
-                                        className: l()(h.icon, s, { [h.pulseIcon]: O }),
+                                        className: l()(h.icon, s, { [h.pulseIcon]: R }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -116,7 +116,7 @@ t.Z = s.memo(function (e) {
                         )
                       : void 0;
             }),
-            R &&
+            O &&
                 (0, a.jsxs)('div', {
                     className: h.sparkleContainer,
                     children: [(0, a.jsx)(f.Z, { className: h.sparkleStar }), (0, a.jsx)(E.Z, { className: h.sparklePlus })]

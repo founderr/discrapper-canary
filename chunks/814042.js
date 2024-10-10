@@ -34,20 +34,20 @@ let A = () => (0, h.f)(!1),
                 location_stack: N
             });
         }, [N]);
-        let O = (0, d.N)(),
-            R = (0, c.Ng)(),
-            v = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
-            C = null != O || null != R;
+        let R = (0, d.N)(),
+            O = (0, c.Ng)(),
+            v = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
+            C = null != R || null != O;
         return (0, r.jsxs)('div', {
             className: s()(S.upsellWrapper, { [S.unifyTrialUpsell]: C }),
             children: [
                 C
                     ? (0, r.jsx)(_.ZP, {
-                          trialOffer: O,
-                          discountOffer: R,
+                          trialOffer: R,
+                          discountOffer: O,
                           onClose: A,
                           type: m.cd.STICKER_PICKER_UPSELL,
-                          subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : m.Si.TIER_2,
+                          subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : m.Si.TIER_2,
                           children: v
                               ? T.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
                                     planName: (0, f.aq)(m.Xh.PREMIUM_MONTH_TIER_0),

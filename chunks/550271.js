@@ -25,126 +25,126 @@ var i = n(496532),
     g = n(718572),
     A = n(496223),
     N = n(846262),
-    O = n(926372),
-    R = n(116175);
+    R = n(926372),
+    O = n(116175);
 let v = (e) => {
     let { badge: t, primaryTintColor: n, secondaryTintColor: v, ...C } = e;
     switch (t) {
-        case R.ZD.SWORD:
+        case O.ZD.SWORD:
             return (0, r.jsx)(g.o, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.WATER_DROP:
+        case O.ZD.WATER_DROP:
             return (0, r.jsx)(N.l, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.SKULL:
+        case O.ZD.SKULL:
             return (0, r.jsx)(p.F, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.TOADSTOOL:
+        case O.ZD.TOADSTOOL:
             return (0, r.jsx)(A.j, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.MOON:
+        case O.ZD.MOON:
             return (0, r.jsx)(f.V, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.LIGHTNING:
+        case O.ZD.LIGHTNING:
             return (0, r.jsx)(E.$, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.LEAF:
+        case O.ZD.LEAF:
             return (0, r.jsx)(_.N, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.HEART:
+        case O.ZD.HEART:
             return (0, r.jsx)(c.K, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.FIRE:
+        case O.ZD.FIRE:
             return (0, r.jsx)(s.e, {
                 primaryTintColor: n,
                 ...C
             });
-        case R.ZD.COMPASS:
+        case O.ZD.COMPASS:
             return (0, r.jsx)(i._, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.CROSSHAIRS:
+        case O.ZD.CROSSHAIRS:
             return (0, r.jsx)(a.U, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.FLOWER:
+        case O.ZD.FLOWER:
             return (0, r.jsx)(o.P, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.FORCE:
+        case O.ZD.FORCE:
             return (0, r.jsx)(l.S, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.GEM:
+        case O.ZD.GEM:
             return (0, r.jsx)(u.j, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.LAVA:
+        case O.ZD.LAVA:
             return (0, r.jsx)(d.x, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.PSYCHIC:
+        case O.ZD.PSYCHIC:
             return (0, r.jsx)(h.y, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.SMOKE:
+        case O.ZD.SMOKE:
             return (0, r.jsx)(I.l, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.SNOW:
+        case O.ZD.SNOW:
             return (0, r.jsx)(m.W, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.SOUND:
+        case O.ZD.SOUND:
             return (0, r.jsx)(T.J, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.SUN:
+        case O.ZD.SUN:
             return (0, r.jsx)(S.O, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C
             });
-        case R.ZD.WIND:
-            return (0, r.jsx)(O.z, {
+        case O.ZD.WIND:
+            return (0, r.jsx)(R.z, {
                 primaryTintColor: n,
                 secondaryTintColor: v,
                 ...C

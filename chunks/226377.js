@@ -5,40 +5,40 @@ r.d(t, {
 });
 var n = r(899517),
     a = r(622916),
-    o = r(101284),
-    i = r(263449),
-    _ = r(255768),
+    _ = r(101284),
+    o = r(263449),
+    i = r(255768),
     E = r(696486),
-    s = r(152228),
-    c = r(366569),
+    c = r(152228),
+    s = r(366569),
     I = r(147498);
 function u(e, t) {
     let r = (0, n.Y)('globalMetricsAggregators', () => new WeakMap()),
         a = r.get(e);
     if (a) return a;
-    let o = new t(e);
-    return e.on('flush', () => o.flush()), e.on('close', () => o.close()), r.set(e, o), o;
+    let _ = new t(e);
+    return e.on('flush', () => _.flush()), e.on('close', () => _.close()), r.set(e, _), _;
 }
-function l(e, t, r, n, o = {}) {
-    let s = o.client || (0, i.s3)();
-    if (!s) return;
-    let c = (0, E.HN)(),
-        I = c ? (0, E.Gx)(c) : void 0,
+function l(e, t, r, n, _ = {}) {
+    let c = _.client || (0, o.s3)();
+    if (!c) return;
+    let s = (0, E.HN)(),
+        I = s ? (0, E.Gx)(s) : void 0,
         l = I && (0, E.XU)(I).description,
-        { unit: R, tags: A, timestamp: T } = o,
-        { release: d, environment: N } = s.getOptions(),
-        p = {};
-    d && (p.release = d),
-        N && (p.environment = N),
-        l && (p.transaction = l),
-        _.X && a.kg.log(`Adding value of ${n} to ${t} metric ${r}`),
-        u(s, e).add(
+        { unit: R, tags: A, timestamp: T } = _,
+        { release: N, environment: d } = c.getOptions(),
+        O = {};
+    N && (O.release = N),
+        d && (O.environment = d),
+        l && (O.transaction = l),
+        i.X && a.kg.log(`Adding value of ${n} to ${t} metric ${r}`),
+        u(c, e).add(
             t,
             r,
             n,
             R,
             {
-                ...p,
+                ...O,
                 ...A
             },
             T
@@ -60,25 +60,25 @@ let A = {
     },
     timing: function (e, t, r, n = 'second', a) {
         if ('function' == typeof r) {
-            let n = (0, o.ph)();
-            return (0, s.V0)(
+            let n = (0, _.ph)();
+            return (0, c.V0)(
                 {
                     op: 'metrics.timing',
                     name: t,
                     startTime: n,
                     onlyIfParent: !0
                 },
-                (i) =>
-                    (0, c.i)(
+                (o) =>
+                    (0, s.i)(
                         () => r(),
                         () => {},
                         () => {
-                            let r = (0, o.ph)();
+                            let r = (0, _.ph)();
                             R(e, t, r - n, {
                                 ...a,
                                 unit: 'second'
                             }),
-                                i.end(r);
+                                o.end(r);
                         }
                     )
             );

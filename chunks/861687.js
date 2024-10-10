@@ -28,8 +28,8 @@ var r,
     g = n(710845),
     A = n(811660),
     N = n(42352),
-    O = n(148959),
-    R = n(926951),
+    R = n(148959),
+    O = n(926951),
     v = n(868616),
     C = n(848886),
     L = n(583215),
@@ -287,7 +287,7 @@ class eo extends E.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((w.Z.supports(er.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let { enabled: e, fullname: n } = R.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
+            let { enabled: e, fullname: n } = O.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
             e && t.push(n);
         }
         this._selectedExperiments = t;
@@ -868,7 +868,7 @@ class eo extends E.Z {
     }
     _handleBandwidthEstimationExperiment(e) {
         this._bandwidthEstimationExperiment = e;
-        let t = R.Z.getMediaEngineExperiments(e);
+        let t = O.Z.getMediaEngineExperiments(e);
         if (null !== t && 0 !== t.length) {
             var n;
             null === (n = this._connection) || void 0 === n || n.setBandwidthEstimationExperiments(t);
@@ -1244,12 +1244,12 @@ class eo extends E.Z {
                 });
         } else
             i === er.Yn.STREAM &&
-                ((this._goLiveQualityManager = new O.Z(!1)),
-                this._goLiveQualityManager.on(O.y.RequestedSSRCsUpdate, (e, t, n) => {
+                ((this._goLiveQualityManager = new R.Z(!1)),
+                this._goLiveQualityManager.on(R.y.RequestedSSRCsUpdate, (e, t, n) => {
                     var r;
                     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
                 }),
-                this._goLiveQualityManager.on(O.y.RequestedStreamsUpdate, (e) => {
+                this._goLiveQualityManager.on(R.y.RequestedStreamsUpdate, (e) => {
                     if (this.state === en.hes.RTC_CONNECTED && null != this._socket) {
                         var t;
                         this.logger.info('Go Live Media sink wants: '.concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e);

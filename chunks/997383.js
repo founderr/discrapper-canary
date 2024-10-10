@@ -46,8 +46,8 @@ function N(e, t, n) {
         e
     );
 }
-let O = Object.freeze({});
-function R(e, t) {
+let R = Object.freeze({});
+function O(e, t) {
     var n, r;
     if (!t.frecencyBoosters) return {};
     let i = _.Z.getFrequentlyWithoutFetchingLatest(),
@@ -151,7 +151,7 @@ class v {
     }
     queryTextChannels(e, t) {
         if (!this._include(g.h8.TEXT_CHANNEL)) return [];
-        let n = R(g.h8.TEXT_CHANNEL, this.options),
+        let n = O(g.h8.TEXT_CHANNEL, this.options),
             { blacklist: r } = this.options,
             i = null != r ? (e) => !r.has('channel:'.concat(e.id)) : void 0;
         return p.ZP.queryChannels({
@@ -166,7 +166,7 @@ class v {
     queryVoiceChannels(e, t) {
         if (!this._include(g.h8.VOICE_CHANNEL)) return [];
         let { voiceChannelGuildFilter: n } = this.options,
-            r = R(g.h8.VOICE_CHANNEL, this.options);
+            r = O(g.h8.VOICE_CHANNEL, this.options);
         return p.ZP.queryChannels({
             query: e,
             guildId: n,
@@ -178,7 +178,7 @@ class v {
     }
     queryGuilds(e, t) {
         if (!this._include(g.h8.GUILD)) return [];
-        let n = R(g.h8.GUILD, this.options),
+        let n = O(g.h8.GUILD, this.options),
             { blacklist: r } = this.options,
             i = null != r ? (e) => !r.has('guild:'.concat(e.id)) : void 0;
         return p.ZP.queryGuilds({
@@ -193,12 +193,12 @@ class v {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(g.h8.USER)) return;
         let { userFilters: i } = this.options;
-        void 0 !== t && I.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, R(g.h8.USER, this.options));
+        void 0 !== t && I.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, O(g.h8.USER, this.options));
     }
     queryGroupDMs(e, t) {
         if (!this._include(g.h8.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            r = R(g.h8.GROUP_DM, this.options),
+            r = O(g.h8.GROUP_DM, this.options),
             i = null != n ? (e) => !n.has('channel:'.concat(e.id)) : void 0;
         return p.ZP.queryGroupDMs({
             query: e,
@@ -247,9 +247,9 @@ class v {
               })
             : [];
     }
-    constructor(e, t, n = 100, r = O) {
+    constructor(e, t, n = 100, r = R) {
         N(this, 'query', ''),
-            N(this, 'options', O),
+            N(this, 'options', R),
             N(this, 'results', []),
             N(this, '_userResults', []),
             N(this, '_groupDMResults', []),

@@ -59,8 +59,8 @@ var r = n(990547),
     g = n(48854),
     A = n(835873),
     N = n(973616),
-    O = n(314897),
-    R = n(592125),
+    R = n(314897),
+    O = n(592125),
     v = n(430824),
     C = n(496675),
     L = n(594174),
@@ -96,7 +96,7 @@ function z(e, t) {
 async function q(e) {
     var t, n;
     let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: _, sectionName: E, source: f, partyId: h, onExecutedCallback: p } = e,
-        m = R.Z.getChannel(r),
+        m = O.Z.getChannel(r),
         A = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
     if (null == A && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n)) return !1;
     let N = (0, g.r)();
@@ -209,7 +209,7 @@ async function Q(e) {
         )
             return !1;
     }
-    let c = R.Z.getChannel(r),
+    let c = O.Z.getChannel(r),
         I = null != i ? v.Z.getGuild(i) : null;
     return (
         null != c &&
@@ -254,18 +254,18 @@ async function Q(e) {
 async function X(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: l } = e,
-        u = O.default.getSessionId(),
+        u = R.default.getSessionId(),
         c = L.default.getCurrentUser();
     if (null == n) return !1;
     let d = await (0, k.Z)(n, i);
     if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
-    let _ = R.Z.getChannel(i);
+    let _ = O.Z.getChannel(i);
     if (null == _ || null == c || null == d) return !1;
     let E =
         null != i
             ? (0, B.e4)({
                   channelId: i,
-                  ChannelStore: R.Z,
+                  ChannelStore: O.Z,
                   GuildStore: v.Z,
                   PermissionStore: C.Z,
                   VoiceStateStore: y.Z
@@ -480,7 +480,7 @@ async function er(e) {
             },
             i
         );
-    null != R.Z.getChannel(n) && c.Z.sendInvite(n, a.code, i, null);
+    null != O.Z.getChannel(n) && c.Z.sendInvite(n, a.code, i, null);
 }
 async function ei(e) {
     let { channelId: t, applicationId: n, userId: r, location: i } = e,
@@ -493,7 +493,7 @@ async function ei(e) {
             i
         );
     o.Z.ensurePrivateChannel(r).then((e) => {
-        null != R.Z.getChannel(e) && c.Z.sendInvite(e, a.code, i, null);
+        null != O.Z.getChannel(e) && c.Z.sendInvite(e, a.code, i, null);
     });
 }
 function ea() {

@@ -21,8 +21,8 @@ var i = n(481060),
     f = n(981631);
 let h = 'apply-guild-boost-modal';
 async function p(e) {
-    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: I, numberOfBoostsToAdd: m, onClose: T, closeLayer: S, onSubscriptionConfirmation: g, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: O, inPopout: R, applicationId: v } = e,
-        C = R ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
+    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: I, numberOfBoostsToAdd: m, onClose: T, closeLayer: S, onSubscriptionConfirmation: g, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: R, inPopout: O, applicationId: v } = e,
+        C = O ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         L = l.default.getCurrentUser();
     if (null == L) return;
     if (!L.verified) {
@@ -91,9 +91,9 @@ async function p(e) {
             },
             totalNumberOfSlotsToAssign: null != m ? m : 1,
             onCloseModal: M,
-            disablePremiumUpsell: O,
+            disablePremiumUpsell: R,
             onSubscriptionConfirmation: g,
-            inPopout: R,
+            inPopout: O,
             applicationId: v
         });
 }

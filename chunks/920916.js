@@ -30,8 +30,8 @@ var r = n(735250),
     g = n(25990),
     A = n(594174),
     N = n(272008),
-    O = n(497505),
-    R = n(918701),
+    R = n(497505),
+    O = n(918701),
     v = n(475595),
     C = n(566078),
     L = n(114732),
@@ -50,7 +50,7 @@ function U(e) {
         m = i.useRef(null),
         [T, S] = i.useState(null),
         g = i.useRef(new o.qA()),
-        R = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
+        O = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         C = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         y = i.useMemo(() => (0, v.fh)(l, v.Bd.HERO), [l]),
         b = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -58,7 +58,7 @@ function U(e) {
     i.useEffect(() => {
         !b &&
             !0 !== I &&
-            (0, N.QB)(l.id, O.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
                 .then(() => U('claimed'))
                 .catch(() => U('error'));
     }, [l, d, b, I]);
@@ -97,7 +97,7 @@ function U(e) {
                             })
                 })
             }),
-            !R &&
+            !O &&
                 !b &&
                 'claimed' === P &&
                 (0, r.jsx)(p.Z, {
@@ -112,7 +112,7 @@ function U(e) {
 function w(e) {
     let { quest: t } = e,
         n = i.useMemo(() => (0, v.fh)(t, v.Bd.LOGO_TYPE, 'dark'), [t]),
-        a = C.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM];
+        a = C.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
     return (0, r.jsxs)('div', {
         className: M.additionalRedemptionInstructions,
         children: [
@@ -131,7 +131,7 @@ function w(e) {
 }
 function x(e) {
     let { quest: t, user: n, decoration: i, decorationName: a, primaryColor: s, secondaryColor: o, backgroundUrl: l, isSaving: u, onClose: d, onConfirm: _ } = e,
-        E = (0, R.Kr)(t.config),
+        E = (0, O.Kr)(t.config),
         h =
             null == E
                 ? b.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({ decorationName: a })
@@ -198,7 +198,7 @@ function x(e) {
                             onClick: _,
                             children: b.Z.Messages.COLLECTIBLES_USE_NOW
                         }),
-                        (0, R.zK)(t, y.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(w, { quest: t })
+                        (0, O.zK)(t, y.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(w, { quest: t })
                     ]
                 })
             })
@@ -208,7 +208,7 @@ function x(e) {
 function G(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u, preview: c } = e,
-        _ = i.useMemo(() => (0, R.xn)(a.config), [a]),
+        _ = i.useMemo(() => (0, O.xn)(a.config), [a]),
         [f, p] = (function (e) {
             let { product: t, isFetching: n } = (0, h.T)(e),
                 {} = (0, S.Z)({}),
@@ -220,7 +220,7 @@ function G(e) {
             return [r, () => (null == r ? Promise.reject() : ((0, d.cV)(r), P()))];
         })(null !== (n = null == _ ? void 0 : _.skuId) && void 0 !== n ? n : null);
     if (null == _) return null;
-    let I = (0, R.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
+    let I = (0, O.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
     return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || I
         ? (0, r.jsx)(U, {
               onClose: o,

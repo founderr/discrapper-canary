@@ -27,11 +27,11 @@ function d(e) {
             secondaryColor: null
         };
     let N = null == E ? void 0 : E.getPreviewThemeColors(f),
-        O = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : (0, r._i)(g),
-        R = null !== (n = null == N ? void 0 : N[1]) && void 0 !== n ? n : (0, r._i)(A);
+        R = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : (0, r._i)(g),
+        O = null !== (n = null == N ? void 0 : N[1]) && void 0 !== n ? n : (0, r._i)(A);
     return {
-        theme: m ? I : null !== (d = (0, u.V3)(O)) && void 0 !== d ? d : I,
-        primaryColor: O,
-        secondaryColor: R
+        theme: m ? I : null !== (d = (0, u.V3)(R)) && void 0 !== d ? d : I,
+        primaryColor: R,
+        secondaryColor: O
     };
 }

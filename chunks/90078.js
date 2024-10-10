@@ -29,14 +29,14 @@ function c(e) {
         g = T[1],
         A = r.useState(null),
         N = A[0],
-        O = A[1];
+        R = A[1];
     r.useEffect(
         function () {
             (0, a.k$)(p, S);
         },
         [p, S]
     );
-    var R = r.useMemo(
+    var O = r.useMemo(
             function () {
                 return {
                     placement: n,
@@ -53,7 +53,7 @@ function c(e) {
             },
             [n, d, h, E, N]
         ),
-        v = (0, s.D)(f || m, S, R),
+        v = (0, s.D)(f || m, S, O),
         C = v.state,
         L = v.styles,
         y = v.forceUpdate,
@@ -68,13 +68,13 @@ function c(e) {
                     isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
                         style: L.arrow,
-                        ref: O
+                        ref: R
                     },
                     forceUpdate: y || o,
                     update: D || l
                 };
             },
-            [g, O, n, C, L, D, y]
+            [g, R, n, C, L, D, y]
         );
     return (0, a.$p)(I)(b);
 }

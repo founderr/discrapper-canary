@@ -1,12 +1,12 @@
 n.d(t, {
     NE: function () {
-        return O;
+        return R;
     },
     QN: function () {
         return g;
     },
     Qf: function () {
-        return R;
+        return O;
     },
     TY: function () {
         return v;
@@ -156,7 +156,7 @@ let I = (e) => {
                       })
         });
     },
-    O = (e) => {
+    R = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         c.default.track(h.rMx.USER_PROFILE_BADGE_PRESSED, {
             ...(0, r.hH)(t),
@@ -167,7 +167,7 @@ let I = (e) => {
             badge: a
         });
     },
-    R = (e) => {
+    O = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         c.default.track(h.rMx.USER_PROFILE_BADGE_HOVERED, {
             ...(0, r.hH)(t),

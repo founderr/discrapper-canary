@@ -104,7 +104,7 @@ class N extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let O = new N(c.Z, {
+let R = new N(c.Z, {
     POGGERMODE_UPDATE_COMBO: function (e) {
         let { type: t, ...n } = e;
         if (!f.Z.isEnabled()) return !1;
@@ -136,13 +136,13 @@ let O = new N(c.Z, {
                                                 value: 0,
                                                 multiplier: 1
                                             }),
-                                            O.emitChange());
+                                            R.emitChange());
                                 } else
                                     e({
                                         ...t,
                                         value: t.value - 1
                                     }),
-                                        O.emitChange();
+                                        R.emitChange();
                             }
                         }));
         })(n);
@@ -181,4 +181,4 @@ let O = new N(c.Z, {
         return !1;
     }
 });
-t.ZP = O;
+t.ZP = R;

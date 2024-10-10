@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(642549),
@@ -47,8 +47,8 @@ function N(e, t, n, r) {
     let i = Math.min((n - r) / 200, 1);
     return 1 === i ? [t, !1] : [(0, d.BM)(e, t, i), !0];
 }
-function O(e) {
-    let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: O, onDrag: R, onDragStart: v, onDragEnd: C } = e,
+function R(e) {
+    let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: R, onDrag: O, onDragStart: v, onDragEnd: C } = e,
         { ref: L, width: y } = (0, u.Z)(),
         D = i.useMemo(() => {
             var e;
@@ -97,7 +97,7 @@ function O(e) {
             }, [n, r]);
         })(n, y),
         P = i.useRef(m),
-        U = i.useRef(O),
+        U = i.useRef(R),
         w = i.useRef(null),
         x = window.devicePixelRatio,
         {
@@ -125,7 +125,7 @@ function O(e) {
                 lastInactiveFillColor: f,
                 inactiveFillColor: h
             };
-        })(m, O);
+        })(m, R);
     i.useEffect(() => {
         let e = S({
             showAll: !m,
@@ -162,7 +162,7 @@ function O(e) {
                         a = b.current;
                     if (null == r || null == i || null == a) return;
                     let s = !1;
-                    (P.current !== m || U.current !== O) && ((P.current = m), (U.current = O), (w.current = n)), null != w.current && n > w.current + 200 && (w.current = null);
+                    (P.current !== m || U.current !== R) && ((P.current = m), (U.current = R), (w.current = n)), null != w.current && n > w.current + 200 && (w.current = null);
                     let o = r.height / x;
                     i.clearRect(0, 0, r.width, r.height), i.beginPath();
                     let [l, u] = N(G, k, n, w.current);
@@ -203,10 +203,10 @@ function O(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [L, x, M, y, a, d, m, O, G, k, B, F, V, H]);
+        }, [L, x, M, y, a, d, m, R, G, k, B, F, V, H]);
     let [, Z] = (0, c.Z)({
         ref: L,
-        onDrag: R,
+        onDrag: O,
         onDragStart: v,
         onDragEnd: C
     });

@@ -43,8 +43,8 @@ var r = n(470079),
     g = n(630388),
     A = n(823379),
     N = n(960048),
-    O = n(709054),
-    R = n(223683),
+    R = n(709054),
+    O = n(223683),
     v = n(630114),
     C = n(506712),
     L = n(468788),
@@ -196,7 +196,7 @@ async function k(e, t) {
                     };
                 }),
             n = {
-                num_unread_guilds_before: O.default.keys(e).filter((e) => p.default.hasUnread(e)).length,
+                num_unread_guilds_before: R.default.keys(e).filter((e) => p.default.hasUnread(e)).length,
                 unmuted_server_ids: t.filter((e) => T.ZP.isMuted(e.plan.guildId)).map((e) => e.plan.guildId)
             };
         return () => {
@@ -207,7 +207,7 @@ async function k(e, t) {
                     .filter((e) => e.mode === y.AR.UseGreyDot)
                     .map((e) => e.guildId),
                 final_selected_server_ids: t.map((e) => e.plan.guildId),
-                num_unread_guids_after: O.default.keys(e).filter((e) => p.default.hasUnread(e)).length,
+                num_unread_guids_after: R.default.keys(e).filter((e) => p.default.hasUnread(e)).length,
                 num_tiny_servers_selected: t.filter((e) => e.memberCount <= 20).length,
                 num_small_servers_selected: t.filter((e) => e.memberCount > 20 && e.memberCount <= 200).length,
                 num_medium_servers_selected: t.filter((e) => e.memberCount > 200 && e.memberCount <= 1000).length,
@@ -266,7 +266,7 @@ async function F(e) {
     return await e();
 }
 async function V() {
-    let e = await (0, R.Tn)();
+    let e = await (0, O.Tn)();
     e.length > 0
         ? (await (function () {
               return new Promise((e) => {
@@ -279,12 +279,12 @@ async function V() {
                       onCancel: () => e(!1)
                   });
               });
-          })()) && (0, R.dt)(e)
-        : (0, R.$U)('Backup from '.concat(new Date().toLocaleDateString()));
+          })()) && (0, O.dt)(e)
+        : (0, O.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 async function H() {
     o.K.set('turnedOffNewNotifications', !0), S.default.track(D.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(I.Z.getGuilds()).filter((e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length });
-    let e = await (0, R.Tn)(),
+    let e = await (0, O.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
@@ -297,7 +297,7 @@ async function H() {
                 onCancel: () => {}
             })
         ),
-            await (0, R.xx)(e.id),
+            await (0, O.xx)(e.id),
             await c.Z.setAccountFlag(L.c.USE_NEW_NOTIFICATIONS, !1);
     } else await c.Z.setAccountFlag(L.c.USE_NEW_NOTIFICATIONS, !1);
 }

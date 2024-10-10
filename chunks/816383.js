@@ -53,9 +53,9 @@ var a = (function () {
         for (var S = [], g = [], A = 0; A < f.length - 1; A++) {
             s = _[A];
             var N = f[A],
-                O = 1 / d[A],
-                R = N + f[A + 1] - s - s;
-            S.push((s - N - R) * O), g.push(R * O * O);
+                R = 1 / d[A],
+                O = N + f[A + 1] - s - s;
+            S.push((s - N - O) * R), g.push(O * R * R);
         }
         (this.xs = e), (this.ys = t), (this.c1s = f), (this.c2s = S), (this.c3s = g);
     }

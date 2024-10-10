@@ -33,8 +33,8 @@ var r,
     g = n(158776),
     A = n(885110),
     N = n(594174),
-    O = n(981631),
-    R = n(689938);
+    R = n(981631),
+    O = n(689938);
 function v(e, t, n) {
     return (
         t in e
@@ -52,21 +52,21 @@ let C = 'everyone',
     L = 0;
 function y(e, t, n, r) {
     switch (t) {
-        case O.Skl.ONLINE:
-        case O.Skl.OFFLINE:
-        case O.Skl.UNKNOWN:
+        case R.Skl.ONLINE:
+        case R.Skl.OFFLINE:
+        case R.Skl.UNKNOWN:
             return {
                 type: 'GROUP',
                 key: t,
                 id: t,
                 get title() {
                     switch (t) {
-                        case O.Skl.ONLINE:
-                            return R.Z.Messages.STATUS_ONLINE;
-                        case O.Skl.OFFLINE:
-                            return R.Z.Messages.STATUS_OFFLINE;
+                        case R.Skl.ONLINE:
+                            return O.Z.Messages.STATUS_ONLINE;
+                        case R.Skl.OFFLINE:
+                            return O.Z.Messages.STATUS_OFFLINE;
                         default:
-                            return R.Z.Messages.STATUS_UNKNOWN;
+                            return O.Z.Messages.STATUS_UNKNOWN;
                     }
                 },
                 count: n,
@@ -111,14 +111,14 @@ function b(e) {
         ? C
         : null == t.memberListId
           ? (function (e) {
-                return f.oz(O.Plq.VIEW_CHANNEL, e)
+                return f.oz(R.Plq.VIEW_CHANNEL, e)
                     ? C
                     : u()
                           .v3(
                               o()(e.permissionOverwrites)
                                   .reduce((e, t) => {
                                       let { id: n, allow: r, deny: i } = t;
-                                      return c.e$(r, O.Plq.VIEW_CHANNEL) ? e.push('allow:'.concat(n)) : c.e$(i, O.Plq.VIEW_CHANNEL) && e.push('deny:'.concat(n)), e;
+                                      return c.e$(r, R.Plq.VIEW_CHANNEL) ? e.push('allow:'.concat(n)) : c.e$(i, R.Plq.VIEW_CHANNEL) && e.push('deny:'.concat(n)), e;
                                   }, [])
                                   .sort()
                                   .join(',')
@@ -207,7 +207,7 @@ let P = new (class e {
             null == r &&
                 ((r = new M(e, t)).setGroups([
                     {
-                        id: O.Skl.UNKNOWN,
+                        id: R.Skl.UNKNOWN,
                         count: 0
                     }
                 ]),

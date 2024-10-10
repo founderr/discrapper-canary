@@ -1,12 +1,12 @@
-var n = s(565580);
+var r = n(565580);
 e.exports = function (e, t) {
-    var s = -1,
-        r = e.length,
-        o = r - 1;
-    for (t = void 0 === t ? r : t; ++s < t; ) {
-        var i = n(s, o),
-            a = e[i];
-        (e[i] = e[s]), (e[s] = a);
+    var n = -1,
+        i = e.length,
+        a = i - 1;
+    for (t = void 0 === t ? i : t; ++n < t; ) {
+        var s = r(n, a),
+            o = e[s];
+        (e[s] = e[n]), (e[n] = o);
     }
     return (e.length = t), e;
 };

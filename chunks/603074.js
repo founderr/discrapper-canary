@@ -22,7 +22,7 @@ var r = n(735250),
     T = n(526617),
     S = n(126857);
 function g(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: O, shouldShowUpsell: R = !0, gridNotice: v, inExpressionPicker: C, soundButtonOverlay: L, listPadding: y, renderHeader: D, defaultSoundsOnly: b } = e,
+    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: R, shouldShowUpsell: O = !0, gridNotice: v, inExpressionPicker: C, soundButtonOverlay: L, listPadding: y, renderHeader: D, defaultSoundsOnly: b } = e,
         M = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
         P = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
         { analyticsLocations: U } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
@@ -55,8 +55,8 @@ function g(e) {
                       onClose: g,
                       onSelect: A,
                       containerWidth: a,
-                      suppressPlaySound: O,
-                      shouldShowUpsell: R,
+                      suppressPlaySound: R,
+                      shouldShowUpsell: O,
                       gridNotice: v,
                       soundButtonOverlay: L,
                       listPadding: y,

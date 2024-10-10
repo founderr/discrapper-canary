@@ -20,13 +20,13 @@ var r = n(735250),
     g = n(80006),
     A = n(587061),
     N = n(392358),
-    O = n(981631);
+    R = n(981631);
 n(81693);
-let R = new Set([O.Z5c.LOGIN, O.Z5c.REGISTER]);
+let O = new Set([R.Z5c.LOGIN, R.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
     (0, S.ZD)({ skipsSettingDefaultPageTitle: a });
-    let { clientThemesClassName: O, clientThemesCSS: v } = (0, E.ZP)(),
+    let { clientThemesClassName: R, clientThemesCSS: v } = (0, E.ZP)(),
         C = i.createElement('style', { [E.PQ]: !0 }, v);
     return (0, r.jsxs)(o.ql, {
         children: [
@@ -38,9 +38,9 @@ t.Z = i.memo(function (e) {
                     a = (0, c.e7)([m.Z], () => m.Z.isFocused(), []),
                     { reducedMotion: o } = i.useContext(_.AccessibilityPreferencesContext),
                     { accessibilitySettings: d, appWrapperClassName: E } = (0, g.I)(),
-                    { fontScale: S, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: y } = d,
+                    { fontScale: S, fontScaleClass: R, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: y } = d,
                     D = (0, l.TH)(),
-                    b = i.useMemo(() => R.has(D.pathname), [D.pathname]);
+                    b = i.useMemo(() => O.has(D.pathname), [D.pathname]);
                 (0, A.Z)(window, b);
                 let M = (0, N.Z)(window, __OVERLAY__ || a),
                     P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
@@ -67,10 +67,10 @@ t.Z = i.memo(function (e) {
                         },
                         (0, _.getThemeClass)(n),
                         (0, T.Z)(),
-                        O
+                        R
                     )
                 });
-            })(O),
+            })(R),
             (function () {
                 let [e, t] = i.useState([]);
                 return (

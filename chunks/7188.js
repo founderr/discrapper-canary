@@ -50,9 +50,9 @@ function A(e) {
             null != T && (0, u.Z)(T.getGuildId(), T.id, p.jXE.STREAM_SETTINGS);
         }, [T]);
     if (null == n || null == T) return null;
-    let O = S;
+    let R = S;
     return (
-        !t && !_ && (O = g),
+        !t && !_ && (R = g),
         (0, r.jsx)(s.Popout, {
             position: 'top',
             renderPopout: (e) => {
@@ -73,7 +73,7 @@ function A(e) {
                 (0, r.jsx)(h.Z, {
                     ...e,
                     label: m.Z.Messages.STREAMER_SETTINGS_TITLE,
-                    iconComponent: O,
+                    iconComponent: R,
                     ...o
                 })
         })

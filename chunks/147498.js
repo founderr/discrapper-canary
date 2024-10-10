@@ -3,13 +3,13 @@ r.d(t, {
         return n;
     },
     RF: function () {
-        return _;
-    },
-    g_: function () {
         return i;
     },
-    is: function () {
+    g_: function () {
         return o;
+    },
+    is: function () {
+        return _;
     },
     uG: function () {
         return a;
@@ -17,6 +17,6 @@ r.d(t, {
 });
 let n = 'c',
     a = 'g',
-    o = 's',
-    i = 'd',
-    _ = 5000;
+    _ = 's',
+    o = 'd',
+    i = 5000;

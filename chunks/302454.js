@@ -72,8 +72,8 @@ var t, n;
                             }
                             if (null == c || null == d) throw Error("Could not find a matching rule for the below content. The rule with highest `order` should always match content provided to it. Check the definition of `match` for '" + r[r.length - 1] + "'. It seems to not match the following source:\n" + t);
                             if (d.index) throw Error('`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?');
-                            var O = c.parse(d, u, s);
-                            Array.isArray(O) ? Array.prototype.push.apply(o, O) : (null == O.type && (O.type = l), o.push(O)), (s.prevCapture = d), (t = t.substring(s.prevCapture[0].length));
+                            var R = c.parse(d, u, s);
+                            Array.isArray(R) ? Array.prototype.push.apply(o, R) : (null == R.type && (R.type = l), o.push(R)), (s.prevCapture = d), (t = t.substring(s.prevCapture[0].length));
                         }
                         return o;
                     },
@@ -116,7 +116,7 @@ var t, n;
                 var i = '';
                 for (var a in (n = n || {})) {
                     var s = n[a];
-                    Object.prototype.hasOwnProperty.call(n, a) && s && (i += ' ' + O(a) + '="' + O(s) + '"');
+                    Object.prototype.hasOwnProperty.call(n, a) && s && (i += ' ' + R(a) + '="' + R(s) + '"');
                 }
                 var o = '<' + e + i + '>';
                 return r ? o + t + '</' + e + '>' : o;
@@ -142,14 +142,14 @@ var t, n;
                 '/': '&#x2F;',
                 '`': '&#96;'
             },
-            O = function (e) {
+            R = function (e) {
                 return String(e).replace(A, function (e) {
                     return N[e];
                 });
             },
-            R = /\\([^0-9A-Za-z\s])/g,
+            O = /\\([^0-9A-Za-z\s])/g,
             v = function (e) {
-                return e.replace(R, '$1');
+                return e.replace(O, '$1');
             },
             C = function (e, t, n) {
                 var r = n.inline || !1;
@@ -357,7 +357,7 @@ var t, n;
                     },
                     html: function (e, t, n) {
                         var r = e.lang ? 'markdown-code-' + e.lang : void 0,
-                            i = T('code', O(e.content), { class: r });
+                            i = T('code', R(e.content), { class: r });
                         return T('pre', i);
                     }
                 },
@@ -790,7 +790,7 @@ var t, n;
                         return m('code', n.key, { children: e.content });
                     },
                     html: function (e, t, n) {
-                        return T('code', O(e.content));
+                        return T('code', R(e.content));
                     }
                 },
                 br: {
@@ -815,7 +815,7 @@ var t, n;
                         return e.content;
                     },
                     html: function (e, t, n) {
-                        return O(e.content);
+                        return R(e.content);
                     }
                 }
             },
@@ -875,7 +875,7 @@ var t, n;
             defaultReactOutput: X,
             defaultHtmlOutput: $,
             preprocess: d,
-            sanitizeText: O,
+            sanitizeText: R,
             sanitizeUrl: g,
             unescapeUrl: v,
             htmlTag: T,

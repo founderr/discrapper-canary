@@ -6,10 +6,10 @@ n.d(t, {
         return T;
     },
     Fr: function () {
-        return R;
+        return O;
     },
     Fz: function () {
-        return O;
+        return R;
     },
     Ko: function () {
         return _;
@@ -220,10 +220,10 @@ function A(e) {
 function N() {
     return g.clearCache();
 }
-function O(e) {
+function R(e) {
     return null != e ? E[e] : null;
 }
-function R(e, t) {
+function O(e, t) {
     let n = c.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!c.KA4.test(t.type)) && !0;
 }

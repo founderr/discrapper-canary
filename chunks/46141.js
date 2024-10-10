@@ -15,7 +15,7 @@ n.d(t, {
         return _;
     },
     U4: function () {
-        return O;
+        return R;
     },
     Vg: function () {
         return f;
@@ -48,7 +48,7 @@ n.d(t, {
         return I;
     },
     u_: function () {
-        return R;
+        return O;
     },
     z: function () {
         return S;
@@ -147,14 +147,14 @@ class u extends r.Z {
             case o.HeQ.GOPAY_WALLET:
                 return new N({ ...r });
             case o.HeQ.BANCONTACT:
-                return new O({ ...r });
+                return new R({ ...r });
             case o.HeQ.IDEAL:
                 return new p({
                     ...r,
                     bank: e.bank
                 });
             case o.HeQ.CASH_APP:
-                return new R({
+                return new O({
                     ...r,
                     username: e.username
                 });
@@ -191,13 +191,13 @@ class u extends r.Z {
             case o.HeQ.GOPAY_WALLET:
                 return new N(e);
             case o.HeQ.BANCONTACT:
-                return new O(e);
+                return new R(e);
             case o.HeQ.EPS:
                 return new h(e);
             case o.HeQ.IDEAL:
                 return new p(e);
             case o.HeQ.CASH_APP:
-                return new R(e);
+                return new O(e);
             default:
                 (0, s.vE)(t);
         }
@@ -296,12 +296,12 @@ class N extends u {
         if ((super(e), e.type !== o.HeQ.GOPAY_WALLET)) throw Error('Cannot instantiate GoPayWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GOPAY_WALLET));
     }
 }
-class O extends u {
+class R extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.BANCONTACT)) throw Error('Cannot instantiate BancontactSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.BANCONTACT));
     }
 }
-class R extends u {
+class O extends u {
     constructor(e) {
         if ((super(e), l(this, 'username', void 0), e.type !== o.HeQ.CASH_APP)) throw Error('Cannot instantiate Cashapp with type: '.concat(e.type, ', must be ').concat(o.HeQ.CASH_APP));
         this.username = e.username || '';

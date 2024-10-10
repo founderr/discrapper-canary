@@ -21,13 +21,13 @@ n.d(t, {
         return p;
     },
     c6: function () {
-        return O;
+        return R;
     },
     m9: function () {
         return A;
     },
     mT: function () {
-        return R;
+        return O;
     },
     rC: function () {
         return N;
@@ -169,7 +169,7 @@ function N(e) {
     let { categoryId: t } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function O(e) {
+function R(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
         search_type: o ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
@@ -182,7 +182,7 @@ function O(e) {
         category_id: s
     });
 }
-function R(e) {
+function O(e) {
     let t = l.Z.getLoadId(e);
     E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,

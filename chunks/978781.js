@@ -29,8 +29,8 @@ var r,
     g = n(572397),
     A = n(705262),
     N = n(436774),
-    O = n(768762),
-    R = n(197115),
+    R = n(768762),
+    O = n(197115),
     v = n(727939),
     C = n(981631),
     L = n(921944),
@@ -123,11 +123,11 @@ function U(e) {
                             size: d.Button.Sizes.NONE,
                             onClick: c,
                             'aria-label': E,
-                            children: (0, a.jsx)(O.Z, { direction: O.Z.Directions.LEFT })
+                            children: (0, a.jsx)(R.Z, { direction: R.Z.Directions.LEFT })
                         })
                     }),
                     r &&
-                        (0, a.jsx)(R.Z, {
+                        (0, a.jsx)(O.Z, {
                             className: b.footerButton,
                             subscriptionTier: y.Si.TIER_2,
                             showGradient: !0,

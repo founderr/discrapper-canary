@@ -1,9 +1,9 @@
 r.d(t, {
     $2: function () {
-        return _;
+        return i;
     },
     WD: function () {
-        return i;
+        return o;
     },
     cW: function () {
         return E;
@@ -11,13 +11,13 @@ r.d(t, {
 });
 var n,
     a,
-    o = r(573736);
-function i(e) {
+    _ = r(573736);
+function o(e) {
     return new E((t) => {
         t(e);
     });
 }
-function _(e) {
+function i(e) {
     return new E((t, r) => {
         r(e);
     });
@@ -93,7 +93,7 @@ class E {
     __init3() {
         this._setResult = (e, t) => {
             if (this._state === a.PENDING) {
-                if ((0, o.J8)(t)) {
+                if ((0, _.J8)(t)) {
                     t.then(this._resolve, this._reject);
                     return;
                 }

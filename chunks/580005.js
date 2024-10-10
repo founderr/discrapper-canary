@@ -87,7 +87,7 @@ function A() {
     );
 }
 let N = { pendingUsages: [] };
-class O extends (r = s.ZP.PersistedStore) {
+class R extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(E.Z, _.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && f.Xyh.test(e.key))), (N = e)), this.syncWith([u.Z], A);
     }
@@ -118,9 +118,9 @@ class O extends (r = s.ZP.PersistedStore) {
         return 100;
     }
 }
-p(O, 'displayName', 'FrecencyStore'),
-    p(O, 'persistKey', 'FrecencyStore'),
-    (t.Z = new O(o.Z, {
+p(R, 'displayName', 'FrecencyStore'),
+    p(R, 'persistKey', 'FrecencyStore'),
+    (t.Z = new R(o.Z, {
         CHANNEL_SELECT: g,
         VOICE_CHANNEL_SELECT: g,
         USER_SETTINGS_PROTO_UPDATE: function (e) {

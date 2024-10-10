@@ -52,8 +52,8 @@ var i = n(442837),
     g = n(5192),
     A = n(51144),
     N = n(377668),
-    O = n(689938),
-    R = n(124158),
+    R = n(689938),
+    O = n(124158),
     v = n(554034);
 function C(e) {
     let { emoji: t } = e;
@@ -105,20 +105,20 @@ function D(e) {
         let e = u || l.isPomelo() ? null : '#'.concat(l.discriminator);
         return (0, r.jsx)(a.Tooltip, {
             text: (0, r.jsxs)('div', {
-                className: R.userTooltip,
+                className: O.userTooltip,
                 children: [
                     (0, r.jsx)(o.Z, {
                         user: l,
                         animate: !0,
                         size: a.AvatarSizes.SIZE_16,
-                        className: R.avatar
+                        className: O.avatar
                     }),
                     A.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
                     (0, r.jsx)('span', {
-                        className: R.discriminator,
+                        className: O.discriminator,
                         children: e
                     })
                 ]
@@ -142,7 +142,7 @@ function b(e) {
         o = (0, i.e7)([l.Z], () => l.Z.roleStyle);
     if (null == s)
         return (0, r.jsxs)('span', {
-            children: ['@', O.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
+            children: ['@', R.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
         });
     let u = null != s.color && 0 !== s.color;
     return (0, r.jsxs)(E.Z, {
@@ -162,12 +162,12 @@ function b(e) {
 function M(e) {
     let { id: t } = e,
         n = (0, i.e7)([p.Z], () => p.Z.getChannel(t)),
-        a = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
+        a = R.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
         s = 'text',
         o = !0;
     if (null != n) {
         var l;
-        (a = (0, c.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, S.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
+        (a = (0, c.YO)(n) ? n.name : R.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, S.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
     }
     return o
         ? (0, r.jsx)(E.Z, {

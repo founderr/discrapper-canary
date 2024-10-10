@@ -1,45 +1,45 @@
 r.d(t, {
     U: function () {
-        return i;
+        return o;
     },
     h: function () {
-        return _;
+        return i;
     }
 });
 var n = r(370336),
     a = r(967752);
-function o(e) {
+function _(e) {
     let t = e.protocol ? `${e.protocol}:` : '',
         r = e.port ? `:${e.port}` : '';
     return `${t}//${e.host}${r}${e.path ? `/${e.path}` : ''}/api/`;
 }
-function i(e, t, r) {
-    var a, i, _;
+function o(e, t, r) {
+    var a, o, i;
     return (
         t ||
-        `${((a = e), `${o(a)}${a.projectId}/envelope/`)}?${
-            ((i = e),
-            (_ = r),
+        `${((a = e), `${_(a)}${a.projectId}/envelope/`)}?${
+            ((o = e),
+            (i = r),
             (0, n._j)({
-                sentry_key: i.publicKey,
+                sentry_key: o.publicKey,
                 sentry_version: '7',
-                ...(_ && { sentry_client: `${_.name}/${_.version}` })
+                ...(i && { sentry_client: `${i.name}/${i.version}` })
             }))
         }`
     );
 }
-function _(e, t) {
+function i(e, t) {
     let r = (0, a.vK)(e);
     if (!r) return '';
-    let n = `${o(r)}embed/error-page/`,
-        i = `dsn=${(0, a.RA)(r)}`;
+    let n = `${_(r)}embed/error-page/`,
+        o = `dsn=${(0, a.RA)(r)}`;
     for (let e in t) {
         if ('dsn' !== e && 'onClose' !== e)
             if ('user' === e) {
                 let e = t.user;
                 if (!e) continue;
-                e.name && (i += `&name=${encodeURIComponent(e.name)}`), e.email && (i += `&email=${encodeURIComponent(e.email)}`);
-            } else i += `&${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`;
+                e.name && (o += `&name=${encodeURIComponent(e.name)}`), e.email && (o += `&email=${encodeURIComponent(e.email)}`);
+            } else o += `&${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`;
     }
-    return `${n}?${i}`;
+    return `${n}?${o}`;
 }

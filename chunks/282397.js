@@ -23,9 +23,9 @@ function N(e) {
     if (null == e) return !1;
     let n = T[e];
     if (null == n) return !1;
-    null === (t = n.onSuccess) || void 0 === t || t.call(n), O(e);
+    null === (t = n.onSuccess) || void 0 === t || t.call(n), R(e);
 }
-function O(e) {
+function R(e) {
     if (null != A[e]) {
         delete A[e];
         return;
@@ -42,7 +42,7 @@ function O(e) {
             interaction: t
         });
 }
-class R extends (a = u.ZP.Store) {
+class O extends (a = u.ZP.Store) {
     getInteraction(e) {
         let t = S[e.id];
         return null != t ? T[t] : null;
@@ -67,7 +67,7 @@ class R extends (a = u.ZP.Store) {
     }
 }
 (l = 'InteractionStore'),
-    (o = 'displayName') in (s = R)
+    (o = 'displayName') in (s = O)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -75,7 +75,7 @@ class R extends (a = u.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.ZP = new R(c.Z, {
+    (t.ZP = new O(c.Z, {
         LOGOUT: function () {
             (T = {}),
                 (S = {}),
@@ -118,7 +118,7 @@ class R extends (a = u.ZP.Store) {
             if (null == o) return !1;
             null === (t = o.onFailure) || void 0 === t || t.call(o, r, i, a, s),
                 o.data.interactionType === _.B8.APPLICATION_COMMAND
-                    ? O(n)
+                    ? R(n)
                     : (T[n] = {
                           ...o,
                           state: p.F.FAILED,
@@ -133,13 +133,13 @@ class R extends (a = u.ZP.Store) {
                 var n;
                 let e = T[t.nonce];
                 if (null == e) return !1;
-                null === (n = e.onSuccess) || void 0 === n || n.call(e), O(t.nonce);
+                null === (n = e.onSuccess) || void 0 === n || n.call(e), R(t.nonce);
             }
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (null == f.Z.getChannel(t)) return !1;
-            for (let [e, t] of Object.entries(T)) t.state === p.F.FAILED && O(e);
+            for (let [e, t] of Object.entries(T)) t.state === p.F.FAILED && R(e);
         },
         INTERACTION_IFRAME_MODAL_CREATE: function (e) {
             let { application: t, nonce: n } = e;
@@ -165,6 +165,6 @@ class R extends (a = u.ZP.Store) {
                 s = r.find((e) => e.user_id === a && e.session_id === i);
             if (null == s || null == s.nonce) return;
             let o = A[s.nonce];
-            if ((null == o ? ((t = g[s.nonce]), (n = T[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) O(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
+            if ((null == o ? ((t = g[s.nonce]), (n = T[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) R(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
         }
     }));

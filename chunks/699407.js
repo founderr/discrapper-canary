@@ -49,13 +49,13 @@ let _ = 1500,
             return 0 !== p.length && (null != i ? null != r : null != c());
         }
         function N() {
-            null == a && A() && (a = E(O, { timeout: _ }));
+            null == a && A() && (a = E(R, { timeout: _ }));
         }
-        function O() {
+        function R() {
             if (((a = null), !A())) return;
             let e = p.slice();
             (p = []),
-                R(e).then(
+                O(e).then(
                     () => {
                         e.forEach((e) => {
                             var t;
@@ -69,7 +69,7 @@ let _ = 1500,
                     }
                 );
         }
-        function R(e) {
+        function O(e) {
             let t = Date.now(),
                 n = e.map((e) => ({
                     ...e,
@@ -92,10 +92,10 @@ let _ = 1500,
             return null != t && (r = t), null != n.id && (i = n.id), N(), !1;
         }),
             (h.handleConnectionClosed = function () {
-                return O(), (r = null), (i = null), !1;
+                return R(), (r = null), (i = null), !1;
             }),
             (h.handleFingerprint = function () {
-                return O(), !1;
+                return R(), !1;
             }),
             (h.handleTrack = function (e) {
                 let { event: t, properties: n, flush: r, fingerprint: a, resolve: s } = e;
@@ -118,7 +118,7 @@ let _ = 1500,
                                 return null != t ? (0, o.s)(t) : null;
                             })(u);
                         null != d && (u.properties.client_uuid = f.generate(d)), p.push(u);
-                        p.length > 10000 && (p = p.slice(-10000)), r ? O() : N();
+                        p.length > 10000 && (p = p.slice(-10000)), r ? R() : N();
                     }),
                     !1
                 );
@@ -128,7 +128,7 @@ let _ = 1500,
                 null != g && this.waitFor(...g);
             }
             constructor(...e) {
-                super(...e), d(this, 'submitEventsImmediately', R);
+                super(...e), d(this, 'submitEventsImmediately', O);
             }
         }
         return d(v, 'displayName', 'AnalyticsTrackingStore'), new v(n, s);

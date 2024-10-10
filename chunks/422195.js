@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(419922),
     A = n(981631),
     N = n(957825),
-    O = n(689938),
-    R = n(193599);
+    R = n(689938),
+    O = n(193599);
 let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     C = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     L = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
@@ -52,16 +52,16 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 'aria-setsize': b,
                                 'aria-posinset': a,
                                 children: (0, r.jsx)(l.Clickable, {
-                                    'aria-label': O.Z.Messages.CATEGORY_FAVORITE,
-                                    className: s()(R.stickerCategory, R.stickerCategoryGeneric, {
-                                        [R.stickerCategoryGenericDisabled]: D && !I,
-                                        [R.stickerCategoryGenericSelected]: !p && I && 0 === t
+                                    'aria-label': R.Z.Messages.CATEGORY_FAVORITE,
+                                    className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
+                                        [O.stickerCategoryGenericDisabled]: D && !I,
+                                        [O.stickerCategoryGenericSelected]: !p && I && 0 === t
                                     }),
                                     onClick: o,
                                     children: (0, r.jsx)(l.StarIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: R.stickerCategoryGenericIcon,
+                                        className: O.stickerCategoryGenericIcon,
                                         height: y,
                                         width: y
                                     })
@@ -77,16 +77,16 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 'aria-setsize': b,
                                 'aria-posinset': a,
                                 children: (0, r.jsx)(l.Clickable, {
-                                    'aria-label': O.Z.Messages.STICKER_PICKER_CATEGORIES_RECENT,
-                                    className: s()(R.stickerCategory, R.stickerCategoryGeneric, {
-                                        [R.stickerCategoryGenericDisabled]: D && !L,
-                                        [R.stickerCategoryGenericSelected]: !p && L && t === v
+                                    'aria-label': R.Z.Messages.STICKER_PICKER_CATEGORIES_RECENT,
+                                    className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
+                                        [O.stickerCategoryGenericDisabled]: D && !L,
+                                        [O.stickerCategoryGenericSelected]: !p && L && t === v
                                     }),
                                     onClick: o,
                                     children: (0, r.jsx)(l.ClockIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: R.stickerCategoryGenericIcon,
+                                        className: O.stickerCategoryGenericIcon,
                                         height: y,
                                         width: y
                                     })
@@ -127,7 +127,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 (0, r.jsx)(l.Tooltip, {
                                     position: 'right',
                                     text: G,
-                                    tooltipContentClassName: R.__invalid_tooltip,
+                                    tooltipContentClassName: O.__invalid_tooltip,
                                     children: (e) =>
                                         (0, r.jsx)('div', {
                                             role: 'listitem',
@@ -136,9 +136,9 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             children: (0, r.jsx)(l.Clickable, {
                                                 ...e,
                                                 'aria-label': G,
-                                                className: s()(R.stickerCategory, {
-                                                    [R.firstPartyCategory]: x,
-                                                    [R.firstPartyCategorySelected]: !p && M && x
+                                                className: s()(O.stickerCategory, {
+                                                    [O.firstPartyCategory]: x,
+                                                    [O.firstPartyCategorySelected]: !p && M && x
                                                 }),
                                                 onClick: () => {
                                                     P.type === T.Ih.PACK &&
@@ -154,7 +154,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             })
                                         })
                                 }),
-                                w ? (0, r.jsx)('hr', { className: R.guildCategorySeparator }, 'separator') : null
+                                w ? (0, r.jsx)('hr', { className: O.guildCategorySeparator }, 'separator') : null
                             ]
                         },
                         P.id
@@ -233,7 +233,7 @@ t.Z = (e) => {
             [f, h]
         );
     return (0, r.jsx)(E.Z, {
-        className: R.categoryList,
+        className: O.categoryList,
         categoryListRef: a,
         expressionsListRef: t,
         store: d.ZN,
@@ -247,7 +247,7 @@ t.Z = (e) => {
             m &&
             o &&
             (0, r.jsx)(l.Clickable, {
-                className: s()(R.standardStickerShortcut, { [R.invisibleShortcut]: !o }),
+                className: s()(O.standardStickerShortcut, { [O.invisibleShortcut]: !o }),
                 onClick: () => N(e),
                 children: (0, r.jsx)(l.StickerIcon, {
                     size: 'md',

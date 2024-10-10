@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(689938),
     h = n(459671);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: S = !1, applicationId: g, handleSubscribeModalClose: A, withHighlight: N = !1, ...O } = e,
-        { analyticsLocations: R } = (0, u.ZP)(),
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: S = !1, applicationId: g, handleSubscribeModalClose: A, withHighlight: N = !1, ...R } = e,
+        { analyticsLocations: O } = (0, u.ZP)(),
         v = (0, l.bp)() === E.IlC.POPOUT,
         [C, L] = i.useState(!1),
         y = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
@@ -22,7 +22,7 @@ t.Z = (e) => {
         b = async () => {
             L(!0),
                 await (0, _.u)({
-                    analyticsLocations: R,
+                    analyticsLocations: O,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
@@ -49,7 +49,7 @@ t.Z = (e) => {
                 P
             ]
         })),
-        (O.disabled = !0)),
+        (R.disabled = !0)),
     null != D)
         ? (0, r.jsx)(o.Tooltip, {
               text: D,
@@ -60,14 +60,14 @@ t.Z = (e) => {
                       disabled: !0,
                       size: o.Button.Sizes.SMALL,
                       pauseAnimation: S,
-                      ...O,
+                      ...R,
                       children: P
                   })
           })
         : (0, r.jsx)(o.ShinyButton, {
               size: o.Button.Sizes.SMALL,
-              ...O,
-              className: s()(O.className, { [h.buttonHighlighted]: N }),
+              ...R,
+              className: s()(R.className, { [h.buttonHighlighted]: N }),
               submitting: C,
               onClick: b,
               pauseAnimation: S,

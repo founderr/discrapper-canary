@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(609218),
     A = n(210887),
     N = n(626135),
-    O = n(176354),
-    R = n(74538),
+    R = n(176354),
+    O = n(74538),
     v = n(543241),
     C = n(149203),
     L = n(981631),
@@ -64,7 +64,7 @@ t.Z = (e) => {
     P = k === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == G ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : G.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : G.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let en = null != G ? G.emoji : void 0,
         er = null != en && en.animated,
-        ei = null != en && !O.ZP.isInternalEmojiForGuildId(en, null == x ? void 0 : x.getGuildId()),
+        ei = null != en && !R.ZP.isInternalEmojiForGuildId(en, null == x ? void 0 : x.getGuildId()),
         ea = null != en ? L.qAy.EMOJI : L.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
         !ee &&
@@ -78,7 +78,7 @@ t.Z = (e) => {
                     object: ea
                 },
                 location_stack: X,
-                sku_id: (0, R.Wz)(R.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
+                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
     }, [B, X, Q, er, ei, P, ea, ee]);
     let es = (0, o.e7)([E.Z], () => E.Z.affinities),
@@ -108,7 +108,7 @@ t.Z = (e) => {
                       object: ea
                   },
                   location_stack: X,
-                  sku_id: (0, R.Wz)(R.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
+                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
                   has_search_query: null != Q && '' !== Q,
                   is_animated: er
               }

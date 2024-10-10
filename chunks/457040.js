@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(626135),
     A = n(624138),
     N = n(191177),
-    O = n(285651),
-    R = n(217590),
+    R = n(285651),
+    O = n(217590),
     v = n(453070),
     C = n(926491),
     L = n(373228),
@@ -45,8 +45,8 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     W = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
     K = Y + 2 * W,
     z = j + 2 * W,
-    q = s()(R.Iw, 200),
-    Q = s()(R.m1, 200),
+    q = s()(O.Iw, 200),
+    Q = s()(O.m1, 200),
     X = i.forwardRef(function (e, t) {
         var a;
         let { containerWidth: s, channel: u, onSelectSticker: A, closePopout: Y } = e,
@@ -80,7 +80,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eI = eh.length + ep.length,
             em = i.useCallback(
                 (e) => {
-                    '' === en ? (0, R.On)(e) : (0, R.Yk)(e, en, eI), A(e.sticker, L.V0.STICKER_PICKER);
+                    '' === en ? (0, O.On)(e) : (0, O.Yk)(e, en, eI), A(e.sticker, L.V0.STICKER_PICKER);
                 },
                 [A, en, eI]
             ),
@@ -90,7 +90,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 rowCountBySection: eg,
                 stickersGrid: eA,
                 gutterWidth: eN,
-                columnCounts: eO
+                columnCounts: eR
             } = (0, v.el)({
                 filteredStickers: ed,
                 stickersCategories: ea,
@@ -100,7 +100,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickerNodeMargin: eT ? H : Z,
                 stickerNodeWidth: eT ? K : z
             }),
-            eR = i.useCallback(
+            eO = i.useCallback(
                 (e, t) => {
                     let { location: i } = t;
                     switch (e.type) {
@@ -119,7 +119,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 });
                             break;
                         case L.al.STICKER:
-                            null != e.sticker && (0, O.kl)(e.sticker, ec, u) && em(e);
+                            null != e.sticker && (0, R.kl)(e.sticker, ec, u) && em(e);
                     }
                 },
                 [j, ec, u, em]
@@ -131,10 +131,10 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 handleGridContainerKeyDown: ey,
                 isUsingKeyboardNavigation: eD
             } = (0, y.t)({
-                columnCounts: eO,
+                columnCounts: eR,
                 stickersListRef: J,
                 stickersGrid: eA,
-                onGridItemSelect: eR,
+                onGridItemSelect: eO,
                 store: f.ZN,
                 setInspectedStickerPosition: f.ZN.setInspectedExpressionPosition,
                 gridNavigatorId: x.Vr
@@ -152,7 +152,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [...ef.values()].forEach((e) => {
                     r += e.length;
                 }),
-                (0, R.ev)({
+                (0, O.ev)({
                     containerWidth: s,
                     favoriteStickers: e_,
                     frequentlyUsedStickers: eE,
@@ -161,7 +161,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 });
         };
         i.useEffect(() => {
-            '' === ei.current && '' !== en && (0, R.n8)(), (ei.current = en);
+            '' === ei.current && '' !== en && (0, O.n8)(), (ei.current = en);
         }, [en]),
             i.useEffect(() => {
                 0 === eI ? q(en) : Q(en, eI, er);

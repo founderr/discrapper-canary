@@ -30,10 +30,10 @@ function c(e, t, n) {
         S = (0, r.zL)(e, { labelable: !0 }),
         g = -1;
     null != t.selectedValue ? t.selectedValue === o && (g = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (g = 0), _ && (g = void 0);
-    let { name: A, descriptionId: N, errorMessageId: O, validationBehavior: R } = u.get(t);
+    let { name: A, descriptionId: N, errorMessageId: R, validationBehavior: O } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
-        (0, a.Q)({ validationBehavior: R }, t, n),
+        (0, a.Q)({ validationBehavior: O }, t, n),
         {
             labelProps: (0, r.dG)(p, { onClick: (e) => e.preventDefault() }),
             inputProps: (0, r.dG)(S, {
@@ -42,13 +42,13 @@ function c(e, t, n) {
                 name: A,
                 tabIndex: g,
                 disabled: _,
-                required: t.isRequired && 'native' === R,
+                required: t.isRequired && 'native' === O,
                 checked: E,
                 value: o,
                 onChange: (e) => {
                     e.stopPropagation(), t.setSelectedValue(o);
                 },
-                'aria-describedby': [e['aria-describedby'], t.isInvalid ? O : null, N].filter(Boolean).join(' ') || void 0
+                'aria-describedby': [e['aria-describedby'], t.isInvalid ? R : null, N].filter(Boolean).join(' ') || void 0
             }),
             isDisabled: _,
             isSelected: E,
@@ -80,10 +80,10 @@ function d(e, t) {
             onFocusWithin: e.onFocus,
             onFocusWithinChange: e.onFocusChange
         }),
-        O = (0, r.Me)(n);
+        R = (0, r.Me)(n);
     return (
         u.set(t, {
-            name: O,
+            name: R,
             descriptionId: S.id,
             errorMessageId: g.id,
             validationBehavior: E

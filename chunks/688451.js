@@ -151,13 +151,13 @@ function N(e) {
     var t = e[H];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
-function O(e, t) {
+function R(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || I('ES5').S(t, e, i), i ? (n[H].P && (S(t), r(4)), a(e) && ((e = R(t, e)), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s)) : (e = R(t, n, [])), S(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
+    return t.h.O || I('ES5').S(t, e, i), i ? (n[H].P && (S(t), r(4)), a(e) && ((e = O(t, e)), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s)) : (e = O(t, n, [])), S(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
 }
-function R(e, t, n) {
+function O(e, t, n) {
     if (p(t)) return t;
     var r = t[H];
     if (!r)
@@ -189,13 +189,13 @@ function R(e, t, n) {
 }
 function v(e, t, n, r, s, o, c) {
     if (i(s)) {
-        var d = R(e, s, o && t && 3 !== t.i && !l(t.R, r) ? o.concat(r) : void 0);
+        var d = O(e, s, o && t && 3 !== t.i && !l(t.R, r) ? o.concat(r) : void 0);
         if ((u(n, r, d), !i(d))) return;
         e.m = !1;
     } else c && n.add(s);
     if (a(s) && !p(s)) {
         if (!e.h.D && e._ < 1) return;
-        R(e, s), (t && t.A.l) || C(e, s);
+        O(e, s), (t && t.A.l) || C(e, s);
     }
 }
 function C(e, t, n) {
@@ -403,13 +403,13 @@ var q = new ((function () {
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
                                   function (e) {
-                                      return T(l, i), O(e, l);
+                                      return T(l, i), R(e, l);
                                   },
                                   function (e) {
                                       throw (S(l), e);
                                   }
                               )
-                            : (T(l, i), O(s, l));
+                            : (T(l, i), R(s, l));
                     }
                     if (!e || 'object' != typeof e) {
                         if ((void 0 === (s = n(e)) && (s = e), s === F && (s = void 0), t.D && f(s, !0), i)) {
@@ -473,7 +473,7 @@ var q = new ((function () {
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[H]).A;
-                return T(n, t), O(void 0, n);
+                return T(n, t), R(void 0, n);
             }),
             (t.setAutoFreeze = function (e) {
                 this.D = e;

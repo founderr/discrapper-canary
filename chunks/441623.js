@@ -38,8 +38,8 @@ let S = T(),
     g = [],
     A = new Set(),
     N = {},
-    O = null;
-function R(e, t) {
+    R = null;
+function O(e, t) {
     let n = new Date(),
         r = new Date(e.getTime());
     r.setFullYear(t);
@@ -49,8 +49,8 @@ function R(e, t) {
     return a.setDate(r.getDate() + 7), n > i && n < a;
 }
 function v() {
-    if (null != O) {
-        y(O);
+    if (null != R) {
+        y(R);
         return;
     }
     if ((C(), !_.Z.hasConsented(I.pjP.PERSONALIZATION))) return;
@@ -64,7 +64,7 @@ function v() {
             if (E.Z.getRelationshipType(e) === I.OGo.FRIEND && null != r && r.affinity > 0 && null != t) {
                 var n;
                 let r = new Date(t);
-                if (!R((n = r), n.getFullYear()) && R(n, new Date().getFullYear())) g.push(e), (N[e] = { friendsSince: r });
+                if (!O((n = r), n.getFullYear()) && O(n, new Date().getFullYear())) g.push(e), (N[e] = { friendsSince: r });
             }
         }
         g.sort((e, t) => {
@@ -86,7 +86,7 @@ function y(e) {
     C();
     let { enabled: t } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
-    O = e;
+    R = e;
     let n = E.Z.getFriendIDs();
     a()
         .sampleSize(n, e)
@@ -137,7 +137,7 @@ class D extends (r = l.ZP.PersistedStore) {
         return null != S.messageGiftIntentLastShownMap[e];
     }
     getDevToolTotalFriendAnniversaries() {
-        return O;
+        return R;
     }
 }
 m(D, 'displayName', 'PremiumGiftingIntentStore'),
@@ -187,7 +187,7 @@ m(D, 'displayName', 'PremiumGiftingIntentStore'),
         DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: function (e) {
             let { total: t } = e;
             if (null == t) {
-                (O = null), v();
+                (R = null), v();
                 return;
             }
             y(t);

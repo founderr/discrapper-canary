@@ -21,9 +21,9 @@ var l = n(497505),
     C = n(271074);
 function h(e) {
     let { quest: t, location: n, initiallyExpanded: h, contentPosition: _ } = e,
-        [g, T] = a.useState(!1),
-        p = a.useCallback(() => T(!0), []),
-        S = a.useCallback(() => T(!1), []),
+        [T, g] = a.useState(!1),
+        p = a.useCallback(() => g(!0), []),
+        S = a.useCallback(() => g(!1), []),
         j = (0, r.tP)(t),
         { containerRef: N, size: f, height: v } = (0, E.h)(),
         M = (0, o.q)({ location: x.dr.QUESTS_CARD }),
@@ -70,7 +70,7 @@ function h(e) {
                         },
                         children: [
                             (0, s.jsx)(m.Z, {
-                                isFocused: g,
+                                isFocused: T,
                                 isQuestExpired: j,
                                 location: n,
                                 quest: t,
@@ -87,7 +87,7 @@ function h(e) {
                                 isQuestExpired: j,
                                 location: n,
                                 size: f,
-                                isFocused: g,
+                                isFocused: T,
                                 isExpanded: R,
                                 isAnimating: q,
                                 contentPosition: _

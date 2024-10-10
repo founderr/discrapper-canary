@@ -16,7 +16,7 @@ var r = n(735250),
     _ = n(51144),
     E = n(711258);
 function f(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onClick: I, onFocus: m, size: T = u.AvatarSizes.SIZE_24, overflowCountVariant: S = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: O = !1, onUserPopoutClosed: R } = e,
+    let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onClick: I, onFocus: m, size: T = u.AvatarSizes.SIZE_24, overflowCountVariant: S = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: R = !1, onUserPopoutClosed: O } = e,
         [v, C] = i.useState(!1);
     function L() {
         return (0, r.jsx)(u.Dialog, {
@@ -31,10 +31,10 @@ function f(e) {
                             guildId: o,
                             channelId: f,
                             nick: _.ZP.getName(e),
-                            disablePopout: 'function' == typeof O ? O(e.id) : O,
+                            disablePopout: 'function' == typeof R ? R(e.id) : R,
                             ignoreModalClicks: !0,
                             onPopoutClose: () => {
-                                C(!1), null == R || R();
+                                C(!1), null == O || O();
                             },
                             onContextMenu: (t) =>
                                 (0, c.jW)(

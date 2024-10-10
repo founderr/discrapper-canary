@@ -22,7 +22,7 @@ let f = {},
 function N() {
     S = d.l4.getSetting();
 }
-class O extends (r = o.ZP.Store) {
+class R extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.default, _.Z), this.syncWith([c.default], () => !0), this.syncWith([_.Z], N);
         let e = l.K.get(T);
@@ -72,7 +72,7 @@ class O extends (r = o.ZP.Store) {
     }
 }
 (s = 'ChangelogStore'),
-    (a = 'displayName') in (i = O)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -80,7 +80,7 @@ class O extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new O(u.Z, {
+    (t.Z = new R(u.Z, {
         CHANGE_LOG_LOCK: function (e) {
             let { key: t } = e;
             if (A.has(t)) return !1;

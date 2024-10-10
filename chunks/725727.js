@@ -49,20 +49,20 @@ function I() {
                     : [...t, e]
             );
         }, []),
-        O = u.ZP.isPremiumExactly(t, h.p9.TIER_2),
-        R =
+        R = u.ZP.isPremiumExactly(t, h.p9.TIER_2),
+        O =
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
                 {
                     autoTrackExposure: !1,
-                    disable: O
+                    disable: R
                 }
-            ).enabled || O;
+            ).enabled || R;
     r.useEffect(() => {
         a.Z.wait(() => {
-            R && null == e && E.ZP.fetchActiveOutboundPromotions();
+            O && null == e && E.ZP.fetchActiveOutboundPromotions();
         });
-    }, [e, R]),
+    }, [e, O]),
         r.useEffect(() => {
             a.Z.wait(() => {
                 (0, _.t8)()
@@ -88,7 +88,7 @@ function I() {
             return !L.has(t.id);
         });
     return {
-        promotionsLoaded: T && (!R || null != e),
+        promotionsLoaded: T && (!O || null != e),
         activeOutboundPromotions: C,
         claimedEndedOutboundPromotions: y.filter((e) => (0, _.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: v,

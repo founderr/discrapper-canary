@@ -204,8 +204,8 @@ let A = d(
                     )
                 )
         }),
-    O = N(I(S)),
-    R = (e, t) => I((n) => T(n) && e <= n && t >= n),
+    R = N(I(S)),
+    O = (e, t) => I((n) => T(n) && e <= n && t >= n),
     v = (e) => I((t) => T(t) && t < e),
     C = (e) => I((t) => T(t) && t > e),
     L = (e) => I((t) => T(t) && t <= e),
@@ -216,7 +216,7 @@ let A = d(
     P = () => I((e) => T(e) && e < 0),
     U = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => U(h(e, R(t, n))),
+            between: (t, n) => U(h(e, O(t, n))),
             lt: (t) => U(h(e, v(t))),
             gt: (t) => U(h(e, C(t))),
             lte: (t) => U(h(e, L(t))),
@@ -380,8 +380,8 @@ var z = {
     select: m,
     any: A,
     _: A,
-    string: O,
-    between: R,
+    string: R,
+    between: O,
     lt: v,
     gt: C,
     lte: L,

@@ -237,14 +237,14 @@ class f {
                     g = 0 === S.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${S.join('|')}|[\\p{White_Space}]`, 'gu'),
                     A = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
                     N = new Map(A.map((e, t) => [e, t])),
-                    O = RegExp(`[${A.join('')}]`, 'g');
+                    R = RegExp(`[${A.join('')}]`, 'g');
                 return {
                     minusSign: E,
                     plusSign: f,
                     decimal: I,
                     group: T,
                     literals: g,
-                    numeral: O,
+                    numeral: R,
                     index: (e) => String(N.get(e))
                 };
             })(e, this.formatter, this.options, t)),

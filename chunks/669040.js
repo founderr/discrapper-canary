@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(551058),
     A = n(536442),
     N = n(775412),
-    O = n(48125),
-    R = n(104494),
+    R = n(48125),
+    O = n(104494),
     v = n(639119),
     C = n(53691),
     L = n(75145),
@@ -53,7 +53,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     ee = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     et = (e) => e + 2 * ee,
     en = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: O, channelGuildId: R, messageId: v, isBurstReaction: C, listHeaderClassName: y, activeSectionIndex: D, upsellGlowOpacity: b, emojiListRef: U } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: R, channelGuildId: O, messageId: v, isBurstReaction: C, listHeaderClassName: y, activeSectionIndex: D, upsellGlowOpacity: b, emojiListRef: U } = e,
             w = (0, f.O)(),
             x = i.useRef(Z.xAR),
             j = i.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -118,9 +118,9 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                 isScrolling: S,
                                 isUsingKeyboardNavigation: N,
                                 rowIndex: e,
-                                allowAnimatedEmoji: O,
+                                allowAnimatedEmoji: R,
                                 showEmojiFavoriteTooltip: er,
-                                channelGuildId: R,
+                                channelGuildId: O,
                                 category: i.sectionId,
                                 selectedItemClassName: K.__invalid_selectedItem,
                                 messageId: v,
@@ -134,7 +134,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                             e
                         );
                     }),
-                [a, E, o, j, en, u, p, m, S, N, O, er, R, v, C, U]
+                [a, E, o, j, en, u, p, m, S, N, R, er, O, v, C, U]
             );
         i.useEffect(
             () => () => {
@@ -253,7 +253,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             [ei, ea] = i.useState(!1),
             [es, eo] = i.useState(0),
             el = (0, v.N)(),
-            eu = (0, R.Ng)(),
+            eu = (0, O.Ng)(),
             ec = ei && !X && !u.tq,
             ed = null != el || null != eu,
             { enabled: e_ } = y.Gi.useExperiment(
@@ -263,7 +263,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                     disable: !ec || ed
                 }
             ),
-            { enabled: eE } = O.Z.useExperiment(
+            { enabled: eE } = R.Z.useExperiment(
                 { location: 'EmojiPickerList' },
                 {
                     autoTrackExposure: ec && null != el,
@@ -309,7 +309,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 setShowUpsell: ea,
                 setUpsellGlowOpacity: eo
             }),
-            eO = (0, S.Qs)({
+            eR = (0, S.Qs)({
                 activeCategoryIndex: Y,
                 isScrolling: H,
                 listRef: a,
@@ -325,11 +325,11 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             activeCategoryIndex: Y,
             listRef: a
         });
-        let eR = i.useCallback(
+        let eO = i.useCallback(
                 (e) => {
-                    eN(e), eO(e);
+                    eN(e), eR(e);
                 },
-                [eN, eO]
+                [eN, eR]
             ),
             ev = d.length > 0;
         return (
@@ -352,7 +352,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                               role: 'none presentation',
                               className: K.list,
                               listPadding: eh,
-                              onScroll: eR,
+                              onScroll: eO,
                               renderRow: ep,
                               renderSection: eI,
                               renderSectionHeader: em,

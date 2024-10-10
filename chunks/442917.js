@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(569545),
     A = n(74299),
     N = n(863908),
-    O = n(803647),
-    R = n(266910),
+    R = n(803647),
+    O = n(266910),
     v = n(788983),
     C = n(703656),
     L = n(937995),
@@ -160,7 +160,7 @@ class ei extends i.PureComponent {
                           streamId: t,
                           component: G.Z.getVideoComponent(),
                           mirror: o,
-                          children: (0, r.jsx)(R.Z, {
+                          children: (0, r.jsx)(O.Z, {
                               size: c.AvatarSizes.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               'aria-label': null == n ? void 0 : n.user.username
@@ -216,7 +216,7 @@ class ei extends i.PureComponent {
             }),
             er(this, 'handleStopStream', () => {
                 let { participantOnScreen: e } = this.props;
-                s()((0, ee._5)(e), 'cannot stop stream for non streamer'), (0, O.Z)(e.stream);
+                s()((0, ee._5)(e), 'cannot stop stream for non streamer'), (0, R.Z)(e.stream);
             }),
             er(this, 'handleHidePIP', () => {
                 let { channel: e } = this.props;

@@ -5,25 +5,25 @@ r.d(t, {
 });
 var n = r(448171),
     a = r(78355),
-    o = r(747677),
-    i = r(622916),
-    _ = r(454463),
+    _ = r(747677),
+    o = r(622916),
+    i = r(454463),
     E = r(878719),
-    s = r(163162),
-    c = r(463461);
+    c = r(163162),
+    s = r(463461);
 class I extends n.W {
     constructor(e) {
         let t = {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...e
             },
-            r = s.m9.SENTRY_SDK_SOURCE || (0, o.S)();
+            r = c.m9.SENTRY_SDK_SOURCE || (0, _.S)();
         (0, a.V)(t, 'browser', ['browser'], r),
             super(t),
             t.sendClientReports &&
-                s.m9.document &&
-                s.m9.document.addEventListener('visibilitychange', () => {
-                    'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
+                c.m9.document &&
+                c.m9.document.addEventListener('visibilitychange', () => {
+                    'hidden' === c.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
     eventFromException(e, t) {
@@ -34,10 +34,10 @@ class I extends n.W {
     }
     captureUserFeedback(e) {
         if (!this._isEnabled()) {
-            _.X && i.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
-        let t = (0, c.r)(e, {
+        let t = (0, s.r)(e, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
             tunnel: this.getOptions().tunnel

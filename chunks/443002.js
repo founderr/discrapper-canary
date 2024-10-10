@@ -21,7 +21,7 @@ var r = n(735250),
     A = n(429905);
 t.Z = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
-        [O, R] = i.useState(!0),
+        [R, O] = i.useState(!0),
         v = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
         { analyticsLocations: L } = (0, u.ZP)(),
@@ -101,7 +101,7 @@ t.Z = function (e) {
                                         (0, r.jsx)(_.Z, {
                                             guild: n,
                                             closeLayer: y,
-                                            onCtaVisibilityChange: R
+                                            onCtaVisibilityChange: O
                                         }),
                                         (0, r.jsx)(h.Z, { guild: n }),
                                         (0, r.jsx)(p.Z, { guild: n })
@@ -140,7 +140,7 @@ t.Z = function (e) {
                 }),
                 (0, r.jsx)(f.Z, {
                     guild: n,
-                    isVisible: !O,
+                    isVisible: !R,
                     closeLayer: y
                 })
             ]

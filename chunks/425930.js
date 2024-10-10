@@ -1,21 +1,21 @@
 r.d(t, {
     N: function () {
-        return o;
+        return _;
     }
 });
 var n = r(370336),
     a = r(263449);
-function o(e, t = {}, r = (0, a.nZ)()) {
-    let { message: o, name: i, email: _, url: E, source: s, associatedEventId: c, tags: I } = e,
+function _(e, t = {}, r = (0, a.nZ)()) {
+    let { message: _, name: o, email: i, url: E, source: c, associatedEventId: s, tags: I } = e,
         u = {
             contexts: {
                 feedback: (0, n.Jr)({
-                    contact_email: _,
-                    name: i,
-                    message: o,
+                    contact_email: i,
+                    name: o,
+                    message: _,
                     url: E,
-                    source: s,
-                    associated_event_id: c
+                    source: c,
+                    associated_event_id: s
                 })
             },
             type: 'feedback',

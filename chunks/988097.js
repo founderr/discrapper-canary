@@ -1,6 +1,6 @@
 r.d(t, {
     $J: function () {
-        return o;
+        return _;
     },
     E1: function () {
         return E;
@@ -9,30 +9,30 @@ r.d(t, {
         return I;
     },
     S3: function () {
-        return i;
+        return o;
     },
     TE: function () {
         return a;
     },
     Wb: function () {
-        return s;
+        return c;
     },
     Zj: function () {
         return n;
     },
     ju: function () {
-        return _;
+        return i;
     },
     p6: function () {
-        return c;
+        return s;
     }
 });
 let n = 'sentry.source',
     a = 'sentry.sample_rate',
-    o = 'sentry.op',
-    i = 'sentry.origin',
-    _ = 'sentry.idle_span_finish_reason',
+    _ = 'sentry.op',
+    o = 'sentry.origin',
+    i = 'sentry.idle_span_finish_reason',
     E = 'sentry.measurement_unit',
-    s = 'sentry.measurement_value',
-    c = 'sentry.profile_id',
+    c = 'sentry.measurement_value',
+    s = 'sentry.profile_id',
     I = 'sentry.exclusive_time';

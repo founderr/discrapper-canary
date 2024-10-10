@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(496675),
     A = n(158776),
     N = n(979651),
-    O = n(6074),
-    R = n(981631),
+    R = n(6074),
+    O = n(981631),
     v = n(23952);
 let C = '14px';
 function L(e) {
@@ -89,9 +89,9 @@ let y = (e) => {
 };
 t.Z = (e) => {
     let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: D, hasQuest: b } = e,
-        M = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
+        M = null != t ? t.find((e) => e.type === O.IIU.CUSTOM_STATUS) : null,
         P = (0, o.e7)([T.default], () => T.default.getId() === (null == D ? void 0 : D.id)),
-        U = (0, o.e7)([p.Z], () => (P ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
+        U = (0, o.e7)([p.Z], () => (P ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === O.IIU.HANG_STATUS) : null)),
         w = (0, o.e7)([N.Z, S.Z], () => {
             var e;
             return null != U && null != D ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(D.id)) || void 0 === e ? void 0 : e.channelId) : null;
@@ -103,9 +103,9 @@ t.Z = (e) => {
             },
             { autoTrackExposure: !1 }
         ),
-        G = (0, E.Sl)(R.Ilk.BRAND_345),
+        G = (0, E.Sl)(O.Ilk.BRAND_345),
         k = null,
-        B = x && null != U && g.Z.can(R.Plq.CONNECT, w);
+        B = x && null != U && g.Z.can(O.Plq.CONNECT, w);
     B
         ? (k = (0, r.jsx)(I.Z, {
               className: s,
@@ -122,7 +122,7 @@ t.Z = (e) => {
           }));
     let F = (0, _.aK)('activity-status-web'),
         V = (0, o.e7)([A.Z], () => (null != D ? A.Z.getStatus(D.id) : null)),
-        H = null !== V && [R.Skl.OFFLINE, R.Skl.INVISIBLE].includes(V),
+        H = null !== V && [O.Skl.OFFLINE, O.Skl.INVISIBLE].includes(V),
         Z = (0, d.Z)(t, n, void 0, B, F),
         Y = null == Z ? void 0 : Z.activityText,
         j = null != Y && '' !== Y;
@@ -145,7 +145,7 @@ t.Z = (e) => {
                           color: G.hex
                       }),
                   null != t && t.some((e) => (0, c.Z)(e, B))
-                      ? (0, r.jsx)(O.Z, {
+                      ? (0, r.jsx)(R.Z, {
                             width: 16,
                             height: 16,
                             className: v.icon

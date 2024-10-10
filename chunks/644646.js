@@ -20,7 +20,7 @@ t.Z = function (e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: g = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         N = i.useMemo(() => (0, f.fh)(n, f.Bd.REWARD), [n]),
-        O = i.useCallback(
+        R = i.useCallback(
             (t) => {
                 var r;
                 (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -35,7 +35,7 @@ t.Z = function (e) {
             },
             [n.id, e]
         ),
-        R = (0, E.vI)(n, m.dr.QUESTS_BAR),
+        O = (0, E.vI)(n, m.dr.QUESTS_BAR),
         v = i.useRef(null),
         C = i.useRef(a);
     i.useEffect(() => {
@@ -89,15 +89,15 @@ t.Z = function (e) {
                   S.questRewardTileInteractive,
                   S.questRewardTile,
                   {
-                      [S.rewardHighlight]: R,
-                      [S.borderOverlay]: !R
+                      [S.rewardHighlight]: O,
+                      [S.borderOverlay]: !O
                   },
                   t
               ),
-              onClick: O,
+              onClick: R,
               children: [
                   L,
-                  R &&
+                  O &&
                       (0, r.jsx)(u.Shine, {
                           className: S.shine,
                           shineSize: u.ShineSizes.SMALL

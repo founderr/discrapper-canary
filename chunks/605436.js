@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     Gy: function () {
-        return O;
+        return R;
     },
     RD: function () {
         return H;
@@ -126,30 +126,30 @@ function A(e, t, n, i) {
 function N(e, t) {
     return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
 }
-function O(e, t) {
+function R(e, t) {
     return !N(e, t);
 }
-function R(e, t) {
+function O(e, t) {
     return !N(e.id, t.id);
 }
 function v(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !m(t) && A(n, t.id, r) && R(e, t) && i(t.name))
+        .filter((t) => !m(t) && A(n, t.id, r) && O(e, t) && i(t.name))
         .sort(S)
         .map((e) => T(e));
 }
 function C(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !m(t) && A(n, t.id, i) && R(e, t) && a(t.name))
+        .filter((t) => !m(t) && A(n, t.id, i) && O(e, t) && a(t.name))
         .sort(S)
         .map((e) => T(e, r.e$(e.permissions, i)));
 }
 function L(e, t, n, r, i) {
     var a, s, o, l, u;
     let c = [];
-    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && R(a, e)))).sort(S).map((e) => T(e))).length ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && O(a, e)))).sort(S).map((e) => T(e))).length ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
 function y(e, t, n, i, a) {
     var s, o, l, u, c;
@@ -162,7 +162,7 @@ function y(e, t, n, i, a) {
         (c = a),
         Object.values(o).filter((e) => {
             var t;
-            return m(e) || (!A(l, e.id, u, c) && R(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
+            return m(e) || (!A(l, e.id, u, c) && O(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
         }))
             .sort(S)
             .map((e) => T(e, r.e$(e.permissions, i)))).length

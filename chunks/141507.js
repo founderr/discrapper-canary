@@ -24,8 +24,8 @@ var r = n(735250),
     g = n(392552),
     A = n(543241),
     N = n(199257),
-    O = n(880949),
-    R = n(784222),
+    R = n(880949),
+    O = n(784222),
     v = n(149203),
     C = n(689938),
     L = n(5772);
@@ -50,17 +50,17 @@ let D = (e) => {
                 return null === (e = U[t]) || void 0 === e ? void 0 : e[n];
             }, [U, B]);
         switch (null == F ? void 0 : F.type) {
-            case R.ld.EMOJI:
+            case O.ld.EMOJI:
                 t = null == F ? void 0 : F.emoji;
                 break;
-            case R.ld.EXPAND_OR_COLLAPSE_EMOJIS:
+            case O.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 t = {
                     type: 'EXPAND_OR_COLLAPSE_EMOJI',
                     guildId: null == F ? void 0 : F.guildId,
                     allNamesString: null == F ? void 0 : F.name
                 };
                 break;
-            case R.ld.CREATE_EMOJI:
+            case O.ld.CREATE_EMOJI:
             default:
                 t = {
                     type: 'CREATE_EMOJI',
@@ -77,7 +77,7 @@ let D = (e) => {
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, N.Z)(w, x),
             q = t.id,
-            Q = (null == F ? void 0 : F.type) === R.ld.EMOJI ? F.subCategory : v.t0.NONE;
+            Q = (null == F ? void 0 : F.type) === O.ld.EMOJI ? F.subCategory : v.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
@@ -147,7 +147,7 @@ let D = (e) => {
         }
         let J =
             null != V
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(R.Z, {
                       className: L.__invalid_guildIcon,
                       guild: V,
                       shouldAnimate: !Y && Z

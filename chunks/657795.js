@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 });
 var r = n(735250),
@@ -24,9 +24,9 @@ var r = n(735250),
     g = n(474936),
     A = n(689938),
     N = n(380086);
-function O(e) {
+function R(e) {
     var t, n, a;
-    let { className: O, onClose: R } = e;
+    let { className: R, onClose: O } = e;
     (0, h.fP)();
     let { analyticsLocations: v } = (0, c.ZP)(u.Z.EMPTY_STATE),
         C = (0, o.Wu)([p.Z], () => T.Wt.map((e) => p.Z.getStickerById(e)));
@@ -42,13 +42,13 @@ function O(e) {
         D = null != L || null != y,
         b = (null == L ? void 0 : null === (t = L.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.Si.TIER_0;
     return (0, r.jsxs)('div', {
-        className: s()(N.emptyState, O, { [N.unifyTrialUpsell]: D }),
+        className: s()(N.emptyState, R, { [N.unifyTrialUpsell]: D }),
         children: [
             D
                 ? (0, r.jsx)(E.ZP, {
                       discountOffer: y,
                       trialOffer: L,
-                      onClose: R,
+                      onClose: O,
                       type: g.cd.EMPTY_STICKER_PICKER_UPSELL,
                       subscriptionTier: null !== (a = null == L ? void 0 : null === (n = L.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : g.Si.TIER_2,
                       children: A.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE

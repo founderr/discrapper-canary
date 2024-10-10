@@ -22,9 +22,9 @@ function l(e) {
         g = (0, a.Z)(),
         A = (0, r.useRef)(o),
         [N] = (0, r.useState)(() => new i.ZP()),
-        O = _(),
-        R = Math.min(null != E ? E : 1 / 0, O.offsetWidth),
-        v = null != E ? Math.max(0, O.offsetWidth - E) : 0,
+        R = _(),
+        O = Math.min(null != E ? E : 1 / 0, R.offsetWidth),
+        v = null != E ? Math.max(0, R.offsetWidth - E) : 0,
         {
             dirty: C,
             chunkStart: L,
@@ -46,7 +46,7 @@ function l(e) {
                           getItemKey: l,
                           getItemHeight: u,
                           getSectionHeight: c,
-                          bufferWidth: R,
+                          bufferWidth: O,
                           itemGutter: f,
                           removeEdgeItemGutters: h,
                           sectionGutter: p,
@@ -58,7 +58,7 @@ function l(e) {
                       }),
                       N.computeVisibleSections(Math.max(0, L * d), y * d),
                       N.getState()),
-            [C, N, t, n, l, u, c, L, y, d, f, h, p, I, m, T, R, S]
+            [C, N, t, n, l, u, c, L, y, d, f, h, p, I, m, T, O, S]
         )),
         {
             ...A.current,

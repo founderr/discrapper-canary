@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return O;
+        return R;
     },
     y: function () {
         return N;
@@ -94,7 +94,7 @@ function A(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, srcIsAnimated: R, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...y } = e,
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: R, srcIsAnimated: O, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...y } = e,
         { width: D, height: b } = (0, E.zp)(s, l),
         M = o.tq && null != v;
     i.useEffect(() => {
@@ -133,7 +133,7 @@ function N(e) {
                             animated: !e && u,
                             autoPlay: !e,
                             responsive: d,
-                            srcIsAnimated: R,
+                            srcIsAnimated: O,
                             onContextMenu: P,
                             ...y
                         },
@@ -150,7 +150,7 @@ function N(e) {
         ]
     });
 }
-function O(e) {
+function R(e) {
     let { src: t, width: n, height: i, onClose: a, renderLinkComponent: l, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
         { width: h, height: I } = (0, E.zp)(n, i),
         m = o.tq && null != a,

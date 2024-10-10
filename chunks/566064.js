@@ -29,7 +29,7 @@ function c(e) {
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: N, focusedX: O, focusedY: R } = g,
+        { columnCounts: N, focusedX: R, focusedY: O } = g,
         [v] = r.useState(() => (0, s.P2)(A, 16));
     return (
         r.useEffect(() => {
@@ -44,7 +44,7 @@ function c(e) {
             S.current = I;
             let g = u(l(t, c, d)),
                 [A, N] = r.useState(!1),
-                [O, R] = r.useState(!1),
+                [R, O] = r.useState(!1),
                 [v, C] = r.useState(!1),
                 [L] = r.useState(
                     () =>
@@ -73,7 +73,7 @@ function c(e) {
                         let r = l(t, e, n);
                         (null != E ? E(e, n, r) : Promise.resolve()).then(() => {
                             let e = u(r);
-                            null != e ? (y(e), R(!1)) : requestAnimationFrame(() => R(!0));
+                            null != e ? (y(e), O(!1)) : requestAnimationFrame(() => O(!0));
                         });
                     },
                     [t, E, y]
@@ -116,8 +116,8 @@ function c(e) {
                 S.current && null == e && P(!0);
             }, []);
             r.useEffect(() => {
-                A && O && null != g && (y(g), R(!1));
-            }, [O, g]),
+                A && R && null != g && (y(g), O(!1));
+            }, [R, g]),
                 r.useEffect(() => {
                     A && (!v && D(c, d), C(!1));
                 }, [c, d]);
@@ -221,8 +221,8 @@ function c(e) {
         })({
             navId: t,
             columnCounts: N,
-            focusedX: O,
-            focusedY: R,
+            focusedX: R,
+            focusedY: O,
             dispatch: v,
             onSelect: _,
             prepareFocus: E,

@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(709054),
     A = n(51144),
     N = n(443603),
-    O = n(981631),
-    R = n(921944),
+    R = n(981631),
+    O = n(921944),
     v = n(689938),
     C = n(679583),
     L = n(933283);
@@ -79,10 +79,10 @@ t.Z = i.memo(function (e) {
             initialPlanId: null,
             analyticsLocations: a,
             analyticsObject: {
-                page: n.isPrivate() ? O.ZY5.DM_CHANNEL : O.ZY5.GUILD_CHANNEL,
-                section: O.jXE.CHANNEL_TEXT_AREA,
-                object: O.qAy.NITROWEEN_BUTTON_ICON,
-                objectType: O.Qqv.GIFT
+                page: n.isPrivate() ? R.ZY5.DM_CHANNEL : R.ZY5.GUILD_CHANNEL,
+                section: R.jXE.CHANNEL_TEXT_AREA,
+                object: R.qAy.NITROWEEN_BUTTON_ICON,
+                objectType: R.Qqv.GIFT
             }
         });
     };
@@ -106,7 +106,7 @@ t.Z = i.memo(function (e) {
                 'aria-label': v.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                 isActive: !1,
                 onClick: () => {
-                    V(), c(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: R.L.TAKE_ACTION }), H();
+                    V(), c(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: O.L.TAKE_ACTION }), H();
                 },
                 ...F,
                 children: (0, r.jsx)(D, {

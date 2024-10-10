@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return O;
+        return R;
     }
 }),
     n(757143),
@@ -154,7 +154,7 @@ m(N, 'defaultProps', {
     look: 'grey',
     disableItemStyles: !1
 });
-class O extends (a = l.Component) {
+class R extends (a = l.Component) {
     render() {
         let { className: e, children: t, type: n = 'side', style: r, 'aria-label': i, orientation: a = 'horizontal' } = this.props;
         return (0, o.jsx)('div', {
@@ -218,7 +218,7 @@ class O extends (a = l.Component) {
             });
     }
 }
-m(O, 'Header', function (e) {
+m(R, 'Header', function (e) {
     let { className: t, onClick: n, children: r, 'aria-expanded': i, 'aria-controls': a } = e;
     return (0, o.jsx)(f.P, {
         tabIndex: null == n ? -1 : 0,
@@ -235,12 +235,12 @@ m(O, 'Header', function (e) {
         })
     });
 }),
-    m(O, 'Item', N),
-    m(O, 'Separator', function (e) {
+    m(R, 'Item', N),
+    m(R, 'Separator', function (e) {
         let { style: t } = e;
         return (0, o.jsx)('div', {
             className: I.separator,
             style: t
         });
     }),
-    m(O, 'Panel', S);
+    m(R, 'Panel', S);

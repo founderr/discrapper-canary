@@ -41,7 +41,7 @@ function N(e) {
     let { user: t, sessionId: n } = e;
     (I = t.id), (m = n), (T = null);
 }
-class O extends (r = o.ZP.Store) {
+class R extends (r = o.ZP.Store) {
     initialize() {
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(_.Z);
     }
@@ -86,7 +86,7 @@ class O extends (r = o.ZP.Store) {
     }
 }
 (s = 'SpeakingStore'),
-    (a = 'displayName') in (i = O)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -94,7 +94,7 @@ class O extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new O(l.Z, {
+    (t.Z = new R(l.Z, {
         CONNECTION_OPEN: N,
         OVERLAY_INITIALIZE: N,
         SPEAKING: function (e) {

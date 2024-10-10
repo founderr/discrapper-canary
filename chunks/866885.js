@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(594174),
     A = n(566620),
     N = n(317381),
-    O = n(175894),
-    R = n(246106),
+    R = n(175894),
+    O = n(246106),
     v = n(963614),
     C = n(917107),
     L = n(208156),
@@ -35,13 +35,13 @@ var r = n(735250),
     x = n(852401);
 function G(e) {
     var t, n, a;
-    let { channel: O, isLoading: R } = e,
+    let { channel: R, isLoading: O } = e,
         [G, k] = i.useState(!1),
-        B = (0, o.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(O.id)),
+        B = (0, o.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(R.id)),
         F = (0, o.e7)([N.ZP], () => N.ZP.getActivityPanelMode()),
         V = (0, E.q)(null == B ? void 0 : B.applicationId),
         H = null == B ? void 0 : B.launchId,
-        Z = (0, o.e7)([S.Z], () => S.Z.getChannelId() === O.id),
+        Z = (0, o.e7)([S.Z], () => S.Z.getChannelId() === R.id),
         { dockedRect: Y, isHidden: j } = (0, o.cj)([T.Z], () => {
             let e = T.Z.pipWindow;
             return {
@@ -55,21 +55,21 @@ function G(e) {
             selectedParticipant: z,
             participantsOpen: q
         } = (0, o.cj)([f.Z], () => ({
-            activityParticipant: null != B ? f.Z.getParticipant(O.id, B.applicationId) : null,
-            selectedParticipant: f.Z.getSelectedParticipant(O.id),
-            participantsOpen: f.Z.getParticipantsOpen(O.id)
+            activityParticipant: null != B ? f.Z.getParticipant(R.id, B.applicationId) : null,
+            selectedParticipant: f.Z.getSelectedParticipant(R.id),
+            participantsOpen: f.Z.getParticipantsOpen(R.id)
         })),
         Q = Z || null != W,
-        X = (0, C.Z)(O.id),
+        X = (0, C.Z)(R.id),
         $ = X && (null == z ? void 0 : z.type) !== P.fO.ACTIVITY,
         J = !X && F === b.Ez.PIP,
         ee = (!Q || (Q && ($ || J) && null == Y)) && !j,
         et = ee && null != T.Z.pipVideoWindow && null != T.Z.pipActivityWindow;
     function en() {
         var e;
-        null != B && c.Z.selectParticipant(O.id, B.applicationId);
-        let t = null !== (e = O.getGuildId()) && void 0 !== e ? e : M.ME;
-        d.Z.channelListScrollTo(t, O.id), (0, p.XU)(t, O.id), null == W && (0, _.Ou)();
+        null != B && c.Z.selectParticipant(R.id, B.applicationId);
+        let t = null !== (e = R.getGuildId()) && void 0 !== e ? e : M.ME;
+        d.Z.channelListScrollTo(t, R.id), (0, p.XU)(t, R.id), null == W && (0, _.Ou)();
     }
     function er() {
         k(!G);
@@ -84,18 +84,18 @@ function G(e) {
             });
         }
     }, [null == B ? void 0 : B.applicationId, ee]);
-    if (null == B || null == H || (null == K && (0, C.Z)(O.id)) || null == V) return null;
+    if (null == B || null == H || (null == K && (0, C.Z)(R.id)) || null == V) return null;
     let ei = Array.from(B.userIds)
             .map((e) => g.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
-            channel_id: O.id,
+            channel_id: R.id,
             location_id: null === (t = B.location) || void 0 === t ? void 0 : t.id,
             launch_id: B.launchId
         };
     return (
-        null != O.guild_id && '' !== O.guild_id && (ea.guild_id = O.guild_id),
+        null != R.guild_id && '' !== R.guild_id && (ea.guild_id = R.guild_id),
         (0, r.jsx)(m.ZP, {
             timeout: 2000,
             children: (e) => {
@@ -126,7 +126,7 @@ function G(e) {
                                         ? (0, r.jsx)(y.of, {
                                               onJumpToChannel: en,
                                               applicationId: B.applicationId,
-                                              channel: O,
+                                              channel: R,
                                               showControls: !o,
                                               onMouseDown: i,
                                               onMouseMove: i,
@@ -145,7 +145,7 @@ function G(e) {
                                                     onJumpToChannel: () => {
                                                         en(), (0, A.tg)(b.Ez.PANEL);
                                                     },
-                                                    channel: O,
+                                                    channel: R,
                                                     applicationId: B.applicationId,
                                                     users: c
                                                 })
@@ -167,7 +167,7 @@ function G(e) {
                                                           onMouseDown: i,
                                                           onMouseLeave: a,
                                                           onJumpToChannel: en,
-                                                          channel: O,
+                                                          channel: R,
                                                           applicationId: B.applicationId,
                                                           selectedParticipant: K
                                                       })
@@ -175,7 +175,7 @@ function G(e) {
                                               })
                                     : null)
                         }),
-                        R
+                        O
                             ? (0, r.jsx)(l.Spinner, {
                                   className: s()(U.iframe, {
                                       [U.pipModeShort]: ee && !G,
@@ -198,7 +198,7 @@ function G(e) {
                             (0, r.jsx)(y.Ds, {
                                 participantsOpen: q,
                                 showToggleParticipants: !1,
-                                channelId: O.id
+                                channelId: R.id
                             })
                     ]
                 });
@@ -208,9 +208,9 @@ function G(e) {
 }
 t.Z = (e) => {
     let { channel: t, ...n } = e,
-        { userActivity: i, inActivity: a } = (0, R.Z)(t.id);
+        { userActivity: i, inActivity: a } = (0, O.Z)(t.id);
     return (
-        (0, O.Z)({
+        (0, R.Z)({
             channel: t,
             userActivity: i
         }),

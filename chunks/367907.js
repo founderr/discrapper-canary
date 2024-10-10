@@ -45,8 +45,8 @@ var r = n(392711),
     g = n(914010),
     A = n(9156),
     N = n(594174),
-    O = n(979651),
-    R = n(626135),
+    R = n(979651),
+    O = n(626135),
     v = n(70956),
     C = n(700785),
     L = n(546416),
@@ -68,7 +68,7 @@ function M(e) {
         s = d.ZP.getChannels(e),
         o = s[d.sH].length,
         l = s[d.Zb].length,
-        c = O.Z.getVoiceStates(e);
+        c = R.Z.getVoiceStates(e);
     return {
         guild_id: n.id,
         guild_size_total: _.Z.getMemberCount(e),
@@ -128,7 +128,7 @@ function x(e) {
     var t, n, r, i, a;
     let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (R.default.isThrottled(e)) return;
+    if (O.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== y.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         u = 'guild_id' in s ? s.guild_id : l ? g.Z.getGuildId() : null,
         d = 'channel_id' in s ? s.channel_id : l ? S.Z.getChannelId(u) : null,
@@ -145,7 +145,7 @@ function x(e) {
               })
             : U(_))
     };
-    R.default.track(e, f, { flush: o });
+    O.default.track(e, f, { flush: o });
 }
 function G(e) {
     let t = c.Z.getChannel(e);
@@ -191,7 +191,7 @@ function k(e, t, n) {
         video_enabled: n
     };
     return (
-        i()(O.Z.getVoiceStates(e))
+        i()(R.Z.getVoiceStates(e))
             .filter((e) => e.channelId === t)
             .filter((e) => e.userId !== u.default.getId())
             .forEach((e) => {
@@ -203,7 +203,7 @@ function k(e, t, n) {
 function B(e, t) {
     let n = { custom_status_count: 0 };
     return (
-        i()(O.Z.getVoiceStates(e)).forEach((e) => {
+        i()(R.Z.getVoiceStates(e)).forEach((e) => {
             e.channelId === t && null != I.Z.findActivity(e.userId, (e) => e.type === y.IIU.CUSTOM_STATUS) && n.custom_status_count++;
         }),
         n

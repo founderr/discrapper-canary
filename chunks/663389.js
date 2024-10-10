@@ -19,8 +19,8 @@ let E = _.QZA.CLOSED,
     g = !1,
     A = !1,
     N = null,
-    O = null,
     R = null,
+    O = null,
     v = [],
     C = null,
     L = null;
@@ -49,13 +49,13 @@ function y(e) {
                 }
             })
         }),
-        (O = null !== (r = e.onClose) && void 0 !== r ? r : null),
-        (R = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
+        (R = null !== (r = e.onClose) && void 0 !== r ? r : null),
+        (O = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
         (v = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (L = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function D() {
-    (E = _.QZA.CLOSED), (g = !1), (T = null), (C = null), (S = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (L = null);
+    (E = _.QZA.CLOSED), (g = !1), (T = null), (C = null), (S = null), (f = null), (h = null), (p = {}), (I = {}), (R = null), (O = null), (v = []), (L = null);
 }
 function b() {
     (E = _.QZA.OPEN), (m = {});
@@ -95,14 +95,14 @@ class M extends (s = u.ZP.Store) {
             errors: m,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: A,
-            analyticsLocation: R,
+            analyticsLocation: O,
             analyticsLocations: v,
             initialSection: C,
             impressionSource: L
         };
     }
     get onClose() {
-        return O;
+        return R;
     }
 }
 (a = 'UserSettingsModalStore'),
@@ -131,7 +131,7 @@ class M extends (s = u.ZP.Store) {
         },
         USER_SETTINGS_MODAL_SET_SECTION: function (e) {
             var t;
-            (f = h), (h = e.section), (R = null), (v = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
+            (f = h), (h = e.section), (O = null), (v = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
         },
         USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function (e) {
             let { forSection: t } = e;

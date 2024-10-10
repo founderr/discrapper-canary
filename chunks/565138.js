@@ -80,8 +80,8 @@ class A extends a.PureComponent {
     }
     renderIcon() {
         var e, t;
-        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: m, animate: T, tabIndex: S, iconSrc: A, 'aria-hidden': N, ...O } = this.props,
-            R = g[l],
+        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: m, animate: T, tabIndex: S, iconSrc: A, 'aria-hidden': N, ...R } = this.props,
+            O = g[l],
             v = null != f ? d.Clickable : 'div';
         return (0, i.jsxs)(v, {
             className: o()(I.icon, r, (0, p.l)(I, 'iconSize', l), {
@@ -93,13 +93,13 @@ class A extends a.PureComponent {
             style:
                 null == n.icon
                     ? {
-                          fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * c,
+                          fontSize: (null !== (t = O[n.acronym.length]) && void 0 !== t ? t : O[O.length - 1]) * c,
                           ...u
                       }
                     : u,
             onClick: null != h || null == f ? void 0 : f,
             tabIndex: S,
-            ...O,
+            ...R,
             children: [this.renderAcronym(), this.renderBadge()]
         });
     }
@@ -139,13 +139,13 @@ let N = u.ZP.connectStores([f.Z], (e) => {
         }
     };
 })((0, _.N)((e) => (0, i.jsx)(A, { ...e })));
-class O extends (r = a.PureComponent) {
+class R extends (r = a.PureComponent) {
     render() {
         return (0, i.jsx)(N, { ...this.props });
     }
 }
-m(O, 'Sizes', T),
-    m(O, 'defaultProps', {
+m(R, 'Sizes', T),
+    m(R, 'defaultProps', {
         size: T.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -155,4 +155,4 @@ m(O, 'Sizes', T),
         badgeStrokeColor: c.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1
     }),
-    (t.Z = O);
+    (t.Z = R);

@@ -19,7 +19,7 @@ var i = n(97613),
     h = n(981631),
     p = n(474936);
 function I(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: I, onComplete: m, onSubscriptionConfirmation: T, analyticsLocations: S, analyticsObject: g, analyticsLocation: A, analyticsSourceLocation: N, isGift: O = !1, giftMessage: R, giftStyle: v, subscriptionTier: C, trialId: L, postSuccessGuild: y, openInvoiceId: D, applicationId: b, referralTrialOfferId: M, giftRecipient: P, returnRef: U, subscription: w, skipConfirm: x, repeatPurchase: G } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: I, onComplete: m, onSubscriptionConfirmation: T, analyticsLocations: S, analyticsObject: g, analyticsLocation: A, analyticsSourceLocation: N, isGift: R = !1, giftMessage: O, giftStyle: v, subscriptionTier: C, trialId: L, postSuccessGuild: y, openInvoiceId: D, applicationId: b, referralTrialOfferId: M, giftRecipient: P, returnRef: U, subscription: w, skipConfirm: x, repeatPurchase: G } = null != e ? e : {},
         k = !1,
         B = (0, s.Z)(),
         F = d.default.getCurrentUser(),
@@ -35,17 +35,17 @@ function I(e) {
                     loadId: B,
                     subscriptionTier: C,
                     skuId: (0, f.Wz)(C),
-                    isGift: O,
-                    giftMessage: R,
+                    isGift: R,
+                    giftMessage: O,
                     giftStyle: v,
                     giftRecipient: P,
                     initialPlanId: t,
                     followupSKUInfo: i,
                     onClose: (e, t) => {
-                        a(), null == I || I(e), e && (null == T || T(), !O && null != t && t === p.Si.TIER_2 && !V && E.S.dispatch(h.CkL.PREMIUM_SUBSCRIPTION_CREATED));
+                        a(), null == I || I(e), e && (null == T || T(), !R && null != t && t === p.Si.TIER_2 && !V && E.S.dispatch(h.CkL.PREMIUM_SUBSCRIPTION_CREATED));
                     },
                     onComplete: () => {
-                        (k = !0), null == m || m(), !O && (0, c.H)(!0);
+                        (k = !0), null == m || m(), !R && (0, c.H)(!0);
                     },
                     onSubscriptionConfirmation: T,
                     analyticsLocations: S,
@@ -75,7 +75,7 @@ function I(e) {
                         location: null != A ? A : g,
                         source: N,
                         subscription_type: h.NYc.PREMIUM,
-                        is_gift: O,
+                        is_gift: R,
                         eligible_for_trial: null != L,
                         application_id: b,
                         location_stack: S

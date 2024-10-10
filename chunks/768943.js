@@ -57,7 +57,7 @@ function N() {
     if (0 === I.size || f) return !1;
     f = !0;
 }
-class O extends (r = o.ZP.Store) {
+class R extends (r = o.ZP.Store) {
     initialize() {}
     getSavedMessages() {
         return E.values(_._l.ALL);
@@ -111,7 +111,7 @@ class O extends (r = o.ZP.Store) {
     }
 }
 (s = 'SavedMessagesStore'),
-    (a = 'displayName') in (i = O)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -119,7 +119,7 @@ class O extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new O(u.Z, {
+    (t.Z = new R(u.Z, {
         POST_CONNECTION_OPEN: function () {
             f = !0;
         },

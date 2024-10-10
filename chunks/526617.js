@@ -28,8 +28,8 @@ var r = n(735250),
     g = n(631771),
     A = n(609218),
     N = n(695346),
-    O = n(594174),
-    R = n(979651),
+    R = n(594174),
+    O = n(979651),
     v = n(259580),
     C = n(626135),
     L = n(74538),
@@ -205,11 +205,11 @@ function J(e) {
             [eo]
         ),
         [eu, ec] = i.useState(null),
-        ed = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
+        ed = (0, o.e7)([R.default], () => R.default.getCurrentUser()),
         e_ = (0, L.I5)(ed, Y.p9.TIER_2),
-        eE = (0, o.e7)([R.Z], () => {
+        eE = (0, o.e7)([O.Z], () => {
             var e;
-            return R.Z.getVoiceState(t, null !== (e = null == ed ? void 0 : ed.id) && void 0 !== e ? e : Z.lds);
+            return O.Z.getVoiceState(t, null !== (e = null == ed ? void 0 : ed.id) && void 0 !== e ? e : Z.lds);
         }),
         ef = (null == eE ? void 0 : eE.selfDeaf) || (null == eE ? void 0 : eE.mute) || (null == eE ? void 0 : eE.suppress),
         eh = (0, I.Iu)((e) => e.searchQuery),
@@ -219,10 +219,10 @@ function J(e) {
         [eT, eS] = i.useState([]),
         [eg, eA] = i.useState(!1),
         eN = (0, x.FS)(em, eT, eh).filter((e) => e.items.length > 0),
-        eO = eN.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
-        eR = !e_ && v && eO,
-        { enableInlineUpsell: ev, enableRoadblock: eC, enableRoadblockWithSocialProof: eL } = g.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eR }),
-        ey = eR && ev,
+        eR = eN.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+        eO = !e_ && v && eR,
+        { enableInlineUpsell: ev, enableRoadblock: eC, enableRoadblockWithSocialProof: eL } = g.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eO }),
+        ey = eO && ev,
         eD = N.T4.useSetting(),
         eb = i.useMemo(() => new Set(eD), [eD]),
         eM = null == a,

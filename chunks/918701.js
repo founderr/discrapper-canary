@@ -185,8 +185,8 @@ var f = n(572004),
     g = n(569984),
     A = n(497505),
     N = n(566078),
-    O = n(312046),
-    R = n(46140),
+    R = n(312046),
+    O = n(46140),
     v = n(981631),
     C = n(701488),
     L = n(689938);
@@ -237,7 +237,7 @@ function k(e) {
 }
 function B(e) {
     return (0, a.EQ)(e)
-        .with({ config_version: 2 }, (e) => (0, O.Q)(e))
+        .with({ config_version: 2 }, (e) => (0, R.Q)(e))
         .exhaustive();
 }
 function F(e) {
@@ -403,12 +403,12 @@ function $(e) {
     return L.Z.Messages.QUESTS_TITLE.format({ questName: r.config.messages.questName });
 }
 function J(e) {
-    return Object.keys(R.a_).includes(A.jn[e]);
+    return Object.keys(O.a_).includes(A.jn[e]);
 }
 function ee(e, t) {
     if (!J(t)) return !1;
     let n = A.jn[t];
-    return (0, p.yE)(e.dismissedQuestContent, R.a_[n]);
+    return (0, p.yE)(e.dismissedQuestContent, O.a_[n]);
 }
 function et(e) {
     return (0, a.EQ)(e)
@@ -494,7 +494,7 @@ let ec = (e) =>
 function ed(e) {
     let { quest: t } = e;
     return (0, a.EQ)(t.config)
-        .with({ configVersion: 2 }, (e) => ep(t, R.S7.PLAYTIME_TASK) || ec(e))
+        .with({ configVersion: 2 }, (e) => ep(t, O.S7.PLAYTIME_TASK) || ec(e))
         .exhaustive();
 }
 function e_(e) {
@@ -504,10 +504,10 @@ function eE(e, t) {
     return N.r.build(t.config).application.id === e || ef(t);
 }
 function ef(e) {
-    return ep(e, R.S7.FRACTIONS_QUEST);
+    return ep(e, O.S7.FRACTIONS_QUEST);
 }
 function eh(e) {
-    return !ep(e, R.S7.IN_HOUSE_CONSOLE_QUEST);
+    return !ep(e, O.S7.IN_HOUSE_CONSOLE_QUEST);
 }
 function ep(e, t) {
     return N.r.build(e.config).features.has(t);
@@ -564,7 +564,7 @@ let eT = (e, t) => {
             d = Math.min(0.99 * s, u + c);
         return Math.max((0, i.floor)(d, 2), 0);
     },
-    eO = (e) => {
+    eR = (e) => {
         var t, n;
         let { quest: r, taskType: i, includeTaskTypes: a = s.T.ALL } = e,
             o = r.config.taskConfig;
@@ -582,7 +582,7 @@ let eT = (e, t) => {
             taskType: l
         };
     },
-    eR = (e) => (s.T.ALL.has(e) ? e : null),
+    eO = (e) => (s.T.ALL.has(e) ? e : null),
     ev = (e) => {
         var t, n;
         let { quest: r, includeTaskTypes: i = s.T.ALL } = e;
@@ -597,17 +597,17 @@ let eT = (e, t) => {
                 else return 1;
             })
             .filter(I.lm)) {
-            let t = eR(e.eventName);
+            let t = eO(e.eventName);
             if (null != t) {
                 if (null == i ? void 0 : i.has(t))
-                    return eO({
+                    return eR({
                         quest: r,
                         taskType: t,
                         includeTaskTypes: i
                     });
             }
         }
-        return eO({
+        return eR({
             quest: r,
             includeTaskTypes: i
         });
@@ -642,11 +642,11 @@ let eT = (e, t) => {
                     };
                 }
                 return e_(e)
-                    ? eO({
+                    ? eR({
                           quest: e,
                           taskType: s.X.PLAY_ON_DESKTOP
                       })
-                    : eO({
+                    : eR({
                           quest: e,
                           taskType: s.X.STREAM_ON_DESKTOP
                       });
@@ -790,5 +790,5 @@ function eZ(e) {
             })({ quest: e }),
         n = eD(e),
         r = [];
-    return t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r;
+    return t && r.push(O.cd.DESKTOP), n && r.push(O.cd.CONSOLE), r;
 }

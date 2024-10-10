@@ -40,7 +40,7 @@ function m(e) {
     var t, n, I, m, T;
     let { contentDisplay: S, fadeInOut: g = !1, ...A } = e,
         N = {},
-        { analyticsLocations: O } = (0, E.ZP)();
+        { analyticsLocations: R } = (0, E.ZP)();
     i.Children.forEach(A.children, (e, t) => {
         N[e.props.id] = {
             children: e.props.children,
@@ -49,15 +49,15 @@ function m(e) {
             index: t
         };
     });
-    let R = A.activeSlide,
+    let O = A.activeSlide,
         v = (0, d.Z)(A.activeSlide);
-    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[R]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
+    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[O]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
         { reducedMotion: L } = i.useContext(l.S),
         y = i.useContext(_.Z),
-        D = N[R].impressionName,
+        D = N[O].impressionName,
         b = {
-            ...N[R].impressionProperties,
-            location_stack: O
+            ...N[O].impressionProperties,
+            location_stack: R
         };
     y({
         type: s.ImpressionTypes.MODAL,
@@ -65,7 +65,7 @@ function m(e) {
         properties: b,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(R),
+    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(O),
         w = {
             ...h,
             ...A.springConfig,
@@ -80,7 +80,7 @@ function m(e) {
             null == v ? 'animate-never' : 'respect-motion-settings'
         ),
         G = (0, u.useTransition)(
-            R,
+            O,
             {
                 value: 0,
                 from: { value: 1 },
@@ -89,7 +89,7 @@ function m(e) {
                 config: w,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === R && null != A.onSlideReady && A.onSlideReady(n);
+                    n === O && null != A.onSlideReady && A.onSlideReady(n);
                 }
             },
             null == v ? 'animate-never' : 'respect-motion-settings'
@@ -120,7 +120,7 @@ function m(e) {
             return (0, r.jsx)(
                 a.animated.div,
                 {
-                    ref: t === R ? M : null,
+                    ref: t === O ? M : null,
                     style: {
                         position: 'absolute',
                         display: S,

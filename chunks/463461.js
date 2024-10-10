@@ -1,12 +1,12 @@
 r.d(t, {
     r: function () {
-        return o;
+        return _;
     }
 });
 var n = r(967752),
     a = r(617726);
-function o(e, { metadata: t, tunnel: r, dsn: o }) {
-    let i = {
+function _(e, { metadata: t, tunnel: r, dsn: _ }) {
+    let o = {
             event_id: e.event_id,
             sent_at: new Date().toISOString(),
             ...(t &&
@@ -16,10 +16,10 @@ function o(e, { metadata: t, tunnel: r, dsn: o }) {
                         version: t.sdk.version
                     }
                 }),
-            ...(!!r && !!o && { dsn: (0, n.RA)(o) })
+            ...(!!r && !!_ && { dsn: (0, n.RA)(_) })
         },
-        _ = (function (e) {
+        i = (function (e) {
             return [{ type: 'user_report' }, e];
         })(e);
-    return (0, a.Jd)(i, [_]);
+    return (0, a.Jd)(o, [i]);
 }

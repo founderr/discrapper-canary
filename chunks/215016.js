@@ -40,8 +40,8 @@ function A(e, t, n) {
     );
 }
 let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
-    O = 1220,
-    R = Array.from({ length: 16 }).map((e, t) => ({
+    R = 1220,
+    O = Array.from({ length: 16 }).map((e, t) => ({
         id: ''.concat(t),
         height: Math.floor(100 * Math.random()) + 120
     }));
@@ -50,12 +50,12 @@ function v(e) {
     return null !== (t = e.id) && void 0 !== t ? t : e.src;
 }
 function C(e, t) {
-    let n = R[t];
+    let n = O[t];
     return null == n ? 0 : n.height;
 }
 function L(e, t, n, i) {
     if (!(e > 0))
-        return null == R[t]
+        return null == O[t]
             ? null
             : (0, r.jsx)(
                   'div',
@@ -71,7 +71,7 @@ function L(e, t, n, i) {
 }
 function y(e, t) {
     var n, r;
-    return e > 0 ? '' : null !== (r = null === (n = R[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
+    return e > 0 ? '' : null !== (r = null === (n = O[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
 }
 function D(e) {
     return e === c.EO.VIDEO;
@@ -268,7 +268,7 @@ class M extends i.PureComponent {
                     { current: t } = this._masonryRef;
                 if (null == t) return;
                 let { scrollTop: n, scrollHeight: r } = t.getScrollerState();
-                r - n <= O && (e !== this.prevResultQuery && (0, E.mO)(e), (this.prevResultQuery = e));
+                r - n <= R && (e !== this.prevResultQuery && (0, E.mO)(e), (this.prevResultQuery = e));
             }),
             A(this, 'renderItem', (e, t, n, i) => {
                 if (e > 0) return null;
@@ -359,7 +359,7 @@ class M extends i.PureComponent {
                           {
                               fade: !0,
                               className: s()(g.results, i),
-                              sections: [R.length],
+                              sections: [O.length],
                               columns: e,
                               itemGutter: 12,
                               getItemKey: y,

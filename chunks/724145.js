@@ -26,8 +26,8 @@ var r = n(735250),
     g = n(626135),
     A = n(74538),
     N = n(238302),
-    O = n(514361),
-    R = n(572397),
+    R = n(514361),
+    O = n(572397),
     v = n(705262),
     C = n(981631),
     L = n(921944),
@@ -51,7 +51,7 @@ let M = () =>
         }),
     P = (e) => {
         let { markAsDismissed: t } = e,
-            n = (0, R.q)();
+            n = (0, O.q)();
         return (0, r.jsxs)('div', {
             className: b.editorHeader,
             children: [
@@ -77,7 +77,7 @@ let M = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, p.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [_, E] = (0, l.Wu)([S.default, O.Z], () => [O.Z.gradientPreset, A.ZP.isPremium(S.default.getCurrentUser())]),
+            [_, E] = (0, l.Wu)([S.default, R.Z], () => [R.Z.gradientPreset, A.ZP.isPremium(S.default.getCurrentUser())]),
             f = (0, I.N)(),
             T = (0, A.Rt)({
                 intervalType: null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.interval,
@@ -104,12 +104,12 @@ let M = () =>
     },
     w = (e) => {
         let { markAsDismissed: t } = e,
-            { isPreview: n, isCoachmark: a } = (0, l.cj)([O.Z], () => ({
-                isPreview: O.Z.isPreview,
-                isCoachmark: O.Z.isCoachmark
+            { isPreview: n, isCoachmark: a } = (0, l.cj)([R.Z], () => ({
+                isPreview: R.Z.isPreview,
+                isCoachmark: R.Z.isCoachmark
             })),
             [s, u] = i.useState(!1),
-            d = (0, R.q)(),
+            d = (0, O.q)(),
             E = (0, o.EQ)({
                 isPreview: n,
                 isCoachmark: a,
@@ -148,13 +148,13 @@ function x(e) {
             isCoachmark: o,
             isEditorOpen: u,
             shouldEditorAnimate: d
-        } = (0, l.cj)([O.Z, f.Z], () => ({
-            isPreview: O.Z.isPreview,
-            isCoachmark: O.Z.isCoachmark,
-            isEditorOpen: O.Z.isEditorOpen,
-            shouldEditorAnimate: O.Z.isCoachmark && !f.Z.useReducedMotion
+        } = (0, l.cj)([R.Z, f.Z], () => ({
+            isPreview: R.Z.isPreview,
+            isCoachmark: R.Z.isCoachmark,
+            isEditorOpen: R.Z.isEditorOpen,
+            shouldEditorAnimate: R.Z.isCoachmark && !f.Z.useReducedMotion
         })),
-        _ = (0, R.q)();
+        _ = (0, O.q)();
     i.useEffect(() => _(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [_]),
         i.useEffect(() => {
             if (!!a)
@@ -163,7 +163,7 @@ function x(e) {
                     location_stack: n
                 });
         }, [a, n]);
-    let I = (0, R.J)(),
+    let I = (0, O.J)(),
         m = (0, E.Z)(null, a ? I : C.dG4);
     return (
         i.useEffect(() => {

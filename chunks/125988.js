@@ -18,14 +18,14 @@ t.Z = (e) => {
             var e;
             return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)];
         }),
-        O = null == g ? (null == N ? void 0 : N.avatarDecoration) : null === g.avatarDecoration ? null : null !== (t = g.avatarDecoration) && void 0 !== t ? t : null == N ? void 0 : N.avatarDecoration,
-        { pendingAvatarDecoration: R } = (0, s.Z)({
+        R = null == g ? (null == N ? void 0 : N.avatarDecoration) : null === g.avatarDecoration ? null : null !== (t = g.avatarDecoration) && void 0 !== t ? t : null == N ? void 0 : N.avatarDecoration,
+        { pendingAvatarDecoration: O } = (0, s.Z)({
             isTryItOut: p,
             guildId: _
         }),
-        v = h && void 0 !== R && void 0 !== A && A === (null == n ? void 0 : n.id),
-        C = null != _ && null === R,
-        L = (0, c.Z)(v ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != R ? R : O) : null != O ? O : null == N ? void 0 : N.avatarDecoration),
+        v = h && void 0 !== O && void 0 !== A && A === (null == n ? void 0 : n.id),
+        C = null != _ && null === O,
+        L = (0, c.Z)(v ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != O ? O : R) : null != R ? R : null == N ? void 0 : N.avatarDecoration),
         y = r.useMemo(
             () =>
                 (0, u.NZ)({

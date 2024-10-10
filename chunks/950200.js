@@ -164,20 +164,20 @@ var n = (function () {
                     g,
                     A,
                     N,
-                    O =
+                    R =
                         ((l = s),
                         (_ = Array(32768)),
                         l.forEach(function (t) {
                             (c = t[0] >> e), (d = t[1] >> e), (_[(u = n(c, d, t[2] >> e))] = (_[u] || 0) + 1);
                         }),
                         _),
-                    R = 0;
-                O.forEach(function () {
-                    R++;
+                    O = 0;
+                R.forEach(function () {
+                    O++;
                 });
                 var v =
                         ((E = s),
-                        (f = O),
+                        (f = R),
                         (m = 1000000),
                         (T = 0),
                         (S = 1000000),
@@ -250,7 +250,7 @@ var n = (function () {
                                             return (i[u] = s), (a[o] = i[u] + 1), [i, a];
                                         }
                                 }
-                            })(O, i),
+                            })(R, i),
                             l = o[0],
                             u = o[1];
                         if (!l) return;

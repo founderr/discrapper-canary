@@ -1,57 +1,57 @@
-let n, a, o, i, _;
+let n, a, _, o, i;
 r.d(t, {
     $A: function () {
-        return O;
-    },
-    PR: function () {
         return p;
     },
+    PR: function () {
+        return O;
+    },
     YF: function () {
-        return L;
+        return S;
     },
     _4: function () {
-        return S;
+        return L;
     },
     _j: function () {
         return D;
     },
     cN: function () {
-        return v;
+        return b;
     },
     to: function () {
         return f;
     }
 });
 var E = r(622916),
-    s = r(688838),
-    c = r(665909),
+    c = r(688838),
+    s = r(665909),
     I = r(795927),
     u = r(661129),
     l = r(231550),
     R = r(428983),
     A = r(622574),
     T = r(288570);
-let d = {},
-    N = {};
-function p(e, t = !1) {
-    return U('cls', e, C, n, t);
-}
+let N = {},
+    d = {};
 function O(e, t = !1) {
-    return U('lcp', e, M, o, t);
+    return m('cls', e, C, n, t);
+}
+function p(e, t = !1) {
+    return m('lcp', e, M, _, t);
 }
 function f(e) {
-    return U('fid', e, g, a);
-}
-function S(e) {
-    return U('ttfb', e, P, i);
+    return m('fid', e, g, a);
 }
 function L(e) {
-    return U('inp', e, m, _);
+    return m('ttfb', e, P, o);
+}
+function S(e) {
+    return m('inp', e, U, i);
 }
 function D(e, t) {
     return (
         G(e, t),
-        !N[e] &&
+        !d[e] &&
             ((function (e) {
                 let t = {};
                 'event' === e && (t.durationThreshold = 0),
@@ -63,22 +63,22 @@ function D(e, t) {
                         t
                     );
             })(e),
-            (N[e] = !0)),
+            (d[e] = !0)),
         y(e, t)
     );
 }
 function h(e, t) {
-    let r = d[e];
+    let r = N[e];
     if (!!r && !!r.length)
         for (let n of r)
             try {
                 n(t);
             } catch (t) {
-                c.X &&
+                s.X &&
                     E.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${e}
-Name: ${(0, s.$P)(n)}
+Name: ${(0, c.$P)(n)}
 Error:`,
                         t
                     );
@@ -100,37 +100,37 @@ function g() {
 function M() {
     return (0, R.N)(
         (e) => {
-            h('lcp', { metric: e }), (o = e);
+            h('lcp', { metric: e }), (_ = e);
         },
         { reportAllChanges: !0 }
     );
 }
 function P() {
     return (0, T.m)((e) => {
-        h('ttfb', { metric: e }), (i = e);
+        h('ttfb', { metric: e }), (o = e);
     });
 }
-function m() {
+function U() {
     return (0, l.Y)((e) => {
-        h('inp', { metric: e }), (_ = e);
+        h('inp', { metric: e }), (i = e);
     });
 }
-function U(e, t, r, n, a = !1) {
-    let o;
-    return G(e, t), !N[e] && ((o = r()), (N[e] = !0)), n && t({ metric: n }), y(e, t, a ? o : void 0);
+function m(e, t, r, n, a = !1) {
+    let _;
+    return G(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), y(e, t, a ? _ : void 0);
 }
 function G(e, t) {
-    (d[e] = d[e] || []), d[e].push(t);
+    (N[e] = N[e] || []), N[e].push(t);
 }
 function y(e, t, r) {
     return () => {
         r && r();
-        let n = d[e];
+        let n = N[e];
         if (!n) return;
         let a = n.indexOf(t);
         -1 !== a && n.splice(a, 1);
     };
 }
-function v(e) {
+function b(e) {
     return 'duration' in e;
 }

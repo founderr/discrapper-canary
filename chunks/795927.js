@@ -1,36 +1,36 @@
 r.d(t, {
     m: function () {
-        return c;
+        return s;
     }
 });
 var n = r(140955),
     a = r(596308),
-    o = r(622574),
-    i = r(433691),
-    _ = r(118182),
+    _ = r(622574),
+    o = r(433691),
+    i = r(118182),
     E = r(825321);
-let s = [0.1, 0.25],
-    c = (e, t = {}) => {
+let c = [0.1, 0.25],
+    s = (e, t = {}) => {
         (0, E.a)(
-            (0, _.R)(() => {
+            (0, i.R)(() => {
                 let r;
-                let _ = (0, a.I)('CLS', 0),
+                let i = (0, a.I)('CLS', 0),
                     E = 0,
-                    c = [],
+                    s = [],
                     I = (e) => {
                         e.forEach((e) => {
                             if (!e.hadRecentInput) {
-                                let t = c[0],
-                                    r = c[c.length - 1];
-                                E && t && r && e.startTime - r.startTime < 1000 && e.startTime - t.startTime < 5000 ? ((E += e.value), c.push(e)) : ((E = e.value), (c = [e]));
+                                let t = s[0],
+                                    r = s[s.length - 1];
+                                E && t && r && e.startTime - r.startTime < 1000 && e.startTime - t.startTime < 5000 ? ((E += e.value), s.push(e)) : ((E = e.value), (s = [e]));
                             }
                         }),
-                            E > _.value && ((_.value = E), (_.entries = c), r());
+                            E > i.value && ((i.value = E), (i.entries = s), r());
                     },
-                    u = (0, o.N)('layout-shift', I);
+                    u = (0, _.N)('layout-shift', I);
                 u &&
-                    ((r = (0, n._)(e, _, s, t.reportAllChanges)),
-                    (0, i.u)(() => {
+                    ((r = (0, n._)(e, i, c, t.reportAllChanges)),
+                    (0, o.u)(() => {
                         I(u.takeRecords()), r(!0);
                     }),
                     setTimeout(r, 0));

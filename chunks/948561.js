@@ -26,8 +26,8 @@ var r = n(952639),
     g = n(522664),
     A = n(651530),
     N = n(163268),
-    O = n(735020),
-    R = n(774863),
+    R = n(735020),
+    O = n(774863),
     v = n(799525),
     C = n(981631),
     L = n(526761);
@@ -144,7 +144,7 @@ function w(e, t) {
         : U(i, a);
 }
 function x(e) {
-    let t = R.Z.validContentScanVersion;
+    let t = O.Z.validContentScanVersion;
     return e.reduce((e, n) => {
         var r, i, a, s, o, l, u, c;
         null == e[n.channel_id] &&
@@ -203,7 +203,7 @@ function k(e) {
     let { message: o } = e;
     if (!(0, A.Kh)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === E.default.getId() || (null == o.embeds && null == o.attachments) || ((null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (r = o.attachments) || void 0 === r ? void 0 : r.length) === 0)) return !1;
     if (!(0, S.N7)(o)) {
-        let e = null !== (s = null !== (a = p.Z.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : O.Z.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (i = _.Z.getMessage(o.channel_id, o.id)) || void 0 === i ? void 0 : i.message;
+        let e = null !== (s = null !== (a = p.Z.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : R.Z.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (i = _.Z.getMessage(o.channel_id, o.id)) || void 0 === i ? void 0 : i.message;
         null != e && !(0, S.N7)((0, c.wi)(e, o)) && P(e, N.Pq.UPDATE);
     }
     let l = I.Z.getChannelId(),

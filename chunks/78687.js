@@ -107,10 +107,10 @@ e.exports = function (e) {
             function N() {
                 return 2 * s.height + 1;
             }
-            function O(e) {
+            function R(e) {
                 return e + 10 + A();
             }
-            function R(e) {
+            function O(e) {
                 return e + 10 + N();
             }
             function v(e, t, n) {
@@ -166,8 +166,8 @@ e.exports = function (e) {
                     g = u(['position: absolute', 'width: 200%', 'height: 200%']),
                     A = document.createElement('div'),
                     N = document.createElement('div'),
-                    O = document.createElement('div'),
                     R = document.createElement('div'),
+                    O = document.createElement('div'),
                     v = document.createElement('div'),
                     L = document.createElement('div');
                 function y() {
@@ -178,7 +178,7 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = S), (v.style.cssText = T), (L.style.cssText = g), O.appendChild(R), v.appendChild(L), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', y), c(v, 'scroll', D), (i(l).onExpandScroll = y), (i(l).onShrinkScroll = D);
+                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (R.style.cssText = m), (O.style.cssText = S), (v.style.cssText = T), (L.style.cssText = g), R.appendChild(O), v.appendChild(L), N.appendChild(R), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(R, 'scroll', y), c(v, 'scroll', D), (i(l).onExpandScroll = y), (i(l).onShrinkScroll = D);
             }
             function y() {
                 function s(t, n, r) {

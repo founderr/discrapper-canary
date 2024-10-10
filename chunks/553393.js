@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(979651),
     A = n(617136),
     N = n(113434),
-    O = n(497505),
-    R = n(475595),
+    R = n(497505),
+    O = n(475595),
     v = n(602667),
     C = n(644646),
     L = n(667105),
@@ -44,7 +44,7 @@ t.Z = function (e) {
         }),
         F = (0, L.hf)({
             quest: p,
-            location: O.jn.MEMBERS_LIST
+            location: R.jn.MEMBERS_LIST
         }),
         V = (0, N.tP)(p),
         H = (null == p ? void 0 : null === (t = p.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -108,23 +108,23 @@ t.Z = function (e) {
     let ei = () => {
             (0, A._3)({
                 questId: p.id,
-                questContent: O.jn.MEMBERS_LIST,
+                questContent: R.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, y.openDisclosureModal)(p, {
-                    content: O.jn.MEMBERS_LIST,
+                    content: R.jn.MEMBERS_LIST,
                     ctaContent: A.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
             (0, A._3)({
                 questId: p.id,
-                questContent: O.jn.MEMBERS_LIST,
+                questContent: R.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, y.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, p.id);
+                (0, y.navigateToQuestHome)(D.dr.MEMBERS_LIST, R.jn.MEMBERS_LIST, p.id);
         },
         es = (e) => {
             e.stopPropagation(), ei();
@@ -134,7 +134,7 @@ t.Z = function (e) {
                 return (
                     (0, A._3)({
                         questId: p.id,
-                        questContent: O.jn.MEMBERS_LIST,
+                        questContent: R.jn.MEMBERS_LIST,
                         questContentCTA: A.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
@@ -173,7 +173,7 @@ t.Z = function (e) {
                       };
     return (0, r.jsx)(v.A, {
         questOrQuests: p,
-        questContent: O.jn.MEMBERS_LIST,
+        questContent: R.jn.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
         children: (e) => {
             var t, n;
@@ -249,13 +249,13 @@ t.Z = function (e) {
                                                         gamePublisher: p.config.messages.gamePublisher
                                                     }),
                                                     className: U.assetTile,
-                                                    src: (0, R.fh)(p, R.Bd.GAME_TILE, W).url
+                                                    src: (0, O.fh)(p, O.Bd.GAME_TILE, W).url
                                                 }),
                                             'reward' === el.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {
                                                     className: U.assetTile,
                                                     quest: p,
-                                                    questContent: O.jn.MEMBERS_LIST,
+                                                    questContent: R.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
                                                     location: D.dr.MEMBERS_LIST,
                                                     onClick: en

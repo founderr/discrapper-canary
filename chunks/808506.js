@@ -41,8 +41,8 @@ var a,
     g = n(490029),
     A = n(710845),
     N = n(594190),
-    O = n(454991),
-    R = n(633565),
+    R = n(454991),
+    O = n(633565),
     v = n(48481),
     C = n(314897),
     L = n(77498),
@@ -278,7 +278,7 @@ let eE = (() => {
         try {
             var e, t, n;
             let { OutOfProcess: r } = await eu();
-            return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(eO), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, eI), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, em), r;
+            return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(eR), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, eI), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, em), r;
         } catch (e) {
             throw ($.error('failed loading out of process overlay', e), e);
         }
@@ -295,7 +295,7 @@ let eh = et('setOverlayEnabled', async (e, t) => {
     if (!G.iP || (H === e && Z === t)) return;
     (H = e),
         (Z = t),
-        O.v.update({
+        R.v.update({
             enabled: e,
             legacyEnabled: t
         }),
@@ -370,10 +370,10 @@ function eA(e) {
     } else eg(e);
 }
 let eN = null;
-function eO(e, t, n) {
+function eR(e, t, n) {
     I.Z.relayClickZoneClicked(e, t, n);
 }
-async function eR(e) {
+async function eO(e) {
     if (!!(0, w.VS)())
         (await eE()).setClickZones(
             e.map((e) => ({
@@ -424,7 +424,7 @@ function ey(e) {
             let t = C.default.getToken();
             if (null == t) break;
             (0, p.te)(w.qU, y.Z.getDefaultLayout(w.qU)),
-                Promise.all([(0, R.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
+                Promise.all([(0, O.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
                     g.lW({
@@ -455,7 +455,7 @@ function ey(e) {
 }
 class eD extends (s = _.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), g.sr(ey, eL), C.default.addChangeListener(eS), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
+        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), g.sr(ey, eL), C.default.addChangeListener(eS), eh(R.v.enabled, R.v.legacyEnabled), E.Z.addInterceptor(ev);
     }
     isInputLocked(e) {
         return !z.has(e);
@@ -561,7 +561,7 @@ let eb = new eD(
                   let { port: t } = e;
                   K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '02cb73b138b4c866c5fa7d0aa3bf9d74c46de661'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '16baafc7833428c88ba9ba0b12fc385037787a66'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;
@@ -599,7 +599,7 @@ let eb = new eD(
               },
               OVERLAY_SET_CLICK_ZONES: function (e) {
                   let { zones: t } = e;
-                  eR(t);
+                  eO(t);
               },
               OVERLAY_SET_ASSOCIATED_GAME: function (e) {
                   var t, n;

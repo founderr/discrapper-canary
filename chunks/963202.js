@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     It: function () {
-        return R;
+        return O;
     },
     St: function () {
         return T;
@@ -275,7 +275,7 @@ function N(e) {
         defaultGameId: null !== (n = null !== (t = i.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
     };
 }
-let O = (0, a.B)({
+let R = (0, a.B)({
     kind: 'user',
     id: '2024-05_clans_general',
     label: 'Clans General',
@@ -288,10 +288,10 @@ let O = (0, a.B)({
         }
     ]
 });
-function R(e) {
+function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = _(e, t),
-        r = O.useExperiment({ location: e }, { autoTrackExposure: t });
+        r = R.useExperiment({ location: e }, { autoTrackExposure: t });
     return n ? { clanTagsVisible: !0 } : r;
 }
 (0, a.B)({

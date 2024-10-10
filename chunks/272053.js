@@ -32,8 +32,8 @@ let I = 1 * _.Z.Millis.MINUTE,
     g = null,
     A = 0,
     N = null,
-    O = new Set(),
-    R = {};
+    R = new Set(),
+    O = {};
 function v(e, t, n) {
     return o.tn.get({
         url: ''.concat('https://api.twitch.tv/helix').concat(e),
@@ -46,13 +46,13 @@ function v(e, t, n) {
 }
 async function C(e, t) {
     var n;
-    let r = R[e];
+    let r = O[e];
     if (null != r) return r;
     let {
             body: { data: i }
         } = await v('/games', { id: e }, t),
         a = null === (n = i[0]) || void 0 === n ? void 0 : n.name;
-    return (R[e] = a), a;
+    return (O[e] = a), a;
 }
 let L = new (class e {
     start() {
@@ -115,7 +115,7 @@ let L = new (class e {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((N = null), e.revoked || O.has(e.id))) return null;
+        if (((N = null), e.revoked || R.has(e.id))) return null;
         try {
             var n;
             let {
@@ -148,7 +148,7 @@ let L = new (class e {
                 return u.Z.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return 403 === n.status && O.add(e.id), null;
+            return 403 === n.status && R.add(e.id), null;
         }
     }
     _check() {

@@ -191,7 +191,7 @@ function m(e) {
                     onKeyDown(t) {
                         if (S(t.nativeEvent, t.currentTarget) && t.currentTarget.contains(t.target)) {
                             var i;
-                            R(t.target, t.key) && t.preventDefault();
+                            O(t.target, t.key) && t.preventDefault();
                             let a = !0;
                             !e.isPressed && !t.repeat && ((e.target = t.currentTarget), (e.isPressed = !0), (a = M(t, 'keyboard')), D((0, r.r3)(t.currentTarget), 'keyup', n, !1)), a && t.stopPropagation(), t.metaKey && (0, r.V5)() && (null === (i = e.metaKeyEvents) || void 0 === i || i.set(t.key, t.nativeEvent));
                         } else 'Meta' === t.key && (e.metaKeyEvents = new Map());
@@ -216,7 +216,7 @@ function m(e) {
                 n = (t) => {
                     var n, i, a;
                     if (e.isPressed && e.target && S(t, e.target)) {
-                        R(t.target, t.key) && t.preventDefault();
+                        O(t.target, t.key) && t.preventDefault();
                         let n = t.target,
                             a = P(A(e.target, t), 'keyboard', e.target.contains(n));
                         b(), a && t.stopPropagation(), 'Enter' !== t.key && T(e.target) && e.target.contains(n) && !t[I] && ((t[I] = !0), (0, r.nG)(e.target, t, !1)), (e.isPressed = !1), null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
@@ -232,12 +232,12 @@ function m(e) {
                         e.pointerType = 'virtual';
                         return;
                     }
-                    O(t.currentTarget) && t.preventDefault(), (e.pointerType = t.pointerType);
+                    R(t.currentTarget) && t.preventDefault(), (e.pointerType = t.pointerType);
                     let s = !0;
                     !e.isPressed && ((e.isPressed = !0), (e.isOverTarget = !0), (e.activePointerId = t.pointerId), (e.target = t.currentTarget), !l && !c && (0, r.Ao)(t.currentTarget), !h && _(e.target), (s = M(t, e.pointerType)), D((0, r.r3)(t.currentTarget), 'pointermove', n, !1), D((0, r.r3)(t.currentTarget), 'pointerup', i, !1), D((0, r.r3)(t.currentTarget), 'pointercancel', a, !1)), s && t.stopPropagation();
                 }),
                     (t.onMouseDown = (e) => {
-                        e.currentTarget.contains(e.target) && 0 === e.button && (O(e.currentTarget) && e.preventDefault(), e.stopPropagation());
+                        e.currentTarget.contains(e.target) && 0 === e.button && (R(e.currentTarget) && e.preventDefault(), e.stopPropagation());
                     }),
                     (t.onPointerUp = (t) => {
                         t.currentTarget.contains(t.target) && 'virtual' !== e.pointerType && 0 === t.button && N(t, t.currentTarget) && U(t, e.pointerType || t.pointerType);
@@ -257,7 +257,7 @@ function m(e) {
             } else {
                 (t.onMouseDown = (t) => {
                     if (0 === t.button && !!t.currentTarget.contains(t.target)) {
-                        if ((O(t.currentTarget) && t.preventDefault(), e.ignoreEmulatedMouseEvents)) {
+                        if ((R(t.currentTarget) && t.preventDefault(), e.ignoreEmulatedMouseEvents)) {
                             t.stopPropagation();
                             return;
                         }
@@ -391,10 +391,10 @@ function N(e, t) {
         });
     return (r = o), (i = l), !(r.left > i.right) && !(i.left > r.right) && !(r.top > i.bottom) && !(i.top > r.bottom) && !0;
 }
-function O(e) {
+function R(e) {
     return !(e instanceof HTMLElement) || !e.hasAttribute('draggable');
 }
-function R(e, t) {
+function O(e, t) {
     return e instanceof HTMLInputElement ? !C(e, t) : e instanceof HTMLButtonElement ? 'submit' !== e.type && 'reset' !== e.type : !T(e) && !0;
 }
 let v = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);

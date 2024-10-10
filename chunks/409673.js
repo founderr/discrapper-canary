@@ -27,8 +27,8 @@ var r = n(735250),
     g = n(242291),
     A = n(706667),
     N = n(286654),
-    O = n(675654),
-    R = n(689938),
+    R = n(675654),
+    O = n(689938),
     v = n(423298);
 function C(e) {
     let { disabled: t = !1, onClick: n, text: i, children: a, tooltipPosition: o = 'top', refreshEnabled: l = !1 } = e;
@@ -53,7 +53,7 @@ function L(e) {
         onClick: function (e) {
             e.stopPropagation(), e.currentTarget.blur(), n();
         },
-        text: R.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+        text: O.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
             emojiName: t.emojiName,
             soundName: t.name
         }),
@@ -101,8 +101,8 @@ t.ZP = i.forwardRef(function (e, t) {
         eg = V || (Z && !eS),
         eA = i.useRef(null),
         eN = (null !== (b = null === (n = eA.current) || void 0 === n ? void 0 : n.scrollHeight) && void 0 !== b ? b : 0) > (null !== (M = null === (a = eA.current) || void 0 === a ? void 0 : a.offsetHeight) && void 0 !== M ? M : 0),
-        eO = null !== (P = h.Wq.useStore().bottomPosition) && void 0 !== P ? P : 0,
-        eR = null !== (U = null === (y = ec.current) || void 0 === y ? void 0 : y.getBoundingClientRect().bottom) && void 0 !== U ? U : 0,
+        eR = null !== (P = h.Wq.useStore().bottomPosition) && void 0 !== P ? P : 0,
+        eO = null !== (U = null === (y = ec.current) || void 0 === y ? void 0 : y.getBoundingClientRect().bottom) && void 0 !== U ? U : 0,
         ev = eS && q,
         { enableInlineUpsell: eC } = p.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: ev });
     function eL(e) {
@@ -112,7 +112,7 @@ t.ZP = i.forwardRef(function (e, t) {
         return (0, r.jsx)(C, {
             disabled: !H && !V,
             onClick: eL,
-            text: (ep ? R.Z.Messages.SOUNDBOARD_SOUND_UNFAVORITE_SOUND : R.Z.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND).format({
+            text: (ep ? O.Z.Messages.SOUNDBOARD_SOUND_UNFAVORITE_SOUND : O.Z.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND).format({
                 emojiName: G.emojiName,
                 soundName: G.name
             }),
@@ -131,7 +131,7 @@ t.ZP = i.forwardRef(function (e, t) {
         });
     }
     function eD() {
-        if ((eh && !e_ && ((eE.current = Math.min(eE.current + 0.01, 0.1)), Math.random() < eE.current && eu(ed.x, ed.y, void 0, void 0, { sprite: O.vv })), null != W)) {
+        if ((eh && !e_ && ((eE.current = Math.min(eE.current + 0.01, 0.1)), Math.random() < eE.current && eu(ed.x, ed.y, void 0, void 0, { sprite: R.vv })), null != W)) {
             W();
             return;
         }
@@ -200,7 +200,7 @@ t.ZP = i.forwardRef(function (e, t) {
             children: [
                 (0, r.jsx)(d.Tooltip, {
                     text: G.name,
-                    position: eR + 50 > eO ? 'top' : 'bottom',
+                    position: eO + 50 > eR ? 'top' : 'bottom',
                     children: (e) =>
                         (0, r.jsxs)(d.ClickableContainer, {
                             ...$,
@@ -209,7 +209,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                 id: eI,
                                 role: 'button'
                             },
-                            'aria-label': R.Z.Messages.SOUNDBOARD_PLAY_SOUND.format({
+                            'aria-label': O.Z.Messages.SOUNDBOARD_PLAY_SOUND.format({
                                 emojiName: G.emojiName,
                                 soundName: G.name
                             }),
@@ -293,7 +293,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                                                           (0, r.jsx)(d.Text, {
                                                                               variant: 'text-xs/medium',
                                                                               color: 'header-primary',
-                                                                              children: R.Z.Messages.GIFT_SELECT_SOUNDBOARD_ADD
+                                                                              children: O.Z.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                                                                           })
                                                                       ]
                                                                   }),
@@ -312,7 +312,7 @@ t.ZP = i.forwardRef(function (e, t) {
                 }),
                 !G.available &&
                     (0, r.jsx)(d.Tooltip, {
-                        text: R.Z.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
+                        text: O.Z.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
                         children: (e) =>
                             (0, r.jsx)('div', {
                                 className: X ? v.unavailableTooltipRefresh : v.unavailableTooltip,

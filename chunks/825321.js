@@ -1,25 +1,25 @@
 r.d(t, {
     a: function () {
-        return c;
+        return s;
     }
 });
 var n = r(140955),
     a = r(202937),
-    o = r(416987),
-    i = r(596308),
-    _ = r(622574),
+    _ = r(416987),
+    o = r(596308),
+    i = r(622574),
     E = r(662355);
-let s = [1800, 3000],
-    c = (e, t = {}) => {
+let c = [1800, 3000],
+    s = (e, t = {}) => {
         (0, E.A)(() => {
             let r;
-            let E = (0, o.Y)(),
-                c = (0, i.I)('FCP'),
-                I = (0, _.N)('paint', (e) => {
+            let E = (0, _.Y)(),
+                s = (0, o.I)('FCP'),
+                I = (0, i.N)('paint', (e) => {
                     e.forEach((e) => {
-                        'first-contentful-paint' === e.name && (I.disconnect(), e.startTime < E.firstHiddenTime && ((c.value = Math.max(e.startTime - (0, a.A)(), 0)), c.entries.push(e), r(!0)));
+                        'first-contentful-paint' === e.name && (I.disconnect(), e.startTime < E.firstHiddenTime && ((s.value = Math.max(e.startTime - (0, a.A)(), 0)), s.entries.push(e), r(!0)));
                     });
                 });
-            I && (r = (0, n._)(e, c, s, t.reportAllChanges));
+            I && (r = (0, n._)(e, s, c, t.reportAllChanges));
         });
     };

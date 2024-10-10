@@ -1,6 +1,6 @@
 r.d(t, {
     GJ: function () {
-        return s;
+        return c;
     },
     ME: function () {
         return A;
@@ -14,11 +14,11 @@ r.d(t, {
 });
 var n = r(263449),
     a = r(202811),
-    o = r(573736),
-    i = r(394798),
-    _ = r(928541),
+    _ = r(573736),
+    o = r(394798),
+    i = r(928541),
     E = r(370336);
-function s(e, t) {
+function c(e, t) {
     let r = I(e, t),
         n = {
             type: t && t.name,
@@ -29,8 +29,8 @@ function s(e, t) {
         };
     return r.length && (n.stacktrace = { frames: r }), void 0 === n.type && '' === n.value && (n.value = 'Unrecoverable error caught'), n;
 }
-function c(e, t) {
-    return { exception: { values: [s(e, t)] } };
+function s(e, t) {
+    return { exception: { values: [c(e, t)] } };
 }
 function I(e, t) {
     let r = t.stacktrace || t.stack || '',
@@ -48,21 +48,21 @@ function I(e, t) {
 let u = /Minified React error #\d+;/i;
 function l(e, t, r, n) {
     let a = A(e, t, (r && r.syntheticException) || void 0, n);
-    return (0, i.EG)(a), (a.level = 'error'), r && r.event_id && (a.event_id = r.event_id), (0, _.WD)(a);
+    return (0, o.EG)(a), (a.level = 'error'), r && r.event_id && (a.event_id = r.event_id), (0, i.WD)(a);
 }
 function R(e, t, r = 'info', n, a) {
-    let o = T(e, t, (n && n.syntheticException) || void 0, a);
-    return (o.level = r), n && n.event_id && (o.event_id = n.event_id), (0, _.WD)(o);
+    let _ = T(e, t, (n && n.syntheticException) || void 0, a);
+    return (_.level = r), n && n.event_id && (_.event_id = n.event_id), (0, i.WD)(_);
 }
-function A(e, t, r, _, u) {
+function A(e, t, r, i, u) {
     let l;
-    if ((0, o.VW)(t) && t.error) return c(e, t.error);
-    if ((0, o.TX)(t) || (0, o.fm)(t)) {
-        if ('stack' in t) l = c(e, t);
+    if ((0, _.VW)(t) && t.error) return s(e, t.error);
+    if ((0, _.TX)(t) || (0, _.fm)(t)) {
+        if ('stack' in t) l = s(e, t);
         else {
-            let n = t.name || ((0, o.TX)(t) ? 'DOMError' : 'DOMException'),
+            let n = t.name || ((0, _.TX)(t) ? 'DOMError' : 'DOMException'),
                 a = t.message ? `${n}: ${t.message}` : n;
-            (l = T(e, a, r, _)), (0, i.Db)(l, a);
+            (l = T(e, a, r, i)), (0, o.Db)(l, a);
         }
         return (
             'code' in t &&
@@ -73,12 +73,12 @@ function A(e, t, r, _, u) {
             l
         );
     }
-    return (0, o.VZ)(t)
-        ? c(e, t)
-        : (0, o.PO)(t) || (0, o.cO)(t)
-          ? ((l = (function (e, t, r, i) {
-                let _ = (0, n.s3)(),
-                    c = _ && _.getOptions().normalizeDepth,
+    return (0, _.VZ)(t)
+        ? s(e, t)
+        : (0, _.PO)(t) || (0, _.cO)(t)
+          ? ((l = (function (e, t, r, o) {
+                let i = (0, n.s3)(),
+                    s = i && i.getOptions().normalizeDepth,
                     u = (function (e) {
                         for (let t in e)
                             if (Object.prototype.hasOwnProperty.call(e, t)) {
@@ -86,22 +86,22 @@ function A(e, t, r, _, u) {
                                 if (r instanceof Error) return r;
                             }
                     })(t),
-                    l = { __serialized__: (0, a.Qy)(t, c) };
+                    l = { __serialized__: (0, a.Qy)(t, s) };
                 if (u)
                     return {
-                        exception: { values: [s(e, u)] },
+                        exception: { values: [c(e, u)] },
                         extra: l
                     };
                 let R = {
                     exception: {
                         values: [
                             {
-                                type: (0, o.cO)(t) ? t.constructor.name : i ? 'UnhandledRejection' : 'Error',
+                                type: (0, _.cO)(t) ? t.constructor.name : o ? 'UnhandledRejection' : 'Error',
                                 value: (function (e, { isUnhandledRejection: t }) {
                                     let r = (0, E.zf)(e),
                                         n = t ? 'promise rejection' : 'exception';
-                                    if ((0, o.VW)(e)) return `Event \`ErrorEvent\` captured as ${n} with message \`${e.message}\``;
-                                    if ((0, o.cO)(e)) {
+                                    if ((0, _.VW)(e)) return `Event \`ErrorEvent\` captured as ${n} with message \`${e.message}\``;
+                                    if ((0, _.cO)(e)) {
                                         let t = (function (e) {
                                             try {
                                                 let t = Object.getPrototypeOf(e);
@@ -111,7 +111,7 @@ function A(e, t, r, _, u) {
                                         return `Event \`${t}\` (type=${e.type}) captured as ${n}`;
                                     }
                                     return `Object captured as ${n} with keys: ${r}`;
-                                })(t, { isUnhandledRejection: i })
+                                })(t, { isUnhandledRejection: o })
                             }
                         ]
                     },
@@ -123,9 +123,9 @@ function A(e, t, r, _, u) {
                 }
                 return R;
             })(e, t, r, u)),
-            (0, i.EG)(l, { synthetic: !0 }),
+            (0, o.EG)(l, { synthetic: !0 }),
             l)
-          : ((l = T(e, t, r, _)), (0, i.Db)(l, `${t}`, void 0), (0, i.EG)(l, { synthetic: !0 }), l);
+          : ((l = T(e, t, r, i)), (0, o.Db)(l, `${t}`, void 0), (0, o.EG)(l, { synthetic: !0 }), l);
 }
 function T(e, t, r, n) {
     let a = {};
@@ -141,7 +141,7 @@ function T(e, t, r, n) {
                 ]
             });
     }
-    if ((0, o.Le)(t)) {
+    if ((0, _.Le)(t)) {
         let { __sentry_template_string__: e, __sentry_template_values__: r } = t;
         return (
             (a.logentry = {

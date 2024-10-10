@@ -101,13 +101,13 @@ m(function (e, t) {
         g = e.sensitive,
         A = e.strict,
         N = e.style,
-        O = e.to,
-        R = e.innerRef,
+        R = e.to,
+        O = e.innerRef,
         v = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return a.createElement(r.s6.Consumer, null, function (e) {
         e || (0, u.Z)(!1);
         var n = S || e.location,
-            s = _(d(O, n), n),
+            s = _(d(R, n), n),
             l = s.pathname,
             C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
             L = C
@@ -139,6 +139,6 @@ m(function (e, t) {
                 },
                 v
             );
-        return I !== m ? (M.ref = t || R) : (M.innerRef = R), a.createElement(p, M);
+        return I !== m ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
     });
 });

@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     GS: function () {
-        return R;
+        return O;
     },
     Gh: function () {
         return B;
@@ -78,7 +78,7 @@ n.d(t, {
         return M;
     },
     tv: function () {
-        return O;
+        return R;
     },
     u0: function () {
         return f;
@@ -194,7 +194,7 @@ function N(e) {
             return e;
     }
 }
-function O(e) {
+function R(e) {
     let { location: t, treatment: n, gameApplicationIds: r } = e;
     l.default.track(c.rMx.CLAN_USER_INVITE_VIEWED, {
         location: t,
@@ -202,7 +202,7 @@ function O(e) {
         game_application_ids: r
     });
 }
-function R(e) {
+function O(e) {
     let { location: t, treatment: n, gameApplicationIds: r } = e;
     l.default.track(c.rMx.CLAN_USER_INVITE_CLICKED, {
         location: t,

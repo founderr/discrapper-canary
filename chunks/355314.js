@@ -24,8 +24,8 @@ var r = n(735250),
     g = n(790527),
     A = n(474936),
     N = n(981631),
-    O = n(731994),
-    R = n(689938),
+    R = n(731994),
+    O = n(689938),
     v = n(128893);
 function C(e) {
     let { onClose: t, ...n } = e,
@@ -51,24 +51,24 @@ function C(e) {
                   alt: 'File Upload Nitro Perk',
                   src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(x, '_v2.png')
               })
-            : (0, r.jsx)(o.Z, { icons: O.J6 }),
+            : (0, r.jsx)(o.Z, { icons: R.J6 }),
         k = i.useMemo(() => {
             let e = p.ZP.getUserMaxFileSize(C);
             return (0, E.BU)(e / 1024, { useKibibytes: !0 });
         }, [C]),
         B = i.useMemo(() => {
-            let e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k });
+            let e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k });
             switch (y) {
                 case A.p9.TIER_0:
-                    e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: k });
+                    e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: k });
                     break;
                 case A.p9.TIER_1:
-                    e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: k });
+                    e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: k });
             }
             return e;
         }, [y, k]),
         F = (0, E.BU)(A.Uq / 1024, { useKibibytes: !0 }),
-        V = U ? R.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE_V2 : R.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+        V = U ? O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE_V2 : O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
         H = w
             ? U
                 ? (0, I.T)({
@@ -77,8 +77,8 @@ function C(e) {
                           window.open(f.Z.getArticleURL(N.BhN.NITRO_FAQ), '_blank');
                       }
                   })
-                : R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2
-            : R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({ premiumMaxSize: F }),
+                : O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2
+            : O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({ premiumMaxSize: F }),
         Z = w
             ? (0, r.jsx)('div', {
                   className: v.body,
@@ -104,12 +104,12 @@ function C(e) {
         type: A.cd.UPLOAD_ERROR_UPSELL,
         title: V,
         body: Z,
-        context: R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k }),
+        context: O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k }),
         glowUp: H,
         analyticsLocation: { section: N.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
         subscriptionTier: A.Si.TIER_2,
-        secondaryCTA: w ? R.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
+        secondaryCTA: w ? O.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
         onSecondaryClick: w
             ? function () {
                   (0, l.Z)(),

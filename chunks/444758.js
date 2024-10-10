@@ -50,14 +50,14 @@ function N(e, t) {
         iconType: e.iconType
     };
 }
-function O(e) {
+function R(e) {
     return {
         type: 'channel',
         content: [C('')],
         iconType: e ? 'post' : 'message'
     };
 }
-function R(e, t) {
+function O(e, t) {
     var n;
     let r = u.Z.getChannel(e),
         i = (0, o.$)(e, u.Z, a.Z, d.Z).isSubscriptionGated,
@@ -170,7 +170,7 @@ function y(e, t, n, r) {
                 ...i,
                 guildId: T.ME,
                 inContent: [N(e)],
-                content: [O(!1)]
+                content: [R(!1)]
             };
         return null != (s = r) ? v(s) : C('#'.concat(S.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
     }
@@ -180,7 +180,7 @@ function y(e, t, n, r) {
         ...(function (e, t, n, r) {
             let i = A(e),
                 a = N(t),
-                s = O(t.isForumPost);
+                s = R(t.isForumPost);
             if (n && r) {
                 if (t.isForumPost) {
                     let e = u.Z.getChannel(t.parentId);
@@ -232,7 +232,7 @@ let D = {
                     type: 'channelMention',
                     id: r
                 };
-            let i = R(r, n.mentionChannels);
+            let i = O(r, n.mentionChannels);
             return null == i ? L(null, r, null, g(n.channelId)) : y(i, null, g(n.channelId));
         }
     },
@@ -249,7 +249,7 @@ let D = {
                 a = e[2],
                 s = e[3];
             if (null == a) return v(r);
-            let o = R(a, null);
+            let o = O(a, null);
             return null == o ? L(i, a, s, g(n.channelId), r) : y(o, s, g(n.channelId), r);
         }
     },
@@ -264,9 +264,9 @@ let D = {
                 s = e[3],
                 o = e[4];
             if (null == a || null == s) return v(r);
-            let l = R(s, null);
+            let l = O(s, null);
             if (null != l) return y(l, o, g(n.channelId), r);
-            let u = R(a, null);
+            let u = O(a, null);
             return null != u ? y(u, o, g(n.channelId), r) : L(i, a, o, g(n.channelId), r);
         }
     };

@@ -36,14 +36,14 @@ t.Z = i.memo(function () {
         t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         n = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
         a = E.Z.useIsRingtoneEligible(),
-        O = E.Z.useIsRingtoneDisabled(),
-        R = (0, l.e7)([I.Z], () => I.Z.disableSounds),
+        R = E.Z.useIsRingtoneDisabled(),
+        O = (0, l.e7)([I.Z], () => I.Z.disableSounds),
         v = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
         C = i.useRef(!1),
         L = (0, o.Z)(() => {
             let e = 'call_ringing';
-            return a && !O ? (0, T.tu)(_.Z.ringtone, e) : v === g.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', v);
-        }, [v, O, a]);
+            return a && !R ? (0, T.tu)(_.Z.ringtone, e) : v === g.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', v);
+        }, [v, R, a]);
     return (
         i.useEffect(
             () => () => {
@@ -52,12 +52,12 @@ t.Z = i.memo(function () {
             [L]
         ),
         i.useEffect(() => {
-            if (R || n) {
+            if (O || n) {
                 C.current && (L.stop(), (C.current = !1));
                 return;
             }
             t && !C.current ? (L.loop(), (C.current = !0)) : !t && C.current && (L.stop(), (C.current = !1));
-        }, [n, R, t, L]),
+        }, [n, O, t, L]),
         (0, u.useTransition)(e, {
             keys: (e) => {
                 var t;

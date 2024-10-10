@@ -18,7 +18,7 @@ n.d(t, {
         return A;
     },
     f4: function () {
-        return O;
+        return R;
     },
     g_: function () {
         return I;
@@ -30,7 +30,7 @@ n.d(t, {
         return h;
     },
     rf: function () {
-        return R;
+        return O;
     },
     x3: function () {
         return v;
@@ -156,14 +156,14 @@ function N(e) {
     }),
         E(_.QP.AVATAR_DECORATION);
 }
-function O(e) {
+function R(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
         E(_.QP.PROFILE_BANNER);
 }
-function R(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e

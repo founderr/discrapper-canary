@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     Ph: function () {
-        return O;
+        return R;
     },
     _2: function () {
         return v;
@@ -90,12 +90,12 @@ let N = (e) => {
                 return h.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
         }
     },
-    O = (e) => {
+    R = (e) => {
         let t = _.Z.get((0, E.rR)(e)),
             n = (0, d.ZP)();
         return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, c.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
     };
-function R(e) {
+function O(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -115,7 +115,7 @@ async function v(e, t) {
             body: { user_ids: r }
         });
         if (!Array.isArray(t.body)) return S(n, 0), [];
-        let i = t.body.map(R),
+        let i = t.body.map(O),
             a = [];
         i.forEach((e) => {
             let { userId: t } = e;

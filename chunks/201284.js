@@ -79,22 +79,22 @@ function u(e) {
             [g, A] = (0, r.useState)(!1);
         I !== T && (S(I), A(!1));
         let N = (0, r.useMemo)(() => d(g ? [] : m), [g, m]),
-            O = (0, r.useRef)(s),
-            [R, v] = (0, r.useState)(s),
+            R = (0, r.useRef)(s),
+            [O, v] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
             [L, y] = (0, r.useState)(!1);
         return (
             (0, r.useEffect)(() => {
                 if (!L) return;
                 y(!1);
-                let e = p || u || O.current;
+                let e = p || u || R.current;
                 !_(e, C.current) && ((C.current = e), v(e));
             }),
             {
                 realtimeValidation: h || N || p || u || s,
-                displayValidation: 'native' === f ? h || N || R : h || N || p || u || R,
+                displayValidation: 'native' === f ? h || N || O : h || N || p || u || O,
                 updateValidation(e) {
-                    'aria' !== f || _(R, e) ? (O.current = e) : v(e);
+                    'aria' !== f || _(O, e) ? (R.current = e) : v(e);
                 },
                 resetValidation() {
                     !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && y(!1), A(!0);

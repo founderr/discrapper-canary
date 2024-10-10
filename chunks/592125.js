@@ -27,8 +27,8 @@ var r,
     g = n(709054),
     A = n(314897),
     N = n(430824),
-    O = n(594174),
-    R = n(981631);
+    R = n(594174),
+    O = n(981631);
 let v = new I.Z('ChannelStore'),
     C = {},
     L = {},
@@ -146,7 +146,7 @@ function q(e) {
             })(e);
 }
 function Q(e) {
-    (D[e.id] = e), e.type === R.d4z.DM && (P[e.getRecipientId()] = e.id), (U += 1);
+    (D[e.id] = e), e.type === O.d4z.DM && (P[e.getRecipientId()] = e.id), (U += 1);
 }
 function X(e) {
     let t = L[e.parent_id];
@@ -215,7 +215,7 @@ function er(e) {
     if (null == i) return !1;
     en(i),
         !(function (e) {
-            if ('basicPermissions' in e || e.type !== R.d4z.DM) return;
+            if ('basicPermissions' in e || e.type !== O.d4z.DM) return;
             let t = e.getRecipientId();
             if (P[t] === e.id) delete P[t];
         })(i);
@@ -247,7 +247,7 @@ function eo() {
 }
 class el extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, O.default, N.Z, m.Z), this.syncWith([m.Z], eo);
+        this.waitFor(h.Z, R.default, N.Z, m.Z), this.syncWith([m.Z], eo);
     }
     hasChannel(e) {
         return null != K(e);

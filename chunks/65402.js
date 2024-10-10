@@ -1,5 +1,5 @@
-var n = s(566131),
-    r = s(760937);
+var r = n(566131),
+    i = n(760937);
 e.exports = function (e) {
-    return r(n(e));
+    return i(r(e));
 };

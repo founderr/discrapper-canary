@@ -41,8 +41,8 @@ var i = t(735250),
     Z = t(561160),
     H = t(41558),
     U = t(105862),
-    B = t(28147),
-    D = t(981631),
+    D = t(28147),
+    B = t(981631),
     k = t(689079),
     w = t(689938),
     V = t(597976);
@@ -100,7 +100,7 @@ function G(e) {
                 className: V.scrollableContent,
                 fade: !0,
                 children: M
-                    ? (0, i.jsx)(B.Z, {
+                    ? (0, i.jsx)(D.Z, {
                           channel: n,
                           query: l,
                           entrypoint: t,
@@ -162,7 +162,7 @@ function q(e) {
             () =>
                 o().debounce(
                     (e) => {
-                        (0, f.yw)(D.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
+                        (0, f.yw)(B.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
                             source: L.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME
@@ -179,7 +179,7 @@ function q(e) {
         m = a.useCallback(() => t(''), [t]),
         p = a.useCallback(() => {
             c(!0),
-                (0, f.yw)(D.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
+                (0, f.yw)(B.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: L.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME
                 });
@@ -247,7 +247,7 @@ function J(e) {
     a.useEffect(() => {
         if (!0 !== s.current)
             0 !== m.length &&
-                (0, f.yw)(D.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
+                (0, f.yw)(B.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
                     num: m.length,
                     section_name: T.L3.RECENT_APPS,
                     location: T.G0.HOME,
@@ -693,7 +693,7 @@ function en(e) {
                 : {
                       items: i.slice(0, l),
                       handleViewMore: () => {
-                          (0, f.yw)(D.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                          (0, f.yw)(B.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: o,
                               source: L.Z.entrypoint(),
                               num: i.length

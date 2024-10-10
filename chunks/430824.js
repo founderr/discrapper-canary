@@ -34,8 +34,8 @@ function N(e) {
         (r = E.iw(t, Object.values(r))),
         (m[t] = r);
 }
-let O = Object.freeze({});
-class R extends (i = l.ZP.Store) {
+let R = Object.freeze({});
+class O extends (i = l.ZP.Store) {
     getGuild(e) {
         return null == e ? void 0 : e === p.I_8 ? I.g : T[e];
     }
@@ -59,7 +59,7 @@ class R extends (i = l.ZP.Store) {
     }
     getRoles(e) {
         var t;
-        return null !== (t = m[e]) && void 0 !== t ? t : O;
+        return null !== (t = m[e]) && void 0 !== t ? t : R;
     }
     getRole(e, t) {
         var n;
@@ -67,7 +67,7 @@ class R extends (i = l.ZP.Store) {
     }
 }
 (o = 'GuildStore'),
-    (s = 'displayName') in (a = R)
+    (s = 'displayName') in (a = O)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -75,13 +75,13 @@ class R extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new R(c.Z, {
+    (t.Z = new O(c.Z, {
         BACKGROUND_SYNC: function (e) {
             for (let n of e.guilds) {
                 var t;
                 let e = T[n.id];
                 if (null == e || 'unavailable' === n.data_mode) return;
-                (T[n.id] = _.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? _.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : O, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles));
+                (T[n.id] = _.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? _.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : R, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles));
             }
             r = Object.keys(T).length;
         },

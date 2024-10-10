@@ -28,8 +28,8 @@ var r = n(735250),
     g = n(55935),
     A = n(823379),
     N = n(453687),
-    O = n(930282),
-    R = n(123145),
+    R = n(930282),
+    O = n(123145),
     v = n(223021),
     C = n(217702),
     L = n(981631),
@@ -71,7 +71,7 @@ function P(e, t, n, i, a) {
         g = (0, T.cv)(d).length > 0,
         A = null != d.interaction,
         N = d.hasFlag(L.iLy.IS_VOICE_MESSAGE),
-        R = d.isPoll(),
+        O = d.isPoll(),
         v = d.type === L.uaV.POLL_RESULT;
     if (
         ((0, E.Z)(e) &&
@@ -86,7 +86,7 @@ function P(e, t, n, i, a) {
         s = y.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
     else if (d.type === L.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
     else if (S) {
-        if (R) {
+        if (O) {
             var C, D;
             o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text;
         } else
@@ -107,7 +107,7 @@ function P(e, t, n, i, a) {
                             height: m
                         })));
     } else
-        o = (0, r.jsx)(O.ZP, {
+        o = (0, r.jsx)(R.ZP, {
             message: d,
             content: t,
             className: i
@@ -158,7 +158,7 @@ function U(e) {
     let t;
     let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: E, renderPopout: f, isReplySpineClickable: h, showReplySpine: p } = e,
         { canShowReactionsOnMessageHover: T } = _.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [O, U] = i.useState(!1),
+        [R, U] = i.useState(!1),
         w = i.useMemo(() => (null != f && E.state === I.Y.LOADED ? (e) => f(e, E.message) : void 0), [E, f]),
         x = i.useCallback(() => U((e) => !e), []),
         G = (function (e, t, n) {
@@ -236,7 +236,7 @@ function U(e) {
                 c = (null == a ? void 0 : a.state) === I.Y.LOADED ? a.message : void 0;
             return null == c || c.type === L.uaV.USER_JOIN || c.type === L.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === L.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === L.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === L.uaV.GUILD_GAMING_STATS_PROMPT || c.type === L.uaV.POLL_RESULT
                 ? null
-                : (0, r.jsx)(R.Z, {
+                : (0, r.jsx)(O.Z, {
                       message: c,
                       channel: i,
                       compact: !0,
@@ -306,7 +306,7 @@ function U(e) {
                 default:
                     (0, A.vE)(a);
             }
-        })(e, O, x),
+        })(e, R, x),
         F = i.useMemo(() => (e.compact ? (0, v.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != a &&
@@ -329,7 +329,7 @@ function U(e) {
                 (0, r.jsx)(u.Clickable, {
                     tag: 'div',
                     'aria-label': y.Z.Messages.JUMP_TO_REPLY,
-                    className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: O }),
+                    className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: R }),
                     onClick: e.onClickReply,
                     onMouseEnter: x,
                     onMouseLeave: x

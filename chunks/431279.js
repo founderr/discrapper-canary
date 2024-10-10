@@ -56,8 +56,8 @@ class T extends (r = a.PureComponent) {
             m(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: a, src: l, original: u, width: _, height: E, animated: m, srcIsAnimated: T, children: S, renderLinkComponent: g, renderForwardComponent: A, isWindowFocused: N, shouldHideMediaOptions: O = !1 } = this.props,
-                    R = {
+                let { alt: a, src: l, original: u, width: _, height: E, animated: m, srcIsAnimated: T, children: S, renderLinkComponent: g, renderForwardComponent: A, isWindowFocused: N, shouldHideMediaOptions: R = !1 } = this.props,
+                    O = {
                         alt: a,
                         src: l,
                         original: null != u ? u : l,
@@ -69,7 +69,7 @@ class T extends (r = a.PureComponent) {
                         srcIsAnimated: T,
                         renderLinkComponent: g,
                         renderForwardComponent: A,
-                        onContextMenu: O
+                        onContextMenu: R
                             ? (e) => {
                                   e.stopPropagation(), e.preventDefault();
                               }
@@ -86,11 +86,11 @@ class T extends (r = a.PureComponent) {
                                 size: o.ModalSize.DYNAMIC,
                                 'aria-label': p.Z.Messages.IMAGE,
                                 children: (0, i.jsx)(c.y, {
-                                    ...R,
+                                    ...O,
                                     className: I.image,
                                     shouldAnimate: N,
                                     onClose: this.onCloseImage,
-                                    shouldHideMediaOptions: O
+                                    shouldHideMediaOptions: R
                                 })
                             }),
                         { modalKey: h.c },

@@ -123,9 +123,9 @@ class N {
         }
     }
 }
-let O = n(5420);
-for (let e in O) {
-    let t = O[e].map((e) => {
+let R = n(5420);
+for (let e in R) {
+    let t = R[e].map((e) => {
         let t = new N(e),
             n = t.surrogates,
             r = t.uniqueName;
@@ -152,7 +152,7 @@ for (let e in O) {
     });
     c[e] = s.ZP.filterUnsupportedEmojis(t);
 }
-function R(e) {
+function O(e) {
     return Object.prototype.hasOwnProperty.call(d, e) ? d[e] : null;
 }
 function v(e) {
@@ -227,7 +227,7 @@ t.ZP = {
     getCategories: function () {
         return Object.keys(c);
     },
-    getByName: R,
+    getByName: O,
     getByCategory: function (e) {
         return c[e];
     },
@@ -256,7 +256,7 @@ t.ZP = {
         return Object.prototype.hasOwnProperty.call(S, e) && (r = S[e]), t ? ':'.concat(r, ':') : r;
     },
     convertSurrogateToBase: function (e) {
-        return R(
+        return O(
             M(
                 m.reduce((e, t) => e.replace(t, ''), e),
                 !1

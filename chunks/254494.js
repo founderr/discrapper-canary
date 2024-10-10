@@ -50,8 +50,8 @@ t.Z = function (e) {
             },
             [n, u]
         ),
-        O = i.useCallback((e) => T(a[e], e, () => N(e), A === e), [A, a, N, T]),
-        R = i.useMemo(() => ('function' == typeof I ? (e) => I(a[e], e) : I), [a, I]);
+        R = i.useCallback((e) => T(a[e], e, () => N(e), A === e), [A, a, N, T]),
+        O = i.useMemo(() => ('function' == typeof I ? (e) => I(a[e], e) : I), [a, I]);
     return (0, r.jsxs)('div', {
         className: s()(c.wrapper, E),
         children: [
@@ -59,9 +59,9 @@ t.Z = function (e) {
                 listPadding: f,
                 onScroll: m,
                 ref: t,
-                renderRow: O,
+                renderRow: R,
                 rowCount: h,
-                rowHeight: R,
+                rowHeight: O,
                 hideScrollbar: !0,
                 rowCountBySection: S,
                 renderSection: g

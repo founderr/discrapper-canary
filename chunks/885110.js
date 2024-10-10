@@ -20,10 +20,10 @@ var r,
     g = n(293273),
     A = n(158776),
     N = n(797258),
-    O = n(981631);
-let R = !1,
-    v = O.Skl.ONLINE,
-    C = O.Skl.UNKNOWN,
+    R = n(981631);
+let O = !1,
+    v = R.Skl.ONLINE,
+    C = R.Skl.UNKNOWN,
     L = 0,
     y = [],
     D = !1,
@@ -35,19 +35,19 @@ function U(e) {
 }
 function w(e) {
     switch (e.type) {
-        case O.IIU.LISTENING:
+        case R.IIU.LISTENING:
             if ((0, E.Z)(e)) return f.Z.shouldShowActivity();
             if (null != e.application_id) return U(e.application_id);
             return !1;
-        case O.IIU.PLAYING:
+        case R.IIU.PLAYING:
             return null != e.application_id
                 ? U(e.application_id)
                 : (function (e) {
                       let t = m.Z.getGameByName(e);
                       return null != t ? U(t.id) : h.G6.getSetting();
                   })(e.name);
-        case O.IIU.STREAMING:
-        case O.IIU.WATCHING:
+        case R.IIU.STREAMING:
+        case R.IIU.WATCHING:
         default:
             return null == e.application_id || U(e.application_id);
     }
@@ -55,26 +55,26 @@ function w(e) {
 function x() {
     var e;
     if (((L = null !== (e = T.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = T.Z.isAFK()), b)) v = C;
-    else if (R) v = O.Skl.INVISIBLE;
+    else if (O) v = R.Skl.INVISIBLE;
     else {
         let e = h.co.getSetting();
-        v = e !== O.Skl.UNKNOWN ? e : O.Skl.ONLINE;
+        v = e !== R.Skl.UNKNOWN ? e : R.Skl.ONLINE;
     }
-    v === O.Skl.ONLINE && L > 0 && (v = O.Skl.IDLE);
+    v === R.Skl.ONLINE && L > 0 && (v = R.Skl.IDLE);
     let t = !1,
-        n = b || v === O.Skl.INVISIBLE ? [] : g.Z.getActivities().filter(w);
+        n = b || v === R.Skl.INVISIBLE ? [] : g.Z.getActivities().filter(w);
     !l()(y, n) && ((y = n), (t = !0));
     let r = N.Z.getRemoteActivities();
     if ((M !== r && ((M = r), (t = !0)), t)) {
-        let e = y.find((e) => e.type === O.IIU.CUSTOM_STATUS);
+        let e = y.find((e) => e.type === R.IIU.CUSTOM_STATUS);
         P =
-            y.filter((e) => e.type !== O.IIU.CUSTOM_STATUS).length > 0
+            y.filter((e) => e.type !== R.IIU.CUSTOM_STATUS).length > 0
                 ? y
                 : null != e
                   ? [
                         e,
                         ...c()(M)
-                            .filter((e) => e.type !== O.IIU.CUSTOM_STATUS)
+                            .filter((e) => e.type !== R.IIU.CUSTOM_STATUS)
                             .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                             .value()
                     ]
@@ -82,7 +82,7 @@ function x() {
     }
 }
 function G() {
-    (b = !1), (C = O.Skl.UNKNOWN), x(), A.Z.setCurrentUserOnConnectionOpen(v, P);
+    (b = !1), (C = R.Skl.UNKNOWN), x(), A.Z.setCurrentUserOnConnectionOpen(v, P);
 }
 class k extends (r = d.ZP.Store) {
     initialize() {
@@ -150,9 +150,9 @@ class k extends (r = d.ZP.Store) {
             (b = !0), (C = v), x();
         },
         FORCE_INVISIBLE: function (e) {
-            return (R = e.invisible), x();
+            return (O = e.invisible), x();
         },
         WINDOW_FOCUS: function () {
-            return (R = !1), x();
+            return (O = !1), x();
         }
     }));

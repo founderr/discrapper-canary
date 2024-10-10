@@ -3,19 +3,19 @@ r.d(t, {
         return E;
     },
     Cd: function () {
-        return p;
+        return O;
     },
     HY: function () {
-        return N;
+        return d;
     },
     Jd: function () {
-        return _;
+        return i;
     },
     KQ: function () {
         return R;
     },
     R: function () {
-        return c;
+        return s;
     },
     V$: function () {
         return u;
@@ -24,10 +24,10 @@ r.d(t, {
         return l;
     },
     gv: function () {
-        return s;
+        return c;
     },
     mL: function () {
-        return d;
+        return N;
     },
     zQ: function () {
         return A;
@@ -35,43 +35,43 @@ r.d(t, {
 });
 var n = r(967752),
     a = r(202811),
-    o = r(370336),
-    i = r(899517);
-function _(e, t = []) {
+    _ = r(370336),
+    o = r(899517);
+function i(e, t = []) {
     return [e, t];
 }
 function E(e, t) {
     let [r, n] = e;
     return [r, [...n, t]];
 }
-function s(e, t) {
+function c(e, t) {
     for (let r of e[1]) {
         let e = r[0].type;
         if (t(r, e)) return !0;
     }
     return !1;
 }
-function c(e, t) {
-    return s(e, (e, r) => t.includes(r));
+function s(e, t) {
+    return c(e, (e, r) => t.includes(r));
 }
 function I(e) {
-    return i.n.__SENTRY__ && i.n.__SENTRY__.encodePolyfill ? i.n.__SENTRY__.encodePolyfill(e) : new TextEncoder().encode(e);
+    return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(e) : new TextEncoder().encode(e);
 }
 function u(e) {
     let [t, r] = e,
         n = JSON.stringify(t);
-    function o(e) {
+    function _(e) {
         'string' == typeof n ? (n = 'string' == typeof e ? n + e : [I(n), e]) : n.push('string' == typeof e ? I(e) : e);
     }
     for (let e of r) {
         let [t, r] = e;
         if (
-            (o(`
+            (_(`
 ${JSON.stringify(t)}
 `),
             'string' == typeof r || r instanceof Uint8Array)
         )
-            o(r);
+            _(r);
         else {
             let e;
             try {
@@ -79,7 +79,7 @@ ${JSON.stringify(t)}
             } catch (t) {
                 e = JSON.stringify((0, a.Fv)(r));
             }
-            o(e);
+            _(e);
         }
     }
     return 'string' == typeof n
@@ -100,16 +100,16 @@ function l(e) {
     function n() {
         var e;
         let n = t.indexOf(10);
-        return n < 0 && (n = t.length), JSON.parse(((e = r(n)), i.n.__SENTRY__ && i.n.__SENTRY__.decodePolyfill ? i.n.__SENTRY__.decodePolyfill(e) : new TextDecoder().decode(e)));
+        return n < 0 && (n = t.length), JSON.parse(((e = r(n)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(e) : new TextDecoder().decode(e)));
     }
     let a = n(),
-        o = [];
+        _ = [];
     for (; t.length; ) {
         let e = n(),
             t = 'number' == typeof e.length ? e.length : void 0;
-        o.push([e, t ? r(t) : n()]);
+        _.push([e, t ? r(t) : n()]);
     }
-    return [a, o];
+    return [a, _];
 }
 function R(e) {
     return [{ type: 'span' }, e];
@@ -117,7 +117,7 @@ function R(e) {
 function A(e) {
     let t = 'string' == typeof e.data ? I(e.data) : e.data;
     return [
-        (0, o.Jr)({
+        (0, _.Jr)({
             type: 'attachment',
             length: t.length,
             filename: e.filename,
@@ -144,10 +144,10 @@ let T = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function d(e) {
+function N(e) {
     return T[e];
 }
-function N(e) {
+function d(e) {
     if (!e || !e.sdk) return;
     let { name: t, version: r } = e.sdk;
     return {
@@ -155,13 +155,13 @@ function N(e) {
         version: r
     };
 }
-function p(e, t, r, a) {
-    let i = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
+function O(e, t, r, a) {
+    let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,
         sent_at: new Date().toISOString(),
         ...(t && { sdk: t }),
         ...(!!r && a && { dsn: (0, n.RA)(a) }),
-        ...(i && { trace: (0, o.Jr)({ ...i }) })
+        ...(o && { trace: (0, _.Jr)({ ...o }) })
     };
 }

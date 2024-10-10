@@ -16,7 +16,7 @@ t.Z = function (e) {
         g = (0, o.ZP)(S, a.Z.unsafe_rawColors.PRIMARY_800.css),
         A = (0, l.c)(!0, 'VideoBackground-web').enabled,
         N = (0, c.ZP)(null != p ? p : E.lds),
-        O =
+        R =
             null == N
                 ? void 0
                 : N.getBannerURL({
@@ -30,7 +30,7 @@ t.Z = function (e) {
         null == n)
     )
         return null;
-    let R = (0, r.jsx)(s.Avatar, {
+    let O = (0, r.jsx)(s.Avatar, {
             className: f.avatarWrapper,
             src: n,
             ...T
@@ -40,16 +40,16 @@ t.Z = function (e) {
             backgroundColor: g
         };
     return (
-        null != O && m && A && ((v.backgroundImage = 'url('.concat(O, ')')), (v.backgroundSize = 'cover')),
+        null != R && m && A && ((v.backgroundImage = 'url('.concat(R, ')')), (v.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
             style: v,
             className: f.background,
             children: I
                 ? (0, r.jsx)(u.Z, {
                       shouldAnimate: m,
-                      children: R
+                      children: O
                   })
-                : R
+                : O
         })
     );
 };

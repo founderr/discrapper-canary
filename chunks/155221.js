@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(314897),
     A = n(626135),
     N = n(361207),
-    O = n(690032),
-    R = n(358085),
+    R = n(690032),
+    O = n(358085),
     v = n(998502),
     C = n(981631),
     L = n(188785),
@@ -154,7 +154,7 @@ class J extends i.Component {
                 n === I.P.IN_PROGRESS
                     ? null
                     : y.KO
-                      ? R.isPlatformEmbedded
+                      ? O.isPlatformEmbedded
                           ? (0, r.jsxs)(s.rs, {
                                 children: [
                                     (0, r.jsx)(s.AW, {
@@ -298,7 +298,7 @@ class J extends i.Component {
                                         render: () => {
                                             var e, t;
                                             let n = null === (e = A.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                                                i = (0, O.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
+                                                i = (0, R.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
                                             if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(s.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : C.Z5c.APP });
                                             {
                                                 let e = (0, N.Gn)('app_open_from_email', n, i.mobile),
@@ -343,7 +343,7 @@ class J extends i.Component {
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
-                children: [e, R.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
+                children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
             })
         );
     }

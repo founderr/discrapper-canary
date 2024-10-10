@@ -33,7 +33,7 @@ n.d(t, {
         return h;
     },
     gs: function () {
-        return O;
+        return R;
     },
     lq: function () {
         return p;
@@ -54,7 +54,7 @@ n.d(t, {
         return f;
     },
     u1: function () {
-        return R;
+        return O;
     }
 });
 var r = n(570140),
@@ -153,13 +153,13 @@ function N(e) {
         systemPrefersContrast: e
     });
 }
-function O(e) {
+function R(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS',
         alwaysShowLinkDecorations: e
     });
 }
-function R(e) {
+function O(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e

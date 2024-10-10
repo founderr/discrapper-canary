@@ -27,7 +27,7 @@ n.d(t, {
         return T;
     },
     wK: function () {
-        return O;
+        return R;
     }
 }),
     n(789020),
@@ -133,15 +133,15 @@ function S(e, t, n, r, i, u) {
             };
         },
         A = g(r),
-        O = g(N(e, t), n),
-        R = m(A, O, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        R = g(N(e, t), n),
+        O = m(A, R, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = o.Z.getChannel(t),
-        C = null !== (h = R('channel_flags')) && void 0 !== h ? h : 0,
-        L = (null !== (I = O.channel_flags) && void 0 !== I ? I : 0) ^ C,
+        C = null !== (h = O('channel_flags')) && void 0 !== h ? h : 0,
+        L = (null !== (I = R.channel_flags) && void 0 !== I ? I : 0) ^ C,
         y = 0 === (0, c.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
         D = null !== (S = null === (E = l.Z.getLastMessage(t)) || void 0 === E ? void 0 : E.type) && void 0 !== S ? S : null;
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-        ...O,
+        ...R,
         ...s.Z.getStats(e),
         location: u,
         guild_id: e,
@@ -149,11 +149,11 @@ function S(e, t, n, r, i, u) {
         update_type: _.I.CHANNEL,
         label: i,
         parent_id: null != v ? v.parent_id : null,
-        channel_flags_old: R('channel_flags'),
-        channel_is_muted_old: R('channel_is_muted'),
-        channel_muted_until_old: R('channel_muted_until'),
-        channel_is_overridden_old: R('channel_is_overridden'),
-        channel_message_notification_settings_old: R('channel_message_notification_settings'),
+        channel_flags_old: O('channel_flags'),
+        channel_is_muted_old: O('channel_is_muted'),
+        channel_muted_until_old: O('channel_muted_until'),
+        channel_is_overridden_old: O('channel_is_overridden'),
+        channel_message_notification_settings_old: O('channel_message_notification_settings'),
         is_opt_in_only_change: y,
         last_message_type: D
     });
@@ -187,7 +187,7 @@ function N(e, t) {
         channel_flags: u.ZP.getChannelIdFlags(e, t)
     };
 }
-function O(e, t) {
+function R(e, t) {
     let n = new Map();
     return t.forEach((t) => n.set(t, N(e, t))), n;
 }

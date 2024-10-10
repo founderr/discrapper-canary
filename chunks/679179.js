@@ -1,9 +1,9 @@
 r.d(t, {
     EZ: function () {
-        return _;
+        return i;
     },
     Gf: function () {
-        return i;
+        return o;
     }
 });
 let n = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
@@ -30,29 +30,29 @@ function a(...e) {
         (r ? '/' : '') + t || '.'
     );
 }
-function o(e) {
+function _(e) {
     let t = 0;
     for (; t < e.length && '' === e[t]; t++);
     let r = e.length - 1;
     for (; r >= 0 && '' === e[r]; r--);
     return t > r ? [] : e.slice(t, r - t + 1);
 }
-function i(e, t) {
+function o(e, t) {
     (e = a(e).slice(1)), (t = a(t).slice(1));
-    let r = o(e.split('/')),
-        n = o(t.split('/')),
-        i = Math.min(r.length, n.length),
-        _ = i;
-    for (let e = 0; e < i; e++)
+    let r = _(e.split('/')),
+        n = _(t.split('/')),
+        o = Math.min(r.length, n.length),
+        i = o;
+    for (let e = 0; e < o; e++)
         if (r[e] !== n[e]) {
-            _ = e;
+            i = e;
             break;
         }
     let E = [];
-    for (let e = _; e < r.length; e++) E.push('..');
-    return (E = E.concat(n.slice(_))).join('/');
+    for (let e = i; e < r.length; e++) E.push('..');
+    return (E = E.concat(n.slice(i))).join('/');
 }
-function _(e, t) {
+function i(e, t) {
     let r =
         (function (e) {
             let t = e.length > 1024 ? `<truncated>${e.slice(-1024)}` : e,

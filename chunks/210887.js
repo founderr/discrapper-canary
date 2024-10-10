@@ -33,8 +33,8 @@ function N(e, t, n) {
         e
     );
 }
-let O = null !== (i = (0, f.Z)()) && void 0 !== i ? i : g.BRd.DARK,
-    R = null,
+let R = null !== (i = (0, f.Z)()) && void 0 !== i ? i : g.BRd.DARK,
+    O = null,
     v = !1;
 function C() {
     let e = (function () {
@@ -46,7 +46,7 @@ function C() {
         let i = null === (e = I.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
         if (null != i) return i;
         let a = null === (t = T.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
-        if (null == a) return O;
+        if (null == a) return R;
         if (!E.i.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? g.BRd.LIGHT : g.BRd.DARK;
         switch (a) {
             case o.Q2.LIGHT:
@@ -71,11 +71,11 @@ function y() {
 }
 function D() {
     let e = C();
-    return e !== O && ((O = e), !0);
+    return e !== R && ((R = e), !0);
 }
 class b extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && (O = e.theme), this.waitFor(m.ZP, I.Z, T.Z, d.Z);
+        (null == e ? void 0 : e.theme) != null && (R = e.theme), this.waitFor(m.ZP, I.Z, T.Z, d.Z);
     }
     getState() {
         return { theme: this.theme };
@@ -87,13 +87,13 @@ class b extends (a = s.ZP.PersistedStore) {
         return C();
     }
     get systemTheme() {
-        return R;
+        return O;
     }
     get systemPrefersColorScheme() {
         return r;
     }
     get isSystemThemeAvailable() {
-        return null !== R;
+        return null !== O;
     }
 }
 N(b, 'displayName', 'ThemeStore'),
@@ -116,8 +116,8 @@ N(b, 'displayName', 'ThemeStore'),
         LOGOUT: function (e) {
             return (
                 !e.isSwitchingAccount &&
-                O !== g.BRd.DARK &&
-                ((O = g.BRd.DARK),
+                R !== g.BRd.DARK &&
+                ((R = g.BRd.DARK),
                 (function () {
                     !__OVERLAY__ && p.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
                 })(),
@@ -131,19 +131,19 @@ N(b, 'displayName', 'ThemeStore'),
         UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
             var t, n;
             let { presetId: r } = e;
-            O = null != r && null !== (n = null === (t = A.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
+            R = null != r && null !== (n = null === (t = A.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
             let i = null != r;
             return v !== i
                 ? ((v = i), !0)
                 : (function () {
                       let e = C();
-                      return !(0, _.qu)(O, e) && ((O = e), !0);
+                      return !(0, _.qu)(R, e) && ((R = e), !0);
                   })();
         },
         RESET_PREVIEW_CLIENT_THEME: L,
         SYSTEM_THEME_CHANGE: function (e) {
             let { systemTheme: t } = e;
-            return (R = t), D();
+            return (O = t), D();
         },
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
             return (r = e.systemPrefersColorScheme), D();

@@ -20,8 +20,8 @@ var r = n(913527),
     g = n(163379),
     A = n(596401),
     N = n(981631),
-    O = n(930441);
-function R(e, t, n) {
+    R = n(930441);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ async function v(e, t) {
         r = I.default.extractTimestamp(e);
     if ((n >= e || i()().diff(r, 'days') > 30) && !t) return;
     let a = await (0, _.Y7)();
-    if (!(null == a ? void 0 : a.categories[O.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
+    if (!(null == a ? void 0 : a.categories[R.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
     let s = await o.Z.getOrEnsurePrivateChannel(A.sP);
     if (null == s) return;
     await l.Z.fetchMessages({
@@ -71,8 +71,8 @@ async function v(e, t) {
 class C extends c.Z {
     constructor(...e) {
         super(...e),
-            R(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
-            R(this, 'handleConnectionOpen', async (e) => {
+            O(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
+            O(this, 'handleConnectionOpen', async (e) => {
                 let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = m.Z.getCurrentConfig({ location: 'changelog_manager' }, { autoTrackExposure: !1 }),
                     r = await s.Z.fetchChangelogConfig(),
                     i = r.body,

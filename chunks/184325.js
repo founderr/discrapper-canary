@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -25,7 +25,7 @@ var r = n(735250),
     g = n(474936),
     A = n(689938),
     N = n(961653);
-let O = (e) => {
+let R = (e) => {
     if (null != e)
         switch (e) {
             case g.VU.PREMIUM_TENURE_1_MONTH:
@@ -48,9 +48,9 @@ let O = (e) => {
                 return;
         }
 };
-function R(e) {
+function O(e) {
     let { badges: t, className: n, badgeClassName: a, onClose: g } = e,
-        { analyticsLocations: R } = (0, c.ZP)(u.Z.BADGE),
+        { analyticsLocations: O } = (0, c.ZP)(u.Z.BADGE),
         { context: v, trackUserProfileAction: C } = (0, h.KZ)(),
         [L, y] = i.useState(!1);
     return (0, r.jsx)('div', {
@@ -59,7 +59,7 @@ function R(e) {
         role: 'group',
         children: t.map((e) => {
             let t = (0, f.gn)(e.id),
-                n = O(t),
+                n = R(t),
                 i = null != t && L;
             return (0, r.jsx)(
                 o.TooltipContainer,
@@ -74,10 +74,10 @@ function R(e) {
                             C({ action: 'PRESS_BADGE' }),
                                 (0, p.NE)({
                                     badge: e.id,
-                                    analyticsLocations: R,
+                                    analyticsLocations: O,
                                     ...v
                                 });
-                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: R }) : null;
+                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: O }) : null;
                             if (null != n) return null == g || g(), n(t);
                         },
                         onMouseEnter: () => {
@@ -85,7 +85,7 @@ function R(e) {
                                 C({ action: 'HOVER_BADGE' }),
                                 (0, p.Qf)({
                                     badge: e.id,
-                                    analyticsLocations: R,
+                                    analyticsLocations: O,
                                     ...v
                                 });
                         },

@@ -39,8 +39,8 @@ function p(e) {
         { application: a, scopes: p, redirectUri: m, approximateGuildCount: T, isEmbeddedFlow: S, disclosures: g } = e,
         A = new Date(u.default.extractTimestamp(a.id)),
         N = (0, d.W3)(p),
-        O = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED);
-    if (null != m && !O && !S)
+        R = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED);
+    if (null != m && !R && !S)
         try {
             let e = new URL(m);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;

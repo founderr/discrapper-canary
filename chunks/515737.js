@@ -5,9 +5,9 @@ r.d(t, {
 });
 var n = r(151122),
     a = r(370336),
-    o = r(688838),
-    i = r(163162);
-let _ = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
+    _ = r(688838),
+    o = r(163162);
+let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
     E = (0, n._I)((e = {}) => {
         let t = {
             XMLHttpRequest: !0,
@@ -20,19 +20,19 @@ let _ = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                t.setTimeout && (0, a.hl)(i.m9, 'setTimeout', s), t.setInterval && (0, a.hl)(i.m9, 'setInterval', s), t.requestAnimationFrame && (0, a.hl)(i.m9, 'requestAnimationFrame', c), t.XMLHttpRequest && 'XMLHttpRequest' in i.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
+                t.setTimeout && (0, a.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, a.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, a.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
                 let e = t.eventTarget;
-                e && (Array.isArray(e) ? e : _).forEach(u);
+                e && (Array.isArray(e) ? e : i).forEach(u);
             }
         };
     });
-function s(e) {
+function c(e) {
     return function (...t) {
         let r = t[0];
         return (
-            (t[0] = (0, i.re)(r, {
+            (t[0] = (0, o.re)(r, {
                 mechanism: {
-                    data: { function: (0, o.$P)(e) },
+                    data: { function: (0, _.$P)(e) },
                     handled: !1,
                     type: 'instrument'
                 }
@@ -41,14 +41,14 @@ function s(e) {
         );
     };
 }
-function c(e) {
+function s(e) {
     return function (t) {
         return e.apply(this, [
-            (0, i.re)(t, {
+            (0, o.re)(t, {
                 mechanism: {
                     data: {
                         function: 'requestAnimationFrame',
-                        handler: (0, o.$P)(e)
+                        handler: (0, _.$P)(e)
                     },
                     handled: !1,
                     type: 'instrument'
@@ -69,14 +69,14 @@ function I(e) {
                                 mechanism: {
                                     data: {
                                         function: e,
-                                        handler: (0, o.$P)(t)
+                                        handler: (0, _.$P)(t)
                                     },
                                     handled: !1,
                                     type: 'instrument'
                                 }
                             },
                             n = (0, a.HK)(t);
-                        return n && (r.mechanism.data.handler = (0, o.$P)(n)), (0, i.re)(t, r);
+                        return n && (r.mechanism.data.handler = (0, _.$P)(n)), (0, o.re)(t, r);
                     });
             }),
             e.apply(this, t)
@@ -84,18 +84,18 @@ function I(e) {
     };
 }
 function u(e) {
-    let t = i.m9,
+    let t = o.m9,
         r = t[e] && t[e].prototype;
     if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
         (0, a.hl)(r, 'addEventListener', function (t) {
             return function (r, n, a) {
                 try {
                     'function' == typeof n.handleEvent &&
-                        (n.handleEvent = (0, i.re)(n.handleEvent, {
+                        (n.handleEvent = (0, o.re)(n.handleEvent, {
                             mechanism: {
                                 data: {
                                     function: 'handleEvent',
-                                    handler: (0, o.$P)(n),
+                                    handler: (0, _.$P)(n),
                                     target: e
                                 },
                                 handled: !1,
@@ -105,11 +105,11 @@ function u(e) {
                 } catch (e) {}
                 return t.apply(this, [
                     r,
-                    (0, i.re)(n, {
+                    (0, o.re)(n, {
                         mechanism: {
                             data: {
                                 function: 'addEventListener',
-                                handler: (0, o.$P)(n),
+                                handler: (0, _.$P)(n),
                                 target: e
                             },
                             handled: !1,

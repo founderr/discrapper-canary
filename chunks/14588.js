@@ -6,7 +6,7 @@ r.d(t, {
         return a;
     },
     WG: function () {
-        return o;
+        return _;
     }
 });
 function n(e, t = Date.now()) {
@@ -19,18 +19,18 @@ function a(e, t, r = Date.now()) {
     var n;
     return ((n = e)[t] || n.all || 0) > r;
 }
-function o(e, { statusCode: t, headers: r }, a = Date.now()) {
-    let o = { ...e },
-        i = r && r['x-sentry-rate-limits'],
-        _ = r && r['retry-after'];
-    if (i)
-        for (let e of i.trim().split(',')) {
+function _(e, { statusCode: t, headers: r }, a = Date.now()) {
+    let _ = { ...e },
+        o = r && r['x-sentry-rate-limits'],
+        i = r && r['retry-after'];
+    if (o)
+        for (let e of o.trim().split(',')) {
             let [t, r, , , n] = e.split(':', 5),
-                i = parseInt(t, 10),
-                _ = (isNaN(i) ? 60 : i) * 1000;
-            if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (o[e] = a + _) : (o[e] = a + _);
-            else o.all = a + _;
+                o = parseInt(t, 10),
+                i = (isNaN(o) ? 60 : o) * 1000;
+            if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (_[e] = a + i) : (_[e] = a + i);
+            else _.all = a + i;
         }
-    else _ ? (o.all = a + n(_, a)) : 429 === t && (o.all = a + 60000);
-    return o;
+    else i ? (_.all = a + n(i, a)) : 429 === t && (_.all = a + 60000);
+    return _;
 }

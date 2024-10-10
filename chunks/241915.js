@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -71,7 +71,7 @@ function N(e) {
         className: o()(h.resizeHandle, S[l])
     });
 }
-class O extends (r = a.PureComponent) {
+class R extends (r = a.PureComponent) {
     componentDidMount() {
         this.setPosition(this.props.position);
     }
@@ -285,7 +285,7 @@ class O extends (r = a.PureComponent) {
             });
     }
 }
-p(O, 'defaultProps', {
+p(R, 'defaultProps', {
     hidden: !1,
     roundCorners: !0
 });
@@ -308,7 +308,7 @@ t.Z = a.memo((e) => {
                     );
                 }),
                 h = n.some((e) => e.component === E.NYg.EMBED_IFRAME);
-            return (0, i.jsx)(O, {
+            return (0, i.jsx)(R, {
                 appContext: d,
                 position: t.position,
                 id: t.id,

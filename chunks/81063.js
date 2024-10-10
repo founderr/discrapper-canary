@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         fetchAssetIds: function () {
-            return R;
+            return O;
         },
         getAssetFromImageURL: function () {
             return T;
@@ -130,7 +130,7 @@ function N(e, t) {
         }
     return n === e.length;
 }
-function O(e, t, n, r) {
+function R(e, t, n, r) {
     let i = !1;
     for (let a = 0; a < e.length; a++) {
         let s = e[a];
@@ -147,7 +147,7 @@ function O(e, t, n, r) {
     }
     return i;
 }
-async function R(e, t) {
+async function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     s.Z.dispatch({
         type: 'APPLICATION_ASSETS_FETCH',
@@ -169,8 +169,8 @@ async function R(e, t) {
         applicationId: e,
         assets: a
     }),
-    O(t, r, a, n))
-        ? m(e).then(() => R(e, t, n - 1))
+    R(t, r, a, n))
+        ? m(e).then(() => O(e, t, n - 1))
         : (s.Z.dispatch({
               type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
               applicationId: e
@@ -182,5 +182,5 @@ function v(e, t) {
     let r = [];
     if (N(t, r)) return r;
     let i = null === (n = o.Z.getApplicationAssets(e)) || void 0 === n ? void 0 : n.assets;
-    return null == i ? r : (O(t, r, i), r);
+    return null == i ? r : (R(t, r, i), r);
 }

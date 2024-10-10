@@ -18,13 +18,13 @@ n.d(t, {
         return P;
     },
     el: function () {
-        return O;
+        return R;
     },
     fP: function () {
         return v;
     },
     fQ: function () {
-        return R;
+        return O;
     },
     t$: function () {
         return N;
@@ -63,7 +63,7 @@ let A = (e) => {
         let t = s.Wp.useSetting();
         return (0, T.WD)(t, e);
     },
-    O = (e) => {
+    R = (e) => {
         let { collapsedStickersCategories: t, filteredStickers: n, listPaddingRight: i = 0, listWidth: s = 0, stickerNodeMargin: o = 0, stickerNodeWidth: c, stickersCategories: d } = e;
         return r.useMemo(() => {
             let e = Math.floor((s - i + o) / (c + o)),
@@ -84,9 +84,9 @@ let A = (e) => {
                         A = d.findIndex((e) => e.type === m.Ih.RECENT),
                         N = t.length;
                     null != i && o === i.id && s && t.length < (0, _.A3)(i.premiumTier) && N++;
-                    let O = Math.ceil(N / e);
-                    f[I] = r ? 0 : O;
-                    for (let a = 0; a < O; a++) {
+                    let R = Math.ceil(N / e);
+                    f[I] = r ? 0 : R;
+                    for (let a = 0; a < R; a++) {
                         let s = a * e,
                             o = s + e,
                             l = t.slice(s, o).map((e, t) => ({
@@ -129,7 +129,7 @@ let A = (e) => {
             };
         }, [t, n, i, s, o, c, d]);
     },
-    R = (e) => {
+    O = (e) => {
         let t = (0, i.e7)([d.default], () => d.default.getCurrentUser());
         return (0, i.e7)(
             [I.Z],

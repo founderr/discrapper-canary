@@ -71,18 +71,18 @@ function l(e, t, n, o, c, d, _, E) {
                     break;
                 case i.FormatJsNodeType.Tag:
                     var N = t.children,
-                        O = u(e.constructor, N, n, o, c, d, _);
-                    if ('$' === T[0]) e.pushRichTextTag(T, O);
+                        R = u(e.constructor, N, n, o, c, d, _);
+                    if ('$' === T[0]) e.pushRichTextTag(T, R);
                     else {
                         if ('function' != typeof S)
                             throw 'expected a function type for a Tag formatting value, '
                                 .concat(T, '. got ')
                                 .concat(typeof S, ': ')
                                 .concat(S);
-                        var R = S(O);
-                        R = Array.isArray(R) ? R : [R];
+                        var O = S(R);
+                        O = Array.isArray(O) ? O : [O];
                         try {
-                            for (var v = ((f = void 0), r(R)), C = v.next(); !C.done; C = v.next()) {
+                            for (var v = ((f = void 0), r(O)), C = v.next(); !C.done; C = v.next()) {
                                 var L = C.value;
                                 'string' == typeof L ? e.pushLiteralText(L) : e.pushObject(L);
                             }

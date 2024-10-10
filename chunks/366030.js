@@ -26,8 +26,8 @@ var r = n(735250),
     g = n(598077),
     A = n(271383),
     N = n(626135),
-    O = n(275759),
-    R = n(107484),
+    R = n(275759),
+    O = n(107484),
     v = n(977392),
     C = n(134433),
     L = n(753194),
@@ -58,7 +58,7 @@ function w(e) {
                 t = o;
         }
     else
-        t = (0, O.n_)({
+        t = (0, R.n_)({
             connectionType: n,
             connectionMetadataField: i,
             operator: a,
@@ -98,7 +98,7 @@ function x(e) {
                 I = null == E ? void 0 : E.application,
                 m = (null == I ? void 0 : I.bot) != null ? new g.Z(I.bot) : null;
             return (
-                O.SJ.includes(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '')
+                R.SJ.includes(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '')
                     ? (l = (0, r.jsx)(L.Z, {
                           className: U.botTag,
                           color: i,
@@ -229,7 +229,7 @@ function k(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
         { analyticsLocations: l } = (0, m.ZP)(),
         c = (0, v.Z)(a, t, o.id, !0),
-        d = (0, u.e7)([R.Z], () => R.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
+        d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
         [f, h] = i.useState(null == d);
     if (null == c) return null;
     async function p() {

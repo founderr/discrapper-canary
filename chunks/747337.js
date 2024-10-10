@@ -69,8 +69,8 @@ function o(e, t) {
             var g = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
                 A = (0, a.Vy)(7 - g.valueOf() + t.wkst, 7),
                 N = (0, i.Eg)(e - 1) ? 366 : 365,
-                O = void 0;
-            A >= 4 ? ((A = 0), (O = N + (0, a.Vy)(g - t.wkst, 7))) : (O = u - f), (S = Math.floor(52 + (0, a.Vy)(O, 7) / 4));
+                R = void 0;
+            A >= 4 ? ((A = 0), (R = N + (0, a.Vy)(g - t.wkst, 7))) : (R = u - f), (S = Math.floor(52 + (0, a.Vy)(R, 7) / 4));
         }
         if ((0, a.q9)(t.byweekno, S)) for (var m = 0; m < f; m++) E.wnomask[m] = 1;
     }

@@ -12,7 +12,7 @@ n.d(t, {
         return v;
     },
     hf: function () {
-        return O;
+        return R;
     },
     k3: function () {
         return C;
@@ -21,7 +21,7 @@ n.d(t, {
         return D;
     },
     tP: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -46,7 +46,7 @@ var r = n(735250),
     g = n(46140),
     A = n(981631),
     N = n(689938);
-function O(e) {
+function R(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         o = (0, s.e7)([c.default], () => {
             var e;
@@ -76,7 +76,7 @@ function O(e) {
                 : (0, T.openRewardModalUnverified)());
     }, [t, n, r, o, a]);
 }
-function R(e) {
+function O(e) {
     var t;
     let n = (0, s.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     if (null == n) return !1;
@@ -134,7 +134,7 @@ let v = (e) => {
     };
 function L(e) {
     let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: u, inGiftInventory: c } = e,
-        f = O({
+        f = R({
             quest: t,
             location: a,
             questContentPosition: s,

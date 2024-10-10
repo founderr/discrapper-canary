@@ -1,19 +1,19 @@
 r.d(t, {
     h: function () {
-        return i;
+        return o;
     }
 });
 var n = r(899517),
     a = r(578346);
-let o = null;
-function i(e) {
+let _ = null;
+function o(e) {
     let t = 'unhandledrejection';
-    (0, a.Hj)(t, e), (0, a.D2)(t, _);
+    (0, a.Hj)(t, e), (0, a.D2)(t, i);
 }
-function _() {
-    (o = n.n.onunhandledrejection),
+function i() {
+    (_ = n.n.onunhandledrejection),
         (n.n.onunhandledrejection = function (e) {
-            return (0, a.rK)('unhandledrejection', e), !o || !!o.__SENTRY_LOADER__ || o.apply(this, arguments);
+            return (0, a.rK)('unhandledrejection', e), !_ || !!_.__SENTRY_LOADER__ || _.apply(this, arguments);
         }),
         (n.n.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
 }

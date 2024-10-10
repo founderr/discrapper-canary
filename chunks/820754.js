@@ -1,11 +1,11 @@
 r.d(t, {
     o: function () {
-        return o;
+        return _;
     }
 });
 var n = r(622916),
     a = r(255768);
-function o(e) {
+function _(e) {
     if ('boolean' == typeof e) return Number(e);
     let t = 'string' == typeof e ? parseFloat(e) : e;
     if ('number' != typeof t || isNaN(t) || t < 0 || t > 1) {

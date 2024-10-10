@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(367790),
     A = n(895924),
     N = n(581364),
-    O = n(56801),
-    R = n(342687),
+    R = n(56801),
+    O = n(342687),
     v = n(826298),
     C = n(689079),
     L = n(981631),
@@ -205,7 +205,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = Z[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === A.iw.PLACEHOLDER) return (0, r.jsx)(R.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === A.iw.PLACEHOLDER) return (0, r.jsx)(O.Z, {}, o);
                 let l = V.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     _.ZP.NewCommand,
@@ -242,7 +242,7 @@ t.Z = i.forwardRef(function (e, t) {
             innerClassName: D.wrapper,
             onMouseDown: U,
             children: [
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(R.Z, {
                     className: D.rail,
                     channel: n,
                     sections: V,

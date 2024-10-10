@@ -28,7 +28,7 @@ function d(e) {
             },
             f ? 'animate-never' : 'respect-motion-settings'
         ),
-        O = i.useCallback(() => {
+        R = i.useCallback(() => {
             E(!_);
         }, [_, E]);
     return (
@@ -47,7 +47,7 @@ function d(e) {
                     (0, r.jsx)('div', {
                         ref: g,
                         className: s()(c.header, { [c.toggled]: m }),
-                        children: t({ onClick: O })
+                        children: t({ onClick: R })
                     }),
                     (0, r.jsx)('div', {
                         ref: T,

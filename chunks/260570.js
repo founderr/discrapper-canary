@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(277085),
     A = n(287954),
     N = n(825801),
-    O = n(64621),
-    R = n(228168),
+    R = n(64621),
+    O = n(228168),
     v = n(689938),
     C = n(249818);
 let L = 'text-sm/medium',
@@ -54,8 +54,8 @@ function b(e) {
         ee = y + X,
         et = q || z,
         { interactionType: en, interactionSource: er, resetInteraction: ei } = (0, S.Xo)(),
-        ea = er === R.n_.STATUS && en === R.P.REACT,
-        es = er === R.n_.STATUS && en === R.P.REPLY,
+        ea = er === O.n_.STATUS && en === O.P.REACT,
+        es = er === O.n_.STATUS && en === O.P.REPLY,
         eo = ea || es,
         el = P && !et,
         eu = P && et,
@@ -84,7 +84,7 @@ function b(e) {
     let eT = i.useRef(t);
     if (
         (i.useEffect(() => {
-            er === R.n_.STATUS && (null == t || eT.current !== t) && ei(), (eT.current = t);
+            er === O.n_.STATUS && (null == t || eT.current !== t) && ei(), (eT.current = t);
         }, [t, er, ei]),
         !et && !el)
     )
@@ -125,7 +125,7 @@ function b(e) {
                       emoji: j,
                       animate: M,
                       hideTooltip: !1,
-                      tooltipDelay: R.vB
+                      tooltipDelay: O.vB
                   })
                 : null,
         eA = () =>
@@ -148,15 +148,15 @@ function b(e) {
                 children: [eg(), eA()]
             });
         },
-        eO = () =>
+        eR = () =>
             (0, r.jsxs)('div', {
-                className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: T === R.y0.PANEL }),
+                className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: T === O.y0.PANEL }),
                 ref: Z,
                 children: [eg(), eA()]
             }),
-        eR = () =>
+        eO = () =>
             (0, r.jsxs)('div', {
-                className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: T === R.y0.PANEL }),
+                className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: T === O.y0.PANEL }),
                 ref: V,
                 children: [eg(), eA()]
             }),
@@ -173,9 +173,9 @@ function b(e) {
                 });
         },
         eC = {
-            [C.biteSize]: T === R.y0.BITE_SIZE,
-            [C.fullSize]: T === R.y0.FULL_SIZE,
-            [C.panel]: T === R.y0.PANEL
+            [C.biteSize]: T === O.y0.BITE_SIZE,
+            [C.fullSize]: T === O.y0.FULL_SIZE,
+            [C.panel]: T === O.y0.PANEL
         },
         eL = s()(C.background, { [C.editable]: eu }),
         ey = { [C.hoisted]: eo },
@@ -232,7 +232,7 @@ function b(e) {
                               })
                             : (0, r.jsx)(N.ZP, {
                                   user: a,
-                                  sourceType: R.n_.STATUS,
+                                  sourceType: O.n_.STATUS,
                                   isVisible: ef && !eo,
                                   isExpandable: e_
                               })
@@ -273,13 +273,13 @@ function b(e) {
                       (() => {
                           let e = (0, r.jsxs)('span', {
                               className: eM,
-                              children: [et && eO(), et && eR()]
+                              children: [et && eR(), et && eO()]
                           });
                           return (0, r.jsxs)('div', {
                               className: s()(C.invisibleContainer, eC, eb),
                               children: [
-                                  (0, r.jsx)(O.Z, {
-                                      sourceType: R.n_.STATUS,
+                                  (0, r.jsx)(R.Z, {
+                                      sourceType: O.n_.STATUS,
                                       user: a,
                                       children: (0, r.jsx)('div', {
                                           className: C.coachmarkAnchor,
@@ -302,7 +302,7 @@ function b(e) {
                               }
                               if (!Q) return ''.concat(W);
                           })(),
-                          sourceType: R.n_.STATUS,
+                          sourceType: O.n_.STATUS,
                           onClose: () => {
                               eh(!1), eS(!1);
                           },

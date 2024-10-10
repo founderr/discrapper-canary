@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     },
     p: function () {
         return i;
@@ -27,9 +27,9 @@ var r,
     g = n(474936),
     A = n(981631),
     N = n(689938),
-    O = n(739626);
-function R(e) {
-    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: R, upsellViewedTrackingData: v, onClose: C, onDisplay: L, onLearnMore: y } = e,
+    R = n(739626);
+function O(e) {
+    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: O, upsellViewedTrackingData: v, onClose: C, onDisplay: L, onLearnMore: y } = e,
         D = (0, u.e7)([I.Z], () => I.Z.affinities),
         b = (0, u.e7)([I.Z], () => I.Z.hasFetched);
     s.useEffect(() => {
@@ -53,46 +53,46 @@ function R(e) {
                 isVisible: !0
             }),
             (0, a.jsxs)('div', {
-                className: l()(O.container, 2 === t ? O.hasTabParentContainer : 1 === t ? O.hasParentContainer : O.noParentContainer),
+                className: l()(R.container, 2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
                 children: [
                     (0, a.jsx)(c.ModalCloseButton, {
                         onClick: C,
-                        className: O.closeButton
+                        className: R.closeButton
                     }),
                     (0, a.jsxs)('div', {
-                        className: O.contentContainer,
+                        className: R.contentContainer,
                         children: [
                             (0, a.jsx)('img', {
-                                className: O.image,
+                                className: R.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, a.jsx)(c.Heading, {
-                                className: l()(O.title, { [O.titleNoSocialProof]: !M }),
+                                className: l()(R.title, { [R.titleNoSocialProof]: !M }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
                             M && (0, a.jsx)(S.Z, { affinities: D }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
-                                className: O.body,
+                                className: R.body,
                                 children: i
                             })
                         ]
                     }),
                     (0, a.jsxs)('div', {
-                        className: O.ctaContainer,
+                        className: R.ctaContainer,
                         children: [
                             (0, a.jsx)(c.Button, {
-                                className: O.secondaryCTA,
+                                className: R.secondaryCTA,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 look: c.Button.Looks.LINK,
                                 onClick: () => {
                                     h.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: R,
+                                        location_section: O,
                                         location_object: A.qAy.NAVIGATION_LINK
                                     }),
                                         null == y || y(),
@@ -106,7 +106,7 @@ function R(e) {
                             (0, a.jsx)(T.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: R,
+                                    section: O,
                                     object: A.qAy.BUTTON_CTA
                                 },
                                 subscriptionTier: g.Si.TIER_2,

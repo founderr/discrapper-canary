@@ -26,8 +26,8 @@ var r = n(525654),
     g = n(931261),
     A = n(15274),
     N = n(924301),
-    O = n(82085),
-    R = n(264229),
+    R = n(82085),
+    O = n(264229),
     v = n(652898),
     C = n(895886),
     L = n(143816),
@@ -331,7 +331,7 @@ t.Z = {
     acceptInvite(e) {
         var t, r, i;
         let { inviteKey: a, context: s, callback: o, skipOnboarding: l } = e,
-            u = (0, R.fU)(a),
+            u = (0, O.fU)(a),
             _ = u.baseCode,
             f = M.default.getSessionId();
         let h =
@@ -410,7 +410,7 @@ t.Z = {
         var n, r;
         let { channel: i, guild: a } = e;
         if (null != a && (null === (n = a.features) || void 0 === n ? void 0 : n.includes(q.oNc.HUB))) {
-            O.Z.onOpenHubInvite(e);
+            R.Z.onOpenHubInvite(e);
             return;
         }
         if (null != a && (null === (r = a.features) || void 0 === r ? void 0 : r.includes(q.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !a.features.includes(q.oNc.PREVIEW_ENABLED)) {
@@ -442,7 +442,7 @@ t.Z = {
     openApp(e, t, n, r, a) {
         var s, c;
         let _;
-        let E = null != e ? (0, R.fU)(e) : null,
+        let E = null != e ? (0, O.fU)(e) : null,
             f = null == E ? void 0 : E.baseCode;
         if (
             (d.Z.dispatch({

@@ -19,8 +19,8 @@ var a,
     g = n(358085),
     A = n(199902),
     N = n(314897),
-    O = n(131951),
-    R = n(158776),
+    R = n(131951),
+    O = n(158776),
     v = n(19780),
     C = n(981631),
     L = n(65154);
@@ -58,7 +58,7 @@ function k() {
 }
 class B extends (a = E.ZP.Store) {
     getActiveStreamKey() {
-        return (0, S.Z)(O.Z) ? i : null;
+        return (0, S.Z)(R.Z) ? i : null;
     }
     getRTCConnections() {
         return U;
@@ -70,7 +70,7 @@ class B extends (a = E.ZP.Store) {
         return U[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, S.Z)(O.Z) || null == t) return null;
+        if (!(0, S.Z)(R.Z) || null == t) return null;
         if (n) {
             let n = A.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === A.Z.getViewerIds(n).length) return null;
@@ -109,7 +109,7 @@ class B extends (a = E.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, S.Z)(O.Z)) return C.IE4.UNKNOWN;
+        if (!(0, S.Z)(R.Z)) return C.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? U[e] : null;
         return null != t ? t.quality : C.IE4.UNKNOWN;
@@ -176,7 +176,7 @@ class B extends (a = E.ZP.Store) {
         : (s[o] = l),
     (t.Z = new B(
         h.Z,
-        !O.Z.isSupported() || __OVERLAY__
+        !R.Z.isSupported() || __OVERLAY__
             ? {}
             : {
                   CONNECTION_OPEN: function (e) {
@@ -238,7 +238,7 @@ class B extends (a = E.ZP.Store) {
                           var l, u, d;
                           null == b[t] && (D[t] = null);
                           let e = (0, m.my)(t);
-                          null == D[t] && null == M[t] && (D[t] = (0, T.L2)(e, R.Z));
+                          null == D[t] && null == M[t] && (D[t] = (0, T.L2)(e, O.Z));
                           let i = new I.A({
                               streamRegion: a,
                               streamApplication: D[t],
@@ -271,7 +271,7 @@ class B extends (a = E.ZP.Store) {
                               })),
                               (U[t] = o);
                       }
-                      (w = []), O.Z.getMediaEngine().on(f.aB.ConnectionStats, G);
+                      (w = []), R.Z.getMediaEngine().on(f.aB.ConnectionStats, G);
                   },
                   STREAM_SERVER_UPDATE: function (e) {
                       let t = U[e.streamKey];
@@ -288,7 +288,7 @@ class B extends (a = E.ZP.Store) {
                       let { streamKey: t } = e,
                           n = U[t];
                       if (null == n) return !1;
-                      t === i && ((i = null), O.Z.getMediaEngine().off(f.aB.ConnectionStats, G)), n.destroy('stream-end'), delete U[t];
+                      t === i && ((i = null), R.Z.getMediaEngine().off(f.aB.ConnectionStats, G)), n.destroy('stream-end'), delete U[t];
                   },
                   STREAM_STATS_UPDATE: function (e) {
                       let { stats: t } = e;

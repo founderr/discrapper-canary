@@ -21,7 +21,7 @@ let I = Date.now(),
 function N() {
     return S || g || ((0, E.isAndroid)() && A);
 }
-function O() {
+function R() {
     Date.now() - I > h.OSm || N()
         ? m ||
           l.Z.dispatch({
@@ -51,7 +51,7 @@ function O() {
         ? (!(function e() {
               var t;
               let n = (t) => {
-                  (I = Math.max(Date.now() - t, I)), O(), setTimeout(e, 10 * _.Z.Millis.SECOND);
+                  (I = Math.max(Date.now() - t, I)), R(), setTimeout(e, 10 * _.Z.Millis.SECOND);
               };
               if ((null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
                   let e = c.Z.remotePowerMonitor.getSystemIdleTimeMs();
@@ -59,19 +59,19 @@ function O() {
               }
           })(),
           c.Z.remotePowerMonitor.on('resume', () => {
-              (S = !1), R({});
+              (S = !1), O({});
           }),
           c.Z.remotePowerMonitor.on('suspend', () => {
-              (S = !0), R({}), u.default.disconnect();
+              (S = !0), O({}), u.default.disconnect();
           }),
           c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (g = !0), R({});
+              (g = !0), O({});
           }),
           c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (g = !1), R({});
+              (g = !1), O({});
           }))
-        : setInterval(O, 0.25 * h.OSm));
-function R(e) {
+        : setInterval(R, 0.25 * h.OSm));
+function O(e) {
     let { timestamp: t, type: n } = e,
         r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
     return (
@@ -82,7 +82,7 @@ function R(e) {
                   type: 'OVERLAY_SET_NOT_IDLE',
                   timestamp: I
               })
-            : O(),
+            : R(),
         !1)
     );
 }
@@ -115,17 +115,17 @@ class v extends (s = o.ZP.Store) {
         },
         SPEAKING: function (e) {
             let { userId: t, speakingFlags: n } = e;
-            return n !== p.Dg.NONE && t === f.default.getId() && R({}), !1;
+            return n !== p.Dg.NONE && t === f.default.getId() && O({}), !1;
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            return (A = t === h.$7l.BACKGROUND), (I = Date.now()), O(), !1;
+            return (A = t === h.$7l.BACKGROUND), (I = Date.now()), R(), !1;
         },
-        OVERLAY_SET_NOT_IDLE: R,
-        CHANNEL_SELECT: R,
-        VOICE_CHANNEL_SELECT: R,
-        WINDOW_FOCUS: R,
-        OVERLAY_INITIALIZE: R,
-        OVERLAY_SET_INPUT_LOCKED: R,
-        USER_SETTINGS_PROTO_UPDATE: R
+        OVERLAY_SET_NOT_IDLE: O,
+        CHANNEL_SELECT: O,
+        VOICE_CHANNEL_SELECT: O,
+        WINDOW_FOCUS: O,
+        OVERLAY_INITIALIZE: O,
+        OVERLAY_SET_INPUT_LOCKED: O,
+        USER_SETTINGS_PROTO_UPDATE: O
     }));

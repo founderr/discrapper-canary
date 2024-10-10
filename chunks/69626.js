@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     wz: function () {
-        return R;
+        return O;
     }
 });
 var r = n(735250),
@@ -78,7 +78,7 @@ function N(e, t, n, i, a) {
           )
         : c();
 }
-function O(e) {
+function R(e) {
     var t;
     let { node: n, output: o, state: f } = e,
         I = (0, a.e7)(
@@ -96,15 +96,15 @@ function O(e) {
                 hasUseAppCommandsPerm: h.Z.can(m.Plq.USE_APPLICATION_COMMANDS, I)
             };
         }),
-        { command: O } = l.YZ(I, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
-        R = _.dN.useSetting(),
+        { command: R } = l.YZ(I, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
+        O = _.dN.useSetting(),
         v = i.useMemo(() => {
-            if (null == O || null == I || O.untranslatedName !== n.commandName || R) return !1;
+            if (null == R || null == I || R.untranslatedName !== n.commandName || O) return !1;
             let e = I.isPrivate();
             if ((0, d.xl)(I) || (!e && !g)) return !1;
-            let t = (null == O ? void 0 : O.applicationId) === T.bi.BUILT_IN;
+            let t = (null == R ? void 0 : R.applicationId) === T.bi.BUILT_IN;
             return !!e || !!t || !!A || !1;
-        }, [I, O, g, A, n.commandName, R]),
+        }, [I, R, g, A, n.commandName, O]),
         C = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(), null != I && null != n.commandName && null != n.commandKey && N(I.id, n.commandName, n.commandKey, u.Vh.MENTION);
@@ -138,7 +138,7 @@ function O(e) {
               children: [S.GI, o(n.content, f)]
           });
 }
-function R(e) {
+function O(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: l } = e,
         c = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
         d = (e) => {
@@ -164,7 +164,7 @@ function R(e) {
 function v(e) {
     return {
         react: (e, t, n) =>
-            (0, r.jsx)(O, {
+            (0, r.jsx)(R, {
                 node: e,
                 output: t,
                 state: n

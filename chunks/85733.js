@@ -43,8 +43,8 @@ var r = n(478497),
         strictNullHandling: !1
     },
     f = {},
-    h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, S, g, A, N, O) {
-        for (var R, v, C = t, L = O, y = 0, D = !1; void 0 !== (L = L.get(f)) && !D; ) {
+    h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, S, g, A, N, R) {
+        for (var O, v, C = t, L = R, y = 0, D = !1; void 0 !== (L = L.get(f)) && !D; ) {
             var b = L.get(t);
             if (((y += 1), void 0 !== b)) {
                 if (b === y) throw RangeError('Cyclic object value');
@@ -67,7 +67,7 @@ var r = n(478497),
             if (u) return h && !A ? h(n, E.encoder, N, 'key', S) : n;
             C = '';
         }
-        if ('string' == typeof (R = C) || 'number' == typeof R || 'boolean' == typeof R || 'symbol' == typeof R || 'bigint' == typeof R || i.isBuffer(C)) return h ? [g(A ? n : h(n, E.encoder, N, 'key', S)) + '=' + g(h(C, E.encoder, N, 'value', S))] : [g(n) + '=' + g(String(C))];
+        if ('string' == typeof (O = C) || 'number' == typeof O || 'boolean' == typeof O || 'symbol' == typeof O || 'bigint' == typeof O || i.isBuffer(C)) return h ? [g(A ? n : h(n, E.encoder, N, 'key', S)) + '=' + g(h(C, E.encoder, N, 'value', S))] : [g(n) + '=' + g(String(C))];
         var M = [];
         if (void 0 === C) return M;
         if ('comma' === a && l(C)) A && h && (C = i.maybeMap(C, h)), (v = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
@@ -85,9 +85,9 @@ var r = n(478497),
             if (!d || null !== k) {
                 var B = m && _ ? G.replace(/\./g, '%2E') : G,
                     F = l(C) ? ('function' == typeof a ? a(w, B) : w) : w + (m ? '.' + B : '[' + B + ']');
-                O.set(t, y);
+                R.set(t, y);
                 var V = r();
-                V.set(f, O), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, I, m, T, S, g, A, N, V));
+                V.set(f, R), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, I, m, T, S, g, A, N, V));
             }
         }
         return M;

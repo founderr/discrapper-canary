@@ -52,10 +52,10 @@ function T(e) {
                 };
             });
         }, [m, T]),
-        O = i.useMemo(() => null == N.find((e) => e.userId === _) && N.length <= 10, [N, _]);
+        R = i.useMemo(() => null == N.find((e) => e.userId === _) && N.length <= 10, [N, _]);
     if (null == m) return null;
     if (0 === m.users.length) return (0, r.jsx)(S, {});
-    let { sort_by_statistic_id: R } = m.settings,
+    let { sort_by_statistic_id: O } = m.settings,
         v = N[0];
     return (0, r.jsxs)('div', {
         className: I.container,
@@ -90,7 +90,7 @@ function T(e) {
                                           children: (function (e) {
                                               if (e === o.E.LOL_TOTAL_KILLS) return p.Z.Messages.LEADERBOARD_TABLE_HEADER_WEEKLY_KILLS;
                                               return 'Unknown statistic';
-                                          })(R)
+                                          })(O)
                                       })
                                   ]
                               }),
@@ -104,7 +104,7 @@ function T(e) {
                                               guildId: n
                                           })
                                       ),
-                                      O ? (0, r.jsx)(A, {}) : null
+                                      R ? (0, r.jsx)(A, {}) : null
                                   ]
                               })
                           ]

@@ -20,8 +20,8 @@ let f = i.forwardRef(function (e, t) {
         [S, g] = i.useState(null),
         A = i.useRef(null),
         N = i.useRef(null),
-        O = i.useRef(null),
-        R =
+        R = i.useRef(null),
+        O =
             'custom' === f
                 ? {
                       width: h,
@@ -38,18 +38,18 @@ let f = i.forwardRef(function (e, t) {
             t,
             () => ({
                 play: (e) => {
-                    if (null != O.current) {
+                    if (null != R.current) {
                         if (((N.current = e), y)) {
                             let t = T[e];
-                            O.current.resetSegments(!0), O.current.setSegment(t.start + t.duration, t.start + t.duration), O.current.stop();
-                        } else O.current.setLoop(!v && e.includes('hover')), O.current.resetSegments(!0), O.current.playSegments([T[e].start, T[e].start + T[e].duration], !0);
+                            R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop();
+                        } else R.current.setLoop(!v && e.includes('hover')), R.current.resetSegments(!0), R.current.playSegments([T[e].start, T[e].start + T[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == O.current || y) return;
+                    if (null == R.current || y) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != O.current && !y && N.current === e && (O.current.resetSegments(!0), O.current.setSegment(T[e].start, T[e].start), O.current.stop());
+                    null != R.current && !y && N.current === e && (R.current.resetSegments(!0), R.current.setSegment(T[e].start, T[e].start), R.current.stop());
                 }
             }),
             [y, v, T]
@@ -72,7 +72,7 @@ let f = i.forwardRef(function (e, t) {
                             n = [e.start, e.start + e.duration];
                         }
                         null != A.current &&
-                            (O.current = r.loadAnimation({
+                            (R.current = r.loadAnimation({
                                 container: A.current,
                                 renderer: 'svg',
                                 loop: !1,
@@ -83,7 +83,7 @@ let f = i.forwardRef(function (e, t) {
                     }),
                 () => {
                     var e;
-                    null === (e = O.current) || void 0 === e || e.destroy();
+                    null === (e = R.current) || void 0 === e || e.destroy();
                 }
             ),
             [S, T]
@@ -92,7 +92,7 @@ let f = i.forwardRef(function (e, t) {
             style: {
                 '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
                 display: 'flex',
-                ...R
+                ...O
             },
             className: s()(E.lottieIcon, I),
             ref: A

@@ -25,8 +25,8 @@ var i,
     g = n(882252);
 let A = [],
     N = null,
-    O = null,
-    R = new Set(),
+    R = null,
+    O = new Set(),
     v = c.z.LATEST_ACTIVITY,
     C = 0,
     L = [],
@@ -49,7 +49,7 @@ function x(e) {
     };
 }
 function G() {
-    (L = []), (r = null), (O = null), (R = new Set()), (v = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
+    (L = []), (r = null), (R = null), (O = new Set()), (v = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
 }
 function k() {
     var e;
@@ -70,7 +70,7 @@ function B(e) {
 }
 function F(e) {
     var t;
-    let n = p.Z.getChannel(O);
+    let n = p.Z.getChannel(R);
     if (null == n) return;
     (null == e ? void 0 : e.refreshThreadIds) &&
         ((D = Object.values(E.Z.getThreadsForParent(n.guild_id, n.id)).map((e) => {
@@ -84,10 +84,10 @@ function F(e) {
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((M = u().chain(D).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(D).sort(x(c.z.CREATION_DATE))));
     let i = (v === c.z.LATEST_ACTIVITY ? M : b).value();
     let a = (L =
-        0 === R.size
+        0 === O.size
             ? i
             : i.filter(
-                  ((t = R),
+                  ((t = O),
                   function (e) {
                       var n;
                       let r = null === (n = p.Z.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
@@ -112,10 +112,10 @@ class V extends (i = d.ZP.Store) {
         return y;
     }
     getThreadIds(e, t, n) {
-        let r = e !== O,
-            i = !(0, T.OL)(n, R),
+        let r = e !== R,
+            i = !(0, T.OL)(n, O),
             a = t !== v;
-        return (O = e), (R = n), (v = t), r ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : i && F(), L;
+        return (R = e), (O = n), (v = t), r ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : i && F(), L;
     }
     getCurrentThreadIds() {
         return L;
@@ -144,23 +144,23 @@ class V extends (i = d.ZP.Store) {
         CHANNEL_SELECT: k,
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            if (null == t.parent_id || t.parent_id !== O) return !1;
+            if (null == t.parent_id || t.parent_id !== R) return !1;
             G();
         },
         THREAD_LIST_SYNC: function (e) {
             var t;
             let { guildId: n } = e;
-            if (null == O || n !== (null === (t = p.Z.getChannel(O)) || void 0 === t ? void 0 : t.guild_id)) return !1;
+            if (null == R || n !== (null === (t = p.Z.getChannel(R)) || void 0 === t ? void 0 : t.guild_id)) return !1;
             F({ refreshThreadIds: !0 });
         },
         THREAD_CREATE: function (e) {
             let { channel: t, isNewlyCreated: n } = e;
-            if (null == t.parent_id || t.parent_id !== O || !n) return !1;
+            if (null == t.parent_id || t.parent_id !== R || !n) return !1;
             t.ownerId !== h.default.getId() ? C++ : (N = t.id);
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
-            if (null == t.parent_id || t.parent_id !== O) return !1;
+            if (null == t.parent_id || t.parent_id !== R) return !1;
             let n = (0, g.yv)(t.id),
                 r = U.has(t.id);
             if (n && !r) U.add(t.id), F({ sortThreadIds: !0 });
@@ -171,17 +171,17 @@ class V extends (i = d.ZP.Store) {
         },
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
-            if (null == t.parent_id || t.parent_id !== O) return !1;
+            if (null == t.parent_id || t.parent_id !== R) return !1;
             P.add(t.id), F({ sortThreadIds: !0 });
         },
         RESORT_THREADS: function (e) {
             let { channelId: t } = e;
-            if (null == t || t !== O) return !1;
+            if (null == t || t !== R) return !1;
             F({ refreshThreadIds: !0 });
         },
         CHANNEL_ACK: function (e) {
             let { channelId: t } = e;
-            if (null == t || t !== O) return !1;
+            if (null == t || t !== R) return !1;
             y = !1;
         }
     }));

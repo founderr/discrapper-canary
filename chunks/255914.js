@@ -12,10 +12,10 @@ n.d(t, {
         return g;
     },
     m7: function () {
-        return O;
+        return R;
     },
     nt: function () {
-        return R;
+        return O;
     },
     u7: function () {
         return r;
@@ -127,7 +127,7 @@ class N {
               u);
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, O, R;
+        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, R, O;
         let v = new N();
         return null == e
             ? v
@@ -171,15 +171,15 @@ class N {
                   cryptorSuccessCount: null !== (m = e.encryptSuccessCount) && void 0 !== m ? m : 0,
                   cryptorFailureCount: null !== (T = e.encryptFailureCount) && void 0 !== T ? T : 0,
                   cryptorDuration: null !== (S = e.encryptDuration) && void 0 !== S ? S : 0,
-                  cryptorAttempts: null !== (O = e.encryptAttempts) && void 0 !== O ? O : 0,
-                  cryptorMaxAttempts: null !== (R = e.encryptMaxAttempts) && void 0 !== R ? R : 0
+                  cryptorAttempts: null !== (R = e.encryptAttempts) && void 0 !== R ? R : 0,
+                  cryptorMaxAttempts: null !== (O = e.encryptMaxAttempts) && void 0 !== O ? O : 0
               };
     }
     constructor() {
         f(this, 'bytes', 0), f(this, 'framesCodec', 0), f(this, 'framesCodecError', null), f(this, 'framesNetwork', 0), f(this, 'resolution', 0), f(this, 'minorResolution', 0), f(this, 'majorResolution', 0), f(this, 'timestamp', 0), f(this, 'packets', 0), f(this, 'packetsLost', 0), f(this, 'framesDropped', 0), f(this, 'nackCount', 0), f(this, 'pliCount', 0), f(this, 'encoder', null), f(this, 'decoder', null), f(this, 'codecType', null), f(this, 'qpSum', 0), f(this, 'freezeCount', 0), f(this, 'pauseCount', 0), f(this, 'totalFreezesDuration', 0), f(this, 'totalPausesDuration', 0), f(this, 'totalFramesDuration', 0), f(this, 'vmafScore', null), f(this, 'psnrDb', null), f(this, 'outboundSinkWant', null), f(this, 'keyframes', null), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null), f(this, 'framesDroppedEncoder', null), f(this, 'passthroughCount', 0), f(this, 'cryptorSuccessCount', 0), f(this, 'cryptorFailureCount', 0), f(this, 'cryptorDuration', 0), f(this, 'cryptorAttempts', 0), f(this, 'cryptorMaxAttempts', 0), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0);
     }
 }
-class O {
+class R {
     get isVideoStopped() {
         return 0 !== this.videoStoppedReason;
     }
@@ -321,7 +321,7 @@ class O {
             });
     }
 }
-class R extends O {
+class O extends R {
     appendTargetRates(e, t, n, r) {
         if (this.statsWindow.length < 2) return;
         (e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (r = null != r ? r : 0);

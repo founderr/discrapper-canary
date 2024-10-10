@@ -4,7 +4,7 @@ r.d(t, {
         return n;
     },
     b: function () {
-        return o;
+        return _;
     }
 }),
     ((a = n || (n = {})).APPLICATION_SUBSCRIPTION_END = 'application-subscription-end'),
@@ -450,7 +450,7 @@ r.d(t, {
     (a.YELLOW_860 = 'yellow-860'),
     (a.YELLOW_900 = 'yellow-900'),
     (a.YOUTUBE = 'youtube');
-let o = {
+let _ = {
     'application-subscription-end': { hex: '#0177a4' },
     'application-subscription-start': { hex: '#3442d9' },
     battlenet: { hex: '#009ae5' },

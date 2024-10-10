@@ -32,9 +32,9 @@ function N(e, t, n) {
         e
     );
 }
-let O = new a.Y('OverlayUsageStatsManager');
-O.verbose = () => {};
-class R {
+let R = new a.Y('OverlayUsageStatsManager');
+R.verbose = () => {};
+class O {
     increment(e) {
         ++this.actions[e];
     }
@@ -71,18 +71,18 @@ class v {
     increment(e, t) {
         let n = this.groupCounters[t];
         if (null == n) {
-            O.error('NotificationCounter: Unknown notification action: '.concat(t));
+            R.error('NotificationCounter: Unknown notification action: '.concat(t));
             return;
         }
         let r = (0, A.YK)(e);
         if (!(r in n)) {
-            O.error('NotificationCounter: Unknown notification action: '.concat(e));
+            R.error('NotificationCounter: Unknown notification action: '.concat(e));
             return;
         }
         ++n[r], ++this.actionCounters[t];
         let i = this.counters[e];
         if (null == i) {
-            O.error('NotificationCounter: Unknown notification type: '.concat(e));
+            R.error('NotificationCounter: Unknown notification type: '.concat(e));
             return;
         }
         i.increment(t);
@@ -125,18 +125,18 @@ class v {
                 [A.bv.Clicked]: v.makeEmptyGroupAnalytics()
             }),
             N(this, 'counters', {
-                [A.n0.NewsNudge]: new R(),
-                [A.n0.WelcomeNudge]: new R(),
-                [A.n0.TextChat]: new R(),
-                [A.n0.ActivityUserJoin]: new R(),
-                [A.n0.ActivityInvite]: new R(),
-                [A.n0.IncomingCall]: new R(),
-                [A.n0.GoLiveNudge]: new R(),
-                [A.n0.GoLiveNonVoiceNudge]: new R(),
-                [A.n0.OverlayCrashed]: new R(),
-                [A.n0.ClipsReminderNotification]: new R(),
-                [A.n0.ClipsNotification]: new R(),
-                [A.n0.KeybindIndicatorsNotification]: new R()
+                [A.n0.NewsNudge]: new O(),
+                [A.n0.WelcomeNudge]: new O(),
+                [A.n0.TextChat]: new O(),
+                [A.n0.ActivityUserJoin]: new O(),
+                [A.n0.ActivityInvite]: new O(),
+                [A.n0.IncomingCall]: new O(),
+                [A.n0.GoLiveNudge]: new O(),
+                [A.n0.GoLiveNonVoiceNudge]: new O(),
+                [A.n0.OverlayCrashed]: new O(),
+                [A.n0.ClipsReminderNotification]: new O(),
+                [A.n0.ClipsNotification]: new O(),
+                [A.n0.KeybindIndicatorsNotification]: new O()
             });
     }
 }
@@ -188,7 +188,7 @@ class L {
             t = I.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
         if (t !== this.lastscreenType) {
             if (!(t in this.counters)) {
-                O.error('ScreenTypeAnalytics: Unknown screen type: '.concat(t), t);
+                R.error('ScreenTypeAnalytics: Unknown screen type: '.concat(t), t);
                 return;
             }
             this.counters[t].start(), null != this.lastscreenType && this.counters[this.lastscreenType].stop(), (this.lastscreenType = t);
@@ -212,7 +212,7 @@ class L {
             })[0],
             a = parseInt(i[0], 10),
             s = isNaN(a) ? l.Jx.UNKNOWN : a;
-        isNaN(a) && O.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
+        isNaN(a) && R.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
         let o = S.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
         S.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
         let u = {
@@ -293,7 +293,7 @@ class y {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
             for (let e of (p.default.track(g.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) p.default.track(g.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
-            O.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete y.gamesByPid[e.pid];
+            R.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete y.gamesByPid[e.pid];
         }
         delete y.gamesByName[t];
     }
@@ -391,67 +391,67 @@ class y {
     }
 }
 function D(e) {
-    for (let t of (O.verbose('handleRunningGamesChange', e), e.added)) {
+    for (let t of (R.verbose('handleRunningGamesChange', e), e.added)) {
         y.incrementConcurrentGameCount();
         let e = y.create(t);
-        O.verbose('handleRunningGamesChange added', t, e);
+        R.verbose('handleRunningGamesChange added', t, e);
     }
-    for (let t of e.removed) y.destroy(t), O.verbose('handleRunningGamesChange removed', t);
+    for (let t of e.removed) y.destroy(t), R.verbose('handleRunningGamesChange removed', t);
 }
 function b(e) {
     let t = y.getByPid(e.pid);
-    if ((O.verbose('OVERLAY_SET_UI_LOCKED', t), null == t)) {
-        O.error('OVERLAY_SET_UI_LOCKED: Unable to find game', e, y.debug);
+    if ((R.verbose('OVERLAY_SET_UI_LOCKED', t), null == t)) {
+        R.error('OVERLAY_SET_UI_LOCKED: Unable to find game', e, y.debug);
         return;
     }
     t.setLocked(e.locked);
 }
 function M(e) {
     var t;
-    O.verbose('OVERLAY_NOTIFICATION_EVENT', e);
+    R.verbose('OVERLAY_NOTIFICATION_EVENT', e);
     let n = y.getByName(null !== (t = e.gameName) && void 0 !== t ? t : e.gameId);
     if (null == n) {
-        O.error('OVERLAY_NOTIFICATION_EVENT: Game not found.', e, y.debug);
+        R.error('OVERLAY_NOTIFICATION_EVENT: Game not found.', e, y.debug);
         return;
     }
     n.notificationAnalytics.increment(e.notificationType, e.action);
 }
 function P(e) {
     var t;
-    O.verbose('OVERLAY_WIDGET_CHANGED', e);
+    R.verbose('OVERLAY_WIDGET_CHANGED', e);
     let n = y.getByName(null !== (t = e.gameName) && void 0 !== t ? t : e.gameId);
     if (null == n) {
-        O.error('OVERLAY_WIDGET_CHANGED: Game not found', e, y.debug);
+        R.error('OVERLAY_WIDGET_CHANGED: Game not found', e, y.debug);
         return;
     }
     let r = n.widgetAnalytics.getByWidget(e.widgetType);
     if (null != r) !r.initialized && ((r.initialized = !0), (r.pinned = e.pinned)), r.pinned !== e.pinned && ++r.pinnedToggledCount, (r.pinned = e.pinned), r.visibleDuration.toggle(e.visible);
 }
 function U(e) {
-    if ((O.verbose('OVERLAY_FOCUSED', e), y.gameSetAllUnfocused(), null == e.pid)) return;
+    if ((R.verbose('OVERLAY_FOCUSED', e), y.gameSetAllUnfocused(), null == e.pid)) return;
     let t = y.getByPid(e.pid);
     if (null == t) {
-        O.error('OVERLAY_FOCUSED: Game not found', e, y.debug);
+        R.error('OVERLAY_FOCUSED: Game not found', e, y.debug);
         return;
     }
     t.gameSetFocused(!0);
 }
 function w(e) {
     var t;
-    O.verbose('SOUNDBOARD_SET_OVERLAY_ENABLED', e);
+    R.verbose('SOUNDBOARD_SET_OVERLAY_ENABLED', e);
     let n = y.getByPid(e.pid);
     if (null == n) {
-        O.error('SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found', e, y.debug);
+        R.error('SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found', e, y.debug);
         return;
     }
     n.setSoundboardShown(e.enabled, !!e.enabled && null !== (t = e.keepOpen) && void 0 !== t && t);
 }
 function x(e) {
     var t;
-    O.verbose('OVERLAY_MESSAGE_EVENT_ACTION', e);
+    R.verbose('OVERLAY_MESSAGE_EVENT_ACTION', e);
     let n = y.getByName(null !== (t = e.gameName) && void 0 !== t ? t : e.gameId);
     if (null == n) {
-        O.error('OVERLAY_MESSAGE_EVENT_ACTION: Game not found', e, y.debug);
+        R.error('OVERLAY_MESSAGE_EVENT_ACTION: Game not found', e, y.debug);
         return;
     }
     switch (e.eventType) {
@@ -463,19 +463,19 @@ function x(e) {
     }
 }
 function G(e) {
-    O.verbose('MESSAGE_ACKED', e), y.desktopMessageEvent('ack');
+    R.verbose('MESSAGE_ACKED', e), y.desktopMessageEvent('ack');
 }
 function k(e) {
     e.message.state === g.yb.SENDING && y.desktopMessageEvent('created');
 }
 function B(e) {
-    null != (0, T.Z)() && (O.verbose('AUDIO_TOGGLE_SELF_MUTE', e), y.handleMuteToggled());
+    null != (0, T.Z)() && (R.verbose('AUDIO_TOGGLE_SELF_MUTE', e), y.handleMuteToggled());
 }
 function F(e) {
-    O.verbose('WINDOW_FOCUS', e);
+    R.verbose('WINDOW_FOCUS', e);
     let t = (0, m.UU)();
     if (e.windowId !== t) {
-        O.verbose('WINDOW_FOCUS: Not main window', {
+        R.verbose('WINDOW_FOCUS: Not main window', {
             action: e,
             mainWindowId: t
         });
@@ -486,7 +486,7 @@ function F(e) {
 function V(e) {
     let t = y.getByPid(e.pid);
     if (null == t) {
-        O.error('OVERLAY_SUCCESSFULLY_SHOWN: Game not found', e, y.debug);
+        R.error('OVERLAY_SUCCESSFULLY_SHOWN: Game not found', e, y.debug);
         return;
     }
     t.successfullyShown = !0;
@@ -513,10 +513,10 @@ class H {
 N(H, 'connections', new Set()), N(H, 'previousHasConnection', !1);
 class Z {
     static handleMessageAcked(e) {
-        O.verbose('MESSAGE_ACKED', e);
+        R.verbose('MESSAGE_ACKED', e);
         let t = E.Z.getGame();
         if (null == t) {
-            O.error('Game not found.');
+            R.error('Game not found.');
             return;
         }
         o.Z.dispatch({
@@ -528,10 +528,10 @@ class Z {
     }
     static handleMessageCreate(e) {
         if (e.message.state !== g.yb.SENDING) return;
-        O.verbose('MESSAGE_CREATE', e, Error().stack);
+        R.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = E.Z.getGame();
         if (null == t) {
-            O.error('Game not found.');
+            R.error('Game not found.');
             return;
         }
         o.Z.dispatch({

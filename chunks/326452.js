@@ -82,14 +82,14 @@ class I extends (r = a.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: I, onChange: m, onBlur: T, onFocus: S, autoComplete: g, inputProps: A, hideSearchIcon: N, 'aria-label': O = _.Z.Messages.SEARCH, ...R } = this.props;
+        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: I, onChange: m, onBlur: T, onFocus: S, autoComplete: g, inputProps: A, hideSearchIcon: N, 'aria-label': R = _.Z.Messages.SEARCH, ...O } = this.props;
         return (0, i.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, i.jsx)('div', {
                 className: o()(r, E.container, h, { [E.disabled]: I }),
                 ref: this.containerRef,
-                ...R,
+                ...O,
                 children: (0, i.jsxs)('div', {
                     className: E.inner,
                     children: [
@@ -107,7 +107,7 @@ class I extends (r = a.PureComponent) {
                             disabled: I,
                             autoFocus: t,
                             autoComplete: g,
-                            'aria-label': O,
+                            'aria-label': R,
                             ref: this.inputRef
                         }),
                         !N &&

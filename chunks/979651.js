@@ -19,8 +19,8 @@ let p = 0,
     g = {},
     A = {},
     N = {},
-    O = {};
-function R(e, t) {
+    R = {};
+function O(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 function v(e, t) {
@@ -162,7 +162,7 @@ class M extends (a = d.ZP.Store) {
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let s = null != i && (null === (a = N[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
-        return t === r && e === s ? h.wR.DESKTOP : O[R(t, e)];
+        return t === r && e === s ? h.wR.DESKTOP : R[O(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;
@@ -224,6 +224,6 @@ class M extends (a = d.ZP.Store) {
         },
         RTC_CONNECTION_PLATFORM: function (e) {
             let { userId: t, channelId: n, platform: r } = e;
-            O[R(t, n)] = r;
+            R[O(t, n)] = r;
         }
     }));

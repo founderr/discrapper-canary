@@ -26,13 +26,13 @@ var r = n(735250),
     g = n(74538),
     A = n(864106),
     N = n(240781),
-    O = n(818611),
-    R = n(981631),
+    R = n(818611),
+    O = n(981631),
     v = n(474936),
     C = n(689938),
     L = n(398787);
 function y(e) {
-    let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: T, isTryItOutFlow: S, guild: R } = e,
+    let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: T, isTryItOutFlow: S, guild: O } = e,
         {
             pendingAvatarDecoration: y,
             setPendingAvatarDecoration: D,
@@ -40,7 +40,7 @@ function y(e) {
         } = (0, m.Z)({
             analyticsLocations: s,
             isTryItOut: S,
-            guildId: null == R ? void 0 : R.id
+            guildId: null == O ? void 0 : O.id
         }),
         [M, P] = i.useState(() => {
             var e, t;
@@ -88,9 +88,9 @@ function y(e) {
                 className: L.modalContent,
                 scrollbarType: 'none',
                 children: [
-                    (0, r.jsx)(O.Z, {
+                    (0, r.jsx)(R.Z, {
                         user: t,
-                        guild: R,
+                        guild: O,
                         pendingAvatarDecoration: M,
                         selectedAvatarDecorationRef: G,
                         onSelect: (e) => {
@@ -101,7 +101,7 @@ function y(e) {
                     (0, r.jsx)(N.Z, {
                         className: L.modalPreview,
                         user: t,
-                        guildId: null == R ? void 0 : R.id,
+                        guildId: null == O ? void 0 : O.id,
                         avatarDecorationOverride: M
                     })
                 ]
@@ -151,11 +151,11 @@ function D(e) {
     let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: _, initialSelectedDecoration: f, initialSelectedDecorationId: h, isTryItOutFlow: p, guild: I } = e,
         m = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
         { analyticsLocations: g } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: A, purchases: N, isFetchingCategories: O, isFetchingPurchases: v } = (0, E.Z)(),
-        C = O || (v && 0 === N.size);
+        { categories: A, purchases: N, isFetchingCategories: R, isFetchingPurchases: v } = (0, E.Z)(),
+        C = R || (v && 0 === N.size);
     return (
         i.useEffect(() => {
-            S.default.track(R.rMx.OPEN_MODAL, {
+            S.default.track(O.rMx.OPEN_MODAL, {
                 type: 'Edit Avatar Decoration Modal',
                 location_stack: g
             });

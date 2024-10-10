@@ -60,15 +60,15 @@ var i = n(672268),
     N = function () {
         (this.tension = void 0), (this.friction = void 0), (this.frequency = void 0), (this.damping = void 0), (this.mass = void 0), (this.velocity = 0), (this.restVelocity = void 0), (this.precision = void 0), (this.progress = void 0), (this.duration = void 0), (this.easing = void 0), (this.clamp = void 0), (this.bounce = void 0), (this.decay = void 0), (this.round = void 0), Object.assign(this, A);
     };
-function O(e, t) {
+function R(e, t) {
     if (a.is.und(t.decay)) {
         var n = !a.is.und(t.tension) || !a.is.und(t.friction);
         (n || !a.is.und(t.frequency) || !a.is.und(t.damping) || !a.is.und(t.mass)) && ((e.duration = void 0), (e.decay = void 0)), n && (e.frequency = void 0);
     } else e.duration = void 0;
 }
-var R = [],
+var O = [],
     v = function () {
-        (this.changed = !1), (this.values = R), (this.toValues = null), (this.fromValues = R), (this.to = void 0), (this.from = void 0), (this.config = new N()), (this.immediate = !1), (this.onStart = void 0), (this.onChange = void 0), (this.onRest = []);
+        (this.changed = !1), (this.values = O), (this.toValues = null), (this.fromValues = O), (this.to = void 0), (this.from = void 0), (this.config = new N()), (this.immediate = !1), (this.onStart = void 0), (this.onChange = void 0), (this.onRest = []);
     };
 function C(e, t) {
     (null == t || t > e.length) && (t = e.length);
@@ -659,8 +659,8 @@ var K = (function (e) {
                                         (E = h + (p / (1 - I)) * (1 - m)), (_ = 0.1 > Math.abs(u.lastPosition - E)), (T = p * m);
                                     } else {
                                         T = null == u.lastVelocity ? p : u.lastVelocity;
-                                        for (var T, S = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), g = s.restVelocity || S / 10, A = s.clamp ? 0 : s.bounce, N = !a.is.und(A), O = h == d ? u.v0 > 0 : h < d, R = !1, v = Math.ceil(e / 1), C = 0; C < v && !(!(Math.abs(T) > g) && (_ = Math.abs(d - E) <= S)); ++C) {
-                                            N && (R = E == d || E > d == O) && ((T = -T * A), (E = d));
+                                        for (var T, S = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), g = s.restVelocity || S / 10, A = s.clamp ? 0 : s.bounce, N = !a.is.und(A), R = h == d ? u.v0 > 0 : h < d, O = !1, v = Math.ceil(e / 1), C = 0; C < v && !(!(Math.abs(T) > g) && (_ = Math.abs(d - E) <= S)); ++C) {
+                                            N && (O = E == d || E > d == R) && ((T = -T * A), (E = d));
                                             var L = (-(0.000001 * s.tension) * (E - d) + -(0.001 * s.friction) * T) / s.mass;
                                             (T += 1 * L), (E += 1 * T);
                                         }
@@ -868,7 +868,7 @@ var K = (function (e) {
                 g && (i.from = T);
                 var N = !a.isEqual(I, f);
                 N && this._focus(I);
-                var R = a.getFluidConfig(I),
+                var O = a.getFluidConfig(I),
                     v = a.getFluidConfig(T);
                 v && (T = v.get());
                 var C = a.is.arr(t.to) || a.is.fun(t.to),
@@ -878,7 +878,7 @@ var K = (function (e) {
                 t.config &&
                     !C &&
                     !(function (e, t, n) {
-                        for (var r in (n && (O((n = s({}, n)), t), (t = s(s({}, n), t))), O(e, t), Object.assign(e, t), A)) null == e[r] && (e[r] = A[r]);
+                        for (var r in (n && (R((n = s({}, n)), t), (t = s(s({}, n), t))), R(e, t), Object.assign(e, t), A)) null == e[r] && (e[r] = A[r]);
                         var i = e.mass,
                             o = e.frequency,
                             l = e.damping;
@@ -899,14 +899,14 @@ var K = (function (e) {
                     }
                 }
                 var W = U.constructor,
-                    K = !!R,
+                    K = !!O,
                     z = !1;
                 if (!K) {
                     var q = w || (this.is(X) && g);
                     (N || q) && (K = !(z = a.isEqual(G(x), k))), (!a.isEqual(L.decay, b) || !a.isEqual(L.velocity, M)) && (K = !0);
                 }
                 if ((z && this.is(J) && (i.changed && !w ? (K = !0) : !K && this._stop()), !C)) {
-                    (K || a.getFluidConfig(f)) && ((i.values = U.getPayload()), (i.toValues = R ? null : W == _.AnimatedString ? [1] : a.toArray(k))), (i.immediate = Z), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
+                    (K || a.getFluidConfig(f)) && ((i.values = U.getPayload()), (i.toValues = O ? null : W == _.AnimatedString ? [1] : a.toArray(k))), (i.immediate = Z), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
                     var Q = i.onRest,
                         ee = w && !t.onRest ? Q[0] || a.noop : ea(ei(c('onRest'), r), this);
                     if (K) {
@@ -1502,7 +1502,7 @@ function eN(e, t) {
         o = r[2];
     return n || 2 == arguments.length ? [i, s, o] : i;
 }
-function eO(e, t, n) {
+function eR(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
     var s = [],
@@ -1537,7 +1537,7 @@ function eO(e, t, n) {
     }
     return o[0];
 }
-var eR = 'mount',
+var eO = 'mount',
     ev = 'enter',
     eC = 'update',
     eL = 'leave';
@@ -1580,7 +1580,7 @@ function ey(e, t, n) {
                 (h[t] = {
                     key: p[t],
                     item: e,
-                    phase: eR,
+                    phase: eO,
                     ctrl: new ed()
                 });
         }),
@@ -1599,13 +1599,13 @@ function ey(e, t, n) {
     var g = -d,
         A = a.useForceUpdate(),
         N = P(t),
-        O = new Map();
+        R = new Map();
     a.each(h, function (e, n) {
         var r,
             i,
             o = e.key,
             l = e.phase;
-        if (l == eR) (r = t.enter), (i = ev);
+        if (l == eO) (r = t.enter), (i = ev);
         else {
             var u = 0 > p.indexOf(o);
             if (l != eL) {
@@ -1670,20 +1670,20 @@ function ey(e, t, n) {
             }
         };
         var T = eE(e.ctrl, _);
-        O.set(e, {
+        R.set(e, {
             phase: i,
             springs: T,
             payload: _
         });
     });
-    var R = eS();
+    var O = eS();
     i.useLayoutEffect(
         function () {
             a.each(h, function (e) {
-                e.ctrl.start({ default: R });
+                e.ctrl.start({ default: O });
             });
         },
-        [R]
+        [O]
     );
     var v = o.useMemo(function () {
         return eg.create(function () {
@@ -1697,11 +1697,11 @@ function ey(e, t, n) {
     }),
         i.useLayoutEffect(
             function () {
-                a.each(O, function (e, t) {
+                a.each(R, function (e, t) {
                     var n = e.phase,
                         i = e.springs,
                         a = e.payload;
-                    ef(t.ctrl, i), !R.cancel && ((t.phase = n), n == ev && t.ctrl.start({ default: R }), t.ctrl[r ? 'update' : 'start'](a));
+                    ef(t.ctrl, i), !O.cancel && ((t.phase = n), n == ev && t.ctrl.start({ default: O }), t.ctrl[r ? 'update' : 'start'](a));
                 });
             },
             l ? void 0 : n
@@ -1711,7 +1711,7 @@ function ey(e, t, n) {
             o.Fragment,
             null,
             h.map(function (t, n) {
-                var r = e(s({}, (O.get(t) || t.ctrl).springs), t.item, t, n);
+                var r = e(s({}, (R.get(t) || t.ctrl).springs), t.item, t, n);
                 return r && r.type
                     ? o.createElement(
                           r.type,
@@ -1847,7 +1847,7 @@ Object.keys(S).forEach(function (e) {
         var t = e.items,
             n = e.children,
             r = I(e, ['items', 'children']),
-            i = eO(t.length, r);
+            i = eR(t.length, r);
         return t.map(function (e, t) {
             var r = n(e, t);
             return a.is.fun(r) ? r(i[t]) : r;
@@ -1919,5 +1919,5 @@ Object.keys(S).forEach(function (e) {
     }),
     (t.useSpring = eN),
     (t.useSprings = eA),
-    (t.useTrail = eO),
+    (t.useTrail = eR),
     (t.useTransition = ey);

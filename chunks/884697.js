@@ -33,7 +33,7 @@ n.d(t, {
         return p;
     },
     iC: function () {
-        return O;
+        return R;
     },
     mO: function () {
         return y;
@@ -48,7 +48,7 @@ n.d(t, {
         return m;
     },
     uV: function () {
-        return R;
+        return O;
     },
     x6: function () {
         return P;
@@ -132,8 +132,8 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     A = (e) => S(e, i.Z.AVATAR_DECORATION),
     N = (e) => g(e, i.Z.AVATAR_DECORATION),
-    O = (e, t) => (0, r.uniqBy)([...A(e), ...N(t)], 'id'),
-    R = (e, t) => {
+    R = (e, t) => (0, r.uniqBy)([...A(e), ...N(t)], 'id'),
+    O = (e, t) => {
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
             s = (0, a.oO)(t.size * (0, a.x_)()),

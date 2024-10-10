@@ -24,8 +24,8 @@ var r = n(735250),
     g = n(631771),
     A = n(474936),
     N = n(981631),
-    O = n(689938),
-    R = n(569548),
+    R = n(689938),
+    O = n(569548),
     v = n(769860);
 function C(e) {
     var t, n, a;
@@ -59,18 +59,18 @@ function C(e) {
     i.useEffect(() => {
         !eE && u.MH();
     }, [eE]);
-    let ef = z ? s()(R.artContainer, R.artContainerBoxShadow, G) : s()(R.artContainer, G),
+    let ef = z ? s()(O.artContainer, O.artContainerBoxShadow, G) : s()(O.artContainer, G),
         eh = null;
     return (
         null != ea.artURL
             ? (eh = (0, r.jsx)('img', {
-                  className: R.art,
+                  className: O.art,
                   alt: '',
                   src: ea.artURL
               }))
             : null != ea.artElement && (eh = ea.artElement),
         (0, r.jsxs)(l.ModalRoot, {
-            className: s()(R.root, !eu && w),
+            className: s()(O.root, !eu && w),
             'aria-label': C,
             transitionState: F,
             children: [
@@ -81,7 +81,7 @@ function C(e) {
                             eh,
                             K
                                 ? (0, r.jsx)('img', {
-                                      className: R.sparkleBadge,
+                                      className: O.sparkleBadge,
                                       alt: '',
                                       src: v
                                   })
@@ -90,7 +90,7 @@ function C(e) {
                     }),
                 (0, r.jsx)(l.ModalContent, {
                     scrollbarType: 'none',
-                    className: s()(J ? R.enhancedContent : R.content, !eu && x),
+                    className: s()(J ? O.enhancedContent : O.content, !eu && x),
                     children: Q
                         ? (0, r.jsx)(l.Spinner, {})
                         : (0, r.jsx)(r.Fragment, {
@@ -109,14 +109,14 @@ function C(e) {
                                         })
                                     })
                                   : (0, r.jsxs)('div', {
-                                        className: R.contentContainer,
+                                        className: O.contentContainer,
                                         children: [
                                             ei,
                                             (0, r.jsxs)('div', {
-                                                className: R.bodyContent,
+                                                className: O.bodyContent,
                                                 children: [
                                                     (0, r.jsx)(l.Heading, {
-                                                        className: s()(R.header, { [R.enhancedHeader]: J }, k),
+                                                        className: s()(O.header, { [O.enhancedHeader]: J }, k),
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
@@ -124,7 +124,7 @@ function C(e) {
                                                     er,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
-                                                        className: s()(B, R.subHeader),
+                                                        className: s()(B, O.subHeader),
                                                         children: M
                                                     })
                                                 ]
@@ -134,14 +134,14 @@ function C(e) {
                           })
                 }),
                 (0, r.jsxs)(l.ModalFooter, {
-                    className: s()(R.footer, { [R.enhancedFooter]: J }),
+                    className: s()(O.footer, { [O.enhancedFooter]: J }),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(R.primaryActions, { [R.enhancedPrimaryActions]: J }),
+                            className: s()(O.primaryActions, { [O.enhancedPrimaryActions]: J }),
                             children: [
                                 null != j
                                     ? (0, r.jsx)(l.Button, {
-                                          className: s()(R.secondaryAction, { [R.enhancedSecondaryAction]: J }),
+                                          className: s()(O.secondaryAction, { [O.enhancedSecondaryAction]: J }),
                                           onClick: Y,
                                           size: l.Button.Sizes.SMALL,
                                           color: J ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
@@ -156,7 +156,7 @@ function C(e) {
                                             guild: y.guild,
                                             onClose: V
                                         });
-                                    let e = J ? O.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+                                    let e = J ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
                                     if (eu) {
                                         if (null != eo) {
                                             var t, n;
@@ -164,7 +164,7 @@ function C(e) {
                                                 intervalType: null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.interval,
                                                 intervalCount: null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                                             });
-                                        } else null != el && (e = O.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: el.discount.amount }));
+                                        } else null != el && (e = R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: el.discount.amount }));
                                     }
                                     return (0, r.jsx)(T.Z, {
                                         className: et,
@@ -189,14 +189,14 @@ function C(e) {
                                 size: l.Button.Sizes.SMALL,
                                 color: l.Button.Colors.PRIMARY,
                                 look: l.Button.Looks.LINK,
-                                children: null != $ ? $ : O.Z.Messages.BACK
+                                children: null != $ ? $ : R.Z.Messages.BACK
                             })
                     ]
                 }),
                 J
                     ? (0, r.jsx)(l.ModalCloseButton, {
                           onClick: V,
-                          className: R.closeButton
+                          className: O.closeButton
                       })
                     : null
             ]

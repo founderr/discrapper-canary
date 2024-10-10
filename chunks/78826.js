@@ -96,21 +96,21 @@ function _(e) {
             },
             [g, A]
         ),
-        O = i.useMemo(() => p.size > 0 || !m, [m, p]);
+        R = i.useMemo(() => p.size > 0 || !m, [m, p]);
     i.useEffect(() => {
-        !O && (S.current = !0);
-    }, [O]);
-    let R = i.useMemo(
+        !R && (S.current = !0);
+    }, [R]);
+    let O = i.useMemo(
         () => ({
             registerAsset: N,
             unregisterAsset: A,
             hasError: f,
-            isLoading: O && !S.current
+            isLoading: R && !S.current
         }),
-        [N, A, f, O]
+        [N, A, f, R]
     );
     return (0, r.jsx)(u.Provider, {
-        value: R,
+        value: O,
         children: t
     });
 }

@@ -57,11 +57,11 @@ function N(e) {
     }
     return !1;
 }
-function O(e) {
+function R(e) {
     let { guildId: t } = e;
     return !!p.has(t) && g(t);
 }
-class R extends (r = l.ZP.Store) {
+class O extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -96,7 +96,7 @@ class R extends (r = l.ZP.Store) {
     }
 }
 (s = 'SubscriptionRoleStore'),
-    (a = 'displayName') in (i = R)
+    (a = 'displayName') in (i = O)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -104,7 +104,7 @@ class R extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new R(u.Z, {
+    (t.Z = new O(u.Z, {
         CONNECTION_OPEN: A,
         LOGOUT: A,
         GUILD_CREATE: N,
@@ -117,9 +117,9 @@ class R extends (r = l.ZP.Store) {
             n.delete(t), (S = n);
         },
         GUILD_UPDATE: N,
-        GUILD_ROLE_CREATE: O,
-        GUILD_ROLE_UPDATE: O,
-        GUILD_ROLE_DELETE: O,
+        GUILD_ROLE_CREATE: R,
+        GUILD_ROLE_UPDATE: R,
+        GUILD_ROLE_DELETE: R,
         GUILD_MEMBER_UPDATE: function (e) {
             let { guildId: t, user: n } = e,
                 r = _.default.getCurrentUser();

@@ -1,6 +1,6 @@
 n.d(t, {
     LO: function () {
-        return R;
+        return O;
     },
     On: function () {
         return N;
@@ -112,7 +112,7 @@ function N(e, t, n, r) {
         }),
         m('AUDIO_SETTINGS_UPDATE', e));
 }
-async function O() {
+async function R() {
     let e;
     try {
         let t = null != u.Z.getRTCConnectionId() ? i.o.TRANSFER_EXISTING_CALL : i.o.CREATE_NEW_CALL;
@@ -127,7 +127,7 @@ async function O() {
     }
     return e;
 }
-async function R(e) {
+async function O(e) {
     let t;
     s.Z.dispatch({
         type: 'GAME_CONSOLE_FETCH_DEVICES_START',
@@ -231,6 +231,6 @@ async function L(e, t, n) {
 }
 async function y(e, t, n) {
     await E.Z.maybeShowPTTAlert(e), await T();
-    let r = await O();
+    let r = await R();
     await C(e, t, n, r), (0, h.Z)(n.id, e);
 }

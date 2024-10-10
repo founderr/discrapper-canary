@@ -38,8 +38,8 @@ let f = {
             { reducedMotion: S } = i.useContext(u.S),
             g = i.useRef(null),
             [A, N] = i.useState(!1),
-            O = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-            R = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
+            R = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+            O = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
             { state: v, opacity: C } = (0, _.useSpring)(
                 {
                     config: f,
@@ -63,7 +63,7 @@ let f = {
                 style: {
                     opacity: C,
                     backgroundColor: v.to({
-                        output: [O, R]
+                        output: [R, O]
                     })
                 },
                 children: [
@@ -125,7 +125,7 @@ let f = {
                                         })
                                     ]
                                 });
-                            })(v, O, R, S.enabled)
+                            })(v, R, O, S.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {

@@ -7,12 +7,12 @@ s.d(t, {
 var n = s(735250),
     r = s(470079),
     o = s(404759),
-    i = s.n(o),
-    a = s(423650),
-    u = s.n(a),
-    l = s(481060),
-    c = s(689938),
-    d = s(984600);
+    a = s.n(o),
+    i = s(423650),
+    l = s.n(i),
+    u = s(481060),
+    d = s(689938),
+    c = s(984600);
 function p(e, t, s) {
     return (
         t in e
@@ -31,18 +31,18 @@ class h extends r.Component {
         let { selectedValue: e } = this.state;
         return (0, n.jsxs)(r.Fragment, {
             children: [
-                (0, n.jsx)(l.Heading, {
-                    className: d.prompt,
+                (0, n.jsx)(u.Heading, {
+                    className: c.prompt,
                     variant: 'heading-md/semibold',
                     children: this.props.prompt
                 }),
-                (0, n.jsx)('hr', { className: d.separator }),
-                (0, n.jsx)(l.Text, {
-                    className: d.selectYourAnswer,
+                (0, n.jsx)('hr', { className: c.separator }),
+                (0, n.jsx)(u.Text, {
+                    className: c.selectYourAnswer,
                     variant: 'text-xs/normal',
-                    children: c.Z.Messages.HYPESQUAD_QUIZ_SELECT_ANSWER
+                    children: d.Z.Messages.HYPESQUAD_QUIZ_SELECT_ANSWER
                 }),
-                (0, n.jsx)(l.RadioGroup, {
+                (0, n.jsx)(u.RadioGroup, {
                     options: this.getQuestionOptions(),
                     onChange: this.handleOptionChange,
                     value: e
@@ -56,8 +56,8 @@ class h extends r.Component {
             p(
                 this,
                 'getQuestionOptions',
-                i()(() =>
-                    u()(
+                a()(() =>
+                    l()(
                         this.props.options.map((e) => ({
                             name: e.copy,
                             value: e.house

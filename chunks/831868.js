@@ -34,11 +34,11 @@ function A(e) {
 function N(e, t) {
     (e.pending_buf[e.pending++] = 255 & t), (e.pending_buf[e.pending++] = (t >>> 8) & 255);
 }
-function O(e, t, n) {
+function R(e, t, n) {
     e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), N(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
 }
-function R(e, t, n) {
-    O(e, n[2 * t], n[2 * t + 1]);
+function O(e, t, n) {
+    R(e, n[2 * t], n[2 * t + 1]);
 }
 function v(e, t) {
     var n = 0;
@@ -86,9 +86,9 @@ function M(e, t, n) {
         s,
         o = 0;
     if (0 !== e.last_lit)
-        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? R(e, i, t) : (R(e, (a = I[i]) + 256 + 1, t), 0 !== (s = c[a]) && O(e, (i -= m[a]), s), R(e, (a = A(--r)), n), 0 !== (s = d[a]) && O(e, (r -= T[a]), s));
+        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? O(e, i, t) : (O(e, (a = I[i]) + 256 + 1, t), 0 !== (s = c[a]) && R(e, (i -= m[a]), s), O(e, (a = A(--r)), n), 0 !== (s = d[a]) && R(e, (r -= T[a]), s));
         while (o < e.last_lit);
-    R(e, 256, t);
+    O(e, 256, t);
 }
 function P(e, t) {
     var n,
@@ -164,9 +164,9 @@ function w(e, t, n) {
     for (0 === s && ((l = 138), (u = 3)), r = 0; r <= n; r++) {
         if (((i = s), (s = t[(r + 1) * 2 + 1]), !(++o < l) || i !== s)) {
             if (o < u)
-                do R(e, i, e.bl_tree);
+                do O(e, i, e.bl_tree);
                 while (0 != --o);
-            else 0 !== i ? (i !== a && (R(e, i, e.bl_tree), o--), R(e, 16, e.bl_tree), O(e, o - 3, 2)) : o <= 10 ? (R(e, 17, e.bl_tree), O(e, o - 3, 3)) : (R(e, 18, e.bl_tree), O(e, o - 11, 7));
+            else 0 !== i ? (i !== a && (O(e, i, e.bl_tree), o--), O(e, 16, e.bl_tree), R(e, o - 3, 2)) : o <= 10 ? (O(e, 17, e.bl_tree), R(e, o - 3, 3)) : (O(e, 18, e.bl_tree), R(e, o - 11, 7));
             (o = 0), (a = i), 0 === s ? ((l = 138), (u = 3)) : i === s ? ((l = 6), (u = 3)) : ((l = 7), (u = 4));
         }
     }
@@ -174,7 +174,7 @@ function w(e, t, n) {
 var x = !1;
 function G(e, t, n, r) {
     var i, a, o, l;
-    O(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), y(i), l && (N(i, o), N(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
+    R(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), y(i), l && (N(i, o), N(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
 }
 (t._tr_init = function (e) {
     !x &&
@@ -232,11 +232,11 @@ function G(e, t, n, r) {
             n + 4 <= i && -1 !== t
                 ? G(e, t, n, r)
                 : 4 === e.strategy || a === i
-                  ? (O(e, 2 + (r ? 1 : 0), 3), M(e, f, h))
-                  : (O(e, 4 + (r ? 1 : 0), 3),
+                  ? (R(e, 2 + (r ? 1 : 0), 3), M(e, f, h))
+                  : (R(e, 4 + (r ? 1 : 0), 3),
                     !(function (e, t, n, r) {
                         var i;
-                        for (O(e, t - 257, 5), O(e, n - 1, 5), O(e, r - 4, 4), i = 0; i < r; i++) O(e, e.bl_tree[2 * E[i] + 1], 3);
+                        for (R(e, t - 257, 5), R(e, n - 1, 5), R(e, r - 4, 4), i = 0; i < r; i++) R(e, e.bl_tree[2 * E[i] + 1], 3);
                         w(e, e.dyn_ltree, t - 1), w(e, e.dyn_dtree, n - 1);
                     })(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, s + 1),
                     M(e, e.dyn_ltree, e.dyn_dtree)),
@@ -248,5 +248,5 @@ function G(e, t, n, r) {
     }),
     (t._tr_align = function (e) {
         var t;
-        O(e, 2, 3), R(e, 256, f), 16 === (t = e).bi_valid ? (N(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
+        R(e, 2, 3), O(e, 256, f), 16 === (t = e).bi_valid ? (N(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
     });

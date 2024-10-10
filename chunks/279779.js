@@ -46,7 +46,7 @@ function A(e) {
 function N(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);
 }
-function O(e) {
+function R(e) {
     let t = [];
     if (null == e || !(0, u.hv)(e.type)) return t;
     let { recipients: n = [] } = e;
@@ -58,7 +58,7 @@ function O(e) {
         t
     );
 }
-function R(e, t) {
+function O(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
@@ -230,7 +230,7 @@ class C extends l.Z {
             g(this, '_handleConnectionOpenSupplemental', (e) => {
                 let { guilds: t } = e;
                 setTimeout(() => {
-                    let e = s().flatMap(t, (e) => R(e.members, e.id)),
+                    let e = s().flatMap(t, (e) => O(e.members, e.id)),
                         n = s().flatMap(t, (e) => {
                             var t;
                             let n = [];
@@ -275,12 +275,12 @@ class C extends l.Z {
             g(this, '_handleGuildCreate', (e) => {
                 let { guild: t } = e,
                     { members: n } = t;
-                this.updateUsers(R(n, t.id), 'guild_create');
+                this.updateUsers(O(n, t.id), 'guild_create');
             }),
             g(this, '_handleGuildMembersChunkBatch', (e) => {
                 let { chunks: t } = e,
                     n = [];
-                for (let e of t) n.push(...R(e.members, e.guildId));
+                for (let e of t) n.push(...O(e.members, e.guildId));
                 this.updateUsers(n, 'guild_members_chunk_batch');
             }),
             g(this, '_handleGuildMemberUpdate', (e) => {
@@ -289,7 +289,7 @@ class C extends l.Z {
                 null != i && (N(i, t, r), this.updateUsers([i], 'guild_member_update'));
             }),
             g(this, '_handlePassiveUpdateV2', (e) => {
-                this.updateUsers(R(e.members, e.guildId), 'passive_update_v2');
+                this.updateUsers(O(e.members, e.guildId), 'passive_update_v2');
             }),
             g(this, '_handleRelationshipAdd', (e) => {
                 let t = A(e.relationship.user);
@@ -307,7 +307,7 @@ class C extends l.Z {
                 let {
                         channel: { id: t }
                     } = e,
-                    n = O(d.Z.getChannel(t));
+                    n = R(d.Z.getChannel(t));
                 if (0 === n.length) return;
                 let r = A(f.default.getCurrentUser());
                 N(r, t), n.push(r), this.updateUsers(n, 'dm_create');
@@ -315,7 +315,7 @@ class C extends l.Z {
             g(this, '_handleDMUpdates', (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
-                    let t = O(d.Z.getChannel(e.id));
+                    let t = R(d.Z.getChannel(e.id));
                     if (0 === t.length) continue;
                     let n = A(f.default.getCurrentUser());
                     N(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');

@@ -6,7 +6,7 @@ n.d(t, {
         return w;
     },
     WH: function () {
-        return R;
+        return O;
     },
     aP: function () {
         return M;
@@ -59,11 +59,11 @@ n(26151), n(493683);
 var A = n(475179);
 n(287734);
 var N = n(981631),
-    O = n(70722);
-function R(e, t, n) {
+    R = n(70722);
+function O(e, t, n) {
     o.Z.dispatch({
         type: 'STREAM_START',
-        streamType: null != e ? O.lo.GUILD : O.lo.CALL,
+        streamType: null != e ? R.lo.GUILD : R.lo.CALL,
         guildId: e,
         channelId: t,
         appContext: __OVERLAY__ ? N.IlC.OVERLAY : N.IlC.APP,
@@ -134,7 +134,7 @@ function M(e) {
 }
 async function P(e, t, n) {
     let r = (0, u.V9)({
-        streamType: null != e ? O.lo.GUILD : O.lo.CALL,
+        streamType: null != e ? R.lo.GUILD : R.lo.CALL,
         guildId: e,
         channelId: t,
         ownerId: n

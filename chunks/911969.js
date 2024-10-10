@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, O, R, v, C, L, y, D, b, M, P, U;
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, R, O, v, C, L, y, D, b, M, P, U;
 n.d(t, {
     B8: function () {
         return d;
@@ -62,19 +62,19 @@ n.d(t, {
     ((N = o || (o = {}))[(N.GUILD = 0)] = 'GUILD'),
     (N[(N.BOT_DM = 1)] = 'BOT_DM'),
     (N[(N.PRIVATE_CHANNEL = 2)] = 'PRIVATE_CHANNEL'),
-    ((O = l || (l = {}))[(O.APP_HANDLER = 1)] = 'APP_HANDLER'),
-    (O[(O.DISCORD_LAUNCH_ACTIVITY = 2)] = 'DISCORD_LAUNCH_ACTIVITY'),
-    ((R = u || (u = {}))[(R.SUB_COMMAND = 1)] = 'SUB_COMMAND'),
-    (R[(R.SUB_COMMAND_GROUP = 2)] = 'SUB_COMMAND_GROUP'),
-    (R[(R.STRING = 3)] = 'STRING'),
-    (R[(R.INTEGER = 4)] = 'INTEGER'),
-    (R[(R.BOOLEAN = 5)] = 'BOOLEAN'),
-    (R[(R.USER = 6)] = 'USER'),
-    (R[(R.CHANNEL = 7)] = 'CHANNEL'),
-    (R[(R.ROLE = 8)] = 'ROLE'),
-    (R[(R.MENTIONABLE = 9)] = 'MENTIONABLE'),
-    (R[(R.NUMBER = 10)] = 'NUMBER'),
-    (R[(R.ATTACHMENT = 11)] = 'ATTACHMENT'),
+    ((R = l || (l = {}))[(R.APP_HANDLER = 1)] = 'APP_HANDLER'),
+    (R[(R.DISCORD_LAUNCH_ACTIVITY = 2)] = 'DISCORD_LAUNCH_ACTIVITY'),
+    ((O = u || (u = {}))[(O.SUB_COMMAND = 1)] = 'SUB_COMMAND'),
+    (O[(O.SUB_COMMAND_GROUP = 2)] = 'SUB_COMMAND_GROUP'),
+    (O[(O.STRING = 3)] = 'STRING'),
+    (O[(O.INTEGER = 4)] = 'INTEGER'),
+    (O[(O.BOOLEAN = 5)] = 'BOOLEAN'),
+    (O[(O.USER = 6)] = 'USER'),
+    (O[(O.CHANNEL = 7)] = 'CHANNEL'),
+    (O[(O.ROLE = 8)] = 'ROLE'),
+    (O[(O.MENTIONABLE = 9)] = 'MENTIONABLE'),
+    (O[(O.NUMBER = 10)] = 'NUMBER'),
+    (O[(O.ATTACHMENT = 11)] = 'ATTACHMENT'),
     ((v = c || (c = {}))[(v.CHAT = 1)] = 'CHAT'),
     (v[(v.USER = 2)] = 'USER'),
     (v[(v.MESSAGE = 3)] = 'MESSAGE'),

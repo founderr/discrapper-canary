@@ -19,8 +19,8 @@ let m = {},
     g = {},
     A = !1,
     N = !1,
-    O = !1;
-class R extends (o = f.ZP.Store) {
+    R = !1;
+class O extends (o = f.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -33,11 +33,11 @@ class R extends (o = f.ZP.Store) {
         return A;
     }
     canRevokeFriendInvite() {
-        return null != r && !N && !O;
+        return null != r && !N && !R;
     }
 }
 (s = 'InstantInviteStore'),
-    (a = 'displayName') in (i = R)
+    (a = 'displayName') in (i = O)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -45,9 +45,9 @@ class R extends (o = f.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new R(h.Z, {
+    (t.Z = new O(h.Z, {
         CONNECTION_OPEN: function () {
-            (m = {}), (T = {}), (S = {}), (g = {}), (r = null), (N = !1), (O = !1), (A = !1);
+            (m = {}), (T = {}), (S = {}), (g = {}), (r = null), (N = !1), (R = !1), (A = !1);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
@@ -55,10 +55,10 @@ class R extends (o = f.ZP.Store) {
         },
         FRIEND_INVITE_CREATE_SUCCESS: function (e) {
             var t;
-            (g[e.invite.code] = p.Z.createFromServer(e.invite)), (r = null !== (t = u()(d()(E()(Object.values(g), 'createdAt')))) && void 0 !== t ? t : null), (O = !1);
+            (g[e.invite.code] = p.Z.createFromServer(e.invite)), (r = null !== (t = u()(d()(E()(Object.values(g), 'createdAt')))) && void 0 !== t ? t : null), (R = !1);
         },
         FRIEND_INVITE_CREATE_FAILURE: function () {
-            O = !1;
+            R = !1;
         },
         FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
             var t;
@@ -86,7 +86,7 @@ class R extends (o = f.ZP.Store) {
             N = !0;
         },
         FRIEND_INVITE_CREATE_REQUEST: function () {
-            O = !0;
+            R = !0;
         },
         FRIEND_INVITES_FETCH_REQUEST: function () {
             A = !0;

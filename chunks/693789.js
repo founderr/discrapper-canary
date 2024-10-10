@@ -64,7 +64,7 @@ function p() {
     });
 }
 function I(e) {
-    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: S = 'button', style: g, wrapperClassName: A, className: N, innerClassName: O, onClick: R, onDoubleClick: v, onMouseDown: C, onMouseUp: L, onMouseEnter: y, onMouseLeave: D, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
+    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: S = 'button', style: g, wrapperClassName: A, className: N, innerClassName: R, onClick: O, onDoubleClick: v, onMouseDown: C, onMouseUp: L, onMouseEnter: y, onMouseLeave: D, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
         F = m || T,
         V = F && (null != y || null != D),
         H = (function (e, t) {
@@ -92,7 +92,7 @@ function I(e) {
             'aria-label': x,
             'aria-busy': !!T || void 0,
             ref: U,
-            onClick: F ? (e) => e.preventDefault() : R,
+            onClick: F ? (e) => e.preventDefault() : O,
             onDoubleClick: F ? (e) => e.preventDefault() : v,
             onMouseUp: m ? void 0 : L,
             onMouseDown: m ? void 0 : C,
@@ -125,7 +125,7 @@ function I(e) {
                       })
                     : null,
                 (0, r.jsx)('div', {
-                    className: s()(_.contents, O),
+                    className: s()(_.contents, R),
                     children: M
                 })
             ]

@@ -27,18 +27,18 @@ var r = n(302454),
     g = n(902676),
     A = n(375954),
     N = n(699516),
-    O = n(944486),
-    R = n(626135),
+    R = n(944486),
+    O = n(626135),
     v = n(981631),
     C = n(689938);
 function L(e, t) {
     var n;
-    let r = m.Z.getChannel(O.Z.getChannelId());
+    let r = m.Z.getChannel(R.Z.getChannelId());
     return !!(null == r || r.type !== v.d4z.DM || N.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
 }
 function y(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        { trusted: N, onClick: O, onConfirm: L, shouldConfirm: y, messageId: D, channelId: b } = e,
+        { trusted: N, onClick: R, onConfirm: L, shouldConfirm: y, messageId: D, channelId: b } = e,
         M = i().sanitizeUrl(e.href);
     if (null == M) {
         null != t && t.preventDefault(),
@@ -78,19 +78,19 @@ function y(e, t) {
         null != e &&
             null != t &&
             t.hasFeature(v.oNc.DISCOVERABLE) &&
-            R.default.track(v.rMx.URL_CLICKED, {
+            O.default.track(v.rMx.URL_CLICKED, {
                 url_domain: (0, g.F)(P),
                 guild_id: t.id,
                 channel_id: e.id
             }),
             (0, c.Z)(b) &&
-                R.default.track(v.rMx.CHANGE_LOG_CTA_CLICKED, {
+                O.default.track(v.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
                     target: P
                 });
     }
-    if ((E.Z.trackLinkClicked(P), null != O)) {
-        if (O(t)) return;
+    if ((E.Z.trackLinkClicked(P), null != R)) {
+        if (R(t)) return;
     } else {
         let { default: e } = n(315263),
             i = e(P, {

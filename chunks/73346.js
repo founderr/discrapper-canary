@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Kb: function () {
-        return O;
+        return R;
     },
     Ww: function () {
         return y;
@@ -15,7 +15,7 @@ n.d(t, {
         return N;
     },
     uF: function () {
-        return R;
+        return O;
     }
 }),
     n(653041),
@@ -86,7 +86,7 @@ function N(e, t, n, r) {
         a
     );
 }
-async function O(e) {
+async function R(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (a) {
@@ -128,7 +128,7 @@ async function O(e) {
     }
     return c.tn.get(e);
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }

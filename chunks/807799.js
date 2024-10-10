@@ -29,8 +29,8 @@ function E(e, t) {
     for (var t = this._w, n = 0 | this._ah, r = 0 | this._bh, i = 0 | this._ch, a = 0 | this._dh, o = 0 | this._eh, l = 0 | this._fh, u = 0 | this._gh, c = 0 | this._hh, f = 0 | this._al, h = 0 | this._bl, p = 0 | this._cl, I = 0 | this._dl, m = 0 | this._el, T = 0 | this._fl, S = 0 | this._gl, g = 0 | this._hl, A = 0; A < 32; A += 2) (t[A] = e.readInt32BE(4 * A)), (t[A + 1] = e.readInt32BE(4 * A + 4));
     for (; A < 160; A += 2) {
         var N,
-            O,
             R,
+            O,
             v,
             C,
             L,
@@ -38,8 +38,8 @@ function E(e, t) {
             D,
             b = t[A - 30],
             M = t[A - 30 + 1];
-        var P = (((N = b) >>> 1) | ((O = M) << 31)) ^ ((N >>> 8) | (O << 24)) ^ (N >>> 7);
-        var U = (((R = M) >>> 1) | ((v = b) << 31)) ^ ((R >>> 8) | (v << 24)) ^ ((R >>> 7) | (v << 25));
+        var P = (((N = b) >>> 1) | ((R = M) << 31)) ^ ((N >>> 8) | (R << 24)) ^ (N >>> 7);
+        var U = (((O = M) >>> 1) | ((v = b) << 31)) ^ ((O >>> 8) | (v << 24)) ^ ((O >>> 7) | (v << 25));
         (b = t[A - 4]), (M = t[A - 4 + 1]);
         var w = (((C = b) >>> 19) | ((L = M) << 13)) ^ ((L >>> 29) | (C << 3)) ^ (C >>> 6);
         var x = (((y = M) >>> 19) | ((D = b) << 13)) ^ ((D >>> 29) | (y << 3)) ^ ((y >>> 6) | (D << 26)),

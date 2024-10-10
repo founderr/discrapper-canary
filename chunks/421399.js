@@ -27,11 +27,11 @@ var r,
     g = n(463396),
     A = n(944192),
     N = n(981631),
-    O = n(825193);
-function R(e) {
+    R = n(825193);
+function O(e) {
     let { compact: t } = e;
     return (0, a.jsx)(h.Z, {
-        className: t ? O.botTagCompact : O.botTagCozy,
+        className: t ? R.botTagCompact : R.botTagCozy,
         type: h.Z.Types.REMIX,
         useRemSizes: !0
     });
@@ -56,7 +56,7 @@ function v(e) {
             [i.id, i.author.id]
         ),
         W = {
-            className: O.username,
+            className: R.username,
             style: 'username' === Z && null != F ? { color: F } : void 0,
             onClick: D,
             onContextMenu: b,
@@ -69,7 +69,7 @@ function v(e) {
                           clan: r.clan,
                           userId: i.author.id,
                           contextGuildId: G,
-                          className: O.clanTagChiplet,
+                          className: R.clanTagChiplet,
                           profileViewedAnalytics: j
                       })
                     : null,
@@ -110,7 +110,7 @@ function v(e) {
                                   tag: 'span',
                                   ...n,
                                   ...W,
-                                  className: l()(W.className, O.clickable, y)
+                                  className: l()(W.className, R.clickable, y)
                               }),
                               K
                           ]
@@ -140,7 +140,7 @@ function v(e) {
                 ? (0, a.jsx)(d.RoleDot, {
                       color: F,
                       name: V,
-                      className: O.roleDot
+                      className: R.roleDot
                   })
                 : null,
             n,
@@ -150,14 +150,14 @@ function v(e) {
                         clan: r.clan,
                         userId: i.author.id,
                         contextGuildId: G,
-                        className: O.clanTagChiplet,
+                        className: R.clanTagChiplet,
                         profileViewedAnalytics: j
                     })
                 }),
             null != q ? (0, a.jsx)(a.Fragment, { children: q }) : null,
             (0, a.jsx)(A.Z, { message: i }),
             null == z || v ? null : z,
-            null != i && (0, g.f)(i) && Y && U ? (0, a.jsx)(R, {}) : null
+            null != i && (0, g.f)(i) && Y && U ? (0, a.jsx)(O, {}) : null
         ]
     });
 }

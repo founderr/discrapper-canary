@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return R;
+        return O;
     },
     A0: function () {
         return v;
@@ -15,7 +15,7 @@ n.d(t, {
         return r;
     },
     t$: function () {
-        return O;
+        return R;
     },
     tM: function () {
         return g;
@@ -122,7 +122,7 @@ let g = async (e) => {
         }
     };
 ((i = r || (r = {}))[(i.SENDING = 0)] = 'SENDING'), (i[(i.CREATED = 1)] = 'CREATED'), (i[(i.FAILED = 2)] = 'FAILED'), (i[(i.TIMED_OUT = 3)] = 'TIMED_OUT'), (i[(i.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS');
-let O = (e, t) => {
+let R = (e, t) => {
     var n;
     let r = null == t ? void 0 : t.state,
         i = e.state === m.yb.SENT && S(e.id) < Date.now();
@@ -136,7 +136,7 @@ let O = (e, t) => {
     else if (o && e.state === m.yb.SEND_FAILED) return 2;
     else if (null != e.interaction && e.hasFlag(m.iLy.EPHEMERAL)) return 4;
 };
-function R(e) {
+function O(e) {
     let t = e.options;
     for (; (null == t ? void 0 : t.length) === 1 && (t[0].type === l.jw.SUB_COMMAND_GROUP || t[0].type === l.jw.SUB_COMMAND); ) t = t[0].options;
     for (let e of null != t ? t : []) if (e.type === l.jw.ATTACHMENT) return !1;

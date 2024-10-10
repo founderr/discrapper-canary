@@ -24,13 +24,13 @@ function m(e) {
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
     let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: T, keyboardModeEnabled: S, onKeyDown: g, draftType: A, size: N = 1 } = e,
-        { onFocus: O, ...R } = (0, u.JA)(n),
-        { handleFocus: v, handleBlur: C } = (0, f.b)(O),
+        { onFocus: R, ...O } = (0, u.JA)(n),
+        { handleFocus: v, handleBlur: C } = (0, f.b)(R),
         L = 0 === N,
         y = null != o;
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
-            ...R,
+            ...O,
             onFocus: v,
             onBlur: C,
             onKeyDown: (e) => {

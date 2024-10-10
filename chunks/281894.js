@@ -1,18 +1,18 @@
 r.d(t, {
     O1: function () {
-        return s;
+        return c;
     }
 });
 var n = r(349812),
     a = r(617726),
-    o = r(387486);
-function i(e) {
+    _ = r(387486);
+function o(e) {
     return new Promise((t, r) => {
         (e.oncomplete = e.onsuccess = () => t(e.result)), (e.onabort = e.onerror = () => r(e.error));
     });
 }
-function _(e) {
-    return i(e.getAllKeys());
+function i(e) {
+    return o(e.getAllKeys());
 }
 function E(e) {
     let t;
@@ -22,7 +22,7 @@ function E(e) {
                 (t = (function (e, t) {
                     let r = indexedDB.open(e);
                     r.onupgradeneeded = () => r.result.createObjectStore(t);
-                    let n = i(r);
+                    let n = o(r);
                     return (e) => n.then((r) => e(r.transaction(t, 'readwrite').objectStore(t)));
                 })(e.dbName || 'sentry-offline', e.storeName || 'queue')),
             t
@@ -31,28 +31,28 @@ function E(e) {
     return {
         push: async (t) => {
             try {
-                var n, o, E;
-                let s = await (0, a.V$)(t);
+                var n, _, E;
+                let c = await (0, a.V$)(t);
                 await ((n = r()),
-                (o = s),
+                (_ = c),
                 (E = e.maxQueueSize || 30),
                 n((e) =>
-                    _(e).then((t) => {
-                        if (!(t.length >= E)) return e.put(o, Math.max(...t, 0) + 1), i(e.transaction);
+                    i(e).then((t) => {
+                        if (!(t.length >= E)) return e.put(_, Math.max(...t, 0) + 1), o(e.transaction);
                     })
                 ));
             } catch (e) {}
         },
         unshift: async (t) => {
             try {
-                var n, o, E;
-                let s = await (0, a.V$)(t);
+                var n, _, E;
+                let c = await (0, a.V$)(t);
                 await ((n = r()),
-                (o = s),
+                (_ = c),
                 (E = e.maxQueueSize || 30),
                 n((e) =>
-                    _(e).then((t) => {
-                        if (!(t.length >= E)) return e.put(o, Math.min(...t, 0) - 1), i(e.transaction);
+                    i(e).then((t) => {
+                        if (!(t.length >= E)) return e.put(_, Math.min(...t, 0) - 1), o(e.transaction);
                     })
                 ));
             } catch (e) {}
@@ -60,9 +60,9 @@ function E(e) {
         shift: async () => {
             try {
                 let e = await r()((e) =>
-                    _(e).then((t) => {
+                    i(e).then((t) => {
                         let r = t[0];
-                        if (null != r) return i(e.get(r)).then((t) => (e.delete(r), i(e.transaction).then(() => t)));
+                        if (null != r) return o(e.get(r)).then((t) => (e.delete(r), o(e.transaction).then(() => t)));
                     })
                 );
                 if (e) return (0, a.f4)(e);
@@ -70,7 +70,7 @@ function E(e) {
         }
     };
 }
-function s(e = o.f) {
+function c(e = _.f) {
     var t;
     return (
         (t = (0, n.Pd)(e)),

@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     b0: function () {
-        return O;
+        return R;
     },
     dU: function () {
         return N;
@@ -36,7 +36,7 @@ n.d(t, {
         return I;
     },
     md: function () {
-        return R;
+        return O;
     },
     o3: function () {
         return _;
@@ -118,8 +118,8 @@ let N = d.Z.getLanguages()
                   }
                 : e
         ),
-    O = 40,
-    R = 20;
+    R = 40,
+    O = 20;
 ((a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations'), (a.SERVER_RECOMMENDATIONS = 'Server Recommendations'), ((s = c || (c = {}))[(s.Activity = 0)] = 'Activity'), (s[(s.Discover = 1)] = 'Discover'), (s[(s.Education = 2)] = 'Education'), (s[(s.Music = 3)] = 'Music'), (s[(s.Science = 4)] = 'Science'), (s[(s.Stage = 5)] = 'Stage'), (s[(s.Television = 6)] = 'Television'), (s[(s.Server = 7)] = 'Server'), (s[(s.Quest = 8)] = 'Quest');
 let v = {
     facebook: {

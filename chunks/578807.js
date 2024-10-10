@@ -1,6 +1,6 @@
 var r;
 (r = 0),
-    (function (e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, O, R, v, C, L, y, D, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
+    (function (e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, R, O, v, C, L, y, D, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
         function ec(e) {
             return e && 'object' == typeof e && 'default' in e ? e : { default: e };
         }
@@ -17,14 +17,14 @@ var r;
             eg = ec(E),
             eA = ec(p),
             eN = ec(I),
-            eO = ec(m),
-            eR = ec(T),
+            eR = ec(m),
+            eO = ec(T),
             ev = ec(S),
             eC = ec(g),
             eL = ec(A),
             ey = ec(N),
-            eD = ec(O),
-            eb = ec(R),
+            eD = ec(R),
+            eb = ec(O),
             eM = ec(v),
             eP = ec(C),
             eU = ec(L),
@@ -257,13 +257,13 @@ var r;
                 r = t.locale;
             return (e && tA(e, Array.isArray(n) ? n[0] : n, r)) || '';
         }
-        function tO(e, t) {
+        function tR(e, t) {
             var n = t.hour,
                 r = t.minute,
                 i = t.second;
             return ek.default(eG.default(ex.default(e, void 0 === i ? 0 : i), void 0 === r ? 0 : r), void 0 === n ? 0 : n);
         }
-        function tR(e, t, n) {
+        function tO(e, t, n) {
             var r = tw(t || tU());
             return ez.default(e, {
                 locale: r,
@@ -397,7 +397,7 @@ var r;
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.minDate,
                 r = t.includeDates,
-                i = eO.default(e, 1);
+                i = eR.default(e, 1);
             return (
                 (n && ej.default(n, i) > 0) ||
                 (r &&
@@ -425,7 +425,7 @@ var r;
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.minDate,
                 r = t.includeDates,
-                i = eR.default(e, 1);
+                i = eO.default(e, 1);
             return (
                 (n && eW.default(n, i) > 0) ||
                 (r &&
@@ -1268,7 +1268,7 @@ var r;
                             return e.props.formatWeekNumber ? e.props.formatWeekNumber(t) : ((n = t), (i = tU() && tw(tU())), eb.default(n, i ? { locale: i } : null));
                         }),
                         tl(tE(e), 'renderDays', function () {
-                            var t = tR(e.props.day, e.props.locale, e.props.calendarStartDay),
+                            var t = tO(e.props.day, e.props.locale, e.props.calendarStartDay),
                                 n = [],
                                 r = e.formatWeekNumber(t);
                             if (e.props.showWeekNumber) {
@@ -1430,7 +1430,7 @@ var r;
                         }),
                         tl(tE(e), 'renderWeeks', function () {
                             for (
-                                var t = [], n = e.props.fixedHeight, r = 0, i = !1, a = tR(tv(e.props.day), e.props.locale, e.props.calendarStartDay);
+                                var t = [], n = e.props.fixedHeight, r = 0, i = !1, a = tO(tv(e.props.day), e.props.locale, e.props.calendarStartDay);
                                 t.push(
                                     ed.default.createElement(ne, {
                                         ariaLabelPrefix: e.props.weekAriaLabelPrefix,
@@ -1504,7 +1504,7 @@ var r;
                                         e.handleMonthNavigation(11 === n ? 0 : n + 1, eS.default(e.props.preSelection, 1));
                                         break;
                                     case 'ArrowLeft':
-                                        e.handleMonthNavigation(0 === n ? 11 : n - 1, eO.default(e.props.preSelection, 1));
+                                        e.handleMonthNavigation(0 === n ? 11 : n - 1, eR.default(e.props.preSelection, 1));
                                 }
                         }),
                         tl(tE(e), 'onQuarterClick', function (t, n) {
@@ -2095,7 +2095,7 @@ var r;
                             r.setState(
                                 function (e) {
                                     var t = e.date;
-                                    return { date: eO.default(t, 1) };
+                                    return { date: eR.default(t, 1) };
                                 },
                                 function () {
                                     return r.handleMonthChange(r.state.date);
@@ -2155,7 +2155,7 @@ var r;
                         }),
                         tl(tE(r), 'header', function () {
                             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.state.date,
-                                t = tR(e, r.props.locale, r.props.calendarStartDay),
+                                t = tO(e, r.props.locale, r.props.calendarStartDay),
                                 n = [];
                             return (
                                 r.props.showWeekNumbers &&
@@ -2194,7 +2194,7 @@ var r;
                             r.setState(
                                 function (e) {
                                     var t = e.date;
-                                    return { date: eR.default(t, r.props.showYearPicker ? r.props.yearItemNumber : 1) };
+                                    return { date: eO.default(t, r.props.showYearPicker ? r.props.yearItemNumber : 1) };
                                 },
                                 function () {
                                     return r.handleYearChange(r.state.date);
@@ -2214,7 +2214,7 @@ var r;
                                                 n = t.minDate,
                                                 r = t.yearItemNumber,
                                                 i = void 0 === r ? 12 : r,
-                                                a = t$(tC(eR.default(e, i)), i).endPeriod,
+                                                a = t$(tC(eO.default(e, i)), i).endPeriod,
                                                 s = n && eU.default(n);
                                             return (s && s > a) || !1;
                                         })(r.state.date, r.props);
@@ -2437,7 +2437,7 @@ var r;
                         }),
                         tl(tE(r), 'renderMonths', function () {
                             if (!r.props.showTimeSelectOnly && !r.props.showYearPicker) {
-                                for (var e = [], t = r.props.showPreviousMonths ? r.props.monthsShown - 1 : 0, n = eO.default(r.state.date, t), i = 0; i < r.props.monthsShown; ++i) {
+                                for (var e = [], t = r.props.showPreviousMonths ? r.props.monthsShown - 1 : 0, n = eR.default(r.state.date, t), i = 0; i < r.props.monthsShown; ++i) {
                                     var a = i - r.props.monthSelectedIn,
                                         s = eS.default(n, a),
                                         o = 'month-'.concat(i),
@@ -3015,7 +3015,7 @@ var r;
                                         (null !== a &&
                                             (!r.props.selected ||
                                                 (n && (r.props.showTimeSelect || r.props.showTimeSelectOnly || r.props.showTimeInput)) ||
-                                                (a = tO(a, {
+                                                (a = tR(a, {
                                                     hour: eL.default(r.props.selected),
                                                     minute: eC.default(r.props.selected),
                                                     second: ev.default(r.props.selected)
@@ -3050,7 +3050,7 @@ var r;
                             i && r.setState({ preSelection: e });
                         }),
                         tl(tE(r), 'handleTimeChange', function (e) {
-                            var t = tO(r.props.selected ? r.props.selected : r.getPreSelection(), {
+                            var t = tR(r.props.selected ? r.props.selected : r.getPreSelection(), {
                                 hour: eL.default(e),
                                 minute: eC.default(e)
                             });
@@ -3108,13 +3108,13 @@ var r;
                                         t = eT.default(i, 1);
                                         break;
                                     case 'PageUp':
-                                        t = eO.default(i, 1);
+                                        t = eR.default(i, 1);
                                         break;
                                     case 'PageDown':
                                         t = eS.default(i, 1);
                                         break;
                                     case 'Home':
-                                        t = eR.default(i, 1);
+                                        t = eO.default(i, 1);
                                         break;
                                     case 'End':
                                         t = eg.default(i, 1);

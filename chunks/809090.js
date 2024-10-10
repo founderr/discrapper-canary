@@ -19,10 +19,10 @@ function _(e) {
         N = i.useCallback(() => {
             A(!0), null == p || p();
         }, [p]),
-        O = i.useCallback(() => {
+        R = i.useCallback(() => {
             A(!1), null == I || I();
         }, [I]),
-        R = i.useCallback(() => {
+        O = i.useCallback(() => {
             A(!0), null == m || m();
         }, [m]),
         v = i.useCallback(() => {
@@ -48,8 +48,8 @@ function _(e) {
             [c.selected]: f && n
         }),
         onFocus: N,
-        onBlur: O,
-        onMouseOver: R,
+        onBlur: R,
+        onMouseOver: O,
         onMouseLeave: v,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,

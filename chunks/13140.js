@@ -1,6 +1,6 @@
 n.d(t, {
     BB: function () {
-        return R;
+        return O;
     },
     C$: function () {
         return m;
@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     Kd: function () {
-        return O;
+        return R;
     },
     d2: function () {
         return N;
@@ -147,7 +147,7 @@ function N(e) {
               }
           }, []);
 }
-function O(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MoX.KEYBOARD_KEY;
     return e
@@ -161,7 +161,7 @@ function O(e) {
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
-function R(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .map((e) => {

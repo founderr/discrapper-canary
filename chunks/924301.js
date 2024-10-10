@@ -59,10 +59,10 @@ let m = new c.h((e) => {
     g = 'SERIES',
     A = {},
     N = {};
-function O(e) {
+function R(e) {
     m.set(e.id, e), (T += 1);
 }
-function R(e) {
+function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     m.delete(e), delete A[e], t && delete N[e], (T += 1);
 }
@@ -109,11 +109,11 @@ function y(e, t, n) {
     null == N[e] && (N[e] = {}), (N[e][r] = n);
 }
 function D(e, t) {
-    m.values(p.GUILD_EVENT(e)).forEach((e) => R(e.id, t));
+    m.values(p.GUILD_EVENT(e)).forEach((e) => O(e.id, t));
 }
 function b(e) {
     let { guildScheduledEvent: t } = e;
-    return O(t), !0;
+    return R(t), !0;
 }
 function M(e) {
     let { eventException: t } = e,
@@ -123,7 +123,7 @@ function M(e) {
         i = [...n.guild_scheduled_event_exceptions];
     return (
         r < 0 ? i.push(t) : (i[r] = t),
-        O({
+        R({
             ...n,
             guild_scheduled_event_exceptions: i
         }),
@@ -210,11 +210,11 @@ class G extends (r = u.ZP.Store) {
     (t.ZP = new G(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
-            return m.clear(), (T = 0), (A = {}), (N = {}), S.forEach(O), t.forEach((e) => e.guild_scheduled_events.forEach((e) => O(e))), !0;
+            return m.clear(), (T = 0), (A = {}), (N = {}), S.forEach(R), t.forEach((e) => e.guild_scheduled_events.forEach((e) => R(e))), !0;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            return D(t.id, !1), t.guild_scheduled_events.forEach((e) => O(e)), !0;
+            return D(t.id, !1), t.guild_scheduled_events.forEach((e) => R(e)), !0;
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
@@ -222,7 +222,7 @@ class G extends (r = u.ZP.Store) {
         },
         FETCH_GUILD_EVENT: function (e) {
             let { guildScheduledEvent: t } = e;
-            O(t);
+            R(t);
         },
         FETCH_GUILD_EVENTS_FOR_GUILD: function (e) {
             let { guildId: t, guildScheduledEvents: n } = e,
@@ -231,17 +231,17 @@ class G extends (r = u.ZP.Store) {
             for (let e of (l()
                 .difference(r, i)
                 .forEach((e) => {
-                    R(e);
+                    O(e);
                 }),
             n))
-                O(e);
+                R(e);
             return !0;
         },
         GUILD_SCHEDULED_EVENT_CREATE: b,
         GUILD_SCHEDULED_EVENT_UPDATE: b,
         GUILD_SCHEDULED_EVENT_DELETE: function (e) {
             let { guildScheduledEvent: t } = e;
-            return R(t.id), !0;
+            return O(t.id), !0;
         },
         GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
             var t, n;
@@ -288,7 +288,7 @@ class G extends (r = u.ZP.Store) {
         INVITE_RESOLVE_SUCCESS: function (e) {
             let { invite: t } = e,
                 n = t.guild_scheduled_event;
-            return null != n && (O(n), !0);
+            return null != n && (R(n), !0);
         },
         GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: M,
         GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: M,
@@ -298,7 +298,7 @@ class G extends (r = u.ZP.Store) {
             if (null == n) return !1;
             let r = n.guild_scheduled_event_exceptions.filter((e) => e.event_exception_id !== t.event_exception_id);
             return (
-                O({
+                R({
                     ...n,
                     guild_scheduled_event_exceptions: r
                 }),
@@ -310,7 +310,7 @@ class G extends (r = u.ZP.Store) {
                 n = m.get(t);
             return (
                 null != n &&
-                (O({
+                (R({
                     ...n,
                     guild_scheduled_event_exceptions: []
                 }),

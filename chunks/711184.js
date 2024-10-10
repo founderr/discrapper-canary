@@ -2,12 +2,12 @@ s.r(t), s(47120);
 var n = s(735250),
     r = s(470079),
     o = s(120356),
-    i = s.n(o),
-    a = s(215569),
-    u = s(481060),
-    l = s(401190),
-    c = s(490529),
-    d = s(57875),
+    a = s.n(o),
+    i = s(215569),
+    l = s(481060),
+    u = s(401190),
+    d = s(490529),
+    c = s(57875),
     p = s(368003),
     h = s(981631),
     g = s(689938),
@@ -26,28 +26,28 @@ function b(e, t, s) {
         e
     );
 }
-let f = (e) =>
+let S = (e) =>
         (0, n.jsx)('div', {
             className: m.innerContentWrapper,
             children: e.children
         }),
-    S = {
+    E = {
         [h.gkr.HOUSE_1]: s(530530),
         [h.gkr.HOUSE_2]: s(230651),
         [h.gkr.HOUSE_3]: s(497494)
     },
-    x = {
+    H = {
         [h.gkr.HOUSE_1]: m.quizResultLogoWrapperHouse1,
         [h.gkr.HOUSE_2]: m.quizResultLogoWrapperHouse2,
         [h.gkr.HOUSE_3]: m.quizResultLogoWrapperHouse3
     },
-    E = (e) =>
+    x = (e) =>
         ({
             [h.gkr.HOUSE_1]: g.Z.Messages.HYPESQUAD_QUIZ_BODY_HOUSE_1,
             [h.gkr.HOUSE_2]: g.Z.Messages.HYPESQUAD_QUIZ_BODY_HOUSE_2,
             [h.gkr.HOUSE_3]: g.Z.Messages.HYPESQUAD_QUIZ_BODY_HOUSE_3
         })[e];
-class H extends r.Component {
+class R extends r.Component {
     getSelectedHouseID() {
         let e;
         let { responses: t } = this.state,
@@ -58,21 +58,21 @@ class H extends r.Component {
             null == s[o] && (s[o] = 0), s[o]++, s[o] > n && ((e = o), (n = s[o]));
         }),
         null == e || e === h.jsM)
-            ? (0, c.uj)()
+            ? (0, d.uj)()
             : e;
     }
     renderUnknownErrorMessage() {
         return (0, n.jsx)(
-            d.Z,
+            c.Z,
             {
                 children: (0, n.jsxs)(r.Fragment, {
                     children: [
-                        (0, n.jsx)(u.Heading, {
+                        (0, n.jsx)(l.Heading, {
                             className: m.quizResultHeading,
                             variant: 'heading-xl/semibold',
                             children: g.Z.Messages.HYPESQUAD_ERROR_HEADING
                         }),
-                        (0, n.jsx)(u.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.HYPESQUAD_ERROR_BODY.format({
                                 emailAddress: 'hypesquad@'.concat(h.U9i),
@@ -88,29 +88,29 @@ class H extends r.Component {
     renderQuizResult() {
         let { selectedHouse: e } = this.state;
         if (null == e) return null;
-        let t = g.Z.Messages.HYPESQUAD_QUIZ_TITLE.format({ house: (0, c.X8)(e) });
+        let t = g.Z.Messages.HYPESQUAD_QUIZ_TITLE.format({ house: (0, d.X8)(e) });
         return (0, n.jsx)(
-            d.Z,
+            c.Z,
             {
                 children: (0, n.jsxs)(r.Fragment, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: i()(m.quizResultLogoWrapper, x[e], _.marginBottom20),
+                            className: a()(m.quizResultLogoWrapper, H[e], _.marginBottom20),
                             children: (0, n.jsx)('img', {
                                 alt: t,
                                 className: m.quizResultLogo,
-                                src: S[e]
+                                src: E[e]
                             })
                         }),
-                        (0, n.jsx)(u.Heading, {
+                        (0, n.jsx)(l.Heading, {
                             className: m.quizResultHeading,
                             variant: 'heading-xl/semibold',
                             children: t
                         }),
-                        (0, n.jsx)(u.Text, {
+                        (0, n.jsx)(l.Text, {
                             className: m.quizResultBody,
                             variant: 'text-sm/normal',
-                            children: E(e)
+                            children: x(e)
                         })
                     ]
                 })
@@ -124,7 +124,7 @@ class H extends r.Component {
         if (s) return this.renderQuizResult();
         let o = r[e];
         return (0, n.jsx)(
-            d.Z,
+            c.Z,
             {
                 children: (0, n.jsx)(
                     p.Z,
@@ -151,8 +151,8 @@ class H extends r.Component {
                 });
     }
     renderNewsletterWarning() {
-        return (0, n.jsx)(d.Z, {
-            children: (0, n.jsx)(u.Text, {
+        return (0, n.jsx)(c.Z, {
+            children: (0, n.jsx)(l.Text, {
                 className: m.nameFormPreface,
                 variant: 'text-md/normal',
                 children: g.Z.Messages.HYPESQUAD_NEWSLETTER_WARNING
@@ -160,36 +160,36 @@ class H extends r.Component {
         });
     }
     renderPrimaryAction() {
-        let { currentStep: e, responses: t, hasUnknownError: s, hasSubmittedHouse: r, isRequestPending: o, questions: i } = this.state,
-            a = null == t[e];
+        let { currentStep: e, responses: t, hasUnknownError: s, hasSubmittedHouse: r, isRequestPending: o, questions: a } = this.state,
+            i = null == t[e];
         return s
-            ? (0, n.jsx)(u.Button, {
+            ? (0, n.jsx)(l.Button, {
                   type: 'submit',
-                  color: u.Button.Colors.BRAND,
+                  color: l.Button.Colors.BRAND,
                   onClick: this.handleSubmitButtonClick,
                   submitting: o,
                   children: g.Z.Messages.HYPESQUAD_QUIZ_RETRY
               })
             : r
-              ? (0, n.jsx)(u.Button, {
+              ? (0, n.jsx)(l.Button, {
                     type: 'submit',
-                    color: u.Button.Colors.BRAND,
+                    color: l.Button.Colors.BRAND,
                     onClick: this.props.onClose,
                     children: g.Z.Messages.HYPESQUAD_QUIZ_CLOSE
                 })
-              : e === i.length - 1
-                ? (0, n.jsx)(u.Button, {
-                      disabled: a,
+              : e === a.length - 1
+                ? (0, n.jsx)(l.Button, {
+                      disabled: i,
                       type: 'submit',
-                      color: u.Button.Colors.BRAND,
+                      color: l.Button.Colors.BRAND,
                       onClick: this.handleSubmitButtonClick,
                       submitting: o,
                       children: g.Z.Messages.HYPESQUAD_QUIZ_SHOW_MY_HOUSE
                   })
-                : (0, n.jsx)(u.Button, {
-                      disabled: a,
+                : (0, n.jsx)(l.Button, {
+                      disabled: i,
                       type: 'submit',
-                      color: u.Button.Colors.BRAND,
+                      color: l.Button.Colors.BRAND,
                       onClick: this.handleNextQuestionButtonClick,
                       children: g.Z.Messages.HYPESQUAD_QUIZ_NEXT_QUESTION
                   });
@@ -198,10 +198,10 @@ class H extends r.Component {
         let { hasSubmittedHouse: e } = this.state;
         return e
             ? null
-            : (0, n.jsx)(u.Button, {
+            : (0, n.jsx)(l.Button, {
                   type: 'button',
-                  look: u.Button.Looks.LINK,
-                  color: u.Button.Colors.PRIMARY,
+                  look: l.Button.Looks.LINK,
+                  color: l.Button.Colors.PRIMARY,
                   onClick: this.props.onClose,
                   children: g.Z.Messages.HYPESQUAD_QUIZ_CANCEL
               });
@@ -209,25 +209,25 @@ class H extends r.Component {
     render() {
         let { selectedHouse: e } = this.state,
             { transitionState: t } = this.props;
-        return (0, n.jsxs)(u.ModalRoot, {
-            size: null == e ? u.ModalSize.MEDIUM : u.ModalSize.SMALL,
+        return (0, n.jsxs)(l.ModalRoot, {
+            size: null == e ? l.ModalSize.MEDIUM : l.ModalSize.SMALL,
             transitionState: t,
             children: [
-                (0, n.jsx)(u.ModalHeader, {
+                (0, n.jsx)(l.ModalHeader, {
                     separator: !1,
-                    children: (0, n.jsx)(u.Heading, {
+                    children: (0, n.jsx)(l.Heading, {
                         variant: 'heading-lg/semibold',
                         children: this.renderHeaderCopy()
                     })
                 }),
                 (0, n.jsx)('div', {
                     className: m.outerContentWrapper,
-                    children: (0, n.jsx)(a.W, {
-                        component: f,
+                    children: (0, n.jsx)(i.W, {
+                        component: S,
                         children: this.renderContent()
                     })
                 }),
-                (0, n.jsxs)(u.ModalFooter, {
+                (0, n.jsxs)(l.ModalFooter, {
                     children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
                 })
             ]
@@ -240,7 +240,7 @@ class H extends r.Component {
                 hasSubmittedHouse: !1,
                 hasUnknownError: !1,
                 isRequestPending: !1,
-                questions: (0, c.tI)(),
+                questions: (0, d.tI)(),
                 responses: {},
                 selectedHouse: null
             }),
@@ -255,7 +255,7 @@ class H extends r.Component {
             b(this, 'handleSubmitButtonClick', () => {
                 let e = this.getSelectedHouseID();
                 this.setState({ isRequestPending: !0 }, () => {
-                    l.Z.joinHypeSquadOnline({ houseID: e })
+                    u.Z.joinHypeSquadOnline({ houseID: e })
                         .then(() => {
                             this.setState({
                                 hasUnknownError: !1,
@@ -281,4 +281,4 @@ class H extends r.Component {
             });
     }
 }
-t.default = H;
+t.default = R;

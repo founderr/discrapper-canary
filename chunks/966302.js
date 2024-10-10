@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(189771),
     A = n(560688),
     N = n(871499),
-    O = n(136995),
-    R = n(25827),
+    R = n(136995),
+    O = n(25827),
     v = n(131951),
     C = n(594174),
     L = n(451478),
@@ -108,7 +108,7 @@ function H(e) {
                     children: (e, t) => {
                         let { onClick: s } = e,
                             { isShown: u } = t;
-                        return (0, r.jsx)(R.C, {
+                        return (0, r.jsx)(O.C, {
                             join: !0,
                             enabled: o,
                             color: 'green',
@@ -126,7 +126,7 @@ function H(e) {
                         });
                     }
                 }),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(R.Z, {
                 channel: n,
                 color: 'green',
                 centerButton: !0,
@@ -143,10 +143,10 @@ function Z(e) {
         [S, g] = (0, l.Wu)([v.Z], () => [v.Z.supports(P.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
         A = (0, l.e7)([L.Z], () => L.Z.isFocused()),
         N = (0, l.e7)([y.Z], () => y.Z.getMode(_.id)),
-        O = i.useCallback((e) => {
+        R = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        R = (0, u.useSpring)(
+        O = (0, u.useSpring)(
             {
                 value: p ? 1 : 0,
                 config: {
@@ -202,7 +202,7 @@ function Z(e) {
         },
         maxX: Y.width,
         maxY: Y.height,
-        onDragEnd: O,
+        onDragEnd: R,
         dragAnywhere: !0,
         children: (0, r.jsx)(u.ThemeProvider, {
             theme: p ? M.BRd.DARK : void 0,
@@ -211,9 +211,9 @@ function Z(e) {
                     className: s()(w.root, x.elevationHigh, { [w.previewCamera]: p }, e),
                     style: {
                         ...t,
-                        width: R.value.interpolate([0, 1], [Z.width, B]),
-                        minHeight: R.value.interpolate([0, 1], [Z.height, F]),
-                        translateX: R.value.interpolate([0, 1], [0, (-1 * Math.abs(B - Z.width)) / 2])
+                        width: O.value.interpolate([0, 1], [Z.width, B]),
+                        minHeight: O.value.interpolate([0, 1], [Z.height, F]),
+                        translateX: O.value.interpolate([0, 1], [0, (-1 * Math.abs(B - Z.width)) / 2])
                     },
                     children: [
                         p

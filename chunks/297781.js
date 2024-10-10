@@ -78,8 +78,8 @@ var r,
     g = n(22211),
     A = n(561308),
     N = n(797342),
-    O = n(371991),
-    R = n(206583),
+    R = n(371991),
+    O = n(206583),
     v = n(689938),
     C = n(793440);
 let L = {
@@ -151,7 +151,7 @@ function U(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, a.jsx)(O.ZP, {
+            (0, a.jsx)(R.ZP, {
                 entry: t,
                 textColor: o ? 'text-positive' : r,
                 hovered: n,
@@ -200,7 +200,7 @@ function x(e) {
                 size: 'xxs',
                 color: c
             }),
-            (0, a.jsx)(O.x3, {
+            (0, a.jsx)(R.x3, {
                 entry: null != d ? { start: d } : n,
                 textColor: u ? 'text-positive' : i,
                 hovered: r,
@@ -306,7 +306,7 @@ function Y(e) {
         { location: n } = D();
     if (3 === n) return null;
     let r = m.default.extractTimestamp(t.extra.application_id);
-    return c()().diff(c()(r), 'days') > R.G
+    return c()().diff(c()(r), 'days') > O.G
         ? null
         : (0, a.jsx)(M, {
               Icon: h.StarShootingIcon,
@@ -325,7 +325,7 @@ function j(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, a.jsx)(O.ZP, {
+            (0, a.jsx)(R.ZP, {
                 entry: t,
                 textColor: o ? 'text-positive' : r,
                 hovered: n,

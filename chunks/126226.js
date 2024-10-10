@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return R;
+        return O;
     }
 });
 var r = n(735250);
@@ -25,8 +25,8 @@ var i = n(693789),
     g = n(665692),
     A = n(689079),
     N = n(689938),
-    O = n(239114);
-let R = { results: { entries: [] } };
+    R = n(239114);
+let O = { results: { entries: [] } };
 function v() {
     (0, a.ZD)(async () => {
         let { default: e } = await n.e('87549').then(n.bind(n, 913962));
@@ -38,7 +38,7 @@ let C = {
     stores: [_.Z, u.ZP, I.Z],
     matches: (e, t, n, r, i) => i.commands !== S.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== S.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
-        if (0 === n.length && r.commands !== S.L8.OLD_BUILT_INS) return R;
+        if (0 === n.length && r.commands !== S.L8.OLD_BUILT_INS) return O;
         if (r.commands === S.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
                 i = RegExp('^'.concat(m.Z.escape(n)), 'i'),
@@ -53,7 +53,7 @@ let C = {
                 ),
                 o = l.Tm[A.bi.BUILT_IN];
             return 0 === a.length
-                ? R
+                ? O
                 : {
                       results: {
                           entries: a.map((e) => ({
@@ -77,7 +77,7 @@ let C = {
                     allowFetch: i
                 }
             );
-        if (null == o) return R;
+        if (null == o) return O;
         let _ = o;
         if (a.hasSpaceTerminator) {
             let e = a.text.trim(),
@@ -85,7 +85,7 @@ let C = {
             _ = _.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
         return 0 === _.length
-            ? R
+            ? O
             : {
                   results: {
                       entries: _.slice(0, S.AQ).map((e) => ({
@@ -129,7 +129,7 @@ let C = {
                 };
             },
             key: 'commands',
-            headerClassName: d ? O.legacyInputCommandHeader : null,
+            headerClassName: d ? R.legacyInputCommandHeader : null,
             headerTrailingContent: d
                 ? (0, r.jsx)(i.zx, {
                       type: 'button',

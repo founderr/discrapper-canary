@@ -48,12 +48,12 @@ t.Z = (e) => {
                 },
                 A = E ? 'pointerup' : 'mouseup',
                 N = E ? 'pointermove' : 'mousemove',
-                O = n.current.ownerDocument;
+                R = n.current.ownerDocument;
             return (
-                O.addEventListener(A, g),
-                O.addEventListener(N, S),
+                R.addEventListener(A, g),
+                R.addEventListener(N, S),
                 () => {
-                    O.removeEventListener(A, g), O.removeEventListener(N, S), o.cancel();
+                    R.removeEventListener(A, g), R.removeEventListener(N, S), o.cancel();
                 }
             );
         }, [h, a, i, r, _, n, d, c, E, f, s]),

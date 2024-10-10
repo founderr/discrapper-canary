@@ -1,8 +1,8 @@
 r.d(t, {
     Q: function () {
-        return o;
+        return _;
     }
 });
 var n = r(185461),
     a = r(27269);
-let o = (0, n.rp)({ lazyLoadIntegration: a.R });
+let _ = (0, n.rp)({ lazyLoadIntegration: a.R });

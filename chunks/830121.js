@@ -44,8 +44,8 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     g = /^\/application-directory\/([0-9-]+)\/?$/,
     A = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     N = /^\/activities\/([0-9-]+)\/?$/,
-    O = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    R = /^\/channels\/([0-9]+)\/shop$/,
+    R = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    O = /^\/channels\/([0-9]+)\/shop$/,
     v = /^\/quests\/([0-9-]+)\/?$/,
     C = /^\/discovery\/game\/([0-9-]+)\/?$/,
     L = /^\/oauth2\/authorize/,
@@ -178,9 +178,9 @@ function Z(e) {
             let e = p[1];
             o(h.g.ACTIVITY_BOOKMARK, e);
         }
-        let v = null == s ? void 0 : s.match(O);
+        let v = null == s ? void 0 : s.match(R);
         null != v && o(h.g.GUILD_PRODUCT, ''.concat(v[1], '-').concat(v[2]));
-        let y = null == s ? void 0 : s.match(R);
+        let y = null == s ? void 0 : s.match(O);
         null != y && o(h.g.SERVER_SHOP, y[1]);
         let D = Y(e);
         null != D && o(h.g.QUESTS_EMBED, D);

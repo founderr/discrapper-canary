@@ -1,19 +1,19 @@
 r.d(t, {
     y: function () {
-        return c;
+        return s;
     }
 });
 var n = r(263449),
     a = r(233517),
-    o = r(151122),
-    i = r(899517),
-    _ = r(694043);
-let E = i.n,
-    s = new WeakMap(),
-    c = (0, o._I)((e = {}) => {
+    _ = r(151122),
+    o = r(899517),
+    i = r(694043);
+let E = o.n,
+    c = new WeakMap(),
+    s = (0, _._I)((e = {}) => {
         let t = e.types || ['crash', 'deprecation', 'intervention'];
         function r(e) {
-            if (!!s.has((0, n.s3)()))
+            if (!!c.has((0, n.s3)()))
                 for (let t of e)
                     (0, n.$e)((e) => {
                         e.setExtra('url', t.url);
@@ -33,14 +33,14 @@ let E = i.n,
         return {
             name: 'ReportingObserver',
             setupOnce() {
-                if (!!(0, _.zb)())
+                if (!!(0, i.zb)())
                     new E.ReportingObserver(r, {
                         buffered: !0,
                         types: t
                     }).observe();
             },
             setup(e) {
-                s.set(e, !0);
+                c.set(e, !0);
             }
         };
     });

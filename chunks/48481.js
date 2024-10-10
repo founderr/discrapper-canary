@@ -21,7 +21,7 @@ n.d(t, {
         return T;
     },
     tU: function () {
-        return O;
+        return R;
     },
     u0: function () {
         return S;
@@ -117,7 +117,7 @@ function N(e, t) {
         cleanupFuncs: a
     };
 }
-function O(e, t) {
+function R(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (

@@ -19,8 +19,8 @@ var r,
     g = o.process,
     A = o.Dispatch,
     N = o.Function,
-    O = o.MessageChannel,
-    R = o.String,
+    R = o.MessageChannel,
+    O = o.String,
     v = 0,
     C = {},
     L = 'onreadystatechange';
@@ -42,7 +42,7 @@ var y = function (e) {
         y(e.data);
     },
     M = function (e) {
-        o.postMessage(R(e), r.protocol + '//' + r.host);
+        o.postMessage(O(e), r.protocol + '//' + r.host);
     };
 (!T || !S) &&
     ((T = function (e) {
@@ -68,8 +68,8 @@ var y = function (e) {
           ? (i = function (e) {
                 A.now(D(e));
             })
-          : O && !I
-            ? ((s = (a = new O()).port2), (a.port1.onmessage = b), (i = u(s.postMessage, s)))
+          : R && !I
+            ? ((s = (a = new R()).port2), (a.port1.onmessage = b), (i = u(s.postMessage, s)))
             : o.addEventListener && c(o.postMessage) && !o.importScripts && r && 'file:' !== r.protocol && !_(M)
               ? ((i = M), o.addEventListener('message', b, !1))
               : (i =

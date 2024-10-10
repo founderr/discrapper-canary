@@ -116,7 +116,7 @@ function Z(e) {
                             query: t
                         }),
                     (g || x) &&
-                        (0, i.jsx)(B, {
+                        (0, i.jsx)(D, {
                             applicationResults: P,
                             includePlaceholder: x,
                             query: t,
@@ -224,7 +224,7 @@ function U(e) {
         })
     });
 }
-function B(e) {
+function D(e) {
     let { applicationResults: n, includePlaceholder: t, query: a, searchesBots: l } = e;
     return l
         ? (0, i.jsxs)('div', {
@@ -236,7 +236,7 @@ function B(e) {
                           n.map((e, n) => {
                               let { application: t, installOnDemand: l } = e;
                               return (0, i.jsx)(
-                                  D,
+                                  B,
                                   {
                                       application: t,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
@@ -281,7 +281,7 @@ function B(e) {
               ]
           });
 }
-function D(e) {
+function B(e) {
     let n = (0, E.cG)(e);
     return (0, i.jsx)(g.Z, {
         application: e.application,

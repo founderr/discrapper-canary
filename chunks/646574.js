@@ -60,16 +60,16 @@ function S(e) {
         S = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         g = E.default.getCurrentUser(),
         A = null == g || (0, f.I5)(g) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [N, O] = (0, _.US)(A),
-        [R, v] = i.useState(!1),
+        [N, R] = (0, _.US)(A),
+        [O, v] = i.useState(!1),
         [C, L] = (0, c.useSpring)(() => ({})),
         y = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
         let e = N === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (O(h.L.DISMISS), setTimeout(() => v(e), 200));
-    }, [N, O]);
-    let D = R ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-        b = R ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+        e && (R(h.L.DISMISS), setTimeout(() => v(e), 200));
+    }, [N, R]);
+    let D = O ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+        b = O ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {
         position: 'top',
         text: (0, r.jsx)(T, {
@@ -78,7 +78,7 @@ function S(e) {
             headingText: b
         }),
         color: c.Tooltip.Colors.BRAND,
-        forceOpen: R,
+        forceOpen: O,
         'aria-label': D,
         tooltipClassName: I.tooltip,
         children: [

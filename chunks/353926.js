@@ -40,8 +40,8 @@ let m = 'scientist:triggered',
     g = 'guildExperimentOverrides',
     A = new c.Z('ExperimentStore'),
     N = !1,
-    O = {},
     R = {},
+    O = {},
     v = {
         rawUserExperiments: [],
         rawGuildExperiments: []
@@ -83,7 +83,7 @@ function B(e) {
 }
 let F = Date.now();
 function V(e, t, n, r) {
-    let i = O[k(e, t, n, r)];
+    let i = R[k(e, t, n, r)];
     return !(null == i || Date.now() - i.time > 604800000) && i.hash === B(t);
 }
 function H(e) {
@@ -173,11 +173,11 @@ function H(e) {
             });
     }
     !u &&
-        ((O[k(t, n, r, c)] = {
+        ((R[k(t, n, r, c)] = {
             time: Date.now(),
             hash: B(n)
         }),
-        ee(O));
+        ee(R));
 }
 function Z(e) {
     let [t, n] = e;
@@ -327,7 +327,7 @@ function q(e) {
     let { serializedExperimentStore: t, user: n } = e;
     !M && G(n) && (M = !0),
         (N = t.hasLoadedExperiments),
-        (O = t.trackedExposureExperiments),
+        (R = t.trackedExposureExperiments),
         (C = t.loadedUserExperiments),
         (D = t.userExperimentOverrides),
         (b = t.guildExperimentOverrides),
@@ -352,11 +352,11 @@ function X(e) {
             ...v,
             rawUserExperiments: []
         }),
-        (O = {}),
+        (R = {}),
         (N = !1);
 }
 function $() {
-    (N = !1), (O = {}), (L = {}), o.K.remove(m);
+    (N = !1), (R = {}), (L = {}), o.K.remove(m);
 }
 function J() {
     try {
@@ -394,7 +394,7 @@ function ee(e) {
 }
 function et(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: a, commonTriggerPoint: s } = e;
-    R[t] = {
+    O[t] = {
         type: n,
         title: r,
         description: i,
@@ -405,7 +405,7 @@ function et(e) {
 function en(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: a } = e,
-        s = null != i ? i : null === (t = R[n]) || void 0 === t ? void 0 : t.type;
+        s = null != i ? i : null === (t = O[n]) || void 0 === t ? void 0 : t.type;
     if (null == s) return !1;
     if (
         (null == r
@@ -432,7 +432,7 @@ function en(e) {
                 }),
         !a)
     )
-        for (let e of [D, b]) for (let t in e) null == R[t] && delete D[t];
+        for (let e of [D, b]) for (let t in e) null == O[t] && delete D[t];
     J();
 }
 function er(e) {
@@ -444,7 +444,7 @@ function er(e) {
 }
 class ei extends _.Z {
     initialize() {
-        (O = (function () {
+        (R = (function () {
             let e = o.K.get(m);
             if (null == e || 1 !== e.v) return {};
             let t = e.e,
@@ -502,7 +502,7 @@ class ei extends _.Z {
         return N;
     }
     hasRegisteredExperiment(e) {
-        return null != R[e];
+        return null != O[e];
     }
     getUserExperimentDescriptor(e) {
         if (M) {
@@ -605,7 +605,7 @@ class ei extends _.Z {
     }
     getRecentExposures(e, t) {
         let n = ''.concat(e, '|').concat(t, '|');
-        return Object.entries(O)
+        return Object.entries(R)
             .filter((e) => {
                 let [t] = e;
                 return t.startsWith(n);
@@ -616,7 +616,7 @@ class ei extends _.Z {
             });
     }
     getRegisteredExperiments() {
-        return R;
+        return O;
     }
     getAllExperimentOverrideDescriptors() {
         return M
@@ -633,7 +633,7 @@ class ei extends _.Z {
     getAllExperimentAssignments() {
         let e = {},
             t = {};
-        for (let n in (Object.keys(R).forEach((e) => {
+        for (let n in (Object.keys(O).forEach((e) => {
             t[U(''.concat(e))] = e;
         }),
         C)) {
@@ -651,7 +651,7 @@ class ei extends _.Z {
         for (let t in L) for (let n of ((e[t] = JSON.parse(JSON.stringify(L[t]))), e[t].populations)) n.filters = [];
         return {
             hasLoadedExperiments: N,
-            trackedExposureExperiments: O,
+            trackedExposureExperiments: R,
             loadedUserExperiments: C,
             loadedGuildExperiments: e,
             userExperimentOverrides: D,

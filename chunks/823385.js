@@ -20,8 +20,8 @@ var i,
     g = n(496675),
     A = n(306680),
     N = n(944486),
-    O = n(914010),
-    R = n(9156),
+    R = n(914010),
+    O = n(9156),
     v = n(483360),
     C = n(823379),
     L = n(981631),
@@ -60,7 +60,7 @@ function Z(e) {
 function Y(e) {
     var t;
     let { query: n, queryMode: i } = e,
-        a = null !== (t = O.Z.getGuildId()) && void 0 !== t ? t : void 0,
+        a = null !== (t = R.Z.getGuildId()) && void 0 !== t ? t : void 0,
         s = new Set(['user:'.concat(h.default.getId())]);
     null != a && s.add('guild:'.concat(a)),
         (r =
@@ -90,7 +90,7 @@ function j(e, t) {
                 '' === (t = t.trim()).trim()
                     ? (function () {
                           var e, t;
-                          let n = null !== (e = O.Z.getGuildId()) && void 0 !== e ? e : void 0,
+                          let n = null !== (e = R.Z.getGuildId()) && void 0 !== e ? e : void 0,
                               r = null !== (t = N.Z.getChannelId()) && void 0 !== t ? t : void 0;
                           switch (x) {
                               case c.h8.USER: {
@@ -115,14 +115,14 @@ function j(e, t) {
                               case c.h8.TEXT_CHANNEL:
                                   return v.ZP.queryChannels({
                                       query: '',
-                                      guildId: O.Z.getGuildId(),
+                                      guildId: R.Z.getGuildId(),
                                       limit: 100,
                                       fuzzy: !0
                                   });
                               case c.h8.VOICE_CHANNEL:
                                   return v.ZP.queryChannels({
                                       query: '',
-                                      guildId: O.Z.getGuildId(),
+                                      guildId: R.Z.getGuildId(),
                                       limit: 100,
                                       fuzzy: !0,
                                       filter: () => !0,
@@ -158,7 +158,7 @@ function j(e, t) {
                               let e = m.ZP.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.Z.getChannel(e);
-                                      return !(null == t || e === r || V.includes(e) || R.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && R.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, _.d)(t);
+                                      return !(null == t || e === r || V.includes(e) || O.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && O.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, _.d)(t);
                                   })
                                   .map((e) => Z(e))
                                   .filter((e) => e);
@@ -182,7 +182,7 @@ function j(e, t) {
             !(function (e, t) {
                 switch (x) {
                     case c.h8.USER: {
-                        let t = S.Z.getGuild(O.Z.getGuildId());
+                        let t = S.Z.getGuild(R.Z.getGuildId());
                         e.unshift((0, c.o6)(null != t ? y.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : y.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
                         break;
                     }
@@ -264,10 +264,10 @@ let z = new K(u.Z, {
         var t, n;
         let { query: i, queryMode: a } = e;
         if (null == r) return !1;
-        let s = null !== (t = O.Z.getGuildId()) && void 0 !== t ? t : null;
+        let s = null !== (t = R.Z.getGuildId()) && void 0 !== t ? t : null;
         if (x !== a) {
             r.setResultTypes(null != a ? [a] : M), r.setLimit(null != a ? 100 : 5);
-            let e = null !== (n = O.Z.getGuildId()) && void 0 !== n ? n : void 0;
+            let e = null !== (n = R.Z.getGuildId()) && void 0 !== n ? n : void 0;
             a === c.h8.USER && null != e
                 ? r.setOptions(
                       {

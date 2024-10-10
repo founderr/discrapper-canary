@@ -14,8 +14,8 @@ var a = n(120356),
     C = n(497505),
     h = n(918701),
     _ = n(566078),
-    g = n(340100),
-    T = n(644646),
+    T = n(340100),
+    g = n(644646),
     p = n(667105),
     S = n(341907),
     j = n(128535),
@@ -49,13 +49,13 @@ function Z(e) {
               children: a
           });
 }
-function O(e) {
+function b(e) {
     let { quest: t, progressState: n, isCollectibleQuest: a, location: i, questContentPosition: u, inGiftInventory: d } = e,
         c = n >= E.OH.COMPLETED,
         m = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         C = (0, o.e7)([x.Z], () => x.Z.isEnrolling(t.id)),
         _ = (0, h.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST),
-        g = (0, p.Ks)({
+        T = (0, p.Ks)({
             progressState: n,
             quest: t,
             isInHouseQuest: _,
@@ -64,13 +64,13 @@ function O(e) {
             questContentPosition: u,
             inGiftInventory: d
         }),
-        T = _ && d && c,
-        S = T ? q.inHouseButton : r.ButtonColors.BRAND,
+        g = _ && d && c,
+        S = g ? q.inHouseButton : r.ButtonColors.BRAND,
         j = c && !m ? r.ShinyButton : r.Button;
     return (0, s.jsx)(
         r.Tooltip,
         {
-            text: g.tooltipText,
+            text: T.tooltipText,
             tooltipContentClassName: q.ctaTooltipText,
             children: (e) => {
                 var t;
@@ -78,46 +78,46 @@ function O(e) {
                     ...e,
                     wrapperClassName: q.ctaButtonWrapper,
                     color: S,
-                    disabled: null == g.onClick,
+                    disabled: null == T.onClick,
                     submitting: C,
-                    onClick: null !== (t = g.onClick) && void 0 !== t ? t : () => {},
+                    onClick: null !== (t = T.onClick) && void 0 !== t ? t : () => {},
                     children: (0, s.jsxs)('div', {
                         className: q.ctaButtonInner,
                         children: [
-                            T &&
+                            g &&
                                 (0, s.jsx)('img', {
                                     src: R,
                                     alt: '',
                                     className: q.inHouseIcon
                                 }),
-                            g.text
+                            T.text
                         ]
                     })
                 });
             }
         },
-        g.tooltipText
+        T.tooltipText
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: a, isFocused: l, isQuestExpired: x, isExpanded: p, isAnimating: R, contentPosition: b } = e,
-        D = (0, E._Q)(t),
-        U = D >= E.OH.ACCEPTED,
-        Q = D >= E.OH.COMPLETED,
-        L = D >= E.OH.CLAIMED,
-        y = (0, h.Xv)(t.config),
+    let { quest: t, location: n, size: a, isFocused: l, isQuestExpired: x, isExpanded: p, isAnimating: R, contentPosition: O } = e,
+        U = (0, E._Q)(t),
+        D = U >= E.OH.ACCEPTED,
+        Q = U >= E.OH.COMPLETED,
+        y = U >= E.OH.CLAIMED,
+        L = (0, h.Xv)(t.config),
         B = (0, N.uq)(n),
         P = n === C.jn.QUESTS_EMBED,
         w = p || R,
-        k = U && !L && B,
+        k = D && !y && B,
         H = (0, E.t5)(t, v.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, E.z6)(),
         G = (0, o.e7)([u.default], () => u.default.locale),
         F = (0, E.z)(t),
-        X = B && y,
+        X = B && L,
         Y = x && !Q,
-        z = W.length > 0 && B && (0, h.$J)(t) && U && !Q && !F,
-        K = (0, s.jsx)(T.Z, {
+        z = W.length > 0 && B && (0, h.$J)(t) && D && !Q && !F,
+        K = (0, s.jsx)(g.Z, {
             autoplay: l,
             className: i()(q.gridImg, {
                 [q.questRewardGiftInventory]: B && 'lg' === a,
@@ -129,7 +129,7 @@ t.Z = (e) => {
             location: v.dr.QUESTS_CARD,
             quest: t,
             questContent: n,
-            questContentPosition: b
+            questContentPosition: O
         });
     return (0, s.jsxs)('div', {
         className: q.root,
@@ -171,7 +171,7 @@ t.Z = (e) => {
                         className: i()(q.gridText, q.taskDetails),
                         children: [
                             (0, s.jsx)(r.Text, {
-                                variant: A(n, a, U),
+                                variant: A(n, a, D),
                                 className: q.taskInstructions,
                                 children: x ? I.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : H
                             }),
@@ -183,8 +183,8 @@ t.Z = (e) => {
                                     let { quest: r, location: l, locale: u, isQuestExpired: m } = e,
                                         x = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                         C = x && (null === (n = r.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-                                        g = (0, h.zK)(r, v.S7.IN_HOUSE_CONSOLE_QUEST),
-                                        T = (0, N.uq)(l),
+                                        T = (0, h.zK)(r, v.S7.IN_HOUSE_CONSOLE_QUEST),
+                                        g = (0, N.uq)(l),
                                         p = (0, E.B6)(null === (s = r.userStatus) || void 0 === s ? void 0 : s.completedAt, {
                                             year: 'numeric',
                                             month: 'long',
@@ -194,7 +194,7 @@ t.Z = (e) => {
                                         j = _.r.build(r.config).defaultReward.messages.nameWithArticle,
                                         f = (0, h.Kr)(r.config),
                                         q = (0, h.b7)(r);
-                                    if (x && g && T) return I.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: p });
+                                    if (x && T && g) return I.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: p });
                                     if (C) {
                                         let e = S
                                                 ? (0, h.o9)({
@@ -262,7 +262,7 @@ t.Z = (e) => {
                                             (0, m._3)({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: b,
+                                                questContentPosition: O,
                                                 questContentCTA: m.jZ.LEARN_MORE
                                             });
                                     },
@@ -270,17 +270,17 @@ t.Z = (e) => {
                                 }),
                             x && !Q
                                 ? null
-                                : (0, s.jsx)(O, {
+                                : (0, s.jsx)(b, {
                                       quest: t,
-                                      progressState: D,
-                                      isCollectibleQuest: y,
+                                      progressState: U,
+                                      isCollectibleQuest: L,
                                       location: n,
                                       inGiftInventory: B
                                   })
                         ]
                     }),
                     k &&
-                        (0, s.jsx)(g.Z, {
+                        (0, s.jsx)(T.Z, {
                             className: q.gridProgressBar,
                             color: Q ? r.tokens.colors.TEXT_POSITIVE : r.tokens.colors.BG_BRAND,
                             quest: t,

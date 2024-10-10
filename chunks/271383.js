@@ -30,8 +30,8 @@ var r,
     g = n(314897),
     A = n(592125),
     N = n(430824),
-    O = n(372897);
-let R = new f.Z('GuildMemberStore'),
+    R = n(372897);
+let O = new f.Z('GuildMemberStore'),
     v = {},
     C = {},
     L = {},
@@ -140,7 +140,7 @@ function Y(e) {
         f = v[n];
     if (null == f) return !1;
     let h = N.Z.getGuild(n);
-    if (null == h) return R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    if (null == h) return O.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
     (f[r.id] = Z({
         userId: r.id,
         nick: i,
@@ -170,7 +170,7 @@ function j(e, t) {
     if (null == n) return !1;
     let r = N.Z.getGuild(e);
     return null == r
-        ? (R.warn('Guild '.concat(e, ' not found during batchUpdateGuildMembers.')), !1)
+        ? (O.warn('Guild '.concat(e, ' not found during batchUpdateGuildMembers.')), !1)
         : (t.forEach((t) => {
               var i;
               let a = n[t.user.id];
@@ -243,7 +243,7 @@ function q(e) {
     let t = v[e.guildId];
     if (null == t) return !1;
     let n = N.Z.getGuild(e.guildId);
-    if (null == n) return R.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
+    if (null == n) return O.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
     for (let r of S.default.keys(t)) {
         let i = t[r];
         ((null != i.roles && i.roles.length > 0) || null != i.colorString || null != i.hoistRoleId) &&
@@ -269,7 +269,7 @@ function Q(e) {
         n = v[t];
     if (null == n) return !1;
     let r = N.Z.getGuild(t);
-    if (null == r) return R.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
+    if (null == r) return O.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
     let i = g.default.getId(),
         a = n[i];
     n[i] = Z({
@@ -388,7 +388,7 @@ class ee extends (i = _.ZP.Store) {
             n = v[e];
         if (null == n || null == n[t]) return !1;
         let r = n[t].flags;
-        return null != r && (0, m.yE)(r, O.q.IS_GUEST);
+        return null != r && (0, m.yE)(r, R.q.IS_GUEST);
     }
     getMemberIds(e) {
         if (null == e) return [];
@@ -560,7 +560,7 @@ class ee extends (i = _.ZP.Store) {
                 i = v[t];
             if (null == i) return !1;
             let a = N.Z.getGuild(t);
-            if (null == a) return R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+            if (null == a) return O.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             let s = i[n];
             if (null == s || !s.roles.includes(r)) return !1;
             s.roles = s.roles.filter((e) => e !== r);
@@ -578,7 +578,7 @@ class ee extends (i = _.ZP.Store) {
                 i = v[t];
             if (null == i) return !1;
             let a = N.Z.getGuild(t);
-            if (null == a) return R.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+            if (null == a) return O.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             let s = i[n];
             if (null == s || s.roles.includes(r)) return !1;
             s.roles = [...s.roles, r];
@@ -596,7 +596,7 @@ class ee extends (i = _.ZP.Store) {
                 r = v[n];
             if (null == r) return !1;
             let i = N.Z.getGuild(n);
-            if (null == i) return R.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+            if (null == i) return O.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             (r[t.user.id] = Z({
                 userId: t.user.id,
                 nick: t.nick,

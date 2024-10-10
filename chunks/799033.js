@@ -3,30 +3,30 @@ r.d(t, {
         return D;
     },
     k3: function () {
-        return L;
+        return S;
     }
 });
 var n = r(157079),
     a = r(501684),
-    o = r(868497),
-    i = r(696486),
-    _ = r(73453),
+    _ = r(868497),
+    o = r(696486),
+    i = r(73453),
     E = r(793373),
-    s = r(152228),
-    c = r(988097),
+    c = r(152228),
+    s = r(988097),
     I = r(789112),
     u = r(263449),
     l = r(305625),
     R = r(64685),
     A = r(873567),
     T = r(101284),
-    d = r(886115),
-    N = r(370541),
-    p = r(285883),
-    O = r(163162);
+    N = r(886115),
+    d = r(370541),
+    O = r(285883),
+    p = r(163162);
 let f = new WeakMap(),
-    S = new Map(),
-    L = {
+    L = new Map(),
+    S = {
         traceFetch: !0,
         traceXHR: !0,
         enableHTTPTimings: !0
@@ -39,14 +39,14 @@ function D(e, t) {
             enableHTTPTimings: D,
             tracePropagationTargets: C
         } = {
-            traceFetch: L.traceFetch,
-            traceXHR: L.traceXHR,
+            traceFetch: S.traceFetch,
+            traceXHR: S.traceXHR,
             ...t
         },
         M = 'function' == typeof T ? T : (e) => !0,
         P = (e) =>
             (function (e, t) {
-                let r = O.m9.location && O.m9.location.href;
+                let r = p.m9.location && p.m9.location.href;
                 if (r) {
                     let n, a;
                     try {
@@ -54,15 +54,15 @@ function D(e, t) {
                     } catch (e) {
                         return !1;
                     }
-                    let o = n.origin === a;
-                    return t ? (0, d.U0)(n.toString(), t) || (o && (0, d.U0)(n.pathname, t)) : o;
+                    let _ = n.origin === a;
+                    return t ? (0, N.U0)(n.toString(), t) || (_ && (0, N.U0)(n.pathname, t)) : _;
                 }
                 {
                     let r = !!e.match(/^\/(?!\/)/);
-                    return t ? (0, d.U0)(e, t) : r;
+                    return t ? (0, N.U0)(e, t) : r;
                 }
             })(e, C),
-        m = {};
+        U = {};
     r &&
         (e.addEventProcessor(
             (e) => (
@@ -70,8 +70,8 @@ function D(e, t) {
                     e.spans &&
                     e.spans.forEach((e) => {
                         if ('http.client' === e.op) {
-                            let t = S.get(e.span_id);
-                            t && ((e.timestamp = t / 1000), S.delete(e.span_id));
+                            let t = L.get(e.span_id);
+                            t && ((e.timestamp = t / 1000), L.delete(e.span_id));
                         }
                     }),
                 e
@@ -80,11 +80,11 @@ function D(e, t) {
         (0, R.cf)((e) => {
             if (e.response) {
                 let t = f.get(e.response);
-                t && e.endTimestamp && S.set(t, e.endTimestamp);
+                t && e.endTimestamp && L.set(t, e.endTimestamp);
             }
         }),
         (0, R.Uf)((e) => {
-            let t = (0, o.m)(e, M, P, m);
+            let t = (0, _.m)(e, M, P, U);
             if ((e.response && e.fetchData.__span && f.set(e.response, e.fetchData.__span), t)) {
                 let r = g(e.fetchData.url),
                     n = r ? (0, A.en)(r).host : void 0;
@@ -98,67 +98,67 @@ function D(e, t) {
         a &&
             (0, n.UK)((e) => {
                 let t = (function (e, t, r, a) {
-                    let o = e.xhr,
-                        R = o && o[n.xU];
-                    if (!o || o.__sentry_own_request__ || !R) return;
-                    let T = (0, _.z)() && t(R.url);
+                    let _ = e.xhr,
+                        R = _ && _[n.xU];
+                    if (!_ || _.__sentry_own_request__ || !R) return;
+                    let T = (0, i.z)() && t(R.url);
                     if (e.endTimestamp && T) {
-                        let e = o.__sentry_xhr_span_id__;
+                        let e = _.__sentry_xhr_span_id__;
                         if (!e) return;
                         let t = a[e];
                         t && void 0 !== R.status_code && ((0, E.Q0)(t, R.status_code), t.end(), delete a[e]);
                         return;
                     }
-                    let d = g(R.url),
-                        O = d ? (0, A.en)(d).host : void 0,
-                        f = !!(0, i.HN)(),
-                        S =
+                    let N = g(R.url),
+                        p = N ? (0, A.en)(N).host : void 0,
+                        f = !!(0, o.HN)(),
+                        L =
                             T && f
-                                ? (0, s.qp)({
+                                ? (0, c.qp)({
                                       name: `${R.method} ${R.url}`,
                                       attributes: {
                                           type: 'xhr',
                                           'http.method': R.method,
-                                          'http.url': d,
+                                          'http.url': N,
                                           url: R.url,
-                                          'server.address': O,
-                                          [c.S3]: 'auto.http.browser',
-                                          [c.$J]: 'http.client'
+                                          'server.address': p,
+                                          [s.S3]: 'auto.http.browser',
+                                          [s.$J]: 'http.client'
                                       }
                                   })
                                 : new I.b();
-                    (o.__sentry_xhr_span_id__ = S.spanContext().spanId), (a[o.__sentry_xhr_span_id__] = S);
-                    let L = (0, u.s3)();
+                    (_.__sentry_xhr_span_id__ = L.spanContext().spanId), (a[_.__sentry_xhr_span_id__] = L);
+                    let S = (0, u.s3)();
                     return (
-                        o.setRequestHeader &&
+                        _.setRequestHeader &&
                             r(R.url) &&
-                            L &&
+                            S &&
                             (function (e, t, r) {
                                 let n = (0, u.nZ)(),
                                     {
                                         traceId: a,
-                                        spanId: o,
+                                        spanId: _,
                                         sampled: E,
-                                        dsc: s
+                                        dsc: c
                                     } = {
                                         ...(0, u.aF)().getPropagationContext(),
                                         ...n.getPropagationContext()
                                     },
-                                    c = r && (0, _.z)() ? (0, i.Hb)(r) : (0, N.$p)(a, o, E);
+                                    s = r && (0, i.z)() ? (0, o.Hb)(r) : (0, d.$p)(a, _, E);
                                 (function (e, t, r) {
                                     try {
-                                        e.setRequestHeader('sentry-trace', t), r && e.setRequestHeader(p.bU, r);
+                                        e.setRequestHeader('sentry-trace', t), r && e.setRequestHeader(O.bU, r);
                                     } catch (e) {}
-                                })(e, c, (0, p.IQ)(s || (r ? (0, l.jC)(r) : (0, l._l)(a, t))));
-                            })(o, L, (0, _.z)() && f ? S : void 0),
-                        S
+                                })(e, s, (0, O.IQ)(c || (r ? (0, l.jC)(r) : (0, l._l)(a, t))));
+                            })(_, S, (0, i.z)() && f ? L : void 0),
+                        L
                     );
-                })(e, M, P, m);
+                })(e, M, P, U);
                 D && t && h(t);
             });
 }
 function h(e) {
-    let { url: t } = (0, i.XU)(e).data || {};
+    let { url: t } = (0, o.XU)(e).data || {};
     if (!t || 'string' != typeof t) return;
     let r = (0, a._j)('resource', ({ entries: n }) => {
         n.forEach((n) => {
@@ -200,7 +200,7 @@ function C(e = 0) {
 }
 function g(e) {
     try {
-        return new URL(e, O.m9.location.origin).href;
+        return new URL(e, p.m9.location.origin).href;
     } catch (e) {
         return;
     }

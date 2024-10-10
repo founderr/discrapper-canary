@@ -114,7 +114,7 @@ e.exports = function (e) {
             contains: [A]
         };
     A.contains.push(N);
-    let O = [g, S, e.C_BLOCK_COMMENT_MODE, d, _, m];
+    let R = [g, S, e.C_BLOCK_COMMENT_MODE, d, _, m];
     return {
         case_insensitive: !1,
         keywords: p,
@@ -136,9 +136,9 @@ e.exports = function (e) {
                             literal: E,
                             keyword: ['new', 'array']
                         },
-                        contains: ['self', ...O]
+                        contains: ['self', ...R]
                     },
-                    ...O,
+                    ...R,
                     {
                         scope: 'meta',
                         match: i

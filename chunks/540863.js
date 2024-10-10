@@ -16,9 +16,9 @@ let l = i.forwardRef(function (e, t) {
         S = i.useId(),
         g = null !== (n = m.titleId) && void 0 !== n ? n : T,
         A = null != I ? (null !== (l = m.errorId) && void 0 !== l ? l : S) : void 0,
-        [N, O] = i.useState(void 0),
-        [R, v] = i.useState(void 0),
-        C = void 0 !== R;
+        [N, R] = i.useState(void 0),
+        [O, v] = i.useState(void 0),
+        C = void 0 !== O;
     return (0, r.jsx)('div', {
         ref: t,
         className: null != d ? d : void 0,
@@ -28,8 +28,8 @@ let l = i.forwardRef(function (e, t) {
             errorId: A,
             error: null != I ? I : void 0,
             isFocused: N,
-            setIsFocused: O,
-            hasValue: R,
+            setIsFocused: R,
+            hasValue: O,
             setHasValue: v,
             children: (0, r.jsxs)('div', {
                 className: C ? o.fieldWrapper : void 0,

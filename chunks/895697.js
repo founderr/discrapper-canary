@@ -25,8 +25,8 @@ var i = n(442837),
     g = n(166584),
     A = n(915014),
     N = n(228168),
-    O = n(689938),
-    R = n(800677),
+    R = n(689938),
+    O = n(800677),
     v = n(451563);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: L, isHovering: y, onOpenProfile: D, channelId: b, onClose: M } = e,
@@ -69,17 +69,17 @@ function C(e) {
                 onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
             }),
             (0, r.jsxs)('div', {
-                className: R.buttons,
+                className: O.buttons,
                 children: [
                     (0, r.jsx)(I.Z, {
                         user: t,
-                        className: R.button,
+                        className: O.button,
                         closePopout: M
                     }),
                     (0, r.jsx)(m.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        className: R.button
+                        className: O.button
                     })
                 ]
             }),
@@ -106,7 +106,7 @@ function C(e) {
                 }),
             null != L &&
                 (0, r.jsx)(h.Z, {
-                    heading: O.Z.Messages.ROLES,
+                    heading: R.Z.Messages.ROLES,
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         currentUser: n,

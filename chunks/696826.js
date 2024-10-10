@@ -12,7 +12,7 @@ n.d(t, {
         return _.Skl;
     },
     W5: function () {
-        return R;
+        return O;
     },
     lm: function () {
         return I;
@@ -21,7 +21,7 @@ n.d(t, {
         return v;
     },
     rs: function () {
-        return O;
+        return R;
     },
     vP: function () {
         return A;
@@ -288,7 +288,7 @@ function N(e) {
             'animate-always'
         ),
         N = p(t, l),
-        [{ fill: O }] = (0, u.useSpring)(
+        [{ fill: R }] = (0, u.useSpring)(
             {
                 config: h,
                 fill: N
@@ -296,11 +296,11 @@ function N(e) {
             'animate-always',
             [N]
         ),
-        R = Math.ceil(a * E.EW);
+        O = Math.ceil(a * E.EW);
     return (0, r.jsxs)('svg', {
         width: a,
-        height: R,
-        viewBox: '0 0 '.concat(a, ' ').concat(R),
+        height: O,
+        viewBox: '0 0 '.concat(a, ' ').concat(O),
         className: s()(f.mask, c),
         style: d,
         children: [
@@ -309,14 +309,14 @@ function N(e) {
                 x: 0,
                 y: 0,
                 width: a,
-                height: R,
-                fill: O,
+                height: O,
+                fill: R,
                 mask: 'url(#'.concat(I, ')')
             })
         ]
     });
 }
-function O(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (n) return d.ZP.Masks.STATUS_TYPING;
     switch (e) {
@@ -336,7 +336,7 @@ function O(e, t) {
             return d.ZP.Masks.STATUS_ONLINE;
     }
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return t === _.Skl.ONLINE && n && !r
         ? {
@@ -353,10 +353,10 @@ function v(e) {
         u = t === _.Skl.ONLINE && n,
         c = p(t, l);
     return (0, r.jsx)(d.ZP, {
-        mask: O(t, u),
+        mask: R(t, u),
         className: s()(f.mask, a),
         style: o,
-        ...R(i, t, u),
+        ...O(i, t, u),
         children: (0, r.jsx)('div', {
             style: { backgroundColor: c },
             className: f.status

@@ -8,47 +8,47 @@ r.d(t, {
 });
 var n = r(394798),
     a = r(101284),
-    o = r(886115),
-    i = r(899517),
-    _ = r(202811),
+    _ = r(886115),
+    o = r(899517),
+    i = r(202811),
     E = r(559508),
-    s = r(263449),
-    c = r(574054),
+    c = r(263449),
+    s = r(574054),
     I = r(307854),
     u = r(396234);
 function l(e, t, r, l, A, T) {
-    let { normalizeDepth: d = 3, normalizeMaxBreadth: N = 1000 } = e,
-        p = {
+    let { normalizeDepth: N = 3, normalizeMaxBreadth: d = 1000 } = e,
+        O = {
             ...t,
             event_id: t.event_id || r.event_id || (0, n.DM)(),
             timestamp: t.timestamp || (0, a.yW)()
         },
-        O = r.integrations || e.integrations.map((e) => e.name);
+        p = r.integrations || e.integrations.map((e) => e.name);
     (function (e, t) {
-        let { environment: r, release: n, dist: a, maxValueLength: i = 250 } = t;
-        !('environment' in e) && (e.environment = 'environment' in t ? r : E.J), void 0 === e.release && void 0 !== n && (e.release = n), void 0 === e.dist && void 0 !== a && (e.dist = a), e.message && (e.message = (0, o.$G)(e.message, i));
-        let _ = e.exception && e.exception.values && e.exception.values[0];
-        _ && _.value && (_.value = (0, o.$G)(_.value, i));
-        let s = e.request;
-        s && s.url && (s.url = (0, o.$G)(s.url, i));
-    })(p, e),
+        let { environment: r, release: n, dist: a, maxValueLength: o = 250 } = t;
+        !('environment' in e) && (e.environment = 'environment' in t ? r : E.J), void 0 === e.release && void 0 !== n && (e.release = n), void 0 === e.dist && void 0 !== a && (e.dist = a), e.message && (e.message = (0, _.$G)(e.message, o));
+        let i = e.exception && e.exception.values && e.exception.values[0];
+        i && i.value && (i.value = (0, _.$G)(i.value, o));
+        let c = e.request;
+        c && c.url && (c.url = (0, _.$G)(c.url, o));
+    })(O, e),
         (function (e, t) {
             t.length > 0 && ((e.sdk = e.sdk || {}), (e.sdk.integrations = [...(e.sdk.integrations || []), ...t]));
-        })(p, O),
+        })(O, p),
         A && A.emit('applyFrameMetadata', t),
         void 0 === t.type &&
             (function (e, t) {
                 let r;
-                let n = i.n._sentryDebugIds;
+                let n = o.n._sentryDebugIds;
                 if (!n) return;
                 let a = R.get(t);
                 a ? (r = a) : ((r = new Map()), R.set(t, r));
-                let o = Object.entries(n).reduce((e, [n, a]) => {
-                    let o;
-                    let i = r.get(n);
-                    i ? (o = i) : ((o = t(n)), r.set(n, o));
-                    for (let t = o.length - 1; t >= 0; t--) {
-                        let r = o[t];
+                let _ = Object.entries(n).reduce((e, [n, a]) => {
+                    let _;
+                    let o = r.get(n);
+                    o ? (_ = o) : ((_ = t(n)), r.set(n, _));
+                    for (let t = _.length - 1; t >= 0; t--) {
+                        let r = _[t];
                         if (r.filename) {
                             e[r.filename] = a;
                             break;
@@ -59,31 +59,31 @@ function l(e, t, r, l, A, T) {
                 try {
                     e.exception.values.forEach((e) => {
                         e.stacktrace.frames.forEach((e) => {
-                            e.filename && (e.debug_id = o[e.filename]);
+                            e.filename && (e.debug_id = _[e.filename]);
                         });
                     });
                 } catch (e) {}
-            })(p, e.stackParser);
+            })(O, e.stackParser);
     let f = (function (e, t) {
         if (!t) return e;
         let r = e ? e.clone() : new I.s();
         return r.update(t), r;
     })(l, r.captureContext);
-    r.mechanism && (0, n.EG)(p, r.mechanism);
-    let S = A ? A.getEventProcessors() : [],
-        L = (0, s.lW)().getScopeData();
+    r.mechanism && (0, n.EG)(O, r.mechanism);
+    let L = A ? A.getEventProcessors() : [],
+        S = (0, c.lW)().getScopeData();
     if (T) {
         let e = T.getScopeData();
-        (0, u.yo)(L, e);
+        (0, u.yo)(S, e);
     }
     if (f) {
         let e = f.getScopeData();
-        (0, u.yo)(L, e);
+        (0, u.yo)(S, e);
     }
-    let D = [...(r.attachments || []), ...L.attachments];
-    D.length && (r.attachments = D), (0, u.gi)(p, L);
-    let h = [...S, ...L.eventProcessors];
-    return (0, c.R)(h, p, r).then((e) =>
+    let D = [...(r.attachments || []), ...S.attachments];
+    D.length && (r.attachments = D), (0, u.gi)(O, S);
+    let h = [...L, ...S.eventProcessors];
+    return (0, s.R)(h, O, r).then((e) =>
         (e &&
             (function (e) {
                 let t = {};
@@ -105,7 +105,7 @@ function l(e, t, r, l, A, T) {
                     });
                 });
             })(e),
-        'number' == typeof d && d > 0)
+        'number' == typeof N && N > 0)
             ? (function (e, t, r) {
                   if (!e) return null;
                   let n = {
@@ -113,23 +113,23 @@ function l(e, t, r, l, A, T) {
                       ...(e.breadcrumbs && {
                           breadcrumbs: e.breadcrumbs.map((e) => ({
                               ...e,
-                              ...(e.data && { data: (0, _.Fv)(e.data, t, r) })
+                              ...(e.data && { data: (0, i.Fv)(e.data, t, r) })
                           }))
                       }),
-                      ...(e.user && { user: (0, _.Fv)(e.user, t, r) }),
-                      ...(e.contexts && { contexts: (0, _.Fv)(e.contexts, t, r) }),
-                      ...(e.extra && { extra: (0, _.Fv)(e.extra, t, r) })
+                      ...(e.user && { user: (0, i.Fv)(e.user, t, r) }),
+                      ...(e.contexts && { contexts: (0, i.Fv)(e.contexts, t, r) }),
+                      ...(e.extra && { extra: (0, i.Fv)(e.extra, t, r) })
                   };
                   return (
-                      e.contexts && e.contexts.trace && n.contexts && ((n.contexts.trace = e.contexts.trace), e.contexts.trace.data && (n.contexts.trace.data = (0, _.Fv)(e.contexts.trace.data, t, r))),
+                      e.contexts && e.contexts.trace && n.contexts && ((n.contexts.trace = e.contexts.trace), e.contexts.trace.data && (n.contexts.trace.data = (0, i.Fv)(e.contexts.trace.data, t, r))),
                       e.spans &&
                           (n.spans = e.spans.map((e) => ({
                               ...e,
-                              ...(e.data && { data: (0, _.Fv)(e.data, t, r) })
+                              ...(e.data && { data: (0, i.Fv)(e.data, t, r) })
                           }))),
                       n
                   );
-              })(e, d, N)
+              })(e, N, d)
             : e
     );
 }

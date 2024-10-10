@@ -26,8 +26,8 @@ async function I(e) {
         N = s.Z.createFromServer(e);
     }
     if (null == A || null == N) return;
-    let O = c.default.getCurrentUser(),
-        R = o.Z.getChannel(t);
+    let R = c.default.getCurrentUser(),
+        O = o.Z.getChannel(t);
     async function v() {
         if (null != A)
             await (0, E.Z)({
@@ -81,11 +81,11 @@ async function I(e) {
         }
     })({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == O ? void 0 : O.id,
+            userId: null == R ? void 0 : R.id,
             application: N,
             channelId: t,
-            currentUser: O,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(R),
+            currentUser: R,
+            isActivitiesEnabledForCurrentPlatform: (0, f.a)(O),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,

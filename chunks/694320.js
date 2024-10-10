@@ -35,11 +35,11 @@ function A() {
 function N(e) {
     var t;
     let { className: n, iconOnly: a, remaining: N } = e,
-        O = (0, o.e7)([p.Z, h.Z], () => {
+        R = (0, o.e7)([p.Z, h.Z], () => {
             let e = h.Z.getChannel(p.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL;
         }),
-        { analyticsLocations: R } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
+        { analyticsLocations: O } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
         v = (0, _.Ng)(),
         C = (0, E.N)(),
         L = (0, _.Wp)(v, T.Si.TIER_2),
@@ -48,12 +48,12 @@ function N(e) {
         I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
             location: {
-                location_page: O,
+                location_page: R,
                 location_section: m.jXE.CHANNEL_TEXT_AREA
             },
-            location_stack: R
+            location_stack: O
         });
-    }, [O, R]),
+    }, [R, O]),
     (y || L) && N < 0)
         ? (0, r.jsx)(f.ZP, {
               type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,

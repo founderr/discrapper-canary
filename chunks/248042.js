@@ -33,14 +33,14 @@ var r = n(913527),
     g = n(725727),
     A = n(1844),
     N = n(474936),
-    O = n(981631),
-    R = n(689938);
+    R = n(981631),
+    O = n(689938);
 function v(e) {
     var t, n, r;
     let { experimentEnabled: a, premiumSubscription: s, mostRecentSubscription: o } = e,
         l = !1,
         c = !1;
-    if (null != o && o.status === O.O0b.ENDED) {
+    if (null != o && o.status === R.O0b.ENDED) {
         let e = (null === (t = o.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? i()(o.metadata.ended_at) : null,
             r = null === (n = (0, _.Af)(o)) || void 0 === n ? void 0 : n.planId,
             a = null != r && _.ZP.getPremiumType(r) === N.p9.TIER_2;
@@ -145,8 +145,8 @@ function b() {
         case 'uk':
         case 'ja':
         case 'ko':
-            return R.Z.Messages.NITRO_BADGE_TEXT;
+            return O.Z.Messages.NITRO_BADGE_TEXT;
         default:
-            return R.Z.Messages.BOGO_PILL;
+            return O.Z.Messages.BOGO_PILL;
     }
 }

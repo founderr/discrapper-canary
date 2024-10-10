@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(735250),
     g = n(981631),
     A = n(474936),
     N = n(8621);
-let O = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: R, animateOnHover: v, onOpenProfile: C, className: L } = e,
+let R = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function O(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: O, animateOnHover: v, onOpenProfile: C, className: L } = e,
         { theme: y } = (0, T.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: b } = (0, p.KZ)(),
@@ -39,13 +39,13 @@ function R(e) {
             status: (0, u.Z)(w) ? g.Skl.STREAMING : E.Z.getStatus(t.id),
             isMobileOnline: E.Z.isMobileOnline(t.id)
         })),
-        k = R === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        k = O === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         B = s()(
             N.avatar,
             {
-                [N.biteSize]: R === S.y0.BITE_SIZE,
-                [N.fullSize]: R === S.y0.FULL_SIZE,
-                [N.panel]: R === S.y0.PANEL
+                [N.biteSize]: O === S.y0.BITE_SIZE,
+                [N.fullSize]: O === S.y0.FULL_SIZE,
+                [N.panel]: O === S.y0.PANEL
             },
             L
         ),
@@ -59,7 +59,7 @@ function R(e) {
             size: k,
             animateOnHover: v
         }),
-        Z = (0, r.jsx)(O, {
+        Z = (0, r.jsx)(R, {
             src: V,
             avatarDecoration: F,
             size: k,

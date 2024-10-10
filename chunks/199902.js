@@ -17,8 +17,8 @@ var o,
     g = n(430824),
     A = n(131951),
     N = n(496675),
-    O = n(19780),
-    R = n(944486),
+    R = n(19780),
+    O = n(944486),
     v = n(979651),
     C = n(981631),
     L = n(70722);
@@ -90,7 +90,7 @@ class k extends (o = d.ZP.Store) {
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = R.Z.getVoiceChannelId(),
+        let e = O.Z.getVoiceChannelId(),
             t = S.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
     }
@@ -101,7 +101,7 @@ class k extends (o = d.ZP.Store) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = R.Z.getVoiceChannelId(),
+        let t = O.Z.getVoiceChannelId(),
             n = S.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(T.default.getId(), n.getGuildId());
@@ -206,7 +206,7 @@ class k extends (o = d.ZP.Store) {
                 }
                 {
                     let t = T.default.getSessionId();
-                    return n === T.default.getId() && s !== t && null != O.Z.getChannelId()
+                    return n === T.default.getId() && s !== t && null != R.Z.getChannelId()
                         ? e
                         : (function (e, t) {
                               var n;

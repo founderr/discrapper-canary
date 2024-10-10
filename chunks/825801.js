@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return O;
+        return R;
     },
     _1: function () {
         return g;
@@ -79,15 +79,15 @@ let g = 2700,
                 () => T.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
             )
             .exhaustive();
-function O(e) {
+function R(e) {
     let { user: t, sourceType: n, isVisible: i, isExpandable: s } = e,
         { trackUserProfileAction: g } = (0, E.KZ)(),
-        { pressReact: A, pressReply: O } = (0, h.Q)(n),
-        R = (0, o.e7)([_.default], () => _.default.getId() === t.id),
+        { pressReact: A, pressReply: R } = (0, h.Q)(n),
+        O = (0, o.e7)([_.default], () => _.default.getId() === t.id),
         v = (0, f.Z)(t.id),
         { profileType: C } = (0, I.z)(),
         { onInteraction: L } = (0, p.Xo)();
-    return t.bot || R || !v
+    return t.bot || O || !v
         ? null
         : (0, r.jsxs)(c.ZP, {
               className: a()(S.popover, {
@@ -128,7 +128,7 @@ function O(e) {
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
                           onClick: () => {
-                              g({ action: O }),
+                              g({ action: R }),
                                   null == L ||
                                       L({
                                           interactionType: m.P.REPLY,

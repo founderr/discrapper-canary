@@ -21,8 +21,8 @@ var r,
 ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED');
 let A = new Map(),
     N = new Map(),
-    O = new Set(),
-    R = 0,
+    R = new Set(),
+    O = 0,
     v = 0,
     C = new Set(),
     L = new Map(),
@@ -39,8 +39,8 @@ let b = c().debounce((e) => {
 function M(e) {
     var t, n;
     let r = null !== (n = null == e ? void 0 : null === (t = e.audioContextSettings) || void 0 === t ? void 0 : t.user) && void 0 !== n ? n : {};
-    for (let [e, t] of Object.entries(r)) t.soundboardMuted ? O.add(e) : O.delete(e);
-    for (let e of O.keys()) null == r[e] && O.delete(e);
+    for (let [e, t] of Object.entries(r)) t.soundboardMuted ? R.add(e) : R.delete(e);
+    for (let e of R.keys()) null == r[e] && R.delete(e);
 }
 class P extends (i = d.ZP.Store) {
     initialize() {
@@ -50,7 +50,7 @@ class P extends (i = d.ZP.Store) {
         return {
             soundboardSounds: Object.fromEntries(A),
             favoritedSoundIds: Array.from(C),
-            localSoundboardMutes: Array.from(O)
+            localSoundboardMutes: Array.from(R)
         };
     }
     getSounds() {
@@ -72,16 +72,16 @@ class P extends (i = d.ZP.Store) {
         return 1 === v;
     }
     isFetchingDefaultSounds() {
-        return 1 === R;
+        return 1 === O;
     }
     isFetching() {
         return this.isFetchingSounds() || this.isFetchingDefaultSounds();
     }
     shouldFetchDefaultSounds() {
-        return 0 === R;
+        return 0 === O;
     }
     hasFetchedDefaultSounds() {
-        return 2 === R;
+        return 2 === O;
     }
     isUserPlayingSounds(e) {
         let t = L.get(e);
@@ -97,13 +97,13 @@ class P extends (i = d.ZP.Store) {
         return C;
     }
     isLocalSoundboardMuted(e) {
-        return O.has(e);
+        return R.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
         return y;
     }
     hasFetchedAllSounds() {
-        return 2 === v && 2 === R;
+        return 2 === v && 2 === O;
     }
 }
 (l = 'SoundboardStore'),
@@ -117,7 +117,7 @@ class P extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new P(_.Z, {
         LOGOUT: function () {
-            A.clear(), N.clear(), L.clear(), (y = !1), (v = 0), (R = 0);
+            A.clear(), N.clear(), L.clear(), (y = !1), (v = 0), (O = 0);
         },
         GUILD_SOUNDBOARD_FETCH: function () {
             v = 1;
@@ -160,11 +160,11 @@ class P extends (i = d.ZP.Store) {
             } else n === g.yP.PRELOADED_USER_SETTINGS && M(r);
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function () {
-            R = 1;
+            O = 1;
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function (e) {
             let { soundboardSounds: t } = e;
-            A.set(T.X8, t), (R = 2);
+            A.set(T.X8, t), (O = 2);
         },
         SOUNDBOARD_SOUNDS_RECEIVED: function (e) {
             let { updates: t } = e;
@@ -180,11 +180,11 @@ class P extends (i = d.ZP.Store) {
         },
         AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: function (e) {
             let { userId: t } = e;
-            O.has(t) ? O.delete(t) : O.add(t);
+            R.has(t) ? R.delete(t) : R.add(t);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { soundboardStoreState: t } = e;
-            (A = new Map(m.default.entries(t.soundboardSounds))), (C = new Set(t.favoritedSoundIds)), (O = new Set(t.localSoundboardMutes));
+            (A = new Map(m.default.entries(t.soundboardSounds))), (C = new Set(t.favoritedSoundIds)), (R = new Set(t.localSoundboardMutes));
         },
         GUILD_SOUNDBOARD_SOUNDS_UPDATE: function (e) {
             let { guildId: t, soundboardSounds: n } = e;

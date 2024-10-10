@@ -40,8 +40,8 @@ function g(e) {
     });
     let A = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
         N = (0, a.e7)([f.Z], () => null != n && f.Z.getUserSubscriptionRoles(n).size > 0),
-        O = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({ serverName: null == A ? void 0 : A.name }),
-        R = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+        R = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({ serverName: null == A ? void 0 : A.name }),
+        O = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
     return (0, r.jsxs)('div', {
         className: T.container,
         children: [
@@ -78,14 +78,14 @@ function g(e) {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         className: T.description,
-                        children: O
+                        children: R
                     }),
                     (0, r.jsx)(o.Spacer, { size: 24 }),
                     (0, r.jsx)(h.Z, {
                         onClick: () => {
                             (0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: g });
                         },
-                        children: R
+                        children: O
                     })
                 ]
             })

@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return O;
+        return R;
     },
     v: function () {
         return A;
@@ -97,7 +97,7 @@ function A() {
     return (0, h.Vn)((0, d.bp)());
 }
 let N = [];
-function O() {
+function R() {
     let e = A(),
         t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : N)),
         n = i.useRef();

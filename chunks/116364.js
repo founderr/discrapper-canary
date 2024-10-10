@@ -37,7 +37,7 @@ let T = { results: { choices: [] } },
         leading: !0,
         trailing: !0
     }),
-    O = {
+    R = {
         stores: [u.Z, l.Z],
         showEmpty: !0,
         matches(e, t, n, r, i) {
@@ -129,4 +129,4 @@ let T = { results: { choices: [] } },
             );
         }
     };
-t.Z = O;
+t.Z = R;

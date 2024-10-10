@@ -20,8 +20,8 @@ var r = n(664751),
     g = n(358085),
     A = n(573261),
     N = n(278323),
-    O = n(58642),
-    R = n(254854),
+    R = n(58642),
+    O = n(254854),
     v = n(981631),
     C = n(701488),
     L = n(689938);
@@ -132,7 +132,7 @@ async function D(e) {
                   pids: e
               });
           }).catch((e) => {
-              R.Z.show(v.kVF.LAUNCH_GAME_FAILURE, L.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND),
+              O.Z.show(v.kVF.LAUNCH_GAME_FAILURE, L.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND),
                   l.Z.dispatch({
                       type: 'GAME_LAUNCH_FAIL',
                       applicationId: t,
@@ -160,7 +160,7 @@ t.Z = {
             let e = p.Z.getActiveLibraryApplication(n.id);
             if (null != e) {
                 let t = T.x9(e.getFlags(), v.eHb.OVERLAY_DISABLED);
-                O.h(e.id, e.branchId, t);
+                R.h(e.id, e.branchId, t);
                 return;
             }
         }

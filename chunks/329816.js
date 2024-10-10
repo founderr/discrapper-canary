@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(607070),
     A = n(899663),
     N = n(793903),
-    O = n(213609),
-    R = n(613413),
+    R = n(213609),
+    O = n(613413),
     v = n(94795),
     C = n(327943),
     L = n(907459),
@@ -170,7 +170,7 @@ t.Z = function (e) {
                                                                 children: (0, r.jsx)(P.m, {
                                                                     children: (0, r.jsx)(B.OR, {
                                                                         children: (0, r.jsxs)(N.Z.Provider, {
-                                                                            value: O.Z,
+                                                                            value: R.Z,
                                                                             children: [
                                                                                 (0, r.jsx)('div', {
                                                                                     className: s()(T ? ei.mobileApp : ei.app),
@@ -184,7 +184,7 @@ t.Z = function (e) {
                                                                                 (0, r.jsx)(G.Un, {}),
                                                                                 (0, r.jsx)(B.ot, {}),
                                                                                 (0, r.jsx)(E.ToastContainer, {}),
-                                                                                (0, r.jsx)(R.Z, {}),
+                                                                                (0, r.jsx)(O.Z, {}),
                                                                                 (0, r.jsx)(F.Z, {}),
                                                                                 (0, r.jsx)(ea, {})
                                                                             ]

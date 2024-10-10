@@ -1,6 +1,6 @@
 r.d(t, {
     Ft: function () {
-        return o;
+        return _;
     },
     Ui: function () {
         return n;
@@ -42,17 +42,17 @@ class a {
             (this.value = e);
     }
 }
-function o(e, t) {
+function _(e, t) {
     let r = {};
     for (let n of Object.keys(e)) {
-        let o = e[n];
-        if ('function' != typeof o) {
-            r[n] = o;
+        let _ = e[n];
+        if ('function' != typeof _) {
+            r[n] = _;
             continue;
         }
         r[n] = function () {
             for (var e = arguments.length, r = Array(e), n = 0; n < e; n++) r[n] = arguments[n];
-            return o(
+            return _(
                 ...(function (e, t) {
                     return e.map((e) =>
                         null == e

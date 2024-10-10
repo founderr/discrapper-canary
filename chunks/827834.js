@@ -67,12 +67,12 @@ t.default = (function () {
                         description: '"date"'
                     },
                     N = 'time',
-                    O = {
+                    R = {
                         type: 'literal',
                         value: 'time',
                         description: '"time"'
                     },
-                    R = 'plural',
+                    O = 'plural',
                     v = {
                         type: 'literal',
                         value: 'plural',
@@ -245,7 +245,7 @@ t.default = (function () {
                                                         return (
                                                             (e = (function () {
                                                                 var e, n, r, i, a, s, o;
-                                                                if (((e = $), t.substr($, 6) === T ? ((n = T), ($ += 6)) : ((n = c), 0 === er && ei(S)), n === c && (t.substr($, 4) === g ? ((n = g), ($ += 4)) : ((n = c), 0 === er && ei(A)), n === c && (t.substr($, 4) === N ? ((n = N), ($ += 4)) : ((n = c), 0 === er && ei(O)))), n !== c)) {
+                                                                if (((e = $), t.substr($, 6) === T ? ((n = T), ($ += 6)) : ((n = c), 0 === er && ei(S)), n === c && (t.substr($, 4) === g ? ((n = g), ($ += 4)) : ((n = c), 0 === er && ei(A)), n === c && (t.substr($, 4) === N ? ((n = N), ($ += 4)) : ((n = c), 0 === er && ei(R)))), n !== c)) {
                                                                     if (ed() !== c) {
                                                                         if (((r = $), 44 === t.charCodeAt($) ? ((i = ','), $++) : ((i = c), 0 === er && ei(I)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? (r = i = [i, a, s]) : (($ = r), (r = c)), r === c && (r = null), r !== c)) {
                                                                             e = n = {
@@ -259,7 +259,7 @@ t.default = (function () {
                                                             })()) === c &&
                                                                 (e = (function () {
                                                                     var e, n, r, i, a;
-                                                                    if (((e = $), t.substr($, 6) === R ? ((n = R), ($ += 6)) : ((n = c), 0 === er && ei(v)), n !== c)) {
+                                                                    if (((e = $), t.substr($, 6) === O ? ((n = O), ($ += 6)) : ((n = c), 0 === er && ei(v)), n !== c)) {
                                                                         if (ed() !== c) {
                                                                             if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {

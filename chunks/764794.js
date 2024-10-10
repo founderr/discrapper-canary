@@ -20,8 +20,8 @@ t.Z = i.memo(function (e) {
     let { disabled: t, referralsRemaining: n, channel: S, isResending: g } = e,
         { enabled: A } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
         N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : g ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
-        O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : void 0,
-        [R, v] = i.useState(!1),
+        R = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : void 0,
+        [O, v] = i.useState(!1),
         [C, L] = i.useState(!1),
         y = (0, o.Z)(null, () => L(!1)),
         { analyticsLocations: D } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
@@ -43,12 +43,12 @@ t.Z = i.memo(function (e) {
                   (0, r.jsx)(a.u, {
                       text: N,
                       shouldShow: !C,
-                      'aria-label': null != O ? O : N.toString(),
+                      'aria-label': null != R ? R : N.toString(),
                       children: (e) =>
                           (0, r.jsx)('div', {
                               onMouseEnter: () => {
                                   !C &&
-                                      !R &&
+                                      !O &&
                                       (v(!0),
                                       f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: D,
@@ -63,7 +63,7 @@ t.Z = i.memo(function (e) {
                                   ...e,
                                   innerClassName: T.button,
                                   isActive: C,
-                                  'aria-label': null != O ? O : N.toString(),
+                                  'aria-label': null != R ? R : N.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
                                       L((e) => !e),
@@ -75,7 +75,7 @@ t.Z = i.memo(function (e) {
                                   },
                                   children: (0, r.jsx)(E.Z, {
                                       referralsRemaining: n,
-                                      hovered: R,
+                                      hovered: O,
                                       isResending: g,
                                       shouldShowBirthdayUX: A,
                                       isLightTheme: (0, s.ap)(M)

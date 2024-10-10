@@ -111,7 +111,7 @@ n.d(t, {
         return D;
     },
     r5: function () {
-        return eO;
+        return eR;
     },
     rt: function () {
         return eT;
@@ -213,7 +213,7 @@ async function N(e, t) {
         );
     }
 }
-async function O(e) {
+async function R(e) {
     let { stripe_payment_intent_client_secret: t } = (
         await s.tn.get({
             url: m.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
@@ -222,7 +222,7 @@ async function O(e) {
     ).body;
     return t;
 }
-async function R(e) {
+async function O(e) {
     let { stripe_payment_intent_client_secret: t, stripe_payment_intent_payment_method_id: n } = (
         await s.tn.get({
             url: m.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
@@ -932,7 +932,7 @@ async function ee(e, t) {
 async function et(e, t) {
     let n = await I.d2();
     if (null == t) throw y('Payment source cannot be null on a redirect.');
-    let { clientSecret: r, paymentMethodId: i } = await R(e);
+    let { clientSecret: r, paymentMethodId: i } = await O(e);
     if (null == n) throw y('Stripe cannot be null on a redirect.');
     if (m.j8d.has(t.type)) {
         let e = await em(t.type);
@@ -971,7 +971,7 @@ async function er(e) {
     let t = await I.d2();
     if (null == t) throw y('Stripe has not loaded.');
     if (null == e) throw y('payment intent id cannot be null.');
-    let n = await O(e),
+    let n = await R(e),
         { paymentIntent: r, error: i } = await t.retrievePaymentIntent(n);
     if (null != i) throw y(i);
     if (null == r) throw y('paymentIntent not available with successful stripe call');
@@ -1296,7 +1296,7 @@ function eA() {
 function eN() {
     o.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_RESET' });
 }
-function eO(e) {
+function eR(e) {
     o.Z.dispatch({
         type: 'USER_PAYMENT_BROWSER_CHECKOUT_STARTED',
         loadId: e

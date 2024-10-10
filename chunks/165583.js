@@ -28,8 +28,8 @@ var r = n(735250),
     g = n(424218),
     A = n(74538),
     N = n(960048),
-    O = n(861990),
-    R = n(98278),
+    R = n(861990),
+    O = n(98278),
     v = n(639119),
     C = n(197115),
     L = n(823188),
@@ -174,7 +174,7 @@ function B(e) {
             (0, r.jsx)(f.Heading, {
                 variant: 'heading-md/semibold',
                 color: 'text-normal',
-                children: b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: () => (0, R.z)() })
+                children: b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: () => (0, O.z)() })
             }),
             (0, r.jsx)(x, {
                 trialOffer: i,
@@ -215,10 +215,10 @@ function F(e) {
     });
 }
 function V(e) {
-    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: S, discountOffer: R } = e,
+    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: S, discountOffer: O } = e,
         v = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         C = (0, h.ZP)(),
-        L = (0, g.BU)(O.zz / g.XD, { useKibibytes: !0 });
+        L = (0, g.BU)(R.zz / g.XD, { useKibibytes: !0 });
     switch (u) {
         case y.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
@@ -246,7 +246,7 @@ function V(e) {
                             }),
                             (0, r.jsx)(w, {
                                 trialOffer: S,
-                                discountOffer: R,
+                                discountOffer: O,
                                 children: b.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
                                     planName: (0, A.jP)(c),
                                     onClick: () => (0, m.uL)(D.Z5c.APPLICATION_STORE)
@@ -262,7 +262,7 @@ function V(e) {
                             object: D.qAy.BUTTON_CTA
                         },
                         trialOffer: S,
-                        discountOffer: R
+                        discountOffer: O
                     })
                 ]
             });
@@ -286,7 +286,7 @@ function V(e) {
                                 }),
                                 (0, r.jsx)(w, {
                                     trialOffer: S,
-                                    discountOffer: R,
+                                    discountOffer: O,
                                     children: b.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
                                         planName: (0, A.jP)(c),
                                         onClick: () => (0, m.uL)(D.Z5c.APPLICATION_STORE)
@@ -302,7 +302,7 @@ function V(e) {
                                 object: D.qAy.BUTTON_CTA
                             },
                             trialOffer: S,
-                            discountOffer: R
+                            discountOffer: O
                         })
                     ]
                 })
@@ -327,7 +327,7 @@ function V(e) {
                             }),
                             (0, r.jsx)(w, {
                                 trialOffer: S,
-                                discountOffer: R,
+                                discountOffer: O,
                                 children: b.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
                                     planName: (0, A.jP)(c),
                                     onClick: () => (0, m.uL)(D.Z5c.APPLICATION_STORE)
@@ -343,7 +343,7 @@ function V(e) {
                             object: D.qAy.BUTTON_CTA
                         },
                         trialOffer: S,
-                        discountOffer: R
+                        discountOffer: O
                     })
                 ]
             });
@@ -402,7 +402,7 @@ function V(e) {
                             }),
                             (0, r.jsx)(w, {
                                 trialOffer: S,
-                                discountOffer: R,
+                                discountOffer: O,
                                 children: G
                             })
                         ]
@@ -424,7 +424,7 @@ function V(e) {
                     }),
                     (0, r.jsx)(w, {
                         trialOffer: S,
-                        discountOffer: R,
+                        discountOffer: O,
                         children: b.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
                             planName: (0, A.jP)(c),
                             onClick: () => (0, m.uL)(D.Z5c.APPLICATION_STORE)
@@ -436,7 +436,7 @@ function V(e) {
                         analyticsLocationObject: T,
                         onClose: o,
                         trialOffer: S,
-                        discountOffer: R
+                        discountOffer: O
                     })
                 ]
             });
@@ -445,7 +445,7 @@ function V(e) {
                 l()(null != a, 'You must specify children for this upsell type'),
                 (0, r.jsx)(w, {
                     trialOffer: S,
-                    discountOffer: R,
+                    discountOffer: O,
                     children: b.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
                         onClick: () => {
                             (0, m.uL)(D.Z5c.APPLICATION_STORE), (0, I.Mo)();
@@ -471,7 +471,7 @@ function V(e) {
                     (0, r.jsx)('div', { className: M.divider }),
                     (0, r.jsx)(w, {
                         trialOffer: S,
-                        discountOffer: R,
+                        discountOffer: O,
                         className: M.messageLengthBrandedContainer,
                         subscriptionTier: c,
                         children: b.Z.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
@@ -486,7 +486,7 @@ function V(e) {
                         analyticsLocationObject: T,
                         onClose: o,
                         trialOffer: S,
-                        discountOffer: R
+                        discountOffer: O
                     })
                 ]
             });
@@ -506,7 +506,7 @@ function V(e) {
         case y.cd.TRY_IT_OUT_MODAL_UPSELL:
             return (0, r.jsx)(F, {
                 trialOffer: S,
-                discountOffer: R,
+                discountOffer: O,
                 headingText: t,
                 context: i,
                 children: a
@@ -519,7 +519,7 @@ function V(e) {
                     context: i,
                     children: a,
                     trialOffer: S,
-                    discountOffer: R
+                    discountOffer: O
                 })
             );
     }

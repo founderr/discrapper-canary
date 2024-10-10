@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(58995),
     A = n(897291),
     N = n(764794),
-    O = n(241553),
-    R = n(319417),
+    R = n(241553),
+    O = n(319417),
     v = n(728386),
     C = n(474936),
     L = n(933283);
@@ -40,7 +40,7 @@ function y(e) {
               channel: n
           })
         : l
-          ? (0, r.jsx)(O.Z, {
+          ? (0, r.jsx)(R.Z, {
                 disabled: t,
                 channel: n
             })
@@ -50,7 +50,7 @@ function y(e) {
             });
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, E, g, A, O;
+    var t, n, i, _, E, g, A, R;
     let { type: D, disabled: b, channel: M, handleSubmit: P, isEmpty: U, showAllButtons: w } = e,
         x = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         G = (0, s.e7)([h.Z], () => h.Z.getStickerPreview(M.id, D.drafts.type)),
@@ -123,7 +123,7 @@ t.Z = i.memo(function (e) {
                     'gif'
                 )
             ),
-        (null === (O = D.stickers) || void 0 === O ? void 0 : O.button) != null &&
+        (null === (R = D.stickers) || void 0 === R ? void 0 : R.button) != null &&
             null == F &&
             w &&
             Z.push(
@@ -152,7 +152,7 @@ t.Z = i.memo(function (e) {
         ((null === (i = D.submit) || void 0 === i ? void 0 : i.ignorePreference) || x) &&
         Z.push(
             (0, r.jsx)(
-                R.Z,
+                O.Z,
                 {
                     onClick: P,
                     disabled: b || (0 === B.length && U && !k)

@@ -1,11 +1,11 @@
 r.d(t, {
     ZN: function () {
-        return o;
+        return _;
     }
 });
 var n = r(147498),
     a = r(939747);
-let o = {
+let _ = {
     [n.JM]: class e {
         constructor(e) {
             this._value = e;

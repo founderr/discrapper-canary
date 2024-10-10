@@ -87,8 +87,8 @@ let T = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = f.b_.position, enableClick: c = !0 } = e,
             [I, T] = i.useState(String(Date.now())),
             [S, A] = i.useState(!1),
-            [N, O] = i.useState(!1),
-            R = function () {
+            [N, R] = i.useState(!1),
+            O = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, r.jsx)(u.Z, {
                     ...e,
@@ -127,7 +127,7 @@ let T = (e) => {
                             onClick: c
                                 ? (t) => {
                                       var n;
-                                      A(!1), O(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                      A(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
                                   }
                                 : void 0,
                             onMouseLeave: () => {
@@ -135,7 +135,7 @@ let T = (e) => {
                             },
                             tag: 'span',
                             className: s()(m.emojiContainer, { [m.emojiContainerClickable]: c }),
-                            children: R(t)
+                            children: O(t)
                         })
                 });
         return c
@@ -143,7 +143,7 @@ let T = (e) => {
                   animation: l.Popout.Animation.FADE,
                   align: 'center',
                   onRequestClose: () => {
-                      _.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1), O(!1);
+                      _.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1), R(!1);
                   },
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,

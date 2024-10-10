@@ -89,11 +89,11 @@ function p(e) {
         [S, g] = (0, s.useState)(null),
         [A, N] = (0, s.useState)(null);
     if ((u && ((S = u), 'hour' in u && (A = u)), E && !(f in E))) throw Error('Invalid granularity ' + f + ' for value ' + E.toString());
-    let O = (e, t) => {
+    let R = (e, t) => {
             c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), g(null), N(null);
         },
-        R = e.isInvalid || 'invalid' === e.validationState || l(u, e.minValue, e.maxValue) || (u && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, u))),
-        v = e.validationState || (R ? 'invalid' : null);
+        O = e.isInvalid || 'invalid' === e.validationState || l(u, e.minValue, e.maxValue) || (u && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, u))),
+        v = e.validationState || (O ? 'invalid' : null);
     return {
         value: u,
         setValue: c,
@@ -101,19 +101,19 @@ function p(e) {
         timeValue: A,
         setDateValue: (t) => {
             let n = 'function' == typeof T ? T() : T;
-            m ? (A || n ? O(t, A || _(e.placeholderValue)) : g(t)) : c(t), n && o.setOpen(!1);
+            m ? (A || n ? R(t, A || _(e.placeholderValue)) : g(t)) : c(t), n && o.setOpen(!1);
         },
         setTimeValue: (e) => {
-            S && e ? O(S, e) : N(e);
+            S && e ? R(S, e) : N(e);
         },
         granularity: f,
         hasTime: m,
         ...o,
         setOpen(t) {
-            !t && !u && S && m && O(S, A || _(e.placeholderValue)), o.setOpen(t);
+            !t && !u && S && m && R(S, A || _(e.placeholderValue)), o.setOpen(t);
         },
         validationState: v,
-        isInvalid: R,
+        isInvalid: O,
         formatValue(t, n) {
             if (!I) return '';
             let i = d(n, {
@@ -531,10 +531,10 @@ function g(e) {
     let { locale: i, createCalendar: o, hideTimeZone: u, isDisabled: c, isReadOnly: _, isRequired: p } = e,
         g = e.value || e.defaultValue || e.placeholderValue,
         [A, N] = h(g, e.granularity),
-        O = N || 'UTC';
+        R = N || 'UTC';
     if (g && !(A in g)) throw Error('Invalid granularity ' + A + ' for value ' + g.toString());
-    let R = (0, s.useMemo)(() => new r.CN(i), [i]),
-        v = (0, s.useMemo)(() => o(R.resolvedOptions().calendar), [o, R]),
+    let O = (0, s.useMemo)(() => new r.CN(i), [i]),
+        v = (0, s.useMemo)(() => o(O.resolvedOptions().calendar), [o, O]),
         [C, L] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
         y = (0, s.useMemo)(() => E(C, v), [C, v]),
         [D, b] = (0, s.useState)(() => f(e.placeholderValue, A, v, N)),
@@ -578,7 +578,7 @@ function g(e) {
                 i = Object.keys(k);
             null == t ? (L(null), b(f(e.placeholderValue, A, v, N)), F({})) : n.length >= i.length || (n.length === i.length - 1 && k.dayPeriod && !B.dayPeriod && 'dayPeriod' !== V.current) ? L((t = (0, r.Mw)(t, (null == g ? void 0 : g.calendar) || new r.IQ()))) : b(t), (V.current = null);
         },
-        j = (0, s.useMemo)(() => Z.toDate(O), [Z, O]),
+        j = (0, s.useMemo)(() => Z.toDate(R), [Z, R]),
         W = (0, s.useMemo)(
             () =>
                 x.formatToParts(j).map((e) => {
@@ -811,23 +811,23 @@ function A(e) {
         S = 'hour' === T || 'minute' === T || 'second' === T,
         g = null === (o = e.shouldCloseOnSelect) || void 0 === o || o,
         [A, N] = (0, s.useState)(null),
-        [O, R] = (0, s.useState)(null);
-    I && I.start && I.end && ((A = I), 'hour' in I.start && (O = I));
+        [R, O] = (0, s.useState)(null);
+    I && I.start && I.end && ((A = I), 'hour' in I.start && (R = I));
     let v = (e, t) => {
             m({
                 start: 'timeZone' in t.start ? t.start.set((0, r.WG)(e.start)) : (0, r.IO)(e.start, t.start),
                 end: 'timeZone' in t.end ? t.end.set((0, r.WG)(e.end)) : (0, r.IO)(e.end, t.end)
             }),
                 N(null),
-                R(null);
+                O(null);
         },
         C = (t) => {
             let n = 'function' == typeof g ? g() : g;
             S
-                ? n || (t.start && t.end && (null == O ? void 0 : O.start) && (null == O ? void 0 : O.end))
+                ? n || (t.start && t.end && (null == R ? void 0 : R.start) && (null == R ? void 0 : R.end))
                     ? v(t, {
-                          start: (null == O ? void 0 : O.start) || _(e.placeholderValue),
-                          end: (null == O ? void 0 : O.end) || _(e.placeholderValue)
+                          start: (null == R ? void 0 : R.start) || _(e.placeholderValue),
+                          end: (null == R ? void 0 : R.end) || _(e.placeholderValue)
                       })
                     : N(t)
                 : t.start && t.end
@@ -836,7 +836,7 @@ function A(e) {
                 n && u.setOpen(!1);
         },
         L = (e) => {
-            (null == A ? void 0 : A.start) && (null == A ? void 0 : A.end) && e.start && e.end ? v(A, e) : R(e);
+            (null == A ? void 0 : A.start) && (null == A ? void 0 : A.end) && e.start && e.end ? v(A, e) : O(e);
         },
         y = e.isInvalid || 'invalid' === e.validationState || (null != I && (l(I.start, e.minValue, e.maxValue) || l(I.end, e.minValue, e.maxValue) || (null != I.end && null != I.start && 0 > I.end.compare(I.start)) || ((null == I ? void 0 : I.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, I.start))) || ((null == I ? void 0 : I.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, I.end))))),
         D = e.validationState || (y ? 'invalid' : null);
@@ -844,7 +844,7 @@ function A(e) {
         value: I,
         setValue: m,
         dateRange: A,
-        timeRange: O,
+        timeRange: R,
         granularity: T,
         hasTime: S,
         setDate(e, t) {
@@ -855,7 +855,7 @@ function A(e) {
         },
         setTime(e, t) {
             L({
-                ...O,
+                ...R,
                 [e]: t
             });
         },
@@ -875,8 +875,8 @@ function A(e) {
                 (null == A ? void 0 : A.end) &&
                 S &&
                 v(A, {
-                    start: (null == O ? void 0 : O.start) || _(e.placeholderValue),
-                    end: (null == O ? void 0 : O.end) || _(e.placeholderValue)
+                    start: (null == R ? void 0 : R.start) || _(e.placeholderValue),
+                    end: (null == R ? void 0 : R.end) || _(e.placeholderValue)
                 }),
                 u.setOpen(t);
         },
@@ -941,12 +941,12 @@ function N(e) {
         _ = e.defaultValue && 'timeZone' in e.defaultValue ? e.defaultValue.timeZone : void 0,
         E = (0, s.useMemo)(() => {
             let e = c && 'timeZone' in c ? c.timeZone : void 0;
-            return (e || _) && t ? (0, r.fW)(O(t), e || _) : O(t);
+            return (e || _) && t ? (0, r.fW)(R(t), e || _) : R(t);
         }, [t, c, _]),
-        f = (0, s.useMemo)(() => O(n, d), [n, d]),
-        h = (0, s.useMemo)(() => O(i, d), [i, d]),
+        f = (0, s.useMemo)(() => R(n, d), [n, d]),
+        h = (0, s.useMemo)(() => R(i, d), [i, d]),
         p = (0, s.useMemo)(() => (l && 'day' in l ? (0, r.ZB)(l) : l), [l]),
-        I = (0, s.useMemo)(() => (null == l ? null : O(l)), [l]);
+        I = (0, s.useMemo)(() => (null == l ? null : R(l)), [l]);
     return {
         ...g({
             ...e,
@@ -965,6 +965,6 @@ function N(e) {
         timeValue: p
     };
 }
-function O(e, t = (0, r.Lg)((0, r.iT)())) {
+function R(e, t = (0, r.Lg)((0, r.iT)())) {
     return e ? ('day' in e ? e : (0, r.IO)(t, e)) : null;
 }

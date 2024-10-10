@@ -12,7 +12,7 @@ n.d(t, {
         return L;
     },
     dv: function () {
-        return O;
+        return R;
     },
     rS: function () {
         return A;
@@ -119,7 +119,7 @@ function N(e, t) {
         })
     );
 }
-async function O(e) {
+async function R(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await a.tn.patch({
@@ -134,7 +134,7 @@ async function O(e) {
         throw new l.Z(e);
     }
 }
-function R(e) {
+function O(e) {
     if (f.Z.totalUnavailableGuilds > 0 || !_.Z.isConnected()) return e;
     let t = e
         .map((e) => {
@@ -154,7 +154,7 @@ function C(e) {
         E.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
-                ((e.emojis = R(e.emojis)), i().size(e.emojis) >= m.oX)
+                ((e.emojis = O(e.emojis)), i().size(e.emojis) >= m.oX)
                     ? (p.Z.show({
                           title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
                           body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: m.oX })
@@ -170,7 +170,7 @@ function L(e) {
         E.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
-                if (((e.emojis = R(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             m.fy.INFREQUENT_USER_ACTION

@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     aq: function () {
-        return O;
+        return R;
     },
     iD: function () {
         return m;
@@ -109,7 +109,7 @@ function N(e, t) {
             roles: r
         });
 }
-function O(e, t) {
+function R(e, t) {
     T(e, {
         type: h.z.NEW_MEMBER,
         ...t

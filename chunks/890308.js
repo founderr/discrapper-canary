@@ -74,7 +74,7 @@
             }
             return S(_);
         }
-        function O(e) {
+        function R(e) {
             var t,
                 n,
                 r,
@@ -113,10 +113,10 @@
                     encode: S
                 },
                 decode: N,
-                encode: O,
+                encode: R,
                 toASCII: function (e) {
                     return m(e, function (e) {
-                        return c.test(e) ? 'xn--' + O(e) : e;
+                        return c.test(e) ? 'xn--' + R(e) : e;
                     });
                 },
                 toUnicode: function (e) {

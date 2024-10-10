@@ -35,8 +35,8 @@ let g = {
         [S.Hk]: { ...g }
     },
     N = '',
-    O = !1,
-    R = 'unset',
+    R = !1,
+    O = 'unset',
     v = null,
     C = S.Hk,
     L = null,
@@ -67,13 +67,13 @@ class P extends (a = f.ZP.Store) {
         this.waitFor(I.default);
     }
     isFetching() {
-        return O || null == v || null == m.Z.lastFetched;
+        return R || null == v || null == m.Z.lastFetched;
     }
     isFetchingSearch() {
-        return 'fetching' === R;
+        return 'fetching' === O;
     }
     hasSearchError() {
-        return 'failed' === R;
+        return 'failed' === O;
     }
     getDiscoverableGuilds() {
         return A;
@@ -120,7 +120,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_START: function (e) {
             let { section: t } = e;
-            (O = !0),
+            (R = !0),
                 (A = {
                     ...A,
                     [t]: {
@@ -131,7 +131,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_SUCCESS: function (e) {
             let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
-            (O = !1), (v = Date.now()), (D = (0, p.P)());
+            (R = !1), (v = Date.now()), (D = (0, p.P)());
             let s = E().map(t, M);
             A = {
                 ...A,
@@ -147,7 +147,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_FAILURE: function (e) {
             let { section: t } = e;
-            (O = !1),
+            (R = !1),
                 (A = {
                     ...A,
                     [t]: {
@@ -158,7 +158,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_POPULAR_FETCH_START: function (e) {
             let { categoryId: t } = e;
-            (O = !0),
+            (R = !0),
                 (A = {
                     ...A,
                     [t]: {
@@ -170,7 +170,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_POPULAR_FETCH_SUCCESS: function (e) {
             let { categoryId: t, guilds: n } = e;
-            (O = !1), (v = Date.now());
+            (R = !1), (v = Date.now());
             let r = E().map(n, M);
             A = {
                 ...A,
@@ -184,7 +184,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_POPULAR_FETCH_FAILURE: function (e) {
             let { categoryId: t } = e;
-            (O = !1),
+            (R = !1),
                 (A = {
                     ...A,
                     [t]: {
@@ -197,7 +197,7 @@ class P extends (a = f.ZP.Store) {
             var t;
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
-                (R = 'fetching'),
+                (O = 'fetching'),
                 (A = {
                     ...A,
                     [n]: {
@@ -236,13 +236,13 @@ class P extends (a = f.ZP.Store) {
                 }
             }),
                 (N = o),
-                (R = 'succeeded');
+                (O = 'succeeded');
         },
         GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function (e) {
             var t;
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
-                (R = 'failed'),
+                (O = 'failed'),
                 (A = {
                     ...A,
                     [n]: {

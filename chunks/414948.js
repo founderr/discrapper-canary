@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     Pf: function () {
-        return O;
+        return R;
     },
     bt: function () {
         return a;
@@ -171,7 +171,7 @@ function A(e) {
 function N() {
     return A(/^iPhone/i) || A(/^iPad/i) || (A(/^Mac/i) && navigator.maxTouchPoints > 1);
 }
-function O() {
+function R() {
     return (
         g(/AppleWebKit/i) &&
         !(function () {

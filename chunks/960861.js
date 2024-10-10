@@ -31,8 +31,8 @@ var r,
     A = n(65154);
 ((r = o || (o = {}))[(r.Present = 0)] = 'Present'), (r[(r.Update = 1)] = 'Update'), (r[(r.Cancel = 2)] = 'Cancel'), (r[(r.Error = 3)] = 'Error');
 let N = !1,
-    O = 0,
     R = 0,
+    O = 0,
     v = !1,
     C = {};
 function L() {
@@ -42,7 +42,7 @@ function y() {
     return L() && E.Z.getCurrentConfig({ location: 'NativeScreenSharePickerStore_enabled' }, { autoTrackExposure: !1 }).enableSystemPicker;
 }
 function D() {
-    let e = y() && (R > 0 || (N && 0 === O));
+    let e = y() && (O > 0 || (N && 0 === R));
     if (e !== v) {
         var t, n;
         (v = e), null === (n = p.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, v);
@@ -51,10 +51,10 @@ function D() {
 function b() {
     return (0, u.useEffect)(
         () => (
-            O++,
+            R++,
             D(),
             () => {
-                0 == --O && D();
+                0 == --R && D();
             }
         ),
         []
@@ -63,10 +63,10 @@ function b() {
 function M() {
     return (0, u.useEffect)(
         () => (
-            R++,
+            O++,
             D(),
             () => {
-                --R, D();
+                --O, D();
             }
         ),
         []
@@ -105,7 +105,7 @@ class U extends (l = c.ZP.Store) {
 t.ZP = new U(d.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: function (e) {
         let { existing: t } = e;
-        if (((C = { lastPickerAction: 1 }), 0 === O && !t)) {
+        if (((C = { lastPickerAction: 1 }), 0 === R && !t)) {
             let e = f.Z.getChannel(m.Z.getVoiceChannelId());
             null != e && (0, S.Z)(p.Z) && (0, T.JL)(e, h.Z, I.Z, !1) && (0, _.WH)(e.getGuildId(), e.id, { sourceId: 'prepicked:0' });
         }

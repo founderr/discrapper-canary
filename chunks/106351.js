@@ -1,7 +1,7 @@
 var n, a;
 r.d(t, {
     T: function () {
-        return o;
+        return _;
     },
     d: function () {
         return n;
@@ -24,7 +24,7 @@ r.d(t, {
     (a[(a.GUILD_MEDIA = 16)] = 'GUILD_MEDIA'),
     (a[(a.LOBBY = 17)] = 'LOBBY'),
     (a[(a.UNKNOWN = 10000)] = 'UNKNOWN');
-let o = {
+let _ = {
     CALLABLE: new Set([1, 3]),
     TEXTUAL: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13]),
     GUILD_THREADS_ONLY: new Set([15, 16]),

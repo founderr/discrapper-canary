@@ -1,9 +1,9 @@
 n.d(t, {
     E: function () {
-        return O;
+        return R;
     },
     Z: function () {
-        return R;
+        return O;
     }
 });
 var r = n(735250),
@@ -27,7 +27,7 @@ var r = n(735250),
     g = n(981631),
     A = n(65154),
     N = n(689938);
-function O(e, t, n) {
+function R(e, t, n) {
     let r = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipantId(e.id)),
         i = (0, a.e7)([h.Z], () => (null != r ? h.Z.getActiveStreamForStreamKey(r) : null), [r]);
     return (0, a.Wu)(
@@ -44,14 +44,14 @@ function O(e, t, n) {
         [e, i, n, t]
     );
 }
-function R(e) {
+function O(e) {
     var t, n, c;
-    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: R = !1, showReportOption: v = !1, handleGoLive: C, onClose: L, onSelect: y, appContext: D = g.IlC.APP } = e,
+    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: O = !1, showReportOption: v = !1, handleGoLive: C, onClose: L, onSelect: y, appContext: D = g.IlC.APP } = e,
         b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
         M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled),
         P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS),
         U = null !== (c = m.find((e) => e.ownerId === (null == I ? void 0 : I.id))) && void 0 !== c ? c : null,
-        w = O(h, I, m),
+        w = R(h, I, m),
         x = (0, _.Z)(U, D),
         G = (0, d.Z)(U, D, g.VqG),
         k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)),
@@ -163,7 +163,7 @@ function R(e) {
                         );
                     })
                 }),
-                R ? null : j
+                O ? null : j
             ]
         })
     });

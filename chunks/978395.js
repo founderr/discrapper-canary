@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 });
 var r = n(735250);
@@ -25,9 +25,9 @@ var i = n(442837),
     g = n(228168),
     A = n(981631),
     N = n(451563);
-function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, guild: R, isHovering: v, onOpenProfile: C, channelId: L, onClose: y } = e,
-        D = u.ZP.getName(null == R ? void 0 : R.id, L, t),
+function R(e) {
+    let { user: t, currentUser: n, displayProfile: R, guild: O, isHovering: v, onOpenProfile: C, channelId: L, onClose: y } = e,
+        D = u.ZP.getName(null == O ? void 0 : O.id, L, t),
         b = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         M = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, r.jsxs)(a.Scroller, {
@@ -39,15 +39,15 @@ function O(e) {
                 profileType: g.y0.BITE_SIZE,
                 onOpenProfile: C,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
+                    t.hasAvatarForGuild(null == O ? void 0 : O.id) &&
                     (0, r.jsx)(m.Z, {
                         user: t,
                         nickname: D
                     }),
                 nickname: D,
-                pronouns: null == O ? void 0 : O.pronouns,
+                pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(c.Z, {
-                    displayProfile: O,
+                    displayProfile: R,
                     profileType: g.y0.BITE_SIZE,
                     onClose: y
                 }),
@@ -67,7 +67,7 @@ function O(e) {
                 (0, r.jsx)(f.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == R ? void 0 : R.id,
+                        guildId: null == O ? void 0 : O.id,
                         channelId: L
                     })
                 }),
@@ -80,7 +80,7 @@ function O(e) {
                 ? (0, r.jsx)(s.Z, { look: 'profile' })
                 : (0, r.jsx)(I.Z, {
                       user: t,
-                      bio: null == O ? void 0 : O.bio,
+                      bio: null == R ? void 0 : R.bio,
                       hidePersonalInformation: M,
                       onClose: y
                   }),
@@ -90,11 +90,11 @@ function O(e) {
                 onClose: y,
                 className: N.activity
             }),
-            null != R &&
+            null != O &&
                 (0, r.jsx)(T.Z, {
                     user: t,
                     currentUser: n,
-                    guild: R
+                    guild: O
                 })
         ]
     });

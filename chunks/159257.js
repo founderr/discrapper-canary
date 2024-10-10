@@ -60,12 +60,12 @@ function _(e, t, n) {
                 ('rtl' === h || f) && (d = 1 - d);
                 let _ = t.getPercentValue(d),
                     E = t.values.findIndex((e) => _ - e < 0);
-                (e = 0 === E ? E : -1 === E ? t.values.length - 1 : Math.abs(t.values[E - 1] - _) < Math.abs(t.values[E] - _) ? E - 1 : E) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (m.current = e), t.setFocusedThumb(e), (A.current = i), t.setThumbDragging(m.current, !0), t.setThumbValue(e, _), p(window, 'mouseup', O, !1), p(window, 'touchend', O, !1), p(window, 'pointerup', O, !1)) : (m.current = null);
+                (e = 0 === E ? E : -1 === E ? t.values.length - 1 : Math.abs(t.values[E - 1] - _) < Math.abs(t.values[E] - _) ? E - 1 : E) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (m.current = e), t.setFocusedThumb(e), (A.current = i), t.setThumbDragging(m.current, !0), t.setThumbValue(e, _), p(window, 'mouseup', R, !1), p(window, 'touchend', R, !1), p(window, 'pointerup', R, !1)) : (m.current = null);
             }
         },
-        O = (e) => {
+        R = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === A.current && (null != m.current && (t.setThumbDragging(m.current, !1), (m.current = null)), I(window, 'mouseup', O, !1), I(window, 'touchend', O, !1), I(window, 'pointerup', O, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === A.current && (null != m.current && (t.setThumbDragging(m.current, !1), (m.current = null)), I(window, 'mouseup', R, !1), I(window, 'touchend', R, !1), I(window, 'pointerup', R, !1));
         };
     return (
         'htmlFor' in _ &&
@@ -112,12 +112,12 @@ function E(e, t) {
         S = e.isDisabled || t.isDisabled,
         g = 'vertical' === m,
         { direction: A } = (0, l.bU)(),
-        { addGlobalListener: N, removeGlobalListener: O } = (0, r.xi)(),
-        R = c.get(t),
+        { addGlobalListener: N, removeGlobalListener: R } = (0, r.xi)(),
+        O = c.get(t),
         { labelProps: v, fieldProps: C } = (0, o.N)({
             ...e,
             id: d(t, _),
-            'aria-labelledby': `${R.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
+            'aria-labelledby': `${O.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
         }),
         L = t.values[_],
         y = (0, a.useCallback)(() => {
@@ -184,7 +184,7 @@ function E(e, t) {
         },
         k = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (y(), t.setThumbDragging(_, !1), O(window, 'mouseup', k, !1), O(window, 'touchend', k, !1), O(window, 'pointerup', k, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (y(), t.setThumbDragging(_, !1), R(window, 'mouseup', k, !1), R(window, 'touchend', k, !1), R(window, 'pointerup', k, !1));
         },
         B = t.getThumbPercent(_);
     (g || 'rtl' === A) && (B = 1 - B);
@@ -220,8 +220,8 @@ function E(e, t) {
                 'aria-required': E || void 0,
                 'aria-invalid': h || 'invalid' === f || void 0,
                 'aria-errormessage': e['aria-errormessage'],
-                'aria-describedby': [R['aria-describedby'], e['aria-describedby']].filter(Boolean).join(' '),
-                'aria-details': [R['aria-details'], e['aria-details']].filter(Boolean).join(' '),
+                'aria-describedby': [O['aria-describedby'], e['aria-describedby']].filter(Boolean).join(' '),
+                'aria-details': [O['aria-details'], e['aria-details']].filter(Boolean).join(' '),
                 onChange: (e) => {
                     t.setThumbValue(_, parseFloat(e.target.value));
                 }

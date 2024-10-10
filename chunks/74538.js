@@ -15,7 +15,7 @@ n.d(t, {
         return L.I5;
     },
     JE: function () {
-        return eO;
+        return eR;
     },
     JP: function () {
         return Z;
@@ -39,7 +39,7 @@ n.d(t, {
         return X;
     },
     Qo: function () {
-        return eR;
+        return eO;
     },
     Rd: function () {
         return W;
@@ -180,8 +180,8 @@ var _ = n(782568),
     g = n(509545),
     A = n(78839),
     N = n(122289),
-    O = n(55935),
-    R = n(424218),
+    R = n(55935),
+    O = n(424218),
     v = n(358085),
     C = n(380684),
     L = n(111361),
@@ -477,8 +477,8 @@ function X(e) {
 function $(e) {
     var t, n, r, i, a, s, o, l, u, d, E, f, h;
     let { subscription: p, planId: I, price: T, includePremiumGuilds: S, hasDiscountApplied: g, activeDiscountInfo: A, renewalInvoicePreview: N } = e,
-        R = M.GP[I],
-        v = ex(F(R.id), R.interval),
+        O = M.GP[I],
+        v = ex(F(O.id), O.interval),
         C = eh(p) || (null == p.paymentSourceId && !p.isPurchasedExternally && !(null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium())),
         L = null != T,
         y = p.status === D.O0b.UNPAID && null !== p.latestInvoice && (null === (n = p.latestInvoice) || void 0 === n ? void 0 : n.status) === D.hUK.OPEN,
@@ -507,7 +507,7 @@ function $(e) {
                     return U.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (s = p.pauseEndsAt) && void 0 !== s ? s : void 0 });
                 case D.O0b.PAST_DUE:
                     return U.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, O.vc)(eu(p).expiresDate, 'LL'),
+                        endDate: (0, R.vc)(eu(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
@@ -536,7 +536,7 @@ function $(e) {
                     return U.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: null !== (o = p.pauseEndsAt) && void 0 !== o ? o : void 0 });
                 case D.O0b.PAST_DUE:
                     return U.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, O.vc)(eu(p).expiresDate, 'LL'),
+                        endDate: (0, R.vc)(eu(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
@@ -589,7 +589,7 @@ function $(e) {
                     return U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: c()(p.currentPeriodStart).add(M.A5, 'days').toDate() });
                 case D.O0b.PAST_DUE:
                     return U.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, O.vc)(eu(p).expiresDate, 'LL'),
+                        endDate: (0, R.vc)(eu(p).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
@@ -1006,7 +1006,7 @@ function eN(e) {
             throw Error('Unsupported interval duration.');
     }
 }
-function eO(e, t) {
+function eR(e, t) {
     switch (e) {
         case D.gg$.APPLE_PARTNER:
         case D.gg$.APPLE:
@@ -1016,7 +1016,7 @@ function eO(e, t) {
     }
     throw Error('Invalid external payment gateway '.concat(e));
 }
-function eR(e, t) {
+function eO(e, t) {
     return (0, L.I5)(e) || ep(null == t ? void 0 : t.status);
 }
 function ev(e, t) {
@@ -1095,7 +1095,7 @@ function eb(e) {
 function eM(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { useSpace: !0 },
         n = M.a1[e].fileSize;
-    return (0, R.BU)(n / 1024, {
+    return (0, O.BU)(n / 1024, {
         useKibibytes: !0,
         useSpace: t.useSpace
     });
@@ -1231,7 +1231,7 @@ t.ZP = Object.freeze({
                 ? U.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
                       endDate: t.toDate(),
                       paymentGatewayName: P.Vz[e.paymentGateway],
-                      paymentSourceLink: eO(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
+                      paymentSourceLink: eR(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
                   })
                 : U.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
                       endDate: t.toDate(),
@@ -1247,7 +1247,7 @@ t.ZP = Object.freeze({
                 ? U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
                       endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
                       paymentGatewayName: P.Vz[e.paymentGateway],
-                      paymentSourceLink: eO(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
+                      paymentSourceLink: eR(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
                   })
                 : U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
                       endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
@@ -1264,7 +1264,7 @@ t.ZP = Object.freeze({
                     ? U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
                           renewalDate: t.subscriptionPeriodStart,
                           paymentGatewayName: P.Vz[e.paymentGateway],
-                          subscriptionManagementLink: eO(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                          subscriptionManagementLink: eR(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                       })
                     : a
                       ? U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({

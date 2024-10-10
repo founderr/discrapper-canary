@@ -25,29 +25,29 @@ var r = n(735250),
     A = n(689938);
 function N(e) {
     let { user: t, closePopout: n, ...N } = e,
-        O = (0, a.e7)([m.Z], () => {
+        R = (0, a.e7)([m.Z], () => {
             var e;
             return null === (e = m.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        R = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
+        O = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
         v = (0, a.e7)([_.Z], () => {
             var e;
-            return null === (e = _.Z.getChannel(R)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = _.Z.getChannel(O)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        C = (0, o.Z)({ channelId: null != R ? R : void 0 }),
+        C = (0, o.Z)({ channelId: null != O ? O : void 0 }),
         L = t.id,
         y = i.useCallback(() => {
-            null != O &&
+            null != R &&
                 (C
-                    ? (l.__(u._b.TEXT, d.I.NORMAL, { applicationId: O.id }), (0, s.closeModal)((0, T.z)(L, v)), null == n || n(), f.default.track(g.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: O.id }))
+                    ? (l.__(u._b.TEXT, d.I.NORMAL, { applicationId: R.id }), (0, s.closeModal)((0, T.z)(L, v)), null == n || n(), f.default.track(g.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id }))
                     : (0, I.LO)({
-                          applicationId: O.id,
-                          ...O
+                          applicationId: R.id,
+                          ...R
                       }));
-        }, [C, O, L, v, n]),
+        }, [C, R, L, v, n]),
         D = C ? A.Z.Messages.APP_LAUNCHER_OPEN_APP : A.Z.Messages.APPLICATION_ADD_BUTTON;
-    if (null == O || !(0, I.Eb)(O)) return null;
-    let { customInstallUrl: b } = O,
+    if (null == R || !(0, I.Eb)(R)) return null;
+    let { customInstallUrl: b } = R,
         M = null == b || p.Z.isDiscordUrl(b) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
         P = C ? void 0 : M;
     return h.wS
@@ -63,7 +63,7 @@ function N(e) {
                           children: (0, r.jsx)(s.MenuItem, {
                               id: 'copy',
                               label: A.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-                              action: () => (0, h.JG)((0, c.J)(O))
+                              action: () => (0, h.JG)((0, c.J)(R))
                           })
                       })
                   });

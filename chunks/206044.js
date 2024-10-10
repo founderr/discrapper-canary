@@ -14,8 +14,8 @@ var s = n(735250),
     C = n(210887),
     h = n(572004),
     _ = n(617136),
-    g = n(113434),
-    T = n(497505),
+    T = n(113434),
+    g = n(497505),
     p = n(918701),
     S = n(475595),
     j = n(566078),
@@ -28,8 +28,8 @@ var s = n(735250),
     R = n(689938),
     A = n(128175);
 let Z = (0, r.animated)(c.ChevronSmallDownIcon),
-    O = (0, r.animated)(x.Z),
-    b = (e) => {
+    b = (0, r.animated)(x.Z),
+    O = (e) => {
         let { quest: t, location: n, questContentPosition: i, ...o } = e,
             [r, l] = a.useState(!1),
             u = a.useRef(new d.V7());
@@ -72,7 +72,7 @@ let Z = (0, r.animated)(c.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: i, isQuestExpired: d, quest: x, location: h, size: p, expansionSpring: D, isAnimating: U, isExpanded: Q, isInConcurrentQuestExperiment: L, contentPosition: y, toggleExpanded: B } = e,
+    let { isFocused: i, isQuestExpired: d, quest: x, location: h, size: p, expansionSpring: U, isAnimating: D, isExpanded: Q, isInConcurrentQuestExperiment: y, contentPosition: L, toggleExpanded: B } = e,
         { ref: P, height: w } = (0, m.Z)(),
         { ref: k, width: H, scrollWidth: W } = (0, m.Z)(),
         G = (0, u.e7)([C.Z], () => C.Z.getState().theme),
@@ -80,15 +80,15 @@ t.Z = (e) => {
         X = a.useMemo(() => (0, S.fh)(x, S.Bd.HERO), [x]),
         Y = a.useRef(null),
         z = (0, I.uq)(h),
-        K = h === T.jn.QUESTS_EMBED,
-        V = (0, g.t5)(x, q.dr.QUESTS_CARD, h),
+        K = h === g.jn.QUESTS_EMBED,
+        V = (0, T.t5)(x, q.dr.QUESTS_CARD, h),
         J = (null === (t = x.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        $ = (0, g.B6)(x.config.expiresAt, {
+        $ = (0, T.B6)(x.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        ee = (0, g.B6)(j.r.build(x.config).rewardsExpireAt, {
+        ee = (0, T.B6)(j.r.build(x.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -101,7 +101,7 @@ t.Z = (e) => {
                     questId: x.id,
                     questContent: h,
                     questContentCTA: Q ? _.jZ.COLLAPSE : _.jZ.EXPAND,
-                    questContentPosition: y
+                    questContentPosition: L
                 });
         };
     return (
@@ -117,9 +117,9 @@ t.Z = (e) => {
             'aria-label': R.Z.Messages.EXPAND,
             style: { height: z ? w : void 0 },
             children: [
-                (0, s.jsx)(O, {
+                (0, s.jsx)(b, {
                     style: {
-                        opacity: D.to({
+                        opacity: U.to({
                             range: [0, 1],
                             output: [0.25, 1]
                         })
@@ -148,7 +148,7 @@ t.Z = (e) => {
                             className: o()(A.headerContent, { [A.headerContentEmbed]: K }),
                             style: {
                                 y: z
-                                    ? D.to({
+                                    ? U.to({
                                           range: [0, 1],
                                           output: [I.DJ, 0]
                                       })
@@ -159,13 +159,13 @@ t.Z = (e) => {
                                     (0, s.jsx)(r.animated.div, {
                                         className: A.headerCollapsedContent,
                                         style: {
-                                            opacity: D.to({
+                                            opacity: U.to({
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             }),
-                                            visibility: U || !Q ? 'inherit' : 'hidden'
+                                            visibility: D || !Q ? 'inherit' : 'hidden'
                                         },
-                                        'aria-hidden': !U && Q,
+                                        'aria-hidden': !D && Q,
                                         children: (0, s.jsxs)(c.ClickableContainer, {
                                             'aria-label': R.Z.Messages.EXPAND,
                                             onClick: et,
@@ -213,13 +213,13 @@ t.Z = (e) => {
                                         [A.outerContainerEmbed]: K
                                     }),
                                     style: {
-                                        opacity: D.to({
+                                        opacity: U.to({
                                             range: [0, 1],
                                             output: [0, 1]
                                         }),
-                                        visibility: U || Q ? 'inherit' : 'hidden'
+                                        visibility: D || Q ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !U && !Q,
+                                    'aria-hidden': !D && !Q,
                                     children: [
                                         (0, s.jsxs)('div', {
                                             className: A.headerExpandedWrapper,
@@ -261,10 +261,10 @@ t.Z = (e) => {
                                         }),
                                         !d &&
                                             z &&
-                                            (0, s.jsx)(b, {
+                                            (0, s.jsx)(O, {
                                                 quest: x,
                                                 location: h,
-                                                questContentPosition: y
+                                                questContentPosition: L
                                             })
                                     ]
                                 })
@@ -274,7 +274,7 @@ t.Z = (e) => {
                             className: A.iconsContainer,
                             style: {
                                 top: z
-                                    ? D.to({
+                                    ? U.to({
                                           range: [0, 1],
                                           output: [I.DJ / 2 - I.Z$ / 2, I.jc]
                                       })
@@ -284,17 +284,17 @@ t.Z = (e) => {
                                 (0, s.jsx)(M.r, {
                                     questContent: h,
                                     quest: x,
-                                    questContentPosition: y,
+                                    questContentPosition: L,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: z,
                                     showShareLink: !d && K,
                                     children: (e) =>
                                         (0, s.jsx)(r.animated.div, {
                                             style: {
-                                                opacity: D,
-                                                visibility: U || Q ? 'inherit' : 'hidden'
+                                                opacity: U,
+                                                visibility: D || Q ? 'inherit' : 'hidden'
                                             },
-                                            'aria-hidden': !U && !Q,
+                                            'aria-hidden': !D && !Q,
                                             children: (0, s.jsx)(c.Clickable, {
                                                 ...e,
                                                 className: A.iconWrapper,
@@ -306,7 +306,7 @@ t.Z = (e) => {
                                             })
                                         })
                                 }),
-                                L &&
+                                y &&
                                     !(0, I.W_)(h) &&
                                     (0, s.jsx)(c.Clickable, {
                                         onClick: et,
@@ -314,7 +314,7 @@ t.Z = (e) => {
                                         'aria-label': Q ? R.Z.Messages.COLLAPSE : R.Z.Messages.EXPAND,
                                         children: (0, s.jsx)(Z, {
                                             style: {
-                                                rotate: D.to({
+                                                rotate: U.to({
                                                     range: [0, 1],
                                                     output: [0, 180]
                                                 })

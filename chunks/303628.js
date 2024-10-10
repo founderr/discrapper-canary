@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(898463),
     A = n(981631),
     N = n(989796),
-    O = n(112864);
-let R = [];
+    R = n(112864);
+let O = [];
 function v(e) {
     let { channelId: t, type: n } = e,
         a = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled),
@@ -36,7 +36,7 @@ function v(e) {
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: R,
+                    commandOptions: O,
                     commandOptionStates: null
                 };
             let n = h.Z.getOptionStates(t);
@@ -97,7 +97,7 @@ function v(e) {
                               return (0, r.jsx)('ul', {
                                   ref: i,
                                   ...o,
-                                  className: s()(N.channelAttachmentArea, O.scrollbarGhost),
+                                  className: s()(N.channelAttachmentArea, R.scrollbarGhost),
                                   children: L
                                       ? b.map((e) =>
                                             (0, r.jsx)(

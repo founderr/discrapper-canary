@@ -26,10 +26,10 @@ let E = (e) => {
         { backgroundStyle: a = 'always', children: E, icon: f, name: h, ariaLabel: p, className: I, style: m, to: T, onClick: S, selected: g = !1, ...A } = e,
         N = (0, o.k6)();
     if (null == f && null != h) {
-        var O;
-        n = null !== (O = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== O ? O : d[d.length - 1];
+        var R;
+        n = null !== (R = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== R ? R : d[d.length - 1];
     }
-    let R = i.useCallback(
+    let O = i.useCallback(
         (e) => {
             if (null == T);
             else if ('string' == typeof T) N.push(T);
@@ -43,7 +43,7 @@ let E = (e) => {
     );
     return (0, r.jsxs)(l.Clickable, {
         ...A,
-        onClick: R,
+        onClick: O,
         className: s()(I, c.wrapper, { [c.selected]: g }),
         'aria-label': null != p && '' !== p ? p : null != h ? h : '',
         style: {

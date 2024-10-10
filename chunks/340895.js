@@ -23,11 +23,11 @@ let m = {
     g = new Map(),
     A = new Set(),
     N = !1;
-function O(e) {
+function R(e) {
     if (null == e || null == g.get(e)) return !1;
     g.delete(e), (A = new Set(A)).delete(e);
 }
-function R(e) {
+function O(e) {
     let { channelId: t, ringing: n } = e,
         i = n.includes(E.default.getId());
     if (!A.has(t) && i) {
@@ -53,7 +53,7 @@ function R(e) {
             void 0
         );
     }
-    return !!A.has(t) && !i && O(t);
+    return !!A.has(t) && !i && R(t);
 }
 function v() {
     N = h.Z.getStatus() === I.Skl.DND || d.QZ.getSetting();
@@ -85,15 +85,15 @@ class C extends (i = l.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new C(c.Z, {
-        CALL_CREATE: R,
-        CALL_UPDATE: R,
+        CALL_CREATE: O,
+        CALL_UPDATE: O,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
-            return O(t);
+            return R(t);
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return O(t);
+            return R(t);
         },
         INCOMING_CALL_MOVE: function (e) {
             let { x: t, y: n } = e;
@@ -108,6 +108,6 @@ class C extends (i = l.ZP.Store) {
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            return O(t.id);
+            return R(t.id);
         }
     }));

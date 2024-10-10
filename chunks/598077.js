@@ -151,7 +151,7 @@ class E extends i.Z {
         this.avatarDecorationData = (0, a.FG)(e);
     }
     constructor(e) {
-        var t, n, i, a, s, o, c, d, E, f, h, p, I, m, T, S, g, A, N, O, R, v, C, L, y, D, b, M, P, U;
+        var t, n, i, a, s, o, c, d, E, f, h, p, I, m, T, S, g, A, N, R, O, v, C, L, y, D, b, M, P, U;
         super(), _(this, 'id', void 0), _(this, 'username', void 0), _(this, 'discriminator', void 0), _(this, 'avatar', void 0), _(this, 'avatarDecorationData', void 0), _(this, 'banner', void 0), _(this, 'email', void 0), _(this, 'verified', void 0), _(this, 'bot', void 0), _(this, 'system', void 0), _(this, 'mfaEnabled', void 0), _(this, 'mobile', void 0), _(this, 'desktop', void 0), _(this, 'premiumType', void 0), _(this, 'flags', void 0), _(this, 'publicFlags', void 0), _(this, 'purchasedFlags', void 0), _(this, 'premiumUsageFlags', void 0), _(this, 'phone', void 0), _(this, 'nsfwAllowed', void 0), _(this, 'guildMemberAvatars', void 0), _(this, 'hasBouncedEmail', void 0), _(this, 'personalConnectionId', void 0), _(this, 'globalName', void 0), _(this, 'clan', void 0), _(this, 'hasFlag', (e) => !1), _(this, 'isStaff', () => !1), _(this, 'isStaffPersonal', () => !1), _(this, 'hasAnyStaffLevel', () => !1);
         let w = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
@@ -170,7 +170,7 @@ class E extends i.Z {
             (this.flags = null !== (T = e.flags) && void 0 !== T ? T : 0),
             (this.publicFlags = null !== (g = null !== (S = e.public_flags) && void 0 !== S ? S : e.publicFlags) && void 0 !== g ? g : 0),
             (this.purchasedFlags = null !== (N = null !== (A = e.purchased_flags) && void 0 !== A ? A : e.purchasedFlags) && void 0 !== N ? N : 0),
-            (this.premiumUsageFlags = null !== (R = null !== (O = e.premium_usage_flags) && void 0 !== O ? O : e.premiumUsageFlags) && void 0 !== R ? R : 0),
+            (this.premiumUsageFlags = null !== (O = null !== (R = e.premium_usage_flags) && void 0 !== R ? R : e.premiumUsageFlags) && void 0 !== O ? O : 0),
             (this.phone = null !== (v = e.phone) && void 0 !== v ? v : null),
             (this.nsfwAllowed = null !== (C = e.nsfw_allowed) && void 0 !== C ? C : e.nsfwAllowed),
             (this.guildMemberAvatars = null !== (L = e.guildMemberAvatars) && void 0 !== L ? L : {}),

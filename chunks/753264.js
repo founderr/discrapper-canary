@@ -78,14 +78,14 @@ function d(e, t, n) {
         g = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == I ? void 0 : I.shouldFocusOnHover,
         A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == I ? void 0 : I.shouldUseVirtualFocus,
         N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == I ? void 0 : I.isVirtualized,
-        O = (0, r.mp)(),
         R = (0, r.mp)(),
+        O = (0, r.mp)(),
         v = {
             role: 'option',
             'aria-disabled': m || void 0,
             'aria-selected': 'none' !== t.selectionManager.selectionMode ? T : void 0
         };
-    !((0, r.V5)() && (0, r.Pf)()) && ((v['aria-label'] = e['aria-label']), (v['aria-labelledby'] = O), (v['aria-describedby'] = R));
+    !((0, r.V5)() && (0, r.Pf)()) && ((v['aria-label'] = e['aria-label']), (v['aria-labelledby'] = R), (v['aria-describedby'] = O));
     let C = t.collection.getItem(p);
     if (N) {
         let e = Number(null == C ? void 0 : C.index);
@@ -129,8 +129,8 @@ function d(e, t, n) {
                 ...(0, r.dG)(U, L, P),
                 id: u(t, p)
             },
-            labelProps: { id: O },
-            descriptionProps: { id: R },
+            labelProps: { id: R },
+            descriptionProps: { id: O },
             isFocused: D,
             isFocusVisible: D && (0, i.E)(),
             isSelected: T,

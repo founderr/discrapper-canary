@@ -44,7 +44,7 @@ var N = f
         : function (e, t, n) {
               return e.slice(n, n + t.length) === t;
           },
-    O = h
+    R = h
         ? String.fromCodePoint
         : function () {
               for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -54,7 +54,7 @@ var N = f
               }
               return r;
           },
-    R = p
+    O = p
         ? Object.fromEntries
         : function (e) {
               for (var t = {}, n = 0; n < e.length; n++) {
@@ -363,7 +363,7 @@ if (g) {
                 break;
             n.push(r), (t += r >= 65536 ? 2 : 1);
         }
-        return O.apply(void 0, n);
+        return R.apply(void 0, n);
     };
 var b = (function () {
     function e(e, t) {
@@ -535,12 +535,12 @@ var b = (function () {
                 } else t.push(n);
                 this.bump();
             }
-            return O.apply(void 0, t);
+            return R.apply(void 0, t);
         }),
         (e.prototype.tryParseUnquoted = function (e, t) {
             if (this.isEOF()) return null;
             var n = this.char();
-            return 60 === n || 123 === n || (35 === n && ('plural' === t || 'selectordinal' === t)) || (125 === n && e > 0) ? null : (this.bump(), O(n));
+            return 60 === n || 123 === n || (35 === n && ('plural' === t || 'selectordinal' === t)) || (125 === n && e > 0) ? null : (this.bump(), R(n));
         }),
         (e.prototype.parseArgument = function (e, t) {
             var n = this.clonePosition();
@@ -659,16 +659,16 @@ var b = (function () {
                     var A = this.clonePosition();
                     if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, E(A, (0, a.pi)({}, A)));
                     this.bumpSpace();
-                    var O = this.parseIdentifierIfPossible(),
+                    var R = this.parseIdentifierIfPossible(),
                         v = 0;
-                    if ('select' !== d && 'offset' === O.value) {
+                    if ('select' !== d && 'offset' === R.value) {
                         if (!this.bumpIf(':')) return this.error(s.o.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, E(this.clonePosition(), this.clonePosition()));
                         this.bumpSpace();
                         var p = this.tryParseDecimalInteger(s.o.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, s.o.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE);
                         if (p.err) return p;
-                        this.bumpSpace(), (O = this.parseIdentifierIfPossible()), (v = p.val);
+                        this.bumpSpace(), (R = this.parseIdentifierIfPossible()), (v = p.val);
                     }
-                    var y = this.tryParsePluralOrSelectOptions(e, d, t, O);
+                    var y = this.tryParsePluralOrSelectOptions(e, d, t, R);
                     if (y.err) return y;
                     var m = this.tryParseArgumentClose(r);
                     if (m.err) return m;
@@ -678,7 +678,7 @@ var b = (function () {
                             val: {
                                 type: o.wD.select,
                                 value: n,
-                                options: R(y.val),
+                                options: O(y.val),
                                 location: D
                             },
                             err: null
@@ -687,7 +687,7 @@ var b = (function () {
                         val: {
                             type: o.wD.plural,
                             value: n,
-                            options: R(y.val),
+                            options: O(y.val),
                             offset: v,
                             pluralType: 'plural' === d ? 'cardinal' : 'ordinal',
                             location: D

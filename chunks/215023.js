@@ -24,13 +24,13 @@ n.d(t, {
         return r;
     },
     iA: function () {
-        return O;
+        return R;
     },
     lb: function () {
         return m;
     },
     pv: function () {
-        return R;
+        return O;
     },
     rL: function () {
         return f;
@@ -379,6 +379,6 @@ let m = 800,
         '1144058522808614923'
     ],
     N = 12,
-    O = 36,
-    R = 1128,
+    R = 36,
+    O = 1128,
     v = 518;

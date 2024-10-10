@@ -1,41 +1,41 @@
-let n, a, o;
+let n, a, _;
 r.d(t, {
     O: function () {
-        return c;
+        return s;
     }
 });
-var i = r(578346),
-    _ = r(370336),
+var o = r(578346),
+    i = r(370336),
     E = r(394798),
-    s = r(395848);
-function c(e) {
-    (0, i.Hj)('dom', e), (0, i.D2)('dom', I);
+    c = r(395848);
+function s(e) {
+    (0, o.Hj)('dom', e), (0, o.D2)('dom', I);
 }
 function I() {
-    if (!s.m.document) return;
-    let e = i.rK.bind(null, 'dom'),
+    if (!c.m.document) return;
+    let e = o.rK.bind(null, 'dom'),
         t = u(e, !0);
-    s.m.document.addEventListener('click', t, !1),
-        s.m.document.addEventListener('keypress', t, !1),
+    c.m.document.addEventListener('click', t, !1),
+        c.m.document.addEventListener('keypress', t, !1),
         ['EventTarget', 'Node'].forEach((t) => {
-            let r = s.m[t] && s.m[t].prototype;
+            let r = c.m[t] && c.m[t].prototype;
             if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
-                (0, _.hl)(r, 'addEventListener', function (t) {
+                (0, i.hl)(r, 'addEventListener', function (t) {
                     return function (r, n, a) {
                         if ('click' === r || 'keypress' == r)
                             try {
                                 let n = (this.__sentry_instrumentation_handlers__ = this.__sentry_instrumentation_handlers__ || {}),
-                                    o = (n[r] = n[r] || { refCount: 0 });
-                                if (!o.handler) {
+                                    _ = (n[r] = n[r] || { refCount: 0 });
+                                if (!_.handler) {
                                     let n = u(e);
-                                    (o.handler = n), t.call(this, r, n, a);
+                                    (_.handler = n), t.call(this, r, n, a);
                                 }
-                                o.refCount++;
+                                _.refCount++;
                             } catch (e) {}
                         return t.call(this, r, n, a);
                     };
                 }),
-                    (0, _.hl)(r, 'removeEventListener', function (e) {
+                    (0, i.hl)(r, 'removeEventListener', function (e) {
                         return function (t, r, n) {
                             if ('click' === t || 'keypress' == t)
                                 try {
@@ -50,7 +50,7 @@ function I() {
 }
 function u(e, t = !1) {
     return (r) => {
-        var i, c;
+        var o, s;
         if (!r || r._sentryCaptured) return;
         let I = (function (e) {
             try {
@@ -59,13 +59,13 @@ function u(e, t = !1) {
                 return null;
             }
         })(r);
-        if (((i = r.type), (c = I), 'keypress' === i && (!c || !c.tagName || ('INPUT' !== c.tagName && 'TEXTAREA' !== c.tagName && !c.isContentEditable)))) return;
-        (0, _.xp)(r, '_sentryCaptured', !0), I && !I._sentryId && (0, _.xp)(I, '_sentryId', (0, E.DM)());
+        if (((o = r.type), (s = I), 'keypress' === o && (!s || !s.tagName || ('INPUT' !== s.tagName && 'TEXTAREA' !== s.tagName && !s.isContentEditable)))) return;
+        (0, i.xp)(r, '_sentryCaptured', !0), I && !I._sentryId && (0, i.xp)(I, '_sentryId', (0, E.DM)());
         let u = 'keypress' === r.type ? 'input' : r.type;
         !(function (e) {
             if (e.type !== a) return !1;
             try {
-                if (!e.target || e.target._sentryId !== o) return !1;
+                if (!e.target || e.target._sentryId !== _) return !1;
             } catch (e) {}
             return !0;
         })(r) &&
@@ -75,10 +75,10 @@ function u(e, t = !1) {
                 global: t
             }),
             (a = r.type),
-            (o = I ? I._sentryId : void 0)),
+            (_ = I ? I._sentryId : void 0)),
             clearTimeout(n),
-            (n = s.m.setTimeout(() => {
-                (o = void 0), (a = void 0);
+            (n = c.m.setTimeout(() => {
+                (_ = void 0), (a = void 0);
             }, 1000));
     };
 }

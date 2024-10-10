@@ -22,8 +22,8 @@ var r = n(735250),
     m = n(572046),
     T = n(609440);
 function S(e) {
-    let { user: t, guildId: n, setPopoutRef: S, channelId: g, messageId: A, roleId: N, onViewBlockedProfileClick: O, newAnalyticsLocations: R = [] } = e,
-        { analyticsLocations: v } = (0, l.ZP)([...R, o.Z.BLOCKED_PROFILE_POPOUT]),
+    let { user: t, guildId: n, setPopoutRef: S, channelId: g, messageId: A, roleId: N, onViewBlockedProfileClick: R, newAnalyticsLocations: O = [] } = e,
+        { analyticsLocations: v } = (0, l.ZP)([...O, o.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
@@ -87,7 +87,7 @@ function S(e) {
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
-                                                null == O || O(),
+                                                null == R || R(),
                                                     (0, d.pQ)({
                                                         action: 'VIEW_BLOCKED_PROFILE',
                                                         analyticsLocations: v,

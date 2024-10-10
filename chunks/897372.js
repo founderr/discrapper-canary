@@ -20,8 +20,8 @@ var r,
     g = n(202934),
     A = n(320273),
     N = n(644659),
-    O = N.set,
-    R = N.getterFor('URL'),
+    R = N.set,
+    O = N.getterFor('URL'),
     v = A.URLSearchParams,
     C = A.getState,
     L = o.URL,
@@ -209,8 +209,8 @@ var r,
     eg = {},
     eA = {},
     eN = {},
-    eO = {},
     eR = {},
+    eO = {},
     ev = {},
     eC = {},
     eL = {},
@@ -264,7 +264,7 @@ eB.prototype = {
                             this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eg) : this.isSpecial() ? (i = eR) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
+                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eg) : this.isSpecial() ? (i = eO) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
                     } else {
                         if (t) return j;
                         (s = ''), (i = eS), (a = 0);
@@ -295,7 +295,7 @@ eB.prototype = {
                     continue;
                 case eN:
                     if (((this.scheme = n.scheme), d === r)) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = p(n.path)), (this.query = n.query);
-                    else if ('/' === d || ('\\' === d && this.isSpecial())) i = eO;
+                    else if ('/' === d || ('\\' === d && this.isSpecial())) i = eR;
                     else if ('?' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = p(n.path)), (this.query = ''), (i = eG);
                     else if ('#' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = p(n.path)), (this.query = n.query), (this.fragment = ''), (i = ek);
                     else {
@@ -303,7 +303,7 @@ eB.prototype = {
                         continue;
                     }
                     break;
-                case eO:
+                case eR:
                     if (this.isSpecial() && ('/' === d || '\\' === d)) i = ev;
                     else if ('/' === d) i = eC;
                     else {
@@ -311,7 +311,7 @@ eB.prototype = {
                         continue;
                     }
                     break;
-                case eR:
+                case eO:
                     if (((i = ev), '/' !== d || '/' !== P(s, a + 1))) continue;
                     a++;
                     break;
@@ -588,19 +588,19 @@ eB.prototype = {
 var eF = function (e) {
         var t = _(this, eV),
             n = g(arguments.length, 1) > 1 ? arguments[1] : void 0,
-            r = O(t, new eB(e, !1, n));
+            r = R(t, new eB(e, !1, n));
         !a && ((t.href = r.serialize()), (t.origin = r.getOrigin()), (t.protocol = r.getProtocol()), (t.username = r.getUsername()), (t.password = r.getPassword()), (t.host = r.getHost()), (t.hostname = r.getHostname()), (t.port = r.getPort()), (t.pathname = r.getPathname()), (t.search = r.getSearch()), (t.searchParams = r.getSearchParams()), (t.hash = r.getHash()));
     },
     eV = eF.prototype,
     eH = function (e, t) {
         return {
             get: function () {
-                return R(this)[e]();
+                return O(this)[e]();
             },
             set:
                 t &&
                 function (e) {
-                    return R(this)[t](e);
+                    return O(this)[t](e);
                 },
             configurable: !0,
             enumerable: !0
@@ -612,7 +612,7 @@ if (
         eV,
         'toJSON',
         function () {
-            return R(this).serialize();
+            return O(this).serialize();
         },
         { enumerable: !0 }
     ),
@@ -620,7 +620,7 @@ if (
         eV,
         'toString',
         function () {
-            return R(this).serialize();
+            return O(this).serialize();
         },
         { enumerable: !0 }
     ),

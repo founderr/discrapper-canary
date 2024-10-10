@@ -242,8 +242,8 @@ function N(e) {
               location_object_type: e.objectType
           };
 }
-let O = () => h.E.NONE,
-    R = (0, a.trackMaker)({
+let R = () => h.E.NONE,
+    O = (0, a.trackMaker)({
         analyticEventConfigs: A,
         dispatcher: s.Z,
         TRACK_ACTION_NAME: 'TRACK'
@@ -276,7 +276,7 @@ function C(e) {
                   })
         };
     }
-    (s.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = _.Z.getCPUCoreCount()), (s.accessibility_features = O()), (s.rendered_locale = p.Z.getLocale()), (s.uptime_app = Math.floor((performance.now() - T) / 1000));
+    (s.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = _.Z.getCPUCoreCount()), (s.accessibility_features = R()), (s.rendered_locale = p.Z.getLocale()), (s.uptime_app = Math.floor((performance.now() - T) / 1000));
     let o = _.Z.getProcessUptime();
     null != o && (s.uptime_process_renderer = Math.floor(o));
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = m;
@@ -310,7 +310,7 @@ t.default = {
     ...a,
     getCampaignParams: a.getCampaignParams,
     setSystemAccessibilityFeatures: function (e) {
-        O = e;
+        R = e;
     },
     expandEventProperties: C,
     track: function (e, t) {
@@ -327,7 +327,7 @@ t.default = {
         let r = C(t);
         return (
             L(e, r, n.logEventProperties),
-            R(e, r, {
+            O(e, r, {
                 flush: n.flush,
                 fingerprint: n.fingerprint
             })

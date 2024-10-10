@@ -20,8 +20,8 @@ var r = n(735250),
     g = n(784222),
     A = n(926243),
     N = n(149203),
-    O = n(981631),
-    R = n(689938),
+    R = n(981631),
+    O = n(689938),
     v = n(886028);
 t.Z = (e) => {
     let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: L, surrogateCodePoint: y, getEmojiItemProps: D, getEmojiRowProps: b, isScrolling: M, isUsingKeyboardNavigation: P, rowIndex: U, allowAnimatedEmoji: w, showEmojiFavoriteTooltip: x, channelGuildId: G, category: k, selectedItemClassName: B, messageId: F, isBurstReaction: V, inNitroLockedSection: H, handleScrollUpOnSectionCollapse: Z } = e,
@@ -99,13 +99,13 @@ t.Z = (e) => {
                                   src: (0, o.wj)(Q) ? W : K,
                                   alt: ''
                               })),
-                              (t = R.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION))
+                              (t = O.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION))
                             : ((i = (0, r.jsx)('img', {
                                   className: v.icon,
                                   src: (0, o.wj)(Q) ? z : q,
                                   alt: ''
                               })),
-                              (t = R.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION)),
+                              (t = O.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION)),
                         n({
                             handleSelect: (t) => {
                                 t.stopPropagation(),
@@ -117,7 +117,7 @@ t.Z = (e) => {
                                         }),
                                         (0, d.D)(e.guildId),
                                         !e.sectionCollapsedToThreeRows && Z(),
-                                        m.default.track(O.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
+                                        m.default.track(R.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
                                             collapsed: e.sectionCollapsedToThreeRows,
                                             guild_id: e.guildId
                                         }));
@@ -144,10 +144,10 @@ t.Z = (e) => {
                                         isFinalSelection: !0,
                                         toggleFavorite: !1
                                     }),
-                                    h.Z.open(e.guildId, O.pNK.EMOJI, O.jXE.EMOJI_PICKER_POPOUT));
+                                    h.Z.open(e.guildId, R.pNK.EMOJI, R.jXE.EMOJI_PICKER_POPOUT));
                         },
                         icon: t,
-                        ariaLabel: R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                        ariaLabel: O.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                         shouldShowRoundHighlight: !1
                     });
                 }
@@ -229,7 +229,7 @@ t.Z = (e) => {
                                   (0, r.jsx)(l.Text, {
                                       variant: 'text-xs/semibold',
                                       color: 'always-white',
-                                      children: R.Z.Messages.NEW
+                                      children: O.Z.Messages.NEW
                                   })
                               ]
                           })

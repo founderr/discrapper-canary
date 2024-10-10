@@ -1,13 +1,13 @@
 r.d(t, {
     R: function () {
-        return _;
+        return i;
     }
 });
 var n = r(622916),
     a = r(688838),
-    o = r(151122),
-    i = r(255768);
-let _ = (0, o._I)(() => {
+    _ = r(151122),
+    o = r(255768);
+let i = (0, _._I)(() => {
     let e;
     return {
         name: 'Dedupe',
@@ -22,19 +22,19 @@ let _ = (0, o._I)(() => {
                                 (function (e, t) {
                                     let r = e.message,
                                         n = t.message;
-                                    return !!((r || n) && (!r || n) && (r || !n) && r === n && s(e, t) && E(e, t)) || !1;
+                                    return !!((r || n) && (!r || n) && (r || !n) && r === n && c(e, t) && E(e, t)) || !1;
                                 })(e, t) ||
                                 (function (e, t) {
-                                    let r = c(t),
-                                        n = c(e);
-                                    return !!(r && n && r.type === n.type && r.value === n.value && s(e, t) && E(e, t)) || !1;
+                                    let r = s(t),
+                                        n = s(e);
+                                    return !!(r && n && r.type === n.type && r.value === n.value && c(e, t) && E(e, t)) || !1;
                                 })(e, t)
                             ) ||
                                 !1)
                         );
                     })(t, e)
                 )
-                    return i.X && n.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
+                    return o.X && n.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
             } catch (e) {}
             return (e = t);
         }
@@ -53,7 +53,7 @@ function E(e, t) {
     }
     return !0;
 }
-function s(e, t) {
+function c(e, t) {
     let r = e.fingerprint,
         n = t.fingerprint;
     if (!r && !n) return !0;
@@ -64,6 +64,6 @@ function s(e, t) {
         return !1;
     }
 }
-function c(e) {
+function s(e) {
     return e.exception && e.exception.values && e.exception.values[0];
 }

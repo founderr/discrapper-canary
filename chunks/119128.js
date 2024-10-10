@@ -5,20 +5,20 @@ r.d(t, {
 });
 var n = r(696486),
     a = r(793373),
-    o = r(622916),
-    i = r(454463),
-    _ = r(163162);
+    _ = r(622916),
+    o = r(454463),
+    i = r(163162);
 function E() {
-    _.m9 && _.m9.document
-        ? _.m9.document.addEventListener('visibilitychange', () => {
+    i.m9 && i.m9.document
+        ? i.m9.document.addEventListener('visibilitychange', () => {
               let e = (0, n.HN)();
               if (!e) return;
               let t = (0, n.Gx)(e);
-              if (_.m9.document.hidden && t) {
+              if (i.m9.document.hidden && t) {
                   let e = 'cancelled',
-                      { op: r, status: _ } = (0, n.XU)(t);
-                  i.X && o.kg.log(`[Tracing] Transaction: ${e} -> since tab moved to the background, op: ${r}`),
-                      !_ &&
+                      { op: r, status: i } = (0, n.XU)(t);
+                  o.X && _.kg.log(`[Tracing] Transaction: ${e} -> since tab moved to the background, op: ${r}`),
+                      !i &&
                           t.setStatus({
                               code: a.jt,
                               message: e
@@ -27,5 +27,5 @@ function E() {
                       t.end();
               }
           })
-        : i.X && o.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
+        : o.X && _.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
 }

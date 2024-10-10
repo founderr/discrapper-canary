@@ -25,8 +25,8 @@ var i = n(120356),
     g = n(994746),
     A = n(232174),
     N = n(502762),
-    O = n(652853),
-    R = n(979038),
+    R = n(652853),
+    O = n(979038),
     v = n(448980),
     C = n(194811),
     L = n(373826),
@@ -43,7 +43,7 @@ var i = n(120356),
 function B(e) {
     let { user: t, currentUser: n, activity: i, application: B, guild: F, channel: V, className: H, onClose: Z } = e,
         { analyticsLocations: Y } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: j } = (0, O.z)(),
+        { profileType: j } = (0, R.z)(),
         W = { [k.fullSize]: j === U.y0.FULL_SIZE },
         K = (0, f.Bq)({
             activity: i,
@@ -246,7 +246,7 @@ function B(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: a()(k.actions, W),
-                      children: (0, r.jsx)(R.Z, {
+                      children: (0, r.jsx)(O.Z, {
                           activity: i,
                           user: t,
                           currentUser: n,

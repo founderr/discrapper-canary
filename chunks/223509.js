@@ -53,8 +53,8 @@ function I(e, t, n, r) {
             g,
             A,
             N,
-            O,
             R,
+            O,
             v,
             C,
             L,
@@ -396,10 +396,10 @@ function I(e, t, n, r) {
                             (e.msg = 'invalid distance too far back'), (n.mode = 30);
                             break;
                         }
-                        N > n.wnext ? ((N -= n.wnext), (O = n.wsize - N)) : (O = n.wnext - N), N > n.length && (N = n.length), (R = n.window);
-                    } else (R = _), (O = f - n.offset), (N = n.length);
+                        N > n.wnext ? ((N -= n.wnext), (R = n.wsize - N)) : (R = n.wnext - N), N > n.length && (N = n.length), (O = n.window);
+                    } else (O = _), (R = f - n.offset), (N = n.length);
                     N > m && (N = m), (m -= N), (n.length -= N);
-                    do _[f++] = R[O++];
+                    do _[f++] = O[R++];
                     while (--N);
                     0 === n.length && (n.mode = 21);
                     break;

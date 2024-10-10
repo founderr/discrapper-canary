@@ -259,7 +259,7 @@ var i = n(698091),
         });
     },
     N = Symbol.for('AnimatedComponent'),
-    O = function (e) {
+    R = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
 (t.Animated = h),
@@ -295,12 +295,12 @@ var i = n(698091),
                         : o
             },
             u = function (e) {
-                var t = O(e) || 'Anonymous';
+                var t = R(e) || 'Anonymous';
                 return ((e = i.is.str(e) ? A(e, l) : e[N] || (e[N] = A(e, l))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             i.each(e, function (e, t) {
-                !i.is.str(t) && (t = O(e)), (u[t] = u(e));
+                !i.is.str(t) && (t = R(e)), (u[t] = u(e));
             }),
             { animated: u }
         );

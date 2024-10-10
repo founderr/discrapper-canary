@@ -98,10 +98,10 @@ t.Z = (e) => {
         f = (0, o.e7)([E.Z], () => E.Z.getStatus(t.id)),
         { product: g, purchase: A } = (0, c.Z)(null == i ? void 0 : i.skuId),
         N = h.ZP.canUseCollectibles(t),
-        O = (0, u.qS)(A),
-        R = (0, u.G1)(g),
-        v = !N && O,
-        C = (0, d.Mu)('ProfileEffectDescription', !R || N);
+        R = (0, u.qS)(A),
+        O = (0, u.G1)(g),
+        v = !N && R,
+        C = (0, d.Mu)('ProfileEffectDescription', !O || N);
     return null != g && (null == A || v)
         ? (0, r.jsxs)('div', {
               className: a()(m.modalPreview, m.shopPreviewContainer, _),
@@ -125,7 +125,7 @@ t.Z = (e) => {
                               variant: 'text-sm/normal',
                               children: v
                                   ? I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED
-                                  : (0, s.EQ)([R, N, C])
+                                  : (0, s.EQ)([O, N, C])
                                         .with([!0, !0, !1], () => I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM)
                                         .with([!0, !1, !0], () => I.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_INLINE_UPSELL_DESCRIPTION)
                                         .with([!0, !1, !1], () => I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER)

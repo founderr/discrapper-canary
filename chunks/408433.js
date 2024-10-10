@@ -1,6 +1,6 @@
 n.d(t, {
     En: function () {
-        return O;
+        return R;
     },
     dY: function () {
         return S;
@@ -189,6 +189,6 @@ function A(e, t, n) {
 function N(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
 }
-function O(e) {
+function R(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

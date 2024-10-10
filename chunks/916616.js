@@ -38,7 +38,7 @@ function g(e, t, n) {
 class A extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: S = E, maxHeight: g = T, minWidth: A, minHeight: R, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: L, zoomable: y, original: D, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: S = E, maxHeight: g = T, minWidth: A, minHeight: O, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: L, zoomable: y, original: D, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
         if (1 === E && 1 === T) return null;
         let k = (0, _.Tj)({
                 width: E,
@@ -46,7 +46,7 @@ class A extends (r = a.PureComponent) {
                 maxWidth: S,
                 maxHeight: g,
                 minWidth: A,
-                minHeight: R
+                minHeight: O
             }),
             B = 0 !== k.width ? k.width / k.height : 1;
         '' !== a && r !== h.zo9.ERROR
@@ -68,7 +68,7 @@ class A extends (r = a.PureComponent) {
                 aspectRatio: B,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: O(k, v),
+                placeholderStyle: R(k, v),
                 children: e
             }));
         let F = null != M ? M() : null;
@@ -161,7 +161,7 @@ function N(e) {
                     };
                 case p.hV.RESPONSIVE:
                     return {
-                        ...R(e),
+                        ...O(e),
                         display: 'flex'
                     };
                 default:
@@ -184,13 +184,13 @@ g(A, 'defaultProps', {
             className: null != a ? a : void 0,
             alt: null != r ? r : I.Z.Messages.IMAGE,
             src: t,
-            style: O(n, s)
+            style: R(n, s)
         });
     },
     minWidth: 0,
     minHeight: 0
 });
-function O(e, t) {
+function R(e, t) {
     switch (t) {
         case p.hV.MOSAIC:
             return {
@@ -201,12 +201,12 @@ function O(e, t) {
                 maxWidth: 1 === (0, E.Z)() ? 'calc(100% + 1px)' : '100%'
             };
         case p.hV.RESPONSIVE:
-            return R(e);
+            return O(e);
         default:
             return e;
     }
 }
-function R(e) {
+function O(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

@@ -1,33 +1,33 @@
 var n = r(990393),
     a = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, r, o, i, _) {
+e.exports = function (e, t, r, _, o, i) {
     var E = 1 & r,
-        s = n(e),
-        c = s.length;
-    if (c != n(t).length && !E) return !1;
-    for (var I = c; I--; ) {
-        var u = s[I];
+        c = n(e),
+        s = c.length;
+    if (s != n(t).length && !E) return !1;
+    for (var I = s; I--; ) {
+        var u = c[I];
         if (!(E ? u in t : a.call(t, u))) return !1;
     }
-    var l = _.get(e),
-        R = _.get(t);
+    var l = i.get(e),
+        R = i.get(t);
     if (l && R) return l == t && R == e;
     var A = !0;
-    _.set(e, t), _.set(t, e);
-    for (var T = E; ++I < c; ) {
-        var d = e[(u = s[I])],
-            N = t[u];
-        if (o) var p = E ? o(N, d, u, t, e, _) : o(d, N, u, e, t, _);
-        if (!(void 0 === p ? d === N || i(d, N, r, o, _) : p)) {
+    i.set(e, t), i.set(t, e);
+    for (var T = E; ++I < s; ) {
+        var N = e[(u = c[I])],
+            d = t[u];
+        if (_) var O = E ? _(d, N, u, t, e, i) : _(N, d, u, e, t, i);
+        if (!(void 0 === O ? N === d || o(N, d, r, _, i) : O)) {
             A = !1;
             break;
         }
         T || (T = 'constructor' == u);
     }
     if (A && !T) {
-        var O = e.constructor,
+        var p = e.constructor,
             f = t.constructor;
-        O != f && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof f && f instanceof f) && (A = !1);
+        p != f && 'constructor' in e && 'constructor' in t && !('function' == typeof p && p instanceof p && 'function' == typeof f && f instanceof f) && (A = !1);
     }
-    return _.delete(e), _.delete(t), A;
+    return i.delete(e), i.delete(t), A;
 };

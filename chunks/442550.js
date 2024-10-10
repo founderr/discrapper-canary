@@ -29,7 +29,7 @@ function _(e) {
             style: { maxWidth: m },
             className: s()(d.contentImage, _)
         });
-    let O =
+    let R =
         'height' === a
             ? {
                   maxWidth: m,
@@ -48,7 +48,7 @@ function _(e) {
             children: (e) =>
                 (0, r.jsx)('img', {
                     ...e,
-                    style: O,
+                    style: R,
                     className: s()(d.contentImage, _),
                     src: T && null != f ? f : t,
                     'aria-hidden': h,

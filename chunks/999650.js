@@ -35,14 +35,14 @@ var r,
     g = n(51144),
     A = n(981631),
     N = n(689938);
-function O() {
+function R() {
     return new Set(
         c()
             .months()
             .map((e) => e.toLowerCase())
     );
 }
-function R() {
+function O() {
     return new Set(
         c()
             .weekdays()
@@ -94,7 +94,7 @@ function x(e, t) {
     let n, r;
     let i = e.getFullMatch().trim().toLowerCase(),
         a = D()[i];
-    return null != a ? ([n, r] = a()) : O().has(i) ? ([n, r] = y(i, 'MMMM', 'month')) : R().has(i) ? ([n, r] = y(i, 'dddd', 'day')) : v().has(i) ? ([n, r] = y(i, 'YYYY', 'year')) : ([n, r] = y(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+    return null != a ? ([n, r] = a()) : R().has(i) ? ([n, r] = y(i, 'MMMM', 'month')) : O().has(i) ? ([n, r] = y(i, 'dddd', 'day')) : v().has(i) ? ([n, r] = y(i, 'YYYY', 'year')) : ([n, r] = y(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function G(e) {
     let t = e.getMatch(1),
@@ -129,7 +129,7 @@ function k(e) {
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
 function B() {
-    return [...Array.from(O()), ...Array.from(R()), ...Array.from(v()), ...Object.keys(D())];
+    return [...Array.from(R()), ...Array.from(O()), ...Array.from(v()), ...Object.keys(D())];
 }
 function F() {
     return l().sample(B());

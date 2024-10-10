@@ -1,21 +1,21 @@
 r.d(t, {
     EN: function () {
-        return s;
-    },
-    IQ: function () {
         return c;
     },
+    IQ: function () {
+        return s;
+    },
     bU: function () {
-        return i;
+        return o;
     }
 });
 var n = r(309544),
     a = r(573736),
-    o = r(622916);
-let i = 'baggage',
-    _ = 'sentry-',
+    _ = r(622916);
+let o = 'baggage',
+    i = 'sentry-',
     E = /^sentry-/;
-function s(e) {
+function c(e) {
     let t = (function (e) {
         return e && ((0, a.HD)(e) || Array.isArray(e))
             ? Array.isArray(e)
@@ -32,19 +32,19 @@ function s(e) {
             : void 0;
     })(e);
     if (!t) return;
-    let r = Object.entries(t).reduce((e, [t, r]) => (t.match(E) && (e[t.slice(_.length)] = r), e), {});
+    let r = Object.entries(t).reduce((e, [t, r]) => (t.match(E) && (e[t.slice(i.length)] = r), e), {});
     return Object.keys(r).length > 0 ? r : void 0;
 }
-function c(e) {
+function s(e) {
     if (!!e)
         return (function (e) {
             if (0 !== Object.keys(e).length)
                 return Object.entries(e).reduce((e, [t, r], a) => {
-                    let i = `${encodeURIComponent(t)}=${encodeURIComponent(r)}`,
-                        _ = 0 === a ? i : `${e},${i}`;
-                    return _.length > 8192 ? (n.X && o.kg.warn(`Not adding key: ${t} with val: ${r} to baggage header due to exceeding baggage size limits.`), e) : _;
+                    let o = `${encodeURIComponent(t)}=${encodeURIComponent(r)}`,
+                        i = 0 === a ? o : `${e},${o}`;
+                    return i.length > 8192 ? (n.X && _.kg.warn(`Not adding key: ${t} with val: ${r} to baggage header due to exceeding baggage size limits.`), e) : i;
                 }, '');
-        })(Object.entries(e).reduce((e, [t, r]) => (r && (e[`${_}${t}`] = r), e), {}));
+        })(Object.entries(e).reduce((e, [t, r]) => (r && (e[`${i}${t}`] = r), e), {}));
 }
 function I(e) {
     return e

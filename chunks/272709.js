@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(496675),
     A = n(594174),
     N = n(979651),
-    O = n(912787),
-    R = n(623552),
+    R = n(912787),
+    O = n(623552),
     v = n(718582),
     C = n(177963),
     L = n(835248),
@@ -39,7 +39,7 @@ var r = n(735250),
     w = n(689938),
     x = n(797113);
 function G(e) {
-    let t = (0, O.Z)(e),
+    let t = (0, R.Z)(e),
         { category: n } = e;
     return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === M.L.GAMING || n === M.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === M.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === M.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && N.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
 }
@@ -105,7 +105,7 @@ function B(e) {
         z = (0, v.ni)(a),
         q = (function (e, t, n, i) {
             let { category: a } = e,
-                s = (0, O.Z)(e),
+                s = (0, R.Z)(e),
                 { usersToShow: c } = (0, v.Es)(s),
                 _ = (0, l.e7)([T.Z], () => (a === M.L.HANGOUT ? T.Z.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null));
             switch (a) {
@@ -123,7 +123,7 @@ function B(e) {
                     });
                 case M.L.EVENT:
                     if (c.length > 0)
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(O.Z, {
                             guildId: t,
                             users: c
                         });
@@ -145,7 +145,7 @@ function B(e) {
                         d = l ? c : [];
                     if (l) {
                         if (0 === d.length) return (0, r.jsx)(y.Z, { className: x.imageIcon });
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(O.Z, {
                             guildId: t,
                             users: d
                         });
@@ -173,13 +173,13 @@ function B(e) {
                                 ]
                             });
                         let a = i.map((e) => A.default.getUser(e)).filter((e) => null != e);
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(O.Z, {
                             guildId: t,
                             users: a
                         });
                     }
                     let E = a.map((e) => A.default.getUser(e)).filter((e) => null != e);
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(O.Z, {
                         guildId: t,
                         users: E
                     });
@@ -191,7 +191,7 @@ function B(e) {
                 i = (0, v.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.userIds) : []),
                 a = (0, v.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.streamUserIds) : []),
                 o = (0, v.FP)(n === M.L.GAMING ? (null == e ? void 0 : e.gameUserIds) : []),
-                l = (0, O.Z)(e),
+                l = (0, R.Z)(e),
                 { hasChannelStatus: c } = (0, v.CE)(l),
                 { usersToShow: d } = (0, v.Es)(l),
                 _ = (0, v.FP)(n === M.L.HANGOUT && e.isStage ? d.map((e) => e.id) : []),
@@ -245,7 +245,7 @@ function B(e) {
         X = (function (e, t, n) {
             var i, a, s;
             let { category: o } = e,
-                l = (0, O.Z)(e),
+                l = (0, R.Z)(e),
                 c = G(e),
                 { audienceCount: d } = (0, v.Es)(l),
                 { channelStatus: _, hasChannelStatus: E } = (0, v.CE)(l);
@@ -395,7 +395,7 @@ function B(e) {
         })(a, z, F),
         $ = (function (e) {
             let { category: t } = e,
-                n = (0, O.Z)(e),
+                n = (0, R.Z)(e),
                 { audienceCount: r } = (0, v.Es)(n);
             switch (t) {
                 case M.L.EVENT:

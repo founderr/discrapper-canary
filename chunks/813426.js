@@ -19,8 +19,8 @@ var r = 'function' == typeof Map && Map.prototype,
     g = String.prototype.toLowerCase,
     A = RegExp.prototype.test,
     N = Array.prototype.concat,
-    O = Array.prototype.join,
-    R = Array.prototype.slice,
+    R = Array.prototype.join,
+    O = Array.prototype.slice,
     v = Math.floor,
     C = 'function' == typeof BigInt ? BigInt.prototype.valueOf : null,
     L = Object.getOwnPropertySymbols,
@@ -91,17 +91,17 @@ e.exports = function e(t, r, i, o) {
         if ('\t' === e.indent) n = '\t';
         else {
             if ('number' != typeof e.indent || !(e.indent > 0)) return null;
-            n = O.call(Array(e.indent + 1), ' ');
+            n = R.call(Array(e.indent + 1), ' ');
         }
         return {
             base: n,
-            prev: O.call(Array(t + 1), n)
+            prev: R.call(Array(t + 1), n)
         };
     })(l, i);
     if (void 0 === o) o = [];
     else if (j(o, t) >= 0) return '[Circular]';
     function H(t, n, r) {
-        if ((n && (o = R.call(o)).push(n), r)) {
+        if ((n && (o = O.call(o)).push(n), r)) {
             var a = { depth: l.depth };
             return Z(l, 'quoteStyle') && (a.quoteStyle = l.quoteStyle), e(t, a, i + 1, o);
         }
@@ -114,7 +114,7 @@ e.exports = function e(t, r, i, o) {
                 return t ? t[1] : null;
             })(t),
             J = X(t, H);
-        return '[Function' + ($ ? ': ' + $ : ' (anonymous)') + ']' + (J.length > 0 ? ' { ' + O.call(J, ', ') + ' }' : '');
+        return '[Function' + ($ ? ': ' + $ : ' (anonymous)') + ']' + (J.length > 0 ? ' { ' + R.call(J, ', ') + ' }' : '');
     }
     if (V(t)) {
         var ee = D ? T.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : y.call(t);
@@ -148,7 +148,7 @@ e.exports = function e(t, r, i, o) {
                 return !0;
             })(ei)
             ? '[' + Q(ei, x) + ']'
-            : '[ ' + O.call(ei, ', ') + ' ]';
+            : '[ ' + R.call(ei, ', ') + ' ]';
     }
     if (
         (function (e) {
@@ -156,7 +156,7 @@ e.exports = function e(t, r, i, o) {
         })(t)
     ) {
         var ea = X(t, H);
-        return 'cause' in Error.prototype || !('cause' in t) || M.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + O.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + O.call(N.call('[cause]: ' + H(t.cause), ea), ', ') + ' }';
+        return 'cause' in Error.prototype || !('cause' in t) || M.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + R.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + R.call(N.call('[cause]: ' + H(t.cause), ea), ', ') + ' }';
     }
     if ('object' == typeof t && h) {
         if (G && 'function' == typeof t[G] && w) return w(t, { depth: L - i });
@@ -292,8 +292,8 @@ e.exports = function e(t, r, i, o) {
             eu = P ? P(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             ec = t instanceof Object ? '' : 'null prototype',
             ed = !eu && b && Object(t) === t && b in t ? m.call(Y(t), 8, -1) : ec ? 'Object' : '',
-            e_ = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + O.call(N.call([], ed || [], ec || []), ': ') + '] ' : '');
-        return 0 === el.length ? e_ + '{}' : x ? e_ + '{' + Q(el, x) + '}' : e_ + '{ ' + O.call(el, ', ') + ' }';
+            e_ = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + R.call(N.call([], ed || [], ec || []), ': ') + '] ' : '');
+        return 0 === el.length ? e_ + '{}' : x ? e_ + '{' + Q(el, x) + '}' : e_ + '{ ' + R.call(el, ', ') + ' }';
     }
     return String(t);
 };
@@ -346,12 +346,12 @@ function z(e) {
     return e + ' { ? }';
 }
 function q(e, t, n, r) {
-    return e + ' (' + t + ') {' + (r ? Q(n, r) : O.call(n, ', ')) + '}';
+    return e + ' (' + t + ') {' + (r ? Q(n, r) : R.call(n, ', ')) + '}';
 }
 function Q(e, t) {
     if (0 === e.length) return '';
     var n = '\n' + t.prev + t.base;
-    return n + O.call(e, ',' + n) + '\n' + t.prev;
+    return n + R.call(e, ',' + n) + '\n' + t.prev;
 }
 function X(e, t) {
     var n,

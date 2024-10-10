@@ -99,13 +99,13 @@ class T extends s.Z {
         super({
             CACHE_LOADED_LAZY_NO_CACHE: y,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: O,
+            CHANNEL_DELETE: R,
             CHANNEL_UPDATES: N,
             CONNECTION_OPEN_SUPPLEMENTAL: g,
             GUILD_DELETE: C,
             LOGIN_SUCCESS: L,
             THREAD_DELETE: v,
-            THREAD_UPDATE: R
+            THREAD_UPDATE: O
         });
     }
 }
@@ -125,10 +125,10 @@ function A(e) {
 function N(e) {
     for (let t of e.channels) A(t);
 }
-function O(e) {
+function R(e) {
     T.deleteChannel(e.channel.id);
 }
-function R(e) {
+function O(e) {
     A(e.channel);
 }
 function v(e) {

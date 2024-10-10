@@ -20,8 +20,8 @@ var r = n(278074),
     g = n(687516),
     A = n(539573),
     N = n(826581),
-    O = n(409059),
-    R = n(264229),
+    R = n(409059),
+    O = n(264229),
     v = n(366980),
     C = n(779832),
     L = n(786761),
@@ -88,7 +88,7 @@ class eh {
 }
 function ep(e) {
     let { inviteKey: t, channelId: n, messageId: r, location: i, suggested: a = null, overrideProperties: s = {} } = e,
-        o = (0, R.fU)(t),
+        o = (0, O.fU)(t),
         l = K.Z.getChannel(n);
     if (null != l) {
         let e = null;
@@ -742,12 +742,12 @@ let eI = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: _, tts: m = !1 } = t,
-                { activityAction: T, location: S, suggestedInvite: g, stickerIds: R, messageReference: v, allowedMentions: C, poll: L, contentInventoryEntry: U } = n,
+                { activityAction: T, location: S, suggestedInvite: g, stickerIds: O, messageReference: v, allowedMentions: C, poll: L, contentInventoryEntry: U } = n,
                 F = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [Z, Y] = (0, H.Z)(c);
             Z && ((c = Y), (F = (0, en.pj)(F, el.iLy.SUPPRESS_NOTIFICATIONS)));
             let j = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
-            if ('' === c && null == T && null == R && null == L && !j) return Promise.resolve();
+            if ('' === c && null == T && null == O && null == L && !j) return Promise.resolve();
             let z = null != v ? el.uaV.REPLY : el.uaV.DEFAULT,
                 q = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.r)();
             if (!1 !== n.eagerDispatch) {
@@ -762,7 +762,7 @@ let eI = {
                     nonce: q,
                     poll: (0, G.x9)(L)
                 });
-                (0, w.EL)(e, t.id), null != R && (t.sticker_items = R.map((e) => V.Z.getStickerById(e)).filter((e) => null != e)), em.receiveMessage(e, t, !0, n);
+                (0, w.EL)(e, t.id), null != O && (t.sticker_items = O.map((e) => V.Z.getStickerById(e)).filter((e) => null != e)), em.receiveMessage(e, t, !0, n);
             }
             if (!ef && null != d && d.length > 0) {
                 let t, n;
@@ -796,7 +796,7 @@ let eI = {
             }
             return (
                 null != L && (X.message.poll = L),
-                null != R && (X.message.sticker_ids = R),
+                null != O && (X.message.sticker_ids = O),
                 x.Z.isEnabled() && (X.message.has_poggermode_enabled = !0),
                 null != U && (X.message.content_inventory_entry = U),
                 new Promise((t, r) => {
@@ -841,7 +841,7 @@ let eI = {
                                         }),
                                         s.Z.dispatch({
                                             type: 'STICKER_TRACK_USAGE',
-                                            stickerIds: R
+                                            stickerIds: O
                                         }),
                                         s.Z.dispatch({
                                             type: 'LOCAL_MESSAGE_CREATE',
@@ -864,7 +864,7 @@ let eI = {
                                                         overrideProperties: s
                                                     });
                                                 else if (t === p.g.TEMPLATE) {
-                                                    let e = O.Z.getGuildTemplate(o);
+                                                    let e = R.Z.getGuildTemplate(o);
                                                     if (null == e || e.state === ec.Rj.RESOLVING) return;
                                                     u.ZP.trackWithMetadata(el.rMx.GUILD_TEMPLATE_LINK_SENT, {
                                                         guild_template_code: o,

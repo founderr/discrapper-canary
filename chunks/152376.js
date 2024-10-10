@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     QG: function () {
-        return O;
+        return R;
     },
     XQ: function () {
         return T;
@@ -15,7 +15,7 @@ n.d(t, {
         return C;
     },
     dM: function () {
-        return R;
+        return O;
     },
     k$: function () {
         return S;
@@ -146,7 +146,7 @@ function N(e, t) {
                 location: r
             });
 }
-function O(e, t, n) {
+function R(e, t, n) {
     if (u.Z.isFullServerPreview(e)) {
         (0, l.aq)(e, { optInEnabled: t });
         return;
@@ -159,7 +159,7 @@ function O(e, t, n) {
             location: n
         });
 }
-function R(e, t, n, r) {
+function O(e, t, n, r) {
     if (null == e || u.Z.isFullServerPreview(e)) return;
     let i = E.ZP.getChannelIdFlags(e, t);
     !(0, h.yE)(i, m.ic.OPT_IN_ENABLED) && n && (i = (0, h.mB)(i, m.ic.OPT_IN_ENABLED, !0)),

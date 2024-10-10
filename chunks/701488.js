@@ -102,7 +102,7 @@ n.d(t, {
         return V;
     },
     qm: function () {
-        return O;
+        return R;
     },
     um: function () {
         return $;
@@ -139,8 +139,8 @@ var r,
 let g = 160,
     A = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
     N = '438122941302046720',
-    O = '773336526917861400',
-    R = '880218832743055411',
+    R = '773336526917861400',
+    O = '880218832743055411',
     v = '1050941315912835122',
     C = '1070087967294631976',
     L = '1007373802981822582',
@@ -170,8 +170,8 @@ let g = 160,
     q = [V, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
 ((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((E = a || (a = {})).DESKTOP = 'desktop'), (E.MOBILE = 'mobile'), ((f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (f.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (f.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (f.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((h = o || (o = {}))[(h.UNLOCKED = 1)] = 'UNLOCKED'), (h[(h.PORTRAIT = 2)] = 'PORTRAIT'), (h[(h.LANDSCAPE = 3)] = 'LANDSCAPE'), ((p = l || (l = {}))[(p.DIRECTORY = 0)] = 'DIRECTORY'), (p[(p.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (p[(p.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let Q = 'activity-shelf',
-    X = new Set(['755600276941176913', R, v, M]),
-    $ = new Set([R, v, M]);
+    X = new Set(['755600276941176913', O, v, M]),
+    $ = new Set([O, v, M]);
 ((I = u || (u = {}))[(I.PORTRAIT = 0)] = 'PORTRAIT'), (I[(I.LANDSCAPE = 1)] = 'LANDSCAPE'), ((m = c || (c = {}))[(m.FOCUSED = 0)] = 'FOCUSED'), (m[(m.PIP = 1)] = 'PIP'), (m[(m.GRID = 2)] = 'GRID');
 let J = {
         label_type: T.ww.NONE,

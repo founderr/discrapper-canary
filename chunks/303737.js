@@ -15,7 +15,7 @@ n.d(t, {
         return A;
     },
     sO: function () {
-        return O;
+        return R;
     },
     yL: function () {
         return N;
@@ -183,6 +183,6 @@ function N(e, t) {
         hasChangeFromTemplate: !1
     };
 }
-function O(e) {
+function R(e) {
     return (0, _.H2)(e) && e.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.$F)() && (0, u.hQ)(e.id);
 }

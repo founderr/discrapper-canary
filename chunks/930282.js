@@ -36,10 +36,10 @@ t.ZP = i.memo(function (e) {
         g = a.state === _.yb.SENDING,
         A = a.isCommandType(),
         N = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-        O = i.useRef(!1);
+        R = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
-            O.current ? null != I && I() : (O.current = !0);
+            R.current ? null != I && I() : (R.current = !0);
         }, [I, a.content, u, N, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),

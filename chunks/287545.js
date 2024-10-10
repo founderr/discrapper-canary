@@ -28,8 +28,8 @@ var i,
     g = n(19780),
     A = n(944486),
     N = n(594174),
-    O = n(626135),
-    R = n(585483),
+    R = n(626135),
+    O = n(585483),
     v = n(358085),
     C = n(624138),
     L = n(24933),
@@ -99,7 +99,7 @@ async function W(e) {
         }),
         { releasePhase: I } = Y(p),
         m = await (0, E.Z)();
-    O.default.track(B.rMx.ACTIVITY_SESSION_LEFT, {
+    R.default.track(B.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: d.id,
         guild_id: f,
         media_session_id: c.mediaSessionIds[0],
@@ -115,7 +115,7 @@ async function W(e) {
         channel_type: d.type,
         media_session_ids: c.mediaSessionIds
     }),
-        O.default.track(B.rMx.ACTIVITY_IFRAME_UNMOUNT, {
+        R.default.track(B.rMx.ACTIVITY_IFRAME_UNMOUNT, {
             channel_id: d.id,
             guild_id: f,
             application_id: i,
@@ -136,8 +136,8 @@ async function K(e) {
     if ((c && null !== (i = null == I ? void 0 : I.isPrivate()) && void 0 !== i && i && l && null == p && u.Z.selectParticipant(a, null), null == p)) return;
     let m = g.Z.getMediaSessionId(),
         A = f.compositeInstanceId,
-        R = null == m && (null == I ? void 0 : I.isVocal()) === !0 && (null == I ? void 0 : I.isPrivate()) === !1;
-    if (null == A || R) return;
+        O = null == m && (null == I ? void 0 : I.isVocal()) === !0 && (null == I ? void 0 : I.isPrivate()) === !1;
+    if (null == A || O) return;
     let v = (0, s.Z)(),
         y = 'location' in f ? 2 : 1,
         D = null == I ? void 0 : I.getGuildId(),
@@ -163,7 +163,7 @@ async function K(e) {
     H[o] = j;
     let W = Z[o];
     !(0, C.Ew)(p.nonce) && p.nonce !== (null == W ? void 0 : W.nonce) && (W = void 0),
-        O.default.track(B.rMx.ACTIVITY_SESSION_JOINED, {
+        R.default.track(B.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: I.id,
             guild_id: I.getGuildId(),
             media_session_id: V[0],
@@ -182,7 +182,7 @@ async function K(e) {
             channel_type: I.type,
             source: null == W ? void 0 : W.source
         }),
-        O.default.track(B.rMx.ACTIVITY_IFRAME_MOUNT, {
+        R.default.track(B.rMx.ACTIVITY_IFRAME_MOUNT, {
             location_stack: null == W ? void 0 : W.locations,
             channel_id: I.id,
             channel_type: I.type,
@@ -203,10 +203,10 @@ function z(e) {
 }
 class q extends c.Z {
     _initialize() {
-        A.Z.addChangeListener(this.handleSelectedChannelUpdate), R.S.subscribe(B.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), R.S.subscribe(B.CkL.OPEN_EMBEDDED_ACTIVITY, K), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', j), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', W), l.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.subscribe('CALL_DELETE', this.handleCallDelete), l.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete);
+        A.Z.addChangeListener(this.handleSelectedChannelUpdate), O.S.subscribe(B.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), O.S.subscribe(B.CkL.OPEN_EMBEDDED_ACTIVITY, K), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', j), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', W), l.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.subscribe('CALL_DELETE', this.handleCallDelete), l.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete);
     }
     _terminate() {
-        A.Z.removeChangeListener(this.handleSelectedChannelUpdate), R.S.unsubscribe(B.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), R.S.unsubscribe(B.CkL.OPEN_EMBEDDED_ACTIVITY, K), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', j), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', W), l.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), l.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete);
+        A.Z.removeChangeListener(this.handleSelectedChannelUpdate), O.S.unsubscribe(B.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), O.S.unsubscribe(B.CkL.OPEN_EMBEDDED_ACTIVITY, K), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', j), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', W), l.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), l.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete);
     }
     constructor(...e) {
         super(...e),
@@ -300,7 +300,7 @@ class q extends c.Z {
                 this.showLaunchErrorModal(d);
                 let m = S.Z.getChannel(s),
                     T = await (0, E.Z)();
-                O.default.track(B.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
+                R.default.track(B.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: s,
                     guild_id: o,
                     application_id: l,

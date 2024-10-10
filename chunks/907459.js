@@ -24,15 +24,15 @@ var r = n(735250),
     g = n(327943),
     A = n(539873),
     N = n(981631),
-    O = n(921944),
-    R = n(474936),
+    R = n(921944),
+    O = n(474936),
     v = n(689938),
     C = n(891304);
 let L = () => {
         var e, t, n;
         let i = (0, o.e7)([I.default], () => T.ZP.isPremium(I.default.getCurrentUser())),
             a = (0, f.N)(),
-            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === R.Si.TIER_2;
+            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
         return (0, r.jsx)(h.Z, {
             size: l.Button.Sizes.MEDIUM,
             buttonText: i
@@ -43,13 +43,13 @@ let L = () => {
                         intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                     })
                   : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-            subscriptionTier: R.Si.TIER_2
+            subscriptionTier: O.Si.TIER_2
         });
     },
     y = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(O.L.DISMISS), (0, S.G8)();
+                null == t || t(R.L.DISMISS), (0, S.G8)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -86,7 +86,7 @@ let L = () => {
                 (0, r.jsx)(l.Button, {
                     className: C.footerButton,
                     onClick: () => {
-                        null == n || n(O.L.DISMISS), (0, S.G8)(), !t && u.Z.open();
+                        null == n || n(R.L.DISMISS), (0, S.G8)(), !t && u.Z.open();
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
@@ -111,7 +111,7 @@ function b(e) {
     i.useEffect(() => {
         if (!!f)
             m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: R.cd.APP_ICON_UPSELL,
+                type: O.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
     }, [f, a]);

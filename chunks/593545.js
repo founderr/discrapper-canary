@@ -170,15 +170,15 @@ function g(e) {
 function A(e) {
     var t;
     let { url: n, fileName: i, fileSize: a, fileContents: o, expanded: u, setExpanded: d, language: _, setLanguage: p, bytesLeft: A, className: N } = e,
-        O = null == o ? void 0 : o.split('\n'),
-        R = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0,
+        R = null == o ? void 0 : o.split('\n'),
+        O = null !== (t = null == R ? void 0 : R.length) && void 0 !== t ? t : 0,
         v = u ? 100 : 6,
         C = 0 === A,
         L = '';
-    C && u && R > v ? (L = '\n...') : !C && (L = '...'), '' !== L && (C ? (L += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: R - v })) : (L += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
-    let y = (null == O ? void 0 : O.slice(0, v).join('\n')) + L,
+    C && u && O > v ? (L = '\n...') : !C && (L = '...'), '' !== L && (C ? (L += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: O - v })) : (L += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
+    let y = (null == R ? void 0 : R.slice(0, v).join('\n')) + L,
         D = (0, c.yx)(y),
-        b = u || v < R;
+        b = u || v < O;
     return (0, r.jsxs)('div', {
         className: s()(N, h.container),
         children: [
@@ -204,7 +204,7 @@ function A(e) {
                                       expanded: u,
                                       setExpanded: d,
                                       isWholeFile: C,
-                                      numLines: R
+                                      numLines: O
                                   }),
                                   (0, r.jsx)(g, {
                                       url: n,

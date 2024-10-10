@@ -92,8 +92,8 @@ n.d(t, {
                     var N = h.options['='.concat(I)];
                     if (!N) {
                         if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, d);
-                        var O = r.getPluralRules(n, { type: h.pluralType }).select(I - (h.offset || 0));
-                        N = h.options[O] || h.options.other;
+                        var R = r.getPluralRules(n, { type: h.pluralType }).select(I - (h.offset || 0));
+                        N = h.options[R] || h.options.other;
                     }
                     if (!N) throw new s.C8(h.value, I, Object.keys(h.options), d);
                     E.push.apply(E, e(N.value, n, r, l, u, I - (h.offset || 0)));

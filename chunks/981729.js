@@ -1,6 +1,6 @@
 n.d(t, {
     Cy: function () {
-        return O;
+        return R;
     },
     DY: function () {
         return D;
@@ -65,7 +65,7 @@ let A = Object.freeze({}),
         custom: null,
         premium: S.tooltipPremium
     }),
-    O = (e) => {
+    R = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: i, children: a, onNonAccessibleClick: o, tooltipClassName: l, tooltipStyle: c, tooltipContentClassName: _, spacing: E = 8, animationStyle: f, disableTooltipPointerEvents: h = !1, allowOverflow: p = !1, tooltipPointerClassName: I } = e,
             m = ''.concat('string' == typeof a ? a : '', ':').concat(r);
         return (0, s.jsx)(T.W5, {
@@ -105,7 +105,7 @@ let A = Object.freeze({}),
             }
         });
     },
-    R = {
+    O = {
         scale: 0.95,
         opacity: 0
     },
@@ -125,15 +125,15 @@ let A = Object.freeze({}),
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: h.F,
-                from: a.enabled ? v : R,
+                from: a.enabled ? v : O,
                 enter: C,
-                leave: a.enabled ? v : R,
+                leave: a.enabled ? v : O,
                 onRest: n
             },
             'animate-always'
         )((e, t) =>
             t
-                ? (0, s.jsx)(O, {
+                ? (0, s.jsx)(R, {
                       animationStyle: e,
                       targetElementRef: r,
                       ...i

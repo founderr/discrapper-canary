@@ -1,11 +1,11 @@
 r.d(t, {
     r: function () {
-        return o;
+        return _;
     }
 });
 var n = r(101284),
     a = r(151122);
-let o = (0, a._I)(() => {
+let _ = (0, a._I)(() => {
     let e = 1000 * (0, n.ph)();
     return {
         name: 'SessionTiming',

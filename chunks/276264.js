@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(518950),
     A = n(699516),
     N = n(594174),
-    O = n(709586),
-    R = n(624138),
+    R = n(709586),
+    O = n(624138),
     v = n(51144),
     C = n(788307),
     L = n(981631),
@@ -34,10 +34,10 @@ var r = n(735250),
     D = n(524484),
     b = n(689938),
     M = n(226686);
-let P = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let P = (0, O.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
     var t;
-    let { selected: n = !1, colorString: a, colorRoleName: l, isOwner: R, ownerTooltipText: P, lostPermissionTooltipText: U, isTyping: w = !1, nick: x, user: G, currentUser: k, activities: B, applicationStream: F, status: V, shouldAnimateStatus: H = !1, isMobile: Z, premiumSince: Y, channel: j, guildId: W, className: K, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: $, onFocus: J, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: ea, itemProps: es } = e,
+    let { selected: n = !1, colorString: a, colorRoleName: l, isOwner: O, ownerTooltipText: P, lostPermissionTooltipText: U, isTyping: w = !1, nick: x, user: G, currentUser: k, activities: B, applicationStream: F, status: V, shouldAnimateStatus: H = !1, isMobile: Z, premiumSince: Y, channel: j, guildId: W, className: K, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: $, onFocus: J, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: ea, itemProps: es } = e,
         eo = null == G ? void 0 : G.id,
         el = v.ZP.useName(G),
         eu = (null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === eo,
@@ -68,8 +68,8 @@ t.Z = function (e) {
         n && eA(!1);
     }, [n]);
     let eN = (0, m.Fr)(B),
-        eO = null != eN && !eu && n && !eg && (0, T.dl)(eN),
-        eR = () => {
+        eR = null != eN && !eu && n && !eg && (0, T.dl)(eN),
+        eO = () => {
             e_(!0);
         },
         ev = () => {
@@ -96,7 +96,7 @@ t.Z = function (e) {
             });
         },
         ey = () =>
-            null != R && R && null == U
+            null != O && O && null == U
                 ? (0, r.jsx)(u.Tooltip, {
                       text: null != P ? P : b.Z.Messages.GUILD_OWNER,
                       children: (e) =>
@@ -117,7 +117,7 @@ t.Z = function (e) {
                           (0, r.jsx)(u.Clickable, {
                               onClick: $,
                               tabIndex: -1,
-                              children: (0, r.jsx)(O.Z, {
+                              children: (0, r.jsx)(R.Z, {
                                   ...e,
                                   className: M.premiumIcon
                               })
@@ -200,7 +200,7 @@ t.Z = function (e) {
                       closePopout: () => eA(!0)
                   }),
               position: 'bottom',
-              shouldShow: eO,
+              shouldShow: eR,
               nudgeAlignIntoViewport: !1,
               useRawTargetDimensions: !0,
               animation: u.Popout.Animation.NONE,
@@ -215,7 +215,7 @@ t.Z = function (e) {
                       onKeyDown: q,
                       onMouseDown: z,
                       onContextMenu: X,
-                      onMouseEnter: eR,
+                      onMouseEnter: eO,
                       onMouseLeave: ev,
                       name:
                           null == U

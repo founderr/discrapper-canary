@@ -55,7 +55,7 @@ function A() {
 function N(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
 }
-function O(e) {
+function R(e) {
     let {
         settings: { proto: t, type: n },
         partial: r,
@@ -66,7 +66,7 @@ function O(e) {
     let o = T[n];
     i && N(o), r ? ((o.proto = (0, f.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
-function R(e) {
+function O(e) {
     null != e &&
         o().forEach(T, (t, n) => {
             var r, i;
@@ -84,7 +84,7 @@ function R(e) {
 }
 class v extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        R(e);
+        O(e);
     }
     getState() {
         return this.computeState();
@@ -147,10 +147,10 @@ p(v, 'displayName', 'UserSettingsProtoStore'),
     (t.Z = new v(_.Z, {
         CACHE_LOADED: function (e) {
             let { userSettings: t } = e;
-            R(t);
+            O(t);
         },
-        USER_SETTINGS_PROTO_UPDATE: O,
-        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: O,
+        USER_SETTINGS_PROTO_UPDATE: R,
+        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,
         USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function (e) {
             let {
                 settings: { type: t, changes: n }

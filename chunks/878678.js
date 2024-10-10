@@ -19,13 +19,13 @@ function d(e) {
     let t,
         n,
         { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: I, onCloseCallback: m, bodyClassName: T, transitionState: S, loading: g = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
-        O = i.useRef(null);
+        R = i.useRef(null);
     return (
         i.useEffect(() => {
             !N &&
                 setTimeout(() => {
                     var e;
-                    return null === (e = O.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = R.current) || void 0 === e ? void 0 : e.focus();
                 }, 0);
         }, [N]),
         i.useLayoutEffect(() => () => (null == m ? void 0 : m())),
@@ -43,7 +43,7 @@ function d(e) {
             })),
         null != _ &&
             (n = (0, r.jsx)(o.zx, {
-                buttonRef: O,
+                buttonRef: R,
                 type: 'submit',
                 color: A,
                 submitting: g,

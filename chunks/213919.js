@@ -2,7 +2,7 @@ let r, i;
 n.r(t),
     n.d(t, {
         encryptAndStoreTokens: function () {
-            return R;
+            return O;
         },
         getToken: function () {
             return S;
@@ -14,7 +14,7 @@ n.r(t),
             return T;
         },
         removeToken: function () {
-            return O;
+            return R;
         },
         setToken: function () {
             return g;
@@ -93,10 +93,10 @@ function S(e) {
 }
 function g(e, t) {
     if (null == e) {
-        O(t);
+        R(t);
         return;
     }
-    (r = e), null != t && (_[t] = e), d ? R() : ((i = r), (E = _), p());
+    (r = e), null != t && (_[t] = e), d ? O() : ((i = r), (E = _), p());
 }
 function A() {
     if (!f) (f = !0), p();
@@ -104,11 +104,11 @@ function A() {
 function N() {
     if (!!f) (f = !1), p();
 }
-function O(e) {
+function R(e) {
     let t = r;
     return null != e && ((t = _[e]), delete _[e], delete E[e]), t === r && ((r = null), (i = null)), p(), null != t;
 }
-function R() {
+function O() {
     (null == u ? void 0 : u.isEncryptionAvailable())
         ? (null != r && (i = m(r)),
           (E = l(

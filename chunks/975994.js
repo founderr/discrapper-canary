@@ -24,8 +24,8 @@ var r = n(235003),
     g = n(580917),
     A = n(773959),
     N = n(168147),
-    O = n(408291),
-    R = n(396423),
+    R = n(408291),
+    O = n(396423),
     v = n(701809),
     C = n(340132),
     L = n(355180),
@@ -77,8 +77,8 @@ function q(e, t) {
         {
             labelProps: A,
             inputProps: N,
-            descriptionProps: O,
-            errorMessageProps: R
+            descriptionProps: R,
+            errorMessageProps: O
         } = (0, K.E)(
             {
                 ...e,
@@ -227,8 +227,8 @@ function q(e, t) {
                 shouldFocusOnHover: !0,
                 linkBehavior: 'selection'
             }),
-            descriptionProps: O,
-            errorMessageProps: R,
+            descriptionProps: R,
+            errorMessageProps: O,
             isInvalid: T,
             validationErrors: S,
             validationDetails: g
@@ -257,8 +257,8 @@ z = {
     'lv-LV': g.Z,
     'nb-NO': A.Z,
     'nl-NL': N.Z,
-    'pl-PL': O.Z,
-    'pt-BR': R.Z,
+    'pl-PL': R.Z,
+    'pt-BR': O.Z,
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': L.Z,

@@ -1,12 +1,12 @@
 n.d(t, {
     YG: function () {
-        return R;
+        return O;
     },
     ZP: function () {
         return C;
     },
     uo: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -43,14 +43,14 @@ function N(e, t, n) {
         e
     );
 }
-let O = /\.gif($|\?|#)/i,
-    R = /\.webp($|\?|#)/i,
+let R = /\.gif($|\?|#)/i,
+    O = /\.webp($|\?|#)/i,
     v = /\.png($|\?|#)/i;
 ((a = r || (r = {})).LOAD = 'LOAD'), (a.PRELOAD = 'PRELOAD'), (a.CLICK = 'CLICK');
 class C extends (i = o.Component) {
     static isAnimated(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i } = e;
-        return r || O.test(null != n && '' !== n ? n : t) || (null != i && i && R.test(null != n && '' !== n ? n : t));
+        return r || R.test(null != n && '' !== n ? n : t) || (null != i && i && O.test(null != n && '' !== n ? n : t));
     }
     static isSrcPNG(e) {
         let { src: t } = e;
@@ -125,7 +125,7 @@ class C extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: S, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: v, placeholder: L, placeholderVersion: y, dataSafeSrc: D, srcIsAnimated: b } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: S, onClick: A, renderAccessory: N, tabIndex: R, limitResponsiveWidth: O, useFullWidth: v, placeholder: L, placeholderVersion: y, dataSafeSrc: D, srcIsAnimated: b } = this.props,
             { readyState: M, hasMouseOver: P, hasFocus: U } = this.state,
             w = null != n,
             x = this.getRatio(),
@@ -141,9 +141,9 @@ class C extends (i = o.Component) {
                 minWidth: I,
                 minHeight: m,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: R,
+                limitResponsiveWidth: O,
                 useFullWidth: v,
-                tabIndex: O,
+                tabIndex: R,
                 width: G,
                 height: k,
                 src: '',

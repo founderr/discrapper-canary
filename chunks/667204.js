@@ -32,8 +32,8 @@ var r = n(512722),
     g = n(346479),
     A = n(706454),
     N = n(430824),
-    O = n(117530),
-    R = n(594174),
+    R = n(117530),
+    O = n(594174),
     v = n(403182),
     C = n(823379),
     L = n(861990),
@@ -66,7 +66,7 @@ let F = (e, t) => {
         return t || n ? t : null;
     };
 async function Z(e) {
-    var t, n, r, s, l, c, d, f, h, p, I, m, T, S, N, R, v;
+    var t, n, r, s, l, c, d, f, h, p, I, m, T, S, N, O, v;
     let { command: C, optionValues: L, context: D, commandTargetId: M, maxSizeCallback: x, commandOrigin: k = U.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: Z = z, source: j } = e,
         K = null !== (r = P.Z.getSource(D.channel.id)) && void 0 !== r ? r : j,
         Q = null !== (s = P.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : k;
@@ -101,7 +101,7 @@ async function Z(e) {
             }
             if (e.type === u.jw.ATTACHMENT) {
                 if (null != D.autocomplete) continue;
-                let n = O.Z.getUpload(D.channel.id, e.name, J);
+                let n = R.Z.getUpload(D.channel.id, e.name, J);
                 if (null == n) continue;
                 let r = $.length;
                 $.push(n),
@@ -218,7 +218,7 @@ async function Z(e) {
     if (C.inputType === U.iw.BUILT_IN || C.inputType === U.iw.BUILT_IN_TEXT || C.inputType === U.iw.BUILT_IN_INTEGRATION) return;
     let ee = {
         version: C.version,
-        id: null !== (R = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== R ? R : C.id,
+        id: null !== (O = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== O ? O : C.id,
         guild_id: C.guildId,
         name: null !== (v = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : C.untranslatedName,
         type: C.type,
@@ -357,7 +357,7 @@ async function z(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: u.B8.APPLICATION_COMMAND,
-            user: (0, T.pe)(R.default.getCurrentUser())
+            user: (0, T.pe)(O.default.getCurrentUser())
         },
         interaction_data: n
     };

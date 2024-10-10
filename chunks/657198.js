@@ -70,9 +70,9 @@ let T = (e) => {
             },
             [n, a.optionName]
         ),
-        O = (0, l.e7)([_.Z], () => _.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
-        R = a.children[a.children.length - 1],
-        v = null != R && h.LC.isText(R) && R.text.endsWith('\n'),
+        R = (0, l.e7)([_.Z], () => _.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        O = a.children[a.children.length - 1],
+        v = null != O && h.LC.isText(O) && O.text.endsWith('\n'),
         C = s()(I.inlineElement, I.optionPill, {
             [I.selectedPill]: S && T,
             [I.erroredPill]: (!S || !T) && N
@@ -83,11 +83,11 @@ let T = (e) => {
     return (
         (t =
             A === u.jw.ATTACHMENT
-                ? (null == O ? void 0 : O.filename) != null
+                ? (null == R ? void 0 : R.filename) != null
                     ? (0, r.jsxs)('span', {
                           className: s()(I.optionPillValue, I.attachmentFilename),
                           contentEditable: !1,
-                          children: [O.filename, m]
+                          children: [R.filename, m]
                       })
                     : (0, r.jsxs)('span', {
                           className: s()(I.optionPillValue, I.readonlyPillValue),

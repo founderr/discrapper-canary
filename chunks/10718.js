@@ -140,7 +140,7 @@ function T(e, t, n) {
     I.current = f;
     let m = r.useMemo(() => {
         var e;
-        return O(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
+        return R(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
@@ -189,7 +189,7 @@ function T(e, t, n) {
 function S(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.ZP.query(e, t, n),
-        u = O(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
+        u = R(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
     return {
         commands: s ? [...a, ...u] : a,
         sections: s && 0 === i.length ? [o.Tm[_.bi.BUILT_IN]] : i
@@ -244,7 +244,7 @@ let N = {
     type: c.Qi.APPLICATION,
     name: ''
 };
-function O(e, t) {
+function R(e, t) {
     let n = [];
     for (let r = 0; r < e; r++)
         n.push(

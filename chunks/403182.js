@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     OC: function () {
-        return O;
+        return R;
     },
     dg: function () {
         return g;
@@ -140,10 +140,10 @@ function N(e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > O()
+        })(e) > R()
     );
 }
-function O() {
+function R() {
     let e = c.default.getCurrentUser();
     return null != e && e.isStaff() ? 524288000 : 524288000;
 }

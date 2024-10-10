@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     MC: function () {
-        return O;
+        return R;
     },
     dn: function () {
         return T;
@@ -101,7 +101,7 @@ function N(e) {
         a = (0, u.m)();
     return A(n, !(0, p.Z)(i, r), a);
 }
-let O = (e) =>
+let R = (e) =>
     (0, a.EQ)(e)
         .with('explicit_content', () => m.Z.Messages.EXPLICIT_CONTENT_ALT)
         .with('spoiler', () => m.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL)

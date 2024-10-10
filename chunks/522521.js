@@ -1,11 +1,11 @@
 r.d(t, {
     s: function () {
-        return o;
+        return _;
     }
 });
 var n = r(622916),
     a = r(151122);
-let o = (0, a._I)((e = {}) => {
+let _ = (0, a._I)((e = {}) => {
     let t = {
         debugger: !1,
         stringify: !1,

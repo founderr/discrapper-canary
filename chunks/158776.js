@@ -20,8 +20,8 @@ let T = Object.freeze([]),
     g = {},
     A = {},
     N = {},
-    O = {};
-function R(e, t) {
+    R = {};
+function O(e, t) {
     let n = S[e];
     return null != n ? n[t] : null;
 }
@@ -81,7 +81,7 @@ function b(e) {
                 timestamp: Date.now()
             });
     }
-    return delete O[n], y(n), !0;
+    return delete R[n], y(n), !0;
 }
 function M(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, timestamp: s } = e;
@@ -131,7 +131,7 @@ class w extends (r = d.ZP.Store) {
             a = I.default.getUser(e);
         if ((null != a && a.hasFlag(m.xW$.BOT_HTTP_INTERACTIONS) && (i = m.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return m.Skl.ONLINE;
         if (null == r) return null !== (t = g[e]) && void 0 !== t ? t : i;
-        let s = R(e, r);
+        let s = O(e, r);
         return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : i;
     }
     getActivities(e) {
@@ -140,7 +140,7 @@ class w extends (r = d.ZP.Store) {
             var n;
             return null !== (n = A[e]) && void 0 !== n ? n : T;
         }
-        let r = R(e, t);
+        let r = O(e, t);
         return null == r || null == r.activities ? T : r.activities;
     }
     getPrimaryActivity(e) {
@@ -167,7 +167,7 @@ class w extends (r = d.ZP.Store) {
         return this.getActivities(e, n).find(t);
     }
     getActivityMetadata(e) {
-        return O[e];
+        return R[e];
     }
     getUserIds() {
         return h.default.keys(A);
@@ -184,7 +184,7 @@ class w extends (r = d.ZP.Store) {
             presencesForGuilds: S,
             statuses: g,
             activities: A,
-            activityMetadata: O,
+            activityMetadata: R,
             clientStatuses: N
         };
     }
@@ -205,7 +205,7 @@ class w extends (r = d.ZP.Store) {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 r = p.default.getId();
-            (S = {}), (O = {}), (g = { [r]: g[r] }), (A = { [r]: A[r] }), (N = { [r]: {} });
+            (S = {}), (R = {}), (g = { [r]: g[r] }), (A = { [r]: A[r] }), (N = { [r]: {} });
             let i = new Set(),
                 a = Date.now();
             t.forEach((e) => {
@@ -240,7 +240,7 @@ class w extends (r = d.ZP.Store) {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { presences: t } = e;
-            (S = t.presencesForGuilds), (g = t.statuses), (A = t.activities), (O = t.activityMetadata);
+            (S = t.presencesForGuilds), (g = t.statuses), (A = t.activities), (R = t.activityMetadata);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -295,7 +295,7 @@ class w extends (r = d.ZP.Store) {
         },
         ACTIVITY_METADATA_UPDATE: function (e) {
             let { userId: t, metadata: n } = e;
-            return (O[t] = n), !1;
+            return (R[t] = n), !1;
         },
         THREAD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, members: n } = e;
@@ -327,6 +327,6 @@ class w extends (r = d.ZP.Store) {
         SELF_PRESENCE_STORE_UPDATE: function (e) {
             let t = p.default.getId();
             if (g[t] === e.status && A[t] === e.activities) return !1;
-            (g[t] = e.status), (A[t] = e.activities), delete O[t];
+            (g[t] = e.status), (A[t] = e.activities), delete R[t];
         }
     }));

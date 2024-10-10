@@ -20,8 +20,8 @@ let E = null,
     g = {},
     A = 0,
     N = null,
-    O = [],
-    R = !1,
+    R = [],
+    O = !1,
     v = 0,
     C = !1,
     L = null,
@@ -74,10 +74,10 @@ class G extends (r = l.ZP.Store) {
         return T.has(e);
     }
     getEligibleUsers() {
-        return O;
+        return R;
     }
     getFetchingEligibleUsers() {
-        return R;
+        return O;
     }
     getNextIndexOfEligibleUsers() {
         return v;
@@ -175,14 +175,14 @@ class G extends (r = l.ZP.Store) {
             T.delete(t), S.add(t);
         },
         REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
-            R = !0;
+            O = !0;
         },
         REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
             let { users: t, nextIndex: n } = e;
-            (R = !1), (O = t), (v = n);
+            (O = !1), (R = t), (v = n);
         },
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
-            R = !1;
+            O = !1;
         },
         LOAD_MESSAGES_SUCCESS: w,
         MESSAGE_CREATE: function (e) {
@@ -191,6 +191,6 @@ class G extends (r = l.ZP.Store) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: w,
         LOGOUT: function () {
-            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (S = new Set()), (g = {}), (A = 0), (N = null), (O = []), (R = !1), (v = 0), (C = !1), (L = null), (p = new Map()), (y = !1), (D = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
+            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (S = new Set()), (g = {}), (A = 0), (N = null), (R = []), (O = !1), (v = 0), (C = !1), (L = null), (p = new Map()), (y = !1), (D = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
         }
     }));

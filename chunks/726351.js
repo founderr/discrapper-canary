@@ -52,16 +52,16 @@ e.exports = function (e) {
     var g = a(t),
         A = i({ stateHandler: d }),
         N = I(e, 'strategy', 'object'),
-        O = I(e, 'important', !1),
-        R = {
+        R = I(e, 'important', !1),
+        O = {
             reporter: m,
             batchProcessor: T,
             stateHandler: d,
             idHandler: t,
-            important: O
+            important: R
         };
-    if (('scroll' === N && (u.isLegacyOpera() ? (m.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object')) : u.isIE(9) && (m.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))), 'scroll' === N)) n = E(R);
-    else if ('object' === N) n = _(R);
+    if (('scroll' === N && (u.isLegacyOpera() ? (m.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object')) : u.isIE(9) && (m.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))), 'scroll' === N)) n = E(O);
+    else if ('object' === N) n = _(O);
     else throw Error('Invalid strategy name: ' + N);
     var v = {};
     return {
@@ -104,7 +104,7 @@ e.exports = function (e) {
                         n.makeDetectable(
                             {
                                 debug: _,
-                                important: O
+                                important: R
                             },
                             e,
                             function (e) {

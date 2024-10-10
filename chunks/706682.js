@@ -469,13 +469,13 @@ function N(e, t = {}) {
                 });
             if (i.contains(u)) c.currentNode = u;
             else {
-                let e = O(c);
+                let e = R(c);
                 return e && S(e, !0), null != e ? e : null;
             }
             let d = c.previousNode();
             if (!d && o) {
                 c.currentNode = i;
-                let e = O(c);
+                let e = R(c);
                 if (!e) return null;
                 d = e;
             }
@@ -495,7 +495,7 @@ function N(e, t = {}) {
             let r = e.current;
             if (!r) return null;
             let { tabbable: i = t.tabbable, accept: a = t.accept } = n,
-                s = O(
+                s = R(
                     A(r, {
                         tabbable: i,
                         accept: a
@@ -505,13 +505,13 @@ function N(e, t = {}) {
         }
     };
 }
-function O(e) {
+function R(e) {
     let t, n;
     do (t = e.lastChild()) && (n = t);
     while (t);
     return n;
 }
-class R {
+class O {
     get size() {
         return this.fastMap.size;
     }
@@ -541,7 +541,7 @@ class R {
     }
     clone() {
         var e, t;
-        let n = new R();
+        let n = new O();
         for (let r of this.traverse()) n.addTreeNode(r.scopeRef, null !== (t = null === (e = r.parent) || void 0 === e ? void 0 : e.scopeRef) && void 0 !== t ? t : null, r.nodeToRestore);
         return n;
     }
@@ -560,7 +560,7 @@ class v {
         (this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef);
     }
 }
-let C = new R();
+let C = new O();
 function L(e = {}) {
     let { autoFocus: t = !1, isTextInput: n, within: r } = e,
         s = (0, i.useRef)({

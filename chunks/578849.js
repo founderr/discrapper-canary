@@ -197,8 +197,8 @@ function S(e, { joinWith: t }) {
 let g = '[a-zA-Z]\\w*',
     A = '[a-zA-Z_]\\w*',
     N = '\\b\\d+(\\.\\d+)?',
-    O = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
-    R = '\\b(0b[01]+)',
+    R = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
+    O = '\\b(0b[01]+)',
     v = {
         begin: '\\\\[\\s\\S]',
         relevance: 0
@@ -232,8 +232,8 @@ var b = Object.freeze({
     IDENT_RE: g,
     UNDERSCORE_IDENT_RE: A,
     NUMBER_RE: N,
-    C_NUMBER_RE: O,
-    BINARY_NUMBER_RE: R,
+    C_NUMBER_RE: R,
+    BINARY_NUMBER_RE: O,
     RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
     SHEBANG: (e = {}) => {
         let t = /^#![ ]*\//;
@@ -280,12 +280,12 @@ var b = Object.freeze({
     },
     C_NUMBER_MODE: {
         scope: 'number',
-        begin: O,
+        begin: R,
         relevance: 0
     },
     BINARY_NUMBER_MODE: {
         scope: 'number',
-        begin: R,
+        begin: O,
         relevance: 0
     },
     REGEXP_MODE: {
@@ -491,7 +491,7 @@ var q = (function (e) {
                               return;
                           }
                           (e = N(v.subLanguage, D, !0, C[v.subLanguage])), (C[v.subLanguage] = e._top);
-                      } else e = O(D, v.subLanguage.length ? v.subLanguage : null);
+                      } else e = R(D, v.subLanguage.length ? v.subLanguage : null);
                       v.relevance > 0 && (b += e.relevance), y.addSublanguage(e._emitter, e.language);
                   })()
                 : d(),
@@ -723,7 +723,7 @@ var q = (function (e) {
                     })(e)
                 );
             })(g),
-            R = '',
+            O = '',
             v = o || A,
             C = {},
             y = new T.__emitter(T);
@@ -750,10 +750,10 @@ var q = (function (e) {
                 I(t.substring(M)),
                 y.closeAllNodes(),
                 y.finalize(),
-                (R = y.toHTML()),
+                (O = y.toHTML()),
                 {
                     language: e,
-                    value: R,
+                    value: O,
                     relevance: b,
                     illegal: !1,
                     _emitter: y,
@@ -772,7 +772,7 @@ var q = (function (e) {
                         index: M,
                         context: t.slice(M - 100, M + 100),
                         mode: n.mode,
-                        resultSoFar: R
+                        resultSoFar: O
                     },
                     _emitter: y
                 };
@@ -789,7 +789,7 @@ var q = (function (e) {
             else throw n;
         }
     }
-    function O(e, t) {
+    function R(e, t) {
         t = t || T.languages || Object.keys(n);
         let r = (function (e) {
                 let t = {
@@ -816,7 +816,7 @@ var q = (function (e) {
         });
         return (s.secondBest = o), s;
     }
-    function R(e) {
+    function O(e) {
         let t = null,
             n = (function (e) {
                 let t = e.className + ' ';
@@ -843,7 +843,7 @@ var q = (function (e) {
                       language: n,
                       ignoreIllegals: !0
                   })
-                : O(r);
+                : R(r);
         (e.innerHTML = i.value),
             !(function (e, t, n) {
                 let r = (t && s[t]) || n;
@@ -871,7 +871,7 @@ var q = (function (e) {
             v = !0;
             return;
         }
-        document.querySelectorAll(T.cssSelector).forEach(R);
+        document.querySelectorAll(T.cssSelector).forEach(O);
     }
     'undefined' != typeof window &&
         window.addEventListener &&
@@ -902,11 +902,11 @@ var q = (function (e) {
     }
     for (let r in (Object.assign(e, {
         highlight: A,
-        highlightAuto: O,
+        highlightAuto: R,
         highlightAll: C,
-        highlightElement: R,
+        highlightElement: O,
         highlightBlock: function (e) {
-            return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), R(e);
+            return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), O(e);
         },
         configure: function (e) {
             T = a(T, e);

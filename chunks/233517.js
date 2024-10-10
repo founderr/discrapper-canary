@@ -1,30 +1,30 @@
 r.d(t, {
     Qy: function () {
-        return L;
+        return S;
     },
     TM: function () {
         return h;
     },
     Tb: function () {
-        return c;
+        return s;
     },
     YA: function () {
-        return d;
+        return N;
     },
     av: function () {
-        return N;
+        return d;
     },
     cg: function () {
         return g;
     },
     dk: function () {
-        return S;
+        return L;
     },
     eN: function () {
         return u;
     },
     eW: function () {
-        return p;
+        return O;
     },
     mG: function () {
         return T;
@@ -48,88 +48,88 @@ r.d(t, {
         return D;
     },
     yl: function () {
-        return O;
+        return p;
     }
 });
 var n = r(622916),
     a = r(899517),
-    o = r(559508),
-    i = r(263449),
-    _ = r(255768),
+    _ = r(559508),
+    o = r(263449),
+    i = r(255768),
     E = r(112797),
-    s = r(822578);
-function c(e, t) {
-    return (0, i.nZ)().captureException(e, (0, s.U0)(t));
+    c = r(822578);
+function s(e, t) {
+    return (0, o.nZ)().captureException(e, (0, c.U0)(t));
 }
 function I(e, t) {
     let r = 'string' == typeof t ? t : void 0,
         n = 'string' != typeof t ? { captureContext: t } : void 0;
-    return (0, i.nZ)().captureMessage(e, r, n);
+    return (0, o.nZ)().captureMessage(e, r, n);
 }
 function u(e, t) {
-    return (0, i.nZ)().captureEvent(e, t);
+    return (0, o.nZ)().captureEvent(e, t);
 }
 function l(e, t) {
-    (0, i.aF)().setContext(e, t);
+    (0, o.aF)().setContext(e, t);
 }
 function R(e) {
-    (0, i.aF)().setExtras(e);
+    (0, o.aF)().setExtras(e);
 }
 function A(e, t) {
-    (0, i.aF)().setExtra(e, t);
+    (0, o.aF)().setExtra(e, t);
 }
 function T(e) {
-    (0, i.aF)().setTags(e);
+    (0, o.aF)().setTags(e);
 }
-function d(e, t) {
-    (0, i.aF)().setTag(e, t);
+function N(e, t) {
+    (0, o.aF)().setTag(e, t);
 }
-function N(e) {
-    (0, i.aF)().setUser(e);
+function d(e) {
+    (0, o.aF)().setUser(e);
 }
-function p() {
-    return (0, i.aF)().lastEventId();
+function O() {
+    return (0, o.aF)().lastEventId();
 }
-async function O(e) {
-    let t = (0, i.s3)();
-    return t ? t.flush(e) : (_.X && n.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
+async function p(e) {
+    let t = (0, o.s3)();
+    return t ? t.flush(e) : (i.X && n.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
 }
 async function f(e) {
-    let t = (0, i.s3)();
-    return t ? t.close(e) : (_.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
+    let t = (0, o.s3)();
+    return t ? t.close(e) : (i.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
 }
-function S() {
-    return !!(0, i.s3)();
+function L() {
+    return !!(0, o.s3)();
 }
-function L(e) {
-    (0, i.aF)().addEventProcessor(e);
+function S(e) {
+    (0, o.aF)().addEventProcessor(e);
 }
 function D(e) {
-    let t = (0, i.s3)(),
-        r = (0, i.aF)(),
-        n = (0, i.nZ)(),
-        { release: _, environment: s = o.J } = (t && t.getOptions()) || {},
-        { userAgent: c } = a.n.navigator || {},
+    let t = (0, o.s3)(),
+        r = (0, o.aF)(),
+        n = (0, o.nZ)(),
+        { release: i, environment: c = _.J } = (t && t.getOptions()) || {},
+        { userAgent: s } = a.n.navigator || {},
         I = (0, E.Hv)({
-            release: _,
-            environment: s,
+            release: i,
+            environment: c,
             user: n.getUser() || r.getUser(),
-            ...(c && { userAgent: c }),
+            ...(s && { userAgent: s }),
             ...e
         }),
         u = r.getSession();
     return u && 'ok' === u.status && (0, E.CT)(u, { status: 'exited' }), h(), r.setSession(I), n.setSession(I), I;
 }
 function h() {
-    let e = (0, i.aF)(),
-        t = (0, i.nZ)(),
+    let e = (0, o.aF)(),
+        t = (0, o.nZ)(),
         r = t.getSession() || e.getSession();
     r && (0, E.RJ)(r), C(), e.setSession(), t.setSession();
 }
 function C() {
-    let e = (0, i.aF)(),
-        t = (0, i.nZ)(),
-        r = (0, i.s3)(),
+    let e = (0, o.aF)(),
+        t = (0, o.nZ)(),
+        r = (0, o.s3)(),
         n = t.getSession() || e.getSession();
     n && r && r.captureSession(n);
 }

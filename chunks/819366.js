@@ -24,8 +24,8 @@ var r = n(735250),
     g = n(699516),
     A = n(594174),
     N = n(5192),
-    O = n(51144),
-    R = n(377668);
+    R = n(51144),
+    O = n(377668);
 function v(e) {
     let { userId: t, className: a, children: s } = e,
         o = i.useCallback(() => {
@@ -75,10 +75,10 @@ function C(e) {
                                   });
                           });
                   },
-        w = O.ZP.useName(b),
+        w = R.ZP.useName(b),
         x = (0, l.e7)([m.Z, T.ZP, g.Z], () => N.ZP.getNickname(P, a, b)),
         G = S.Z.getGuild(P),
-        k = (0, E.Ib)(G, M) && i === R.fL ? R.jM : null;
+        k = (0, E.Ib)(G, M) && i === O.fL ? O.jM : null;
     if (null == b)
         return (0, r.jsx)(v, {
             userId: f,

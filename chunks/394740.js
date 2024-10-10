@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(735250),
     g = n(689938),
     A = n(383052),
     N = n(145834);
-function O(e) {
+function R(e) {
     var t;
-    let { onClose: a, closePopout: O, sound: R, channel: v } = e,
+    let { onClose: a, closePopout: R, sound: O, channel: v } = e,
         C = (0, c.ZP)(),
         [L, y] = i.useState(!1),
         { location: D } = (0, u.O)(),
@@ -39,9 +39,9 @@ function O(e) {
             [D]
         ),
         { analyticsLocations: M } = (0, _.ZP)(d.Z.PREMIUM_UPSELL),
-        { previewSound: P } = (0, I.Z)(R, null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : null),
+        { previewSound: P } = (0, I.Z)(O, null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : null),
         U = (0, m.K_)({
-            sound: R,
+            sound: O,
             previewSound: P,
             tooltipPosition: 'left'
         }),
@@ -59,8 +59,8 @@ function O(e) {
         });
     }, [M, b]);
     let x = i.useCallback(() => {
-        h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, { location_section: T.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, E.z)(), O();
-    }, [O]);
+        h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, { location_section: T.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, E.z)(), R();
+    }, [R]);
     return (0, r.jsxs)('div', {
         className: s()(N.premiumPromo, A.container),
         children: [

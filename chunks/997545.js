@@ -28,7 +28,7 @@ var r = n(595182),
     g = n(650886),
     A = n(65154),
     N = n(149396);
-function O(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function O(e, t, n) {
         e
     );
 }
-let R = 0;
+let O = 0;
 function v(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
@@ -835,79 +835,79 @@ class C extends E.Z {
     }
     constructor(e, t, n) {
         super(e, t),
-            O(this, 'mediaEngineConnectionId', 'Native-'.concat(R++)),
-            O(this, 'goLiveSourceIdentifier', void 0),
-            O(this, 'selfMute', !1),
-            O(this, 'selfVideo', !1),
-            O(this, 'forceAudioNormal', !1),
-            O(this, 'forceAudioPriority', !1),
-            O(this, 'codecs', []),
-            O(this, 'videoEncoderFallbackPending', !1),
-            O(this, 'desktopDegradationPreference', (0, T.zS)().DegradationPreference.MAINTAIN_FRAMERATE),
-            O(this, 'sourceDesktopDegradationPreference', (0, T.zS)().DegradationPreference.DISABLED),
-            O(this, 'videoDegradationPreference', (0, T.zS)().DegradationPreference.BALANCED),
-            O(this, 'localPans', {}),
-            O(this, 'remoteAudioSSRCs', {}),
-            O(this, 'remoteVideoSSRCs', {}),
-            O(this, 'inputMode', N.pM.VOICE_ACTIVITY),
-            O(this, 'vadThreshold', -40),
-            O(this, 'vadAutoThreshold', !0),
-            O(this, 'vadUseKrisp', !0),
-            O(this, 'vadLeading', 5),
-            O(this, 'vadTrailing', 25),
-            O(this, 'pttReleaseDelay', 20),
-            O(this, 'soundshareActive', !1),
-            O(this, 'soundshareId', null),
-            O(this, 'soundshareSentSpeakingEvent', !1),
-            O(this, 'echoCancellation', !0),
-            O(this, 'noiseSuppression', !0),
-            O(this, 'automaticGainControl', !0),
-            O(this, 'noiseCancellation', !1),
-            O(this, 'experimentalEncoders', !1),
-            O(this, 'hardwareH264', !0),
-            O(this, 'softwareH264', !0),
-            O(this, 'attenuationFactor', 0.5),
-            O(this, 'attenuateWhileSpeakingSelf', !1),
-            O(this, 'attenuateWhileSpeakingOthers', !0),
-            O(this, 'qos', !0),
-            O(this, 'conn', void 0),
-            O(this, 'minimumJitterBufferLevel', 0),
-            O(this, 'postponeDecodeLevel', 100),
-            O(this, 'reconnectInterval', 60000),
-            O(this, 'keyframeInterval', 0),
-            O(this, 'clipsKeyFrameInterval', 0),
-            O(this, 'videoQualityMeasurement', ''),
-            O(this, 'videoEncoderExperiments', ''),
-            O(this, 'numFastUdpReconnects', 0),
-            O(this, 'logger', void 0),
-            O(this, 'handleSpeakingNative', (e, t) => {
+            R(this, 'mediaEngineConnectionId', 'Native-'.concat(O++)),
+            R(this, 'goLiveSourceIdentifier', void 0),
+            R(this, 'selfMute', !1),
+            R(this, 'selfVideo', !1),
+            R(this, 'forceAudioNormal', !1),
+            R(this, 'forceAudioPriority', !1),
+            R(this, 'codecs', []),
+            R(this, 'videoEncoderFallbackPending', !1),
+            R(this, 'desktopDegradationPreference', (0, T.zS)().DegradationPreference.MAINTAIN_FRAMERATE),
+            R(this, 'sourceDesktopDegradationPreference', (0, T.zS)().DegradationPreference.DISABLED),
+            R(this, 'videoDegradationPreference', (0, T.zS)().DegradationPreference.BALANCED),
+            R(this, 'localPans', {}),
+            R(this, 'remoteAudioSSRCs', {}),
+            R(this, 'remoteVideoSSRCs', {}),
+            R(this, 'inputMode', N.pM.VOICE_ACTIVITY),
+            R(this, 'vadThreshold', -40),
+            R(this, 'vadAutoThreshold', !0),
+            R(this, 'vadUseKrisp', !0),
+            R(this, 'vadLeading', 5),
+            R(this, 'vadTrailing', 25),
+            R(this, 'pttReleaseDelay', 20),
+            R(this, 'soundshareActive', !1),
+            R(this, 'soundshareId', null),
+            R(this, 'soundshareSentSpeakingEvent', !1),
+            R(this, 'echoCancellation', !0),
+            R(this, 'noiseSuppression', !0),
+            R(this, 'automaticGainControl', !0),
+            R(this, 'noiseCancellation', !1),
+            R(this, 'experimentalEncoders', !1),
+            R(this, 'hardwareH264', !0),
+            R(this, 'softwareH264', !0),
+            R(this, 'attenuationFactor', 0.5),
+            R(this, 'attenuateWhileSpeakingSelf', !1),
+            R(this, 'attenuateWhileSpeakingOthers', !0),
+            R(this, 'qos', !0),
+            R(this, 'conn', void 0),
+            R(this, 'minimumJitterBufferLevel', 0),
+            R(this, 'postponeDecodeLevel', 100),
+            R(this, 'reconnectInterval', 60000),
+            R(this, 'keyframeInterval', 0),
+            R(this, 'clipsKeyFrameInterval', 0),
+            R(this, 'videoQualityMeasurement', ''),
+            R(this, 'videoEncoderExperiments', ''),
+            R(this, 'numFastUdpReconnects', 0),
+            R(this, 'logger', void 0),
+            R(this, 'handleSpeakingNative', (e, t) => {
                 let n = N.Dg.NONE;
                 (n = 'boolean' == typeof t ? (t ? N.Dg.VOICE : N.Dg.NONE) : t), this.handleSpeakingFlags(e, n);
             }),
-            O(this, 'handleNativeMuteToggled', () => {
+            R(this, 'handleNativeMuteToggled', () => {
                 this.emit(p.Sh.ToggleMuteFromNative);
             }),
-            O(this, 'handleNativeMuteChanged', (e) => {
+            R(this, 'handleNativeMuteChanged', (e) => {
                 this.emit(p.Sh.NativeMuteChanged, e);
             }),
-            O(this, 'handleSpeakingFlags', (e, t) => {
+            R(this, 'handleSpeakingFlags', (e, t) => {
                 this.localSpeakingFlags[e] = t;
                 let n = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
                 this.emit(p.Sh.Speaking, e, t, n), (t & N.Dg.SOUNDSHARE) != 0 && !1 === this.soundshareSentSpeakingEvent && (this.emit(p.Sh.SoundshareSpeaking), (this.soundshareSentSpeakingEvent = !0));
             }),
-            O(this, 'handleSpeakingWhileMuted', () => {
+            R(this, 'handleSpeakingWhileMuted', () => {
                 this.emit(p.Sh.SpeakingWhileMuted);
             }),
-            O(this, 'handlePing', (e, t, n) => {
+            R(this, 'handlePing', (e, t, n) => {
                 this.emit(p.Sh.Ping, e);
             }),
-            O(this, 'handlePingTimeout', (e, t, n, r) => {
+            R(this, 'handlePingTimeout', (e, t, n, r) => {
                 this.emit(p.Sh.PingTimeout, n, r > 0 ? r : 4000);
             }),
-            O(this, 'handleVideoEncoderFallback', (e) => {
+            R(this, 'handleVideoEncoderFallback', (e) => {
                 if (!this.videoEncoderFallbackPending) this.logger.info('Falling back from current video encoder: '.concat(e)), (this.codecs = this.codecs.map((t) => ((e === t.name || ('AV1' === t.name && 'AV1X' === e)) && (t.encode = !1), t)).filter((e) => !('video' === e.type && !1 === e.encode && !1 === e.decode))), this.emit(p.Sh.VideoEncoderFallback, this.codecs), (this.videoEncoderFallbackPending = !0);
             }),
-            O(this, 'handleVideo', (e, t, n, r) => {
+            R(this, 'handleVideo', (e, t, n, r) => {
                 let i = s()(this.videoStreamParameters);
                 e === this.userId
                     ? null != r && Array.isArray(r) && r.length > 0
@@ -929,32 +929,32 @@ class C extends E.Z {
                     (this.videoStreamParameters = i),
                     this.emit(p.Sh.Video, e, null != n && '' !== n ? n : null, e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e], t, v(t), this.videoStreamParameters);
             }),
-            O(this, 'handleFirstFrame', (e, t, n) => {
+            R(this, 'handleFirstFrame', (e, t, n) => {
                 this.emit(p.Sh.FirstFrame, e, t, n);
             }),
-            O(this, 'handleNoInput', (e) => {
+            R(this, 'handleNoInput', (e) => {
                 this.emit(p.Sh.Silence, !e);
             }),
-            O(this, 'handleDesktopSourceEnded', () => {
+            R(this, 'handleDesktopSourceEnded', () => {
                 this.emit(p.Sh.DesktopSourceEnd);
             }),
-            O(this, 'handleSoundshare', (e) => {
+            R(this, 'handleSoundshare', (e) => {
                 e && ((this.soundshareActive = !0), this.conn.setTransportOptions({ encodingVoiceBitRate: Math.max(N.ed, this.voiceBitrate) }), this.emit(p.Sh.SoundshareAttached));
             }),
-            O(this, 'handleSoundshareFailed', (e, t, n) => {
+            R(this, 'handleSoundshareFailed', (e, t, n) => {
                 this.emit(p.Sh.SoundshareFailed, {
                     failureCode: e,
                     failureReason: t,
                     willRetry: n
                 });
             }),
-            O(this, 'handleSoundshareEnded', () => {
+            R(this, 'handleSoundshareEnded', () => {
                 (this.soundshareActive = !1), !this.destroyed && this.conn.setTransportOptions({ encodingVoiceBitRate: this.voiceBitrate });
             }),
-            O(this, 'handleNewListenerNative', (e) => {
+            R(this, 'handleNewListenerNative', (e) => {
                 if (e === p.Sh.ConnectionStateChange) this.emit(e, this.connectionState);
             }),
-            O(this, 'handleStats', (e) => {
+            R(this, 'handleStats', (e) => {
                 if (this.connectionState === N.$j.DISCONNECTED) {
                     this.off(p.Sh.Stats, this.handleStats);
                     return;
@@ -1005,7 +1005,7 @@ class C extends E.Z {
                     this.stats = e;
                 }
             }),
-            O(this, 'handleMLSFailure', (e, t) => {
+            R(this, 'handleMLSFailure', (e, t) => {
                 this.emit(p.Sh.MLSFailure, e, t);
             }),
             (this.logger = new _.Y('Connection('.concat(e, ')'))),

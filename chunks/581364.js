@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     BO: function () {
-        return R;
+        return O;
     },
     D7: function () {
         return L;
@@ -27,7 +27,7 @@ n.d(t, {
         return T;
     },
     bD: function () {
-        return O;
+        return R;
     },
     nG: function () {
         return S;
@@ -263,10 +263,10 @@ function N(e) {
         canMentionNonMentionableRoles: i
     };
 }
-function O(e) {
+function R(e) {
     return i()(e).subtract(1).toString();
 }
-let R = u.vB(0);
+let O = u.vB(0);
 function v(e) {
     let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: a, defaultMemberPermissions: s } = e;
     if (n.ownerId === r.userId || t.can(m.Pl.ADMINISTRATOR, n)) return !0;
@@ -276,7 +276,7 @@ function v(e) {
         if ('boolean' == typeof e) return e;
     }
     let l = C(r, o, i);
-    return ('boolean' != typeof l || !!l) && (null == s || (!u.fS(s, R) && t.can(s, n)));
+    return ('boolean' != typeof l || !!l) && (null == s || (!u.fS(s, O) && t.can(s, n)));
 }
 function C(e, t, n) {
     let r = n[(0, _.rE)(e.userId, f.Kw.USER)];

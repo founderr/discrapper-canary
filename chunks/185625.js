@@ -15,7 +15,7 @@ n.d(t, {
         return v;
     },
     X: function () {
-        return R;
+        return O;
     },
     ZD: function () {
         return h;
@@ -30,7 +30,7 @@ n.d(t, {
         return C;
     },
     k8: function () {
-        return O;
+        return R;
     },
     ox: function () {
         return f;
@@ -247,7 +247,7 @@ let N = (e, t, n, r) => {
         };
     return null;
 };
-function O(e, t, n) {
+function R(e, t, n) {
     l.ZP.trackWithMetadata(d.rMx.IAR_MODAL_CLOSE, {
         report_type: e.name,
         report_id: n,
@@ -259,7 +259,7 @@ function O(e, t, n) {
         channel_id: e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === c.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
     });
 }
-function R(e, t) {
+function O(e, t) {
     o.Z.dispatch({
         type: 'IN_APP_REPORTS_SHOW_FEEDBACK',
         reportId: t,

@@ -19,8 +19,8 @@ let { Themes: p } = n(15202).V,
     { Spacing: g } = h.V,
     { Modules: A } = _.V,
     { Layout: N } = d.V,
-    O = l()(m, (e) => i()(e)),
-    R = {
+    R = l()(m, (e) => i()(e)),
+    O = {
         themes: p,
         modules: A,
         colors: l()(I, (e, t) => ({
@@ -35,15 +35,15 @@ let { Themes: p } = n(15202).V,
                         let r = null === (o = T[t]) || void 0 === o ? void 0 : null === (s = o[e]) || void 0 === s ? void 0 : s[n.theme];
                         null != r && ((i = null !== (l = r.raw) && void 0 !== l ? l : i), (a = null !== (u = r.opacity) && void 0 !== u ? u : a));
                     }
-                if (1 === a) return R.unsafe_rawColors[i].resolve(n);
+                if (1 === a) return O.unsafe_rawColors[i].resolve(n);
                 {
-                    let e = O[i];
+                    let e = R[i];
                     return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), v(e, n.saturation);
                 }
             }
         })),
         unsafe_rawColors: l()(m, (e, t) => {
-            let n = O[t];
+            let n = R[t];
             return {
                 css: y(t),
                 resolve: (e) => v(n, e.saturation)
@@ -97,4 +97,4 @@ function y(e, t) {
         r = L(e);
     return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
 }
-t.Z = R;
+t.Z = O;

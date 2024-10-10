@@ -32,7 +32,7 @@ var r,
     g = n(141795),
     A = n(981631),
     N = n(959517);
-function O(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,8 +45,8 @@ function O(e, t, n) {
         e
     );
 }
-let R = null;
-__OVERLAY__ && (R = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
+let O = null;
+__OVERLAY__ && (O = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
 let v = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
     L = (e) => (v(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
@@ -124,7 +124,7 @@ class D extends T.Z {
                 });
             return;
         }
-        null != R && (R.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !R.isInstanceUILocked() && (n = R.isPinned(A.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        null != O && (O.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !O.isInstanceUILocked() && (n = O.isPinned(A.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
         let o = this.createResponseHandler(e.nonce, t),
             l = new AbortController();
         this.startQueueMetricTimers(e.nonce),
@@ -204,7 +204,7 @@ class D extends T.Z {
         );
     }
     constructor(e = 5) {
-        super(new _.Z('MessageQueue')), O(this, 'maxSize', void 0), O(this, 'requests', void 0), O(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
+        super(new _.Z('MessageQueue')), R(this, 'maxSize', void 0), R(this, 'requests', void 0), R(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
 t.ZP = new D();

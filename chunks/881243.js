@@ -1,20 +1,20 @@
 r.d(t, {
     I1: function () {
-        return _;
+        return i;
     },
     YJ: function () {
-        return i;
+        return o;
     }
 });
 var n = r(370336);
 let a = '_sentryScope',
-    o = '_sentryIsolationScope';
-function i(e, t, r) {
-    e && ((0, n.xp)(e, o, r), (0, n.xp)(e, a, t));
+    _ = '_sentryIsolationScope';
+function o(e, t, r) {
+    e && ((0, n.xp)(e, _, r), (0, n.xp)(e, a, t));
 }
-function _(e) {
+function i(e) {
     return {
         scope: e[a],
-        isolationScope: e[o]
+        isolationScope: e[_]
     };
 }

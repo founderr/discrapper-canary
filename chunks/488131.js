@@ -1,6 +1,6 @@
 n.d(t, {
     NK: function () {
-        return R;
+        return O;
     },
     R6: function () {
         return N;
@@ -9,7 +9,7 @@ n.d(t, {
         return A;
     },
     vN: function () {
-        return O;
+        return R;
     }
 });
 var r = n(512722),
@@ -75,14 +75,14 @@ function N(e, t, n) {
         });
     }, 0);
 }
-function O(e, t) {
+function R(e, t) {
     (0, _.uL)(S.Z5c.CHANNEL(e, (0, g.ME)(t) ? g.oC.GUILD_HOME : t)),
         o.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: t
         });
 }
-function R(e) {
+function O(e) {
     o.Z.dispatch({
         type: 'SIDEBAR_CLOSE',
         baseChannelId: e

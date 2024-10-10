@@ -30,17 +30,17 @@ var r,
     g = n(413135).Buffer;
 let A = window.DiscordNative,
     N = ['jpg', 'jpeg', 'png'],
-    O = null,
     R = null,
+    O = null,
     v = null,
     C = {};
 null != A &&
-    ((O = A.remoteApp
+    ((R = A.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
     (v = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
-    (R = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+    (O = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let L = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     y = !1;
 async function D(e) {
@@ -231,10 +231,10 @@ function M(e) {
             return '';
         },
         get version() {
-            return O;
+            return R;
         },
         get buildNumber() {
-            return R;
+            return O;
         },
         get moduleVersions() {
             return v;
@@ -518,7 +518,7 @@ function M(e) {
         },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
-            let a = [...(null != O ? O : [0, 0, 0])];
+            let a = [...(null != R ? R : [0, 0, 0])];
             a.push(null !== (r = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== r ? r : 0);
             let s = null !== (i = t[this.releaseChannel]) && void 0 !== i ? i : t.stable;
             for (let [e, t] of a.entries()) {

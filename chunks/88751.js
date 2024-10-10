@@ -54,12 +54,12 @@ function N(e, t) {
     })(e, t, n);
     return (g[t][e] = r), r;
 }
-function O(e) {
+function R(e) {
     let t = Object.values(E.Z.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete g[e.id];
     return t.length > 0;
 }
-function R(e) {
+function O(e) {
     let { guildId: t, user: n } = e;
     return (
         null != n &&
@@ -121,14 +121,14 @@ class C extends (i = d.ZP.Store) {
         CONNECTION_OPEN: function () {
             g = {};
         },
-        GUILD_MEMBER_REMOVE: R,
-        GUILD_MEMBER_UPDATE: R,
+        GUILD_MEMBER_REMOVE: O,
+        GUILD_MEMBER_UPDATE: O,
         GUILD_ROLE_UPDATE: function (e) {
             let { guildId: t } = e;
-            O(t);
+            R(t);
         },
         PASSIVE_UPDATE_V2: function (e) {
-            return O(e.guildId);
+            return R(e.guildId);
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;

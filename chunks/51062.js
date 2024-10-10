@@ -21,7 +21,7 @@ var r = n(470079),
     I = n(377668),
     m = n(185923);
 function T(e, t, n) {
-    var T, S, g, A, N, O, R;
+    var T, S, g, A, N, R, O;
     let { channel: v, type: C } = e,
         [L, y] = r.useState(() => (0, f.P)()),
         D = (0, i.Z)(),
@@ -68,9 +68,9 @@ function T(e, t, n) {
             hidePersonalInformation: w,
             hideMentionDescription: C === l.I.RULES_INPUT,
             emojiIntention: C === l.I.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
-            currentWord: null !== (O = null == B ? void 0 : B.word) && void 0 !== O ? O : '',
+            currentWord: null !== (R = null == B ? void 0 : B.word) && void 0 !== R ? R : '',
             currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (R = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentCommandOptionValue()) && void 0 !== R ? R : [] }, G.name) : ''
+            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (O = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentCommandOptionValue()) && void 0 !== O ? O : [] }, G.name) : ''
         },
         [V] = r.useState(() => new f.Z(F));
     return (

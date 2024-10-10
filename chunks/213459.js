@@ -49,8 +49,8 @@ var r,
     g = n(626135),
     A = n(254711),
     N = n(700089),
-    O = n(654455),
-    R = n(963456),
+    R = n(654455),
+    O = n(963456),
     v = n(367790),
     C = n(895924),
     L = n(581364),
@@ -159,7 +159,7 @@ async function K(e) {
         },
         !0
     ),
-        await (0, R.a)(e, t);
+        await (0, O.a)(e, t);
 }
 function z() {
     Z({ type: 'user' }, { serverVersion: x });
@@ -230,19 +230,19 @@ class q extends (r = c.ZP.Store) {
                 }),
                 es(r) &&
                     (null != e.guild_id
-                        ? (0, R.j)({
+                        ? (0, O.j)({
                               type: 'guild',
                               guildId: e.guild_id
                           })
-                        : (0, R.j)({
+                        : (0, O.j)({
                               type: 'channel',
                               channelId: e.id
                           }),
                     (u = !0))),
-            es(i) && ((0, R.j)({ type: 'user' }), (u = !0)),
+            es(i) && ((0, O.j)({ type: 'user' }), (u = !0)),
             es(a) &&
                 null != n.applicationId &&
-                ((0, R.j)({
+                ((0, O.j)({
                     type: 'application',
                     applicationId: n.applicationId
                 }),
@@ -492,11 +492,11 @@ function X(e, t, n) {
                     }),
                     es(a) &&
                         (null != e.guild_id
-                            ? (0, R.j)({
+                            ? (0, O.j)({
                                   type: 'guild',
                                   guildId: e.guild_id
                               })
-                            : (0, R.j)({
+                            : (0, O.j)({
                                   type: 'channel',
                                   channelId: e.id
                               }))),
@@ -521,7 +521,7 @@ function $(e, t) {
                         size: Object.keys(Q.indices).length
                     }),
                     es(i) &&
-                        (0, R.j)({
+                        (0, O.j)({
                             type: 'guild',
                             guildId: e
                         })),
@@ -535,7 +535,7 @@ function J(e, t) {
         i = (0, c.cj)([Q], () => Q.getUserState());
     return (
         s.useEffect(() => {
-            n && (t && es(i) && e && (0, R.j)({ type: 'user' }), r(!1));
+            n && (t && es(i) && e && (0, O.j)({ type: 'user' }), r(!1));
         }, [i, t, e, n]),
         i
     );
@@ -562,8 +562,8 @@ function ee(e, t, n, r) {
             s = a
                 .filter((e) => u.includes(e.id))
                 .sort((e, t) => {
-                    let r = O.ZP.getScoreWithoutLoadingLatest(n, e);
-                    return O.ZP.getScoreWithoutLoadingLatest(n, t) - r;
+                    let r = R.ZP.getScoreWithoutLoadingLatest(n, e);
+                    return R.ZP.getScoreWithoutLoadingLatest(n, t) - r;
                 })
                 .splice(0, b.hz);
         return 0 === s.length
@@ -613,7 +613,7 @@ function en(e, t, n) {
                     (t &&
                         es(i) &&
                         null != e &&
-                        (0, R.j)({
+                        (0, O.j)({
                             type: 'application',
                             applicationId: e
                         }),
@@ -643,11 +643,11 @@ function en(e, t, n) {
 function er(e) {
     var t, n, r, i, a, s;
     let { permissionContext: o, contextState: u, userState: c, applicationStates: d, text: _, builtIns: E = v.D.ALLOW, allowApplicationCommands: h = !0, singleApplicationId: p, allowEmptySections: m = !1, scoreMethod: S = v.p.NONE, sortOptions: g = et, installOnDemand: N = !1 } = e,
-        { commandTypes: R } = o,
+        { commandTypes: O } = o,
         C = null == _ ? void 0 : _.toLowerCase(),
         L = null == C ? void 0 : C.split(' '),
         y = E === v.D.ONLY_TEXT,
-        D = E !== v.D.DENY ? (0, A.Kh)(R, !0, y) : [],
+        D = E !== v.D.DENY ? (0, A.Kh)(O, !0, y) : [],
         M = [],
         P = {
             permissionContext: o,
@@ -738,14 +738,14 @@ function er(e) {
                     if (e !== t) return e - t;
                 }
                 if (g.commands.useFrecency) {
-                    let i = O.ZP.getScoreWithoutLoadingLatest(
+                    let i = R.ZP.getScoreWithoutLoadingLatest(
                             {
                                 channel: e,
                                 guild: t
                             },
                             n
                         ),
-                        a = O.ZP.getScoreWithoutLoadingLatest(
+                        a = R.ZP.getScoreWithoutLoadingLatest(
                             {
                                 channel: e,
                                 guild: t

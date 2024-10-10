@@ -60,8 +60,8 @@ var r = n(863714),
     }),
     A = !1,
     N = !1,
-    O = /^[A-Z]{3}$/,
-    R = /-u(?:-[0-9a-z]{2,8})+/gi,
+    R = /^[A-Z]{3}$/,
+    O = /-u(?:-[0-9a-z]{2,8})+/gi,
     v = {
         tags: {
             'art-lojban': 'jbo',
@@ -444,14 +444,14 @@ function D(e, t) {
 function b(e, t) {
     for (var n, r = 0, i = t.length; r < i && !n; ) {
         var s = t[r],
-            o = String(s).replace(R, ''),
+            o = String(s).replace(O, ''),
             n = D(e, o);
         r++;
     }
     var l = new X();
     if (void 0 !== n) {
         if (((l['[[locale]]'] = n), String(s) !== String(o))) {
-            var u = s.match(R)[0],
+            var u = s.match(O)[0],
                 c = s.indexOf('-u-');
             (l['[[extension]]'] = u), (l['[[extensionIndex]]'] = c);
         }
@@ -481,19 +481,19 @@ function M(e, t, n, r, i) {
             if (-1 !== A) {
                 if (A + 1 < E && _[A + 1].length > 2) {
                     var N = _[A + 1],
-                        O = d.call(T, N);
-                    if (-1 !== O)
+                        R = d.call(T, N);
+                    if (-1 !== R)
                         var S = N,
                             g = '-' + m + '-' + S;
                 } else {
-                    var O = d(T, 'true');
-                    if (-1 !== O) var S = 'true';
+                    var R = d(T, 'true');
+                    if (-1 !== R) var S = 'true';
                 }
             }
         }
         if (u.call(n, '[[' + m + ']]')) {
-            var R = n['[[' + m + ']]'];
-            -1 !== d.call(T, R) && R !== S && ((S = R), (g = ''));
+            var O = n['[[' + m + ']]'];
+            -1 !== d.call(T, O) && O !== S && ((S = O), (g = ''));
         }
         (f['[[' + m + ']]'] = S), (h += g), p++;
     }
@@ -503,7 +503,7 @@ function M(e, t, n, r, i) {
 function P(e, t) {
     for (var n = t.length, r = new $(), i = 0; i < n; ) {
         var a = t[i];
-        void 0 !== D(e, String(a).replace(R, '')) && h.call(r, a), i++;
+        void 0 !== D(e, String(a).replace(O, '')) && h.call(r, a), i++;
     }
     return E.call(r);
 }
@@ -551,7 +551,7 @@ function G(e, t, n) {
         f = U(n, 'style', 'string', new $('decimal', 'percent', 'currency'), 'decimal');
     i['[[style]]'] = f;
     var h = U(n, 'currency', 'string');
-    if (void 0 !== h && ((r = ee(String(h))), !1 === O.test(r))) throw RangeError("'" + h + "' is not a valid currency code");
+    if (void 0 !== h && ((r = ee(String(h))), !1 === R.test(r))) throw RangeError("'" + h + "' is not a valid currency code");
     if ('currency' === f && void 0 === h) throw TypeError('Currency code is required when style is currency');
     if ('currency' === f) {
         (h = h.toUpperCase()), (i['[[currency]]'] = h);
@@ -568,9 +568,9 @@ function G(e, t, n) {
     var A = 'currency' === f ? Math.max(g, p) : 'percent' === f ? Math.max(g, 0) : Math.max(g, 3),
         N = w(n, 'maximumFractionDigits', g, 20, A);
     i['[[maximumFractionDigits]]'] = N;
-    var R = n.minimumSignificantDigits,
+    var O = n.minimumSignificantDigits,
         v = n.maximumSignificantDigits;
-    (void 0 !== R || void 0 !== v) && ((R = w(n, 'minimumSignificantDigits', 1, 21, 1)), (v = w(n, 'maximumSignificantDigits', R, 21, 21)), (i['[[minimumSignificantDigits]]'] = R), (i['[[maximumSignificantDigits]]'] = v));
+    (void 0 !== O || void 0 !== v) && ((O = w(n, 'minimumSignificantDigits', 1, 21, 1)), (v = w(n, 'maximumSignificantDigits', O, 21, 21)), (i['[[minimumSignificantDigits]]'] = O), (i['[[maximumSignificantDigits]]'] = v));
     var L = U(n, 'useGrouping', 'boolean', void 0, !0);
     i['[[useGrouping]]'] = L;
     var D = d[E].patterns[f];
@@ -665,12 +665,12 @@ function B(e, t) {
     }
     var N = i[!0 === c ? '[[negativePattern]]' : '[[positivePattern]]'];
     if (((N = N.replace('{number}', n)), 'currency' === i['[[style]]'])) {
-        var O,
-            R = i['[[currency]]'],
-            v = o.currencies[R];
-        if ('symbol' === i['[[currencyDisplay]]']) O = v || R;
-        else O = R;
-        N = N.replace('{currency}', O);
+        var R,
+            O = i['[[currency]]'],
+            v = o.currencies[O];
+        if ('symbol' === i['[[currencyDisplay]]']) R = v || O;
+        else R = O;
+        N = N.replace('{currency}', R);
     }
     return r.exp.test(r.input), N;
 }
@@ -760,18 +760,18 @@ function H(e, t, n) {
               })(o, A)),
     Z))
         if (u.call(Z, p) && u.call(m, p)) {
-            var O = m[p];
-            r['[[' + p + ']]'] = O;
+            var R = m[p];
+            r['[[' + p + ']]'] = R;
         }
-    var R,
+    var O,
         v = U(n, 'hour12', 'boolean');
     if (r['[[hour]]']) {
         if (((v = void 0 === v ? g.hour12 : v), (r['[[hour12]]'] = v), !0 === v)) {
             var C = g.hourNo0;
-            (r['[[hourNo0]]'] = C), (R = m.pattern12);
-        } else R = m.pattern;
-    } else R = m.pattern;
-    return (r['[[pattern]]'] = R), (r['[[boundFormat]]'] = void 0), (r['[[initializedDateTimeFormat]]'] = !0), l && (e.format = W.call(e)), a.exp.test(a.input), e;
+            (r['[[hourNo0]]'] = C), (O = m.pattern12);
+        } else O = m.pattern;
+    } else O = m.pattern;
+    return (r['[[pattern]]'] = O), (r['[[boundFormat]]'] = void 0), (r['[[initializedDateTimeFormat]]'] = !0), l && (e.format = W.call(e)), a.exp.test(a.input), e;
 }
 c(s.NumberFormat.prototype, 'resolvedOptions', {
     configurable: !0,

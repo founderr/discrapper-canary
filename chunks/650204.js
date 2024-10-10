@@ -21,8 +21,8 @@ var d = n(202226),
     g = n(960048),
     A = n(63063),
     N = n(240849),
-    O = n(998502),
-    R = n(513566),
+    R = n(998502),
+    O = n(513566),
     v = n(534713),
     C = n(358085),
     L = n(703656),
@@ -69,28 +69,28 @@ if (null != M.Z) {
         .join(', ');
     new B.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
     let d = null === (l = (u = M.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
-    ('canary' === d || 'development' === d) && O.ZP.pauseFrameEvictor(), O.ZP.initializeExitHook();
+    ('canary' === d || 'development' === d) && R.ZP.pauseFrameEvictor(), R.ZP.initializeExitHook();
 }
 if (((0, D.O)(window), __OVERLAY__)) j(f.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) j(f.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => O.ZP.beforeUnload()), O.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
-        let e = new b.sW(V, () => O.ZP.purgeMemory());
-        O.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), O.ZP.setFocused(!1), (0, y.T_)(window, !1);
+        (window.onbeforeunload = () => R.ZP.beforeUnload()), R.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
+        let e = new b.sW(V, () => R.ZP.purgeMemory());
+        R.ZP.on('MAIN_WINDOW_BLUR', () => {
+            e.delay(), R.ZP.setFocused(!1), (0, y.T_)(window, !1);
         }),
-            O.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), O.ZP.setFocused(!0), (0, y.T_)(window, !0);
+            R.ZP.on('MAIN_WINDOW_FOCUS', () => {
+                e.cancel(), R.ZP.setFocused(!0), (0, y.T_)(window, !0);
             }),
-            O.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
+            R.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
                 var r;
                 let i = null != n ? new URLSearchParams(n) : null;
                 if (null === (r = Y[t]) || void 0 === r ? !void 0 : !r.call(Y, i)) (0, L.uL)(t);
             }),
-            O.ZP.on('MAIN_WINDOW_HIDDEN', () => {
+            R.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, y.al)(window);
             });
     }
-    m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), k.Z.init(), I.Z.initialize(), N.Z.initialize(), R.Z.initialize(), T.j(), w.Z.init(), j(f.Z.App);
+    m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), k.Z.init(), I.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), w.Z.init(), j(f.Z.App);
 }

@@ -22,25 +22,25 @@ function s(e) {
         ),
         A = (0, a.useMemo)(() => g.resolvedOptions(), [g]),
         N = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : g.format(e)), [g]),
-        O = isNaN(s) ? 1 : s;
-    'percent' === A.style && isNaN(s) && (O = 0.01);
-    let [R, v] = (0, a.useState)(h),
+        R = isNaN(s) ? 1 : s;
+    'percent' === A.style && isNaN(s) && (R = 0.01);
+    let [O, v] = (0, a.useState)(h),
         [C, L] = (0, a.useState)(_),
         [y, D] = (0, a.useState)(l);
-    (!Object.is(h, R) || _ !== C || l !== y) && (m(N(h)), v(h), L(_), D(l));
+    (!Object.is(h, O) || _ !== C || l !== y) && (m(N(h)), v(h), L(_), D(l));
     let b = (0, a.useMemo)(() => T.parse(I), [T, I]),
         M = (e, i) => {
             if (isNaN(b)) {
                 let e = isNaN(i) ? 0 : i;
-                return (0, r.N4)(e, t, n, O);
+                return (0, r.N4)(e, t, n, R);
             }
             {
-                let i = (0, r.N4)(b, t, n, O);
-                return ('+' === e && i > b) || ('-' === e && i < b) ? i : (0, r.N4)(o(e, b, O), t, n, O);
+                let i = (0, r.N4)(b, t, n, R);
+                return ('+' === e && i > b) || ('-' === e && i < b) ? i : (0, r.N4)(o(e, b, R), t, n, R);
             }
         },
-        P = (0, a.useMemo)(() => !E && !f && (isNaN(b) || isNaN(n) || (0, r.N4)(b, t, n, O) > b || o('+', b, O) <= n), [E, f, t, n, O, b]),
-        U = (0, a.useMemo)(() => !E && !f && (isNaN(b) || isNaN(t) || (0, r.N4)(b, t, n, O) < b || o('-', b, O) >= t), [E, f, t, n, O, b]);
+        P = (0, a.useMemo)(() => !E && !f && (isNaN(b) || isNaN(n) || (0, r.N4)(b, t, n, R) > b || o('+', b, R) <= n), [E, f, t, n, R, b]),
+        U = (0, a.useMemo)(() => !E && !f && (isNaN(b) || isNaN(t) || (0, r.N4)(b, t, n, R) < b || o('-', b, R) >= t), [E, f, t, n, R, b]);
     return {
         validate: (e) => T.isValidPartialNumber(e, t, n),
         increment: () => {
@@ -48,7 +48,7 @@ function s(e) {
             e === h && m(N(e)), p(e);
         },
         incrementToMax: () => {
-            null != n && p((0, r.N4)(n, t, n, O));
+            null != n && p((0, r.N4)(n, t, n, R));
         },
         decrement: () => {
             let e = M('-', n);

@@ -41,13 +41,13 @@ function A(e) {
 function N() {
     (E = new Map()), (f = new Set()), (h = new Set()), (p = new Map()), (I = new Map()), (m = new Map());
 }
-function O() {
+function R() {
     if (r === c.default.locale) return !1;
     (r = c.default.locale), N();
 }
-class R extends (i = l.yh) {
+class O extends (i = l.yh) {
     initialize() {
-        this.waitFor(c.default, _.Z), this.syncWith([c.default], O), (r = c.default.locale);
+        this.waitFor(c.default, _.Z), this.syncWith([c.default], R), (r = c.default.locale);
     }
     get(e) {
         return p.get(e);
@@ -71,7 +71,7 @@ class R extends (i = l.yh) {
     }
 }
 (o = 'SKUStore'),
-    (s = 'displayName') in (a = R)
+    (s = 'displayName') in (a = O)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -79,7 +79,7 @@ class R extends (i = l.yh) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new R(u.Z, {
+    (t.Z = new O(u.Z, {
         STORE_LISTINGS_FETCH_START: function (e) {
             let { skuId: t } = e;
             f.add(t);

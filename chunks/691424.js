@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(703656),
     A = n(271383),
     N = n(430824),
-    O = n(572004),
-    R = n(746878),
+    R = n(572004),
+    O = n(746878),
     v = n(285063),
     C = n(943362),
     L = n(551452),
@@ -44,7 +44,7 @@ function x(e) {
     return (0, r.jsx)(l.Clickable, {
         onClick: () => {
             try {
-                (0, O.JG)(t), a(!0);
+                (0, R.JG)(t), a(!0);
             } catch (e) {
                 a(!1);
             }
@@ -91,7 +91,7 @@ let G = {
                 'code',
                 {
                     className: 'inline',
-                    children: (0, R.S)(e, t, n)
+                    children: (0, O.S)(e, t, n)
                 },
                 n.key
             )
@@ -101,7 +101,7 @@ let G = {
             let a = () =>
                 (0, r.jsx)('code', {
                     className: s()(w.scrollbarGhostHairline, 'hljs'),
-                    children: (0, R.S)(e, t, i)
+                    children: (0, O.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
@@ -109,7 +109,7 @@ let G = {
                     children: (0, r.jsxs)('div', {
                         className: U.codeContainer,
                         children: [
-                            O.wS
+                            R.wS
                                 ? (0, r.jsx)('div', {
                                       className: U.codeActions,
                                       children: (0, r.jsx)(x, { text: e.content })
@@ -163,7 +163,7 @@ let G = {
     },
     staticRouteLink: {
         react: (e, t, n) =>
-            (0, R.k)(e.id)
+            (0, O.k)(e.id)
                 ? (0, r.jsxs)(
                       p.Z,
                       {
@@ -249,7 +249,7 @@ let G = {
                 h.Z,
                 {
                     guild: i,
-                    children: (0, R.S)(e, t, n)
+                    children: (0, O.S)(e, t, n)
                 },
                 n.key
             );
@@ -261,7 +261,7 @@ let G = {
                 f.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, R.S)(e, t, n)
+                    children: (0, O.S)(e, t, n)
                 },
                 n.key
             )

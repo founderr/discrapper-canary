@@ -47,8 +47,8 @@ var r,
     g = n(481060),
     A = n(893776),
     N = n(384275),
-    O = n(596454),
-    R = n(434650),
+    R = n(596454),
+    O = n(434650),
     v = n(367907),
     C = n(702493),
     L = n(424602),
@@ -141,7 +141,7 @@ function ed(e) {
         C,
         L,
         b,
-        { clientId: P, responseType: k, redirectUri: et, codeChallenge: eu, codeChallengeMethod: ec, state: ed, nonce: e_, prompt: eE, authorizations: ef, scopes: eh, permissions: ep, guildId: eI, channelId: em, integrationType: eT, disableGuildSelect: eS = !1, showLogout: eg = !1, cancelCompletesFlow: eA = !0, isTrustedName: eN = !1, isEmbeddedFlow: eO = !1, callback: eR, callbackWithoutPost: ev, onClose: eC, disclosures: eL } = e,
+        { clientId: P, responseType: k, redirectUri: et, codeChallenge: eu, codeChallengeMethod: ec, state: ed, nonce: e_, prompt: eE, authorizations: ef, scopes: eh, permissions: ep, guildId: eI, channelId: em, integrationType: eT, disableGuildSelect: eS = !1, showLogout: eg = !1, cancelCompletesFlow: eA = !0, isTrustedName: eN = !1, isEmbeddedFlow: eR = !1, callback: eO, callbackWithoutPost: ev, onClose: eC, disclosures: eL } = e,
         ey = null != eT ? (null == ef ? void 0 : ef.get(eT)) : void 0,
         eD = (0, u.TH)(),
         eb = (0, h.e7)([M.Z], () => M.Z.hasLoadedExperiments);
@@ -222,8 +222,8 @@ function ed(e) {
                     return;
                 }
                 if (!e && !eA) {
-                    null != eR &&
-                        (eR({
+                    null != eO &&
+                        (eO({
                             application: null == eM ? void 0 : eM.application,
                             guild: eQ
                         }),
@@ -251,8 +251,8 @@ function ed(e) {
                         guildId: eX === _.Y.GUILD_INSTALL && null != eZ ? eZ : void 0,
                         channelId: eX === _.Y.GUILD_INSTALL && null != ej ? ej : void 0
                     });
-                    if ((e && (N.Z.fetch(), await (0, D.x9)(P, e7)), null != eR))
-                        eR({
+                    if ((e && (N.Z.fetch(), await (0, D.x9)(P, e7)), null != eO))
+                        eO({
                             application: null == eM ? void 0 : eM.application,
                             location: t.location,
                             guild: eQ
@@ -274,7 +274,7 @@ function ed(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eG(Error(e.message)) : eG(e), ew('AUTHORIZE_SCOPES'), eB(!1);
                 }
             },
-            [ev, eA, eR, null == eM ? void 0 : eM.application, eQ, eC, P, e3, k, et, eu, ec, ed, e_, e5, eK, eZ, eX, ej, e7]
+            [ev, eA, eO, null == eM ? void 0 : eM.application, eQ, eC, P, e3, k, et, eu, ec, ed, e_, e5, eK, eZ, eX, ej, e7]
         ),
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
@@ -356,7 +356,7 @@ function ed(e) {
     let ts = s.useCallback((e) => {
             e && eV(!0);
         }, []),
-        to = (0, R.O)(ts);
+        to = (0, O.O)(ts);
     if (ex instanceof Error) return { body: (0, a.jsx)(en.Lk, { message: ex.message }) };
     let tl = !1,
         tu = !1,
@@ -450,7 +450,7 @@ function ed(e) {
                     disclosures: e7,
                     redirectUri: null !== (o = eM.redirect_uri) && void 0 !== o ? o : null,
                     approximateGuildCount: void 0 !== e ? e : null,
-                    isEmbeddedFlow: eO
+                    isEmbeddedFlow: eR
                 }),
                 (0, a.jsx)('div', {
                     className: eo.intObserver,
@@ -515,7 +515,7 @@ function ed(e) {
                                                   children: [
                                                       es.Z.Messages.OAUTH2_KEEP_SCROLLING,
                                                       ' ',
-                                                      (0, a.jsx)(O.Z, {
+                                                      (0, a.jsx)(R.Z, {
                                                           className: eo.emoji,
                                                           src: B.ZP.getURL(p.Z.convert.fromCodePoint(ei.I)),
                                                           emojiName: ':point_down:',

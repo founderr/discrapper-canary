@@ -495,10 +495,10 @@ function A(e, t, n, r, i, a) {
 function N(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError('Index out of range');
 }
-function O(e, t, n, r, a) {
+function R(e, t, n, r, a) {
     return (t = +t), (n >>>= 0), !a && N(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
 }
-function R(e, t, n, r, a) {
+function O(e, t, n, r, a) {
     return (t = +t), (n >>>= 0), !a && N(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
 }
 (o.prototype.slice = function (e, t) {
@@ -646,16 +646,16 @@ function R(e, t, n, r, a) {
         return (e = +e), (t >>>= 0), !n && A(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
     }),
     (o.prototype.writeFloatLE = function (e, t, n) {
-        return O(this, e, t, !0, n);
-    }),
-    (o.prototype.writeFloatBE = function (e, t, n) {
-        return O(this, e, t, !1, n);
-    }),
-    (o.prototype.writeDoubleLE = function (e, t, n) {
         return R(this, e, t, !0, n);
     }),
-    (o.prototype.writeDoubleBE = function (e, t, n) {
+    (o.prototype.writeFloatBE = function (e, t, n) {
         return R(this, e, t, !1, n);
+    }),
+    (o.prototype.writeDoubleLE = function (e, t, n) {
+        return O(this, e, t, !0, n);
+    }),
+    (o.prototype.writeDoubleBE = function (e, t, n) {
+        return O(this, e, t, !1, n);
     }),
     (o.prototype.copy = function (e, t, n, r) {
         if (!o.isBuffer(e)) throw TypeError('argument should be a Buffer');

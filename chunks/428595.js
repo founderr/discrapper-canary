@@ -20,8 +20,8 @@ var r = n(392711),
     g = n(594199),
     A = n(97734),
     N = n(303694),
-    O = n(660199),
-    R = n(364458),
+    R = n(660199),
+    O = n(364458),
     v = n(981631),
     C = n(689079),
     L = n(377668),
@@ -319,10 +319,10 @@ let w = (e) => {
         timestamp: {
             order: g.ZP.order - 1,
             requiredFirstCharacters: ['<'],
-            match: (e) => O.Ay.exec(e),
+            match: (e) => R.Ay.exec(e),
             parse(e) {
                 let [t, n, r] = e,
-                    i = (0, O.ZB)(n, r);
+                    i = (0, R.ZB)(n, r);
                 return null == i
                     ? {
                           type: 'text',
@@ -380,12 +380,12 @@ let w = (e) => {
         list: T.Z,
         subtext: S.Z
     },
-    k = (0, R.Z)([G, A.Z]),
+    k = (0, O.Z)([G, A.Z]),
     B = i().omit(k, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
     F = i().omit(k, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
     V = i().omit(k, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
     H = i().omit(
-        (0, R.Z)([
+        (0, O.Z)([
             k,
             {
                 inlineCode: {
@@ -407,7 +407,7 @@ let w = (e) => {
 function K(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
-let z = (0, R.Z)([
+let z = (0, O.Z)([
     {
         highlightWord: {
             order: -1,

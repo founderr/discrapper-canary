@@ -73,11 +73,11 @@ function N(e, t) {
     let r = a()(n, g);
     return r ? (g = n) : (g.version = n.version + 1), !r;
 }
-function O() {
+function R() {
     var e, t, n;
     return N(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
 }
-function R() {
+function O() {
     var e, t;
     let n = c.Z.getGuildFolders();
     return !(null != r && a()(r, n)) && N(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
@@ -149,7 +149,7 @@ function D(e) {
         a = p.Z.getGuild(t);
     if ((null == i ? void 0 : i.id) !== r.id || null == a) return !1;
     let s = 'string' == typeof n ? new Date(n) : n;
-    return s !== a.joinedAt && null != s && O();
+    return s !== a.joinedAt && null != s && R();
 }
 function b(e) {
     let { folderId: t } = e,
@@ -221,13 +221,13 @@ class B extends I.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: O,
-            OVERLAY_INITIALIZE: O,
+            CONNECTION_OPEN: R,
+            OVERLAY_INITIALIZE: R,
             CACHE_LOADED: () => this.loadCache(),
-            GUILD_CREATE: O,
-            GUILD_DELETE: O,
+            GUILD_CREATE: R,
+            GUILD_DELETE: R,
             GUILD_MEMBER_ADD: D,
-            USER_SETTINGS_PROTO_UPDATE: R,
+            USER_SETTINGS_PROTO_UPDATE: O,
             GUILD_MOVE_BY_ID: v,
             GUILD_FOLDER_CREATE_LOCAL: C,
             GUILD_FOLDER_EDIT_LOCAL: L,

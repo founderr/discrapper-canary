@@ -1,51 +1,51 @@
 r.d(t, {
     E: function () {
-        return c;
+        return s;
     }
 });
 var n = r(573736),
     a = r(202811),
-    o = r(370336),
-    i = r(886115),
-    _ = r(622916),
+    _ = r(370336),
+    o = r(886115),
+    i = r(622916),
     E = r(151122),
-    s = r(255768);
-let c = (0, E._I)((e = {}) => {
+    c = r(255768);
+let s = (0, E._I)((e = {}) => {
     let { depth: t = 3, captureErrorCause: r = !0 } = e;
     return {
         name: 'ExtraErrorData',
-        processEvent(e, E, c) {
-            let { maxValueLength: I = 250 } = c.getOptions();
-            return (function (e, t = {}, r, E, c) {
+        processEvent(e, E, s) {
+            let { maxValueLength: I = 250 } = s.getOptions();
+            return (function (e, t = {}, r, E, s) {
                 if (!t.originalException || !(0, n.VZ)(t.originalException)) return e;
                 let I = t.originalException.name || t.originalException.constructor.name,
                     u = (function (e, t, r) {
                         try {
                             let a = ['name', 'message', 'stack', 'line', 'column', 'fileName', 'lineNumber', 'columnNumber', 'toJSON'],
-                                o = {};
+                                _ = {};
                             for (let t of Object.keys(e)) {
                                 if (-1 !== a.indexOf(t)) continue;
-                                let _ = e[t];
-                                o[t] = (0, n.VZ)(_) || 'string' == typeof _ ? (0, i.$G)(`${_}`, r) : _;
+                                let i = e[t];
+                                _[t] = (0, n.VZ)(i) || 'string' == typeof i ? (0, o.$G)(`${i}`, r) : i;
                             }
-                            if ((t && void 0 !== e.cause && (o.cause = (0, n.VZ)(e.cause) ? e.cause.toString() : e.cause), 'function' == typeof e.toJSON)) {
+                            if ((t && void 0 !== e.cause && (_.cause = (0, n.VZ)(e.cause) ? e.cause.toString() : e.cause), 'function' == typeof e.toJSON)) {
                                 let t = e.toJSON();
                                 for (let e of Object.keys(t)) {
                                     let r = t[e];
-                                    o[e] = (0, n.VZ)(r) ? r.toString() : r;
+                                    _[e] = (0, n.VZ)(r) ? r.toString() : r;
                                 }
                             }
-                            return o;
+                            return _;
                         } catch (e) {
-                            s.X && _.kg.error('Unable to extract extra data from the Error object:', e);
+                            c.X && i.kg.error('Unable to extract extra data from the Error object:', e);
                         }
                         return null;
-                    })(t.originalException, E, c);
+                    })(t.originalException, E, s);
                 if (u) {
                     let t = { ...e.contexts },
-                        i = (0, a.Fv)(u, r);
+                        o = (0, a.Fv)(u, r);
                     return (
-                        (0, n.PO)(i) && ((0, o.xp)(i, '__sentry_skip_normalization__', !0), (t[I] = i)),
+                        (0, n.PO)(o) && ((0, _.xp)(o, '__sentry_skip_normalization__', !0), (t[I] = o)),
                         {
                             ...e,
                             contexts: t

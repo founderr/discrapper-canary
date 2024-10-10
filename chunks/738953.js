@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(867176),
     A = n(169979),
     N = n(119096),
-    O = n(502762),
-    R = n(544989),
+    R = n(502762),
+    O = n(544989),
     v = n(481932),
     C = n(195387),
     L = n(272510),
@@ -87,7 +87,7 @@ function x(e) {
                     ref: Q,
                     'aria-label': t.username,
                     children: [
-                        (0, r.jsxs)(O.Z, {
+                        (0, r.jsxs)(R.Z, {
                             user: t,
                             displayProfile: X,
                             profileType: M.y0.BITE_SIZE,
@@ -97,7 +97,7 @@ function x(e) {
                                         style: ee,
                                         className: w.backdrop
                                     }),
-                                (0, r.jsxs)(R.Z, {
+                                (0, r.jsxs)(O.Z, {
                                     profileType: M.y0.BITE_SIZE,
                                     children: [
                                         (0, r.jsx)(C.Z, {

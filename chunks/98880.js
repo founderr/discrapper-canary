@@ -49,8 +49,8 @@ var i,
     Z = t(981631),
     H = t(217702),
     U = t(689938),
-    B = t(127935),
-    D = t(413097),
+    D = t(127935),
+    B = t(413097),
     k = t(969728);
 function w(e) {
     var n;
@@ -99,7 +99,7 @@ function V(e) {
             },
             [n, h]
         ),
-        { name: A, description: E } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: D }), [n]),
+        { name: A, description: E } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]),
         { trackItemImpressionRef: v } = (0, j.Z)({
             applicationId: n.id,
             sectionName: a,
@@ -107,13 +107,13 @@ function V(e) {
             sectionOverallPosition: c
         }),
         x = o.useMemo(() => {
-            let e = p ? B.containerDisabled : B.container;
+            let e = p ? D.containerDisabled : D.container;
             return s()(
                 e,
                 {
-                    [B.containerBorderRadius]: 'row' !== C,
-                    [B.rowContainer]: 'row' === C,
-                    [B.iconCard]: 'icon' === C
+                    [D.containerBorderRadius]: 'row' !== C,
+                    [D.rowContainer]: 'row' === C,
+                    [D.iconCard]: 'icon' === C
                 },
                 _
             );
@@ -138,19 +138,19 @@ function V(e) {
 }
 function W(e) {
     let { application: n, imageStyle: t, children: i } = e,
-        { name: a, iconURL: r } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: D }), [n]);
+        { name: a, iconURL: r } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]);
     return (0, l.jsx)(d.Tooltip, {
-        tooltipContentClassName: B.tooltipContent,
+        tooltipContentClassName: D.tooltipContent,
         text: a,
         children: (e) => {
             let { ...n } = e;
             return (0, l.jsxs)('div', {
-                className: s()(B.iconContainer, t),
+                className: s()(D.iconContainer, t),
                 ...n,
                 children: [
                     (0, l.jsx)(O.Z, {
                         src: r,
-                        className: B.iconCard,
+                        className: D.iconCard,
                         'aria-hidden': !0,
                         rendersPlaceholder: !0
                     }),
@@ -162,7 +162,7 @@ function W(e) {
 }
 function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
-        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: D }), [n]),
+        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]),
         h = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
         f = (0, x.ZP)(m, ''),
         [A, E] = o.useState(!1),
@@ -180,9 +180,9 @@ function F(e) {
                 onFocus: N,
                 onMouseLeave: P,
                 onBlur: P,
-                className: s()(B.bannerImageContainer, {
-                    [B.mediumBanner]: 'medium_banner' === t,
-                    [B.largeBanner]: 'large_banner' === t
+                className: s()(D.bannerImageContainer, {
+                    [D.mediumBanner]: 'medium_banner' === t,
+                    [D.largeBanner]: 'large_banner' === t
                 }),
                 children: [
                     (0, l.jsx)('span', {
@@ -199,11 +199,11 @@ function F(e) {
                               children: [
                                   g || v
                                       ? (0, l.jsxs)('div', {
-                                            className: B.bannerUpperRightContainer,
+                                            className: D.bannerUpperRightContainer,
                                             children: [
                                                 v &&
                                                     (0, l.jsx)('div', {
-                                                        className: B.promotedLabelWrapperBanner,
+                                                        className: D.promotedLabelWrapperBanner,
                                                         children: (0, l.jsx)(d.Heading, {
                                                             variant: 'text-xxs/medium',
                                                             color: 'header-primary',
@@ -215,7 +215,7 @@ function F(e) {
                                         })
                                       : null,
                                   (0, l.jsx)('div', {
-                                      className: B.bannerImageChildContainer,
+                                      className: D.bannerImageChildContainer,
                                       children: u
                                   })
                               ]
@@ -224,19 +224,19 @@ function F(e) {
                 ]
             }),
             (0, l.jsxs)('div', {
-                className: s()(B.appDetailsContainer, { [B.appDetailsRowContainer]: 'row' === t }),
+                className: s()(D.appDetailsContainer, { [D.appDetailsRowContainer]: 'row' === t }),
                 children: [
                     (0, l.jsx)(O.Z, {
                         src: m,
-                        className: s()(B.icon, { [B.rowIcon]: 'row' === t }),
+                        className: s()(D.icon, { [D.rowIcon]: 'row' === t }),
                         'aria-hidden': !0,
                         rendersPlaceholder: !0
                     }),
                     (0, l.jsxs)('div', {
-                        className: B.appDetails,
+                        className: D.appDetails,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: B.appDetailsHeaderContainer,
+                                className: D.appDetailsHeaderContainer,
                                 children: [
                                     (0, l.jsx)(d.Heading, {
                                         variant: 'heading-md/semibold',
@@ -246,7 +246,7 @@ function F(e) {
                                     }),
                                     !I && v
                                         ? (0, l.jsx)('div', {
-                                              className: B.promotedLabelWrapperNonBanner,
+                                              className: D.promotedLabelWrapperNonBanner,
                                               children: (0, l.jsx)(d.Text, {
                                                   variant: 'text-xxs/semibold',
                                                   color: 'text-muted',
@@ -265,7 +265,7 @@ function F(e) {
                             })
                         ]
                     }),
-                    'row' === t ? (0, l.jsx)('div', { className: B.rowDivider }) : null
+                    'row' === t ? (0, l.jsx)('div', { className: D.rowDivider }) : null
                 ]
             })
         ]
@@ -276,9 +276,9 @@ function Y() {
         text: U.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: (e) =>
             (0, l.jsx)('div', {
-                className: B.devShelfBadge,
+                className: D.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(T.Z, { className: B.devShelfIcon })
+                children: (0, l.jsx)(T.Z, { className: D.devShelfIcon })
             })
     });
 }
@@ -293,7 +293,7 @@ function G(e) {
               text: i,
               children: (e) =>
                   (0, l.jsx)('img', {
-                      className: B.staffBadge,
+                      className: D.staffBadge,
                       alt: i,
                       src: k,
                       ...e
@@ -336,14 +336,14 @@ function q(e) {
     o.useEffect(() => {
         t && d(!0);
     }, [t]);
-    let u = s()(B.bannerImage, { [B.disableFadeIn]: i });
+    let u = s()(D.bannerImage, { [D.disableFadeIn]: i });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != r && c
                 ? (0, l.jsx)('div', {
-                      className: B.activityVideoContainer,
+                      className: D.activityVideoContainer,
                       children: (0, l.jsx)('div', {
-                          className: s()(B.activityVideo, { [B.videoFadeOut]: !t }),
+                          className: s()(D.activityVideo, { [D.videoFadeOut]: !t }),
                           onAnimationEnd: () => (t ? null : d(!1)),
                           children: (0, l.jsx)(I.Z, {
                               src: r,
@@ -381,13 +381,13 @@ function J(e) {
         : (0, l.jsx)('img', {
               src: o,
               alt: '',
-              className: s()(B.bannerImage, { [B.disableFadeIn]: i })
+              className: s()(D.bannerImage, { [D.disableFadeIn]: i })
           });
 }
 function X(e) {
     let { fallbackColor: n, disableFadeIn: t } = e;
     return (0, l.jsx)('div', {
-        className: s()(B.bannerImage, { [B.disableFadeIn]: t }),
+        className: s()(D.bannerImage, { [D.disableFadeIn]: t }),
         style: { backgroundColor: n }
     });
 }
@@ -453,7 +453,7 @@ function $(e) {
                   children: h
                       ? (0, l.jsx)(d.Spinner, {
                             type: d.Spinner.Type.PULSING_ELLIPSIS,
-                            className: B.spinner
+                            className: D.spinner
                         })
                       : null
               })
@@ -470,13 +470,13 @@ function $(e) {
         onClick: (e) => {
             e.stopPropagation();
         },
-        imageStyle: B.darkenImage,
+        imageStyle: D.darkenImage,
         enableVideoBanner: !1,
         disabled: !0,
         children: (0, l.jsx)('div', {
-            className: B.voiceLauncherAppCardContainer,
+            className: D.voiceLauncherAppCardContainer,
             children: (0, l.jsx)(d.Button, {
-                className: B.voiceLauncherAppCardButton,
+                className: D.voiceLauncherAppCardButton,
                 type: 'submit',
                 size: d.Button.Sizes.LARGE,
                 color: N,

@@ -1,11 +1,11 @@
 r.d(t, {
     q: function () {
-        return o;
+        return _;
     }
 });
 var n = r(226377),
     a = r(91647);
-let o = {
+let _ = {
     increment: function (e, t = 1, r) {
         n.q.increment(a.P, e, t, r);
     },
@@ -18,7 +18,7 @@ let o = {
     gauge: function (e, t, r) {
         n.q.gauge(a.P, e, t, r);
     },
-    timing: function (e, t, r = 'second', o) {
-        return n.q.timing(a.P, e, t, r, o);
+    timing: function (e, t, r = 'second', _) {
+        return n.q.timing(a.P, e, t, r, _);
     }
 };

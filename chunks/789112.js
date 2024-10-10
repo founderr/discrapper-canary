@@ -1,11 +1,11 @@
 r.d(t, {
     b: function () {
-        return o;
+        return _;
     }
 });
 var n = r(394798),
     a = r(696486);
-class o {
+class _ {
     constructor(e = {}) {
         (this._traceId = e.traceId || (0, n.DM)()), (this._spanId = e.spanId || (0, n.DM)().substring(16));
     }

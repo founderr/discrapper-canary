@@ -28,8 +28,8 @@ var i = n(658722),
     g = n(601070),
     A = n(675478),
     N = n(131704),
-    O = n(598077),
-    R = n(592125),
+    R = n(598077),
+    O = n(592125),
     v = n(984933),
     C = n(271383),
     L = n(430824),
@@ -101,10 +101,10 @@ function ea(e) {
         h = 0,
         p = 0;
     for (; h < f; ) {
-        var I, m, T, S, g, A, N, R, v;
+        var I, m, T, S, g, A, N, O, v;
         let e, r;
         let u = n[h];
-        u instanceof O.Z ? ((r = u), (e = null === (m = C.ZP.getNick(l, r.id)) || void 0 === m ? void 0 : m.toLocaleLowerCase())) : ((e = null === (T = u.nick) || void 0 === T ? void 0 : T.toLocaleLowerCase()), (r = o[u.userId]));
+        u instanceof R.Z ? ((r = u), (e = null === (m = C.ZP.getNick(l, r.id)) || void 0 === m ? void 0 : m.toLocaleLowerCase())) : ((e = null === (T = u.nick) || void 0 === T ? void 0 : T.toLocaleLowerCase()), (r = o[u.userId]));
         let f = null === (I = Z.ZP.getGlobalName(r)) || void 0 === I ? void 0 : I.toLocaleLowerCase();
         if (null == i || (null != r && i(r))) {
             let n = r.username.toLocaleLowerCase(),
@@ -136,7 +136,7 @@ function ea(e) {
                         type: j.h8.USER,
                         record: r,
                         score: 1,
-                        comparator: null !== (R = null != f ? f : e) && void 0 !== R ? R : n,
+                        comparator: null !== (O = null != f ? f : e) && void 0 !== O ? O : n,
                         sortable: null !== (v = null != h ? h : l) && void 0 !== v ? v : i
                     }),
                     (p += 1));
@@ -155,7 +155,7 @@ function es(e, t, n) {
     return null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r;
 }
 function eo(e, t) {
-    let n = R.Z.getChannel(e);
+    let n = O.Z.getChannel(e);
     return null == e || null == n
         ? []
         : o()(y.Z.getMessages(e).toArray())
@@ -197,7 +197,7 @@ t.ZP = {
         let { query: t, limit: n = 10, filter: r } = e;
         return ea({
             query: t,
-            members: R.Z.getDMUserIds()
+            members: O.Z.getDMUserIds()
                 .map((e) => w.default.getUser(e))
                 .filter(G.lm),
             limit: n,
@@ -207,9 +207,9 @@ t.ZP = {
     queryChannelUsers(e) {
         let t,
             { channelId: n, query: r, limit: i = 10, request: a = !0, checkRecentlyTalkedOnEmptyQuery: s = !0, allowSnowflake: o = !1 } = e,
-            l = R.Z.getChannel(n);
+            l = O.Z.getChannel(n);
         if (null == l) return [];
-        let u = l.isThread() ? R.Z.getChannel(l.parent_id) : null,
+        let u = l.isThread() ? O.Z.getChannel(l.parent_id) : null,
             c = null != u ? u : l;
         if (null == c) return [];
         if (c.isPrivate()) {
@@ -314,11 +314,11 @@ t.ZP = {
                       .map((e) => e.channel)
                       .concat(g.Z.computeAllActiveJoinedThreads(r))
                       .value()
-                : o()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(g.Z.computeAllActiveJoinedThreads()).value();
+                : o()(O.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(g.Z.computeAllActiveJoinedThreads()).value();
         let p = {},
             I = [];
         for (let e of t) {
-            var m, T, S, A, O;
+            var m, T, S, A, R;
             if (((m = l), (T = e.type), (S = null != r), !(m === T || ((S || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !D.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
@@ -341,7 +341,7 @@ t.ZP = {
                             let n = t[e.parent_id];
                             if (null == n) {
                                 var r;
-                                n = t[e.parent_id] = null === (r = R.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
+                                n = t[e.parent_id] = null === (r = O.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
                             }
                             return n;
                         })(e, p)
@@ -353,7 +353,7 @@ t.ZP = {
                     u = Math.min(6, u);
                 }
                 if (0 === u || t.length > 1 || (1 === t.length && !t[0].isFullMatch && !o)) continue;
-                if (((A = l), (O = e.type), A === v.sH && (0, N.bw)(O))) u = Math.max(u - 1, 0.5);
+                if (((A = l), (R = e.type), A === v.sH && (0, N.bw)(R))) u = Math.max(u - 1, 0.5);
                 I.push({
                     type: (0, N.bw)(e.type) ? j.h8.VOICE_CHANNEL : j.h8.TEXT_CHANNEL,
                     record: e,
@@ -397,7 +397,7 @@ t.ZP = {
                 containQuery: RegExp(F.Z.escape(s), 'i'),
                 queryLower: s
             },
-            d = o()(R.Z.getMutablePrivateChannels()).values().value(),
+            d = o()(O.Z.getMutablePrivateChannels()).values().value(),
             _ = [];
         for (let e of d) {
             if (!e.isMultiUserDM() || !i(e)) continue;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -25,7 +25,7 @@ var r = n(735250),
     g = n(531578),
     A = n(857911);
 function N(e) {
-    let { summary: t, channel: _, members: T, guildId: N, unread: O, onClick: R } = e,
+    let { summary: t, channel: _, members: T, guildId: N, unread: R, onClick: O } = e,
         [v, C] = i.useState(!1),
         L = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
         y = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
@@ -40,7 +40,7 @@ function N(e) {
         b = d.Z.can(S.Plq.MANAGE_MESSAGES, _);
     return (0, r.jsxs)(s.Clickable, {
         className: A.container,
-        onClick: R,
+        onClick: O,
         onContextMenu: (e) => {
             b &&
                 (0, o.jW)(e, async () => {
@@ -57,7 +57,7 @@ function N(e) {
         children: [
             (0, r.jsx)(u.Z, {
                 hovered: v,
-                unread: O,
+                unread: R,
                 className: A.unreadPill
             }),
             (0, r.jsx)('div', {
@@ -149,7 +149,7 @@ function N(e) {
         ]
     });
 }
-function O(e) {
+function R(e) {
     let { summaries: t, summariesMembers: n, channel: s, selectTopic: o, setOpen: l } = e,
         u = (0, a.e7)([_.ZP], () => _.ZP.getOldestUnreadMessageId(s.id)),
         c = i.useCallback(

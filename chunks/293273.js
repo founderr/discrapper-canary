@@ -20,8 +20,8 @@ var r,
     g = n(199902),
     A = n(272053),
     N = n(77498),
-    O = n(981631);
-let R = [],
+    R = n(981631);
+let O = [],
     v = {};
 function C() {
     let e = [],
@@ -32,7 +32,7 @@ function C() {
     let r = A.Z.getStream();
     null != r &&
         e.push({
-            type: O.IIU.STREAMING,
+            type: R.IIU.STREAMING,
             ...r
         });
     let i = new Set();
@@ -46,7 +46,7 @@ function C() {
     if (null != a && null != a.name && !(s || (o && !(null != u)))) {
         var d, _;
         e.push({
-            type: O.IIU.PLAYING,
+            type: R.IIU.PLAYING,
             name: a.name,
             application_id: null !== (_ = a.id) && void 0 !== _ ? _ : null === (d = N.Z.getGameByName(a.name)) || void 0 === d ? void 0 : d.id,
             timestamps: { start: a.start }
@@ -55,40 +55,40 @@ function C() {
     let E = m.Z.getActivity();
     null != E &&
         e.push({
-            type: O.IIU.LISTENING,
+            type: R.IIU.LISTENING,
             ...E
         });
     let S = p.Z.getCurrentHangStatus();
     if (null != S) {
         let t = p.Z.getCustomHangStatus();
         e.push({
-            type: O.IIU.HANG_STATUS,
+            type: R.IIU.HANG_STATUS,
             name: 'Hang Status',
             state: S,
             details: null == t ? void 0 : t.status,
             emoji: null == t ? void 0 : t.emoji
         });
     }
-    !l()(R, e) && (R = e);
+    !l()(O, e) && (O = e);
 }
 class L extends (r = d.ZP.Store) {
     initialize() {
         this.waitFor(h.ZP, E.ZP, A.Z, g.Z, m.Z, S.Z, p.Z, N.Z), this.syncWith([I.Z, p.Z], () => C());
     }
     getActivities() {
-        return R;
+        return O;
     }
     getPrimaryActivity() {
-        return R[0];
+        return O[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
     }
     getCustomStatusActivity() {
-        return this.findActivity((e) => e.type === O.IIU.CUSTOM_STATUS);
+        return this.findActivity((e) => e.type === R.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return R.find(e);
+        return O.find(e);
     }
     getApplicationActivities() {
         return v;

@@ -45,7 +45,7 @@ n.d(t, {
         return g;
     },
     Sq: function () {
-        return R;
+        return O;
     },
     TY: function () {
         return v;
@@ -63,7 +63,7 @@ n.d(t, {
         return r;
     },
     c4: function () {
-        return O;
+        return R;
     },
     cG: function () {
         return S;
@@ -145,8 +145,8 @@ let T = 200,
     g = 'ClanSetupModal',
     A = 'ClanSettingsModal',
     N = 20,
-    O = 30,
-    R = 24,
+    R = 30,
+    O = 24,
     v = 12,
     C = 300,
     L = 3,

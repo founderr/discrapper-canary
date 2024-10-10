@@ -26,8 +26,8 @@ var r = n(735250),
 let A = 32;
 function N(e) {
     let { user: t, children: n, onClose: N } = e,
-        { analyticsLocations: O } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
-        { context: R } = (0, f.KZ)(),
+        { analyticsLocations: R } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
+        { context: O } = (0, f.KZ)(),
         { profileType: v, primaryColor: C } = (0, h.z)(),
         L =
             (0, a.e7)([E.default], () => {
@@ -42,8 +42,8 @@ function N(e) {
             (0, p.openUserProfileModal)({
                 userId: t.id,
                 section: I.oh.ACTIVITY,
-                sourceAnalyticsLocations: O,
-                ...R
+                sourceAnalyticsLocations: R,
+                ...O
             }),
                 null == N || N();
         };

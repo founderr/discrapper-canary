@@ -242,7 +242,7 @@ var r;
                           stripe: r
                       };
             },
-            O = function (e) {
+            R = function (e) {
                 if (!!e && !!e._registerWrapper && !!e.registerAppInfo)
                     e._registerWrapper({
                         name: 'react-stripe-js',
@@ -254,8 +254,8 @@ var r;
                             url: 'https://stripe.com/docs/stripe-js/react'
                         });
             },
-            R = t.createContext(null);
-        R.displayName = 'ElementsContext';
+            O = t.createContext(null);
+        O.displayName = 'ElementsContext';
         var v = function (e, t) {
                 if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
                 return e;
@@ -327,11 +327,11 @@ var r;
                     ),
                     t.useEffect(
                         function () {
-                            O(l.stripe);
+                            R(l.stripe);
                         },
                         [l.stripe]
                     ),
-                    t.createElement(R.Provider, { value: l }, i)
+                    t.createElement(O.Provider, { value: l }, i)
                 );
             };
         C.propTypes = {
@@ -339,7 +339,7 @@ var r;
             options: f.object
         };
         var L = function (e) {
-                return v(t.useContext(R), e);
+                return v(t.useContext(O), e);
             },
             y = function (e) {
                 return (0, e.children)(L('mounts <ElementsConsumer>'));
@@ -466,7 +466,7 @@ var r;
                 ),
                     t.useEffect(
                         function () {
-                            O(d.stripe);
+                            R(d.stripe);
                         },
                         [d.stripe]
                     );
@@ -487,7 +487,7 @@ var r;
         };
         var x = function (e) {
                 var n = t.useContext(b),
-                    r = t.useContext(R);
+                    r = t.useContext(O);
                 if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
                 return n ? M(n, e) : v(r, e);
             },
@@ -521,8 +521,8 @@ var r;
                                   g = n.onNetworksChange,
                                   A = n.onConfirm,
                                   N = n.onCancel,
-                                  O = n.onShippingAddressChange,
-                                  R = n.onShippingRateChange,
+                                  R = n.onShippingAddressChange,
+                                  O = n.onShippingRateChange,
                                   v = x('mounts <'.concat(i, '>')),
                                   C = 'elements' in v ? v.elements : null,
                                   L = 'customCheckoutSdk' in v ? v.customCheckoutSdk : null,
@@ -540,8 +540,8 @@ var r;
                                   h(D, 'networkschange', g),
                                   h(D, 'confirm', A),
                                   h(D, 'cancel', N),
-                                  h(D, 'shippingaddresschange', O),
-                                  h(D, 'shippingratechange', R),
+                                  h(D, 'shippingaddresschange', R),
+                                  h(D, 'shippingratechange', O),
                                   h(D, 'change', E),
                                   _ &&
                                       (r =
@@ -739,7 +739,7 @@ var r;
                     ),
                     t.useEffect(
                         function () {
-                            O(l);
+                            R(l);
                         },
                         [l]
                     );

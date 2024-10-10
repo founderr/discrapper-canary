@@ -6,7 +6,7 @@ n.d(t, {
         return y;
     },
     K0: function () {
-        return R;
+        return O;
     },
     f$: function () {
         return o.f$;
@@ -18,7 +18,7 @@ n.d(t, {
         return o.Hx;
     },
     tn: function () {
-        return O;
+        return R;
     },
     yZ: function () {
         return u.H;
@@ -215,7 +215,7 @@ let T = m.bind(null, 'get'),
     g = m.bind(null, 'put'),
     A = m.bind(null, 'patch'),
     N = m.bind(null, 'del'),
-    O = {
+    R = {
         get: T,
         post: S,
         put: g,
@@ -233,7 +233,7 @@ if (n.g.isServerRendering) {
         });
     (T = e), (S = e), (g = e), (A = e), (N = e);
 }
-function R() {
+function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return 'https:' + window.GLOBAL_ENV.API_ENDPOINT + (e ? '/v'.concat(window.GLOBAL_ENV.API_VERSION) : '');
 }

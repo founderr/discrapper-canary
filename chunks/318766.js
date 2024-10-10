@@ -49,11 +49,11 @@ let A = {
     };
 t.Z = function (e) {
     var t;
-    let { tabIndex: n, className: a, renderButtonContents: O, active: R, onClick: v, 'aria-controls': C, focusProps: L } = e,
+    let { tabIndex: n, className: a, renderButtonContents: R, active: O, onClick: v, 'aria-controls': C, focusProps: L } = e,
         [y, D] = i.useState(!1),
         [b, M] = i.useState(50),
         P = (0, l.e7)([f.ZP], () => f.ZP.inReverseTrial()),
-        U = y || R,
+        U = y || O,
         w = (0, p.l)(g, 'emojiButton', U ? 'Hovered' : 'Normal');
     let x =
             ((t = b),
@@ -78,7 +78,7 @@ t.Z = function (e) {
         text: N(),
         'aria-label': S.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.plainFormat(),
         position: 'top',
-        shouldShow: P && !R && H,
+        shouldShow: P && !O && H,
         tooltipClassName: g.premiumTooltip,
         tooltipContentClassName: g.premiumTooltipContainer,
         children: (e) =>
@@ -103,13 +103,13 @@ t.Z = function (e) {
                 },
                 'aria-label': S.Z.Messages.SELECT_EMOJI,
                 'aria-controls': C,
-                'aria-expanded': R,
+                'aria-expanded': O,
                 'aria-haspopup': 'dialog',
                 focusProps: L,
                 onContextMenu: e.onContextMenu,
                 children:
-                    null != O
-                        ? O()
+                    null != R
+                        ? R()
                         : (0, r.jsx)(c.Spring, {
                               config: A,
                               to: { value: U ? 1 : 0 },

@@ -23,9 +23,9 @@ var r = n(735250),
 let T = (e) => {
         let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: I, profileEffectConfig: T, noBorderRadius: S = !1, introDelay: g = c.lG } = e,
             A = i.useRef(null),
-            [N, O] = i.useState([]);
+            [N, R] = i.useState([]);
         (0, p.Z)(T);
-        let [R, v] = i.useState(0),
+        let [O, v] = i.useState(0),
             [C, L] = i.useState(0),
             { accessibilityLabel: y } = T,
             [D, b] = i.useState(-g),
@@ -37,7 +37,7 @@ let T = (e) => {
                 b((t) => t + e);
             });
         i.useEffect(() => {
-            b(-g), O((0, E.H)(T.effects));
+            b(-g), R((0, E.H)(T.effects));
         }, [T]),
             i.useEffect(() => {
                 let e = 0,
@@ -52,8 +52,8 @@ let T = (e) => {
         let [w, x] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 !== u && !o && (M(), b(0)), !o && w && U.current && (M(), b(0)), a && o && !U.current && (P(), T.animationType === d.Q.PERSISTENT ? b(h === d.j.FromStart ? 0 : R) : b(0));
-            }, [o, w, R, a, M, P, U, T.animationType, u, h]),
+                !0 !== u && !o && (M(), b(0)), !o && w && U.current && (M(), b(0)), a && o && !U.current && (P(), T.animationType === d.Q.PERSISTENT ? b(h === d.j.FromStart ? 0 : O) : b(0));
+            }, [o, w, O, a, M, P, U, T.animationType, u, h]),
             (0, r.jsx)('div', {
                 ref: A,
                 className: s()(m.profileEffects, { [m.hovered]: o && l }),

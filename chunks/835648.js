@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 });
 var r = n(735250),
@@ -144,7 +144,7 @@ function N(e) {
             })(t, i, a, e, l, s)
     });
 }
-function O(e) {
+function R(e) {
     let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = g, guildId: o, inExpressionPicker: u } = e,
         c = i.useRef(null),
         E = (0, l.e7)([f.default], () => f.default.getCurrentUser()),

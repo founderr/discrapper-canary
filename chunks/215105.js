@@ -25,8 +25,8 @@ var r = n(735250),
     g = n(652853),
     A = n(228168),
     N = n(420212),
-    O = n(689938),
-    R = n(639899);
+    R = n(689938),
+    O = n(639899);
 let v = (0, _.kt)({
         id: '1',
         type: o.d.DM
@@ -35,13 +35,13 @@ let v = (0, _.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case A.n_.ACTIVITY:
-                let a = O.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
+                let a = R.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
                 return ''.concat(S.jd).concat(a, '*\n').concat(t);
             case A.n_.AVATAR:
-                let s = O.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
+                let s = R.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
                 return ''.concat(S.jd).concat(s, '*\n').concat(t);
             case A.n_.STATUS:
-                let o = O.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
+                let o = R.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
                 return null != i ? ''.concat(S.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(S.jd).concat(o, '*\n').concat(t);
             default:
                 (0, E.vE)(r);
@@ -50,17 +50,17 @@ let v = (0, _.kt)({
     L = (e) => {
         switch (e) {
             case A.n_.ACTIVITY:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+                return R.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
             case A.n_.AVATAR:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+                return R.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
             case A.n_.STATUS:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+                return R.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
             default:
                 (0, E.vE)(e);
         }
     };
 function y(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: O, modalKey: y, onClose: D } = e,
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: R, modalKey: y, onClose: D } = e,
         { trackUserProfileAction: b } = (0, p.KZ)(),
         { sendReply: M } = (0, I.Q)(_),
         { resetInteraction: P, setInteractionToastShown: U, setInteractionTypeSent: w } = (0, T.Xo)(),
@@ -76,8 +76,8 @@ function y(e) {
             [P]
         );
     i.useEffect(() => {
-        null == O || O(null == H ? void 0 : H.current);
-    }, [H, O]);
+        null == R || R(null == H ? void 0 : H.current);
+    }, [H, R]);
     let Y = async (e) => {
             if (null == e) return;
             b({ action: M });
@@ -103,23 +103,23 @@ function y(e) {
                 }, S._1);
         },
         j = {
-            [R.biteSize]: o === A.y0.BITE_SIZE,
-            [R.panel]: o === A.y0.PANEL
+            [O.biteSize]: o === A.y0.BITE_SIZE,
+            [O.panel]: o === A.y0.PANEL
         },
         W = {
-            [R.status]: _ === A.n_.STATUS,
-            [R.avatar]: _ === A.n_.AVATAR
+            [O.status]: _ === A.n_.STATUS,
+            [O.avatar]: _ === A.n_.AVATAR
         };
     return (0, r.jsx)(l.V, {
         ref: H,
         onKeyDown: Z,
         children: (0, r.jsx)('div', {
-            className: s()(R.container, j, W, { [R.customProfileTheme]: null != x }),
+            className: s()(O.container, j, W, { [O.customProfileTheme]: null != x }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: y,
                 emojiPickerCloseOnModalOuterClick: !0,
-                innerClassName: R.inner,
-                editorClassName: R.editor,
+                innerClassName: O.inner,
+                editorClassName: O.editor,
                 type: u.I.USER_PROFILE_REPLY,
                 placeholder: L(_).format({ username: f.ZP.getName(n, a, t) }),
                 channel: v,

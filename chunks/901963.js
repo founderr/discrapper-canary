@@ -21,19 +21,19 @@ let S = 'premiumRetentionEmojiPickerNotice',
 t.Z = (e) => {
     let { closePopout: t, channel: n } = e,
         [a, A] = i.useState(!1),
-        { subscription: N, hasFetchedSubscriptions: O } = (0, o.cj)([E.ZP], () => ({
+        { subscription: N, hasFetchedSubscriptions: R } = (0, o.cj)([E.ZP], () => ({
             subscription: E.ZP.getPremiumSubscription(),
             hasFetchedSubscriptions: E.ZP.hasFetchedSubscriptions()
         }));
     if (
         (i.useEffect(() => {
-            !O && (0, c.jg)();
-        }, [O]),
+            !R && (0, c.jg)();
+        }, [R]),
         null == N || !(0, f.zV)(N.status) || a)
     )
         return null;
-    let R = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(I.gh),
-        v = ''.concat(N.id, ':').concat(R.toISOString());
+    let O = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(I.gh),
+        v = ''.concat(N.id, ':').concat(O.toISOString());
     if (g === v) return null;
     let C = f.ZP.getPremiumType(N.planId) === I.p9.TIER_0 ? _.JX.PREMIUM_TIER_0 : f.ZP.getPremiumType(N.planId) === I.p9.TIER_1 ? _.JX.PREMIUM_TIER_1 : _.JX.PREMIUM_TIER_2;
     return (0, r.jsxs)('div', {
@@ -51,7 +51,7 @@ t.Z = (e) => {
                         variant: 'text-xs/normal',
                         children: m.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
                             planName: f.ZP.getDisplayPremiumType(N.planId),
-                            endsAt: R.toDate()
+                            endsAt: O.toDate()
                         })
                     }),
                     (0, r.jsx)('div', {

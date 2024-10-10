@@ -1,34 +1,34 @@
 r.d(t, {
     l: function () {
-        return i;
+        return o;
     },
     o: function () {
-        return o;
+        return _;
     }
 });
 var n = r(988097),
     a = r(696486);
-function o(e, t, r) {
-    let o = (0, a.HN)(),
-        i = o && (0, a.Gx)(o);
-    i &&
-        i.addEvent(e, {
+function _(e, t, r) {
+    let _ = (0, a.HN)(),
+        o = _ && (0, a.Gx)(_);
+    o &&
+        o.addEvent(e, {
             [n.Wb]: t,
             [n.E1]: r
         });
 }
-function i(e) {
+function o(e) {
     if (!e || 0 === e.length) return;
     let t = {};
     return (
         e.forEach((e) => {
             let r = e.attributes || {},
                 a = r[n.E1],
-                o = r[n.Wb];
+                _ = r[n.Wb];
             'string' == typeof a &&
-                'number' == typeof o &&
+                'number' == typeof _ &&
                 (t[e.name] = {
-                    value: o,
+                    value: _,
                     unit: a
                 });
         }),

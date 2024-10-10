@@ -1,15 +1,15 @@
 s.d(t, {
     Z: function () {
-        return u;
+        return l;
     }
 }),
     s(47120);
 var n = s(735250),
     r = s(470079),
     o = s(748780),
-    i = s(481060),
-    a = s(532864);
-class u extends r.Component {
+    a = s(481060),
+    i = s(532864);
+class l extends r.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
         t.setValue(1),
@@ -31,7 +31,7 @@ class u extends r.Component {
     render() {
         let { isExiting: e, offset: t } = this.state;
         return (0, n.jsx)(o.Z.div, {
-            className: a.wrapper,
+            className: i.wrapper,
             style: {
                 left: 0,
                 position: e ? 'absolute' : 'relative',
@@ -45,8 +45,8 @@ class u extends r.Component {
                     }
                 ]
             },
-            children: (0, n.jsx)(i.ModalContent, {
-                className: a.contentWrapper,
+            children: (0, n.jsx)(a.ModalContent, {
+                className: i.contentWrapper,
                 children: this.props.children
             })
         });

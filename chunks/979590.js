@@ -339,7 +339,7 @@
             return this._applyCombination(L, arguments);
         },
         complement: function () {
-            return this._applyCombination(O, arguments);
+            return this._applyCombination(R, arguments);
         },
         monochromatic: function () {
             return this._applyCombination(y, arguments);
@@ -348,7 +348,7 @@
             return this._applyCombination(C, arguments);
         },
         triad: function () {
-            return this._applyCombination(R, arguments);
+            return this._applyCombination(O, arguments);
         },
         tetrad: function () {
             return this._applyCombination(v, arguments);
@@ -457,11 +457,11 @@
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), _(n);
     }
-    function O(e) {
+    function R(e) {
         var t = _(e).toHsl();
         return (t.h = (t.h + 180) % 360), _(t);
     }
-    function R(e) {
+    function O(e) {
         var t = _(e).toHsl(),
             n = t.h;
         return [

@@ -7,7 +7,7 @@ var r = n(735250),
     l = n(98528),
     u = n(729480);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: S, rowHeight: g, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: R } = e,
+    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: S, rowHeight: g, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: R, setShowUpsell: O } = e,
         v = i.useRef(!1),
         C = i.useRef(null),
         L = (0, o.Iu)((e) => e.searchQuery),
@@ -17,7 +17,7 @@ let c = i.forwardRef(function (e, t) {
             listRef: C,
             searchQuery: L,
             nitroLockedSectionStates: D,
-            setShowUpsell: R
+            setShowUpsell: O
         }),
         M = (0, l.Qs)({
             activeCategoryIndex: y,
@@ -103,7 +103,7 @@ let c = i.forwardRef(function (e, t) {
                           stickyHeaders: !0,
                           ref: C
                       }),
-                null == O ? void 0 : O(),
+                null == R ? void 0 : R(),
                 null == I ? void 0 : I()
             ]
         })

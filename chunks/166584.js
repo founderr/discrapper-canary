@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120),
@@ -30,11 +30,11 @@ let N = (e) => {
     let { width: t } = e.getBoundingClientRect();
     return t > 0 ? t + 4 : 0;
 };
-function O(e) {
-    let { user: t, currentUser: n, guild: l, guildMember: c, roles: d, highestRole: _, canManageRoles: E, onAddRole: f, onRemoveRole: O } = e,
-        R = i.useRef({}),
+function R(e) {
+    let { user: t, currentUser: n, guild: l, guildMember: c, roles: d, highestRole: _, canManageRoles: E, onAddRole: f, onRemoveRole: R } = e,
+        O = i.useRef({}),
         v = (e, t) => {
-            null != t ? (R.current[e] = t) : delete R.current[e];
+            null != t ? (O.current[e] = t) : delete O.current[e];
         },
         [C, L] = i.useState(d),
         [y, D] = i.useState(268),
@@ -55,7 +55,7 @@ function O(e) {
                 let t = 1 === e ? r : 268;
                 for (let e = 0, r = n.length; r < d.length; r++) {
                     let i = d[r],
-                        a = R.current[i.id];
+                        a = O.current[i.id];
                     if (null == a) {
                         0 === w.current && n.push(i);
                         continue;
@@ -87,7 +87,7 @@ function O(e) {
                     style: { maxWidth: b || i !== C.length - 1 ? 268 : y },
                     disableBorderColor: !0,
                     ref: (t) => v(e.id, t),
-                    onRemove: () => O(e),
+                    onRemove: () => R(e),
                     canRemove: E ? p.r6(l, n.id, _, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === n.id
                 },
                 e.id
@@ -155,7 +155,7 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function O(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: s } = (0, I.KZ)(),
         o = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
@@ -194,9 +194,9 @@ function R(e) {
             },
             [h, a.id, t.id, s]
         ),
-        R = g && null != o;
-    return 0 !== m.length || R
-        ? (0, r.jsx)(O, {
+        O = g && null != o;
+    return 0 !== m.length || O
+        ? (0, r.jsx)(R, {
               user: t,
               currentUser: n,
               guild: a,

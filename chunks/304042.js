@@ -26,8 +26,8 @@ var i = n(120356),
     g = n(496675),
     A = n(938475),
     N = n(960870),
-    O = n(139793),
-    R = n(502762),
+    R = n(139793),
+    O = n(502762),
     v = n(652853),
     C = n(194811),
     L = n(373826),
@@ -57,7 +57,7 @@ function F(e) {
             stream: i,
             analyticsLocations: W
         }),
-        z = (0, O.Z)({
+        z = (0, R.Z)({
             userId: t.id,
             onAction: K
         }),
@@ -240,7 +240,7 @@ function F(e) {
             onClose: V,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(R.Z.Overlay, {
+                return (0, r.jsxs)(O.Z.Overlay, {
                     className: a()(x.card, F),
                     ref: z,
                     children: [
