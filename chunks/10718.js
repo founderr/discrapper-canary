@@ -125,51 +125,52 @@ function m(e) {
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
 function T(e, t, n) {
-    let s = (0, i.e7)([a.Z], () => a.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
+    let s = null == e ? void 0 : e.guild_id,
+        u = (0, i.e7)([a.Z], () => a.Z.getGuild(s), [s]),
         {
-            descriptors: u,
-            commands: c,
-            sectionedCommands: d,
-            loading: f
-        } = (0, l.JK)(e, s, t, {
+            descriptors: c,
+            commands: d,
+            sectionedCommands: f,
+            loading: h
+        } = (0, l.JK)(e, u, t, {
             ...n,
             allowFetch: !0
         }),
-        [h, p] = r.useState(null),
-        I = r.useRef(!1);
-    I.current = f;
-    let m = r.useMemo(() => {
+        [p, I] = r.useState(null),
+        m = r.useRef(!1);
+    m.current = h;
+    let T = r.useMemo(() => {
         var e;
         return R(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: I,
-            commands: c,
-            activeSections: u,
-            commandsByActiveSection: d,
-            filteredSectionId: h,
+            loading: m,
+            commands: d,
+            activeSections: c,
+            commandsByActiveSection: f,
+            filteredSectionId: p,
             hasMoreAfter: !1,
-            placeholders: f ? m : [],
-            sectionDescriptors: u,
+            placeholders: h ? T : [],
+            sectionDescriptors: c,
             filterSection: (e) => {
-                p(e);
+                I(e);
             },
             scrollDown: E.dG4
         };
-        if (null != h) {
-            let t = d.find((e) => e.section.id === h);
+        if (null != p) {
+            let t = f.find((e) => e.section.id === p);
             (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
         }
-        if (f) {
-            let t = d[0];
+        if (h) {
+            let t = f[0];
             if (null != t)
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...m]
+                        data: [...t.data, ...T]
                     },
-                    ...d.slice(1)
+                    ...f.slice(1)
                 ];
             else {
                 let t = o.Tm[_.bi.BUILT_IN];
@@ -177,14 +178,14 @@ function T(e, t, n) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: m
+                            data: T
                         }
                     ]);
             }
-            e.commands = [...c, ...m];
+            e.commands = [...d, ...T];
         }
         return e;
-    }, [c, u, h, d, f, m]);
+    }, [d, c, p, f, h, T]);
 }
 function S(e, t, n) {
     var r;
