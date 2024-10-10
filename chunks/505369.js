@@ -5,6 +5,31 @@ var i = n(544891),
     l = n(207205),
     o = n(981631);
 t.Z = {
+    async fetchPopularGuildsFromCategories(e, t) {
+        try {
+            let { guilds: n } = (
+                await i.tn.post({
+                    url: o.ANM.GRAVITY_TOPIC_GUILDS,
+                    body: {
+                        category_ids: e,
+                        offset: t
+                    }
+                })
+            ).body;
+            return (
+                a.Z.dispatch({
+                    type: 'LOAD_GRAVITY_POPULAR_GUILDS',
+                    categoryIds: e,
+                    guilds: n,
+                    offset: t
+                }),
+                !0
+            );
+        } catch (e) {
+            s.Z.captureException(e);
+        }
+        return !1;
+    },
     async fetchDehydrated() {
         let { isReloading: e, forceRefresh: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (!(0, l.rK)('fetchDehydrated')) return;
