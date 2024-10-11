@@ -527,63 +527,58 @@ function p(e) {
                                     i = e[t.key],
                                     O = 'function' == typeof i ? i(t) : i;
                                 return (function (e) {
-                                    let { changeItem: _, subChanges: E, changeNumber: n, log: t, oldValue: r, newValue: T, change: a } = e;
-                                    if (null == _) return console.warn('No change string for', a), null;
-                                    let I = (() => {
-                                        if ('string' == typeof _) return _;
-                                        if ('string' != typeof _ && null != _.format) {
-                                            var e, E;
-                                            return _.format({
-                                                oldValue: r,
-                                                newValue: T,
-                                                count: Array.isArray(T) ? T.length : null,
-                                                subtarget: null !== (E = null !== (e = t.options.subtarget) && void 0 !== e ? e : a.subtarget) && void 0 !== E ? E : null,
-                                                newColorHook: (e, _) =>
-                                                    (0, s.jsx)(
-                                                        'div',
-                                                        {
-                                                            className: M.colorHook,
-                                                            style: { backgroundColor: a.newValue }
-                                                        },
-                                                        _
-                                                    ),
-                                                oldColorHook: (e, _) =>
-                                                    (0, s.jsx)(
-                                                        'div',
-                                                        {
-                                                            className: M.colorHook,
-                                                            style: { backgroundColor: a.oldValue }
-                                                        },
-                                                        _
-                                                    ),
-                                                oldTagHook: (e, _) =>
-                                                    (0, s.jsx)(
-                                                        N.Z,
-                                                        {
-                                                            tag: r,
-                                                            size: N.Z.Sizes.SMALL
-                                                        },
-                                                        _
-                                                    ),
-                                                newTagHook: (e, _) =>
-                                                    (0, s.jsx)(
-                                                        N.Z,
-                                                        {
-                                                            tag: T,
-                                                            size: N.Z.Sizes.SMALL
-                                                        },
-                                                        _
-                                                    ),
-                                                oldEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: r }, _),
-                                                newEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: T }, _),
-                                                applicationHook: (e, _) => {
-                                                    var E;
-                                                    return (0, s.jsx)(C, { applicationId: null !== (E = null == r ? void 0 : r.application_id) && void 0 !== E ? E : null == T ? void 0 : T.application_id }, _);
-                                                }
-                                            });
+                                    var _, E;
+                                    let { changeItem: n, subChanges: t, changeNumber: r, log: T, oldValue: a, newValue: I, change: l } = e;
+                                    if (null == n) return console.warn('No change string for', l), null;
+                                    let i = n.format({
+                                        oldValue: a,
+                                        newValue: I,
+                                        count: Array.isArray(I) ? I.length : null,
+                                        subtarget: null !== (E = null !== (_ = T.options.subtarget) && void 0 !== _ ? _ : l.subtarget) && void 0 !== E ? E : null,
+                                        newColorHook: (e, _) =>
+                                            (0, s.jsx)(
+                                                'div',
+                                                {
+                                                    className: M.colorHook,
+                                                    style: { backgroundColor: l.newValue }
+                                                },
+                                                _
+                                            ),
+                                        oldColorHook: (e, _) =>
+                                            (0, s.jsx)(
+                                                'div',
+                                                {
+                                                    className: M.colorHook,
+                                                    style: { backgroundColor: l.oldValue }
+                                                },
+                                                _
+                                            ),
+                                        oldTagHook: (e, _) =>
+                                            (0, s.jsx)(
+                                                N.Z,
+                                                {
+                                                    tag: a,
+                                                    size: N.Z.Sizes.SMALL
+                                                },
+                                                _
+                                            ),
+                                        newTagHook: (e, _) =>
+                                            (0, s.jsx)(
+                                                N.Z,
+                                                {
+                                                    tag: I,
+                                                    size: N.Z.Sizes.SMALL
+                                                },
+                                                _
+                                            ),
+                                        oldEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: a }, _),
+                                        newEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: I }, _),
+                                        applicationHook: (e, _) => {
+                                            var E;
+                                            return (0, s.jsx)(C, { applicationId: null !== (E = null == a ? void 0 : a.application_id) && void 0 !== E ? E : null == I ? void 0 : I.application_id }, _);
                                         }
-                                    })();
-                                    return null == I || '' === I
+                                    });
+                                    return null == i || '' === i
                                         ? null
                                         : (0, s.jsxs)(
                                               'div',
@@ -606,9 +601,9 @@ function p(e) {
                                                                   default:
                                                                       return 'text-warning';
                                                               }
-                                                          })(t.actionType),
+                                                          })(T.actionType),
                                                           children: [
-                                                              n < 10 ? '0'.concat(n) : n,
+                                                              r < 10 ? '0'.concat(r) : r,
                                                               (0, s.jsx)('span', {
                                                                   className: M.dash,
                                                                   children: '\u2014'
@@ -620,14 +615,14 @@ function p(e) {
                                                           children: [
                                                               (0, s.jsx)('div', {
                                                                   className: M.changeStr,
-                                                                  children: I
+                                                                  children: i
                                                               }),
-                                                              null != E ? (0, s.jsx)('div', { children: E }) : null
+                                                              null != t ? (0, s.jsx)('div', { children: t }) : null
                                                           ]
                                                       })
                                                   ]
                                               },
-                                              n
+                                              r
                                           );
                                 })({
                                     changeItem: O,
