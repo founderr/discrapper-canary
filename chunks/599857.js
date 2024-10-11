@@ -1,50 +1,56 @@
 n.d(t, {
     _: function () {
-        return c;
+        return d;
     }
 });
 var i = n(735250),
     a = n(470079),
     s = n(14199),
     r = n(780384),
-    l = n(756148),
-    o = n(981631);
-function c(e) {
+    l = n(481060),
+    o = n(756148),
+    c = n(981631);
+function d(e) {
     return (
-        a.useEffect(() => {
-            var t, n, i;
-            l.Z.init(e.sitekey),
-                null === (i = window) ||
-                    void 0 === i ||
-                    null === (n = i.grecaptcha) ||
-                    void 0 === n ||
-                    null === (t = n.enterprise) ||
-                    void 0 === t ||
-                    t.ready(async () => {
-                        var t;
-                        let n = await (null === (t = window) || void 0 === t ? void 0 : t.grecaptcha).enterprise.execute(e.sitekey, null != e.action ? { action: e.action } : void 0);
-                        e.onVerify(n);
-                    });
-        }, [e]),
-        (0, i.jsx)(i.Fragment, {})
+        a.useEffect(
+            () => (
+                o.I.loadRecaptchaScript(e.sitekey, () => {
+                    var t, n, i;
+                    return null === (i = window) || void 0 === i
+                        ? void 0
+                        : null === (n = i.grecaptcha) || void 0 === n
+                          ? void 0
+                          : null === (t = n.enterprise) || void 0 === t
+                            ? void 0
+                            : t.ready(async () => {
+                                  var t;
+                                  let n = await (null === (t = window) || void 0 === t ? void 0 : t.grecaptcha).enterprise.execute(e.sitekey, null != e.action ? { action: e.action } : void 0);
+                                  e.onVerify(n);
+                              });
+                }),
+                () => o.I.cleanup(e.sitekey)
+            ),
+            [e]
+        ),
+        (0, i.jsx)(l.Spinner, {})
     );
 }
-let d = (e) => {
+let u = (e) => {
     let { theme: t, ...n } = e,
         a = (0, r.wj)(t) ? 'dark' : 'light';
     return (0, i.jsx)(s.Z, {
-        sitekey: o.OL7,
+        sitekey: c.OL7,
         ...n,
         theme: a
     });
 };
-(d.Themes = {
+(u.Themes = {
     LIGHT: 'light',
     DARK: 'dark'
 }),
-    (d.Sizes = {
+    (u.Sizes = {
         COMPACT: 'compact',
         NORMAL: 'normal',
         INVISIBLE: 'invisible'
     }),
-    (t.Z = d);
+    (t.Z = u);
