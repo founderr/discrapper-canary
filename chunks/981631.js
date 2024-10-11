@@ -1,6 +1,6 @@
 r.d(t, {
     $7l: function () {
-        return aF.$7;
+        return ax.$7;
     },
     $92: function () {
         return _f;
@@ -9,13 +9,13 @@ r.d(t, {
         return p;
     },
     $Dd: function () {
-        return ax.$D;
+        return aF.$D;
     },
     $R1: function () {
-        return ax.$R;
+        return aF.$R;
     },
     $VG: function () {
-        return ax.$V;
+        return aF.$V;
     },
     $Y6: function () {
         return _H;
@@ -42,13 +42,13 @@ r.d(t, {
         return e4;
     },
     Ai1: function () {
-        return ax.Ai;
+        return aF.Ai;
     },
     AzA: function () {
         return tG;
     },
     B1h: function () {
-        return ax.B1;
+        return aF.B1;
     },
     B9o: function () {
         return _G;
@@ -57,7 +57,7 @@ r.d(t, {
         return _Q;
     },
     BRd: function () {
-        return ax.BR;
+        return aF.BR;
     },
     BVn: function () {
         return t0;
@@ -69,7 +69,7 @@ r.d(t, {
         return tr;
     },
     BmY: function () {
-        return x;
+        return F;
     },
     BpS: function () {
         return j;
@@ -84,7 +84,7 @@ r.d(t, {
         return R;
     },
     Cyb: function () {
-        return ax.Cy;
+        return aF.Cy;
     },
     DJE: function () {
         return tI;
@@ -96,13 +96,13 @@ r.d(t, {
         return a8;
     },
     E07: function () {
-        return _x;
+        return _F;
     },
     EKQ: function () {
-        return ax.EK;
+        return aF.EK;
     },
     ETv: function () {
-        return ax.ET;
+        return aF.ET;
     },
     EYA: function () {
         return _V;
@@ -111,7 +111,7 @@ r.d(t, {
         return E;
     },
     Etm: function () {
-        return ax.Et;
+        return aF.Et;
     },
     Eu4: function () {
         return eH;
@@ -120,7 +120,7 @@ r.d(t, {
         return _a;
     },
     FsG: function () {
-        return aF.Fs;
+        return ax.Fs;
     },
     GNZ: function () {
         return oo;
@@ -132,10 +132,10 @@ r.d(t, {
         return Q;
     },
     GZQ: function () {
-        return ax.GZ;
+        return aF.GZ;
     },
     H0J: function () {
-        return ax.H0;
+        return aF.H0;
     },
     HGf: function () {
         return os;
@@ -144,7 +144,7 @@ r.d(t, {
         return _E;
     },
     HeQ: function () {
-        return ax.He;
+        return aF.He;
     },
     Hqc: function () {
         return on;
@@ -159,7 +159,7 @@ r.d(t, {
         return ea;
     },
     IWh: function () {
-        return tF;
+        return tx;
     },
     IXf: function () {
         return _D;
@@ -171,7 +171,7 @@ r.d(t, {
         return ts;
     },
     Ilk: function () {
-        return ax.Il;
+        return aF.Il;
     },
     IyS: function () {
         return tX;
@@ -183,7 +183,7 @@ r.d(t, {
         return __;
     },
     JjL: function () {
-        return ax.Jj;
+        return aF.Jj;
     },
     JkL: function () {
         return _W;
@@ -237,10 +237,10 @@ r.d(t, {
         return tg;
     },
     NYc: function () {
-        return ax.NY;
+        return aF.NY;
     },
     NYc: function () {
-        return ax.NY;
+        return aF.NY;
     },
     NYg: function () {
         return e9;
@@ -255,7 +255,7 @@ r.d(t, {
         return eW;
     },
     O42: function () {
-        return aF.O4;
+        return ax.O4;
     },
     OBS: function () {
         return aj;
@@ -267,7 +267,7 @@ r.d(t, {
         return J;
     },
     OMz: function () {
-        return ax.OM;
+        return aF.OM;
     },
     OSm: function () {
         return _A;
@@ -297,7 +297,7 @@ r.d(t, {
         return e5;
     },
     Plq: function () {
-        return ax.Pl;
+        return aF.Pl;
     },
     PrB: function () {
         return f;
@@ -306,7 +306,7 @@ r.d(t, {
         return _w;
     },
     PyE: function () {
-        return ax.Py;
+        return aF.Py;
     },
     QCD: function () {
         return t_;
@@ -315,7 +315,7 @@ r.d(t, {
         return ec;
     },
     QL: function () {
-        return ax.QL;
+        return aF.QL;
     },
     QR$: function () {
         return th;
@@ -324,13 +324,13 @@ r.d(t, {
         return i;
     },
     Qa3: function () {
-        return ax.Q;
+        return aF.Q;
     },
     Qqv: function () {
         return eN;
     },
     R5N: function () {
-        return eF;
+        return ex;
     },
     R7I: function () {
         return _Y;
@@ -339,10 +339,10 @@ r.d(t, {
         return oA;
     },
     RG5: function () {
-        return ax.RG;
+        return aF.RG;
     },
     RK: function () {
-        return ax.RK;
+        return aF.RK;
     },
     RcX: function () {
         return _b;
@@ -351,7 +351,7 @@ r.d(t, {
         return o_;
     },
     S7T: function () {
-        return ax.S7;
+        return aF.S7;
     },
     S9g: function () {
         return ez;
@@ -372,13 +372,13 @@ r.d(t, {
         return a1;
     },
     Skl: function () {
-        return ax.Sk;
+        return aF.Sk;
     },
     T23: function () {
         return oD;
     },
     TC2: function () {
-        return ax.TC;
+        return aF.TC;
     },
     TNx: function () {
         return _j;
@@ -396,10 +396,10 @@ r.d(t, {
         return ta;
     },
     U66: function () {
-        return ax.U6;
+        return aF.U6;
     },
     U9i: function () {
-        return ax.U9;
+        return aF.U9;
     },
     ULH: function () {
         return T;
@@ -408,7 +408,7 @@ r.d(t, {
         return tQ;
     },
     Uk1: function () {
-        return ax.Uk;
+        return aF.Uk;
     },
     UkZ: function () {
         return tj;
@@ -423,7 +423,7 @@ r.d(t, {
         return aw.V;
     },
     V6Z: function () {
-        return ax.V6;
+        return aF.V6;
     },
     VD2: function () {
         return e7;
@@ -435,10 +435,10 @@ r.d(t, {
         return eC;
     },
     VqG: function () {
-        return ax.Vq;
+        return aF.Vq;
     },
     Vzj: function () {
-        return ax.Vz;
+        return aF.Vz;
     },
     WKe: function () {
         return _d;
@@ -450,13 +450,13 @@ r.d(t, {
         return en;
     },
     X5t: function () {
-        return ax.X5;
+        return aF.X5;
     },
     X6Q: function () {
-        return ax.X6;
+        return aF.X6;
     },
     X7u: function () {
-        return ax.X7;
+        return aF.X7;
     },
     XAJ: function () {
         return a2;
@@ -498,7 +498,7 @@ r.d(t, {
         return A;
     },
     Zuq: function () {
-        return ax.Zu;
+        return aF.Zu;
     },
     _1z: function () {
         return K;
@@ -519,7 +519,7 @@ r.d(t, {
         return a0;
     },
     aO5: function () {
-        return ax.aO;
+        return aF.aO;
     },
     aZC: function () {
         return _z;
@@ -546,7 +546,7 @@ r.d(t, {
         return e3;
     },
     cII: function () {
-        return aF.cI;
+        return ax.cI;
     },
     d4z: function () {
         return ab.d;
@@ -558,13 +558,13 @@ r.d(t, {
         return ev;
     },
     dG4: function () {
-        return ax.dG;
+        return aF.dG;
     },
     dGM: function () {
         return _h;
     },
     dGm: function () {
-        return ax.yA;
+        return aF.yA;
     },
     dN1: function () {
         return _T;
@@ -606,16 +606,16 @@ r.d(t, {
         return tu;
     },
     fK7: function () {
-        return ax.fK;
+        return aF.fK;
     },
     fMv: function () {
-        return aF.fM;
+        return ax.fM;
     },
     fo$: function () {
         return _P;
     },
     frH: function () {
-        return ax.fr;
+        return aF.fr;
     },
     fzT: function () {
         return _0;
@@ -627,7 +627,7 @@ r.d(t, {
         return tZ;
     },
     gg$: function () {
-        return ax.gg;
+        return aF.gg;
     },
     gkr: function () {
         return tC;
@@ -657,7 +657,7 @@ r.d(t, {
         return y;
     },
     ihW: function () {
-        return aF.ih;
+        return ax.ih;
     },
     ipw: function () {
         return W;
@@ -669,7 +669,7 @@ r.d(t, {
         return _n;
     },
     j8d: function () {
-        return ax.j8;
+        return aF.j8;
     },
     jXE: function () {
         return eA;
@@ -705,10 +705,10 @@ r.d(t, {
         return tW;
     },
     lTL: function () {
-        return ax.lT;
+        return aF.lT;
     },
     ldS: function () {
-        return ax.ld;
+        return aF.ld;
     },
     lds: function () {
         return aQ;
@@ -756,7 +756,7 @@ r.d(t, {
         return N;
     },
     pKx: function () {
-        return ax.pK;
+        return aF.pK;
     },
     pM4: function () {
         return L;
@@ -798,10 +798,10 @@ r.d(t, {
         return D;
     },
     rMx: function () {
-        return ex;
+        return eF;
     },
     rnv: function () {
-        return _F;
+        return _x;
     },
     rsA: function () {
         return oa;
@@ -810,7 +810,7 @@ r.d(t, {
         return eB;
     },
     rxP: function () {
-        return ax.rx;
+        return aF.rx;
     },
     sFg: function () {
         return X;
@@ -834,13 +834,13 @@ r.d(t, {
         return a7;
     },
     tNA: function () {
-        return ax.tN;
+        return aF.tN;
     },
     tPV: function () {
         return _l;
     },
     tPk: function () {
-        return ax.tP;
+        return aF.tP;
     },
     tuJ: function () {
         return eY;
@@ -903,16 +903,16 @@ r.d(t, {
         return aX;
     },
     xr4: function () {
-        return ax.xr;
+        return aF.xr;
     },
     yXg: function () {
         return e8;
     },
     yXt: function () {
-        return ax.yX;
+        return aF.yX;
     },
     yYS: function () {
-        return ax.yY;
+        return aF.yY;
     },
     yb: function () {
         return G;
@@ -930,7 +930,7 @@ r.d(t, {
         return _k;
     },
     zMe: function () {
-        return ax.zM;
+        return aF.zM;
     },
     zUn: function () {
         return e2;
@@ -985,8 +985,8 @@ var n,
     K,
     k,
     V,
-    x,
     F,
+    x,
     X,
     j,
     $,
@@ -1039,8 +1039,8 @@ var n,
     eK,
     ek,
     eV,
-    ex,
     eF,
+    ex,
     eX,
     ej,
     e$,
@@ -1103,8 +1103,8 @@ var n,
     tK,
     tk,
     tV,
-    tx,
     tF,
+    tx,
     tX,
     tj,
     t$,
@@ -1167,8 +1167,8 @@ var n,
     rK,
     rk,
     rV,
-    rx,
     rF,
+    rx,
     rX,
     rj,
     r$,
@@ -1231,8 +1231,8 @@ var n,
     nK,
     nk,
     nV,
-    nx,
     nF,
+    nx,
     nX,
     nj,
     n$,
@@ -1296,8 +1296,8 @@ var ab = r(106351),
     aK = r(272242),
     ak = r(188785),
     aV = r(526761),
-    ax = r(231338),
-    aF = r(334431);
+    aF = r(231338),
+    ax = r(334431);
 ((t2 = n || (n = {})).NONE = 'NONE'),
     (t2.LOGGING_IN = 'LOGGING_IN'),
     (t2.ACCOUNT_SCHEDULED_FOR_DELETION = 'ACCOUNT_SCHEDULED_FOR_DELETION'),
@@ -1689,7 +1689,7 @@ let aX = Object.freeze({
 });
 ((rA = g || (g = {})).DISCONNECTED = 'DISCONNECTED'), (rA.AWAITING_ENDPOINT = 'AWAITING_ENDPOINT'), (rA.AUTHENTICATING = 'AUTHENTICATING'), (rA.CONNECTING = 'CONNECTING'), (rA.RTC_DISCONNECTED = 'RTC_DISCONNECTED'), (rA.RTC_CONNECTING = 'RTC_CONNECTING'), (rA.RTC_CONNECTED = 'RTC_CONNECTED'), (rA.NO_ROUTE = 'NO_ROUTE'), (rA.ICE_CHECKING = 'ICE_CHECKING'), (rA.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((rT = M || (M = {})).UNKNOWN = 'unknown'), (rT.BAD = 'bad'), (rT.AVERAGE = 'average'), (rT.FINE = 'fine'), ((rN = P || (P = {})).CONNECTED = 'connected'), (rN.CONNECTING = 'connecting'), (rN.ERROR = 'error'), ((rd = U || (U = {})).MANUAL_ENABLED = 'MANUAL_ENABLED'), (rd.AUTO_PROBING = 'AUTO_PROBING'), (rd.AUTO_ENABLED = 'AUTO_ENABLED'), (rd.DISABLED = 'DISABLED'), (rd.NONE = 'NONE'), ((rO = m || (m = {})).LOGIN = 'Login'), (rO.REGISTER = 'Register'), (rO.INVITE = 'Accept Invite Page'), (rO.VERIFY = 'Verify Email'), (rO.DISABLE_EMAIL_NOTIFICATIONS = 'Disable Email Notifications'), (rO.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS = 'Disable Server Highlight Notifications'), (rO.AUTHORIZE_IP = 'Authorize Ip'), (rO.REJECT_IP = 'Reject Ip'), (rO.REJECT_MFA = 'Reject MFA'), (rO.REPORT = 'Report Illegal Content'), (rO.REPORT_SECOND_LOOK = 'Report Second Look'), (rO.AUTHORIZE_PAYMENT = 'Authorize Payment'), (rO.RESET = 'Reset'), (rO.HANDOFF = 'Handoff'), (rO.UNKNOWN = 'Unknown'), (rO.LANDING = 'Landing'), ((rp = G || (G = {})).SENT = 'SENT'), (rp.SENDING = 'SENDING'), (rp.SEND_FAILED = 'SEND_FAILED');
 let aj = new Set([aw.u.REPLY, aw.u.THREAD_STARTER_MESSAGE, aw.u.CONTEXT_MENU_COMMAND]);
-((rf = y || (y = {}))[(rf.CROSSPOSTED = 1)] = 'CROSSPOSTED'), (rf[(rf.IS_CROSSPOST = 2)] = 'IS_CROSSPOST'), (rf[(rf.SUPPRESS_EMBEDS = 4)] = 'SUPPRESS_EMBEDS'), (rf[(rf.SOURCE_MESSAGE_DELETED = 8)] = 'SOURCE_MESSAGE_DELETED'), (rf[(rf.URGENT = 16)] = 'URGENT'), (rf[(rf.HAS_THREAD = 32)] = 'HAS_THREAD'), (rf[(rf.EPHEMERAL = 64)] = 'EPHEMERAL'), (rf[(rf.LOADING = 128)] = 'LOADING'), (rf[(rf.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD = 256)] = 'FAILED_TO_MENTION_SOME_ROLES_IN_THREAD'), (rf[(rf.GUILD_FEED_HIDDEN = 512)] = 'GUILD_FEED_HIDDEN'), (rf[(rf.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING = 1024)] = 'SHOULD_SHOW_LINK_NOT_DISCORD_WARNING'), (rf[(rf.SUPPRESS_NOTIFICATIONS = 4096)] = 'SUPPRESS_NOTIFICATIONS'), (rf[(rf.IS_VOICE_MESSAGE = 8192)] = 'IS_VOICE_MESSAGE'), (rf[(rf.HAS_SNAPSHOT = 16384)] = 'HAS_SNAPSHOT'), (rf[(rf.IS_UIKIT_COMPONENTS = 32768)] = 'IS_UIKIT_COMPONENTS'), (rf[(rf.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = 'SENT_BY_SOCIAL_LAYER_INTEGRATION'), ((rL = b || (b = {}))[(rL.IS_CLIP = 1)] = 'IS_CLIP'), (rL[(rL.IS_THUMBNAIL = 2)] = 'IS_THUMBNAIL'), (rL[(rL.IS_REMIX = 4)] = 'IS_REMIX'), (rL[(rL.IS_SPOILER = 8)] = 'IS_SPOILER'), (rL[(rL.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rL[(rL.IS_ANIMATED = 32)] = 'IS_ANIMATED'), ((rS = v || (v = {}))[(rS.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rS[(rS.IS_CONTENT_INVENTORY_ENTRY = 32)] = 'IS_CONTENT_INVENTORY_ENTRY'), ((rD = B || (B = {})).ALWAYS = 'ALWAYS'), (rD.NEVER = 'NEVER'), (rD.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rh = w || (w = {})).ALWAYS = 'ALWAYS'), (rh.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rC = H || (H = {})).GUILDS = 'GUILDS'), (rC.VOICE = 'VOICE'), (rC.TEXT = 'TEXT'), (rC.GUILDS_TEXT = 'GUILDS_TEXT'), ((rg = Y || (Y = {})).DEFAULT = 'DEFAULT'), (rg.PINNED = 'PINNED'), (rg.UNPINNED = 'UNPINNED'), (rg.IN_GAME = 'IN_GAME'), (rg.IN_GAME_TEXT = 'IN_GAME_TEXT'), (rg.IN_GAME_ACTIVE = 'IN_GAME_ACTIVE'), (rg.IN_GAME_PREVIEW = 'IN_GAME_PREVIEW'), ((rM = W || (W = {})).LARGE = 'large'), (rM.SMALL = 'small'), ((rP = K || (K = {}))[(rP.ACTIVE = 0)] = 'ACTIVE'), (rP[(rP.TIMED_OUT = 1)] = 'TIMED_OUT'), (rP[(rP.DISMISSED = 2)] = 'DISMISSED'), ((rU = k || (k = {})).TOP_LEFT = 'topLeft'), (rU.TOP_RIGHT = 'topRight'), (rU.BOTTOM_LEFT = 'bottomLeft'), (rU.BOTTOM_RIGHT = 'bottomRight'), (rU.DISABLED = 'disabled'), ((rm = V || (V = {})).ENABLED = 'ENABLED'), (rm.DISABLED = 'DISABLED'), ((rG = x || (x = {})).CONNECT = 'CONNECT'), (rG.DISPATCH = 'DISPATCH'), (rG.LOG_MESSAGES = 'LOG_MESSAGES'), (rG.STORAGE_SYNC = 'STORAGE_SYNC'), ((F || (F = {})).TEXT_WIDGET = 'TEXT_WIDGET'), ((ry = X || (X = {}))[(ry.NONE = 0)] = 'NONE'), (ry[(ry.LOW = 1)] = 'LOW'), (ry[(ry.MEDIUM = 2)] = 'MEDIUM'), (ry[(ry.HIGH = 3)] = 'HIGH'), (ry[(ry.VERY_HIGH = 4)] = 'VERY_HIGH');
+((rf = y || (y = {}))[(rf.CROSSPOSTED = 1)] = 'CROSSPOSTED'), (rf[(rf.IS_CROSSPOST = 2)] = 'IS_CROSSPOST'), (rf[(rf.SUPPRESS_EMBEDS = 4)] = 'SUPPRESS_EMBEDS'), (rf[(rf.SOURCE_MESSAGE_DELETED = 8)] = 'SOURCE_MESSAGE_DELETED'), (rf[(rf.URGENT = 16)] = 'URGENT'), (rf[(rf.HAS_THREAD = 32)] = 'HAS_THREAD'), (rf[(rf.EPHEMERAL = 64)] = 'EPHEMERAL'), (rf[(rf.LOADING = 128)] = 'LOADING'), (rf[(rf.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD = 256)] = 'FAILED_TO_MENTION_SOME_ROLES_IN_THREAD'), (rf[(rf.GUILD_FEED_HIDDEN = 512)] = 'GUILD_FEED_HIDDEN'), (rf[(rf.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING = 1024)] = 'SHOULD_SHOW_LINK_NOT_DISCORD_WARNING'), (rf[(rf.SUPPRESS_NOTIFICATIONS = 4096)] = 'SUPPRESS_NOTIFICATIONS'), (rf[(rf.IS_VOICE_MESSAGE = 8192)] = 'IS_VOICE_MESSAGE'), (rf[(rf.HAS_SNAPSHOT = 16384)] = 'HAS_SNAPSHOT'), (rf[(rf.IS_UIKIT_COMPONENTS = 32768)] = 'IS_UIKIT_COMPONENTS'), (rf[(rf.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = 'SENT_BY_SOCIAL_LAYER_INTEGRATION'), ((rL = b || (b = {}))[(rL.IS_CLIP = 1)] = 'IS_CLIP'), (rL[(rL.IS_THUMBNAIL = 2)] = 'IS_THUMBNAIL'), (rL[(rL.IS_REMIX = 4)] = 'IS_REMIX'), (rL[(rL.IS_SPOILER = 8)] = 'IS_SPOILER'), (rL[(rL.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rL[(rL.IS_ANIMATED = 32)] = 'IS_ANIMATED'), ((rS = v || (v = {}))[(rS.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rS[(rS.IS_CONTENT_INVENTORY_ENTRY = 32)] = 'IS_CONTENT_INVENTORY_ENTRY'), ((rD = B || (B = {})).ALWAYS = 'ALWAYS'), (rD.NEVER = 'NEVER'), (rD.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rh = w || (w = {})).ALWAYS = 'ALWAYS'), (rh.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rC = H || (H = {})).GUILDS = 'GUILDS'), (rC.VOICE = 'VOICE'), (rC.TEXT = 'TEXT'), (rC.GUILDS_TEXT = 'GUILDS_TEXT'), ((rg = Y || (Y = {})).DEFAULT = 'DEFAULT'), (rg.PINNED = 'PINNED'), (rg.UNPINNED = 'UNPINNED'), (rg.IN_GAME = 'IN_GAME'), (rg.IN_GAME_TEXT = 'IN_GAME_TEXT'), (rg.IN_GAME_ACTIVE = 'IN_GAME_ACTIVE'), (rg.IN_GAME_PREVIEW = 'IN_GAME_PREVIEW'), ((rM = W || (W = {})).LARGE = 'large'), (rM.SMALL = 'small'), ((rP = K || (K = {}))[(rP.ACTIVE = 0)] = 'ACTIVE'), (rP[(rP.TIMED_OUT = 1)] = 'TIMED_OUT'), (rP[(rP.DISMISSED = 2)] = 'DISMISSED'), ((rU = k || (k = {})).TOP_LEFT = 'topLeft'), (rU.TOP_RIGHT = 'topRight'), (rU.BOTTOM_LEFT = 'bottomLeft'), (rU.BOTTOM_RIGHT = 'bottomRight'), (rU.DISABLED = 'disabled'), ((rm = V || (V = {})).ENABLED = 'ENABLED'), (rm.DISABLED = 'DISABLED'), ((rG = F || (F = {})).CONNECT = 'CONNECT'), (rG.DISPATCH = 'DISPATCH'), (rG.LOG_MESSAGES = 'LOG_MESSAGES'), (rG.STORAGE_SYNC = 'STORAGE_SYNC'), ((x || (x = {})).TEXT_WIDGET = 'TEXT_WIDGET'), ((ry = X || (X = {}))[(ry.NONE = 0)] = 'NONE'), (ry[(ry.LOW = 1)] = 'LOW'), (ry[(ry.MEDIUM = 2)] = 'MEDIUM'), (ry[(ry.HIGH = 3)] = 'HIGH'), (ry[(ry.VERY_HIGH = 4)] = 'VERY_HIGH');
 let a$ = Object.freeze({
     ACCOUNT_AGE: 5,
     MEMBER_AGE: 10
@@ -2603,7 +2603,7 @@ let _T = 10,
     _f = /^\|\|([\s\S]+?)\|\|/,
     _L = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     _S = /^\d{17,19}$/;
-((rV = er || (er = {})).MESSAGE = 'MESSAGE'), (rV.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (rV.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (rV.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (rV.DIVIDER = 'DIVIDER'), (rV.JUMP_TARGET = 'JUMP_TARGET'), (rV.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (rV.MESSAGE_GROUP = 'MESSAGE_GROUP'), (rV.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (rV.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), ((rx = en || (en = {})).VIDEO = 'video'), (rx.VOICE = 'voice'), ((rF = ea || (ea = {}))[(rF.PLAYING = 0)] = 'PLAYING'), (rF[(rF.STREAMING = 1)] = 'STREAMING'), (rF[(rF.LISTENING = 2)] = 'LISTENING'), (rF[(rF.WATCHING = 3)] = 'WATCHING'), (rF[(rF.CUSTOM_STATUS = 4)] = 'CUSTOM_STATUS'), (rF[(rF.COMPETING = 5)] = 'COMPETING'), (rF[(rF.HANG_STATUS = 6)] = 'HANG_STATUS'), ((rX = e_ || (e_ = {})).GAME = 'game'), (rX.USER = 'user'), (rX.GROUP = 'group'), ((rj = eo || (eo = {})).LOADING = 'LOADING'), (rj.COMPLETE = 'COMPLETE'), (rj.FAILED = 'FAILED'), ((r$ = ei || (ei = {})).FEATURED = 'featured'), (r$.GAMES_YOU_PLAY = 'gamesYouPlay'), (r$.SEARCH = 'search'), (r$.MISC = 'misc');
+((rV = er || (er = {})).MESSAGE = 'MESSAGE'), (rV.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (rV.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (rV.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (rV.DIVIDER = 'DIVIDER'), (rV.JUMP_TARGET = 'JUMP_TARGET'), (rV.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (rV.MESSAGE_GROUP = 'MESSAGE_GROUP'), (rV.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (rV.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), ((rF = en || (en = {})).VIDEO = 'video'), (rF.VOICE = 'voice'), ((rx = ea || (ea = {}))[(rx.PLAYING = 0)] = 'PLAYING'), (rx[(rx.STREAMING = 1)] = 'STREAMING'), (rx[(rx.LISTENING = 2)] = 'LISTENING'), (rx[(rx.WATCHING = 3)] = 'WATCHING'), (rx[(rx.CUSTOM_STATUS = 4)] = 'CUSTOM_STATUS'), (rx[(rx.COMPETING = 5)] = 'COMPETING'), (rx[(rx.HANG_STATUS = 6)] = 'HANG_STATUS'), ((rX = e_ || (e_ = {})).GAME = 'game'), (rX.USER = 'user'), (rX.GROUP = 'group'), ((rj = eo || (eo = {})).LOADING = 'LOADING'), (rj.COMPLETE = 'COMPLETE'), (rj.FAILED = 'FAILED'), ((r$ = ei || (ei = {})).FEATURED = 'featured'), (r$.GAMES_YOU_PLAY = 'gamesYouPlay'), (r$.SEARCH = 'search'), (r$.MISC = 'misc');
 let _D = 128,
     _h = 1024,
     _C = 2000,
@@ -2657,13 +2657,13 @@ let _D = 128,
         INVITES_HELP: 'https://support.discord.com/hc/en-us/articles/208866998-Invites-101',
         SAFETY_CENTER: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/safetycenter')
     }),
-    _x = Object.freeze({
+    _F = Object.freeze({
         DEVELOPER_PORTAL: '/developers',
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => '/developers/servers/'.concat(e),
         DEVELOPER_PORTAL_TEAMS: '/developers/teams',
         DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => '/developers/teams/'.concat(e, '/payout-settings')
     }),
-    _F = 10,
+    _x = 10,
     _X = 25,
     _j = /^FILTER_/,
     _$ = /^ANSWER_/;
@@ -2784,6 +2784,7 @@ let _D = 128,
     (rz[(rz.INVALID_GIFT_REDEMPTION_EXHAUSTED = 50050)] = 'INVALID_GIFT_REDEMPTION_EXHAUSTED'),
     (rz[(rz.INVALID_GIFT_REDEMPTION_OWNED = 50051)] = 'INVALID_GIFT_REDEMPTION_OWNED'),
     (rz[(rz.INVALID_GIFT_SELF_REDEMPTION = 50054)] = 'INVALID_GIFT_SELF_REDEMPTION'),
+    (rz[(rz.INVALID_GIFT_REDEMPTION_PREVIOUSLY_OWNED = 50092)] = 'INVALID_GIFT_REDEMPTION_PREVIOUSLY_OWNED'),
     (rz[(rz.INVALID_COUNTRY_CODE = 50095)] = 'INVALID_COUNTRY_CODE'),
     (rz[(rz.INVALID_CANNOT_FRIEND_SELF = 50096)] = 'INVALID_CANNOT_FRIEND_SELF'),
     (rz[(rz.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED = 50097)] = 'INVALID_GIFT_REDEMPTION_FRAUD_REJECTED'),
@@ -3877,7 +3878,7 @@ let ot = Object.freeze({
     (np.ADD_BUTTON = 'add button'),
     (np.APPS_BUTTON = 'apps button'),
     (np.APPS = 'apps'),
-    ((nf = ex || (ex = {})).APP_OPENED = 'app_opened'),
+    ((nf = eF || (eF = {})).APP_OPENED = 'app_opened'),
     (nf.APP_CRASHED = 'app_crashed'),
     (nf.APP_BACKGROUND = 'app_background'),
     (nf.APP_NATIVE_CRASH = 'app_native_crash'),
@@ -4966,7 +4967,7 @@ let ot = Object.freeze({
     (nf.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED = 'guild_game_discovery_entrypoint_viewed'),
     (nf.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP = 'guild_game_discovery_entrypoint_deep_link_to_desktop'),
     (nf.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
-    ((nL = eF || (eF = {})).CANARY = 'canary'),
+    ((nL = ex || (ex = {})).CANARY = 'canary'),
     (nL.PTB = 'ptb'),
     (nL.STABLE = 'stable'),
     ((nS = eX || (eX = {}))[(nS.STAFF = 1)] = 'STAFF'),
@@ -5480,18 +5481,18 @@ let oi = Object.freeze({
     (nV.PULLING = 'PULLING'),
     (nV.CONFLICT = 'CONFLICT'),
     (nV.ERROR = 'ERROR'),
-    ((nx = t_ || (t_ = {})).PULL = 'PULL'),
-    (nx.PUSH = 'PUSH'),
-    (nx.CONFLICT = 'CONFLICT'),
-    (nx.NONE = 'NONE'),
-    ((nF = to || (to = {})).DISCORD = 'discord'),
-    (nF.STEAM = 'steam'),
-    (nF.TWITCH = 'twitch'),
-    (nF.UPLAY = 'uplay'),
-    (nF.BATTLENET = 'battlenet'),
-    (nF.ORIGIN = 'origin'),
-    (nF.GOG = 'gog'),
-    (nF.EPIC = 'epic'),
+    ((nF = t_ || (t_ = {})).PULL = 'PULL'),
+    (nF.PUSH = 'PUSH'),
+    (nF.CONFLICT = 'CONFLICT'),
+    (nF.NONE = 'NONE'),
+    ((nx = to || (to = {})).DISCORD = 'discord'),
+    (nx.STEAM = 'steam'),
+    (nx.TWITCH = 'twitch'),
+    (nx.UPLAY = 'uplay'),
+    (nx.BATTLENET = 'battlenet'),
+    (nx.ORIGIN = 'origin'),
+    (nx.GOG = 'gog'),
+    (nx.EPIC = 'epic'),
     Object.freeze({
         discord: 'Discord',
         steam: 'Steam',
@@ -5860,10 +5861,10 @@ let oT = Object.freeze({
     "'": 222
 });
 ((aa = tP || (tP = {}))[(aa.WINDOWS = 1)] = 'WINDOWS'), (aa[(aa.MACOS = 2)] = 'MACOS'), (aa[(aa.LINUX = 3)] = 'LINUX'), (aa[(aa.BROWSER = 4)] = 'BROWSER'), ((a_ = tU || (tU = {})).EMPTY_MESSAGE = 'EMPTY_MESSAGE'), (a_.MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG'), (a_.RATE_LIMITED = 'RATE_LIMITED'), (a_.SHOUTING_CANCELLED = 'SHOUTING_CANCELLED'), (a_.SLOWMODE_COOLDOWN = 'SLOWMODE_COOLDOWN'), ((ao = tm || (tm = {}))[(ao.IMG = 1)] = 'IMG'), (ao[(ao.YOUTUBE_VIDEO = 2)] = 'YOUTUBE_VIDEO'), (ao[(ao.VIDEO = 3)] = 'VIDEO'), ((ai = tG || (tG = {})).NOW_PLAYING = '1'), (ai.RECENTLY_PLAYED = '2'), (ai.EVER_PLAYED = '3'), (ai.FLAVOR_TEXT = '4'), (ai.RECENT_RELEASE_DATE = '6'), (ai.RELEASE_DATE = '7'), (ai.EARLY_ACCESS = '8'), (ai.HAS_FREE_PREMIUM_CONTENT = '9'), ((aE = ty || (ty = {})).INPUT = 'INPUT'), (aE.OUTPUT = 'OUTPUT'), (aE.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((ac = tb || (tb = {})).INPUT = 'INPUT'), (ac.OUTPUT = 'OUTPUT'), (ac.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((as = tv || (tv = {})).APPLICATION_LIBRARY_BADGE = 'application_library_badge_18_11_02'), (as.SERVER_DISCOVERY_BADGE = 'server_discovery_badge_19_02_11'), (as.E3_SERVER_DISCOVERY_BADGE = 'e3_server_discovery_badge_19_06_08'), ((aI = tB || (tB = {})).MESSAGE = 'MESSAGE'), (aI.MESSAGE_FAILED_TO_SEND = 'MESSAGE_FAILED_TO_SEND'), (aI.FORUM_THREAD_CREATED = 'FORUM_THREAD_CREATED'), (aI.BUG_REPORTER = 'BUG_REPORTER'), (aI.ALERT = 'ALERT'), (aI.REACTION = 'REACTION'), (aI.MESSAGE_REMINDER = 'MESSAGE_REMINDER'), ((au = tw || (tw = {})).TRENDING_GIFS = 'Trending'), (au.FAVORITES = 'Favorites'), (au.TRENDING_CATEGORY = 'Category'), (au.SEARCH = 'Search'), (au.SEARCH_SUGGESTION = 'Search Suggestion');
-let oN = new Set([ax.pK.USD, ax.pK.CAD, ax.pK.EUR, ax.pK.AUD, ax.pK.GBP, ax.pK.PHP, ax.pK.MYR, ax.pK.VND, ax.pK.KRW, ax.pK.IDR]);
+let oN = new Set([aF.pK.USD, aF.pK.CAD, aF.pK.EUR, aF.pK.AUD, aF.pK.GBP, aF.pK.PHP, aF.pK.MYR, aF.pK.VND, aF.pK.KRW, aF.pK.IDR]);
 ((al = tH || (tH = {})).ALWAYS = 'ALWAYS'), (al.ON_CLICK = 'ON_CLICK'), (al.IF_MODERATOR = 'IF_MODERATOR');
 let od = [];
-((aR = tY || (tY = {})).CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (aR.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (aR.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (aR.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), ((aA = tW || (tW = {})).LOADED = 'loaded'), (aA.UNLOADED = 'unloaded'), ((aT = tK || (tK = {})).CONNECTING = 'CONNECTING'), (aT.ACTIVE = 'ACTIVE'), (aT.RECONNECTING = 'RECONNECTING'), (aT.ENDED = 'ENDED'), (aT.PAUSED = 'PAUSED'), (aT.FAILED = 'FAILED'), ((aN = tk || (tk = {})).USER_REQUESTED = 'user_requested'), (aN.STREAM_FULL = 'stream_full'), (aN.UNAUTHORIZED = 'unauthorized'), (aN.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), ((ad = tV || (tV = {})).SOUND = 'SOUND'), (ad.VIDEO = 'VIDEO'), ((aO = tx || (tx = {})).PLAYING = 'playing'), (aO.PAUSED = 'paused'), ((ap = tF || (tF = {})).NONE = 'none'), (ap.WIFI = 'wifi'), (ap.CELLULAR = 'cellular'), (ap.UNKNOWN = 'unknown'), (ap.ETHERNET = 'ethernet'), (ap.BLUETOOTH = 'bluetooth'), (ap.WIMAX = 'wimax'), (ap.OTHER = 'other'), ((af = tX || (tX = {})).UNKNOWN = 'unknown'), (af.SLOW_TWO_G = 'slow-2g'), (af.TWO_G = '2g'), (af.THREE_G = '3g'), (af.FOUR_G = '4g'), (af.FIVE_G = '5g'), ((aL = tj || (tj = {})).INITIAL = 'initial'), (aL.ENTER = 'enter'), (aL.UPDATE = 'update'), (aL.LEAVE = 'leave'), ((aS = t$ || (t$ = {})).CHANNEL_SETTINGS = 'Channel Settings'), (aS.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (aS.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((aD = tJ || (tJ = {}))[(aD.INCOMING = 1)] = 'INCOMING'), (aD[(aD.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((ah = tq || (tq = {}))[(ah.APPLICATION = 0)] = 'APPLICATION'), (ah[(ah.OVERVIEW = 1)] = 'OVERVIEW'), (ah[(ah.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (ah[(ah.TWITCH = 3)] = 'TWITCH'), (ah[(ah.YOUTUBE = 4)] = 'YOUTUBE'), (ah[(ah.WEBHOOKS = 5)] = 'WEBHOOKS'), (ah[(ah.CHANNELS_SYNCING = 6)] = 'CHANNELS_SYNCING');
+((aR = tY || (tY = {})).CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (aR.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (aR.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (aR.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), ((aA = tW || (tW = {})).LOADED = 'loaded'), (aA.UNLOADED = 'unloaded'), ((aT = tK || (tK = {})).CONNECTING = 'CONNECTING'), (aT.ACTIVE = 'ACTIVE'), (aT.RECONNECTING = 'RECONNECTING'), (aT.ENDED = 'ENDED'), (aT.PAUSED = 'PAUSED'), (aT.FAILED = 'FAILED'), ((aN = tk || (tk = {})).USER_REQUESTED = 'user_requested'), (aN.STREAM_FULL = 'stream_full'), (aN.UNAUTHORIZED = 'unauthorized'), (aN.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), ((ad = tV || (tV = {})).SOUND = 'SOUND'), (ad.VIDEO = 'VIDEO'), ((aO = tF || (tF = {})).PLAYING = 'playing'), (aO.PAUSED = 'paused'), ((ap = tx || (tx = {})).NONE = 'none'), (ap.WIFI = 'wifi'), (ap.CELLULAR = 'cellular'), (ap.UNKNOWN = 'unknown'), (ap.ETHERNET = 'ethernet'), (ap.BLUETOOTH = 'bluetooth'), (ap.WIMAX = 'wimax'), (ap.OTHER = 'other'), ((af = tX || (tX = {})).UNKNOWN = 'unknown'), (af.SLOW_TWO_G = 'slow-2g'), (af.TWO_G = '2g'), (af.THREE_G = '3g'), (af.FOUR_G = '4g'), (af.FIVE_G = '5g'), ((aL = tj || (tj = {})).INITIAL = 'initial'), (aL.ENTER = 'enter'), (aL.UPDATE = 'update'), (aL.LEAVE = 'leave'), ((aS = t$ || (t$ = {})).CHANNEL_SETTINGS = 'Channel Settings'), (aS.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (aS.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((aD = tJ || (tJ = {}))[(aD.INCOMING = 1)] = 'INCOMING'), (aD[(aD.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((ah = tq || (tq = {}))[(ah.APPLICATION = 0)] = 'APPLICATION'), (ah[(ah.OVERVIEW = 1)] = 'OVERVIEW'), (ah[(ah.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (ah[(ah.TWITCH = 3)] = 'TWITCH'), (ah[(ah.YOUTUBE = 4)] = 'YOUTUBE'), (ah[(ah.WEBHOOKS = 5)] = 'WEBHOOKS'), (ah[(ah.CHANNELS_SYNCING = 6)] = 'CHANNELS_SYNCING');
 let oO = 2500,
     op = 0,
     of = 2592000000;
