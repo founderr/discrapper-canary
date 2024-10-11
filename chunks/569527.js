@@ -23,56 +23,63 @@ var i = n(735250),
     T = n(463051);
 function f(e) {
     var t;
-    let { query: n } = e,
-        f = (0, p.k)(),
-        [S, C] = a.useState(1),
-        { fetchState: N, searchResults: A } = (0, l.cj)([_.Z], () => ({
+    let { query: n, onSelectApplication: f } = e,
+        S = (0, p.k)(),
+        [C, N] = a.useState(1),
+        { fetchState: A, searchResults: v } = (0, l.cj)([_.Z], () => ({
             fetchState: _.Z.getFetchState({
                 query: n,
-                categoryId: null == f ? void 0 : f.id,
-                page: S,
+                categoryId: null == S ? void 0 : S.id,
+                page: C,
                 source: r.F.APP_DIRECTORY
             }),
             searchResults: _.Z.getSearchResults({
                 query: n,
-                categoryId: null == f ? void 0 : f.id,
-                page: S,
+                categoryId: null == S ? void 0 : S.id,
+                page: C,
                 source: r.F.APP_DIRECTORY
             })
         })),
-        v = (0, c.Z)(A),
-        Z = a.useMemo(() => (N === u.M.FETCHING ? v : A), [N, v, A]);
+        Z = (0, c.Z)(v),
+        L = a.useMemo(() => (A === u.M.FETCHING ? Z : v), [A, Z, v]);
     a.useEffect(() => {
-        C(1);
-    }, [null == f ? void 0 : f.id, n]);
-    let L = a.useCallback(
+        N(1);
+    }, [null == S ? void 0 : S.id, n]);
+    let R = a.useCallback(
         (e) => {
             d.yC({
                 query: n,
                 options: {
                     page: e,
                     source: r.F.APP_DIRECTORY,
-                    categoryId: null == f ? void 0 : f.id
+                    categoryId: null == S ? void 0 : S.id
                 }
             }),
-                C(e);
+                N(e);
         },
-        [n, f]
+        [n, S]
     );
     return (0, i.jsx)(m.Z, {
         children: (0, i.jsxs)(h.Z, {
             children: [
                 (0, i.jsx)(E.Z, {
-                    loading: N === u.M.FETCHING,
+                    loading: A === u.M.FETCHING,
                     children: (0, i.jsx)('div', {
                         className: T.content,
                         children:
-                            null == Z
+                            null == L
                                 ? void 0
-                                : Z.results.map((e) => {
+                                : L.results.map((e) => {
                                       if (e.type === s.s.APPLICATION) {
                                           let t = e.data;
-                                          return (0, i.jsx)(I.Z, { application: t }, t.id);
+                                          return (0, i.jsx)(
+                                              I.Z,
+                                              {
+                                                  application: t,
+                                                  onSelectApplication: f
+                                              },
+                                              t.id
+                                          );
                                       }
                                       return null;
                                   })
@@ -80,12 +87,12 @@ function f(e) {
                 }),
                 (0, i.jsx)(o.Paginator, {
                     className: T.paginationInput,
-                    totalCount: Math.min((null !== (t = null == Z ? void 0 : Z.totalPages) && void 0 !== t ? t : 0) * g.IV, g.Et * g.IV),
+                    totalCount: Math.min((null !== (t = null == L ? void 0 : L.totalPages) && void 0 !== t ? t : 0) * g.IV, g.Et * g.IV),
                     pageSize: g.IV,
                     disablePaginationGap: !0,
                     hideMaxPage: !0,
-                    currentPage: S,
-                    onPageChange: L
+                    currentPage: C,
+                    onPageChange: R
                 })
             ]
         })

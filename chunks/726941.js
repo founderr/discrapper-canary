@@ -11,29 +11,32 @@ var i = n(735250),
     E = n(689938),
     h = n(624849);
 t.Z = function (e) {
-    let { tabId: t, onScroll: n } = e,
-        m = (0, s.e7)([r.Z], () => r.Z.getCategories()),
-        I = a.useMemo(() => m.find((e) => e.id === t), [m, t]),
-        p = a.useMemo(() => {
+    let { tabId: t, onSelectApplication: n, onScroll: m } = e,
+        I = (0, s.e7)([r.Z], () => r.Z.getCategories()),
+        p = a.useMemo(() => I.find((e) => e.id === t), [I, t]),
+        g = a.useMemo(() => {
             var e;
-            return [null !== (e = null == I ? void 0 : I.name) && void 0 !== e ? e : '', E.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE_END];
-        }, [I]);
+            return [null !== (e = null == p ? void 0 : p.name) && void 0 !== e ? e : '', E.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE_END];
+        }, [p]);
     return (0, i.jsxs)(d.Z, {
-        onScroll: n,
+        onScroll: m,
         children: [
             (0, i.jsx)(o.Z, {
-                title: p,
+                title: g,
                 description: '',
                 children: (0, i.jsx)(l.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:
-                    null == I
+                    null == p
                         ? (0, i.jsx)('div', {
                               className: h.errorContainer,
                               children: (0, i.jsx)(u.Z, { className: h.error })
                           })
-                        : (0, i.jsx)(_.Z, { categoryId: I.id })
+                        : (0, i.jsx)(_.Z, {
+                              categoryId: p.id,
+                              onSelectApplication: n
+                          })
             })
         ]
     });

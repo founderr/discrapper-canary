@@ -12,11 +12,14 @@ var i = n(735250),
     h = n(923592);
 t.Z = function (e) {
     var t, n, m, I, p;
-    let { application: g, showCategory: T = !1 } = e,
-        f = (0, o.Z)({ application: g }),
-        S = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
-        C = (0, r.lf)(g),
-        N = a.useMemo(
+    let { application: g, onSelectApplication: T, showCategory: f = !1 } = e,
+        S = (0, o.Z)({ application: g }),
+        C = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
+        N = (0, r.lf)(g),
+        A = a.useCallback(() => {
+            T(g.id);
+        }, [T, g.id]),
+        v = a.useMemo(
             () =>
                 u.ZP.getApplicationIconURL({
                     id: g.id,
@@ -25,21 +28,21 @@ t.Z = function (e) {
                 }),
             [g]
         ),
-        A = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
-        v = (0, i.jsx)(l.Z, {
+        Z = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || S.length > 0,
+        L = (0, i.jsx)(l.Z, {
             application: g,
             textVariant: 'text-xs/medium',
-            mutualGuilds: f,
+            mutualGuilds: S,
             mutualGuildShownMax: 3,
             guildIconSize: l.x.SMALL,
             compact: !0
         }),
-        Z = T && null != S;
+        R = f && null != C;
     return (0, i.jsx)('div', {
         className: h.container,
         children: (0, i.jsxs)(d.Z, {
             className: h.card,
-            onClick: () => {},
+            onClick: A,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
@@ -47,7 +50,7 @@ t.Z = function (e) {
                     children: [
                         (0, i.jsx)(_.Z, {
                             application: g,
-                            iconURL: N
+                            iconURL: v
                         }),
                         (0, i.jsx)('div', {
                             className: h.icon,
@@ -62,7 +65,7 @@ t.Z = function (e) {
                                         width: 48,
                                         height: 48,
                                         children: (0, i.jsx)('img', {
-                                            src: N,
+                                            src: v,
                                             alt: '',
                                             className: h.avatar
                                         })
@@ -87,26 +90,26 @@ t.Z = function (e) {
                                 })
                             })
                         }),
-                        Z || C
+                        R || N
                             ? (0, i.jsxs)('div', {
                                   className: h.infoContainer,
                                   children: [
-                                      Z
+                                      R
                                           ? (0, i.jsx)(s.Text, {
                                                 className: h.appCategory,
                                                 variant: 'text-xs/medium',
                                                 color: 'text-normal',
-                                                children: S.name
+                                                children: C.name
                                             })
                                           : null,
-                                      Z && C
+                                      R && N
                                           ? (0, i.jsx)(s.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
                                                 children: '\u2022'
                                             })
                                           : null,
-                                      C
+                                      N
                                           ? (0, i.jsx)(s.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
@@ -120,13 +123,13 @@ t.Z = function (e) {
                             className: h.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            lineClamp: Z || C ? 2 : 3,
+                            lineClamp: R || N ? 2 : 3,
                             children: null !== (p = null === (m = g.directory_entry) || void 0 === m ? void 0 : m.short_description) && void 0 !== p ? p : g.description
                         }),
-                        A
+                        Z
                             ? (0, i.jsx)('div', {
                                   className: h.memberDetails,
-                                  children: v
+                                  children: L
                               })
                             : null
                     ]

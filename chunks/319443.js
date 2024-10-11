@@ -9,85 +9,99 @@ var i = n(735250),
     u = n(680180),
     _ = n(975907),
     E = n(119014),
-    h = n(726941),
-    m = n(370648),
-    I = n(569527),
-    p = n(979007),
-    g = n(689938),
-    T = n(842221);
+    h = n(578470),
+    m = n(726941),
+    I = n(666697),
+    p = n(370648),
+    g = n(569527),
+    T = n(979007),
+    f = n(689938),
+    S = n(842221);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
-        { tabs: f, selectedTab: S, onSelectTab: C } = (0, E.i)();
+        { tabs: C, selectedTab: N, onSelectTab: A } = (0, E.i)();
     a.useEffect(() => {
         n();
-    }, [S, n]),
+    }, [N, n]),
         a.useEffect(() => {
             r.CP();
         }, []),
         a.useEffect(() => {
             r.g5();
         }, []);
-    let { searchQuery: N, searchFetchedQuery: A, onSearchTextChange: v, onClearSearch: Z, onSearchSubmit: L, isSearchVisible: R } = (0, _.M)(),
+    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, isSearchVisible: x } = (0, _.M)(),
         {
-            searchBarState: O,
-            onTabsAvailableWidthChange: x,
-            onCollapsedSearchBarClick: b,
-            onSearchBarBlur: M
+            searchBarState: b,
+            onTabsAvailableWidthChange: M,
+            onCollapsedSearchBarClick: P,
+            onSearchBarBlur: D
         } = (0, o.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === N.trim()
+            isSearchBarEmpty: '' === v.trim()
         }),
-        P = a.useCallback(
+        { onSelectApplication: y, onCloseAppDetails: j, selectedAppId: U } = (0, h.g)(),
+        G = null != U,
+        w = a.useCallback(
             (e) => {
-                C(e), R && Z();
+                A(e), x && R();
             },
-            [R, Z, C]
+            [x, R, A]
         );
     return (0, i.jsxs)('div', {
-        className: T.container,
+        className: S.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: R ? T.search : void 0,
+                className: x ? S.search : void 0,
                 children: [
-                    !R && (0, i.jsx)(c.z6, { scrollPosition: t }),
+                    !x && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     (0, i.jsx)(c.aV, {
-                        icon: R ? s.ArrowLargeLeftIcon : s.AppsIcon,
-                        iconColor: R ? s.tokens.colors.INTERACTIVE_NORMAL : void 0,
-                        onClick: R ? Z : void 0
+                        icon: x || G ? s.ArrowLargeLeftIcon : s.AppsIcon,
+                        iconColor: x ? s.tokens.colors.INTERACTIVE_NORMAL : void 0,
+                        onClick: G ? j : x ? R : void 0
                     }),
-                    R
+                    G || x
                         ? (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
-                              color: 'header-primary',
-                              className: T.searchResultsHeader,
-                              children: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: A })
+                              color: G ? void 0 : 'header-primary',
+                              className: S.alternateHeader,
+                              children: G ? f.Z.Messages.BACK : f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
                           })
                         : (0, i.jsx)(d.Z, {
-                              tabs: f,
-                              selectedTab: S,
-                              onTabSelect: P,
-                              onAvailableWidthChange: x
+                              tabs: C,
+                              selectedTab: N,
+                              onTabSelect: w,
+                              onAvailableWidthChange: M
                           }),
-                    (0, i.jsx)(u.Z, {
-                        query: N,
-                        placeholder: g.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
-                        onTextChange: v,
-                        onClear: Z,
-                        onSubmit: L,
-                        onCollapsedClick: b,
-                        state: O,
-                        onBlur: M
-                    })
+                    !G &&
+                        (0, i.jsx)(u.Z, {
+                            query: v,
+                            placeholder: f.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
+                            onTextChange: L,
+                            onClear: R,
+                            onSubmit: O,
+                            onCollapsedClick: P,
+                            state: b,
+                            onBlur: D
+                        })
                 ]
             }),
-            R
-                ? (0, i.jsx)(I.Z, { query: A })
-                : S === p.kK
-                  ? (0, i.jsx)(m.Z, { onScroll: e })
-                  : (0, i.jsx)(h.Z, {
-                        tabId: Number(S),
-                        onScroll: e
+            G
+                ? (0, i.jsx)(I.Z, { onScroll: e })
+                : x
+                  ? (0, i.jsx)(g.Z, {
+                        query: Z,
+                        onSelectApplication: y
                     })
+                  : N === T.kK
+                    ? (0, i.jsx)(p.Z, {
+                          onScroll: e,
+                          onSelectApplication: y
+                      })
+                    : (0, i.jsx)(m.Z, {
+                          tabId: Number(N),
+                          onScroll: e,
+                          onSelectApplication: y
+                      })
         ]
     });
 };

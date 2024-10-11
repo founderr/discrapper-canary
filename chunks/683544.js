@@ -19,37 +19,37 @@ let p = {
 };
 t.Z = function (e) {
     var t;
-    let { categoryId: n } = e,
-        [g, T] = a.useState(1),
-        f = a.useCallback((e) => {
-            T(e);
+    let { categoryId: n, onSelectApplication: g } = e,
+        [T, f] = a.useState(1),
+        S = a.useCallback((e) => {
+            f(e);
         }, []);
     a.useEffect(() => {
-        T(1);
+        f(1);
     }, [n]);
-    let S = a.useMemo(
+    let C = a.useMemo(
             () => ({
                 query: m.Mm,
-                page: g,
+                page: T,
                 categoryId: n
             }),
-            [g, n]
+            [T, n]
         ),
-        C = (0, r.e7)([u.Z], () =>
+        N = (0, r.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: m.Mm,
-                page: g,
+                page: T,
                 categoryId: n
             })
         ),
-        N = (0, r.cj)([u.Z], () => {
+        A = (0, r.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : p;
+            return null !== (e = u.Z.getSearchResults(C)) && void 0 !== e ? e : p;
         }),
-        A = null !== (t = (0, o.Z)(N)) && void 0 !== t ? t : p,
-        { results: v, totalPages: Z } = a.useMemo(() => (C === d.M.FETCHING ? A : N), [C, A, N]),
-        L = a.useMemo(() => (null == v ? void 0 : v.filter((e) => !(e.type !== s.s.APPLICATION))), [v]),
-        R = a.useCallback((e) => {
+        v = null !== (t = (0, o.Z)(A)) && void 0 !== t ? t : p,
+        { results: Z, totalPages: L } = a.useMemo(() => (N === d.M.FETCHING ? v : A), [N, v, A]),
+        R = a.useMemo(() => (null == Z ? void 0 : Z.filter((e) => !(e.type !== s.s.APPLICATION))), [Z]),
+        O = a.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: a, fetchCounts: s } = e;
             s &&
                 c.yC({
@@ -67,41 +67,48 @@ t.Z = function (e) {
                 });
         }, []);
     return (a.useEffect(() => {
-        R({
-            page: g,
+        O({
+            page: T,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, R, g]),
-    C === d.M.ERROR)
+    }, [n, O, T]),
+    N === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: I.errorContainer,
               children: (0, i.jsx)(h.Z, { className: I.error })
           })
         : (0, i.jsxs)(_.Z, {
-              loading: C === d.M.FETCHING,
+              loading: N === d.M.FETCHING,
               children: [
                   (0, i.jsx)('div', {
                       className: I.content,
                       children:
-                          null == L
+                          null == R
                               ? void 0
-                              : L.map((e) => {
+                              : R.map((e) => {
                                     if (e.type === s.s.APPLICATION) {
                                         let t = e.data;
-                                        return (0, i.jsx)(E.Z, { application: t }, t.id);
+                                        return (0, i.jsx)(
+                                            E.Z,
+                                            {
+                                                application: t,
+                                                onSelectApplication: g
+                                            },
+                                            t.id
+                                        );
                                     }
                                     return null;
                                 })
                   }),
                   (0, i.jsx)(l.Paginator, {
                       className: I.paginationInput,
-                      totalCount: Math.min(Z * m.IV, m.Et * m.IV),
+                      totalCount: Math.min(L * m.IV, m.Et * m.IV),
                       pageSize: m.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: g,
-                      onPageChange: f
+                      currentPage: T,
+                      onPageChange: S
                   })
               ]
           });
