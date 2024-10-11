@@ -129,17 +129,35 @@ t.Z = {
                 })
         );
     },
-    updatePermissionOverwrite: (e, t) =>
-        r.tn.put({
+    async updatePermissionOverwrite(e, t) {
+        let n = await r.tn.put({
             url: S.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
             body: t,
             oldFormErrors: !0
-        }),
-    clearPermissionOverwrite: (e, t) =>
-        r.tn.del({
+        });
+        return (
+            a.Z.dispatch({
+                type: 'CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS',
+                channelId: e,
+                overwrite: t
+            }),
+            n
+        );
+    },
+    async clearPermissionOverwrite(e, t) {
+        let n = await r.tn.del({
             url: S.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
             oldFormErrors: !0
-        }),
+        });
+        return (
+            a.Z.dispatch({
+                type: 'CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS',
+                channelId: e,
+                overwriteId: t
+            }),
+            n
+        );
+    },
     addRecipient(e, t, n, a) {
         return r.tn
             .put({

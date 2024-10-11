@@ -398,6 +398,24 @@ function eu(e) {
             for (let n of ((P = {}), (L = {}), (y = {}), (M = {}), (w = {}), (F = {}), (k = {}), (B = Date.now()), (b = e.initialPrivateChannels), e.initialPrivateChannels.forEach(Q), e.guilds)) 'partial' === n.dataMode && (l().forEach(t[n.id], $), v.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eu(n.id)))), J(n);
             eo();
         },
+        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: function (e) {
+            let { channelId: t, overwrite: n } = e,
+                r = z(t);
+            if (null == r) return !1;
+            q(
+                r.set('permissionOverwrites', {
+                    ...r.permissionOverwrites,
+                    [n.id]: n
+                })
+            );
+        },
+        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: function (e) {
+            let { channelId: t, overwriteId: n } = e,
+                r = z(t);
+            if (null == r) return !1;
+            let i = { ...r.permissionOverwrites };
+            delete i[n], q(r.set('permissionOverwrites', i));
+        },
         GUILD_CREATE: function (e) {
             J(e.guild);
         },
