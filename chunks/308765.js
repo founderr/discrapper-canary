@@ -104,6 +104,11 @@ let i = {
         inlineRequire: () => n(218315).Z,
         neverLoadBeforeConnectionOpen: !0
     },
+    HolidayEventsManager: {
+        actions: ['NOTIFICATIONS_SET_DISABLED_SOUNDS'],
+        inlineRequire: () => n(103547).Z,
+        hasStoreChangeListeners: !0
+    },
     SignUpManager: {
         actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT'],
         inlineRequire: () => n(207269).Z,
