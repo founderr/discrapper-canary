@@ -47,12 +47,13 @@ let c = {
         key: 'light-false-null-null-null',
         flags: 0,
         contrast: 1,
-        saturation: 1
+        saturation: 1,
+        density: 'compact'
     },
     d = s.createContext(c);
 function _(e) {
-    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: _ = 1, saturation: E = 1 } = e,
-        f = s.useMemo(
+    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: _ = 1, saturation: E = 1, density: f = 'compact' } = e,
+        h = s.useMemo(
             () =>
                 u({
                     theme: n,
@@ -61,33 +62,35 @@ function _(e) {
                     gradient: l,
                     flags: c,
                     contrast: _,
-                    saturation: E
+                    saturation: E,
+                    density: f
                 }),
-            [n, r, i, l, c, _, E]
+            [n, r, i, l, c, _, E, f]
         );
     return (0, a.jsx)(d.Provider, {
-        value: f,
+        value: h,
         children: t
     });
 }
 function E(e) {
-    let { children: t, theme: n, primaryColor: r, secondaryColor: i, gradient: o, flags: l, contrast: c, saturation: _ } = e,
-        E = s.useContext(d),
-        f = s.useMemo(
+    let { children: t, theme: n, primaryColor: r, secondaryColor: i, gradient: o, flags: l, contrast: c, saturation: _, density: E } = e,
+        f = s.useContext(d),
+        h = s.useMemo(
             () =>
                 u({
-                    theme: null != n ? n : E.theme,
-                    primaryColor: null != r ? r : E.primaryColor,
-                    secondaryColor: null != i ? i : E.secondaryColor,
-                    gradient: null != o ? o : E.gradient,
-                    flags: null != l ? l : E.flags,
-                    contrast: null != c ? c : E.contrast,
-                    saturation: null != _ ? _ : E.saturation
+                    theme: null != n ? n : f.theme,
+                    primaryColor: null != r ? r : f.primaryColor,
+                    secondaryColor: null != i ? i : f.secondaryColor,
+                    gradient: null != o ? o : f.gradient,
+                    flags: null != l ? l : f.flags,
+                    contrast: null != c ? c : f.contrast,
+                    saturation: null != _ ? _ : f.saturation,
+                    density: null != E ? E : f.density
                 }),
-            [n, E.theme, E.primaryColor, E.secondaryColor, E.gradient, E.flags, E.contrast, E.saturation, r, i, o, l, c, _]
+            [n, f.theme, f.primaryColor, f.secondaryColor, f.gradient, f.flags, f.contrast, f.saturation, f.density, r, i, o, l, c, _, E]
         );
     return (0, a.jsx)(d.Provider, {
-        value: f,
+        value: h,
         children: t
     });
 }
