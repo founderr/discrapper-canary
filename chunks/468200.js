@@ -11,7 +11,8 @@ var s = n(481060),
     r = n(689938),
     o = n(188090),
     c = n(495841);
-function u() {
+function u(e) {
+    let { channel: t } = e;
     return (0, i.jsxs)(s.Dialog, {
         className: o.bar,
         children: [
@@ -27,8 +28,18 @@ function u() {
                     (0, i.jsx)(a.Z, {})
                 ]
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)(s.Clickable, {
                 className: o.button,
+                onClick: () => {
+                    (0, s.openModalLazy)(async () => {
+                        let { default: e } = await n.e('39473').then(n.bind(n, 447564));
+                        return (n) =>
+                            (0, i.jsx)(e, {
+                                channel: t,
+                                ...n
+                            });
+                    });
+                },
                 children: (0, i.jsxs)('div', {
                     className: o.buttonContent,
                     children: [
