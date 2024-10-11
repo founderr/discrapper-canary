@@ -341,6 +341,7 @@ async function v(e) {
 }
 async function C(e) {
     try {
+        a.Z.dispatch({ type: 'QUESTS_DOCK_RESET_SOFT_DISMISSAL' });
         let t = await i.tn.del({
             url: f.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
             body: {}
