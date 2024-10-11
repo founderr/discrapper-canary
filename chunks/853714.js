@@ -87,7 +87,7 @@ class G extends a.PureComponent {
                     'string' != typeof t.options.channel &&
                     null != i &&
                     (0, I.jW)(e, async () => {
-                        let { default: e } = await n.e('51529').then(n.bind(n, 228620));
+                        let { default: e } = await Promise.all([n.e('38902'), n.e('51529')]).then(n.bind(n, 228620));
                         return (n) =>
                             null != t.options.channel
                                 ? (0, s.jsx)(e, {
@@ -106,7 +106,7 @@ class G extends a.PureComponent {
                             r = h.Z.getGuild(a);
                         if (null != i && null != r)
                             return (0, I.jW)(e, async () => {
-                                let { default: e } = await n.e('51529').then(n.bind(n, 228620));
+                                let { default: e } = await Promise.all([n.e('38902'), n.e('51529')]).then(n.bind(n, 228620));
                                 return (t) =>
                                     (0, s.jsx)(e, {
                                         ...t,

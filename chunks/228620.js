@@ -1,46 +1,46 @@
-n.r(t);
-var l = n(735250);
-n(470079);
-var i = n(481060),
-    r = n(239091),
-    a = n(37234),
-    u = n(108843),
-    o = n(100527),
-    s = n(299206),
-    d = n(703656),
-    c = n(852245),
-    _ = n(689938);
-t.default = (0, u.Z)(
-    function (e) {
-        let { channel: t, onSelect: n } = e,
-            u = (0, c.Z)(t),
-            o = (0, s.Z)({
-                id: t.id,
-                label: _.Z.Messages.COPY_ID_CHANNEL
+a.r(e);
+var s = a(735250);
+a(470079);
+var c = a(481060),
+    t = a(239091),
+    i = a(37234),
+    l = a(108843),
+    u = a(100527),
+    r = a(299206),
+    o = a(703656),
+    _ = a(852245),
+    d = a(689938);
+e.default = (0, l.Z)(
+    function (n) {
+        let { channel: e, onSelect: a } = n,
+            l = (0, _.Z)(e),
+            u = (0, r.Z)({
+                id: e.id,
+                label: d.Z.Messages.COPY_ID_CHANNEL
             });
-        return (0, l.jsxs)(i.Menu, {
+        return (0, s.jsxs)(c.Menu, {
             navId: 'channel-context',
-            onClose: r.Zy,
-            'aria-label': _.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-            onSelect: n,
+            onClose: t.Zy,
+            'aria-label': d.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+            onSelect: a,
             children: [
-                (0, l.jsxs)(i.MenuGroup, {
+                (0, s.jsxs)(c.MenuGroup, {
                     children: [
-                        u,
-                        t.isCategory()
+                        l,
+                        e.isCategory()
                             ? null
-                            : (0, l.jsx)(i.MenuItem, {
+                            : (0, s.jsx)(c.MenuItem, {
                                   id: 'jump-to-channel',
-                                  label: _.Z.Messages.JUMP_TO_CHANNEL,
+                                  label: d.Z.Messages.JUMP_TO_CHANNEL,
                                   action: () => {
-                                      (0, d.XU)(t.guild_id, t.id), (0, a.xf)();
+                                      (0, o.XU)(e.guild_id, e.id), (0, i.xf)();
                                   }
                               })
                     ]
                 }),
-                (0, l.jsx)(i.MenuGroup, { children: o })
+                (0, s.jsx)(c.MenuGroup, { children: u })
             ]
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_AUDIT_LOG_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_AUDIT_LOG_MENU]
 );

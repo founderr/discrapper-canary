@@ -47,7 +47,7 @@ n.Z = s.memo(function (e) {
         onClick: (e) => s(d, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([t.e('39285'), t.e('48800'), t.e('13154')]).then(t.bind(t, 422200));
+                let { default: e } = await Promise.all([t.e('38902'), t.e('77564'), t.e('13154')]).then(t.bind(t, 422200));
                 return (n) =>
                     (0, a.jsx)(e, {
                         ...n,

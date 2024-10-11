@@ -31,7 +31,7 @@ function o(e) {
             null != e.content_scan_metadata
                 ? {
                       version: (t = e.content_scan_metadata).version,
-                      contentScanFlags: t.content_scan_flags
+                      flags: t.flags
                   }
                 : void 0,
         srcIsAnimated: !1
@@ -55,7 +55,7 @@ function l(e) {
                     ? void 0
                     : {
                           version: e.content_scan_version,
-                          contentScanFlags: l
+                          flags: l
                       },
             srcIsAnimated: (0, a.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, s.J0y.IS_ANIMATED)
         }

@@ -1,20 +1,20 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 });
 var i = t(735250);
 t(470079);
 var a = t(481060),
     r = t(346479),
-    d = t(665906),
+    o = t(665906),
     s = t(689938);
-function o(e) {
+function u(e) {
     var n;
-    let t = (0, d.C7)(e),
-        o = (0, d.tc)(e),
-        u = e.isArchivedThread();
-    if (u ? o : t)
+    let t = (0, o.C7)(e),
+        u = (0, o.tc)(e),
+        l = e.isArchivedThread();
+    if (l ? u : t)
         return (null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.archived)
             ? (0, i.jsx)(a.MenuItem, {
                   id: 'unarchive-thread',

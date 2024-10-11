@@ -1,36 +1,36 @@
-n.r(t), n(47120);
-var l = n(735250),
-    i = n(470079),
-    r = n(481060),
-    a = n(668781),
-    u = n(787014),
-    o = n(689938);
-t.default = function (e) {
-    let { channelId: t, application: n, onClose: s, ...d } = e,
-        [N, _] = i.useState(!1),
-        E = async () => {
+a.r(s), a(47120);
+var t = a(735250),
+    N = a(470079),
+    o = a(481060),
+    n = a(668781),
+    C = a(787014),
+    r = a(689938);
+s.default = function (e) {
+    let { channelId: s, application: a, onClose: _, ...i } = e,
+        [c, l] = N.useState(!1),
+        S = async () => {
             try {
-                _(!0), await u.ZP.removeLinkedLobby(t), s();
+                l(!0), await C.ZP.removeLinkedLobby(s), _();
             } catch (e) {
-                _(!1),
-                    a.Z.show({
-                        title: o.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR_TITLE,
-                        body: o.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR
+                l(!1),
+                    n.Z.show({
+                        title: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR_TITLE,
+                        body: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR
                     });
             }
         };
-    return (0, l.jsx)(r.ConfirmModal, {
-        header: o.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_TITLE,
-        confirmText: o.Z.Messages.CONFIRM,
-        cancelText: o.Z.Messages.CANCEL,
-        confirmButtonColor: r.Button.Colors.BRAND,
-        onConfirm: E,
-        loading: N,
-        onClose: s,
-        ...d,
-        children: (0, l.jsx)(r.Text, {
+    return (0, t.jsx)(o.ConfirmModal, {
+        header: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_TITLE,
+        confirmText: r.Z.Messages.CONFIRM,
+        cancelText: r.Z.Messages.CANCEL,
+        confirmButtonColor: o.Button.Colors.BRAND,
+        onConfirm: S,
+        loading: c,
+        onClose: _,
+        ...i,
+        children: (0, t.jsx)(o.Text, {
             variant: 'text-sm/normal',
-            children: o.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_BODY.format({ applicationName: n.name })
+            children: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_BODY.format({ applicationName: a.name })
         })
     });
 };

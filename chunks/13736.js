@@ -1,19 +1,19 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 });
 var i = t(735250);
 t(470079);
 var a = t(481060),
     r = t(787014),
-    d = t(665906),
+    o = t(665906),
     s = t(689938);
-function o(e) {
-    let n = (0, d.C7)(e),
-        t = (0, d.$R)(e),
-        o = (0, d.Gu)(e);
-    return !n || !t || o || __OVERLAY__
+function u(e) {
+    let n = (0, o.C7)(e),
+        t = (0, o.$R)(e),
+        u = (0, o.Gu)(e);
+    return !n || !t || u || __OVERLAY__
         ? null
         : (0, i.jsx)(a.MenuItem, {
               id: 'edit-thread',

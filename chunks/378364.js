@@ -4,7 +4,7 @@ var r = n(774258),
     s = n(483465);
 let o = {
     experiment: r.Z,
-    startTimeMs: 1728406800000,
+    startTimeMs: 1730829600000,
     endTimeMs: 1730829600000,
     isDesktopOnly: !0,
     ringtone: 'call_ringing_halloween',

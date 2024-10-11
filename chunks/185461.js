@@ -157,8 +157,8 @@ let v =
         colorScheme: K = 'system',
         themeLight: k = {},
         themeDark: V = {},
-        addScreenshotButtonLabel: x = h,
-        cancelButtonLabel: F = l,
+        addScreenshotButtonLabel: F = h,
+        cancelButtonLabel: x = l,
         confirmButtonLabel: X = A,
         emailLabel: j = d,
         emailPlaceholder: $ = N,
@@ -195,7 +195,7 @@ let v =
                 themeLight: k,
                 triggerLabel: ea,
                 triggerAriaLabel: e_,
-                cancelButtonLabel: F,
+                cancelButtonLabel: x,
                 submitButtonLabel: er,
                 confirmButtonLabel: X,
                 formTitle: J,
@@ -207,7 +207,7 @@ let v =
                 namePlaceholder: ee,
                 successMessageText: en,
                 isRequiredLabel: q,
-                addScreenshotButtonLabel: x,
+                addScreenshotButtonLabel: F,
                 removeScreenshotButtonLabel: et,
                 onFormClose: ei,
                 onFormOpen: eo,
@@ -484,8 +484,8 @@ var w,
     K,
     k,
     V,
-    x = {},
-    F = [],
+    F = {},
+    x = [],
     X = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,
     j = Array.isArray;
 function $(e, t) {
@@ -575,7 +575,7 @@ function er() {
                             n
                         );
                 })(e, n, a) || t),
-            0 === r || W.length > r ? (ec(n, t, a), (a.length = n.length = 0), (t = void 0), W.sort(V)) : t && H.__c && H.__c(t, F));
+            0 === r || W.length > r ? (ec(n, t, a), (a.length = n.length = 0), (t = void 0), W.sort(V)) : t && H.__c && H.__c(t, x));
     t && ec(n, t, a), (er.__r = 0);
 }
 function en(e, t, r, n, a, _, o, i, E, c, s) {
@@ -584,7 +584,7 @@ function en(e, t, r, n, a, _, o, i, E, c, s) {
         l,
         R,
         A,
-        T = (n && n.__k) || F,
+        T = (n && n.__k) || x,
         N = t.length;
     for (
         r.__d = E,
@@ -637,7 +637,7 @@ function en(e, t, r, n, a, _, o, i, E, c, s) {
         null != (l = r.__k[I]) &&
             'boolean' != typeof l &&
             'function' != typeof l &&
-            ((u = -1 === l.__i ? x : T[l.__i] || x),
+            ((u = -1 === l.__i ? F : T[l.__i] || F),
             (l.__i = I),
             eE(e, l, u, a, _, o, i, E, c, s),
             (R = l.__e),
@@ -778,7 +778,7 @@ function eE(e, t, r, n, a, _, o, i, E, c) {
                   }
                   if (null === d) T === N || (i && e.data === N) || (e.data = N);
                   else {
-                      if (((_ = _ && w.call(e.childNodes)), (T = r.props || x), !i && null != _)) for (T = {}, c = 0; c < e.attributes.length; c++) T[(l = e.attributes[c]).name] = l.value;
+                      if (((_ = _ && w.call(e.childNodes)), (T = r.props || F), !i && null != _)) for (T = {}, c = 0; c < e.attributes.length; c++) T[(l = e.attributes[c]).name] = l.value;
                       for (c in T) (l = T[c]), 'children' == c || ('dangerouslySetInnerHTML' == c ? (I = l) : 'key' === c || c in N || e_(e, c, null, l, a));
                       for (c in N) (l = N[c]), 'children' == c ? (u = l) : 'dangerouslySetInnerHTML' == c ? (s = l) : 'value' == c ? (R = l) : 'checked' == c ? (A = l) : 'key' === c || (i && 'function' != typeof l) || T[c] === l || e_(e, c, l, T[c], a);
                       if (s) i || (I && (s.__html === I.__html || s.__html === e.innerHTML)) || (e.innerHTML = s.__html), (t.__k = []);
@@ -828,7 +828,7 @@ function eI(e, t, r) {
 function eu(e, t, r) {
     return this.constructor(e, r);
 }
-(w = F.slice),
+(w = x.slice),
     (H = {
         __e: function (e, t, r, n) {
             for (var a, _, o; (t = t.__); )
@@ -1184,7 +1184,7 @@ function eV(e, t) {
     let r = e.get(t);
     return 'string' == typeof r ? r.trim() : '';
 }
-function ex({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
+function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
     let { tags: I, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: l, cancelButtonLabel: R, emailLabel: A, emailPlaceholder: T, isEmailRequired: N, isNameRequired: d, messageLabel: O, messagePlaceholder: p, nameLabel: f, namePlaceholder: L, submitButtonLabel: S, isRequiredLabel: D } = e,
         [h, C] = eM(null),
         [g, P] = eM(!1),
@@ -1308,7 +1308,7 @@ function ex({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 154
                               }
                           },
-                          q(eF, {
+                          q(ex, {
                               label: f,
                               isRequiredLabel: D,
                               isRequired: d,
@@ -1356,7 +1356,7 @@ function ex({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   lineNumber: 171
                               }
                           },
-                          q(eF, {
+                          q(ex, {
                               label: A,
                               isRequiredLabel: D,
                               isRequired: N,
@@ -1403,7 +1403,7 @@ function ex({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             lineNumber: 187
                         }
                     },
-                    q(eF, {
+                    q(ex, {
                         label: O,
                         isRequiredLabel: D,
                         isRequired: !0,
@@ -1514,7 +1514,7 @@ function ex({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
         )
     );
 }
-function eF({ label: e, isRequired: t, isRequiredLabel: r }) {
+function ex({ label: e, isRequired: t, isRequiredLabel: r }) {
     return q(
         'span',
         {
@@ -1676,7 +1676,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 66
                               }
                           }),
-                          q(ex, {
+                          q(eF, {
                               ...r,
                               onSubmitSuccess: E,
                               __self: this,
@@ -2044,7 +2044,7 @@ ${eQ}
                         (s = ((c = false), (E && E.__k) || a.__k)),
                         (I = []),
                         (R = []),
-                        eE(a, (n = ((!c && E) || a).__k = q(Q, null, [n])), s || x, x, void 0 !== a.ownerSVGElement, !c && E ? [E] : s ? null : a.firstChild ? w.call(a.childNodes) : null, I, !c && E ? E : s ? s.__e : a.firstChild, c, R),
+                        eE(a, (n = ((!c && E) || a).__k = q(Q, null, [n])), s || F, F, void 0 !== a.ownerSVGElement, !c && E ? [E] : s ? null : a.firstChild ? w.call(a.childNodes) : null, I, !c && E ? E : s ? s.__e : a.firstChild, c, R),
                         (n.__d = void 0),
                         ec(I, n, R);
                 };
@@ -2053,8 +2053,8 @@ ${eQ}
     }),
     e0 = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/screenshot/components/ScreenshotEditor.tsx',
     e1 = 33,
-    e2 = c.devicePixelRatio,
-    e3 = (e) => ({
+    e3 = c.devicePixelRatio,
+    e2 = (e) => ({
         x: Math.min(e.startX, e.endX),
         y: Math.min(e.startY, e.endY),
         width: Math.abs(e.startX - e.endX),
@@ -2237,11 +2237,11 @@ ${eQ}
                             [d, O] = t.useState(!1);
                         function p() {
                             let e = l.current,
-                                t = e3(e6(r));
+                                t = e2(e6(r));
                             if (e) {
-                                (e.width = t.width * e2), (e.height = t.height * e2), (e.style.width = `${t.width}px`), (e.style.height = `${t.height}px`);
+                                (e.width = t.width * e3), (e.height = t.height * e3), (e.style.width = `${t.width}px`), (e.style.height = `${t.height}px`);
                                 let r = e.getContext('2d');
-                                r && r.scale(e2, e2);
+                                r && r.scale(e3, e3);
                             }
                             let n = u.current;
                             n && ((n.style.width = `${t.width}px`), (n.style.height = `${t.height}px`)),
@@ -2268,8 +2268,8 @@ ${eQ}
                                 if (!e) return;
                                 let t = e.getContext('2d');
                                 if (!t) return;
-                                let n = e3(e6(r)),
-                                    a = e3(R);
+                                let n = e2(e6(r)),
+                                    a = e2(R);
                                 t.clearRect(0, 0, n.width, n.height), (t.fillStyle = 'rgba(0, 0, 0, 0.5)'), t.fillRect(0, 0, n.width, n.height), t.clearRect(a.x, a.y, a.width, a.height), (t.strokeStyle = '#ffffff'), (t.lineWidth = 3), t.strokeRect(a.x + 1, a.y + 1, a.width - 2, a.height - 2), (t.strokeStyle = '#000000'), (t.lineWidth = 1), t.strokeRect(a.x + 3, a.y + 3, a.width - 6, a.height - 6);
                             }, [R]);
                         let L = t.useCallback(
@@ -2291,7 +2291,7 @@ ${eQ}
                                             case 'top-right':
                                                 A((e) => ({
                                                     ...e,
-                                                    endX: Math.max(Math.min(a, r.width / e2), e.startX + e1),
+                                                    endX: Math.max(Math.min(a, r.width / e3), e.startX + e1),
                                                     startY: Math.min(Math.max(0, _), e.endY - e1)
                                                 }));
                                                 break;
@@ -2299,14 +2299,14 @@ ${eQ}
                                                 A((e) => ({
                                                     ...e,
                                                     startX: Math.min(Math.max(0, a), e.endX - e1),
-                                                    endY: Math.max(Math.min(_, r.height / e2), e.startY + e1)
+                                                    endY: Math.max(Math.min(_, r.height / e3), e.startY + e1)
                                                 }));
                                                 break;
                                             case 'bottom-right':
                                                 A((e) => ({
                                                     ...e,
-                                                    endX: Math.max(Math.min(a, r.width / e2), e.startX + e1),
-                                                    endY: Math.max(Math.min(_, r.height / e2), e.startY + e1)
+                                                    endX: Math.max(Math.min(a, r.width / e3), e.startX + e1),
+                                                    endY: Math.max(Math.min(_, r.height / e3), e.startY + e1)
                                                 }));
                                         }
                                     },
@@ -2395,8 +2395,8 @@ ${eQ}
                                                         let r = e.clientX - S.current.initialX,
                                                             n = e.clientY - S.current.initialY;
                                                         A((a) => {
-                                                            let _ = Math.max(0, Math.min(a.startX + r, t.width / e2 - (a.endX - a.startX))),
-                                                                o = Math.max(0, Math.min(a.startY + n, t.height / e2 - (a.endY - a.startY))),
+                                                            let _ = Math.max(0, Math.min(a.startX + r, t.width / e3 - (a.endX - a.startX))),
+                                                                o = Math.max(0, Math.min(a.startY + n, t.height / e3 - (a.endY - a.startY))),
                                                                 i = _ + (a.endX - a.startX),
                                                                 E = o + (a.endY - a.startY);
                                                             return (
@@ -2495,8 +2495,8 @@ ${eQ}
                                                                 A({
                                                                     startX: 0,
                                                                     startY: 0,
-                                                                    endX: l.current.width / e2,
-                                                                    endY: l.current.height / e2
+                                                                    endX: l.current.width / e3,
+                                                                    endY: l.current.height / e3
                                                                 }),
                                                             N(!1);
                                                     },
@@ -2516,9 +2516,9 @@ ${eQ}
                                                         e.preventDefault(),
                                                             !(function () {
                                                                 let e = s.createElement('canvas'),
-                                                                    t = e3(e6(r)),
-                                                                    n = e3(R);
-                                                                (e.width = n.width * e2), (e.height = n.height * e2);
+                                                                    t = e2(e6(r)),
+                                                                    n = e2(R);
+                                                                (e.width = n.width * e3), (e.height = n.height * e3);
                                                                 let a = e.getContext('2d');
                                                                 a && r && a.drawImage(r, (n.x / t.width) * r.width, (n.y / t.height) * r.height, (n.width / t.width) * r.width, (n.height / t.height) * r.height, 0, 0, e.width, e.height);
                                                                 let _ = r.getContext('2d');

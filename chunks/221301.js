@@ -1,11 +1,11 @@
 let { createLoader: n } = t(845731),
     a = n(
         {
-            JJ0wpK: 'INTL_TESTING_FORM_HEADER',
             uczI4u: 'INTL_TESTING_VARIABLE_LINK',
+            JJ0wpK: 'INTL_TESTING_FORM_HEADER',
             'Q+eyqq': 'INTL_TESTING_PLURAL',
-            rdfRys: 'INTL_TESTING_CODE',
             HMvECw: 'INTL_TESTING_DESCRIPTION',
+            rdfRys: 'INTL_TESTING_CODE',
             'rmps8/': 'INTL_TESTING_STATIC_LINK',
             XOdbAw: 'INTL_TESTING_HOOK'
         },

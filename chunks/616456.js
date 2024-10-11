@@ -4,7 +4,7 @@ r.d(t, {
         return rk;
     },
     T: function () {
-        return rF;
+        return rx;
     }
 });
 var c,
@@ -42,8 +42,8 @@ var c,
     K = r(157079),
     k = r(469359),
     V = r(393523);
-let x = g.n,
-    F = 'sentryReplaySession',
+let F = g.n,
+    x = 'sentryReplaySession',
     X = 'Unable to send Replay';
 function j(e, t) {
     return null != e ? e : t();
@@ -919,10 +919,10 @@ function ek(e, t, r, n, a) {
 function eV(e, t) {
     return -2 === t.getId(e);
 }
-function ex(e) {
+function eF(e) {
     return !!e.changedTouches;
 }
-function eF(e, t) {
+function ex(e, t) {
     return !!('IFRAME' === e.nodeName && t.getMeta(e));
 }
 function eX(e, t) {
@@ -997,8 +997,8 @@ function eZ(...e) {
 }
 var e0 = (((s = e0 || {})[(s.DomContentLoaded = 0)] = 'DomContentLoaded'), (s[(s.Load = 1)] = 'Load'), (s[(s.FullSnapshot = 2)] = 'FullSnapshot'), (s[(s.IncrementalSnapshot = 3)] = 'IncrementalSnapshot'), (s[(s.Meta = 4)] = 'Meta'), (s[(s.Custom = 5)] = 'Custom'), (s[(s.Plugin = 6)] = 'Plugin'), s);
 var e1 = (((I = e1 || {})[(I.Mutation = 0)] = 'Mutation'), (I[(I.MouseMove = 1)] = 'MouseMove'), (I[(I.MouseInteraction = 2)] = 'MouseInteraction'), (I[(I.Scroll = 3)] = 'Scroll'), (I[(I.ViewportResize = 4)] = 'ViewportResize'), (I[(I.Input = 5)] = 'Input'), (I[(I.TouchMove = 6)] = 'TouchMove'), (I[(I.MediaInteraction = 7)] = 'MediaInteraction'), (I[(I.StyleSheetRule = 8)] = 'StyleSheetRule'), (I[(I.CanvasMutation = 9)] = 'CanvasMutation'), (I[(I.Font = 10)] = 'Font'), (I[(I.Log = 11)] = 'Log'), (I[(I.Drag = 12)] = 'Drag'), (I[(I.StyleDeclaration = 13)] = 'StyleDeclaration'), (I[(I.Selection = 14)] = 'Selection'), (I[(I.AdoptedStyleSheet = 15)] = 'AdoptedStyleSheet'), (I[(I.CustomElement = 16)] = 'CustomElement'), I);
-var e2 = (((u = e2 || {})[(u.MouseUp = 0)] = 'MouseUp'), (u[(u.MouseDown = 1)] = 'MouseDown'), (u[(u.Click = 2)] = 'Click'), (u[(u.ContextMenu = 3)] = 'ContextMenu'), (u[(u.DblClick = 4)] = 'DblClick'), (u[(u.Focus = 5)] = 'Focus'), (u[(u.Blur = 6)] = 'Blur'), (u[(u.TouchStart = 7)] = 'TouchStart'), (u[(u.TouchMove_Departed = 8)] = 'TouchMove_Departed'), (u[(u.TouchEnd = 9)] = 'TouchEnd'), (u[(u.TouchCancel = 10)] = 'TouchCancel'), u);
-var e3 = (((l = e3 || {})[(l.Mouse = 0)] = 'Mouse'), (l[(l.Pen = 1)] = 'Pen'), (l[(l.Touch = 2)] = 'Touch'), l);
+var e3 = (((u = e3 || {})[(u.MouseUp = 0)] = 'MouseUp'), (u[(u.MouseDown = 1)] = 'MouseDown'), (u[(u.Click = 2)] = 'Click'), (u[(u.ContextMenu = 3)] = 'ContextMenu'), (u[(u.DblClick = 4)] = 'DblClick'), (u[(u.Focus = 5)] = 'Focus'), (u[(u.Blur = 6)] = 'Blur'), (u[(u.TouchStart = 7)] = 'TouchStart'), (u[(u.TouchMove_Departed = 8)] = 'TouchMove_Departed'), (u[(u.TouchEnd = 9)] = 'TouchEnd'), (u[(u.TouchCancel = 10)] = 'TouchCancel'), u);
+var e2 = (((l = e2 || {})[(l.Mouse = 0)] = 'Mouse'), (l[(l.Pen = 1)] = 'Pen'), (l[(l.Touch = 2)] = 'Touch'), l);
 function e6(e) {
     return '__ln' in e;
 }
@@ -1101,7 +1101,7 @@ class e8 {
                             recordCanvas: this.recordCanvas,
                             inlineImages: this.inlineImages,
                             onSerialize: (e) => {
-                                eF(e, this.mirror) && this.iframeManager.addIframe(e), eX(e, this.mirror) && this.stylesheetManager.trackLinkElement(e), ej(a) && this.shadowDomManager.addShadowRoot(a.shadowRoot, this.doc);
+                                ex(e, this.mirror) && this.iframeManager.addIframe(e), eX(e, this.mirror) && this.stylesheetManager.trackLinkElement(e), ej(a) && this.shadowDomManager.addShadowRoot(a.shadowRoot, this.doc);
                             },
                             onIframeLoad: (e, t) => {
                                 this.iframeManager.attachIframe(e, t), e.contentWindow && this.canvasManager.addWindow(e.contentWindow), this.shadowDomManager.observeAttachShadow(e);
@@ -1516,7 +1516,7 @@ function tu(e, t = {}) {
                     ev(
                         tt((e) => {
                             let t = ta(e),
-                                { clientX: r, clientY: _ } = ex(e) ? e.changedTouches[0] : e;
+                                { clientX: r, clientY: _ } = eF(e) ? e.changedTouches[0] : e;
                             !a && (a = ew()),
                                 i.push({
                                     x: r,
@@ -1548,23 +1548,23 @@ function tu(e, t = {}) {
                     if ('pointerType' in o) {
                         switch (o.pointerType) {
                             case 'mouse':
-                                E = e3.Mouse;
+                                E = e2.Mouse;
                                 break;
                             case 'touch':
-                                E = e3.Touch;
+                                E = e2.Touch;
                                 break;
                             case 'pen':
-                                E = e3.Pen;
+                                E = e2.Pen;
                         }
-                        E === e3.Touch ? (e2[t] === e2.MouseDown ? (s = 'TouchStart') : e2[t] === e2.MouseUp && (s = 'TouchEnd')) : e3.Pen;
-                    } else ex(o) && (E = e3.Touch);
-                    null !== E ? ((c = E), ((s.startsWith('Touch') && E === e3.Touch) || (s.startsWith('Mouse') && E === e3.Mouse)) && (E = null)) : e2[t] === e2.Click && ((E = c), (c = null));
-                    let I = ex(o) ? o.changedTouches[0] : o;
+                        E === e2.Touch ? (e3[t] === e3.MouseDown ? (s = 'TouchStart') : e3[t] === e3.MouseUp && (s = 'TouchEnd')) : e2.Pen;
+                    } else eF(o) && (E = e2.Touch);
+                    null !== E ? ((c = E), ((s.startsWith('Touch') && E === e2.Touch) || (s.startsWith('Mouse') && E === e2.Mouse)) && (E = null)) : e3[t] === e3.Click && ((E = c), (c = null));
+                    let I = eF(o) ? o.changedTouches[0] : o;
                     if (!I) return;
                     let u = r.getId(i),
                         { clientX: l, clientY: R } = I;
                     tt(e)({
-                        type: e2[s],
+                        type: e3[s],
                         id: u,
                         x: l,
                         y: R,
@@ -1572,19 +1572,19 @@ function tu(e, t = {}) {
                     });
                 };
             return (
-                Object.keys(e2)
+                Object.keys(e3)
                     .filter((e) => Number.isNaN(Number(e)) && !e.endsWith('_Departed') && !1 !== i[e])
                     .forEach((e) => {
                         let r = er(e),
                             n = s(e);
                         if (window.PointerEvent)
-                            switch (e2[e]) {
-                                case e2.MouseDown:
-                                case e2.MouseUp:
+                            switch (e3[e]) {
+                                case e3.MouseDown:
+                                case e3.MouseUp:
                                     r = r.replace('mouse', 'pointer');
                                     break;
-                                case e2.TouchStart:
-                                case e2.TouchEnd:
+                                case e3.TouchStart:
+                                case e3.TouchEnd:
                                     return;
                             }
                         E.push(eG(r, n, t));
@@ -2458,15 +2458,15 @@ function th(e = {}) {
     let t;
     let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: E = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: I = 'rr-ignore', ignoreSelector: u = null, maskAllText: l = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: N = null, inlineStylesheet: O = !0, maskAllInputs: p, maskInputOptions: f, slimDOMOptions: L, maskAttributeFn: S, maskInputFn: D, maskTextFn: h, maxCanvasSize: C = null, packFn: g, sampling: M = {}, dataURLOptions: P = {}, mousemoveWait: U, recordDOM: m = !0, recordCanvas: G = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: B = !1, inlineImages: w = !1, plugins: H, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: W = new Set([]), errorHandler: K, onMutation: k, getCanvasManager: V } = e;
     _ = K;
-    let x = !y || window.parent === window,
-        F = !1;
-    if (!x)
+    let F = !y || window.parent === window,
+        x = !1;
+    if (!F)
         try {
-            window.parent.document && (F = !1);
+            window.parent.document && (x = !1);
         } catch (e) {
-            F = !0;
+            x = !0;
         }
-    if (x && !r) throw Error('emit function is required');
+    if (F && !r) throw Error('emit function is required');
     void 0 !== U && void 0 === M.mousemove && (M.mousemove = U), tD.reset();
     let X =
             !0 === p
@@ -2522,11 +2522,11 @@ function th(e = {}) {
     let $ = 0,
         J = (e) => {
             for (let t of H || []) t.eventProcessor && (e = t.eventProcessor(e));
-            return g && !F && (e = g(e)), e;
+            return g && !x && (e = g(e)), e;
         };
     o = (e, _) => {
-        if (((e.timestamp = ew()), (0, d.x)([tn, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && tn.forEach((e) => e.unfreeze()), x)) (0, d.x)([r, 'optionalCall', (t) => t(J(e), _)]);
-        else if (F) {
+        if (((e.timestamp = ew()), (0, d.x)([tn, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && tn.forEach((e) => e.unfreeze()), F)) (0, d.x)([r, 'optionalCall', (t) => t(J(e), _)]);
+        else if (x) {
             let t = {
                 type: 'rrweb',
                 event: J(e),
@@ -2763,7 +2763,7 @@ function th(e = {}) {
                 recordCanvas: G,
                 inlineImages: w,
                 onSerialize: (e) => {
-                    eF(e, tD) && et.addIframe(e), eX(e, tD) && ee.trackLinkElement(e), ej(e) && ea.addShadowRoot(e.shadowRoot, document);
+                    ex(e, tD) && et.addIframe(e), eX(e, tD) && ee.trackLinkElement(e), ej(e) && ea.addShadowRoot(e.shadowRoot, document);
                 },
                 onIframeLoad: (e, t) => {
                     et.attachIframe(e, t), e.contentWindow && en.addWindow(e.contentWindow), ea.observeAttachShadow(e);
@@ -3033,13 +3033,13 @@ class tG {
             !E &&
                 ((E = []),
                 (function () {
-                    (0, P.hl)(x, 'open', function (e) {
+                    (0, P.hl)(F, 'open', function (e) {
                         return function (...t) {
                             if (E)
                                 try {
                                     E.forEach((e) => e());
                                 } catch (e) {}
-                            return e.apply(x, t);
+                            return e.apply(F, t);
                         };
                     });
                 })()),
@@ -3118,7 +3118,7 @@ class tG {
                     category: 'ui.slowClickDetected',
                     data: {
                         ..._.data,
-                        url: x.location.href,
+                        url: F.location.href,
                         route: t.getCurrentRoute(),
                         timeAfterClickMs: r,
                         endReason: n,
@@ -3136,7 +3136,7 @@ class tG {
                 category: 'ui.multiClick',
                 data: {
                     ..._.data,
-                    url: x.location.href,
+                    url: F.location.href,
                     route: t.getCurrentRoute(),
                     clickCount: a,
                     metric: !0
@@ -3300,19 +3300,19 @@ function tK(e) {
     return t ? t(e) : null;
 }
 function tk(e) {
-    return ((m.Z1 || x.performance.timeOrigin) + e) / 1000;
+    return ((m.Z1 || F.performance.timeOrigin) + e) / 1000;
 }
 function tV(e) {
     let t = e.entries[e.entries.length - 1];
     return tj(e, 'largest-contentful-paint', t && t.element ? [t.element] : void 0);
 }
-function tx(e) {
+function tF(e) {
     let t = e.entries[e.entries.length - 1],
         r = [];
     if (t && t.sources) for (let e of t.sources) e.node && r.push(e.node);
     return tj(e, 'cumulative-layout-shift', r);
 }
-function tF(e) {
+function tx(e) {
     let t = e.entries[e.entries.length - 1];
     return tj(e, 'first-input-delay', t && t.target ? [t.target] : void 0);
 }
@@ -3493,7 +3493,7 @@ class t1 {
         return (this._earliestTimestamp = null), (this._totalSize = 0), e;
     }
 }
-class t2 {
+class t3 {
     constructor(e) {
         (this._fallback = new tZ()), (this._compression = new t1(e)), (this._used = this._fallback), (this._ensureWorkerIsLoadedPromise = this._ensureWorkerIsLoaded());
     }
@@ -3548,9 +3548,9 @@ class t2 {
         }
     }
 }
-function t3() {
+function t2() {
     try {
-        return 'sessionStorage' in x && !!x.sessionStorage;
+        return 'sessionStorage' in F && !!F.sessionStorage;
     } catch (e) {
         return !1;
     }
@@ -3575,9 +3575,9 @@ function t5(e) {
     };
 }
 function t4(e) {
-    if (!!t3())
+    if (!!t2())
         try {
-            x.sessionStorage.setItem(F, JSON.stringify(e));
+            F.sessionStorage.setItem(x, JSON.stringify(e));
         } catch (e) {}
 }
 function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: n } = {}) {
@@ -3608,9 +3608,9 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
     let _ =
         a.stickySession &&
         (function (e) {
-            if (!t3()) return null;
+            if (!t2()) return null;
             try {
-                let t = x.sessionStorage.getItem(F);
+                let t = F.sessionStorage.getItem(x);
                 if (!t) return null;
                 let r = JSON.parse(t);
                 return tq('[Replay] Loading existing session', e), t5(r);
@@ -3807,8 +3807,8 @@ function rO(e) {
     return new URLSearchParams(e).toString();
 }
 function rp(e, t) {
-    let r = (function (e, t = x.document.baseURI) {
-        if (e.startsWith('http://') || e.startsWith('https://') || e.startsWith(x.location.origin)) return e;
+    let r = (function (e, t = F.document.baseURI) {
+        if (e.startsWith('http://') || e.startsWith('https://') || e.startsWith(F.location.origin)) return e;
         let r = new URL(e, t);
         if (r.origin !== new URL(t).origin) return e;
         let n = r.href;
@@ -4020,7 +4020,7 @@ async function rU(e) {
                             }
                         }
                     };
-                })(x.performance.memory)
+                })(F.performance.memory)
             ])
         );
     } catch (e) {
@@ -4361,7 +4361,7 @@ class rw {
                                         ) {
                                             let { type: r, id: n } = t.data,
                                                 a = th.mirror.getNode(n);
-                                            a instanceof HTMLElement && r === e2.Click && e.registerClick(a);
+                                            a instanceof HTMLElement && r === e3.Click && e.registerClick(a);
                                         }
                                     } catch (e) {}
                                 })(e.clickDetector, r),
@@ -4445,9 +4445,9 @@ class rw {
                     (this.eventBuffer = null),
                     (r = this),
                     (function () {
-                        if (!!t3())
+                        if (!!t2())
                             try {
-                                x.sessionStorage.removeItem(F);
+                                F.sessionStorage.removeItem(x);
                             } catch (e) {}
                     })(),
                     (r.session = void 0);
@@ -4507,8 +4507,8 @@ class rw {
         return !!this._checkSession() || !1;
     }
     setInitialState() {
-        let e = `${x.location.pathname}${x.location.hash}${x.location.search}`,
-            t = `${x.location.origin}${e}`;
+        let e = `${F.location.pathname}${F.location.hash}${F.location.search}`,
+            t = `${F.location.origin}${e}`;
         (this.performanceEntries = []), (this.replayPerformanceEntries = []), this._clearContext(), (this._context.initialUrl = t), (this._context.initialTimestamp = Date.now()), this._context.urls.push(t);
     }
     throttledAddEvent(e, t) {
@@ -4558,7 +4558,7 @@ class rw {
                             if (!t) return;
                             tJ(`[Replay] Using compression worker${e ? ` from ${e}` : ''}`);
                             let r = new Worker(t);
-                            return new t2(r);
+                            return new t3(r);
                         } catch (e) {
                             tJ('[Replay] Failed to create compression worker');
                         }
@@ -4608,10 +4608,10 @@ class rw {
     }
     _addListeners() {
         try {
-            x.document.addEventListener('visibilitychange', this._handleVisibilityChange),
-                x.addEventListener('blur', this._handleWindowBlur),
-                x.addEventListener('focus', this._handleWindowFocus),
-                x.addEventListener('keydown', this._handleKeyboardEvent),
+            F.document.addEventListener('visibilitychange', this._handleVisibilityChange),
+                F.addEventListener('blur', this._handleWindowBlur),
+                F.addEventListener('focus', this._handleWindowFocus),
+                F.addEventListener('keydown', this._handleKeyboardEvent),
                 this.clickDetector && this.clickDetector.addListeners(),
                 !this._hasInitializedCoreListeners &&
                     (!(function (e) {
@@ -4864,7 +4864,7 @@ class rw {
                 ['navigation', 'paint', 'resource'].forEach((e) => {
                     n.push((0, W._j)(e, r));
                 }),
-                n.push((0, W.$A)(tW(tV, e)), (0, W.PR)(tW(tx, e)), (0, W.to)(tW(tF, e)), (0, W.YF)(tW(tX, e))),
+                n.push((0, W.$A)(tW(tV, e)), (0, W.PR)(tW(tF, e)), (0, W.to)(tW(tx, e)), (0, W.YF)(tW(tX, e))),
                 () => {
                     n.forEach((e) => e());
                 }
@@ -4873,14 +4873,14 @@ class rw {
     }
     _removeListeners() {
         try {
-            x.document.removeEventListener('visibilitychange', this._handleVisibilityChange), x.removeEventListener('blur', this._handleWindowBlur), x.removeEventListener('focus', this._handleWindowFocus), x.removeEventListener('keydown', this._handleKeyboardEvent), this.clickDetector && this.clickDetector.removeListeners(), this._performanceCleanupCallback && this._performanceCleanupCallback();
+            F.document.removeEventListener('visibilitychange', this._handleVisibilityChange), F.removeEventListener('blur', this._handleWindowBlur), F.removeEventListener('focus', this._handleWindowFocus), F.removeEventListener('keydown', this._handleKeyboardEvent), this.clickDetector && this.clickDetector.removeListeners(), this._performanceCleanupCallback && this._performanceCleanupCallback();
         } catch (e) {
             this.handleException(e);
         }
     }
     __init() {
         this._handleVisibilityChange = () => {
-            'visible' === x.document.visibilityState ? this._doChangeToForegroundTasks() : this._doChangeToBackgroundTasks();
+            'visible' === F.document.visibilityState ? this._doChangeToForegroundTasks() : this._doChangeToBackgroundTasks();
         };
     }
     __init2() {
@@ -5162,8 +5162,8 @@ class rV {
                 networkDetailAllowUrls: A,
                 networkDetailDenyUrls: T,
                 networkCaptureBodies: N,
-                networkRequestHeaders: rx(d),
-                networkResponseHeaders: rx(O),
+                networkRequestHeaders: rF(d),
+                networkResponseHeaders: rF(O),
                 beforeAddRecordingEvent: g,
                 beforeErrorSampling: M,
                 _experiments: i
@@ -5236,10 +5236,10 @@ class rV {
     }
 }
 rV.__initStatic();
-function rx(e) {
+function rF(e) {
     return [...rW, ...e.map((e) => e.toLowerCase())];
 }
-function rF() {
+function rx() {
     let e = (0, p.s3)();
     return e && e.getIntegrationByName('Replay');
 }

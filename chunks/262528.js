@@ -1,8 +1,8 @@
 t.r(a);
 var s = t(735250),
     n = t(470079),
-    d = t(481060),
-    r = t(933557),
+    r = t(481060),
+    d = t(933557),
     o = t(925329),
     i = t(296023),
     l = t(689938),
@@ -13,8 +13,8 @@ a.default = (e) => {
         _ = n.useCallback(
             () => (
                 x(),
-                (0, d.openModalLazy)(async () => {
-                    let { default: e } = await t.e('39955').then(t.bind(t, 547653));
+                (0, r.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([t.e('38902'), t.e('39955')]).then(t.bind(t, 547653));
                     return (t) =>
                         (0, s.jsx)(e, {
                             ...t,
@@ -25,19 +25,19 @@ a.default = (e) => {
             ),
             [N, a.id, x]
         ),
-        C = (0, r.ZP)(a, !0);
-    return (0, s.jsxs)(d.ModalRoot, {
+        C = (0, d.ZP)(a, !0);
+    return (0, s.jsxs)(r.ModalRoot, {
         transitionState: h,
         'aria-label': l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE,
         children: [
-            (0, s.jsx)(d.ModalHeader, {
+            (0, s.jsx)(r.ModalHeader, {
                 separator: !1,
-                children: (0, s.jsx)(d.Heading, {
+                children: (0, s.jsx)(r.Heading, {
                     variant: 'heading-lg/semibold',
                     children: l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE
                 })
             }),
-            (0, s.jsxs)(d.ModalContent, {
+            (0, s.jsxs)(r.ModalContent, {
                 className: c.content,
                 children: [
                     (0, s.jsx)(o.Z, {
@@ -50,12 +50,12 @@ a.default = (e) => {
                             (0, s.jsxs)('div', {
                                 className: c.metadataHeader,
                                 children: [
-                                    (0, s.jsx)(d.Text, {
+                                    (0, s.jsx)(r.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
                                         children: N.name
                                     }),
-                                    (0, s.jsx)(d.Text, {
+                                    (0, s.jsx)(r.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
                                         children: l.Z.Messages.INTEGRATIONS_LINKED_LOBBY_SYNCING_WITH_CHANNEL.format({ channelName: C })
@@ -66,7 +66,7 @@ a.default = (e) => {
                                 (0, s.jsxs)(s.Fragment, {
                                     children: [
                                         (0, s.jsx)('div', { className: c.divider }),
-                                        (0, s.jsx)(d.Text, {
+                                        (0, s.jsx)(r.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-secondary',
                                             children: m
@@ -77,17 +77,17 @@ a.default = (e) => {
                     })
                 ]
             }),
-            (0, s.jsxs)(d.ModalFooter, {
+            (0, s.jsxs)(r.ModalFooter, {
                 children: [
-                    (0, s.jsx)(d.Button, {
+                    (0, s.jsx)(r.Button, {
                         onClick: _,
-                        color: d.Button.Colors.RED,
+                        color: r.Button.Colors.RED,
                         children: l.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING
                     }),
-                    (0, s.jsx)(d.Button, {
+                    (0, s.jsx)(r.Button, {
                         onClick: x,
-                        look: d.Button.Looks.LINK,
-                        color: d.Button.Colors.PRIMARY,
+                        look: r.Button.Looks.LINK,
+                        color: r.Button.Colors.PRIMARY,
                         children: l.Z.Messages.CANCEL
                     })
                 ]

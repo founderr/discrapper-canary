@@ -63,7 +63,7 @@ r.d(t, {
         return eN;
     },
     OM: function () {
-        return eF;
+        return ex;
     },
     Pl: function () {
         return eM;
@@ -132,7 +132,7 @@ r.d(t, {
         return eP;
     },
     fK: function () {
-        return ex;
+        return eF;
     },
     fr: function () {
         return eB;
@@ -222,8 +222,8 @@ var n,
     K,
     k,
     V,
-    x,
     F,
+    x,
     X,
     j,
     $,
@@ -368,13 +368,13 @@ let ep = new Map([
     }),
     ((V = R || (R = {}))[(V.DISCOVERY = 0)] = 'DISCOVERY'),
     (V[(V.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((x = A || (A = {}))[(x.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
-    (x[(x.ONE_TIME = 1)] = 'ONE_TIME');
+    ((F = A || (A = {}))[(F.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
+    (F[(F.ONE_TIME = 1)] = 'ONE_TIME');
 let eg = Object.freeze({
     0: 'subscription',
     1: 'sku'
 });
-((F = T || (T = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
+((x = T || (T = {}))[(x.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (x[(x.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (x[(x.CONNECT = 1048576)] = 'CONNECT');
 let eM = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
@@ -668,7 +668,7 @@ let eH = 'token',
         REPORT: ''.concat(eI, '/report')
     });
 ((q = f || (f = {})).INDEX = '/'), (q.INDEX_WORD = '/index'), (q.INDEX_BUCKET = '/index/:bucketId'), (q.CHANGELOGS = '/changelogs/:date'), (q.COMMUNITY = '/community'), (q.COMPANY = '/company'), (q.COMPANY_INFORMATION = '/company-information'), (q.CREATORS = '/creators'), (q.DOWNLOADS = '/downloads'), (q.DOWNLOAD = '/download'), (q.GAMING = '/gaming'), (q.PRIVACY = '/privacy'), (q.TOS = '/tos'), (q.TERMS = '/terms'), (q.STORE_TERMS = '/store-terms'), (q.ACKNOWLEDGEMENTS = '/acknowledgements'), (q.LICENSES = '/licenses'), (q.PARTNERS = '/partners'), (q.HYPESQUAD = '/hypesquad'), (q.HYPESQUAD_RIOT = '/hypesquad-riot'), (q.BRANDING = '/branding'), (q.ERROR_404 = '/404'), (q.JOBS = '/jobs'), (q.JOB = '/jobs/:jobId'), (q.STREAMKIT = '/streamkit'), (q.SECURITY = '/security'), (q.NITRO = '/nitro'), (q.DISCOVER = '/servers'), (q.QUESTS = '/ads/quests'), (q.GUIDELINES = '/guidelines'), (q.RICH_PRESENCE = '/rich-presence'), (q.VERIFICATION = '/verification'), (q.OPEN_SOURCE = '/open-source'), (q.WARFRAME = '/warframe'), (q.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (q.SAFETY_LANDING = '/safetycenter'), (q.SAFETY_ARTICLE_ROOT = '/safety'), (q.SAFETY_ARTICLE = '/safety/:article'), (q.NEWSROOM = '/newsroom'), (q.INSPIRATION = '/inspiration'), (q.MOD_ACADEMY_LANDING = '/moderation'), (q.MOD_ACADEMY_EXAM = '/moderation/exam'), (q.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (q.BLOG = '/blog'), (q.APP_DIRECTORY = '/application-directory'), (q.REFRESH_INDEX = '/new'), (q.REFRESH_INDEX_WORD = '/new/index'), (q.REFRESH_COMPANY = '/new/company'), (q.REFRESH_DOWNLOAD = '/new/download'), (q.REFRESH_PRIVACY = '/new/privacy'), (q.REFRESH_TERMS = '/new/terms'), (q.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (q.REFRESH_LICENSES = '/new/licenses'), (q.REFRESH_BRANDING = '/new/branding'), (q.REFRESH_JOBS = '/new/jobs'), (q.REFRESH_JOB = '/new/jobs/:jobId'), (q.REFRESH_STREAMKIT = '/new/streamkit'), (q.REFRESH_NITRO = '/new/nitro'), (q.REFRESH_GUIDELINES = '/new/guidelines'), (q.REFRESH_SAFETY_LANDING = '/new/safety'), (q.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (q.COLLEGE = '/college'), (q.LEAGUE_CLUBS = '/league-communities'), (q.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (q.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (q.LEGACY_DEV_NEWSLETTER = '/newsletter'), (q.LEGAL_ARCHIVE = '/archive/'), (q.TERMS_MAY_2020 = '/archive/terms/may-2020'), (q.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (q.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (q.FALL_RELEASE_2023 = '/fallrelease'), (q.MOBILE_REDESIGN_2023 = '/mobile'), (q.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (q.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (q.WHY_DISCORD = '/why-discord'), (q.XBOX_OFFER = '/discord-xbox-offer-2020'), (q.COLLEGE_BRUINS = '/bruins'), (q.COLLEGE_ANTEATERS = '/anteaters'), (q.COLLEGE_GAUCHOS = '/gauchos'), (q.COLLEGE_BEARS = '/bears'), (q.COLLEGE_SLUGS = '/slugs'), (q.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (q.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (q.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (q.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(eV), (0, eE.Ft)(f);
-let ex = Object.freeze({
+let eF = Object.freeze({
     FACEBOOK_URL: 'https://www.facebook.com/discord/',
     INSTAGRAM_URL: 'https://www.instagram.com/discord/',
     YOUTUBE_URL: 'https://www.youtube.com/discord/',
@@ -880,7 +880,7 @@ let ex = Object.freeze({
     (Q.ZAR = 'zar'),
     (Q.ZMW = 'zmw'),
     (Q.ZWL = 'zwl');
-let eF = 'US';
+let ex = 'US';
 ((Z = h || (h = {})).COUNTRY = 'US'),
     (Z.CURRENCY = 'usd'),
     ((ee = C || (C = {}))[(ee.SINGLE_PLAYER = 1)] = 'SINGLE_PLAYER'),

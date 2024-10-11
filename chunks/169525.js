@@ -63,7 +63,7 @@ let T = (e, t) => {
             { contentScanMetadata: r } = e;
         if (t) {
             if ((0, l.oh)(r)) return 'potential_explicit_content';
-            let { contentScanFlags: e } = r;
+            let { flags: e } = r;
             if ((0, h.yE)(e, d.Cb.EXPLICIT) || o.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
         }
         return n ? 'spoiler' : null;

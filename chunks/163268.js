@@ -179,7 +179,7 @@ function B(e, t) {
         case 0:
             return (0, A.yE)(null !== (r = e.media.flags) && void 0 !== r ? r : 0, v.J0y.CONTAINS_EXPLICIT_MEDIA);
         case 2:
-            return (0, A.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.contentScanFlags) && void 0 !== a ? a : 0, f.Cb.EXPLICIT);
+            return (0, A.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : 0, f.Cb.EXPLICIT);
         default:
             return !1;
     }

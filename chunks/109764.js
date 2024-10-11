@@ -1,30 +1,30 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var i = t(735250);
 t(470079);
-var u = t(852229),
-    a = t(399606),
-    r = t(481060),
-    l = t(228392),
-    d = t(592125),
-    s = t(934415),
-    o = t(981631),
+var a = t(852229),
+    r = t(399606),
+    o = t(481060),
+    s = t(228392),
+    u = t(592125),
+    l = t(934415),
+    d = t(981631),
     c = t(689938);
-function _(e, n, t) {
-    let _ = (0, a.e7)([d.Z], () => d.Z.getChannel(e.parent_id));
-    return (0, i.jsx)(r.MenuItem, {
+function f(e, n, t) {
+    let f = (0, r.e7)([u.Z], () => u.Z.getChannel(e.parent_id));
+    return (0, i.jsx)(o.MenuItem, {
         id: 'channel-copy-link',
         label: c.Z.Messages.COPY_LINK,
         action: () => {
             e.isForumPost() &&
-                (0, l.B)({
+                (0, s.B)({
                     postId: e.id,
-                    location: { section: o.jXE.CONTEXT_MENU }
+                    location: { section: d.jXE.CONTEXT_MENU }
                 }),
-                (0, u.J)((0, s.EO)(e, _, n, t));
+                (0, a.J)((0, l.EO)(e, f, n, t));
         }
     });
 }
