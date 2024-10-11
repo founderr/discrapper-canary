@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     Z: function () {
-        return L;
+        return Z;
     }
 });
 var i,
@@ -23,8 +23,8 @@ var i,
     N = n(963249),
     h = n(703656),
     C = n(594174),
-    f = n(626135),
-    p = n(51144),
+    p = n(626135),
+    f = n(51144),
     g = n(479446),
     A = n(441623),
     S = n(317271),
@@ -33,8 +33,8 @@ var i,
     x = n(182294),
     R = n(689938),
     v = n(17500);
-function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
+function Z(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: r, popoutPosition: Z, analyticsPage: L, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
         j = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         { analyticsLocations: U } = (0, m.ZP)(),
         y = (0, d.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
@@ -100,7 +100,7 @@ function L(e) {
                                     color: k ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: p.ZP.getName(i) });
+                                        if (t === M.hX.FRIEND_ANNIVERSARY) return R.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: f.ZP.getName(i) });
                                         return (0, g.Ou)(t);
                                     })()
                                 }),
@@ -123,7 +123,7 @@ function L(e) {
                             (0, s.jsx)(_.Button, {
                                 className: o()(v.button, v.buttonSecondary),
                                 onClick: (e) => {
-                                    e.stopPropagation(), f.default.track(O.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, { gift_intent_type: t }), (0, h.uL)(O.Z5c.FRIENDS), E.Z.setSection(O.pJs.ALL);
+                                    e.stopPropagation(), p.default.track(O.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, { gift_intent_type: t }), (0, h.uL)(O.Z5c.FRIENDS), E.Z.setSection(O.pJs.ALL);
                                 },
                                 size: _.Button.Sizes.MEDIUM,
                                 color: _.Button.Colors.CUSTOM,
@@ -151,7 +151,7 @@ function L(e) {
                                     analyticsLocation: 'system_message' === n ? a.chat : a.actionButtonCoachmark,
                                     analyticsLocations: U,
                                     analyticsObject: {
-                                        page: Z,
+                                        page: L,
                                         section: P,
                                         object: O.qAy.BUTTON_CTA,
                                         objectType: O.Qqv.GIFT
@@ -180,11 +180,11 @@ function L(e) {
                         })
                     ]
                 }),
-                null != L &&
+                null != Z &&
                     (0, s.jsx)('div', {
                         className: o()(v.connector, {
-                            [v.leftPopoutConnector]: 'left' === L,
-                            [v.rightPopoutConnector]: 'right' === L
+                            [v.leftPopoutConnector]: 'left' === Z,
+                            [v.rightPopoutConnector]: 'right' === Z
                         })
                     })
             ]

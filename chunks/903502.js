@@ -44,11 +44,11 @@ function g() {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        T = Object.keys(s.R).map((e) => ({
+        S = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
-        S = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
+        T = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
     return (0, r.jsxs)('div', {
         className: m.container,
         children: [
@@ -57,7 +57,7 @@ function g() {
                 className: m.formElement,
                 tag: i.FormTitleTags.H3,
                 children: (0, r.jsx)(i.SingleSelect, {
-                    options: T,
+                    options: S,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -185,7 +185,7 @@ function g() {
                                 cooldown: n * b,
                                 chance: _ / 100
                             }),
-                        disabled: !S,
+                        disabled: !T,
                         children: 'Update'
                     }),
                     (0, r.jsx)(i.Button, {
@@ -194,7 +194,7 @@ function g() {
                                 type: 'FEEDBACK_OVERRIDE_CLEAR',
                                 feedbackType: e
                             }),
-                        disabled: !S,
+                        disabled: !T,
                         children: 'Clear Override'
                     })
                 ]

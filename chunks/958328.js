@@ -49,9 +49,9 @@ function _() {
         _ = (0, o.e7)([m.Z], () => m.Z.computePermissions(n)),
         j = (0, o.e7)([m.Z], () => m.Z.computePermissions(a)),
         C = (0, c.ZP)(n, !0),
-        T = null != n ? (0, p.IG)(n, !1, !0) : null,
-        S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
-        N = Object.values(null != T ? T : {}).map((e) => {
+        S = null != n ? (0, p.IG)(n, !1, !0) : null,
+        T = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
+        N = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(_, n);
             return (0, r.jsx)(
@@ -63,7 +63,7 @@ function _() {
                 t
             );
         }),
-        y = Object.values(null != S ? S : {}).map((e) => {
+        y = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(j, n);
             return (0, r.jsx)(

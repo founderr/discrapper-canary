@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(78839),
     h = n(55935),
     C = n(63063),
-    f = n(74538),
-    p = n(276444),
+    p = n(74538),
+    f = n(276444),
     g = n(790368),
     A = n(786397),
     S = n(474936),
@@ -55,7 +55,7 @@ class R extends a.Component {
                 },
                 color: u.Button.Colors.BRAND
             },
-            o = s.id !== a.user_id || (0, f.I5)(s) || !s.verified || (0, A.B)(a),
+            o = s.id !== a.user_id || (0, p.I5)(s) || !s.verified || (0, A.B)(a),
             c = this.renderExpirationDate(e, t, n);
         return (
             (r.disabled = o),
@@ -166,15 +166,15 @@ class R extends a.Component {
 function v(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: a, isResolving: s } = (0, d.cj)(
-            [p.Z],
+            [f.Z],
             () => ({
-                trialOffer: n ? p.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && p.Z.isResolving(t)
+                trialOffer: n ? f.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && f.Z.isResolving(t)
             }),
             [n, t]
         ),
         l = T.default.getCurrentUser(),
-        r = (0, d.e7)([T.default], () => null != a && (0, f.I5)(void 0 !== l && a.user_id === l.id ? l : T.default.getUser(a.user_id))),
+        r = (0, d.e7)([T.default], () => null != a && (0, p.I5)(void 0 !== l && a.user_id === l.id ? l : T.default.getUser(a.user_id))),
         o = (0, d.e7)([N.ZP], () => {
             var e;
             return r ? (null === (e = N.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;

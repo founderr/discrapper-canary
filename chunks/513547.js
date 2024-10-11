@@ -1,9 +1,9 @@
 n.d(t, {
     al: function () {
-        return D;
+        return S;
     },
     ck: function () {
-        return b;
+        return v;
     }
 }),
     n(47120),
@@ -161,7 +161,7 @@ function y(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let D = {
+let S = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -187,7 +187,7 @@ let D = {
         lqSimulcastStreamEncoded: !0,
         hqSimulcastStreamEncoded: !0
     },
-    S = {
+    D = {
         accelerateRate: g,
         audioDetected: f,
         audioLevel: C,
@@ -244,7 +244,7 @@ let D = {
         }
     },
     R = (e) => e,
-    v = (e) => {
+    b = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -259,10 +259,10 @@ let D = {
             })
         );
     };
-function b(e) {
+function v(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = S[o]) && void 0 !== n ? n : R;
+        p = null !== (n = D[o]) && void 0 !== n ? n : R;
     let h =
             s.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
@@ -272,7 +272,7 @@ function b(e) {
                       height: 100
                   })
                 : 'number' == typeof i
-                  ? (0, r.jsx)(v, {
+                  ? (0, r.jsx)(b, {
                         value: i,
                         width: 300,
                         height: 100

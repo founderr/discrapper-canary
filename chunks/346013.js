@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(1585),
     h = n(841762),
     C = n(336197),
-    f = n(406432),
-    p = n(348238),
+    p = n(406432),
+    f = n(348238),
     g = n(38267),
     A = n(184301),
     S = n(347475),
@@ -31,8 +31,8 @@ var i = n(735250),
     x = n(594174),
     R = n(768581),
     v = n(900849),
-    L = n(506071),
-    Z = n(495114),
+    Z = n(506071),
+    L = n(495114),
     P = n(170140),
     b = n(981631),
     D = n(959517),
@@ -44,9 +44,9 @@ function B(e) {
     let { embedUrl: r, message: B, channel: k } = e,
         G = (0, P.J)(r, B),
         { setPopout: F } = (0, g.Z)(B.id, D.d$),
-        w = (0, p.qo)(B, k, F, !0),
+        w = (0, f.qo)(B, k, F, !0),
         V = M.QK.useSetting(),
-        H = (0, L.n)(),
+        H = (0, Z.n)(),
         [Y, W] = a.useState(!1),
         [K, z] = a.useState((null == G ? void 0 : G.coverImage) == null),
         X = (0, u.e7)([E.Z], () => E.Z.useReducedMotion),
@@ -115,7 +115,7 @@ function B(e) {
             if (!et.enabled) ei((e) => !e);
         },
         e_ = G.coverImage,
-        eE = null != e_ && (0, f.d$)(e_);
+        eE = null != e_ && (0, p.d$)(e_);
     return (0, i.jsxs)('div', {
         className: U.postPreviewContainer,
         children: [
@@ -151,7 +151,7 @@ function B(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: U.thumbnailOverlayCta,
                                     children: [
-                                        (0, i.jsx)(Z.Z, { color: d.Z.WHITE }),
+                                        (0, i.jsx)(L.Z, { color: d.Z.WHITE }),
                                         (0, i.jsx)(_.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',

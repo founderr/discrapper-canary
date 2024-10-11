@@ -9,5 +9,5 @@ function l(e) {
     let { applicationId: n, channel: t } = e;
     (0, i.PL)(!0, !0);
     let { isUserInstalled: l } = (0, i.If)(t, n);
-    return { buttonText: l ? a.Z.Messages.APP_LAUNCHER_OPEN_DM : a.Z.Messages.TRY_IT_OUT };
+    return { buttonText: l ? a.Z.Messages.APP_LAUNCHER_OPEN_DM : a.Z.Messages.APP_LAUNCHER_TRY_IN_DM };
 }

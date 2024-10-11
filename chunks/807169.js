@@ -28,7 +28,7 @@ var r = n(470079),
 function p(e, t) {
     var n, r, i, a, s;
     let E;
-    let h = g((E = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e)),
+    let h = null != (E = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e) ? g(E) : void 0,
         p = l.xM.getSetting(),
         I = c.default.getId(),
         S = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
@@ -55,7 +55,7 @@ function I(e, t) {
             }
             return e;
         }, [e]),
-        i = g(n),
+        i = null != n ? g(n) : void 0,
         s = l.xM.useSetting(),
         E = (0, a.e7)([c.default], () => c.default.getId()),
         h = (0, a.e7)([f.default], () => {
@@ -87,7 +87,7 @@ function m(e, t, n) {
 }
 function T(e, t) {
     let n, r;
-    if (e instanceof u.Sf && e.isPrivate())
+    if ((e instanceof u.Sf && e.isPrivate()) || null == e)
         return {
             computedPermissions: i.vB(0),
             hasBaseAccessPermissions: !0,
@@ -104,7 +104,7 @@ function T(e, t) {
     );
 }
 function S(e, t) {
-    return e instanceof u.Sf && null == e.guild_id ? (e.type === h.d4z.DM && e.getRecipientId() === t ? s.D.BOT_DM : s.D.PRIVATE_CHANNEL) : s.D.GUILD;
+    return e instanceof u.Sf && (null == e ? void 0 : e.guild_id) == null ? ((null == e ? void 0 : e.type) === h.d4z.DM && (null == e ? void 0 : e.getRecipientId()) === t ? s.D.BOT_DM : s.D.PRIVATE_CHANNEL) : s.D.GUILD;
 }
 function g(e) {
     return e instanceof u.Sf ? e.guild_id : e.id;

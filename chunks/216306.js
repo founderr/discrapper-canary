@@ -38,8 +38,8 @@ var s = E(470079),
     c = E(306680),
     O = E(709054),
     U = E(981631),
-    d = E(176505),
-    G = E(443063),
+    G = E(176505),
+    d = E(443063),
     M = E(490897),
     R = E(689938);
 function g(e, _) {
@@ -48,7 +48,7 @@ function g(e, _) {
 function C(e, _, E, n) {
     n = n.toLowerCase();
     let r = (0, i.g)(e),
-        T = s.useCallback((e, _) => !(r && e.channel.hasFlag(d.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== U.d4z.GUILD_DIRECTORY && (0 === _.length || t()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [r]);
+        T = s.useCallback((e, _) => !(r && e.channel.hasFlag(G.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== U.d4z.GUILD_DIRECTORY && (0 === _.length || t()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [r]);
     return s.useMemo(() => {
         let e = {
             null: [],
@@ -69,12 +69,12 @@ function f(e) {
     let _ = e.getSections(!1);
     if (_[N.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case G.z.GUILD_HOME:
-                return d.oC.GUILD_HOME;
-            case G.z.GUILD_ROLE_SUBSCRIPTIONS:
-                return d.oC.ROLE_SUBSCRIPTIONS;
-            case G.z.GUILD_MEMBER_APPLICATIONS:
-                return d.oC.MEMBER_APPLICATIONS;
+            case d.z.GUILD_HOME:
+                return G.oC.GUILD_HOME;
+            case d.z.GUILD_ROLE_SUBSCRIPTIONS:
+                return G.oC.ROLE_SUBSCRIPTIONS;
+            case d.z.GUILD_MEMBER_APPLICATIONS:
+                return G.oC.MEMBER_APPLICATIONS;
         }
     for (let s = N.wd; s < e.voiceChannelsSectionNumber; s++)
         if (_[s] > 0) {

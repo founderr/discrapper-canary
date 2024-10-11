@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 });
 var i = n(735250),
@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(474936),
     h = n(981631),
     C = n(689938),
-    f = n(464780);
-function p() {
+    p = n(464780);
+function f() {
     let e = (0, l.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), N.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = m.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
@@ -30,19 +30,19 @@ function p() {
                 disable: e
             }
         ),
-        { location: p } = (0, c.O)(),
+        { location: f } = (0, c.O)(),
         { analyticsLocations: g } = (0, d.ZP)(),
         A = a.useCallback(() => {
             (0, u.Z)({
                 subscriptionTier: I.ZP.getSkuIdForPremiumType(N.p9.TIER_2),
                 analyticsLocations: g,
                 analyticsObject: {
-                    ...p,
+                    ...f,
                     object: h.qAy.BUTTON_CTA,
                     objectType: h.Qqv.TIER_2
                 }
             });
-        }, [g, p]),
+        }, [g, f]),
         S = a.useCallback(() => {
             o.Z.open(h.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
         }, []),
@@ -61,13 +61,13 @@ function p() {
             (0, i.jsx)(r.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: f.premiumIcon
+                className: p.premiumIcon
             }),
             t
                 ? n
                     ? (0, i.jsxs)(s.xv, {
                           variant: 'text-sm/normal',
-                          className: f.text,
+                          className: p.text,
                           children: [C.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', C.Z.Messages.LEARN_MORE_CLICK.format({ onClick: S })]
                       })
                     : C.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE

@@ -1,21 +1,21 @@
-t.d(n, {
+n.d(t, {
     K: function () {
-        return o;
+        return c;
     },
     z: function () {
         return u;
     }
 });
-var l = t(481060),
-    a = t(475179),
-    r = t(925549),
-    i = t(905423),
-    s = t(981631);
-function o(e, n) {
-    let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    if (!(0, l.hasAnyModalOpen)()) t && r.Z.channelListScrollTo(e, n), o && null != n && a.Z.updateChatOpen(n, !0), i.Z.getState().updatePath(s.Z5c.CHANNEL(e, n));
+var i = n(481060),
+    r = n(475179),
+    o = n(925549),
+    l = n(905423),
+    a = n(981631);
+function c(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    if (!(0, i.hasAnyModalOpen)()) n && o.Z.channelListScrollTo(e, t), c && null != t && r.Z.updateChatOpen(t, !0), l.Z.getState().updatePath(a.Z5c.CHANNEL(e, t));
 }
 function u(e) {
-    if (!(0, l.hasAnyModalOpen)()) i.Z.getState().updatePath(e);
+    if (!(0, i.hasAnyModalOpen)()) l.Z.getState().updatePath(e);
 }

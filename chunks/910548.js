@@ -21,8 +21,8 @@ var i,
     N = n(745510),
     h = n(549006),
     C = n(64078),
-    f = n(29270),
-    p = n(709586),
+    p = n(29270),
+    f = n(709586),
     g = n(267642),
     A = n(739566),
     S = n(834129),
@@ -54,8 +54,8 @@ let R = {
 };
 ((l = a || (a = {})).TOP_LEFT = 'TOP_LEFT'), (l.TOP_RIGHT = 'TOP_RIGHT'), (l.BOTTOM_LEFT = 'BOTTOM_LEFT'), (l.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 let v = ['TOP_LEFT', 'TOP_RIGHT'],
-    L = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    Z = {
+    Z = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+    L = {
         leafPosition: {
             x: 85,
             y: 125
@@ -94,7 +94,7 @@ let v = ['TOP_LEFT', 'TOP_RIGHT'],
             leafRotationDirection: -1
         },
         BOTTOM_LEFT: {
-            ...Z,
+            ...L,
             getConfettiPosition: (e) => ({
                 x: e - 11,
                 y: 125
@@ -105,7 +105,7 @@ let v = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         },
         BOTTOM_RIGHT: {
-            ...Z,
+            ...L,
             getConfettiPosition: (e) => ({
                 x: 11,
                 y: 125
@@ -151,8 +151,8 @@ function k(e) {
                   })()
         ),
         { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(N.h),
-        [C, f] = o.useState(null),
-        p = (0, u.uR)(h, C),
+        [C, p] = o.useState(null),
+        f = (0, u.uR)(h, C),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -177,7 +177,7 @@ function k(e) {
         O = o.useCallback(() => {
             'exit' === c && (null == t || t());
         }, [t, c]),
-        Z = o.useCallback((e) => {
+        L = o.useCallback((e) => {
             l.current = e;
         }, []);
     return (
@@ -185,7 +185,7 @@ function k(e) {
             if ('confetti' === c) {
                 let { confettiVelocityDirection: e } = P[I],
                     t = (function (e, t) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L,
+                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Z,
                             i = null == e ? void 0 : e.getBoundingClientRect();
                         if (null == i)
                             return {
@@ -216,7 +216,7 @@ function k(e) {
         o.useEffect(() => {
             if (A && 'leaf_fall' === c) {
                 let e = P[I].leafRotationDirection;
-                p.createConfetti(
+                f.createConfetti(
                     {
                         id: ''.concat(b, '-').concat((0, _.Z)()),
                         position: {
@@ -266,11 +266,11 @@ function k(e) {
                     { sprite: 'TOP_LEFT' === I ? j : U }
                 );
             }
-        }, [A, p, I, c]),
+        }, [A, f, I, c]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Ji, {
-                    ref: f,
+                    ref: p,
                     sprites: y,
                     colors: D,
                     spriteWidth: 45,
@@ -285,7 +285,7 @@ function k(e) {
                         [x.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === I
                     }),
                     children: (0, r.jsx)(m.SequencedLottieAnimation, {
-                        animationRef: Z,
+                        animationRef: L,
                         className: d()(x.easterEggAnimation, { [x.easterEggAnimationHideLeaf]: S }),
                         nextScene: g,
                         sceneSegments: R,
@@ -313,36 +313,36 @@ function G(e) {
             }
             return null;
         })(n),
-        d = (0, f.Z)(n),
+        d = (0, p.Z)(n),
         { createMultipleConfettiAt: u, addClickListener: _ } = o.useContext(N.h),
         [E, I] = o.useState(!1),
         R = o.useRef(null),
         { reducedMotion: v } = o.useContext(m.AccessibilityPreferencesContext),
-        L = (0, A.ZH)(n),
-        Z = L.nick,
-        P = s(L);
+        Z = (0, A.ZH)(n),
+        L = Z.nick,
+        P = s(Z);
     t =
         null == c || null == a
             ? d > 1
                 ? O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
-                      username: Z,
+                      username: L,
                       usernameHook: P,
                       numSubscriptions: d
                   })
                 : O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
-                      username: Z,
+                      username: L,
                       usernameHook: P
                   })
             : d > 1
               ? O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
-                    username: Z,
+                    username: L,
                     usernameHook: P,
                     numSubscriptions: d,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
                 })
               : O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
-                    username: Z,
+                    username: L,
                     usernameHook: P,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
@@ -373,7 +373,7 @@ function G(e) {
         className: x.iconWrapper,
         innerRef: R,
         onClick: l,
-        children: (0, r.jsx)(p.Z, {
+        children: (0, r.jsx)(f.Z, {
             className: x.icon,
             onMouseEnter: D
         })

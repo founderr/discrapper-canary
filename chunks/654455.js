@@ -41,13 +41,13 @@ let f = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
 function I(e, t) {
     return e
         .filter((e) => {
-            if (e.includes(':')) return null != t.guild && t.guild.id === e.split(':')[1];
+            if (e.includes(':')) return (null == t ? void 0 : t.guild) != null && t.guild.id === e.split(':')[1];
             return !0;
         })
         .map((e) => e.split(':')[0]);
 }
 function m(e, t) {
-    return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
+    return 0 > Number(t.id) ? t.id : (null == e ? void 0 : e.guild) != null && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
 }
 function T() {
     var e, t;

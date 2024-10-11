@@ -23,11 +23,11 @@ function N(e) {
     var t, N;
     let h,
         C,
-        f,
-        { onTransitionToInviteChannel: p, onAcceptInstantInvite: g, guild: A, invite: S, author: M, currentUserId: O } = e,
+        p,
+        { onTransitionToInviteChannel: f, onAcceptInstantInvite: g, guild: A, invite: S, author: M, currentUserId: O } = e,
         x = O === M.id,
-        { channel: R, approximate_member_count: v, approximate_presence_count: L } = S,
-        Z = S.state === I.r2o.ACCEPTING,
+        { channel: R, approximate_member_count: v, approximate_presence_count: Z } = S,
+        L = S.state === I.r2o.ACCEPTING,
         P = null != R ? (0, o.jD)(R) : null,
         b = null != A,
         D = null != P,
@@ -41,7 +41,7 @@ function N(e) {
         let e = (0, d.rF)(S.guild.premium_subscription_count, S.guild.id);
         A.premiumTier = e;
     }
-    let k = b ? p : g,
+    let k = b ? f : g,
         G = (0, _.e)({
             isVoiceChannel: j,
             isOwnInvite: x,
@@ -66,7 +66,7 @@ function N(e) {
             ]
         })),
         y &&
-            (f = (0, i.jsx)(s.TooltipContainer, {
+            (p = (0, i.jsx)(s.TooltipContainer, {
                 className: T.tooltipContainer,
                 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                 children: (0, i.jsx)(s.CircleInformationIcon, {
@@ -90,10 +90,10 @@ function N(e) {
                       })
                   ]
               })))
-            : (null != v && v >= 5) || (null != L && L > 0)
+            : (null != v && v >= 5) || (null != Z && Z > 0)
               ? (h = (0, i.jsx)(r.Z.Data, {
                     members: v,
-                    membersOnline: L
+                    membersOnline: Z
                 }))
               : D &&
                 (h = (0, i.jsx)(r.Z.Channel, {
@@ -105,7 +105,7 @@ function N(e) {
                 (0, i.jsx)(r.Z.GuildSplash, { guild: A }),
                 (0, i.jsx)(r.Z.Header, {
                     text: G,
-                    extra: f
+                    extra: p
                 }),
                 (0, i.jsxs)(r.Z.Body, {
                     children: [
@@ -122,7 +122,7 @@ function N(e) {
                         }),
                         (0, i.jsx)(r.Z.Button, {
                             onClick: k,
-                            submitting: Z,
+                            submitting: L,
                             color: r.Z.Button.Colors.GREEN,
                             children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : b ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
                         })

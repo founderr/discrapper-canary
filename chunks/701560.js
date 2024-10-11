@@ -22,8 +22,8 @@ var i,
     N = n(346329),
     h = n(981631),
     C = n(689938),
-    f = n(201219);
-function p(e, t, n) {
+    p = n(201219);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,14 +48,14 @@ class g extends (i = s.PureComponent) {
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, a.jsxs)(c.Clickable, {
                   'aria-label': C.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-                  className: f.dropdownArrowHitbox,
+                  className: p.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, a.jsx)('div', { className: f.arrowSeparator }),
+                      (0, a.jsx)('div', { className: p.arrowSeparator }),
                       (0, a.jsx)(c.ChevronSmallDownIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: f.dropdownArrow
+                          className: p.dropdownArrow
                       })
                   ]
               })
@@ -64,13 +64,13 @@ class g extends (i = s.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: i, size: s, customDisabledColor: l, tooltipPosition: r } = this.props;
         return (0, a.jsxs)('div', {
-            className: f.disabledButtonWrapper,
+            className: p.disabledButtonWrapper,
             children: [
                 (0, a.jsx)(c.Button, {
                     className: n,
                     fullWidth: i,
                     size: s,
-                    color: null != l ? l : f.disabledButtonColor,
+                    color: null != l ? l : p.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -79,7 +79,7 @@ class g extends (i = s.PureComponent) {
                     position: r,
                     children: (e) =>
                         (0, a.jsx)('div', {
-                            className: f.disabledButtonOverlay,
+                            className: p.disabledButtonOverlay,
                             ...e
                         })
                 })
@@ -92,8 +92,8 @@ class g extends (i = s.PureComponent) {
         if (o) return this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = d ? c.ShinyButton : c.Button;
         return (0, a.jsxs)(_, {
-            className: r()(f.playButton, e),
-            innerClassName: f.playButtonContents,
+            className: r()(p.playButton, e),
+            innerClassName: p.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.Button.Colors.GREEN,
@@ -101,7 +101,7 @@ class g extends (i = s.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, a.jsx)('div', {
-                    className: f.buttonText,
+                    className: p.buttonText,
                     children: C.Z.Messages.GAME_ACTION_BUTTON_PLAY
                 }),
                 this.renderDropdown()
@@ -110,7 +110,7 @@ class g extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'handleDropdownClick', (e) => {
+            f(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: i, onDropdownClose: s } = this.props;
                 if ((null == i || i(e), null == t)) throw Error('Unexpected missing libraryApplication');
@@ -128,7 +128,7 @@ class g extends (i = s.PureComponent) {
                     { onClose: s }
                 );
             }),
-            p(this, 'handleClick', () => {
+            f(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: i } = this.props;
                 N.playApplication(e, t, {
                     analyticsParams: {
@@ -155,7 +155,7 @@ function A(e) {
         dispatchState: c
     });
 }
-p(g, 'defaultProps', {
+f(g, 'defaultProps', {
     fullWidth: !1,
     size: c.Button.Sizes.LARGE,
     tooltipPosition: 'top',

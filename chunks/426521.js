@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(833592),
     h = n(497089),
     C = n(178480),
-    f = n(418316),
-    p = n(526146),
+    p = n(418316),
+    f = n(526146),
     g = n(400565),
     A = n(148789),
     S = n(11825),
@@ -30,7 +30,7 @@ var i = n(735250),
     x = n(56599),
     R = n(756688),
     v = n(886765);
-function L(e) {
+function Z(e) {
     var t, n, a;
     let { item: r } = e,
         o = null === (t = r.message) || void 0 === t ? void 0 : t.content;
@@ -53,7 +53,7 @@ function L(e) {
         ]
     });
 }
-function Z(e) {
+function L(e) {
     let {
         item: { callout: t }
     } = e;
@@ -96,7 +96,7 @@ let b = a.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: u } = e,
             { analyticsLocations: _ } = (0, r.ZP)(),
-            E = (0, p.I)(l, u),
+            E = (0, f.I)(l, u),
             O = a.useCallback(async () => {
                 if ((!E && (0, N.wt)(l), null != l.item_enum && l.item_enum === h.AM.FIND_FRIENDS)) {
                     (0, s.openModalLazy)(async () => {
@@ -138,7 +138,7 @@ let b = a.memo(function (e) {
             R = null;
         l.type === h.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (R = (0, i.jsx)(A.Z, { userId: l.other_user.id }));
         let v = null != l.local_id,
-            b = (0, f.Z)(l);
+            b = (0, p.Z)(l);
         return (0, i.jsxs)('div', {
             className: x.row,
             children: [
@@ -159,8 +159,8 @@ let b = a.memo(function (e) {
                                     color: E ? 'text-muted' : 'text-normal',
                                     children: 'string' != typeof b ? b : c.Z.parse(b)
                                 }),
-                                (null === (t = l.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, { item: l }) : null,
-                                null != l.callout ? (0, i.jsx)(Z, { item: l }) : null,
+                                (null === (t = l.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(Z, { item: l }) : null,
+                                null != l.callout ? (0, i.jsx)(L, { item: l }) : null,
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: E ? 'text-muted' : 'header-secondary',

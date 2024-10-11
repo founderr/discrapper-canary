@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(825829),
     h = n(226192),
     C = n(36459),
-    f = n(336197),
-    p = n(359110),
+    p = n(336197),
+    f = n(359110),
     g = n(347475),
     A = n(496675),
     S = n(594174),
@@ -30,8 +30,8 @@ var i = n(735250),
     x = n(937889),
     R = n(739566),
     v = n(779125),
-    L = n(890410),
-    Z = n(464891),
+    Z = n(890410),
+    L = n(464891),
     P = n(507418),
     b = n(348238),
     D = n(38267),
@@ -190,7 +190,7 @@ let Q = a.memo(function (e) {
         o = V(n, a),
         c = H(a, n.author),
         d = (0, R.ZP)(n),
-        u = (0, Z.CF)(
+        u = (0, L.CF)(
             {
                 message: n,
                 channel: a,
@@ -206,7 +206,7 @@ let Q = a.memo(function (e) {
         m = H(a, E);
     if (null != E) {
         let e = (0, R.ij)(E, a),
-            i = (0, Z.CF)(
+            i = (0, L.CF)(
                 {
                     message: n,
                     channel: a,
@@ -260,7 +260,7 @@ function J(e) {
         }, [r.id, ee, J, o]),
         eu = a.useCallback(
             (e) => {
-                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, f.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
+                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, p.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
             },
             [z, et]
         ),
@@ -272,7 +272,7 @@ function J(e) {
                         channelId: e,
                         messageId: r.id
                     }),
-                    (0, p.Kh)(e));
+                    (0, f.Kh)(e));
             },
             [r, z]
         ),
@@ -295,7 +295,7 @@ function J(e) {
             children: (0, i.jsxs)('div', {
                 className: l()(w.content, { [w.compact]: s }),
                 children: [
-                    (0, i.jsx)(Z.nD, {
+                    (0, i.jsx)(L.nD, {
                         message: r,
                         messageClassname: w.spanCorrection,
                         className: l()(w.usernameContainer, w.spanCorrection, { [w.compact]: s }),
@@ -327,7 +327,7 @@ function J(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: l()(w.messageContent, { [w.compact]: s }),
-                        children: (0, i.jsx)(L.Z, {
+                        children: (0, i.jsx)(Z.Z, {
                             ...R,
                             message: r,
                             channel: z,

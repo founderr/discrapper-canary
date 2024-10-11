@@ -16,8 +16,8 @@ var i = n(735250),
     N = n(623624),
     h = n(533694),
     C = n(182180),
-    f = n(924301),
-    p = n(225890),
+    p = n(924301),
+    f = n(225890),
     g = n(434404),
     A = n(507435),
     S = n(504733),
@@ -26,8 +26,8 @@ var i = n(735250),
     x = n(471253),
     R = n(565799),
     v = n(590415),
-    L = n(911560),
-    Z = n(488131),
+    Z = n(911560),
+    L = n(488131),
     P = n(814820),
     b = n(314897),
     D = n(523746),
@@ -70,8 +70,8 @@ var i = n(735250),
     eN = n(461135),
     eh = n(296571),
     eC = n(587737),
-    ef = n(482239),
-    ep = n(328749),
+    ep = n(482239),
+    ef = n(328749),
     eg = n(4305),
     eA = n(910548),
     eS = n(981631),
@@ -123,7 +123,7 @@ function ev(e) {
         usernameHook: s
     });
 }
-let eL = Object.freeze({
+let eZ = Object.freeze({
     [eS.uaV.DEFAULT]: void 0,
     [eS.uaV.REPLY]: void 0,
     [eS.uaV.CHAT_INPUT_COMMAND]: void 0,
@@ -181,7 +181,7 @@ let eL = Object.freeze({
                 messageId: t.id
             });
         return n.isThread()
-            ? (0, i.jsx)(ef.Z, {
+            ? (0, i.jsx)(ep.Z, {
                   message: t,
                   channel: n,
                   compact: a,
@@ -397,9 +397,9 @@ let eL = Object.freeze({
                     var n;
                     let i = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
                     if (null != i) {
-                        await L.Z.loadThread(i);
+                        await Z.Z.loadThread(i);
                         let t = j.Z.getChannel(i);
-                        null != t && (0, Z.ok)(t, e.shiftKey);
+                        null != t && (0, L.ok)(t, e.shiftKey);
                     }
                 },
                 [t]
@@ -439,7 +439,7 @@ let eL = Object.freeze({
             onContextMenuThread: _
         });
     },
-    [eS.uaV.THREAD_STARTER_MESSAGE]: ep.Z,
+    [eS.uaV.THREAD_STARTER_MESSAGE]: ef.Z,
     [eS.uaV.GUILD_INVITE_REMINDER]: function (e) {
         let { message: t, channel: n, compact: a } = e,
             l = (0, s.e7)([G.default], () => G.default.getCurrentUser()),
@@ -517,7 +517,7 @@ let eL = Object.freeze({
                 guildId: n.guild_id,
                 messageId: t.id
             }),
-            r = (0, s.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(n.id), [n.id]);
+            r = (0, s.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(n.id), [n.id]);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(eT.Z, {
@@ -525,7 +525,7 @@ let eL = Object.freeze({
                     compact: a,
                     usernameHook: l
                 }),
-                null != r && r.name === t.content ? (0, i.jsx)(p.Z, { code: ''.concat(n.guild_id, '-').concat(r.id) }) : null
+                null != r && r.name === t.content ? (0, i.jsx)(f.Z, { code: ''.concat(n.guild_id, '-').concat(r.id) }) : null
             ]
         });
     },
@@ -682,7 +682,7 @@ let eL = Object.freeze({
 t.Z = a.memo(function (e) {
     let { message: t, channel: n, compact: a, disableInteraction: s } = e,
         { type: l } = t,
-        r = eL[l];
+        r = eZ[l];
     if (null == r) {
         var o;
         return (o = Error('unknown message type '.concat(t.type))), H.Z.captureException(o), new m.Z('SystemMessage').error('', o), null;

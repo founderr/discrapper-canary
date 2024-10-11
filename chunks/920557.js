@@ -22,22 +22,22 @@ var i = n(735250),
     N = n(139256),
     h = n(294608),
     C = n(689938),
-    f = n(490351);
-function p(e) {
+    p = n(490351);
+function f(e) {
     let { percentage: t, label: n, canShowVoterDetails: s, answerId: l } = e,
         o = (0, _.Dt)(),
         { channelId: c, messageId: d } = (0, h.pE)(),
         [T, N] = a.useState(''),
-        [C, p] = a.useState(!1),
+        [C, f] = a.useState(!1),
         g = '' !== T && C,
         A = a.useCallback(() => {
             N((0, m.e1)(d, c, l));
         }, [d, c, l]),
         S = a.useCallback(() => {
-            A(), p(!0);
+            A(), f(!0);
         }, [A]),
         M = a.useCallback(() => {
-            p(!1);
+            f(!1);
         }, []),
         O = a.useCallback(() => {
             (0, I.n)({
@@ -58,12 +58,12 @@ function p(e) {
     let x = (0, i.jsx)(u.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
-        className: f.voteCount,
+        className: p.voteCount,
         scaleFontToUserSetting: !0,
         children: n
     });
     return (0, i.jsxs)('div', {
-        className: f.votesData,
+        className: p.votesData,
         children: [
             s
                 ? (0, i.jsxs)(i.Fragment, {
@@ -85,7 +85,7 @@ function p(e) {
                                       onFocus: S,
                                       onBlur: M,
                                       onClick: O,
-                                      className: f.voteCountButton,
+                                      className: p.voteCountButton,
                                       'aria-describedby': g ? o : void 0,
                                       look: u.Button.Looks.BLANK,
                                       size: u.Button.Sizes.NONE,
@@ -123,7 +123,7 @@ function g(e) {
             'animate-always'
         );
     return (0, i.jsx)(o.animated.span, {
-        className: f.votePercentageBar,
+        className: p.votePercentageBar,
         style: a,
         'aria-hidden': !0
     });
@@ -171,9 +171,9 @@ function S(e) {
         E = t.shouldAnimateTransition;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: l()(f.answerInner, {
-                [f.currentlyVoting]: a !== T.Y7.LIST,
-                [f.selected]: c
+            className: l()(p.answerInner, {
+                [p.currentlyVoting]: a !== T.Y7.LIST,
+                [p.selected]: c
             }),
             children: [
                 s
@@ -184,11 +184,11 @@ function S(e) {
                     : null,
                 null != t.pollMedia.emoji &&
                     (0, i.jsx)(N.sc, {
-                        className: f.emoji,
+                        className: p.emoji,
                         emoji: t.pollMedia.emoji
                     }),
                 (0, i.jsx)(u.Text, {
-                    className: f.label,
+                    className: p.label,
                     variant: 'text-sm/semibold',
                     color: 'none',
                     scaleFontToUserSetting: !0,
@@ -196,7 +196,7 @@ function S(e) {
                 }),
                 t.didSelfVote && (0, i.jsx)(r.T, { children: C.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
                 s &&
-                    (0, i.jsx)(p, {
+                    (0, i.jsx)(f, {
                         percentage: t.votesPercentage,
                         label: t.votes,
                         canShowVoterDetails: o,
@@ -208,7 +208,7 @@ function S(e) {
                     didSelfVote: d,
                     isVictor: _,
                     isExpired: n,
-                    className: f.answerSelectionIcon
+                    className: p.answerSelectionIcon
                 })
             ]
         })
@@ -217,8 +217,8 @@ function S(e) {
 function M(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: a, canTapAnswers: s, ...l } = e;
     return (0, i.jsx)(N.$e, {
-        className: f.answersContainer,
-        answerClassName: f.answer,
+        className: p.answersContainer,
+        answerClassName: p.answer,
         answersInteraction: n,
         canTapAnswers: s,
         renderAnswerContent: (e) =>

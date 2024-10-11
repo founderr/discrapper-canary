@@ -21,24 +21,24 @@ var i = n(735250),
 function h(e) {
     let { onOpen: t, onClose: n, className: h } = e,
         C = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        f = a.useRef(null),
-        p = (0, s.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
+        p = a.useRef(null),
+        f = (0, s.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
         { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
         A = (0, s.e7)([r.Z], () => g && r.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: p },
+        badgeState: { badgeForYou: f },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n, a) =>
             (0, i.jsxs)('div', {
-                ref: f,
+                ref: p,
                 className: N.recentsIcon,
                 children: [
                     g &&
                         (0, i.jsx)(I.Z, {
-                            inboxIconRef: f,
+                            inboxIconRef: p,
                             recentsPopoutShown: t
                         }),
                     (0, i.jsx)(d.U, {
@@ -51,7 +51,7 @@ function h(e) {
                             'aria-label': T.Z.Messages.INBOX,
                             tooltip: t ? null : T.Z.Messages.INBOX,
                             selected: t,
-                            showBadge: p || A || a
+                            showBadge: f || A || a
                         })
                     })
                 ]

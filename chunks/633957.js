@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(314897),
     h = n(592125),
     C = n(158776),
-    f = n(594174),
-    p = n(823379),
+    p = n(594174),
+    f = n(823379),
     g = n(226378),
     A = n(701488),
     S = n(689938),
@@ -32,23 +32,23 @@ function O(e) {
     let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: R } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, r.O)(),
-        L = (0, s.e7)([h.Z], () => h.Z.getChannel(O)),
-        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
+        Z = (0, s.e7)([h.Z], () => h.Z.getChannel(O)),
+        L = (null == Z ? void 0 : null === (t = Z.isThread) || void 0 === t ? void 0 : t.call(Z)) ? (null == Z ? void 0 : Z.parent_id) : O,
         P = (0, s.e7)([N.default], () => N.default.getId()),
         {
             embeddedActivity: b,
             currentEmbeddedActivity: D,
             activityLaunchState: j
         } = (0, s.cj)([o.ZP], () => ({
-            embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != Z ? Z : '').find((e) => e.applicationId === n.id),
+            embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != L ? L : '').find((e) => e.applicationId === n.id),
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
-            activityLaunchState: o.ZP.getLaunchState(n.id, null != Z ? Z : void 0)
+            activityLaunchState: o.ZP.getLaunchState(n.id, null != L ? L : void 0)
         })),
-        U = (0, s.Wu)([f.default], () => {
+        U = (0, s.Wu)([p.default], () => {
             var e;
             return Array.from(null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e ? e : [])
-                .map((e) => f.default.getUser(e))
-                .filter(p.lm);
+                .map((e) => p.default.getUser(e))
+                .filter(f.lm);
         }),
         y = (0, s.e7)([C.Z], () => {
             var e;
@@ -69,7 +69,7 @@ function O(e) {
             embeddedActivity: b,
             joinability: k,
             currentEmbeddedActivity: D,
-            channel: L
+            channel: Z
         }),
         w = a.useId(),
         V = null != j && j.isLaunching && j.componentId === w,

@@ -22,8 +22,8 @@ var i,
     N = n(293245),
     h = n(417363),
     C = n(941128),
-    f = n(780570),
-    p = n(358085),
+    p = n(780570),
+    f = n(358085),
     g = n(814225),
     A = n(346329),
     S = n(701560),
@@ -52,8 +52,8 @@ let v = Object.freeze({
         [M.apO.MOVE_UP]: 'queued',
         [M.apO.RESUME]: 'paused'
     }),
-    L = () => [O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class Z extends (a = r.Component) {
+    Z = () => [O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, O.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
+class L extends (a = r.Component) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
@@ -72,7 +72,7 @@ class Z extends (a = r.Component) {
             case 'locate':
                 return O.Z.Messages.GAME_ACTION_BUTTON_LOCATE;
             case 'uninstalling':
-                let t = L();
+                let t = Z();
                 return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
             case 'queued':
                 return O.Z.Messages.GAME_ACTION_BUTTON_QUEUED;
@@ -91,7 +91,7 @@ class Z extends (a = r.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let i = null != n ? v[n] : null;
-        return null != i ? i : null != t && t.type === M.vxO.UNINSTALLING ? 'uninstalling' : (0, p.isWeb)() ? 'play' : 'unsupported_os';
+        return null != i ? i : null != t && t.type === M.vxO.UNINSTALLING ? 'uninstalling' : (0, f.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: a, isPlayShiny: s, onDropdownOpen: r, onDropdownClose: o, analyticsListSort: c, analyticsListIndex: d } = this.props;
@@ -137,9 +137,9 @@ class Z extends (a = r.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = f.KJ(t);
+        let n = p.KJ(t);
         if (null == n) return null;
-        let i = n.type === M.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
+        let i = n.type === M.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : p.xI(Number(n.progress), Number(n.total));
         return (0, l.jsx)(d.Progress, {
             percent: i,
             size: d.Progress.Sizes.XSMALL,
@@ -213,7 +213,7 @@ function P(e) {
         [i, a] = (0, o.Wu)([h.Z, C.Z], () => [(0, T.i)(t, h.Z, C.Z), h.Z.getState(t.id, t.branchId)], [t]),
         s = (0, o.e7)([N.Z], () => N.Z.isSyncing(t.id, t.branchId), [t]),
         r = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
-    return (0, l.jsx)(Z, {
+    return (0, l.jsx)(L, {
         ...e,
         analyticsContext: n,
         actionState: i,
@@ -222,11 +222,11 @@ function P(e) {
         hasNoBuild: r
     });
 }
-R(Z, 'defaultProps', {
+R(L, 'defaultProps', {
     fullWidth: !1,
     size: d.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'
 }),
-    R(Z, 'ButtonStates', i);
+    R(L, 'ButtonStates', i);

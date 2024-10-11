@@ -16,8 +16,8 @@ var i = n(735250),
     N = n(600164),
     h = n(479446),
     C = n(930114),
-    f = n(981632),
-    p = n(108989),
+    p = n(981632),
+    f = n(108989),
     g = n(703656),
     A = n(314897),
     S = n(82142),
@@ -26,8 +26,8 @@ var i = n(735250),
     x = n(509545),
     R = n(55563),
     v = n(199480),
-    L = n(626135),
-    Z = n(669079),
+    Z = n(626135),
+    L = n(669079),
     P = n(74538),
     b = n(296848),
     D = n(51144),
@@ -287,7 +287,7 @@ class V extends a.Component {
                 let { channelId: t, code: n, content: i, type: a, giftInfo: s } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    L.default.track(U.rMx.OPEN_MODAL, {
+                    Z.default.track(U.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
@@ -331,13 +331,13 @@ class V extends a.Component {
                     children: [
                         !t &&
                             y.eZ.includes(e.giftStyle) &&
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(f.Z, {
                                 className: k.snow,
                                 wind: 5
                             }),
                         a && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(f.Z, {
+                            (0, i.jsx)(p.Z, {
                                 defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: r
@@ -362,7 +362,7 @@ t.Z = c.ZP.connectStores([S.Z, R.Z, O.default, M.Z, x.Z, A.default, m.Z], (e) =>
         subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
         isSelfGift: null != a ? A.default.getId() === a.userId : A.default.getId() === n.id,
         resolved: S.Z.getIsResolved(t),
-        libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, M.Z) : null,
+        libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? L.z2(a.entitlementBranches, s, M.Z) : null,
         useReducedMotion: r
     };
 })(H);

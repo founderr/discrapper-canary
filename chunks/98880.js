@@ -3,7 +3,7 @@ t.d(n, {
         return i;
     },
     cG: function () {
-        return Q;
+        return X;
     },
     kA: function () {
         return K;
@@ -285,8 +285,8 @@ function Y() {
 function G(e) {
     let { application: n } = e,
         t = (0, R.yJ)(n);
-    if (null == t) return null;
-    let i = (0, f.fD)(t);
+    if (null == t || !(0, R.BQ)(n)) return null;
+    let i = (0, f.fD)(n, t);
     return null == i
         ? null
         : (0, l.jsx)(d.Tooltip, {
@@ -316,7 +316,7 @@ function z(e) {
                 disableFadeIn: a
             });
     }
-    return (0, l.jsx)(X, {
+    return (0, l.jsx)(Q, {
         fallbackColor: t,
         disableFadeIn: a
     });
@@ -374,7 +374,7 @@ function J(e) {
             size: 600
         });
     return null == o
-        ? (0, l.jsx)(X, {
+        ? (0, l.jsx)(Q, {
               fallbackColor: t,
               disableFadeIn: i
           })
@@ -384,14 +384,14 @@ function J(e) {
               className: s()(D.bannerImage, { [D.disableFadeIn]: i })
           });
 }
-function X(e) {
+function Q(e) {
     let { fallbackColor: n, disableFadeIn: t } = e;
     return (0, l.jsx)('div', {
         className: s()(D.bannerImage, { [D.disableFadeIn]: t }),
         style: { backgroundColor: n }
     });
 }
-function Q(e) {
+function X(e) {
     let { application: n, sectionName: t, resultsPosition: i, query: a, installOnDemand: l, location: r } = e,
         { pushHistory: s } = (0, M.hH)();
     return o.useCallback(
@@ -416,7 +416,7 @@ function Q(e) {
     );
 }
 function K(e) {
-    let n = Q(e);
+    let n = X(e);
     return (0, l.jsx)(w, {
         ...e,
         onClick: n

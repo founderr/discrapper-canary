@@ -16,8 +16,8 @@ var i,
     N = n(592745),
     h = n(952164),
     C = n(768419),
-    f = n(456432),
-    p = n(347475),
+    p = n(456432),
+    f = n(347475),
     g = n(789407),
     A = n(598077),
     S = n(757266),
@@ -26,8 +26,8 @@ var i,
     x = n(283595),
     R = n(293273),
     v = n(594174),
-    L = n(181106),
-    Z = n(417363),
+    Z = n(181106),
+    L = n(417363),
     P = n(768581),
     b = n(358085),
     D = n(804739),
@@ -143,7 +143,7 @@ class G extends (i = s.PureComponent) {
                 let { channelId: n, guildId: i, message: s, analyticsLocations: l } = this.props;
                 return null == n
                     ? null
-                    : (0, a.jsx)(p.Z, {
+                    : (0, a.jsx)(f.Z, {
                           ...t,
                           userId: e.id,
                           guildId: null != i ? i : void 0,
@@ -154,7 +154,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
-                return (0, a.jsx)(f.Z, {
+                return (0, a.jsx)(p.Z, {
                     guildId: null != n ? n : void 0,
                     channelId: t,
                     source: 'Invite Embed',
@@ -212,13 +212,13 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = l.ZP.connectStores([C.Z, M.Z, R.Z, x.Z, N.Z, Z.Z, S.Z, L.Z, v.default, O.ZP], (e) => {
+    (t.Z = l.ZP.connectStores([C.Z, M.Z, R.Z, x.Z, N.Z, L.Z, S.Z, Z.Z, v.default, O.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: l } = e,
             { id: r } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? M.Z.getParty(t.party.id) : null,
             c = null != r ? R.Z.getApplicationActivity(r) : R.Z.findActivity((e) => e.type === U.IIU.LISTENING),
             d = !1;
-        null != r && (d = L.Z.getState(r, U.mFx.JOIN) === U.OcF.LOADING);
+        null != r && (d = Z.Z.getState(r, U.mFx.JOIN) === U.OcF.LOADING);
         let u = Array.from(null != o ? o : []).map((e) => {
                 let t = null != l ? O.ZP.getMember(l, e) : null,
                     n = null != t ? t.nick : null,
@@ -248,7 +248,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
                 (0, D.t)({
                     LibraryApplicationStore: x.Z,
                     LaunchableGameStore: N.Z,
-                    DispatchApplicationStore: Z.Z,
+                    DispatchApplicationStore: L.Z,
                     ConnectedAppsStore: S.Z,
                     applicationId: r
                 })

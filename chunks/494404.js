@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     },
     h4: function () {
-        return Z;
+        return L;
     },
     nH: function () {
         return P;
@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(703656),
     h = n(210887),
     C = n(592125),
-    f = n(375954),
-    p = n(496675),
+    p = n(375954),
+    f = n(496675),
     g = n(933429),
     A = n(451478),
     S = n(626135),
@@ -50,10 +50,10 @@ function v(e, t, n) {
         e
     );
 }
-function L(e) {
+function Z(e) {
     e.stopPropagation();
 }
-let Z = (e) => {
+let L = (e) => {
         let { title: t, icon: n, children: a, className: s } = e;
         return (0, i.jsxs)('div', {
             className: l()(s, R.header),
@@ -142,14 +142,14 @@ class b extends a.PureComponent {
             });
     }
 }
-let D = d.ZP.connectStores([p.Z], (e) => {
+let D = d.ZP.connectStores([f.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && f.Z.can(O.Plq.MANAGE_MESSAGES, t) };
 })(b);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: s, loading: r, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: N, getProTip: C, scrollerClassName: f, className: p, listName: v } = e,
-        Z = a.useRef(null),
-        P = (0, I.Z)(v, Z),
+    let { analyticsName: t, items: n, hasMore: s, loading: r, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: N, getProTip: C, scrollerClassName: p, className: f, listName: v } = e,
+        L = a.useRef(null),
+        P = (0, I.Z)(v, L),
         b = (0, d.e7)([g.Z], () => g.Z.hasNotice()),
         D = (0, d.e7)([A.Z], () => A.Z.windowSize());
     a.useEffect(() => {
@@ -158,11 +158,11 @@ function j(e) {
         a.useEffect(() => {
             function e() {
                 var e;
-                null === (e = Z.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
+                null === (e = L.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null === (e = Z.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
+                null === (e = L.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
                 M.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t),
@@ -174,7 +174,7 @@ function j(e) {
         }, []);
     let j = a.useCallback(() => {
             var e;
-            let t = null === (e = Z.current) || void 0 === e ? void 0 : e.getScrollerState();
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == _ || _());
         }, [s, _, r]),
         U = [],
@@ -244,18 +244,18 @@ function j(e) {
     b && (F.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
-        className: l()(p, R.messagesPopoutWrap),
+        className: l()(f, R.messagesPopoutWrap),
         style: F,
-        onClick: L,
-        onDoubleClick: L,
+        onClick: Z,
+        onDoubleClick: Z,
         'aria-label': e['aria-label'],
         children: (0, i.jsxs)(u.HeadingLevel, {
             component: E(),
             children: [
                 (0, i.jsxs)(u.AdvancedScroller, {
-                    className: l()(R.messagesPopout, f),
+                    className: l()(R.messagesPopout, p),
                     onScroll: w ? j : void 0,
-                    ref: Z,
+                    ref: L,
                     children: [
                         (0, i.jsx)(c.bG, {
                             navigator: P,
@@ -279,12 +279,12 @@ function j(e) {
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: s, messages: l, hasMore: r, loading: o, loadMore: c, onJump: u, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: p, getProTip: g, scrollerClassName: A, className: S, onCloseMessage: M, listName: v } = e,
-        L = (0, d.e7)([f.Z], () => {
-            let e = null != s ? f.Z.getMessages(s.id) : null;
+    let { analyticsName: t, onFetch: n, channel: s, messages: l, hasMore: r, loading: o, loadMore: c, onJump: u, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: f, getProTip: g, scrollerClassName: A, className: S, onCloseMessage: M, listName: v } = e,
+        Z = (0, d.e7)([p.Z], () => {
+            let e = null != s ? p.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function Z(e, n) {
+    function L(e, n) {
         let { id: i, blocked: a, author: s, channel_id: l } = e;
         if (a)
             _.Z.show({
@@ -292,7 +292,7 @@ function U(e) {
                 body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: s.username }),
                 confirmText: x.Z.Messages.OKAY
             });
-        else if (!L) {
+        else if (!Z) {
             let e = C.Z.getChannel(l);
             null != e && (E.Z.trackJump(l, i, t), (0, N.uL)(O.Z5c.CHANNEL(e.getGuildId(), l, i))), null == u || u(n);
         }
@@ -324,7 +324,7 @@ function U(e) {
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != p) return p(t, (e) => Z(t, e));
+            if (null != f) return f(t, (e) => L(t, e));
             let a = [];
             return null == n
                 ? []
@@ -342,9 +342,9 @@ function U(e) {
                                   (0, i.jsx)(D, {
                                       channel: s,
                                       message: t,
-                                      jumping: L,
+                                      jumping: Z,
                                       canCloseAllMessages: I,
-                                      jumpTo: Z,
+                                      jumpTo: L,
                                       onCloseMessage: M
                                   })
                               ]

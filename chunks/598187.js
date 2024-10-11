@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(528011),
     h = n(533244),
     C = n(825829),
-    f = n(226192),
-    p = n(36459),
+    p = n(226192),
+    f = n(36459),
     g = n(434404),
     A = n(518950),
     S = n(347475),
@@ -30,8 +30,8 @@ var i = n(735250),
     x = n(594174),
     R = n(464891),
     v = n(348238),
-    L = n(83561),
-    Z = n(834129),
+    Z = n(83561),
+    L = n(834129),
     P = n(981631),
     b = n(674563),
     D = n(689938),
@@ -215,14 +215,14 @@ function F(e) {
     var t;
     let { message: n, compact: s } = e,
         { joinAttempts: l, raidDatetime: r, dmsSent: d, raidType: m, resolvedReason: T } = (0, C.FL)(n),
-        p = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
-        g = null !== (t = null == p ? void 0 : p.guild_id) && void 0 !== t ? t : null,
+        f = (0, _.e7)([M.Z], () => M.Z.getChannel(n.channel_id), [n.channel_id]),
+        g = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: A } = (0, N.mI)(g),
         S = (0, v.sR)(n.author.id, n.channel_id),
         O = a.useCallback(() => {
-            let e = null == p ? void 0 : p.guild_id;
-            null != e && (0, f.kW)(n.id, e);
-        }, [n.id, p]),
+            let e = null == f ? void 0 : f.guild_id;
+            null != e && (0, p.kW)(n.id, e);
+        }, [n.id, f]),
         x = m === u.$.DM_RAID,
         R = x ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
@@ -367,8 +367,8 @@ function w(e) {
                     onClick: function () {
                         null != l &&
                             null != c &&
-                            (0, p.UE)(l, c, () => {
-                                (0, m.c)(d), (0, p.T9)(l);
+                            (0, f.UE)(l, c, () => {
+                                (0, m.c)(d), (0, f.T9)(l);
                             });
                     },
                     color: I.Button.Colors.LINK,
@@ -446,15 +446,15 @@ function H(e) {
         {
             avatarSrc: r,
             eventHandlers: { onMouseEnter: o, onMouseLeave: c }
-        } = (0, L.m)(!0),
+        } = (0, Z.m)(!0),
         { notificationType: u } = (0, C.FL)(a),
         _ = null == u || u === d.p.RAID;
     return (0, i.jsx)('div', {
         onMouseEnter: o,
         onMouseLeave: c,
-        children: (0, i.jsx)(Z.Z, {
+        children: (0, i.jsx)(L.Z, {
             className: l()(j.mainContainer, { [j.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(L.S, { src: r }),
+            iconNode: n ? null : (0, i.jsx)(Z.S, { src: r }),
             iconContainerClassName: j.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {

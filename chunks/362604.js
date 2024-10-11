@@ -23,14 +23,14 @@ var i = n(735250),
     h = n(809858);
 function C(e) {
     let { message: t, channel: s, compact: C } = e,
-        f = (0, r.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [p, g] = a.useState(null);
+        p = (0, r.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [f, g] = a.useState(null);
     return (a.useEffect(() => {
         let e = setInterval(() => {
-            f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
+            p.length > 0 && g(p[Math.floor(Math.random() * p.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [f]),
+    }, [p]),
     null == s.guild_id)
         ? null
         : (0, i.jsxs)('div', {
@@ -88,10 +88,10 @@ function C(e) {
                                           (0, m.O)(t.id, s);
                                   },
                                   children:
-                                      null != p
+                                      null != f
                                           ? (0, i.jsx)(_.ZP, {
                                                 size: 32,
-                                                sticker: p
+                                                sticker: f
                                             })
                                           : (0, i.jsx)(o.ReactionIcon, {
                                                 size: 'md',

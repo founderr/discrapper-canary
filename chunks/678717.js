@@ -27,8 +27,8 @@ var v = n(392750),
     _ = n(926976),
     j = n(592197),
     C = n(860337),
-    T = n(789654),
-    S = n(691867),
+    S = n(789654),
+    T = n(691867),
     N = n(916790),
     y = n(645973),
     I = n(903502),
@@ -125,12 +125,12 @@ function Y() {
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    render: () => (0, r.jsx)(T.Z, {})
+                    render: () => (0, r.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(S.Z, {})
+                    render: () => (0, r.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'overlays',

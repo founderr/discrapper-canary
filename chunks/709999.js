@@ -19,8 +19,8 @@ var a = r(735250),
     E = r(906732),
     I = r(1585),
     x = r(333867),
-    T = r(197115),
-    v = r(300284),
+    v = r(197115),
+    T = r(300284),
     S = r(876917),
     L = r(642619),
     N = r(210887),
@@ -108,10 +108,10 @@ t.Z = function (e) {
         n.useEffect(() => {
             null == o || o(J);
         }, [o]);
-    let eE = (0, v.Z)({ analyticsLocations: q }),
+    let eE = (0, T.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: eT } = (0, P.W)({ product: t }),
-        ev = () => {
+        { handleUseNow: ex, isApplying: ev } = (0, P.W)({ product: t }),
+        eT = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
@@ -141,7 +141,7 @@ t.Z = function (e) {
         eO = () =>
             (0, a.jsx)('div', {
                 className: z.hoverUpsellContainer,
-                children: (0, a.jsx)(T.Z, {
+                children: (0, a.jsx)(v.Z, {
                     fullWidth: !0,
                     className: z.__invalid_premiumSubscribeButton,
                     disabled: ep,
@@ -211,8 +211,8 @@ t.Z = function (e) {
                         : ed
                           ? (0, a.jsx)(Y, {
                                 disabled: ep,
-                                onClick: e_ ? ex : ev,
-                                submitting: eT,
+                                onClick: e_ ? ex : eT,
+                                submitting: ev,
                                 children: V.Z.Messages.COLLECTIBLES_USE_NOW
                             })
                           : (0, a.jsx)(Y, {

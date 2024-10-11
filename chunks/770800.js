@@ -15,11 +15,11 @@ var r = n(735250),
     f = n(5192),
     C = n(476221),
     y = n(481250),
-    D = n(206314),
-    S = n(513547),
+    S = n(206314),
+    D = n(513547),
     R = n(65154),
-    v = n(689938),
-    b = n(701491),
+    b = n(689938),
+    v = n(701491),
     E = n(113207);
 class Z extends a.PureComponent {
     render() {
@@ -32,7 +32,7 @@ class Z extends a.PureComponent {
             s = o().map(i, (e, t) => {
                 if ('receiverReports' !== t && (!n || 'localAddress' !== t))
                     return (0, r.jsx)(
-                        S.ck,
+                        D.ck,
                         {
                             label: t,
                             value: e
@@ -68,7 +68,7 @@ class Z extends a.PureComponent {
                 return (
                     null == s && (s = null != i ? i.username : e.id),
                     (0, r.jsx)(
-                        D.Z,
+                        S.Z,
                         {
                             label: e.id,
                             valueRendered: [n, a],
@@ -80,8 +80,8 @@ class Z extends a.PureComponent {
             });
         return (0, r.jsxs)(l.FormSection, {
             tag: l.FormTitleTags.H2,
-            title: v.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? ' - ' + t : ''),
-            className: b.allowSelection,
+            title: b.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? ' - ' + t : ''),
+            className: v.allowSelection,
             children: [(0, y.a)(s), 0 === d.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }), (0, y.a)(d)]
         });
     }

@@ -20,17 +20,17 @@ var i = n(735250),
 let T = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: f, burst_colors: p, readOnly: g, isLurking: A, isGuest: S, isPendingMember: M, type: O, emojiSize: x } = e,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: p, burst_colors: f, readOnly: g, isLurking: A, isGuest: S, isPendingMember: M, type: O, emojiSize: x } = e,
             R = O === _.O.BURST,
             v = (0, E.y4)(h, C, O),
-            L = (0, u.v)(R && null != p ? p : []),
-            Z = a ? m : I,
-            P = R ? f : N,
+            Z = (0, u.v)(R && null != f ? f : []),
+            L = a ? m : I,
+            P = R ? p : N,
             b = (0, d.y)(P, E.aO),
             D = {};
-        if (R && null != L) {
+        if (R && null != Z) {
             var j;
-            let { accentColor: e, backgroundColor: i, opacity: a } = L,
+            let { accentColor: e, backgroundColor: i, opacity: a } = Z,
                 s = null !== (j = (0, r.wK)(null != i ? i : '', a)) && void 0 !== j ? j : '';
             v && (D.borderColor = i), (D.background = s), (t = e), (n = e);
         }
@@ -40,21 +40,21 @@ let T = a.memo(function (e) {
             borderColor: n
         };
         return (0, i.jsxs)('div', {
-            className: l()(Z.reaction, Z.reactionInner, T, {
-                [Z.reactionMe]: v,
-                [Z.reactionReadOnly]: g && !A && !M && !S
+            className: l()(L.reaction, L.reactionInner, T, {
+                [L.reactionMe]: v,
+                [L.reactionReadOnly]: g && !A && !M && !S
             }),
             style: D,
             children: [
                 (0, i.jsx)(o.Z, {
-                    className: l()({ [Z.hideEmoji]: s }),
+                    className: l()({ [L.hideEmoji]: s }),
                     emojiId: c.id,
                     emojiName: c.name,
                     size: x,
                     animated: R && c.animated
                 }),
                 (0, i.jsx)('div', {
-                    className: Z.reactionCount,
+                    className: L.reactionCount,
                     style: U,
                     children: P
                 })

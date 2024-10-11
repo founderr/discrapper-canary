@@ -29,17 +29,17 @@ var s = E(735250),
     c = E(823379),
     O = E(624138),
     U = E(909746),
-    d = E(981631),
-    G = E(689938),
+    G = E(981631),
+    d = E(689938),
     M = E(451316);
 function R(e, _) {
     let E = U.vc[e.targetType];
     return null != E && !0 === E[_.key];
 }
 let g = {
-    [d.vB8.CREATE]: M.typeCreate,
-    [d.vB8.UPDATE]: M.typeUpdate,
-    [d.vB8.DELETE]: M.typeDelete
+    [G.vB8.CREATE]: M.typeCreate,
+    [G.vB8.UPDATE]: M.typeUpdate,
+    [G.vB8.DELETE]: M.typeDelete
 };
 function C(e) {
     let { applicationId: _ } = e,
@@ -60,34 +60,34 @@ class f extends n.PureComponent {
             M.icon,
             g[E],
             ((e = n),
-            (_ = t) === d.rsA.MESSAGE_DELETE
+            (_ = t) === G.rsA.MESSAGE_DELETE
                 ? M.targetMessage
-                : _ === d.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === d.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === d.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === d.rsA.AUTO_MODERATION_QUARANTINE_USER
+                : _ === G.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === G.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === G.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === G.rsA.AUTO_MODERATION_QUARANTINE_USER
                   ? M.autoModerationBlockMessage
                   : {
-                        [d.KFR.ALL]: M.targetAll,
-                        [d.KFR.GUILD]: M.targetGuild,
-                        [d.KFR.CHANNEL]: M.targetChannel,
-                        [d.KFR.CHANNEL_OVERWRITE]: M.targetChannel,
-                        [d.KFR.USER]: M.targetMember,
-                        [d.KFR.ROLE]: M.targetRole,
-                        [d.KFR.ONBOARDING_PROMPT]: M.targetOnboarding,
-                        [d.KFR.GUILD_ONBOARDING]: M.targetOnboarding,
-                        [d.KFR.HOME_SETTINGS]: M.targetOnboarding,
-                        [d.KFR.INTEGRATION]: M.targetIntegration,
-                        [d.KFR.INVITE]: M.targetInvite,
-                        [d.KFR.WEBHOOK]: M.targetWebhook,
-                        [d.KFR.EMOJI]: M.targetEmoji,
-                        [d.KFR.STICKER]: M.targetSticker,
-                        [d.KFR.STAGE_INSTANCE]: M.targetStageInstance,
-                        [d.KFR.GUILD_SCHEDULED_EVENT]: M.targetGuildScheduledEvent,
-                        [d.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: M.targetGuildScheduledEvent,
-                        [d.KFR.THREAD]: M.thread,
-                        [d.KFR.APPLICATION_COMMAND]: M.applicationCommand,
-                        [d.KFR.AUTO_MODERATION_RULE]: M.autoModerationRule,
-                        [d.KFR.GUILD_HOME]: M.targetGuildHome,
-                        [d.KFR.GUILD_SOUNDBOARD]: M.targetGuildSoundboard,
-                        [d.KFR.VOICE_CHANNEL_STATUS]: M.targetChannel
+                        [G.KFR.ALL]: M.targetAll,
+                        [G.KFR.GUILD]: M.targetGuild,
+                        [G.KFR.CHANNEL]: M.targetChannel,
+                        [G.KFR.CHANNEL_OVERWRITE]: M.targetChannel,
+                        [G.KFR.USER]: M.targetMember,
+                        [G.KFR.ROLE]: M.targetRole,
+                        [G.KFR.ONBOARDING_PROMPT]: M.targetOnboarding,
+                        [G.KFR.GUILD_ONBOARDING]: M.targetOnboarding,
+                        [G.KFR.HOME_SETTINGS]: M.targetOnboarding,
+                        [G.KFR.INTEGRATION]: M.targetIntegration,
+                        [G.KFR.INVITE]: M.targetInvite,
+                        [G.KFR.WEBHOOK]: M.targetWebhook,
+                        [G.KFR.EMOJI]: M.targetEmoji,
+                        [G.KFR.STICKER]: M.targetSticker,
+                        [G.KFR.STAGE_INSTANCE]: M.targetStageInstance,
+                        [G.KFR.GUILD_SCHEDULED_EVENT]: M.targetGuildScheduledEvent,
+                        [G.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: M.targetGuildScheduledEvent,
+                        [G.KFR.THREAD]: M.thread,
+                        [G.KFR.APPLICATION_COMMAND]: M.applicationCommand,
+                        [G.KFR.AUTO_MODERATION_RULE]: M.autoModerationRule,
+                        [G.KFR.GUILD_HOME]: M.targetGuildHome,
+                        [G.KFR.GUILD_SOUNDBOARD]: M.targetGuildSoundboard,
+                        [G.KFR.VOICE_CHANNEL_STATUS]: M.targetChannel
                     }[e]),
             a
         );
@@ -105,14 +105,14 @@ function p(e) {
                             _.changes.map((t) => {
                                 if (R(_, t)) return null;
                                 let { oldValue: r, newValue: T } = (() => {
-                                        if ((_.action === d.rsA.CHANNEL_UPDATE || _.action === d.rsA.CHANNEL_CREATE) && t.key === d.zUn.TYPE) {
+                                        if ((_.action === G.rsA.CHANNEL_UPDATE || _.action === G.rsA.CHANNEL_CREATE) && t.key === G.zUn.TYPE) {
                                             var e, E;
                                             return {
                                                 oldValue: null !== (e = t.oldValue) && void 0 !== e ? e : (0, u.a5)({ type: t.oldValue }),
                                                 newValue: null !== (E = t.newValue) && void 0 !== E ? E : (0, u.a5)({ type: t.newValue })
                                             };
                                         }
-                                        if (_.action === d.rsA.MEMBER_UPDATE && t.key === d.zUn.COMMUNICATION_DISABLED_UNTIL) {
+                                        if (_.action === G.rsA.MEMBER_UPDATE && t.key === G.zUn.COMMUNICATION_DISABLED_UNTIL) {
                                             let e = l()(t.newValue);
                                             return {
                                                 oldValue: t.oldValue,
@@ -122,7 +122,7 @@ function p(e) {
                                         return t;
                                     })(),
                                     I = (() => {
-                                        if (_.action === d.rsA.MEMBER_ROLE_UPDATE)
+                                        if (_.action === G.rsA.MEMBER_ROLE_UPDATE)
                                             return (function (e) {
                                                 let { newValue: _ } = e;
                                                 return Array.isArray(_)
@@ -138,7 +138,7 @@ function p(e) {
                                                       )
                                                     : null;
                                             })(t);
-                                        if (_.targetType === d.KFR.ROLE || _.action === d.rsA.CHANNEL_OVERWRITE_CREATE || _.action === d.rsA.CHANNEL_OVERWRITE_UPDATE)
+                                        if (_.targetType === G.KFR.ROLE || _.action === G.rsA.CHANNEL_OVERWRITE_CREATE || _.action === G.rsA.CHANNEL_OVERWRITE_UPDATE)
                                             return (function (e, _) {
                                                 let { newValue: E } = e;
                                                 return Array.isArray(E)
@@ -154,7 +154,7 @@ function p(e) {
                                                       )
                                                     : null;
                                             })(t, _);
-                                        if ((_.action === d.rsA.CHANNEL_UPDATE || _.action === d.rsA.THREAD_UPDATE) && t.key === d.zUn.FLAGS)
+                                        if ((_.action === G.rsA.CHANNEL_UPDATE || _.action === G.rsA.THREAD_UPDATE) && t.key === G.zUn.FLAGS)
                                             return (function (e) {
                                                 let { newValue: _, oldValue: E } = e,
                                                     n = [];
@@ -188,7 +188,7 @@ function p(e) {
                                                     ? n
                                                     : null;
                                             })(t);
-                                        else if ((_.action === d.rsA.ONBOARDING_PROMPT_UPDATE || _.action === d.rsA.ONBOARDING_PROMPT_CREATE) && t.key === d.zUn.OPTIONS)
+                                        else if ((_.action === G.rsA.ONBOARDING_PROMPT_UPDATE || _.action === G.rsA.ONBOARDING_PROMPT_CREATE) && t.key === G.zUn.OPTIONS)
                                             return (function (e, _, E) {
                                                 let { newValue: n, oldValue: t } = e,
                                                     r = (e) => {
@@ -222,13 +222,13 @@ function p(e) {
                                                                               className: M.onboardingChangeLogItemTitle,
                                                                               children: [
                                                                                   (0, s.jsx)(f, {
-                                                                                      actionType: d.vB8.UPDATE,
+                                                                                      actionType: G.vB8.UPDATE,
                                                                                       targetType: _.targetType,
                                                                                       action: _.action
                                                                                   }),
                                                                                   (0, s.jsx)(o.Text, {
                                                                                       variant: 'text-md/normal',
-                                                                                      children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format({ title: n })
+                                                                                      children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format({ title: n })
                                                                                   })
                                                                               ]
                                                                           }),
@@ -238,29 +238,29 @@ function p(e) {
                                                                                   N.length > 0 &&
                                                                                       (0, s.jsx)(o.Text, {
                                                                                           variant: 'text-md/normal',
-                                                                                          children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: N.join(', ') })
+                                                                                          children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: N.join(', ') })
                                                                                       }),
                                                                                   D.length > 0 &&
                                                                                       (0, s.jsx)(o.Text, {
                                                                                           variant: 'text-md/normal',
-                                                                                          children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format({ roles: D.join(', ') })
+                                                                                          children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format({ roles: D.join(', ') })
                                                                                       }),
                                                                                   L.length > 0 &&
                                                                                       (0, s.jsx)(o.Text, {
                                                                                           variant: 'text-md/normal',
-                                                                                          children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format({ channels: L.join(', ') })
+                                                                                          children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format({ channels: L.join(', ') })
                                                                                       }),
                                                                                   S.length > 0 &&
                                                                                       (0, s.jsx)(o.Text, {
                                                                                           variant: 'text-md/normal',
-                                                                                          children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({ channels: S.join(', ') })
+                                                                                          children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({ channels: S.join(', ') })
                                                                                       }),
                                                                                   u.map((_, n) =>
                                                                                       (0, s.jsx)(
                                                                                           o.Text,
                                                                                           {
                                                                                               variant: 'text-md/normal',
-                                                                                              children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
+                                                                                              children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
                                                                                                   key: _,
                                                                                                   oldValue: e[_],
                                                                                                   newValue: E[_]
@@ -302,13 +302,13 @@ function p(e) {
                                                                                 className: M.onboardingChangeLogItemTitle,
                                                                                 children: [
                                                                                     (0, s.jsx)(f, {
-                                                                                        actionType: d.vB8.CREATE,
+                                                                                        actionType: G.vB8.CREATE,
                                                                                         targetType: _.targetType,
                                                                                         action: _.action
                                                                                     }),
                                                                                     (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format({ title: t })
+                                                                                        children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format({ title: t })
                                                                                     })
                                                                                 ]
                                                                             }),
@@ -318,12 +318,12 @@ function p(e) {
                                                                                     I.length > 0 &&
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format({ roles: I.join(', ') })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format({ roles: I.join(', ') })
                                                                                         }),
                                                                                     l.length > 0 &&
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format({ channels: l.join(', ') })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format({ channels: l.join(', ') })
                                                                                         })
                                                                                 ]
                                                                             })
@@ -340,13 +340,13 @@ function p(e) {
                                                                             className: M.onboardingChangeLogItemTitle,
                                                                             children: [
                                                                                 (0, s.jsx)(f, {
-                                                                                    actionType: d.vB8.DELETE,
+                                                                                    actionType: G.vB8.DELETE,
                                                                                     targetType: _.targetType,
                                                                                     action: _.action
                                                                                 }),
                                                                                 (0, s.jsx)(o.Text, {
                                                                                     variant: 'text-md/normal',
-                                                                                    children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format({ title: e.title })
+                                                                                    children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format({ title: e.title })
                                                                                 })
                                                                             ]
                                                                         })
@@ -360,12 +360,12 @@ function p(e) {
                                                     'options'
                                                 );
                                             })(t, _, E);
-                                        else if (_.action === d.rsA.HOME_SETTINGS_CREATE || _.action === d.rsA.HOME_SETTINGS_UPDATE)
+                                        else if (_.action === G.rsA.HOME_SETTINGS_CREATE || _.action === G.rsA.HOME_SETTINGS_UPDATE)
                                             return (function (e, _) {
                                                 let { oldValue: E, newValue: n, key: t } = e,
                                                     { targetType: r, action: T } = _;
                                                 switch (t) {
-                                                    case d.zUn.WELCOME_MESSAGE:
+                                                    case G.zUn.WELCOME_MESSAGE:
                                                         return ((e, _) => {
                                                             var E, n, t, r, T;
                                                             let a = S.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
@@ -377,9 +377,9 @@ function p(e) {
                                                                                   className: M.onboardingChangeLogItemTitle,
                                                                                   children: (0, s.jsx)(o.Text, {
                                                                                       variant: 'text-md/normal',
-                                                                                      children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
-                                                                                          oldUser: null !== (t = null == a ? void 0 : a.username) && void 0 !== t ? t : G.Z.Messages.NONE,
-                                                                                          newUser: null !== (r = null == I ? void 0 : I.username) && void 0 !== r ? r : G.Z.Messages.NONE
+                                                                                      children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
+                                                                                          oldUser: null !== (t = null == a ? void 0 : a.username) && void 0 !== t ? t : d.Z.Messages.NONE,
+                                                                                          newUser: null !== (r = null == I ? void 0 : I.username) && void 0 !== r ? r : d.Z.Messages.NONE
                                                                                       })
                                                                                   })
                                                                               })
@@ -392,8 +392,8 @@ function p(e) {
                                                                                   className: M.onboardingChangeLogItemTitle,
                                                                                   children: (0, s.jsx)(o.Text, {
                                                                                       variant: 'text-md/normal',
-                                                                                      children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
-                                                                                          oldMessage: null !== (T = null == _ ? void 0 : _.message) && void 0 !== T ? T : G.Z.Messages.NONE,
+                                                                                      children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
+                                                                                          oldMessage: null !== (T = null == _ ? void 0 : _.message) && void 0 !== T ? T : d.Z.Messages.NONE,
                                                                                           newMessage: e.message
                                                                                       })
                                                                                   })
@@ -404,7 +404,7 @@ function p(e) {
                                                                 children: [l, A]
                                                             });
                                                         })(n, E);
-                                                    case d.zUn.NEW_MEMBER_ACTIONS:
+                                                    case G.zUn.NEW_MEMBER_ACTIONS:
                                                         return ((e, _) => {
                                                             let E = e.map((e) => e.channel_id),
                                                                 n = _.map((e) => e.channel_id),
@@ -422,13 +422,13 @@ function p(e) {
                                                                                     className: M.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, s.jsx)(f, {
-                                                                                            actionType: d.vB8.CREATE,
+                                                                                            actionType: G.vB8.CREATE,
                                                                                             targetType: r,
                                                                                             action: T
                                                                                         }),
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format({ name: e.title })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format({ name: e.title })
                                                                                         })
                                                                                     ]
                                                                                 })
@@ -444,13 +444,13 @@ function p(e) {
                                                                                     className: M.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, s.jsx)(f, {
-                                                                                            actionType: d.vB8.DELETE,
+                                                                                            actionType: G.vB8.DELETE,
                                                                                             targetType: r,
                                                                                             action: T
                                                                                         }),
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format({ name: e.title })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format({ name: e.title })
                                                                                         })
                                                                                     ]
                                                                                 })
@@ -461,7 +461,7 @@ function p(e) {
                                                                 ]
                                                             });
                                                         })(null != E ? E : [], n);
-                                                    case d.zUn.RESOURCE_CHANNELS:
+                                                    case G.zUn.RESOURCE_CHANNELS:
                                                         return ((e, _) => {
                                                             let E = e.map((e) => e.channel_id),
                                                                 n = _.map((e) => e.channel_id),
@@ -479,13 +479,13 @@ function p(e) {
                                                                                     className: M.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, s.jsx)(f, {
-                                                                                            actionType: d.vB8.CREATE,
+                                                                                            actionType: G.vB8.CREATE,
                                                                                             targetType: r,
                                                                                             action: T
                                                                                         }),
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format({ name: e.title })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format({ name: e.title })
                                                                                         })
                                                                                     ]
                                                                                 })
@@ -501,13 +501,13 @@ function p(e) {
                                                                                     className: M.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, s.jsx)(f, {
-                                                                                            actionType: d.vB8.DELETE,
+                                                                                            actionType: G.vB8.DELETE,
                                                                                             targetType: r,
                                                                                             action: T
                                                                                         }),
                                                                                         (0, s.jsx)(o.Text, {
                                                                                             variant: 'text-md/normal',
-                                                                                            children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format({ name: e.title })
+                                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format({ name: e.title })
                                                                                         })
                                                                                     ]
                                                                                 })
@@ -599,9 +599,9 @@ function p(e) {
                                                           variant: 'code',
                                                           color: (function (e) {
                                                               switch (e) {
-                                                                  case d.vB8.CREATE:
+                                                                  case G.vB8.CREATE:
                                                                       return 'text-positive';
-                                                                  case d.vB8.DELETE:
+                                                                  case G.vB8.DELETE:
                                                                       return 'status-danger';
                                                                   default:
                                                                       return 'text-warning';
@@ -651,46 +651,46 @@ function p(e) {
         ),
         i = n.useMemo(() => {
             switch (_.targetType) {
-                case d.KFR.GUILD:
+                case G.KFR.GUILD:
                     return I(U.pY());
-                case d.KFR.CHANNEL:
-                case d.KFR.CHANNEL_OVERWRITE:
+                case G.KFR.CHANNEL:
+                case G.KFR.CHANNEL_OVERWRITE:
                     return I(U.ML());
-                case d.KFR.USER:
+                case G.KFR.USER:
                     return I(U.lU());
-                case d.KFR.ROLE:
+                case G.KFR.ROLE:
                     return I(U.HE());
-                case d.KFR.ONBOARDING_PROMPT:
+                case G.KFR.ONBOARDING_PROMPT:
                     return I(U.oD());
-                case d.KFR.GUILD_ONBOARDING:
+                case G.KFR.GUILD_ONBOARDING:
                     return I(U.EN());
-                case d.KFR.HOME_SETTINGS:
+                case G.KFR.HOME_SETTINGS:
                     return I(U.hx());
-                case d.KFR.INVITE:
+                case G.KFR.INVITE:
                     return I(U.HN());
-                case d.KFR.WEBHOOK:
+                case G.KFR.WEBHOOK:
                     return I(U.lR());
-                case d.KFR.EMOJI:
+                case G.KFR.EMOJI:
                     return I(U.N$());
-                case d.KFR.STICKER:
+                case G.KFR.STICKER:
                     return I(U.Bq());
-                case d.KFR.INTEGRATION:
+                case G.KFR.INTEGRATION:
                     return I(U.K());
-                case d.KFR.STAGE_INSTANCE:
+                case G.KFR.STAGE_INSTANCE:
                     return I(U.C2());
-                case d.KFR.GUILD_SCHEDULED_EVENT:
+                case G.KFR.GUILD_SCHEDULED_EVENT:
                     return I(U.uB());
-                case d.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                case G.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
                     return I(U.pi());
-                case d.KFR.THREAD:
+                case G.KFR.THREAD:
                     return I(U.pA());
-                case d.KFR.APPLICATION_COMMAND:
+                case G.KFR.APPLICATION_COMMAND:
                     return I(U.vm(_.changes));
-                case d.KFR.AUTO_MODERATION_RULE:
+                case G.KFR.AUTO_MODERATION_RULE:
                     return I(U.rK());
-                case d.KFR.GUILD_SOUNDBOARD:
+                case G.KFR.GUILD_SOUNDBOARD:
                     return I(U.C0());
-                case d.KFR.VOICE_CHANNEL_STATUS:
+                case G.KFR.VOICE_CHANNEL_STATUS:
                     return I(U.F1());
             }
         }, [_.targetType, _.changes, I]);

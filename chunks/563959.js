@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     e: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250),
@@ -49,22 +49,22 @@ function h(e, t) {
                         : null != N
                           ? (t) => (0, I.Pv)(t, N, e)
                           : void 0,
-                { bot: f } = a;
-            return null == f
+                { bot: p } = a;
+            return null == p
                 ? r
                 : (0, i.jsx)(
                       s.Popout,
                       {
                           position: 'right',
                           preload: () =>
-                              (0, d.Z)(f.id, T, {
+                              (0, d.Z)(p.id, T, {
                                   guildId: e.guild_id,
                                   channelId: e.id
                               }),
                           renderPopout: (n) =>
                               (0, i.jsx)(u.Z, {
                                   ...n,
-                                  userId: f.id,
+                                  userId: p.id,
                                   guildId: e.guild_id,
                                   channelId: e.id,
                                   messageId: t.id
@@ -105,7 +105,7 @@ function C(e) {
         })
     });
 }
-function f(e) {
+function p(e) {
     let { message: t, channel: a, compact: s } = e,
         l = (0, r.ZP)(t),
         d = t.application,

@@ -21,15 +21,15 @@ var i = n(735250),
     N = n(768581),
     h = n(135431),
     C = n(728345),
-    f = n(812206),
-    p = n(981631),
+    p = n(812206),
+    f = n(981631),
     g = n(689938),
     A = n(166272),
     S = n(413097),
     M = n(970952);
 function O(e) {
     let { applicationId: t } = e,
-        [n, s, r] = (0, l.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isFetchingApplication(t), f.Z.didFetchingApplicationFail(t)], [t]);
+        [n, s, r] = (0, l.Wu)([p.Z], () => [p.Z.getApplication(t), p.Z.isFetchingApplication(t), p.Z.didFetchingApplicationFail(t)], [t]);
     return (a.useEffect(() => {
         null == n && !s && !r && C.ZP.fetchApplication(t);
     }, [n, s, r, t]),
@@ -61,9 +61,9 @@ function x(e) {
             [t]
         ),
         N = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
-        [C, f] = a.useState(!1),
+        [C, p] = a.useState(!1),
         O = a.useCallback((e) => {
-            e && f(!0);
+            e && p(!0);
         }, []),
         x = (0, o.O)(O);
     return (
@@ -115,7 +115,7 @@ function x(e) {
                             type: 'button',
                             size: r.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                u.ZP.trackWithMetadata(p.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
+                                u.ZP.trackWithMetadata(f.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
                                     (0, h.LO)({
                                         applicationId: t.id,
                                         customInstallUrl: t.customInstallUrl,

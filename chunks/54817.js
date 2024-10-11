@@ -23,9 +23,9 @@ function T(e) {
         N = a(T),
         {
             avatarSrc: h,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: f }
+            eventHandlers: { onMouseEnter: C, onMouseLeave: p }
         } = (0, d.m)(!0),
-        p =
+        f =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
                       hour: 'numeric',
@@ -37,7 +37,7 @@ function T(e) {
                 : '';
     return (0, i.jsx)('div', {
         onMouseEnter: C,
-        onMouseLeave: f,
+        onMouseLeave: p,
         children: (0, i.jsx)(u.Z, {
             className: s()(m.mainContainer, { [m.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(d.S, { src: h }),
@@ -76,7 +76,7 @@ function T(e) {
                                 ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
                                       username: T.nick,
                                       usernameHook: N,
-                                      time: p
+                                      time: f
                                   })
                                 : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
                                       username: T.nick,

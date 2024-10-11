@@ -27,8 +27,8 @@ var s = E(735250),
     c = E(607070),
     O = E(605436),
     U = E(134433),
-    d = E(600164),
-    G = E(91218),
+    G = E(600164),
+    d = E(91218),
     M = E(313201),
     R = E(518738),
     g = E(434404),
@@ -56,9 +56,9 @@ function F(e) {
                 className: b.overflowRolesPopoutArrowWrapper,
                 children: (0, s.jsx)('div', { className: b.overflowRolesPopoutArrow })
             }),
-            (0, s.jsxs)(d.Z, {
+            (0, s.jsxs)(G.Z, {
                 className: b.overflowRolesPopoutHeader,
-                align: d.Z.Align.CENTER,
+                align: G.Z.Align.CENTER,
                 children: [
                     (0, s.jsx)(D.FlagIcon, {
                         size: 'xs',
@@ -83,12 +83,12 @@ function F(e) {
 let B = n.forwardRef(function (e, _) {
     var t, T, a;
     let I;
-    let { canRemove: o, className: S, role: u, onRemove: O, guildId: d, disableBorderColor: M, onMouseDown: g } = e,
+    let { canRemove: o, className: S, role: u, onRemove: O, guildId: G, disableBorderColor: M, onMouseDown: g } = e,
         { tabIndex: C, ...f } = (0, l.JA)(u.id),
         p = (0, R.p9)({
             roleId: u.id,
             size: 16,
-            guildId: d
+            guildId: G
         }),
         h = (0, i.e7)([c.Z], () => c.Z.roleStyle),
         m = (null === (t = u.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
@@ -165,7 +165,7 @@ let B = n.forwardRef(function (e, _) {
                     ]
                 }),
                 null != p
-                    ? (0, s.jsx)(G.Z, {
+                    ? (0, s.jsx)(d.Z, {
                           className: b.roleIcon,
                           ...p,
                           enableTooltip: !1
@@ -258,14 +258,14 @@ function j(e) {
             },
             [T, t.id, E.id]
         ),
-        d = n.useCallback(
+        G = n.useCallback(
             (e) => {
                 let _ = T;
                 -1 === _.indexOf(e) && (_ = _.concat([e])), g.Z.updateMemberRoles(t.id, E.id, _, [e], []);
             },
             [T, t.id, E.id]
         ),
-        [G, M] = n.useState(null),
+        [d, M] = n.useState(null),
         R = (0, i.e7)([f.Z], () => f.Z.getRoles(t.id)),
         C = n.useMemo(() => {
             let e = Object.values(R)
@@ -276,8 +276,8 @@ function j(e) {
                         t = (null === (s = _.tags) || void 0 === s ? void 0 : s.guild_connections) !== null;
                     return n && !t ? 1 : !n && t ? -1 : 0;
                 });
-            return null != G ? e.slice(0, G) : e;
-        }, [R, G, T]),
+            return null != d ? e.slice(0, d) : e;
+        }, [R, d, T]),
         P = T.length - C.length;
     n.useLayoutEffect(() => {
         if (A) return;
@@ -327,7 +327,7 @@ function j(e) {
             );
         });
     return (
-        null != G && 0 !== P
+        null != d && 0 !== P
             ? (_ = (0, s.jsx)(x, {
                   ...e,
                   numRolesHidden: P
@@ -335,7 +335,7 @@ function j(e) {
             : j &&
               (_ = (0, s.jsx)(V, {
                   ...e,
-                  handleAddRole: d
+                  handleAddRole: G
               })),
         (0, s.jsx)(l.bG, {
             navigator: z,

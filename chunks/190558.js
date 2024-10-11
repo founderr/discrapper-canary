@@ -965,7 +965,7 @@ let { Themes: n } = r(15202).V,
         BG_SURFACE_RAISED: {
             category: 'background',
             [n.DARK]: {
-                raw: 'PRIMARY_600',
+                raw: 'PRIMARY_560',
                 opacity: 1
             },
             [n.LIGHT]: {

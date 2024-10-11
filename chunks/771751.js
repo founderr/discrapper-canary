@@ -45,7 +45,7 @@ let _ = async () => {
             await (0, d.T)();
         }
     },
-    T = async (e, t) => {
+    S = async (e, t) => {
         try {
             await o.tn.post({ url: p.ANM.UNACK_USER_OFFER(e, t) });
         } catch {
@@ -53,7 +53,7 @@ let _ = async () => {
             await (0, d.T)();
         }
     },
-    S = async () => {
+    T = async () => {
         try {
             let { body: e } = await o.tn.get({ url: p.ANM.USER_OFFERS });
             return e;
@@ -77,7 +77,7 @@ function y(e) {
     let { offer: s, offerOptions: u, forceRefetch: m } = e,
         [f, p] = a.useState(!1),
         [b, _] = a.useState(!1),
-        [j, S] = a.useState(!1),
+        [j, T] = a.useState(!1),
         [N, y] = a.useState(!1);
     a.useEffect(() => {
         j && y(!0);
@@ -105,7 +105,7 @@ function y(e) {
         A = null != E && new Date(E).getTime() < Date.now(),
         L = (null == R ? void 0 : R.sku_id) === g.Si.TIER_0,
         P = async () => {
-            S(!0), O ? await T(I, 'trial') : await (0, d.a)(s), m(), S(!1);
+            T(!0), O ? await S(I, 'trial') : await (0, d.a)(s), m(), T(!1);
         };
     a.useEffect(() => {
         if (f) {
@@ -142,7 +142,7 @@ function y(e) {
                         }),
                         (0, r.jsx)(c.Clickable, {
                             onClick: async () => {
-                                S(!0), await C(I, 'trial'), m(), S(!1);
+                                T(!0), await C(I, 'trial'), m(), T(!1);
                             },
                             children: (0, r.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -265,7 +265,7 @@ function I(e) {
             clearTimeout(e);
         };
     }, [p]);
-    let { id: j, expires_at: S, applied_at: N, discount_id: y, discount: I } = l,
+    let { id: j, expires_at: T, applied_at: N, discount_id: y, discount: I } = l,
         E =
             null !==
                 (n =
@@ -278,10 +278,10 @@ function I(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        w = null != S,
-        k = null != S && new Date(S).getTime() < Date.now(),
+        w = null != T,
+        k = null != T && new Date(T).getTime() < Date.now(),
         R = async () => {
-            g(!0), w ? await T(j, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
+            g(!0), w ? await S(j, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
         };
     a.useEffect(() => {
         if (u) {
@@ -423,7 +423,7 @@ function E() {
         [o, h] = a.useState(),
         [x, p] = a.useState(),
         [g, C] = a.useState([]),
-        [T, E] = a.useState([]),
+        [S, E] = a.useState([]),
         [w, k] = a.useState(!0);
     a.useEffect(() => {
         (0 === e.length || 0 === n.length || w) &&
@@ -444,7 +444,7 @@ function E() {
                 (k(!1),
                 m.Z.forceReset(),
                 (0, d.T)(),
-                S().then((e) => {
+                T().then((e) => {
                     C(e.trial.sort((e, t) => e.id.localeCompare(t.id))), E(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [w]);
@@ -566,7 +566,7 @@ function E() {
                             )
                         ]
                     }),
-                T.length > 0 &&
+                S.length > 0 &&
                     (0, r.jsxs)('section', {
                         className: v.section,
                         children: [
@@ -574,7 +574,7 @@ function E() {
                                 variant: 'heading-md/semibold',
                                 children: 'Existing Discount Offers'
                             }),
-                            T.map((e) =>
+                            S.map((e) =>
                                 (0, r.jsx)(
                                     I,
                                     {

@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return Z;
+        return L;
     }
 }),
     n(47120),
@@ -22,8 +22,8 @@ var i,
     N = n(812206),
     h = n(283595),
     C = n(558314),
-    f = n(55563),
-    p = n(551428),
+    p = n(55563),
+    f = n(551428),
     g = n(73346),
     A = n(981631),
     S = n(689938),
@@ -170,20 +170,20 @@ class x extends (i = s.Component) {
     }
 }
 O(x, 'defaultProps', { renderFallback: A.dG4 });
-let R = [f.Z, C.Z, h.Z, p.Z];
+let R = [p.Z, C.Z, h.Z, f.Z];
 function v(e) {
     let { skuId: t } = e,
-        n = f.Z.get(t),
+        n = p.Z.get(t),
         i = null != n ? N.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
-        fetchFailed: f.Z.didFetchingSkuFail(t),
+        fetchFailed: p.Z.didFetchingSkuFail(t),
         inLibrary: null != n && h.Z.hasApplication(n.applicationId, n.applicationId, !0),
-        storeListing: null != n ? p.Z.getForSKU(n.id) : null,
+        storeListing: null != n ? f.Z.getForSKU(n.id) : null,
         libraryApplication: null != n ? h.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, T.Z)((0, m.Z)(x));
-t.Z = r.ZP.connectStores(R, v)(L);
-let Z = (0, m.Z)(r.ZP.connectStores(R, v)(x));
+let Z = (0, T.Z)((0, m.Z)(x));
+t.Z = r.ZP.connectStores(R, v)(Z);
+let L = (0, m.Z)(r.ZP.connectStores(R, v)(x));

@@ -21,16 +21,16 @@ var i = n(735250),
     N = n(585483),
     h = n(400445),
     C = n(153209),
-    f = n(956961),
-    p = n(903672),
+    p = n(956961),
+    f = n(903672),
     g = n(946443),
     A = n(264233),
     S = n(981631),
     M = n(689938);
 function O(e) {
     let { onOpen: t, onClose: n, children: O, badgeState: x, popoutPosition: R, popoutAlign: v } = e,
-        { analyticsLocations: L } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
-        [Z, P] = a.useState(!1),
+        { analyticsLocations: Z } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+        [L, P] = a.useState(!1),
         [b, D] = (function () {
             let e = (0, l.e7)([T.Z], () => {
                 var e, t;
@@ -70,11 +70,11 @@ function O(e) {
             };
         })(b),
         y = a.useCallback(() => {
-            P(!1), Z && (null == n || n());
-        }, [n, Z]),
+            P(!1), L && (null == n || n());
+        }, [n, L]),
         B = a.useCallback(() => {
-            P(!Z), Z ? null == n || n() : null == t || t();
-        }, [n, t, Z]);
+            P(!L), L ? null == n || n() : null == t || t();
+        }, [n, t, L]);
     a.useEffect(() => (N.S.subscribe(S.CkL.TOGGLE_INBOX, B), () => void N.S.unsubscribe(S.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: k } = I.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: G, inInbox: F } = _.Z.useExperiment({ location: 'RecentsPopout' }),
@@ -90,13 +90,13 @@ function O(e) {
         [y]
     );
     return (0, i.jsx)(d.Gt, {
-        value: L,
+        value: Z,
         children: (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
             position: R,
             align: v,
             autoInvert: !1,
-            shouldShow: Z,
+            shouldShow: L,
             onRequestClose: y,
             renderPopout: function () {
                 return (0, i.jsx)(o.Dialog, {
@@ -109,7 +109,7 @@ function O(e) {
                                   closePopout: y
                               })
                             : b === r.X.MENTIONS
-                              ? (0, i.jsx)(p.Z, {
+                              ? (0, i.jsx)(f.Z, {
                                     setTab: D,
                                     onJump: H,
                                     badgeState: x,
@@ -122,7 +122,7 @@ function O(e) {
                                       closePopout: y
                                   })
                                 : k && b === r.X.TODOS
-                                  ? (0, i.jsx)(f.Z, {
+                                  ? (0, i.jsx)(p.Z, {
                                         setTab: D,
                                         onJump: H,
                                         closePopout: y

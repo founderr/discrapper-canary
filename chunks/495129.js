@@ -21,14 +21,14 @@ var a = n(120356),
     N = n(594174),
     h = n(938475),
     C = n(5192),
-    f = n(981631),
-    p = n(689938),
+    p = n(981631),
+    f = n(689938),
     g = n(64182);
 function A(e) {
     var t, n, a, A, S, M, O, x, R, v;
-    let { message: L, channel: Z } = e,
+    let { message: Z, channel: L } = e,
         P =
-            null === (a = L.embeds[0]) || void 0 === a
+            null === (a = Z.embeds[0]) || void 0 === a
                 ? void 0
                 : null === (n = a.fields) || void 0 === n
                   ? void 0
@@ -40,7 +40,7 @@ function A(e) {
                     ? void 0
                     : t.rawValue,
         b =
-            null === (M = L.embeds[0]) || void 0 === M
+            null === (M = Z.embeds[0]) || void 0 === M
                 ? void 0
                 : null === (S = M.fields) || void 0 === S
                   ? void 0
@@ -54,15 +54,15 @@ function A(e) {
         D = (0, l.e7)([T.Z], () => T.Z.getGuild(P)),
         j = (0, l.e7)([m.Z], () => m.Z.getChannel(b)),
         U = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        y = (0, l.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
+        y = (0, l.e7)([], () => Z.author.id === (null == U ? void 0 : U.id)),
+        B = null === (O = L.recipients) || void 0 === O ? void 0 : O.find((e) => e !== Z.author.id),
         k = (0, l.e7)([N.default], () => (null != B ? N.default.getUser(B) : null)),
-        G = (0, u.ZP)(L),
-        F = (0, C._T)(Z.getGuildId(), Z.id, k),
+        G = (0, u.ZP)(Z),
+        F = (0, C._T)(L.getGuildId(), L.id, k),
         w = (0, l.Wu)([h.ZP], () => (null != j ? h.ZP.getVoiceStatesForChannel(j) : []), [j]),
         V = w.some((e) => e.user.id === (null == U ? void 0 : U.id)),
         H =
-            null === (v = L.embeds[0]) || void 0 === v
+            null === (v = Z.embeds[0]) || void 0 === v
                 ? void 0
                 : null === (R = v.fields) || void 0 === R
                   ? void 0
@@ -75,11 +75,11 @@ function A(e) {
                     : x.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, l.Wu)([N.default], () => Y.map((e) => N.default.getUser(e)).filter(Boolean)),
-        K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: F }) : p.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
+        K = y && null != k ? f.Z.Messages.WAVED_AT_USER.format({ username: F }) : f.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
         z = null != D && null != j,
         X = null;
-    (X = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (X = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
-    let Q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
+    (X = z ? (y || V ? f.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : f.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : f.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (X = y ? f.Z.Messages.HANGOUT_OVER_SENDER : f.Z.Messages.HANGOUT_OVER_RECEIVER);
+    let Q = y ? f.Z.Messages.WAVE_AGAIN : f.Z.Messages.WAVE_BACK;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
@@ -130,7 +130,7 @@ function A(e) {
                     (0, i.jsxs)(r.Button, {
                         color: r.Button.Colors.BRAND,
                         onClick: () => {
-                            null != b && null != P && ((0, I.uL)(f.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+                            null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,
@@ -140,13 +140,13 @@ function A(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            p.Z.Messages.JOIN_HANGOUT
+                            f.Z.Messages.JOIN_HANGOUT
                         ]
                     }),
                     (0, i.jsx)(r.Button, {
                         color: r.Button.Colors.PRIMARY,
                         onClick: () => {
-                            o.Z.sendMessage(Z.id, d.ZP.parse(Z, '\uD83D\uDC4B'));
+                            o.Z.sendMessage(L.id, d.ZP.parse(L, '\uD83D\uDC4B'));
                         },
                         className: g.button,
                         children: Q

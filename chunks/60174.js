@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(594174),
     h = n(630388),
     C = n(74538),
-    f = n(833803),
-    p = n(566006),
+    p = n(833803),
+    f = n(566006),
     g = n(981631),
     A = n(185923),
     S = n(474936),
@@ -48,16 +48,16 @@ class v extends a.Component {
         let { type: e, message: t, className: n, children: a, useChatFontScaling: s, tabIndex: r = 0 } = this.props,
             { isReactionPickerActive: o } = this.state,
             c = t.state === g.yb.SENDING,
-            E = e === p.O.BURST;
+            E = e === f.O.BURST;
         if (c || (0, h.yE)(t.flags, g.iLy.EPHEMERAL)) return null;
         let I = N.default.getCurrentUser(),
             m = (0, C.I5)(I),
             T = E ? M.Z.Messages.ADD_BURST_REACTION : M.Z.Messages.ADD_REACTION;
         !m && E && (T = (0, i.jsx)(_.X, { tooltipText: M.Z.Messages.ADD_BURST_REACTION }));
         let S = s ? x : O,
-            { canShowImprovedReactionButton: R } = f.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
+            { canShowImprovedReactionButton: R } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             v = R && !this.props.isForumToolbar,
-            L = {
+            Z = {
                 size: 'sm',
                 color: 'currentColor',
                 className: l()(S.icon, { [S.largeIcon]: v })
@@ -90,7 +90,7 @@ class v extends a.Component {
                             },
                             n
                         ),
-                        children: [E ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...L }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...L }) }), a]
+                        children: [E ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...Z }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...Z }) }), a]
                     })
                 });
             }
@@ -111,7 +111,7 @@ class v extends a.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let i = N.default.getCurrentUser();
-                t === p.O.BURST &&
+                t === f.O.BURST &&
                     !(0, C.I5)(i) &&
                     (0, E.openBurstReactionsUpsellModal)({
                         analytics: {
@@ -128,7 +128,7 @@ class v extends a.Component {
                     { type: n, channel: a, message: s } = this.props,
                     l = {
                         openPopoutType: 'message_reaction_emoji_picker',
-                        ...(n === p.O.BURST && {
+                        ...(n === f.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != a.getGuildId() ? g.ZY5.GUILD_CHANNEL : g.ZY5.DM_CHANNEL,
                             section: (0, m.s4)(a),

@@ -20,8 +20,8 @@ var i,
     N = n(809026),
     h = n(139256),
     C = n(489887),
-    f = n(689938),
-    p = n(167919);
+    p = n(689938),
+    f = n(167919);
 function g() {
     return (0, s.jsx)('svg', {
         width: '24',
@@ -51,7 +51,7 @@ function A(e) {
     }
     return null != t
         ? (0, s.jsx)('div', {
-              className: p.imageContainer,
+              className: f.imageContainer,
               children: t
           })
         : null;
@@ -66,7 +66,7 @@ function S(e) {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
-                children: f.Z.Messages.POLL_RESULT_NO_VOTERS
+                children: p.Z.Messages.POLL_RESULT_NO_VOTERS
             });
             break;
         case 'VICTOR':
@@ -74,18 +74,18 @@ function S(e) {
             t = (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsxs)('div', {
-                        className: p.victorAnswer,
+                        className: f.victorAnswer,
                         children: [
                             (0, s.jsx)(d.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-normal',
-                                className: p.victorAnswerText,
+                                className: f.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
                             (0, s.jsx)(h.ZY, {
                                 size: 16,
-                                className: p.victorIcon,
+                                className: f.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0
                             })
@@ -95,7 +95,7 @@ function S(e) {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
-                        children: [f.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', l, '%']
+                        children: [p.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', l, '%']
                     })
                 ]
             });
@@ -108,7 +108,7 @@ function S(e) {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
-                        children: f.Z.Messages.POLL_RESULT_TIED
+                        children: p.Z.Messages.POLL_RESULT_TIED
                     }),
                     (0, s.jsxs)(d.Text, {
                         variant: 'text-xs/medium',
@@ -120,7 +120,7 @@ function S(e) {
             });
     }
     return (0, s.jsx)('div', {
-        className: p.description,
+        className: f.description,
         children: t
     });
 }
@@ -147,7 +147,7 @@ function M(e) {
         ),
         r = null != n.victorEmoji || 'NO_VOTES' === a.type;
     return (0, s.jsxs)('div', {
-        className: o()(p.container, { [p.containerWithImage]: r }, t),
+        className: o()(f.container, { [f.containerWithImage]: r }, t),
         children: [
             (0, s.jsx)(A, {
                 hasNoVotes: 'NO_VOTES' === a.type,
@@ -156,7 +156,7 @@ function M(e) {
             (0, s.jsx)(S, { ...a }),
             null != i &&
                 (0, s.jsx)(d.Button, {
-                    className: p.button,
+                    className: f.button,
                     size: d.Button.Sizes.TINY,
                     onClick: i,
                     color: d.Button.Colors.PRIMARY,
@@ -164,7 +164,7 @@ function M(e) {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
-                        children: f.Z.Messages.POLL_RESULT_VIEW_POLL
+                        children: p.Z.Messages.POLL_RESULT_VIEW_POLL
                     })
                 })
         ]
@@ -201,7 +201,7 @@ function O(e) {
                       iconNode: (0, s.jsx)(d.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: f.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+                      children: p.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
                           username: h.nick,
                           usernameHook: g(h),
                           title: E,
@@ -209,7 +209,7 @@ function O(e) {
                       })
                   }),
                   (0, s.jsx)(M, {
-                      className: p.embed,
+                      className: f.embed,
                       data: _,
                       onClickPollLink: r ? void 0 : S
                   })

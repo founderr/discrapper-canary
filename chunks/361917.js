@@ -114,7 +114,7 @@ function G(e) {
                                   onEmptyState: E
                               }),
                               _ &&
-                                  (0, i.jsx)(Q, {
+                                  (0, i.jsx)(X, {
                                       channel: n,
                                       onEmptyState: v
                                   }),
@@ -125,7 +125,7 @@ function G(e) {
                                       onEmptyState: I
                                   }),
                               h &&
-                                  (0, i.jsx)(X, {
+                                  (0, i.jsx)(Q, {
                                       channel: n,
                                       onEmptyState: g
                                   }),
@@ -323,7 +323,7 @@ function J(e) {
               ]
           });
 }
-function X(e) {
+function Q(e) {
     let { channel: n, onEmptyState: t } = e;
     (0, C.g)();
     let l = (0, _.Z)({ guildId: n.getGuildId() }),
@@ -370,7 +370,7 @@ function X(e) {
               ]
           });
 }
-function Q(e) {
+function X(e) {
     var n;
     let { channel: t, onEmptyState: l } = e,
         r = (0, v.LD)(t.guild_id, !0),

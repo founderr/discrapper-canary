@@ -24,10 +24,10 @@ var r = n(735250),
     _ = n(621060),
     j = n(246195),
     C = n(219299);
-function T(e) {
+function S(e) {
     return parseFloat(e.toFixed(3));
 }
-let S = [
+let T = [
     {
         key: 'store',
         cellClassName: j.actionColumn,
@@ -41,7 +41,7 @@ let S = [
         cellClassName: j.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return ''.concat(T(t.time), ' ms');
+            return ''.concat(S(t.time), ' ms');
         }
     }
 ];
@@ -57,7 +57,7 @@ function N(e) {
         );
     return (0, r.jsx)(d.ScrollerThin, {
         children: (0, r.jsx)(v.Z, {
-            columns: S,
+            columns: T,
             data: n
         })
     });
@@ -85,7 +85,7 @@ let y = [
                             }),
                             (0, r.jsxs)(g.Z9, {
                                 name: 'Total Time',
-                                children: [T(n.totalTime), ' ms']
+                                children: [S(n.totalTime), ' ms']
                             })
                         ]
                     }),
@@ -183,7 +183,7 @@ let E = [
         cellClassName: j.totalTimeColumn,
         render(e) {
             let { actionLog: t } = e;
-            return ''.concat(T(t.totalTime), ' ms');
+            return ''.concat(S(t.totalTime), ' ms');
         }
     }
 ];

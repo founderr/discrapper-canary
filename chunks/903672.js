@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(455199),
     h = n(655354),
     C = n(999671),
-    f = n(324081),
-    p = n(240126),
+    p = n(324081),
+    f = n(240126),
     g = n(791914),
     A = n(981631),
     S = n(689938),
@@ -45,8 +45,8 @@ function R(e) {
         {
             messages: m,
             hasMore: h,
-            loading: f,
-            guildFilter: p,
+            loading: p,
+            guildFilter: f,
             roleFilter: O,
             everyoneFilter: R
         } = (0, s.cj)([N.Z], () => ({
@@ -57,16 +57,16 @@ function R(e) {
             roleFilter: N.Z.roleFilter,
             everyoneFilter: N.Z.everyoneFilter
         })),
-        v = (0, d.Z)(p),
-        Z = (0, d.Z)(O),
+        v = (0, d.Z)(f),
+        L = (0, d.Z)(O),
         b = (0, d.Z)(R);
     a.useEffect(() => {
         if (!N.Z.hasLoadedEver) {
             x(E, !0);
             return;
         }
-        ((null != v && p !== v) || (null != Z && O !== Z) || (null != b && R !== b)) && x(E, !0);
-    }, [v, p, Z, O, b, R, E, !0]);
+        ((null != v && f !== v) || (null != L && O !== L) || (null != b && R !== b)) && x(E, !0);
+    }, [v, f, L, O, b, R, E, !0]);
     a.useEffect(() => {
         (null == m ? void 0 : m.some(u.k5)) && (o.Z.clearMentions(), x(E, !0));
     }, []),
@@ -98,7 +98,7 @@ function R(e) {
             },
             channel: E,
             messages: m,
-            loading: f,
+            loading: p,
             hasMore: h,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
@@ -107,7 +107,7 @@ function R(e) {
             canCloseAllMessages: !0,
             renderHeader: D,
             renderEmptyState: P,
-            renderMessage: L,
+            renderMessage: Z,
             'aria-label': S.Z.Messages.RECENT_MENTIONS,
             listName: 'recents'
         })
@@ -116,7 +116,7 @@ function R(e) {
 function v(e, t) {
     return [
         (0, i.jsx)(
-            Z,
+            L,
             {
                 message: e,
                 gotoMessage: t
@@ -125,10 +125,10 @@ function v(e, t) {
         )
     ];
 }
-function L(e, t) {
+function Z(e, t) {
     return [
         (0, i.jsx)(
-            Z,
+            L,
             {
                 message: e,
                 gotoMessage: t,
@@ -138,7 +138,7 @@ function L(e, t) {
         )
     ];
 }
-function Z(e) {
+function L(e) {
     let { message: t, gotoMessage: n, dismissible: a } = e;
     if (null == t) return null;
     let s = I.Z.getChannel(t.channel_id);
@@ -148,7 +148,7 @@ function Z(e) {
     return (0, i.jsxs)('div', {
         className: M.container,
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(p.Z, {
                 channel: s,
                 gotoChannel: n,
                 children:
@@ -192,7 +192,7 @@ function Z(e) {
     });
 }
 function P(e) {
-    return (0, i.jsx)(p.Z, {
+    return (0, i.jsx)(f.Z, {
         Icon: r.AtIcon,
         header: S.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
         tip: S.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP

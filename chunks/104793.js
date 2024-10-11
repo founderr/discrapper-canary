@@ -34,9 +34,9 @@ function m(e, t, n) {
         { applicationAllowedForUser: O, applicationAllowedForChannel: v, isGuildInstalled: C, isUserInstalled: L, commandBotId: y } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
-    let D = (0, h.Vh)(i, y);
+    let D = null != i ? (0, h.Vh)(i, y) : void 0;
     if (null != e.contexts) {
-        if (!e.contexts.includes(D)) return 4;
+        if (null != D && !e.contexts.includes(D)) return 4;
     } else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && D === u.D.BOT_DM) || D === u.D.PRIVATE_CHANNEL)) return 4;
     if (null != e.predicate && i instanceof d.Sf) {
         let t = _.Z.getGuild(i.guild_id);
@@ -49,7 +49,7 @@ function m(e, t, n) {
             return 3;
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
-    let b = (0, h.ny)(i);
+    let b = null != i ? (0, h.ny)(i) : void 0;
     if (null == b || l.e$(m, I.Plq.ADMINISTRATOR) || (L && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))) return 0;
     if (!R && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
@@ -117,7 +117,7 @@ function A(e, t, n, r, i) {
         }
     }
     if (a) return !1;
-    let s = e[(0, c.rE)(t, E.Kw.ROLE)];
+    let s = null != t ? e[(0, c.rE)(t, E.Kw.ROLE)] : null;
     return null != s ? s.permission : null;
 }
 ((i = r || (r = {}))[(i.ALLOWED = 0)] = 'ALLOWED'), (i[(i.NSFW_NOT_ALLOWED = 1)] = 'NSFW_NOT_ALLOWED'), (i[(i.WRONG_COMMAND_TYPE = 2)] = 'WRONG_COMMAND_TYPE'), (i[(i.PREDICATE_FAILED = 3)] = 'PREDICATE_FAILED'), (i[(i.CONTEXT_NOT_ALLOWED = 4)] = 'CONTEXT_NOT_ALLOWED'), (i[(i.MISSING_BASE_PERMISSIONS = 5)] = 'MISSING_BASE_PERMISSIONS'), (i[(i.CHANNEL_DENIED = 6)] = 'CHANNEL_DENIED'), (i[(i.USER_DENIED = 7)] = 'USER_DENIED');

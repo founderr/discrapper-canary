@@ -31,8 +31,8 @@ var i,
     N = n(853856),
     h = n(181945),
     C = n(220444),
-    f = n(601070),
-    p = n(344185),
+    p = n(601070),
+    f = n(344185),
     g = n(569471),
     A = n(723170),
     S = n(675478),
@@ -41,8 +41,8 @@ var i,
     x = n(592125),
     R = n(984933),
     v = n(731290),
-    L = n(430824),
-    Z = n(375954),
+    Z = n(430824),
+    L = n(375954),
     P = n(496675),
     b = n(306680),
     D = n(771845),
@@ -98,7 +98,7 @@ class V extends o.EventEmitter {
                 hasLoadedAnything: !0
             };
         if ('forum' === e.type) {
-            let t = p.Z.hasLoaded(e.guildId);
+            let t = f.Z.hasLoaded(e.guildId);
             return {
                 ...e,
                 isFullyLoaded: t,
@@ -277,7 +277,7 @@ class V extends o.EventEmitter {
                 let e = this.state.channels.map((e) => {
                     if ('forum' !== e.type) return e;
                     {
-                        let t = p.Z.hasLoaded(e.guildId);
+                        let t = f.Z.hasLoaded(e.guildId);
                         return {
                             ...e,
                             isFullyLoaded: t,
@@ -292,7 +292,7 @@ class V extends o.EventEmitter {
 function H(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        a = Z.Z.getMessages(e.channelId),
+        a = L.Z.getMessages(e.channelId),
         s = a.toArray().filter((t) => B.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= B.default.compare(t.id, e.newestUnreadMessageId));
     if (s.length === e.messages.length && s.every((t, n) => e.messages[n] === t) && i) return e;
     let l = null != a.getAfter(e.oldestReadMessageId) || (null === (n = s[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
@@ -325,7 +325,7 @@ function Y() {
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = R.ZP.getSelectableChannelIds(n),
-                        a = f.Z.getActiveJoinedUnreadThreadsForGuild(n);
+                        a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     i.forEach((i) => {
                         var s;
                         W(e, t, n, i);
@@ -362,7 +362,7 @@ function W(e, t, n, i) {
     if (!a.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, a)) return;
     let s = b.ZP.ackMessageId(i);
     if (null == s) {
-        let e = L.Z.getGuild(a.guild_id);
+        let e = Z.Z.getGuild(a.guild_id);
         if (null == e || null == e.joinedAt) return;
         s = B.default.fromTimestamp(e.joinedAt.getTime());
     }
@@ -446,10 +446,10 @@ function X(e) {
             0 === r.channels.length || t - s.current < 10 * U.Z.Millis.SECOND ? a(!0) : ((s.current = Date.now()), n(new V(r, e)));
         }, [l, i, e]),
         r.useLayoutEffect(t.maybeLoadMore, [null == l ? void 0 : l.channels, null == l ? void 0 : l.loadState]),
-        r.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
+        r.useEffect(() => (L.Z.addChangeListener(t.reloadMessages), () => L.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         r.useEffect(() => (j.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => j.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
         r.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
-        r.useEffect(() => (p.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => p.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
+        r.useEffect(() => (f.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => f.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [l, t]
     );
 }

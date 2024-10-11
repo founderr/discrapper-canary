@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     JC: function () {
-        return L;
+        return Z;
     },
     NU: function () {
         return D;
@@ -67,8 +67,8 @@ var i = n(735250),
     N = n(5967),
     h = n(630388),
     C = n(358085),
-    f = n(51144),
-    p = n(91047),
+    p = n(51144),
+    f = n(91047),
     g = n(50284),
     A = n(981631),
     S = n(689938);
@@ -86,7 +86,7 @@ function O(e, t, n) {
                 n();
                 return;
             }
-            let s = '@'.concat(f.ZP.getUserTag(a, { decoration: 'never' })),
+            let s = '@'.concat(p.ZP.getUserTag(a, { decoration: 'never' })),
                 l = '<@'.concat(e, '>');
             T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: s,
@@ -109,11 +109,11 @@ function v(e, t, n, i) {
     let a = M('interactionUsernameProfile', n, i);
     return O(null == e ? void 0 : e.user.id, t.id, a);
 }
-function L(e, t, n, i) {
+function Z(e, t, n, i) {
     let a = M('referencedUsernameProfile', n, i);
     return O(e, t.id, a);
 }
-function Z(e) {
+function L(e) {
     return a.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -122,13 +122,13 @@ function Z(e) {
     );
 }
 function P(e, t) {
-    return Z(M('avatarProfile', e, t));
+    return L(M('avatarProfile', e, t));
 }
 function b(e, t) {
-    return Z(M('referencedAvatarProfile', e, t));
+    return L(M('referencedAvatarProfile', e, t));
 }
 function D(e, t) {
-    return Z(M('interactionAvatarProfile', e, t));
+    return L(M('interactionAvatarProfile', e, t));
 }
 function j(e, t, s, r) {
     let { id: o } = t,
@@ -176,7 +176,7 @@ function U(e, t) {
         (n) => {
             let i = m.default.getUser(e),
                 a = _.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, p.Pv)(n, i, a));
+            null != i && null != a && (n.stopPropagation(), (0, f.Pv)(n, i, a));
         },
         [e, t]
     );
@@ -189,7 +189,7 @@ function y(e, t, n) {
             null != a &&
                 null != s &&
                 (i.stopPropagation(),
-                (0, p._j)(i, {
+                (0, f._j)(i, {
                     user: a,
                     channel: s,
                     moderationAlertId: n
@@ -203,7 +203,7 @@ function B(e, t) {
         (n) => {
             let i = m.default.getUser(e),
                 a = _.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, p.xS)(n, i, a.guild_id));
+            null != i && null != a && (n.stopPropagation(), (0, f.xS)(n, i, a.guild_id));
         },
         [e, t]
     );

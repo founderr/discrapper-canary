@@ -22,7 +22,7 @@ function N(e) {
     let t,
         n,
         a,
-        { invite: N, currentUserId: h, guild: C, onTransitionToInviteChannel: f, onAcceptInstantInvite: p } = e,
+        { invite: N, currentUserId: h, guild: C, onTransitionToInviteChannel: p, onAcceptInstantInvite: f } = e,
         g = null == C ? void 0 : C.id,
         A = (0, l.e7)([u.Z], () => u.Z.getGuildId()),
         S = (0, l.e7)([d.Z], () => (null != N && null != N.target_user ? d.Z.getActiveStreamForUser(N.target_user.id, g) : null), [N, g]),
@@ -32,16 +32,16 @@ function N(e) {
     s()(null != N, 'Invite cannot be null');
     let { target_type: R, target_user: v } = N;
     s()(R === I.Iq.STREAM && null != v, 'invalid streaming invite');
-    let L = h === v.id,
-        Z = N.state === E.r2o.ACCEPTING,
+    let Z = h === v.id,
+        L = N.state === E.r2o.ACCEPTING,
         P = null != C;
     if (null == C) {
         if (null == N.guild) return (0, i.jsx)(_.Z, {});
         C = new c.ZP(N.guild);
     }
     let b = null != N.channel ? (0, o.jD)(N.channel) : null,
-        D = O ? f : p;
-    P && !x ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = r.Z.Button.Colors.GREEN), O && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = r.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
+        D = O ? p : f;
+    P && !x ? (a = Z ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = r.Z.Button.Colors.GREEN), O && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = r.Z.Button.Colors.PRIMARY)), (a = Z ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
     let j = A === C.id && null != b ? (0, i.jsx)(r.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
     return (0, i.jsxs)(r.Z, {
         children: [
@@ -66,7 +66,7 @@ function N(e) {
                         ? (0, i.jsx)(r.Z.Button, {
                               disabled: P && !x,
                               onClick: D,
-                              submitting: Z,
+                              submitting: L,
                               isDisabled: O && x,
                               color: n,
                               children: t

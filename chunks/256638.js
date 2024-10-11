@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ep;
+        return ef;
     },
     c: function () {
         return eC;
@@ -23,8 +23,8 @@ var i = n(735250),
     N = n(287734),
     h = n(205355),
     C = n(558381),
-    f = n(223245),
-    p = n(491428),
+    p = n(223245),
+    f = n(491428),
     g = n(401430),
     A = n(230711),
     S = n(726542),
@@ -33,8 +33,8 @@ var i = n(735250),
     x = n(812206),
     R = n(391650),
     v = n(600164),
-    L = n(605236),
-    Z = n(749277),
+    Z = n(605236),
+    L = n(749277),
     P = n(492435),
     b = n(353926),
     D = n(506357),
@@ -111,15 +111,15 @@ let eN = () =>
 function eC(e) {
     m.Z.dismiss(null != e ? { untilAtLeast: l()(e) } : void 0);
 }
-let ef =
+let ep =
     12633 == n.j
         ? a.memo(function () {
               var e, t, s;
               let m = (0, o.e7)([en.default], () => en.default.getCurrentUser()),
                   M = (0, o.e7)([et.Z], () => et.Z.getGuildId()),
                   ed = (0, o.e7)([es.Z], () => es.Z.getNotice()),
-                  ef = (0, o.e7)([q.Z], () => q.Z.getGuild(M)),
-                  { analyticsLocations: ep } = (0, O.ZP)(),
+                  ep = (0, o.e7)([q.Z], () => q.Z.getGuild(M)),
+                  { analyticsLocations: ef } = (0, O.ZP)(),
                   eg = null == ed ? void 0 : ed.type,
                   eA = (0, B.J)(M);
               a.useEffect(() => {
@@ -136,7 +136,7 @@ let ef =
                           null != t && (0, P.W9)(e.id, t),
                               (async () => {
                                   var e, t;
-                                  (null === (e = ed.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, p.g8)(null === (t = ed.metadata) || void 0 === t ? void 0 : t.id));
+                                  (null === (e = ed.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, f.g8)(null === (t = ed.metadata) || void 0 === t ? void 0 : t.id));
                               })();
                       }
                   }, [ed]);
@@ -146,7 +146,7 @@ let ef =
               })(eg);
               if (null == ed) return null;
               if (null != eS)
-                  return (0, i.jsx)(Z.A, {
+                  return (0, i.jsx)(L.A, {
                       dismissibleContent: eS,
                       noticeType: ed.type
                   });
@@ -276,7 +276,7 @@ let ef =
                           ]
                       });
                   case eu.kVF.SPOTIFY_AUTO_PAUSED:
-                      let eL = S.Z.get(eu.ABu.SPOTIFY);
+                      let eZ = S.Z.get(eu.ABu.SPOTIFY);
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
@@ -287,7 +287,7 @@ let ef =
                               (0, i.jsx)('img', {
                                   alt: '',
                                   className: eT.platformIcon,
-                                  src: eL.icon.whiteSVG
+                                  src: eZ.icon.whiteSVG
                               }),
                               em.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -356,12 +356,12 @@ let ef =
                       return (0, i.jsx)(eh, {});
                   case eu.kVF.HARDWARE_MUTE:
                       if (null == ed.metadata) return null;
-                      let { vendor: eZ, model: eP } = ed.metadata;
+                      let { vendor: eL, model: eP } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               em.Z.Messages.NOTICE_HARDWARE_MUTE.format({
-                                  vendorName: eZ.name,
+                                  vendorName: eL.name,
                                   modelName: eP.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
@@ -387,7 +387,7 @@ let ef =
                               }),
                               em.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                                  onClick: () => f.Z.setEnabled(!1),
+                                  onClick: () => p.Z.setEnabled(!1),
                                   noticeType: eu.kVF.STREAMER_MODE,
                                   children: em.Z.Messages.DISABLE
                               })
@@ -444,11 +444,11 @@ let ef =
                                               (0, H.Z)({
                                                   initialPlanId: null,
                                                   subscriptionTier: e_.Si.TIER_2,
-                                                  analyticsLocations: ep,
+                                                  analyticsLocations: ef,
                                                   analyticsObject: ey
                                               });
                                           },
-                                          analyticsLocations: ep,
+                                          analyticsLocations: ef,
                                           analyticsLocationObject: ey,
                                           context: __OVERLAY__ ? eu.IlC.OVERLAY : eu.IlC.APP
                                       }).then(() => E.Z(ej.id)),
@@ -501,14 +501,14 @@ let ef =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eu.kVF.SURVEY,
                                   onClick: () => {
-                                      (0, p.hZ)(t, !0);
+                                      (0, f.hZ)(t, !0);
                                   }
                               }),
                               n,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eu.kVF.SURVEY,
                                   onClick: () => {
-                                      window.open(s, '_blank'), (0, p.hZ)(t, !1);
+                                      window.open(s, '_blank'), (0, f.hZ)(t, !1);
                                   },
                                   children: a
                               })
@@ -525,13 +525,13 @@ let ef =
                                       eC();
                                   }
                               }),
-                              em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server' }),
+                              em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ep ? void 0 : ep.name) && void 0 !== t ? t : 'this server' }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eu.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
-                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eC();
+                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ep ? void 0 : ep.id), '_blank'), eC();
                                   },
-                                  additionalTrackingProps: { guild_id: null == ef ? void 0 : ef.id },
+                                  additionalTrackingProps: { guild_id: null == ep ? void 0 : ep.id },
                                   children: em.Z.Messages.SERVER_USAGE_SURVEY_CTA
                               })
                           ]
@@ -814,7 +814,7 @@ let ef =
                       let e = { page: eu.ZY5.IN_APP };
                       return (0, i.jsx)(U.Z, {
                           guildId: M,
-                          analyticsLocations: ep,
+                          analyticsLocations: ef,
                           analyticsLocation: e
                       });
                   }
@@ -910,7 +910,7 @@ let ef =
                       let eW = l()().add(5, 'days').toDate();
                       return (0, i.jsx)(K.Z, {
                           dismissCurrentNotice: () => {
-                              (0, L.EW)(es.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eC(eW);
+                              (0, Z.EW)(es.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eC(eW);
                           },
                           subscriptionTier: e_.Si.TIER_2
                       });
@@ -933,10 +933,10 @@ let ef =
               }
           })
         : null;
-function ep() {
+function ef() {
     let { analyticsLocations: e } = (0, O.ZP)(M.Z.NOTICE);
     return (0, i.jsx)(O.Gt, {
         value: e,
-        children: (0, i.jsx)(ef, {})
+        children: (0, i.jsx)(ep, {})
     });
 }

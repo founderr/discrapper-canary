@@ -16,8 +16,8 @@ var i,
     N = n(23750),
     h = n(314897),
     C = n(592125),
-    f = n(375954),
-    p = n(306680),
+    p = n(375954),
+    f = n(306680),
     g = n(699516),
     A = n(914010),
     S = n(9156),
@@ -26,8 +26,8 @@ var i,
 let x = 'recentMentionFilterSettings',
     R = [],
     v = {},
-    L = !1,
-    Z = !0,
+    Z = !1,
+    L = !0,
     P = d.K.get(x, {
         guildFilter: O.NgX.ALL_SERVERS,
         everyoneFilter: !0,
@@ -39,7 +39,7 @@ let x = 'recentMentionFilterSettings',
     U = !1;
 function y(e) {
     if (e instanceof N.ZP) return e;
-    let t = f.Z.getMessage(e.channel_id, e.id);
+    let t = p.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, E.e5)(e);
 }
 function B(e) {
@@ -60,7 +60,7 @@ function B(e) {
         suppressRoles: s
     })
         ? (U &&
-              p.ZP.ackMessageId(n.id) !== e.id &&
+              f.ZP.ackMessageId(n.id) !== e.id &&
               (0, I.ZP)({
                   message: e,
                   userId: i,
@@ -109,7 +109,7 @@ function H(e) {
 }
 class Y extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(M.default, C.Z, f.Z, p.ZP);
+        this.waitFor(M.default, C.Z, p.Z, f.ZP);
     }
     isOpen() {
         return j;
@@ -127,10 +127,10 @@ class Y extends (i = c.ZP.Store) {
         return v[e];
     }
     get loading() {
-        return L;
+        return Z;
     }
     get hasMore() {
-        return Z;
+        return L;
     }
     get guildFilter() {
         return P.guildFilter;
@@ -157,7 +157,7 @@ class Y extends (i = c.ZP.Store) {
     (t.Z = new Y(_.Z, {
         LOAD_RECENT_MENTIONS: function (e) {
             let { guildId: t } = e;
-            (L = !0), null == t && P.guildFilter === O.NgX.THIS_SERVER && F({ guildFilter: O.NgX.ALL_SERVERS });
+            (Z = !0), null == t && P.guildFilter === O.NgX.THIS_SERVER && F({ guildFilter: O.NgX.ALL_SERVERS });
         },
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { hasMoreAfter: t, messages: n, isAfter: i } = e,
@@ -166,13 +166,13 @@ class Y extends (i = c.ZP.Store) {
                 o().forEach(a, (e) => {
                     v[e.id] = !0;
                 }),
-                (L = !1),
-                (Z = t),
+                (Z = !1),
+                (L = t),
                 (D = (0, u.zO)()),
                 (b = !0);
         },
         LOAD_RECENT_MENTIONS_FAILURE: function () {
-            L = !1;
+            Z = !1;
         },
         SET_RECENT_MENTIONS_FILTER: F,
         CLEAR_MENTIONS: function (e) {
@@ -182,7 +182,7 @@ class Y extends (i = c.ZP.Store) {
             let { size: t } = e;
             for (let e = t; e < R.length; ++e) delete v[R[e].id];
             let n = R.length;
-            n > (R = R.slice(0, t)).length && (Z = !0);
+            n > (R = R.slice(0, t)).length && (L = !0);
         },
         CHANNEL_SELECT: function () {
             if (P.guildFilter !== O.NgX.THIS_SERVER) return !1;

@@ -21,14 +21,14 @@ var a = n(399606),
     N = n(226060),
     h = n(981631);
 function C(e) {
-    let { guildProductListing: t, guildId: n, location: C, shouldShowFullDescriptionButton: f = !0, hideRoleTag: p = !1, lineClamp: g = 1, cardWidth: A, cardHeight: S, thumbnailHeight: M, descriptionTextVariant: O = 'text-sm/normal', showOpaqueBackground: x = !1 } = e,
+    let { guildProductListing: t, guildId: n, location: C, shouldShowFullDescriptionButton: p = !0, hideRoleTag: f = !1, lineClamp: g = 1, cardWidth: A, cardHeight: S, thumbnailHeight: M, descriptionTextVariant: O = 'text-sm/normal', showOpaqueBackground: x = !1 } = e,
         R = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
         v = (0, a.e7)([o.Z], () => {
             var e;
             return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.lds);
         }),
-        L = (0, s.U)(t, 600),
-        Z = (0, I.C)(t),
+        Z = (0, s.U)(t, 600),
+        L = (0, I.C)(t),
         P = (0, d.SO)(R),
         { shouldHideGuildPurchaseEntryPoints: b } = (0, r.uP)(n),
         D = (0, I.k)(t);
@@ -66,7 +66,7 @@ function C(e) {
     return (0, i.jsx)(
         E.Z,
         {
-            imageUrl: L,
+            imageUrl: Z,
             name: t.name,
             description: t.description,
             formattedPrice: D,
@@ -76,13 +76,13 @@ function C(e) {
                 guildProductListingId: t.id,
                 sourceAnalyticsLocations: C
             }),
-            productType: Z,
-            shouldShowFullDescriptionButton: f,
+            productType: L,
+            shouldShowFullDescriptionButton: p,
             onShowFullDescription: j,
             onTapCard: j,
             actionMenu: U,
             showOpaqueBackground: x,
-            hideRoleTag: p,
+            hideRoleTag: f,
             lineClamp: g,
             cardWidth: A,
             cardHeight: S,

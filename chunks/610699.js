@@ -23,8 +23,8 @@ var i = n(735250),
     N = n(100527),
     h = n(906732),
     C = n(835473),
-    f = n(471445),
-    p = n(111028),
+    p = n(471445),
+    f = n(111028),
     g = n(955415),
     A = n(601964),
     S = n(592125),
@@ -33,8 +33,8 @@ var i = n(735250),
     x = n(594174),
     R = n(624138),
     v = n(358595),
-    L = n(981631),
-    Z = n(245335),
+    Z = n(981631),
+    L = n(245335),
     P = n(689938),
     b = n(610935);
 let D = (0, R.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
@@ -93,7 +93,7 @@ function y(e) {
 function B(e) {
     let { channel: t, guild: n, isStacked: a, hasEnded: s } = e;
     if (null != t && null != n) {
-        let e = (0, f.KS)(t, n);
+        let e = (0, p.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: l()(b.channel, {
                 [b.stacked]: a,
@@ -107,7 +107,7 @@ function B(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(f.Z, {
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -125,7 +125,7 @@ function B(e) {
                   [b.stacked]: a,
                   [b.ended]: s
               }),
-              children: (0, i.jsx)(p.Z, {
+              children: (0, i.jsx)(f.Z, {
                   children: (0, i.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: n.name })
@@ -138,9 +138,9 @@ function k(e) {
     var t, n;
     let s,
         r,
-        { invite: d, getAcceptInviteContext: f } = e,
-        { approximate_member_count: p, approximate_presence_count: R, target_type: k, target_application: G } = d;
-    o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
+        { invite: d, getAcceptInviteContext: p } = e,
+        { approximate_member_count: f, approximate_presence_count: R, target_type: k, target_application: G } = d;
+    o()(k === L.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
     let F = a.useRef(null),
         [w, V] = a.useState(!1),
         [H, Y] = a.useState(!1);
@@ -174,7 +174,7 @@ function k(e) {
             });
         }),
         Q = S.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-        J = (0, c.e7)([O.Z], () => null != Q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+        J = (0, c.e7)([O.Z], () => null != Q && O.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
         { analyticsLocations: q } = (0, h.ZP)(N.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: G.id,
@@ -192,7 +192,7 @@ function k(e) {
             [Q, G.id]
         ),
         et = (0, c.Wu)([x.default], () => ee.map((e) => x.default.getUser(e)), [ee]),
-        en = d.state === L.r2o.ACCEPTING,
+        en = d.state === Z.r2o.ACCEPTING,
         ei = null != W;
     if (null == W) {
         if (null == d.guild) return (0, i.jsx)(v.Z, {});
@@ -202,7 +202,7 @@ function k(e) {
         es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: d.code,
-                context: f('Invite Button Embed'),
+                context: p('Invite Button Embed'),
                 analyticsLocations: q
             });
         };
@@ -277,7 +277,7 @@ function k(e) {
                                   ei
                                       ? null
                                       : (0, i.jsx)(y, {
-                                            members: p,
+                                            members: f,
                                             membersOnline: R,
                                             isLarge: w,
                                             isStacked: H

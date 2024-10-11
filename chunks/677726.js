@@ -3,23 +3,23 @@ t.d(n, {
         return a;
     }
 });
-var i = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(120356),
-    o = t.n(r),
+var i = t(120356),
+    o = t.n(i),
     l = t(481060),
     c = t(471731),
     s = t(985312);
 function a(e) {
-    let { title: n, className: t, ref: r } = e;
-    return (0, i.jsxs)('div', {
+    let { title: n, className: t, ref: i } = e;
+    return (0, r.jsxs)('div', {
         className: o()(s.header, t),
-        ref: r,
+        ref: i,
         children: [
-            (0, i.jsx)(c.Z, { className: s.logo }),
-            (0, i.jsx)(l.HeadingLevel, {
+            (0, r.jsx)(c.Z, { className: s.logo }),
+            (0, r.jsx)(l.HeadingLevel, {
                 forceLevel: 1,
-                children: (0, i.jsx)(l.Heading, {
+                children: (0, r.jsx)(l.Heading, {
                     className: s.title,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',

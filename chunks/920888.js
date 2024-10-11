@@ -16,10 +16,10 @@ var i = n(735250),
     N = n(96042),
     h = n(968661);
 let C = (e, t) => (null == e && null == t) || e === t,
-    f = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
-    p = (e, t) => {
+    p = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
+    f = (e, t) => {
         if (null == t) return e;
-        let n = f(e, t);
+        let n = p(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
 class g extends a.PureComponent {
@@ -35,20 +35,20 @@ class g extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: C, isForumToolbar: f, channel: p, className: g, forceAddReactions: A, reactionClassName: S, useChatFontScaling: M, forceHideReactionCreates: O, remainingReactions: x, combinedReactions: R, visibleReactionsCount: v } = this.props,
-            { disableTransitionAppear: L } = this.state,
-            Z = M ? h : N,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: C, isForumToolbar: p, channel: f, className: g, forceAddReactions: A, reactionClassName: S, useChatFontScaling: M, forceHideReactionCreates: O, remainingReactions: x, combinedReactions: R, visibleReactionsCount: v } = this.props,
+            { disableTransitionAppear: Z } = this.state,
+            L = M ? h : N,
             P = v > 0;
         if (!P && !A) return null;
         let { enabled: b } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             { canShowImprovedReactionButton: D } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             j = b && P,
             U = (A && !P) || j,
-            y = D && !f;
+            y = D && !p;
         return (0, i.jsxs)(r.W, {
             component: 'div',
-            className: l()(Z.reactions, g, { [Z.largeReactions]: y }),
-            transitionAppear: !L,
+            className: l()(L.reactions, g, { [L.largeReactions]: y }),
+            transitionAppear: !Z,
             role: 'group',
             transitionLeave: !1,
             id: (0, E.bY)(e),
@@ -62,7 +62,7 @@ class g extends a.PureComponent {
                     isLurking: a,
                     isGuest: s,
                     isPendingMember: C,
-                    isForumToolbar: f,
+                    isForumToolbar: p,
                     useChatFontScaling: M,
                     className: S,
                     emojiSize: y ? 'reactionLarge' : 'reaction'
@@ -70,12 +70,12 @@ class g extends a.PureComponent {
                 x > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, m.op)(p, e);
+                            t.stopPropagation(), (0, m.op)(f, e);
                         },
-                        className: l()(Z.reaction, S, Z.remainingReactions),
+                        className: l()(L.reaction, S, L.remainingReactions),
                         'aria-label': T.Z.Messages.ADD_REACTION,
                         children: (0, i.jsxs)(o.Text, {
-                            className: Z.reactionInner,
+                            className: L.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', x]
                         })
@@ -86,12 +86,12 @@ class g extends a.PureComponent {
                         tabIndex: U || this.state.isHovered ? 0 : -1,
                         type: u.O.NORMAL,
                         message: e,
-                        channel: p,
+                        channel: f,
                         useChatFontScaling: M,
                         isHovered: this.state.isHovered,
                         className: l()({
-                            [Z.forceShow]: U,
-                            [Z.forceShowLook]: A || j
+                            [L.forceShow]: U,
+                            [L.forceShowLook]: A || j
                         })
                     })
             ]
@@ -125,7 +125,7 @@ t.Z = (e) => {
             visibleReactionsCount: o
         } = a.useMemo(() => {
             let e = [],
-                i = p(t.reactions, s),
+                i = f(t.reactions, s),
                 a = null != n && n < i.length ? i.slice(0, n) : i,
                 l = i.length - a.length,
                 r = i.length;

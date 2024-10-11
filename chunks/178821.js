@@ -111,7 +111,7 @@ function p(e) {
                 }
             ];
         })(t),
-        [T, S] = (function (e, t) {
+        [S, T] = (function (e, t) {
             let n = a.useRef(null),
                 r = a.useRef(null),
                 l = a.useRef(null),
@@ -137,16 +137,16 @@ function p(e) {
         y = j(c, b.current);
     a.useEffect(
         () => (
-            T(),
+            S(),
             () => {
-                S();
+                T();
             }
         ),
         []
     );
     let I = a.useCallback(() => {
-        h(), C(), T();
-    }, [h, C, T]);
+        h(), C(), S();
+    }, [h, C, S]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [

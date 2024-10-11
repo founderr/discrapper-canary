@@ -18,8 +18,8 @@ let S = [L.Plq.KICK_MEMBERS, L.Plq.BAN_MEMBERS, L.Plq.ADMINISTRATOR, L.Plq.MANAG
     c = [],
     O = [],
     U = [],
-    d = [],
     G = [],
+    d = [],
     M = [],
     R = [],
     g = [],
@@ -113,10 +113,10 @@ class x extends (s = l.ZP.Store) {
         return O;
     }
     get webhooks() {
-        return d;
+        return G;
     }
     get guildScheduledEvents() {
-        return G;
+        return d;
     }
     get automodRules() {
         return M;
@@ -176,7 +176,7 @@ class x extends (s = l.ZP.Store) {
         },
         AUDIT_LOG_FETCH_SUCCESS: function (e) {
             var _;
-            (H = 0), (C = !1), (f = !1), (h = !0), (m = !1), (c = F(e.logs)), (O = e.integrations), (d = e.webhooks), (G = e.guildScheduledEvents), (M = null !== (_ = e.automodRules) && void 0 !== _ ? _ : []), (R = e.threads), (g = e.applicationCommands), e.logs.length < L.Rg9 && (h = !1);
+            (H = 0), (C = !1), (f = !1), (h = !0), (m = !1), (c = F(e.logs)), (O = e.integrations), (G = e.webhooks), (d = e.guildScheduledEvents), (M = null !== (_ = e.automodRules) && void 0 !== _ ? _ : []), (R = e.threads), (g = e.applicationCommands), e.logs.length < L.Rg9 && (h = !1);
         },
         AUDIT_LOG_FETCH_FAIL: function () {
             (f = !1), (m = !0), (c = []);
@@ -187,7 +187,7 @@ class x extends (s = l.ZP.Store) {
         },
         AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
             let { logs: _, integrations: E, webhooks: s, guildScheduledEvents: n, automodRules: t, threads: r, applicationCommands: T } = e;
-            if (((p = !1), (O = E), (d = s), (G = n), (M = t), (R = r), (g = T), (0 === _.length || _.length < L.Rg9) && (h = !1), _.length > 0)) {
+            if (((p = !1), (O = E), (G = s), (d = n), (M = t), (R = r), (g = T), (0 === _.length || _.length < L.Rg9) && (h = !1), _.length > 0)) {
                 let e = F(_);
                 c = [...c, ...e];
             }
@@ -213,6 +213,6 @@ class x extends (s = l.ZP.Store) {
             return (u = _), (v = null), B({ section: E });
         },
         GUILD_SETTINGS_CLOSE: function () {
-            (c = []), (U = []), (Z = L.rsA.ALL), (P = null), (v = null), (b = {}), (H = 0), (C = !0), (O = []), (d = []), (G = []), (M = []), (R = []);
+            (c = []), (U = []), (Z = L.rsA.ALL), (P = null), (v = null), (b = {}), (H = 0), (C = !0), (O = []), (G = []), (d = []), (M = []), (R = []);
         }
     }));

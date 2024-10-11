@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -24,7 +24,7 @@ var r = n(735250),
     _ = n(246992),
     j = n(128374),
     C = n(219299);
-function T() {
+function S() {
     var e;
     let t = (0, s.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
         [n, l] = a.useState(t.length > 0 ? t[0].channelId : void 0),
@@ -84,7 +84,7 @@ function T() {
         ]
     });
 }
-function S() {
+function T() {
     let e = v.ZP.allByCategory(v.zU.MESSAGING).map((e) => {
         let [t, n, { label: a }] = e;
         return (0, r.jsx)(
@@ -101,6 +101,6 @@ function S() {
     });
     return (0, r.jsxs)('div', {
         className: i()(C.panel, j.panel),
-        children: [e, (0, r.jsx)('div', { className: j.divider }), (0, r.jsx)(T, {})]
+        children: [e, (0, r.jsx)('div', { className: j.divider }), (0, r.jsx)(S, {})]
     });
 }

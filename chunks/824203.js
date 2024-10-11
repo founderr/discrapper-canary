@@ -25,7 +25,7 @@ function c(e, t, n) {
         S = null === (u = f.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
     if (void 0 !== S) {
         let n = (0, l.ZJ)(S.permissions, t, null == t ? void 0 : t.guild_id),
-            r = (0, l.ML)(S.permissions, p.guild_id, I, m, T);
+            r = (0, l.ML)(S.permissions, null == p ? void 0 : p.guild_id, I, m, T);
         if (
             (0, l.Ft)(e, _, {
                 applicationAllowedForUser: r,

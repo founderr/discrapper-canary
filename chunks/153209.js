@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(981631),
     h = n(689938),
     C = n(802840),
-    f = n(811304);
-function p(e) {
+    p = n(811304);
+function f(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(r.CircleIconButton, {
         tooltip: h.Z.Messages.MARK_ALL_AS_READ,
@@ -31,16 +31,16 @@ function p(e) {
             size: 'xs',
             color: 'currentColor'
         }),
-        className: f.controlButton,
+        className: p.controlButton,
         onClick: t
     });
 }
 function g(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e,
-        { initialized: h, items: f, loading: g, loadMore: A } = (0, u.y6)(),
+        { initialized: h, items: p, loading: g, loadMore: A } = (0, u.y6)(),
         S = (0, s.e7)([o.Z], () => o.Z.localItems),
-        M = a.useMemo(() => [...[...f, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [f, S]),
-        O = f.length > 0 ? f[0] : null,
+        M = a.useMemo(() => [...[...p, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, S]),
+        O = p.length > 0 ? p[0] : null,
         x = E.d$.useSetting(),
         R = a.useMemo(() => {
             if (null != O && 0 >= m.default.compare(O.id, x)) return !1;
@@ -59,7 +59,7 @@ function g(e) {
                 badgeState: n,
                 closePopout: r,
                 children: R
-                    ? (0, i.jsx)(p, {
+                    ? (0, i.jsx)(f, {
                           onClick: () => {
                               null != O && (E.d$.updateSetting(O.id), I.default.track(N.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }

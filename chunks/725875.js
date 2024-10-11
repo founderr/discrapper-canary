@@ -19,7 +19,7 @@ var i = t(735250),
     _ = t(672994);
 function N(e) {
     let { webhooks: n, selectableWebhookChannels: t, lastCreatedWebhookId: N, editedWebhook: E, errors: T, canNavigate: h } = e,
-        g = a.useMemo(
+        p = a.useMemo(
             () =>
                 Object.values(t).map((e) => ({
                     value: e.id,
@@ -27,7 +27,7 @@ function N(e) {
                 })),
             [t]
         ),
-        p = a.useMemo(() => {
+        g = a.useMemo(() => {
             let e = {};
             for (let i of n)
                 if (i.channel_id in e) e[i.channel_id].webhooks.push(i);
@@ -49,7 +49,7 @@ function N(e) {
         );
     return (0, i.jsx)('div', {
         className: _.__invalid_list,
-        children: p.map((e) => {
+        children: g.map((e) => {
             let { channel: n, webhooks: t } = e;
             return (function (e) {
                 let { channel: n, webhooks: t, channelOptions: a, lastCreatedWebhookId: l, editedWebhook: N, errors: E, toggleWebhookExpand: T } = e;
@@ -108,7 +108,7 @@ function N(e) {
             })({
                 channel: n,
                 webhooks: t,
-                channelOptions: g,
+                channelOptions: p,
                 lastCreatedWebhookId: N,
                 editedWebhook: E,
                 errors: T,

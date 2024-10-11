@@ -131,8 +131,8 @@ function L(e) {
                             let { context: a, userId: l, roleIds: o, isImpersonating: r } = n;
                             if (!(i.applicationId in t)) {
                                 let { descriptor: n, isGuildInstalled: s, isUserInstalled: c } = (0, m.If)(e, i.applicationId),
-                                    d = null != a.guild_id ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, o, r) : null,
-                                    u = null != a.guild_id ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
+                                    d = (null == a ? void 0 : a.guild_id) != null ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, o, r) : null,
+                                    u = (null == a ? void 0 : a.guild_id) != null ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
                                 t[i.applicationId] = {
                                     descriptor: n,
                                     applicationAllowedForUser: d,
@@ -253,8 +253,8 @@ function L(e) {
                         return (t) => {
                             let { context: i, userId: a, roleIds: l, isImpersonating: o } = n,
                                 { descriptor: r, sectionCommands: s, isGuildInstalled: c, isUserInstalled: d } = (0, m.If)(e, t.id),
-                                u = null != i.guild_id ? _.ML(null == r ? void 0 : r.permissions, i.guild_id, a, l, o) : null,
-                                p = null != i.guild_id ? _.ZJ(null == r ? void 0 : r.permissions, i, i.guild_id) : null;
+                                u = (null == i ? void 0 : i.guild_id) != null ? _.ML(null == r ? void 0 : r.permissions, i.guild_id, a, l, o) : null,
+                                p = (null == i ? void 0 : i.guild_id) != null ? _.ZJ(null == r ? void 0 : r.permissions, i, i.guild_id) : null;
                             return (
                                 null == s ||
                                 !(s.length > 0) ||

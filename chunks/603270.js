@@ -1,6 +1,6 @@
 n.d(t, {
     F: function () {
-        return L;
+        return Z;
     },
     P: function () {
         return v;
@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(551428),
     h = n(626135),
     C = n(572004),
-    f = n(601911),
-    p = n(504211),
+    p = n(601911),
+    f = n(504211),
     g = n(381961),
     A = n(970321),
     S = n(680005),
@@ -42,7 +42,7 @@ let v = P(function (e) {
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
-                        i = null != n ? (0, f.y)(n, 45) : void 0,
+                        i = null != n ? (0, p.y)(n, 45) : void 0,
                         a = null === (e = E.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
                     return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), m.Z.getStoreLayout(t), m.Z.getFetchStatus(t), a, i];
                 },
@@ -52,20 +52,20 @@ let v = P(function (e) {
             C === m.N.NONE && (0, r.k)(t), null == _ && !I && !T && (0, d.UM)(t);
         }, [_, t, T, I, C]);
         let v = N.subscriptions.length,
-            L = N.otps.length,
+            Z = N.otps.length,
             P = a.useMemo(
                 () =>
-                    v > 0 && L > 0
+                    v > 0 && Z > 0
                         ? x.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
                               subCount: v,
-                              itemCount: L
+                              itemCount: Z
                           })
                         : v > 0
                           ? x.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: v })
-                          : L > 0
-                            ? x.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: L })
+                          : Z > 0
+                            ? x.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: Z })
                             : x.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
-                [L, v]
+                [Z, v]
             );
         if (!u || null == _) return null;
         let b = () => {
@@ -80,13 +80,13 @@ let v = P(function (e) {
                     });
             });
         };
-        return (0, i.jsx)(Z, {
+        return (0, i.jsx)(L, {
             appName: _.name,
             title: x.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
             description: P,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, p.X)(t, p.B.STORE_EMBED);
+                (0, f.X)(t, f.B.STORE_EMBED);
             },
             iconSrc: S,
             onIconClick: () => {
@@ -109,10 +109,10 @@ let v = P(function (e) {
             })
         });
     }),
-    L = P(function (e) {
+    Z = P(function (e) {
         var t, r;
         let { skuId: d, message: m } = e,
-            [C, g, v, L, P, b, D, j] = (0, s.Wu)(
+            [C, g, v, Z, P, b, D, j] = (0, s.Wu)(
                 [T.Z, N.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -120,7 +120,7 @@ let v = P(function (e) {
                         s = T.Z.get(d),
                         l = null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == s ? void 0 : s.applicationId,
                         r = null !== (i = null != l ? c.Z.getApplication(l) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
-                        o = null != r ? (0, f.y)(r, 45) : void 0,
+                        o = null != r ? (0, p.y)(r, 45) : void 0,
                         u = I.Z.getForSKU(d);
                     return [s, r, N.Z.getForSKU(d), T.Z.isFetching(d), T.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, a, o];
                 },
@@ -128,8 +128,8 @@ let v = P(function (e) {
             ),
             U = (0, A.R)(null !== (r = null == g ? void 0 : g.id) && void 0 !== r ? r : '');
         a.useEffect(() => {
-            null == C && !L && !P && (0, o.km)(d);
-        }, [P, L, C, d]),
+            null == C && !Z && !P && (0, o.km)(d);
+        }, [P, Z, C, d]),
             a.useEffect(() => {
                 if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
             }, [null == g ? void 0 : g.id]);
@@ -225,13 +225,13 @@ let v = P(function (e) {
                 area: 'purchase_button'
             });
         };
-        return (0, i.jsx)(Z, {
+        return (0, i.jsx)(L, {
             appName: g.name,
             title: C.name,
             description: Y,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(g.id, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, p.X)(g.id, p.B.SKU_EMBED, d);
+                (0, f.X)(g.id, f.B.SKU_EMBED, d);
             },
             iconSrc: j,
             onIconClick: () => {
@@ -291,7 +291,7 @@ let v = P(function (e) {
             })
         });
     });
-function Z(e) {
+function L(e) {
     let { appName: t, title: n, description: a, link: s, iconSrc: r, onIconClick: o, onLinkCopy: c, children: d } = e;
     return (0, i.jsxs)('div', {
         className: R.wrapper,

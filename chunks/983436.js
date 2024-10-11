@@ -33,7 +33,7 @@ function m(e) {
                 (0, l.K)(n.id, m.id),
                 s.default.selectVoiceChannel(m.id);
         }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, N, h]),
-        f = (0, i.jsx)(o.Z.Channel, { channel: m });
+        p = (0, i.jsx)(o.Z.Channel, { channel: m });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsxs)(o.Z.Body, {
             children: [
@@ -42,7 +42,7 @@ function m(e) {
                     children: [
                         (0, i.jsx)(o.Z.Icon, { guild: n }),
                         (0, i.jsx)(o.Z.Info, {
-                            title: f,
+                            title: p,
                             onClick: C,
                             children: (0, i.jsxs)('span', {
                                 className: I.infoTitle,

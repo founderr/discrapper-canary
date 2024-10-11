@@ -36,8 +36,8 @@ var i,
     N = n(553826),
     h = n(506071),
     C = n(203143),
-    f = n(79390),
-    p = n(839963),
+    p = n(79390),
+    f = n(839963),
     g = n(294608),
     A = n(65145),
     S = n(981631),
@@ -70,7 +70,7 @@ function v(e) {
         children: n
     });
 }
-function L(e) {
+function Z(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: a, children: l } = e,
         { pollAnswerRef: r } = (0, A.dv)();
     return (0, s.jsx)(d.Clickable, {
@@ -82,7 +82,7 @@ function L(e) {
         children: l
     });
 }
-function Z(e) {
+function L(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: l, hasSelectedAnyAnswer: r, isFirstAnswer: c } = e;
     t = r ? (l ? 0 : -1) : c ? 0 : -1;
@@ -103,18 +103,18 @@ function P(e) {
             canTapAnswers: a,
             answersInteraction: n
         })
-            .with({ answersInteraction: p.Y7.RADIO_BUTTONS }, () => ({
+            .with({ answersInteraction: f.Y7.RADIO_BUTTONS }, () => ({
                 ContainerComponent: v,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: p.Y7.CHECKBOXES }, () => ({
+            .with({ answersInteraction: f.Y7.CHECKBOXES }, () => ({
                 ContainerComponent: R,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: p.Y7.LIST
+                    answersInteraction: f.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: x,
@@ -164,7 +164,7 @@ function b(e) {
                 children: i
             });
         case 1:
-            return (0, s.jsx)(Z, {
+            return (0, s.jsx)(L, {
                 className: o()(t, _),
                 onClick: I,
                 isSelected: E,
@@ -173,7 +173,7 @@ function b(e) {
                 children: i
             });
         case 2:
-            return (0, s.jsx)(L, {
+            return (0, s.jsx)(Z, {
                 className: o()(t, _),
                 onClick: I,
                 isSelected: E,
@@ -191,7 +191,7 @@ function D(e) {
         className: i,
         imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,

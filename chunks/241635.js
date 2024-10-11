@@ -31,12 +31,12 @@ function _(e, n) {
     });
     null != T && N.push(T);
     let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-        g = n.managed && !h,
-        p = null != n && (0, o.pM)(e.id, n.id);
+        p = n.managed && !h,
+        g = null != n && (0, o.pM)(e.id, n.id);
     return (
         !_ &&
-            !g &&
             !p &&
+            !g &&
             N.push(
                 (0, i.jsx)(
                     s.MenuGroup,

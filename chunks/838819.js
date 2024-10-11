@@ -19,8 +19,8 @@ var a = r(735250),
     E = r(214852),
     I = r(479446),
     x = r(981632),
-    T = r(290026),
-    v = r(819640),
+    v = r(290026),
+    T = r(819640),
     S = r(594174),
     L = r(626135),
     N = r(74538),
@@ -171,13 +171,13 @@ t.default = function (e) {
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
         [el, ec] = n.useState(),
-        ed = (0, c.e7)([v.Z], () => v.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
+        ed = (0, c.e7)([T.Z], () => T.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
         eu = (0, u.f9)(),
         { onClose: ef } = (0, D.Db)(),
         ep = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
         em = N.ZP.canUseCollectibles(ep),
         { categories: eC, isFetchingCategories: e_, error: eg, refreshCategories: eh } = (0, R.Z)();
-    (0, T.P)();
+    (0, v.P)();
     let eb = (0, Z.O)(eC),
         eE = n.useRef(null),
         [eI, ex] = n.useState(!1);
@@ -206,14 +206,14 @@ t.default = function (e) {
                     location_stack: m
                 });
         }, [r, em, m, s, I, M, w, ei, eo, el]);
-    let { dismissCollectiblesShopTabNewBadge: eT } = (0, Y.Z)();
+    let { dismissCollectiblesShopTabNewBadge: ev } = (0, Y.Z)();
     n.useEffect(() => {
-        if ((eT(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
+        if ((ev(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, h.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
                 dismissAction: Q.L.AUTO_DISMISS,
                 forceTrack: !0
             });
-    }, [eT]),
+    }, [ev]),
         n.useEffect(() => {
             !t && (0, p.Y)(J.Z5c.COLLECTIBLES_SHOP);
         }, [t]),
@@ -233,7 +233,7 @@ t.default = function (e) {
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [t, ed, eu, ef]);
-    let ev = n.useCallback(() => {
+    let eT = n.useCallback(() => {
             eh();
         }, [eh]),
         { setCategoryRef: eS, handleScrollToCategory: eL } = (0, y.xV)(x.current),
@@ -315,7 +315,7 @@ t.default = function (e) {
                                             children: e_
                                                 ? (0, a.jsx)(U.Z, {})
                                                 : null != eg
-                                                  ? (0, a.jsx)(H.Z, { onRetry: ev })
+                                                  ? (0, a.jsx)(H.Z, { onRetry: eT })
                                                   : (0, a.jsx)('div', {
                                                         className: er.categories,
                                                         children: eb

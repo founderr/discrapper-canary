@@ -21,7 +21,7 @@ function f(e) {
         v = null != f ? [f, ...p] : p,
         Z = (0, r.Z)(v),
         h = i.useMemo(() => Z.filter(a.lm), [Z]),
-        I = i.useMemo(
+        E = i.useMemo(
             () =>
                 null != f && h.length > 0 && h[0].id === f && null != h[0].embeddedActivityConfig
                     ? [
@@ -33,7 +33,7 @@ function f(e) {
                     : [],
             [h, f]
         ),
-        g = i.useMemo(
+        I = i.useMemo(
             () =>
                 n
                     .map((e) => {
@@ -50,7 +50,7 @@ function f(e) {
         );
     return i.useMemo(
         () =>
-            [...I, ...g]
+            [...E, ...I]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -60,6 +60,6 @@ function f(e) {
                     let { activity: n } = e;
                     return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, g, I]
+        [null == t ? void 0 : t.nsfwAllowed, I, E]
     );
 }

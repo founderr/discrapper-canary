@@ -14,7 +14,7 @@ var a = n(430824),
     d = n(981631),
     u = n(689938);
 function _(e) {
-    var t, n, _, E, I, m, T, N, h, C, f, p, g, A, S;
+    var t, n, _, E, I, m, T, N, h, C, p, f, g, A, S;
     let M = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : d.lds,
         O = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
@@ -30,11 +30,11 @@ function _(e) {
                 count: v
             });
         case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let L = null !== (f = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== f ? f : 'unknown';
-            return 'Update to build '.concat(L, ' available!');
+            let Z = null !== (p = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== p ? p : 'unknown';
+            return 'Update to build '.concat(Z, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            let Z = s.Z.getRelationshipType(M) === d.OGo.PENDING_OUTGOING;
-            return null !== (p = e.body) && void 0 !== p ? p : '';
+            let L = s.Z.getRelationshipType(M) === d.OGo.PENDING_OUTGOING;
+            return null !== (f = e.body) && void 0 !== f ? f : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
             let P = e.guild_scheduled_event_id,
                 b = null != P ? i.ZP.getGuildScheduledEvent(P) : null,

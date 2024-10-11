@@ -17,7 +17,7 @@ var s = E(735250),
     c = E(327999),
     O = E(689938),
     U = E(406385);
-let d = n.memo(function () {
+let G = n.memo(function () {
         return (0, s.jsx)(a.Tooltip, {
             text: O.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN_TOOLTIP,
             children: (e) =>
@@ -30,7 +30,7 @@ let d = n.memo(function () {
                 })
         });
     }),
-    G = n.memo(function () {
+    d = n.memo(function () {
         return (0, s.jsx)(a.Tooltip, {
             text: O.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP,
             children: (e) =>
@@ -226,7 +226,7 @@ function f(e) {
         case null == i:
         case null == E:
         case E === c.gq.UNSPECIFIED:
-            return (0, s.jsx)(d, { ...A });
+            return (0, s.jsx)(G, { ...A });
         case null != t && N:
             return (0, s.jsxs)(a.Clickable, {
                 className: U.inviteContainer,
@@ -273,7 +273,7 @@ function f(e) {
                 ]
             });
         default:
-            return (0, s.jsx)(d, { ...A });
+            return (0, s.jsx)(G, { ...A });
     }
 }
 _.ZP = n.memo(function (e) {
@@ -286,12 +286,12 @@ _.ZP = n.memo(function (e) {
         null != D && (I.Z.requestMembersById(r, [D]), (0, o.Z)(D, void 0, { guildId: r }));
     }, [r, D]);
     let u = (0, T.e7)([i.Z], () => i.Z.hideInstantInvites, []);
-    if (null == A) return (0, s.jsx)(d, {});
+    if (null == A) return (0, s.jsx)(G, {});
     let { sourceInviteCode: O, joinSourceType: U, integrationType: R } = A,
         C = null != U ? M[U] : null,
         p = null !== (E = null == C ? void 0 : C.hasTooltip) && void 0 !== E && E;
     return (U === c.gq.INVITE || U === c.gq.VANITY_URL || (U === c.gq.MANUAL_MEMBER_VERIFICATION && null != O)) && u
-        ? (0, s.jsx)(G, {})
+        ? (0, s.jsx)(d, {})
         : (0, s.jsx)(g, {
               hasTooltip: p && !a,
               inviterUser: null != L ? L : null,

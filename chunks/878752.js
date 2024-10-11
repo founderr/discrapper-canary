@@ -57,7 +57,7 @@ function N(e) {
                 }),
             j && (0, i.jsx)(C.Z, { channel: t }),
             b && R && (0, i.jsx)(f.Z, { channel: t }),
-            A && (0, i.jsx)(I.Z, {}),
+            A && (0, i.jsx)(I.Z, { channel: t }),
             M && n && (0, i.jsx)(E.Z, {}),
             M && n && (0, i.jsx)(g.Z, { channel: t }),
             M && n && (0, i.jsx)(x.Z, {})

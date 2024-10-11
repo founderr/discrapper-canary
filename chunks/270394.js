@@ -19,8 +19,8 @@ var i = t(735250),
     E = t(129861),
     T = t(493544),
     h = t(700582),
-    g = t(410030),
-    p = t(933557),
+    p = t(410030),
+    g = t(933557),
     f = t(346486),
     x = t(600164),
     C = t(666657),
@@ -79,7 +79,7 @@ function B(e) {
                                 ? (0, i.jsx)(m.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: (0, p.F6)(t, b.default, R.Z, !0)
+                                      children: (0, g.F6)(t, b.default, R.Z, !0)
                                   })
                                 : null)
                         ]
@@ -136,8 +136,8 @@ function y(e) {
     o()(null != s, 'guild is required');
     let E = (0, Z.M)(s),
         h = (0, u.e7)([O.Z], () => O.Z.getGuildIncident(s.id)),
-        p = s.hasFeature(v.oNc.INVITES_DISABLED) || ((null == h ? void 0 : h.invitesDisabledUntil) != null && new Date(h.invitesDisabledUntil) > new Date()),
-        f = (0, g.ZP)(),
+        g = s.hasFeature(v.oNc.INVITES_DISABLED) || ((null == h ? void 0 : h.invitesDisabledUntil) != null && new Date(h.invitesDisabledUntil) > new Date()),
+        f = (0, p.ZP)(),
         R = a.useMemo(
             () =>
                 null == n || _
@@ -242,12 +242,12 @@ function y(e) {
                                     children: [
                                         (0, i.jsx)(m.Button, {
                                             size: m.Button.Sizes.SMALL,
-                                            color: p ? m.Button.Colors.BRAND : m.Button.Colors.RED,
+                                            color: g ? m.Button.Colors.BRAND : m.Button.Colors.RED,
                                             disabled: !E,
                                             onClick: j,
-                                            children: p ? M.Z.Messages.ENABLE_INVITES : M.Z.Messages.DISABLE_INVITES
+                                            children: g ? M.Z.Messages.ENABLE_INVITES : M.Z.Messages.DISABLE_INVITES
                                         }),
-                                        p &&
+                                        g &&
                                             (0, i.jsxs)('div', {
                                                 className: L.inviteDisabledTip,
                                                 children: [
@@ -295,7 +295,7 @@ function y(e) {
                           hide: l,
                           invite: a,
                           showChannel: c,
-                          inviteDisabled: p
+                          inviteDisabled: g
                       },
                       a.code
                   );

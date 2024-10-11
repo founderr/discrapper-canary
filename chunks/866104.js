@@ -24,8 +24,8 @@ var i = n(735250),
     N = n(671533),
     h = n(51144),
     C = n(506071),
-    f = n(696014),
-    p = n(847033),
+    p = n(696014),
+    f = n(847033),
     g = n(544978),
     A = n(893182),
     S = n(689938),
@@ -104,17 +104,17 @@ function R(e) {
                 },
                 [s]
             )),
-        { isTruncated: R, ExpandableTextContainer: v } = (0, f.s)(),
-        L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [Z, P] = a.useState(1),
+        { isTruncated: R, ExpandableTextContainer: v } = (0, p.s)(),
+        Z = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
+        [L, P] = a.useState(1),
         b = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: D, isPhantomPreview: j } = (0, p.m)(),
+        { selectedTab: D, isPhantomPreview: j } = (0, f.m)(),
         U = D === g.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
-        y = L
+        y = Z
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(v, {
-                          lineClamp: b || 2 === Z ? 2 : 3,
+                          lineClamp: b || 2 === L ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',

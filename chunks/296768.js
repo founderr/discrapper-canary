@@ -66,7 +66,7 @@ function N(e) {
             o
                 .map((e) => E.Z.getGame(e))
                 .filter((e) => null != e)
-                .filter(A.W1)
+                .filter((e) => (0, A.z6)(e.applicationId))
                 .slice(0, 5)
         );
     return (r.useEffect(() => {

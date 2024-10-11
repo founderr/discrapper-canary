@@ -32,7 +32,7 @@ function p(e) {
     null == n.summary)
         ? null
         : (0, a.jsxs)('div', {
-              className: i()(I.column, I.gapSm),
+              className: i()(I.column, I.gapMd),
               children: [
                   null != n.summaryLocalized &&
                       (0, a.jsxs)('div', {

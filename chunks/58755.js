@@ -103,7 +103,7 @@ function g(e) {
 }
 function b(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: S, steps: T = 26 } = t,
         N = (0, h.XM)(t),
         y = (0, h.W6)(N, c);
     return (0, r.jsxs)(d.FormSection, {
@@ -249,17 +249,17 @@ function b(e) {
                     (0, r.jsx)(d.FormItem, {
                         children: (0, r.jsx)(d.FormSwitch, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: T,
+                            value: S,
                             disabled: !h.S2,
                             onChange: (e) => (0, h.uF)(c, e, n),
                             children: 'Use P3 Color Space'
                         })
                     }),
                     (0, r.jsx)(d.FormItem, {
-                        title: 'Steps ('.concat(S, ')'),
+                        title: 'Steps ('.concat(T, ')'),
                         children: (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: S,
+                            initialValue: T,
                             minValue: (0, h.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, h.YC)(c, Math.round(e), n),

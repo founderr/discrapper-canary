@@ -23,8 +23,8 @@ var a = n(613828),
     N = n(594174),
     h = n(630388),
     C = n(823379),
-    f = n(624138),
-    p = n(317381),
+    p = n(624138),
+    f = n(317381),
     g = n(638880),
     A = n(122613),
     S = n(147865),
@@ -33,11 +33,11 @@ var a = n(613828),
     x = n(403404),
     R = n(701488),
     v = n(981631),
-    L = n(689938),
-    Z = n(896219);
-let P = (0, f.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+    Z = n(689938),
+    L = n(896219);
+let P = (0, p.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
-    var t, n, l, f;
+    var t, n, l, p;
     let { applicationId: b, message: D } = e,
         { analyticsLocations: j } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
@@ -45,12 +45,12 @@ function b(e) {
         B = (0, s.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
         G = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
+        F = (0, s.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)),
         w = (null == F ? void 0 : F.applicationId) === b,
         [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, S.ZP)(null !== (l = null == V ? void 0 : V.maxParticipants) && void 0 !== l ? l : 0),
-        [Y] = (0, s.Wu)([p.ZP], () => (G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
-        W = Array.from(null !== (f = null == Y ? void 0 : Y.userIds) && void 0 !== f ? f : []),
+        [Y] = (0, s.Wu)([f.ZP], () => (G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
+        W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
         K = (0, s.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
         z = (0, M.Z)({
             applicationId: b,
@@ -58,7 +58,7 @@ function b(e) {
             names: ['embedded_cover']
         }),
         X = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
-        Q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
+        Q = K.length > 0 ? Z.Z.Messages.JOIN : Z.Z.Messages.START,
         J = async () => {
             if (G) {
                 if (null != Y && K.length > 0)
@@ -79,11 +79,11 @@ function b(e) {
                             });
                     e
                         ? o.Z.show({
-                              title: L.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-                              cancelText: L.Z.Messages.CANCEL,
-                              confirmText: L.Z.Messages.CONFIRM,
+                              title: Z.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+                              cancelText: Z.Z.Messages.CANCEL,
+                              confirmText: Z.Z.Messages.CONFIRM,
                               onConfirm: () => t(),
-                              body: L.Z.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
+                              body: Z.Z.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
                           })
                         : t();
                 }
@@ -101,43 +101,43 @@ function b(e) {
         ? (0, i.jsx)(u.Gt, {
               value: j,
               children: (0, i.jsxs)('div', {
-                  className: Z.container,
+                  className: L.container,
                   children: [
                       (0, i.jsx)('div', {
-                          className: Z.imgContainer,
+                          className: L.imgContainer,
                           children: (0, i.jsx)('img', {
-                              className: Z.img,
+                              className: L.img,
                               alt: V.name,
                               src: z.url
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: Z.content,
+                          className: L.content,
                           children: [
                               (0, i.jsx)(r.Heading, {
-                                  className: Z.heading,
+                                  className: L.heading,
                                   variant: 'heading-xl/semibold',
                                   children: V.name
                               }),
                               (0, i.jsx)(r.Heading, {
-                                  className: Z.description,
+                                  className: L.description,
                                   variant: 'heading-sm/medium',
                                   children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
                               }),
                               (0, i.jsx)(r.Heading, {
-                                  className: Z.learnMore,
+                                  className: L.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(a.rU, {
                                       to: v.Z5c.ACTIVITY_DETAILS(b),
-                                      children: L.Z.Messages.LEARN_MORE
+                                      children: Z.Z.Messages.LEARN_MORE
                                   })
                               }),
                               (0, i.jsxs)('div', {
-                                  className: Z.cta,
+                                  className: L.cta,
                                   children: [
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
-                                                className: Z.avatars,
+                                                className: L.avatars,
                                                 children: (0, i.jsx)(O.Z, {
                                                     guildId: k,
                                                     users: K,
@@ -145,12 +145,12 @@ function b(e) {
                                                 })
                                             })
                                           : (0, i.jsxs)('div', {
-                                                className: Z.maxParticipants,
+                                                className: L.maxParticipants,
                                                 children: [
                                                     (0, i.jsx)(r.GroupIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: Z.peopleIcon
+                                                        className: L.peopleIcon
                                                     }),
                                                     (0, i.jsx)(r.Text, {
                                                         variant: 'text-xs/semibold',
@@ -159,10 +159,10 @@ function b(e) {
                                                 ]
                                             }),
                                       (0, i.jsx)('div', {
-                                          className: Z.buttonWrapper,
+                                          className: L.buttonWrapper,
                                           children: (0, i.jsx)(r.Button, {
                                               onClick: J,
-                                              className: Z.button,
+                                              className: L.button,
                                               color: r.ButtonColors.GREEN,
                                               disabled: w,
                                               children: Q

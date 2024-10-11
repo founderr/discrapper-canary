@@ -69,11 +69,11 @@ function C() {
                           })
                       ]
                   }),
-                  (0, i.jsx)(f, {})
+                  (0, i.jsx)(p, {})
               ]
           });
 }
-function f() {
+function p() {
     let e = (0, u.Px)(I.p9.TIER_2),
         t = a.useCallback(
             () =>

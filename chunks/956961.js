@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(695346),
     h = n(592125),
     C = n(655354),
-    f = n(324081),
-    p = n(791914),
+    p = n(324081),
+    f = n(791914),
     g = n(981631),
     A = n(689938),
     S = n(816396),
@@ -42,7 +42,7 @@ function x(e) {
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(f.Z, {
                 tab: d.X.TODOS,
                 setTab: t,
                 closePopout: n
@@ -77,17 +77,17 @@ function R(e) {
         T = () => {
             (0, I.uL)(g.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), s.channelId, s.messageId));
         },
-        p = null;
+        f = null;
     return (null != s.dueAt &&
         (s.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (p = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+              (f = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
                   duration: o()
                       .duration(s.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (p = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+              (f = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
                   duration: o()
                       .duration(Date.now() - s.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -97,7 +97,7 @@ function R(e) {
         : (0, i.jsxs)('div', {
               className: M.container,
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(p.Z, {
                       channel: d,
                       gotoChannel: T,
                       children: (0, i.jsxs)('div', {
@@ -118,11 +118,11 @@ function R(e) {
                                         ]
                                     })
                                   : null,
-                              null != p
+                              null != f
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
-                                        children: p
+                                        children: f
                                     })
                                   : null,
                               (0, i.jsx)(u.TooltipContainer, {

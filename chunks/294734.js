@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return L;
     }
 });
 var i = n(735250),
@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(906467),
     h = n(430824),
     C = n(496675),
-    f = n(699516),
-    p = n(594174),
+    p = n(699516),
+    f = n(594174),
     g = n(100604),
     A = n(694784),
     S = n(39154),
@@ -49,7 +49,7 @@ function R() {
 function v(e) {
     let { message: t, snapshot: n, index: u } = e,
         _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]),
-        E = (0, l.e7)([T.Z, p.default, f.Z, C.Z, h.Z, d.Z], () => _.getForwardInfo(T.Z, p.default, f.Z, C.Z, h.Z, d.Z).footerInfo, [_], r.Z),
+        E = (0, l.e7)([T.Z, f.default, p.Z, C.Z, h.Z, d.Z], () => _.getForwardInfo(T.Z, f.default, p.Z, C.Z, h.Z, d.Z).footerInfo, [_], r.Z),
         I = a.useCallback(() => {
             (0, A.Z)(t);
         }, [t]);
@@ -79,7 +79,7 @@ function v(e) {
               ]
           });
 }
-function L(e) {
+function Z(e) {
     var t;
     let { message: n, snapshot: s, index: r } = e,
         o = a.useMemo(() => (0, S.Z)(n, s), [n, s]),
@@ -87,7 +87,7 @@ function L(e) {
         d = m.NA.useSetting(),
         h = (0, l.e7)([N.Z], () => N.Z.isDeveloper),
         C = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: f, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
+        { content: p, hasSpoilerEmbeds: f } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
@@ -113,7 +113,7 @@ function L(e) {
                               (0, i.jsx)(R, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
-                                  content: f
+                                  content: p
                               }),
                               (0, I.Z)({
                                   channelMessageProps: {
@@ -121,7 +121,7 @@ function L(e) {
                                       channel: g,
                                       compact: A
                                   },
-                                  hasSpoilerEmbeds: p,
+                                  hasSpoilerEmbeds: f,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1
@@ -138,12 +138,12 @@ function L(e) {
               r
           );
 }
-function Z(e) {
+function L(e) {
     let { message: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t.messageSnapshots.map((e, n) =>
             (0, i.jsx)(
-                L,
+                Z,
                 {
                     message: t,
                     snapshot: e,

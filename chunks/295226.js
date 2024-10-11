@@ -87,7 +87,7 @@ class S extends (r = i.ZP.PersistedStore) {
     getAlmostExpiringTrialOffers(e) {
         let t = Object.values(d.nG).map((e) => e.id),
             n = l.default.getCurrentUser();
-        return (0, u.I5)(n) ? [] : Object.values(f.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + d.ff);
+        return (0, u.I5)(n) ? [] : Object.values(f.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + (n.trial_id === d.jz ? d.FL : d.ff));
     }
     getAcknowledgedOffers(e) {
         let t = l.default.getCurrentUser();

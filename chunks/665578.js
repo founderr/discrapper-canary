@@ -20,8 +20,8 @@ var i = t(735250),
     E = t(821864),
     T = t(905753),
     h = t(937427),
-    g = t(643886),
-    p = t(869157),
+    p = t(643886),
+    g = t(869157),
     f = t(454092),
     x = t(289465),
     C = t(981631),
@@ -29,7 +29,7 @@ var i = t(735250),
     S = t(689938),
     A = t(457237);
 function R(e) {
-    let { applicationId: n, commandId: s, guildId: h, inModal: g, editedTargetPermissions: R, originalApplicationPermissions: v, originalCommandPermissions: M, selectedPermissionCount: L } = e,
+    let { applicationId: n, commandId: s, guildId: h, inModal: p, editedTargetPermissions: R, originalApplicationPermissions: v, originalCommandPermissions: M, selectedPermissionCount: L } = e,
         j = (0, o.e7)([T.Z], () => (null == s ? null : T.Z.getCommand(s)), [s]),
         D = (null == j ? void 0 : j.defaultMemberPermissions) != null,
         P = (0, o.e7)(
@@ -253,11 +253,11 @@ function R(e) {
                                 shouldShow: null != a,
                                 children: (e) => t(e)
                             }),
-                            inModal: g,
+                            inModal: p,
                             title: e.title,
                             children: (0, i.jsx)('div', {
-                                className: g ? void 0 : A.listContainer,
-                                children: (0, i.jsx)(p.Z, {
+                                className: p ? void 0 : A.listContainer,
+                                children: (0, i.jsx)(g.Z, {
                                     guildId: h,
                                     commandId: s,
                                     noneSelectedText: e.noneSelectedText,
@@ -285,7 +285,7 @@ function b(e) {
     };
 }
 function Z(e) {
-    let n = (0, g.U)(e);
+    let n = (0, p.U)(e);
     return {
         ...n,
         results: n.results.roles
