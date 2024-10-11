@@ -49799,17 +49799,14 @@ html.disable-forced-colors * {
     --space-96: 96px;
     --space-128: 128px;
     --space-160: 160px;
-    --space-192: 192px
-}
-
-.density-cozy {
-    --space-xxs: var(--space-8);
-    --space-xs: var(--space-12);
-    --space-sm: var(--space-16);
-    --space-md: var(--space-20);
-    --space-lg: var(--space-24);
-    --space-xl: var(--space-32);
-    --space-xxl: var(--space-48)
+    --space-192: 192px;
+    --space-xxs: var(--space-4);
+    --space-xs: var(--space-8);
+    --space-sm: var(--space-12);
+    --space-md: var(--space-16);
+    --space-lg: var(--space-20);
+    --space-xl: var(--space-24);
+    --space-xxl: var(--space-32)
 }
 
 .density-compact {
@@ -49820,6 +49817,16 @@ html.disable-forced-colors * {
     --space-lg: var(--space-20);
     --space-xl: var(--space-24);
     --space-xxl: var(--space-32)
+}
+
+.density-cozy {
+    --space-xxs: var(--space-8);
+    --space-xs: var(--space-12);
+    --space-sm: var(--space-16);
+    --space-md: var(--space-20);
+    --space-lg: var(--space-24);
+    --space-xl: var(--space-32);
+    --space-xxl: var(--space-48)
 }
 
 .density-spacious {
