@@ -161,8 +161,8 @@ let e4 = l.ZP.connectStores([H.Z, eU.Z, eD.default], () => ({
     ),
     e7 = (0, v.e)(L.Z, null, { passProps: !1 }),
     e5 = (0, v.e)(A.default, null, { passProps: !1 }),
-    e3 = [eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(em.Hw.guildId(), e))];
-function e2(e) {
+    e2 = [eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(em.Hw.guildId(), e))];
+function e3(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
         guildId: null != t ? t : eX.ME,
@@ -462,7 +462,7 @@ class te extends a.PureComponent {
             !(function (e, t) {
                 let n = e6(e);
                 if (null == n) return;
-                let { guildId: i, channelId: a, messageId: l, threadId: o } = e2(n),
+                let { guildId: i, channelId: a, messageId: l, threadId: o } = e3(n),
                     c = (0, em.Ss)(i),
                     d = (0, em.cq)(a),
                     E = (0, em.cq)(o),
@@ -509,7 +509,7 @@ class te extends a.PureComponent {
                     var I;
                     if (
                         ((I = e),
-                        !e3.some((e) => {
+                        !e2.some((e) => {
                             var t;
                             return (null === (t = (0, r.LX)(I, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
@@ -523,7 +523,7 @@ class te extends a.PureComponent {
         let { pathname: t } = e,
             n = e6(t);
         if (null == n) return null;
-        let { guildId: i, channelId: a, threadId: s } = e2(n),
+        let { guildId: i, channelId: a, threadId: s } = e3(n),
             r = (0, em.Ss)(i) && i !== eX.ME && i !== eX.I_8;
         if (null != a && (0, em.cq)(a) && !(0, eJ.AB)(a) && r) {
             let n = ej.Z.getChannel(a);

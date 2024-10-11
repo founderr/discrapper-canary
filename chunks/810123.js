@@ -20,8 +20,8 @@ t.Z = function (e) {
     var t, n, l;
     let { className: s, iconClassName: _, size: f, channel: E, guild: g, locked: m, hasActiveThreads: S } = e;
     if (null == g) return null;
-    let A = g.getIconURL(48),
-        I = h[f],
+    let I = g.getIconURL(48),
+        A = h[f],
         p = d[f],
         C = (0, o.KS)(E, g, {
             locked: m,
@@ -36,10 +36,10 @@ t.Z = function (e) {
             (0, a.jsx)(c.ZP, {
                 mask: c.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                 children:
-                    null != A
+                    null != I
                         ? (0, a.jsx)('img', {
                               alt: '',
-                              src: A,
+                              src: I,
                               className: u.channelGuildIcon,
                               style: {
                                   width: p,
@@ -49,7 +49,7 @@ t.Z = function (e) {
                         : (0, a.jsx)('div', {
                               className: i()(u.channelGuildIcon, u.acronym),
                               style: {
-                                  fontSize: ((n = I), (l = N).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
+                                  fontSize: ((n = A), (l = N).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
                                   width: p,
                                   height: p
                               },

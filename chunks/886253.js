@@ -13,12 +13,12 @@ var i = t(442837),
     u = t(601911),
     c = t(504211),
     d = t(981631),
-    f = t(689938),
-    p = t(213891),
+    p = t(689938),
+    f = t(213891),
     m = t(566809);
 function v(n) {
     let { appId: e, skuId: t, transitionState: v, onClose: I, onHeaderTitleClick: S, children: h, footer: x } = n,
-        g = (0, i.e7)(
+        N = (0, i.e7)(
             [o.Z, a.Z],
             () => {
                 var n;
@@ -26,36 +26,36 @@ function v(n) {
             },
             [e]
         );
-    if (null == g) return null;
-    let N = (0, u.y)(g, 25),
-        { termsOfServiceUrl: Z, privacyPolicyUrl: E } = g;
+    if (null == N) return null;
+    let T = (0, u.y)(N, 25),
+        { termsOfServiceUrl: g, privacyPolicyUrl: E } = N;
     return (0, l.jsxs)(r.ModalRoot, {
         transitionState: v,
         size: r.ModalSize.DYNAMIC,
         className: m.modal,
         children: [
             (0, l.jsxs)(r.ModalHeader, {
-                className: p.modalHeader,
+                className: f.modalHeader,
                 children: [
                     (0, l.jsxs)(r.Clickable, {
-                        className: p.modalTitle,
+                        className: f.modalTitle,
                         onClick: S,
                         children: [
-                            null != N &&
+                            null != T &&
                                 (0, l.jsx)('img', {
-                                    src: N.href,
+                                    src: T.href,
                                     alt: '',
                                     className: m.appIcon
                                 }),
                             (0, l.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: g.name
+                                children: N.name
                             })
                         ]
                     }),
                     (0, l.jsx)(r.ModalCloseButton, {
                         onClick: I,
-                        className: p.modalCloseBtn
+                        className: f.modalCloseBtn
                     })
                 ]
             }),
@@ -63,19 +63,19 @@ function v(n) {
             (0, l.jsxs)(r.ModalFooter, {
                 className: m.footer,
                 children: [
-                    null != Z && null != E
+                    null != g && null != E
                         ? (0, l.jsx)(r.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
-                              children: f.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-                                  tosUrl: Z,
+                              children: p.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
+                                  tosUrl: g,
                                   ppUrl: E
                               })
                           })
                         : (0, l.jsx)(r.Text, {
                               color: 'header-primary',
                               variant: 'text-xs/normal',
-                              children: f.Z.Messages.STOREFRONT_NO_TOS_PP
+                              children: p.Z.Messages.STOREFRONT_NO_TOS_PP
                           }),
                     (0, l.jsxs)('div', {
                         className: m.footerButtons,
@@ -85,11 +85,11 @@ function v(n) {
                                     look: r.ButtonLooks.FILLED,
                                     size: r.ButtonSizes.ICON,
                                     color: r.ButtonColors.CUSTOM,
-                                    'aria-label': f.Z.Messages.COPY_LINK,
+                                    'aria-label': p.Z.Messages.COPY_LINK,
                                     className: m.linkButton,
                                     onClick: () => {
                                         let n = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
-                                        (0, s.JG)(n), (0, r.showToast)((0, r.createToast)(f.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, c.X)(e, c.B.DETAILS_MODAL, t);
+                                        (0, s.JG)(n), (0, r.showToast)((0, r.createToast)(p.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, c.X)(e, c.B.DETAILS_MODAL, t);
                                     },
                                     children: (0, l.jsx)(r.LinkIcon, {
                                         size: 'xs',

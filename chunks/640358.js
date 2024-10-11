@@ -9,5 +9,5 @@ let a = (e, t) => {
     if (e < 1000000) return new Intl.NumberFormat(t, { maximumFractionDigits: n % 1 == 0 ? 0 : 1 }).format(e);
     let a = Math.round((e / 1000000) * 10) / 10,
         i = new Intl.NumberFormat(t, { maximumFractionDigits: a % 1 == 0 ? 0 : 1 }).format(e / 1000000);
-    return s.Z.Messages.NumberAbbreviations.MILLION.format({ num: i });
+    return s.Z.Messages.NUMBER_ABBREVIATIONS_MILLION.format({ num: i });
 };

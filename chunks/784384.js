@@ -1,9 +1,9 @@
 n.d(t, {
     HY: function () {
-        return I;
+        return A;
     },
     nm: function () {
-        return A;
+        return I;
     },
     pU: function () {
         return p;
@@ -30,7 +30,7 @@ var l = n(470079),
     g = n(823379),
     m = n(981631),
     S = n(689938);
-function A(e) {
+function I(e) {
     let t = e.map(r.hl).find(g.lm),
         n = (0, s.e7)([d.Z], () => d.Z.getChannel(t), [t]);
     return l.useMemo(
@@ -44,7 +44,7 @@ function A(e) {
         [n]
     );
 }
-function I(e, t, n) {
+function A(e, t, n) {
     let l = n instanceof u.Sf;
     if (t.isNSFW() && !(l && n.isNSFW())) return { label: S.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED };
     if (l && (0, u.Km)(n.type)) {

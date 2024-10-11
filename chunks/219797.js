@@ -27,8 +27,8 @@ var i = t(735250),
     a = t(442837),
     l = t(993365),
     u = t(981729),
-    o = t(481060),
-    s = t(543651),
+    s = t(481060),
+    o = t(543651),
     c = t(394779),
     d = t(519320),
     _ = t(592125),
@@ -70,7 +70,7 @@ function C(e) {
                       text: A.Z.Messages.CLIPS_BETA_TAG_HOVER,
                       className: p.clipPill,
                       children: [
-                          (0, i.jsx)(o.ClipsIcon, {
+                          (0, i.jsx)(s.ClipsIcon, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
@@ -83,14 +83,14 @@ function C(e) {
                   })
                 : null;
         }, [t]),
-        s = E.Z.toURLSafe(t.proxy_url);
-    return null == s
+        o = E.Z.toURLSafe(t.proxy_url);
+    return null == o
         ? null
-        : (s.searchParams.append('format', 'webp'),
+        : (o.searchParams.append('format', 'webp'),
           (0, S.lV)({
               ...e,
               alt: t.description,
-              poster: s.toString(),
+              poster: o.toString(),
               fileSize: t.size,
               fileName: (0, h.Z)(t),
               src: t.url,
@@ -184,9 +184,9 @@ function y(e) {
             var e;
             return null === (e = _.Z.getBasicChannel(l)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        { clip_created_at: o, clip_participants: c, title: d, application: f } = t;
-    return (0, i.jsx)(s.Z, {
-        createdAt: null != o ? Date.parse(o) : void 0,
+        { clip_created_at: s, clip_participants: c, title: d, application: f } = t;
+    return (0, i.jsx)(o.Z, {
+        createdAt: null != s ? Date.parse(s) : void 0,
         participantIds:
             null !==
                 (n =

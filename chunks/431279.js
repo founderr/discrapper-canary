@@ -16,7 +16,7 @@ var r,
     _ = n(956664),
     E = n(506071),
     f = n(981631),
-    h = n(503349),
+    h = n(701865),
     p = n(689938),
     I = n(167251);
 function m(e, t, n) {
@@ -51,7 +51,7 @@ class T extends (r = a.PureComponent) {
             }),
             m(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
             m(this, 'onCloseImage', () => {
-                (0, o.closeModal)(h.c, this.modalContext);
+                (0, o.closeModal)(h.U, this.modalContext);
             }),
             m(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
@@ -93,7 +93,7 @@ class T extends (r = a.PureComponent) {
                                     shouldHideMediaOptions: R
                                 })
                             }),
-                        { modalKey: h.c },
+                        { modalKey: h.U },
                         this.modalContext
                     );
             });

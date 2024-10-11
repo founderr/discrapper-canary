@@ -11,11 +11,11 @@ var a = t(120356),
     l = t(689938),
     s = t(882089);
 function c(e) {
-    let { className: n, onClick: t, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: m, animatesOnHover: I, ...f } = e,
-        g = null != a,
-        h = (0, i.jsxs)(i.Fragment, {
+    let { className: n, onClick: t, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: m, animatesOnHover: f, ...I } = e,
+        h = null != a,
+        g = (0, i.jsxs)(i.Fragment, {
             children: [
-                g &&
+                h &&
                     (0, i.jsx)('div', {
                         className: s.imageContainer,
                         children: (0, i.jsx)('img', {
@@ -63,19 +63,19 @@ function c(e) {
                 })
             ]
         }),
-        C = r()(n, s.container, { [s.hasImage]: g });
+        C = r()(n, s.container, { [s.hasImage]: h });
     return null != t
         ? (0, i.jsx)(o.ClickableContainer, {
               tag: 'article',
               'aria-label': l.Z.Messages.APP_DIRECTORY_LISTING_CARD_BUTTON_A11Y_LABEL.format({ name: d }),
               onClick: t,
-              className: r()(C, s.clickable, { [s.animatesOnHoverContainer]: I }),
+              className: r()(C, s.clickable, { [s.animatesOnHoverContainer]: f }),
               focusProps: { offset: 4 },
-              children: h
+              children: g
           })
         : (0, i.jsx)('article', {
               className: C,
-              ...f,
-              children: h
+              ...I,
+              children: g
           });
 }

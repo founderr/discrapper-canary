@@ -14,19 +14,19 @@ var a = t(735250),
     A = t(810568),
     p = t(689938),
     g = t(501345),
-    T = t(51527);
+    f = t(51527);
 n.Z = (e) => {
-    let { entry: n, viewId: t, officialGuildId: s, onClose: f } = e,
+    let { entry: n, viewId: t, officialGuildId: s, onClose: T } = e,
         O = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        R = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
-        { nick: N, avatar: h } = r.useMemo(() => {
-            let e = null == R ? void 0 : R.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
+        N = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
+        { nick: h, avatar: R } = r.useMemo(() => {
+            let e = null == N ? void 0 : N.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
             return {
-                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, R),
+                nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
                 avatar: e
             };
-        }, [R, O]);
-    return null == R
+        }, [N, O]);
+    return null == N
         ? null
         : (0, a.jsx)(l.Popout, {
               position: 'right',
@@ -45,7 +45,7 @@ n.Z = (e) => {
                               viewId: t,
                               officialGuildId: s
                           }),
-                              f(),
+                              T(),
                               r();
                       },
                       onUserPopoutClosed: () => r(),
@@ -78,19 +78,19 @@ n.Z = (e) => {
                               children: [
                                   (0, a.jsx)('img', {
                                       className: g.avatar,
-                                      src: h,
-                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
+                                      src: R,
+                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: h })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: i()(g.playerInfo),
                                       children: (0, a.jsxs)('div', {
-                                          className: i()(T.column, T.gapXs),
+                                          className: i()(f.column, f.gapXs),
                                           children: [
                                               (0, a.jsx)(l.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: N
+                                                  children: h
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,

@@ -1,6 +1,6 @@
 t.d(n, {
     M: function () {
-        return E;
+        return b;
     }
 }),
     t(789020);
@@ -16,34 +16,34 @@ var i = t(735250),
     _ = t(147496),
     p = t(955335),
     m = t(519896),
-    I = t(171246),
-    f = t(55563),
-    g = t(147890),
-    h = t(272242),
+    f = t(171246),
+    I = t(55563),
+    h = t(147890),
+    g = t(272242),
     C = t(981631),
     v = t(689938),
-    b = t(778452);
-function E(e) {
+    x = t(778452);
+function b(e) {
     let { appId: n } = e,
         { subscriptions: t, otps: a } = (0, d.q)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: b.productSection,
+                    className: x.productSection,
                     children: [
                         (0, i.jsx)(p.r, { subscriptions: t }),
                         (0, i.jsx)('div', {
-                            className: o()(b.productList, b.subList),
+                            className: o()(x.productList, x.subList),
                             children: t.map((e) =>
                                 (0, i.jsx)(
                                     u.zz,
                                     {
                                         appId: n,
                                         listing: e,
-                                        subscriptionType: (0, I.KW)(e.skuFlags) ? 'user' : 'guild',
+                                        subscriptionType: (0, f.KW)(e.skuFlags) ? 'user' : 'guild',
                                         onDetails: () => {
-                                            (0, g.goToApplicationStoreSku)({
+                                            (0, h.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -57,14 +57,14 @@ function E(e) {
                 }),
             a.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: b.productSection,
+                    className: x.productSection,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(b.productList, b.itemList),
+                            className: o()(x.productList, x.itemList),
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -72,7 +72,7 @@ function E(e) {
                                         skuId: e.skuId,
                                         appId: n,
                                         onDetails: () => {
-                                            (0, g.goToApplicationStoreSku)({
+                                            (0, h.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -87,19 +87,19 @@ function E(e) {
             (0, i.jsx)(c.Z, {
                 path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(x, { ...e })
+                render: (e) => (0, i.jsx)(E, { ...e })
             })
         ]
     });
 }
-function x(e) {
+function E(e) {
     let {
             match: {
                 params: { applicationId: n, skuId: t }
             }
         } = e,
-        r = (0, l.e7)([f.Z], () => f.Z.get(t), [t]),
-        o = (0, l.e7)([f.Z], () => (null != t ? f.Z.getParentSKU(t) : void 0), [t]),
+        r = (0, l.e7)([I.Z], () => I.Z.get(t), [t]),
+        o = (0, l.e7)([I.Z], () => (null != t ? I.Z.getParentSKU(t) : void 0), [t]),
         c = a.useId();
     return (
         a.useLayoutEffect(() => {
@@ -121,9 +121,9 @@ function x(e) {
                                 modalKey: e,
                                 onCloseCallback() {
                                     !P() &&
-                                        (0, g.goToApplicationSection)({
+                                        (0, h.goToApplicationSection)({
                                             applicationId: n,
-                                            section: h.ApplicationDirectoryProfileSections.STORE
+                                            section: g.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
@@ -137,7 +137,7 @@ function x(e) {
                                 let { onClose: r, transitionState: o } = e;
                                 return (0, i.jsx)(m.SubscriptionDetailsModal, {
                                     appId: n,
-                                    subscriptionType: (0, I.KW)(a) ? 'user' : 'guild',
+                                    subscriptionType: (0, f.KW)(a) ? 'user' : 'guild',
                                     skuId: t,
                                     guildId: null,
                                     onClose: r,
@@ -148,9 +148,9 @@ function x(e) {
                                 modalKey: e,
                                 onCloseCallback() {
                                     !P() &&
-                                        (0, g.goToApplicationSection)({
+                                        (0, h.goToApplicationSection)({
                                             applicationId: n,
-                                            section: h.ApplicationDirectoryProfileSections.STORE
+                                            section: g.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }

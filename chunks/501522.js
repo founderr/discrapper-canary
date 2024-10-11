@@ -1,8 +1,8 @@
 a(47120);
 var n = a(735250),
-    i = a(470079),
+    s = a(470079),
     r = a(333032);
-function l(e, t, a) {
+function i(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function l(e, t, a) {
         e
     );
 }
-class o extends i.Component {
+class l extends s.Component {
     componentDidUpdate(e) {
         let {
             props: { location: t, shouldScrollToTop: a },
@@ -33,11 +33,11 @@ class o extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            l(this, 'scrollRef', i.createRef()),
-            l(this, 'scrollTo', (e) => {
+            i(this, 'scrollRef', s.createRef()),
+            i(this, 'scrollTo', (e) => {
                 null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
             }),
-            l(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
+            i(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
     }
 }
-t.Z = (0, r.EN)(o);
+t.Z = (0, r.EN)(l);

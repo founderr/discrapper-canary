@@ -1,19 +1,19 @@
 a(411104), a(47120);
 var n = a(735250),
-    i = a(470079),
+    s = a(470079),
     r = a(539528),
-    l = a(786876),
-    o = a(333032);
-class s extends i.Component {
+    i = a(786876),
+    l = a(333032);
+class o extends s.Component {
     render() {
-        let { to: e, from: t, isNavLink: a, children: i, tabIndex: r = 0, role: o, className: s } = this.props;
+        let { to: e, from: t, isNavLink: a, children: s, tabIndex: r = 0, role: l, className: o } = this.props;
         if (null == e) throw Error("Missing 'to' route prop in TrackLink component");
         let c = 'string' == typeof e ? e : e.pathname,
             d = 'string' == typeof e ? '' : e.hash,
             u = 'string' == typeof e ? '' : e.search;
         return a
-            ? (0, n.jsx)(l.OL, {
-                  className: s,
+            ? (0, n.jsx)(i.OL, {
+                  className: o,
                   tabIndex: r,
                   onClick: this.handleOnClick,
                   to: {
@@ -22,11 +22,11 @@ class s extends i.Component {
                       search: u,
                       state: { previousLinkLocation: t }
                   },
-                  role: o,
-                  children: i
+                  role: l,
+                  children: s
               })
-            : (0, n.jsx)(l.rU, {
-                  className: s,
+            : (0, n.jsx)(i.rU, {
+                  className: o,
                   tabIndex: r,
                   onClick: this.handleOnClick,
                   to: {
@@ -35,8 +35,8 @@ class s extends i.Component {
                       search: u,
                       state: { previousLinkLocation: t }
                   },
-                  role: o,
-                  children: i
+                  role: l,
+                  children: s
               });
     }
     constructor(...e) {
@@ -63,4 +63,4 @@ class s extends i.Component {
                 : (t[a] = n);
     }
 }
-t.Z = (0, o.EN)(s);
+t.Z = (0, l.EN)(o);

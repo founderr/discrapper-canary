@@ -16,8 +16,8 @@ var i = t(860911),
     u = t(87484),
     c = t(703656),
     d = t(626135),
-    f = t(937615),
-    p = t(110742),
+    p = t(937615),
+    f = t(110742),
     m = t(981631),
     v = t(689938),
     I = t(962083);
@@ -33,10 +33,10 @@ function S(n) {
               className: t,
               children: (0, l.jsxs)('div', {
                   className: I.btnContent,
-                  children: [s, v.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, f.xg)(o) })]
+                  children: [s, v.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, p.xg)(o) })]
               })
           })
-        : (0, l.jsx)(g, {
+        : (0, l.jsx)(N, {
               className: t,
               children: c
           });
@@ -51,13 +51,13 @@ function h(n) {
                 analyticsLocations: d
             });
         },
-        h = (0, p.M)(s.id),
-        N = s.type === m.epS.DURABLE && h,
-        { price: Z } = s;
-    return null == Z
+        h = (0, f.M)(s.id),
+        T = s.type === m.epS.DURABLE && h,
+        { price: g } = s;
+    return null == g
         ? null
-        : N
-          ? (0, l.jsx)(g, {
+        : T
+          ? (0, l.jsx)(N, {
                 className: t,
                 children: v.Z.Messages.COLLECTIBLES_ALREADY_OWNED
             })
@@ -70,7 +70,7 @@ function h(n) {
                 className: t,
                 children: (0, l.jsxs)('div', {
                     className: I.btnContent,
-                    children: [c, v.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, f.T4)(Z.amount, Z.currency) })]
+                    children: [c, v.Z.Messages.STOREFRONT_PURCHASE_FOR.format({ price: (0, p.T4)(g.amount, g.currency) })]
                 })
             });
 }
@@ -97,7 +97,7 @@ function x(n) {
         }
     });
 }
-function g(n) {
+function N(n) {
     let { className: e, children: t } = n;
     return (0, l.jsx)(r.Button, {
         disabled: !0,

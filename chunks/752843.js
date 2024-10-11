@@ -27,7 +27,7 @@ function c(n) {
                       size: 'xxs',
                       color: o.Z.colors.INTERACTIVE_NORMAL
                   }),
-        text: 'user' === e ? s.Z.Messages.Storefront.USER_SUBSCRIPTION : s.Z.Messages.Storefront.SERVER_SUBSCRIPTION
+        text: 'user' === e ? s.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : s.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
     });
 }
 function d(n) {

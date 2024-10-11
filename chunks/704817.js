@@ -5,5 +5,5 @@ n.d(t, {
 });
 var r = n(330711);
 function i() {
-    return r.Z.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION;
+    return r.Z.Messages.DYNAMIC_LINKS_IOS_APP_PREVIEW_DESCRIPTION;
 }

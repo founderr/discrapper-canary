@@ -7,17 +7,17 @@ var i = n(735250),
     c = n(499692),
     d = n(689938);
 t.Z = function (e) {
-    let { onScroll: t } = e,
-        n = a.useMemo(() => [d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_ONE, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_TWO, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_THREE], []);
+    let { onScroll: t, onSelectApplication: n } = e,
+        u = a.useMemo(() => [d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_ONE, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_TWO, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_THREE], []);
     return (0, i.jsxs)(o.Z, {
         onScroll: t,
         children: [
             (0, i.jsx)(r.Z, {
-                title: n,
+                title: u,
                 description: '',
                 children: (0, i.jsx)(s.Z, {})
             }),
-            (0, i.jsx)(l.Z, { children: (0, i.jsx)(c.Z, {}) })
+            (0, i.jsx)(l.Z, { children: (0, i.jsx)(c.Z, { onSelectApplication: n }) })
         ]
     });
 };

@@ -1,17 +1,17 @@
 let n;
 a.d(t, {
     fQ: function () {
-        return o;
+        return l;
     }
 }),
     a(653041),
     a(757143);
-var i = a(539528),
+var s = a(539528),
     r = a(33382),
-    l = a.n(r);
-function o(e) {
+    i = a.n(r);
+function l(e) {
     return (t) => {
-        if (null != e) return null != l()(t, { end: !1 }).exec(e.history.location.pathname);
+        if (null != e) return null != i()(t, { end: !1 }).exec(e.history.location.pathname);
     };
 }
-(0, i.lX)();
+(0, s.lX)();

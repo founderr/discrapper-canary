@@ -7,29 +7,29 @@ t.d(n, {
     }
 }),
     t(789020);
-var i = t(470079),
+var a = t(470079),
     r = t(442837),
-    a = t(430198),
+    i = t(430198),
     l = t(592125),
-    u = t(430824),
-    o = t(630388),
-    s = t(981631);
-let c = s.iLy.CROSSPOSTED | s.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | s.iLy.GUILD_FEED_HIDDEN | s.iLy.HAS_SNAPSHOT | s.iLy.HAS_THREAD | s.iLy.IS_CROSSPOST | s.iLy.IS_VOICE_MESSAGE | s.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | s.iLy.SUPPRESS_EMBEDS | s.iLy.SUPPRESS_NOTIFICATIONS | s.iLy.URGENT;
+    s = t(430824),
+    u = t(630388),
+    o = t(981631);
+let c = o.iLy.CROSSPOSTED | o.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | o.iLy.GUILD_FEED_HIDDEN | o.iLy.HAS_SNAPSHOT | o.iLy.HAS_THREAD | o.iLy.IS_CROSSPOST | o.iLy.IS_VOICE_MESSAGE | o.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | o.iLy.SUPPRESS_EMBEDS | o.iLy.SUPPRESS_NOTIFICATIONS | o.iLy.URGENT;
 function d(e) {
-    return (!!(e.state !== s.yb.SEND_FAILED && s.V$x.FORWARDABLE.has(e.type)) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, o.Ge)(e.flags, c)) || !1;
+    return (!!(e.state !== o.yb.SEND_FAILED && o.V$x.FORWARDABLE.has(e.type)) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, u.Ge)(e.flags, c)) || !1;
 }
 function _(e) {
     var n;
     if (!d(e)) return !1;
     let t = null === (n = l.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
-    return !(null != t && a.Z.isChannelOrThreadParentGated(t, e.channel_id)) && !0;
+    return !(null != t && i.Z.isChannelOrThreadParentGated(t, e.channel_id)) && !0;
 }
 function f(e) {
-    let n = (0, r.e7)([u.Z, a.Z, l.Z], () => {
+    let n = (0, r.e7)([s.Z, i.Z, l.Z], () => {
         var n, t;
         if (null == e) return !0;
-        let i = null === (n = l.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
-        return !!(null != i && (null === (t = u.Z.getGuild(i)) || void 0 === t ? void 0 : t.hasFeature(s.oNc.FORWARDING_DISABLED))) || (null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id));
+        let a = null === (n = l.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
+        return !!(null != a && (null === (t = s.Z.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(o.oNc.FORWARDING_DISABLED))) || (null != a && i.Z.isChannelOrThreadParentGated(a, e.channel_id));
     });
-    return i.useMemo(() => !n && null != e && d(e), [n, e]);
+    return a.useMemo(() => !n && null != e && d(e), [n, e]);
 }

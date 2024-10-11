@@ -12,7 +12,7 @@ var i = t(772848),
     s = t(626135),
     u = t(981631);
 function c(n) {
-    let { applicationId: e, skuId: c, onClose: d, onComplete: f, analyticsLocations: p, analyticsLocationObject: m, contextKey: v } = n,
+    let { applicationId: e, skuId: c, onClose: d, onComplete: p, analyticsLocations: f, analyticsLocationObject: m, contextKey: v } = n,
         I = !1,
         S = (0, i.Z)();
     (0, r.openModalLazy)(
@@ -25,13 +25,13 @@ function c(n) {
                     loadId: S,
                     applicationId: e,
                     skuId: c,
-                    analyticsLocations: p,
+                    analyticsLocations: f,
                     analyticsLocationObject: m,
                     onClose: (n) => {
                         i(), null == d || d(n);
                     },
                     onComplete: (n) => {
-                        (I = !0), null == f || f(n);
+                        (I = !0), null == p || p(n);
                     }
                 });
             };
@@ -46,7 +46,7 @@ function c(n) {
                         location: m,
                         is_gift: !1,
                         application_id: e,
-                        location_stack: p
+                        location_stack: f
                     }),
                     (0, a.fw)(),
                     (0, o.p)(),

@@ -18,32 +18,32 @@ var l = n(735250),
     f = n(689938),
     E = n(463061);
 function g(e) {
-    let { message: t, forwardOptions: n, sendLabel: g, canSend: m, selectedDestinations: S, isSending: A, onSend: I, showPreview: p } = e,
+    let { message: t, forwardOptions: n, sendLabel: g, canSend: m, selectedDestinations: S, isSending: I, onSend: A, showPreview: p } = e,
         C = (0, c.Z)(),
         N = (0, u.nm)(S),
-        L = (0, u.y)(S),
-        v = (0, d.Ad)(),
-        [b, x] = a.useState(() => (0, r.H2)()),
-        { textValue: T, richValue: Z } = b,
-        [y, M] = a.useState(!1),
-        P = a.useCallback(() => M(!0), []),
-        R = a.useCallback(() => M(!1), []),
+        v = (0, u.y)(S),
+        L = (0, d.Ad)(),
+        [b, T] = a.useState(() => (0, r.H2)()),
+        { textValue: x, richValue: Z } = b,
+        [M, y] = a.useState(!1),
+        P = a.useCallback(() => y(!0), []),
+        R = a.useCallback(() => y(!1), []),
         O = a.useCallback(
             (e, n, l) => {
-                x({
+                T({
                     textValue: n,
                     richValue: l
                 }),
-                    v(t.channel_id, t.id);
+                    L(t.channel_id, t.id);
             },
-            [v, t]
+            [L, t]
         ),
         D = a.useCallback(() => {
-            I(T);
-        }, [T, I]),
+            A(x);
+        }, [x, A]),
         w = a.useCallback(
             () =>
-                !m || T.length > C
+                !m || x.length > C
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
@@ -53,7 +53,7 @@ function g(e) {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [D, T, C, m]
+            [D, x, C, m]
         );
     return (0, l.jsxs)(s.ModalFooter, {
         className: E.footerWithMessage,
@@ -78,12 +78,12 @@ function g(e) {
                                 onChange: O,
                                 placeholder: f.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
                                 channel: N,
-                                textValue: T,
+                                textValue: x,
                                 richValue: Z,
                                 type: i.I.FORWARD_MESSAGE_INPUT,
                                 onBlur: R,
                                 onFocus: P,
-                                focused: y,
+                                focused: M,
                                 onSubmit: w,
                                 parentModalKey: h.so,
                                 autoCompletePosition: 'bottom',
@@ -91,21 +91,21 @@ function g(e) {
                             }),
                             (0, l.jsx)(s.Button, {
                                 className: E.sendWithMessage,
-                                submitting: A,
-                                disabled: !m || T.length > C,
+                                submitting: I,
+                                disabled: !m || x.length > C,
                                 onClick: D,
                                 children: g
                             })
                         ]
                     }),
-                    L.length > 0 &&
-                        T.length > 0 &&
+                    v.length > 0 &&
+                        x.length > 0 &&
                         (0, l.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: f.Z.Messages.MESSAGE_FORWARD_SLOWMODE_WARNING.format({
-                                count: L.length,
-                                channelNames: L.join(', ')
+                                count: v.length,
+                                channelNames: v.join(', ')
                             })
                         })
                 ]

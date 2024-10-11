@@ -602,18 +602,18 @@ var t, r;
             },
             e0 = i.unpack,
             e1 = i.unpack,
-            e3 = i.type,
-            e2 = function () {
+            e2 = i.type,
+            e3 = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = eX(e, 'rgb'),
                     n = eG(r[0], r[1], r[2]);
                 return eF(n[0], n[1], n[2]);
             };
         (u.prototype.lch = function () {
-            return e2(this._rgb);
+            return e3(this._rgb);
         }),
             (u.prototype.hcl = function () {
-                return e2(this._rgb).reverse();
+                return e3(this._rgb).reverse();
             }),
             (l.lch = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
@@ -634,7 +634,7 @@ var t, r;
                     p: 2,
                     test: function () {
                         for (var t = [], r = arguments.length; r--; ) t[r] = arguments[r];
-                        if ('array' === e3((t = e1(t, e))) && 3 === t.length) return e;
+                        if ('array' === e2((t = e1(t, e))) && 3 === t.length) return e;
                     }
                 });
             });
@@ -1499,8 +1499,8 @@ var t, r;
             ));
         for (
             var t1 = i.type,
-                t3 = i.clip_rgb,
-                t2 = i.TWOPI,
+                t2 = i.clip_rgb,
+                t3 = i.TWOPI,
                 t6 = Math.pow,
                 t5 = Math.sin,
                 t4 = Math.cos,
@@ -1728,12 +1728,12 @@ var t, r;
                     o = 0;
                 'array' === t1(a) ? (_ = a[1] - a[0]) : ((_ = 0), (a = [a, a]));
                 var i = function (i) {
-                    var E = t2 * ((e + 120) / 360 + t * i),
+                    var E = t3 * ((e + 120) / 360 + t * i),
                         c = t6(a[0] + _ * i, n),
                         s = ((0 !== o ? r[0] + i * o : r) * c * (1 - c)) / 2,
                         I = t4(E),
                         u = t5(E);
-                    return l(t3([255 * (c + s * (-0.14861 * I + 1.78277 * u)), 255 * (c + s * (-0.29227 * I - 0.90649 * u)), 255 * (c + 1.97294 * I * s), 1]));
+                    return l(t2([255 * (c + s * (-0.14861 * I + 1.78277 * u)), 255 * (c + s * (-0.29227 * I - 0.90649 * u)), 255 * (c + 1.97294 * I * s), 1]));
                 };
                 return (
                     (i.start = function (t) {

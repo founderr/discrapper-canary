@@ -3,7 +3,7 @@ t.d(e, {
         return m;
     },
     U: function () {
-        return p;
+        return f;
     }
 });
 var l = t(735250);
@@ -16,15 +16,15 @@ var i = t(557533),
     u = t(330711),
     c = t(56273),
     d = t(103077),
-    f = t(692547);
-function p(n) {
-    let { description: e, imgSrc: t, renderPurchaseButton: i, onPurchase: p, title: m, onDetails: v, benefitItems: I, benefitsSummary: S } = n;
+    p = t(692547);
+function f(n) {
+    let { description: e, imgSrc: t, renderPurchaseButton: i, onPurchase: f, title: m, onDetails: v, benefitItems: I, benefitsSummary: S } = n;
     return (0, l.jsx)(a.tE, {
         children: (0, l.jsxs)('div', {
             className: r()(c.container, d.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != v ? v() : null != p && p();
+                null != v ? v() : null != f && f();
             },
             children: [
                 (0, l.jsx)('div', {
@@ -46,7 +46,7 @@ function p(n) {
                                               alt: ''
                                           })
                                         : (0, l.jsx)(o.V, {
-                                              color: f.Z.colors.ICON_PRIMARY,
+                                              color: p.Z.colors.ICON_PRIMARY,
                                               size: 'custom',
                                               height: 48,
                                               width: 48
@@ -56,7 +56,7 @@ function p(n) {
                                 ? i({
                                       className: c.purchaseBtn,
                                       onClick: (n) => {
-                                          n.stopPropagation(), null == p || p();
+                                          n.stopPropagation(), null == f || f();
                                       }
                                   })
                                 : null,
@@ -77,7 +77,7 @@ function p(n) {
                         children: (0, l.jsx)(s.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: u.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: S })
+                            children: u.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: S })
                         })
                     }),
                 null != I &&
@@ -91,7 +91,7 @@ function p(n) {
                                     (0, l.jsx)(s.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
-                                        children: u.Z.Messages.Storefront.BENEFITS_TITLE
+                                        children: u.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
                                     I.length > 3
                                         ? (0, l.jsxs)(l.Fragment, {
@@ -100,7 +100,7 @@ function p(n) {
                                                   (0, l.jsx)(s.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: u.Z.Messages.Storefront.MORE_BENEFITS.format({ count: I.length - 3 })
+                                                      children: u.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: I.length - 3 })
                                                   })
                                               ]
                                           })

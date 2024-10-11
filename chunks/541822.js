@@ -14,7 +14,7 @@ function u(n) {
     let { children: e, gradientClassName: t, ...r } = n,
         u = i.useRef(null),
         [c, d] = i.useState(!0),
-        f = () => {
+        p = () => {
             var n;
             (null === (n = u.current) || void 0 === n ? void 0 : n.isScrolledToBottom()) === !0 ? d(!1) : d(!0);
         };
@@ -24,9 +24,9 @@ function u(n) {
                 fade: !0,
                 ...r,
                 ref: (n) => {
-                    null != n && ((u.current = n), f());
+                    null != n && ((u.current = n), p());
                 },
-                onScroll: f,
+                onScroll: p,
                 children: e
             }),
             (0, l.jsx)('div', {

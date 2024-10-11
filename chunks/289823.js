@@ -114,16 +114,16 @@ let S = {
 };
 t.Z = function (e) {
     var t, n, s;
-    let { backSrc: o, frontSrc: f, size: E, isTyping: A, status: I, style: p, className: C, ...N } = e,
-        { size: L } = c.AvatarSizeSpecs[E],
+    let { backSrc: o, frontSrc: f, size: E, isTyping: I, status: A, style: p, className: C, ...N } = e,
+        { size: v } = c.AvatarSizeSpecs[E],
         {
-            statusCoords: v,
+            statusCoords: L,
             frontAvatarOffsetPx: b,
-            frontAvatarSizePx: x,
-            backAvatarSizePx: T
+            frontAvatarSizePx: T,
+            backAvatarSizePx: x
         } = a.useMemo(() => {
             var e;
-            let t = ''.concat(L, '-').concat(A);
+            let t = ''.concat(v, '-').concat(I);
             return null !== (e = _[t]) && void 0 !== e
                 ? e
                 : (function (e, t, n) {
@@ -139,13 +139,13 @@ t.Z = function (e) {
                               frontAvatarCenter: i + s / 2
                           };
                       return (_[n] = o), o;
-                  })(E, A, t);
-        }, [L, A, E]);
-    let Z = ((t = null != I), (n = A), (s = E), n ? S[s].typing : t ? S[s].status : S[s].default);
+                  })(E, I, t);
+        }, [v, I, E]);
+    let Z = ((t = null != A), (n = I), (s = E), n ? S[s].typing : t ? S[s].status : S[s].default);
     return (0, l.jsxs)('div', {
         style: {
-            width: L,
-            height: L,
+            width: v,
+            height: v,
             ...p
         },
         'aria-label': N['aria-label'],
@@ -154,14 +154,14 @@ t.Z = function (e) {
         children: [
             (0, l.jsxs)(u.ZP, {
                 mask: Z,
-                height: L,
-                width: L,
+                height: v,
+                width: v,
                 children: [
                     (0, l.jsx)('img', {
                         src: o,
                         alt: '',
-                        width: T,
-                        height: T
+                        width: x,
+                        height: x
                     }),
                     (0, l.jsx)('div', {
                         style: {
@@ -171,17 +171,17 @@ t.Z = function (e) {
                         },
                         children: (0, l.jsx)(m, {
                             src: f,
-                            size: x,
-                            isTyping: A,
-                            status: I
+                            size: T,
+                            isTyping: I,
+                            status: A
                         })
                     })
                 ]
             }),
             (0, l.jsx)(g, {
-                statusCoords: v,
-                status: I,
-                isTyping: A
+                statusCoords: L,
+                status: A,
+                isTyping: I
             })
         ]
     });

@@ -14,26 +14,26 @@ var i = n(735250),
     a = n(470079),
     s = n(120356),
     r = n.n(s),
-    l = n(330711),
-    o = n(442837),
-    c = n(481060),
-    d = n(607070),
-    u = n(446411),
-    _ = n(468846),
-    E = n(313201),
-    h = n(70097),
-    m = n(605236),
-    I = n(524444),
-    p = n(626135),
-    g = n(960048),
-    T = n(565216),
-    f = n(981631),
-    S = n(921944),
+    l = n(442837),
+    o = n(481060),
+    c = n(607070),
+    d = n(446411),
+    u = n(468846),
+    _ = n(313201),
+    E = n(70097),
+    h = n(605236),
+    m = n(524444),
+    I = n(626135),
+    p = n(960048),
+    g = n(565216),
+    T = n(981631),
+    f = n(921944),
+    S = n(689938),
     C = n(67037);
 let N = [],
     A = (e) => {
         let { tagText: t, className: n } = e;
-        return (0, i.jsx)(c.TextBadge, {
+        return (0, i.jsx)(o.TextBadge, {
             className: r()(C.tag, n),
             text: t
         });
@@ -57,12 +57,12 @@ let N = [],
                 (0, i.jsxs)('div', {
                     className: C.featureCardTextGroup,
                     children: [
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/extrabold',
                             className: C.featureCardTextHeader,
                             children: t
                         }),
-                        (0, i.jsx)(c.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             children: n
                         })
@@ -74,9 +74,9 @@ let N = [],
 function Z(e) {
     let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: M, changeLogId: P, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
-        G = (0, E.Dt)(),
+        G = (0, _.Dt)(),
         w = M.length % 2 == 0,
-        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, V] = a.useState(Date.now()),
         [H, F] = a.useState(0),
         [Y, z] = a.useState(0),
@@ -118,7 +118,7 @@ function Z(e) {
                               });
                     ei(await Promise.all(t));
                 } catch (e) {
-                    g.Z.captureException(e), ei(N);
+                    p.Z.captureException(e), ei(N);
                 }
             };
             !0 !== ea.current && e(), (ea.current = !0);
@@ -139,11 +139,11 @@ function Z(e) {
             () => () => {
                 if ('video' === s.type || 'embed' === s.type) {
                     let [e, t] = es();
-                    p.default.track(f.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    I.default.track(T.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: P,
                         seconds_played: Math.round(e / 1000)
                     }),
-                        p.default.track(f.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                        I.default.track(T.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: P,
                             seconds_unmuted: Math.round(t / 1000)
                         });
@@ -152,40 +152,40 @@ function Z(e) {
             [P, s.type]
         ),
         a.useEffect(() => {
-            null != Z && (0, m.kk)(Z);
+            null != Z && (0, h.kk)(Z);
             let e = Date.now();
             return (
-                p.default.track(f.rMx.CHANGE_LOG_OPENED, { change_log_id: P }),
+                I.default.track(T.rMx.CHANGE_LOG_OPENED, { change_log_id: P }),
                 () => {
-                    p.default.track(f.rMx.CHANGE_LOG_CLOSED, {
+                    I.default.track(T.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: P,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != Z && (0, m.EW)(Z, { dismissAction: S.L.DISMISS });
+                        null != Z && (0, h.EW)(Z, { dismissAction: f.L.DISMISS });
                 }
             );
         }, [Z, P]),
-        (0, i.jsxs)(c.ModalRoot, {
+        (0, i.jsxs)(o.ModalRoot, {
             className: r()(C.root, t),
             transitionState: U,
             'aria-labelledby': G,
             children: [
-                (0, i.jsx)(c.ModalCloseButton, {
+                (0, i.jsx)(o.ModalCloseButton, {
                     className: C.closeButton,
                     onClick: j
                 }),
-                (0, i.jsx)(T.Z, { className: C.splash }),
+                (0, i.jsx)(g.Z, { className: C.splash }),
                 null == L ? void 0 : L(),
-                (0, i.jsxs)(c.ModalContent, {
+                (0, i.jsxs)(o.ModalContent, {
                     className: C.content,
                     children: [
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'display-md',
                             className: r()(C.headerText, O),
                             children: R
                         }),
                         'video' === s.type
-                            ? (0, i.jsx)(h.Z, {
+                            ? (0, i.jsx)(E.Z, {
                                   className: r()(C.video, A),
                                   autoPlay: !k,
                                   loop: !0,
@@ -195,7 +195,7 @@ function Z(e) {
                                   src: s.src,
                                   poster: s.poster,
                                   onPlay: (e) => {
-                                      p.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P }), V(Date.now()), K(!0), Q(e.currentTarget.muted);
+                                      I.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P }), V(Date.now()), K(!0), Q(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       es(), Q(e.currentTarget.muted), K(!1);
@@ -211,7 +211,7 @@ function Z(e) {
                                       null == en
                                           ? void 0
                                           : en.map((e) => {
-                                                let t = l.Z.getLanguages().find((t) => t.code === e.locale);
+                                                let t = S.Z.getLanguages().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, i.jsx)(
@@ -228,21 +228,21 @@ function Z(e) {
                                             })
                               })
                             : 'embed' === s.type
-                              ? (0, i.jsx)(u.BC, {
+                              ? (0, i.jsx)(d.BC, {
                                     className: r()(C.video, A),
                                     allowFullScreen: !1,
                                     href: s.href,
                                     thumbnail: s.thumbnail,
                                     video: s.embed,
-                                    provider: _.pn.YOUTUBE,
+                                    provider: u.pn.YOUTUBE,
                                     maxWidth: s.embed.width,
                                     maxHeight: s.embed.height,
-                                    renderVideoComponent: I.lV,
-                                    renderImageComponent: I.Yi,
-                                    renderLinkComponent: I.iT,
-                                    renderForwardComponent: f.VqG,
+                                    renderVideoComponent: m.lV,
+                                    renderImageComponent: m.Yi,
+                                    renderLinkComponent: m.iT,
+                                    renderForwardComponent: T.VqG,
                                     onPlay: () => {
-                                        p.default.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P });
+                                        I.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P });
                                     }
                                 })
                               : 'image' === s.type
@@ -252,13 +252,13 @@ function Z(e) {
                                       src: s.src
                                   })
                                 : null,
-                        (0, i.jsxs)(c.Heading, {
+                        (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
                             className: C.subHeader,
                             children: [x, null == b ? void 0 : b()]
                         }),
                         null != y &&
-                            (0, i.jsx)(c.Heading, {
+                            (0, i.jsx)(o.Heading, {
                                 variant: 'heading-md/medium',
                                 className: C.bodyText,
                                 children: y

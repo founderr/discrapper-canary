@@ -11,8 +11,8 @@ var i = t(409794),
     o = t(330711),
     s = t(770561);
 function u(n) {
-    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: f } = n,
-        p = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
+    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = n,
+        f = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
     return (0, l.jsx)('div', {
         className: s.container,
         children: (0, l.jsx)(a.Z, {
@@ -25,7 +25,7 @@ function u(n) {
                         children: [
                             (0, l.jsx)('div', {
                                 className: s.headerBackground,
-                                style: p
+                                style: f
                             }),
                             (0, l.jsx)('div', {
                                 className: s.headerImage,
@@ -35,7 +35,7 @@ function u(n) {
                                               src: u.toString(),
                                               alt: ''
                                           })
-                                        : (0, l.jsx)(f, {
+                                        : (0, l.jsx)(p, {
                                               size: 'custom',
                                               color: 'var(--text-muted)',
                                               height: 96,
@@ -73,7 +73,7 @@ function u(n) {
                                         (0, l.jsx)(r.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
-                                            children: o.Z.Messages.Storefront.BENEFITS_TITLE
+                                            children: o.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                         }),
                                         e
                                     ]

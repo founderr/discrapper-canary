@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return h;
     }
 }),
     t(47120);
@@ -20,10 +20,10 @@ var a = t(735250),
     A = t(774073),
     p = t(426482),
     g = t(644941),
-    T = t(689938),
-    f = t(51527),
+    f = t(689938),
+    T = t(51527),
     O = t(796805);
-let R = (e) => {
+let N = (e) => {
     let { game: n, onClose: t, trackClick: r } = e,
         s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
     return (0, a.jsx)(d.Tooltip, {
@@ -55,7 +55,7 @@ let R = (e) => {
             })
     });
 };
-function N(e) {
+function h(e) {
     let { applicationId: n, onClose: t, trackAction: s, similarGames: o, similarGamesError: _ } = e,
         m = (0, c.e7)([I.Z, E.Z], () => {
             let e = void 0 === I.Z.getSimilarGames(n),
@@ -75,9 +75,9 @@ function N(e) {
     m && null == _)
         ? (0, a.jsxs)('div', {
               children: [
-                  (0, a.jsx)('div', { className: i()(O.loadingHeading, f.sectionHeader) }),
+                  (0, a.jsx)('div', { className: i()(O.loadingHeading, T.sectionHeader) }),
                   (0, a.jsx)('div', {
-                      className: i()(f.row, f.gapLg),
+                      className: i()(T.row, T.gapLg),
                       children: l()
                           .range(0, 5)
                           .map((e) => (0, a.jsx)('div', { className: O.loadingArtwork }, e))
@@ -88,17 +88,17 @@ function N(e) {
           ? (0, a.jsxs)('div', {
                 children: [
                     (0, a.jsx)(d.Heading, {
-                        className: f.sectionHeader,
+                        className: T.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: T.Z.Messages.GAME_PROFILE_ALSO_PLAYING
+                        children: f.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                     }),
                     (0, a.jsx)('div', {
                         className: O.similarGames,
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(
-                                R,
+                                N,
                                 {
                                     game: e,
                                     onClose: t,

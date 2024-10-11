@@ -15,12 +15,12 @@ var a = t(481060),
     A = t(786761),
     p = t(3148),
     g = t(48854),
-    T = t(785359),
-    f = t(79390),
+    f = t(785359),
+    T = t(79390),
     O = t(623292),
-    R = t(807092),
-    N = t(467798),
-    h = t(703558),
+    N = t(807092),
+    h = t(467798),
+    R = t(703558),
     P = t(117530),
     C = t(630388),
     L = t(226351),
@@ -40,8 +40,8 @@ async function S(e) {
             sticker_ids: null == Z ? void 0 : Z.stickerIds,
             poll: null == Z ? void 0 : Z.poll
         };
-    null != G && (y.content = null == G ? void 0 : G.content), null != R.Z.getPendingReply(_) && ((y.type = M.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, O.A6)(_));
-    let [w, k] = (0, N.Z)(y.content);
+    null != G && (y.content = null == G ? void 0 : G.content), null != N.Z.getPendingReply(_) && ((y.type = M.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, O.A6)(_));
+    let [w, k] = (0, h.Z)(y.content);
     w && ((y.content = k), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let U = null !== (t = Z.nonce) && void 0 !== t ? t : (0, g.r)(),
         F = (0, p.ZP)({
@@ -52,7 +52,7 @@ async function S(e) {
             messageReference: y.message_reference,
             flags: y.flags,
             nonce: U,
-            poll: (0, f.x9)(Z.poll)
+            poll: (0, T.x9)(Z.poll)
         });
     return (
         ((y.nonce = U),
@@ -84,7 +84,7 @@ async function S(e) {
                     file: e,
                     messageRecord: u
                 }),
-                (0, T.x)({
+                (0, f.x)({
                     fileItems: e.items,
                     failureCode: n,
                     errorMessage: null == a ? void 0 : a.msg
@@ -133,7 +133,7 @@ async function S(e) {
                         help: null !== (E = null == t ? void 0 : t.message) && void 0 !== E ? E : x.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== y.content && '' === h.Z.getDraft(_, v) && s.Z.saveDraft(_, y.content, v),
+                '' !== y.content && '' === R.Z.getDraft(_, v) && s.Z.saveDraft(_, y.content, v),
                     0 === P.Z.getUploadCount(_, v) &&
                         o.Z.setUploads({
                             channelId: _,
@@ -187,7 +187,7 @@ n.Z = {
             };
         if (null != d) {
             (I.content = d.content), (I.tts = d.tts), (I.channel_id = d.channel_id);
-            let e = R.Z.getPendingReply(t);
+            let e = N.Z.getPendingReply(t);
             if (null != e) {
                 let n = i.Z.getSendMessageOptionsForReply(e);
                 (I.type = M.uaV.REPLY), (I.message_reference = n.messageReference), (I.allowed_mentions = n.allowedMentions), (0, O.A6)(t);
@@ -216,7 +216,7 @@ n.Z = {
                         channelId: t,
                         file: n
                     }),
-                    (0, T.x)({
+                    (0, f.x)({
                         fileItems: n.items,
                         failureCode: u
                     }),
@@ -239,7 +239,7 @@ n.Z = {
                         }
                     })
                 }),
-                    '' !== I.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, I.content, c);
+                    '' !== I.content && '' === R.Z.getDraft(t, c) && s.Z.saveDraft(t, I.content, c);
             }),
             A.on('complete', (e) => {
                 r.Z.dispatch({
@@ -258,12 +258,12 @@ n.Z = {
         }),
             null != e.draftContent &&
                 null != e.channelId &&
-                '' === h.Z.getDraft(e.channelId, h.d.ChannelMessage) &&
+                '' === R.Z.getDraft(e.channelId, R.d.ChannelMessage) &&
                 r.Z.dispatch({
                     type: 'DRAFT_SAVE',
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: h.d.ChannelMessage
+                    draftType: R.d.ChannelMessage
                 });
     }
 };
