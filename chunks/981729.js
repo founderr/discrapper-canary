@@ -1,15 +1,15 @@
 n.d(t, {
     Cy: function () {
-        return R;
+        return O;
     },
     DY: function () {
-        return D;
+        return b;
     },
     FG: function () {
         return r;
     },
     u: function () {
-        return y;
+        return D;
     }
 }),
     n(411104),
@@ -45,7 +45,7 @@ function g(e, t, n) {
         e
     );
 }
-((a = r || (r = {})).PRIMARY = 'primary'), (a.NESTED = 'nested'), (a.BLACK = 'black'), (a.GREY = 'grey'), (a.BRAND = 'brand'), (a.GREEN = 'green'), (a.YELLOW = 'yellow'), (a.RED = 'red'), (a.CUSTOM = 'custom'), (a.PREMIUM = 'premium');
+((a = r || (r = {})).PRIMARY = 'primary'), (a.NESTED = 'nested'), (a.BLACK = 'black'), (a.GREY = 'grey'), (a.BRAND = 'brand'), (a.GREEN = 'green'), (a.YELLOW = 'yellow'), (a.RED = 'red'), (a.PREMIUM = 'premium');
 let A = Object.freeze({}),
     N = Object.freeze({
         top: S.tooltipTop,
@@ -62,10 +62,15 @@ let A = Object.freeze({}),
         green: S.tooltipGreen,
         yellow: S.tooltipYellow,
         red: S.tooltipRed,
-        custom: null,
         premium: S.tooltipPremium
-    }),
-    R = (e) => {
+    });
+function R(e, t, n) {
+    let r = 'left' === e || 'right' === e,
+        i = '50%',
+        a = n;
+    return t === (r ? 'top' : 'left') ? ((i = '0%'), (a += 16)) : t === (r ? 'bottom' : 'right') && ((i = '100%'), (a -= 20)), { [r ? 'top' : 'left']: 'calc('.concat(i, ' + ').concat(a, 'px)') };
+}
+let O = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: i, children: a, onNonAccessibleClick: o, tooltipClassName: l, tooltipStyle: c, tooltipContentClassName: _, spacing: E = 8, animationStyle: f, disableTooltipPointerEvents: h = !1, allowOverflow: p = !1, tooltipPointerClassName: I } = e,
             m = ''.concat('string' == typeof a ? a : '', ':').concat(r);
         return (0, s.jsx)(T.W5, {
@@ -88,13 +93,12 @@ let A = Object.freeze({}),
                     },
                     children: [
                         (0, s.jsx)('div', {
+                            className: u()(S.tooltipPointer, S.tooltipPointerBg, I),
+                            style: R(null != t ? t : r, n, E)
+                        }),
+                        (0, s.jsx)('div', {
                             className: u()(S.tooltipPointer, I),
-                            style: (function (e, t, n) {
-                                let r = 'left' === e || 'right' === e,
-                                    i = '50%',
-                                    a = n;
-                                return t === (r ? 'top' : 'left') ? ((i = '0%'), (a += 16)) : t === (r ? 'bottom' : 'right') && ((i = '100%'), (a -= 20)), { [r ? 'top' : 'left']: 'calc('.concat(i, ' + ').concat(a, 'px)') };
-                            })(null != t ? t : r, n, E)
+                            style: R(null != t ? t : r, n, E)
                         }),
                         (0, s.jsx)('div', {
                             className: u()(S.tooltipContent, { [S.tooltipContentAllowOverflow]: p }, _),
@@ -105,19 +109,19 @@ let A = Object.freeze({}),
             }
         });
     },
-    O = {
-        scale: 0.95,
-        opacity: 0
-    },
     v = {
-        scale: 1,
+        scale: 0.95,
         opacity: 0
     },
     C = {
         scale: 1,
+        opacity: 0
+    },
+    L = {
+        scale: 1,
         opacity: 1
     },
-    L = (e) => {
+    y = (e) => {
         let { isVisible: t, onAnimationRest: n, targetElementRef: r, ...i } = e,
             { reducedMotion: a } = o.useContext(p.S);
         return (0, I.useTransition)(
@@ -125,15 +129,15 @@ let A = Object.freeze({}),
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: h.F,
-                from: a.enabled ? v : O,
-                enter: C,
-                leave: a.enabled ? v : O,
+                from: a.enabled ? C : v,
+                enter: L,
+                leave: a.enabled ? C : v,
                 onRest: n
             },
             'animate-always'
         )((e, t) =>
             t
-                ? (0, s.jsx)(R, {
+                ? (0, s.jsx)(O, {
                       animationStyle: e,
                       targetElementRef: r,
                       ...i
@@ -141,7 +145,7 @@ let A = Object.freeze({}),
                 : null
         );
     };
-class y extends (i = o.Component) {
+class D extends (i = o.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -190,7 +194,7 @@ class y extends (i = o.Component) {
             m = null;
         return (
             (m = e instanceof Function ? (I ? e() : null) : e),
-            (0, s.jsx)(L, {
+            (0, s.jsx)(y, {
                 disableTooltipPointerEvents: (!1 !== u && !p) || !0 === u,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: o,
@@ -256,8 +260,8 @@ class y extends (i = o.Component) {
             });
     }
 }
-g(y, 'Colors', r),
-    g(y, 'defaultProps', {
+g(D, 'Colors', r),
+    g(D, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',
@@ -267,9 +271,9 @@ g(y, 'Colors', r),
         allowOverflow: !1,
         overflowOnly: !1
     });
-let D = (e) => {
+let b = (e) => {
     let { children: t, className: n, element: r = 'div', ...i } = e;
-    return (0, s.jsx)(y, {
+    return (0, s.jsx)(D, {
         ...i,
         children: (e) =>
             o.createElement(

@@ -16,6 +16,11 @@ let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
     _ = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e),
     u = Object.keys(l.Button.Sizes).filter((e) => 'NONE' !== e);
 function E() {
+    return (0, n.jsxs)('div', {
+        children: [(0, n.jsx)(T, {}), (0, n.jsx)(A, {}), (0, n.jsx)(g, {}), (0, n.jsx)(h, {}), (0, n.jsx)(m, {}), (0, n.jsx)(N, {}), (0, n.jsx)(I, {}), (0, n.jsx)(S, {})]
+    });
+}
+function T() {
     let e = d.flatMap((e) => [
             ..._.map((s) =>
                 (0, n.jsxs)(
@@ -43,6 +48,7 @@ function E() {
             })
         );
     return (0, n.jsxs)('div', {
+        className: c.section,
         children: [
             (0, n.jsx)(l.Heading, {
                 variant: 'heading-xl/semibold',
@@ -85,14 +91,424 @@ function E() {
                     })
                 ]
             }),
-            (0, n.jsx)(T, {}),
-            (0, n.jsx)(S, {}),
-            (0, n.jsx)(I, {}),
-            (0, n.jsx)(N, {})
+            (0, n.jsx)(C, {})
         ]
     });
 }
-function T() {
+function S() {
+    let [e, s] = a.useState('1');
+    return (0, n.jsxs)('div', {
+        className: c.section,
+        children: [
+            (0, n.jsx)(l.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'TabBar'
+            }),
+            (0, n.jsxs)(l.TabBar, {
+                type: 'top',
+                look: 'brand',
+                selectedItem: e,
+                onItemSelect: (e) => s(e),
+                className: c.tabBar,
+                children: [
+                    (0, n.jsx)(l.TabBar.Item, {
+                        id: '1',
+                        children: 'Tab 1'
+                    }),
+                    (0, n.jsx)(l.TabBar.Item, {
+                        id: '2',
+                        children: 'Tab 2'
+                    }),
+                    (0, n.jsx)(l.TabBar.Item, {
+                        id: '3',
+                        children: 'Tab 3'
+                    })
+                ]
+            }),
+            (0, n.jsxs)(l.Text, {
+                variant: 'text-md/medium',
+                children: ['Selected tab: ', e]
+            })
+        ]
+    });
+}
+function I() {
+    let [e, s] = a.useState(1),
+        [t, i] = a.useState(!1),
+        [r, o] = a.useState(5),
+        [d, _] = a.useState(!1);
+    return (0, n.jsxs)('div', {
+        className: c.section,
+        children: [
+            (0, n.jsx)(l.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'Context Menus'
+            }),
+            (0, n.jsx)('span', {
+                children: (0, n.jsx)(l.Popout, {
+                    shouldShow: d,
+                    renderPopout: () =>
+                        (0, n.jsxs)(l.Menu, {
+                            navId: 'demo',
+                            'aria-label': 'Demo Actions',
+                            onClose: () => null,
+                            onSelect: () => null,
+                            children: [
+                                (0, n.jsxs)(l.MenuGroup, {
+                                    label: 'Basic items',
+                                    children: [
+                                        (0, n.jsx)(l.MenuItem, {
+                                            id: 'first',
+                                            label: 'An option'
+                                        }),
+                                        (0, n.jsx)(l.MenuItem, {
+                                            id: 'second',
+                                            label: 'An option with an icon',
+                                            icon: l.ChatIcon
+                                        }),
+                                        (0, n.jsxs)(l.MenuItem, {
+                                            id: 'item-with-submenu',
+                                            label: 'Item with submenu',
+                                            children: [
+                                                (0, n.jsx)(l.MenuItem, {
+                                                    id: 'subitem-1',
+                                                    label: 'Subitem 1'
+                                                }),
+                                                (0, n.jsx)(l.MenuItem, {
+                                                    id: 'subitem-2',
+                                                    label: 'Subitem 2'
+                                                }),
+                                                (0, n.jsx)(l.MenuItem, {
+                                                    id: 'subitem-3',
+                                                    label: 'Subitem 3'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                (0, n.jsxs)(l.MenuGroup, {
+                                    label: 'Inputs',
+                                    children: [
+                                        (0, n.jsx)(l.MenuCheckboxItem, {
+                                            id: 'checkable',
+                                            label: 'Checkbox',
+                                            checked: t,
+                                            action: () => i(!t)
+                                        }),
+                                        (0, n.jsx)(l.MenuRadioItem, {
+                                            id: 'radio-one',
+                                            group: 'a-group',
+                                            label: 'Radio 1',
+                                            action: () => s(1),
+                                            checked: 1 === e
+                                        }),
+                                        (0, n.jsx)(l.MenuRadioItem, {
+                                            id: 'radio-two',
+                                            group: 'a-group',
+                                            label: 'Radio 2',
+                                            action: () => s(2),
+                                            checked: 2 === e
+                                        }),
+                                        (0, n.jsx)(l.MenuRadioItem, {
+                                            id: 'radio-three',
+                                            group: 'a-group',
+                                            label: 'Radio 3',
+                                            action: () => s(3),
+                                            checked: 3 === e
+                                        }),
+                                        (0, n.jsx)(l.MenuControlItem, {
+                                            id: 'slider',
+                                            label: 'Slider',
+                                            control: (e, s) =>
+                                                (0, n.jsx)(l.MenuSliderControl, {
+                                                    ref: s,
+                                                    value: r,
+                                                    minValue: 0,
+                                                    maxValue: 100,
+                                                    onChange: (e) => o(e),
+                                                    'aria-label': 'Slider'
+                                                })
+                                        })
+                                    ]
+                                }),
+                                (0, n.jsx)(l.MenuSeparator, {}),
+                                (0, n.jsx)(l.MenuItem, {
+                                    id: 'danger',
+                                    label: 'A destructive option',
+                                    color: 'danger',
+                                    icon: l.TrashIcon
+                                })
+                            ]
+                        }),
+                    children: () =>
+                        (0, n.jsx)(l.Button, {
+                            onClick: () => _(!d),
+                            children: 'Toggle context menu'
+                        })
+                })
+            })
+        ]
+    });
+}
+function N() {
+    return (0, n.jsxs)('div', {
+        className: c.section,
+        children: [
+            (0, n.jsx)(l.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'Tooltips'
+            }),
+            (0, n.jsxs)('div', {
+                style: {
+                    display: 'flex',
+                    gap: 8,
+                    flexWrap: 'wrap'
+                },
+                children: [
+                    (0, n.jsx)(l.Tooltip, {
+                        text: "Here's top aligned tooltip text!",
+                        position: 'top',
+                        children: (e) =>
+                            (0, n.jsx)(l.Button, {
+                                ...e,
+                                children: 'Tooltip on the top'
+                            })
+                    }),
+                    (0, n.jsx)(l.Tooltip, {
+                        text: "Here's right aligned tooltip text!",
+                        position: 'left',
+                        children: (e) =>
+                            (0, n.jsx)(l.Button, {
+                                ...e,
+                                children: 'Tooltip on the left'
+                            })
+                    }),
+                    (0, n.jsx)(l.Tooltip, {
+                        text: "Here's bottom aligned tooltip text!",
+                        position: 'bottom',
+                        children: (e) =>
+                            (0, n.jsx)(l.Button, {
+                                ...e,
+                                children: 'Tooltip on the bottom'
+                            })
+                    }),
+                    (0, n.jsx)(l.Tooltip, {
+                        text: "Here's right aligned tooltip text!",
+                        position: 'right',
+                        children: (e) =>
+                            (0, n.jsx)(l.Button, {
+                                ...e,
+                                children: 'Tooltip on the right'
+                            })
+                    })
+                ]
+            }),
+            (0, n.jsx)('div', {})
+        ]
+    });
+}
+function m() {
+    let [e, s] = a.useState(!1),
+        [t, i] = a.useState(!1),
+        [r, o] = a.useState('auto');
+    return (0, n.jsxs)(n.Fragment, {
+        children: [
+            (0, n.jsxs)('div', {
+                className: c.section,
+                children: [
+                    (0, n.jsx)(l.Heading, {
+                        variant: 'heading-xl/semibold',
+                        children: 'Checkboxes'
+                    }),
+                    (0, n.jsx)(l.Checkbox, {
+                        value: e,
+                        onChange: (e, t) => s(t),
+                        children: (0, n.jsx)(l.Text, {
+                            variant: 'text-md/medium',
+                            children: 'Checkbox input'
+                        })
+                    }),
+                    (0, n.jsx)(l.Checkbox, {
+                        value: e,
+                        onChange: (e, t) => s(t),
+                        disabled: !0,
+                        children: (0, n.jsx)(l.Text, {
+                            variant: 'text-md/medium',
+                            children: 'Disabled checkbox'
+                        })
+                    }),
+                    (0, n.jsx)(l.Checkbox, {
+                        value: e,
+                        onChange: (e, t) => s(t),
+                        readOnly: !0,
+                        children: (0, n.jsx)(l.Text, {
+                            variant: 'text-md/medium',
+                            children: 'Read-only checkbox'
+                        })
+                    }),
+                    (0, n.jsx)(l.Checkbox, {
+                        value: e,
+                        onChange: (e, t) => s(t),
+                        type: l.Checkbox.Types.ROW,
+                        children: (0, n.jsx)(l.Text, {
+                            variant: 'text-md/medium',
+                            children: 'Checkbox row'
+                        })
+                    })
+                ]
+            }),
+            (0, n.jsxs)('div', {
+                className: c.section,
+                children: [
+                    (0, n.jsx)(l.Heading, {
+                        variant: 'heading-xl/semibold',
+                        children: 'Switches'
+                    }),
+                    (0, n.jsx)(l.FormSwitch, {
+                        hideBorder: !0,
+                        value: t,
+                        onChange: (e) => i(e),
+                        children: 'FormSwitch with a label'
+                    })
+                ]
+            }),
+            (0, n.jsxs)('div', {
+                className: c.section,
+                children: [
+                    (0, n.jsx)(l.Heading, {
+                        variant: 'heading-xl/semibold',
+                        children: 'Radio Buttons'
+                    }),
+                    (0, n.jsx)(l.FormItem, {
+                        children: (0, n.jsx)(l.RadioGroup, {
+                            onChange: (e) => {
+                                let { value: s } = e;
+                                return o(s);
+                            },
+                            options: [
+                                {
+                                    value: 'auto',
+                                    name: 'Auto'
+                                },
+                                {
+                                    value: '720p',
+                                    name: '720p'
+                                },
+                                {
+                                    value: '1080p',
+                                    name: '1080p'
+                                }
+                            ],
+                            value: r
+                        })
+                    })
+                ]
+            }),
+            (0, n.jsxs)('div', {
+                className: c.section,
+                children: [
+                    (0, n.jsx)(l.Heading, {
+                        variant: 'heading-xl/semibold',
+                        children: 'Slider'
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'Standard slider'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50,
+                                markers: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'Sticky markers'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50,
+                                markers: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                                stickToMarkers: !0
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'Non-uniform markers'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50,
+                                markers: [0, 20, 50, 100],
+                                equidistant: !1
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'Non-uniform equidistant markers'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50,
+                                markers: [0, 20, 50, 100],
+                                equidistant: !0
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'No markers'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        className: c.slider,
+                        children: [
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                children: 'Mini slider'
+                            }),
+                            (0, n.jsx)(l.Slider, {
+                                mini: !0,
+                                minValue: 0,
+                                maxValue: 100,
+                                initialValue: 50
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+function C() {
     return (0, n.jsxs)('div', {
         className: c.shinyButtonExamples,
         children: [
@@ -112,7 +528,7 @@ function T() {
         ]
     });
 }
-function S() {
+function A() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),
@@ -177,7 +593,7 @@ function S() {
         ]
     });
 }
-function I() {
+function g() {
     let e = Object.keys(l.FormTitleTags);
     return (0, n.jsxs)('div', {
         className: c.section,
@@ -208,7 +624,7 @@ function I() {
         ]
     });
 }
-function N() {
+function h() {
     let [e, s] = a.useState('');
     return (0, n.jsxs)('div', {
         className: c.section,

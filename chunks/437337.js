@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return p;
+        return I;
     }
 }),
     n(47120);
@@ -14,12 +14,13 @@ var r = n(735250),
     c = n(84735),
     d = n(180035),
     _ = n(481060),
-    E = n(980492);
-let f = {
+    E = n(540059),
+    f = n(980492);
+let h = {
         mass: 1,
         tension: 250
     },
-    h = {
+    p = {
         X: {
             TOP: 'M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z',
             BOTTOM: 'M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'
@@ -33,67 +34,68 @@ let f = {
             BOTTOM: 'M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'
         }
     },
-    p = function (e) {
-        let { id: t, onChange: n, checked: a, disabled: p, className: I, focusProps: m, innerRef: T } = e,
-            { reducedMotion: S } = i.useContext(u.S),
-            g = i.useRef(null),
-            [A, N] = i.useState(!1),
-            R = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-            O = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
-            { state: v, opacity: C } = (0, _.useSpring)(
+    I = function (e) {
+        let { id: t, onChange: n, checked: a, disabled: I, className: m, focusProps: T, innerRef: S } = e,
+            { reducedMotion: g } = i.useContext(u.S),
+            A = i.useRef(null),
+            [N, R] = i.useState(!1),
+            O = (0, E.Q)('Switch'),
+            v = (0, d.d)(O ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+            C = (0, d.d)(O ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+            { state: L, opacity: y } = (0, _.useSpring)(
                 {
-                    config: f,
-                    opacity: p ? 0.3 : 1,
-                    state: A ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                    config: h,
+                    opacity: I ? (O ? 0.5 : 0.3) : 1,
+                    state: N ? (a ? 0.7 : 0.3) : a ? 1 : 0
                 },
                 'animate-always'
             );
         return (0, r.jsx)(c.t, {
-            ...m,
+            ...T,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(E.container, I, {
-                    [E.checked]: a,
-                    [E.disabled]: p
+                className: s()(f.container, m, {
+                    [f.checked]: a,
+                    [f.disabled]: I
                 }),
-                onMouseDown: () => !p && N(!0),
-                onMouseUp: () => N(!1),
-                onMouseLeave: () => N(!1),
+                onMouseDown: () => !I && R(!0),
+                onMouseUp: () => R(!1),
+                onMouseLeave: () => R(!1),
                 style: {
-                    opacity: C,
-                    backgroundColor: v.to({
-                        output: [R, O]
+                    opacity: y,
+                    backgroundColor: L.to({
+                        output: [v, C]
                     })
                 },
                 children: [
                     (0, r.jsxs)(o.animated.svg, {
-                        className: E.slider,
+                        className: f.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
-                            left: v.to({
+                            left: L.to({
                                 range: [0, 0.3, 0.7, 1],
-                                output: [-3, 1, 8, 12]
+                                output: [O ? 0 : -3, 1, 8, 12]
                             })
                         },
                         'aria-hidden': !0,
                         children: [
                             (0, r.jsx)(o.animated.rect, {
                                 fill: 'white',
-                                x: v.to({
+                                x: L.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4]
                                 }),
-                                y: v.to({
+                                y: L.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0]
                                 }),
-                                height: v.to({
+                                height: L.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20]
                                 }),
-                                width: v.to({
+                                width: L.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20]
                                 }),
@@ -103,8 +105,8 @@ let f = {
                                 let a = e.to({
                                         output: [t, n]
                                     }),
-                                    s = i ? [h.X.TOP, h.X.TOP, h.CHECK.TOP, h.CHECK.TOP] : [h.X.TOP, h.BAR.TOP, h.BAR.TOP, h.CHECK.TOP],
-                                    l = i ? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM] : [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
+                                    s = i ? [p.X.TOP, p.X.TOP, p.CHECK.TOP, p.CHECK.TOP] : [p.X.TOP, p.BAR.TOP, p.BAR.TOP, p.CHECK.TOP],
+                                    l = i ? [p.X.BOTTOM, p.X.BOTTOM, p.CHECK.BOTTOM, p.CHECK.BOTTOM] : [p.X.BOTTOM, p.BAR.BOTTOM, p.BAR.BOTTOM, p.CHECK.BOTTOM];
                                 return (0, r.jsxs)('svg', {
                                     viewBox: '0 0 20 20',
                                     fill: 'none',
@@ -125,29 +127,29 @@ let f = {
                                         })
                                     ]
                                 });
-                            })(v, R, O, S.enabled)
+                            })(L, v, C, g.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (g.current = e), null != T && (T.current = e);
+                            (A.current = e), null != S && (S.current = e);
                         },
-                        className: E.input,
-                        tabIndex: p ? -1 : 0,
+                        className: f.input,
+                        tabIndex: I ? -1 : 0,
                         onKeyDown: function (e) {
-                            if (!p && !e.repeat) (' ' === e.key || 'Enter' === e.key) && N(!0);
+                            if (!I && !e.repeat) (' ' === e.key || 'Enter' === e.key) && R(!0);
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!p && !!A && !e.repeat) N(!1), 'Enter' === e.key && (null === (t = g.current) || void 0 === t || t.click());
+                            if (!I && !!N && !e.repeat) R(!1), 'Enter' === e.key && (null === (t = A.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
-                            N(!1), null == n || n(e.currentTarget.checked, e);
+                            R(!1), null == n || n(e.currentTarget.checked, e);
                         },
                         checked: a,
-                        disabled: p
+                        disabled: I
                     })
                 ]
             })

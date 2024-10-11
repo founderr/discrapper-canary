@@ -1,6 +1,9 @@
 n.d(t, {
+    F: function () {
+        return O;
+    },
     X: function () {
-        return N;
+        return R;
     }
 }),
     n(47120);
@@ -19,9 +22,10 @@ var r,
     h = n(692547),
     p = n(84735),
     I = n(481060),
-    m = n(981631),
-    T = n(766581);
-function S(e, t, n) {
+    m = n(540059),
+    T = n(981631),
+    S = n(766581);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,128 +39,135 @@ function S(e, t, n) {
     );
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
-let g = {
-        BOX: T.box,
-        ROUND: T.round,
-        SMALL_BOX: T.smallBox
+let A = {
+        BOX: S.box,
+        ROUND: S.round,
+        SMALL_BOX: S.smallBox
     },
-    A = {
-        top: T.alignTop,
-        center: T.alignCenter
+    N = {
+        top: S.alignTop,
+        center: S.alignCenter
     };
-class N extends (a = u.PureComponent) {
-    getInputMode() {
-        return this.props.disabled ? 'disabled' : this.props.readOnly ? 'readonly' : 'default';
-    }
-    getStyle() {
-        var e;
-        let { value: t, type: n, color: r } = this.props,
-            i = null !== (e = this.props.style) && void 0 !== e ? e : {};
-        if (!1 === t) return i;
-        if (((i = { ...i }), r === h.Z.unsafe_rawColors.BRAND_500.css))
-            switch (n) {
-                case 'default':
-                    i.borderColor = 'var(--control-brand-foreground)';
-                    break;
-                case 'ghost':
-                    (i.borderColor = 'var(--brand-15a)'), (i.backgroundColor = 'var(--brand-15a)');
-                    break;
-                case 'row':
-                case 'inverted':
-                    (i.borderColor = 'var(--brand-400)'), (i.backgroundColor = 'var(--brand-500)');
-            }
-        else
-            switch (n) {
-                case 'default':
-                    i.borderColor = r;
-                    break;
-                case 'ghost':
-                    if (r.startsWith('var(--')) {
-                        let e = ''.concat(r.slice(0, -1), '-hsl)');
-                        (i.borderColor = 'rgba('.concat(e, ', 0.15)')), (i.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-                    } else E()((0, f.FX)(r), 'Checkbox: '.concat(r, ' is not a valid hex color')), (i.borderColor = (0, f.wK)(r, 0.15)), (i.backgroundColor = (0, f.wK)(r, 0.15));
-                    break;
-                case 'row':
-                case 'inverted':
-                    (i.backgroundColor = r), (i.borderColor = r);
-            }
-        return i;
-    }
-    getColor() {
-        let { value: e, type: t, color: n } = this.props;
-        return e ? ('inverted' === t || 'row' === t ? h.Z.unsafe_rawColors.WHITE_500.css : n) : h.Z.unsafe_rawColors.TRANSPARENT.css;
-    }
+class R extends (a = u.PureComponent) {
     render() {
-        let { disabled: e, readOnly: t, value: n, shape: r, align: i = 'center', className: a, innerClassName: s, children: o, size: u, reverse: c, checkboxColor: _, displayOnly: E, type: f, onClick: h } = this.props,
-            S =
-                null != o
+        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: i, innerClassName: a, children: s, size: o, reverse: u, displayOnly: c, type: _, onClick: E } = this.props,
+            f =
+                null != s
                     ? (0, l.jsx)('div', {
-                          className: d()(T.label, e ? T.labelDisabled : T.labelClickable, c ? T.labelReversed : T.labelForward),
-                          style: { lineHeight: ''.concat(u, 'px') },
-                          children: o
+                          className: d()(S.label, e ? S.labelDisabled : S.labelClickable, u ? S.labelReversed : S.labelForward),
+                          style: { lineHeight: ''.concat(o, 'px') },
+                          children: s
                       })
                     : null,
-            g = this.props.disabled ? T.inputDisabled : this.props.readOnly ? T.inputReadonly : T.inputDefault;
-        return (0, l.jsxs)(E ? 'span' : 'label', {
-            className: d()(e ? T.checkboxWrapperDisabled : T.checkboxWrapper, A[i], a, {
-                [T.row]: 'row' === f,
-                [T.checked]: n
+            h = this.props.disabled ? S.inputDisabled : this.props.readOnly ? S.inputReadonly : S.inputDefault;
+        return (0, l.jsxs)(c ? 'span' : 'label', {
+            className: d()(e ? S.checkboxWrapperDisabled : S.checkboxWrapper, N[r], i, {
+                [S.row]: 'row' === _,
+                [S.checked]: n
             }),
             children: [
-                c ? S : null,
-                !E &&
+                u ? f : null,
+                !c &&
                     (0, l.jsx)(p.t, {
                         children: (0, l.jsx)('input', {
-                            className: d()(s, g),
+                            className: d()(a, h),
                             type: 'checkbox',
-                            onClick: h,
-                            onChange: e || t ? m.dG4 : this.handleChange,
+                            onClick: E,
+                            onChange: e || t ? T.dG4 : this.handleChange,
                             checked: n,
                             style: {
-                                width: u,
-                                height: u
+                                width: o,
+                                height: o
                             }
                         })
                     }),
-                (0, l.jsx)('div', {
-                    className: d()(T.checkbox, r, { [T.checked]: n }),
-                    style: {
-                        width: u,
-                        height: u,
-                        borderColor: _,
-                        ...this.getStyle()
-                    },
-                    children: (0, l.jsx)(I.CheckmarkLargeIcon, {
-                        size: 'sm',
-                        color: this.getColor(),
-                        'aria-hidden': !0
-                    })
-                }),
-                c ? null : S
+                (0, l.jsx)(O, { ...this.props }),
+                u ? null : f
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            S(this, 'handleChange', (e) => {
+            g(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-S(N, 'Types', r),
-    S(N, 'Shapes', g),
-    S(N, 'Aligns', i),
-    S(N, 'defaultProps', {
+g(R, 'Types', r),
+    g(R, 'Shapes', A),
+    g(R, 'Aligns', i),
+    g(R, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
         displayOnly: !1,
         value: !1,
         type: 'default',
-        color: h.Z.unsafe_rawColors.BRAND_500.css,
-        shape: g.BOX,
+        shape: A.BOX,
         align: 'center',
-        onChange: m.dG4,
+        onChange: T.dG4,
         reverse: !1
     });
+function O(e) {
+    let t = (0, m.Q)('Checkbox'),
+        { value: n, size: r, shape: i, checkboxColor: a, type: s, color: o, disabled: c } = e,
+        _ = (function (e, t) {
+            var n;
+            let { value: r, type: i, color: a } = e,
+                s = null !== (n = e.style) && void 0 !== n ? n : {};
+            if (!1 === r) return s;
+            if (((s = { ...s }), null == a)) {
+                if (!t)
+                    switch (i) {
+                        case 'default':
+                            s.borderColor = 'var(--control-brand-foreground)';
+                            break;
+                        case 'ghost':
+                            (s.borderColor = 'var(--brand-15a)'), (s.backgroundColor = 'var(--brand-15a)');
+                            break;
+                        case 'row':
+                        case 'inverted':
+                            (s.borderColor = 'var(--brand-400)'), (s.backgroundColor = 'var(--brand-500)');
+                    }
+            } else
+                switch (i) {
+                    case 'default':
+                        s.borderColor = a;
+                        break;
+                    case 'ghost':
+                        if (a.startsWith('var(--')) {
+                            let e = ''.concat(a.slice(0, -1), '-hsl)');
+                            (s.borderColor = 'rgba('.concat(e, ', 0.15)')), (s.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
+                        } else E()((0, f.FX)(a), 'Checkbox: '.concat(a, ' is not a valid hex color')), (s.borderColor = (0, f.wK)(a, 0.15)), (s.backgroundColor = (0, f.wK)(a, 0.15));
+                        break;
+                    case 'row':
+                    case 'inverted':
+                        (s.backgroundColor = a), (s.borderColor = a);
+                }
+            return s;
+        })(e, t),
+        p = u.useMemo(() => (n ? (t ? h.Z.colors.WHITE.css : 'inverted' === s || 'row' === s ? h.Z.colors.WHITE.css : null != o ? o : h.Z.unsafe_rawColors.BRAND_500.css) : h.Z.unsafe_rawColors.TRANSPARENT.css), [n, s, o, t]);
+    return (0, l.jsx)('div', {
+        className: d()(S.checkbox, i, {
+            [S.checked]: n,
+            [S.checkboxDisabled]: c
+        }),
+        style: {
+            width: r,
+            height: r,
+            borderColor: a,
+            ..._
+        },
+        children: (0, l.jsx)(v, {
+            isVisualRefreshEnabled: t,
+            size: 'sm',
+            color: p,
+            'aria-hidden': !0
+        })
+    });
+}
+function v(e) {
+    let { isVisualRefreshEnabled: t, ...n } = e;
+    return t ? (0, l.jsx)(I.CheckmarkSmallBoldIcon, { ...n }) : (0, l.jsx)(I.CheckmarkLargeIcon, { ...n });
+}

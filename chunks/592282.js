@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return f;
+        return p;
     }
 });
 var r = n(735250),
@@ -10,52 +10,62 @@ var r = n(735250),
     o = n(1561),
     l = n(761224),
     u = n(743236),
-    c = n(448239),
-    d = n(247442),
-    _ = n(939350),
-    E = n(667947);
-function f(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: I, action: m, className: T, focusedClassName: S } = e,
-        g = i.useRef(null);
+    c = n(481060),
+    d = n(540059),
+    _ = n(448239),
+    E = n(247442),
+    f = n(939350),
+    h = n(667947);
+function p(e) {
+    let { color: t = 'default', label: n, checked: a, subtext: p, disabled: I, isFocused: m, menuItemProps: T, action: S, className: g, focusedClassName: A } = e,
+        N = i.useRef(null),
+        R = (0, d.Q)('MenuCheckboxItem');
     return (
         i.useEffect(() => {
-            p && (0, u.F)(g);
-        }, [p]),
+            m && (0, u.F)(N);
+        }, [m]),
         (0, r.jsxs)(o.P, {
-            innerRef: g,
-            className: s()(E.item, E.labelContainer, _._[t], T, {
-                [E.disabled]: h,
-                [E.focused]: p,
-                [null != S ? S : '']: p
+            innerRef: N,
+            className: s()(h.item, h.labelContainer, f._[t], g, {
+                [h.disabled]: I,
+                [h.focused]: m,
+                [null != A ? A : '']: m
             }),
-            onClick: h ? void 0 : m,
-            ...I,
+            onClick: I ? void 0 : S,
+            ...T,
             'aria-checked': a,
-            'aria-disabled': h,
+            'aria-disabled': I,
             children: [
                 (0, r.jsxs)('div', {
-                    className: E.label,
+                    className: h.label,
                     children: [
                         (0, l.I)(n, e),
-                        null != f &&
+                        null != p &&
                             (0, r.jsx)('div', {
-                                className: E.subtext,
-                                children: f
+                                className: h.subtext,
+                                children: p
                             })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: E.iconContainer,
-                    children: a
-                        ? (0, r.jsx)(d.Z, {
-                              className: E.icon,
-                              background: E.checkbox,
-                              foreground: E.check
+                    className: h.iconContainer,
+                    children: R
+                        ? (0, r.jsx)(c.CheckboxIndicator, {
+                              shape: c.Checkbox.Shapes.BOX,
+                              size: 20,
+                              value: a,
+                              disabled: I
                           })
-                        : (0, r.jsx)(c.Z, {
-                              className: E.icon,
-                              foreground: E.__invalid_checkboxEmpty
-                          })
+                        : a
+                          ? (0, r.jsx)(E.Z, {
+                                className: h.icon,
+                                background: h.checkbox,
+                                foreground: h.check
+                            })
+                          : (0, r.jsx)(_.Z, {
+                                className: h.icon,
+                                foreground: h.__invalid_checkboxEmpty
+                            })
                 })
             ]
         })

@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return f;
+        return p;
     }
 });
 var r = n(735250),
@@ -10,51 +10,59 @@ var r = n(735250),
     o = n(1561),
     l = n(761224),
     u = n(743236),
-    c = n(186523),
-    d = n(553826),
-    _ = n(939350),
-    E = n(667947);
-function f(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: I, action: m } = e,
-        T = i.useRef(null);
+    c = n(481060),
+    d = n(540059),
+    _ = n(186523),
+    E = n(553826),
+    f = n(939350),
+    h = n(667947);
+function p(e) {
+    let { color: t = 'default', label: n, checked: a, subtext: p, disabled: I, isFocused: m, menuItemProps: T, action: S } = e,
+        g = i.useRef(null),
+        A = (0, d.Q)('MenuRadioItem');
     return (
         i.useEffect(() => {
-            p && (0, u.F)(T);
-        }, [p]),
+            m && (0, u.F)(g);
+        }, [m]),
         (0, r.jsxs)(o.P, {
-            innerRef: T,
-            className: s()(E.item, E.labelContainer, _._[t], {
-                [E.disabled]: h,
-                [E.focused]: p
+            innerRef: g,
+            className: s()(h.item, h.labelContainer, f._[t], {
+                [h.disabled]: I,
+                [h.focused]: m
             }),
-            onClick: h ? void 0 : m,
-            ...I,
+            onClick: I ? void 0 : S,
+            ...T,
             'aria-checked': a,
-            'aria-disabled': h,
+            'aria-disabled': I,
             children: [
                 (0, r.jsxs)('div', {
-                    className: E.label,
+                    className: h.label,
                     children: [
                         (0, l.I)(n, e),
-                        null != f &&
+                        null != p &&
                             (0, r.jsx)('div', {
-                                className: E.subtext,
-                                children: f
+                                className: h.subtext,
+                                children: p
                             })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: E.iconContainer,
-                    children: a
-                        ? (0, r.jsx)(d.Z, {
-                              className: E.icon,
-                              background: E.__invalid_radio,
-                              foreground: E.radioSelection
+                    className: h.iconContainer,
+                    children: A
+                        ? (0, r.jsx)(c.RadioIndicator, {
+                              checked: a,
+                              radioItemIconClassName: h.radioIcon
                           })
-                        : (0, r.jsx)(c.Z, {
-                              className: E.icon,
-                              foreground: E.__invalid_radio
-                          })
+                        : a
+                          ? (0, r.jsx)(E.Z, {
+                                className: h.icon,
+                                background: h.__invalid_radio,
+                                foreground: h.radioSelection
+                            })
+                          : (0, r.jsx)(_.Z, {
+                                className: h.icon,
+                                foreground: h.__invalid_radio
+                            })
                 })
             ]
         })

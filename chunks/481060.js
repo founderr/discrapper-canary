@@ -366,6 +366,9 @@ n.r(t),
         Checkbox: function () {
             return T.X;
         },
+        CheckboxIndicator: function () {
+            return T.F;
+        },
         CheckmarkLargeBoldIcon: function () {
             return tv.sV5;
         },
@@ -1379,6 +1382,9 @@ n.r(t),
         },
         RadioGroup: function () {
             return eR.Ee;
+        },
+        RadioIndicator: function () {
+            return eR.Fj;
         },
         ReactionIcon: function () {
             return tv.EO4;

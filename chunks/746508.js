@@ -574,6 +574,7 @@ class eH extends a.PureComponent {
                                       (0, i.jsxs)(j.Z, {
                                           grow: 0,
                                           shrink: 0,
+                                          className: eD.voiceButtonsContainer,
                                           children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(eO.Z, { channel: e })]
                                       })
                                   ]

@@ -33,6 +33,7 @@ n.r(
         colorSuccess: 'colorSuccess_d90b3d colorDefault_d90b3d',
         groupLabel: 'groupLabel_d90b3d labelContainer_d90b3d',
         loader: 'loader_d90b3d',
-        sparkles: 'sparkles_d90b3d'
+        sparkles: 'sparkles_d90b3d',
+        radioIcon: 'radioIcon_d90b3d'
     })
 );
