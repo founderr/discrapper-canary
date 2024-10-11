@@ -248,7 +248,7 @@ function eI(e) {
         n = [],
         i = [];
     $.forEach((e, a) => {
-        a > et && (e.type === v.Rr.MESSAGE || e.type === v.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
+        (a > et || !q) && (e.type === v.Rr.MESSAGE || e.type === v.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let a = K,
         [s, r] = ec(j);

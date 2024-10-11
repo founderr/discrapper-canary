@@ -8,7 +8,7 @@ e.exports = {
     appDetails: 'appDetails_f2758d',
     titleContainer: 'titleContainer_f2758d',
     title: 'title_f2758d',
-    tagContainer: 'tagContainer_f2758d',
+    infoContainer: 'infoContainer_f2758d',
     appName: 'appName_f2758d',
     appCategory: 'appCategory_f2758d',
     description: 'description_f2758d',
