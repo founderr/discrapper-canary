@@ -98,31 +98,32 @@ function x(e) {
     return null;
 }
 function T(e) {
-    let { messageId: i, channelId: t, failedDestinations: l, forwardOptions: r, ...c } = e,
-        d = n.useCallback(() => {
+    let { messageId: i, channelId: t, message: l, failedDestinations: r, forwardOptions: c, ...d } = e,
+        o = n.useCallback(() => {
             (0, f.l8)({
                 messageId: i,
                 channelId: t,
+                message: l,
                 source: 'retry-modal',
-                initialSelectedDestinations: l,
-                forwardOptions: r
+                initialSelectedDestinations: r,
+                forwardOptions: c
             });
-        }, [t, l, i, r]);
+        }, [t, r, i, l, c]);
     return (0, a.jsxs)(s.ConfirmModal, {
         header: h.Z.Messages.MESSAGE_FORWARD_FAILED,
         confirmText: h.Z.Messages.RETRY,
         cancelText: h.Z.Messages.CANCEL,
         confirmButtonColor: s.Button.Colors.BRAND,
-        onConfirm: d,
-        ...c,
+        onConfirm: o,
+        ...d,
         children: [
             (0, a.jsx)(s.Text, {
                 variant: 'text-md/medium',
-                children: h.Z.Messages.MESSAGE_FORWARD_FAILED_BODY.format({ count: l.length })
+                children: h.Z.Messages.MESSAGE_FORWARD_FAILED_BODY.format({ count: r.length })
             }),
             (0, a.jsx)('div', {
                 className: g.failedDestinations,
-                children: l.map((e, i) => (0, a.jsx)(x, { destination: e }, i))
+                children: r.map((e, i) => (0, a.jsx)(x, { destination: e }, i))
             })
         ]
     });
