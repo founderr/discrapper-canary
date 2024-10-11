@@ -204,7 +204,8 @@ async function Q(e) {
             !(await (0, E.L)({
                 applicationId: t,
                 userIndexState: n,
-                guildIndexState: e
+                guildIndexState: e,
+                commandIntegrationTypes: u.integration_types
             }))
         )
             return !1;

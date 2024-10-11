@@ -167,7 +167,8 @@ function D(e) {
                         guildIndexState: r,
                         sectionName: l,
                         location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                        entrypoint: n
+                        entrypoint: n,
+                        commandIntegrationTypes: t.integration_types
                     })) &&
                         (await (0, g.Y$)({
                             command: t,
