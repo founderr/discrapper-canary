@@ -16,7 +16,8 @@ t.Z = function (e) {
         f = (0, o.Z)({ application: g }),
         S = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
         C = (0, r.lf)(g),
-        N = a.useMemo(
+        N = (0, r.vJ)(g),
+        A = a.useMemo(
             () =>
                 u.ZP.getApplicationIconURL({
                     id: g.id,
@@ -25,16 +26,15 @@ t.Z = function (e) {
                 }),
             [g]
         ),
-        A = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
-        v = (0, i.jsx)(l.Z, {
+        v = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
+        Z = (0, i.jsx)(l.Z, {
             application: g,
-            textVariant: 'text-xs/medium',
+            textVariant: 'text-xs/normal',
             mutualGuilds: f,
             mutualGuildShownMax: 3,
             guildIconSize: l.x.SMALL,
             compact: !0
-        }),
-        Z = T && null != S;
+        });
     return (0, i.jsx)('div', {
         className: h.container,
         children: (0, i.jsxs)(d.Z, {
@@ -47,7 +47,7 @@ t.Z = function (e) {
                     children: [
                         (0, i.jsx)(_.Z, {
                             application: g,
-                            iconURL: N
+                            iconURL: A
                         }),
                         (0, i.jsx)('div', {
                             className: h.icon,
@@ -62,7 +62,7 @@ t.Z = function (e) {
                                         width: 48,
                                         height: 48,
                                         children: (0, i.jsx)('img', {
-                                            src: N,
+                                            src: A,
                                             alt: '',
                                             className: h.avatar
                                         })
@@ -75,58 +75,47 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: h.appDetails,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, i.jsxs)('div', {
                             className: h.titleContainer,
-                            children: (0, i.jsx)('div', {
-                                className: h.title,
-                                children: (0, i.jsx)(s.Heading, {
-                                    variant: 'heading-md/semibold',
-                                    color: 'header-primary',
-                                    className: h.appName,
-                                    children: g.name
-                                })
-                            })
+                            children: [
+                                (0, i.jsx)('div', {
+                                    className: h.title,
+                                    children: (0, i.jsx)(s.Heading, {
+                                        variant: 'heading-md/semibold',
+                                        className: h.appName,
+                                        children: g.name
+                                    })
+                                }),
+                                C || N
+                                    ? (0, i.jsx)('div', {
+                                          className: h.tagContainer,
+                                          children: (0, i.jsx)(s.Text, {
+                                              variant: 'text-sm/bold',
+                                              children: C ? E.Z.Messages.APP_LAUNCHER_PROMOTED : E.Z.Messages.APP_DIRECTORY_PARTNER
+                                          })
+                                      })
+                                    : null
+                            ]
                         }),
-                        Z || C
-                            ? (0, i.jsxs)('div', {
-                                  className: h.infoContainer,
-                                  children: [
-                                      Z
-                                          ? (0, i.jsx)(s.Text, {
-                                                className: h.appCategory,
-                                                variant: 'text-xs/medium',
-                                                color: 'text-normal',
-                                                children: S.name
-                                            })
-                                          : null,
-                                      Z && C
-                                          ? (0, i.jsx)(s.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-secondary',
-                                                children: '\u2022'
-                                            })
-                                          : null,
-                                      C
-                                          ? (0, i.jsx)(s.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-secondary',
-                                                children: E.Z.Messages.APP_LAUNCHER_PROMOTED
-                                            })
-                                          : null
-                                  ]
+                        T
+                            ? (0, i.jsx)(s.Text, {
+                                  className: h.appCategory,
+                                  variant: 'text-xs/normal',
+                                  color: 'text-muted',
+                                  children: null != S ? S.name : ' '
                               })
                             : null,
                         (0, i.jsx)(s.Text, {
                             className: h.description,
-                            variant: 'text-sm/medium',
+                            variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            lineClamp: Z || C ? 2 : 3,
+                            lineClamp: T ? 2 : 3,
                             children: null !== (p = null === (m = g.directory_entry) || void 0 === m ? void 0 : m.short_description) && void 0 !== p ? p : g.description
                         }),
-                        A
+                        v
                             ? (0, i.jsx)('div', {
                                   className: h.memberDetails,
-                                  children: v
+                                  children: Z
                               })
                             : null
                     ]
