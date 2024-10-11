@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(297700),
     I = t(77498),
     N = t(283595),
-    C = t(626135),
-    A = t(251625),
-    m = t(358085),
+    m = t(626135),
+    C = t(251625),
+    A = t(358085),
     g = t(210887),
     h = t(981631),
     O = t(689938),
@@ -26,7 +26,7 @@ var n = t(735250),
     M = t(869042),
     f = t(113207);
 let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
-    L = (0, m.isWindows)();
+    L = (0, A.isWindows)();
 function P(e) {
     let { onClose: s } = e,
         t = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()),
@@ -81,35 +81,35 @@ function P(e) {
 function b(e) {
     var s;
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
-        A = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
-        [m, g] = a.useState(!1),
-        [R, f] = a.useState(null !== (s = A.name) && void 0 !== s ? s : '???'),
+        C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
+        [A, g] = a.useState(!1),
+        [R, f] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
             [M.card]: !i,
-            [p.nowPlaying]: null != A && i
+            [p.nowPlaying]: null != C && i
         });
     function P() {
-        d.Z.deleteEntry(A);
+        d.Z.deleteEntry(C);
     }
     function b() {
-        A.name !== R && d.Z.editName(A, R);
+        C.name !== R && d.Z.editName(C, R);
     }
     function Z(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
     function v() {
-        d.Z.toggleDetection(A);
+        d.Z.toggleDetection(C);
     }
     function j() {
-        if (m) return;
-        let e = null != A.id ? I.Z.getDetectableGame(A.id) : null;
-        C.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        if (A) return;
+        let e = null != C.id ? I.Z.getDetectableGame(C.id) : null;
+        m.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: A.name
+            game_name: C.name
         }),
-            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: A.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: C.name }), c.ToastType.SUCCESS)),
             g(!0);
     }
     return (0, n.jsxs)('div', {
@@ -118,13 +118,13 @@ function b(e) {
             (0, n.jsxs)('div', {
                 className: r()(p.gameNameLastPlayed, x.vertical),
                 children: [
-                    A.verified && !T
+                    C.verified && !T
                         ? (0, n.jsxs)('div', {
                               className: p.detectedApplication,
                               children: [
                                   (0, n.jsx)('div', {
                                       className: p.gameName,
-                                      children: A.name
+                                      children: C.name
                                   }),
                                   (0, n.jsx)(c.Tooltip, {
                                       text: O.Z.Messages.SETTINGS_GAMES_VERIFIED_ICON,
@@ -155,7 +155,7 @@ function b(e) {
                           }),
                     (function () {
                         let e;
-                        let { played: s, exePath: t } = A;
+                        let { played: s, exePath: t } = C;
                         return (
                             i ? (e = O.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE) : null != s && '' !== s && (e = O.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
                             (0, n.jsx)('div', {
@@ -171,7 +171,7 @@ function b(e) {
             }),
             T
                 ? null
-                : m
+                : A
                   ? null
                   : (0, n.jsx)('div', {
                         className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
@@ -196,7 +196,7 @@ function b(e) {
                         })
                     }),
             (function () {
-                let { detectable: e } = A,
+                let { detectable: e } = C,
                     s = e
                         ? (0, n.jsx)(c.EyeIcon, {
                               size: 'md',
@@ -230,7 +230,7 @@ function b(e) {
             })(),
             (function () {
                 if (!L) return null;
-                let { overlay: e, overlayWarn: s } = A,
+                let { overlay: e, overlayWarn: s } = C,
                     t = e
                         ? (0, n.jsx)(c.ScreenIcon, {
                               size: 'md',
@@ -267,7 +267,7 @@ function b(e) {
                                     className: p.toggleIcon,
                                     onClick: () => {
                                         var s;
-                                        return (s = !e), void d.Z.toggleOverlay(A, s);
+                                        return (s = !e), void d.Z.toggleOverlay(C, s);
                                     },
                                     onMouseEnter: a,
                                     onMouseLeave: i,
@@ -320,7 +320,7 @@ function v(e) {
         ]
     });
 }
-let j = (0, A.oH)(function () {
+let j = (0, C.oH)(function () {
     for (var e = arguments.length, s = Array(e), t = 0; t < e; t++) s[t] = arguments[t];
     return new Set(s.map((e) => e.exePath));
 });

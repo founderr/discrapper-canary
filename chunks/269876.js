@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(65154),
     I = t(689938),
     N = t(393752),
-    C = t(739017),
-    A = t(113207);
-let m = (0, E.hQ)();
+    m = t(739017),
+    C = t(113207);
+let A = (0, E.hQ)();
 function g() {
     let [e, s] = a.useState(-100),
         [t, i] = a.useState(!1),
@@ -63,7 +63,7 @@ function g() {
             onValueChange: (e) => M(-((100 - e) * 1), h),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': m,
+            'aria-labelledby': A,
             children: (0, n.jsxs)('div', {
                 className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar),
                 children: [
@@ -87,7 +87,7 @@ function g() {
                     }),
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: A.marginBottom8,
+                        className: C.marginBottom8,
                         children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
@@ -96,9 +96,9 @@ function g() {
             className: N.sensitivity,
             children: [
                 (0, n.jsx)(_.FormTitle, {
-                    id: m,
+                    id: A,
                     tag: _.FormTitleTags.H5,
-                    className: A.marginBottom8,
+                    className: C.marginBottom8,
                     children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
                 (0, n.jsxs)('div', {
@@ -107,11 +107,11 @@ function g() {
                             (0, n.jsx)(E.FG, {
                                 children: (e) =>
                                     (0, n.jsxs)('div', {
-                                        className: r()(C.horizontal, A.marginBottom4),
+                                        className: r()(m.horizontal, C.marginBottom4),
                                         children: [
                                             (0, n.jsx)(_.FormTitle, {
                                                 tag: _.FormTitleTags.H3,
-                                                className: A.marginReset,
+                                                className: C.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
                                                     children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -131,7 +131,7 @@ function g() {
                 !R &&
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: r()(N.inputDisabledWarning, A.marginBottom8),
+                        className: r()(N.inputDisabledWarning, C.marginBottom8),
                         children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: () => u.Z.enable(!0) })
                     })
             ]

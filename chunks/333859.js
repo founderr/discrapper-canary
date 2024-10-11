@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(626135),
     I = t(981631),
     N = t(474936),
-    C = t(689938),
-    A = t(444298),
-    m = t(113207);
+    m = t(689938),
+    C = t(444298),
+    A = t(113207);
 let g = () => {
         (0, d.nJ)(), (0, o.xf)();
     },
@@ -43,30 +43,30 @@ let g = () => {
                     });
             }, []),
             (0, n.jsxs)('div', {
-                className: A.selectionGroup,
+                className: C.selectionGroup,
                 children: [
                     (0, n.jsx)(u.Z, {
                         disabled: s && !t,
                         renderCTAButtons: () =>
                             (0, n.jsxs)('div', {
-                                className: A.tryItOutButtons,
+                                className: C.tryItOutButtons,
                                 children: [
                                     (0, n.jsx)(r.Button, {
                                         color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
                                         onClick: () => g(),
-                                        children: t ? C.Z.Messages.PREVIEW : C.Z.Messages.APP_ICON_PREVIEW_TITLE
+                                        children: t ? m.Z.Messages.PREVIEW : m.Z.Messages.APP_ICON_PREVIEW_TITLE
                                     }),
                                     s
                                         ? (0, n.jsx)(T.Z, {
                                               showGradient: t,
                                               subscriptionTier: N.Si.TIER_2,
-                                              buttonText: t ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                              buttonText: t ? m.Z.Messages.PREMIUM_UPSELL_GET_NITRO : m.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: m.marginTop20 })
+                    (0, n.jsx)(r.FormDivider, { className: A.marginTop20 })
                 ]
             })
         );

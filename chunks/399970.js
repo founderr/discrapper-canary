@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -19,24 +19,24 @@ var n,
     S = t(689938),
     I = t(80366),
     N = t(113207);
-let C = /^\d+$|^$/;
+let m = /^\d+$|^$/;
 ((a = n || (n = {})).LOCALHOST = 'localhost'), (a.PROXY = 'proxy');
-function A(e) {
+function C(e) {
     let { onClose: s, transitionState: t } = e,
         {
             authorizedApplicationId: n,
             authorizationError: a,
-            authorizing: A
+            authorizing: C
         } = (0, o.cj)([T.Z], () => ({
             authorizedApplicationId: T.Z.testModeApplicationId,
             authorizationError: T.Z.error,
             authorizing: T.Z.isFetchingAuthorization
         })),
-        [m, g] = r.useState(null != n ? n : ''),
+        [A, g] = r.useState(null != n ? n : ''),
         [h, O] = r.useState('8080'),
         [p, R] = r.useState('localhost'),
         x = (0, E.Dt)(),
-        M = C.test(m);
+        M = m.test(A);
     async function f() {
         d.q$();
         let e = (function (e, s, t) {
@@ -47,11 +47,11 @@ function A(e) {
                 case 'proxy':
                     return (0, _.Z)(t);
             }
-        })(p, h, m);
-        null != (await d.Wt(m, e)) && s();
+        })(p, h, A);
+        null != (await d.Wt(A, e)) && s();
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let D = null != n && n === m,
+    let D = null != n && n === A,
         L = D
             ? function () {
                   d.mc(), g(''), R(null);
@@ -101,20 +101,20 @@ function A(e) {
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, i.jsx)(l.TextInput, {
-                                        value: m,
+                                        value: A,
                                         maxLength: 19,
                                         error: M ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
                                             g(e);
                                         },
-                                        disabled: A
+                                        disabled: C
                                     })
                                 }),
                                 (0, i.jsx)(l.FormItem, {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !M || '' === m,
+                                        isDisabled: !M || '' === A,
                                         value: p,
                                         options: [
                                             {
@@ -144,13 +144,13 @@ function A(e) {
                                               value: h,
                                               maxLength: 5,
                                               onChange: (e) => O(e),
-                                              disabled: A
+                                              disabled: C
                                           })
                                       }),
                                 (0, i.jsx)(l.Button, {
-                                    submitting: A,
+                                    submitting: C,
                                     type: 'submit',
-                                    disabled: !M || 0 === m.length || ('localhost' === p && 0 === h.length),
+                                    disabled: !M || 0 === A.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
                                     children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })

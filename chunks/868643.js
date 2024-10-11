@@ -29,7 +29,7 @@ function f(e) {
         var n, t;
         if (null == e) return !0;
         let i = null === (n = l.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
-        return !(null == i || (null === (t = u.Z.getGuild(i)) || void 0 === t ? void 0 : t.hasFeature(s.oNc.FORWARDING_DISABLED))) || (null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id));
+        return !!(null != i && (null === (t = u.Z.getGuild(i)) || void 0 === t ? void 0 : t.hasFeature(s.oNc.FORWARDING_DISABLED))) || (null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id));
     });
     return i.useMemo(() => !n && null != e && d(e), [n, e]);
 }

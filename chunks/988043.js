@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -19,13 +19,13 @@ var n = t(735250),
     S = t(726985),
     I = t(736530),
     N = t(981631),
-    C = t(689938);
-function A() {
+    m = t(689938);
+function C() {
     let e = (0, _.is)(),
         s = (0, _.c_)(),
         t = d.h2.useSetting().includes(e),
-        A = d.iG.useSetting(),
-        m = a.useCallback(
+        C = d.iG.useSetting(),
+        A = a.useCallback(
             (s) => {
                 let t = new Set((0, c.YK)());
                 s ? t.delete(e) : t.add(e), d.h2.updateSetting(Array.from(t));
@@ -40,10 +40,10 @@ function A() {
     }
     let h = (e) => {
         (0, T.V)({
-            header: C.Z.Messages.USER_DM_SETTINGS_TITLE,
-            body: C.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
-            confirmText: C.Z.Messages.NO_TEXT,
-            cancelText: C.Z.Messages.YES_TEXT,
+            header: m.Z.Messages.USER_DM_SETTINGS_TITLE,
+            body: m.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
+            confirmText: m.Z.Messages.NO_TEXT,
+            cancelText: m.Z.Messages.YES_TEXT,
             confirmButtonColor: i.Button.Colors.BRAND,
             onConfirm: () => {
                 d.iG.updateSetting(e), g(e, !1);
@@ -58,18 +58,18 @@ function A() {
         children:
             e === I.T
                 ? (0, n.jsx)(E.Z, {
-                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
-                      note: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
-                      value: !A,
+                      title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
+                      note: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
+                      value: !C,
                       onChange: (e) => {
                           h(!e);
                       }
                   })
                 : (0, n.jsx)(E.Z, {
-                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
-                      note: s ? C.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : C.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                      title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
+                      note: s ? m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                       value: !t,
-                      onChange: m
+                      onChange: A
                   })
     });
 }

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 });
 var n = t(735250),
@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(981631),
     I = t(474936),
     N = t(689938),
-    C = t(492004);
-function A(e) {
-    let { user: s, guild: t, className: i, sectionTitle: A, forcedDivider: m = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
+    m = t(492004);
+function C(e) {
+    let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: A = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
         R = (0, u.Kg)(s, t),
         x = _.ZP.canUsePremiumProfileCustomization(s),
         { analyticsLocations: M } = (0, l.ZP)(),
@@ -45,25 +45,25 @@ function A(e) {
         b = O || void 0 !== f ? null != f : null != R,
         Z = g ? o.ShinyButton : o.Button;
     return (0, n.jsx)(E.Z, {
-        forcedDivider: m,
+        forcedDivider: A,
         borderType: T.Y.PREMIUM,
         hasBackground: !0,
-        title: A,
+        title: C,
         showBorder: h,
         errors: D,
         className: i,
         children: (0, n.jsxs)('div', {
-            className: C.buttonsContainer,
+            className: m.buttonsContainer,
             children: [
                 (0, n.jsx)(Z, {
                     size: o.Button.Sizes.SMALL,
                     onClick: L,
-                    className: r()({ [C.buttonHighlighted]: g }),
+                    className: r()({ [m.buttonHighlighted]: g }),
                     children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
                 }),
                 b &&
                     (0, n.jsx)(o.Button, {
-                        className: C.removeButton,
+                        className: m.removeButton,
                         color: o.Button.Colors.PRIMARY,
                         look: o.Button.Looks.LINK,
                         size: o.Button.Sizes.SMALL,

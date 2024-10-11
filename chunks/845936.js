@@ -12,24 +12,24 @@ var r = n(373793),
     u = n(689079);
 function c(e) {
     var t, n, c, d, _;
-    let { applicationId: E, userIndexState: f, guildIndexState: h, onSuccess: p, sectionName: I, location: m, entrypoint: T } = e;
-    if (E === u.bi.BUILT_IN || (null === (t = f.result) || void 0 === t ? void 0 : t.sections[E]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[E]) != null) return null == p || p(), Promise.resolve(!0);
-    let S = null != T ? T : o.Z.lastShownEntrypoint();
+    let { applicationId: E, userIndexState: f, guildIndexState: h, onSuccess: p, sectionName: I, location: m, entrypoint: T, commandIntegrationTypes: S } = e;
+    if ((null != S && !S.includes(r.Y.USER_INSTALL)) || E === u.bi.BUILT_IN || (null === (t = f.result) || void 0 === t ? void 0 : t.sections[E]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[E]) != null) return null == p || p(), Promise.resolve(!0);
+    let g = null != T ? T : o.Z.lastShownEntrypoint();
     (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
         location: m,
         application_id: E,
         section_name: I,
-        source: S
+        source: g
     });
-    let g = a.Z.getApplication(E),
-        A = r.Y.USER_INSTALL,
-        N = null == g ? void 0 : null === (_ = g.integrationTypesConfig) || void 0 === _ ? void 0 : null === (d = _[A]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
+    let A = a.Z.getApplication(E),
+        N = r.Y.USER_INSTALL,
+        R = null == A ? void 0 : null === (_ = A.integrationTypesConfig) || void 0 === _ ? void 0 : null === (d = _[N]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
         (0, s.openOAuth2Modal)(
             {
                 clientId: E,
-                integrationType: A,
-                scopes: N,
+                integrationType: N,
+                scopes: R,
                 callback: (t) => {
                     let { location: n } = t;
                     null != n &&
@@ -37,7 +37,7 @@ function c(e) {
                             location: m,
                             application_id: E,
                             section_name: I,
-                            source: S
+                            source: g
                         }),
                         e(!0),
                         null == p || p());

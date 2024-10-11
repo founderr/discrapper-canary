@@ -18,14 +18,14 @@ var n = t(735250),
     S = t(319978);
 function I(e) {
     let { cta: s, storeListing: t, className: i } = e,
-        { applicationId: I, benefits: N, description: C } = t,
-        A = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(I, t.thumbnail, 256)), [I, t.thumbnail]),
-        { data: m } = (0, d.X)(t.skuId),
+        { applicationId: I, benefits: N, description: m } = t,
+        C = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(I, t.thumbnail, 256)), [I, t.thumbnail]),
+        { data: A } = (0, d.X)(t.skuId),
         g = a.useMemo(() => {
-            if (null == m || 0 === m.length) return null;
-            let e = m[0];
+            if (null == A || 0 === A.length) return null;
+            let e = A[0];
             return (0, u.xg)(e);
-        }, [m]);
+        }, [A]);
     return null == g
         ? null
         : (0, n.jsxs)(o.l, {
@@ -35,9 +35,9 @@ function I(e) {
                       (0, n.jsxs)('div', {
                           className: S.headerTitle,
                           children: [
-                              null != A &&
+                              null != C &&
                                   (0, n.jsx)(c.Image, {
-                                      src: A.href,
+                                      src: C.href,
                                       imageClassName: S.subscriptionImg,
                                       width: 48,
                                       height: 48
@@ -60,12 +60,12 @@ function I(e) {
                   ]
               }),
               children: [
-                  !(0, E.Ew)(C) &&
+                  !(0, E.Ew)(m) &&
                       (0, n.jsx)('div', {
                           className: S.description,
                           children: (0, n.jsx)(c.Text, {
                               variant: 'text-sm/medium',
-                              children: C
+                              children: m
                           })
                       }),
                   null != N &&

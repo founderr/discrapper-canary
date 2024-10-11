@@ -1,16 +1,16 @@
 t.r(s),
     t.d(s, {
         ConnectedPrivacySettings: function () {
-            return m;
+            return A;
         },
         PrivacySettingSurfaces: function () {
             return n;
         },
         PrivacySettings: function () {
-            return C;
+            return m;
         },
         default: function () {
-            return A;
+            return C;
         }
     }),
     t(47120);
@@ -29,9 +29,9 @@ var n,
     S = t(726985),
     I = t(689938),
     N = t(566701);
-function C(e) {
+function m(e) {
     let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: u, guild: T } = e,
-        C = T.hasFeature(E.oNc.HUB);
+        m = T.hasFeature(E.oNc.HUB);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.F, {
@@ -40,7 +40,7 @@ function C(e) {
                     (0, i.jsx)(o.FormItem, {
                         children: (0, i.jsx)(o.FormSwitch, {
                             value: !s,
-                            note: C ? I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                            note: m ? I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                             onChange: t,
                             hideBorder: !0,
                             children: I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
@@ -56,7 +56,7 @@ function C(e) {
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.FormSwitch, {
                                 value: !d,
-                                note: C ? I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
+                                note: m ? I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
                                 onChange: u,
                                 disabled: s,
                                 hideBorder: !0,
@@ -110,7 +110,7 @@ function C(e) {
         ]
     });
 }
-function A(e) {
+function C(e) {
     let { guild: s, transitionState: t, onClose: n } = e,
         a = ''.concat(I.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
     return (0, i.jsxs)(o.ModalRoot, {
@@ -126,7 +126,7 @@ function A(e) {
             }),
             (0, i.jsx)(o.ModalContent, {
                 className: N.content,
-                children: (0, i.jsx)(m, {
+                children: (0, i.jsx)(A, {
                     guild: s,
                     ingress: 'server_privacy_modal'
                 })
@@ -140,7 +140,7 @@ function A(e) {
         ]
     });
 }
-function m(e) {
+function A(e) {
     let { guild: s, ingress: t = 'server_privacy_modal' } = e,
         n = s.id,
         a = c.h2.useSetting().includes(n),
@@ -186,7 +186,7 @@ function m(e) {
             },
             [n, t]
         ),
-        A = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 let s = new Set((0, u.gl)());
                 e ? s.delete(n) : s.add(n),
@@ -199,7 +199,7 @@ function m(e) {
             },
             [n, t]
         );
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(m, {
         isGuildRestricted: a,
         handleRestrictedGuildChange: S,
         isGuildActivityRestricted: l,
@@ -207,7 +207,7 @@ function m(e) {
         isGuildActivityJoiningRestricted: _,
         handleActivityJoiningRestrictedGuildChange: N,
         isGuildMessageRequestRestricted: o,
-        handleMessageRequestRestrictedGuildChange: A,
+        handleMessageRequestRestrictedGuildChange: C,
         guild: s
     });
 }

@@ -20,9 +20,9 @@ var a = t(120356),
     S = t(301766),
     I = t(509545),
     N = t(78839),
-    C = t(931331),
-    A = t(754347),
-    m = t(122289),
+    m = t(931331),
+    C = t(754347),
+    A = t(122289),
     g = t(74538),
     h = t(212895),
     O = t(296848),
@@ -126,7 +126,7 @@ function F() {
     return (0, n.jsxs)('div', {
         className: Z.wordMark,
         children: [
-            (0, n.jsx)(A.Z, {
+            (0, n.jsx)(C.Z, {
                 className: Z.discordWordmark,
                 'aria-label': b.Z.Messages.PREMIUM_TIER_1
             }),
@@ -212,7 +212,7 @@ s.Z = function (e) {
         },
         $ = () => {
             if (!B.includes(a.status) || null == a.pauseEndsAt) {
-                (0, m.q2)(Error('Invalid subscription to resume'), {
+                (0, A.q2)(Error('Invalid subscription to resume'), {
                     extra: {
                         subscriptionId: a.id,
                         status: a.status,
@@ -257,7 +257,7 @@ s.Z = function (e) {
             er = (0, n.jsxs)('div', {
                 className: Z.wordMark,
                 children: [
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(C.Z, {
                         className: Z.discordWordmark,
                         'aria-label': b.Z.Messages.PREMIUM_TIER_0
                     }),
@@ -269,7 +269,7 @@ s.Z = function (e) {
             er = (0, n.jsx)(F, {});
             break;
         case L.p9.TIER_2:
-            er = (0, n.jsx)(C.Z, {
+            er = (0, n.jsx)(m.Z, {
                 className: Z.planName,
                 'aria-label': b.Z.Messages.PREMIUM_TITLE
             });

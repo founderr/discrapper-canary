@@ -20,20 +20,20 @@ var a = t(442837),
 function S(e) {
     var s;
     let { app: t, currentSubscription: _, currentListing: u, alternativeListings: S, bundleSku: N } = e,
-        C = (0, r.y)(t, 100),
-        A = (0, d.KK)(N.flags),
-        m = A ? i.ServerIcon : i.UserIcon,
-        g = A ? E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS,
+        m = (0, r.y)(t, 100),
+        C = (0, d.KK)(N.flags),
+        A = C ? i.ServerIcon : i.UserIcon,
+        g = C ? E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS,
         h = null === (s = _.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
-        O = (0, a.e7)([c.Z], () => (A && null != h ? c.Z.getGuild(h) : void 0), [h, A]);
+        O = (0, a.e7)([c.Z], () => (C && null != h ? c.Z.getGuild(h) : void 0), [h, C]);
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsxs)('div', {
                 className: T.header,
                 children: [
-                    null != C &&
+                    null != m &&
                         (0, n.jsx)(i.Image, {
-                            src: C.href,
+                            src: m.href,
                             imageClassName: T.appIcon,
                             width: 48,
                             height: 48
@@ -51,7 +51,7 @@ function S(e) {
                                         variant: 'heading-md/normal',
                                         className: T.subInfoType,
                                         children: [
-                                            (0, n.jsx)(m, {
+                                            (0, n.jsx)(A, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),

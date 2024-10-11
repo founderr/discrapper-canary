@@ -13,9 +13,9 @@ var r = n(735250),
     f = n(599857),
     v = n(981631);
 t.Z = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: m, onRender: y, onVerify: C, onError: E, onOpen: _, onClose: b, onChalExpired: R, size: x, userflow: g, ...w } = e,
-        A = i.useRef(null),
-        S = (0, u.H)('captcha'),
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: m, onRender: y, onVerify: C, onError: E, onOpen: _, onClose: b, onChalExpired: R, size: x, userflow: g, ...S } = e,
+        w = i.useRef(null),
+        A = (0, u.H)('captcha'),
         k = (0, o.Z)(),
         [I, j] = i.useState(!1),
         O = i.useCallback(
@@ -40,8 +40,8 @@ t.Z = (e) => {
         ),
         L = i.useCallback(() => {
             var e, t;
-            null != m && '' !== m && null != A.current && (null === (e = A.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && (null === (t = A.current) || void 0 === t || t.execute());
-        }, [m, A, x]),
+            null != m && '' !== m && null != w.current && (null === (e = w.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && (null === (t = w.current) || void 0 === t || t.execute());
+        }, [m, w, x]),
         P = i.useCallback(() => {
             !I && (O('initial-load'), T('initial-load'), j(!0)), L();
         }, [T, I, O, L]);
@@ -54,62 +54,62 @@ t.Z = (e) => {
     let N = i.useCallback(() => {
             O('error'), T('error'), L(), null == E || E();
         }, [O, T, L, E]),
-        Z = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 O('verify'), T('verify'), C(e);
             },
             [T, C, O]
         ),
-        V = i.useCallback(() => {
-            O('render'), (0, h.emitCaptchaDistributionMetric)(S, g), null == y || y();
-        }, [S, y, O, g]),
+        Z = i.useCallback(() => {
+            O('render'), (0, h.emitCaptchaDistributionMetric)(A, g), null == y || y();
+        }, [A, y, O, g]),
         D = i.useCallback(() => {
-            O('open'), T('open'), (0, h.emitCaptchaDistributionMetric)(S, g), null == _ || _();
-        }, [T, S, _, O, g]),
+            O('open'), T('open'), (0, h.emitCaptchaDistributionMetric)(A, g), null == _ || _();
+        }, [T, A, _, O, g]),
         M = i.useCallback(() => {
             O('close'), null == b || b(), L();
         }, [b, O, L]),
-        H = i.useCallback(() => {
+        K = i.useCallback(() => {
             O('chal-expire'), null == R || R();
         }, [R, O]);
     return ((null == n || '' === n) && (n = v.OL7), t === p.hP.RECAPTCHA)
         ? (0, r.jsx)(c.Z, {
-              ...w,
+              ...S,
               onLoad: P,
-              onRender: V,
-              onVerify: Z,
+              onRender: Z,
+              onVerify: V,
               onError: N,
               sitekey: n
           })
         : t === p.hP.RECAPTCHA_ENTERPRISE
           ? (0, r.jsx)(f._, {
-                ...w,
+                ...S,
                 onLoad: P,
-                onRender: V,
-                onVerify: Z,
+                onRender: Z,
+                onVerify: V,
                 onError: N,
                 sitekey: n,
                 action: g
             })
           : t === p.hP.HCAPTCHA
             ? (0, r.jsx)(a.Z, {
-                  ref: A,
-                  ...w,
+                  ref: w,
+                  ...S,
                   sitekey: n,
                   onLoad: P,
                   onError: N,
-                  onVerify: Z,
-                  onChalExpired: H,
+                  onVerify: V,
+                  onChalExpired: K,
                   onOpen: D,
                   onClose: M,
                   size: x
               })
             : (0, r.jsx)(c.Z, {
-                  ...w,
+                  ...S,
                   sitekey: n,
                   onLoad: P,
-                  onRender: V,
-                  onVerify: Z,
+                  onRender: Z,
+                  onVerify: V,
                   onError: N
               });
 };

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return m;
     }
 }),
     t(47120);
@@ -113,7 +113,7 @@ function N() {
         })
     });
 }
-function C(e) {
+function m(e) {
     let { className: s, showHeader: t = !0 } = e;
     return (0, n.jsxs)(a.FormSection, {
         className: s,

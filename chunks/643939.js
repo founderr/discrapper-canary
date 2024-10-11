@@ -16,7 +16,7 @@ var n = t(735250),
     u = t(680674),
     E = t(74316);
 let T = a.memo(function (e) {
-    let { message: s, handleClick: t, handleClose: i, buttonText: T, useInitialGlow: S, useGlowOnHover: I, handleImageClick: N, className: C, analyticsLocations: A, upsellType: m } = e,
+    let { message: s, handleClick: t, handleClose: i, buttonText: T, useInitialGlow: S, useGlowOnHover: I, handleImageClick: N, className: m, analyticsLocations: C, upsellType: A } = e,
         [g, h] = a.useState(S);
     return (
         a.useEffect(() => {
@@ -24,14 +24,14 @@ let T = a.memo(function (e) {
         }, []),
         a.useEffect(() => {
             l.default.track(c.rMx.POST_ACTION_UPSELL_SHOWN, {
-                type: m,
-                location: A
+                type: A,
+                location: C
             });
-        }, [m, A]),
+        }, [A, C]),
         (0, n.jsx)('div', {
             className: _.wrapper,
             children: (0, n.jsxs)('div', {
-                className: r()(_.content, g ? _.initialGlowUp : _.initialGlowDown, I ? _.contentGlow : null, C),
+                className: r()(_.content, g ? _.initialGlowUp : _.initialGlowDown, I ? _.contentGlow : null, m),
                 children: [
                     (0, n.jsxs)('div', {
                         className: _.innerContent,
@@ -42,8 +42,8 @@ let T = a.memo(function (e) {
                                     ? {
                                           onClick: () => {
                                               l.default.track(c.rMx.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED, {
-                                                  type: m,
-                                                  location: A
+                                                  type: A,
+                                                  location: C
                                               }),
                                                   N();
                                           }
@@ -74,8 +74,8 @@ let T = a.memo(function (e) {
                             onlyShineOnHover: !0,
                             onClick: () => {
                                 l.default.track(c.rMx.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED, {
-                                    type: m,
-                                    location: A
+                                    type: A,
+                                    location: C
                                 }),
                                     t();
                             },
@@ -94,8 +94,8 @@ let T = a.memo(function (e) {
                         children: (0, n.jsx)(o.Clickable, {
                             onClick: () => {
                                 l.default.track(c.rMx.POST_ACTION_UPSELL_DISMISSED, {
-                                    type: m,
-                                    location: A
+                                    type: A,
+                                    location: C
                                 }),
                                     i();
                             },

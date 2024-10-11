@@ -28,7 +28,7 @@ function I() {
     a.useEffect(() => {
         e === _.Th && N && s(t[0]), e !== _.Th && I && s(_.Th);
     }, [e, s, N, I, t]);
-    let C = a.useMemo(() => {
+    let m = a.useMemo(() => {
             let e = I
                 ? []
                 : t
@@ -51,7 +51,7 @@ function I() {
                 e
             );
         }, [I, t, N, E]),
-        A = a.useCallback(
+        C = a.useCallback(
             (e) => {
                 let s = (null == e ? void 0 : e.label) === S.label() && (null == e ? void 0 : e.value) === S.value;
                 return null == e || '' === e.value || s
@@ -79,7 +79,7 @@ function I() {
             s(e);
         },
         value: e,
-        options: C,
-        renderOptionPrefix: A
+        options: m,
+        renderOptionPrefix: C
     });
 }
