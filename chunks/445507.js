@@ -1,44 +1,45 @@
 n.d(t, {
     Q3: function () {
-        return u;
+        return d;
     },
     Zl: function () {
-        return c;
+        return u;
     },
     mC: function () {
-        return r;
-    },
-    mU: function () {
         return a;
     },
-    qJ: function () {
+    mU: function () {
         return s;
     },
-    u9: function () {
-        return l;
-    },
-    xQ: function () {
+    qJ: function () {
         return o;
     },
+    u9: function () {
+        return r;
+    },
+    xQ: function () {
+        return c;
+    },
     z5: function () {
-        return d;
+        return h;
     }
 });
-var i = n(704215);
-function l(e) {
+var i = n(704215),
+    l = n(689938);
+function r(e) {
     return 'user' === e.type;
 }
-function r(e) {
+function a(e) {
     return 'guild' === e.type;
 }
-function a(e) {
+function s(e) {
     return JSON.stringify({
         playstyle: e.playstyle,
         acknowledgeCap: e.acknowledgeCap,
         acknowledgeScreen: e.acknowledgeScreen
     });
 }
-let s = {
+let o = {
         key: 'valorant-user',
         type: 'user',
         title: 'Preview new features for Valorant players on Discord',
@@ -72,7 +73,7 @@ let s = {
             }
         ]
     },
-    o = {
+    c = {
         key: 'valorant-admin',
         type: 'guild',
         title: 'Want to recruit more Valorant players for your server?',
@@ -106,7 +107,7 @@ let s = {
             }
         ]
     },
-    c = {
+    u = {
         key: 'genshin-user',
         type: 'user',
         title: 'Preview new features for Genshin Impact players on Discord',
@@ -140,7 +141,7 @@ let s = {
             }
         ]
     },
-    u = {
+    d = {
         key: 'genshin-admin',
         type: 'guild',
         title: 'Interested in recruiting more Genshin Impact players for your server?',
@@ -174,27 +175,27 @@ let s = {
             }
         ]
     };
-function d(e) {
+function h() {
     return [
         {
             value: 'very-casual',
-            title: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_DESCRIPTION
+            title: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_TITLE,
+            description: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_DESCRIPTION
         },
         {
             value: 'casual',
-            title: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION
+            title: l.Z.Messages.SIGNUP_CLAN_OPTION_CASUAL_TITLE,
+            description: l.Z.Messages.SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION
         },
         {
             value: 'hardcore',
-            title: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION
+            title: l.Z.Messages.SIGNUP_CLAN_OPTION_HARDCORE_TITLE,
+            description: l.Z.Messages.SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION
         },
         {
             value: 'very-hardcore',
-            title: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE,
-            description: e.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION
+            title: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE,
+            description: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION
         }
     ];
 }
