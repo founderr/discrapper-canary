@@ -131,10 +131,6 @@ class S extends (o = c.ZP.DeviceSettingsStore) {
         var e;
         return null !== (e = T.disableApplicationSubscriptionCancellationSurvey) && void 0 !== e && e;
     }
-    get enableAndroidChatListAnimations() {
-        var e;
-        return null !== (e = T.enableAndroidChatListAnimations) && void 0 !== e && e;
-    }
     get darkSidebar() {
         var e;
         return null !== (e = T.darkSidebar) && void 0 !== e && e;
