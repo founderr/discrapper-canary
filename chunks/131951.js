@@ -505,7 +505,7 @@ function tS(e) {
     e === eE.iA.AUTOMATIC ? (ts({ automaticAudioSubsystem: !0 }), tg()) : (ts({ automaticAudioSubsystem: !1 }), eg.setAudioSubsystem(e));
 }
 function tg() {
-    let { enabled: e } = k.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' }, { autoTrackExposure: !1 });
+    let { enabled: e } = k.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' });
     e ? eg.setAudioSubsystem(eE.iA.EXPERIMENTAL) : eg.setAudioSubsystem(eE.iA.STANDARD);
 }
 function tA(e) {

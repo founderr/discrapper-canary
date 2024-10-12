@@ -35,8 +35,8 @@ var a = r(735250),
     M = r(390698),
     y = r(813083),
     w = r(680942),
-    H = r(558060),
-    F = r(237031),
+    F = r(558060),
+    H = r(237031),
     D = r(616066),
     U = r(216541),
     W = r(832149),
@@ -128,7 +128,7 @@ t.Z = function (e) {
         },
         eS = (e) => (r) => {
             (eI.current = r.currentTarget),
-                (0, F.T)({
+                (0, H.T)({
                     product: t,
                     category: s,
                     analyticsLocations: q,
@@ -162,7 +162,7 @@ t.Z = function (e) {
                         className: z.priceTag,
                         children: V.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
-                  : (0, a.jsx)(H.Z, {
+                  : (0, a.jsx)(F.Z, {
                         product: t,
                         discount: eo,
                         isPremiumUser: es,

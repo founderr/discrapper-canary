@@ -27,8 +27,8 @@ function p(e) {
         { width: h, height: R } = (0, u.Z)();
     return (r.useEffect(() => {
         let e = N.current;
-        null != e && O(e.scrollHeight - e.clientHeight > 1);
-    }, [N, h, R]),
+        null != e && O(e.scrollHeight - e.clientHeight > 1 || !g);
+    }, [N, h, R, g]),
     null == n.summary)
         ? null
         : (0, a.jsxs)('div', {
@@ -55,7 +55,7 @@ function p(e) {
                       variant: 'text-sm/normal',
                       children: s ? n.summaryLocalized : n.summary
                   }),
-                  (T || !g) &&
+                  T &&
                       (0, a.jsx)(d.Clickable, {
                           className: I.clickable,
                           onClick: () => {

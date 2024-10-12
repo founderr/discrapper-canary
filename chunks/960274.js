@@ -1,5 +1,5 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
-let r = n(88528),
+let r = n(756401),
     i = n(203723),
     a = n(735546);
 t.DEFAULT_LOCALE = 'en-US';

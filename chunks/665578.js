@@ -132,7 +132,7 @@ function R(e) {
         U = a.useCallback(() => {
             let e = Object.keys(y);
             return (0, c.openModalLazy)(async () => {
-                let { default: n } = await t.e('64908').then(t.bind(t, 46851));
+                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
                 return (t) =>
                     (0, i.jsx)(n, {
                         editPermissions: w,
@@ -150,7 +150,7 @@ function R(e) {
         W = a.useCallback(() => {
             let e = Object.keys(G);
             return (0, c.openModalLazy)(async () => {
-                let { default: n } = await t.e('64908').then(t.bind(t, 46851));
+                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
                 return (t) =>
                     (0, i.jsx)(n, {
                         editPermissions: w,

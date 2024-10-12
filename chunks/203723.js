@@ -1,7 +1,7 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.FormatBuilder = void 0), (t.bindFormatValuesWithBuilder = o), (t.bindFormatValues = l);
 let r = n(927882),
     i = n(901119),
-    a = n(766989);
+    a = n(500149);
 function s(e) {
     return '$' === e[0];
 }
