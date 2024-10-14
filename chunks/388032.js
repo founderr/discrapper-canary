@@ -1,7 +1,10 @@
 n.r(t),
     n.d(t, {
         getAvailableLocales: function () {
-            return l.u;
+            return l.u5;
+        },
+        getLanguages: function () {
+            return l.Vb;
         },
         international: function () {
             return u;
@@ -19,7 +22,7 @@ n.r(t),
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(845731),
+    a = n(625624),
     s = n(302454),
     o = n.n(s),
     l = n(424395);

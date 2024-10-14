@@ -231,30 +231,8 @@ let V = () => ({ [m.zUn.REASON]: x(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_
     }),
     K = () => ({
         ...V(),
-        [m.zUn.TITLE]: x({
-            format(e) {
-                let { oldValue: _, newValue: E } = e;
-                return null != _
-                    ? (0 === _.length && (_ = b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                      b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format({
-                          oldValue: _,
-                          newValue: E
-                      }))
-                    : b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE;
-            }
-        }),
-        [m.zUn.DESCRIPTION]: x({
-            format(e) {
-                let { oldValue: _, newValue: E } = e;
-                return null != _
-                    ? (0 === _.length && (_ = b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                      b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format({
-                          oldValue: _,
-                          newValue: E
-                      }))
-                    : b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format({ newValue: E });
-            }
-        }),
+        [m.zUn.TITLE]: eR(B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE), b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE),
+        [m.zUn.DESCRIPTION]: eR(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE, b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE),
         [m.zUn.OPTIONS]: x(B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CHANGED_OPTIONS)),
         [m.zUn.SINGLE_SELECT]: ef(B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_SINGLE_SELECT), B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_MULTI_SELECT)),
         [m.zUn.REQUIRED]: ef(B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_REQUIRED), B(b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL))
@@ -1131,7 +1109,7 @@ function ec(e, _) {
                                 (e) => S.Z.getOnboardingPrompt(e),
                                 (e) => e.title
                             );
-                            return null != E ? E : b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
+                            return null == E || '' === E ? b.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE : E;
                         case m.KFR.GUILD_ONBOARDING:
                             return _;
                         case m.KFR.INVITE:
