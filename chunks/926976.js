@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return Z;
     }
 }),
     n(47120);
@@ -103,10 +103,10 @@ let w = [
                             children: [
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
-                                    children: (0, r.jsx)('time', {
+                                    children: (0, r.jsxs)('time', {
                                         dateTime: a.toISOString(),
                                         title: (0, p.vc)(d, 'LLLL'),
-                                        children: (0, p.Y4)(d)
+                                        children: [c().locale(), (0, p.Y4)(d)]
                                     })
                                 }),
                                 null != s &&
@@ -172,7 +172,7 @@ let w = [
             filter: (e) => e.event.startsWith('network_action')
         }
     };
-function R() {
+function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
@@ -215,8 +215,8 @@ function R() {
         p(t, l);
     }, [t, p, l]);
     let [I, E] = a.useState(void 0),
-        R = v.find((e) => e.key === I),
-        { TabBar: Z, renderSelectedTab: O } = (0, C.Z)({ tabs: w }, []);
+        Z = v.find((e) => e.key === I),
+        { TabBar: R, renderSelectedTab: O } = (0, C.Z)({ tabs: w }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, T.panel),
@@ -275,15 +275,15 @@ function R() {
                 selectedRowKey: I,
                 onClickRow: (e) => E(e.key)
             }),
-            null != R &&
+            null != Z &&
                 (0, r.jsxs)(_.Z, {
                     className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(Z, {}),
+                        (0, r.jsx)(R, {}),
                         O({
-                            loggedEvent: R,
+                            loggedEvent: Z,
                             onClose: () => E(void 0)
                         })
                     ]

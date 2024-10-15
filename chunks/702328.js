@@ -23,8 +23,8 @@ var s = n(735250),
     M = n(104494),
     S = n(639119),
     h = n(8647),
-    x = n(568126),
-    b = n(605289),
+    b = n(568126),
+    x = n(605289),
     O = n(248042),
     P = n(218390),
     v = n(823188),
@@ -180,7 +180,7 @@ t.Z = (e) => {
             ed(!0);
         }, []);
     let { enabled: eh } = f.O.useExperiment({ location: 'PremiumMarketingHome' }, { autoTrackExposure: !1 }),
-        ex = (0, s.jsx)('div', {
+        eb = (0, s.jsx)('div', {
             className: i()({
                 [z.premiumTierCardsContainerSettings]: !n,
                 [z.premiumTierCardsContainerFullscreen]: n
@@ -232,7 +232,7 @@ t.Z = (e) => {
                 })
             })
         }),
-        eb = eh && r === W.EZ.UserSettings,
+        ex = eh && r === W.EZ.UserSettings,
         eO = (0, s.jsxs)('div', {
             className: i()(z.container, { [z.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
@@ -247,7 +247,7 @@ t.Z = (e) => {
                     inOfferExperience: ep
                 }),
                 !n && eR
-                    ? (0, s.jsx)(b.Z, {
+                    ? (0, s.jsx)(x.Z, {
                           localizedPricingPromo: eI,
                           smallGap: !0
                       })
@@ -271,10 +271,10 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: z.promoBannerContainer,
-                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eR && (0, s.jsx)(x.Z, { localizedPricingPromo: eI })]
+                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eR && (0, s.jsx)(b.Z, { localizedPricingPromo: eI })]
                 }),
-                ex,
-                eb && (0, s.jsx)(P.d, { className: z.nitroweenGiftCard }),
+                eb,
+                ex && (0, s.jsx)(P.d, { className: z.nitroweenGiftCard }),
                 (0, s.jsx)(ee, {
                     isFullscreen: n,
                     inOfferExperience: ep,

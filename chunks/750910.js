@@ -4,7 +4,7 @@ n.d(t, {
     }
 });
 var i = n(470079),
-    a = n(900849);
+    a = n(726115);
 function s(e) {
     let { guildDiscoveryCardSeenManager: t, loadId: n } = e,
         s = i.useCallback(
@@ -14,13 +14,13 @@ function s(e) {
             [t, n]
         ),
         r = i.useCallback(
-            (e, t, i) =>
-                a.Lq({
+            (e, t, i, s) =>
+                (0, a.vL)({
                     loadId: n,
                     guildId: e,
                     index: t,
-                    analyticsContext: a.P1.GLOBAL_DISCOVERY,
-                    categoryId: i
+                    categoryId: i,
+                    analyticsLocation: s
                 }),
             [n]
         );

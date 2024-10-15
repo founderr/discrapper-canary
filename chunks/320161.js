@@ -35,9 +35,9 @@ function g(e) {
         !c.wS)
     )
         return (0, s.jsx)(s.Fragment, { children: d({}) });
-    let x = m >= R.length - 1,
-        b = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
-        O = f ? b : l.TooltipColors.PRIMARY,
+    let b = m >= R.length - 1,
+        x = b ? l.TooltipColors.RED : l.TooltipColors.GREEN,
+        O = f ? x : l.TooltipColors.PRIMARY,
         P = () => {
             null == E || E(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !A && C(m + 1), M(!0), p(!0), S.start(u, () => M(!1)), h.start(T, () => C(0));
         };
@@ -48,7 +48,7 @@ function g(e) {
             let n = (0, r.clamp)(m - 1, 0, R.length - 1),
                 a = null !== (e = R[n]) && void 0 !== e ? e : R[0];
             return (0, s.jsx)(l.Shaker, {
-                isShaking: x,
+                isShaking: b,
                 children: a()
             });
         })(),

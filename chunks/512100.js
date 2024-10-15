@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     u: function () {
         return u;
     }
@@ -6,16 +6,16 @@ t.d(e, {
 var l = t(735250);
 t(470079);
 var i = t(409794),
-    r = t(777207),
-    a = t(541822),
+    a = t(777207),
+    r = t(541822),
     o = t(330711),
     s = t(770561);
-function u(n) {
-    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = n,
+function u(e) {
+    let { benefits: n, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = e,
         f = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
     return (0, l.jsx)('div', {
         className: s.container,
-        children: (0, l.jsx)(a.Z, {
+        children: (0, l.jsx)(r.Z, {
             className: s.scroller,
             children: (0, l.jsxs)('div', {
                 className: s.scrollContent,
@@ -58,7 +58,7 @@ function u(n) {
                                     }),
                                     null != t &&
                                         '' !== t &&
-                                        (0, l.jsx)(r.x, {
+                                        (0, l.jsx)(a.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
                                             className: s.description,
@@ -66,16 +66,16 @@ function u(n) {
                                         })
                                 ]
                             }),
-                            null != e &&
+                            null != n &&
                                 (0, l.jsxs)('div', {
                                     className: s.benefits,
                                     children: [
-                                        (0, l.jsx)(r.x, {
+                                        (0, l.jsx)(a.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
                                             children: o.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                         }),
-                                        e
+                                        n
                                     ]
                                 })
                         ]

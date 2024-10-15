@@ -84,8 +84,8 @@ function I(e) {
         z = (0, b.Z)(y),
         Y = (0, b.Z)(k),
         q = (0, b.Z)(F),
-        W = (0, b.Z)(M),
-        J = (0, b.Z)(w),
+        J = (0, b.Z)(M),
+        W = (0, b.Z)(w),
         Q = null != F && Z.includes(F),
         { renderSkipButton: X } = C.w.useExperiment({ location: 'FeedbackModal' });
     return (
@@ -99,11 +99,11 @@ function I(e) {
                     source: 'Feedback Modal'
                 }),
                 () => {
-                    W.current({
+                    J.current({
                         rating: z.current,
                         problem: q.current,
                         dontShowAgain: Y.current,
-                        feedback: J.current
+                        feedback: W.current
                     });
                 }
             ),

@@ -23,8 +23,8 @@ var s = n(735250),
     M = n(689938),
     S = n(776710),
     h = n(113207),
-    x = n(926895);
-function b(e) {
+    b = n(926895);
+function x(e) {
     let { header: t, description: n, stepNumber: a } = e;
     return (0, s.jsxs)('div', {
         className: S.step,
@@ -78,7 +78,7 @@ function O() {
                     }),
                     (0, s.jsx)('img', {
                         className: S.bannerArt,
-                        src: x,
+                        src: b,
                         alt: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
                     })
                 ]
@@ -86,17 +86,17 @@ function O() {
             (0, s.jsxs)('div', {
                 className: S.steps,
                 children: [
-                    (0, s.jsx)(b, {
+                    (0, s.jsx)(x, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
                         stepNumber: 1
                     }),
-                    (0, s.jsx)(b, {
+                    (0, s.jsx)(x, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
                         stepNumber: 2
                     }),
-                    (0, s.jsx)(b, {
+                    (0, s.jsx)(x, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
                         stepNumber: 3
@@ -129,7 +129,7 @@ function P() {
             }),
             (0, s.jsx)('img', {
                 className: S.bannerArt,
-                src: x,
+                src: b,
                 alt: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
             })
         ]

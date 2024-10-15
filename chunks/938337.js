@@ -1,25 +1,25 @@
-t.d(e, {
+t.d(n, {
     i: function () {
         return u;
     }
 });
 var l = t(735250),
     i = t(470079),
-    r = t(512100),
-    a = t(906732),
+    a = t(512100),
+    r = t(906732),
     o = t(626135),
     s = t(981631);
-function u(n) {
-    let { appId: e, skuId: t, ...u } = n,
-        { analyticsLocations: c } = (0, a.ZP)();
+function u(e) {
+    let { appId: n, skuId: t, ...u } = e,
+        { analyticsLocations: c } = (0, r.ZP)();
     return (
         i.useEffect(() => {
             o.default.track(s.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-                application_id: e,
+                application_id: n,
                 sku_id: t,
                 location_stack: c
             });
-        }, [c, e, t]),
-        (0, l.jsx)(r.u, { ...u })
+        }, [c, n, t]),
+        (0, l.jsx)(a.u, { ...u })
     );
 }

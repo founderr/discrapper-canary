@@ -103,7 +103,7 @@ function k() {
             var e;
             return (null === (e = C.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [k, Z] = a.useState(''),
+        [k, R] = a.useState(''),
         O = (0, d.e7)(
             [v.Z, x.Z],
             () => {
@@ -198,21 +198,21 @@ function k() {
                         (0, r.jsx)(m.FormTitle, { children: 'Game Profile' }),
                         (0, r.jsx)(m.TextInput, {
                             placeholder: 'App ID or full name',
-                            onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A() : Z(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
                             },
                             error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(R, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
         })
     });
 }
-let R = (e) => {
+let Z = (e) => {
     let { application: t } = e,
         n = (0, b.Z)({
             applicationId: t.id,

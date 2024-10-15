@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     B: function () {
         return i;
     },
@@ -8,12 +8,12 @@ t.d(e, {
 });
 var l,
     i,
-    r = t(626135),
-    a = t(981631);
-function o(n, e, t) {
-    r.default.track(a.rMx.STOREFRONT_COPY_LINK_CLICKED, {
-        application_id: n,
-        area: e,
+    a = t(626135),
+    r = t(981631);
+function o(e, n, t) {
+    a.default.track(r.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+        application_id: e,
+        area: n,
         sku_id: t
     });
 }

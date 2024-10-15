@@ -8,11 +8,11 @@ n.d(t, {
     cL: function () {
         return h;
     },
-    cy: function () {
-        return c;
-    },
     di: function () {
         return _;
+    },
+    rk: function () {
+        return c;
     },
     sp: function () {
         return d;
@@ -88,7 +88,7 @@ function u(e, t) {
 function c(e, t) {
     return new s.Bg({
         ...e,
-        roles: t
+        ...t
     });
 }
 function d(e, t) {

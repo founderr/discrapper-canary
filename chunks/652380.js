@@ -46,7 +46,7 @@ function R(e, s, t) {
         e
     );
 }
-let D = ['svg', 'png', 'gif', 'webp'],
+let D = ['png', 'gif', 'webp'],
     F = [...D, 'jpg', 'jpeg'],
     B = Array.from(new Set([...F, 'gif', 'mp4', 'webm']));
 function Z(e) {
@@ -332,14 +332,14 @@ function H() {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
                         onFileChange: U,
-                        filters: F,
+                        filters: [...F, 'svg'],
                         initialValue: o.config.assets.gameTile
                     }),
                     (0, a.jsx)(N.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: U,
-                        filters: D,
+                        filters: [...D, 'svg'],
                         initialValue: o.config.assets.logotype
                     })
                 ]

@@ -30,8 +30,8 @@ var o = n(149765),
     M = n(38618),
     S = n(218543),
     h = n(314897),
-    x = n(944486),
-    b = n(914010),
+    b = n(944486),
+    x = n(914010),
     O = n(449934),
     P = n(576376),
     v = n(38217),
@@ -82,8 +82,8 @@ async function V(e, t, n) {
     D.verbose('loading early cache');
     let i = M.Z.getSocket();
     i.connect();
-    let o = null !== (s = b.Z.getGuildId()) && void 0 !== s ? s : null,
-        d = null !== (a = x.Z.getChannelId()) && void 0 !== a ? a : null,
+    let o = null !== (s = x.Z.getGuildId()) && void 0 !== s ? s : null,
+        d = null !== (a = b.Z.getChannelId()) && void 0 !== a ? a : null,
         E = performance.now(),
         u = S.Z.loadCachedMessages.measureAsyncWithoutNesting(() => F(e, o, d)),
         T = S.Z.fetchGuildCache.measureAsync(() => K(e, n)),

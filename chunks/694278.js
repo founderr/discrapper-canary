@@ -1,7 +1,7 @@
 s.r(a),
     s.d(a, {
         default: function () {
-            return u;
+            return N;
         }
     }),
     s(47120);
@@ -15,20 +15,20 @@ var t = s(735250),
     l = s(981631),
     i = s(689938),
     c = s(113207);
-function u(e) {
-    let { guild: a, onClose: s, hideColors: u } = e,
-        [N, R] = n.useState(a.verificationLevel),
+function N(e) {
+    let { guild: a, onClose: s, hideColors: N } = e,
+        [u, R] = n.useState(a.verificationLevel),
         [T, d] = n.useState(null),
         L = a.hasFeature(l.oNc.COMMUNITY),
-        M = (0, o.IF)(L, u).filter((e) => !e.disabled),
+        M = (0, o.IF)(L, N).filter((e) => !e.disabled),
         C = n.useCallback(async () => {
             null != T && d(null);
             try {
-                await r.Z.saveGuild(a.id, { verificationLevel: N }), r.Z.updateGuild({ verificationLevel: N }), s();
+                await r.Z.saveGuild(a.id, { verificationLevel: u }), r.Z.updateGuild({ verificationLevel: u }), s();
             } catch (e) {
                 d(new E.Hx(e).getAnyErrorMessage());
             }
-        }, [T, a.id, N, s]);
+        }, [T, a.id, u, s]);
     return (0, t.jsx)(I.Z, {
         ...e,
         title: i.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL,
@@ -43,7 +43,7 @@ function u(e) {
                     children: i.Z.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
                 }),
                 (0, t.jsx)(_.RadioGroup, {
-                    value: N,
+                    value: u,
                     options: M,
                     onChange: (e) => R(e.value)
                 })

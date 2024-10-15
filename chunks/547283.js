@@ -1,6 +1,6 @@
 function n(e, s, t) {
     let n = new Set(s.bundledSkuIds);
-    return t.subscriptions.filter((s) => s.id !== e && n.has(s.skuId));
+    return t.filter((s) => s.id !== e && n.has(s.skuId));
 }
 t.d(s, {
     $: function () {

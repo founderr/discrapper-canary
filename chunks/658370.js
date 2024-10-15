@@ -19,17 +19,17 @@ t.Z = (e) => {
     let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: m = '', description: C = '', descriptionCta: f = '', isPremiumGetCta: p, onCtaClick: A, cardVariant: M } = e,
         S = (0, d.N)(),
         h = null == S ? void 0 : S.subscription_trial,
-        x = (0, c.Ng)(),
-        b = (0, l.Rt)({
+        b = (0, c.Ng)(),
+        x = (0, l.Rt)({
             intervalType: null == h ? void 0 : h.interval,
             intervalCount: null == h ? void 0 : h.interval_count
         }),
         O = (0, o._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
             onNonTier2Subscriber: I.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE,
-            onTier2TrialOffer: b,
-            onTier0TrialOffer: b,
-            onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
+            onTier2TrialOffer: x,
+            onTier0TrialOffer: x,
+            onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == b ? void 0 : b.discount.amount })
         }),
         P = (0, _._)(M);
     return (0, s.jsxs)('div', {

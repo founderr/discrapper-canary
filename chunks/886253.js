@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     A: function () {
         return v;
     }
@@ -6,8 +6,8 @@ t.d(e, {
 var l = t(735250);
 t(470079);
 var i = t(442837),
-    r = t(481060),
-    a = t(264043),
+    a = t(481060),
+    r = t(264043),
     o = t(812206),
     s = t(572004),
     u = t(601911),
@@ -16,30 +16,30 @@ var i = t(442837),
     p = t(689938),
     f = t(213891),
     m = t(566809);
-function v(n) {
-    let { appId: e, skuId: t, transitionState: v, onClose: I, onHeaderTitleClick: S, children: h, footer: x } = n,
+function v(e) {
+    let { appId: n, skuId: t, transitionState: v, onClose: I, onHeaderTitleClick: h, children: S, footer: x } = e,
         N = (0, i.e7)(
-            [o.Z, a.Z],
+            [o.Z, r.Z],
             () => {
-                var n;
-                return null !== (n = o.Z.getApplication(e)) && void 0 !== n ? n : a.Z.getApplicationRecord(e);
+                var e;
+                return null !== (e = o.Z.getApplication(n)) && void 0 !== e ? e : r.Z.getApplicationRecord(n);
             },
-            [e]
+            [n]
         );
     if (null == N) return null;
     let T = (0, u.y)(N, 25),
-        { termsOfServiceUrl: g, privacyPolicyUrl: E } = N;
-    return (0, l.jsxs)(r.ModalRoot, {
+        { termsOfServiceUrl: Z, privacyPolicyUrl: g } = N;
+    return (0, l.jsxs)(a.ModalRoot, {
         transitionState: v,
-        size: r.ModalSize.DYNAMIC,
+        size: a.ModalSize.DYNAMIC,
         className: m.modal,
         children: [
-            (0, l.jsxs)(r.ModalHeader, {
+            (0, l.jsxs)(a.ModalHeader, {
                 className: f.modalHeader,
                 children: [
-                    (0, l.jsxs)(r.Clickable, {
+                    (0, l.jsxs)(a.Clickable, {
                         className: f.modalTitle,
-                        onClick: S,
+                        onClick: h,
                         children: [
                             null != T &&
                                 (0, l.jsx)('img', {
@@ -47,32 +47,32 @@ function v(n) {
                                     alt: '',
                                     className: m.appIcon
                                 }),
-                            (0, l.jsx)(r.Heading, {
+                            (0, l.jsx)(a.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: N.name
                             })
                         ]
                     }),
-                    (0, l.jsx)(r.ModalCloseButton, {
+                    (0, l.jsx)(a.ModalCloseButton, {
                         onClick: I,
                         className: f.modalCloseBtn
                     })
                 ]
             }),
-            h,
-            (0, l.jsxs)(r.ModalFooter, {
+            S,
+            (0, l.jsxs)(a.ModalFooter, {
                 className: m.footer,
                 children: [
-                    null != g && null != E
-                        ? (0, l.jsx)(r.Text, {
+                    null != Z && null != g
+                        ? (0, l.jsx)(a.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
                               children: p.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-                                  tosUrl: g,
-                                  ppUrl: E
+                                  tosUrl: Z,
+                                  ppUrl: g
                               })
                           })
-                        : (0, l.jsx)(r.Text, {
+                        : (0, l.jsx)(a.Text, {
                               color: 'header-primary',
                               variant: 'text-xs/normal',
                               children: p.Z.Messages.STOREFRONT_NO_TOS_PP
@@ -81,17 +81,17 @@ function v(n) {
                         className: m.footerButtons,
                         children: [
                             s.wS &&
-                                (0, l.jsx)(r.Button, {
-                                    look: r.ButtonLooks.FILLED,
-                                    size: r.ButtonSizes.ICON,
-                                    color: r.ButtonColors.CUSTOM,
+                                (0, l.jsx)(a.Button, {
+                                    look: a.ButtonLooks.FILLED,
+                                    size: a.ButtonSizes.ICON,
+                                    color: a.ButtonColors.CUSTOM,
                                     'aria-label': p.Z.Messages.COPY_LINK,
                                     className: m.linkButton,
                                     onClick: () => {
-                                        let n = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
-                                        (0, s.JG)(n), (0, r.showToast)((0, r.createToast)(p.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, c.X)(e, c.B.DETAILS_MODAL, t);
+                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
+                                        (0, s.JG)(e), (0, a.showToast)((0, a.createToast)(p.Z.Messages.COPIED_LINK, a.ToastType.SUCCESS)), (0, c.X)(n, c.B.DETAILS_MODAL, t);
                                     },
-                                    children: (0, l.jsx)(r.LinkIcon, {
+                                    children: (0, l.jsx)(a.LinkIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     })

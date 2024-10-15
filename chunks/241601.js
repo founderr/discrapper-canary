@@ -12,7 +12,7 @@ n.d(t, {
 }),
     n(653041),
     n(47120);
-var i = n(845731),
+var i = n(625624),
     a = n(652874),
     s = n(388032),
     o = n(424395),
@@ -57,5 +57,5 @@ async function d(e) {
     let t = u.getState();
     t.setLoadingStarted(e);
     let n = [];
-    o.v ? (s.intl.setLocale(e), n.push((0, i.loadAllMessagesInLocale)(e))) : (l.Z.setLocale(e), n.push(l.Z.loadPromise)), null != r && (r.setLocale(e), n.push(r.loadPromise)), await Promise.all(n).catch((n) => t.setLoadingFailed(n, e)), t.setLoadingSucceeded(e);
+    o.vJ ? (s.intl.setLocale(e), n.push((0, i.loadAllMessagesInLocale)(e))) : (l.Z.setLocale(e), n.push(l.Z.loadPromise)), null != r && (r.setLocale(e), n.push(r.loadPromise)), await Promise.all(n).catch((n) => t.setLoadingFailed(n, e)), t.setLoadingSucceeded(e);
 }

@@ -20,7 +20,7 @@ var T,
     A = s(97694);
 ((o = T || (T = {})).ACTIONS = 'ACTIONS'), (o.SAFETY_TIPS = 'SAFETY_TIPS'), (o.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
 t.default = (e) => {
-    let { onClose: t, channelId: s, warningId: T, warningType: o, otherUserId: u, transitionState: d } = e,
+    let { onClose: t, channelId: s, warningId: T, warningType: o, otherUserId: d, transitionState: u } = e,
         I = null != (0, i.M)(s),
         [L, N] = a.useState('ACTIONS'),
         C = a.useCallback(
@@ -29,12 +29,12 @@ t.default = (e) => {
                     channelId: s,
                     warningId: T,
                     warningType: o,
-                    senderId: u,
+                    senderId: d,
                     cta: e,
                     isNudgeWarning: I
                 });
             },
-            [s, T, o, u, I]
+            [s, T, o, d, I]
         ),
         R = a.useCallback((e) => {
             let { text: t, onClick: s } = e;
@@ -76,7 +76,7 @@ t.default = (e) => {
             [N]
         );
     return (0, n.jsxs)(l.ModalRoot, {
-        transitionState: d,
+        transitionState: u,
         'aria-label': O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_HEADER,
         size: l.ModalSize.SMALL,
         children: [
@@ -97,7 +97,7 @@ t.default = (e) => {
                         (0, n.jsx)(l.Slide, {
                             id: 'ACTIONS',
                             children: (0, n.jsx)(E.Z, {
-                                otherUserId: u,
+                                otherUserId: d,
                                 channelId: s,
                                 warningId: T,
                                 warningType: o,

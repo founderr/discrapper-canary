@@ -134,7 +134,7 @@ function I(e) {
             cta: (0, n.jsx)(i.Button, {
                 size: i.Button.Sizes.SMALL,
                 onClick: t,
-                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN
+                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SWITCH_TO_PLAN
             })
         },
         s.id

@@ -245,7 +245,7 @@ function v(e) {
         [C, A] = a.useState(!1),
         h = (0, E.q)(s.id),
         O = (0, o.e7)([g.Z], () => g.Z.getParentSKU(i.skuId), [i.skuId]),
-        R = a.useMemo(() => (null == O ? [] : (0, x.$)(i.id, O, h)), [i.id, h, O]),
+        R = a.useMemo(() => (null == O ? [] : (0, x.$)(i.id, O, h.subscriptions)), [i.id, h, O]),
         M = 0 !== R.length,
         L = async () => {
             try {
