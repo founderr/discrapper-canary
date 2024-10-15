@@ -29627,121 +29627,121 @@ div.popoutCloseButton_d523a2:hover {
     top: -25px
 }
 
-.background_e6ac4a {
+.background_d22603 {
     --custom-status-bubble-background-color: var(--bg-surface-raised);
     --custom-status-bubble-background: var(--custom-status-bubble-background-color)
 }
 
-.custom-profile-theme .background_e6ac4a {
+.custom-profile-theme .background_d22603 {
     --custom-status-bubble-background-color: var(--bg-surface-overlay)
 }
 
-.theme-dark .background_e6ac4a {
+.theme-dark .background_d22603 {
     --custom-status-bubble-overlay-color: 255 255 255
 }
 
-.theme-light .background_e6ac4a {
+.theme-light .background_d22603 {
     --custom-status-bubble-overlay-color: 0 0 0
 }
 
-.background_e6ac4a.editable_e6ac4a:hover {
+.background_d22603.editable_d22603:hover {
     --custom-status-bubble-background: linear-gradient(rgb(var(--custom-status-bubble-overlay-color) / 0.05),
             rgb(var(--custom-status-bubble-overlay-color) / 0.05)),
         var(--custom-status-bubble-background-color)
 }
 
-.theme-dark .statusBubbleOuter_e6ac4a,
-.theme-dark .statusBubbleOuter_e6ac4a:before,
-.theme-dark .statusBubbleOuter_e6ac4a:after {
+.theme-dark .statusBubbleOuter_d22603,
+.theme-dark .statusBubbleOuter_d22603:before,
+.theme-dark .statusBubbleOuter_d22603:after {
     border: 1px solid var(--border-faint)
 }
 
-.custom-profile-theme.theme-dark .statusBubbleOuter_e6ac4a,
-.custom-profile-theme.theme-dark .statusBubbleOuter_e6ac4a:before,
-.custom-profile-theme.theme-dark .statusBubbleOuter_e6ac4a:after {
+.custom-profile-theme.theme-dark .statusBubbleOuter_d22603,
+.custom-profile-theme.theme-dark .statusBubbleOuter_d22603:before,
+.custom-profile-theme.theme-dark .statusBubbleOuter_d22603:after {
     border: 1px solid var(--border-strong)
 }
 
-.addCustomStatusButtonBubble_e6ac4a {
+.addCustomStatusButtonBubble_d22603 {
     position: relative;
     z-index: 2;
     width: -moz-fit-content;
     width: fit-content
 }
 
-.addCustomStatusButtonBubble_e6ac4a.biteSize_e6ac4a {
+.addCustomStatusButtonBubble_d22603.biteSize_d22603 {
     top: 4px;
     left: 106px
 }
 
-.addCustomStatusButtonBubble_e6ac4a.fullSize_e6ac4a {
+.addCustomStatusButtonBubble_d22603.fullSize_d22603 {
     top: -12px;
     left: 144px;
     height: 2px
 }
 
-.invisibleContainer_e6ac4a {
+.invisibleContainer_d22603 {
     pointer-events: none;
     visibility: hidden;
     position: relative
 }
 
-.invisibleContainer_e6ac4a.biteSize_e6ac4a {
+.invisibleContainer_d22603.biteSize_d22603 {
     top: 4px;
     left: 106px
 }
 
-.invisibleContainer_e6ac4a.fullSize_e6ac4a {
+.invisibleContainer_d22603.fullSize_d22603 {
     height: 0;
     top: -54px;
     left: 144px
 }
 
-.invisibleContainer_e6ac4a.panel_e6ac4a {
+.invisibleContainer_d22603.panel_d22603 {
     top: 4px;
     left: 106px
 }
 
-.visibleContainer_e6ac4a {
+.visibleContainer_d22603 {
     position: absolute;
     visibility: visible;
     z-index: 2
 }
 
-.visibleContainer_e6ac4a.biteSize_e6ac4a {
+.visibleContainer_d22603.biteSize_d22603 {
     top: calc(6px + var(--custom-user-banner-height-bite-size));
     left: 106px
 }
 
-.visibleContainer_e6ac4a.fullSize_e6ac4a {
+.visibleContainer_d22603.fullSize_d22603 {
     top: 4px;
     left: 160px
 }
 
-.visibleContainer_e6ac4a.panel_e6ac4a {
+.visibleContainer_d22603.panel_d22603 {
     top: calc(6px + var(--custom-user-banner-banner-height-panel));
     left: 106px
 }
 
-.visibleContainer_e6ac4a.hoisted_e6ac4a {
+.visibleContainer_d22603.hoisted_d22603 {
     z-index: 4
 }
 
-.statusBubble_e6ac4a {
+.statusBubble_d22603 {
     position: relative;
     display: block;
     background: var(--custom-status-bubble-background);
     word-wrap: break-word
 }
 
-.statusBubbleCopyStatusCursor_e6ac4a {
+.statusBubbleCopyStatusCursor_d22603 {
     cursor: text;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
 }
 
-.statusBubbleOuter_e6ac4a {
+.statusBubbleOuter_d22603 {
     position: relative;
     background: var(--custom-status-bubble-background);
     box-shadow: var(--shadow-low);
@@ -29750,7 +29750,7 @@ div.popoutCloseButton_d523a2:hover {
     max-width: 184px
 }
 
-.statusBubbleOuter_e6ac4a:before {
+.statusBubbleOuter_d22603:before {
     content: "";
     position: absolute;
     top: -11px;
@@ -29764,7 +29764,7 @@ div.popoutCloseButton_d523a2:hover {
     height: 19px
 }
 
-.statusBubbleOuter_e6ac4a:after {
+.statusBubbleOuter_d22603:after {
     content: "";
     position: absolute;
     top: -24px;
@@ -29778,31 +29778,31 @@ div.popoutCloseButton_d523a2:hover {
     height: 10px
 }
 
-.statusBubbleOuterAddStatusCursor_e6ac4a {
+.statusBubbleOuterAddStatusCursor_d22603 {
     cursor: pointer
 }
 
-.statusBubbleShape_e6ac4a {
+.statusBubbleShape_d22603 {
     border-radius: 16px
 }
 
-.statusBubbleSingleLineWithTextShape_e6ac4a {
+.statusBubbleSingleLineWithTextShape_d22603 {
     border-radius: 12px
 }
 
-.statusBubbleEmojiOnlyPadding_e6ac4a {
+.statusBubbleEmojiOnlyPadding_d22603 {
     padding: 8px 12px
 }
 
-.statusBubbleWithTextPadding_e6ac4a {
+.statusBubbleWithTextPadding_d22603 {
     padding: 10px 12px
 }
 
-.statusBubbleWithTextMinWidth_e6ac4a {
+.statusBubbleWithTextMinWidth_d22603 {
     min-width: 18px
 }
 
-.content_e6ac4a {
+.content_d22603 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -29812,46 +29812,46 @@ div.popoutCloseButton_d523a2:hover {
     word-break: break-word
 }
 
-.coachmarkAnchor_e6ac4a {
+.coachmarkAnchor_d22603 {
     position: absolute;
     pointer-events: none
 }
 
-.clamp_e6ac4a {
+.clamp_d22603 {
     -webkit-line-clamp: 2
 }
 
-.unclamp_e6ac4a {
+.unclamp_d22603 {
     -webkit-line-clamp: 9
 }
 
-.placeholderWidth_e6ac4a {
+.placeholderWidth_d22603 {
     max-width: 160px
 }
 
-.incorporeal_e6ac4a {
+.incorporeal_d22603 {
     position: absolute
 }
 
-.statusBubbleOuter_e6ac4a:hover .addStatusPrompt_e6ac4a {
+.statusBubbleOuter_d22603:hover .addStatusPrompt_d22603 {
     color: var(--text-normal)
 }
 
-.statusBubbleOuter_e6ac4a:hover .addStatusIconColor_e6ac4a {
+.statusBubbleOuter_d22603:hover .addStatusIconColor_d22603 {
     fill: var(--text-normal)
 }
 
-.singleLineAlign_e6ac4a {
+.singleLineAlign_d22603 {
     text-align: center
 }
 
-.addStatusPrompt_e6ac4a {
+.addStatusPrompt_d22603 {
     display: inline;
     color: var(--text-muted);
     vertical-align: middle
 }
 
-.addStatusIcon_e6ac4a {
+.addStatusIcon_d22603 {
     display: inline;
     height: 18px;
     width: 18px;
@@ -29860,13 +29860,13 @@ div.popoutCloseButton_d523a2:hover {
     vertical-align: middle
 }
 
-.statusText_e6ac4a {
+.statusText_d22603 {
     display: inline;
     color: var(--text-normal);
     vertical-align: middle
 }
 
-.statusEmojiInline_e6ac4a {
+.statusEmojiInline_d22603 {
     display: inline;
     height: 16px;
     width: 16px;
@@ -29874,7 +29874,7 @@ div.popoutCloseButton_d523a2:hover {
     vertical-align: middle
 }
 
-.statusEmojiOnly_e6ac4a {
+.statusEmojiOnly_d22603 {
     min-width: 32px;
     min-height: 32px;
     max-width: 32px;

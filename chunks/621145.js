@@ -31,8 +31,8 @@ var t = n(735250),
     N = n(981631),
     L = n(217702),
     j = n(530124);
-let y = (e, i) => {
-        let n = e.attachments.map((e) => {
+let y = (e, i, n) => {
+        let t = e.attachments.map((e) => {
             var n, t, a, l;
             let s = {
                 ...e,
@@ -49,13 +49,22 @@ let y = (e, i) => {
         });
         return (0, m.e5)({
             ...(0, _.ZP)({
+                author:
+                    null != n
+                        ? n
+                        : {
+                              id: '',
+                              avatar: void 0,
+                              discriminator: '0000',
+                              username: ''
+                          },
                 nonce: e.id,
                 content: e.content,
                 type: N.uaV.DEFAULT,
                 channelId: N.lds
             }),
             timestamp: new Date(f.default.extractTimestamp(e.id)).toISOString(),
-            attachments: n,
+            attachments: t,
             state: N.yb.SENT
         });
     },
@@ -154,7 +163,7 @@ function D(e) {
         [r, d] = a.useState({}),
         [m, u] = a.useState(!0),
         _ = n[0],
-        A = y(_, r),
+        A = y(_, r, l),
         p = (0, x.Z)(A, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
