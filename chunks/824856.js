@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return N;
     }
 });
 var n = t(735250),
@@ -15,30 +15,31 @@ var n = t(735250),
     u = t(937615),
     E = t(624138),
     T = t(150414),
-    S = t(319978);
-function I(e) {
+    S = t(993553),
+    I = t(319978);
+function N(e) {
     let { cta: s, storeListing: t, className: i } = e,
-        { applicationId: I, benefits: N, description: m } = t,
-        C = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(I, t.thumbnail, 256)), [I, t.thumbnail]),
-        { data: A } = (0, d.X)(t.skuId),
-        g = a.useMemo(() => {
-            if (null == A || 0 === A.length) return null;
-            let e = A[0];
+        { applicationId: N, benefits: m, description: C } = t,
+        A = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(N, t.thumbnail, 256)), [N, t.thumbnail]),
+        { data: g } = (0, d.X)(t.skuId),
+        h = a.useMemo(() => {
+            if (null == g || 0 === g.length) return null;
+            let e = g[0];
             return (0, u.xg)(e);
-        }, [A]);
-    return null == g
+        }, [g]);
+    return null == h
         ? null
         : (0, n.jsxs)(o.l, {
-              className: r()(S.wrapper, i),
+              className: r()(I.wrapper, i),
               header: (0, n.jsxs)(n.Fragment, {
                   children: [
                       (0, n.jsxs)('div', {
-                          className: S.headerTitle,
+                          className: I.headerTitle,
                           children: [
-                              null != C &&
+                              null != A &&
                                   (0, n.jsx)(c.Image, {
-                                      src: C.href,
-                                      imageClassName: S.subscriptionImg,
+                                      src: A.href,
+                                      imageClassName: I.subscriptionImg,
                                       width: 48,
                                       height: 48
                                   }),
@@ -50,7 +51,7 @@ function I(e) {
                                       }),
                                       (0, n.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: g
+                                          children: h
                                       })
                                   ]
                               })
@@ -60,25 +61,25 @@ function I(e) {
                   ]
               }),
               children: [
-                  !(0, E.Ew)(m) &&
+                  !(0, E.Ew)(C) &&
                       (0, n.jsx)('div', {
-                          className: S.description,
-                          children: (0, n.jsx)(c.Text, {
+                          className: I.description,
+                          children: (0, n.jsx)(S.Z, {
                               variant: 'text-sm/medium',
-                              children: m
+                              children: C
                           })
                       }),
-                  null != N &&
-                      N.length > 0 &&
+                  null != m &&
+                      m.length > 0 &&
                       (0, n.jsx)('div', {
-                          className: S.benefits,
-                          children: N.map((e) => {
+                          className: I.benefits,
+                          children: m.map((e) => {
                               let { id: s, name: t, description: a, icon: i } = e;
                               return (0, n.jsx)(
                                   l.G,
                                   {
                                       name: t,
-                                      icon: (0, _.n)(I, i),
+                                      icon: (0, _.n)(N, i),
                                       description: a
                                   },
                                   s
