@@ -41,48 +41,58 @@ class Z extends a.PureComponent {
                     );
             }),
             d = o().map(i.receiverReports, (e) => {
-                let t = Array.isArray(e.bitrate) ? (null === (o = e.bitrate.at(-1)) || void 0 === o ? void 0 : o.value) : e,
-                    n = (0, r.jsxs)(c.Z, {
-                        id: 'bitrate-'.concat(e.id),
-                        justify: c.Z.Justify.BETWEEN,
-                        children: [
-                            (0, r.jsx)('span', { children: 'Bitrate:' }),
-                            (0, r.jsxs)('span', {
-                                children: [(t / 1000).toFixed(2), ' Kbps']
-                            })
-                        ]
-                    }),
-                    a = (0, r.jsxs)(c.Z, {
-                        id: 'lost-'.concat(e.id),
-                        justify: c.Z.Justify.BETWEEN,
-                        children: [
-                            (0, r.jsx)('span', { children: 'Packet Loss:' }),
-                            (0, r.jsxs)('span', {
-                                children: [((100 * e.fractionLost) / 256).toFixed(0), '%']
-                            })
-                        ]
-                    }),
-                    i = g.default.getUser(e.id);
-                var o,
-                    s = f.ZP.getNickname(m.Z.getGuildId(), void 0, i);
+                let t = Array.isArray(e.bitrate) ? (null === (r = e.bitrate.at(-1)) || void 0 === r ? void 0 : r.value) : e.bitrate,
+                    n = g.default.getUser(e.id);
+                var r,
+                    a = f.ZP.getNickname(m.Z.getGuildId(), void 0, n);
                 return (
-                    null == s && (s = null != i ? i.username : e.id),
-                    (0, r.jsx)(
+                    null == a && (a = null != n ? n.username : e.id),
+                    {
+                        displayName: a,
+                        bitrate: t / 1000,
+                        lost: (100 * e.fractionLost) / 256
+                    }
+                );
+            }),
+            u = o().sortBy(d, (e) => e.displayName),
+            p = o().map(u, (e) =>
+                (function (e, t, n) {
+                    let a = (0, r.jsxs)(c.Z, {
+                            id: 'bitrate-'.concat(e),
+                            justify: c.Z.Justify.BETWEEN,
+                            children: [
+                                (0, r.jsx)('span', { children: 'Bitrate:' }),
+                                (0, r.jsxs)('span', {
+                                    children: [t.toFixed(2), ' Kbps']
+                                })
+                            ]
+                        }),
+                        i = (0, r.jsxs)(c.Z, {
+                            id: 'lost-'.concat(e),
+                            justify: c.Z.Justify.BETWEEN,
+                            children: [
+                                (0, r.jsx)('span', { children: 'Packet Loss:' }),
+                                (0, r.jsxs)('span', {
+                                    children: [n.toFixed(0), '%']
+                                })
+                            ]
+                        });
+                    return (0, r.jsx)(
                         S.Z,
                         {
-                            label: e.id,
-                            valueRendered: [n, a],
-                            children: s
+                            label: e,
+                            valueRendered: [a, i],
+                            children: e
                         },
-                        e.id
-                    )
-                );
-            });
+                        e
+                    );
+                })(e.displayName, e.bitrate, e.lost)
+            );
         return (0, r.jsxs)(l.FormSection, {
             tag: l.FormTitleTags.H2,
             title: b.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? ' - ' + t : ''),
             className: v.allowSelection,
-            children: [(0, y.a)(s), 0 === d.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }), (0, y.a)(d)]
+            children: [(0, y.a)(s), 0 === p.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }), (0, y.a)(p)]
         });
     }
 }
