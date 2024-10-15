@@ -2,26 +2,26 @@ n(47120), n(653041);
 var i,
     a,
     s,
-    l,
-    r = n(392711),
-    o = n.n(r),
+    r,
+    l = n(392711),
+    o = n.n(l),
     c = n(442837),
-    d = n(433517),
-    u = n(570140),
+    u = n(433517),
+    d = n(570140),
     _ = n(496929),
     E = n(16084),
     I = n(728345),
     m = n(812206),
     T = n(594190),
-    N = n(594174),
-    h = n(580130),
-    C = n(55563),
-    p = n(981631);
-let f = 'DetectedOffPlatformPremiumPerksStore',
+    h = n(594174),
+    N = n(580130),
+    f = n(55563),
+    C = n(981631);
+let p = 'DetectedOffPlatformPremiumPerksStore',
     g = {},
     A = {},
     S = [];
-function M() {
+function R() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of o().values(A)) {
         if (S.includes(t)) continue;
@@ -30,12 +30,12 @@ function M() {
             !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.ZP.fetchApplication(n);
             continue;
         }
-        let a = C.Z.get(t);
+        let a = f.Z.get(t);
         if (null == a) {
-            !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
+            !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
             continue;
         }
-        h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, i.id, i.id) || !a.available
+        N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available
             ? null != g[t] && (delete g[t], (e = !0))
             : ((g[t] = {
                   skuId: t,
@@ -45,51 +45,51 @@ function M() {
     }
     return e;
 }
-class O extends (i = c.ZP.Store) {
+class x extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(T.ZP, C.Z, h.Z), (S = null !== (e = d.K.get(f)) && void 0 !== e ? e : S);
+        this.waitFor(T.ZP, f.Z, N.Z), (S = null !== (e = u.K.get(p)) && void 0 !== e ? e : S);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(g);
     }
 }
-(l = 'DetectedOffPlatformPremiumPerksStore'),
-    (s = 'displayName') in (a = O)
+(r = 'DetectedOffPlatformPremiumPerksStore'),
+    (s = 'displayName') in (a = x)
         ? Object.defineProperty(a, s, {
-              value: l,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = l),
-    (t.Z = new O(u.Z, {
+        : (a[s] = r),
+    (t.Z = new x(d.Z, {
         LOGOUT: function () {
             (g = {}), (A = {});
         },
-        SKU_FETCH_SUCCESS: M,
-        ENTITLEMENT_FETCH_APPLICATION_SUCCESS: M,
-        ENTITLEMENT_CREATE: M,
-        APPLICATION_FETCH_SUCCESS: M,
+        SKU_FETCH_SUCCESS: R,
+        ENTITLEMENT_FETCH_APPLICATION_SUCCESS: R,
+        ENTITLEMENT_CREATE: R,
+        APPLICATION_FETCH_SUCCESS: R,
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
             if ((delete g[t], S.includes(t))) return !1;
-            S.push(t), d.K.set(f, S);
+            S.push(t), u.K.set(p, S);
         },
         RUNNING_GAMES_CHANGE: function () {
             let e = !1;
             for (let { id: t, distributor: n } of T.ZP.getRunningGames())
-                if (null != t && n !== p.GQo.DISCORD)
-                    for (let { skuId: n, applicationId: i } of p.Lg6) {
+                if (null != t && n !== C.GQo.DISCORD)
+                    for (let { skuId: n, applicationId: i } of C.Lg6) {
                         if (!(i !== t || S.includes(n)))
                             null == A[n] &&
-                                (!h.Z.applicationIdsFetched.has(i) && !h.Z.applicationIdsFetching.has(i) && null == h.Z.getForSku(n) && _.yD(i),
+                                (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i),
                                 (A[n] = {
                                     skuId: n,
                                     applicationId: i
                                 }),
                                 (e = !0));
                     }
-            return e && M(), e;
+            return e && R(), e;
         }
     }));

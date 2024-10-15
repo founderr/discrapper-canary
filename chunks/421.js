@@ -195,7 +195,7 @@ function A(e) {
         }, [d, p, v, j]),
         L = a.useCallback(() => {
             (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('60133'), n.e('43035')]).then(n.bind(n, 827940));
+                let { default: e } = await Promise.all([n.e('60133'), n.e('37493')]).then(n.bind(n, 827940));
                 return (t) =>
                     (0, i.jsx)(e, {
                         activityItem: d,

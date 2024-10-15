@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(442837),
     s = n(607070),
-    l = n(519566);
-function r(e) {
-    let { guildId: t, user: n, className: r } = e,
+    r = n(519566);
+function l(e) {
+    let { guildId: t, user: n, className: l } = e,
         o = (0, a.e7)([s.Z], () => !s.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, o),
-        d = (0, i.jsx)('foreignObject', {
+        u = (0, i.jsx)('foreignObject', {
             x: '30',
             y: '68',
             width: '56',
@@ -20,19 +20,19 @@ function r(e) {
             transform: 'skewX(12)',
             children: (0, i.jsx)('img', {
                 src: c,
-                className: l.userAvatar,
+                className: r.userAvatar,
                 alt: ''
             })
         });
     return (0, i.jsx)('div', {
-        className: r,
+        className: l,
         children: (0, i.jsxs)('svg', {
             width: '128',
             height: '200',
             viewBox: '0 0 128 200',
             fill: 'none',
             xmlns: 'http://www.w3.org/2000/svg',
-            className: l.svg,
+            className: r.svg,
             children: [
                 (0, i.jsx)('path', {
                     fillRule: 'evenodd',
@@ -84,7 +84,7 @@ function r(e) {
                     d: 'M61.1485 21.3944C62.4818 21.3286 63.5224 20.5015 63.4728 19.547C63.4231 18.5925 62.302 17.872 60.9686 17.9378C59.6353 18.0035 58.5947 18.8306 58.6444 19.7851C58.694 20.7396 59.8152 21.4601 61.1485 21.3944Z',
                     fill: 'black'
                 }),
-                d
+                u
             ]
         })
     });

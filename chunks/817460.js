@@ -1,12 +1,12 @@
 t.d(n, {
     JE: function () {
-        return o;
+        return u;
     },
     ab: function () {
-        return s;
+        return o;
     },
     iG: function () {
-        return u;
+        return s;
     },
     lL: function () {
         return c;
@@ -18,10 +18,10 @@ t.d(n, {
 var i = t(293810),
     r = t(474936),
     l = t(689938);
-function s(e) {
+function o(e) {
     return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
 }
-function o(e) {
+function u(e) {
     let { interval: n, interval_count: t } = e;
     return (function (e) {
         switch (e) {
@@ -34,7 +34,7 @@ function o(e) {
         }
     })(n).format({ count: t });
 }
-function u(e) {
+function s(e) {
     let { interval: n, interval_count: t } = e;
     switch (n) {
         case r.rV.DAY:

@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(388905),
     p = n(792766),
     f = n(600164),
-    m = n(436774),
-    _ = n(313201),
+    _ = n(436774),
+    m = n(313201),
     g = n(451603),
     C = n(885714),
     I = n(973616),
@@ -26,10 +26,10 @@ var i = n(735250),
     S = n(55543),
     x = n(626135),
     v = n(768581),
-    T = n(358085),
-    Z = n(998502),
-    A = n(379164),
-    b = n(590965),
+    Z = n(358085),
+    T = n(998502),
+    b = n(379164),
+    A = n(590965),
     R = n(981631),
     M = n(474936),
     L = n(689938),
@@ -60,7 +60,7 @@ function O() {
                 (0, i.jsx)(o.NitroWheelIcon, {
                     size: 'md',
                     className: P.experimentUpsellIcon,
-                    color: m.JX.PREMIUM_TIER_2
+                    color: _.JX.PREMIUM_TIER_2
                 }),
                 (0, i.jsx)('span', {
                     className: P.experimentUpsellText,
@@ -94,7 +94,7 @@ function j(e) {
 }
 function D(e) {
     let { transitionState: t } = e,
-        n = (0, _.Dt)(),
+        n = (0, m.Dt)(),
         { analyticsLocations: l } = (0, d.ZP)(u.Z.INVITE_MODAL);
     return (0, i.jsx)(d.Gt, {
         value: l,
@@ -118,7 +118,7 @@ function D(e) {
                     }),
                     (0, i.jsx)(h.zx, {
                         size: h.zx.Sizes.LARGE,
-                        onClick: () => A.Z.close(),
+                        onClick: () => b.Z.close(),
                         color: h.zx.Colors.BRAND,
                         children: L.Z.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
                     })
@@ -135,34 +135,34 @@ function w(e) {
         var e;
         return null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: m, error: C, submitting: N } = (0, s.cj)([b.Z], () => b.Z.getProps());
+    let { invite: _, error: C, submitting: N } = (0, s.cj)([A.Z], () => A.Z.getProps());
     l.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? Z.ZP.minimize() : Z.ZP.restore(), Z.ZP.focus());
+        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
-    let S = (0, _.Dt)(),
+    let S = (0, m.Dt)(),
         { analyticsLocations: x } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    if (null == m) return null;
-    if (m.state === R.r2o.EXPIRED || m.state === R.r2o.BANNED || m.state === R.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
-    if (null == m.channel) return null;
+    if (null == _) return null;
+    if (_.state === R.r2o.EXPIRED || _.state === R.r2o.BANNED || _.state === R.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
+    if (null == _.channel) return null;
     function M() {
-        null != m && A.Z.acceptInvite(m);
+        null != _ && b.Z.acceptInvite(_);
     }
-    let { guild: j, channel: w, inviter: G, target_application: U } = m,
+    let { guild: j, channel: w, inviter: U, target_application: G } = _,
         k = null != j,
-        B = null != m.stage_instance,
-        V = null == m.guild && null == m.channel && null != m.inviter;
-    if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
+        B = null != _.stage_instance,
+        H = null == _.guild && null == _.channel && null != _.inviter;
+    if (null != G) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
             (n = v.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));
-    else if (((null == (t = w.name) || '' === t) && null != G && (t = G.username), null == t)) throw Error('no name for group DM invite');
-    let H = (0, g.yU)(),
+    else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)) throw Error('no name for group DM invite');
+    let V = (0, g.yU)(),
         F = B ? L.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : L.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (
-        V && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
+        H && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
             value: x,
             children: (0, i.jsxs)(o.ModalRoot, {
@@ -184,7 +184,7 @@ function w(e) {
                                         id: S,
                                         className: y.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
-                                            invite: m,
+                                            invite: _,
                                             disableUser: k,
                                             error: C
                                         })
@@ -194,17 +194,17 @@ function w(e) {
                                               className: a()(y.marginBottom20, P.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
-                                                  stageInstance: m.stage_instance,
+                                                  stageInstance: _.stage_instance,
                                                   guild: j
                                               })
                                           })
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            H ? (0, i.jsx)(O, {}) : null,
-                                            null == U
+                                            V ? (0, i.jsx)(O, {}) : null,
+                                            null == G
                                                 ? (0, i.jsx)(o.Tooltip, {
-                                                      text: H ? L.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+                                                      text: V ? L.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -212,11 +212,11 @@ function w(e) {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
                                                               submitting: N,
-                                                              disabled: H,
+                                                              disabled: V,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: H ? L.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
+                                                              children: V ? L.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
                                                           });
                                                       }
                                                   })
@@ -245,7 +245,7 @@ function w(e) {
                                                     look: h.zx.Looks.LINK,
                                                     className: P.noThanksButton,
                                                     onClick: function () {
-                                                        A.Z.close();
+                                                        b.Z.close();
                                                     },
                                                     color: h.zx.Colors.TRANSPARENT,
                                                     children: L.Z.Messages.INIVTE_MODAL_NO_THANKS

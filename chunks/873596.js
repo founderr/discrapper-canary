@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(277642),
     p = n(441894),
     f = n(160038),
-    m = n(586646),
-    _ = n(760373),
+    _ = n(586646),
+    m = n(760373),
     g = n(689938),
     C = n(739949);
 function I(e) {
@@ -73,14 +73,14 @@ function N(e) {
 }
 function S(e) {
     let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
-        [n, o] = l.useState(_.tu.RTC_DEBUG_PANEL),
+        [n, o] = l.useState(m.tu.RTC_DEBUG_PANEL),
         u = (0, s.Dt)(),
         p = l.useMemo(() => {
             switch (n) {
-                case _.tu.RTC_DEBUG_PANEL:
+                case m.tu.RTC_DEBUG_PANEL:
                     return (0, i.jsx)(N, { ...e });
-                case _.tu.RTC_SECURE_FRAMES:
-                    return (0, i.jsx)(m.Z, { channelId: e.channelId });
+                case m.tu.RTC_SECURE_FRAMES:
+                    return (0, i.jsx)(_.Z, { channelId: e.channelId });
             }
         }, [e, n]);
     l.useEffect(() => {
@@ -92,7 +92,7 @@ function S(e) {
     let f = (0, h.r)();
     return (
         l.useEffect(() => {
-            f && o(_.tu.RTC_DEBUG_PANEL);
+            f && o(m.tu.RTC_DEBUG_PANEL);
         }, [f]),
         (0, i.jsxs)('div', {
             className: C.container,
@@ -111,14 +111,14 @@ function S(e) {
                     onItemSelect: o,
                     children: [
                         (0, i.jsx)(a.TabBar.Item, {
-                            id: _.tu.RTC_DEBUG_PANEL,
+                            id: m.tu.RTC_DEBUG_PANEL,
                             className: C.tabBarItem,
                             children: g.Z.Messages.E2EE_CONNECTION
                         }),
                         f
                             ? null
                             : (0, i.jsx)(a.TabBar.Item, {
-                                  id: _.tu.RTC_SECURE_FRAMES,
+                                  id: m.tu.RTC_SECURE_FRAMES,
                                   className: C.tabBarItem,
                                   children: g.Z.Messages.E2EE_PRIVACY
                               })

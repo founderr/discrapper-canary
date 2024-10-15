@@ -1,6 +1,6 @@
 r.d(t, {
     Wg: function () {
-        return v;
+        return S;
     }
 }),
     r(47120);
@@ -9,8 +9,8 @@ var n,
     a = r(392711),
     o = r.n(a),
     d = r(442837),
-    s = r(570140),
-    l = r(944163),
+    l = r(570140),
+    s = r(944163),
     c = r(709054),
     g = r(116175),
     f = r(308083);
@@ -27,17 +27,17 @@ function u(e, t, r) {
         e
     );
 }
-let b = new Map(),
-    p = new Map(),
-    _ = !1,
-    C = Object.freeze({
+let C = new Map(),
+    b = new Map(),
+    p = !1,
+    _ = Object.freeze({
         gameApplicationIds: new Set(),
         playstyle: f.zv.NONE,
         interests: new Set(),
         description: '',
         wildcardDescriptors: [f.U6, f.U6, f.U6],
         tag: '',
-        verificationForm: { ...l.t },
+        verificationForm: { ...s.t },
         badgeKind: g.ZD.SWORD,
         badgePrimaryColor: void 0,
         badgeSecondaryColor: void 0,
@@ -48,30 +48,30 @@ let b = new Map(),
         furthestStep: f.Wy.GAMES,
         requiredGameId: void 0
     });
-function S() {
-    let e = o().cloneDeep(C);
+function v() {
+    let e = o().cloneDeep(_);
     return (e.badgeKind = (0, g.lP)()), (e.banner = (0, f.i1)()), e;
 }
-function v() {
-    return i.useState(() => S())[0];
+function S() {
+    return i.useState(() => v())[0];
 }
 function m(e) {
     var t;
-    return null !== (t = b.get(e)) && void 0 !== t ? t : S();
+    return null !== (t = C.get(e)) && void 0 !== t ? t : v();
 }
 function y(e, t) {
     let r = m(e);
-    b.set(e, {
+    C.set(e, {
         ...r,
         ...t
     });
-    let n = p.get(e);
+    let n = b.get(e);
     if (null != n) {
         let r = { ...n };
         Object.keys(t).forEach((e) => {
             delete r[e];
         }),
-            p.set(e, r);
+            b.set(e, r);
     }
 }
 class h extends (n = d.ZP.PersistedStore) {
@@ -79,14 +79,14 @@ class h extends (n = d.ZP.PersistedStore) {
         null != e &&
             c.default.keys(e.progressByGuild).forEach((t) => {
                 var r, n, i, a, o;
-                b.set(t, {
+                C.set(t, {
                     gameApplicationIds: new Set((r = e.progressByGuild[t]).gameApplicationIds),
                     playstyle: r.playstyle,
                     interests: new Set(r.interests),
                     description: r.description,
                     wildcardDescriptors: null !== (n = r.wildcardDescriptors) && void 0 !== n ? n : [f.U6, f.U6, f.U6],
                     tag: r.tag,
-                    verificationForm: null !== (i = r.verificationForm) && void 0 !== i ? i : { ...l.t },
+                    verificationForm: null !== (i = r.verificationForm) && void 0 !== i ? i : { ...s.t },
                     badgeKind: null !== (a = r.badgeKind) && void 0 !== a ? a : g.ZD.SWORD,
                     badgePrimaryColor: r.badgePrimaryColor,
                     badgeSecondaryColor: r.badgeSecondaryColor,
@@ -102,7 +102,7 @@ class h extends (n = d.ZP.PersistedStore) {
     getState() {
         let e = {};
         return (
-            b.forEach((t, r) => {
+            C.forEach((t, r) => {
                 var n;
                 e[r] = {
                     gameApplicationIds: Array.from((n = t).gameApplicationIds),
@@ -128,20 +128,20 @@ class h extends (n = d.ZP.PersistedStore) {
     }
     getStateForGuild(e) {
         return {
-            progress: b.get(e),
-            errors: p.get(e),
-            submitting: _
+            progress: C.get(e),
+            errors: b.get(e),
+            submitting: p
         };
     }
     getGuildIds() {
-        return [...b.keys()];
+        return [...C.keys()];
     }
 }
 u(h, 'displayName', 'ClanSetupStore'),
     u(h, 'persistKey', 'ClanSetupStore'),
-    (t.ZP = new h(s.Z, {
+    (t.ZP = new h(l.Z, {
         CLAN_SETUP_RESET: function () {
-            b.clear(), p.clear();
+            C.clear(), b.clear();
         },
         CLAN_SETUP_UPDATE: function (e) {
             let { guildId: t, updates: r } = e;
@@ -149,16 +149,16 @@ u(h, 'displayName', 'ClanSetupStore'),
         },
         CLAN_SETUP_SUBMIT: function (e) {
             let { guildId: t } = e;
-            (_ = !0), p.delete(t);
+            (p = !0), b.delete(t);
         },
         CLAN_SETUP_SUCCESS: function (e) {
             let { guildId: t } = e;
-            (_ = !1), b.delete(t), p.delete(t);
+            (p = !1), C.delete(t), b.delete(t);
         },
         CLAN_SETUP_ERROR: function (e) {
             let { guildId: t, error: r } = e;
-            (_ = !1),
-                p.set(t, {
+            (p = !1),
+                b.set(t, {
                     gameApplicationIds: r.getFirstFieldErrorMessage('game_application_ids'),
                     playstyle: r.getFirstFieldErrorMessage('play_style'),
                     description: r.getFirstFieldErrorMessage('description'),
@@ -174,7 +174,7 @@ u(h, 'displayName', 'ClanSetupStore'),
             i &&
                 ((t =
                     null == r
-                        ? l.t
+                        ? s.t
                         : {
                               ...m(n).verificationForm,
                               ...r

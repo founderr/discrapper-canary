@@ -1,16 +1,16 @@
 n.d(t, {
     b: function () {
-        return r;
+        return l;
     },
     e: function () {
-        return l;
+        return r;
     }
 });
 var i = n(399606),
     a = n(594174),
     s = n(918505);
-let l = () => o(a.default.getCurrentUser(), (0, s.JH)()),
-    r = () =>
+let r = () => o(a.default.getCurrentUser(), (0, s.JH)()),
+    l = () =>
         o(
             (0, i.e7)([a.default], () => a.default.getCurrentUser()),
             (0, s.o9)()

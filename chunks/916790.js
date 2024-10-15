@@ -13,8 +13,8 @@ var r = n(735250),
     c = n.n(s),
     d = n(481060),
     u = n(570140),
-    m = n(665149),
-    h = n(301801),
+    h = n(665149),
+    m = n(301801),
     x = n(4912),
     f = n(55935),
     p = n(428530),
@@ -24,10 +24,10 @@ var r = n(735250),
     _ = n(621060),
     j = n(246195),
     C = n(219299);
-function S(e) {
+function T(e) {
     return parseFloat(e.toFixed(3));
 }
-let T = [
+let S = [
     {
         key: 'store',
         cellClassName: j.actionColumn,
@@ -41,7 +41,7 @@ let T = [
         cellClassName: j.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return ''.concat(S(t.time), ' ms');
+            return ''.concat(T(t.time), ' ms');
         }
     }
 ];
@@ -57,7 +57,7 @@ function N(e) {
         );
     return (0, r.jsx)(d.ScrollerThin, {
         children: (0, r.jsx)(v.Z, {
-            columns: T,
+            columns: S,
             data: n
         })
     });
@@ -85,7 +85,7 @@ let y = [
                             }),
                             (0, r.jsxs)(g.Z9, {
                                 name: 'Total Time',
-                                children: [S(n.totalTime), ' ms']
+                                children: [T(n.totalTime), ' ms']
                             })
                         ]
                     }),
@@ -153,14 +153,14 @@ function I(e) {
         initialHeight: n,
         children: [
             (0, r.jsx)(o, {}),
-            (0, r.jsxs)(m.ZP, {
+            (0, r.jsxs)(h.ZP, {
                 className: i()(C.headerBar, j.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(m.ZP.Icon, {
+                    (0, r.jsx)(h.ZP.Icon, {
                         icon: d.ReceiptIcon,
                         tooltip: t.name
                     }),
-                    (0, r.jsx)(m.ZP.Title, { children: t.name })
+                    (0, r.jsx)(h.ZP.Title, { children: t.name })
                 ]
             }),
             s({ actionLog: t })
@@ -183,7 +183,7 @@ let E = [
         cellClassName: j.totalTimeColumn,
         render(e) {
             let { actionLog: t } = e;
-            return ''.concat(S(t.totalTime), ' ms');
+            return ''.concat(T(t.totalTime), ' ms');
         }
     }
 ];
@@ -214,18 +214,18 @@ function w() {
                 })),
             [l]
         ),
-        [c, m] = a.useState(s),
+        [c, h] = a.useState(s),
         [x, f] = a.useState(),
         p = a.useRef(null),
         g = a.useCallback(
             (0, o.throttle)(
                 async (e, t) => {
                     if ('' === e) {
-                        m(t);
+                        h(t);
                         return;
                     }
                     p.current = (0, o.uniqueId)();
-                    let n = await (0, h.H)(
+                    let n = await (0, m.H)(
                         t,
                         (e) => {
                             let { actionLog: t } = e;
@@ -234,7 +234,7 @@ function w() {
                         e,
                         !0
                     );
-                    if (null != p.current) m(n);
+                    if (null != p.current) h(n);
                 },
                 300,
                 { leading: !0 }

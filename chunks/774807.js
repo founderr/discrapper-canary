@@ -3,11 +3,11 @@ var i,
     a = n(442837),
     s = n(570140);
 n(57132);
-var l = n(455199),
-    r = n(70956),
+var r = n(455199),
+    l = n(70956),
     o = n(709054),
     c = n(497089);
-function d(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-let u = 90 * r.Z.Millis.DAY,
+let d = 90 * l.Z.Millis.DAY,
     _ = {
         tab: null,
         localItemAcks: {},
@@ -30,11 +30,11 @@ let u = 90 * r.Z.Millis.DAY,
     };
 class E extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(l.Z), null != e)) {
+        if ((this.waitFor(r.Z), null != e)) {
             var t;
             ((_ = e).localItemAcks = (function (e) {
                 let t = {};
-                for (let [n, i] of Object.entries(e)) Date.now() - i < u && (t[n] = i);
+                for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
                 return t;
             })(null !== (t = _.localItemAcks) && void 0 !== t ? t : {})),
                 (_.isDataStale = !0);
@@ -48,7 +48,7 @@ class E extends (i = a.ZP.PersistedStore) {
         return null !== (e = _.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != _.localItemAcks[e.local_id] || o.default.age(e.id) > u);
+        return null != e.local_id && (null != _.localItemAcks[e.local_id] || o.default.age(e.id) > d);
     }
     hasNewMentions() {
         return _.hasNewMentions;
@@ -63,7 +63,7 @@ class E extends (i = a.ZP.PersistedStore) {
         return _.hasNewMentions || _.isDataStale || _.isRefreshing;
     }
 }
-d(E, 'displayName', 'NotificationCenterStore'), d(E, 'persistKey', 'NotificationCenterStore');
+u(E, 'displayName', 'NotificationCenterStore'), u(E, 'persistKey', 'NotificationCenterStore');
 function I() {
     (_.hasNewMentions = !1), (_.isDataStale = !1), (_.isRefreshing = !1);
 }

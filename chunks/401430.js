@@ -14,12 +14,12 @@ n.d(t, {
 var i = n(570140),
     a = n(566620),
     s = n(728345),
-    l = n(812206),
-    r = n(973616),
+    r = n(812206),
+    l = n(973616),
     o = n(630388),
     c = n(591759),
-    d = n(978085),
-    u = n(981631);
+    u = n(978085),
+    d = n(981631);
 async function _(e, t) {
     i.Z.dispatch({
         applicationId: e,
@@ -27,12 +27,12 @@ async function _(e, t) {
     });
     try {
         if (!(await (0, a.W5)(e))) throw Error('Do not have access!');
-        let n = l.Z.getApplication(e);
-        null == n && (n = r.Z.createFromServer(await s.ZP.fetchApplication(e)));
-        let _ = (0, o.yE)(n.flags, u.udG.EMBEDDED);
+        let n = r.Z.getApplication(e);
+        null == n && (n = l.Z.createFromServer(await s.ZP.fetchApplication(e)));
+        let _ = (0, o.yE)(n.flags, d.udG.EMBEDDED);
         if (_ && (null == t || !c.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (
-            !_ && d.GR(n),
+            !_ && u.GR(n),
             i.Z.dispatch({
                 type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS',
                 applicationId: e,

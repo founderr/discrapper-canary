@@ -15,13 +15,13 @@ var s = n(735250),
     _ = n(314897),
     h = n(626135),
     E = n(587444),
-    p = n(981631),
-    g = n(58346),
-    f = n(689938),
-    m = n(113207);
+    g = n(981631),
+    p = n(58346),
+    m = n(689938),
+    f = n(113207);
 function I(e, t, n) {
     e.preventDefault(),
-        h.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        h.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -29,7 +29,7 @@ function I(e, t, n) {
         });
     let s = _.default.getFingerprint(),
         r = null != s ? s : _.default.getId();
-    c.Z.openMobileApp(n.state === g.Rj.RESOLVED ? t : void 0, r);
+    c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, r);
 }
 function N(e) {
     let { code: t } = e,
@@ -37,9 +37,9 @@ function N(e) {
     return (r.useEffect(() => {
         (0, d.e)('guild_template_mobile');
     }, []),
-    null == n || n.state === g.Rj.RESOLVING)
+    null == n || n.state === p.Rj.RESOLVING)
         ? (0, s.jsx)(o.ZP, { children: (0, s.jsx)(a.Spinner, {}) })
-        : n.state === g.Rj.RESOLVED
+        : n.state === p.Rj.RESOLVED
           ? (0, s.jsxs)(o.ZP, {
                 children: [
                     (0, s.jsx)(u.Z, {
@@ -48,14 +48,14 @@ function N(e) {
                     }),
                     (0, s.jsx)(o.zx, {
                         onClick: (e) => I(e, t, n),
-                        className: m.marginTop20,
-                        children: f.Z.Messages.GUILD_TEMPLATE_OPEN
+                        className: f.marginTop20,
+                        children: m.Z.Messages.GUILD_TEMPLATE_OPEN
                     })
                 ]
             })
           : (0, s.jsx)(E.Z, {
-                text: f.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
-                buttonCta: f.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
+                text: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
+                buttonCta: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
                 onClick: (e) => I(e, t, n)
             });
 }

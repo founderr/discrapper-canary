@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060),
     s = n(674701),
-    l = n(934415),
-    r = n(834129),
+    r = n(934415),
+    l = n(834129),
     o = n(981631),
     c = n(163809);
-function d(e) {
-    let { giftIntentType: t, recipientUser: n, showSecondaryCta: d, channel: u } = e;
-    return (0, i.jsx)(r.Z, {
+function u(e) {
+    let { giftIntentType: t, recipientUser: n, showSecondaryCta: u, channel: d } = e;
+    return (0, i.jsx)(l.Z, {
         contentClassName: c.messageContentContainer,
         iconContainerClassName: c.iconContainer,
         iconNode: (0, i.jsx)(a.BellIcon, { colorClass: c.icon }),
@@ -21,9 +21,9 @@ function d(e) {
             giftIntentType: t,
             premiumGiftIntentCardType: s.U.SYSTEM_MESSAGE,
             recipientUser: n,
-            analyticsPage: (0, l.mE)(u),
+            analyticsPage: (0, r.mE)(d),
             analyticsSection: o.jXE.CHANNEL,
-            showSecondaryCta: d
+            showSecondaryCta: u
         })
     });
 }

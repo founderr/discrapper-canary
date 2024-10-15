@@ -38,7 +38,7 @@ t.Z = (e) => {
                               [
                                   n.to({
                                       range: [0, 1],
-                                      output: [-12, 0]
+                                      output: [-8, 0]
                                   }),
                                   n.to({
                                       range: [0, 1],
@@ -46,7 +46,7 @@ t.Z = (e) => {
                                   }),
                                   n.to({
                                       range: [1, 0],
-                                      output: [1, 38 / 64]
+                                      output: [1, 0.75]
                                   })
                               ],
                               (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
@@ -74,11 +74,11 @@ t.Z = (e) => {
                                       [
                                           n.to({
                                               range: [0, 1],
-                                              output: [0, -42]
+                                              output: [0, -48]
                                           }),
                                           n.to({
                                               range: [0, 1],
-                                              output: [0, 10]
+                                              output: [0, 8]
                                           })
                                       ],
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')

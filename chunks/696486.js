@@ -6,10 +6,10 @@ r.d(t, {
         return g;
     },
     Gx: function () {
-        return M;
+        return P;
     },
     HN: function () {
-        return P;
+        return M;
     },
     HR: function () {
         return A;
@@ -154,15 +154,15 @@ function g(e) {
         Array.from(t)
     );
 }
-function M(e) {
+function P(e) {
     return e[D] || e;
 }
-function P() {
+function M() {
     let e = (0, i.c)(),
         t = (0, o.G)(e);
     return t.getActiveSpan ? t.getActiveSpan() : (0, u.Y)((0, E.nZ)());
 }
 function U(e, t, r, n, a, _) {
-    let o = P();
+    let o = M();
     o && (0, c.V)(o, e, t, r, n, a, _);
 }

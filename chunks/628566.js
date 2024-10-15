@@ -8,23 +8,23 @@ n.d(t, {
 var i,
     a,
     s,
-    l,
     r,
+    l,
     o,
     c = n(442837),
-    d = n(570140),
-    u = n(973616),
+    u = n(570140),
+    d = n(973616),
     _ = n(911955);
 ((s = i || (i = {}))[(s.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (s[(s.FETCHING = 1)] = 'FETCHING'), (s[(s.FETCHED = 2)] = 'FETCHED'), (s[(s.FETCH_FAILED = 3)] = 'FETCH_FAILED');
 let E = new Map(),
     I = new Map(),
     m = [],
     T = 0,
-    N = [];
-class h extends (a = c.ZP.Store) {
+    h = [];
+class N extends (a = c.ZP.Store) {
     getIntegrations(e) {
         var t;
-        return null !== (t = E.get(e)) && void 0 !== t ? t : N;
+        return null !== (t = E.get(e)) && void 0 !== t ? t : h;
     }
     getIntegration(e, t) {
         var n;
@@ -44,19 +44,19 @@ class h extends (a = c.ZP.Store) {
         return m;
     }
 }
-function C(e) {
+function f(e) {
     return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
 (o = 'PrivateChannelIntegrationStore'),
-    (r = 'displayName') in (l = h)
-        ? Object.defineProperty(l, r, {
+    (l = 'displayName') in (r = N)
+        ? Object.defineProperty(r, l, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o);
-let p = new h(d.Z, {
+        : (r[l] = o);
+let C = new N(u.Z, {
     LOGOUT() {
         E.clear();
     },
@@ -73,7 +73,7 @@ let p = new h(d.Z, {
     },
     APPLICATIONS_SHELF_FETCH_SUCCESS(e) {
         let { applications: t } = e;
-        (m = t.map(u.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name))), (T = 2);
+        (m = t.map(d.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name))), (T = 2);
     },
     APPLICATIONS_SHELF_FETCH_FAIL() {
         T = 3;
@@ -84,7 +84,7 @@ let p = new h(d.Z, {
     },
     FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
         let { channelId: t, integrations: n } = e;
-        E.set(t, C(n.map(_.F))), I.set(t, 2);
+        E.set(t, f(n.map(_.F))), I.set(t, 2);
     },
     FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
         let { channelId: t } = e;
@@ -94,7 +94,7 @@ let p = new h(d.Z, {
         let { integration: t } = e,
             n = E.get(t.channel_id);
         if (null == n) return !1;
-        E.set(t.channel_id, C([...n, (0, _.F)(t)]));
+        E.set(t.channel_id, f([...n, (0, _.F)(t)]));
     },
     PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
         let { integration: t } = e,
@@ -103,7 +103,7 @@ let p = new h(d.Z, {
         let i = (0, _.F)(t),
             a = n.findIndex((e) => e.application.id === i.application.id),
             s = [...n];
-        -1 === a ? s.push(i) : (s[a] = i), E.set(i.channel_id, C(s));
+        -1 === a ? s.push(i) : (s[a] = i), E.set(i.channel_id, f(s));
     },
     PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
         let { channelId: t, applicationId: n } = e,
@@ -119,4 +119,4 @@ let p = new h(d.Z, {
         return E.delete(t.id);
     }
 });
-t.Z = p;
+t.Z = C;

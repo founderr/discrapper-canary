@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 }),
     n(47120);
 var i = n(470079),
     a = n(585483),
     s = n(981631);
-function l(e) {
+function r(e) {
     return Object.keys(e).some((t) => e[t]);
 }
-function r(e, t) {
-    let [n, r] = i.useState(t),
-        [o, c] = i.useState(l(n)),
-        d = i.useRef(o),
-        u = i.useRef(null),
+function l(e, t) {
+    let [n, l] = i.useState(t),
+        [o, c] = i.useState(r(n)),
+        u = i.useRef(o),
+        d = i.useRef(null),
         _ = i.useCallback((e) => {
-            r((t) => {
+            l((t) => {
                 let n = {
                         ...t,
                         ...e
                     },
-                    i = l(n);
-                return i !== d.current && ((d.current = i), null != u.current && (cancelAnimationFrame(u.current), (u.current = null)), i ? c(!0) : (u.current = requestAnimationFrame(() => c(!1)))), n;
+                    i = r(n);
+                return i !== u.current && ((u.current = i), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), i ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n;
             });
         }, []);
     return (

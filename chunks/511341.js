@@ -15,7 +15,7 @@ var r = n(735250),
     _ = n(448197),
     E = n(698305),
     f = n(510659),
-    h = n(825801),
+    h = n(810097),
     p = n(652853),
     I = n(228168),
     m = n(185923),
@@ -77,7 +77,7 @@ function R(e) {
             await (0, E.Z)({
                 userId: t.id,
                 content: n,
-                location: 'UserProfileReactReplyBar',
+                location: 'UserProfileReactPopout',
                 openChannel: !1,
                 whenReady: !1
             });

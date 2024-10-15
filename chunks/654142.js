@@ -11,9 +11,9 @@ var i = n(735250),
     h = n(823379),
     p = n(179809),
     f = n(652376),
-    m = n(981631);
+    _ = n(981631);
 t.Z = l.memo(function (e) {
-    let { folderNode: t, ..._ } = e,
+    let { folderNode: t, ...m } = e,
         { id: g, name: C, color: I, children: E } = t,
         N = E.map((e) => e.id),
         S = (0, o.Z)((e) => e.guildId),
@@ -26,17 +26,17 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * m.dYL,
+                n = 2 * _.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        T = (0, f.Z)(t),
-        { mentionCount: Z, unread: A } = (0, r.cj)([u.default], () => ({
+        Z = (0, f.Z)(t),
+        { mentionCount: T, unread: b } = (0, r.cj)([u.default], () => ({
             mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: N.some((e) => u.default.hasUnread(e))
         })),
-        b = l.useCallback(() => {
+        A = l.useCallback(() => {
             s.Z.toggleGuildFolderExpand(g);
         }, [g]),
         R = l.useCallback(
@@ -49,22 +49,22 @@ t.Z = l.memo(function (e) {
                             folderId: g,
                             folderName: C,
                             folderColor: I,
-                            unread: A || Z > 0
+                            unread: b || T > 0
                         });
                 });
             },
-            [g, C, I, A, Z]
+            [g, C, I, b, T]
         );
     return (0, i.jsx)(p.Z, {
-        ..._,
+        ...m,
         folderNode: t,
         expanded: x,
         selected: null != S && N.includes(S),
-        mentionCount: Z,
-        unread: A,
-        mediaState: T,
+        mentionCount: T,
+        unread: b,
+        mediaState: Z,
         defaultFolderName: v,
-        onExpandCollapse: b,
+        onExpandCollapse: A,
         onContextMenu: R
     });
 });

@@ -7,7 +7,7 @@ n.d(t, {
         return s;
     },
     K7: function () {
-        return d;
+        return u;
     },
     NN: function () {
         return o;
@@ -16,13 +16,13 @@ n.d(t, {
         return i;
     },
     e9: function () {
-        return l;
+        return r;
     },
     lv: function () {
-        return u;
+        return d;
     },
     t4: function () {
-        return r;
+        return l;
     },
     u$: function () {
         return _;
@@ -31,13 +31,13 @@ n.d(t, {
     ((a = i || (i = {}))[(a.POPULAR = 0)] = 'POPULAR'),
     (a[(a.ALPHABETICAL = 1)] = 'ALPHABETICAL');
 let s = 'app-launcher-element',
-    l = 'app-launcher-modal',
-    r = 'app-launcher-entrypoint',
+    r = 'app-launcher-modal',
+    l = 'app-launcher-entrypoint',
     o = 'app-launcher-app-details-more-menu',
     c = 500,
-    d = 670,
-    u = 'min(100vh, '.concat(d, 'px)'),
+    u = 670,
+    d = 'min(100vh, '.concat(u, 'px)'),
     _ = {
         '--custom-app-launcher-width': ''.concat(c, 'px'),
-        '--custom-app-launcher-height': u
+        '--custom-app-launcher-height': d
     };

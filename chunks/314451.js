@@ -7,12 +7,12 @@ n.d(t, {
 var i = n(735250),
     a = n(470079),
     s = n(442837),
-    l = n(481060),
-    r = n(782568),
+    r = n(481060),
+    l = n(782568),
     o = n(31336),
     c = n(906467),
-    d = n(63063),
-    u = n(665149),
+    u = n(63063),
+    d = n(665149),
     _ = n(689938);
 function E() {
     let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
@@ -29,9 +29,9 @@ function E() {
     return (0, i.jsx)('div', {
         onMouseEnter: () => T(!0),
         onMouseLeave: () => T(!1),
-        children: (0, i.jsx)(l.Popout, {
+        children: (0, i.jsx)(r.Popout, {
             shouldShow: t,
-            animation: l.Popout.Animation.NONE,
+            animation: r.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
@@ -40,36 +40,36 @@ function E() {
             renderPopout: () =>
                 (function (e) {
                     let { onClose: t, isDiscordDeveloper: a } = e;
-                    return (0, i.jsx)(l.Menu, {
+                    return (0, i.jsx)(r.Menu, {
                         onSelect: () => {},
                         navId: 'staff-help-popout',
                         variant: 'fixed',
                         onClose: t,
                         'aria-label': _.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-                        children: (0, i.jsxs)(l.MenuGroup, {
+                        children: (0, i.jsxs)(r.MenuGroup, {
                             children: [
-                                (0, i.jsx)(l.MenuItem, {
+                                (0, i.jsx)(r.MenuItem, {
                                     id: 'staff-help-bug-reporter',
                                     label: _.Z.Messages.BUG_REPORT_TITLE,
-                                    icon: l.BugIcon,
+                                    icon: r.BugIcon,
                                     action: () =>
-                                        (0, l.openModalLazy)(async () => {
+                                        (0, r.openModalLazy)(async () => {
                                             let { default: e } = await n.e('83051').then(n.bind(n, 115072));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 }),
                                 a &&
-                                    (0, i.jsx)(l.MenuItem, {
+                                    (0, i.jsx)(r.MenuItem, {
                                         id: 'staff-devtools',
                                         label: 'Toggle DevTools',
-                                        icon: l.StaffBadgeIcon,
+                                        icon: r.StaffBadgeIcon,
                                         action: () => (0, o.SO)()
                                     }),
-                                (0, i.jsx)(l.MenuItem, {
+                                (0, i.jsx)(r.MenuItem, {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
-                                    icon: l.WindowLaunchIcon,
-                                    action: () => (0, r.Z)(d.w)
+                                    icon: r.WindowLaunchIcon,
+                                    action: () => (0, l.Z)(u.w)
                                 })
                             ]
                         })
@@ -80,9 +80,9 @@ function E() {
                 }),
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, i.jsx)(u.JO, {
+                return (0, i.jsx)(d.JO, {
                     ...e,
-                    icon: l.BugIcon,
+                    icon: r.BugIcon,
                     'aria-label': _.Z.Messages.HELP,
                     selected: n
                 });

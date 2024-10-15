@@ -1,18 +1,18 @@
 n.d(t, {
     z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(772848),
     s = n(481060),
-    l = n(976255),
-    r = n(667),
+    r = n(976255),
+    l = n(667),
     o = n(626135),
     c = n(981631);
-function d(e) {
-    let { guildProductListing: t, guildId: d, sourceAnalyticsLocations: u } = e,
+function u(e) {
+    let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: d } = e,
         _ = !1,
         E = (0, a.Z)(),
         I = () => {
@@ -20,16 +20,16 @@ function d(e) {
         };
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('96427'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('40460')]).then(n.bind(n, 578780));
+            let { default: e } = await Promise.all([n.e('96427'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('47691')]).then(n.bind(n, 578780));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
                     applicationId: t.application_id,
                     skuId: t.id,
-                    sourceAnalyticsLocations: u,
+                    sourceAnalyticsLocations: d,
                     guildProductContext: {
                         guildProductListingId: t.id,
-                        guildId: d
+                        guildId: u
                     },
                     loadId: E,
                     onComplete: I
@@ -42,10 +42,10 @@ function d(e) {
                         load_id: E,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
-                        location_stack: Array.isArray(u) ? u : [u]
+                        location_stack: Array.isArray(d) ? d : [d]
                     }),
-                    (0, l.fw)(),
-                    (0, r.p)();
+                    (0, r.fw)(),
+                    (0, l.p)();
             },
             onCloseRequest: c.dG4
         }

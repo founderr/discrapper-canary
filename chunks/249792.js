@@ -16,14 +16,14 @@ var l = n(120356),
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
         f = {},
-        m = {};
-    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (m.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
-    let _ = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+        _ = {};
+    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (_.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
+    let m = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
         g = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((f.backgroundColor = _), (m.backgroundColor = g));
+    l && null == t.icon && ((f.backgroundColor = m), (_.backgroundColor = g));
     let C = (0, o.useTransition)(n, {
         from: f,
-        enter: m,
+        enter: _,
         leave: f,
         config: { duration: 100 },
         onStart: h,

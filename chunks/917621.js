@@ -2,22 +2,22 @@ n(47120), n(653041);
 var i = n(735250),
     a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    r = n(692547),
+    r = n.n(s),
+    l = n(692547),
     o = n(481060),
     c = n(600164),
-    d = n(424678),
-    u = n(184301),
+    u = n(424678),
+    d = n(184301),
     _ = n(237583),
     E = n(598077),
     I = n(63063),
     m = n(153066),
     T = n(51144),
-    N = n(620662),
-    h = n(994339),
-    C = n(503438),
-    p = n(981631),
-    f = n(616922),
+    h = n(620662),
+    N = n(994339),
+    f = n(503438),
+    C = n(981631),
+    p = n(616922),
     g = n(689938),
     A = n(812301);
 function S(e, t, n) {
@@ -33,13 +33,13 @@ function S(e, t, n) {
         e
     );
 }
-class M extends a.PureComponent {
+class R extends a.PureComponent {
     render() {
         let { member: e, className: t, guildId: n } = this.props;
         return (0, i.jsx)(o.Popout, {
             renderPopout: this.renderUserPopout,
             position: 'left',
-            preload: () => (0, u.Z)(e.user.id, e.user.getAvatarURL(n, 80), { guildId: n }),
+            preload: () => (0, d.Z)(e.user.id, e.user.getAvatarURL(n, 80), { guildId: n }),
             children: (a) => {
                 var s;
                 return (0, i.jsx)(o.Tooltip, {
@@ -52,7 +52,7 @@ class M extends a.PureComponent {
                             children: (0, i.jsx)(o.Avatar, {
                                 src: e.user.getAvatarURL(n, 24),
                                 size: o.AvatarSizes.SIZE_24,
-                                className: l()(A.partyAvatar, t),
+                                className: r()(A.partyAvatar, t),
                                 'aria-label': e.user.username
                             })
                         })
@@ -68,17 +68,17 @@ class M extends a.PureComponent {
             });
     }
 }
-class O extends a.PureComponent {
+class x extends a.PureComponent {
     isDeadInvite() {
         let { isPreview: e, message: t, activity: n, applicationId: i } = this.props;
-        return !e && !(null != t && (0, h.Z)(n, t, i));
+        return !e && !(null != t && (0, N.Z)(n, t, i));
     }
     getPartySize() {
         let { activity: e } = this.props;
         return null == e || null == e.party || null == e.party.size || e.party.size.length < 2 ? [-1, -1] : e.party.size;
     }
     getActionableMode() {
-        return [p.mFx.LISTEN, p.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? 'Actionable' : 'NotActionable';
+        return [C.mFx.LISTEN, C.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? 'Actionable' : 'NotActionable';
     }
     isInParty() {
         let { activity: e, myPartyId: t, isPreview: n } = this.props;
@@ -97,51 +97,51 @@ class O extends a.PureComponent {
     }
     canJoin() {
         let { activity: e, isPreview: t, isGameLaunchable: n, isInBrowser: i } = this.props;
-        return !!t || (!(this.isDeadInvite() || !this.isActionType(p.mFx.JOIN) || !(0, N.Z)(e, p.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || i || !n || this.isInParty()) && !0);
+        return !!t || (!(this.isDeadInvite() || !this.isActionType(C.mFx.JOIN) || !(0, h.Z)(e, C.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || i || !n || this.isInParty()) && !0);
     }
     canSendInvite() {
         let { activity: e, isPreview: t } = this.props;
-        return !!t || (!(this.isDeadInvite() || !this.isActionType(p.mFx.JOIN_REQUEST) || !(0, N.Z)(e, p.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0);
+        return !!t || (!(this.isDeadInvite() || !this.isActionType(C.mFx.JOIN_REQUEST) || !(0, h.Z)(e, C.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0);
     }
     canSync() {
         let { activity: e, isPreview: t, isSyncable: n, isInBrowser: i } = this.props;
-        return !!t || (!((!this.isActionType(p.mFx.LISTEN) && !this.isActionType(p.mFx.WATCH)) || this.isDeadInvite() || !(0, N.Z)(e, p.xjy.SYNC) || i || !n || this.isInParty()) && !0);
+        return !!t || (!((!this.isActionType(C.mFx.LISTEN) && !this.isActionType(C.mFx.WATCH)) || this.isDeadInvite() || !(0, h.Z)(e, C.xjy.SYNC) || i || !n || this.isInParty()) && !0);
     }
     getHelpdeskArticleURL() {
         let { partyId: e } = this.props;
-        return null != e && (0, f.Ps)(e) ? p.BhN.SPOTIFY_CONNECTION : p.BhN.RICH_PRESENCE_INTRODUCTION;
+        return null != e && (0, p.Ps)(e) ? C.BhN.SPOTIFY_CONNECTION : C.BhN.RICH_PRESENCE_INTRODUCTION;
     }
     renderHeaderText() {
         let { activityActionType: e, name: t } = this.props;
         switch (e) {
-            case p.mFx.LISTEN:
+            case C.mFx.LISTEN:
                 return g.Z.Messages.INVITE_EMBED_INVITE_TO_LISTEN.format({ name: t });
-            case p.mFx.WATCH:
+            case C.mFx.WATCH:
                 return g.Z.Messages.INVITE_EMBED_INVITE_TO_WATCH.format({ name: t });
-            case p.mFx.JOIN:
+            case C.mFx.JOIN:
                 return g.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN_GROUP;
-            case p.mFx.JOIN_REQUEST:
+            case C.mFx.JOIN_REQUEST:
             default:
                 return g.Z.Messages.INVITE_EMBED_ASK_TO_JOIN;
         }
     }
     renderPartyStatus() {
-        let { activityActionType: e, isGameLaunchable: t, isSyncable: n, isPreview: a, isInBrowser: s, name: l, activity: r } = this.props,
-            [c, u] = this.getPartySize();
+        let { activityActionType: e, isGameLaunchable: t, isSyncable: n, isPreview: a, isInBrowser: s, name: r, activity: l } = this.props,
+            [c, d] = this.getPartySize();
         if (this.isDeadInvite())
             switch (e) {
-                case p.mFx.LISTEN:
+                case C.mFx.LISTEN:
                     return g.Z.Messages.INVITE_EMBED_LISTEN_HAS_ENDED;
-                case p.mFx.WATCH:
+                case C.mFx.WATCH:
                     return g.Z.Messages.INVITE_EMBED_WATCH_HAS_ENDED;
-                case p.mFx.JOIN:
-                case p.mFx.JOIN_REQUEST:
+                case C.mFx.JOIN:
+                case C.mFx.JOIN_REQUEST:
                 default:
                     return g.Z.Messages.INVITE_EMBED_GAME_HAS_ENDED;
             }
-        if (s && !a && e === p.mFx.JOIN) return g.Z.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
-        if (this.isActionType(p.mFx.LISTEN) || this.isActionType(p.mFx.WATCH))
-            return null != r && null != r.details && null != r.state && (0, C.Z)(r)
+        if (s && !a && e === C.mFx.JOIN) return g.Z.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
+        if (this.isActionType(C.mFx.LISTEN) || this.isActionType(C.mFx.WATCH))
+            return null != l && null != l.details && null != l.state && (0, f.Z)(l)
                 ? [
                       (0, i.jsx)(
                           'div',
@@ -150,7 +150,7 @@ class O extends a.PureComponent {
                               children: (0, i.jsx)(o.Anchor, {
                                   className: A.textLink,
                                   onClick: this.handleOpenSpotifyTrack,
-                                  children: r.details
+                                  children: l.details
                               })
                           },
                           'details'
@@ -160,15 +160,15 @@ class O extends a.PureComponent {
                           {
                               className: A.state,
                               children: g.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
-                                  artists: r.state,
+                                  artists: l.state,
                                   artistsHook: (e, t) =>
-                                      null != r.state
+                                      null != l.state
                                           ? (0, i.jsx)(
-                                                d.Z,
+                                                u.Z,
                                                 {
-                                                    artists: r.state,
+                                                    artists: l.state,
                                                     linkClassName: A.textLink,
-                                                    canOpen: null != r.sync_id,
+                                                    canOpen: null != l.sync_id,
                                                     onOpenSpotifyArtist: this.handleOpenSpotifyArtist
                                                 },
                                                 t
@@ -179,28 +179,28 @@ class O extends a.PureComponent {
                           'state'
                       )
                   ]
-                : this.isActionType(p.mFx.LISTEN)
+                : this.isActionType(C.mFx.LISTEN)
                   ? g.Z.Messages.USER_ACTIVITY_LISTEN_ALONG
                   : g.Z.Messages.USER_ACTIVITY_WATCH_ALONG;
-        return this.isActionType(p.mFx.JOIN_REQUEST) ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: u - c })) : this.isInParty() ? g.Z.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: u - c }) : g.Z.Messages.JOIN) : g.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: l });
+        return this.isActionType(C.mFx.JOIN_REQUEST) ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c })) : this.isInParty() ? g.Z.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c }) : g.Z.Messages.JOIN) : g.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: r });
     }
     renderActionButton() {
-        let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: a, partyId: s, activity: l, message: r, renderSpotifyJoinButton: c, renderCustomButton: d } = this.props,
-            u = {
+        let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: a, partyId: s, activity: r, message: l, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
+            d = {
                 className: A.actionButton,
                 size: o.Button.Sizes.SMALL
             },
-            _ = null != d ? d(u) : null;
+            _ = null != u ? u(d) : null;
         return null != _
             ? _
-            : !this.isDeadInvite() && this.isActionType(p.mFx.LISTEN) && null != s && null != r && null != l && (0, f.Ps)(s)
+            : !this.isDeadInvite() && this.isActionType(C.mFx.LISTEN) && null != s && null != l && null != r && (0, p.Ps)(s)
               ? c({
-                    ...u,
-                    activity: l,
-                    user: r.author
+                    ...d,
+                    activity: r,
+                    user: l.author
                 })
               : (0, i.jsx)(o.Button, {
-                    ...u,
+                    ...d,
                     ...(() => {
                         if (!t && e && !this.isDeadInvite())
                             return {
@@ -224,7 +224,7 @@ class O extends a.PureComponent {
                                 disabled: a
                             };
                         return {
-                            children: this.isActionType(p.mFx.JOIN_REQUEST) ? g.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN : g.Z.Messages.JOIN,
+                            children: this.isActionType(C.mFx.JOIN_REQUEST) ? g.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN : g.Z.Messages.JOIN,
                             disabled: !0
                         };
                     })(),
@@ -244,9 +244,9 @@ class O extends a.PureComponent {
     }
     renderParty() {
         let { partyId: e, partyMembers: t, hideParty: n, guildId: a } = this.props,
-            [s, l] = this.getPartySize(),
-            r = this.hasPartySize() || this.isActionType(p.mFx.LISTEN) || this.isActionType(p.mFx.WATCH);
-        if (null == e || this.isDeadInvite() || !r || n) return null;
+            [s, r] = this.getPartySize(),
+            l = this.hasPartySize() || this.isActionType(C.mFx.LISTEN) || this.isActionType(C.mFx.WATCH);
+        if (null == e || this.isDeadInvite() || !l || n) return null;
         let o = [...t],
             c = Math.min(s, 6);
         for (; o.length < c; )
@@ -254,30 +254,30 @@ class O extends a.PureComponent {
                 user: new E.Z({ discriminator: '0005' }),
                 unknownUser: !0
             });
-        let d = Math.min(l, 106);
-        for (; o.length < d; ) o.push(null);
+        let u = Math.min(r, 106);
+        for (; o.length < u; ) o.push(null);
         return (0, i.jsx)(_.Z, {
             guildId: a,
             className: A.partyMembers,
             users: o,
-            max: l > 0 ? Math.min(l, 6) : 6,
+            max: r > 0 ? Math.min(r, 6) : 6,
             renderUser: this.renderUser,
             renderMoreUsers: this.renderMoreUsers
         });
     }
     render() {
         let { className: e, coverImage: t, name: n, activity: a } = this.props,
-            s = this.isActionType(p.mFx.JOIN) || this.isActionType(p.mFx.JOIN_REQUEST),
-            d = this.isDeadInvite(),
-            u = null;
+            s = this.isActionType(C.mFx.JOIN) || this.isActionType(C.mFx.JOIN_REQUEST),
+            u = this.isDeadInvite(),
+            d = null;
         null == t || null == a || s
-            ? !s && d && (u = (0, i.jsx)('div', { className: A.artworkSpotifySessionEnded }))
-            : (u = (0, i.jsx)('img', {
+            ? !s && u && (d = (0, i.jsx)('div', { className: A.artworkSpotifySessionEnded }))
+            : (d = (0, i.jsx)('img', {
                   alt: '',
                   src: t,
                   className: (0, m.l)(A, 'artwork', this.getActionableMode())
               }));
-        let _ = null != a && null != u && null != a.assets && null != a.assets.large_text && '' !== a.assets.large_text && !d && (0, C.Z)(a) ? a.assets.large_text : null,
+        let _ = null != a && null != d && null != a.assets && null != a.assets.large_text && '' !== a.assets.large_text && !u && (0, f.Z)(a) ? a.assets.large_text : null,
             E =
                 null != _
                     ? (0, i.jsx)(o.Tooltip, {
@@ -288,18 +288,18 @@ class O extends a.PureComponent {
                                   onClick: this.handleOpenSpotifyAlbum,
                                   onMouseEnter: t,
                                   onMouseLeave: n,
-                                  children: u
+                                  children: d
                               });
                           }
                       })
-                    : u;
+                    : d;
         return (0, i.jsxs)('div', {
-            className: l()(A.invite, e),
+            className: r()(A.invite, e),
             children: [
                 (0, i.jsx)('div', {
                     className: A.coverImageWrapper,
                     children: (0, i.jsx)('div', {
-                        className: l()((0, m.l)(A, 'coverImage', this.getActionableMode()), null != u ? A.blurred : null),
+                        className: r()((0, m.l)(A, 'coverImage', this.getActionableMode()), null != d ? A.blurred : null),
                         style: { backgroundImage: null != t ? "url('".concat(t, "')") : void 0 }
                     })
                 }),
@@ -327,7 +327,7 @@ class O extends a.PureComponent {
                                             style: { marginRight: 0 },
                                             children: [this.renderActionButton(), this.renderParty()]
                                         }),
-                                        null == u && s
+                                        null == d && s
                                             ? (0, i.jsx)('div', {
                                                   className: A.name,
                                                   children: n
@@ -344,7 +344,7 @@ class O extends a.PureComponent {
                     href: I.Z.getArticleURL(this.getHelpdeskArticleURL()),
                     className: A.helpIcon,
                     children: (0, i.jsx)(o.CircleQuestionIcon, {
-                        color: r.Z.unsafe_rawColors.PRIMARY_300.css,
+                        color: l.Z.unsafe_rawColors.PRIMARY_300.css,
                         size: 'xxs'
                     })
                 })
@@ -385,7 +385,7 @@ class O extends a.PureComponent {
                 let { renderUserPopout: a, guildId: s } = this.props;
                 return null != e
                     ? (0, i.jsx)(
-                          M,
+                          R,
                           {
                               member: e,
                               renderUserPopout: a,
@@ -394,8 +394,8 @@ class O extends a.PureComponent {
                           },
                           n
                       )
-                    : (0, i.jsx)('div', { className: l()(A.partyMemberEmpty, t) }, n);
+                    : (0, i.jsx)('div', { className: r()(A.partyMemberEmpty, t) }, n);
             });
     }
 }
-t.Z = O;
+t.Z = x;

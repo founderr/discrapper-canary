@@ -1,6 +1,6 @@
 n.d(t, {
     CN: function () {
-        return b;
+        return A;
     },
     ZP: function () {
         return O;
@@ -27,8 +27,8 @@ var i,
     h = n(481060),
     p = n(787014),
     f = n(924301),
-    m = n(159300),
-    _ = n(152376),
+    _ = n(159300),
+    m = n(152376),
     g = n(427679),
     C = n(155409),
     I = n(131704),
@@ -37,30 +37,30 @@ var i,
     S = n(496675),
     x = n(914010),
     v = n(281029),
-    T = n(981631),
-    Z = n(689938),
-    A = n(872356);
-function b(e, t, n) {
+    Z = n(981631),
+    T = n(689938),
+    b = n(872356);
+function A(e, t, n) {
     return null != t && !!t && !(0, v.ig)(n, e.type);
 }
 function R(e, t) {
-    return null == t ? A.containerDefault : e > t ? A.containerDragAfter : A.containerDragBefore;
+    return null == t ? b.containerDefault : e > t ? b.containerDragAfter : b.containerDragBefore;
 }
 function M(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([S.Z, x.Z], () => n || x.Z.getGuildId() === T.I_8 || (!S.Z.can(T.Plq.MANAGE_CHANNELS, t) && !S.Z.can(T.Plq.MANAGE_ROLES, t) && !S.Z.can(T.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !S.Z.can(T.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !S.Z.can(T.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
+    if ((0, d.e7)([S.Z, x.Z], () => n || x.Z.getGuildId() === Z.I_8 || (!S.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !S.Z.can(Z.Plq.MANAGE_ROLES, t) && !S.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !S.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !S.Z.can(Z.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
     return (0, s.jsx)(h.Tooltip, {
-        text: Z.Z.Messages.EDIT_CHANNEL,
+        text: T.Z.Messages.EDIT_CHANNEL,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: o, onBlur: c } = e;
             return (0, s.jsx)(h.Clickable, {
-                className: u()(A.iconItem, l ? A.alwaysShown : void 0, r ? A.iconWithChannelInfo : A.iconNoChannelInfo),
+                className: u()(b.iconItem, l ? b.alwaysShown : void 0, r ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                 onClick: a,
                 tabIndex: i,
-                'aria-label': Z.Z.Messages.EDIT_CHANNEL,
+                'aria-label': T.Z.Messages.EDIT_CHANNEL,
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: o,
@@ -68,7 +68,7 @@ function M(e) {
                 children: (0, s.jsx)(h.SettingsIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             });
         }
@@ -78,13 +78,13 @@ function L(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: o = !1 } = e,
         c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
-        _ = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        I = (0, d.e7)([S.Z], () => (0, m.b)(S.Z, c, t, p)),
-        x = (0, d.e7)([S.Z], () => (S.Z.can(T.Plq.CREATE_INSTANT_INVITE, t) ? Z.Z.Messages.CREATE_INSTANT_INVITE : Z.Z.Messages.INVITE_TO_SERVER));
+        m = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
+        I = (0, d.e7)([S.Z], () => (0, _.b)(S.Z, c, t, p)),
+        x = (0, d.e7)([S.Z], () => (S.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER));
     if (l || !I) return null;
     function v() {
         if (null != c) {
-            let e = E.Z.getAllActiveStreams().filter((e) => e.state !== T.jm8.ENDED && e.channelId === t.id);
+            let e = E.Z.getAllActiveStreams().filter((e) => e.state !== Z.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
                 let { default: i } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                 return (n) =>
@@ -93,34 +93,34 @@ function L(e) {
                         guild: c,
                         channel: t,
                         streamUserId: 1 === e.length ? e[0].ownerId : null,
-                        source: T.t4x.GUILD_CHANNELS,
-                        guildScheduledEvent: _
+                        source: Z.t4x.GUILD_CHANNELS,
+                        guildScheduledEvent: m
                     });
             });
         }
     }
-    let b = (0, s.jsx)(h.GroupPlusIcon, {
+    let A = (0, s.jsx)(h.GroupPlusIcon, {
         size: 'xs',
-        className: A.actionIcon,
+        className: b.actionIcon,
         'aria-hidden': !0
     });
     return (
         i &&
-            (b = (0, s.jsx)(C.Z, {
+            (A = (0, s.jsx)(C.Z, {
                 tutorialId: 'instant-invite',
                 position: 'left',
-                children: (0, s.jsx)('div', { children: b })
+                children: (0, s.jsx)('div', { children: A })
             })),
         (0, s.jsx)(h.Tooltip, {
             text: x,
             children: (e) =>
                 (0, s.jsx)(h.Clickable, {
-                    className: u()(A.iconItem, a ? A.alwaysShown : void 0, o ? A.iconWithChannelInfo : A.iconNoChannelInfo),
+                    className: u()(b.iconItem, a ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                     ...e,
                     onClick: v,
                     tabIndex: r,
                     'aria-label': x,
-                    children: b
+                    children: A
                 })
         })
     );
@@ -128,20 +128,20 @@ function L(e) {
 function P(e) {
     let { channel: t } = e,
         n = () => {
-            (0, _._U)(t.guild_id, t.id);
+            (0, m._U)(t.guild_id, t.id);
         };
     return (0, s.jsx)(h.Tooltip, {
-        text: Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
+        text: T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: A.iconItem,
+                className: b.iconItem,
                 ...e,
                 onClick: n,
-                'aria-label': Z.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
+                'aria-label': T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
                 children: (0, s.jsx)(h.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             })
     });
@@ -149,20 +149,20 @@ function P(e) {
 function y(e) {
     let { channel: t } = e,
         n = () => {
-            (0, _.dM)(t.guild_id, t.id, !0, { section: T.jXE.CHANNEL_LIST });
+            (0, m.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
         };
     return (0, s.jsx)(h.Tooltip, {
-        text: Z.Z.Messages.ADD_FAVORITE,
+        text: T.Z.Messages.ADD_FAVORITE,
         children: (e) =>
             (0, s.jsx)(h.Clickable, {
-                className: A.iconItem,
+                className: b.iconItem,
                 ...e,
                 onClick: n,
-                'aria-label': Z.Z.Messages.ADD_FAVORITE,
+                'aria-label': T.Z.Messages.ADD_FAVORITE,
                 children: (0, s.jsx)(h.CheckmarkLargeIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.actionIcon
+                    className: b.actionIcon
                 })
             })
     });
@@ -186,7 +186,7 @@ class O extends (a = o.PureComponent) {
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
-        return b(e, t, n);
+        return A(e, t, n);
     }
 }
 (r = { isDefaultChannel: !1 }),

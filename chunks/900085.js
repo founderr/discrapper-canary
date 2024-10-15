@@ -17,8 +17,8 @@ var i,
     h = n(134616),
     p = n(714338),
     f = n(212819),
-    m = n(14429),
-    _ = n(951844),
+    _ = n(14429),
+    m = n(951844),
     g = n(313201),
     C = n(592125),
     I = n(888369),
@@ -27,10 +27,10 @@ var i,
     S = n(944486),
     x = n(938475),
     v = n(585483),
-    T = n(63063),
-    Z = n(51596),
-    A = n(823385),
-    b = n(415795),
+    Z = n(63063),
+    T = n(51596),
+    b = n(823385),
+    A = n(415795),
     R = n(670512),
     M = n(981631),
     L = n(689938),
@@ -60,7 +60,7 @@ let O = 10,
                 (0, l.jsx)('div', {
                     className: P.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: L.Z.Messages.QUICKSWITCHER_EMPTY_CTA
                     })
                 })
@@ -69,7 +69,7 @@ let O = 10,
 class D extends (i = r.Component) {
     render() {
         let e = E.Z.getGuild(this.props.channel.guild_id);
-        return (0, l.jsx)(b.$W, {
+        return (0, l.jsx)(A.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
                 className: P.miscContainer,
@@ -87,25 +87,25 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    G = c.ZP.connectStores([x.ZP], (e) => {
+    U = c.ZP.connectStores([x.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    U = c.ZP.connectStores([I.default], (e) => {
+    G = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
         return { unread: I.default.hasUnread(t.id) };
-    })(b.ic),
+    })(A.ic),
     k = c.ZP.connectStores([N.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: N.ZP.getMentionCount(t.id) };
-    })(b.PZ),
+    })(A.PZ),
     B = c.ZP.connectStores([C.Z, N.ZP], (e) => {
         let { user: t } = e,
             n = C.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? N.ZP.getMentionCount(n) : 0 };
-    })(b.n5);
-function V(e, t, n) {
+    })(A.n5);
+function H(e, t, n) {
     return (0, l.jsx)(
         u.Tooltip,
         {
@@ -120,7 +120,7 @@ function V(e, t, n) {
         e
     );
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -143,10 +143,10 @@ class H extends r.PureComponent {
                   });
     }
     close() {
-        (0, Z.Cp)();
+        (0, T.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, Z.yC)(e);
+        this.setState({ query: e }), (0, T.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -203,15 +203,15 @@ class H extends r.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, l.jsx)(_.Z, {
+        return (0, l.jsx)(m.Z, {
             className: s()(P.protip, { [P.hasContent]: this.state.query.length > 0 }),
-            type: _.Z.Types.INLINE,
+            type: m.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
-                userSymbolHook: (e, t) => V(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-                textChannelSymbolHook: (e, t) => V(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-                voiceChannelSymbolHook: (e, t) => V(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-                guildSymbolHook: (e, t) => V(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-                helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
+                userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+                textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+                voiceChannelSymbolHook: (e, t) => H(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+                guildSymbolHook: (e, t) => H(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+                helpdeskArticle: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -252,10 +252,10 @@ class H extends r.PureComponent {
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
             y(this, 'focusResult', (e) => {
-                if (!this.state.mouseFocusDisabled) (0, Z.tF)(this.props.results.indexOf(e));
+                if (!this.state.mouseFocusDisabled) (0, T.tF)(this.props.results.indexOf(e));
             }),
             y(this, 'selectResult', (e) => {
-                (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
+                (0, T.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             y(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -267,7 +267,7 @@ class H extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     guild: t.record,
-                                    onSelect: Z.Cp,
+                                    onSelect: T.Cp,
                                     hideSettings: !0
                                 });
                         });
@@ -288,7 +288,7 @@ class H extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case M.d4z.GUILD_VOICE:
@@ -300,7 +300,7 @@ class H extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case M.d4z.ANNOUNCEMENT_THREAD:
@@ -312,7 +312,7 @@ class H extends r.PureComponent {
                                         (0, l.jsx)(e, {
                                             ...t,
                                             channel: i,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case M.d4z.GUILD_STORE:
@@ -323,7 +323,7 @@ class H extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case M.d4z.GUILD_DIRECTORY:
@@ -345,7 +345,7 @@ class H extends r.PureComponent {
                                     ...n,
                                     channel: t.record,
                                     selected: S.Z.getChannelId() === t.record.id,
-                                    onSelect: Z.Cp
+                                    onSelect: T.Cp
                                 });
                         });
                     case f.h8.USER:
@@ -355,7 +355,7 @@ class H extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     user: t.record,
-                                    onSelect: Z.Cp
+                                    onSelect: T.Cp
                                 });
                         });
                 }
@@ -368,10 +368,10 @@ class H extends r.PureComponent {
                     { selectedIndex: r } = this.props;
                 switch (l) {
                     case 'escape':
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, Z.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, T.Cp)();
                         return;
                     case 'k':
-                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, Z.Cp)());
+                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, T.Cp)());
                         return;
                     case 'enter': {
                         if (-1 === r) return;
@@ -397,16 +397,16 @@ class H extends r.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, Z.tF)(r);
+                e.preventDefault(), (0, T.tF)(r);
             }),
             y(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
-                    { showScores: r } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
+                    { showScores: r } = _.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case f.h8.HEADER:
-                        return (0, l.jsx)(b.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
+                        return (0, l.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
                     case f.h8.TEXT_CHANNEL:
                         return (0, l.jsx)(
                             w,
@@ -424,7 +424,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.VOICE_CHANNEL:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -439,7 +439,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.GUILD:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -485,7 +485,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.APPLICATION:
                         return (0, l.jsx)(
-                            b.Mx,
+                            A.Mx,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -498,7 +498,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.LINK:
                         return (0, l.jsx)(
-                            b.rU,
+                            A.rU,
                             {
                                 focused: i >= 0 && t === i,
                                 onClick: () => this.selectResult(n),
@@ -513,7 +513,7 @@ class H extends r.PureComponent {
                         );
                     case f.h8.IN_APP_NAVIGATION:
                         return (0, l.jsx)(
-                            b.s8,
+                            A.s8,
                             {
                                 focused: i >= 0 && t === i,
                                 onClick: () => this.selectResult(n),
@@ -533,8 +533,8 @@ class H extends r.PureComponent {
     }
 }
 function F(e) {
-    let t = (0, c.cj)([A.Z], () => A.Z.getProps());
-    return (0, l.jsx)(H, {
+    let t = (0, c.cj)([b.Z], () => b.Z.getProps());
+    return (0, l.jsx)(V, {
         ...t,
         ...e
     });

@@ -7,12 +7,12 @@ var i = n(735250);
 n(470079);
 var a = n(120356),
     s = n.n(a),
-    l = n(481060),
-    r = n(385499),
+    r = n(481060),
+    l = n(385499),
     o = n(739566),
     c = n(464891),
-    d = n(83561),
-    u = n(834129),
+    u = n(83561),
+    d = n(834129),
     _ = n(981631),
     E = n(674563),
     I = n(689938),
@@ -20,12 +20,12 @@ var a = n(120356),
 function T(e) {
     let { message: t, compact: n, usernameHook: a } = e,
         T = (0, o.ZP)(t),
-        N = a(T),
+        h = a(T),
         {
-            avatarSrc: h,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: p }
-        } = (0, d.m)(!0),
-        f =
+            avatarSrc: N,
+            eventHandlers: { onMouseEnter: f, onMouseLeave: C }
+        } = (0, u.m)(!0),
+        p =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
                       hour: 'numeric',
@@ -36,11 +36,11 @@ function T(e) {
                   })
                 : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: C,
-        onMouseLeave: p,
-        children: (0, i.jsx)(u.Z, {
+        onMouseEnter: f,
+        onMouseLeave: C,
+        children: (0, i.jsx)(d.Z, {
             className: s()(m.mainContainer, { [m.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(d.S, { src: h }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),
             iconContainerClassName: m.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
@@ -53,14 +53,14 @@ function T(e) {
                         username: (0, i.jsxs)('div', {
                             className: m.spanCorrection,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: m.username,
                                     children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
-                                (0, i.jsx)(r.Z, {
+                                (0, i.jsx)(l.Z, {
                                     type: E.Hb.SYSTEM_DM,
                                     className: m.systemTag
                                 })
@@ -75,12 +75,12 @@ function T(e) {
                             t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
                                       username: T.nick,
-                                      usernameHook: N,
-                                      time: f
+                                      usernameHook: h,
+                                      time: p
                                   })
                                 : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
                                       username: T.nick,
-                                      usernameHook: N
+                                      usernameHook: h
                                   })
                     })
                 ]

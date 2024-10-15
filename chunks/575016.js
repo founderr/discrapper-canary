@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     fC: function () {
-        return N;
+        return h;
     },
     gr: function () {
         return T;
@@ -15,12 +15,12 @@ n.d(t, {
 var i,
     a,
     s = n(470079),
-    l = n(913527),
-    r = n.n(l),
+    r = n(913527),
+    l = n.n(r),
     o = n(442837),
     c = n(493683),
-    d = n(336197),
-    u = n(131704),
+    u = n(336197),
+    d = n(131704),
     _ = n(592125),
     E = n(981631),
     I = n(689938);
@@ -33,14 +33,14 @@ function m(e) {
         };
     let a = 0 === i ? I.Z.Messages.MESSAGE_REMINDERS_REMINDER_DUE_IN : I.Z.Messages.MESSAGE_REMINDERS_DUE_IN,
         s = 0 === i ? I.Z.Messages.MESSAGE_REMINDERS_REMINDER_OVERDUE : I.Z.Messages.MESSAGE_REMINDERS_OVERDUE,
-        l = n > t;
+        r = n > t;
     return {
-        dueInText: (l ? s : a).format({
-            duration: r()
+        dueInText: (r ? s : a).format({
+            duration: l()
                 .duration(t.getTime() - n.getTime(), 'millisecond')
                 .humanize()
         }),
-        isOverdue: l
+        isOverdue: r
     };
 }
 function T(e) {
@@ -50,7 +50,7 @@ function T(e) {
             null != t
                 ? t
                 : null != e.message
-                  ? new u.nl({
+                  ? new d.nl({
                         id: e.saveData.channelId,
                         guild_id: e.saveData.guildId,
                         type: E.d4z.UNKNOWN,
@@ -60,13 +60,13 @@ function T(e) {
         [t, e]
     );
 }
-async function N(e, t) {
+async function h(e, t) {
     if ((null == t ? void 0 : t.type) === E.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
             let t = await c.Z.fetchChannel(e.saveData.channelId);
             if (null == t.recipients || t.recipients.length > 1) return;
             await c.Z.ensurePrivateChannel(t.recipients.map((e) => e.id));
         } catch (e) {}
-    (0, d.Z)(E.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId));
+    (0, u.Z)(E.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId));
 }
 ((i = a || (a = {}))[(i.LONG = 0)] = 'LONG'), (i[(i.SHORT = 1)] = 'SHORT');

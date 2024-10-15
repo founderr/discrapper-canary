@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(390547),
@@ -9,13 +9,13 @@ var i = n(735250);
 n(470079);
 var a = n(392711),
     s = n.n(a),
-    l = n(661824),
-    r = n(289481),
+    r = n(661824),
+    l = n(289481),
     o = n(809780),
     c = n(689938),
-    d = n(258360);
-function u(e, t, n) {
-    let { markChannelRead: a, markGuildRead: u, deleteChannel: _, toggle: E, getNumUnreadChannels: I } = t,
+    u = n(258360);
+function d(e, t, n) {
+    let { markChannelRead: a, markGuildRead: d, deleteChannel: _, toggle: E, getNumUnreadChannels: I } = t,
         m = null;
     return s().flatMap(e, (e) => {
         let t = e.sortOrder !== m;
@@ -26,10 +26,10 @@ function u(e, t, n) {
                 (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel
                     ? s.push(
                           (0, i.jsx)(
-                              l.Z,
+                              r.Z,
                               {
-                                  className: d.divider,
-                                  contentClassName: d.dividerContent,
+                                  className: u.divider,
+                                  contentClassName: u.dividerContent,
                                   children: c.Z.Messages.UNREADS_OLD_CHANNELS_DIVIDER
                               },
                               'old-divider'
@@ -39,10 +39,10 @@ function u(e, t, n) {
                       e.sortOrder === o.As.NoNotifications &&
                       s.push(
                           (0, i.jsx)(
-                              l.Z,
+                              r.Z,
                               {
-                                  className: d.divider,
-                                  contentClassName: d.dividerContent,
+                                  className: u.divider,
+                                  contentClassName: u.dividerContent,
                                   children: c.Z.Messages.UNREADS_NO_NOTIFICATIONS_DIVIDER
                               },
                               'disabled-divider'
@@ -50,11 +50,11 @@ function u(e, t, n) {
                       )),
             s.push(
                 (0, i.jsx)(
-                    r.Z,
+                    l.Z,
                     {
                         channel: e,
                         markChannelRead: a,
-                        markGuildRead: u,
+                        markGuildRead: d,
                         toggle: E,
                         deleteChannel: _,
                         onJump: n,

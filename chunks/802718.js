@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(662146),
     p = n(678513),
     f = n(981631),
-    m = n(689938),
-    _ = n(293992);
+    _ = n(689938),
+    m = n(293992);
 function g(e) {
     let { target: t } = e,
         s = (0, r.Ie)('fakedoor'),
@@ -45,10 +45,10 @@ function g(e) {
         ),
         C = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
         I = (0, i.jsxs)('div', {
-            className: _.tooltipContainer,
+            className: m.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: _.tooltipBackground,
+                    className: m.tooltipBackground,
                     style: { background: C }
                 }),
                 (0, i.jsx)(a.Heading, {
@@ -57,7 +57,7 @@ function g(e) {
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: m.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
+                    children: _.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
                 })
             ]
         }),
@@ -68,8 +68,8 @@ function g(e) {
                 theme: f.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: I,
-                    tooltipClass: _.tooltip,
-                    tooltipContentClass: _.tooltipContent,
+                    tooltipClass: m.tooltip,
+                    tooltipContentClass: m.tooltipContent,
                     children: (0, i.jsx)(a.ThemeContextProvider, {
                         theme: E,
                         children: (0, i.jsx)(a.BlobMask, {

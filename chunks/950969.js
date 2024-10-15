@@ -13,7 +13,7 @@ function f(e) {
     let t = u.Z.getChannel(e);
     return null != t && null != t.getGuildId() && !(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, o.d)(t);
 }
-function m(e) {
+function _(e) {
     let t = u.Z.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
@@ -30,7 +30,7 @@ t.Z = l.forwardRef(function (e, t) {
         ref: t,
         ...c,
         isUnread: f,
-        isMentioned: m,
+        isMentioned: _,
         items: u,
         animate: d
     });

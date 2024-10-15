@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(481060),
-    l = n(626135),
-    r = n(288552),
+    r = n(626135),
+    l = n(288552),
     o = n(981631),
     c = n(689938),
-    d = n(811304);
-function u(e) {
+    u = n(811304);
+function d(e) {
     let { type: t, onClick: n } = e,
-        [u, E] = a.useState(!1),
+        [d, E] = a.useState(!1),
         I = () => {
             n(),
-                l.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
+                r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0
                 });
@@ -27,14 +27,14 @@ function u(e) {
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            u
+            d
                 ? (0, i.jsx)(_, {
                       confirm: I,
                       cancel: () => E(!1)
                   })
                 : null,
             'bottom-floating' === t
-                ? (0, i.jsx)(r.a, {
+                ? (0, i.jsx)(l.a, {
                       text: c.Z.Messages.MARK_ALL_AS_READ,
                       icon: s.DoubleCheckmarkIcon,
                       onClick: m
@@ -46,7 +46,7 @@ function u(e) {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                      className: d.controlButton,
+                      className: u.controlButton,
                       onClick: m
                   })
         ]

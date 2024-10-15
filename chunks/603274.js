@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -19,8 +19,8 @@ var l = n(120356),
     h = n(565799),
     p = n(501655),
     f = n(199902),
-    m = n(592125),
-    _ = n(594174),
+    _ = n(592125),
+    m = n(594174),
     g = n(938475),
     C = n(823379),
     I = n(709054),
@@ -29,7 +29,7 @@ var l = n(120356),
     S = n(689938),
     x = n(516126),
     v = n(64056);
-function T(e, t) {
+function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -47,12 +47,12 @@ function T(e, t) {
               ]
           });
 }
-function Z() {
+function T() {
     var e, t;
-    let n = (0, o.Wu)([E.Z, m.Z], () =>
+    let n = (0, o.Wu)([E.Z, _.Z], () =>
             I.default
                 .keys(E.Z.getFavoriteChannels())
-                .map((e) => m.Z.getChannel(e))
+                .map((e) => _.Z.getChannel(e))
                 .filter(C.lm)
         ),
         l = n.map((e) => e.id),
@@ -79,12 +79,12 @@ function Z() {
                     })
             )
         ),
-        Z = (0, o.e7)([h.Z], () => {
+        T = (0, o.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
         }),
-        A = (0, o.Wu)(
+        b = (0, o.Wu)(
             [f.Z],
             () =>
                 f.Z.getAllApplicationStreams()
@@ -92,7 +92,7 @@ function Z() {
                     .map((e) => e.ownerId),
             [l]
         ),
-        b = (0, o.Wu)(
+        A = (0, o.Wu)(
             [u.ZP],
             () => {
                 let e = u.ZP.getEmbeddedActivitiesByChannel(),
@@ -105,15 +105,15 @@ function Z() {
             },
             [l]
         ),
-        R = (0, o.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
-        M = (0, o.Wu)([_.default], () => A.map((e) => _.default.getUser(e)), [A]),
-        L = T(
+        R = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        M = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
+        L = Z(
             c.VoiceNormalIcon,
-            S.filter((e) => !A.includes(e.id) && !b.includes(e.id))
+            S.filter((e) => !b.includes(e.id) && !A.includes(e.id))
         );
     let P =
             ((e = v),
-            (t = Z),
+            (t = T),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,16 +146,16 @@ function Z() {
                           })
                       ]
                   })),
-        y = T(
+        y = Z(
             c.ScreenArrowIcon,
-            M.filter((e) => null != e && !b.includes(e.id))
+            M.filter((e) => null != e && !A.includes(e.id))
         ),
-        O = T(c.ActivitiesIcon, R);
+        O = Z(c.ActivitiesIcon, R);
     return (0, i.jsxs)(i.Fragment, {
         children: [P, L, y, O]
     });
 }
-function A() {
+function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -165,17 +165,17 @@ function A() {
                     children: S.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),
-            (0, i.jsx)(Z, {})
+            (0, i.jsx)(T, {})
         ]
     });
 }
-function b(e) {
+function A(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e;
     return (0, i.jsx)(c.Tooltip, {
         hideOnClick: !0,
         spacing: 20,
         position: 'right',
-        text: (0, i.jsx)(A, {}),
+        text: (0, i.jsx)(b, {}),
         'aria-label': t,
         tooltipClassName: v.listItemTooltip,
         onTooltipShow: n,

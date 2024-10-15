@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 });
 var s = n(735250);
@@ -25,26 +25,26 @@ let E = (e) => {
             return !1;
     }
 };
-function p(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: p = !1 } = e;
+function g(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
     if (null == t) return null;
-    let g = null != t.guild ? new o.ZP(t.guild) : null,
-        f = null != t.channel ? (0, a.jD)(t.channel) : null,
-        m = null != t.target_application ? new i.Z(t.target_application) : null,
-        I = p || null == t.inviter ? null : new l.Z(t.inviter),
-        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != g && g.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
+    let p = null != t.guild ? new o.ZP(t.guild) : null,
+        m = null != t.channel ? (0, a.jD)(t.channel) : null,
+        f = null != t.target_application ? new i.Z(t.target_application) : null,
+        I = g || null == t.inviter ? null : new l.Z(t.inviter),
+        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         T = E(t),
-        A = {
+        x = {
             invite: t,
             user: I,
-            guild: g,
-            channel: f,
-            application: m
+            guild: p,
+            channel: m,
+            application: f
         };
     return (0, c.JI)(t)
         ? (0, s.jsx)(u.Z, {
               invite: t,
-              channel: f,
+              channel: m,
               isSubmitting: T,
               onAcceptInvite: n
           })
@@ -52,21 +52,21 @@ function p(e) {
               className: h.container,
               children: [
                   (0, s.jsx)(c.GB, {
-                      application: m,
-                      guild: g,
+                      application: f,
+                      guild: p,
                       user: N || (0, c.X7)(t) ? I : null
                   }),
                   (0, c.X7)(t)
                       ? null
                       : (0, s.jsx)(c.jq, {
-                            ...A,
+                            ...x,
                             showBigUserIcon: N
                         }),
                   (0, s.jsx)(c.UM, {
-                      ...A,
+                      ...x,
                       showBigUserIcon: N
                   }),
-                  (0, s.jsx)(c.V6, { ...A }),
+                  (0, s.jsx)(c.V6, { ...x }),
                   (0, s.jsx)(r.Button, {
                       onClick: n,
                       submitting: T,

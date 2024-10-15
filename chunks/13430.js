@@ -14,12 +14,12 @@ let h = l()().localeData().months(),
         value: e + 1,
         label: ''.concat(e + 1)
     })),
-    p = Array.from(Array(12).keys()).map((e) => ({
+    g = Array.from(Array(12).keys()).map((e) => ({
         value: e + 1,
         label: h[e]
     })),
-    g = /[a-zA-Z0-9]/;
-function f(e) {
+    p = /[a-zA-Z0-9]/;
+function m(e) {
     let { options: t, selectOption: n, children: i } = e,
         [a, o] = r.useState('');
     r.useEffect(() => {
@@ -30,7 +30,7 @@ function f(e) {
     }, [a, o]);
     let l = r.useCallback(
         (e) => {
-            if (g.test(e.key)) {
+            if (p.test(e.key)) {
                 let s = ''.concat(a).concat(e.key.toLowerCase()),
                     r = t.find((e) => e.label.toLowerCase().startsWith(s));
                 null != r && n(r.value), o(s);
@@ -43,7 +43,7 @@ function f(e) {
         children: i
     });
 }
-function m() {
+function f() {
     let e = l()().localeData().longDateFormat('L'),
         t = e.indexOf('D'),
         n = e.indexOf('M'),
@@ -67,14 +67,14 @@ function m() {
     );
 }
 let I = r.forwardRef(function (e, t) {
-    let { value: n, wrapperClassName: i, onChange: o, onPopulated: h, error: g, autoFocus: I, required: N } = e,
+    let { value: n, wrapperClassName: i, onChange: o, onPopulated: h, error: p, autoFocus: I, required: N } = e,
         {
             day: T,
-            setDay: A,
-            month: x,
+            setDay: x,
+            month: A,
             setMonth: C,
             year: v,
-            setYear: S
+            setYear: Z
         } = (function (e) {
             let t = null,
                 n = null,
@@ -92,12 +92,12 @@ let I = r.forwardRef(function (e, t) {
                 setYear: u
             };
         })(n),
-        Z = r.useMemo(() => (null != T && null != x && null != v ? l()(''.concat(T, '/').concat(x, '/').concat(v), 'DD/MM/YYYY') : null), [T, x, v]);
+        R = r.useMemo(() => (null != T && null != A && null != v ? l()(''.concat(T, '/').concat(A, '/').concat(v), 'DD/MM/YYYY') : null), [T, A, v]);
     r.useEffect(() => {
-        o((null == Z ? void 0 : Z.isValid()) ? Z : null);
-    }, [Z, o]);
-    let R = g;
-    null != Z && !Z.isValid() && (R = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
+        o((null == R ? void 0 : R.isValid()) ? R : null);
+    }, [R, o]);
+    let S = p;
+    null != R && !R.isValid() && (S = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
     let O = (function () {
             let e = new Date().getFullYear(),
                 t = r.useRef(
@@ -117,23 +117,23 @@ let I = r.forwardRef(function (e, t) {
             );
         })(),
         [b, D] = r.useState(I ? 0 : -1),
-        M = r.useRef(null),
         L = r.useRef(null),
+        M = r.useRef(null),
         P = r.useRef(null),
-        j = r.useMemo(m, []),
+        j = r.useMemo(f, []),
         y = r.useCallback(() => {
             var e, t, n, s;
             switch (null === (e = j[b]) || void 0 === e ? void 0 : e.type) {
                 case 'day':
-                    null === (t = M.current) || void 0 === t || t.focus();
+                    null === (t = L.current) || void 0 === t || t.focus();
                     break;
                 case 'month':
-                    null === (n = L.current) || void 0 === n || n.focus();
+                    null === (n = M.current) || void 0 === n || n.focus();
                     break;
                 case 'year':
                     null === (s = P.current) || void 0 === s || s.focus();
             }
-        }, [b, M, L, P, j]);
+        }, [b, L, M, P, j]);
     r.useEffect(() => {
         setTimeout(y, 500);
     }, []),
@@ -151,11 +151,11 @@ let I = r.forwardRef(function (e, t) {
             case 'day':
                 G.push({
                     key: 'day',
-                    input: (0, s.jsx)(f, {
+                    input: (0, s.jsx)(m, {
                         options: E,
-                        selectOption: A,
+                        selectOption: x,
                         children: (0, s.jsx)(u.Z, {
-                            ref: M,
+                            ref: L,
                             className: _.__invalid_inputDay,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_DAY,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -167,7 +167,7 @@ let I = r.forwardRef(function (e, t) {
                             value: T,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                A(n), D(e + 1);
+                                x(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -177,11 +177,11 @@ let I = r.forwardRef(function (e, t) {
             case 'month':
                 G.push({
                     key: 'month',
-                    input: (0, s.jsx)(f, {
-                        options: p,
+                    input: (0, s.jsx)(m, {
+                        options: g,
                         selectOption: C,
                         children: (0, s.jsx)(u.Z, {
-                            ref: L,
+                            ref: M,
                             className: _.__invalid_inputMonth,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_MONTH,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -189,8 +189,8 @@ let I = r.forwardRef(function (e, t) {
                                 'aria-hidden': !0,
                                 children: d.Z.Messages.AGE_GATE_DOB_MONTH
                             }),
-                            options: p,
-                            value: x,
+                            options: g,
+                            value: A,
                             onChange: (t) => {
                                 let { value: n } = t;
                                 C(n), D(e + 1);
@@ -203,9 +203,9 @@ let I = r.forwardRef(function (e, t) {
             case 'year':
                 G.push({
                     key: 'year',
-                    input: (0, s.jsx)(f, {
+                    input: (0, s.jsx)(m, {
                         options: O,
-                        selectOption: S,
+                        selectOption: Z,
                         children: (0, s.jsx)(u.Z, {
                             ref: P,
                             className: _.__invalid_inputYear,
@@ -219,7 +219,7 @@ let I = r.forwardRef(function (e, t) {
                             value: v,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                S(n), D(e + 1);
+                                Z(n), D(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -233,7 +233,7 @@ let I = r.forwardRef(function (e, t) {
             (0, s.jsx)(c.FormTitle, {
                 tag: 'legend',
                 required: N,
-                error: R,
+                error: S,
                 children: d.Z.Messages.AGE_GATE_DATE_OF_BIRTH
             }),
             (0, s.jsx)('div', {

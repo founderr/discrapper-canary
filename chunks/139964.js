@@ -122,7 +122,7 @@ function N() {
 }
 function A(e) {
     let { guild: a } = e,
-        { leaderboardsDisabled: s, toggleGuildLeaderboardsDisabled: t } = (0, u.Oz)(a.id);
+        { leaderboardsDisabled: s, toggleGuildLeaderboardsDisabled: t } = (0, u.O)(a.id);
     return (0, n.jsxs)('div', {
         className: g.row,
         children: [

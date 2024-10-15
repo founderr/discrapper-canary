@@ -1,144 +1,144 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return R;
+        return L;
     }
 }),
-    n(47120),
-    n(724458),
-    n(653041);
-var r = n(735250),
-    i = n(470079),
-    o = n(658722),
-    u = n.n(o),
-    l = n(392711),
-    s = n.n(l),
-    a = n(149765),
-    c = n(442837),
-    d = n(481060),
-    _ = n(271383),
-    E = n(430824),
-    f = n(594174),
-    I = n(700785),
-    S = n(709054),
-    T = n(962086),
-    C = n(160404),
-    p = n(225675),
-    N = n(981631),
-    O = n(689938),
-    g = n(679537);
+    t(47120),
+    t(724458),
+    t(653041);
+var i = t(735250),
+    r = t(470079),
+    l = t(658722),
+    o = t.n(l),
+    u = t(392711),
+    s = t.n(u),
+    a = t(149765),
+    c = t(442837),
+    d = t(481060),
+    _ = t(271383),
+    E = t(430824),
+    f = t(594174),
+    I = t(700785),
+    S = t(709054),
+    T = t(962086),
+    C = t(160404),
+    p = t(225675),
+    N = t(981631),
+    A = t(689938),
+    g = t(679537);
 function m(e) {
-    var t;
-    return (0, r.jsx)('span', {
-        style: { color: null !== (t = e.colorString) && void 0 !== t ? t : 'currentColor' },
+    var n;
+    return (0, i.jsx)('span', {
+        style: { color: null !== (n = e.colorString) && void 0 !== n ? n : 'currentColor' },
         children: e.name
     });
 }
-function R(e) {
-    let { guildId: t } = e,
-        n = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        o = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
-        l = (0, c.e7)([E.Z], () => E.Z.getRoles(t)),
-        { impersonateType: R, viewingRoles: h } = (0, c.cj)([C.Z], () => ({
-            impersonateType: C.Z.getImpersonateType(t),
-            viewingRoles: C.Z.getViewingRoles(t)
+function L(e) {
+    let { guildId: n } = e,
+        t = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+        l = (0, c.e7)([E.Z], () => E.Z.getGuild(n)),
+        u = (0, c.e7)([E.Z], () => E.Z.getRoles(n)),
+        { impersonateType: L, viewingRoles: O } = (0, c.cj)([C.Z], () => ({
+            impersonateType: C.Z.getImpersonateType(n),
+            viewingRoles: C.Z.getViewingRoles(n)
         })),
-        A = R === p.z.SERVER_SHOP,
-        M = (0, c.e7)([_.ZP], () => (null != n ? _.ZP.getTrueMember(t, n.id) : null)),
-        [L, P] = (0, d.useMultiSelect)(null == h ? [] : S.default.keys(h)),
-        D = i.useRef(o);
-    i.useEffect(() => {
+        R = L === p.z.SERVER_SHOP,
+        h = (0, c.e7)([_.ZP], () => (null != t ? _.ZP.getTrueMember(n, t.id) : null)),
+        [v, M] = (0, d.useMultiSelect)(null == O ? [] : S.default.keys(O)),
+        D = r.useRef(l);
+    r.useEffect(() => {
         let e = {},
-            t = D.current;
-        if (null != t && null != R) {
-            for (let t of L) {
-                let n = l[t];
-                null != n && (e[t] = n);
+            n = D.current;
+        if (null != n && null != L) {
+            for (let n of v) {
+                let t = u[n];
+                null != t && (e[n] = t);
             }
-            (0, T.Zm)(t.id, {
-                type: R,
+            (0, T.Zm)(n.id, {
+                type: L,
                 roles: e
             });
         }
-    }, [L, R, l]);
+    }, [v, L, u]);
     let U =
-            null != o && null != n && null != M
-                ? s()(l)
-                      .filter((e) => -1 !== M.roles.indexOf(e.id))
+            null != l && null != t && null != h
+                ? s()(u)
+                      .filter((e) => -1 !== h.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
                       .first()
                 : void 0,
-        v = i.useMemo(
+        Z = r.useMemo(
             () =>
-                null != o && null != n
-                    ? Object.values(l)
-                          .filter((e) => e.id !== o.id)
+                null != l && null != t
+                    ? Object.values(u)
+                          .filter((e) => e.id !== l.id)
                           .filter((e) => {
-                              var t;
-                              return !A || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
+                              var n;
+                              return !R || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == U ? void 0 : U.id) === e.id || I.r6(o, n.id, U, e))
+                          .filter((e) => (null == U ? void 0 : U.id) === e.id || I.r6(l, t.id, U, e))
                     : [],
-            [o, n, A, U, l]
+            [l, t, R, U, u]
         );
-    if (null == n || null == o || null == M) return null;
-    let b = {};
-    return (M.roles.forEach((e) => {
-        let t = l[e];
-        null != t && (b[t.id] = t);
+    if (null == t || null == l || null == h) return null;
+    let P = {};
+    return (h.roles.forEach((e) => {
+        let n = u[e];
+        null != n && (P[n.id] = n);
     }),
     a.e$(
         I.I0({
-            forceRoles: b,
-            context: o
+            forceRoles: P,
+            context: l
         }),
         a.$e(N.Plq.MANAGE_GUILD, N.Plq.MANAGE_ROLES)
-    ) || o.isOwner(n.id))
-        ? (0, r.jsx)('div', {
+    ) || l.isOwner(t.id))
+        ? (0, i.jsx)('div', {
               className: g.container,
-              children: (0, r.jsx)(d.Combobox, {
-                  placeholder: O.Z.Messages.SEARCH_ROLES,
-                  value: L,
-                  onChange: P,
+              children: (0, i.jsx)(d.Combobox, {
+                  placeholder: A.Z.Messages.SEARCH_ROLES,
+                  value: v,
+                  onChange: M,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = v.reduce(
-                              (t, n) => (
-                                  u()(e.toLowerCase(), n.name.toLowerCase()) &&
-                                      t.push(
-                                          (0, r.jsxs)(
+                      let n = Z.reduce(
+                              (n, t) => (
+                                  o()(e.toLowerCase(), t.name.toLowerCase()) &&
+                                      n.push(
+                                          (0, i.jsxs)(
                                               d.ComboboxItem,
                                               {
-                                                  value: n.id,
-                                                  children: [(0, r.jsx)(d.ComboboxItem.Label, { children: m(n) }), (0, r.jsx)(d.ComboboxItem.Checkbox, {})]
+                                                  value: t.id,
+                                                  children: [(0, i.jsx)(d.ComboboxItem.Label, { children: m(t) }), (0, i.jsx)(d.ComboboxItem.Checkbox, {})]
                                               },
-                                              n.id
+                                              t.id
                                           )
                                       ),
-                                  t
+                                  n
                               ),
                               []
                           ),
-                          n = l[o.getEveryoneRoleId()];
+                          t = u[l.getEveryoneRoleId()];
                       return (
-                          null != n &&
-                              t.push(
-                                  (0, r.jsxs)(
+                          null != t &&
+                              n.push(
+                                  (0, i.jsxs)(
                                       d.ComboboxItem,
                                       {
-                                          value: n.id,
+                                          value: t.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(d.ComboboxItem.Label, { children: m(n) }), (0, r.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
+                                          children: [(0, i.jsx)(d.ComboboxItem.Label, { children: m(t) }), (0, i.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
                                       },
-                                      n.id
+                                      t.id
                                   )
                               ),
-                          t
+                          n
                       );
                   }
               })
           })
-        : (0, r.jsx)(d.Text, {
+        : (0, i.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: O.Z.Messages.VIEW_AS_ROLES_NO_ACCESS
+              children: A.Z.Messages.VIEW_AS_ROLES_NO_ACCESS
           });
 }

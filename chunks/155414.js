@@ -1,23 +1,23 @@
-n.d(t, {
+t.d(n, {
     X: function () {
-        return u;
+        return o;
     }
 });
-var r = n(544891),
-    i = n(881052),
-    o = n(981631);
-let u = async (e, t) => {
+var i = t(544891),
+    r = t(881052),
+    l = t(981631);
+let o = async (e, n) => {
     try {
         return (
-            await r.tn.get({
-                url: o.ANM.PRICE_TIERS,
+            await i.tn.get({
+                url: l.ANM.PRICE_TIERS,
                 query: {
-                    price_tier_type: t,
+                    price_tier_type: n,
                     guild_id: e
                 }
             })
         ).body;
     } catch (e) {
-        throw new i.Hx(e);
+        throw new r.Hx(e);
     }
 };

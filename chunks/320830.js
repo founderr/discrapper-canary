@@ -23,11 +23,11 @@ function h(e, t, n) {
     );
 }
 let E = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    p = {
+    g = {
         START: 0,
         END: 1
     },
-    g = {
+    p = {
         friction: 10,
         tension: 130
     };
@@ -40,18 +40,18 @@ t.Z = function (e) {
             clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
         }
         componentWillAppear(e) {
-            this.state.shouldAnimate ? this.animateTo(p.END, e) : e();
+            this.state.shouldAnimate ? this.animateTo(g.END, e) : e();
         }
         componentWillEnter(e) {
-            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(p.END, e), 40))) : e();
+            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(g.END, e), 40))) : e();
         }
         componentWillLeave(e) {
-            this.state.shouldAnimate ? this.animateTo(p.START, e) : e();
+            this.state.shouldAnimate ? this.animateTo(g.START, e) : e();
         }
         animateTo(e, t) {
             o.Z.spring(this.anim, {
                 toValue: e,
-                ...g
+                ...p
             }).start(t);
         }
         getAnimatedStyle(e) {
@@ -95,11 +95,11 @@ t.Z = function (e) {
         constructor(...e) {
             super(...e),
                 h(this, 'timeout', void 0),
-                h(this, 'anim', new o.Z.Value(p.START)),
+                h(this, 'anim', new o.Z.Value(g.START)),
                 h(this, 'state', { shouldAnimate: !l.tq }),
                 h(this, 'handleResize', () => {
                     let e = window.innerWidth > E;
-                    !this.state.shouldAnimate && e && this.anim.setValue(p.END), this.setState({ shouldAnimate: e });
+                    !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({ shouldAnimate: e });
                 }),
                 h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
         }

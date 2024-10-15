@@ -13,8 +13,8 @@ var r = n(735250),
     c = n(115470),
     d = n(511010),
     u = n(246992),
-    m = n(501775);
-let h = 60000,
+    h = n(501775);
+let m = 60000,
     x = 3600000,
     f = 86400000,
     p = [
@@ -44,20 +44,20 @@ function g() {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        S = Object.keys(s.R).map((e) => ({
+        T = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
-        T = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
+        S = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
     return (0, r.jsxs)('div', {
-        className: m.container,
+        className: h.container,
         children: [
             (0, r.jsx)(i.FormSection, {
                 title: 'Feedback Survey',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: (0, r.jsx)(i.SingleSelect, {
-                    options: S,
+                    options: T,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -68,14 +68,14 @@ function g() {
             }),
             (0, r.jsxs)(i.FormSection, {
                 title: 'Override Survey Cooldown',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
                     null != C &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    className: m.formDividerTitle,
+                                    className: h.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current cooldown'
@@ -87,7 +87,7 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / h, ' minute(s) or')
+                                    children: ''.concat(C.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
@@ -100,14 +100,14 @@ function g() {
                             ]
                         }),
                     (0, r.jsx)(d.Z, {
-                        className: m.formDividerTitle,
+                        className: h.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override cooldown'
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: m.formRow,
+                        className: h.formRow,
                         children: [
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
@@ -130,14 +130,14 @@ function g() {
             }),
             (0, r.jsxs)(i.FormSection, {
                 title: 'Override Survey Chance',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
                     null != C &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    className: m.formDividerTitle,
+                                    className: h.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current chance'
@@ -150,14 +150,14 @@ function g() {
                             ]
                         }),
                     (0, r.jsx)(d.Z, {
-                        className: m.formDividerTitle,
+                        className: h.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override chance'
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: m.formRow,
+                        className: h.formRow,
                         children: [
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
@@ -175,7 +175,7 @@ function g() {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: m.formRow,
+                className: h.formRow,
                 children: [
                     (0, r.jsx)(i.Button, {
                         onClick: () =>
@@ -185,7 +185,7 @@ function g() {
                                 cooldown: n * b,
                                 chance: _ / 100
                             }),
-                        disabled: !T,
+                        disabled: !S,
                         children: 'Update'
                     }),
                     (0, r.jsx)(i.Button, {
@@ -194,7 +194,7 @@ function g() {
                                 type: 'FEEDBACK_OVERRIDE_CLEAR',
                                 feedbackType: e
                             }),
-                        disabled: !T,
+                        disabled: !S,
                         children: 'Clear Override'
                     })
                 ]

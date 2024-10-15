@@ -1,24 +1,24 @@
 n.d(t, {
     g: function () {
-        return h;
+        return N;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(913527),
     s = n.n(a),
-    l = n(692547),
-    r = n(481060),
+    r = n(692547),
+    l = n(481060),
     o = n(788080),
     c = n(800530),
-    d = n(689938),
-    u = n(494729);
+    u = n(689938),
+    d = n(494729);
 let _ = (e) => s()().diff(s().unix(e), 'days');
 function E(e) {
     let { classificationId: t } = e;
-    return (0, i.jsx)(r.Anchor, {
+    return (0, i.jsx)(l.Anchor, {
         onClick: () => {
-            (0, r.openModalLazy)(async () => {
+            (0, l.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('25183'), n.e('18831'), n.e('45945')]).then(n.bind(n, 41164));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -29,16 +29,16 @@ function E(e) {
                     });
             });
         },
-        className: u.detailsButton,
-        children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+        className: d.detailsButton,
+        children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
     });
 }
 function I(e) {
     let { learnMoreLink: t } = e;
-    return (0, i.jsx)(r.Anchor, {
-        className: u.detailsButton,
+    return (0, i.jsx)(l.Anchor, {
+        className: d.detailsButton,
         href: t,
-        children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+        children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
     });
 }
 function m(e) {
@@ -57,62 +57,62 @@ function m(e) {
 function T(e) {
     let { iconType: t } = e,
         n = {
-            default: (0, i.jsx)(r.AnnouncementsIcon, {
+            default: (0, i.jsx)(l.AnnouncementsIcon, {
                 size: 'xs',
-                color: l.Z.colors.TEXT_LINK.css
+                color: r.Z.colors.TEXT_LINK.css
             }),
-            danger: (0, i.jsx)(r.WarningIcon, { color: l.Z.colors.STATUS_DANGER })
+            danger: (0, i.jsx)(l.WarningIcon, { color: r.Z.colors.STATUS_DANGER })
         };
     return null != t && t in n
         ? (0, i.jsx)('div', {
-              className: u.icon,
+              className: d.icon,
               children: n[t]
           })
         : null;
 }
-function N(e) {
+function h(e) {
     let { children: t, theme: n } = e,
         a = {
-            default: u.defaultFooterContainer,
-            danger: u.dangerFooterContainer
+            default: d.defaultFooterContainer,
+            danger: d.dangerFooterContainer
         };
     return (0, i.jsx)('div', {
         className: a[null != n ? n : 'default'],
         children: t
     });
 }
-function h(e) {
+function N(e) {
     var t, n;
     if (null == e.embed || null == e.embed.fields) return null;
     let a = (0, o.fr)(e.embed);
     return null == a
         ? null
-        : (0, i.jsxs)(r.Clickable, {
-              className: u.safetyPolicyNoticeContainer,
+        : (0, i.jsxs)(l.Clickable, {
+              className: d.safetyPolicyNoticeContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: u.noticeContent,
+                      className: d.noticeContent,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: u.headerRow,
+                              className: d.headerRow,
                               children: [
                                   (0, i.jsx)(T, { iconType: a.icon }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(l.Text, {
                                       variant: 'text-md/semibold',
                                       children: a.header
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: u.incidentTiming,
-                              children: (0, i.jsx)(r.Text, {
+                              className: d.incidentTiming,
+                              children: (0, i.jsx)(l.Text, {
                                   variant: 'text-xs/medium',
-                                  children: d.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0) })
+                                  children: u.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0) })
                               })
                           }),
                           (0, i.jsx)('div', {
-                              className: u.noticeBody,
-                              children: (0, i.jsx)(r.Text, {
+                              className: d.noticeBody,
+                              children: (0, i.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
                                   children: a.body
@@ -120,7 +120,7 @@ function h(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(N, {
+                  (0, i.jsx)(h, {
                       theme: a.theme,
                       children:
                           null === (t = a.ctas) || void 0 === t

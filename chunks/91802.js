@@ -1,14 +1,14 @@
-n.d(t, {
+t.d(n, {
     n: function () {
-        return o;
+        return l;
     }
 });
-var r = n(442837),
-    i = n(351402);
-function o() {
-    let { localizedPricingPromo: e, hasError: t } = (0, r.cj)([i.Z], () => ({
-        localizedPricingPromo: i.Z.localizedPricingPromo,
-        hasError: i.Z.localizedPricingPromoHasError
+var i = t(442837),
+    r = t(351402);
+function l() {
+    let { localizedPricingPromo: e, hasError: n } = (0, i.cj)([r.Z], () => ({
+        localizedPricingPromo: r.Z.localizedPricingPromo,
+        hasError: r.Z.localizedPricingPromoHasError
     }));
-    return t ? null : e;
+    return n ? null : e;
 }

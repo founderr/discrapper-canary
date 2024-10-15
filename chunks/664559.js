@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 }),
     n(47120),
@@ -8,11 +8,11 @@ n.d(t, {
 var i = n(470079),
     a = n(768943),
     s = n(818260);
-function l() {
+function r() {
     return a.Z.getSavedMessages().map((e) => e.saveData);
 }
-function r() {
-    let [e, t] = i.useState(l),
+function l() {
+    let [e, t] = i.useState(r),
         n = i.useRef(a.Z.getIsStale());
     return (
         i.useEffect(() => {
@@ -21,7 +21,7 @@ function r() {
                 let i = a.Z.getLastChanged();
                 if (e !== i) {
                     if (((e = i), n.current && !a.Z.getIsStale())) {
-                        (n.current = !1), t(l());
+                        (n.current = !1), t(r());
                         return;
                     }
                     t((e) => {

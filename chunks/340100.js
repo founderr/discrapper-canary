@@ -3,17 +3,17 @@ var s = n(735250);
 n(470079);
 var a = n(120356),
     i = n.n(a),
-    o = n(692547),
+    l = n(692547),
     r = n(481060),
-    l = n(113434),
+    o = n(113434),
     u = n(26650),
     d = n(597799);
 t.Z = function (e) {
-    let { className: t, color: n = o.Z.colors.WHITE, quest: a, isInventory: c } = e,
-        m = (0, l.qb)(e.quest),
-        { percentComplete: E, completedRatioDisplay: x } = (0, l.I)(a);
-    return !c && m.length > 0
-        ? (0, s.jsx)(u.Z, { children: m.at(0) })
+    let { className: t, color: n = l.Z.colors.WHITE, quest: a, isInventory: c } = e,
+        E = (0, o.qb)(e.quest),
+        { percentComplete: m, completedRatioDisplay: C } = (0, o.I)(a);
+    return !c && E.length > 0
+        ? (0, s.jsx)(u.Z, { children: E.at(0) })
         : (0, s.jsxs)('div', {
               className: i()(d.wrapper, t),
               style: { color: n.css },
@@ -25,27 +25,27 @@ t.Z = function (e) {
                               variant: 'text-xs/semibold',
                               className: d.percentCompleteLabel,
                               color: 'none',
-                              children: x
+                              children: C
                           }),
                           (0, s.jsx)('div', {
                               className: d.percentCompleteLabelOffset,
-                              style: { width: ''.concat(100 - E, '%') }
+                              style: { width: ''.concat(100 - m, '%') }
                           })
                       ]
                   }),
                   (0, s.jsx)('div', {
                       className: d.progressBar,
                       role: 'progressbar',
-                      'aria-valuenow': E,
+                      'aria-valuenow': m,
                       children: (0, s.jsx)('div', {
                           className: d.progressBarFill,
-                          style: { width: ''.concat(E, '%') }
+                          style: { width: ''.concat(m, '%') }
                       })
                   }),
-                  m.length > 0 &&
+                  E.length > 0 &&
                       (0, s.jsx)(u.Z, {
                           isInventory: c,
-                          children: m.at(0)
+                          children: E.at(0)
                       })
               ]
           });

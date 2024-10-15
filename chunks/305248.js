@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(392711),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     o = n(570140),
     c = n(45114),
-    d = n(404616),
-    u = n(470623),
+    u = n(404616),
+    d = n(470623),
     _ = n(344185),
     E = n(488131),
     I = n(592125),
     m = n(823379),
     T = n(709054),
-    N = n(124368),
-    h = n(302762);
-function C(e) {
+    h = n(124368),
+    N = n(302762);
+function f(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
-        C = (0, r.Wu)(
+        f = (0, l.Wu)(
             [_.Z, I.Z],
             () =>
-                l()(_.Z.getThreadsForParent(n.guild_id, n.id))
+                r()(_.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -40,8 +40,8 @@ function C(e) {
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        p = a.useCallback((e, t) => {
-            (0, E.ok)(e, t, N.on.INBOX);
+        C = a.useCallback((e, t) => {
+            (0, E.ok)(e, t, h.on.INBOX);
         }, []);
     return (
         a.useEffect(() => {
@@ -49,22 +49,22 @@ function C(e) {
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
-                0 === C.length &&
+                0 === f.length &&
                 o.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), s(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
-            className: h.container,
-            children: C.map((e) =>
+            className: N.container,
+            children: f.map((e) =>
                 (0, i.jsx)(
-                    u.oL,
+                    d.oL,
                     {
-                        createStore: () => (0, u.NU)(n),
-                        children: (0, i.jsx)(d.ZP, {
-                            className: h.forumPost,
+                        createStore: () => (0, d.NU)(n),
+                        children: (0, i.jsx)(u.ZP, {
+                            className: N.forumPost,
                             threadId: e.id,
-                            goToThread: p
+                            goToThread: C
                         })
                     },
                     e.id

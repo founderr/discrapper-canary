@@ -11,14 +11,14 @@ var l = n(120356),
     h = n(237583),
     p = n(131704),
     f = n(314897),
-    m = n(594174),
-    _ = n(768581),
+    _ = n(594174),
+    m = n(768581),
     g = n(51144),
     C = n(754231),
     I = n(51299);
 function E(e) {
     let { guildId: t, member: n, className: l } = e,
-        a = null != n.member ? (0, _.CA)(n.member) : null;
+        a = null != n.member ? (0, m.CA)(n.member) : null;
     return (0, i.jsx)(s.Tooltip, {
         text: n.nick,
         position: 'bottom',
@@ -65,9 +65,9 @@ function N(e) {
 t.Z = (e) => {
     let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: s } = e,
         h = null != r,
-        _ = h ? Array.from(r.embeddedActivity.userIds) : [],
-        g = (0, a.e7)([m.default, f.default], () => {
-            if (h) return m.default.getUser(_[0]);
+        m = h ? Array.from(r.embeddedActivity.userIds) : [],
+        g = (0, a.e7)([_.default, f.default], () => {
+            if (h) return _.default.getUser(m[0]);
             if (null != l) {
                 var e, t;
                 return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== f.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;

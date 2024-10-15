@@ -7,20 +7,20 @@ var i = n(735250);
 n(470079);
 var a = n(399606),
     s = n(481060),
-    l = n(607070),
-    r = n(739566),
+    r = n(607070),
+    l = n(739566),
     o = n(942951),
     c = n(834129),
-    d = n(703656),
-    u = n(331372),
+    u = n(703656),
+    d = n(331372),
     _ = n(981631),
     E = n(689938),
     I = n(979314);
 function m(e) {
-    let { guildId: t, user: n, username: r } = e,
-        o = (0, a.e7)([l.Z], () => !l.Z.useReducedMotion),
+    let { guildId: t, user: n, username: l } = e,
+        o = (0, a.e7)([r.Z], () => !r.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, o),
-        d = (0, i.jsx)('img', {
+        u = (0, i.jsx)('img', {
             src: c,
             className: I.userAvatar,
             alt: ''
@@ -28,16 +28,16 @@ function m(e) {
     return (0, i.jsxs)('div', {
         className: I.thankYouCard,
         role: 'img',
-        'aria-label': E.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: r }),
+        'aria-label': E.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: l }),
         children: [
-            (0, i.jsx)(u.Z, { avatar: d }),
+            (0, i.jsx)(d.Z, { avatar: u }),
             (0, i.jsx)(s.Text, {
                 className: I.thankYouText,
                 tag: 'p',
                 color: 'status-positive-text',
                 variant: 'heading-xl/medium',
                 children: E.Z.Messages.GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT.format({
-                    username: r,
+                    username: l,
                     usernameHook: (e, t) =>
                         (0, i.jsx)(
                             s.Text,
@@ -57,35 +57,35 @@ function m(e) {
 }
 function T(e) {
     var t, a, s;
-    let { channel: l, message: u, compact: I } = e,
-        T = (0, r.ZP)(u),
-        N = (0, o.l)({
-            user: u.author,
-            channelId: l.id,
-            guildId: l.guild_id,
-            messageId: u.id
+    let { channel: r, message: d, compact: I } = e,
+        T = (0, l.ZP)(d),
+        h = (0, o.l)({
+            user: d.author,
+            channelId: r.id,
+            guildId: r.guild_id,
+            messageId: d.id
         })(T),
-        h = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+        N = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
             username: T.nick,
-            usernameHook: N,
-            productName: null !== (s = null === (a = u.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== s ? s : '',
+            usernameHook: h,
+            productName: null !== (s = null === (a = d.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== s ? s : '',
             handleProductListingClick: () => {
                 var e, t, n;
-                (0, d.uL)(_.Z5c.GUILD_PRODUCT(l.guild_id, null !== (n = null === (t = u.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
+                (0, u.uL)(_.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
             }
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
                 icon: n(570111),
-                timestamp: u.timestamp,
+                timestamp: d.timestamp,
                 compact: I,
-                children: h
+                children: N
             }),
             (0, i.jsx)(m, {
                 username: T.nick,
-                guildId: l.guild_id,
-                user: u.author
+                guildId: r.guild_id,
+                user: d.author
             })
         ]
     });

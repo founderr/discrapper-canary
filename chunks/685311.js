@@ -29,7 +29,7 @@ t.Z = function (e) {
             let e = setTimeout(() => (0, _.uL)((0, u.M)()), 3000);
             return () => clearTimeout(e);
         }, [r]);
-    let p = a.useCallback(
+    let g = a.useCallback(
         async (e, t) => {
             try {
                 o(2), await s(e, t), o(3);
@@ -51,7 +51,7 @@ t.Z = function (e) {
                     (0, i.jsx)(d.DK, { children: h.Z.Messages.DEEPLINK_BROWSER_PROMPT }),
                     (0, i.jsx)(d.zx, {
                         className: E.marginTop40,
-                        onClick: () => p(t, n),
+                        onClick: () => g(t, n),
                         children: h.Z.Messages.OPEN_IN_APP
                     }),
                     (0, i.jsx)(d.zx, {

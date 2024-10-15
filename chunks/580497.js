@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var s = n(512722),
@@ -15,8 +15,8 @@ var s = n(512722),
     _ = n(896797),
     h = n(626135),
     E = n(954824),
-    p = n(981631);
-function g(e) {
+    g = n(981631);
+function p(e) {
     let t = (function (e) {
             var t;
             let n = null === (t = a().os) || void 0 === t ? void 0 : t.family;
@@ -36,7 +36,7 @@ function g(e) {
         })(e),
         n = (0, l.zS)(t);
     null != n &&
-        h.default.track(p.rMx.DEEP_LINK_CLICKED, {
+        h.default.track(g.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource

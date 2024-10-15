@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(565138),
     p = n(430824),
     f = n(624138),
-    m = n(674552),
-    _ = n(981631),
+    _ = n(674552),
+    m = n(981631),
     g = n(689938),
     C = n(115376);
 let I = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
@@ -43,12 +43,12 @@ function S(e) {
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
         { color: u, children: h } = r,
-        p = null != u ? u : _.Wyy,
+        p = null != u ? u : m.Wyy,
         f = h.map((e) => e.id),
-        [m, g] = l.useState(!1),
+        [_, g] = l.useState(!1),
         [S, x] = l.useState(c),
         v = c ? 0 : -E,
-        T = (0, d.useSpring)(
+        Z = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
@@ -61,11 +61,11 @@ function S(e) {
             },
             'animate-always'
         ),
-        Z = m ? T : void 0;
+        T = _ ? Z : void 0;
     return (
-        (m || S) &&
+        (_ || S) &&
             (t = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -73,9 +73,9 @@ function S(e) {
                     style: { color: (0, o.Rf)(p) }
                 })
             })),
-        (m || !S) &&
+        (_ || !S) &&
             (n = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -108,31 +108,31 @@ function x(e) {
             folderGroupId: h,
             folderIconContent: p,
             onClick: f,
-            onContextMenu: _,
+            onContextMenu: m,
             onHoverChange: I,
             onKeyDown: E,
             treeItemProps: { onFocus: N, ...x }
         } = e,
-        [v, T] = l.useState(!1),
-        Z = l.useCallback(() => {
-            s || T(!0), null == I || I(!0);
+        [v, Z] = l.useState(!1),
+        T = l.useCallback(() => {
+            s || Z(!0), null == I || I(!0);
         }, [s, I]),
-        A = l.useCallback(() => {
-            s || T(!1), null == I || I(!1);
+        b = l.useCallback(() => {
+            s || Z(!1), null == I || I(!1);
         }, [s, I]),
-        b = r || null == o ? null : (0, m.Or)(o),
-        R = !r && c > 0 ? (0, m.Ne)(c) : null;
+        A = r || null == o ? null : (0, _.Or)(o),
+        R = !r && c > 0 ? (0, _.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
-        upperBadge: b,
+        upperBadge: A,
         lowerBadge: R,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: v }),
             onClick: f,
-            onContextMenu: _,
-            onMouseEnter: Z,
-            onMouseLeave: A,
+            onContextMenu: m,
+            onMouseEnter: T,
+            onMouseLeave: b,
             onKeyDown: E,
             onFocus: N,
             'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({

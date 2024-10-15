@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(692547),
     s = n(481060),
-    l = n(739566),
-    r = n(834129),
+    r = n(739566),
+    l = n(834129),
     o = n(689938),
     c = n(437814);
-function d(e) {
-    let { message: t, compact: n, usernameHook: d } = e,
-        u = (0, l.ZP)(t),
-        _ = d(u),
+function u(e) {
+    let { message: t, compact: n, usernameHook: u } = e,
+        d = (0, r.ZP)(t),
+        _ = u(d),
         E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
-            username: u.nick,
+            username: d.nick,
             usernameHook: _,
             topic: t.content
         });
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(l.Z, {
         className: c.stageSystemMessage,
         iconNode: (0, i.jsx)(s.StageIcon, {
             size: 'md',

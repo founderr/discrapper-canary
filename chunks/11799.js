@@ -7,21 +7,21 @@ n.d(t, {
 var i = n(470079),
     a = n(442837),
     s = n(45114),
-    l = n(733427),
-    r = n(455199),
+    r = n(733427),
+    l = n(455199),
     o = n(833592),
     c = n(140155),
-    d = n(774807),
-    u = n(490897);
+    u = n(774807),
+    d = n(490897);
 let _ = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
-            m = (0, a.e7)([d.Z], () => d.Z.shouldReload()),
+            m = (0, a.e7)([u.Z], () => u.Z.shouldReload()),
             T = i.useRef(!1),
-            [N, h] = i.useState(!1),
+            [h, N] = i.useState(!1),
             {
-                initialized: C,
-                loading: p,
-                items: f,
+                initialized: f,
+                loading: C,
+                items: p,
                 hasMore: g,
                 cursor: A,
                 errored: S
@@ -33,63 +33,63 @@ let _ = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: M, everyoneFilter: O } = (0, a.cj)([r.Z], () => ({
-                everyoneFilter: r.Z.everyoneFilter,
-                roleFilter: r.Z.roleFilter
+            { roleFilter: R, everyoneFilter: x } = (0, a.cj)([l.Z], () => ({
+                everyoneFilter: l.Z.everyoneFilter,
+                roleFilter: l.Z.roleFilter
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
             i.useEffect(() => {
-                C && t && (0, s.FT)(u.W.NOTIFICATION_CENTER);
-            }, [t, C]);
-        let x = (0, l.Z)();
+                f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, f]);
+        let O = (0, r.Z)();
         i.useEffect(
             () => () => {
-                _ ? !x() && (S || f.length > 100) && (0, o.jF)() : n && f.length > 100 && (0, o.jF)();
+                _ ? !O() && (S || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
             },
-            [n, f, _, x, S]
+            [n, p, _, O, S]
         ),
             i.useEffect(() => {
                 let e = m && t;
-                (!C || e) &&
+                (!f || e) &&
                     (0, o.jk)({
                         limit: null != I ? I : E ? 8 : 20,
                         with_mentions: E,
-                        roles_filter: M,
-                        everyone_filter: O
+                        roles_filter: R,
+                        everyone_filter: x
                     });
-            }, [C, m, t, E, M, O, I]);
-        let R = i.useCallback(
+            }, [f, m, t, E, R, x, I]);
+        let M = i.useCallback(
             async (e) => {
                 !T.current &&
-                    C &&
+                    f &&
                     g &&
                     null != A &&
                     (e || !S) &&
                     ((T.current = !0),
-                    h(!0),
+                    N(!0),
                     await (0, o.jk)(
                         {
                             after: A,
                             with_mentions: E,
-                            roles_filter: M,
-                            everyone_filter: O,
+                            roles_filter: R,
+                            everyone_filter: x,
                             limit: E ? 8 : 20
                         },
                         () => {
                             T.current = !1;
                         }
                     ),
-                    h(!1));
+                    N(!1));
             },
-            [C, g, A, S, E, M, O]
+            [f, g, A, S, E, R, x]
         );
         return {
-            initialized: C,
-            loading: p,
-            items: f,
+            initialized: f,
+            loading: C,
+            items: p,
             hasMore: g,
-            loadMore: R,
-            loadingMore: N,
+            loadMore: M,
+            loadingMore: h,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

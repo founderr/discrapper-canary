@@ -6,16 +6,16 @@ n.d(t, {
 var i = n(735250),
     a = n(470079),
     s = n(692547),
-    l = n(481060),
-    r = n(375954),
+    r = n(481060),
+    l = n(375954),
     o = n(876338),
     c = n(912332),
-    d = n(245216),
-    u = n(689938);
+    u = n(245216),
+    d = n(689938);
 function _(e) {
     let { className: t, channelId: n, messageId: _, targetKind: E, embedIndex: I } = e,
         m = a.useCallback(() => {
-            let e = r.Z.getMessage(n, _);
+            let e = l.Z.getMessage(n, _);
             if (null == e) return;
             let t = (0, o.j)(e, {
                 targetKind: E,
@@ -28,11 +28,11 @@ function _(e) {
                 forwardOptions: t
             });
         }, [n, I, _, E]);
-    return (0, i.jsx)(l.CircleIconButton, {
+    return (0, i.jsx)(r.CircleIconButton, {
         className: t,
-        tooltip: u.Z.Messages.MESSAGE_ACTION_FORWARD,
-        color: l.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(d.Z, {
+        tooltip: d.Z.Messages.MESSAGE_ACTION_FORWARD,
+        color: r.CircleIconButtonColors.SECONDARY,
+        icon: (0, i.jsx)(u.Z, {
             size: 'xs',
             color: s.Z.colors.INTERACTIVE_NORMAL
         }),

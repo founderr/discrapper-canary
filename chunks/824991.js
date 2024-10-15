@@ -1,6 +1,6 @@
 n.d(t, {
     To: function () {
-        return _;
+        return m;
     },
     Xu: function () {
         return g;
@@ -9,7 +9,7 @@ n.d(t, {
         return C;
     },
     aF: function () {
-        return m;
+        return _;
     }
 });
 var i = n(735250),
@@ -24,7 +24,7 @@ var i = n(735250),
     h = n(921944),
     p = n(689938),
     f = n(737116);
-function m(e) {
+function _(e) {
     let { title: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(r.Heading, {
@@ -35,7 +35,7 @@ function m(e) {
         })
     });
 }
-function _(e) {
+function m(e) {
     let { message: t } = e;
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
@@ -69,8 +69,8 @@ function C(e) {
         });
     }, [t.id]);
     let C = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        I = l.useCallback(() => (0, i.jsx)(_, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
-        E = l.useCallback(() => (0, i.jsx)(m, { title: C }), [C]),
+        I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
+        E = l.useCallback(() => (0, i.jsx)(_, { title: C }), [C]),
         N = l.useCallback(() => {
             (0, c._9)({
                 guildId: t.id,

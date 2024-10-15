@@ -3,34 +3,34 @@ n.d(t, {
         return c;
     },
     hZ: function () {
-        return u;
+        return d;
     }
 });
 var i = n(913527),
     a = n.n(i),
     s = n(835913),
-    l = n(675478),
-    r = n(581883),
+    r = n(675478),
+    l = n(581883),
     o = n(905567);
 let c = (e) => {
         var t;
-        if (!d(e)) return !1;
-        let n = null === (t = r.Z.settings.userContent) || void 0 === t ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
+        if (!u(e)) return !1;
+        let n = null === (t = l.Z.settings.userContent) || void 0 === t ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
             i = null != n ? s.E.toDate(n) : void 0,
-            l = null != i ? a()().diff(i, 'days') : null,
+            r = null != i ? a()().diff(i, 'days') : null,
             c = null != n;
-        if (c && !(null != l && l > 30)) return !1;
-        let { isEligible: u } = o.C.getCurrentConfig({ location: '657a81_1' }, { autoTrackExposure: !0 });
-        return u;
+        if (c && !(null != r && r > 30)) return !1;
+        let { isEligible: d } = o.C.getCurrentConfig({ location: '657a81_1' }, { autoTrackExposure: !0 });
+        return d;
     },
-    d = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
-    u = () => {
+    u = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
+    d = () => {
         let e = s.E.now();
-        l.hW.updateAsync(
+        r.hW.updateAsync(
             'userContent',
             (t) => {
                 t.safetyUserSentimentNoticeDismissedAt = e;
             },
-            l.fy.INFREQUENT_USER_ACTION
+            r.fy.INFREQUENT_USER_ACTION
         );
     };

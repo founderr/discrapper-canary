@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
 var r = n(735250);
@@ -13,8 +13,8 @@ var a = n(120356),
     c = n(441623),
     d = n(246992),
     u = n(852613),
-    m = n(219299);
-function h() {
+    h = n(219299);
+function m() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
             s.Z.dispatch({
@@ -23,7 +23,7 @@ function h() {
             });
         };
     return (0, r.jsx)(o.ScrollerThin, {
-        className: l()(m.panel),
+        className: l()(h.panel),
         children: (0, r.jsxs)('div', {
             className: u.panelInner,
             children: [

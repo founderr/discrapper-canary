@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060),
     s = n(197115),
-    l = n(834129),
-    r = n(981631),
+    r = n(834129),
+    l = n(981631),
     o = n(474936),
     c = n(689938),
-    d = n(315642);
-function u(e) {
+    u = n(315642);
+function d(e) {
     let { message: t, channel: n } = e,
-        u = null != n.guild_id ? r.jXE.TEXT_IN_VOICE : r.jXE.CHANNEL_TEXT_AREA;
-    return (0, i.jsx)(l.Z, {
-        contentClassName: d.messageContentContainer,
-        iconContainerClassName: d.iconContainer,
-        iconNode: (0, i.jsx)(a.BellIcon, { colorClass: d.icon }),
+        d = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
+    return (0, i.jsx)(r.Z, {
+        contentClassName: u.messageContentContainer,
+        iconContainerClassName: u.iconContainer,
+        iconNode: (0, i.jsx)(a.BellIcon, { colorClass: u.icon }),
         children: (0, i.jsxs)('div', {
-            className: d.container,
+            className: u.container,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
@@ -29,15 +29,15 @@ function u(e) {
                             children: t.content
                         }),
                         (0, i.jsxs)('div', {
-                            className: d.nitroBadge,
+                            className: u.nitroBadge,
                             children: [
                                 (0, i.jsx)(a.NitroWheelIcon, {
                                     size: 'xs',
-                                    colorClass: d.nitroBadgeIcon
+                                    colorClass: u.nitroBadgeIcon
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
-                                    className: d.nitroBadgeText,
+                                    className: u.nitroBadgeText,
                                     children: c.Z.Messages.POWERED_BY_NITRO
                                 })
                             ]
@@ -45,16 +45,16 @@ function u(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: d.buttonContainer,
+                    className: u.buttonContainer,
                     children: (0, i.jsx)(s.Z, {
                         showGradient: !0,
-                        iconClassName: d.premiumIcon,
+                        iconClassName: u.premiumIcon,
                         subscriptionTier: o.Si.TIER_2,
                         buttonText: c.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
                         size: a.Button.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
-                            section: u,
-                            object: r.qAy.MESSAGE
+                            section: d,
+                            object: l.qAy.MESSAGE
                         }
                     })
                 })

@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250),
     a = n(470079),
     s = n(481060),
-    l = n(283836),
-    r = n(728345),
+    r = n(283836),
+    l = n(728345),
     o = n(689938),
     c = n(364060);
-function d(e) {
+function u(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: a } = (0, r.IX)(t);
+        { data: a } = (0, l.IX)(t);
     return null == a
         ? null
-        : (0, i.jsx)(u, {
+        : (0, i.jsx)(d, {
               app: a,
               guildId: n
           });
 }
-function u(e) {
-    let { app: t, guildId: r } = e;
-    (0, l.q)(t.id);
-    let d = a.useCallback(() => {
+function d(e) {
+    let { app: t, guildId: l } = e;
+    (0, r.q)(t.id);
+    let u = a.useCallback(() => {
         (0, s.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, i.jsx)(e, {
                     appId: t.id,
-                    guildId: r,
+                    guildId: l,
                     ...n
                 });
         });
-    }, [t, r]);
+    }, [t, l]);
     return (0, i.jsx)(s.Button, {
         color: s.Button.Colors.BRAND,
         size: s.Button.Sizes.SMALL,
-        onClick: d,
+        onClick: u,
         children: (0, i.jsxs)('div', {
             className: c.button,
             children: [

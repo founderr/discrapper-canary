@@ -1,12 +1,12 @@
 r.d(t, {
     $X: function () {
-        return P;
+        return M;
     },
     AJ: function () {
         return D;
     },
     Ei: function () {
-        return M;
+        return P;
     },
     GC: function () {
         return y;
@@ -82,7 +82,7 @@ function D(e) {
 let h = new WeakMap(),
     C = !1,
     g = 30000;
-function M() {
+function P() {
     let e = l.m9.Profiler;
     if ('function' != typeof e) {
         u.X && i.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
@@ -98,7 +98,7 @@ function M() {
         u.X && (i.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), i.kg.log('[Profiling] Disabling profiling for current user session.')), (C = !0);
     }
 }
-function P(e) {
+function M(e) {
     var t;
     if (C) return u.X && i.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!e.isRecording()) return u.X && i.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;

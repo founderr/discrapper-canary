@@ -8,20 +8,20 @@ var i = n(735250);
 n(470079);
 var a = n(990547),
     s = n(399606),
-    l = n(100527),
-    r = n(213609),
+    r = n(100527),
+    l = n(213609),
     o = n(914010),
     c = n(267101),
-    d = n(675297),
-    u = n(20281);
+    u = n(675297),
+    d = n(20281);
 function _(e) {
     let { code: t } = e,
         [n, _] = t.split('-'),
         E = (0, c.hO)(n, _),
         I = (0, s.e7)([o.Z], () => o.Z.getGuildId());
-    return ((0, r.Z)(
+    return ((0, l.Z)(
         {
-            type: u.n.VIEW,
+            type: d.n.VIEW,
             name: a.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
             properties: {
                 guild_product_listing_id: _,
@@ -32,10 +32,10 @@ function _(e) {
     ),
     null == E || I !== n)
         ? null
-        : (0, i.jsx)(d.H, {
+        : (0, i.jsx)(u.H, {
               guildProductListing: E,
               guildId: n,
-              location: l.Z.GUILD_PRODUCT_EMBED_CARD,
+              location: r.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,
               thumbnailHeight: 219
           });

@@ -15,7 +15,7 @@ n.d(t, {
         return X;
     },
     HW: function () {
-        return G;
+        return H;
     },
     Ib: function () {
         return ei;
@@ -48,7 +48,7 @@ n.d(t, {
         return z;
     },
     jQ: function () {
-        return H;
+        return U;
     },
     lT: function () {
         return K;
@@ -78,8 +78,8 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    m = n(694626),
-    h = n(855930),
+    h = n(694626),
+    m = n(855930),
     x = n(385787),
     f = n(566162),
     p = n(567027),
@@ -89,8 +89,8 @@ var r,
     _ = n(312976),
     j = n(147591),
     C = n(135164),
-    S = n(940172),
-    T = n(81011),
+    T = n(940172),
+    S = n(81011),
     N = n(981613),
     y = n(762399),
     I = n(232112),
@@ -102,18 +102,18 @@ var r,
     O = n(856308),
     A = n(665352),
     L = n(394900),
-    P = n(661105),
-    B = n(525169),
+    B = n(661105),
+    P = n(525169),
     M = n(433517),
     D = n(190558),
     F = n(231338);
-let G = {
+let H = {
         sRGB: s.Z,
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: m.Z,
-        HSL: h.Z,
+        HPLuv: h.Z,
+        HSL: m.Z,
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
@@ -123,8 +123,8 @@ let G = {
         LCH: _.Z,
         LCHuv: j.Z,
         Lab: C.Z,
-        Lab_D65: S.Z,
-        Luv: T.Z,
+        Lab_D65: T.Z,
+        Luv: S.Z,
         OKLCH: N.Z,
         OKLab: y.Z,
         P3: I.Z,
@@ -135,10 +135,10 @@ let G = {
         XYZ_D50: R.Z,
         XYZ_D65: O.Z
     },
-    H = Object.fromEntries(Object.keys(G).map((e) => [e, e]));
-Object.values(G).forEach((e) => A.Z.register(e));
-let { SemanticColors: U } = D.V,
-    z = U,
+    U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
+Object.values(H).forEach((e) => A.Z.register(e));
+let { SemanticColors: G } = D.V,
+    z = G,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {
@@ -188,7 +188,7 @@ function q(e) {
     };
 }
 function X(e) {
-    return (0, L.Z)((0, P.Z)(e, s.Z), { format: 'hex' });
+    return (0, L.Z)((0, B.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -238,38 +238,38 @@ function et(e, t) {
 }
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
-        o = G[e.colorSpace],
-        c = (0, P.Z)(n, o),
-        d = (0, B.CD)(c, 'white', 1 - a, {
+        o = H[e.colorSpace],
+        c = (0, B.Z)(n, o),
+        d = (0, P.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
         }),
-        u = (0, B.CD)(c, 'black', 1 - l, {
+        u = (0, P.CD)(c, 'black', 1 - l, {
             space: o,
             outputSpace: s.Z
         }),
-        m = Math.floor(r / 2),
-        h = r - m,
-        x = (0, B.w6)(d, c, {
-            steps: m,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        f = (0, B.w6)(u, c, {
+        h = Math.floor(r / 2),
+        m = r - h,
+        x = (0, P.w6)(d, c, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
+        f = (0, P.w6)(u, c, {
+            steps: m,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
         p = [];
-    for (let e = 0; e < m; e++) {
-        let t = x(e / m);
+    for (let e = 0; e < h; e++) {
+        let t = x(e / h);
         p.push(t);
     }
     p.push(c);
-    for (let e = 1; e < h; e++) {
-        let t = f(1 - e / h);
+    for (let e = 1; e < m; e++) {
+        let t = f(1 - e / m);
         p.push(t);
     }
     return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));

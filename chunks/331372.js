@@ -7,15 +7,15 @@ var i = n(735250);
 n(470079);
 var a = n(325767);
 function s(e) {
-    let { width: t = 440, height: n = 200, avatar: s, ...l } = e;
+    let { width: t = 440, height: n = 200, avatar: s, ...r } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(l),
+        ...(0, a.Z)(r),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        ...l,
+        ...r,
         children: [
             (0, i.jsx)('rect', {
                 y: '12',

@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     I3: function () {
         return c;
     },
@@ -15,7 +15,7 @@ n.d(t, {
         return s;
     },
     Ux: function () {
-        return i;
+        return r;
     },
     VW: function () {
         return d;
@@ -33,33 +33,33 @@ n.d(t, {
         return I;
     },
     dc: function () {
-        return O;
+        return A;
     },
     fX: function () {
-        return l.f;
+        return u.f;
     },
     hu: function () {
         return _;
     },
     jj: function () {
-        return o.j;
+        return l.j;
     },
     n4: function () {
         return a;
     },
     q4: function () {
-        return u.q;
+        return o.q;
     },
     uE: function () {
         return f;
     }
 });
-var r,
-    i,
-    o = n(401653),
-    u = n(95930),
-    l = n(41381);
-((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), l.f.USER_PROFILE, l.f.SERVER_POLICY, l.f.MENTION_SPAM, l.f.ML_SPAM, l.f.DEFAULT_KEYWORD_LIST, l.f.KEYWORD;
+var i,
+    r,
+    l = t(401653),
+    o = t(95930),
+    u = t(41381);
+((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
 let s = 1000,
     a = 100,
     c = 1000,
@@ -73,4 +73,4 @@ let s = 1000,
     C = 50,
     p = 20,
     N = 150,
-    O = 'automod-profile-quarantine-alert';
+    A = 'automod-profile-quarantine-alert';

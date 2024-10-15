@@ -36,7 +36,7 @@ function D(e) {
                 className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 3 },
                 children: (0, r.jsx)(c.LottieAnimation, {
-                    shouldAnimate: !0,
+                    shouldAnimate: o,
                     importData: () => n.e('39298').then(n.t.bind(n, 324952, 19))
                 })
             }),
@@ -49,7 +49,7 @@ function D(e) {
                 className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 1 },
                 children: (0, r.jsx)(c.LottieAnimation, {
-                    shouldAnimate: !0,
+                    shouldAnimate: o,
                     importData: () => n.e('58889').then(n.t.bind(n, 593162, 19))
                 })
             })

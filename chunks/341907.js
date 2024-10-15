@@ -38,7 +38,7 @@ var i = n(481060),
 function m(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('37447'), n.e('48923'), n.e('64838'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,

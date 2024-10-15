@@ -1,66 +1,66 @@
 let i;
-n(47120);
+t(47120);
 var r,
-    a = n(442837),
-    o = n(570140),
-    d = n(699516),
-    f = n(496232);
-function c(e, t, n) {
+    l = t(442837),
+    o = t(570140),
+    u = t(699516),
+    s = t(496232);
+function a(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let l = !1,
-    s = Object.freeze({
+let c = !1,
+    d = Object.freeze({
         userAffinities: [],
         lastFetched: 0
     }),
-    u = { ...s };
-function _() {
-    i = new Map(u.userAffinities.filter((e) => !d.Z.isBlocked(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    _ = { ...d };
+function E() {
+    i = new Map(_.userAffinities.filter((e) => !u.Z.isBlocked(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-class h extends (r = a.ZP.PersistedStore) {
+class f extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && ((u.userAffinities = e.userAffinities), (u.lastFetched = e.lastFetched), _()), this.syncWith([d.Z], _);
+        this.waitFor(u.Z), null != e && ((_.userAffinities = e.userAffinities), (_.lastFetched = e.lastFetched), E()), this.syncWith([u.Z], E);
     }
     shouldFetch() {
-        if (!l) return Date.now() - u.lastFetched > f.K;
+        if (!c) return Date.now() - _.lastFetched > s.K;
     }
     isFetching() {
-        return l;
+        return c;
     }
     getUserAffinities() {
-        return u.userAffinities;
+        return _.userAffinities;
     }
     getUserAffinity(e) {
         return i.get(e);
     }
     getState() {
-        return u;
+        return _;
     }
 }
-c(h, 'displayName', 'UserAffinitiesStoreV2'),
-    c(h, 'persistKey', 'UserAffinitiesStoreV2'),
-    (t.Z = new h(o.Z, {
+a(f, 'displayName', 'UserAffinitiesStoreV2'),
+    a(f, 'persistKey', 'UserAffinitiesStoreV2'),
+    (n.Z = new f(o.Z, {
         LOAD_USER_AFFINITIES_V2: function () {
-            l = !0;
+            c = !0;
         },
         LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
-            let { affineUsers: t } = e;
-            (u.lastFetched = Date.now()), (l = !1), (u.userAffinities = t), _();
+            let { affineUsers: n } = e;
+            (_.lastFetched = Date.now()), (c = !1), (_.userAffinities = n), E();
         },
         LOAD_USER_AFFINITIES_V2_FAILURE: function () {
-            l = !1;
+            c = !1;
         },
         LOGOUT: function () {
-            (u = { ...s }), (i = new Map()), (l = !1);
+            (_ = { ...d }), (i = new Map()), (c = !1);
         }
     }));

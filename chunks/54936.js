@@ -8,25 +8,25 @@ var i = n(735250);
 n(470079);
 var a = n(120356),
     s = n.n(a),
-    l = n(481060),
-    r = n(910111),
+    r = n(481060),
+    l = n(910111),
     o = n(732559),
     c = n(723851),
-    d = n(981631),
-    u = n(689938),
+    u = n(981631),
+    d = n(689938),
     _ = n(500792);
 let E = {
-    [d.TaA.WINDOWS]: {
+    [u.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => u.Z.Messages.WINDOWS
+        getLabel: () => d.Z.Messages.WINDOWS
     },
-    [d.TaA.MACOS]: {
+    [u.TaA.MACOS]: {
         icon: o.Z,
-        getLabel: () => u.Z.Messages.MACOS
+        getLabel: () => d.Z.Messages.MACOS
     },
-    [d.TaA.LINUX]: {
-        icon: r.Z,
-        getLabel: () => u.Z.Messages.LINUX
+    [u.TaA.LINUX]: {
+        icon: l.Z,
+        getLabel: () => d.Z.Messages.LINUX
     }
 };
 function I(e) {
@@ -34,7 +34,7 @@ function I(e) {
         a = E[t];
     if (null == a) throw Error('Unexpected operating system: '.concat(t));
     let s = a.icon;
-    return (0, i.jsx)(l.Tooltip, {
+    return (0, i.jsx)(r.Tooltip, {
         text: a.getLabel(),
         children: (e) =>
             (0, i.jsx)(s, {

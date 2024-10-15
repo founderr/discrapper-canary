@@ -1,49 +1,49 @@
 n.d(t, {
     $X: function () {
-        return d;
+        return u;
     },
     HV: function () {
-        return c;
+        return o;
     },
     RI: function () {
         return s;
     },
     k5: function () {
-        return o;
+        return l;
     },
     kR: function () {
-        return i;
+        return r;
     },
     zY: function () {
-        return l;
+        return c;
     }
 });
-var a = n(626135),
-    r = n(981631);
+var i = n(626135),
+    a = n(981631);
 function s(e) {
     let { selectedTab: t } = e;
-    a.default.track(r.rMx.GLOBAL_DISCOVERY_VIEWED, { selected_tab: t });
+    i.default.track(a.rMx.GLOBAL_DISCOVERY_VIEWED, { selected_tab: t });
 }
-function i(e) {
+function r(e) {
     let { selectedCategoryId: t } = e;
-    a.default.track(r.rMx.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
+    i.default.track(a.rMx.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
+}
+function l(e) {
+    let { source: t } = e;
+    i.default.track(a.rMx.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, { source: t });
 }
 function o(e) {
-    let { source: t } = e;
-    a.default.track(r.rMx.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, { source: t });
-}
-function c(e) {
     let { gameId: t, source: n } = e;
-    a.default.track(r.rMx.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED, {
+    i.default.track(a.rMx.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED, {
         game_id: t,
         source: n
     });
 }
-function l(e) {
+function c(e) {
     let { gameId: t } = e;
-    a.default.track(r.rMx.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP, { game_id: t });
+    i.default.track(a.rMx.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP, { game_id: t });
 }
-function d(e) {
+function u(e) {
     let { gameId: t } = e;
-    a.default.track(r.rMx.GLOBAL_DISCOVERY_WITH_GAME_VIEWED, { game_id: t });
+    i.default.track(a.rMx.GLOBAL_DISCOVERY_WITH_GAME_VIEWED, { game_id: t });
 }

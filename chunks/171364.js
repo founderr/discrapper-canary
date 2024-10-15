@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return l;
+        return r;
     },
     I: function () {
         return s;
@@ -22,7 +22,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    l = (0, i.B)({
+    r = (0, i.B)({
         kind: 'user',
         id: '2024-10_app_oauth2_link_embed_mobile',
         label: 'app oauth2 link embed',

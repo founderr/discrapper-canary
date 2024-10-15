@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(153867),
     p = n(771845),
     f = n(624138),
-    m = n(727258),
-    _ = n(276952),
+    _ = n(727258),
+    m = n(276952),
     g = n(199540),
     C = n(40153),
     I = n(252686),
@@ -26,24 +26,24 @@ var i = n(735250),
     S = n(689938),
     x = n(115376),
     v = n(767573);
-let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    A = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
-function b(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: b = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
-        { id: k, name: B, children: V } = t,
-        [H, F] = l.useState(!1),
+let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+function A(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+        { id: k, name: B, children: H } = t,
+        [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = H || W;
+        Y = V || W;
     l.useEffect(() => {
         y && F(!1);
     }, [y]);
     let [{ dragging: K }, q] = (0, s.c)({
-            type: m.eD.FOLDER,
+            type: _.eD.FOLDER,
             item: () => (
                 null == O || O(),
                 {
-                    type: m.eD.FOLDER,
+                    type: _.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -64,19 +64,19 @@ function b(e) {
         J = null != B && '' !== B ? B : null != M && '' !== M ? M : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = V.length * (Z + A),
+        et = H.length * (T + b),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: T }
+            config: { duration: Z }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
             children: [
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(m.Z, {
                     disabled: K || u,
-                    hovered: H,
+                    hovered: V,
                     selected: r,
                     unread: R,
                     className: v.pill
@@ -98,7 +98,7 @@ function b(e) {
                                   forceCircular: L,
                                   sorting: y,
                                   mediaState: f,
-                                  mentionCount: b,
+                                  mentionCount: A,
                                   tooltipName: J,
                                   folderGroupId: ee,
                                   onClick: D,
@@ -106,7 +106,7 @@ function b(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: U
+                                  folderIconContent: G
                               })
                     })
                 }),
@@ -142,7 +142,7 @@ function b(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: x.__invalid_expandedGuilds,
                             role: 'group',
-                            children: V.map(G)
+                            children: H.map(U)
                         },
                         l
                     )

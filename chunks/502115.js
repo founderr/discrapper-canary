@@ -3,10 +3,10 @@ n.d(t, {
         return o;
     },
     HL: function () {
-        return d;
+        return u;
     },
     Yc: function () {
-        return u;
+        return d;
     },
     xe: function () {
         return c;
@@ -16,16 +16,16 @@ var i = n(735250);
 n(470079);
 var a = n(481060),
     s = n(834129),
-    l = n(689938),
-    r = n(286102);
+    r = n(689938),
+    l = n(286102);
 function o(e) {
     let { message: t, compact: a, onClick: o } = e;
     return (0, i.jsx)(s.Z, {
         icon: n(508933),
         timestamp: t.timestamp,
         compact: a,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({ onClick: o })
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({ onClick: o })
     });
 }
 function c(e) {
@@ -34,24 +34,8 @@ function c(e) {
         icon: n(324606),
         timestamp: t.timestamp,
         compact: a,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
-    });
-}
-function d(e) {
-    let { message: t, compact: n } = e;
-    return (0, i.jsx)(s.Z, {
-        iconNode: (0, i.jsx)(a.CircleWarningIcon, {
-            size: 'custom',
-            width: 20,
-            height: 20,
-            color: 'currentColor',
-            className: r.alertIcon
-        }),
-        timestamp: t.timestamp,
-        compact: n,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
     });
 }
 function u(e) {
@@ -62,11 +46,27 @@ function u(e) {
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: r.alertIcon
+            className: l.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: r.messageContent,
-        children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
+    });
+}
+function d(e) {
+    let { message: t, compact: n } = e;
+    return (0, i.jsx)(s.Z, {
+        iconNode: (0, i.jsx)(a.CircleWarningIcon, {
+            size: 'custom',
+            width: 20,
+            height: 20,
+            color: 'currentColor',
+            className: l.alertIcon
+        }),
+        timestamp: t.timestamp,
+        compact: n,
+        contentClassName: l.messageContent,
+        children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
     });
 }

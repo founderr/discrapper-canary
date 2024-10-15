@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(899740),
     p = n(155409),
     f = n(699516),
-    m = n(944486),
-    _ = n(594174),
+    _ = n(944486),
+    m = n(594174),
     g = n(295226),
     C = n(774343),
     I = n(417363),
@@ -26,10 +26,10 @@ var i = n(735250),
     S = n(557177),
     x = n(278464),
     v = n(276952),
-    T = n(682662),
-    Z = n(662146),
-    A = n(674552),
-    b = n(981631),
+    Z = n(682662),
+    T = n(662146),
+    b = n(674552),
+    A = n(981631),
     R = n(474936),
     M = n(871465),
     L = n(689938),
@@ -47,8 +47,8 @@ let y = {
     }
 };
 function O(e) {
-    let { selected: t, user: n, badge: h, link: f, showProgressBadge: m } = e,
-        _ = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
+    let { selected: t, user: n, badge: h, link: f, showProgressBadge: _ } = e,
+        m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
         [N, x] = l.useState(null),
@@ -59,19 +59,19 @@ function O(e) {
         };
     if (null == n) return null;
     let w = L.Z.Messages.DIRECT_MESSAGES;
-    I && (w = s.K.get(b.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
-    let G = null;
+    I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
+    let U = null;
     !t &&
-        m &&
-        (G = (0, i.jsx)(c.Z, {
+        _ &&
+        (U = (0, i.jsx)(c.Z, {
             className: P.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let U = t || g || _,
+    let G = t || g || m,
         k = (0, i.jsx)(o.BlobMask, {
-            selected: U,
-            lowerBadge: h > 0 ? (0, A.Ne)(h) : null,
-            upperBadge: G,
+            selected: G,
+            lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
+            upperBadge: U,
             lowerBadgeSize: { width: (0, o.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(o.NavItem, {
                 onMouseEnter: () => C(!0),
@@ -79,8 +79,8 @@ function O(e) {
                 onClick: () => {
                     if (!__OVERLAY__ && (null != N && clearTimeout(N), x(setTimeout(D, 500)), O(R + 1), 15 === R)) {
                         D();
-                        let e = !s.K.get(b.wli);
-                        s.K.set(b.wli, e),
+                        let e = !s.K.get(A.wli);
+                        s.K.set(A.wli, e),
                             e && s.K.set(M.O5, !0),
                             e ? (0, S.GN)('discodo') : (0, S.GN)('user_leave'),
                             E(!0),
@@ -89,16 +89,16 @@ function O(e) {
                             }, 1000);
                     }
                 },
-                selected: U,
+                selected: G,
                 ariaLabel: L.Z.Messages.DIRECT_MESSAGES,
                 ...j,
                 to: {
                     pathname: f,
                     state: {
                         analyticsSource: {
-                            page: b.ZY5.GUILD_CHANNEL,
-                            section: b.jXE.NAVIGATION,
-                            object: b.qAy.BUTTON_HOME
+                            page: A.ZY5.GUILD_CHANNEL,
+                            section: A.jXE.NAVIGATION,
+                            object: A.qAy.BUTTON_HOME
                         }
                     }
                 },
@@ -111,14 +111,14 @@ function O(e) {
             inlineSpecs: y,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(T.H, {
+            children: (0, i.jsxs)(Z.H, {
                 children: [
                     (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
                         className: P.pill
                     }),
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(T.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: w,
@@ -145,17 +145,17 @@ function j() {
             unviewedDiscountCount: g.Z.getUnacknowledgedDiscountOffers().length
         })),
         o = r + s,
-        u = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        u = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + o + d,
         S = p === o && o > 0 && n + d === 0,
         v = C.Z.getHomeLink();
     return (
-        S && (v = b.Z5c.APPLICATION_STORE),
+        S && (v = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(O, {
             selected: e,
             user: u,
-            selectedChannelId: m.Z.getChannelId(b.ME),
+            selectedChannelId: _.Z.getChannelId(A.ME),
             badge: p,
             link: v,
             showProgressBadge: t

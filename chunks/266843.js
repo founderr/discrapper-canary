@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return l;
+        return o;
     },
     h: function () {
         return r;
@@ -10,7 +10,7 @@ n.d(t, {
 var s = n(470079),
     a = n(481060),
     i = n(393238),
-    o = n(87894);
+    l = n(87894);
 function r() {
     let e = s.useRef(null),
         [t, n] = s.useState('lg'),
@@ -18,7 +18,7 @@ function r() {
     return (
         (0, i.P)(e, (e) => {
             let { width: t, scrollHeight: s } = e;
-            return (r(s), null == t || t > o.j2) ? n('lg') : t > o.Z0 ? n('sm') : n('xs');
+            return (r(s), null == t || t > l.j2) ? n('lg') : t > l.Z0 ? n('sm') : n('xs');
         }),
         {
             containerRef: e,
@@ -27,11 +27,11 @@ function r() {
         }
     );
 }
-function l(e) {
+function o(e) {
     let { initiallyExpanded: t } = e,
         [n, i] = s.useState(t),
-        [o, r] = s.useState(!1),
-        l = s.useCallback(() => {
+        [l, r] = s.useState(!1),
+        o = s.useCallback(() => {
             i((e) => !e), r(!0);
         }, []),
         { expansionSpring: u } = (0, a.useSpring)({
@@ -44,8 +44,8 @@ function l(e) {
         });
     return {
         expansionSpring: u,
-        isAnimating: o,
+        isAnimating: l,
         isExpanded: n,
-        toggleExpanded: l
+        toggleExpanded: o
     };
 }

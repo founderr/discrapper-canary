@@ -11,8 +11,8 @@ var l,
     h = n(131704),
     p = n(601964),
     f = n(592125),
-    m = n(430824),
-    _ = n(701190),
+    _ = n(430824),
+    m = n(701190),
     g = n(496675),
     C = n(594174),
     I = n(998502),
@@ -21,28 +21,28 @@ var l,
 let S = E.IlC.APP,
     x = !1,
     v = !1,
-    T = [];
-function Z() {
+    Z = [];
+function T() {
     x = !0;
 }
-class A extends (l = o.ZP.Store) {
+class b extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, _.Z, C.default);
+        this.waitFor(_.Z, m.Z, C.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
-        return !!(x && T.length > 0 && S === e);
+        return !!(x && Z.length > 0 && S === e);
     }
     getProps() {
         return {
-            invite: T.length > 0 ? T[0][0] : null,
+            invite: Z.length > 0 ? Z[0][0] : null,
             error: null != i && '' !== i ? i : null,
             submitting: v
         };
     }
 }
 (s = 'InviteModalStore'),
-    (a = 'displayName') in (r = A)
+    (a = 'displayName') in (r = b)
         ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
@@ -50,9 +50,9 @@ class A extends (l = o.ZP.Store) {
               writable: !0
           })
         : (r[a] = s),
-    (t.Z = new A(c.Z, {
-        OVERLAY_INITIALIZE: Z,
-        CONNECTION_OPEN: Z,
+    (t.Z = new b(c.Z, {
+        OVERLAY_INITIALIZE: T,
+        CONNECTION_OPEN: T,
         CONNECTION_CLOSED: function () {
             x = !1;
         },
@@ -66,7 +66,7 @@ class A extends (l = o.ZP.Store) {
                     if (null != f.Z.getChannel(e.id)) return (0, d.XU)(E.ME, e.id), I.ZP.focus(), !1;
                 } else {
                     if (null == n) return !1;
-                    if (null != m.Z.getGuild(n.id) && !(0, u.TY)(t)) {
+                    if (null != _.Z.getGuild(n.id) && !(0, u.TY)(t)) {
                         let e = (function (e) {
                             if ((0, u.W6)(e)) return N.oC.ROLE_SUBSCRIPTIONS;
                             let { channel: t } = e;
@@ -81,7 +81,7 @@ class A extends (l = o.ZP.Store) {
                 }
             }
             if (
-                T.some((e) => {
+                Z.some((e) => {
                     let [n] = e;
                     return n.code === t.code;
                 })
@@ -103,11 +103,11 @@ class A extends (l = o.ZP.Store) {
                     };
                 return null != u && (h.channel = { ...u }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
             })(t);
-            T.push([n, e.resolve]);
+            Z.push([n, e.resolve]);
         },
         INVITE_MODAL_CLOSE: function () {
-            if (((i = null), (v = !1), T.length > 0)) {
-                let [, e] = T.shift();
+            if (((i = null), (v = !1), Z.length > 0)) {
+                let [, e] = Z.shift();
                 null != e && e();
             }
         },

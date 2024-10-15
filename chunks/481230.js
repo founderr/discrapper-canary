@@ -1,9 +1,9 @@
 n.d(t, {
     R$: function () {
-        return g;
+        return p;
     },
     ZP: function () {
-        return p;
+        return g;
     }
 });
 var s = n(913527),
@@ -18,20 +18,20 @@ var s = n(913527),
     _ = n(959776),
     h = n(981631),
     E = n(723359);
-function p(e) {
+function g(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...s } = e;
-    return g({
+    return p({
         ...s,
         invite: t,
         giftCodeSKUId: n
     });
 }
-function g(e) {
-    let { email: t, phoneToken: n, username: s, globalName: p, consent: g, password: f, guildTemplateCode: m, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: A = !1, promoEmailConsent: x = null, usedUsernameSuggestion: C = null } = e;
+function p(e) {
+    let { email: t, phoneToken: n, username: s, globalName: g, consent: p, password: m, guildTemplateCode: f, birthday: I, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
     return (
         a.Z.dispatch({
             type: 'REGISTER',
-            birthday: A ? I : null
+            birthday: x ? I : null
         }),
         null != I &&
             ((0, _.Z)(I, h.jXE.REGISTER),
@@ -50,23 +50,23 @@ function g(e) {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
                 username: s,
-                global_name: p,
-                password: f,
+                global_name: g,
+                password: m,
                 invite: N,
-                consent: g,
+                consent: p,
                 phone_token: n,
                 date_of_birth: null == I ? void 0 : I.format('YYYY-MM-DD'),
                 gift_code_sku_id: T,
-                guild_template_code: m,
-                promotional_email_opt_in: null == x ? void 0 : x.checked
+                guild_template_code: f,
+                promotional_email_opt_in: null == A ? void 0 : A.checked
             },
             trackedActionData: {
                 event: i.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: N,
                     used_username_suggestion: C,
-                    promotional_email_opt_in: null == x ? void 0 : x.checked,
-                    promotional_email_pre_checked: null == x ? void 0 : x.preChecked,
+                    promotional_email_opt_in: null == A ? void 0 : A.checked,
+                    promotional_email_pre_checked: null == A ? void 0 : A.preChecked,
                     was_unique_username: !0
                 }
             }

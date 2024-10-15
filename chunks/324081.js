@@ -7,22 +7,22 @@ var i = n(735250);
 n(470079);
 var a = n(120356),
     s = n.n(a),
-    l = n(91192),
-    r = n(442837),
+    r = n(91192),
+    l = n(442837),
     o = n(481060),
     c = n(788307),
-    d = n(43267),
-    u = n(933557),
+    u = n(43267),
+    d = n(933557),
     _ = n(471445),
     E = n(790145),
     I = n(313201),
     m = n(565138),
     T = n(199902),
-    N = n(592125),
-    h = n(430824),
-    C = n(158776),
-    p = n(594174),
-    f = n(689938),
+    h = n(592125),
+    N = n(430824),
+    f = n(158776),
+    C = n(594174),
+    p = n(689938),
     g = n(699420);
 let A = {
     top: 8,
@@ -31,24 +31,24 @@ let A = {
     right: -4
 };
 function S(e) {
-    let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: r, toggleCollapsed: c } = e,
-        d = (0, l.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
+    let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: l, toggleCollapsed: c } = e,
+        u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
         offset: A,
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
-            ...d,
+            ...u,
             tabIndex: 0,
             'data-recents-channel': t.id,
             onKeyDown: function (e) {
-                null != c && null != r && (('ArrowRight' === e.key && r.collapsed) || ('ArrowLeft' === e.key && !r.collapsed)) && (null == c || c(r));
+                null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
             },
             children: [
-                (0, i.jsx)(M, {
+                (0, i.jsx)(R, {
                     channel: t,
                     gotoChannel: a
                 }),
-                (0, i.jsx)(R, {
+                (0, i.jsx)(M, {
                     channel: t,
                     gotoChannel: a,
                     mentionCount: s
@@ -58,22 +58,22 @@ function S(e) {
         })
     });
 }
-function M(e) {
+function R(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(O, {
+        ? (0, i.jsx)(x, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(O, {
               channel: t,
               gotoChannel: n
           });
 }
-function O(e) {
+function x(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, r.e7)([p.default], () => (t.isDM() ? p.default.getUser(t.getRecipientId()) : null)),
-        s = null == a ? (0, d.x)(t) : a.getAvatarURL(void 0, 40);
+        a = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
+        s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
         tabIndex: -1,
@@ -85,9 +85,9 @@ function O(e) {
         })
     });
 }
-function x(e) {
+function O(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
+        a = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
     return null == a
         ? null
         : (0, i.jsx)(m.Z, {
@@ -100,15 +100,15 @@ function x(e) {
               tabIndex: -1
           });
 }
-function R(e) {
+function M(e) {
     let { channel: t, gotoChannel: n, mentionCount: a } = e,
-        l = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
-        c = (0, r.e7)([N.Z], () => N.Z.getChannel(t.parent_id)),
-        d = (0, _.KS)(t, l),
-        I = (0, u.ZP)(t, !1),
-        m = null == c ? (null == l ? void 0 : l.name) : ''.concat(null == l ? void 0 : l.name, ' \u203A ').concat(c.name),
+        r = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id)),
+        c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
+        u = (0, _.KS)(t, r),
+        I = (0, d.ZP)(t, !1),
+        m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
         T = t.isMultiUserDM()
-            ? f.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
+            ? p.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(v, { channel: t })
               : (0, i.jsx)(o.Clickable, {
@@ -126,9 +126,9 @@ function R(e) {
                     className: g.channelName,
                     onClick: n,
                     children: [
-                        t.isThread() || t.isGroupDM() || null == d
+                        t.isThread() || t.isGroupDM() || null == u
                             ? null
-                            : (0, i.jsx)(d, {
+                            : (0, i.jsx)(u, {
                                   className: t.isForumLikeChannel() ? g.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
@@ -163,11 +163,11 @@ function v(e) {
             user: n,
             activities: a,
             applicationStream: s
-        } = (0, r.cj)([p.default, C.Z, T.Z], () => {
-            let e = p.default.getUser(t.getRecipientId());
+        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
+            let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? C.Z.getActivities(e.id) : null,
+                activities: null != e ? f.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
             };
         });

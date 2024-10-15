@@ -18,8 +18,8 @@ var i = n(735250),
     h = n(317381),
     p = n(276952),
     f = n(682662),
-    m = n(674552),
-    _ = n(593364),
+    _ = n(674552),
+    m = n(593364),
     g = n(905423),
     C = n(199902),
     I = n(592125),
@@ -28,17 +28,17 @@ var i = n(735250),
     S = n(709054),
     x = n(853856),
     v = n(593214),
-    T = n(919755),
-    Z = n(110977),
-    A = n(603274),
-    b = n(981631),
+    Z = n(919755),
+    T = n(110977),
+    b = n(603274),
+    A = n(981631),
     R = n(689938),
     M = n(599576);
 let L = {
     analyticsSource: {
-        page: b.ZY5.GUILD_CHANNEL,
-        section: b.jXE.CHANNEL_LIST,
-        object: b.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function P() {
@@ -49,10 +49,10 @@ function P() {
             favoriteChannels: x.Z.getFavoriteChannels(),
             favoriteServerMuted: x.Z.favoriteServerMuted
         })),
-        D = (0, o.e7)([E.Z], () => E.Z.getChannelId(b.I_8)),
+        D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-        G = (0, g.Z)((e) => e.guildId) === b.I_8,
-        { badge: U, unread: k } = (0, T.Z)(j),
+        U = (0, g.Z)((e) => e.guildId) === A.I_8,
+        { badge: G, unread: k } = (0, Z.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -77,7 +77,7 @@ function P() {
                 f = !1;
             return (
                 n ? ((u = !r), (d = r), (p = i), (f = s)) : ((p = l), (f = c)),
-                (0, m.Or)({
+                (0, _.Or)({
                     audio: u,
                     video: d,
                     screenshare: p,
@@ -87,36 +87,36 @@ function P() {
                 })
             );
         })(j),
-        V = U > 0 ? (0, _.N)(U) : null,
-        H = l.useCallback(() => {
+        H = G > 0 ? (0, m.N)(G) : null,
+        V = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
         children: [
             (0, i.jsx)(p.Z, {
-                selected: G,
+                selected: U,
                 hovered: P,
                 unread: k && !O,
                 className: M.pill
             }),
-            (0, i.jsx)(A.Z, {
-                onShow: H,
-                children: (0, i.jsx)(Z.S, {
+            (0, i.jsx)(b.Z, {
+                onShow: V,
+                children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: G || P,
+                        selected: U || P,
                         upperBadge: B,
-                        lowerBadge: V,
+                        lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
                             ariaLabel: R.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
                                 guildName: R.Z.Messages.FAVORITES_GUILD_NAME,
-                                mentions: U
+                                mentions: G
                             }),
                             to: {
-                                pathname: b.Z5c.CHANNEL(b.I_8, D),
+                                pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
-                            selected: G || P,
+                            selected: U || P,
                             onMouseEnter: () => y(!0),
                             onMouseLeave: () => y(!1),
                             onMouseDown: function () {

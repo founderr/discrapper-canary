@@ -18,8 +18,8 @@ function c(e) {
         h = !1,
         p = !1,
         f = (0, l.e7)([s.Z], () => s.Z.getChannelId()),
-        m = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
-        _ = null != m && c.includes(m),
+        _ = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
+        m = null != _ && c.includes(_),
         g = (0, l.e7)([o.Z], () => null != f && o.Z.hasVideo(f), [f]),
         C = (0, l.e7)([a.Z], () => a.Z.getCurrentUserActiveStream());
     return (
@@ -29,10 +29,10 @@ function c(e) {
                 audio: d,
                 video: h,
                 screenshare: p,
-                liveStage: _,
+                liveStage: m,
                 isCurrentUserConnected: u
             }),
-            [d, h, p, _, u]
+            [d, h, p, m, u]
         )
     );
 }

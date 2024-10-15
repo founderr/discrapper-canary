@@ -14,10 +14,10 @@ function r(e) {
 }
 n.d(t, {
     U2: function () {
-        return f;
+        return m;
     },
     wz: function () {
-        return g;
+        return p;
     }
 });
 var i = 'copy',
@@ -121,7 +121,7 @@ var E = {
         }),
         signal: u(i)
     },
-    p = {
+    g = {
         type: c(i),
         id: c(i),
         rawId: c(a),
@@ -134,10 +134,10 @@ var E = {
         }),
         clientExtensionResults: l(h, (e) => e.getClientExtensionResults())
     };
-function g(e) {
+function p(e) {
     return o(s, E, e);
 }
-async function f(e) {
+async function m(e) {
     let t = await navigator.credentials.get(e);
-    return (t.toJSON = () => o(r, p, t)), t;
+    return (t.toJSON = () => o(r, g, t)), t;
 }

@@ -2,13 +2,13 @@ var i = n(735250);
 n(470079);
 var a = n(120356),
     s = n.n(a),
-    l = n(481060),
-    r = n(318713),
+    r = n(481060),
+    l = n(318713),
     o = n(928028);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: a, className: l, children: c, contentClassName: d, iconClassName: u, iconContainerClassName: _, compact: E = !1 } = e;
+    let { icon: t, iconNode: n, timestamp: a, className: r, children: c, contentClassName: u, iconClassName: d, iconContainerClassName: _, compact: E = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: s()(l, {
+        className: s()(r, {
             [o.container]: !0,
             [o.compact]: E,
             [o.cozy]: !E
@@ -24,13 +24,13 @@ function c(e) {
                     className: o.iconContainer,
                     children: (0, i.jsx)('div', {
                         'data-accessibility': 'desaturate',
-                        className: s()(o.icon, o.iconSize, u),
+                        className: s()(o.icon, o.iconSize, d),
                         style: { backgroundImage: "url('".concat(t, "')") }
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: s()(d, o.content),
-                children: [c, null != a && (0, i.jsx)(r.Z, { timestamp: a })]
+                className: s()(u, o.content),
+                children: [c, null != a && (0, i.jsx)(l.Z, { timestamp: a })]
             })
         ]
     });
@@ -41,7 +41,7 @@ function c(e) {
         className: o.action,
         children: [
             '\u2014',
-            (0, i.jsx)(l.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 onClick: t,
                 className: o.actionAnchor,
                 children: n

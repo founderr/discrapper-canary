@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(259580),
     p = n(981631),
     f = n(176505),
-    m = n(689938),
-    _ = n(813397);
+    _ = n(689938),
+    m = n(813397);
 function g(e, t) {
     return (0, i.jsx)(
         s.Text,
@@ -50,33 +50,33 @@ let C = l.memo(function (e) {
                 ...N,
                 role: 'button',
                 focusProps: { offset: { right: 4 } },
-                className: _.progressBarContainer,
+                className: m.progressBarContainer,
                 onClick: function () {
                     (0, d.uL)(p.Z5c.CHANNEL(t.id, f.oC.GUILD_HOME));
                 },
                 children: [
                     (0, i.jsxs)('div', {
-                        className: _.progressBarText,
+                        className: m.progressBarText,
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'heading-sm/bold',
-                                children: m.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+                                children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
                             }),
                             (0, i.jsxs)('div', {
-                                className: _.rightContainer,
+                                className: m.rightContainer,
                                 children: [
                                     (0, i.jsx)(s.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
-                                        className: _.rightText,
-                                        children: m.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+                                        className: m.rightText,
+                                        children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
                                             numberHook: g,
                                             total: E.toString(),
                                             completed: I.toString()
                                         })
                                     }),
                                     (0, i.jsx)(h.Z, {
-                                        className: _.arrow,
+                                        className: m.arrow,
                                         width: 16,
                                         height: 16,
                                         direction: h.Z.Directions.RIGHT
@@ -86,7 +86,7 @@ let C = l.memo(function (e) {
                         ]
                     }),
                     (0, i.jsx)(s.Progress, {
-                        className: _.progressBar,
+                        className: m.progressBar,
                         foregroundGradientColor: [(0, o.Lq)(p.Ilk.GREEN_300), (0, o.Lq)(p.Ilk.GREEN_230)],
                         percent: (I / E) * 100 + 3,
                         animate: !0
@@ -95,7 +95,7 @@ let C = l.memo(function (e) {
             }),
             (0, i.jsx)('div', {
                 role: 'separator',
-                className: _.divider
+                className: m.divider
             })
         ]
     });

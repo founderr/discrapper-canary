@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     g3: function () {
-        return N;
+        return h;
     },
     jF: function () {
         return E;
@@ -18,28 +18,28 @@ n.d(t, {
 var i = n(990547),
     a = n(544891),
     s = n(283693),
-    l = n(570140),
-    r = n(695346),
+    r = n(570140),
+    l = n(695346),
     o = n(573261),
     c = n(140155),
-    d = n(178480),
-    u = n(981631);
+    u = n(178480),
+    d = n(981631);
 function _(e) {
-    l.Z.dispatch({
+    r.Z.dispatch({
         type: 'NOTIFICATION_CENTER_SET_ACTIVE',
         active: e
     });
 }
 function E() {
-    l.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
+    r.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
 async function I(e, t) {
     if (c.Z.loading) return;
-    await l.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
+    await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
         let a = await o.Z.get({
-            url: u.ANM.NOTIF_CENTER_ITEMS(),
+            url: d.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
@@ -55,27 +55,27 @@ async function I(e, t) {
             query: { ...e }
         });
         null == t || t(),
-            await l.Z.dispatch({
+            await r.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
                 items: a.body.items,
                 cursor: a.body.cursor,
                 hasMore: a.body.has_more
             });
     } catch (e) {
-        null == t || t(), await l.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
+        null == t || t(), await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
     }
 }
 function m(e) {
     null != e.local_id
         ? (function (e) {
-              l.Z.dispatch({
+              r.Z.dispatch({
                   type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
                   localIds: e
               });
           })([e.local_id])
-        : (0, d.RB)(e)
+        : (0, u.RB)(e)
           ? (function (e) {
-                l.Z.dispatch({
+                r.Z.dispatch({
                     type: 'NOTIFICATION_CENTER_ITEMS_ACK',
                     optimistic: !0,
                     ids: [e]
@@ -85,41 +85,41 @@ function m(e) {
 }
 async function T(e) {
     try {
-        l.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
             optimistic: !0,
             ids: [e]
         }),
-            await a.tn.post({ url: u.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
+            await a.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
     } catch (t) {
-        l.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
             ids: [e]
         });
     }
 }
-async function N(e) {
-    let t = r.d$.getSetting();
+async function h(e) {
+    let t = l.d$.getSetting();
     try {
-        l.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEM_DELETE',
             id: e.id
         }),
             await o.Z.delete({
-                url: u.ANM.NOTIF_CENTER_ITEMS(e.id),
-                body: { item_type: (0, d.RB)(e) ? 'mention' : 'regular' },
+                url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
+                body: { item_type: (0, u.RB)(e) ? 'mention' : 'regular' },
                 trackedActionData: {
                     event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
                     properties: {
                         notification_center_id: e.id,
-                        acked: (0, d.r)(e, t),
+                        acked: (0, u.r)(e, t),
                         item_type: e.type
                     }
                 }
             });
     } catch (t) {
         throw (
-            (l.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEM_DELETE_FAILURE',
                 item: e
             }),

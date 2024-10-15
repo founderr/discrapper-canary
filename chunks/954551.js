@@ -3,32 +3,32 @@ n.d(t, {
         return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    l = n(665149),
-    s = n(388035),
-    a = n(453473),
+var a = n(481060),
+    s = n(665149),
+    r = n(388035),
+    l = n(453473),
     o = n(689938);
 function c(e) {
     let { onOpen: t, onClose: n, className: c } = e;
-    return (0, r.jsx)(a.P, {
+    return (0, i.jsx)(l.P, {
         onOpen: t,
         onClose: n,
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, a) =>
-            (0, r.jsx)(s.U, {
+        children: (e, t, n, l) =>
+            (0, i.jsx)(r.U, {
                 location: 'bookmarks-button',
-                children: (0, r.jsx)(l.JO, {
+                children: (0, i.jsx)(s.JO, {
                     ...n,
                     className: c,
                     onClick: e,
-                    icon: i.BookmarkIcon,
+                    icon: a.BookmarkIcon,
                     'aria-label': o.Z.Messages.FOR_LATER,
                     tooltip: t ? null : o.Z.Messages.FOR_LATER,
                     selected: t,
-                    showBadge: a
+                    showBadge: l
                 })
             })
     });

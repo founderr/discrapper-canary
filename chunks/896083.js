@@ -1,23 +1,23 @@
 n.d(t, {
     F: function () {
-        return l;
+        return s;
     }
 }),
     n(47120);
-var r = n(470079),
-    i = n(295141);
-let l = () => {
-    let [e, t] = r.useState(!1),
-        [n, l] = r.useState(null);
+var i = n(470079),
+    a = n(295141);
+let s = () => {
+    let [e, t] = i.useState(!1),
+        [n, s] = i.useState(null);
     return {
         loading: e,
         error: n,
-        getTrialPurchaseEligibility: r.useCallback(async (e, n, r) => {
-            t(!0), l(null);
+        getTrialPurchaseEligibility: i.useCallback(async (e, n, i) => {
+            t(!0), s(null);
             try {
-                return await (0, i.LB)(e, n, r);
+                return await (0, a.LB)(e, n, i);
             } catch (e) {
-                l(e);
+                s(e);
             } finally {
                 t(!1);
             }

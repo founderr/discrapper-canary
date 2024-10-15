@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     },
     Rq: function () {
-        return p;
+        return g;
     },
     W_: function () {
         return a;
@@ -87,7 +87,7 @@ async function h(e, t) {
 async function E(e, t) {
     return c(await _(e, u(t)));
 }
-async function p(e, t) {
+async function g(e, t) {
     t = await h(e, t);
     let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');

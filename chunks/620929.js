@@ -4,27 +4,27 @@ t.d(l, {
     }
 });
 var a = t(735250),
-    n = t(470079),
-    s = t(120356),
-    i = t.n(s),
+    s = t(470079),
+    n = t(120356),
+    i = t.n(n),
     r = t(913527),
     o = t.n(r),
     c = t(442837),
     d = t(481060),
     u = t(430824),
     x = t(650461),
-    h = t(353093),
-    m = t(105671),
+    m = t(353093),
+    h = t(105671),
     g = t(532490),
     C = t(979264),
     v = t(570938),
     f = t(550271),
     j = t(116175),
-    p = t(308083),
-    N = t(689938),
+    N = t(308083),
+    p = t(689938),
     _ = t(691994);
 function T(e) {
-    let { guildId: l, tag: t, badge: n, primaryColor: s, secondaryColor: i } = e;
+    let { guildId: l, tag: t, badge: s, primaryColor: n, secondaryColor: i } = e;
     return null == t || 0 === t.length
         ? (0, a.jsx)('div', {
               className: _.placeholderIcon,
@@ -39,27 +39,27 @@ function T(e) {
               clanTag: t,
               textVariant: 'heading-lg/semibold',
               textColor: 'text-normal',
-              badgeSize: p.NC.SIZE_24,
+              badgeSize: N.NC.SIZE_24,
               clanBadge: (0, a.jsx)(f.A, {
                   className: _.charterClanBadge,
-                  badge: n,
-                  width: p.NC.SIZE_24,
-                  height: p.NC.SIZE_24,
-                  primaryTintColor: s,
+                  badge: s,
+                  width: N.NC.SIZE_24,
+                  height: N.NC.SIZE_24,
+                  primaryTintColor: n,
                   secondaryTintColor: i
               })
           });
 }
 function E(e) {
-    let { applicationIds: l, playstyle: t, className: s } = e,
-        r = n.useMemo(() => Array.from(l), [l]),
-        o = (0, m.i)(r),
-        c = n.useMemo(() => {
+    let { applicationIds: l, playstyle: t, className: n } = e,
+        r = s.useMemo(() => Array.from(l), [l]),
+        o = (0, h.i)(r),
+        c = s.useMemo(() => {
             if (null == o) return null;
-            let e = (0, p.mv)(t);
+            let e = (0, N.mv)(t);
             return null == e
-                ? N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({ games: o })
-                : N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
+                ? p.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({ games: o })
+                : p.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
                       playstyle: e,
                       games: o
                   });
@@ -67,8 +67,8 @@ function E(e) {
     return (0, a.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
-        className: i()(_.overviewText, s),
-        children: null == c ? N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
+        className: i()(_.overviewText, n),
+        children: null == c ? p.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
     });
 }
 l.Z =
@@ -76,14 +76,14 @@ l.Z =
         ? (e) => {
               let { guildId: l } = e,
                   t = (0, x.Wg)(),
-                  s = (0, c.e7)([u.Z], () => {
+                  n = (0, c.e7)([u.Z], () => {
                       var e, t;
                       return null !== (t = null === (e = u.Z.getGuild(l)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
                   }),
                   {
                       gameApplicationIds: i,
                       playstyle: r,
-                      interests: m,
+                      interests: h,
                       tag: C,
                       badgeKind: v,
                       badgePrimaryColor: f,
@@ -92,7 +92,7 @@ l.Z =
                       var e;
                       return null !== (e = x.ZP.getStateForGuild(l).progress) && void 0 !== e ? e : t;
                   }),
-                  Z = n.useMemo(() => ((null == m ? void 0 : m.size) > 0 ? (0, h.f6)(Array.from(m), p.nt) : null), [m]);
+                  Z = s.useMemo(() => ((null == h ? void 0 : h.size) > 0 ? (0, m.f6)(Array.from(h), N.nt) : null), [h]);
               return (0, a.jsxs)(g.Z, {
                   ...e,
                   children: [
@@ -107,19 +107,19 @@ l.Z =
                           variant: 'heading-xl/normal',
                           color: 'text-muted',
                           className: _.overviewHeaderPrelude,
-                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
+                          children: p.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
                       }),
                       (0, a.jsx)(d.Heading, {
                           variant: 'heading-xl/bold',
                           color: 'interactive-active',
                           className: _.overviewGuildName,
-                          children: s
+                          children: n
                       }),
                       (0, a.jsx)(d.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           className: _.overviewText,
-                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
+                          children: p.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
                       }),
                       (0, a.jsx)(E, {
                           applicationIds: i,
@@ -130,14 +130,14 @@ l.Z =
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 className: _.overviewText,
-                                children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({ traits: Z })
+                                children: p.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({ traits: Z })
                             })
                           : null,
                       (0, a.jsx)(d.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           className: _.overviewText,
-                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+                          children: p.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
                       })
                   ]
               });

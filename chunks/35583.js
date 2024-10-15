@@ -2,12 +2,12 @@ n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(442837),
-    l = n(481060),
-    r = n(668781),
+    r = n(481060),
+    l = n(668781),
     o = n(431583),
     c = n(91372),
-    d = n(19780),
-    u = n(35818),
+    u = n(19780),
+    d = n(35818),
     _ = n(665149),
     E = n(689938),
     I = n(228856);
@@ -34,7 +34,7 @@ class T extends a.PureComponent {
             : null;
     }
     handleDownloadApps() {
-        (0, l.openModal)((e) =>
+        (0, r.openModal)((e) =>
             (0, i.jsx)(o.default, {
                 source: 'Links',
                 ...e
@@ -49,7 +49,7 @@ class T extends a.PureComponent {
                     tooltip: E.Z.Messages.UPDATE_AVAILABLE,
                     foreground: I.downloadArrow,
                     background: I.cloud,
-                    icon: l.DownloadIcon
+                    icon: r.DownloadIcon
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
@@ -57,7 +57,7 @@ class T extends a.PureComponent {
                     tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
                     foreground: I.updateIconForeground,
                     onClick: this.handleInstallDownload,
-                    icon: l.DownloadIcon
+                    icon: r.DownloadIcon
                 });
             default:
                 return null;
@@ -70,8 +70,8 @@ class T extends a.PureComponent {
                 clicked: !1
             }),
             m(this, 'handleInstallDownload', () => {
-                d.Z.isConnected()
-                    ? r.Z.show({
+                u.Z.isConnected()
+                    ? l.Z.show({
                           title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
                           body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
                           onConfirm: this.doUpdate,
@@ -81,7 +81,7 @@ class T extends a.PureComponent {
                     : this.doUpdate();
             }),
             m(this, 'doUpdate', () => {
-                !this.state.clicked && (this.setState({ clicked: !0 }), (0, u.Q)());
+                !this.state.clicked && (this.setState({ clicked: !0 }), (0, d.Q)());
             });
     }
 }

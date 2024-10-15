@@ -18,8 +18,8 @@ var l = n(120356),
     h = n(888651),
     p = n(619915),
     f = n(339340),
-    m = n(201895),
-    _ = n(718589),
+    _ = n(201895),
+    m = n(718589),
     g = n(933557),
     C = n(557135),
     I = n(873696),
@@ -28,10 +28,10 @@ var l = n(120356),
     S = n(281956),
     x = n(66999),
     v = n(554747),
-    T = n(506936),
-    Z = n(574176),
-    A = n(359110),
-    b = n(155409),
+    Z = n(506936),
+    T = n(574176),
+    b = n(359110),
+    A = n(155409),
     R = n(695346),
     M = n(592125),
     L = n(430824),
@@ -41,12 +41,12 @@ var l = n(120356),
     j = n(9156),
     D = n(979651),
     w = n(934415),
-    G = n(98597),
-    U = n(648501),
+    U = n(98597),
+    G = n(648501),
     k = n(473403),
     B = n(830993),
-    V = n(653577),
-    H = n(207055),
+    H = n(653577),
+    V = n(207055),
     F = n(981631),
     W = n(647086),
     z = n(689938),
@@ -64,7 +64,7 @@ function K(e, t, n) {
         e
     );
 }
-class q extends G.ZP {
+class q extends U.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -88,7 +88,7 @@ class q extends G.ZP {
         let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
             a = null === (e = (0, I.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
             { hovered: s } = this.state;
-        return (0, i.jsx)(V.Z, {
+        return (0, i.jsx)(H.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
@@ -100,7 +100,7 @@ class q extends G.ZP {
     }
     renderVoiceUsers() {
         let { channel: e, voiceStates: t, collapsed: n, withGuildIcon: l, tabIndex: r } = this.props;
-        return (0, i.jsx)(H.Z, {
+        return (0, i.jsx)(V.Z, {
             channel: e,
             collapsed: n,
             collapsedMax: 6,
@@ -120,8 +120,8 @@ class q extends G.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: x, isFavoriteSuggestion: v, withGuildIcon: T } = this.props,
-            { shouldShowActivities: Z, shouldShowGuildVerificationPopout: A } = this.state,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: x, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
+            { shouldShowActivities: T, shouldShowGuildVerificationPopout: b } = this.state,
             R = this.getVoiceStatesCount(),
             M = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [Y.disabled]: this.isDisabled() }),
@@ -135,7 +135,7 @@ class q extends G.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (Z && !u && !d && !A) || A,
+                            shouldShow: (T && !u && !d && !b) || b,
                             children: () =>
                                 (0, i.jsx)(o.Tooltip, {
                                     text: this.getTooltipText(),
@@ -160,7 +160,7 @@ class q extends G.ZP {
                                             },
                                             connectDragPreview: g,
                                             isFavoriteSuggestion: v,
-                                            'aria-label': (0, m.ZP)({
+                                            'aria-label': (0, _.ZP)({
                                                 channel: e,
                                                 unread: l,
                                                 mentionCount: s,
@@ -168,11 +168,11 @@ class q extends G.ZP {
                                                 embeddedActivitiesCount: S.length,
                                                 isSubscriptionGated: x
                                             }),
-                                            'aria-describedby': (0, _.Z)({
+                                            'aria-describedby': (0, m.Z)({
                                                 channel: e,
                                                 embeddedApps: S
                                             }),
-                                            withGuildIcon: T,
+                                            withGuildIcon: Z,
                                             ...h,
                                             children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
                                         });
@@ -187,7 +187,7 @@ class q extends G.ZP {
             I && (M = f(M)),
             C && (M = h(p(M))),
             E &&
-                (M = (0, i.jsx)(b.Z, {
+                (M = (0, i.jsx)(A.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
@@ -285,8 +285,8 @@ class q extends G.ZP {
                     });
                 }
                 if (o)
-                    return (0, i.jsx)(T.Z, {
-                        type: T.R.VOICE,
+                    return (0, i.jsx)(Z.Z, {
+                        type: Z.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
@@ -302,7 +302,7 @@ class q extends G.ZP {
                             return (0, i.jsx)(o.Clickable, {
                                 className: r()(Y.iconItem, n ? Y.alwaysShown : null),
                                 onClick: () => {
-                                    c.Z.updateChatOpen(e.id, !0), (0, A.Kh)(e.id);
+                                    c.Z.updateChatOpen(e.id, !0), (0, b.Kh)(e.id);
                                 },
                                 'aria-label': z.Z.Messages.OPEN_CHAT,
                                 onMouseEnter: l,
@@ -345,21 +345,21 @@ function X(e) {
             };
         }),
         f = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)),
-        m = (0, p.ZP)(n),
-        _ = (0, g.ZP)(n),
+        _ = (0, p.ZP)(n),
+        m = (0, g.ZP)(n),
         C = (0, v.qY)(n.id),
         { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, x.Z)(n.id),
         S = (0, E.Z)(),
-        T = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
-        A = e.connected || (null == S ? void 0 : S.channelId) === n.id,
-        { enableHangStatus: b, allowChannelTopic: R } = Z.n.useExperiment(
+        Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
+        b = e.connected || (null == S ? void 0 : S.channelId) === n.id,
+        { enableHangStatus: A, allowChannelTopic: R } = T.n.useExperiment(
             {
                 guildId: n.guild_id,
                 location: 'VoiceChannel'
             },
             { autoTrackExposure: !1 }
         ),
-        L = (0, U.Z)({
+        L = (0, G.Z)({
             channel: n,
             isChannelSelected: s,
             isChannelCollapsed: o,
@@ -369,10 +369,10 @@ function X(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        w = A && null == L;
+        w = b && null == L;
     return (0, i.jsx)(Q, {
-        channelName: _,
-        embeddedApps: m,
+        channelName: m,
+        embeddedApps: _,
         embeddedActivityType: F.IIU.PLAYING,
         video: f,
         hasActiveEvent: null != C,
@@ -381,11 +381,11 @@ function X(e) {
         ...u,
         ...h,
         ...e,
-        connected: A,
-        isFavoriteSuggestion: r && !T,
+        connected: b,
+        isFavoriteSuggestion: r && !Z,
         forceShowButtons: w,
         channelInfo: L,
-        enableHangStatus: b,
+        enableHangStatus: A,
         allowChannelTopic: R,
         resolvedUnreadSetting: d
     });

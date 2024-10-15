@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return x;
     }
 });
 var i,
     a,
     s = n(735250),
-    l = n(470079),
-    r = n(120356),
-    o = n.n(r),
+    r = n(470079),
+    l = n(120356),
+    o = n.n(l),
     c = n(468194),
-    d = n(481060),
-    u = n(904245),
+    u = n(481060),
+    d = n(904245),
     _ = n(596454),
     E = n(377171),
     I = n(739566),
     m = n(942951),
     T = n(834129),
-    N = n(809026),
-    h = n(139256),
-    C = n(489887),
-    p = n(689938),
-    f = n(167919);
+    h = n(809026),
+    N = n(139256),
+    f = n(489887),
+    C = n(689938),
+    p = n(167919);
 function g() {
     return (0, s.jsx)('svg', {
         width: '24',
@@ -51,7 +51,7 @@ function A(e) {
     }
     return null != t
         ? (0, s.jsx)('div', {
-              className: f.imageContainer,
+              className: p.imageContainer,
               children: t
           })
         : null;
@@ -62,71 +62,71 @@ function S(e) {
         { type: n, ...i } = e;
     switch (n) {
         case 'NO_VOTES':
-            t = (0, s.jsx)(d.Text, {
+            t = (0, s.jsx)(u.Text, {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
-                children: p.Z.Messages.POLL_RESULT_NO_VOTERS
+                children: C.Z.Messages.POLL_RESULT_NO_VOTERS
             });
             break;
         case 'VICTOR':
-            let { victorAnswerText: a, victorVotePercentage: l } = i;
+            let { victorAnswerText: a, victorVotePercentage: r } = i;
             t = (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsxs)('div', {
-                        className: f.victorAnswer,
+                        className: p.victorAnswer,
                         children: [
-                            (0, s.jsx)(d.Text, {
+                            (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-normal',
-                                className: f.victorAnswerText,
+                                className: p.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, s.jsx)(h.ZY, {
+                            (0, s.jsx)(N.ZY, {
                                 size: 16,
-                                className: f.victorIcon,
+                                className: p.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0
                             })
                         ]
                     }),
-                    (0, s.jsxs)(d.Text, {
+                    (0, s.jsxs)(u.Text, {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
-                        children: [p.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', l, '%']
+                        children: [C.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', r, '%']
                     })
                 ]
             });
             break;
         case 'TIE':
-            let { tiedVotePercentage: r } = i;
+            let { tiedVotePercentage: l } = i;
             t = (0, s.jsxs)(s.Fragment, {
                 children: [
-                    (0, s.jsx)(d.Text, {
+                    (0, s.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
-                        children: p.Z.Messages.POLL_RESULT_TIED
+                        children: C.Z.Messages.POLL_RESULT_TIED
                     }),
-                    (0, s.jsxs)(d.Text, {
+                    (0, s.jsxs)(u.Text, {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
-                        children: [r, '%']
+                        children: [l, '%']
                     })
                 ]
             });
     }
     return (0, s.jsx)('div', {
-        className: f.description,
+        className: p.description,
         children: t
     });
 }
-function M(e) {
+function R(e) {
     let { className: t, data: n, onClickPollLink: i } = e,
-        a = l.useMemo(
+        a = r.useMemo(
             () =>
                 (function (e) {
                     if (0 === e.totalVotes) return { type: 'NO_VOTES' };
@@ -145,9 +145,9 @@ function M(e) {
                 })(n),
             [n]
         ),
-        r = null != n.victorEmoji || 'NO_VOTES' === a.type;
+        l = null != n.victorEmoji || 'NO_VOTES' === a.type;
     return (0, s.jsxs)('div', {
-        className: o()(f.container, { [f.containerWithImage]: r }, t),
+        className: o()(p.container, { [p.containerWithImage]: l }, t),
         children: [
             (0, s.jsx)(A, {
                 hasNoVotes: 'NO_VOTES' === a.type,
@@ -155,28 +155,28 @@ function M(e) {
             }),
             (0, s.jsx)(S, { ...a }),
             null != i &&
-                (0, s.jsx)(d.Button, {
-                    className: f.button,
-                    size: d.Button.Sizes.TINY,
+                (0, s.jsx)(u.Button, {
+                    className: p.button,
+                    size: u.Button.Sizes.TINY,
                     onClick: i,
-                    color: d.Button.Colors.PRIMARY,
-                    children: (0, s.jsx)(d.Text, {
+                    color: u.Button.Colors.PRIMARY,
+                    children: (0, s.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
-                        children: p.Z.Messages.POLL_RESULT_VIEW_POLL
+                        children: C.Z.Messages.POLL_RESULT_VIEW_POLL
                     })
                 })
         ]
     });
 }
-function O(e) {
+function x(e) {
     var t;
-    let { message: n, channel: i, compact: a, disableInteraction: r = !1 } = e,
+    let { message: n, channel: i, compact: a, disableInteraction: l = !1 } = e,
         o = n.embeds[0],
-        _ = l.useMemo(() => (0, N.Z)(o), [o]),
-        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv),
-        h = (0, I.ZP)(n),
+        _ = r.useMemo(() => (0, h.Z)(o), [o]),
+        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', f.Dv),
+        N = (0, I.ZP)(n),
         g = (0, m.l)({
             user: n.author,
             channelId: i.id,
@@ -184,9 +184,9 @@ function O(e) {
             messageId: n.id
         }),
         A = n.messageReference,
-        S = l.useCallback(() => {
+        S = r.useCallback(() => {
             null != A &&
-                u.Z.jumpToMessage({
+                d.Z.jumpToMessage({
                     channelId: A.channel_id,
                     messageId: A.message_id,
                     flash: !0,
@@ -198,20 +198,20 @@ function O(e) {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsx)(T.Z, {
-                      iconNode: (0, s.jsx)(d.PollsIcon, { size: 'xs' }),
+                      iconNode: (0, s.jsx)(u.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: p.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
-                          username: h.nick,
-                          usernameHook: g(h),
+                      children: C.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+                          username: N.nick,
+                          usernameHook: g(N),
                           title: E,
                           titleOnClick: S
                       })
                   }),
-                  (0, s.jsx)(M, {
-                      className: f.embed,
+                  (0, s.jsx)(R, {
+                      className: p.embed,
                       data: _,
-                      onClickPollLink: r ? void 0 : S
+                      onClickPollLink: l ? void 0 : S
                   })
               ]
           });

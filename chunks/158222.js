@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     fn: function () {
-        return r;
+        return l;
     },
     xP: function () {
         return o;
@@ -12,8 +12,8 @@ n.d(t, {
 var i = n(544891),
     a = n(570140),
     s = n(881052),
-    l = n(981631);
-function r(e) {
+    r = n(981631);
+function l(e) {
     a.Z.dispatch({
         type: 'DISMISS_MEDIA_POST_SHARE_PROMPT',
         threadId: e
@@ -25,7 +25,7 @@ async function o(e) {
         threadId: e
     });
     try {
-        let t = (await i.tn.get({ url: l.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e) })).body;
+        let t = (await i.tn.get({ url: r.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e) })).body;
         a.Z.dispatch({
             type: 'MEDIA_POST_EMBED_FETCH_SUCCESS',
             threadId: e,
@@ -42,7 +42,7 @@ async function c(e) {
     try {
         return (
             await i.tn.post({
-                url: l.ANM.UNFURL_EMBED_URLS,
+                url: r.ANM.UNFURL_EMBED_URLS,
                 body: { urls: e }
             })
         ).body;

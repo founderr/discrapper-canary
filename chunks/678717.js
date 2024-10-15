@@ -15,8 +15,8 @@ var r = n(735250),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    m = n(213713),
-    h = n(665149),
+    h = n(213713),
+    m = n(665149),
     x = n(906467),
     f = n(259580),
     p = n(31336),
@@ -27,8 +27,8 @@ var v = n(392750),
     _ = n(926976),
     j = n(592197),
     C = n(860337),
-    S = n(789654),
-    T = n(691867),
+    T = n(789654),
+    S = n(691867),
     N = n(916790),
     y = n(645973),
     I = n(903502),
@@ -40,14 +40,14 @@ var v = n(392750),
     O = n(442954),
     A = n(702904),
     L = n(178821),
-    P = n(248526),
-    B = n(958328),
+    B = n(248526),
+    P = n(958328),
     M = n(514866),
     D = n(678639),
     F = n(351930),
-    G = n(771751),
-    H = n(596768),
-    U = n(621060),
+    H = n(771751),
+    U = n(596768),
+    G = n(621060),
     z = n(689938),
     V = n(622331),
     W = n(219299);
@@ -77,7 +77,7 @@ function K() {
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, r.jsx)(H.Z, {})
+                    render: () => (0, r.jsx)(U.Z, {})
                 },
                 {
                     id: 'stores',
@@ -100,7 +100,7 @@ function K() {
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     })),
                 x.Z.isDeveloper &&
                     (e.push({
@@ -131,12 +131,12 @@ function K() {
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    render: () => (0, r.jsx)(S.Z, {})
+                    render: () => (0, r.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(T.Z, {})
+                    render: () => (0, r.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -156,7 +156,7 @@ function K() {
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, r.jsx)(B.Z, {})
+                    render: () => (0, r.jsx)(P.Z, {})
                 }),
                 e.push({
                     id: 'modals',
@@ -172,13 +172,13 @@ function K() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, r.jsx)(m.Z, {})
+                        render: () => (0, r.jsx)(h.Z, {})
                     }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, r.jsx)(G.Z, {})
+                        render: () => (0, r.jsx)(H.Z, {})
                     }),
                     e.push({
                         id: 'payments',
@@ -207,7 +207,7 @@ function K() {
             TabBar: n,
             renderSelectedTab: l,
             selectedTabId: i
-        } = (0, U.Z)(
+        } = (0, G.Z)(
             {
                 tabs: t,
                 initialSelectedTabId: null !== (e = g.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
@@ -225,19 +225,19 @@ function K() {
         }),
         (0, r.jsxs)(Z.Gk, {
             children: [
-                (0, r.jsxs)(h.ZP, {
+                (0, r.jsxs)(m.ZP, {
                     className: W.headerBar,
-                    toolbar: (0, r.jsx)(h.ZP.Icon, {
+                    toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: c.XSmallIcon,
                         tooltip: z.Z.Messages.CLOSE,
                         onClick: p.SO
                     }),
                     children: [
-                        (0, r.jsx)(h.ZP.Icon, {
+                        (0, r.jsx)(m.ZP.Icon, {
                             icon: c.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, r.jsx)(n, {}),
@@ -291,15 +291,15 @@ function X() {
               className: V.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
-                  children: (0, r.jsxs)(h.ZP, {
+                  children: (0, r.jsxs)(m.ZP, {
                       className: i()(W.headerBar, V.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, r.jsx)(h.ZP.Icon, {
+                          (0, r.jsx)(m.ZP.Icon, {
                               icon: c.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

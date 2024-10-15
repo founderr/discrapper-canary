@@ -16,29 +16,29 @@ var s = n(735250),
     _ = n(409059),
     h = n(659900),
     E = n(962220),
-    p = n(473855),
-    g = n(306453),
-    f = n(929809),
-    m = n(108427),
+    g = n(473855),
+    p = n(306453),
+    m = n(929809),
+    f = n(108427),
     I = n(390885),
     N = n(314897),
     T = n(896797),
-    A = n(954824),
-    x = n(781428),
+    x = n(954824),
+    A = n(781428),
     C = n(163671),
     v = n(423527),
-    S = n(981631),
-    Z = n(58346),
-    R = n(701476),
+    Z = n(981631),
+    R = n(58346),
+    S = n(701476),
     O = n(630724),
     b = n(436620),
     D = n(689938),
-    M = n(60561),
-    L = n(113207);
+    L = n(60561),
+    M = n(113207);
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, m.e)('guildTemplate'), !b.KO && A.Z.launch('discord://' + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, f.e)('guildTemplate'), !b.KO && x.Z.launch('discord://' + Z.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && E.Z.resolveGuildTemplate(this.props.code);
@@ -46,11 +46,11 @@ class P extends r.PureComponent {
     renderButton(e, t) {
         return b.KO
             ? (0, s.jsx)(u.zx, {
-                  className: L.marginTop40,
+                  className: M.marginTop40,
                   onClick: t,
                   children: e
               })
-            : (0, s.jsx)(u.v6, { className: L.marginTop40 });
+            : (0, s.jsx)(u.v6, { className: M.marginTop40 });
     }
     renderSpinner(e) {
         return (0, s.jsxs)(u.ZP, {
@@ -62,10 +62,10 @@ class P extends r.PureComponent {
             children: [
                 (0, s.jsx)(u.Ee, {
                     src: n(167969),
-                    className: L.marginBottom8
+                    className: M.marginBottom8
                 }),
                 (0, s.jsx)(u.Dx, {
-                    className: a()(L.marginTop8, L.marginBottom8),
+                    className: a()(M.marginTop8, M.marginBottom8),
                     children: D.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
                 }),
                 (0, s.jsx)(u.DK, { children: D.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE }),
@@ -77,7 +77,7 @@ class P extends r.PureComponent {
         return (0, s.jsxs)(u.ZP, {
             children: [
                 (0, s.jsx)(u.Dx, {
-                    className: L.marginBottom8,
+                    className: M.marginBottom8,
                     children: D.Z.Messages.APP_OPENED_TITLE
                 }),
                 (0, s.jsx)(u.DK, { children: D.Z.Messages.APP_OPENED_BODY }),
@@ -87,10 +87,10 @@ class P extends r.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (l()(null != e, 'guild template must not be null'), e.state === Z.Rj.RESOLVING)
+        return (l()(null != e, 'guild template must not be null'), e.state === R.Rj.RESOLVING)
             ? (0, s.jsx)(u.ZP, {
-                  className: M.authBox,
-                  children: (0, s.jsx)(g.Z, { guildTemplate: e })
+                  className: L.authBox,
+                  children: (0, s.jsx)(p.Z, { guildTemplate: e })
               })
             : (0, s.jsx)(y, { guildTemplate: e });
     }
@@ -102,15 +102,15 @@ class P extends r.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: r, location: i } = this.props;
         if (null == e) return this.renderSpinner(D.Z.Messages.LOADING);
-        if (t === S.kEZ.OPEN) return this.renderAppOpened();
-        if (t === S.kEZ.OPENING) return this.renderSpinner(D.Z.Messages.APP_OPENING);
+        if (t === Z.kEZ.OPEN) return this.renderAppOpened();
+        if (t === Z.kEZ.OPENING) return this.renderSpinner(D.Z.Messages.APP_OPENING);
         switch (e.state) {
-            case Z.Rj.RESOLVING:
+            case R.Rj.RESOLVING:
                 return this.renderSpinner(D.Z.Messages.APP_OPENING);
-            case Z.Rj.RESOLVED:
+            case R.Rj.RESOLVED:
                 if (n || !b.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
-                    return (0, s.jsx)(x.Z, {
+                    return (0, s.jsx)(A.Z, {
                         guildTemplate: e,
                         transitionTo: r,
                         location: i
@@ -121,10 +121,10 @@ class P extends r.PureComponent {
                         transitionTo: r,
                         location: i,
                         onRegister: () => {
-                            (0, f.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
+                            (0, m.c)(S.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
                         }
                     });
-            case Z.Rj.EXPIRED:
+            case R.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;
@@ -168,25 +168,25 @@ function y(e) {
     let i = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(u.Dx, {
-                className: M.header,
+                className: L.header,
                 children: D.Z.Messages.GUILD_TEMPLATE_SETUP_DISCORD
             }),
             n,
             (0, s.jsx)(u.zx, {
-                className: M.createButton,
+                className: L.createButton,
                 onClick: r,
                 children: D.Z.Messages.GUILD_TEMPLATE_CREATE_DISCORD
             })
         ]
     });
     return (0, s.jsx)(C.Z, {
-        className: M.authBox,
+        className: L.authBox,
         children: () => [
-            (0, s.jsx)(p.Z, { guildTemplate: t }, 'template'),
+            (0, s.jsx)(g.Z, { guildTemplate: t }, 'template'),
             (0, s.jsx)(
                 'div',
                 {
-                    className: M.formContainer,
+                    className: L.formContainer,
                     children: i
                 },
                 'contents'

@@ -8,10 +8,10 @@ var i = n(406432),
 function s(e, t) {
     let { targetKind: n, embedIndex: s } = t;
     if ('media' === n) {
-        var l, r;
+        var r, l;
         let t = e;
         return (
-            (null === (l = e.messageReference) || void 0 === l ? void 0 : l.type) === a.Uvt.FORWARD && (t = null === (r = e.messageSnapshots[0]) || void 0 === r ? void 0 : r.message),
+            (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === a.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message),
             {
                 onlyAttachmentIds:
                     null == t

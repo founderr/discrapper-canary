@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return m;
+        return _;
     }
 });
 var i = n(735250),
@@ -23,7 +23,7 @@ function f() {
         })
     });
 }
-let m = l.memo(function (e) {
+let _ = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
         r = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, o.up)();

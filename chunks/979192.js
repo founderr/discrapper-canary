@@ -1,5 +1,5 @@
 n.d(t, {
-    Oz: function () {
+    O: function () {
         return s;
     }
 });

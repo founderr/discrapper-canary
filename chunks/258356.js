@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     Z: function () {
-        return p;
+        return g;
     }
 });
 var s = n(735250);
@@ -110,7 +110,7 @@ function E(e) {
         ]
     });
 }
-function p(e) {
+function g(e) {
     let { invite: t, channel: n, isSubmitting: r, onAcceptInvite: i } = e,
         { guild_scheduled_event: a } = t;
     return null != a

@@ -3,39 +3,39 @@ n.d(t, {
         return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    l = n(39604),
-    s = n(176127),
-    a = n(689938),
+var a = n(481060),
+    s = n(39604),
+    r = n(176127),
+    l = n(689938),
     o = n(516707);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, r.jsxs)(i.TooltipLayer, {
+    return (0, i.jsxs)(a.TooltipLayer, {
         tooltipClassName: o.reminderTooltip,
         tooltipContentClassName: o.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: i.TooltipColors.PRIMARY,
+        color: a.TooltipColors.PRIMARY,
         children: [
-            (0, r.jsx)(s.Z, {}),
-            (0, r.jsx)(i.Heading, {
+            (0, i.jsx)(r.Z, {}),
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-md/extrabold',
-                children: a.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
+                children: l.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
             }),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
-                    (0, r.jsx)(i.Button, {
-                        color: i.Button.Colors.TRANSPARENT,
-                        onClick: l.eL,
-                        children: a.Z.Messages.DISMISS
+                    (0, i.jsx)(a.Button, {
+                        color: a.Button.Colors.TRANSPARENT,
+                        onClick: s.eL,
+                        children: l.Z.Messages.DISMISS
                     }),
-                    (0, r.jsx)(i.Button, {
-                        color: i.Button.Colors.BRAND,
+                    (0, i.jsx)(a.Button, {
+                        color: a.Button.Colors.BRAND,
                         onClick: t,
-                        children: a.Z.Messages.CLIPS_REVIEW_NOW
+                        children: l.Z.Messages.CLIPS_REVIEW_NOW
                     })
                 ]
             })

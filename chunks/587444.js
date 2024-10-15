@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     },
     u: function () {
-        return p;
+        return g;
     }
 });
 var s = n(735250);
@@ -19,7 +19,7 @@ var r = n(120356),
     _ = n(684190),
     h = n(739017),
     E = n(113207);
-function p(e) {
+function g(e) {
     let { text: t, buttonCta: r, onClick: u } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -71,11 +71,11 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function p(e) {
     let { text: t, buttonCta: n, theme: r = u.BRd.DARK, onClick: i } = e;
     return (0, s.jsx)(l.ZP, {
         theme: r,
-        children: (0, s.jsx)(p, {
+        children: (0, s.jsx)(g, {
             text: t,
             buttonCta: n,
             onClick: i

@@ -11,10 +11,10 @@ var s = n(735250),
     _ = n(82554),
     h = n(726521),
     E = n(185625),
-    p = n(314897),
-    g = n(63063),
-    f = n(981631),
-    m = n(689938),
+    g = n(314897),
+    p = n(63063),
+    m = n(981631),
+    f = n(689938),
     I = n(987742),
     N = n(113207);
 a.ZP.initialize();
@@ -27,8 +27,8 @@ let T = (e) => {
                     (0, s.jsx)(e, {
                         ...t,
                         onSuccess: l,
-                        headerText: m.Z.Messages.ENTER_EMAIL,
-                        confirmButtonText: m.Z.Messages.NEXT,
+                        headerText: f.Z.Messages.ENTER_EMAIL,
+                        confirmButtonText: f.Z.Messages.NEXT,
                         confirmButtonColor: o.Button.Colors.BRAND,
                         impressionName: i.ImpressionNames.URF_ENTER_EMAIL
                     });
@@ -52,8 +52,8 @@ let T = (e) => {
                             onFormSubmit: a,
                             onResend: t,
                             onSuccess: l,
-                            headerText: m.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-                            confirmButtonText: m.Z.Messages.VERIFY,
+                            headerText: f.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+                            confirmButtonText: f.Z.Messages.VERIFY,
                             confirmButtonColor: o.Button.Colors.BRAND,
                             impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                         });
@@ -73,9 +73,9 @@ let T = (e) => {
 t.Z = () => {
     let [e, t] = r.useState(!0),
         [n, i] = r.useState(!1),
-        h = (0, a.e7)([p.default], () => p.default.isAuthenticated()),
-        A = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        x = () => {
+        h = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+        x = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        A = () => {
             (0, E.qJ)()
                 .then(() => {
                     t(!1), i(!0);
@@ -90,37 +90,37 @@ t.Z = () => {
                 ? (t(!0),
                   c
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => x())
+                      .then(() => A())
                       .catch(() => t(!1)))
-                : x();
+                : A();
         }, [h]),
         r.useEffect(() => {
             (async () => {
-                !A && (await l.Z.getLocationMetadata(), l.Z.getExperiments());
+                !x && (await l.Z.getLocationMetadata(), l.Z.getExperiments());
             })();
-        }, [A]),
-        e || !A
+        }, [x]),
+        e || !x
             ? (0, s.jsx)(u.ZP, { children: (0, s.jsx)(o.Spinner, {}) })
             : n &&
               (0, s.jsxs)(u.ZP, {
                   children: [
                       (0, s.jsx)(u.Dx, {
                           className: N.marginBottom8,
-                          children: m.Z.Messages.URF_LANDING_PAGE_TITLE
+                          children: f.Z.Messages.URF_LANDING_PAGE_TITLE
                       }),
                       (0, s.jsx)(u.DK, {
                           className: N.marginBottom8,
-                          children: m.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: g.Z.getArticleURL(f.BhN.COPYRIGHT_AND_IP_POLICY) })
+                          children: f.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: p.Z.getArticleURL(m.BhN.COPYRIGHT_AND_IP_POLICY) })
                       }),
                       (0, s.jsxs)('div', {
                           className: I.container,
                           children: [
                               (0, s.jsx)(T, {
-                                  title: m.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+                                  title: f.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
                                   menuType: _.BM.MESSAGE
                               }),
                               (0, s.jsx)(T, {
-                                  title: m.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+                                  title: f.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
                                   menuType: _.BM.USER
                               })
                           ]

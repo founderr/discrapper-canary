@@ -1,55 +1,55 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return C;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(120356),
     s = n.n(a),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     o = n(239091),
     c = n(901461),
-    d = n(592125),
-    u = n(709054),
+    u = n(592125),
+    d = n(709054),
     _ = n(723774),
     E = n(144140),
     I = n(91159),
     m = n(576799),
     T = n(488131),
-    N = n(981631),
-    h = n(689938),
-    C = n(119487);
-function p(e) {
+    h = n(981631),
+    N = n(689938),
+    f = n(119487);
+function C(e) {
     let { message: t, compact: n } = e,
-        a = (0, l.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
+        a = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == a
         ? null
-        : (0, i.jsx)(f, {
+        : (0, i.jsx)(p, {
               channel: a,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function f(e) {
+function p(e) {
     let { channel: t, compact: a, isSystemMessage: c } = e,
-        d = (0, l.e7)([E.Z], () => E.Z.getCount(t.id)),
-        u = (function (e) {
+        u = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)),
+        d = (function (e) {
             var t;
-            let n = (0, l.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)),
-                a = (0, l.e7)([E.Z], () => E.Z.getCount(e.id)),
+            let n = (0, r.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)),
+                a = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
                 s = (0, I.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
-                ? h.Z.Messages.NO_RECENT_THREAD_MESSAGES
+                ? N.Z.Messages.NO_RECENT_THREAD_MESSAGES
                 : null == a || 0 === a
-                  ? h.Z.Messages.NO_THREAD_MESSAGES
+                  ? N.Z.Messages.NO_THREAD_MESSAGES
                   : null == n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('span', { children: h.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
+                              (0, i.jsx)('span', { children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
                               (0, i.jsx)('span', {
-                                  className: C.timestamp,
+                                  className: f.timestamp,
                                   children: (0, I.Ye)(s)
                               })
                           ]
@@ -61,22 +61,22 @@ function f(e) {
                                   channel: e
                               }),
                               (0, i.jsx)('span', {
-                                  className: C.timestamp,
+                                  className: f.timestamp,
                                   children: (0, I.Ye)(s)
                               })
                           ]
                       });
         })(t),
-        p = null != d && d > 0;
+        C = null != u && u > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: s()(C.spine, {
-                    [C.cozy]: !a,
-                    [C.systemMessageSpine]: c
+                className: s()(f.spine, {
+                    [f.cozy]: !a,
+                    [f.systemMessageSpine]: c
                 })
             }),
-            (0, i.jsx)(r.Clickable, {
+            (0, i.jsx)(l.Clickable, {
                 onClick: function (e) {
                     e.stopPropagation(), (0, T.ok)(t, e.shiftKey);
                 },
@@ -84,7 +84,7 @@ function f(e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         i = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === N.yXg.SPACE || e.which === N.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, T.ok)(t, i));
+                    (e.which === h.yXg.SPACE || e.which === h.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, T.ok)(t, i));
                 },
                 onContextMenu: function (e) {
                     (0, o.jW)(e, async () => {
@@ -96,29 +96,29 @@ function f(e) {
                             });
                     });
                 },
-                'aria-roledescription': h.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-                className: s()(C.container, { [C.systemMessageContainer]: c }),
-                children: (0, i.jsxs)(r.BlockInteractions, {
+                'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
+                className: s()(f.container, { [f.systemMessageContainer]: c }),
+                children: (0, i.jsxs)(l.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: C.topLine,
+                            className: f.topLine,
                             children: [
-                                (0, i.jsx)(r.HiddenVisually, { children: h.Z.Messages.THREAD }),
+                                (0, i.jsx)(l.HiddenVisually, { children: N.Z.Messages.THREAD }),
                                 (0, i.jsx)('span', {
-                                    className: C.name,
+                                    className: f.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: C.cta,
-                                    'aria-hidden': !p,
-                                    children: (0, _.WE)(d, t.id)
+                                    className: f.cta,
+                                    'aria-hidden': !C,
+                                    children: (0, _.WE)(u, t.id)
                                 })
                             ]
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
-                            className: s()(C.bottomLine),
-                            children: u
+                            className: s()(f.bottomLine),
+                            children: d
                         })
                     ]
                 })

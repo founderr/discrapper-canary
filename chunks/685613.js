@@ -7,32 +7,32 @@ var s,
     a,
     i = n(735250);
 n(470079);
-var o = n(120356),
-    r = n.n(o),
-    l = n(780384),
+var l = n(120356),
+    r = n.n(l),
+    o = n(780384),
     u = n(302245),
     d = n(475595),
     c = n(78826),
-    m = n(46140),
-    E = n(981631),
-    x = n(789935);
+    E = n(46140),
+    m = n(981631),
+    C = n(789935);
 ((s = a || (a = {}))[(s.SMALL = 24)] = 'SMALL'), (s[(s.MEDIUM = 32)] = 'MEDIUM');
 t.Z = function (e) {
-    let { className: t, gameTileSize: n = 24, quest: s, theme: a = E.BRd.DARK, withGameTile: o = !0 } = e,
-        C = (0, l.wj)(a) ? E.BRd.DARK : E.BRd.LIGHT,
-        h = (0, u.vI)(s, m.dr.QUESTS_BAR);
+    let { className: t, gameTileSize: n = 24, quest: s, theme: a = m.BRd.DARK, withGameTile: l = !0 } = e,
+        x = (0, o.wj)(a) ? m.BRd.DARK : m.BRd.LIGHT,
+        S = (0, u.vI)(s, E.dr.QUESTS_BAR);
     return (0, i.jsxs)('div', {
-        className: r()(x.partnerBranding, t),
+        className: r()(C.partnerBranding, t),
         children: [
-            o &&
+            l &&
                 (0, i.jsx)(c.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
                         (0, i.jsx)('img', {
                             ref: e,
-                            className: x.partnerBrandingGameTile,
+                            className: C.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, d.fh)(s, d.Bd.GAME_TILE, C).url,
+                            src: (0, d.fh)(s, d.Bd.GAME_TILE, x).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -52,9 +52,9 @@ t.Z = function (e) {
                 children: (e) =>
                     (0, i.jsx)('img', {
                         ref: e,
-                        className: r()(x.partnerBrandingLogotype, { [x.rewardHighlightLogotype]: h }),
+                        className: r()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: S }),
                         alt: s.config.messages.gameTitle,
-                        src: (0, d.fh)(s, d.Bd.LOGO_TYPE, C).url
+                        src: (0, d.fh)(s, d.Bd.LOGO_TYPE, x).url
                     })
             })
         ]

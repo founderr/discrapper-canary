@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(735250),
     a = n(470079),
     s = n(120356),
-    l = n.n(s),
-    r = n(168504);
+    r = n.n(s),
+    l = n(168504);
 function o() {
     let [e, t] = a.useState(!1);
     return {
@@ -19,7 +19,7 @@ function o() {
                 ref: (e) => {
                     null != e && t(e.scrollHeight - e.clientHeight > 1);
                 },
-                className: l()(r.lineClamp, a),
+                className: r()(l.lineClamp, a),
                 style: n
                     ? void 0
                     : {

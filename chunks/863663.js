@@ -1,6 +1,6 @@
-n.d(t, {
+t.d(n, {
     NB: function () {
-        return u;
+        return o;
     },
     ar: function () {
         return c;
@@ -9,47 +9,47 @@ n.d(t, {
         return a;
     },
     kg: function () {
-        return l;
+        return u;
     },
     pM: function () {
         return s;
     }
 });
-var r = n(881052);
-n(496675);
-var i = n(981631),
-    o = n(689938);
-let u = '_role';
-function l(e) {
+var i = t(881052);
+t(496675);
+var r = t(981631),
+    l = t(689938);
+let o = '_role';
+function u(e) {
     if (!(e >= 0))
         switch (-e) {
-            case i.evJ.ENTITY_TOO_LARGE:
-                return o.Z.Messages.UPLOAD_ERROR_TOO_LARGE;
-            case i.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
-                return o.Z.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
+            case r.evJ.ENTITY_TOO_LARGE:
+                return l.Z.Messages.UPLOAD_ERROR_TOO_LARGE;
+            case r.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
+                return l.Z.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
             case 1:
-                return o.Z.Messages.ERROR_GENERIC_TITLE;
+                return l.Z.Messages.ERROR_GENERIC_TITLE;
             default:
-                return o.Z.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({ code: -e });
+                return l.Z.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({ code: -e });
         }
 }
 function s(e) {
-    let { newRoleParams: t } = e;
-    if (null != t && '' === t.name.trim()) {
-        var n, i;
+    let { newRoleParams: n } = e;
+    if (null != n && '' === n.name.trim()) {
+        var t, r;
         return (
-            (n = u),
-            (i = o.Z.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME),
-            new r.Hx({
+            (t = o),
+            (r = l.Z.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME),
+            new i.Hx({
                 status: 400,
                 body: {
                     message: 'Invalid form body',
                     errors: {
-                        [n]: {
+                        [t]: {
                             _errors: [
                                 {
                                     code: '',
-                                    message: i
+                                    message: r
                                 }
                             ]
                         }
@@ -60,19 +60,19 @@ function s(e) {
     }
 }
 function a(e) {
-    var t;
-    let { guildProductListing: n, name: r, priceTier: i, description: o, image: u, imageName: l, isImageChanged: s, newRoleParams: a, hasUnsavedAttachmentChanges: c } = e,
+    var n;
+    let { guildProductListing: t, name: i, priceTier: r, description: l, image: o, imageName: u, isImageChanged: s, newRoleParams: a, hasUnsavedAttachmentChanges: c } = e,
         d = {};
-    (null == n ? void 0 : n.name) !== r && '' !== r.trim() && (d.name = r), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : '') !== o && (d.description = o), (null == n ? void 0 : n.price_tier) !== i && null != i && (d.priceTier = i), null != a && '' !== a.name.trim() ? (d.createNewRole = !0) : null === a && (d.unlinkRole = !0), u.startsWith('data:') && (s || (null == n && (Object.keys(d).length > 0 || c))) && ((d.image = u), (d.imageName = l));
+    (null == t ? void 0 : t.name) !== i && '' !== i.trim() && (d.name = i), (null !== (n = null == t ? void 0 : t.description) && void 0 !== n ? n : '') !== l && (d.description = l), (null == t ? void 0 : t.price_tier) !== r && null != r && (d.priceTier = r), null != a && '' !== a.name.trim() ? (d.createNewRole = !0) : null === a && (d.unlinkRole = !0), o.startsWith('data:') && (s || (null == t && (Object.keys(d).length > 0 || c))) && ((d.image = o), (d.imageName = u));
     let _ = Object.keys(d).length > 0 || c;
     return {
         changes: d,
         hasUnsavedChanges: _,
         canSaveForDraft: _,
         canSaveForPublished: _,
-        canPublishOrUnpublish: !(null == n || _)
+        canPublishOrUnpublish: !(null == t || _)
     };
 }
-function c(e, t) {
-    return ''.concat(location.protocol, '//').concat(location.host).concat(i.Z5c.GUILD_PRODUCT(e, t));
+function c(e, n) {
+    return ''.concat(location.protocol, '//').concat(location.host).concat(r.Z5c.GUILD_PRODUCT(e, n));
 }

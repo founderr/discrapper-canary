@@ -33,7 +33,7 @@ r.d(t, {
         return g;
     },
     ET: function () {
-        return P;
+        return M;
     },
     Et: function () {
         return N;
@@ -66,7 +66,7 @@ r.d(t, {
         return ex;
     },
     Pl: function () {
-        return eM;
+        return eP;
     },
     Py: function () {
         return I;
@@ -78,7 +78,7 @@ r.d(t, {
         return ep;
     },
     RG: function () {
-        return M;
+        return P;
     },
     RK: function () {
         return ek;
@@ -129,7 +129,7 @@ r.d(t, {
         return m;
     },
     dG: function () {
-        return eP;
+        return eM;
     },
     fK: function () {
         return eF;
@@ -206,8 +206,8 @@ var n,
     h,
     C,
     g,
-    M,
     P,
+    M,
     U,
     m,
     G,
@@ -227,8 +227,8 @@ var n,
     X,
     j,
     $,
-    J,
     q,
+    J,
     z,
     Q,
     Z,
@@ -375,7 +375,7 @@ let eg = Object.freeze({
     1: 'sku'
 });
 ((x = T || (T = {}))[(x.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (x[(x.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (x[(x.CONNECT = 1048576)] = 'CONNECT');
-let eM = Object.freeze({
+let eP = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
         BAN_MEMBERS: ei.r0(2),
@@ -428,12 +428,12 @@ let eM = Object.freeze({
         MANAGE_EVENTS: ei.r0(33),
         CREATE_EVENTS: ei.r0(44)
     }),
-    eP = function () {
+    eM = function () {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     },
     eU = () => null,
     em = () => Promise.resolve(),
-    eG = [eM.KICK_MEMBERS, eM.BAN_MEMBERS, eM.ADMINISTRATOR, eM.MANAGE_CHANNELS, eM.MANAGE_GUILD, eM.MANAGE_ROLES, eM.MANAGE_MESSAGES, eM.MANAGE_THREADS, eM.MODERATE_MEMBERS],
+    eG = [eP.KICK_MEMBERS, eP.BAN_MEMBERS, eP.ADMINISTRATOR, eP.MANAGE_CHANNELS, eP.MANAGE_GUILD, eP.MANAGE_ROLES, eP.MANAGE_MESSAGES, eP.MANAGE_THREADS, eP.MODERATE_MEMBERS],
     ey = ei.$e(...eG),
     eb = 1,
     ev = 6463,
@@ -593,15 +593,15 @@ let eM = Object.freeze({
     ($[($.RATE_LIMITED = 5011)] = 'RATE_LIMITED'),
     ($[($.UNAUTHORIZED_FOR_APPLICATION = 5012)] = 'UNAUTHORIZED_FOR_APPLICATION'),
     ($[($.NO_CONNECTION_FOUND = 5013)] = 'NO_CONNECTION_FOUND'),
-    ((J = p || (p = {}))[(J.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
-    (J[(J.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
-    (J[(J.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
-    (J[(J.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
-    (J[(J.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
-    (J[(J.RATELIMITED = 4002)] = 'RATELIMITED'),
-    (J[(J.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
-    (J[(J.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
-    (J[(J.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
+    ((q = p || (p = {}))[(q.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
+    (q[(q.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
+    (q[(q.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
+    (q[(q.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
+    (q[(q.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
+    (q[(q.RATELIMITED = 4002)] = 'RATELIMITED'),
+    (q[(q.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
+    (q[(q.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
+    (q[(q.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
 let eH = 'token',
     eY = 'tokens',
     eW = 'https://'.concat('status.discord.com'),
@@ -667,7 +667,7 @@ let eH = 'token',
         CHANNEL: (e, t) => '/channels/'.concat(e, '/').concat(t),
         REPORT: ''.concat(eI, '/report')
     });
-((q = f || (f = {})).INDEX = '/'), (q.INDEX_WORD = '/index'), (q.INDEX_BUCKET = '/index/:bucketId'), (q.CHANGELOGS = '/changelogs/:date'), (q.COMMUNITY = '/community'), (q.COMPANY = '/company'), (q.COMPANY_INFORMATION = '/company-information'), (q.CREATORS = '/creators'), (q.DOWNLOADS = '/downloads'), (q.DOWNLOAD = '/download'), (q.GAMING = '/gaming'), (q.PRIVACY = '/privacy'), (q.TOS = '/tos'), (q.TERMS = '/terms'), (q.STORE_TERMS = '/store-terms'), (q.ACKNOWLEDGEMENTS = '/acknowledgements'), (q.LICENSES = '/licenses'), (q.PARTNERS = '/partners'), (q.HYPESQUAD = '/hypesquad'), (q.HYPESQUAD_RIOT = '/hypesquad-riot'), (q.BRANDING = '/branding'), (q.ERROR_404 = '/404'), (q.JOBS = '/jobs'), (q.JOB = '/jobs/:jobId'), (q.STREAMKIT = '/streamkit'), (q.SECURITY = '/security'), (q.NITRO = '/nitro'), (q.DISCOVER = '/servers'), (q.QUESTS = '/ads/quests'), (q.GUIDELINES = '/guidelines'), (q.RICH_PRESENCE = '/rich-presence'), (q.VERIFICATION = '/verification'), (q.OPEN_SOURCE = '/open-source'), (q.WARFRAME = '/warframe'), (q.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (q.SAFETY_LANDING = '/safetycenter'), (q.SAFETY_ARTICLE_ROOT = '/safety'), (q.SAFETY_ARTICLE = '/safety/:article'), (q.NEWSROOM = '/newsroom'), (q.INSPIRATION = '/inspiration'), (q.MOD_ACADEMY_LANDING = '/moderation'), (q.MOD_ACADEMY_EXAM = '/moderation/exam'), (q.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (q.BLOG = '/blog'), (q.APP_DIRECTORY = '/application-directory'), (q.REFRESH_INDEX = '/new'), (q.REFRESH_INDEX_WORD = '/new/index'), (q.REFRESH_COMPANY = '/new/company'), (q.REFRESH_DOWNLOAD = '/new/download'), (q.REFRESH_PRIVACY = '/new/privacy'), (q.REFRESH_TERMS = '/new/terms'), (q.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (q.REFRESH_LICENSES = '/new/licenses'), (q.REFRESH_BRANDING = '/new/branding'), (q.REFRESH_JOBS = '/new/jobs'), (q.REFRESH_JOB = '/new/jobs/:jobId'), (q.REFRESH_STREAMKIT = '/new/streamkit'), (q.REFRESH_NITRO = '/new/nitro'), (q.REFRESH_GUIDELINES = '/new/guidelines'), (q.REFRESH_SAFETY_LANDING = '/new/safety'), (q.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (q.COLLEGE = '/college'), (q.LEAGUE_CLUBS = '/league-communities'), (q.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (q.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (q.LEGACY_DEV_NEWSLETTER = '/newsletter'), (q.LEGAL_ARCHIVE = '/archive/'), (q.TERMS_MAY_2020 = '/archive/terms/may-2020'), (q.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (q.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (q.FALL_RELEASE_2023 = '/fallrelease'), (q.MOBILE_REDESIGN_2023 = '/mobile'), (q.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (q.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (q.WHY_DISCORD = '/why-discord'), (q.XBOX_OFFER = '/discord-xbox-offer-2020'), (q.COLLEGE_BRUINS = '/bruins'), (q.COLLEGE_ANTEATERS = '/anteaters'), (q.COLLEGE_GAUCHOS = '/gauchos'), (q.COLLEGE_BEARS = '/bears'), (q.COLLEGE_SLUGS = '/slugs'), (q.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (q.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (q.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (q.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(eV), (0, eE.Ft)(f);
+((J = f || (f = {})).INDEX = '/'), (J.INDEX_WORD = '/index'), (J.INDEX_BUCKET = '/index/:bucketId'), (J.CHANGELOGS = '/changelogs/:date'), (J.COMMUNITY = '/community'), (J.COMPANY = '/company'), (J.COMPANY_INFORMATION = '/company-information'), (J.CREATORS = '/creators'), (J.DOWNLOADS = '/downloads'), (J.DOWNLOAD = '/download'), (J.GAMING = '/gaming'), (J.PRIVACY = '/privacy'), (J.TOS = '/tos'), (J.TERMS = '/terms'), (J.STORE_TERMS = '/store-terms'), (J.ACKNOWLEDGEMENTS = '/acknowledgements'), (J.LICENSES = '/licenses'), (J.PARTNERS = '/partners'), (J.HYPESQUAD = '/hypesquad'), (J.HYPESQUAD_RIOT = '/hypesquad-riot'), (J.BRANDING = '/branding'), (J.ERROR_404 = '/404'), (J.JOBS = '/jobs'), (J.JOB = '/jobs/:jobId'), (J.STREAMKIT = '/streamkit'), (J.SECURITY = '/security'), (J.NITRO = '/nitro'), (J.DISCOVER = '/servers'), (J.QUESTS = '/ads/quests'), (J.GUIDELINES = '/guidelines'), (J.RICH_PRESENCE = '/rich-presence'), (J.VERIFICATION = '/verification'), (J.OPEN_SOURCE = '/open-source'), (J.WARFRAME = '/warframe'), (J.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (J.SAFETY_LANDING = '/safetycenter'), (J.SAFETY_ARTICLE_ROOT = '/safety'), (J.SAFETY_ARTICLE = '/safety/:article'), (J.NEWSROOM = '/newsroom'), (J.INSPIRATION = '/inspiration'), (J.MOD_ACADEMY_LANDING = '/moderation'), (J.MOD_ACADEMY_EXAM = '/moderation/exam'), (J.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (J.BLOG = '/blog'), (J.APP_DIRECTORY = '/application-directory'), (J.REFRESH_INDEX = '/new'), (J.REFRESH_INDEX_WORD = '/new/index'), (J.REFRESH_COMPANY = '/new/company'), (J.REFRESH_DOWNLOAD = '/new/download'), (J.REFRESH_PRIVACY = '/new/privacy'), (J.REFRESH_TERMS = '/new/terms'), (J.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (J.REFRESH_LICENSES = '/new/licenses'), (J.REFRESH_BRANDING = '/new/branding'), (J.REFRESH_JOBS = '/new/jobs'), (J.REFRESH_JOB = '/new/jobs/:jobId'), (J.REFRESH_STREAMKIT = '/new/streamkit'), (J.REFRESH_NITRO = '/new/nitro'), (J.REFRESH_GUIDELINES = '/new/guidelines'), (J.REFRESH_SAFETY_LANDING = '/new/safety'), (J.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (J.COLLEGE = '/college'), (J.LEAGUE_CLUBS = '/league-communities'), (J.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (J.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (J.LEGACY_DEV_NEWSLETTER = '/newsletter'), (J.LEGAL_ARCHIVE = '/archive/'), (J.TERMS_MAY_2020 = '/archive/terms/may-2020'), (J.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (J.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (J.FALL_RELEASE_2023 = '/fallrelease'), (J.MOBILE_REDESIGN_2023 = '/mobile'), (J.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (J.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (J.WHY_DISCORD = '/why-discord'), (J.XBOX_OFFER = '/discord-xbox-offer-2020'), (J.COLLEGE_BRUINS = '/bruins'), (J.COLLEGE_ANTEATERS = '/anteaters'), (J.COLLEGE_GAUCHOS = '/gauchos'), (J.COLLEGE_BEARS = '/bears'), (J.COLLEGE_SLUGS = '/slugs'), (J.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (J.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (J.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (J.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(eV), (0, eE.Ft)(f);
 let eF = Object.freeze({
     FACEBOOK_URL: 'https://www.facebook.com/discord/',
     INSTAGRAM_URL: 'https://www.instagram.com/discord/',
@@ -965,9 +965,9 @@ let ex = 'US';
     (et[(et.INDIE = 67)] = 'INDIE'),
     (et[(et.ARCADE = 68)] = 'ARCADE'),
     (et[(et.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((er = M || (M = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
+    ((er = P || (P = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
     (er[(er.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
-    ((en = P || (P = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
+    ((en = M || (M = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
     (en.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
     (en.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
     ((ea = U || (U = {})).SWIPE = 'SWIPE'),

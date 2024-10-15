@@ -3,20 +3,20 @@ n.d(t, {
         return o;
     },
     w: function () {
-        return a;
+        return l;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    l = n(742380);
-function s(e, t) {
+var a = n(481060),
+    s = n(742380);
+function r(e, t) {
     let { children: n } = e;
-    return (0, r.jsx)(i.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: 'text-sm/medium',
         className: t,
         children: n
     });
 }
-let a = (e) => s(e, l.searchFilter),
-    o = (e) => s(e, l.searchAnswer);
+let l = (e) => r(e, s.searchFilter),
+    o = (e) => r(e, s.searchAnswer);

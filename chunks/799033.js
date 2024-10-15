@@ -43,8 +43,8 @@ function D(e, t) {
             traceXHR: S.traceXHR,
             ...t
         },
-        M = 'function' == typeof T ? T : (e) => !0,
-        P = (e) =>
+        P = 'function' == typeof T ? T : (e) => !0,
+        M = (e) =>
             (function (e, t) {
                 let r = p.m9.location && p.m9.location.href;
                 if (r) {
@@ -84,7 +84,7 @@ function D(e, t) {
             }
         }),
         (0, R.Uf)((e) => {
-            let t = (0, _.m)(e, M, P, U);
+            let t = (0, _.m)(e, P, M, U);
             if ((e.response && e.fetchData.__span && f.set(e.response, e.fetchData.__span), t)) {
                 let r = g(e.fetchData.url),
                     n = r ? (0, A.en)(r).host : void 0;
@@ -153,7 +153,7 @@ function D(e, t) {
                             })(_, S, (0, i.z)() && f ? L : void 0),
                         L
                     );
-                })(e, M, P, U);
+                })(e, P, M, U);
                 D && t && h(t);
             });
 }

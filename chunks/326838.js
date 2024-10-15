@@ -1,39 +1,39 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 }),
     n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(913527),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(727637),
-    d = n(782568),
-    u = n(317632),
+    u = n(782568),
+    d = n(317632),
     _ = n(174767),
     E = n(594174),
     I = n(55935),
     m = n(689938),
     T = n(575954);
-function N(e) {
+function h(e) {
     let { invite: t, expired: n } = e,
-        s = (0, r.e7)([E.default], () => {
+        s = (0, l.e7)([E.default], () => {
             var e, n;
             return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
         }),
-        d = (0, I.vc)(l()(t.created_at), 'LT'),
-        u = a.useRef(null),
-        N = (0, c.Z)(u);
+        u = (0, I.vc)(r()(t.created_at), 'LT'),
+        d = a.useRef(null),
+        h = (0, c.Z)(d);
     return (
         a.useEffect(() => {
             !n && (0, _.Br)(t);
         }, [t, n]),
         (0, i.jsxs)('div', {
             className: T.container,
-            ref: u,
+            ref: d,
             children: [
                 (0, i.jsxs)('div', {
                     className: T.primaryRow,
@@ -52,10 +52,10 @@ function N(e) {
                         (0, i.jsxs)('div', {
                             className: T.buttonContainer,
                             children: [
-                                (0, i.jsx)(h, {
+                                (0, i.jsx)(N, {
                                     expired: n,
                                     invite: t,
-                                    isHoveringInvite: N
+                                    isHoveringInvite: h
                                 }),
                                 (0, i.jsx)(o.CircleIconButton, {
                                     className: T.deleteButton,
@@ -78,7 +78,7 @@ function N(e) {
                             variant: 'text-xs/medium',
                             className: T.subtitle,
                             color: 'text-muted',
-                            children: [t.application_name, ' \xB7 ', d]
+                            children: [t.application_name, ' \xB7 ', u]
                         }),
                         n &&
                             (0, i.jsx)('div', {
@@ -96,19 +96,19 @@ function N(e) {
         })
     );
 }
-function h(e) {
+function N(e) {
     let { expired: t, invite: n, isHoveringInvite: s } = e,
-        l = (0, r.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)),
-        c = (0, r.e7)([u.Z], () => u.Z.isInviteJoinable(n)),
+        r = (0, l.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
+        c = (0, l.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
         [E, I] = a.useState(!1),
-        N = a.useCallback(async () => {
+        h = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.MH)(n);
             } catch {}
             I(!1);
         }, [n]),
-        h = a.useCallback(async () => {
+        N = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.Ol)(n);
@@ -116,23 +116,23 @@ function h(e) {
             I(!1);
         }, [n]);
     if (t)
-        return l && s
+        return r && s
             ? (0, i.jsx)(o.Button, {
                   className: T.primaryButton,
                   color: o.ButtonColors.TRANSPARENT,
                   disabled: E,
                   size: o.ButtonSizes.SMALL,
-                  onClick: N,
+                  onClick: h,
                   children: m.Z.Messages.GAME_INVITES_LAUNCH_GAME
               })
             : null;
-    return l && c
+    return r && c
         ? (0, i.jsx)(o.Button, {
               className: T.primaryButton,
               color: o.ButtonColors.GREEN,
               disabled: E,
               size: o.ButtonSizes.SMALL,
-              onClick: h,
+              onClick: N,
               children: m.Z.Messages.GAME_INVITES_JOIN_GAME
           })
         : null != n.fallback_url
@@ -141,7 +141,7 @@ function h(e) {
                 disabled: E,
                 size: o.ButtonSizes.SMALL,
                 color: o.ButtonColors.TRANSPARENT,
-                onClick: () => (0, d.Z)(n.fallback_url),
+                onClick: () => (0, u.Z)(n.fallback_url),
                 children: m.Z.Messages.GAME_INVITES_INSTALL_GAME
             })
           : (0, i.jsx)(o.Tooltip, {
@@ -153,7 +153,7 @@ function h(e) {
                         disabled: !0,
                         size: o.ButtonSizes.SMALL,
                         color: o.ButtonColors.TRANSPARENT,
-                        onClick: () => (0, d.Z)(n.fallback_url),
+                        onClick: () => (0, u.Z)(n.fallback_url),
                         children: (0, i.jsxs)('div', {
                             className: T.launchToJoinContainer,
                             children: [

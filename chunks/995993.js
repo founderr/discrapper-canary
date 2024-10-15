@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(31445),
     p = n(22082),
     f = n(703656),
-    m = n(306680),
-    _ = n(709054),
+    _ = n(306680),
+    m = n(709054),
     g = n(540126),
     C = n(434479),
     I = n(981631),
@@ -26,21 +26,21 @@ var i = n(735250),
     x = n(718317);
 function v(e) {
     let { guild: t, selected: v } = e,
-        T = (0, h.Z)(t),
-        Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        A = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        b = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
-        R = A.length > g.Cb,
-        M = (0, r.e7)([d.Z, m.ZP], () => {
+        Z = (0, h.Z)(t),
+        T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        A = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
+        R = b.length > g.Cb,
+        M = (0, r.e7)([d.Z, _.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = m.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
+                n = _.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let i = _.default.extractTimestamp(n);
+            let i = m.default.extractTimestamp(n);
             return null != e && e > i;
         }),
         L = l.useCallback(() => {
-            (0, f.uL)(I.Z5c.CHANNEL(t.id, T ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
-        }, [t.id, T]),
+            (0, f.uL)(I.Z5c.CHANNEL(t.id, Z ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
+        }, [t.id, Z]),
         P = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -56,7 +56,7 @@ function v(e) {
         ),
         y = null;
     return (
-        (!Z || b || R) &&
+        (!T || A || R) &&
             !v &&
             !M &&
             (y = (0, i.jsx)(o.TextBadge, {
@@ -72,7 +72,7 @@ function v(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: T ? S.Z.Messages.CHANNELS_AND_ROLES : S.Z.Messages.CHANNEL_BROWSER_TITLE,
+            text: Z ? S.Z.Messages.CHANNELS_AND_ROLES : S.Z.Messages.CHANNEL_BROWSER_TITLE,
             selected: v,
             onClick: L,
             onContextMenu: P,

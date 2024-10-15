@@ -10,8 +10,8 @@ var i = n(735250),
     h = n(430824),
     p = n(451478),
     f = n(61634),
-    m = n(325257),
-    _ = n(941823);
+    _ = n(325257),
+    m = n(941823);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         g = t.id,
@@ -21,38 +21,38 @@ t.Z = l.memo(function (e) {
         N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(g)),
         S = (0, c.Z)((e) => e.guildId),
         x = (0, f.Z)(g),
-        { badge: v, unread: T } = (0, r.cj)([d.default], () => ({
+        { badge: v, unread: Z } = (0, r.cj)([d.default], () => ({
             badge: d.default.getMentionCount(g),
             unread: d.default.hasUnread(g)
         })),
-        Z = (0, o.I)(C) && 0 === v,
-        A = l.useMemo(
+        T = (0, o.I)(C) && 0 === v,
+        b = l.useMemo(
             () =>
                 null != n
                     ? n
-                    : Z
+                    : T
                       ? (0, i.jsx)('div', {
-                            className: _.pauseBackground,
+                            className: m.pauseBackground,
                             children: (0, i.jsx)(a.PauseIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: _.pause,
+                                className: m.pause,
                                 width: 10,
                                 height: 10
                             })
                         })
                       : null,
-            [n, Z]
+            [n, T]
         );
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(_.Z, {
         ...e,
         guild: C,
         unavailable: N,
         animatable: E,
         selected: S === g,
         badge: v,
-        lowerBadge: A,
-        unread: T,
+        lowerBadge: b,
+        unread: Z,
         mediaState: x,
         guildJoinRequestStatus: I
     });

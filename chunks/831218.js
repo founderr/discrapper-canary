@@ -11,8 +11,8 @@ var i,
     h = n(442837),
     p = n(902704),
     f = n(481060),
-    m = n(925549),
-    _ = n(607070),
+    _ = n(925549),
+    m = n(607070),
     g = n(367907),
     C = n(453542),
     I = n(702321),
@@ -21,10 +21,10 @@ var i,
     S = n(860144),
     x = n(214852),
     v = n(518311),
-    T = n(355298),
-    Z = n(869404),
-    A = n(333984),
-    b = n(210887),
+    Z = n(355298),
+    T = n(869404),
+    b = n(333984),
+    A = n(210887),
     R = n(592125),
     M = n(158776),
     L = n(55589),
@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class G extends (l = s.Component) {
+class U extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -315,7 +315,7 @@ class G extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && m.Z.updateChannelListScroll(y.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(y.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -384,29 +384,29 @@ class G extends (l = s.Component) {
             });
     }
 }
-D(G, 'defaultProps', { padding: 8 });
+D(U, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
         o = R.Z.getMutablePrivateChannels(),
-        c = (0, Z.k1)(o),
+        c = (0, T.k1)(o),
         p = (0, h.Wu)(
-            [L.Z, T.Z, A.Z],
+            [L.Z, Z.Z, b.Z],
             () => {
                 let e = L.Z.getPrivateChannelIds();
-                return (0, Z.tU)(e, [T.Z, A.Z]);
+                return (0, T.tU)(e, [Z.Z, b.Z]);
             },
             []
         );
     (0, x.z)(S.R);
-    let f = (0, h.cj)([_.Z, b.Z, R.Z], () => ({
-            theme: b.Z.darkSidebar ? y.BRd.DARK : n,
-            keyboardModeEnabled: _.Z.keyboardModeEnabled,
+    let f = (0, h.cj)([m.Z, A.Z, R.Z], () => ({
+            theme: A.Z.darkSidebar ? y.BRd.DARK : n,
+            keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(R.Z.getPrivateChannelsVersion()) : R.Z.getPrivateChannelsVersion()
         })),
-        m = s.useRef(null),
+        _ = s.useRef(null),
         g = s.useCallback((e) => {
-            let t = m.current,
+            let t = _.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -423,7 +423,7 @@ t.Z = (e) => {
         C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = m.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -432,7 +432,7 @@ t.Z = (e) => {
         I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = m.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -453,10 +453,10 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(G, {
+        children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
-            listRef: m,
+            listRef: _,
             theme: n,
             version: t,
             ...e,

@@ -2,24 +2,24 @@ n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(477690),
-    l = n(481060),
-    r = n(100527),
+    r = n(481060),
+    l = n(100527),
     o = n(367907),
     c = n(906732),
-    d = n(524444),
-    u = n(624138),
+    u = n(524444),
+    d = n(624138),
     _ = n(453070),
     E = n(373228),
     I = n(419922),
     m = n(217588),
     T = n(981631),
-    N = n(474936),
-    h = n(231206);
-let C = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    p = (e) => {
+    h = n(474936),
+    N = n(231206);
+let f = (0, d.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    C = (e) => {
         if (null != e)
             o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                type: N.cd.STICKER_IN_MESSAGE_HOVER,
+                type: h.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, E.aQ)(e.format_type),
@@ -28,29 +28,29 @@ let C = (0, u.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     };
 t.Z = (e) => {
     let { renderableSticker: t, channel: n, isInteracting: s } = e,
-        [o, u] = a.useState(!0),
+        [o, d] = a.useState(!0),
         [E, T] = a.useState(String(Date.now())),
-        [N] = (0, _.XW)(t, s),
-        { analyticsLocations: f } = (0, c.ZP)(r.Z.STICKER_MESSAGE),
+        [h] = (0, _.XW)(t, s),
+        { analyticsLocations: p } = (0, c.ZP)(l.Z.STICKER_MESSAGE),
         g = (0, i.jsxs)('span', {
-            className: h.stickerName,
+            className: N.stickerName,
             children: [
-                (0, i.jsx)(l.StickerSmallIcon, {
+                (0, i.jsx)(r.StickerSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: h.stickerIcon
+                    className: N.stickerIcon
                 }),
-                (null != N ? N : t).name
+                (null != h ? h : t).name
             ]
         });
     return (0, i.jsx)(c.Gt, {
-        value: f,
-        children: (0, i.jsx)(l.Popout, {
+        value: p,
+        children: (0, i.jsx)(r.Popout, {
             align: 'center',
-            animation: l.Popout.Animation.TRANSLATE,
+            animation: r.Popout.Animation.TRANSLATE,
             positionKey: E,
             onRequestClose: () => {
-                u(!0);
+                d(!0);
             },
             renderPopout: (e) =>
                 (0, i.jsx)(m.Z, {
@@ -61,26 +61,26 @@ t.Z = (e) => {
                 }),
             children: (e) => {
                 let { onClick: n } = e;
-                return (0, i.jsx)(l.Tooltip, {
-                    ...d.b_,
+                return (0, i.jsx)(r.Tooltip, {
+                    ...u.b_,
                     shouldShow: o,
-                    text: (0, d.Y)(g),
+                    text: (0, u.Y)(g),
                     'aria-label': !1,
                     onTooltipShow: () => {
-                        p(N);
+                        C(h);
                     },
                     children: (e) =>
-                        (0, i.jsx)(l.Clickable, {
+                        (0, i.jsx)(r.Clickable, {
                             ...e,
-                            className: h.clickableSticker,
+                            className: N.clickableSticker,
                             onClick: (e) => {
-                                u(!o), n(e);
+                                d(!o), n(e);
                             },
                             tag: 'span',
                             children: (0, i.jsx)(I.ZP, {
                                 isInteracting: s,
-                                size: C,
-                                sticker: null != N ? N : t
+                                size: f,
+                                sticker: null != h ? h : t
                             })
                         })
                 });

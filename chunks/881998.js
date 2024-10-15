@@ -1,25 +1,25 @@
 n.d(t, {
     M: function () {
-        return r;
+        return l;
     }
 });
 var i,
     a,
     s,
-    l,
     r,
+    l,
     o,
     c = n(442837),
-    d = n(570140),
-    u = n(592125),
+    u = n(570140),
+    d = n(592125),
     _ = n(757266),
     E = n(375954);
-((i = r || (r = {})).NOT_FETCHED = 'NOT_FETCHED'), (i.FETCHING = 'FETCHING'), (i.FETCHED = 'FETCHED');
+((i = l || (l = {})).NOT_FETCHED = 'NOT_FETCHED'), (i.FETCHING = 'FETCHING'), (i.FETCHED = 'FETCHED');
 let I = null,
     m = 'NOT_FETCHED';
 class T extends (o = c.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z, _.Z, E.Z);
+        this.waitFor(d.Z, _.Z, E.Z);
     }
     getApps() {
         return I;
@@ -28,16 +28,16 @@ class T extends (o = c.ZP.Store) {
         return m;
     }
 }
-(l = 'AuthorizedAppsStore'),
+(r = 'AuthorizedAppsStore'),
     (s = 'displayName') in (a = T)
         ? Object.defineProperty(a, s, {
-              value: l,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = l),
-    (t.Z = new T(d.Z, {
+        : (a[s] = r),
+    (t.Z = new T(u.Z, {
         USER_AUTHORIZED_APPS_REQUEST: function () {
             m = 'FETCHING';
         },

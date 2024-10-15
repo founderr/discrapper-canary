@@ -19,17 +19,17 @@ function f(e) {
     var t;
     let { isOnHubVerificationRoute: n } = e,
         f = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', { path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(s.Hw.guildId(), ':inviteCode') }),
-        m = (0, r.e7)([c.Z], () => {
+        _ = (0, r.e7)([c.Z], () => {
             if (null == f) return null;
             let { inviteCode: e } = f.params;
             return null != e ? c.Z.getInvite(e) : null;
         }),
-        _ = (null == m ? void 0 : m.guild) != null ? new o.ZP(null == m ? void 0 : m.guild) : null;
+        m = (null == _ ? void 0 : _.guild) != null ? new o.ZP(null == _ ? void 0 : _.guild) : null;
     return n
-        ? null != _ && null != m
+        ? null != m && null != _
             ? (0, i.jsx)(u.Z, {
-                  guild: _,
-                  invite: m
+                  guild: m,
+                  invite: _
               })
             : (0, i.jsx)(d.Z, {
                   tooltip: p.Z.Messages.HUB_DISCORD_HUBS,

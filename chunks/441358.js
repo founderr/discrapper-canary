@@ -1,21 +1,21 @@
 n.d(t, {
     v: function () {
-        return r;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(689938),
     s = n(858140),
-    l = n(652430);
-let r = () =>
+    r = n(652430);
+let l = () =>
     (0, i.jsxs)('div', {
         className: s.container,
         children: [
             (0, i.jsx)('img', {
                 className: s.image,
                 alt: '',
-                src: l
+                src: r
             }),
             (0, i.jsx)('div', {
                 className: s.title,

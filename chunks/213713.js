@@ -13,8 +13,8 @@ var r = n(735250),
     c = n(876215),
     d = n(442837),
     u = n(433517),
-    m = n(481060),
-    h = n(570140),
+    h = n(481060),
+    m = n(570140),
     x = n(812206),
     f = n(835473),
     p = n(681619),
@@ -24,8 +24,8 @@ var r = n(735250),
     _ = n(823379),
     j = n(71585),
     C = n(146282),
-    S = n(650613),
-    T = n(789086),
+    T = n(650613),
+    S = n(789086),
     N = n(206583),
     y = n(768452),
     I = n(219299);
@@ -35,7 +35,7 @@ let E = [
         cellClassName: i()(y.cell, y.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(m.Text, {
+            return (0, r.jsx)(h.Text, {
                 variant: 'text-md/semibold',
                 children: c.s[t]
             });
@@ -47,7 +47,7 @@ let E = [
         render(e) {
             let { entries: t } = e;
             return (0, r.jsx)('div', {
-                children: (0, r.jsx)(m.Text, {
+                children: (0, r.jsx)(h.Text, {
                     variant: 'text-md/normal',
                     children: t.length
                 })
@@ -68,15 +68,15 @@ function w(e) {
     let { type: a } = e,
         l = (0, d.e7)([C.Z], () => C.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
-    return (0, r.jsx)(m.Checkbox, {
+    return (0, r.jsx)(h.Checkbox, {
         value: i,
         onClick: function () {
             i
-                ? h.Z.dispatch({
+                ? m.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: void 0
                   })
-                : h.Z.dispatch({
+                : m.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: { types: new Set([a]) }
                   });
@@ -126,26 +126,26 @@ function k() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, f.Z)(L).filter(_.lm);
+        B = (0, f.Z)(L).filter(_.lm);
     return (0, r.jsx)('div', {
         className: i()(I.panel),
-        children: (0, r.jsxs)(m.ScrollerThin, {
+        children: (0, r.jsxs)(h.ScrollerThin, {
             className: y.content,
             children: [
-                (0, r.jsxs)(m.FormSection, {
+                (0, r.jsxs)(h.FormSection, {
                     children: [
-                        (0, r.jsx)(m.FormTitle, { children: 'Inventory' }),
+                        (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(p.Z, {
                                 columns: E,
                                 data: c
                             }),
-                        (0, r.jsx)(m.Spacer, { size: 8 }),
-                        (0, r.jsx)(T.Z, {}),
-                        (0, r.jsx)(m.Button, {
+                        (0, r.jsx)(h.Spacer, { size: 8 }),
+                        (0, r.jsx)(S.Z, {}),
+                        (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({
+                                m.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
                                     feedId: N.YN.GLOBAL_FEED
                                 });
@@ -155,48 +155,48 @@ function k() {
                         })
                     ]
                 }),
-                (0, r.jsxs)(m.FormSection, {
+                (0, r.jsxs)(h.FormSection, {
                     children: [
-                        (0, r.jsx)(m.FormTitle, { children: 'Impression Capping' }),
-                        (0, r.jsx)(m.Button, {
+                        (0, r.jsx)(h.FormTitle, { children: 'Impression Capping' }),
+                        (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
+                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
                             },
                             children: 'Clear Impressions'
                         }),
-                        (0, r.jsx)(m.Spacer, { size: 8 }),
-                        (0, r.jsx)(m.Button, {
+                        (0, r.jsx)(h.Spacer, { size: 8 }),
+                        (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
+                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
                             },
                             children: 'Log Impressions'
                         }),
-                        (0, r.jsx)(m.Spacer, { size: 8 }),
-                        (0, r.jsx)(m.Button, {
+                        (0, r.jsx)(h.Spacer, { size: 8 }),
+                        (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
+                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
                             },
                             children: l ? 'Enable Impression Capping' : 'Disable Impression Capping'
                         }),
-                        (0, r.jsx)(m.Spacer, { size: 8 }),
-                        (0, r.jsx)(m.Button, {
+                        (0, r.jsx)(h.Spacer, { size: 8 }),
+                        (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
+                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
                             },
                             children: o ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
                         })
                     ]
                 }),
                 false,
-                (0, r.jsx)(S.Z, {}),
-                (0, r.jsxs)(m.FormSection, {
+                (0, r.jsx)(T.Z, {}),
+                (0, r.jsxs)(h.FormSection, {
                     children: [
-                        (0, r.jsx)(m.FormTitle, { children: 'Game Profile' }),
-                        (0, r.jsx)(m.TextInput, {
+                        (0, r.jsx)(h.FormTitle, { children: 'Game Profile' }),
+                        (0, r.jsx)(h.TextInput, {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
@@ -205,7 +205,7 @@ function k() {
                             error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
@@ -219,13 +219,13 @@ let Z = (e) => {
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         });
-    return (0, r.jsx)(m.Clickable, {
+    return (0, r.jsx)(h.Clickable, {
         onClick: n,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, r.jsx)(m.Text, {
+        children: (0, r.jsx)(h.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: t.name

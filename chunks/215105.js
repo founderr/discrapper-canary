@@ -21,7 +21,7 @@ var r = n(735250),
     I = n(448197),
     m = n(698305),
     T = n(510659),
-    S = n(825801),
+    S = n(810097),
     g = n(652853),
     A = n(228168),
     N = n(420212),
@@ -92,7 +92,7 @@ function y(e) {
                 await (0, m.Z)({
                     userId: t.id,
                     content: n,
-                    location: 'UserProfileReactReplyBar',
+                    location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1
                 });
