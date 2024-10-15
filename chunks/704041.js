@@ -28,7 +28,7 @@ function m(e) {
 }
 function T(e) {
     let { guildId: t } = e,
-        { leaderboardsDisabled: i } = (0, u.Oz)(t);
+        { leaderboardsDisabled: i } = (0, u.O)(t);
     return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, f.ABu.RIOT_GAMES)) || i
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -86,7 +86,10 @@ t.Z = (e) => {
                                                   )
                                           })
                                       }),
-                                      (0, r.jsx)(c.Z, { guildId: t })
+                                      (0, r.jsx)(c.Z, {
+                                          guildId: t,
+                                          leaderboardId: E._
+                                      })
                                   ]
                               }),
                               (0, r.jsx)(_.Z, {
