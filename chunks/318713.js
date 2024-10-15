@@ -4,52 +4,78 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(55935),
-    l = n(223021),
-    u = n(689938),
-    c = n(825193);
-t.Z = function (e) {
-    let { children: t, className: n, compact: i = !1, timestamp: d, isVisibleOnlyOnHover: _ = !1, cozyAlt: E = !1, isInline: f = !0, id: h, isEdited: p = !1 } = e,
-        I = (0, o.Hg)(d),
-        m = i ? (0, o.vc)(d, 'LT') : (0, o.Y4)(d),
-        T = i ? (0, l.Z)(m) : null,
-        S = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: I }) : I;
-    return (0, r.jsx)('span', {
-        className: a()(n, T, {
-            [c.timestamp]: !0,
-            [c.timestampVisibleOnHover]: _,
-            [c.timestampInline]: f,
-            [c.alt]: E
-        }),
-        children: (0, r.jsx)(s.Tooltip, {
-            text: (0, o.vc)(d, 'LLLL'),
-            'aria-label': S,
-            tooltipClassName: c.timestampTooltip,
-            delay: 750,
-            children: (e) =>
-                (0, r.jsx)('time', {
-                    ...e,
-                    id: h,
-                    dateTime: d.toISOString(),
-                    children:
-                        null != t
-                            ? t
-                            : (0, r.jsxs)(r.Fragment, {
-                                  children: [
-                                      (0, r.jsx)('i', {
-                                          className: c.separator,
-                                          'aria-hidden': !0,
-                                          children: i ? '[' : ' \u2014 '
-                                      }),
-                                      m,
-                                      i &&
-                                          (0, r.jsxs)('i', {
-                                              className: c.separator,
-                                              'aria-hidden': !0,
-                                              children: [']', ' ']
-                                          })
-                                  ]
+    l = n(543388),
+    u = n(223021),
+    c = n(689938),
+    d = n(825193);
+function _(e) {
+    let { tooltipProps: t, timeFormatted: n, children: i, compact: a, timestamp: s, id: o } = e;
+    return (0, r.jsx)('time', {
+        ...t,
+        id: o,
+        dateTime: s.toISOString(),
+        children:
+            null != i
+                ? i
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)('i', {
+                              className: d.separator,
+                              'aria-hidden': !0,
+                              children: a ? '[' : ' \u2014 '
+                          }),
+                          n,
+                          a &&
+                              (0, r.jsxs)('i', {
+                                  className: d.separator,
+                                  'aria-hidden': !0,
+                                  children: [']', ' ']
                               })
-                })
-        })
+                      ]
+                  })
+    });
+}
+t.Z = function (e) {
+    let { children: t, className: n, compact: i = !1, timestamp: E, isVisibleOnlyOnHover: f = !1, cozyAlt: h = !1, isInline: p = !0, id: I, isEdited: m = !1, application: T } = e,
+        S = (0, o.Hg)(E),
+        g = i ? (0, o.vc)(E, 'LT') : (0, o.Y4)(E),
+        A = i ? (0, u.Z)(g) : null,
+        N = m ? c.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: S }) : S;
+    return (0, r.jsx)('span', {
+        className: a()(n, A, {
+            [d.timestamp]: !0,
+            [d.timestampVisibleOnHover]: f,
+            [d.timestampInline]: p,
+            [d.alt]: h
+        }),
+        children:
+            null == T
+                ? (0, r.jsx)(s.Tooltip, {
+                      text: (0, o.vc)(E, 'LLLL'),
+                      'aria-label': N,
+                      tooltipClassName: d.timestampTooltip,
+                      delay: 750,
+                      children: (e) =>
+                          (0, r.jsx)(_, {
+                              tooltipProps: e,
+                              timeFormatted: g,
+                              timestamp: E,
+                              id: I,
+                              compact: i,
+                              children: t
+                          })
+                  })
+                : (0, r.jsx)(l.Z, {
+                      application: T,
+                      timestamp: E,
+                      compact: i,
+                      children: (0, r.jsx)(_, {
+                          timeFormatted: g,
+                          timestamp: E,
+                          id: I,
+                          compact: i,
+                          children: t
+                      })
+                  })
     });
 };
