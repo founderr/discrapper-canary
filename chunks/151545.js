@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return A;
     }
 });
 var r = n(735250),
@@ -16,63 +16,90 @@ var r = n(735250),
     E = n(496675),
     f = n(979651),
     h = n(626135),
-    p = n(409057),
-    I = n(128277),
-    m = n(981631);
-function T(e) {
-    let { user: t, currentUser: n, activity: T, className: S, onClose: g } = e,
-        A = (0, a.e7)([f.Z, d.Z], () => {
+    p = n(984173),
+    I = n(409057),
+    m = n(443375),
+    T = n(128277),
+    S = n(263059),
+    g = n(981631);
+function A(e) {
+    let { user: t, currentUser: n, activity: A, className: N, onClose: R } = e,
+        O = (0, a.e7)([f.Z, d.Z], () => {
             var e;
             return d.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
         }),
-        { enableHangStatus: N } = c.n.useExperiment(
+        { enableHangStatus: v } = c.n.useExperiment(
             {
-                guildId: null == A ? void 0 : A.guild_id,
+                guildId: null == O ? void 0 : O.guild_id,
                 location: 'UserProfileActivityCardWrapper'
             },
             { autoTrackExposure: !1 }
         ),
-        R = N && E.Z.can(m.Plq.CONNECT, A),
-        O = (null == T ? void 0 : T.type) === m.IIU.HANG_STATUS && R ? A : null,
-        v = (0, a.e7)([_.Z, f.Z, d.Z], () => {
-            if ((0, s.Z)(T)) {
+        C = v && E.Z.can(g.Plq.CONNECT, O),
+        L = (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && C ? O : null,
+        y = (0, p.F)({ location: 'UserProfileActivityCardWrapper' }),
+        D = (0, a.e7)([_.Z, f.Z, d.Z], () => {
+            if ((0, s.Z)(A)) {
                 var e, n;
-                let r = null === (e = f.Z.getVoiceStateForSession(t.id, null == T ? void 0 : T.session_id)) || void 0 === e ? void 0 : e.channelId;
+                let r = null === (e = f.Z.getVoiceStateForSession(t.id, null == A ? void 0 : A.session_id)) || void 0 === e ? void 0 : e.channelId;
                 return _.Z.getGuild(null === (n = d.Z.getChannel(r)) || void 0 === n ? void 0 : n.getGuildId());
             }
-            return null != O ? _.Z.getGuild(O.getGuildId()) : null;
+            return null != L ? _.Z.getGuild(L.getGuildId()) : null;
         });
-    (0, u.q)(null == T ? void 0 : T.application_id);
-    let C = (0, a.e7)([l.Z], () => ((null == T ? void 0 : T.application_id) != null ? l.Z.getApplication(T.application_id) : (null == T ? void 0 : T.name) != null ? l.Z.getApplicationByName(T.name) : null));
-    return (i.useEffect(() => {
-        (null == T ? void 0 : T.type) === m.IIU.HANG_STATUS &&
-            R &&
-            h.default.track(m.rMx.VIEW_HANG_STATUS, {
-                source: 'UserProfilePopout',
-                guild_id: null == O ? void 0 : O.guild_id,
-                channel_id: null == O ? void 0 : O.id
-            });
-    }, [null == T ? void 0 : T.type, R, O]),
-    (null == T ? void 0 : T.type) !== m.IIU.HANG_STATUS || R)
-        ? (0, o.Z)(T)
-            ? (0, r.jsx)(I.Z, {
+    (0, u.q)(null == A ? void 0 : A.application_id);
+    let b = (0, a.e7)([l.Z], () => ((null == A ? void 0 : A.application_id) != null ? l.Z.getApplication(A.application_id) : (null == A ? void 0 : A.name) != null ? l.Z.getApplicationByName(A.name) : null));
+    if (
+        (i.useEffect(() => {
+            (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS &&
+                C &&
+                h.default.track(g.rMx.VIEW_HANG_STATUS, {
+                    source: 'UserProfilePopout',
+                    guild_id: null == L ? void 0 : L.guild_id,
+                    channel_id: null == L ? void 0 : L.id
+                });
+        }, [null == A ? void 0 : A.type, C, L]),
+        (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && !C)
+    )
+        return null;
+    if ((0, o.Z)(A))
+        return y
+            ? (0, r.jsx)(S.Z, {
                   user: t,
                   currentUser: n,
-                  activity: T,
-                  guild: v,
-                  channel: A,
-                  className: S,
-                  onClose: g
+                  activity: A,
+                  guild: D,
+                  channel: O,
+                  className: N,
+                  onClose: R
               })
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(T.Z, {
                   user: t,
                   currentUser: n,
-                  activity: T,
-                  application: C,
-                  guild: v,
-                  channel: A,
-                  className: S,
-                  onClose: g
-              })
-        : null;
+                  activity: A,
+                  guild: D,
+                  channel: O,
+                  className: N,
+                  onClose: R
+              });
+    return y
+        ? (0, r.jsx)(m.Z, {
+              user: t,
+              currentUser: n,
+              activity: A,
+              application: b,
+              guild: D,
+              channel: O,
+              className: N,
+              onClose: R
+          })
+        : (0, r.jsx)(I.Z, {
+              user: t,
+              currentUser: n,
+              activity: A,
+              application: b,
+              guild: D,
+              channel: O,
+              className: N,
+              onClose: R
+          });
 }
