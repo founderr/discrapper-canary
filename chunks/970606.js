@@ -163,10 +163,11 @@ function g(e, t) {
         enable_tag: t
     });
 }
-function A(e, t) {
+function A(e, t, n) {
     l.default.track(c.rMx.CLAN_DISCOVERY_VIEWED, {
         ...E(),
         section: e,
+        treatment: n,
         application_ids: t.games,
         playstyle: t.playstyle,
         traits: t.traits

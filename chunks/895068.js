@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     s: function () {
-        return b;
+        return M;
     }
 }),
     n(47120);
@@ -20,26 +20,27 @@ var i,
     E = n(481060),
     h = n(110924),
     m = n(970606),
-    I = n(594174),
-    p = n(823379),
-    g = n(51144),
-    T = n(945124),
-    f = n(231467),
-    S = n(301544),
-    C = n(931515),
-    N = n(286083),
-    A = n(207796),
-    v = n(777734),
-    Z = n(976757),
-    L = n(981631),
-    R = n(689938),
-    O = n(641388),
-    x = n(882008);
-function b(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
-    return e === A.v0.SAVED_GUILDS ? 'saved_guilds' : t;
-}
+    I = n(216742),
+    p = n(594174),
+    g = n(823379),
+    T = n(51144),
+    f = n(945124),
+    S = n(231467),
+    C = n(301544),
+    N = n(931515),
+    A = n(286083),
+    v = n(207796),
+    Z = n(777734),
+    L = n(976757),
+    R = n(981631),
+    O = n(689938),
+    x = n(641388),
+    b = n(882008);
 function M(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
+    return e === v.v0.SAVED_GUILDS ? 'saved_guilds' : t;
+}
+function P(e) {
     var t;
     let { clan: n, entranceDelay: i = 0, hide: a, searchCriteria: s, className: r, source: o, ...c } = e;
     return (0, l.jsx)('div', {
@@ -47,14 +48,14 @@ function M(e) {
             opacity: a ? 0 : void 0,
             animationDelay: ''.concat(i, 'ms')
         },
-        className: O.animatedCard,
+        className: x.animatedCard,
         children: (0, l.jsx)(
-            f.ZP,
+            S.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, T.y)(n, s),
-                className: d()(O.card, r),
-                source: null != o ? o : L.jXE.DISCOVER_SEARCH,
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, f.y)(n, s),
+                className: d()(x.card, r),
+                source: null != o ? o : R.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
             },
@@ -65,33 +66,34 @@ function M(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: T = 16, paddingHorizontal: f = 32, variant: L = 'default', onUpdatePage: b } = e,
-        P = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
-        D = o.useMemo(() => {
-            if (0 === P) return 1;
-            let e = P / 256,
-                t = P / 376,
-                n = P / e,
-                i = P / t;
+    let { width: c, paddingVertical: f = 16, paddingHorizontal: S = 32, variant: R = 'default', onUpdatePage: M } = e,
+        D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
+        y = o.useMemo(() => {
+            if (0 === D) return 1;
+            let e = D / 256,
+                t = D / 376,
+                n = D / e,
+                i = D / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
-        }, [P]),
-        { loaded: y, clans: j, searchResult: U, searchCriteria: G, hasError: w } = (0, C.ML)(D, 'saved_guilds' === L),
-        k = (0, A.GN)((e) => e.selectedTraits, u.Z),
-        B = (0, A.GN)((e) => e.selectedGames, u.Z),
-        V = (0, h.Z)(U),
-        { currentPage: H, updatePage: F, totalItems: Y, pageSize: z } = (0, N.a)(),
-        W = (0, _.e7)([I.default], () => I.default.getCurrentUser());
+        }, [D]),
+        { loaded: j, clans: U, searchResult: G, searchCriteria: w, hasError: k } = (0, N.ML)(y, 'saved_guilds' === R),
+        B = (0, v.GN)((e) => e.selectedTraits, u.Z),
+        V = (0, v.GN)((e) => e.selectedGames, u.Z),
+        H = (0, h.Z)(G),
+        { currentPage: F, updatePage: Y, totalItems: z, pageSize: W } = (0, A.a)(),
+        K = (0, _.e7)([p.default], () => p.default.getCurrentUser()),
+        { treatment: q } = (0, I.I7)();
     o.useEffect(() => {
-        if (null != U && !!(0, Z.Pw)(U)) (!(null != V && (0, Z.Pw)(V)) || !(V.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
-    }, [G, U, V]);
-    let K = B.length > 0 || k.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != W ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: g.ZP.getName(W) }) : '';
-    let q =
-            ((t = j),
-            (n = D),
-            (i = L),
-            (a = H),
-            (s = K),
-            (r = y),
+        if (null != G && !!(0, L.Pw)(G)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= G.loadedAt)) && (0, m.Oe)('top_picks', w, q);
+    }, [w, G, H, q]);
+    let Q = V.length > 0 || B.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != K ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(K) }) : '';
+    let X =
+            ((t = U),
+            (n = y),
+            (i = R),
+            (a = F),
+            (s = Q),
+            (r = j),
             o.useMemo(() => {
                 if (null == t) return [];
                 switch (i) {
@@ -121,7 +123,7 @@ t.ZP = o.memo(function (e) {
                                 items: t.slice(0, n),
                                 itemHeight: 400,
                                 sectionHeight: 24,
-                                header: a > 1 ? R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+                                header: a > 1 ? O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
                                 props: { style: { paddingTop: 8 } },
                                 subtitle: a > 1 ? void 0 : s,
                                 skeletonCount: n
@@ -133,7 +135,7 @@ t.ZP = o.memo(function (e) {
                                       itemHeight: 400,
                                       sectionHeight: a > 1 ? 0 : 24,
                                       props: { style: { paddingTop: 16 } },
-                                      header: a > 1 ? void 0 : R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
+                                      header: a > 1 ? void 0 : O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
                                       skeletonCount: 4 * n
                                   }
                                 : null,
@@ -143,33 +145,33 @@ t.ZP = o.memo(function (e) {
                                 itemHeight: 0,
                                 sectionHeight: 86
                             }
-                        ].filter(p.lm);
+                        ].filter(g.lm);
                     default:
                         return [];
                 }
             }, [t, i, n, a, s, r])),
-        Q = o.useCallback(
+        J = o.useCallback(
             (e) => {
-                F(e),
+                Y(e),
                     (0, m.Lx)({
-                        fromPage: H,
+                        fromPage: F,
                         toPage: e
                     }),
-                    null == b || b();
+                    null == M || M();
             },
-            [F, b, H]
+            [Y, M, F]
         ),
-        [, X] = o.useState(new Set()),
-        J = o.useMemo(() => new Set(G.games), [G.games]),
-        $ = o.useCallback(
+        [, $] = o.useState(new Set()),
+        ee = o.useMemo(() => new Set(w.games), [w.games]),
+        et = o.useCallback(
             (e, t, n, i) => {
-                let { items: a } = q[e],
-                    s = (H - 1) * z + (e * D + t),
+                let { items: a } = X[e],
+                    s = (F - 1) * W + (e * y + t),
                     r = a[t];
                 null != r && n
                     ? (i.current = setTimeout(
                           () =>
-                              X((e) => {
+                              $((e) => {
                                   let t = new Set(e);
                                   return (
                                       t.add(r.id),
@@ -185,43 +187,43 @@ t.ZP = o.memo(function (e) {
                       ))
                     : clearTimeout(i.current);
             },
-            [q, X, D, H, z]
+            [X, $, y, F, W]
         ),
-        ee = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
-        et = o.useCallback(
+        en = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
+        ei = o.useCallback(
             (e, t, n) => {
-                let { items: i } = q[e],
-                    a = e * D + t,
-                    s = (H - 1) * z + a,
+                let { items: i } = X[e],
+                    a = e * y + t,
+                    s = (F - 1) * W + a,
                     r = i[t],
-                    o = ee ? 0 : Math.min(125 * Math.floor(a / D) + (a % D) * 25, 1000);
+                    o = en ? 0 : Math.min(125 * Math.floor(a / y) + (a % y) * 25, 1000);
                 return (0, l.jsx)(
-                    M,
+                    P,
                     {
                         clan: r,
                         index: a,
                         position: s,
-                        searchCriteria: G,
-                        traitsToHighlight: k,
-                        prioritizedGameIds: J,
-                        onVisibilityChange: (n, i) => $(e, t, n, i),
+                        searchCriteria: w,
+                        traitsToHighlight: B,
+                        prioritizedGameIds: ee,
+                        onVisibilityChange: (n, i) => et(e, t, n, i),
                         hide: n,
                         entranceDelay: o
                     },
-                    ''.concat(r.id, ':').concat(L)
+                    ''.concat(r.id, ':').concat(R)
                 );
             },
-            [q, D, H, z, ee, L, G, k, J, $]
+            [X, y, F, W, en, R, w, B, ee, et]
         ),
-        en = o.useCallback((e) => (0, l.jsx)(S.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
-        ei = o.useCallback(
+        ea = o.useCallback((e) => (0, l.jsx)(C.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
+        es = o.useCallback(
             (e) => {
-                let { header: t, subtitle: n, section: i } = q[e];
+                let { header: t, subtitle: n, section: i } = X[e];
                 switch (i) {
                     case 'top_picks':
                         return (0, l.jsx)('div', {
-                            className: O.topPicksSection,
-                            children: (0, l.jsx)(v.Z, {
+                            className: x.topPicksSection,
+                            children: (0, l.jsx)(Z.Z, {
                                 title: t,
                                 subtitle: n
                             })
@@ -229,58 +231,58 @@ t.ZP = o.memo(function (e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                Y > z &&
+                                z > W &&
                                 (0, l.jsx)(E.Paginator, {
-                                    className: d()(O.paginationInput),
-                                    totalCount: Y,
-                                    pageSize: z,
+                                    className: d()(x.paginationInput),
+                                    totalCount: z,
+                                    pageSize: W,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
-                                    currentPage: H,
-                                    onPageChange: Q
+                                    currentPage: F,
+                                    onPageChange: J
                                 })
                         });
                     case 'header_spacer':
-                        return (0, l.jsx)('div', { className: O.headerSpacer });
+                        return (0, l.jsx)('div', { className: x.headerSpacer });
                     default:
                         if (null == t) return null;
-                        return (0, l.jsx)(v.Z, {
+                        return (0, l.jsx)(Z.Z, {
                             title: t,
                             subtitle: n
                         });
                 }
             },
-            [H, Q, z, q, Y]
+            [F, J, W, X, z]
         ),
-        ea = o.useMemo(
+        er = o.useMemo(
             () =>
-                y
-                    ? q.map((e) => {
+                j
+                    ? X.map((e) => {
                           let { items: t } = e;
                           return t.length;
                       })
-                    : q.map((e) => {
+                    : X.map((e) => {
                           let { skeletonCount: t } = e;
                           return null != t ? t : 0;
                       }),
-            [y, q]
+            [j, X]
         );
-    return 0 === j.length && y
+    return 0 === U.length && j
         ? (0, l.jsx)('div', {
-              className: O.emptySavedGuilds,
+              className: x.emptySavedGuilds,
               children:
-                  'saved_guilds' === L
+                  'saved_guilds' === R
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
+                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                                 }),
                                 (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
+                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
                                 })
                             ]
                         })
@@ -289,60 +291,60 @@ t.ZP = o.memo(function (e) {
                                 (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
+                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                                 }),
                                 (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
+                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
                                 })
                             ]
                         })
           })
-        : w && 0 === j.length
+        : k && 0 === U.length
           ? (0, l.jsxs)('div', {
-                className: O.errorPage,
+                className: x.errorPage,
                 children: [
                     (0, l.jsx)('img', {
                         alt: '',
-                        src: x,
-                        className: O.errorImage
+                        src: b,
+                        className: x.errorImage
                     }),
                     (0, l.jsx)(E.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: R.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
+                        children: O.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
                     }),
                     (0, l.jsx)(E.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: R.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION
+                        children: O.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION
                     })
                 ]
             })
           : (0, l.jsx)('div', {
-                className: O.sectionContainer,
+                className: x.sectionContainer,
                 style: {
-                    paddingTop: T,
-                    paddingLeft: f,
-                    paddingRight: f,
-                    paddingBottom: T,
-                    width: 'calc(100% - '.concat(2 * f, 'px)'),
+                    paddingTop: f,
+                    paddingLeft: S,
+                    paddingRight: S,
+                    paddingBottom: f,
+                    width: 'calc(100% - '.concat(2 * S, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
-                children: ea.map((e, t) => {
+                children: er.map((e, t) => {
                     var n, i;
-                    let a = q[t],
-                        s = ei(t);
+                    let a = X[t],
+                        s = es(t);
                     return (0, l.jsxs)(
                         'div',
                         {
-                            className: O.section,
+                            className: x.section,
                             style: { gap: ''.concat(16, 'px') },
                             children: [
                                 null != s &&
                                     (0, l.jsx)('div', {
                                         ...a.props,
-                                        className: d()(O.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
+                                        className: d()(x.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
                                         style: {
                                             height: ''.concat(a.sectionHeight, 'px'),
                                             ...(null === (i = a.props) || void 0 === i ? void 0 : i.style)
@@ -351,11 +353,11 @@ t.ZP = o.memo(function (e) {
                                     }),
                                 e > 0 &&
                                     (0, l.jsx)('div', {
-                                        className: O.sectionContent,
-                                        style: { gridTemplateColumns: 'repeat('.concat(D, ', minmax(252px, 1fr))') },
+                                        className: x.sectionContent,
+                                        style: { gridTemplateColumns: 'repeat('.concat(y, ', minmax(252px, 1fr))') },
                                         children: Array.from({ length: e }).map((e, n) => {
                                             let i = ''.concat(t, '-').concat(n);
-                                            return y ? et(t, n, null == c) : en(i);
+                                            return j ? ei(t, n, null == c) : ea(i);
                                         })
                                     })
                             ]
