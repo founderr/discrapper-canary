@@ -35734,6 +35734,16 @@ div.popoutCloseButton_d523a2:hover {
     flex-shrink: 0
 }
 
+.visual-refresh .titleBar_a934d8 {
+    pointer-events: none;
+    padding-bottom: 0;
+    padding-bottom: var(--custom-app-top-bar-height, 0)
+}
+
+.visual-refresh .titleBar_a934d8[data-has-layer=true] {
+    padding-bottom: 0
+}
+
 .withFrame_a934d8 {
     height: 18px;
     margin-top: 4px
@@ -35752,7 +35762,6 @@ div.popoutCloseButton_d523a2:hover {
 .visual-refresh .typeMacOS_a934d8 {
     position: relative;
     width: 100%;
-    height: 40px;
     display: flex;
     align-items: center
 }
@@ -35792,18 +35801,30 @@ div.popoutCloseButton_d523a2:hover {
     color: var(--text-muted)
 }
 
+.visual-refresh.platform-win {
+    --custom-app-bar-right-offset: 120px
+}
+
 .visual-refresh .typeWindows_a934d8 {
     width: 100%;
     height: 40px;
     flex-direction: row;
     align-items: center;
-    justify-content: center
+    justify-content: space-between
 }
 
 .visual-refresh .winButton_a934d8 {
     width: 40px;
     height: 40px;
     top: 0
+}
+
+.visual-refresh .winButtons_a934d8 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    padding-right: 4px
 }
 
 .visual-refresh .wordmarkWindows_a934d8 {
@@ -35914,12 +35935,6 @@ div.popoutCloseButton_d523a2:hover {
 .custom-theme-background .withBackgroundOverride_a934d8.typeWindows_a934d8 {
     margin-top: 0;
     padding-top: 4px
-}
-
-.visual-refresh .children_a934d8 {
-    height: 40px;
-    display: flex;
-    justify-content: center
 }
 
 .tile_dc5fc4 {
@@ -41843,6 +41858,10 @@ html.disable-forced-colors * {
     position: relative;
     z-index: auto;
     height: 100%
+}
+
+.visual-refresh .app_bd26cc {
+    position: static
 }
 
 .mobileApp_bd26cc {
@@ -51113,7 +51132,8 @@ img[alt] {
     --custom-guild-list-width: 72px;
     --custom-guild-sidebar-width: 268px;
     --custom-app-sidebar-target-width: calc(var(--custom-guild-sidebar-width) + var(--custom-guild-list-width));
-    --custom-channel-textarea-text-area-height: 40px
+    --custom-channel-textarea-text-area-height: 40px;
+    --custom-app-top-bar-height: 40px
 }
 
 .grecaptcha-badge {

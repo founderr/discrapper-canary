@@ -1,40 +1,39 @@
 n.d(t, {
     O: function () {
-        return N;
+        return h;
     }
 }),
     n(536091);
 var i = n(904245),
     a = n(339085),
     s = n(957730),
-    l = n(285651),
-    r = n(268350),
+    r = n(285651),
+    l = n(268350),
     o = n(926491),
     c = n(373228),
-    d = n(430824),
-    u = n(594174),
+    u = n(430824),
+    d = n(594174),
     _ = n(176354),
     E = n(709054),
     I = n(981631),
     m = n(185923);
 function T(e) {
-    let t = d.Z.getGuild(e);
+    let t = u.Z.getGuild(e);
     return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE);
 }
-async function N(e, t) {
-    var n, I, N;
-    let h = t.getGuildId();
-    if (null == h || null == d.Z.getGuild(h)) return;
-    let C = u.default.getCurrentUser();
-    if (null == C) return;
-    await (0, r.$p)();
-    let p = Array.from(o.Z.getAllStickersIterator()),
-        f = p
-            .filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => T(e.guild_id) && (0, l.kl)(e, C, t))
+async function h(e, t) {
+    var n, I, h;
+    let N = t.getGuildId();
+    if (null == N || null == u.Z.getGuild(N)) return;
+    let f = d.default.getCurrentUser();
+    if (null == f) return;
+    await (0, l.$p)();
+    let C = Array.from(o.Z.getAllStickersIterator()),
+        p = C.filter((e) => e.type === c.n0.GUILD)
+            .filter((e) => T(e.guild_id) && (0, r.kl)(e, f, t))
             .sort((e, t) => -E.default.compare(e.id, t.id));
-    if (f.length > 5) {
-        let a = [f[Math.floor(Math.pow(Math.random(), 2) * f.length)].id];
+    if (p.length > 5) {
+        let a = [p[Math.floor(Math.pow(Math.random(), 2) * p.length)].id];
         i.Z.sendStickers(t.id, a, '', {
             messageReference: {
                 guild_id: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
@@ -44,7 +43,7 @@ async function N(e, t) {
         });
         return;
     }
-    let g = d.Z.getGuildIds()
+    let g = u.Z.getGuildIds()
         .filter(T)
         .map((e) => a.ZP.getUsableGuildEmoji(e))
         .flat()
@@ -54,7 +53,7 @@ async function N(e, t) {
                 _.ZP.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: h,
+                    guildId: N,
                     intention: m.Hz.CHAT
                 })
         )
@@ -70,11 +69,11 @@ async function N(e, t) {
         });
         return;
     }
-    let A = p.filter((e) => e.type === c.n0.STANDARD),
+    let A = C.filter((e) => e.type === c.n0.STANDARD),
         S = [A[Math.floor(Math.random() * A.length)].id];
     i.Z.sendStickers(t.id, S, '', {
         messageReference: {
-            guild_id: null !== (N = t.getGuildId()) && void 0 !== N ? N : void 0,
+            guild_id: null !== (h = t.getGuildId()) && void 0 !== h ? h : void 0,
             channel_id: t.id,
             message_id: e
         }

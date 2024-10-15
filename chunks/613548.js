@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return z;
+        return Y;
     }
 }),
     n(653041);
@@ -16,44 +16,45 @@ var i = n(735250),
     h = n(194082),
     p = n(320007),
     m = n(236091),
-    _ = n(569545),
-    f = n(517525),
-    E = n(665149),
-    g = n(6242),
-    C = n(757692),
-    I = n(933843),
-    T = n(141321),
-    x = n(2818),
-    v = n(954551),
-    S = n(44136),
-    N = n(651183),
-    A = n(618158),
-    Z = n(390322),
-    M = n(616286),
-    b = n(961048),
-    R = n(179424),
-    L = n(786915),
-    j = n(975146),
-    P = n(991617),
-    O = n(597998),
-    y = n(606304),
-    D = n(594174),
-    U = n(358221),
-    k = n(887012),
-    w = n(444253),
-    B = n(355827),
-    H = n(354459),
-    G = n(981631),
-    V = n(689938),
-    F = n(438337);
-function W(e) {
+    _ = n(540059),
+    f = n(569545),
+    E = n(517525),
+    g = n(665149),
+    C = n(6242),
+    I = n(757692),
+    T = n(933843),
+    x = n(141321),
+    v = n(2818),
+    S = n(954551),
+    N = n(44136),
+    A = n(651183),
+    Z = n(618158),
+    M = n(390322),
+    b = n(616286),
+    R = n(961048),
+    L = n(179424),
+    j = n(786915),
+    P = n(975146),
+    O = n(991617),
+    y = n(597998),
+    D = n(606304),
+    U = n(594174),
+    k = n(358221),
+    w = n(887012),
+    B = n(444253),
+    H = n(355827),
+    G = n(354459),
+    V = n(981631),
+    F = n(689938),
+    W = n(438337);
+function z(e) {
     let { channelId: t, guildId: n } = e,
-        s = (0, u.Wu)([y.Z, U.Z], () => {
+        s = (0, u.Wu)([D.Z, k.Z], () => {
             let e = Date.now();
-            return o()(y.Z.getSpeakers())
-                .map((e) => U.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === H.fO.USER && e.speaking && !(0, S.ZP)(e))
-                .sortBy((t) => -y.Z.getSpeakingDuration(t.user.id, e))
+            return o()(D.Z.getSpeakers())
+                .map((e) => k.Z.getParticipant(t, e))
+                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, N.ZP)(e))
+                .sortBy((t) => -D.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
         });
@@ -66,11 +67,11 @@ function W(e) {
                       {
                           position: 'bottom',
                           color: d.Tooltip.Colors.GREY,
-                          text: V.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
+                          text: F.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
                           children: (a) =>
-                              (0, i.jsx)(O.Z, {
+                              (0, i.jsx)(y.Z, {
                                   ...a,
-                                  className: l()(F.speaker, { [F.last]: t === s.length - 1 }),
+                                  className: l()(W.speaker, { [W.last]: t === s.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -82,109 +83,110 @@ function W(e) {
               )
           });
 }
-function z(e) {
+function Y(e) {
     let { inPopout: t, channel: n, appContext: a, inCall: l, isChatOpen: r, exitFullScreen: o } = e,
-        S = n.id,
+        N = n.id,
         {
-            voiceParticipantsHidden: O,
-            selectedParticipant: y,
-            userParticipantCount: V
+            voiceParticipantsHidden: y,
+            selectedParticipant: D,
+            userParticipantCount: F
         } = (0, u.cj)(
-            [U.Z],
+            [k.Z],
             () => ({
-                selectedParticipant: U.Z.getSelectedParticipant(S),
-                voiceParticipantsHidden: U.Z.getVoiceParticipantsHidden(S),
-                userParticipantCount: U.Z.getUserParticipantCount(S)
+                selectedParticipant: k.Z.getSelectedParticipant(N),
+                voiceParticipantsHidden: k.Z.getVoiceParticipantsHidden(N),
+                userParticipantCount: k.Z.getUserParticipantCount(N)
             }),
-            [S]
+            [N]
         ),
-        z = (0, u.e7)([D.default], () => D.default.getCurrentUser()),
-        Y = (0, k.Z)(n),
-        K = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
-        q = (0, C.o)(y, z),
-        X = (0, g.lL)('CallHeader', !0, z, q),
-        { enabled: J, inInbox: Q } = x.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
-        { preventIdle: $, allowIdle: ee } = (0, A.Y)('popup'),
-        et = [];
-    if (Y) {
-        let e = (null == y ? void 0 : y.type) === H.fO.STREAM ? (0, _.my)(y.id) : void 0,
-            t = (null == y ? void 0 : y.type) === H.fO.ACTIVITY ? y.id : void 0;
-        et.push(
+        Y = (0, u.e7)([U.default], () => U.default.getCurrentUser()),
+        K = (0, w.Z)(n),
+        q = (0, T.So)(c.q.STREAM_HIGH_QUALITY),
+        X = (0, I.o)(D, Y),
+        J = (0, C.lL)('CallHeader', !0, Y, X),
+        { enabled: Q, inInbox: $ } = v.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        ee = (0, _.Q)('ChannelCallHeaderToolbar'),
+        { preventIdle: et, allowIdle: en } = (0, Z.Y)('popup'),
+        ei = [];
+    if (K) {
+        let e = (null == D ? void 0 : D.type) === G.fO.STREAM ? (0, f.my)(D.id) : void 0,
+            t = (null == D ? void 0 : D.type) === G.fO.ACTIVITY ? D.id : void 0;
+        ei.push(
             (0, i.jsx)(
-                L.Z,
+                j.Z,
                 {
-                    className: F.button,
+                    className: W.button,
                     channel: n,
                     applicationId: t,
                     stream: e,
                     exitFullScreen: o,
-                    analyticsLocation: n.type === G.d4z.GUILD_VOICE ? G.ZY5.GUILD_CHANNEL : G.ZY5.DM_CHANNEL
+                    analyticsLocation: n.type === V.d4z.GUILD_VOICE ? V.ZY5.GUILD_CHANNEL : V.ZY5.DM_CHANNEL
                 },
                 'invite-button'
             )
         );
     }
     return (
-        O &&
-            et.push(
+        y &&
+            ei.push(
                 (0, i.jsx)(
-                    W,
+                    z,
                     {
-                        channelId: S,
+                        channelId: N,
                         guildId: n.guild_id
                     },
                     'current-speaker'
                 )
             ),
-        et.push(
+        ei.push(
             (0, i.jsx)(
                 m.Z,
                 {
-                    className: F.button,
-                    channelId: S
+                    className: W.button,
+                    channelId: N
                 },
                 'clips-enabled-indicator'
             )
         ),
-        (null == y ? void 0 : y.type) === H.fO.STREAM &&
-            (et.push(
+        (null == D ? void 0 : D.type) === G.fO.STREAM &&
+            (ei.push(
                 (0, i.jsx)(
-                    N.Z,
+                    A.Z,
                     {
-                        className: F.button,
-                        participant: y
+                        className: W.button,
+                        participant: D
                     },
                     'warning'
                 )
             ),
-            et.push(
+            ei.push(
                 (0, i.jsx)(
-                    f.Z,
+                    E.Z,
                     {
                         size: h.ZP.Sizes.LARGE,
-                        className: F.button,
-                        participant: y,
+                        className: W.button,
+                        participant: D,
                         showQuality: !0,
-                        premiumIndicator: K || X.enabled
+                        premiumIndicator: q || J.enabled
                     },
                     'live-indicator'
                 )
             )),
-        O &&
-            et.push(
+        y &&
+            ei.push(
                 (0, i.jsx)(
                     d.Popout,
                     {
                         position: 'bottom',
-                        renderPopout: () => (0, i.jsx)(Z.Z, { children: (0, i.jsx)(B.Z, { channel: n }) }),
+                        renderPopout: () => (0, i.jsx)(M.Z, { children: (0, i.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, s.createElement)(j.Z, {
+                            return (0, s.createElement)(P.Z, {
                                 ...e,
                                 isActive: n,
-                                count: V,
+                                count: F,
                                 key: 'call-members',
-                                className: F.button
+                                className: W.button
                             });
                         }
                     },
@@ -192,49 +194,50 @@ function z(e) {
                 )
             ),
         l &&
-            et.push(
-                null != y
+            ei.push(
+                null != D
                     ? (0, i.jsx)(
-                          R.Z,
+                          L.Z,
                           {
-                              className: F.button,
-                              channelId: S
+                              className: W.button,
+                              channelId: N
                           },
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          P.Z,
+                          O.Z,
                           {
-                              className: F.button,
-                              channelId: S,
+                              className: W.button,
+                              channelId: N,
                               isHorizontal: !0
                           },
                           'select-participant'
                       )
             ),
-        !t && et.push((0, i.jsx)(p.Z, { className: F.button }, 'clips')),
-        et.push(
-            (0, i.jsx)(
-                T.Z,
-                {
-                    onOpen: $,
-                    onClose: ee,
-                    className: F.button
-                },
-                'recents'
-            )
-        ),
-        J && !Q && et.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
-        et.push(
+        !t && ei.push((0, i.jsx)(p.Z, { className: W.button }, 'clips')),
+        !ee &&
+            ei.push(
+                (0, i.jsx)(
+                    x.Z,
+                    {
+                        onOpen: et,
+                        onClose: en,
+                        className: W.button
+                    },
+                    'recents'
+                )
+            ),
+        Q && !$ && ei.push((0, i.jsx)(S.Z, { className: W.button }, 'for-later')),
+        ei.push(
             (0, i.jsx)(
                 d.Popout,
                 {
                     position: 'bottom',
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(Z.Z, {
-                            children: (0, i.jsx)(w.Z, {
-                                channelId: S,
+                        return (0, i.jsx)(M.Z, {
+                            children: (0, i.jsx)(B.Z, {
+                                channelId: N,
                                 onClose: t,
                                 appContext: a,
                                 exitFullScreen: o
@@ -243,11 +246,11 @@ function z(e) {
                     },
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return (0, s.createElement)(b.Z, {
+                        return (0, s.createElement)(R.Z, {
                             ...e,
                             key: 'more-options',
                             isActive: n,
-                            className: F.lastButton
+                            className: W.lastButton
                         });
                     }
                 },
@@ -255,18 +258,18 @@ function z(e) {
             )
         ),
         !r &&
-            (et.push((0, i.jsx)(E.ZP.Divider, { className: F.divider }, 'divider')),
-            et.push(
+            (ei.push((0, i.jsx)(g.ZP.Divider, { className: W.divider }, 'divider')),
+            ei.push(
                 (0, i.jsx)(
-                    M.T,
+                    b.T,
                     {
                         channelId: n.id,
-                        className: F.chatButtonSpacer,
+                        className: W.chatButtonSpacer,
                         disabled: !0
                     },
                     'chat-spacer'
                 )
             )),
-        (0, i.jsx)(i.Fragment, { children: et })
+        (0, i.jsx)(i.Fragment, { children: ei })
     );
 }

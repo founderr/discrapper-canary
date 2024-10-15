@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return y;
     }
 });
 var r = n(735250);
@@ -23,43 +23,39 @@ var i = n(120356),
     T = n(117795),
     S = n(358085),
     g = n(998502),
-    A = n(663993),
-    N = n(689938),
-    R = n(211149);
-let O = (0, A.Un)({
-        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('23755'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('81272'), n.e('95393'), n.e('52774'), n.e('56602'), n.e('90508'), n.e('46097'), n.e('88390'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('43244'), n.e('37447'), n.e('59743'), n.e('68241'), n.e('33180'), n.e('9796'), n.e('39371'), n.e('46139')]).then(n.bind(n, 191741)),
-        webpackId: 191741
-    }),
-    v = (e) => g.ZP.close(e),
-    C = (e) => g.ZP.minimize(e),
-    L = (e, t) => {
+    A = n(689938),
+    N = n(211149);
+let R = (e) => g.ZP.close(e),
+    O = (e) => g.ZP.minimize(e),
+    v = (e, t) => {
         (0, S.isMac)() && !t.altKey ? g.ZP.fullscreen(e) : g.ZP.maximize(e);
     },
-    y = (e) => {
+    C = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: s, isRefreshEnabled: l } = e,
             u = (0, r.jsx)(o.Clickable, {
-                className: R.winButtonClose,
-                onClick: () => v(n),
-                'aria-label': N.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
+                className: N.winButtonClose,
+                onClick: () => R(n),
+                'aria-label': A.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                 tabIndex: -1,
                 children: (0, r.jsx)(f.Z, {})
             }),
             c = (0, r.jsx)(o.Clickable, {
-                className: R.winButtonMinMax,
-                onClick: (e) => L(n, e),
-                'aria-label': N.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
+                className: N.winButtonMinMax,
+                onClick: (e) => v(n, e),
+                'aria-label': A.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, r.jsx)(p.Z, {})
             }),
             d = (0, r.jsx)(o.Clickable, {
-                className: R.winButtonMinMax,
-                onClick: () => C(n),
-                'aria-label': N.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                className: N.winButtonMinMax,
+                onClick: () => O(n),
+                'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, r.jsx)(m.Z, {})
             }),
             _ = l
-                ? (0, r.jsxs)(r.Fragment, {
+                ? (0, r.jsxs)('div', {
+                      className: N.winButtons,
                       children: [d, c, u]
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -69,10 +65,10 @@ let O = (0, A.Un)({
             theme: i,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: a()(R.typeWindows, e, { [R.withBackgroundOverride]: !s }),
+                    className: a()(N.typeWindows, e, { [N.withBackgroundOverride]: !s }),
                     children: [
                         (0, r.jsx)('div', {
-                            className: R.wordmarkWindows,
+                            className: N.wordmarkWindows,
                             children: (0, r.jsx)(E.Z, {})
                         }),
                         t,
@@ -81,39 +77,39 @@ let O = (0, A.Un)({
                 })
         });
     },
-    D = (e) => {
+    L = (e) => {
         let { focused: t, windowKey: n, frame: i, themeOverride: s, hasOpenLayer: l, children: c } = e;
         return (0, r.jsx)(o.ThemeProvider, {
             theme: s,
             children: (e) =>
                 (0, r.jsxs)(o.Clickable, {
-                    className: a()(i ? R.typeMacOSWithFrame : R.typeMacOS, t ? R.focused : R.unfocused, e, { [R.withBackgroundOverride]: !l }),
+                    className: a()(i ? N.typeMacOSWithFrame : N.typeMacOS, t ? N.focused : N.unfocused, e, { [N.withBackgroundOverride]: !l }),
                     onDoubleClick: () => g.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
                         u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
                             ? c
                             : (0, r.jsxs)('div', {
-                                  className: R.macButtons,
+                                  className: N.macButtons,
                                   children: [
                                       (0, r.jsx)(o.Clickable, {
-                                          className: R.macButtonClose,
-                                          onClick: () => v(n),
-                                          'aria-label': N.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
+                                          className: N.macButtonClose,
+                                          onClick: () => R(n),
+                                          'aria-label': A.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(h.Z, { color: '#4c0000' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
-                                          className: R.macButtonMinimize,
-                                          onClick: () => C(n),
-                                          'aria-label': N.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                                          className: N.macButtonMinimize,
+                                          onClick: () => O(n),
+                                          'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(T.Z, { color: '#975500' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
-                                          className: R.macButtonMaximize,
-                                          onClick: (e) => L(n, e),
-                                          'aria-label': N.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                                          className: N.macButtonMaximize,
+                                          onClick: (e) => v(n, e),
+                                          'aria-label': A.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(I.Z, { color: '#006500' })
                                       })
@@ -121,7 +117,7 @@ let O = (0, A.Un)({
                               }),
                         i
                             ? (0, r.jsx)('div', {
-                                  className: R.wordmarkMacOS,
+                                  className: N.wordmarkMacOS,
                                   children: (0, r.jsx)(E.Z, { color: '#ffffff' })
                               })
                             : null
@@ -129,38 +125,30 @@ let O = (0, A.Un)({
                 })
         });
     };
-function b(e) {
+function y(e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: a = !1, themeOverride: o } = e,
         u = (0, c.bp)(),
         E = (0, s.e7)([d.Z], () => d.Z.isFullscreenInContext(u)),
         f = (0, l.Z)(),
-        h = (0, _.Q)('AppPanels'),
-        p = h && !a ? (0, r.jsx)(O, {}) : null;
+        h = (0, _.Q)('AppPanels');
     if (E) return null;
     switch (n) {
         case S.PlatformTypes.WINDOWS:
-            return (0, r.jsx)(y, {
+            return (0, r.jsx)(C, {
                 windowKey: i,
                 themeOverride: o,
                 hasOpenLayer: f,
-                isRefreshEnabled: h,
-                children: p
+                isRefreshEnabled: h
             });
         case S.PlatformTypes.OSX:
-            return (0, r.jsx)(D, {
+            return (0, r.jsx)(L, {
                 focused: t,
                 windowKey: i,
                 frame: a,
                 themeOverride: o,
-                hasOpenLayer: f,
-                children: p
+                hasOpenLayer: f
             });
         default:
-            return h
-                ? (0, r.jsx)('div', {
-                      className: R.children,
-                      children: p
-                  })
-                : null;
+            return null;
     }
 }
