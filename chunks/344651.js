@@ -1599,6 +1599,21 @@ B(
             ...e
         });
     }),
+    B(
+        ['CHANNEL_SYNC'],
+        (e) => g.o.loadGuildIds([e.guild_id]),
+        (e) => {
+            e.channels.forEach((e) => {
+                P.add(e);
+            }),
+                V({
+                    type: 'CHANNEL_SYNC',
+                    guild_id: e.guild_id,
+                    channels: e.channels,
+                    integrity_check: e.integrity_check
+                });
+        }
+    ),
     k(['CONSOLE_COMMAND_UPDATE'], (e) => {
         V({
             type: 'CONSOLE_COMMAND_UPDATE',

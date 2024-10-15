@@ -72,6 +72,11 @@ class u extends r.ZP.Store {
             ),
             l(
                 this,
+                'guildsRequiringChannelSync',
+                c((e) => new i.L5('guilds_requiring_channel_sync', i.Ds.KvCache, e))
+            ),
+            l(
+                this,
                 'messages',
                 c((e) => new i.uC('messages', i.Ds.Messages, e))
             ),
@@ -126,6 +131,7 @@ class u extends r.ZP.Store {
             l(this, 'readStatesTransaction', (e) => this.readStates(e.database).upgradeTransaction(e)),
             l(this, 'userGuildSettingsTransaction', (e) => this.userGuildSettings(e.database).upgradeTransaction(e)),
             l(this, 'guildsRequiringDeletedIdsSyncTransaction', (e) => this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(e)),
+            l(this, 'guildsRequiringChannelSyncTransaction', (e) => this.guildsRequiringChannelSync(e.database).upgradeTransaction(e)),
             l(this, 'userSearchItemsTransaction', (e) => this.userSearchItems(e.database).upgradeTransaction(e));
     }
 }

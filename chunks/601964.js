@@ -133,6 +133,15 @@ class d extends r.Z {
 class _ extends d {
     constructor(e) {
         var t;
-        super(e), c(this, 'roles', void 0), (this.roles = null !== (t = e.roles) && void 0 !== t ? t : {});
+        super(e),
+            c(this, 'roles', void 0),
+            c(this, 'member', void 0),
+            (this.roles = null !== (t = e.roles) && void 0 !== t ? t : {}),
+            e.member && e.member.userId && e.member.roles
+                ? (this.member = {
+                      roles: e.member.roles,
+                      userId: e.member.userId
+                  })
+                : (this.member = null);
     }
 }
