@@ -18,6 +18,7 @@ e.exports = {
     gameDetails: 'gameDetails_e881fc',
     gameBadge: 'gameBadge_e881fc',
     newBadge: 'newBadge_e881fc',
+    gameIcon: 'gameIcon_e881fc',
     mainContent: 'mainContent_e881fc',
     sidebar: 'sidebar_e881fc',
     sections: 'sections_e881fc',

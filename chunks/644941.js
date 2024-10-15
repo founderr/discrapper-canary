@@ -18,9 +18,9 @@ var a = t(735250),
     f = t(561308),
     T = t(669764),
     O = t(706454),
-    N = t(768581),
-    h = t(814225),
-    R = t(709054),
+    R = t(768581),
+    N = t(814225),
+    h = t(709054),
     P = t(810568),
     C = t(998058),
     L = t(839392),
@@ -61,7 +61,7 @@ function W(e) {
             return null === (e = u.K.get(B)) || void 0 === e ? void 0 : e[o.id];
         }),
         p = (0, M.p)('GameProfileModal'),
-        g = r.useMemo(() => (null == s ? void 0 : s.genres.map(h.P3).join(', ')), [s]),
+        g = r.useMemo(() => (null == s ? void 0 : s.genres.map(N.P3).join(', ')), [s]),
         T = r.useMemo(() => {
             if (null == s) return '';
             let { artwork: e, screenshots: n } = s;
@@ -75,8 +75,8 @@ function W(e) {
             }
             return '';
         }, [s]),
-        O = null == o ? void 0 : o.getIconURL(160, N.$k ? 'webp' : 'png'),
-        C = R.default.extractTimestamp(o.id),
+        O = null == o ? void 0 : o.getIconURL(160, R.$k ? 'webp' : 'png'),
+        C = h.default.extractTimestamp(o.id),
         L = l()().diff(l()(C), 'days') <= F.G,
         x = d.some((e) => (0, f.ig)(e) === c.o.GLOBAL),
         S = null !== (n = s.name) && void 0 !== n ? n : null == o ? void 0 : o.name,
@@ -145,6 +145,7 @@ function W(e) {
                                         children: [
                                             null != O &&
                                                 (0, a.jsx)('img', {
+                                                    className: H.gameIcon,
                                                     src: O,
                                                     height: 16,
                                                     alt: K.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: S })
@@ -258,9 +259,9 @@ n.default = (e) => {
     var n;
     let { applicationId: t, source: s, sourceUserId: o, transitionState: l, onClose: c } = e,
         { clientThemesClassName: u } = (0, A.ZP)(),
-        N = (0, d.e7)([O.default], () => O.default.locale),
-        h = r.useMemo(() => (0, P.fP)(), []),
-        R = (0, d.Wu)([L.Z], () => {
+        R = (0, d.e7)([O.default], () => O.default.locale),
+        N = r.useMemo(() => (0, P.fP)(), []),
+        h = (0, d.Wu)([L.Z], () => {
             var e;
             return (null !== (e = L.Z.getSimilarGames(t)) && void 0 !== e ? e : []).slice(0, 25);
         }),
@@ -281,14 +282,14 @@ n.default = (e) => {
                 applicationId: t,
                 action: e,
                 similarGameId: n,
-                viewId: h,
+                viewId: N,
                 officialGuildId: null == Z ? void 0 : null === (a = Z.guild) || void 0 === a ? void 0 : a.id
             });
         };
     return (r.useEffect(() => {
         (0, P.IS)({
             source: s,
-            viewId: h,
+            viewId: N,
             applicationId: t,
             gameName: null != y ? y : '',
             authorId: o
@@ -297,13 +298,13 @@ n.default = (e) => {
     r.useEffect(() => {
         (0, p.Jn)();
     }, []),
-    (0, I.Z)(R),
+    (0, I.Z)(h),
     r.useEffect(() => {
-        !N.startsWith('en') && (null == D ? void 0 : D.summaryLocalized) == null && E.Z.getDetectableGamesSupplemental([t], { forceFetch: !0 });
-    }, [t, null == D ? void 0 : D.summaryLocalized, N]),
+        !R.startsWith('en') && (null == D ? void 0 : D.summaryLocalized) == null && E.Z.getDetectableGamesSupplemental([t], { forceFetch: !0 });
+    }, [t, null == D ? void 0 : D.summaryLocalized, R]),
     r.useEffect(() => {
         (async () => {
-            if (0 === R.length) {
+            if (0 === h.length) {
                 S(null);
                 try {
                     await (0, C.i)(t);
@@ -312,12 +313,12 @@ n.default = (e) => {
                 }
             }
         })();
-    }, [t, R]),
+    }, [t, h]),
     (0, m.Z)(() => {
         var e;
         let n = Date.now(),
             a = G.map((e) => {
-                let t = (0, f.kr)(e) ? (0, f.T_)(e, n) : (0, f.GL)(e, N);
+                let t = (0, f.kr)(e) ? (0, f.T_)(e, n) : (0, f.GL)(e, R);
                 return JSON.stringify({
                     item_id: e.id,
                     trait: e.traits,
@@ -325,12 +326,12 @@ n.default = (e) => {
                 });
             });
         (0, P.wz)({
-            viewId: h,
+            viewId: N,
             applicationId: t,
             gameName: null != y ? y : '',
             playedFriendIds: G.map((e) => e.author_id),
             playedFriendsData: a,
-            similarGames: V(R),
+            similarGames: V(h),
             officialGuildId: null == Z ? void 0 : null === (e = Z.guild) || void 0 === e ? void 0 : e.id
         });
     }),
@@ -347,7 +348,7 @@ n.default = (e) => {
                           detectedGame: D,
                           application: j,
                           entries: G,
-                          viewId: h,
+                          viewId: N,
                           trackAction: w
                       }),
                       (0, a.jsx)(_.HeadingLevel, {
@@ -359,10 +360,10 @@ n.default = (e) => {
                                       application: j,
                                       entries: G,
                                       officialGuildInvite: Z,
-                                      similarGames: R,
+                                      similarGames: h,
                                       similarGamesError: M,
                                       onClose: c,
-                                      viewId: h,
+                                      viewId: N,
                                       trackAction: w
                                   }),
                                   (0, a.jsx)(z, {
