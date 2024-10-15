@@ -302,6 +302,7 @@ class U extends (l = s.Component) {
                     g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
+                        visible_user_ids: o.filter((e) => null != e),
                         changelog_dm_visible: c
                     });
             }),
