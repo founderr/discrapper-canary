@@ -86,8 +86,6 @@ n.r(
         errorSeparator: 'errorSeparator_c46f6a',
         defaultColor: 'defaultColor_c46f6a',
         faded: 'faded_c46f6a',
-        error: 'error_c46f6a',
-        floatingAbove: 'floatingAbove_c46f6a',
-        floatingOn: 'floatingOn_c46f6a'
+        error: 'error_c46f6a'
     })
 );

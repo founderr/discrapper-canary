@@ -201,6 +201,63 @@ let { Themes: n } = r(15202).V,
                 }
             }
         },
+        BACKGROUND_BASE_LOW: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_92',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_80',
+                opacity: 1
+            }
+        },
+        BACKGROUND_BASE_LOWER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_76',
+                opacity: 1
+            }
+        },
+        BACKGROUND_BASE_LOWEST: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_92',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
+            }
+        },
         BACKGROUND_FLOATING: {
             category: 'background',
             [n.DARK]: {
@@ -600,6 +657,63 @@ let { Themes: n } = r(15202).V,
                     color: 'BLACK_500',
                     opacity: 0.5
                 }
+            }
+        },
+        BACKGROUND_SURFACE_HIGH: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_64',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_4',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_88',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_72',
+                opacity: 1
+            }
+        },
+        BACKGROUND_SURFACE_HIGHER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_60',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            }
+        },
+        BACKGROUND_SURFACE_HIGHEST: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_56',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_80',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_64',
+                opacity: 1
             }
         },
         BACKGROUND_TERTIARY: {

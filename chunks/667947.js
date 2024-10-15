@@ -26,6 +26,7 @@ n.r(
         radioSelection: 'radioSelection_d90b3d',
         check: 'check_d90b3d',
         focused: 'focused_d90b3d',
+        checkboxContainer: 'checkboxContainer_d90b3d',
         colorBrand: 'colorBrand_d90b3d colorDefault_d90b3d',
         colorDanger: 'colorDanger_d90b3d colorDefault_d90b3d',
         colorPremium: 'colorPremium_d90b3d colorDefault_d90b3d',
