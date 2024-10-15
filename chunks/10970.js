@@ -109,7 +109,7 @@ function S(e) {
                             I,
                             {
                                 storeListing: e,
-                                bundleSkuId: N.id
+                                guildId: h
                             },
                             e.id
                         )
@@ -120,12 +120,12 @@ function S(e) {
     });
 }
 function I(e) {
-    let { storeListing: s } = e,
-        { openModal: t } = (0, _.Z)({
+    let { storeListing: s, guildId: t } = e,
+        { openModal: a } = (0, _.Z)({
             showBenefitsFirst: !1,
             analyticsLocation: u.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: s.skuId,
-            guildId: null
+            guildId: t
         });
     return (0, n.jsx)(
         o.Z,
@@ -133,7 +133,7 @@ function I(e) {
             storeListing: s,
             cta: (0, n.jsx)(i.Button, {
                 size: i.Button.Sizes.SMALL,
-                onClick: t,
+                onClick: a,
                 children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SWITCH_TO_PLAN
             })
         },

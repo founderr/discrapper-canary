@@ -13,21 +13,21 @@ var r = n(735250),
     u = n(598),
     c = n(456251);
 function d(e) {
-    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
-        { blockedPayments: h, setStep: f, hasFetchedSubscriptions: S, hasFetchedSubscriptionPlans: E, currencyLoading: m, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
+    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: h, handleClose: I } = e,
+        { blockedPayments: _, setStep: f, hasFetchedSubscriptions: m, hasFetchedSubscriptionPlans: E, currencyLoading: S, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
         { isGift: O } = (0, o.wD)(),
-        [P, b] = a.useState(!S || !E || m);
+        [P, b] = a.useState(!m || !E || S);
     return (a.useEffect(() => {
-        b(!S || !E || m);
-    }, [m, E, S]),
+        b(!m || !E || S);
+    }, [S, E, m]),
     a.useEffect(() => {
         null != d && A({ guild_id: d });
     }, [d, A]),
     a.useEffect(() => {
         C(n);
         let e = null != n ? l.Z.get(n) : null;
-        if (!P && !h)
-            I((t) => {
+        if (!P && !_)
+            h((t) => {
                 let n = null != e ? (0, s.aS)(e.id, !1, O, N) : void 0;
                 return {
                     ...t,
@@ -38,10 +38,10 @@ function d(e) {
                 };
             }),
                 null != e && (T(null == e ? void 0 : e.skuId), f(t));
-    }, [h, n, O, P, N, p, I, C, T, f, t]),
+    }, [_, n, O, P, N, p, h, C, T, f, t]),
     P)
         ? (0, r.jsx)(c.Z, {})
-        : h
-          ? (0, r.jsx)(i.Vq, { onClose: _ })
+        : _
+          ? (0, r.jsx)(i.Vq, { onClose: I })
           : null;
 }

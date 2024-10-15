@@ -8,16 +8,16 @@ var l = i(735250),
     t = i(777207),
     r = i(529079);
 function a(n) {
-    let { title: e, subtitle: i, iconSrc: a, backgroundSrc: o, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = n,
+    let { title: e, subtitle: i, iconSrc: a, backgroundSrc: d, animatedBackgroundSrc: o, prefersReducedMotion: u = !0 } = n,
         c = s.useMemo(() => {
-            let n = null != o ? o : a;
+            let n = null != d ? d : a;
             if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
-        }, [o, a]),
+        }, [d, a]),
         m = s.useMemo(() => {
-            if (null == o) return;
-            let n = { '--custom-background-static': 'url('.concat(o.toString()) };
-            return !u && null != d && (n['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), n;
-        }, [d, o, u]);
+            if (null == d) return;
+            let n = { '--custom-background-static': 'url('.concat(d.toString()) };
+            return !u && null != o && (n['--custom-background-animated'] = 'url('.concat(o.toString(), ')')), n;
+        }, [o, d, u]);
     return (0, l.jsxs)('div', {
         className: r.wrapper,
         children: [
@@ -52,7 +52,7 @@ function a(n) {
                     })
                 ]
             }),
-            null != o
+            null != d
                 ? (0, l.jsx)('div', {
                       className: r.image,
                       style: m

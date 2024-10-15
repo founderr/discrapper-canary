@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return I;
+        return h;
     }
 });
 var r = n(735250);
@@ -13,15 +13,15 @@ var a = n(512722),
     u = n(614277),
     c = n(689938),
     d = n(525550);
-function I(e) {
+function h(e) {
     let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: a, application: I } = (0, s.usePaymentContext)();
-    i()(null != a, 'Expected selectedSkuId'), i()(null != I, 'Expected application');
-    let _ = n[a];
-    i()(null != _, 'Expected sku');
-    let h = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-        applicationName: I.name,
-        itemName: _.name
+        { skusById: n, selectedSkuId: a, application: h } = (0, s.usePaymentContext)();
+    i()(null != a, 'Expected selectedSkuId'), i()(null != h, 'Expected application');
+    let I = n[a];
+    i()(null != I, 'Expected sku');
+    let _ = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+        applicationName: h.name,
+        itemName: I.name
     });
     return (0, r.jsxs)(u.C3, {
         children: [
@@ -36,7 +36,7 @@ function I(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: h
+                        children: _
                     }),
                     (0, r.jsx)('div', { className: d.divider }),
                     (0, r.jsx)(l.Button, {

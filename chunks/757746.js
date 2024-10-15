@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var l = t(442837),
     i = t(558381),
     a = t(551428);
-let r = (0, l.Kb)(a.Z, {
+let s = (0, l.Kb)(a.Z, {
     queryId: (e) => (null != e ? ['storeListing', e] : null),
     get: (e) => (null != e ? a.Z.getForSKU(e) : null),
     load: (e, n) => (null != n ? (0, i.km)(n) : Promise.resolve()),

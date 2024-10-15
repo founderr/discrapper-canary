@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return _;
+        return I;
     },
     w: function () {
         return d;
@@ -31,12 +31,12 @@ function d(e, t, n) {
             t());
     }, [e]);
 }
-let I = [];
-function _(e, t) {
+let h = [];
+function I(e, t) {
     let n = (0, a.e7)([l.Z], () => (null != e ? l.Z.get(e) : null)),
         i = (0, a.e7)([s.Z], () => {
             var e;
-            return null != n && null !== (e = s.Z.getForSku(n.skuId)) && void 0 !== e ? e : I;
+            return null != n && null !== (e = s.Z.getForSku(n.skuId)) && void 0 !== e ? e : h;
         }),
         u = r.useMemo(
             () =>

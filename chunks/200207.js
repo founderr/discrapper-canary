@@ -9,21 +9,21 @@ var s = i(557533),
     t = i.n(s),
     r = i(789978),
     a = i(790472),
-    o = i(777207),
-    d = i(147333),
+    d = i(777207),
+    o = i(147333),
     u = i(103077);
 function c(n) {
     let { title: e, description: i, headerImage: s, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
     return (0, l.jsx)(r.tE, {
         children: (0, l.jsxs)('div', {
-            className: t()(d.wrapper, u.hoverCard),
+            className: t()(o.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != m && m();
             },
             children: [
                 (0, l.jsx)('div', {
-                    className: d.cardHeaderImg,
+                    className: o.cardHeaderImg,
                     style: null != s ? { backgroundImage: null != s ? 'url('.concat(s.toString(), ')') : void 0 } : void 0,
                     children:
                         null == s &&
@@ -35,16 +35,16 @@ function c(n) {
                         })
                 }),
                 (0, l.jsxs)('div', {
-                    className: d.details,
+                    className: o.details,
                     children: [
-                        (0, l.jsx)(o.x, {
+                        (0, l.jsx)(d.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
                             children: e
                         }),
                         null != i &&
-                            (0, l.jsx)(o.x, {
-                                className: d.description,
+                            (0, l.jsx)(d.x, {
+                                className: o.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: i
@@ -53,9 +53,9 @@ function c(n) {
                 }),
                 null != v &&
                     (0, l.jsxs)('div', {
-                        className: d.footer,
+                        className: o.footer,
                         children: [
-                            (0, l.jsx)(o.x, {
+                            (0, l.jsx)(d.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
                                 children: p
