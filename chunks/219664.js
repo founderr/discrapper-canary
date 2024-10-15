@@ -300,8 +300,7 @@ let k = (e) => e.preventDefault(),
                                 height: e.height,
                                 alt: null != e.alt && r ? h : e.alt,
                                 onClick: k,
-                                shouldRenderAccessory: !x && !u,
-                                renderForwardComponent: w.VqG
+                                shouldRenderAccessory: !x && !u
                             },
                             I = (0, _.d$)(e.src) ? ''.concat(e.src, '?format=png') : e.src,
                             E = o && !r ? e.src : I;

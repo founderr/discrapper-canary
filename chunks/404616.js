@@ -69,8 +69,8 @@ var i = n(735250),
     K = n(627896),
     Y = n(883728),
     J = n(981631),
-    q = n(217702),
-    X = n(689938),
+    X = n(217702),
+    q = n(689938),
     $ = n(646230),
     Q = n(554034);
 let ee = 72,
@@ -131,7 +131,7 @@ t.ZP = s.memo(function (e) {
                 onClick: C,
                 focusProps: { ringTarget: b },
                 onContextMenu: x,
-                'aria-label': X.Z.Messages.FORUM_POST_ARIA_LABEL.format({
+                'aria-label': q.Z.Messages.FORUM_POST_ARIA_LABEL.format({
                     title: m.name,
                     count: _
                 }),
@@ -200,7 +200,7 @@ function en(e) {
                                             children: (0, i.jsx)(p.TextBadge, {
                                                 className: $.newBadge,
                                                 color: m.Z.unsafe_rawColors.BRAND_260.css,
-                                                text: X.Z.Messages.NEW
+                                                text: q.Z.Messages.NEW
                                             })
                                         })
                                 ]
@@ -211,7 +211,7 @@ function en(e) {
                             (0, i.jsx)(p.TextBadge, {
                                 className: $.newBadge,
                                 color: m.Z.unsafe_rawColors.BRAND_260.css,
-                                text: X.Z.Messages.NEW
+                                text: q.Z.Messages.NEW
                             })
                     ]
                 })
@@ -257,7 +257,7 @@ let es = s.memo(function (e) {
             className: $.blockedMessage,
             variant: 'text-sm/medium',
             color: 'text-muted',
-            children: X.Z.Messages.FORUM_POST_BLOCKED_FIRST_MESSAGE
+            children: q.Z.Messages.FORUM_POST_BLOCKED_FIRST_MESSAGE
         });
     else {
         let { contentPlaceholder: e, renderedContent: n } =
@@ -269,7 +269,7 @@ let es = s.memo(function (e) {
                 : (0, Z.f)(t, s, r, a()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
                       leadingIconClass: $.messageContentLeadingIcon,
                       trailingIconClass: $.messageContentTrailingIcon,
-                      iconSize: q.WW
+                      iconSize: X.WW
                   });
         m =
             null != n
@@ -285,7 +285,7 @@ let es = s.memo(function (e) {
                         variant: 'text-sm/medium',
                         color: l ? 'header-secondary' : 'text-muted',
                         className: $.messageContent,
-                        children: null == t ? (c ? null : X.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED) : e
+                        children: null == t ? (c ? null : q.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED) : e
                     });
     }
     return (0, i.jsxs)(E.a.Provider, {
@@ -390,7 +390,7 @@ function ea(e) {
                       className: $.newMessageCount,
                       variant: 'text-sm/semibold',
                       color: 'text-brand',
-                      children: ['(', X.Z.Messages.FORUM_POST_MESSAGE_COUNT_SHORT.format({ count: l }), ')']
+                      children: ['(', q.Z.Messages.FORUM_POST_MESSAGE_COUNT_SHORT.format({ count: l }), ')']
                   })
         ]
     });
@@ -450,7 +450,7 @@ function ec(e) {
         { sortOrder: s } = (0, w.H)(n.parent_id),
         o = (0, D.xw)(n, s),
         a = null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
-        l = null == a ? null : X.Z.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({ timestamp: (0, U.vc)(d()(a), 'LLLL') });
+        l = null == a ? null : q.Z.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({ timestamp: (0, U.vc)(d()(a), 'LLLL') });
     return (0, i.jsx)(p.Tooltip, {
         text: l,
         tooltipClassName: $.timestampTooltip,
@@ -526,8 +526,7 @@ function eu(e) {
                               autoPlay: c,
                               animated: r && !d && l,
                               containerClassName: $.thumbnailContainer,
-                              imageClassName: a()({ [$.obscured]: d }),
-                              renderForwardComponent: J.VqG
+                              imageClassName: a()({ [$.obscured]: d })
                           }),
                     d &&
                         (0, i.jsx)(V.Z, {

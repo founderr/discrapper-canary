@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -11,15 +11,14 @@ var r,
     o = n(481060),
     l = n(40851),
     u = n(124347),
-    c = n(751586),
+    c = n(950120),
     d = n(626135),
     _ = n(956664),
     E = n(506071),
     f = n(981631),
     h = n(701865),
-    p = n(689938),
-    I = n(167251);
-function m(e, t, n) {
+    p = n(167251);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +31,7 @@ function m(e, t, n) {
         e
     );
 }
-class T extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     render() {
         let { appContext: e, isWindowFocused: t, ...n } = this.props;
         return (0, i.jsx)(u.ZP, {
@@ -44,54 +43,43 @@ class T extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'onMouseEnter', (e, t) => {
+            I(this, 'onMouseEnter', (e, t) => {
                 let { preloadImage: n } = t,
                     { width: r, height: i, onMouseEnter: a } = this.props;
                 null == a || a(e, { preloadImage: n }), n((0, _.zp)(r, i));
             }),
-            m(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
-            m(this, 'onCloseImage', () => {
+            I(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
+            I(this, 'onCloseImage', () => {
                 (0, o.closeModal)(h.U, this.modalContext);
             }),
-            m(this, 'onZoom', (e, t) => {
+            I(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: a, src: l, original: u, width: _, height: E, animated: m, srcIsAnimated: T, children: S, renderLinkComponent: g, renderForwardComponent: A, isWindowFocused: N, shouldHideMediaOptions: R = !1 } = this.props,
-                    O = {
-                        alt: a,
-                        src: l,
-                        original: null != u ? u : l,
+                let { alt: a, src: l, original: u, width: _, height: E, animated: I, srcIsAnimated: m, children: T, shouldHideMediaOptions: S = !1, sourceMetadata: g } = this.props,
+                    A = {
+                        url: l,
                         width: _,
                         height: E,
-                        animated: m,
-                        children: S,
+                        type: 'IMAGE',
+                        alt: a,
                         zoomThumbnailPlaceholder: n,
-                        srcIsAnimated: T,
-                        renderLinkComponent: g,
-                        renderForwardComponent: A,
-                        onContextMenu: R
-                            ? (e) => {
-                                  e.stopPropagation(), e.preventDefault();
-                              }
-                            : void 0,
-                        trigger: r
+                        animated: I,
+                        srcIsAnimated: m,
+                        children: T,
+                        trigger: r,
+                        sourceMetadata: g,
+                        original: null != u ? u : l
                     };
                 (0, s.k)(e.currentTarget) && e.currentTarget.blur(),
                     d.default.track(f.rMx.OPEN_MODAL, { type: 'Media Modal' }),
                     (0, o.openModal)(
                         (e) =>
-                            (0, i.jsx)(o.ModalRoot, {
-                                className: I.modal,
+                            (0, i.jsx)(c.default, {
                                 ...e,
-                                size: o.ModalSize.DYNAMIC,
-                                'aria-label': p.Z.Messages.IMAGE,
-                                children: (0, i.jsx)(c.y, {
-                                    ...O,
-                                    className: I.image,
-                                    shouldAnimate: N,
-                                    onClose: this.onCloseImage,
-                                    shouldHideMediaOptions: R
-                                })
+                                className: p.modal,
+                                onClose: this.onCloseImage,
+                                items: [A],
+                                shouldHideMediaOptions: S
                             }),
                         { modalKey: h.U },
                         this.modalContext
@@ -99,16 +87,16 @@ class T extends (r = a.PureComponent) {
             });
     }
 }
-function S(e) {
+function T(e) {
     let t = (0, l.bp)(),
         n = (0, E.n)();
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(m, {
         ...e,
         isWindowFocused: n,
         appContext: t
     });
 }
-m(T, 'defaultProps', {
+I(m, 'defaultProps', {
     shouldLink: !0,
     autoPlay: !1,
     animated: !1

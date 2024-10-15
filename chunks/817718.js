@@ -1,12 +1,12 @@
-n.d(e, {
+n.d(t, {
     U3: function () {
-        return h;
+        return _;
     },
     XM: function () {
-        return u;
+        return c;
     },
     hd: function () {
-        return c;
+        return u;
     },
     lI: function () {
         return l;
@@ -15,45 +15,39 @@ n.d(e, {
         return d;
     }
 });
-var a = n(481060),
+var r = n(481060),
     i = n(819640),
-    o = n(585483),
-    r = n(981631);
-let s = () => i.Z.hasLayers() || (0, a.hasAnyModalOpen)(),
-    l =
-        12633 == n.j
-            ? {
-                  binds: ['right'],
-                  comboKeysBindGlobal: !0,
-                  action() {
-                      if (!s()) return o.S.dispatch(r.CkL.CAROUSEL_NEXT), !1;
-                  }
-              }
-            : null,
-    c =
-        12633 == n.j
-            ? {
-                  binds: ['left'],
-                  comboKeysBindGlobal: !0,
-                  action() {
-                      if (!s()) return o.S.dispatch(r.CkL.CAROUSEL_PREV), !1;
-                  }
-              }
-            : null,
+    a = n(585483),
+    s = n(981631);
+let o = () => i.Z.hasLayers() || (0, r.hasAnyModalOpen)(),
+    l = {
+        binds: ['right'],
+        comboKeysBindGlobal: !0,
+        action() {
+            if (!o()) return a.S.dispatch(s.CkL.CAROUSEL_NEXT), !1;
+        }
+    },
     u = {
+        binds: ['left'],
+        comboKeysBindGlobal: !0,
+        action() {
+            if (!o()) return a.S.dispatch(s.CkL.CAROUSEL_PREV), !1;
+        }
+    },
+    c = {
         binds: ['right', 'down', 'space'],
         comboKeysBindGlobal: !0,
-        action: () => (o.S.dispatch(r.CkL.MODAL_CAROUSEL_NEXT), !1)
+        action: () => (a.S.dispatch(s.CkL.MODAL_CAROUSEL_NEXT), !1)
     },
     d = {
         binds: ['left', 'up'],
         comboKeysBindGlobal: !0,
-        action: () => (o.S.dispatch(r.CkL.MODAL_CAROUSEL_PREV), !1)
+        action: () => (a.S.dispatch(s.CkL.MODAL_CAROUSEL_PREV), !1)
     },
-    h = {
+    _ = {
         binds: ['esc'],
         comboKeysBindGlobal: !0,
         action() {
-            if (o.S.hasSubscribers(r.CkL.MODAL_CLOSE)) return o.S.dispatch(r.CkL.MODAL_CLOSE), !1;
+            if (a.S.hasSubscribers(s.CkL.MODAL_CLOSE)) return a.S.dispatch(s.CkL.MODAL_CLOSE), !1;
         }
     };

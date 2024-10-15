@@ -240,7 +240,6 @@ function Z(e) {
                                     renderVideoComponent: m.lV,
                                     renderImageComponent: m.Yi,
                                     renderLinkComponent: m.iT,
-                                    renderForwardComponent: T.VqG,
                                     onPlay: () => {
                                         I.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P });
                                     }

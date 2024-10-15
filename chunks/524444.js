@@ -167,10 +167,10 @@ function Q(e) {
 }
 function X(e) {
     var t;
-    let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: o, imageContainerClassName: u, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: _, renderForwardComponent: f } = e,
-        h = d === B.hV.MOSAIC,
-        I = !c && D.H1.getSetting() && null != n && '' !== n && !0 !== r,
-        m = (e) => {
+    let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: o, imageContainerClassName: u, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: _ } = e,
+        f = d === B.hV.MOSAIC,
+        h = !c && D.H1.getSetting() && null != n && '' !== n && !0 !== r,
+        I = (e) => {
             let { altText: t } = e;
             return (0, a.jsxs)(E.Dialog, {
                 'aria-label': Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
@@ -179,7 +179,7 @@ function X(e) {
                     e.key === V.mR.Escape &&
                         setTimeout(() => {
                             var e;
-                            return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
+                            return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
                         }, 0);
                 },
                 children: [
@@ -194,13 +194,13 @@ function X(e) {
                 ]
             });
         },
-        T = s.createRef(),
-        S = (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Safari';
+        m = s.createRef(),
+        T = (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Safari';
     return (0, a.jsxs)('div', {
         className: l()(
             {
-                [Y.imageContentSafari]: S,
-                [Y.imageContent]: !S
+                [Y.imageContentSafari]: T,
+                [Y.imageContent]: !T
             },
             o
         ),
@@ -208,29 +208,22 @@ function X(e) {
             (0, a.jsxs)('div', {
                 className: l()(Y.imageContainer, u),
                 style: _,
-                children: [
-                    (0, a.jsx)(p.Z, {
-                        ...e,
-                        renderLinkComponent: $,
-                        renderForwardComponent: null != f ? f : F.VqG
-                    }),
-                    null != i && i()
-                ]
+                children: [(0, a.jsx)(p.Z, { ...e }), null != i && i()]
             }),
-            h &&
-                I &&
+            f &&
+                h &&
                 (0, a.jsx)('div', {
                     className: Y.mediaMosaicAltTextContainer,
                     children: (0, a.jsx)(E.Popout, {
                         animation: E.Popout.Animation.FADE,
-                        renderPopout: () => (0, a.jsx)(m, { altText: n }),
+                        renderPopout: () => (0, a.jsx)(I, { altText: n }),
                         children: (e) =>
                             (0, a.jsx)(E.FocusRing, {
                                 offset: 4,
                                 children: (0, a.jsx)('button', {
                                     ...e,
                                     type: 'button',
-                                    ref: T,
+                                    ref: m,
                                     'aria-label': Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
                                     className: Y.mediaMosaicAltText,
                                     children: Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
@@ -238,8 +231,8 @@ function X(e) {
                             })
                     })
                 }),
-            !h &&
-                I &&
+            !f &&
+                h &&
                 (0, a.jsx)('span', {
                     className: Y.altText,
                     children: n

@@ -10,8 +10,8 @@ var a = l(735250),
     t = l.n(r),
     s = l(442837),
     d = l(481060),
-    o = l(904245),
-    c = l(368844),
+    c = l(904245),
+    o = l(368844),
     u = l(73315),
     h = l(454585),
     m = l(406432),
@@ -39,11 +39,11 @@ function k(e) {
         l,
         { firstMedia: i, channelId: r } = e,
         d = (0, s.e7)([v.Z], () => v.Z.getChannel(r)),
-        [o, c] = (0, g.hL)({
+        [c, o] = (0, g.hL)({
             media: i,
             channel: d
         }),
-        h = (0, g.MC)(c),
+        h = (0, g.MC)(o),
         x = (0, s.e7)([j.Z], () => j.Z.isFocused()),
         f = (0, m.d$)(i.src),
         _ = I.QK.useSetting(),
@@ -59,16 +59,15 @@ function k(e) {
                     maxWidth: l,
                     width: N,
                     height: p,
-                    alt: null != b && o && null != h ? h : b,
+                    alt: null != b && c && null != h ? h : b,
                     autoPlay: _,
-                    animated: f && !o && x,
+                    animated: f && !c && x,
                     containerClassName: T.thumbnailContainer,
-                    imageClassName: t()({ [T.obscured]: o }),
-                    renderForwardComponent: A.VqG
+                    imageClassName: t()({ [T.obscured]: c })
                 }),
-                o &&
+                c &&
                     (0, a.jsx)(u.Z, {
-                        obscureReason: c,
+                        obscureReason: o,
                         iconClassname: T.obscuredTag
                     })
             ]
@@ -82,12 +81,12 @@ function y(e) {
         u = (0, s.e7)([N.Z], () => N.Z.can(A.Plq.VIEW_CHANNEL, l)),
         m = r.first(),
         g = (0, E.Z)(m),
-        C = (0, c.zy)(m, !1),
+        C = (0, o.zy)(m, !1),
         x = (null == C ? void 0 : C.length) > 0 ? C[0] : null,
         I = null != l && null == r.first() && !r.loadingMore && !r.ready && !r.hasFetched && u;
     i.useEffect(() => {
         I &&
-            o.Z.fetchMessages({
+            c.Z.fetchMessages({
                 channelId: n.channelId,
                 after: n.channelId,
                 limit: 5

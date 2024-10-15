@@ -64,7 +64,6 @@ function m(e) {
               autoPlayGif: !1,
               renderImageComponent: d.VqG,
               renderVideoComponent: d.VqG,
-              renderLinkComponent: d.VqG,
-              renderForwardComponent: d.VqG
+              renderLinkComponent: d.VqG
           });
 }
