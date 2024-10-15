@@ -14,17 +14,14 @@ var T = s(735250),
     A = s(681789);
 t.Z = function (e) {
     let { onClose: t, channelId: s } = e,
-        [u, d] = o.useState(!1),
-        I = (0, l._p)({
-            location: 'safety-tools-about-safety-alerts',
-            autoTrackExposure: !1
-        }),
+        [d, u] = o.useState(!1),
+        I = (0, l._p)({ location: 'safety-tools-about-safety-alerts' }),
         L = o.useCallback(() => {
             I ? a.Z.open(E.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: c.to.DM_SAFETY_ALERTS_V2 }) : a.Z.open(E.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: c.to.DM_SAFETY_ALERTS }), t();
         }, [I, t]),
         N = o.useCallback(() => {
-            !u &&
-                (d(!0),
+            !d &&
+                (u(!0),
                 (0, i.Uj)(s)
                     .then(() => {
                         t(),
@@ -34,9 +31,9 @@ t.Z = function (e) {
                             });
                     })
                     .catch(() => {
-                        d(!1), (0, n.showToast)((0, n.createToast)(O.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE));
+                        u(!1), (0, n.showToast)((0, n.createToast)(O.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE));
                     }));
-        }, [s, t, u]);
+        }, [s, t, d]);
     return (0, T.jsxs)(S.Z, {
         style: A.wrapperStyle,
         children: [
@@ -64,7 +61,7 @@ t.Z = function (e) {
                                     size: n.Button.Sizes.NONE,
                                     color: n.Button.Colors.LINK,
                                     look: n.Button.Looks.LINK,
-                                    disabled: u,
+                                    disabled: d,
                                     onClick: N,
                                     children: e
                                 },

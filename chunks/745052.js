@@ -194,10 +194,7 @@ let ea = function (e) {
         let t = (0, w.Z)(),
             n = () => y.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
             s = (0, c.e7)([I.Z], () => I.Z.useReducedMotion),
-            r = (0, b._p)({
-                location: 'message-request-coachmark',
-                autoTrackExposure: !1
-            });
+            r = (0, b._p)({ location: 'message-request-coachmark' });
         return (
             a.useEffect(() => {
                 (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);

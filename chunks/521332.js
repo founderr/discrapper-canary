@@ -41,10 +41,7 @@ function m(e) {
         S = (0, a.e7)([d.Z], () => d.Z.getChannel(n)),
         g = (0, _.jc)(t, null == S ? void 0 : S.type),
         A = (0, E.i_)(m, T, u),
-        N = (0, c._p)({
-            location: 'settings-upsells-element',
-            autoTrackExposure: !1
-        });
+        N = (0, c._p)({ location: 'settings-upsells-element' });
     return 0 === g.length
         ? null
         : (0, r.jsxs)('div', {

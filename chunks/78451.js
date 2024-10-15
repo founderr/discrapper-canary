@@ -9,10 +9,10 @@ s.d(a, {
         return c;
     },
     X7: function () {
-        return N;
+        return u;
     },
     c7: function () {
-        return u;
+        return N;
     }
 });
 var t = s(524437);
@@ -111,11 +111,8 @@ function c() {
         }
     ];
 }
-function u() {
-    let e = (0, E.sp)({
-        location: 'generate-dm-spam-options',
-        autoTrackExposure: !1
-    });
+function N() {
+    let e = (0, E.sp)({ location: 'generate-dm-spam-options' });
     return [
         {
             name: e ? I.Z.Messages.USER_SETTING_DM_SPAM_FILTER_ALL_TITLE : I.Z.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS,
@@ -137,7 +134,7 @@ function u() {
         }
     ];
 }
-function N() {
+function u() {
     return [
         {
             name: I.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_V2,

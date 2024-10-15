@@ -18,10 +18,7 @@ var a = n(120356),
     h = n(886769);
 function m(e) {
     let { className: t, markAsDismissed: n } = e,
-        a = (0, d._p)({
-            location: 'consent-card',
-            autoTrackExposure: !1
-        });
+        a = (0, d._p)({ location: 'consent-card' });
     return (0, i.jsxs)(c.Z, {
         className: s()(h.card, t),
         children: [

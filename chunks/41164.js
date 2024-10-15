@@ -14,10 +14,7 @@ var a = n(481060),
 i.default = (e) => {
     let { transitionState: i, onClose: n, classificationId: h, source: A } = e,
         p = (0, o.Z)(),
-        I = (0, s._p)({
-            location: 'classification-detail-modal',
-            autoTrackExposure: !1
-        }),
+        I = (0, s._p)({ location: 'classification-detail-modal' }),
         x = () => {
             n(), I ? l.Z.open(c.oAB.ACCOUNT, d.s6.PRIVACY_AND_SAFETY_STANDING) : l.Z.open(c.oAB.PRIVACY_AND_SAFETY, d.s6.PRIVACY_ACCOUNT_STANDING);
         };
