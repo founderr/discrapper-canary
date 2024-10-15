@@ -17,13 +17,11 @@ var a = t(120356),
     N = t(574587);
 function m(e) {
     let { user: s, planId: t, count: a, userPremiumSubscription: r } = e,
-        [o, d] = (0, l.Wu)([_.Z], () => [_.Z.get(t), null != r ? _.Z.get(r.planId) : null]),
-        u = E.ZP.getInterval(t).intervalType;
-    if (null == o || ![S.rV.YEAR, S.rV.MONTH].includes(u)) return null;
-    E.ZP.getInterval(t).intervalType === S.rV.YEAR && (a = E.ZP.getIntervalMonths(u, a));
-    let T = null != d ? d.skuId : null,
-        m = o.skuId === T,
-        C = E.ZP.getDisplayName(t);
+        [o, d] = (0, l.Wu)([_.Z], () => [_.Z.get(t), null != r ? _.Z.get(r.planId) : null]);
+    if (null == o || E.ZP.getInterval(t).intervalType !== S.rV.MONTH) return null;
+    let u = null != d ? d.skuId : null,
+        T = o.skuId === u,
+        m = E.ZP.getDisplayName(t);
     return (0, n.jsxs)('div', {
         className: N.accountCreditRow,
         children: [
@@ -44,7 +42,7 @@ function m(e) {
                 children: [
                     (0, n.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
-                        children: I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({ planName: C })
+                        children: I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({ planName: m })
                     }),
                     s.hasFreePremium() || (null != r && r.isPurchasedExternally)
                         ? null
@@ -52,7 +50,7 @@ function m(e) {
                               className: N.rowApplied,
                               variant: 'heading-sm/semibold',
                               color: 'header-secondary',
-                              children: m && null != r ? I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd }) : I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: C })
+                              children: T && null != r ? I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd }) : I.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: m })
                           })
                 ]
             }),
@@ -68,7 +66,7 @@ s.Z = function (e) {
     let { className: s, entitlements: t } = e,
         a = o()(Array.from(t))
             .filter((e) => {
-                let { subscriptionPlanId: s, gifterId: t, consumed: n } = e;
+                let { subscriptionPlanId: s, parentId: t, consumed: n } = e;
                 return null != s && null != t && !n;
             })
             .groupBy((e) => e.subscriptionPlanId)
