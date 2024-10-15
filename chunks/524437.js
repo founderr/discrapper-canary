@@ -414,10 +414,7 @@ class x extends D.C {
 let G = new x();
 class k extends D.C {
     create(e) {
-        let t = {
-            guilds: {},
-            leaderboardsDisabled: !1
-        };
+        let t = { guilds: {} };
         return (
             globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
@@ -432,18 +429,12 @@ class k extends D.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, r] = e.tag();
-            switch (t) {
-                case 1:
-                    this.binaryReadMap1(i.guilds, e, n);
-                    break;
-                case 2:
-                    i.leaderboardsDisabled = e.bool();
-                    break;
-                default:
-                    let a = n.readUnknownField;
-                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                    let s = e.skip(r);
-                    !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
+            if (1 === t) this.binaryReadMap1(i.guilds, e, n);
+            else {
+                let a = n.readUnknownField;
+                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                let s = e.skip(r);
+                !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
             }
         }
         return i;
@@ -470,7 +461,6 @@ class k extends D.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let r of Object.keys(e.guilds)) t.tag(1, C.TD.LengthDelimited).fork().tag(1, C.TD.Bit64).fixed64(r), t.tag(2, C.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.guilds[r], t, n), t.join().join();
-        !1 !== e.leaderboardsDisabled && t.tag(2, C.TD.Varint).bool(e.leaderboardsDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -485,12 +475,6 @@ class k extends D.C {
                     kind: 'message',
                     T: () => V
                 }
-            },
-            {
-                no: 2,
-                name: 'leaderboards_disabled',
-                kind: 'scalar',
-                T: 8
             }
         ]);
     }
