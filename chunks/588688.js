@@ -1,6 +1,6 @@
 n.d(t, {
     FK: function () {
-        return function e(t, n, r, o, l, u, c) {
+        return function e(t, n, r, l, u, c, d) {
             if (1 === t.length && (0, a.O4)(t[0]))
                 return [
                     {
@@ -8,73 +8,73 @@ n.d(t, {
                         value: t[0].value
                     }
                 ];
-            for (var d, _ = [], E = 0; E < t.length; E++) {
-                var f = t[E];
-                if ((0, a.O4)(f)) {
-                    _.push({
+            for (var _, E = [], f = 0; f < t.length; f++) {
+                var h = t[f];
+                if ((0, a.O4)(h)) {
+                    E.push({
                         type: i.literal,
-                        value: f.value
+                        value: h.value
                     });
                     continue;
                 }
-                if ((0, a.yx)(f)) {
-                    'number' == typeof u &&
-                        _.push({
+                if ((0, a.yx)(h)) {
+                    'number' == typeof c &&
+                        E.push({
                             type: i.literal,
-                            value: r.getNumberFormat(n).format(u)
+                            value: r.getNumberFormat(n).format(c)
                         });
                     continue;
                 }
-                var h = f.value;
-                if (!(l && h in l)) throw new s.HR(h, c);
-                var p = l[h];
-                if ((0, a.VG)(f)) {
-                    (!p || 'string' == typeof p || 'number' == typeof p) && (p = 'string' == typeof p || 'number' == typeof p ? String(p) : ''),
-                        _.push({
-                            type: 'string' == typeof p ? i.literal : i.object,
-                            value: p
+                var p = h.value;
+                if (!(u && p in u)) throw new s.HR(p, d);
+                var I = u[p];
+                if ((0, a.VG)(h)) {
+                    (!I || 'string' == typeof I || 'number' == typeof I) && (I = 'string' == typeof I || 'number' == typeof I ? String(I) : ''),
+                        E.push({
+                            type: 'string' == typeof I ? i.literal : i.object,
+                            value: I
                         });
                     continue;
                 }
-                if ((0, a.rp)(f)) {
-                    var I = 'string' == typeof f.style ? o.date[f.style] : (0, a.Ii)(f.style) ? f.style.parsedOptions : void 0;
-                    _.push({
+                if ((0, a.rp)(h)) {
+                    var m = 'string' == typeof h.style ? l.date[h.style] : (0, a.Ii)(h.style) ? h.style.parsedOptions : void 0;
+                    E.push({
                         type: i.literal,
-                        value: r.getDateTimeFormat(n, I).format(p)
+                        value: r.getDateTimeFormat(n, m).format(I)
                     });
                     continue;
                 }
-                if ((0, a.pe)(f)) {
-                    var I = 'string' == typeof f.style ? o.time[f.style] : (0, a.Ii)(f.style) ? f.style.parsedOptions : o.time.medium;
-                    _.push({
+                if ((0, a.pe)(h)) {
+                    var m = 'string' == typeof h.style ? l.time[h.style] : (0, a.Ii)(h.style) ? h.style.parsedOptions : l.time.medium;
+                    E.push({
                         type: i.literal,
-                        value: r.getDateTimeFormat(n, I).format(p)
+                        value: r.getDateTimeFormat(n, m).format(I)
                     });
                     continue;
                 }
-                if ((0, a.uf)(f)) {
-                    var I = 'string' == typeof f.style ? o.number[f.style] : (0, a.Wh)(f.style) ? f.style.parsedOptions : void 0;
-                    I && I.scale && (p *= I.scale || 1),
-                        _.push({
+                if ((0, a.uf)(h)) {
+                    var m = 'string' == typeof h.style ? l.number[h.style] : (0, a.Wh)(h.style) ? h.style.parsedOptions : void 0;
+                    m && m.scale && (I *= m.scale || 1),
+                        E.push({
                             type: i.literal,
-                            value: r.getNumberFormat(n, I).format(p)
+                            value: r.getNumberFormat(n, m).format(I)
                         });
                     continue;
                 }
-                if ((0, a.HI)(f)) {
-                    var m = f.children,
-                        T = f.value,
-                        S = l[T];
-                    if ('function' != typeof S) throw new s.YR(T, 'function', c);
-                    var g = S(
-                        e(m, n, r, o, l, u).map(function (e) {
+                if ((0, a.HI)(h)) {
+                    var T = h.children,
+                        S = h.value,
+                        g = u[S];
+                    if (!o(g)) throw new s.YR(S, 'function', d);
+                    var A = g(
+                        e(T, n, r, l, u, c).map(function (e) {
                             return e.value;
                         })
                     );
-                    !Array.isArray(g) && (g = [g]),
-                        _.push.apply(
-                            _,
-                            g.map(function (e) {
+                    !Array.isArray(A) && (A = [A]),
+                        E.push.apply(
+                            E,
+                            A.map(function (e) {
                                 return {
                                     type: 'string' == typeof e ? i.literal : i.object,
                                     value: e
@@ -82,31 +82,34 @@ n.d(t, {
                             })
                         );
                 }
-                if ((0, a.Wi)(f)) {
-                    var A = f.options[p] || f.options.other;
-                    if (!A) throw new s.C8(f.value, p, Object.keys(f.options), c);
-                    _.push.apply(_, e(A.value, n, r, o, l));
+                if ((0, a.Wi)(h)) {
+                    var N = h.options[I] || h.options.other;
+                    if (!N) throw new s.C8(h.value, I, Object.keys(h.options), d);
+                    E.push.apply(E, e(N.value, n, r, l, u));
                     continue;
                 }
-                if ((0, a.Jo)(f)) {
-                    var A = f.options['='.concat(p)];
-                    if (!A) {
-                        if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, c);
-                        var N = r.getPluralRules(n, { type: f.pluralType }).select(p - (f.offset || 0));
-                        A = f.options[N] || f.options.other;
+                if ((0, a.Jo)(h)) {
+                    var N = h.options['='.concat(I)];
+                    if (!N) {
+                        if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, d);
+                        var R = r.getPluralRules(n, { type: h.pluralType }).select(I - (h.offset || 0));
+                        N = h.options[R] || h.options.other;
                     }
-                    if (!A) throw new s.C8(f.value, p, Object.keys(f.options), c);
-                    _.push.apply(_, e(A.value, n, r, o, l, p - (f.offset || 0)));
+                    if (!N) throw new s.C8(h.value, I, Object.keys(h.options), d);
+                    E.push.apply(E, e(N.value, n, r, l, u, I - (h.offset || 0)));
                     continue;
                 }
             }
-            return (d = _).length < 2
-                ? d
-                : d.reduce(function (e, t) {
+            return (_ = E).length < 2
+                ? _
+                : _.reduce(function (e, t) {
                       var n = e[e.length - 1];
                       return n && n.type === i.literal && t.type === i.literal ? (n.value += t.value) : e.push(t), e;
                   }, []);
         };
+    },
+    Gt: function () {
+        return o;
     },
     du: function () {
         return i;
@@ -117,3 +120,6 @@ var r,
     a = n(322182),
     s = n(584811);
 ((r = i || (i = {}))[(r.literal = 0)] = 'literal'), (r[(r.object = 1)] = 'object');
+function o(e) {
+    return 'function' == typeof e;
+}
