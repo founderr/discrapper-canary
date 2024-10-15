@@ -1,42 +1,36 @@
 n.d(t, {
     Az: function () {
-        return T;
+        return m;
     },
     Eg: function () {
-        return v;
+        return O;
     },
     IZ: function () {
-        return S;
-    },
-    Lq: function () {
-        return I;
-    },
-    P1: function () {
-        return r;
+        return T;
     },
     PP: function () {
-        return m;
+        return I;
     },
     Ub: function () {
         return p;
     },
     c6: function () {
-        return R;
+        return N;
     },
     m9: function () {
-        return A;
+        return g;
     },
     mT: function () {
-        return O;
+        return R;
     },
     rC: function () {
-        return N;
+        return A;
     },
     sq: function () {
         return h;
     },
     tI: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -81,40 +75,7 @@ async function p(e, t) {
               ))),
         null == i || i();
 }
-async function I(e) {
-    let t,
-        { loadId: n, guildId: i, index: a, analyticsContext: s, categoryId: o } = e;
-    'string' == typeof s && s in r && (t = s);
-    let l = {
-        page: f.ZY5.GUILD_DISCOVERY,
-        object: f.qAy.CARD,
-        section: t
-    };
-    await p(i, l, { loadId: n }),
-        (function (e) {
-            let { loadId: t, guildId: n, index: r, analyticsContext: i, categoryId: a } = e,
-                s = {
-                    page: f.ZY5.GUILD_DISCOVERY,
-                    section: i
-                };
-            'string' != typeof i && null != i.location && (s = i.location),
-                E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
-                    location: s,
-                    guild_id: n,
-                    load_id: t,
-                    card_index: r,
-                    location_object: f.qAy.CARD,
-                    category_id: a
-                });
-        })({
-            loadId: n,
-            guildId: i,
-            index: a,
-            analyticsContext: s,
-            categoryId: o
-        });
-}
-function m(e) {
+function I(e) {
     return {
         id: e.id,
         name: e.name,
@@ -135,7 +96,7 @@ function m(e) {
         keywords: e.keywords
     };
 }
-function T(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     E.default.track(f.rMx.GUILD_DISCOVERY_EXITED, {
         load_id: e,
@@ -143,10 +104,10 @@ function T(e, t) {
         recommendations_source: n
     });
 }
-function S(e) {
+function T(e) {
     E.default.track(f.rMx.SEARCH_CLOSED, { load_id: e });
 }
-function g(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     E.default.track(f.rMx.SEARCH_STARTED, {
         search_type: f.aib.GUILD_DISCOVERY,
@@ -155,7 +116,7 @@ function g(e, t) {
         category_id: t
     });
 }
-function A(e) {
+function g(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
@@ -165,11 +126,11 @@ function A(e) {
         is_request_retry: i
     });
 }
-function N(e) {
+function A(e) {
     let { categoryId: t } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function R(e) {
+function N(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
         search_type: o ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
@@ -182,7 +143,7 @@ function R(e) {
         category_id: s
     });
 }
-function O(e) {
+function R(e) {
     let t = l.Z.getLoadId(e);
     E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
@@ -190,7 +151,7 @@ function O(e) {
         guild_size: d.Z.getMemberCount(e)
     });
 }
-async function v(e) {
+async function O(e) {
     try {
         var t, n;
         let r = await s.tn.get({
@@ -200,7 +161,7 @@ async function v(e) {
             }),
             i = null === (n = r.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
         if (null == i) return i;
-        return m(i);
+        return I(i);
     } catch (e) {
         return null;
     }
