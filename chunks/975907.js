@@ -1,42 +1,39 @@
 n.d(t, {
     M: function () {
-        return l;
+        return r;
     }
 }),
     n(47120);
 var i = n(470079),
     a = n(288385),
-    s = n(674588),
-    r = n(618508);
-function l() {
+    s = n(674588);
+function r() {
     let [e, t] = i.useState(''),
-        [n, l] = i.useState(''),
-        [o, c] = i.useState(!1),
-        d = (0, r.k)(),
-        u = i.useCallback((e) => {
+        [n, r] = i.useState(''),
+        [l, o] = i.useState(!1),
+        c = i.useCallback((e) => {
             t(e);
         }, []),
-        _ = i.useCallback(() => {
-            t(''), l(''), c(!1);
+        d = i.useCallback(() => {
+            t(''), r(''), o(!1);
         }, []),
-        E = i.useCallback(() => {
+        u = i.useCallback(() => {
             s.yC({
                 query: e,
                 options: {
                     page: 1,
-                    source: a.F.APP_DIRECTORY,
-                    categoryId: null == d ? void 0 : d.id
+                    source: a.F.APP_DIRECTORY
                 }
             }),
-                c(!0),
-                l(e);
-        }, [e, d]);
+                o(!0),
+                r(e);
+        }, [e]);
     return {
         searchQuery: e,
         searchFetchedQuery: n,
-        onSearchTextChange: u,
-        onClearSearch: _,
-        onSearchSubmit: E,
-        isSearchVisible: o
+        onSearchTextChange: c,
+        onClearSearch: d,
+        onSearchSubmit: u,
+        isSearchVisible: l
     };
 }

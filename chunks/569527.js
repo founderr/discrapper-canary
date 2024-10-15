@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
@@ -11,90 +11,154 @@ var i = n(735250),
     l = n(442837),
     o = n(481060),
     c = n(110924),
-    d = n(674588),
-    u = n(264043),
-    _ = n(809547),
-    E = n(125909),
-    h = n(374939),
-    m = n(283293),
-    I = n(797908),
-    p = n(618508),
-    g = n(979007),
-    T = n(463051);
-function f(e) {
+    d = n(393903),
+    u = n(674588),
+    _ = n(264043),
+    E = n(809547),
+    h = n(34674),
+    m = n(125909),
+    I = n(374939),
+    p = n(283293),
+    g = n(797908),
+    T = n(120549),
+    f = n(979007),
+    S = n(463051);
+function C(e) {
     var t;
-    let { query: n, onSelectApplication: f } = e,
-        S = (0, p.k)(),
-        [C, N] = a.useState(1),
-        { fetchState: A, searchResults: v } = (0, l.cj)([_.Z], () => ({
-            fetchState: _.Z.getFetchState({
+    let { query: n, onSelectApplication: C } = e,
+        [N, A] = a.useState(void 0),
+        [v, Z] = a.useState(1),
+        [L, R] = a.useState(!0),
+        O = a.useRef(L),
+        [x, b] = a.useState(0),
+        M = a.useRef(null),
+        { fetchState: P, searchResults: D } = (0, l.cj)([E.Z], () => ({
+            fetchState: E.Z.getFetchState({
                 query: n,
-                categoryId: null == S ? void 0 : S.id,
-                page: C,
+                categoryId: N,
+                page: v,
                 source: r.F.APP_DIRECTORY
             }),
-            searchResults: _.Z.getSearchResults({
+            searchResults: E.Z.getSearchResults({
                 query: n,
-                categoryId: null == S ? void 0 : S.id,
-                page: C,
+                categoryId: N,
+                page: v,
                 source: r.F.APP_DIRECTORY
             })
         })),
-        Z = (0, c.Z)(v),
-        L = a.useMemo(() => (A === u.M.FETCHING ? Z : v), [A, Z, v]);
-    a.useEffect(() => {
-        N(1);
-    }, [null == S ? void 0 : S.id, n]);
-    let R = a.useCallback(
-        (e) => {
-            d.yC({
+        y = (0, l.cj)([E.Z], () => {
+            let e = E.Z.getSearchResults({
                 query: n,
-                options: {
-                    page: e,
-                    source: r.F.APP_DIRECTORY,
-                    categoryId: null == S ? void 0 : S.id
-                }
-            }),
-                N(e);
-        },
-        [n, S]
-    );
-    return (0, i.jsx)(m.Z, {
-        children: (0, i.jsxs)(h.Z, {
-            children: [
-                (0, i.jsx)(E.Z, {
-                    loading: A === u.M.FETCHING,
-                    children: (0, i.jsx)('div', {
-                        className: T.content,
-                        children:
-                            null == L
-                                ? void 0
-                                : L.results.map((e) => {
-                                      if (e.type === s.s.APPLICATION) {
-                                          let t = e.data;
-                                          return (0, i.jsx)(
-                                              I.Z,
-                                              {
-                                                  application: t,
-                                                  onSelectApplication: f
-                                              },
-                                              t.id
-                                          );
-                                      }
-                                      return null;
-                                  })
-                    })
+                page: 1,
+                source: r.F.APP_DIRECTORY
+            });
+            return null != e
+                ? {
+                      [h.MU]: e.totalCount,
+                      ...e.countsByCategory
+                  }
+                : {};
+        }),
+        j = (0, c.Z)(D),
+        U = a.useMemo(() => (P === _.M.FETCHING ? j : D), [P, j, D]);
+    a.useEffect(() => {
+        A(void 0), Z(1);
+    }, [n]);
+    let G = a.useCallback(
+            (e) => {
+                u.yC({
+                    query: n,
+                    options: {
+                        page: e,
+                        source: r.F.APP_DIRECTORY,
+                        categoryId: N
+                    }
                 }),
-                (0, i.jsx)(o.Paginator, {
-                    className: T.paginationInput,
-                    totalCount: Math.min((null !== (t = null == L ? void 0 : L.totalPages) && void 0 !== t ? t : 0) * g.IV, g.Et * g.IV),
-                    pageSize: g.IV,
-                    disablePaginationGap: !0,
-                    hideMaxPage: !0,
-                    currentPage: C,
-                    onPageChange: R
+                    Z(e);
+            },
+            [n, N]
+        ),
+        w = (0, d.y)((e) => {
+            var t;
+            let n = null == e ? void 0 : e.getBoundingClientRect();
+            if (null == n) return;
+            let i = n.width;
+            i < 1024 && O.current ? ((O.current = !1), R(!1)) : i > 1024 && !O.current && ((O.current = !0), R(!0));
+            let a = null === (t = M.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+            null != a && b(a.width);
+        }),
+        k = a.useCallback(
+            (e) => {
+                Z(1),
+                    A(e),
+                    u.yC({
+                        query: n,
+                        options: {
+                            page: 1,
+                            source: r.F.APP_DIRECTORY,
+                            categoryId: e
+                        }
+                    });
+            },
+            [n]
+        );
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(p.Z, {
+                children: (0, i.jsxs)(I.Z, {
+                    children: [
+                        (0, i.jsx)(m.Z, {
+                            loading: P === _.M.FETCHING,
+                            children: (0, i.jsx)('div', {
+                                ref: w,
+                                children: (0, i.jsx)('div', {
+                                    className: S.content,
+                                    style: { paddingRight: L ? x + 32 : void 0 },
+                                    children:
+                                        null == U
+                                            ? void 0
+                                            : U.results.map((e) => {
+                                                  if (e.type === s.s.APPLICATION) {
+                                                      let t = e.data;
+                                                      return (0, i.jsx)(
+                                                          g.Z,
+                                                          {
+                                                              application: t,
+                                                              onSelectApplication: C
+                                                          },
+                                                          t.id
+                                                      );
+                                                  }
+                                                  return null;
+                                              })
+                                })
+                            })
+                        }),
+                        (0, i.jsx)(o.Paginator, {
+                            className: S.paginationInput,
+                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * f.IV, f.Et * f.IV),
+                            pageSize: f.IV,
+                            disablePaginationGap: !0,
+                            hideMaxPage: !0,
+                            currentPage: v,
+                            onPageChange: G
+                        })
+                    ]
                 })
-            ]
-        })
+            }),
+            L &&
+                (0, i.jsx)('div', {
+                    className: S.sidebar,
+                    ref: M,
+                    children: (0, i.jsx)('div', {
+                        className: S.sidebarContent,
+                        children: (0, i.jsx)(T.Z, {
+                            countsByCategory: y,
+                            selectedCategoryId: null != N ? N : h.MU,
+                            onSelectCategory: k
+                        })
+                    })
+                })
+        ]
     });
 }
