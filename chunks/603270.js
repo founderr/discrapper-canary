@@ -134,19 +134,15 @@ let v = P(function (e) {
                 if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
             }, [null == g ? void 0 : g.id]);
         let y = (0, s.e7)([T.Z], () => (null != d ? T.Z.getParentSKU(d) : void 0), [d]),
-            {
-                openModal: B,
-                canOpenModal: k,
-                cannotOpenReason: G
-            } = (0, _.Z)({
+            { openModal: B, canOpenModal: k } = (0, _.Z)({
                 skuId: d,
                 guildId: D,
                 showBenefitsFirst: !1
             });
         if (!U || null == g || null == C) return null;
-        let F = C.type === M.epS.SUBSCRIPTION,
-            w = !!F && (0, u.KW)(C.flags),
-            V = () => {
+        let G = C.type === M.epS.SUBSCRIPTION,
+            F = !!G && (0, u.KW)(C.flags),
+            w = () => {
                 (0, l.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
                     return (t) =>
@@ -158,13 +154,13 @@ let v = P(function (e) {
                         });
                 });
             },
-            H = () => {
+            V = () => {
                 (0, l.openModalLazy)(async () => {
-                    let e = F ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                        t = F ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                    let e = G ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                        t = G ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                     return (n) => {
                         let a = () => {
-                            n.onClose(), V();
+                            n.onClose(), w();
                         };
                         return null != e && null != y
                             ? (0, i.jsx)(e, {
@@ -172,7 +168,7 @@ let v = P(function (e) {
                                   appId: g.id,
                                   skuId: C.id,
                                   guildId: D,
-                                  subscriptionType: w ? 'user' : 'guild',
+                                  subscriptionType: F ? 'user' : 'guild',
                                   onClose: n.onClose,
                                   onHeaderTitleClick: a
                               })
@@ -188,8 +184,8 @@ let v = P(function (e) {
                     };
                 });
             },
-            Y = F
-                ? w
+            H = G
+                ? F
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(l.UserIcon, {
@@ -217,8 +213,8 @@ let v = P(function (e) {
                   : null === (t = v.description) || void 0 === t
                     ? void 0
                     : t.trim();
-        '' === Y && (Y = void 0);
-        let W = () => {
+        '' === H && (H = void 0);
+        let Y = () => {
             h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                 application_id: g.id,
                 sku_id: C.id,
@@ -228,14 +224,14 @@ let v = P(function (e) {
         return (0, i.jsx)(L, {
             appName: g.name,
             title: C.name,
-            description: Y,
+            description: H,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(M.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(g.id, O.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, f.X)(g.id, f.B.SKU_EMBED, d);
             },
             iconSrc: j,
             onIconClick: () => {
-                V(),
+                w(),
                     h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                         application_id: g.id,
                         sku_id: C.id,
@@ -248,7 +244,7 @@ let v = P(function (e) {
                     (0, i.jsx)(l.Button, {
                         color: l.ButtonColors.CUSTOM,
                         onClick: () => {
-                            H(),
+                            V(),
                                 h.default.track(M.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                     application_id: g.id,
                                     sku_id: C.id,
@@ -258,24 +254,23 @@ let v = P(function (e) {
                         className: R.viewDetailsButton,
                         children: x.Z.Messages.STOREFRONT_DETAILS
                     }),
-                    F
+                    G
                         ? null != b
                             ? (0, i.jsx)(S.p, {
                                   onClick: B,
                                   appId: g.id,
-                                  subscriptionType: w ? 'user' : 'guild',
+                                  subscriptionType: F ? 'user' : 'guild',
                                   skuId: C.id,
                                   icon: (0, i.jsx)(l.ShopIcon, {
                                       size: 'xs',
                                       color: 'currentcolor'
                                   }),
-                                  onHasClicked: W,
+                                  onHasClicked: Y,
                                   subscriptionPlan: b,
-                                  canPurchase: k,
-                                  cannotPurchaseReason: G
+                                  canPurchase: k
                               })
                             : (0, i.jsx)(l.Button, {
-                                  onClick: H,
+                                  onClick: V,
                                   children: x.Z.Messages.STOREFRONT_SUBSCRIBE
                               })
                         : (0, i.jsx)(S.Y, {
@@ -285,7 +280,7 @@ let v = P(function (e) {
                                   size: 'xs',
                                   color: 'currentcolor'
                               }),
-                              onHasClicked: W
+                              onHasClicked: Y
                           })
                 ]
             })

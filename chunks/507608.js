@@ -15,8 +15,8 @@ var l = i(735250),
     t = i(905322),
     r = i(200207),
     a = i(269210),
-    o = i(442837),
-    d = i(481060),
+    d = i(442837),
+    o = i(481060),
     u = i(607070),
     c = i(100527),
     m = i(906732),
@@ -68,7 +68,7 @@ function L(n) {
             });
             return null != e && null !== (n = P.Z.toURLSafe(e)) && void 0 !== n ? n : void 0;
         }, [x]),
-        I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
         S = s.useMemo(() => [...r.map((n) => n.skuId), ...a.map((n) => n.skuId)], [r, a]),
         { analyticsLocations: f } = (0, m.ZP)(c.Z.APP_STOREFRONT);
     return (
@@ -116,7 +116,7 @@ function L(n) {
                     (0, l.jsxs)('div', {
                         className: Z.productSection,
                         children: [
-                            (0, l.jsx)(d.Heading, {
+                            (0, l.jsx)(o.Heading, {
                                 variant: 'heading-lg/semibold',
                                 children: U.Z.Messages.STOREFRONT_APP_PRODUCTS
                             }),
@@ -135,7 +135,7 @@ function L(n) {
                             })
                         ]
                     }),
-                (0, l.jsx)(d.Text, {
+                (0, l.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     className: Z.legalText,
                     children:
@@ -152,19 +152,15 @@ function L(n) {
 }
 function y(n) {
     var e;
-    let { appId: i, guildId: t, listing: r, subscriptionType: o, onDetails: u } = n,
+    let { appId: i, guildId: t, listing: r, subscriptionType: d, onDetails: u } = n,
         { data: c } = (0, x.H)(r.skuId),
-        {
-            openModal: m,
-            canOpenModal: v,
-            cannotOpenReason: p
-        } = (0, g.Z)({
+        { openModal: m, canOpenModal: v } = (0, g.Z)({
             guildId: t,
             showBenefitsFirst: !1,
             analyticsLocation: A.Sbl.APP_STOREFRONT,
             skuId: r.skuId
         }),
-        I = s.useMemo(() => {
+        p = s.useMemo(() => {
             var n;
             return null === (n = r.benefits) || void 0 === n
                 ? void 0
@@ -175,33 +171,32 @@ function y(n) {
                       icon: (0, h.n)(i, n.icon)
                   }));
         }, [i, r.benefits]),
-        S = s.useMemo(() => (null != r.thumbnail ? (0, k.q)(i, r.thumbnail, 256) : void 0), [i, r.thumbnail]),
-        j = s.useCallback(
+        I = s.useMemo(() => (null != r.thumbnail ? (0, k.q)(i, r.thumbnail, 256) : void 0), [i, r.thumbnail]),
+        S = s.useCallback(
             (n) =>
                 null == c || 0 === c.length
                     ? null
                     : (0, l.jsx)(_.p, {
                           ...n,
                           appId: i,
-                          subscriptionType: o,
+                          subscriptionType: d,
                           skuId: r.skuId,
                           subscriptionPlan: c[0],
-                          canPurchase: v,
-                          cannotPurchaseReason: p
+                          canPurchase: v
                       }),
-            [i, o, r.skuId, c, v, p]
+            [i, d, r.skuId, c, v]
         );
     return null == c
         ? null
         : (0, l.jsx)(a.U, {
               title: r.summary,
               description: null !== (e = r.description) && void 0 !== e ? e : void 0,
-              imgSrc: S,
+              imgSrc: I,
               onPurchase: m,
-              renderPurchaseButton: j,
+              renderPurchaseButton: S,
               benefitItems:
-                  null != I
-                      ? I.map((n) =>
+                  null != p
+                      ? p.map((n) =>
                             (0, l.jsx)(
                                 a.G,
                                 {
@@ -215,13 +210,13 @@ function y(n) {
               onDetails:
                   null != u
                       ? u
-                      : null != I
+                      : null != p
                         ? () => {
-                              (0, d.openModal)((n) => {
+                              (0, o.openModal)((n) => {
                                   let { onClose: e, transitionState: s } = n;
                                   return (0, l.jsx)(M.SubscriptionDetailsModal, {
                                       appId: i,
-                                      subscriptionType: o,
+                                      subscriptionType: d,
                                       onClose: e,
                                       skuId: r.skuId,
                                       transitionState: s,
@@ -236,8 +231,8 @@ function F(n) {
     var e, i, s, t;
     let { skuId: a, appId: u, onDetails: p } = n,
         { analyticsLocations: x } = (0, m.ZP)(c.Z.APP_STOREFRONT),
-        h = (0, o.e7)([S.Z], () => S.Z.getForSKU(a), [a]),
-        g = (0, o.e7)([I.Z], () => I.Z.get(a), [a]),
+        h = (0, d.e7)([S.Z], () => S.Z.getForSKU(a), [a]),
+        g = (0, d.e7)([I.Z], () => I.Z.get(a), [a]),
         j = (0, b.M)(a);
     if (null == g) return null;
     let R = null !== (i = g.name) && void 0 !== i ? i : '',
@@ -259,7 +254,7 @@ function F(n) {
                       : (0, N.Ew)(T)
                         ? void 0
                         : () => {
-                              (0, d.openModal)((n) => {
+                              (0, o.openModal)((n) => {
                                   let { onClose: e, transitionState: i } = n;
                                   return (0, l.jsx)(O.ItemDetailsModal, {
                                       appId: u,

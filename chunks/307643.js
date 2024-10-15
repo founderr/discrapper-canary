@@ -10,9 +10,6 @@ n.d(t, {
     },
     jz: function () {
         return o;
-    },
-    tn: function () {
-        return d;
     }
 });
 var r = n(544891),
@@ -64,15 +61,4 @@ function c(e, t) {
                 )
             )
     );
-}
-async function d(e, t) {
-    return (
-        await r.tn.get({
-            url: s.ANM.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
-            query: {
-                application_id: e,
-                sku_id: t
-            }
-        })
-    ).body;
 }

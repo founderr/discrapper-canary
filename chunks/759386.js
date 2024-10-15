@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getApplicationPaymentSteps: function () {
-            return I;
+            return h;
         }
     }),
     n(47120);
@@ -15,14 +15,14 @@ var a = n(409813),
     u = n(589771),
     c = n(883419),
     d = n(689938);
-function I(e) {
-    let { guildId: t, eligibleApplicationSubscriptionGuilds: n, showBenefitsFirst: I } = e;
+function h(e) {
+    let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {
             key: null,
             renderStep: (e) =>
                 (0, r.jsx)(u.Z, {
-                    initialStep: I ? a.h8.BENEFITS : a.h8.REVIEW,
+                    initialStep: n ? a.h8.BENEFITS : a.h8.REVIEW,
                     guildId: t,
                     ...e
                 })
@@ -48,9 +48,8 @@ function I(e) {
             key: a.h8.REVIEW,
             renderStep: (e) =>
                 (0, r.jsx)(c.Z, {
-                    backButtonEligible: !!I || void 0,
-                    prevStep: I ? a.h8.BENEFITS : void 0,
-                    eligibleApplicationSubscriptionGuilds: n,
+                    backButtonEligible: !!n || void 0,
+                    prevStep: n ? a.h8.BENEFITS : void 0,
                     ...e
                 }),
             options: {
@@ -62,7 +61,7 @@ function I(e) {
             key: a.h8.CONFIRM,
             renderStep: (e) =>
                 (0, r.jsx)(o.Z, {
-                    showBenefits: !I,
+                    showBenefits: !n,
                     ...e
                 })
         }
