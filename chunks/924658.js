@@ -676,5 +676,7 @@ e.exports = Object.freeze({
     FRACTIONAL_PREMIUM_DURATION_ENDS_IN_DAYS: 'ends in {days, plural, =1 {{days} day} other {{days} days}}',
     FRACTIONAL_PREMIUM_DURATION_ENDS_IN_HOURS: 'ends in {hours, plural, =1 {{hours} hour} other {{hours} hours}}',
     FRACTIONAL_PREMIUM_DURATION_ENDS_IN_MINUTES: 'ends in {minutes, plural, =1 {{minutes} minute} other {{minutes} minutes}}',
-    APP_DIRECTORY_SEARCH_PLACEHOLDER_V2: 'Search Apps'
+    APP_DIRECTORY_SEARCH_PLACEHOLDER_V2: 'Search Apps',
+    APP_DIRECTORY_ABOUT: 'About',
+    APP_DIRECTORY_STORE: 'Store'
 });

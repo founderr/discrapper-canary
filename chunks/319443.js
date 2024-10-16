@@ -86,7 +86,10 @@ t.Z = function () {
                 ]
             }),
             G
-                ? (0, i.jsx)(I.Z, { onScroll: e })
+                ? (0, i.jsx)(I.Z, {
+                      onScroll: e,
+                      applicationId: U
+                  })
                 : x
                   ? (0, i.jsx)(g.Z, {
                         query: Z,
