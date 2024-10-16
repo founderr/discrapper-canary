@@ -17,7 +17,7 @@ var l = t(735250),
 async function c(e) {
     let { subscriptionPlanId: n, sku: a, subscriptionGroupPlanIds: c, activeSubscription: d, subscribeForGuild: p, analyticsLocations: m, analyticsLocation: v } = e,
         { promise: f, resolve: h } = Promise.withResolvers();
-    if ((0, o.KK)(a.flags) && null == p) {
+    if ((0, o.KK)(a.flags)) {
         let { promise: e, resolve: n } = Promise.withResolvers();
         (0, i.openModalLazy)(async () => {
             let { GuildSubscriptionSelectionModal: e } = await t.e('43889').then(t.bind(t, 279875));
@@ -26,7 +26,8 @@ async function c(e) {
                     transitionState: t.transitionState,
                     onClose: t.onClose,
                     sku: a,
-                    onSelect: n
+                    onSelect: n,
+                    currentGuildId: p
                 });
         }),
             (p = await e);
