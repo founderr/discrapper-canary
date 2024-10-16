@@ -82,7 +82,7 @@ t.Z = function (e) {
             if (eT && eS) return null;
             let e = null != B ? B.find((e) => e.type === L.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != G && (0, p.Z)(e, G, j);
-            return (0, r.jsx)(C.Z, {
+            return (0, r.jsx)(C.ZP, {
                 className: M.activity,
                 textClassName: M.activityText,
                 emojiClassName: M.activityEmoji,

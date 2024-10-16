@@ -6,7 +6,7 @@ var a = n(788307),
 t.Z = function (e) {
     let { hovered: t, activities: n, applicationStream: l, status: o, user: c } = e;
     return n.length > 0
-        ? (0, i.jsx)(a.Z, {
+        ? (0, i.jsx)(a.ZP, {
               className: r.activity,
               textClassName: r.text,
               emojiClassName: r.customStatusEmoji,

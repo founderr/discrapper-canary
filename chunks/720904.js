@@ -16,8 +16,8 @@ var a = t(120356),
     E = t(695346),
     M = t(496675),
     g = t(768581),
-    m = t(176354),
-    f = t(981631),
+    f = t(176354),
+    m = t(981631),
     I = t(185923),
     _ = t(689938),
     Z = t(50455);
@@ -33,7 +33,7 @@ function h(e) {
                   animated: !!l,
                   size: 20
               }))
-            : null == o && (o = m.ZP.getURL(u)),
+            : null == o && (o = f.ZP.getURL(u)),
         (0, i.jsx)(
             r.Tooltip,
             {
@@ -69,7 +69,7 @@ function A(e, n) {
         var t;
         return (
             !(e.useSpriteSheet && S.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
-            !m.ZP.isEmojiPremiumLocked({
+            !f.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
                 intention: I.Hz.REACTION
@@ -79,7 +79,7 @@ function A(e, n) {
     t.length > 4 && (t.length = 4);
     let a = E.nc.useSetting(),
         s = (0, c.$R)(n),
-        g = (0, l.e7)([M.Z], () => a && s && (n.isPrivate() || M.Z.can(f.Plq.ADD_REACTIONS, n)), [n, s, a]),
+        g = (0, l.e7)([M.Z], () => a && s && (n.isPrivate() || M.Z.can(m.Plq.ADD_REACTIONS, n)), [n, s, a]),
         _ = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };

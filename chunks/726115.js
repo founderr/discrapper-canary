@@ -9,7 +9,7 @@ n.d(t, {
         return g;
     },
     NL: function () {
-        return R;
+        return O;
     },
     QW: function () {
         return S;
@@ -236,7 +236,7 @@ function L(e) {
             offset: 0
         });
 }
-async function O(e) {
+async function R(e) {
     return (
         !(0, a.x)(e) &&
         (
@@ -248,7 +248,7 @@ async function O(e) {
         ).body.valid
     );
 }
-async function R(e) {
+async function O(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: a } = e;
     if ('' === i.trim()) return;
     let s = d.Z.getIsFetchingCounts(i),
@@ -259,7 +259,7 @@ async function R(e) {
                 fetchedQuery: i,
                 resultsQuery: ''
             }),
-            u.Z.getIsBlocked(i) || !(await O(i)))
+            u.Z.getIsBlocked(i) || !(await R(i)))
         ) {
             c.Z.handleBlockedSearchQuery(i);
             return;

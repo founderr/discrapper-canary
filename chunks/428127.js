@@ -72,20 +72,20 @@ function E(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
         { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: N, mentionCount: S, targetChannelId: x } = 'bottom' === t ? h : f,
-        v = N === _.x.HIDDEN,
-        Z = (0, u.useSpring)(
+        { mode: N, mentionCount: S, targetChannelId: v } = 'bottom' === t ? h : f,
+        x = N === _.x.HIDDEN,
+        T = (0, u.useSpring)(
             {
-                to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: x ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: C
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        T = l.useCallback(
+        Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != x && d(x);
+                e.preventDefault(), e.stopPropagation(), null != v && d(v);
             },
-            [d, x]
+            [d, v]
         );
     return (0, i.jsx)('div', {
         className: a()(g.container, {
@@ -94,15 +94,15 @@ function E(e) {
         }),
         children: (0, i.jsx)(s.animated.div, {
             className: g.containerPadding,
-            style: Z,
-            'aria-hidden': v,
+            style: T,
+            'aria-hidden': x,
             children:
                 N === _.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(g.bar, g.emptyBar) })
                     : N === _.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: g.bar,
-                            onClick: T,
+                            onClick: Z,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -130,7 +130,7 @@ function E(e) {
                       : N === _.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(g.bar, g.mentionsBar),
-                              onClick: T,
+                              onClick: Z,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

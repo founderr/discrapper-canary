@@ -237,13 +237,13 @@ class eu {
     }
     getEmojiInPriorityOrderWithoutFetchingLatest() {
         let e = (0, G.E2)({
-                location: 'getEmojiInPriorityOrderWithoutFetchingLatest',
-                autoTrackExposure: !0
-            })
-                ? this.getFrequentlyUsedReactionEmojisWithoutFetchingLatest()
-                : this.getFrequentlyUsedEmojisWithoutFetchingLatest(),
-            t = new Set();
-        return this.favoriteEmojisWithoutFetchingLatest.concat(e).filter((e) => !t.has(e) && (t.add(e), !0));
+            location: 'getEmojiInPriorityOrderWithoutFetchingLatest',
+            autoTrackExposure: !0
+        });
+        G.Xb.trackExposure({ location: 'getEmojiInPriorityOrderWithoutFetchingLatest' });
+        let t = e ? this.getFrequentlyUsedReactionEmojisWithoutFetchingLatest() : this.getFrequentlyUsedEmojisWithoutFetchingLatest(),
+            n = new Set();
+        return this.favoriteEmojisWithoutFetchingLatest.concat(t).filter((e) => !n.has(e) && (n.add(e), !0));
     }
     getTopEmojiWithoutFetchingLatest(e) {
         if ((this.ensureDisambiguated(), null == this.topEmojis)) {
@@ -394,7 +394,7 @@ function ep() {
                     location: 'populateInitialFrecencyData',
                     autoTrackExposure: !0
                 });
-            if (o().isEmpty(e) && o().isEmpty(q.pendingUsages) && R.Z.hasLoaded(j.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) ec.track(e);
+            if ((G.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), o().isEmpty(e) && o().isEmpty(q.pendingUsages) && R.Z.hasLoaded(j.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) ec.track(e);
             if ((n || r) && o().isEmpty(t) && o().isEmpty(q.emojiReactionPendingUsages) && R.Z.hasLoaded(j.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) ed.track(e);
         })(u, c);
 }
@@ -483,7 +483,7 @@ class eS extends (i = d.ZP.PersistedStore) {
                 location: 'getSearchResultsOrder',
                 autoTrackExposure: !0
             });
-        if (e.length > 0) {
+        if ((G.Xb.trackExposure({ location: 'getSearchResultsOrder' }), e.length > 0)) {
             let t = RegExp('^'.concat(a), 'i'),
                 n = new RegExp('(^|_|[A-Z])'.concat(a, 's?([A-Z]|_|$)')),
                 u = n.test.bind(n),

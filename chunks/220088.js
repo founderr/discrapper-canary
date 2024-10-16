@@ -120,7 +120,7 @@ function b(e) {
         },
         eg = () =>
             q
-                ? (0, r.jsx)(d.I, {
+                ? (0, r.jsx)(d.Iv, {
                       className: z ? C.statusEmojiInline : C.statusEmojiOnly,
                       emoji: j,
                       animate: M,

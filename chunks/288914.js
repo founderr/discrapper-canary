@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(703656),
     Z = n(785717),
     L = n(221292),
-    O = n(481046),
-    R = n(687158),
+    R = n(481046),
+    O = n(687158),
     x = n(899007),
     b = n(648052),
     M = n(867176),
@@ -170,7 +170,7 @@ function ec(e) {
     var t;
     let { currentUser: W, onClose: X, setPopoutRef: ec } = e,
         ed = __OVERLAY__,
-        eu = (0, R.ZP)(W.id),
+        eu = (0, O.ZP)(W.id),
         e_ = (0, u.O)(),
         { analyticsLocations: eE } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         eh = (0, Z.ZB)({
@@ -302,7 +302,7 @@ function ec(e) {
         })(ep),
         eN = (0, J.g)(X),
         eA = (0, N.Z)({ analyticsLocations: eE }),
-        { customStatusBubbleEditEnabled: ev } = (0, O.K)({ location: 'AccountProfilePopout' }),
+        { customStatusBubbleEditEnabled: ev } = (0, R.K)({ location: 'AccountProfilePopout' }),
         eZ = (0, q.I5)(W),
         eL = (e) => {
             null == X || X(),
@@ -312,7 +312,7 @@ function ec(e) {
                     ...e
                 });
         },
-        eO = () => {
+        eR = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -323,7 +323,7 @@ function ec(e) {
                     });
             });
         },
-        eR = () => {
+        eO = () => {
             (0, v.uL)(et.Z5c.APPLICATION_STORE), X();
         };
     return (0, i.jsx)(m.Gt, {
@@ -453,7 +453,7 @@ function ec(e) {
                                                               action: en.yM.VIEW_PREMIUM_PERKS,
                                                               label: ei.Z.Messages.USER_PROFILE_ENTRY_POINTS_VIEW_PREMIUM_PERKS,
                                                               icon: c.NitroWheelIcon,
-                                                              onClick: eR
+                                                              onClick: eO
                                                           })
                                                         : (0, i.jsx)($.Mv, {
                                                               id: 'get-premium',
@@ -467,7 +467,7 @@ function ec(e) {
                                                                       size: 'xs',
                                                                       color: p.JX.PREMIUM_TIER_2
                                                                   }),
-                                                              onClick: eR
+                                                              onClick: eO
                                                           })
                                                 ]
                                             })
@@ -540,7 +540,7 @@ function ec(e) {
                                                                           label: ei.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
                                                                           icon: () => (0, i.jsx)('div', { className: ea.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              X(), eO();
+                                                                              X(), eR();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)($.Mv, {
@@ -549,7 +549,7 @@ function ec(e) {
                                                                           label: ei.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                                                                           icon: () =>
                                                                               null != ef.emoji
-                                                                                  ? (0, i.jsx)(d.I, {
+                                                                                  ? (0, i.jsx)(d.Iv, {
                                                                                         emoji: ef.emoji,
                                                                                         animate: !0,
                                                                                         hideTooltip: !0
@@ -572,7 +572,7 @@ function ec(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              X(), eO();
+                                                                              X(), eR();
                                                                           }
                                                                       })
                                                             ]

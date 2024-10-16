@@ -33,11 +33,11 @@ function Z() {
         s = (0, m.V)(),
         Z = (0, d.N)(),
         L = (0, u.Z)('message-requests-spam-list'),
-        { channelId: O } = (0, p._)(),
-        R = a.useCallback(() => {
+        { channelId: R } = (0, p._)(),
+        O = a.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
         }, []),
-        { rejectAll: x } = (0, I.m)({ onError: R }),
+        { rejectAll: x } = (0, I.m)({ onError: O }),
         b = a.useCallback(() => {
             x(t.map((e) => e.channel.id));
         }, [t, x]);
@@ -56,8 +56,8 @@ function Z() {
                     {
                         index: l,
                         className: r()({
-                            [v.selected]: null != O && O === d,
-                            [v.siblingSelected]: null != O && O === c
+                            [v.selected]: null != R && R === d,
+                            [v.siblingSelected]: null != R && R === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -66,7 +66,7 @@ function Z() {
                     d
                 );
             },
-            [t, s, O]
+            [t, s, R]
         ),
         P = a.useCallback(
             () =>

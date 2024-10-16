@@ -37,7 +37,7 @@ t.Z = function (e) {
             guildIconSize: l.x.SMALL,
             compact: !0
         }),
-        O = S && null != C;
+        R = S && null != C;
     return (0, i.jsx)('div', {
         className: h.container,
         children: (0, i.jsxs)(d.Z, {
@@ -90,11 +90,11 @@ t.Z = function (e) {
                                 })
                             })
                         }),
-                        O || N
+                        R || N
                             ? (0, i.jsxs)('div', {
                                   className: h.infoContainer,
                                   children: [
-                                      O
+                                      R
                                           ? (0, i.jsx)(s.Text, {
                                                 className: h.appCategory,
                                                 variant: 'text-xs/medium',
@@ -102,7 +102,7 @@ t.Z = function (e) {
                                                 children: C.name
                                             })
                                           : null,
-                                      O && N
+                                      R && N
                                           ? (0, i.jsx)(s.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
@@ -123,7 +123,7 @@ t.Z = function (e) {
                             className: h.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            lineClamp: O || N ? 2 : 3,
+                            lineClamp: R || N ? 2 : 3,
                             children: null !== (p = null === (m = g.directory_entry) || void 0 === m ? void 0 : m.short_description) && void 0 !== p ? p : g.description
                         }),
                         Z

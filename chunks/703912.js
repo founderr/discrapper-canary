@@ -33,7 +33,7 @@ async function A(e, t, n) {
         c,
         d,
         f,
-        { client_id: N, response_type: A = 'code', redirect_uri: v, code_challenge: Z, code_challenge_method: L, state: O, nonce: R, scope: x, permissions: b, guild_id: M, channel_id: P, prompt: D, disable_guild_select: y, integration_type: j, pid: U, signal: G } = e;
+        { client_id: N, response_type: A = 'code', redirect_uri: v, code_challenge: Z, code_challenge_method: L, state: R, nonce: O, scope: x, permissions: b, guild_id: M, channel_id: P, prompt: D, disable_guild_select: y, integration_type: j, pid: U, signal: G } = e;
     if (null == G ? void 0 : G.aborted) throw new S.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != v) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -57,7 +57,7 @@ async function A(e, t, n) {
             redirectUri: v,
             codeChallenge: Z,
             codeChallengeMethod: L,
-            state: O,
+            state: R,
             integrationType: o,
             signal: G
         });
@@ -82,8 +82,8 @@ async function A(e, t, n) {
                     redirectUri: v,
                     codeChallenge: Z,
                     codeChallengeMethod: L,
-                    state: O,
-                    nonce: R,
+                    state: R,
+                    nonce: O,
                     integrationType: o
                 })
             ).location;
@@ -107,7 +107,7 @@ async function A(e, t, n) {
             redirectUri: v,
             codeChallenge: Z,
             codeChallengeMethod: L,
-            state: O,
+            state: R,
             guildId: M,
             channelId: P,
             prompt: D,

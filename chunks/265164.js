@@ -1,4 +1,4 @@
-n(653041), n(47120), n(724458);
+n(47120), n(724458), n(653041);
 var i,
     a = n(876215),
     s = n(442837),
@@ -24,8 +24,8 @@ var i,
     v = n(761080),
     Z = n(584925),
     L = n(207205),
-    O = n(981631),
-    R = n(206583);
+    R = n(981631),
+    O = n(206583);
 function x(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ let b = 1 * N.Z.Millis.DAY,
     en = [],
     ei = 0;
 function ea(e) {
-    return Date.now() - y > 2 * N.Z.Millis.HOUR && e.length + U.length + G.length >= v.Lb;
+    return Date.now() - y > 6 * N.Z.Millis.HOUR && [...e, ...G, ...U].slice(0, 3).reduce((e, t) => e + t.score, 0) >= v.jp;
 }
 function es(e, t, n, i) {
     let a = e.filter((e) => e.type !== n);
@@ -95,13 +95,13 @@ function er() {
                                 (V[i.id] = {
                                     id: i.id,
                                     type: v.Rr.GUILD_EVENT,
-                                    score: 50,
+                                    score: 10,
                                     event_id: i.id
                                 }),
                             t.push({
                                 id: i.id,
                                 type: v.Rr.GUILD_EVENT,
-                                score: 50,
+                                score: 10,
                                 data: {
                                     guild_id: i.guild_id,
                                     event_id: i.id,
@@ -135,7 +135,7 @@ function er() {
                 i = {},
                 s = [],
                 r = [],
-                d = null !== (t = null === (e = l.Z.getFeed(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
+                d = null !== (t = null === (e = l.Z.getFeed(O.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
             d.sort((e, t) => e.rank - t.rank),
                 d.forEach((e) => {
                     if (n.has(e.content.id) || (e.content.content_type !== a.s.PLAYED_GAME && e.content.content_type !== a.s.CUSTOM_STATUS && e.content.content_type !== a.s.TOP_GAME) || (0, c.n2)(e.content)) return;
@@ -147,13 +147,13 @@ function er() {
                         (V[e.content.id] = {
                             id: e.content.id,
                             type: v.Rr.ACTIVITY,
-                            score: 50,
+                            score: 15,
                             activity: e.content
                         });
                     let t = {
                         id: e.content.id,
                         type: v.Rr.ACTIVITY,
-                        score: 50,
+                        score: 15,
                         data: {
                             user_id: e.content.author_id,
                             content_id: e.content.id
@@ -193,7 +193,7 @@ function eo(e) {
     }
     if ((er(), null != k.load_id && D !== k.load_id)) {
         var t;
-        C.default.track(O.rMx.FEED_LOADED, {
+        C.default.track(R.rMx.FEED_LOADED, {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
@@ -520,7 +520,7 @@ x(ep, 'displayName', 'GravityStore'),
         MESSAGE_ACK: eI,
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t } = e;
-            if (t !== R.YN.GLOBAL_FEED) return !1;
+            if (t !== O.YN.GLOBAL_FEED) return !1;
             if (!q) {
                 let [e, t] = ec(P);
                 ($ = e), (ee = t), er(), (K = ea(e));

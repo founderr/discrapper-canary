@@ -19,17 +19,17 @@ var i = n(735250),
     E = n(358221),
     N = n(963202),
     S = n(706590),
-    x = n(940777),
-    v = n(41776),
-    Z = n(905423),
-    T = n(802718),
+    v = n(940777),
+    x = n(41776),
+    T = n(905423),
+    Z = n(802718),
     b = n(796974),
     A = n(271383),
-    R = n(430824),
-    M = n(771845),
+    M = n(430824),
+    R = n(771845),
     L = n(358085),
-    P = n(709054),
-    y = n(727258),
+    y = n(709054),
+    P = n(727258),
     O = n(605951),
     j = n(474109),
     D = n(741616),
@@ -166,16 +166,16 @@ class el {
 }
 function er(e) {
     let { disableAppDownload: t = L.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
-        [o] = (0, h.Wu)([M.ZP], () => {
-            let e = M.ZP.getGuildsTree();
+        [o] = (0, h.Wu)([R.ZP], () => {
+            let e = R.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        d = (0, h.e7)([v.Z], () => v.Z.lurkingGuildIds()),
+        d = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        m = (0, h.Wu)([R.Z, A.ZP], () => P.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        m = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         g = p.concat(m),
         $ = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
-        ee = (0, h.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()),
+        ee = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
         ei = l.useCallback(() => en(!0), []),
         er = l.useCallback(() => en(!1), []),
@@ -225,23 +225,23 @@ function er(e) {
     }, []),
         l.useEffect(() => {
             if ((eC.setGuildsTree(o), ea.current || 0 === o.size)) return;
-            let e = Z.Z.getState().guildId;
+            let e = T.Z.getState().guildId;
             eC.scrollToGuild(e, !1);
             let t = null;
-            return Z.Z.subscribe((e) => {
+            return T.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), eC.scrollToGuild(t, !1));
             });
         }, [o, eC]);
-    let ex = l.useCallback(() => {
+    let ev = l.useCallback(() => {
         eC.scrollTo({
             to: 0,
             animate: !1
         });
     }, [eC]);
-    function ev(e) {
+    function ex(e) {
         switch (e.type) {
-            case y.eD.FOLDER:
+            case P.eD.FOLDER:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -251,11 +251,11 @@ function er(e) {
                         sorting: et,
                         onDragStart: ei,
                         onDragEnd: er,
-                        renderChildNode: ev
+                        renderChildNode: ex
                     },
                     e.id
                 );
-            case y.eD.GUILD:
+            case P.eD.GUILD:
                 return (0, i.jsx)(
                     Y.Z,
                     {
@@ -273,9 +273,9 @@ function er(e) {
         }
     }
     (0, O.Z)(eC.scrollToGuild);
-    let eZ = o.getRoots(),
-        eT = (0, S.Z)(),
-        eb = (0, T.U)(),
+    let eT = o.getRoots(),
+        eZ = (0, S.Z)(),
+        eb = (0, Z.U)(),
         eA = l.useCallback(
             (e) => {
                 let { onClick: t } = e;
@@ -288,7 +288,7 @@ function er(e) {
             },
             [eN, eC.guildDiscoveryRef]
         ),
-        eR = ee.map((e) =>
+        eM = ee.map((e) =>
             (0, i.jsx)(
                 G.Z,
                 {
@@ -330,23 +330,23 @@ function er(e) {
                                 onScroll: eC.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eT ? (0, i.jsx)(x.Z, {}) : null,
+                                    eZ ? (0, i.jsx)(v.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eS }),
                                     (0, i.jsx)(D.Z, {}),
                                     eb,
                                     g.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
-                                    (0, i.jsx)(K.Z, { onActivate: ex }),
+                                    (0, i.jsx)(K.Z, { onActivate: ev }),
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': X.Z.Messages.SERVERS,
-                                        children: eZ.map(ev)
+                                        children: eT.map(ex)
                                     }),
-                                    eR,
+                                    eM,
                                     n
                                         ? null
                                         : (0, i.jsx)(U.Z, {
                                               disableTooltip: p.length > 0,
-                                              lastTargetNode: eZ[eZ.length - 1]
+                                              lastTargetNode: eT[eT.length - 1]
                                           }),
                                     (0, i.jsx)(W.Z, {}),
                                     t

@@ -29,7 +29,7 @@ t.Z = function () {
         a.useEffect(() => {
             r.g5();
         }, []);
-    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: O, onSearchSubmit: R, isSearchVisible: x } = (0, _.M)(),
+    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, isSearchVisible: x } = (0, _.M)(),
         {
             searchBarState: b,
             onTabsAvailableWidthChange: M,
@@ -43,9 +43,9 @@ t.Z = function () {
         G = null != U,
         w = a.useCallback(
             (e) => {
-                A(e), x && O();
+                A(e), x && R();
             },
-            [x, O, A]
+            [x, R, A]
         );
     return (0, i.jsxs)('div', {
         className: f.container,
@@ -57,7 +57,7 @@ t.Z = function () {
                     (0, i.jsx)(c.aV, {
                         icon: x || G ? s.ArrowLargeLeftIcon : s.AppsIcon,
                         iconColor: x ? s.tokens.colors.INTERACTIVE_NORMAL : void 0,
-                        onClick: G ? j : x ? O : void 0
+                        onClick: G ? j : x ? R : void 0
                     }),
                     G || x
                         ? (0, i.jsx)(s.Heading, {
@@ -77,8 +77,8 @@ t.Z = function () {
                             query: v,
                             placeholder: S.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
                             onTextChange: L,
-                            onClear: O,
-                            onSubmit: R,
+                            onClear: R,
+                            onSubmit: O,
                             onCollapsedClick: P,
                             state: b,
                             onBlur: D

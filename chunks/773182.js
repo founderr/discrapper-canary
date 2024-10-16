@@ -31,17 +31,17 @@ var i = n(735250),
     E = n(353647),
     N = n(243778),
     S = n(669764),
-    x = n(859921),
-    v = n(863249),
-    Z = n(937111),
-    T = n(667105),
+    v = n(859921),
+    x = n(863249),
+    T = n(937111),
+    Z = n(667105),
     b = n(369566),
     A = n(314897),
-    R = n(480294),
-    M = n(564334),
+    M = n(480294),
+    R = n(564334),
     L = n(302221),
-    P = n(956664),
-    y = n(602147),
+    y = n(956664),
+    P = n(602147),
     O = n(981631),
     j = n(308083),
     D = n(921944),
@@ -108,20 +108,20 @@ function H(e) {
         ]
     });
 }
-let V = M.Z.parseString('#E93446'),
+let V = R.Z.parseString('#E93446'),
     F = l.memo(function (e) {
         let { children: t } = e,
             n = (0, s.TH)(),
             {
                 games: r,
                 treatment: f,
-                hasFetchedGames: v
+                hasFetchedGames: x
             } = (function () {
                 let e = (0, c.e7)([A.default], () => A.default.getId()),
                     t = (0, _.ZP)(),
                     { recent: n, outbox: i } = (0, b.Z)(e),
                     r = (0, c.e7)([E.Z], () => E.Z.hasInitialized),
-                    a = (0, c.e7)([R.Z], () => R.Z.hasConsented(O.pjP.PERSONALIZATION)),
+                    a = (0, c.e7)([M.Z], () => M.Z.hasConsented(O.pjP.PERSONALIZATION)),
                     s = null == i && r,
                     o = l.useMemo(() => (a ? n.reduce((e, t) => (e.length >= 5 || 'played_game_extra' !== t.extra.type || null == j.gQ.get(t.extra.application_id) ? e : e.concat(t.extra.application_id)), []) : []), [n, a]),
                     u = o.length > 0 ? o : j.Id;
@@ -163,21 +163,21 @@ let V = M.Z.parseString('#E93446'),
                                 let [n, i] = e;
                                 return null == i
                                     ? Promise.resolve({
-                                          color: new M.Z(0, 255, 0, 1),
+                                          color: new R.Z(0, 255, 0, 1),
                                           gameId: n
                                       })
-                                    : (0, P.OF)(i)
+                                    : (0, y.OF)(i)
                                           .then((e) => {
                                               let [i, l, r] = e[0],
-                                                  a = new M.Z(i, l, r, 1),
-                                                  s = 'light' === t ? new M.Z(255, 255, 255, 1) : new M.Z(0, 0, 0, 1),
+                                                  a = new R.Z(i, l, r, 1),
+                                                  s = 'light' === t ? new R.Z(255, 255, 255, 1) : new R.Z(0, 0, 0, 1),
                                                   o = (0, L.k8)({
                                                       colors: [a, s],
                                                       ratio: 5,
                                                       saturationFactor: 1
                                                   });
                                               return Promise.resolve({
-                                                  color: null != o ? o : new M.Z(0, 0, 255, 1),
+                                                  color: null != o ? o : new R.Z(0, 0, 255, 1),
                                                   gameId: n
                                               });
                                           })
@@ -219,9 +219,9 @@ let V = M.Z.parseString('#E93446'),
                     }
                 );
             })(),
-            [Z, F] = (0, N.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], D.R.SIDEBAR, !0),
-            W = (0, T.Ws)({ location: G.dr.CONFLICT_CHECKS }),
-            z = Z !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
+            [T, F] = (0, N.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], D.R.SIDEBAR, !0),
+            W = (0, Z.Ws)({ location: G.dr.CONFLICT_CHECKS }),
+            z = T !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
             Y = (0, p.Z)(),
             K = n.pathname === O.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(O.Z5c.GLOBAL_DISCOVERY),
             q = W && !Y && !z && !K,
@@ -249,8 +249,8 @@ let V = M.Z.parseString('#E93446'),
                         treatment: f,
                         gameApplicationIds: $
                     }),
-                    (0, x.jY)({ selectedTab: U.vf.GUILDS }),
-                    (0, y.o)(w.F$.SERVERS);
+                    (0, v.jY)({ selectedTab: U.vf.GUILDS }),
+                    (0, P.o)(w.F$.SERVERS);
             }, [F, f, $, W]),
             et = l.useCallback(
                 (e) => {
@@ -267,7 +267,7 @@ let V = M.Z.parseString('#E93446'),
             }),
             ei = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
             el = l.useMemo(() => t({ onClick: ee }), [t, ee]);
-        return f !== j.O7.GAME_SPECIFIC || v
+        return f !== j.O7.GAME_SPECIFIC || x
             ? (0, i.jsxs)('div', {
                   className: B.container,
                   children: [
@@ -341,9 +341,9 @@ let V = M.Z.parseString('#E93446'),
     });
 function W(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, c.e7)([Z.Z], () => Z.Z.hasJoinRequestCoackmark()),
+        r = (0, c.e7)([T.Z], () => T.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            v.ZP.clearCoachmark();
+            x.ZP.clearCoachmark();
         }, []),
         s = (0, f.Z)(r),
         o = l.useRef(null);

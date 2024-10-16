@@ -48,8 +48,8 @@ t.Z = function (e) {
         }),
         v = null !== (t = (0, o.Z)(A)) && void 0 !== t ? t : p,
         { results: Z, totalPages: L } = a.useMemo(() => (N === d.M.FETCHING ? v : A), [N, v, A]),
-        O = a.useMemo(() => (null == Z ? void 0 : Z.filter((e) => !(e.type !== s.s.APPLICATION))), [Z]),
-        R = a.useCallback((e) => {
+        R = a.useMemo(() => (null == Z ? void 0 : Z.filter((e) => !(e.type !== s.s.APPLICATION))), [Z]),
+        O = a.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: a, fetchCounts: s } = e;
             s &&
                 c.yC({
@@ -67,12 +67,12 @@ t.Z = function (e) {
                 });
         }, []);
     return (a.useEffect(() => {
-        R({
+        O({
             page: T,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, R, T]),
+    }, [n, O, T]),
     N === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: I.errorContainer,
@@ -84,9 +84,9 @@ t.Z = function (e) {
                   (0, i.jsx)('div', {
                       className: I.content,
                       children:
-                          null == O
+                          null == R
                               ? void 0
-                              : O.map((e) => {
+                              : R.map((e) => {
                                     if (e.type === s.s.APPLICATION) {
                                         let t = e.data;
                                         return (0, i.jsx)(

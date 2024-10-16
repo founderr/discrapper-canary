@@ -17,8 +17,8 @@ t.Z = l.memo(function (e) {
         { id: g, name: C, color: I, children: E } = t,
         N = E.map((e) => e.id),
         S = (0, o.Z)((e) => e.guildId),
-        x = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)),
-        v = (function (e) {
+        v = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)),
+        x = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -31,15 +31,15 @@ t.Z = l.memo(function (e) {
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        Z = (0, f.Z)(t),
-        { mentionCount: T, unread: b } = (0, r.cj)([u.default], () => ({
+        T = (0, f.Z)(t),
+        { mentionCount: Z, unread: b } = (0, r.cj)([u.default], () => ({
             mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: N.some((e) => u.default.hasUnread(e))
         })),
         A = l.useCallback(() => {
             s.Z.toggleGuildFolderExpand(g);
         }, [g]),
-        R = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -49,22 +49,22 @@ t.Z = l.memo(function (e) {
                             folderId: g,
                             folderName: C,
                             folderColor: I,
-                            unread: b || T > 0
+                            unread: b || Z > 0
                         });
                 });
             },
-            [g, C, I, b, T]
+            [g, C, I, b, Z]
         );
     return (0, i.jsx)(p.Z, {
         ...m,
         folderNode: t,
-        expanded: x,
+        expanded: v,
         selected: null != S && N.includes(S),
-        mentionCount: T,
+        mentionCount: Z,
         unread: b,
-        mediaState: Z,
-        defaultFolderName: v,
+        mediaState: T,
+        defaultFolderName: x,
         onExpandCollapse: A,
-        onContextMenu: R
+        onContextMenu: M
     });
 });

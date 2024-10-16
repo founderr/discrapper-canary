@@ -8,7 +8,7 @@ t.Z = (e) => {
     let { className: n, hangStatusActivity: o, animate: l = !0 } = e;
     if ((null == o ? void 0 : o.state) === s.tNA.CUSTOM)
         return null != o.emoji
-            ? (0, r.jsx)(i.I, {
+            ? (0, r.jsx)(i.Iv, {
                   emoji: o.emoji,
                   className: n,
                   hideTooltip: !0,

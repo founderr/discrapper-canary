@@ -27,34 +27,34 @@ function E(e) {
         [n, E] = l.useState(!1),
         N = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         S = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        x = (0, f.Z)(),
-        v = (0, s.Z)(N),
-        Z = l.useMemo(() => {
+        v = (0, f.Z)(),
+        x = (0, s.Z)(N),
+        T = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
                 expanded: n,
                 guildIds: []
             });
-            for (let t of x) e.children.push((0, p.Mg)(t, e.id));
+            for (let t of v) e.children.push((0, p.Mg)(t, e.id));
             return e;
-        }, [x, n]);
+        }, [v, n]);
     l.useEffect(() => {
         n && !S && o.Z.fetchRequestToJoinGuilds();
     }, [n, S]);
-    let T = null != N && x.includes(N);
+    let Z = null != N && v.includes(N);
     return (l.useEffect(() => {
-        !n && T && v !== N && E(!0);
-    }, [n, T, v, N]),
-    0 === x.length)
+        !n && Z && x !== N && E(!0);
+    }, [n, Z, x, N]),
+    0 === v.length)
         ? null
         : (0, i.jsx)(m.TH, {
               onActivate: t,
               children: (0, i.jsx)(_.Z, {
-                  folderNode: Z,
+                  folderNode: T,
                   expanded: n,
-                  useCircleMask: !n && !T,
-                  selected: T,
+                  useCircleMask: !n && !Z,
+                  selected: Z,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {

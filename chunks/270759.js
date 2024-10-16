@@ -24,10 +24,10 @@ var i = n(735250),
     v = n(981631),
     Z = n(723359),
     L = n(689938),
-    O = n(692392);
-function R() {
+    R = n(692392);
+function O() {
     return (0, i.jsxs)('div', {
-        className: O.inviteToolbar,
+        className: R.inviteToolbar,
         children: [(0, i.jsx)(g.Z, { tooltip: L.Z.Messages.NEW_GROUP_DM }), (0, i.jsx)(p.Z.Divider, {})]
     });
 }
@@ -59,7 +59,7 @@ t.Z = function (e) {
         D = (0, m.Dt)(),
         y = (0, m.Dt)();
     return (0, i.jsxs)('main', {
-        className: O.container,
+        className: R.container,
         'aria-label': L.Z.Messages.FRIENDS,
         children: [
             (0, i.jsx)(h.yY, { location: L.Z.Messages.FRIENDS }),
@@ -68,7 +68,7 @@ t.Z = function (e) {
                 children: (e) =>
                     (0, i.jsxs)(p.Z, {
                         className: e,
-                        toolbar: (0, i.jsx)(R, {}),
+                        toolbar: (0, i.jsx)(O, {}),
                         scrollable: o.tq,
                         role: 'navigation',
                         'aria-labelledby': D,
@@ -87,28 +87,28 @@ t.Z = function (e) {
                                 selectedItem: x,
                                 type: 'top-pill',
                                 onItemSelect: P,
-                                className: O.tabBar,
+                                className: R.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: v.pJs.ONLINE,
-                                        className: O.item,
+                                        className: R.item,
                                         children: L.Z.Messages.FRIENDS_SECTION_ONLINE
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: v.pJs.ALL,
-                                        className: O.item,
+                                        className: R.item,
                                         children: L.Z.Messages.FRIENDS_SECTION_ALL
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
                                         id: v.pJs.PENDING,
-                                        className: O.item,
+                                        className: R.item,
                                         'aria-label': L.Z.Messages.FRIENDS_SECTION_PENDING,
                                         children: [
                                             L.Z.Messages.FRIENDS_SECTION_PENDING,
                                             b > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
                                                       count: b,
-                                                      className: O.badge
+                                                      className: R.badge
                                                   })
                                                 : null
                                         ]
@@ -116,25 +116,25 @@ t.Z = function (e) {
                                     M > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
                                               id: v.pJs.SUGGESTIONS,
-                                              className: O.item,
+                                              className: R.item,
                                               'aria-label': L.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
                                               children: [
                                                   L.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
                                                   (0, i.jsx)(d.NumberBadge, {
                                                       count: M,
-                                                      className: O.badge
+                                                      className: R.badge
                                                   })
                                               ]
                                           })
                                         : null,
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: v.pJs.BLOCKED,
-                                        className: O.item,
+                                        className: R.item,
                                         children: L.Z.Messages.BLOCKED
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         'aria-label': L.Z.Messages.FRIENDS_SECTION_ADD_FRIEND,
-                                        className: r()(O.item, O.addFriend),
+                                        className: r()(R.item, R.addFriend),
                                         id: v.pJs.ADD_FRIEND,
                                         children: (0, i.jsx)('span', { children: L.Z.Messages.FRIENDS_SECTION_ADD_FRIEND })
                                     })
@@ -144,11 +144,11 @@ t.Z = function (e) {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: O.tabBody,
+                className: R.tabBody,
                 children: [
                     (0, i.jsx)(d.TabBar.Panel, {
                         id: x,
-                        className: O.peopleColumn,
+                        className: R.peopleColumn,
                         'aria-labelledby': y,
                         children:
                             x === v.pJs.ADD_FRIEND
@@ -159,7 +159,7 @@ t.Z = function (e) {
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: O.nowPlayingColumn,
+                        className: R.nowPlayingColumn,
                         children: (0, i.jsx)(T.Z, {})
                     })
                 ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return v;
     }
 }),
     n(47120);
@@ -133,7 +133,7 @@ function S(e) {
         })
     );
 }
-function x(e) {
+function v(e) {
     return (0, p.J)({
         channelId: e.channelId,
         location: 'RTCConnectionPopout'

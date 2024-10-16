@@ -18,8 +18,8 @@ function M(e, n) {
     let t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         M = (0, o.$R)(n),
         g = (0, a.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]),
-        m = g || (null != t && e.canDeleteOwnMessage(t.id));
-    return e.state === c.yb.SENDING || !m || c.V$x.UNDELETABLE.has(e.type) || !M
+        f = g || (null != t && e.canDeleteOwnMessage(t.id));
+    return e.state === c.yb.SENDING || !f || c.V$x.UNDELETABLE.has(e.type) || !M
         ? null
         : (0, i.jsx)(s.MenuItem, {
               id: 'delete',

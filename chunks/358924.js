@@ -24,8 +24,8 @@ var i,
     v = n(194082),
     Z = n(264165),
     L = n(630186),
-    O = n(925329),
-    R = n(382182),
+    R = n(925329),
+    O = n(382182),
     x = n(871118),
     b = n(707409),
     M = n(849171),
@@ -446,7 +446,7 @@ let ee = (e) => {
         var t, n;
         let { activity: i, user: a, applicationStream: r, onPreviewClick: l, guildId: o } = e,
             d = (0, c.e7)([D.Z], () => D.Z.getChannel(r.channelId)),
-            [_, E] = (0, R.wq)(d),
+            [_, E] = (0, O.wq)(d),
             h = (0, s.jsxs)(u.Clickable, {
                 onClick: _ ? l : void 0,
                 className: F.applicationStreamingPreviewWrapper,
@@ -459,7 +459,7 @@ let ee = (e) => {
                         className: F.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: (0, R.P9)(E)
+                        children: (0, O.P9)(E)
                     })
                 ]
             }),
@@ -513,9 +513,9 @@ let ee = (e) => {
                 (0, s.jsxs)('div', {
                     className: F.embeddedActivityTopRow,
                     children: [
-                        (0, s.jsx)(O.Z, {
+                        (0, s.jsx)(R.Z, {
                             game: p,
-                            size: O.Z.Sizes.XSMALL,
+                            size: R.Z.Sizes.XSMALL,
                             className: F.embeddedActivityIcon
                         }),
                         (0, s.jsx)('div', {

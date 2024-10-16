@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return y;
     }
 }),
     n(47120),
@@ -26,14 +26,14 @@ var i = n(735250),
     E = n(944486),
     N = n(979651),
     S = n(709054),
-    x = n(853856),
-    v = n(593214),
-    Z = n(919755),
-    T = n(110977),
+    v = n(853856),
+    x = n(593214),
+    T = n(919755),
+    Z = n(110977),
     b = n(603274),
     A = n(981631),
-    R = n(689938),
-    M = n(599576);
+    M = n(689938),
+    R = n(599576);
 let L = {
     analyticsSource: {
         page: A.ZY5.GUILD_CHANNEL,
@@ -41,18 +41,18 @@ let L = {
         object: A.qAy.CHANNEL
     }
 };
-function P() {
+function y() {
     let e = (0, s.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
-        [P, y] = l.useState(!1),
-        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([x.Z], () => ({
-            favoriteChannels: x.Z.getFavoriteChannels(),
-            favoriteServerMuted: x.Z.favoriteServerMuted
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, x.up)(),
+        [y, P] = l.useState(!1),
+        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([v.Z], () => ({
+            favoriteChannels: v.Z.getFavoriteChannels(),
+            favoriteServerMuted: v.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
         U = (0, g.Z)((e) => e.guildId) === A.I_8,
-        { badge: G, unread: k } = (0, Z.Z)(j),
+        { badge: G, unread: k } = (0, T.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -95,30 +95,30 @@ function P() {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: U,
-                hovered: P,
+                hovered: y,
                 unread: k && !O,
-                className: M.pill
+                className: R.pill
             }),
             (0, i.jsx)(b.Z, {
                 onShow: V,
-                children: (0, i.jsx)(T.S, {
+                children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || P,
+                        selected: U || y,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: R.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-                                guildName: R.Z.Messages.FAVORITES_GUILD_NAME,
+                            ariaLabel: M.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+                                guildName: M.Z.Messages.FAVORITES_GUILD_NAME,
                                 mentions: G
                             }),
                             to: {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
-                            selected: U || P,
-                            onMouseEnter: () => y(!0),
-                            onMouseLeave: () => y(!1),
+                            selected: U || y,
+                            onMouseEnter: () => P(!0),
+                            onMouseLeave: () => P(!1),
                             onMouseDown: function () {
                                 if (null != w) u.Z.preload(w.guild_id, w.id);
                             },
@@ -129,11 +129,11 @@ function P() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(M.ring, { [M.ringActive]: t }),
+                                className: a()(R.ring, { [R.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: M.favoriteIcon,
+                                    className: R.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

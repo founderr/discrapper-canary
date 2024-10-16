@@ -26,7 +26,7 @@ var i,
     E = n(981631),
     N = n(689938),
     S = n(213169);
-function x(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function x(e, t, n) {
         e
     );
 }
-let v = {
+let x = {
     [E.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
         [f.J6.SECONDS]: (e, t) =>
@@ -95,7 +95,7 @@ let v = {
             })
     }
 };
-class Z extends r.PureComponent {
+class T extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
@@ -115,13 +115,13 @@ class Z extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'renderProgressBody', (e, t) => {
+            v(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
                     { stage: l, progress: r, total: a, type: s } = n;
                 if (null == r || null == a || null == l) return null;
                 let o = (e[e.length - 1] / t) * 1000,
                     c = 0 !== o ? Math.max(1, (a - r) / o) : null,
-                    u = v[s],
+                    u = x[s],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -132,7 +132,7 @@ class Z extends r.PureComponent {
             });
     }
 }
-class T extends (i = r.PureComponent) {
+class Z extends (i = r.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -152,7 +152,7 @@ class T extends (i = r.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? N.Z.Messages.LIBRARY
-            : (0, l.jsx)(Z, {
+            : (0, l.jsx)(T, {
                   application: e,
                   state: t,
                   isPaused: n
@@ -186,14 +186,14 @@ class T extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', { animationScale: new o.Z.Value(0) }),
-            x(this, 'handleOnClick', (e) => {
+            v(this, 'state', { animationScale: new o.Z.Value(0) }),
+            v(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-x(T, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+v(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function b(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
@@ -216,7 +216,7 @@ t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     return t
         ? (0, l.jsx)(d.W, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(T, { ...n }) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(Z, { ...n }) : null
           })
-        : (0, l.jsx)(T, { ...n });
+        : (0, l.jsx)(Z, { ...n });
 });

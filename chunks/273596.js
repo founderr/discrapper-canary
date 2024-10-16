@@ -40,12 +40,12 @@ let Z = Object.freeze({
         left: 32,
         right: 32
     }),
-    O = {
+    R = {
         page: A.ZY5.GUILD_DISCOVERY,
         object: A.qAy.CARD,
         section: A.jXE.DISCOVER_SEARCH
     },
-    R = o().throttle(m.c6, 1000, {
+    O = o().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
@@ -86,7 +86,7 @@ function x(e) {
             j((0, u.P)());
         }, [A]),
         a.useEffect(() => {
-            R({
+            O({
                 loadId: t,
                 searchId: y,
                 query: A,
@@ -182,7 +182,7 @@ function x(e) {
                             style: n,
                             children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await J(e, t, b, O),
+                                onClick: async (e) => await J(e, t, b, R),
                                 onView: (e) => z(e)
                             })
                         },

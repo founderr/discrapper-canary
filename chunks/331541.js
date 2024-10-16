@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(687158),
     Z = n(899007),
     L = n(648052),
-    O = n(867176),
-    R = n(438163),
+    R = n(867176),
+    O = n(438163),
     x = n(483424),
     b = n(681837),
     M = n(502762),
@@ -341,7 +341,7 @@ function ea(e) {
                         (0, i.jsxs)('header', {
                             className: ee.header,
                             children: [
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: H,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE
@@ -352,7 +352,7 @@ function ea(e) {
                                     profileType: X.y0.BITE_SIZE,
                                     onOpenProfile: es ? void 0 : ef
                                 }),
-                                (0, i.jsx)(R.Z, {
+                                (0, i.jsx)(O.Z, {
                                     user: H,
                                     profileType: X.y0.BITE_SIZE,
                                     onCloseProfile: z
@@ -495,7 +495,7 @@ function ea(e) {
                                                                           label: J.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                                                                           icon: () =>
                                                                               null != eI.emoji
-                                                                                  ? (0, i.jsx)(d.I, {
+                                                                                  ? (0, i.jsx)(d.Iv, {
                                                                                         emoji: eI.emoji,
                                                                                         animate: !0,
                                                                                         hideTooltip: !0

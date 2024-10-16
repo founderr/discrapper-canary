@@ -29,8 +29,8 @@ var i,
     v = n(922482),
     Z = n(565799),
     L = n(501655),
-    O = n(427679),
-    R = n(448206),
+    R = n(427679),
+    O = n(448206),
     x = n(184301),
     b = n(347475),
     M = n(496675),
@@ -45,7 +45,7 @@ function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, S.y)(t.id),
         a = (0, f.k5)(t.id),
-        l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+        l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
             [g.Z],
             () => ({
@@ -58,7 +58,7 @@ function w(e) {
         V = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
         H = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, i)),
-        Y = (0, R.Z)(null == i ? void 0 : i.id),
+        Y = (0, O.Z)(null == i ? void 0 : i.id),
         z = null == a ? void 0 : a.creator_id,
         W = (0, c.e7)([P.default], () => P.default.getUser(z), [z]);
     r.useEffect(() => {

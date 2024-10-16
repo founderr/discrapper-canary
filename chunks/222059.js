@@ -24,17 +24,17 @@ var i = n(735250),
     E = n(941128),
     N = n(780570),
     S = n(557177),
-    x = n(278464),
-    v = n(276952),
-    Z = n(682662),
-    T = n(662146),
+    v = n(278464),
+    x = n(276952),
+    T = n(682662),
+    Z = n(662146),
     b = n(674552),
     A = n(981631),
-    R = n(474936),
-    M = n(871465),
+    M = n(474936),
+    R = n(871465),
     L = n(689938),
-    P = n(342824);
-let y = {
+    y = n(342824);
+let P = {
     origin: {
         x: -16,
         y: 0
@@ -51,11 +51,11 @@ function O(e) {
         m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
-        [N, x] = l.useState(null),
-        [R, O] = l.useState(0),
+        [N, v] = l.useState(null),
+        [M, O] = l.useState(0),
         j = (0, r.Ie)('home'),
         D = () => {
-            x(null), O(0), clearTimeout(N);
+            v(null), O(0), clearTimeout(N);
         };
     if (null == n) return null;
     let w = L.Z.Messages.DIRECT_MESSAGES;
@@ -64,7 +64,7 @@ function O(e) {
     !t &&
         _ &&
         (U = (0, i.jsx)(c.Z, {
-            className: P.downloadProgress,
+            className: y.downloadProgress,
             determineOwnVisibility: !1
         }));
     let G = t || g || m,
@@ -77,11 +77,11 @@ function O(e) {
                 onMouseEnter: () => C(!0),
                 onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != N && clearTimeout(N), x(setTimeout(D, 500)), O(R + 1), 15 === R)) {
+                    if (!__OVERLAY__ && (null != N && clearTimeout(N), v(setTimeout(D, 500)), O(M + 1), 15 === M)) {
                         D();
                         let e = !s.K.get(A.wli);
                         s.K.set(A.wli, e),
-                            e && s.K.set(M.O5, !0),
+                            e && s.K.set(R.O5, !0),
                             e ? (0, S.GN)('discodo') : (0, S.GN)('user_leave'),
                             E(!0),
                             setTimeout(() => {
@@ -106,19 +106,19 @@ function O(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: P.tutorialContainer,
+        className: y.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: y,
+            inlineSpecs: P,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(Z.H, {
+            children: (0, i.jsxs)(T.H, {
                 children: [
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(x.Z, {
                         selected: t,
                         hovered: g,
-                        className: P.pill
+                        className: y.pill
                     }),
-                    (0, i.jsx)(T.Z, {
+                    (0, i.jsx)(Z.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: w,
@@ -131,7 +131,7 @@ function O(e) {
     });
 }
 function j() {
-    let e = (0, x.n)(),
+    let e = (0, v.n)(),
         t = (0, a.e7)([E.Z, I.Z], () => {
             let e = (0, c.E)(E.Z.activeItems, I.Z),
                 { total: t, progress: n } = N.lK(e),
@@ -139,7 +139,7 @@ function j() {
             return i > 0 && i < 100;
         }),
         n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
-        l = Object.keys(R.nG),
+        l = Object.keys(M.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: s } = (0, a.cj)([g.Z], () => ({
             unviewedTrialCount: g.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: g.Z.getUnacknowledgedDiscountOffers().length
@@ -149,15 +149,15 @@ function j() {
         d = (0, h.q)(),
         p = n + o + d,
         S = p === o && o > 0 && n + d === 0,
-        v = C.Z.getHomeLink();
+        x = C.Z.getHomeLink();
     return (
-        S && (v = A.Z5c.APPLICATION_STORE),
+        S && (x = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(O, {
             selected: e,
             user: u,
             selectedChannelId: _.Z.getChannelId(A.ME),
             badge: p,
-            link: v,
+            link: x,
             showProgressBadge: t
         })
     );

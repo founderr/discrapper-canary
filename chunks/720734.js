@@ -30,8 +30,8 @@ var i = n(735250),
     v = n(1585),
     Z = n(304761),
     L = n(865427),
-    O = n(571250),
-    R = n(628581),
+    R = n(571250),
+    O = n(628581),
     x = n(55311),
     b = n(575175),
     M = n(64220),
@@ -96,8 +96,8 @@ function eZ(e, t, n) {
     );
 }
 let eL = eg.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
-    eO = 30 * eh.Z.Millis.DAY;
-function eR(e) {
+    eR = 30 * eh.Z.Millis.DAY;
+function eO(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, A.Z)(null == a ? void 0 : a.avatarDecoration),
         d = (0, e_.NZ)({
@@ -214,7 +214,7 @@ class ex extends a.PureComponent {
         );
     }
     renderAvatarWithPopout() {
-        return (0, i.jsx)(eR, {
+        return (0, i.jsx)(eO, {
             ...this.props,
             handleMouseLeave: this.handleMouseLeave,
             renderNameTag: () => this.renderNameTag()
@@ -259,7 +259,7 @@ class ex extends a.PureComponent {
                                   serverMute: s,
                                   suppress: l,
                                   awaitingRemote: a,
-                                  tooltipText: d ? eA.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, R.Z)(n, s, l, a),
+                                  tooltipText: d ? eA.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, O.Z)(n, s, l, a),
                                   tooltipColor: d ? E.TooltipColors.GREEN : void 0,
                                   tooltipForceOpen: d || void 0,
                                   onMouseEnter: this.handleMouseEnterMute,
@@ -496,11 +496,11 @@ function eb() {
         }),
         { mute: I, selfMute: p, suppress: f } = (0, et.Z)(m),
         { selfDeaf: A, deaf: v } = (0, ee.Z)(m),
-        O = (0, l.e7)([Z.C], () => {
+        R = (0, l.e7)([Z.C], () => {
             var e;
             return (0, L.fD)() ? (null === (e = Z.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        R = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
+        O = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
         x = (0, l.e7)([es.Z], () => es.Z.getEverSpeakingWhileMuted()),
         b = (0, l.e7)([ea.Z], () => ea.Z.hasLayers()),
         M = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || b || eI.s.isDisallowPopupsSet(),
@@ -528,7 +528,7 @@ function eb() {
                 { enabled: r } = H.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != s && (s.status === eC.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eO);
+                    return null != s && (s.status === eC.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eR);
                 }, [s]);
             return (
                 a.useEffect(() => {
@@ -560,7 +560,7 @@ function eb() {
                 userTag: u,
                 hidePrivateData: _,
                 occluded: M,
-                premiumSubscription: R,
+                premiumSubscription: O,
                 selfDeaf: A,
                 selfMute: p,
                 serverDeaf: v,
@@ -570,7 +570,7 @@ function eb() {
                 status: c,
                 streaming: r,
                 suppress: f,
-                webBuildOverride: O,
+                webBuildOverride: R,
                 awaitingRemote: D,
                 isEligibleForPomelo: P
             })
@@ -673,7 +673,7 @@ function eD(e) {
     return (0, i.jsx)(N.Gt, {
         value: p,
         children: (0, i.jsx)(eT.Z, {
-            tooltipText: (0, O.Z)(t, n, s),
+            tooltipText: (0, R.Z)(t, n, s),
             onMouseEnter: h,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {

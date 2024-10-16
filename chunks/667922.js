@@ -15,20 +15,20 @@ var i = t(735250),
     E = t(496675),
     M = t(768581),
     g = t(585483),
-    m = t(176354),
-    f = t(981631),
+    f = t(176354),
+    m = t(981631),
     I = t(185923),
     _ = t(689938);
 function Z(e, n) {
     let { reducedMotion: t } = a.useContext(l.AccessibilityPreferencesContext),
         M = (0, d.$R)(n),
-        Z = (0, s.e7)([E.Z], () => (n.isPrivate() || E.Z.can(f.Plq.ADD_REACTIONS, n)) && M, [n, M]),
+        Z = (0, s.e7)([E.Z], () => (n.isPrivate() || E.Z.can(m.Plq.ADD_REACTIONS, n)) && M, [n, M]),
         h = (0, r.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !Z || e.type === f.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !Z || e.type === m.uaV.GUILD_INVITE_REMINDER) return null;
     let A = h
         .filter(
             (e) =>
-                !m.ZP.isEmojiFilteredOrLocked({
+                !f.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: n,
                     intention: I.Hz.REACTION
@@ -61,7 +61,7 @@ function Z(e, n) {
         id: 'add-reaction',
         label: _.Z.Messages.ADD_REACTION,
         action: () => {
-            g.S.dispatchKeyed(f.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            g.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
@@ -74,7 +74,7 @@ function Z(e, n) {
                     label: _.Z.Messages.VIEW_MORE,
                     icon: l.ReactionIcon,
                     action: () => {
-                        g.S.dispatchKeyed(f.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        g.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
@@ -93,7 +93,7 @@ function S(e) {
                       animated: t.animated && (!a || l),
                       size: 18
                   })
-                : m.ZP.getURL(null !== (n = t.optionallyDiverseSequence) && void 0 !== n ? n : ''),
+                : f.ZP.getURL(null !== (n = t.optionallyDiverseSequence) && void 0 !== n ? n : ''),
         alt: ''
     });
 }

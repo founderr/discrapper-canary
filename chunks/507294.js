@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         openGuildRoleConnectionsConnectAccountModal: function () {
-            return R;
+            return O;
         }
     }),
     n(47120),
@@ -31,8 +31,8 @@ var i = n(735250),
     v = n(981631),
     Z = n(689938),
     L = n(140167),
-    O = n(621925);
-function R(e, t) {
+    R = n(621925);
+function O(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: a } = await Promise.all([n.e('82412'), n.e('18993')]).then(n.bind(n, 107807));
         return (n) =>
@@ -124,7 +124,7 @@ t.default = function (e) {
                                                     ? (0, i.jsx)('img', {
                                                           src: new p.Z(a.bot).getAvatarURL(t, 24),
                                                           alt: '',
-                                                          className: r()(L.botAvatar, O.avatar)
+                                                          className: r()(L.botAvatar, R.avatar)
                                                       })
                                                     : null;
                                         } else {
@@ -132,7 +132,7 @@ t.default = function (e) {
                                             l = (0, i.jsx)('img', {
                                                 src: (0, o.ap)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: '',
-                                                className: O.avatar
+                                                className: R.avatar
                                             });
                                         }
                                         if (null != l) a[''.concat(e.connection_type, ':').concat(e.application_id)] = l;
@@ -143,7 +143,7 @@ t.default = function (e) {
                                 c.Clickable,
                                 {
                                     className: r()(L.verifiedRole, s ? L.verifiedRoleHasRole : null),
-                                    onClick: s ? void 0 : () => R(e, t),
+                                    onClick: s ? void 0 : () => O(e, t),
                                     onContextMenu: s
                                         ? (a) => {
                                               var s, r, l;

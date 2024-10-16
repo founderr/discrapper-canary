@@ -108,21 +108,21 @@ let _ = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: x } = e,
-        v = l.useRef(null),
-        Z = l.useRef([]),
-        T = l.useRef(!1),
+    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: S = !0, children: v } = e,
+        x = l.useRef(null),
+        T = l.useRef([]),
+        Z = l.useRef(!1),
         b = l.useRef(null),
-        [A, R] = l.useState(0),
-        [M, L] = l.useState({
+        [A, M] = l.useState(0),
+        [R, L] = l.useState({
             x: 0,
             y: 0
         }),
-        P = Math.abs(M.x) + Math.abs(M.y) > 0,
-        y = l.useMemo(() => a().chunk(x, p), [x]),
+        y = Math.abs(R.x) + Math.abs(R.y) > 0,
+        P = l.useMemo(() => a().chunk(v, p), [v]),
         O = l.useCallback(
             (e, t) => {
-                null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
+                null == T.current[A] ? (T.current[A] = []) : (T.current[A][t] = e);
             },
             [A]
         ),
@@ -137,12 +137,12 @@ t.Z = l.memo(function (e) {
         }, [E]),
         w = l.useCallback(
             (e) => {
-                D(), (T.current = e);
+                D(), (Z.current = e);
             },
             [D]
         ),
         U = l.useCallback((e, t, n) => {
-            if (T.current) {
+            if (Z.current) {
                 L({
                     x: 0,
                     y: 0
@@ -171,8 +171,8 @@ t.Z = l.memo(function (e) {
         k = l.useMemo(
             () =>
                 (0, r.throttle)((e) => {
-                    if (null == v.current) return;
-                    let i = v.current.getBoundingClientRect(),
+                    if (null == x.current) return;
+                    let i = x.current.getBoundingClientRect(),
                         l = i.left + i.width / 2,
                         r = {
                             x: l,
@@ -182,13 +182,13 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((U(a, r, Math.max(t, n)), T.current)) {
+                    if ((U(a, r, Math.max(t, n)), Z.current)) {
                         null != I && D();
                         return;
                     }
                     let s = (0, o.ld)(r, a, Math.max(t, n));
-                    for (let e = 0; e < Z.current[A].length; e++) {
-                        let t = Z.current[A][e];
+                    for (let e = 0; e < T.current[A].length; e++) {
+                        let t = T.current[A][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
                         if ((0, o.Vr)(r, s, n)) {
@@ -204,15 +204,15 @@ t.Z = l.memo(function (e) {
             (e) => {
                 if (!S) return;
                 let t = A + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < y.length && (null != b.current && (y[t].length > b.current ? j(t, b.current) : D()), R(t));
+                t >= 0 && t < P.length && (null != b.current && (P[t].length > b.current ? j(t, b.current) : D()), M(t));
             },
-            [S, A, y, j, D]
+            [S, A, P, j, D]
         ),
         H = l.useMemo(
             () =>
-                y[A].map((e, l) => {
+                P[A].map((e, l) => {
                     let r = h[l];
-                    if (null == r) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(h.length));
+                    if (null == r) throw Error('Too many items supplied '.concat(v.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, m),
                         s = f(r.y, n, g);
                     return (0, i.jsx)(
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [y, A, t, m, n, g, x.length, O]
+            [P, A, t, m, n, g, v.length, O]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
@@ -239,7 +239,7 @@ t.Z = l.memo(function (e) {
         onWheel: B,
         onClick: G,
         children: (0, i.jsxs)('div', {
-            ref: v,
+            ref: x,
             className: u.chatWheel,
             style: {
                 width: t,
@@ -302,11 +302,11 @@ t.Z = l.memo(function (e) {
                                         cy: 144,
                                         r: 28.8
                                     }),
-                                P &&
+                                y &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelCenter,
-                                        cx: 144 + M.x,
-                                        cy: 144 + M.y,
+                                        cx: 144 + R.x,
+                                        cy: 144 + R.y,
                                         r: 28.8
                                     })
                             ]
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        S && y.length > 1
+                        S && P.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return Z;
     }
 }),
     n(47120);
@@ -99,7 +99,7 @@ function S(e) {
         children: s
     });
 }
-function x(e) {
+function v(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
@@ -128,7 +128,7 @@ function x(e) {
               children: o
           });
 }
-function v(e) {
+function x(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -138,7 +138,7 @@ function v(e) {
               children: n
           });
 }
-function Z(e) {
+function T(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -152,11 +152,11 @@ function Z(e) {
         singleLine: !0
     });
 }
-function T(e) {
+function Z(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
-    let T = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
+    let Z = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
         b = null != n || (0, c.Z)(t),
         A = l.useMemo(() => {
             let e = new Map();
@@ -191,17 +191,17 @@ function T(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(x, {
+                                  (0, i.jsx)(v, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, i.jsx)(v, { activity: t }),
+                                  (0, i.jsx)(x, { activity: t }),
                                   m.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: I.usersSummary,
                                           guildId: a.guild_id,
-                                          users: T,
+                                          users: Z,
                                           size: E,
                                           max: 7,
                                           renderUser: (e) => {
@@ -232,7 +232,7 @@ function T(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(Z, { activity: t })
+                  (0, i.jsx)(T, { activity: t })
               ]
           })
         : null;

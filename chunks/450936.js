@@ -67,7 +67,7 @@ function E(e) {
         }),
         Z = (0, r.Z)(A),
         M = N.commands.filter((e) => e.type === l.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
-        b = N.commands,
+        b = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         R = N.loading,
         L =
             null ===

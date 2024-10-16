@@ -19,10 +19,10 @@ var i,
     E = n(594174),
     N = n(451478),
     S = n(276952),
-    x = n(682662),
-    v = n(662146),
-    Z = n(674552),
-    T = n(981631),
+    v = n(682662),
+    x = n(662146),
+    T = n(674552),
+    Z = n(981631),
     b = n(673193);
 function A(e, t, n) {
     return (
@@ -37,20 +37,20 @@ function A(e, t, n) {
         e
     );
 }
-let R = {
+let M = {
     friction: 28,
     tension: 600
 };
-function M(e) {
+function R(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...R
+                ...M
             };
         case 'scale':
-            return { ...R };
+            return { ...M };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -65,7 +65,7 @@ class L extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: M
+                    config: R
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class L extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: M
+            config: R
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class L extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: M
+                    config: R
                 })
                 .start()
                 .then(e)
@@ -111,7 +111,7 @@ class L extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === T.d4z.DM ? E.default.getUser(e.getRecipientId()) : null;
+            t = e.type === Z.d4z.DM ? E.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -120,7 +120,7 @@ class L extends (i = r.PureComponent) {
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, l.jsxs)(x.H, {
+            children: (0, l.jsxs)(v.H, {
                 children: [
                     (0, l.jsx)(S.Z, {
                         hovered: !m && f,
@@ -128,13 +128,13 @@ class L extends (i = r.PureComponent) {
                         unread: !m && h,
                         className: b.pill
                     }),
-                    (0, l.jsx)(v.Z, {
+                    (0, l.jsx)(x.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
                             selected: n || f,
-                            lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
-                            upperBadge: (0, Z.Or)({
+                            lowerBadge: i > 0 ? (0, T.Ne)(i) : null,
+                            upperBadge: (0, T.Or)({
                                 audio: r,
                                 video: o,
                                 screenshare: u,
@@ -145,7 +145,7 @@ class L extends (i = r.PureComponent) {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.NavItem, {
-                                        to: T.Z5c.CHANNEL(T.ME, e.id),
+                                        to: Z.Z5c.CHANNEL(Z.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || f,
@@ -180,12 +180,12 @@ class L extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: M
+                    config: R
                 })
             }),
             A(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === T.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === Z.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -218,7 +218,7 @@ A(L, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
-            a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : T.WtW.VOICE), [r]),
+            a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : Z.WtW.VOICE), [r]),
             s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
             u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
@@ -227,7 +227,7 @@ A(L, 'defaultProps', {
             E = !1,
             N = !1;
         return (
-            _ && ((E = a === T.WtW.VOICE), (N = a === T.WtW.VIDEO)),
+            _ && ((E = a === Z.WtW.VOICE), (N = a === Z.WtW.VIDEO)),
             (0, l.jsx)(L, {
                 ...e,
                 ref: t,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -29,7 +29,7 @@ var i = n(392711),
     v = n(981631),
     Z = n(701488),
     L = n(65154);
-function O(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function O(e, t, n) {
         e
     );
 }
-class R {
+class O {
     loadServer() {
         for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
@@ -285,6 +285,6 @@ class R {
         this.rpcServer.dispatchToSubscriptions(v.zMe.USER_ACHIEVEMENT_UPDATE, (e) => e.socket.application.id === n, { user_achievement: t });
     }
     constructor(e) {
-        O(this, 'rpcServer', void 0), O(this, 'transports', void 0), O(this, 'rpcCommandHandlers', void 0), O(this, 'rpcEventHandlers', void 0), O(this, 'stores', void 0), O(this, 'registerTransportsForEmbeddedPlatform', void 0), (this.rpcServer = e.server), (this.transports = e.transports), (this.rpcCommandHandlers = e.commands), (this.rpcEventHandlers = e.events), (this.stores = e.stores), (this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform);
+        R(this, 'rpcServer', void 0), R(this, 'transports', void 0), R(this, 'rpcCommandHandlers', void 0), R(this, 'rpcEventHandlers', void 0), R(this, 'stores', void 0), R(this, 'registerTransportsForEmbeddedPlatform', void 0), (this.rpcServer = e.server), (this.transports = e.transports), (this.rpcCommandHandlers = e.commands), (this.rpcEventHandlers = e.events), (this.stores = e.stores), (this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform);
     }
 }

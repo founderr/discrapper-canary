@@ -19,7 +19,7 @@ function o(e) {
         children: [
             E || null == m
                 ? null
-                : (0, i.jsx)(r.I, {
+                : (0, i.jsx)(r.Iv, {
                       emoji: m,
                       className: s()(l.emoji, a, null != d ? { [d]: null == I || '' === I } : null),
                       animate: u,

@@ -204,7 +204,7 @@ let N = (e) => {
                                                     name: e.status,
                                                     icon:
                                                         null != e.emoji
-                                                            ? (0, i.jsx)(h.I, {
+                                                            ? (0, i.jsx)(h.Iv, {
                                                                   className: S.customIcon,
                                                                   emoji: e.emoji,
                                                                   hideTooltip: !0

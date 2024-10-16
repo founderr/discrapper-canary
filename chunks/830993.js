@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return T;
     }
 }),
     n(47120),
@@ -25,9 +25,9 @@ var i = n(735250),
     E = n(135724),
     N = n(543432),
     S = n(981631),
-    x = n(689938),
-    v = n(289223);
-function Z(e) {
+    v = n(689938),
+    x = n(289223);
+function T(e) {
     var t, d;
     let { channel: h, guild: p, onAction: _, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
     !(function (e, t) {
@@ -49,10 +49,10 @@ function Z(e) {
         (0, s.$)(n);
     })(h, g);
     let N = (0, o.ZP)(h),
-        Z = Array.from((0, o.uF)(N).values()),
+        T = Array.from((0, o.uF)(N).values()),
         b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
         A = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
-        R = (0, r.e7)(
+        M = (0, r.e7)(
             [f.Z],
             () => {
                 let e = {};
@@ -78,18 +78,18 @@ function Z(e) {
             [b],
             r.pF
         );
-    return R.length + Z.length === 0
+    return M.length + T.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
-              className: v.container,
+              className: x.container,
               children: [
-                  (0, i.jsx)(T, {
+                  (0, i.jsx)(Z, {
                       channel: h,
                       isChannelSelected: I,
                       voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
                   }),
-                  (0, i.jsx)('div', { className: v.headerDivider }),
-                  Z.map((e, t) => {
+                  (0, i.jsx)('div', { className: x.headerDivider }),
+                  T.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
                           C.Z,
@@ -102,7 +102,7 @@ function Z(e) {
                           t
                       );
                   }),
-                  R.map((e, t) => {
+                  M.map((e, t) => {
                       let { members: n, activity: l } = e;
                       return (0, i.jsx)(
                           C.Z,
@@ -118,13 +118,13 @@ function Z(e) {
                   E &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('div', { className: v.headerDivider }),
+                              (0, i.jsx)('div', { className: x.headerDivider }),
                               (0, i.jsx)('div', {
-                                  className: v.settingNudgeText,
+                                  className: x.settingNudgeText,
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: x.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
+                                      children: v.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([n.e('96427'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('18146'), n.e('37229'), n.e('28044'), n.e('35539'), n.e('67760')]).then(n.bind(n, 241420));
@@ -143,7 +143,7 @@ function Z(e) {
               ]
           });
 }
-function T(e) {
+function Z(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         a = (0, r.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, t)),
         s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)),
@@ -157,7 +157,7 @@ function T(e) {
     return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {
-              className: v.popoutHeaderContainer,
+              className: x.popoutHeaderContainer,
               children: [
                   (0, i.jsx)(I.Z, { channel: t }),
                   o

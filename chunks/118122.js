@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return v;
     }
 });
 var i = n(735250),
@@ -39,16 +39,16 @@ function S(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function x(e) {
+function v(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        x = l.useMemo(() => Object.values(s), [s]),
-        v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        Z = l.useMemo(() => x.some((e) => e.isOwner(v)), [x, v]),
-        T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
+        v = l.useMemo(() => Object.values(s), [s]),
+        x = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        T = l.useMemo(() => v.some((e) => e.isOwner(x)), [v, x]),
+        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
         { analyticsLocations: b } = (0, o.ZP)(),
         A = (0, a.useRedesignIconContext)().enabled,
-        R = (0, i.jsx)(m.Z, {
+        M = (0, i.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,21 +63,21 @@ function x(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: T,
+            selected: Z,
             onContextMenu: S,
             tooltip: I.Z.Messages.ADD_A_SERVER,
             icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? R
+        ? M
         : (0, i.jsx)('div', {
               className: E.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: T ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: N,
                   position: 'right',
                   children: [
-                      R,
+                      M,
                       null != n &&
                           (0, i.jsx)(_.ZP, {
                               name: I.Z.Messages.DND_END_OF_LIST,

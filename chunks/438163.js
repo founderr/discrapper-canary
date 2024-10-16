@@ -104,7 +104,7 @@ function v(e) {
         },
         eo = () =>
             H
-                ? (0, r.jsx)(d.I, {
+                ? (0, r.jsx)(d.Iv, {
                       className: V ? A.statusEmojiInline : A.statusEmojiOnly,
                       emoji: k,
                       animate: v,

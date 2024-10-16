@@ -173,7 +173,7 @@ function v(e) {
         });
     return null == a
         ? null
-        : (0, i.jsx)(c.Z, {
+        : (0, i.jsx)(c.ZP, {
               className: g.activityStatus,
               emojiClassName: g.activityEmoji,
               activities: a,
