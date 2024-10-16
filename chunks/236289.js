@@ -19,8 +19,9 @@ let f = {},
     b = !1,
     U = null,
     I = d.bK.DIDNT_VIOLATE_POLICY,
-    F = '';
-class H extends (l = u.ZP.Store) {
+    F = '',
+    H = '';
+class R extends (l = u.ZP.Store) {
     isFetching() {
         return A;
     }
@@ -60,9 +61,12 @@ class H extends (l = u.ZP.Store) {
     getSubmitError() {
         return U;
     }
+    getUsername() {
+        return H;
+    }
 }
 (o = 'SafetyHubStore'),
-    (a = 'displayName') in (e = H)
+    (a = 'displayName') in (e = R)
         ? Object.defineProperty(e, a, {
               value: o,
               enumerable: !0,
@@ -70,13 +74,13 @@ class H extends (l = u.ZP.Store) {
               writable: !0
           })
         : (e[a] = o),
-    (t.Z = new H(r.Z, {
+    (t.Z = new R(r.Z, {
         SAFETY_HUB_FETCH_START: function (n) {
             A = !0;
         },
         SAFETY_HUB_FETCH_SUCCESS: function (n) {
-            let { classifications: t, accountStanding: i, isDsaEligible: e } = n;
-            (f = c()(t, 'id')), (S = i), (g = e), (A = !1), (p = !0), (T = null);
+            let { classifications: t, accountStanding: i, isDsaEligible: e, username: a } = n;
+            (f = c()(t, 'id')), (S = i), (g = e), (A = !1), (p = !0), (T = null), (H = a);
         },
         SAFETY_HUB_FETCH_FAILURE: function (n) {
             let { error: t } = n;
@@ -86,8 +90,8 @@ class H extends (l = u.ZP.Store) {
             (E[n.classificationId] = _.OY.PENDING), (A = !0);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (n) {
-            let { classification: t, accountStanding: i, isDsaEligible: e } = n;
-            (f[t.id] = t), (E[t.id] = _.OY.SUCCESS), (S = i), (A = !1), (T = null), (g = e), (p = !0);
+            let { classification: t, accountStanding: i, isDsaEligible: e, username: a } = n;
+            (f[t.id] = t), (E[t.id] = _.OY.SUCCESS), (S = i), (A = !1), (T = null), (g = e), (p = !0), (H = a);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (n) {
             let { error: t, classificationId: i } = n;

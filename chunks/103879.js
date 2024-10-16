@@ -29,13 +29,14 @@ async function u() {
     await i
         .then((n) => {
             let { body: t } = n,
-                { classifications: i, guild_classifications: e, account_standing: o, is_dsa_eligible: l } = t,
-                s = i.map((n) => (_(n), n));
+                { classifications: i, guild_classifications: e, account_standing: o, is_dsa_eligible: l, username: s } = t,
+                c = i.map((n) => (_(n), n));
             a.Z.dispatch({
                 type: 'SAFETY_HUB_FETCH_SUCCESS',
-                classifications: s.concat(null != e ? e : []),
+                classifications: c.concat(null != e ? e : []),
                 accountStanding: o,
-                isDsaEligible: l
+                isDsaEligible: l,
+                username: s
             });
         })
         .catch((n) => {
@@ -63,15 +64,16 @@ async function r(n) {
     await o
         .then((t) => {
             let { body: i } = t,
-                { classifications: e, account_standing: o, is_dsa_eligible: l } = i,
-                s = e.find((t) => t.id === n);
-            null != s
-                ? (_(s),
+                { classifications: e, account_standing: o, is_dsa_eligible: l, username: s } = i,
+                c = e.find((t) => t.id === n);
+            null != c
+                ? (_(c),
                   a.Z.dispatch({
                       type: 'SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS',
-                      classification: s,
+                      classification: c,
                       accountStanding: o,
-                      isDsaEligible: l
+                      isDsaEligible: l,
+                      username: s
                   }))
                 : a.Z.dispatch({
                       type: 'SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE',
