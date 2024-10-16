@@ -107,9 +107,6 @@ class u {
             localWant: this.goliveMaxQuality.localWant
         });
     }
-    setLqSimulcastStreamActive(e) {
-        this.lqSimulcastStreamActive = e;
-    }
     configGoliveSimulcast(e) {
         e.has(i.V8.GOLIVE_SIMULCAST_480P_500K)
             ? ((this.goliveSimulcastEnabled = !0),
@@ -154,19 +151,7 @@ class u {
         });
     }
     getGoliveQuality(e) {
-        if (this.goliveSimulcastEnabled && e < 100) return this.getGoliveLQQuality();
-        if (this.goliveSimulcastEnabled) {
-            let e = this.lqSimulcastStreamActive ? this.goliveSimulcastLQBitrate : 0;
-            return new o({
-                capture: this.goliveMaxQuality.capture,
-                encode: this.goliveMaxQuality.encode,
-                bitrateMin: this.goliveMaxQuality.bitrateMin,
-                bitrateMax: this.goliveMaxQuality.bitrateMax - e,
-                bitrateTarget: this.goliveMaxQuality.bitrateTarget,
-                localWant: this.goliveMaxQuality.localWant
-            });
-        }
-        return this.goliveMaxQuality;
+        return this.goliveSimulcastEnabled && e < 100 ? this.getGoliveLQQuality() : this.goliveMaxQuality;
     }
     getDefaultGoliveQuality() {
         return new o({
@@ -220,12 +205,10 @@ class u {
             a(this, 'goliveSimulcastLQRes', void 0),
             a(this, 'isStreamContext', void 0),
             a(this, 'ladder', void 0),
-            a(this, 'lqSimulcastStreamActive', void 0),
             (this.contextType = e),
             (this.connection = t),
             (this.options = n),
             (this.isMuted = !1),
-            (this.lqSimulcastStreamActive = !1),
             (this.isStreamContext = this.contextType === i.Yn.STREAM),
             (this.ladder = new r.x(n)),
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
