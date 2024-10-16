@@ -2,6 +2,9 @@ n.d(t, {
     Cm: function () {
         return T;
     },
+    FX: function () {
+        return C;
+    },
     IV: function () {
         return N;
     },
@@ -381,4 +384,5 @@ let m = 800,
     N = 12,
     R = 36,
     O = 1128,
-    v = 518;
+    v = 518,
+    C = '1285377810587979827';

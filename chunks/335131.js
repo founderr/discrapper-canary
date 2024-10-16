@@ -8,11 +8,17 @@ n.d(t, {
     F$: function () {
         return g;
     },
+    Gq: function () {
+        return L;
+    },
     K$: function () {
         return v;
     },
     R2: function () {
         return C;
+    },
+    SN: function () {
+        return y;
     },
     fK: function () {
         return R;
@@ -32,7 +38,8 @@ n.d(t, {
     qg: function () {
         return A;
     }
-});
+}),
+    n(411104);
 var r = n(561842),
     i = n(664081),
     a = n(544891),
@@ -206,4 +213,48 @@ let p = (e) => {
         } catch (e) {
             throw (s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' }), new l.Hx(e));
         }
+    },
+    L = async (e) => {
+        s.Z.dispatch({
+            type: 'CONSUMABLES_PRICE_FETCH_STARTED',
+            skuId: e
+        });
+        try {
+            let t = await a.tn.get({ url: h.ANM.CONSUMABLE_FETCH_PRICE(e) });
+            if (null == t.body.price)
+                throw (
+                    (s.Z.dispatch({
+                        type: 'CONSUMABLES_PRICE_FETCH_FAILED',
+                        skuId: e
+                    }),
+                    Error('price not found'))
+                );
+            let n = t.body.price;
+            return (
+                s.Z.dispatch({
+                    type: 'CONSUMABLES_PRICE_FETCH_SUCCEEDED',
+                    skuId: e,
+                    price: n
+                }),
+                {
+                    amount: n.amount,
+                    currency: n.currency,
+                    exponent: n.currency_exponent
+                }
+            );
+        } catch (t) {
+            throw (
+                (s.Z.dispatch({
+                    type: 'CONSUMABLES_PRICE_FETCH_FAILED',
+                    skuId: e
+                }),
+                new l.Hx(t))
+            );
+        }
+    },
+    y = (e) => {
+        s.Z.dispatch({
+            type: 'CONSUMABLES_CLEAR_ERROR',
+            skuId: e
+        });
     };

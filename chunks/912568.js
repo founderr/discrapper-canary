@@ -5,5 +5,9 @@ e.exports = {
     image: 'image_beafbd',
     body: 'body_beafbd',
     applyingTo: 'applyingTo_beafbd',
-    channelLeft: 'channelLeft_beafbd'
+    channelLeft: 'channelLeft_beafbd',
+    footer: 'footer_beafbd',
+    anomaly: 'anomaly_beafbd',
+    error: 'error_beafbd',
+    spinner: 'spinner_beafbd'
 };
