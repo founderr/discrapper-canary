@@ -26,26 +26,6 @@ let { Themes: r } = n(15202).V,
                     }
                 }
             },
-            BACKGROUND_PRIMARY: {
-                'visual-refresh': {
-                    [r.DARK]: {
-                        raw: 'NEUTRAL_64',
-                        opacity: 1
-                    },
-                    [r.LIGHT]: {
-                        raw: 'NEUTRAL_1',
-                        opacity: 1
-                    },
-                    [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_100',
-                        opacity: 1
-                    },
-                    [r.DARKER]: {
-                        raw: 'NEUTRAL_76',
-                        opacity: 1
-                    }
-                }
-            },
             BACKGROUND_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {

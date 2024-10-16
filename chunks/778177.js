@@ -131,8 +131,10 @@ let k = _()('2015-05-15').local(),
                 tabIndex: d,
                 'aria-selected': _,
                 children: [
-                    t,
-                    n,
+                    (0, i.jsxs)('div', {
+                        className: y.content,
+                        children: [t, n]
+                    }),
                     (0, i.jsx)(m.PlusSmallIcon, {
                         size: 'sm',
                         color: 'currentColor',
