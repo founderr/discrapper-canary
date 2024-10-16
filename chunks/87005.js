@@ -24,21 +24,33 @@ let _ = {
         limit: p.tn,
         includeFrecency: !0
     };
-function h(e, n) {
-    let { sectionDescriptors: t, loading: r } = s.wi(e, _, C);
+function h(e) {
+    let { channel: n, onlyActivityApps: t, allowFetch: r } = e,
+        { sectionDescriptors: h, loading: f } = s.wi({
+            channel: n,
+            filters: _,
+            options: C,
+            allowFetch: r
+        });
     return {
-        loading: r,
-        frecentApps: (function (e, n, t) {
+        loading: f,
+        frecentApps: (function (e) {
+            let { sectionDescriptors: n, channel: t, onlyActivityApps: r, allowFetch: s } = e;
             i.useEffect(() => {
-                o.Z.fetch();
-            }, []);
-            let r = (0, l.Wu)([u.Z], () => {
+                s && o.Z.fetch();
+            }, [s]);
+            let _ = (0, l.Wu)([u.Z], () => {
                     var e, n;
                     return null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
                 }),
-                s = e.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
-                _ = (0, d.h)(s, r);
-            return i.useMemo(() => (t ? _.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(n, e.id)) : _), [_, n, t]);
-        })(t, e, n)
+                C = n.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
+                h = (0, d.h)(C, _);
+            return i.useMemo(() => (r ? h.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(t, e.id)) : h), [h, t, r]);
+        })({
+            sectionDescriptors: h,
+            channel: n,
+            onlyActivityApps: t,
+            allowFetch: r
+        })
     };
 }

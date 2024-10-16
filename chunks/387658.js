@@ -251,18 +251,19 @@ function k(e) {
             commandsByActiveSection: d,
             sectionDescriptors: m,
             loading: p
-        } = C.wi(
-            t,
-            { commandTypes: [u.yU.CHAT] },
-            {
+        } = C.wi({
+            channel: t,
+            filters: { commandTypes: [u.yU.CHAT] },
+            options: {
                 placeholderCount: 0,
                 limit: R.tn,
                 includeFrecency: !0,
                 allowApplicationState: r,
                 installOnDemand: r,
                 applicationId: l.id
-            }
-        ),
+            },
+            allowFetch: !0
+        }),
         _ = null !== (n = m.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
         {
             sortOrder: h,
