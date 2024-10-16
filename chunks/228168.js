@@ -22,6 +22,9 @@ n.d(t, {
     },
     y0: function () {
         return p;
+    },
+    yM: function () {
+        return g;
     }
 });
 var r,
@@ -178,6 +181,9 @@ function C(e) {
     (c.COPY_CONNECTED_ACCOUNT = 'COPY_CONNECTED_ACCOUNT'),
     (c.PRESS_VIEW_CONNECTED_ACCOUNT = 'PRESS_VIEW_CONNECTED_ACCOUNT'),
     (c.PRESS_REACT_REPLY_TOAST = 'PRESS_REACT_REPLY_TOAST'),
+    (c.VISIT_SHOP = 'VISIT_SHOP'),
+    (c.GET_PREMIUM = 'GET_NITRO'),
+    (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
     ((d = A || (A = {})).VIEW = 'VIEW'),
     (d.PRESS_GAME_IMAGE = 'PRESS_GAME_IMAGE'),
     (d.PRESS_STREAM_IMAGE = 'PRESS_STREAM_IMAGE'),
