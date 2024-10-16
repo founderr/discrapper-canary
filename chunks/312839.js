@@ -25,6 +25,15 @@ function c(e, t) {
                 action_type: n
             }),
                 i.Z.notificationEvent(e, l.bv.Clicked);
+        },
+        trackEvent(n, s) {
+            let o = a.Z.isInstanceUILocked() ? r.Sbl.LOCKED_OVERLAY : r.Sbl.UNLOCKED_OVERLAY;
+            i.Z.track(n, {
+                ...t,
+                ...s,
+                location: o
+            }),
+                i.Z.notificationEvent(e, l.bv.Clicked);
         }
     };
 }

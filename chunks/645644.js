@@ -136,7 +136,8 @@ class v {
                 [A.n0.OverlayCrashed]: new O(),
                 [A.n0.ClipsReminderNotification]: new O(),
                 [A.n0.ClipsNotification]: new O(),
-                [A.n0.KeybindIndicatorsNotification]: new O()
+                [A.n0.KeybindIndicatorsNotification]: new O(),
+                [A.n0.SendGameInvitesNotification]: new O()
             });
     }
 }

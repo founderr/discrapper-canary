@@ -3,10 +3,13 @@ n.d(t, {
         return s;
     },
     QR: function () {
-        return Z;
+        return I;
     },
     Yj: function () {
-        return I;
+        return Z;
+    },
+    iz: function () {
+        return m;
     }
 });
 var i,
@@ -34,16 +37,16 @@ function _(e, t, n) {
         e
     );
 }
-let g = (e) => e.stopPropagation(),
-    m = () =>
+let E = (e) => e.stopPropagation(),
+    g = () =>
         (0, o.jsx)('div', {
             className: p.clickBlocker,
-            onClick: g,
-            onMouseEnter: g,
-            onMouseOver: g
+            onClick: E,
+            onMouseEnter: E,
+            onMouseOver: E
         }),
-    E = () => (0, o.jsx)('div', { className: p.divider }),
-    Z = (e, t, n) =>
+    m = () => (0, o.jsx)('div', { className: p.divider }),
+    I = (e, t, n) =>
         (0, o.jsx)('div', {
             className: p.keybindMessage,
             children: n.format({
@@ -59,13 +62,13 @@ let g = (e) => e.stopPropagation(),
                     )
             })
         }),
-    I = (e, t) =>
+    Z = (e, t) =>
         (0, o.jsx)('div', {
             className: p.hintSubtleText,
             children: t
         });
 ((i = s || (s = {})).PRIMARY = 'PRIMARY'), (i.BRAND = 'BRAND'), (i.DANGER = 'DANGER');
-class S extends (a = r.PureComponent) {
+class v extends (a = r.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -105,7 +108,7 @@ class S extends (a = r.PureComponent) {
                 ? (0, o.jsxs)(
                       r.Fragment,
                       {
-                          children: [(0, o.jsx)(E, {}), i]
+                          children: [(0, o.jsx)(m, {}), i]
                       },
                       'hint-custom'
                   )
@@ -115,7 +118,7 @@ class S extends (a = r.PureComponent) {
             r.Fragment,
             {
                 children: [
-                    (0, o.jsx)(E, {}),
+                    (0, o.jsx)(m, {}),
                     (0, o.jsx)(
                         'div',
                         {
@@ -141,7 +144,7 @@ class S extends (a = r.PureComponent) {
                 ? (0, o.jsxs)(
                       r.Fragment,
                       {
-                          children: [(0, o.jsx)(E, {}), t]
+                          children: [(0, o.jsx)(m, {}), t]
                       },
                       'footer-custom-content'
                   )
@@ -160,7 +163,7 @@ class S extends (a = r.PureComponent) {
                 r.Fragment,
                 {
                     children: [
-                        (0, o.jsx)(E, {}),
+                        (0, o.jsx)(m, {}),
                         (0, o.jsxs)('div', {
                             className: p.buttonContainer,
                             children: [
@@ -255,7 +258,7 @@ class S extends (a = r.PureComponent) {
                 [p.themeDanger]: 'DANGER' === t,
                 [p.clickable]: null != e && !n
             }),
-            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, o.jsx)(m, {}) : null]
+            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, o.jsx)(g, {}) : null]
         });
     }
     constructor(e) {
@@ -282,11 +285,11 @@ class S extends (a = r.PureComponent) {
         this.state = { expanded: t };
     }
 }
-_(S, 'ColorSchemes', s),
-    _(S, 'defaultProps', {
+_(v, 'ColorSchemes', s),
+    _(v, 'defaultProps', {
         maxBodyLines: void 0,
         colorScheme: 'PRIMARY',
         expand: !1,
         disabled: !1
     }),
-    (t.ZP = S);
+    (t.ZP = v);

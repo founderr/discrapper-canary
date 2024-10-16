@@ -130,7 +130,8 @@ class U extends a.Z {
                 CONTENT_INVENTORY_MANUAL_REFRESH: D,
                 CONTENT_INVENTORY_INBOX_STALE: b,
                 SPOTIFY_NEW_TRACK: M,
-                GAME_PROFILE_OPEN: P
+                GAME_PROFILE_OPEN: P,
+                OVERLAY_INITIALIZE: P
             }),
             n in t
                 ? Object.defineProperty(t, n, {

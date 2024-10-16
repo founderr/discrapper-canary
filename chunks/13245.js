@@ -316,6 +316,12 @@ let E = {
             type: 'OVERLAY_SUCCESSFULLY_SHOWN',
             pid: e
         });
+    },
+    notifyContentInventoryReady(e) {
+        i.Z.dispatch({
+            type: 'OVERLAY_CONTENT_INVENTORY_READY',
+            contentInventoryEntries: e
+        });
     }
 };
 t.Z = E;
