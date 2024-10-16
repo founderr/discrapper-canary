@@ -14635,20 +14635,17 @@ span.clanTag_a31c43 {
     box-sizing: border-box;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    flex: 1 1 auto;
+    color: var(--channels-default)
+}
+
+.text_a5ad5c {
     text-transform: uppercase;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: .02em;
     font-family: var(--font-display);
-    font-weight: 600;
-    flex: 1 1 auto;
-    color: var(--channels-default)
-}
-
-.visual-refresh .container_a5ad5c {
-    text-transform: inherit;
-    color: var(--text-low-contrast)
+    font-weight: 600
 }
 
 .avatar_ab08a5 {
