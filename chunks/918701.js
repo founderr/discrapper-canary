@@ -1,30 +1,30 @@
 n.d(t, {
     $H: function () {
-        return e_;
+        return ed;
     },
     $J: function () {
-        return eM;
+        return eb;
     },
     AV: function () {
         return $;
     },
     Bz: function () {
-        return eU;
+        return eP;
     },
     C1: function () {
-        return eV;
+        return eF;
     },
     C9: function () {
-        return eF;
+        return eB;
     },
     CE: function () {
         return x;
     },
     FE: function () {
-        return em;
+        return eI;
     },
     Fs: function () {
-        return eH;
+        return eV;
     },
     GN: function () {
         return J;
@@ -36,7 +36,7 @@ n.d(t, {
         return ea;
     },
     KM: function () {
-        return ef;
+        return eE;
     },
     Kr: function () {
         return en;
@@ -45,10 +45,10 @@ n.d(t, {
         return Q;
     },
     Nj: function () {
-        return ed;
+        return ec;
     },
     OG: function () {
-        return ek;
+        return eG;
     },
     PM: function () {
         return z;
@@ -63,10 +63,10 @@ n.d(t, {
         return F;
     },
     UZ: function () {
-        return eE;
+        return e_;
     },
     V$: function () {
-        return eG;
+        return ex;
     },
     WP: function () {
         return V;
@@ -87,22 +87,22 @@ n.d(t, {
         return M;
     },
     _j: function () {
-        return eB;
+        return ek;
     },
     b7: function () {
-        return eL;
+        return eC;
     },
     dl: function () {
-        return eh;
+        return ef;
     },
     f2: function () {
-        return eT;
+        return em;
     },
     fY: function () {
-        return ew;
+        return eU;
     },
     gI: function () {
-        return ex;
+        return ew;
     },
     hQ: function () {
         return Z;
@@ -111,13 +111,13 @@ n.d(t, {
         return k;
     },
     il: function () {
-        return eC;
+        return ev;
     },
     lQ: function () {
         return w;
     },
     o9: function () {
-        return eI;
+        return ep;
     },
     oo: function () {
         return eu;
@@ -138,7 +138,7 @@ n.d(t, {
         return et;
     },
     yH: function () {
-        return eZ;
+        return eH;
     },
     yI: function () {
         return Y;
@@ -150,7 +150,7 @@ n.d(t, {
         return ee;
     },
     zK: function () {
-        return ep;
+        return eh;
     },
     zi: function () {
         return G;
@@ -224,7 +224,7 @@ function w(e, t) {
     return n;
 }
 function x(e, t) {
-    return Array.from(e.values()).find((e) => U(t, e) && !G(e) && ed({ quest: e }));
+    return Array.from(e.values()).find((e) => U(t, e) && !G(e) && ec({ quest: e }));
 }
 function G(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
@@ -411,12 +411,8 @@ function ee(e, t) {
     return (0, p.yE)(e.dismissedQuestContent, O.a_[n]);
 }
 function et(e) {
-    return (0, a.EQ)(e)
-        .with({ configVersion: 2 }, (e) => {
-            let t = e.rewardsConfig.rewards.find((e) => e.type === l.w.COLLECTIBLE);
-            return (null == t ? void 0 : t.type) === l.w.COLLECTIBLE ? t : null;
-        })
-        .exhaustive();
+    let t = e.rewardsConfig.rewards.find((e) => e.type === l.w.COLLECTIBLE);
+    return (null == t ? void 0 : t.type) === l.w.COLLECTIBLE ? t : null;
 }
 function en(e) {
     let t = et(e);
@@ -444,17 +440,11 @@ function er(e) {
     return null != et(e);
 }
 function ei(e) {
-    return (0, a.EQ)(e)
-        .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards.some((e) => e.type === l.w.IN_GAME))
-        .exhaustive();
+    return e.rewardsConfig.rewards.some((e) => e.type === l.w.IN_GAME);
 }
 function ea(e) {
-    return (0, a.EQ)(e)
-        .with({ configVersion: 2 }, (e) => {
-            var t;
-            return null !== (t = e.rewardsConfig.rewards.find((e) => e.type === l.w.IN_GAME)) && void 0 !== t ? t : null;
-        })
-        .exhaustive();
+    var t;
+    return null !== (t = e.rewardsConfig.rewards.find((e) => e.type === l.w.IN_GAME)) && void 0 !== t ? t : null;
 }
 function es(e, t) {
     return e.targetedContent.includes(t);
@@ -478,49 +468,38 @@ function el(e, t) {
 }
 function eu(e) {
     let {
-        quest: { config: t }
-    } = e;
-    return (0, a.EQ)(t)
-        .with({ configVersion: 2 }, (e) => {
-            let t = e.rewardsConfig;
-            return t.assignmentMethod === o.j.TIERED && t.rewards.length > 0 && t.rewards.every((e) => e.type === l.w.REWARD_CODE);
-        })
-        .exhaustive();
+            quest: { config: t }
+        } = e,
+        n = t.rewardsConfig;
+    return n.assignmentMethod === o.j.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === l.w.REWARD_CODE);
 }
-let ec = (e) =>
-    (0, a.EQ)(e.taskConfig)
-        .with({ type: u.L.FIRST_PARTY }, (e) => null != e.tasks[s.X.PLAY_ON_DESKTOP])
-        .otherwise(() => !1);
+function ec(e) {
+    var t;
+    let { quest: n } = e;
+    return (t = n.config).taskConfig.type === u.L.FIRST_PARTY && null != t.taskConfig.tasks[s.X.PLAY_ON_DESKTOP];
+}
 function ed(e) {
-    let { quest: t } = e;
-    return (0, a.EQ)(t.config)
-        .with({ configVersion: 2 }, (e) => ep(t, O.S7.PLAYTIME_TASK) || ec(e))
-        .exhaustive();
+    return null != e && ec({ quest: e });
 }
-function e_(e) {
-    return null != e && ed({ quest: e });
+function e_(e, t) {
+    return N.r.build(t.config).application.id === e || eE(t);
 }
-function eE(e, t) {
-    return N.r.build(t.config).application.id === e || ef(t);
+function eE(e) {
+    return eh(e, O.S7.FRACTIONS_QUEST);
 }
 function ef(e) {
-    return ep(e, O.S7.FRACTIONS_QUEST);
+    return !eh(e, O.S7.IN_HOUSE_CONSOLE_QUEST);
 }
-function eh(e) {
-    return !ep(e, O.S7.IN_HOUSE_CONSOLE_QUEST);
-}
-function ep(e, t) {
+function eh(e, t) {
     return N.r.build(e.config).features.has(t);
 }
-function eI(e) {
+function ep(e) {
     let { quest: t, idx: n } = e;
     if (null == n) return null;
     let r = t.config.rewardsConfig.rewards[n];
-    return (0, a.EQ)(r)
-        .with({ type: l.w.REWARD_CODE }, (e) => e)
-        .otherwise(() => null);
+    return r.type === l.w.REWARD_CODE ? r : null;
 }
-function em(e, t) {
+function eI(e, t) {
     let n = N.r.build(e.config).application.link;
     (0, m.q)({
         href: n,
@@ -535,7 +514,7 @@ function em(e, t) {
         }
     });
 }
-let eT = (e, t) => {
+let em = (e, t) => {
         (0, S._3)({
             questId: e,
             questContent: t.content,
@@ -544,27 +523,27 @@ let eT = (e, t) => {
         }),
             (0, f.JG)(K(e));
     },
-    eS = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    eg = (e) => eU(e) || g.Z.isProgressingOnDesktop(e.id),
-    eA = (e, t) => {
+    eT = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
+    eS = (e) => eP(e) || g.Z.isProgressingOnDesktop(e.id),
+    eg = (e, t) => {
         var n, r, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (r = a[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
-        if (null == o || !eg(e)) return 0;
+        if (null == o || !eS(e)) return 0;
         let l = Date.now() - new Date(o).valueOf();
         return (0, i.floor)(l / h.Z.Millis.SECOND, 2);
     },
-    eN = (e, t) => {
+    eA = (e, t) => {
         var n, r, a;
         let s = t.target,
             o = e.userStatus;
         if ((null == o ? void 0 : o.completedAt) != null) return s;
         let l = null == o ? void 0 : null === (n = o.progress) || void 0 === n ? void 0 : n[t.eventName],
             u = null !== (a = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == o ? void 0 : o.streamProgressSeconds) && void 0 !== a ? a : 0,
-            c = eA(e, t),
+            c = eg(e, t),
             d = Math.min(0.99 * s, u + c);
         return Math.max((0, i.floor)(d, 2), 0);
     },
-    eR = (e) => {
+    eN = (e) => {
         var t, n;
         let { quest: r, taskType: i, includeTaskTypes: a = s.T.ALL } = e,
             o = r.config.taskConfig;
@@ -573,17 +552,17 @@ let eT = (e, t) => {
             c = null !== (n = o.tasks[l]) && void 0 !== n ? n : o.tasks[s.X.STREAM_ON_DESKTOP];
         if (null == c) throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
         let d = c.target,
-            _ = eN(r, c);
+            _ = eA(r, c);
         return {
             progressSeconds: _,
             targetSeconds: d,
             targetMinutes: Math.round(d / h.Z.Seconds.MINUTE),
-            percentComplete: eS(d, _),
+            percentComplete: eT(d, _),
             taskType: l
         };
     },
-    eO = (e) => (s.T.ALL.has(e) ? e : null),
-    ev = (e) => {
+    eR = (e) => (s.T.ALL.has(e) ? e : null),
+    eO = (e) => {
         var t, n;
         let { quest: r, includeTaskTypes: i = s.T.ALL } = e;
         for (let e of Object.values(null !== (n = null === (t = r.userStatus) || void 0 === t ? void 0 : t.progress) && void 0 !== n ? n : {})
@@ -597,99 +576,90 @@ let eT = (e, t) => {
                 else return 1;
             })
             .filter(I.lm)) {
-            let t = eO(e.eventName);
+            let t = eR(e.eventName);
             if (null != t) {
                 if (null == i ? void 0 : i.has(t))
-                    return eR({
+                    return eN({
                         quest: r,
                         taskType: t,
                         includeTaskTypes: i
                     });
             }
         }
-        return eR({
+        return eN({
             quest: r,
             includeTaskTypes: i
         });
     },
-    eC = (e, t) =>
-        (0, a.EQ)(e)
-            .with({ config: { configVersion: 2 } }, (e) => {
-                if (e.config.taskConfig.type !== u.L.FIRST_PARTY)
-                    return {
-                        progressSeconds: 0,
-                        targetSeconds: 1,
-                        targetMinutes: 1,
-                        percentComplete: 0,
-                        taskType: s.X.STREAM_ON_DESKTOP
-                    };
-                if (eD(e))
-                    return ev({
-                        quest: e,
-                        includeTaskTypes: null != t ? t : eU(e) ? s.T.CONSOLE : s.T.ALL
-                    });
-                if (eb(e)) {
-                    var n, r, i, a, o;
-                    let t = null !== (a = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
-                        l = null !== (o = null === (i = e.config.taskConfig.tasks[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === i ? void 0 : i.target) && void 0 !== o ? o : 1000,
-                        u = l / 1000;
-                    return {
-                        taskType: s.X.PLAY_ON_DESKTOP_V2,
-                        progressSeconds: Math.floor(t / 1000),
-                        targetSeconds: u,
-                        targetMinutes: Math.round(u / 60),
-                        percentComplete: eS(l, t)
-                    };
-                }
-                return e_(e)
-                    ? eR({
-                          quest: e,
-                          taskType: s.X.PLAY_ON_DESKTOP
-                      })
-                    : eR({
-                          quest: e,
-                          taskType: s.X.STREAM_ON_DESKTOP
-                      });
-            })
-            .exhaustive();
-function eL(e) {
-    return (0, a.EQ)(e.config)
-        .with({ configVersion: 2 }, (t) => {
-            var n, r, i, a;
-            if (t.taskConfig.type !== u.L.THIRD_PARTY || 0 === Object.keys(t.taskConfig.tasks).length) return null;
-            let s = Object.keys(t.taskConfig.tasks)[0],
-                o = t.taskConfig.tasks[s],
-                l = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (r = i.progress) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
-                c = eS(o.target, l);
+    ev = (e, t) => {
+        if (e.config.taskConfig.type !== u.L.FIRST_PARTY)
             return {
-                title: o.title,
-                description: o.description,
-                target: o.target,
-                progress: l,
-                completedRatio: c
+                progressSeconds: 0,
+                targetSeconds: 1,
+                targetMinutes: 1,
+                percentComplete: 0,
+                taskType: s.X.STREAM_ON_DESKTOP
             };
-        })
-        .exhaustive();
+        if (ey(e))
+            return eO({
+                quest: e,
+                includeTaskTypes: null != t ? t : eP(e) ? s.T.CONSOLE : s.T.ALL
+            });
+        if (eD(e)) {
+            var n, r, i, a, o;
+            let t = null !== (a = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
+                l = null !== (o = null === (i = e.config.taskConfig.tasks[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === i ? void 0 : i.target) && void 0 !== o ? o : 1000,
+                u = l / 1000;
+            return {
+                taskType: s.X.PLAY_ON_DESKTOP_V2,
+                progressSeconds: Math.floor(t / 1000),
+                targetSeconds: u,
+                targetMinutes: Math.round(u / 60),
+                percentComplete: eT(l, t)
+            };
+        }
+        return ed(e)
+            ? eN({
+                  quest: e,
+                  taskType: s.X.PLAY_ON_DESKTOP
+              })
+            : eN({
+                  quest: e,
+                  taskType: s.X.STREAM_ON_DESKTOP
+              });
+    };
+function eC(e) {
+    var t, n, r, i;
+    if (e.config.taskConfig.type !== u.L.THIRD_PARTY || 0 === Object.keys(e.config.taskConfig.tasks).length) return null;
+    let a = Object.keys(e.config.taskConfig.tasks)[0],
+        s = e.config.taskConfig.tasks[a],
+        o = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : null === (t = n[a]) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0,
+        l = eT(s.target, o);
+    return {
+        title: s.title,
+        description: s.description,
+        target: s.target,
+        progress: o,
+        completedRatio: l
+    };
 }
-let ey = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
-    eD = ey([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
-    eb = ey([s.X.PLAY_ON_DESKTOP_V2]),
-    eM = (e) =>
-        (0, a.EQ)(e)
-            .with({ config: { configVersion: 2 } }, eD)
-            .exhaustive(),
-    eP = (e, t) => {
-        var n, r;
-        let i = null == e ? void 0 : null === (r = e.progress[t]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.expiresAt;
-        if (null == i) return !1;
-        let a = new Date(i).valueOf();
-        return !isNaN(a) && a > Date.now();
-    },
-    eU = (e) =>
-        (0, a.EQ)(e)
-            .with({ config: { configVersion: 2 } }, (e) => null != e.userStatus && (eP(e.userStatus, s.X.PLAY_ON_XBOX) || eP(e.userStatus, s.X.PLAY_ON_PLAYSTATION)))
-            .exhaustive();
-function ew(e, t) {
+let eL = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
+    ey = eL([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
+    eD = eL([s.X.PLAY_ON_DESKTOP_V2]);
+function eb(e) {
+    return ey(e);
+}
+let eM = (e, t) => {
+    var n, r;
+    let i = null == e ? void 0 : null === (r = e.progress[t]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.expiresAt;
+    if (null == i) return !1;
+    let a = new Date(i).valueOf();
+    return !isNaN(a) && a > Date.now();
+};
+function eP(e) {
+    return null != e.userStatus && (eM(e.userStatus, s.X.PLAY_ON_XBOX) || eM(e.userStatus, s.X.PLAY_ON_PLAYSTATION));
+}
+function eU(e, t) {
     let { platformType: n, quest: r } = e;
     (0, S._3)({
         questId: r.id,
@@ -701,7 +671,7 @@ function ew(e, t) {
             location: t.ctaContent
         });
 }
-function ex(e, t) {
+function ew(e, t) {
     let { quest: n } = e;
     (0, S._3)({
         questId: n.id,
@@ -730,7 +700,7 @@ function ex(e, t) {
         includedPlatformTypes: new Set(r)
     });
 }
-function eG(e, t) {
+function ex(e, t) {
     let { quest: n } = e;
     (0, S._3)({
         questId: n.id,
@@ -740,22 +710,22 @@ function eG(e, t) {
     }),
         d.Z.open(v.oAB.CONNECTIONS);
 }
-function ek() {
+function eG() {
     return window.location.pathname.startsWith(v.Z5c.QUEST_HOME);
 }
-function eB(e) {
+function ek(e) {
     return 'xbox' === e.connected_account_type ? v.ABu.XBOX : v.ABu.PLAYSTATION;
 }
-function eF(e) {
-    return eB(e) === v.ABu.XBOX ? L.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : L.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
+function eB(e) {
+    return ek(e) === v.ABu.XBOX ? L.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : L.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
 }
-function eV(e) {
+function eF(e) {
     var t, n, r, i;
     let { quest: a, rewardCode: s, selectedPlatformType: o, sharedQuestFields: l } = e,
         u = eu({ quest: a }),
         c = null != o ? o : null == s ? void 0 : s.platform,
         d = u
-            ? eI({
+            ? ep({
                   quest: a,
                   idx: null !== (r = null == s ? void 0 : s.tier) && void 0 !== r ? r : null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedTier
               })
@@ -763,7 +733,7 @@ function eV(e) {
         _ = null !== (i = null == d ? void 0 : null === (n = d.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== i ? i : l.defaultRewardRedemptionInstructionsByPlatform;
     return null != c ? _[c] : void 0;
 }
-function eH(e) {
+function eV(e) {
     let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, isInHouseQuest: i } = e;
     if (i) return t ? L.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : L.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_HOME;
     return t
@@ -773,22 +743,14 @@ function eH(e) {
               gameTitle: r
           });
 }
-function eZ(e) {
+function eH(e) {
     let t =
-            ed({ quest: e }) ||
+            ec({ quest: e }) ||
             (function (e) {
                 let { quest: t } = e;
-                return (0, a.EQ)(t.config)
-                    .with(
-                        {
-                            configVersion: 2,
-                            taskConfig: { type: u.L.FIRST_PARTY }
-                        },
-                        (e) => null != e.taskConfig.tasks[s.X.STREAM_ON_DESKTOP]
-                    )
-                    .otherwise(() => !1);
+                return t.config.taskConfig.type === u.L.FIRST_PARTY && null != t.config.taskConfig.tasks[s.X.STREAM_ON_DESKTOP];
             })({ quest: e }),
-        n = eD(e),
+        n = ey(e),
         r = [];
     return t && r.push(O.cd.DESKTOP), n && r.push(O.cd.CONSOLE), r;
 }
