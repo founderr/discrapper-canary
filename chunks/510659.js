@@ -1,28 +1,30 @@
 n.d(t, {
     $m: function () {
-        return u;
+        return d;
     },
     NJ: function () {
-        return l;
+        return c;
     },
     Xo: function () {
-        return c;
+        return _;
     }
 }),
     n(47120);
 var r = n(735250),
     i = n(470079),
     a = n(512722),
-    s = n.n(a);
-let o = i.createContext(void 0);
-function l(e) {
+    s = n.n(a),
+    o = n(846519),
+    l = n(810097);
+let u = i.createContext(void 0);
+function c(e) {
     let { value: t, children: n } = e;
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(u.Provider, {
         value: t,
         children: n
     });
 }
-function u() {
+function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
         a = i.useCallback((e) => {
@@ -34,23 +36,34 @@ function u() {
                 interactionSource: null
             });
         }, [a]),
-        [o, l] = i.useState(!1),
-        [u, c] = i.useState(null);
-    return i.useMemo(
-        () => ({
-            interactionType: e,
-            interactionSource: n,
-            onInteraction: a,
-            resetInteraction: s,
-            interactionToastShown: o,
-            setInteractionToastShown: l,
-            interactionTypeSent: u,
-            setInteractionTypeSent: c
-        }),
-        [a, n, o, e, u, s]
+        [u, c] = i.useState(!1),
+        [d, _] = i.useState(null),
+        [E] = i.useState(new o.V7()),
+        f = i.useCallback(
+            (e) => {
+                _(e), c(!0), null === e ? E.stop() : E.start(l._1, () => c(!1));
+            },
+            [E]
+        );
+    return (
+        i.useEffect(() => {
+            E.stop();
+        }, [E]),
+        i.useMemo(
+            () => ({
+                interactionType: e,
+                interactionSource: n,
+                onInteraction: a,
+                setInteractionToast: f,
+                resetInteraction: s,
+                showInteractionToast: u,
+                interactionTypeSent: d
+            }),
+            [a, f, n, u, e, d, s]
+        )
     );
 }
-function c() {
-    let e = i.useContext(o);
+function _() {
+    let e = i.useContext(u);
     return s()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }

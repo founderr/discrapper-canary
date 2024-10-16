@@ -60,34 +60,34 @@ let v = (0, _.kt)({
         }
     };
 function y(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: R, modalKey: y, onClose: D } = e,
-        { trackUserProfileAction: b } = (0, p.KZ)(),
-        { sendReply: M } = (0, I.Q)(_),
-        { resetInteraction: P, setInteractionToastShown: U, setInteractionTypeSent: w } = (0, T.Xo)(),
-        { primaryColor: x } = (0, g.z)(),
-        [G, k] = i.useState(''),
-        [B, F] = i.useState((0, c.JM)(G)),
-        V = i.useRef(!1),
-        H = i.useRef(null),
-        Z = i.useCallback(
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: S, modalKey: R, onClose: y } = e,
+        { trackUserProfileAction: D } = (0, p.KZ)(),
+        { sendReply: b } = (0, I.Q)(_),
+        { resetInteraction: M, setInteractionToast: P } = (0, T.Xo)(),
+        { primaryColor: U } = (0, g.z)(),
+        [w, x] = i.useState(''),
+        [G, k] = i.useState((0, c.JM)(w)),
+        B = i.useRef(!1),
+        F = i.useRef(null),
+        V = i.useCallback(
             (e) => {
-                e.key === N.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === N.vn.ESCAPE && (e.stopPropagation(), M());
             },
-            [P]
+            [M]
         );
     i.useEffect(() => {
-        null == R || R(null == H ? void 0 : H.current);
-    }, [H, R]);
-    let Y = async (e) => {
+        null == S || S(null == F ? void 0 : F.current);
+    }, [F, S]);
+    let H = async (e) => {
             if (null == e) return;
-            b({ action: M });
+            D({ action: b });
             let n = C({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: _,
                 sourceDetails: E
             });
-            w(null), U(!0);
+            P(null);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -97,40 +97,37 @@ function y(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            w(A.P.REPLY),
-                setTimeout(() => {
-                    U(!1);
-                }, S._1);
+            P(A.P.REPLY);
         },
-        j = {
+        Z = {
             [O.biteSize]: o === A.y0.BITE_SIZE,
             [O.panel]: o === A.y0.PANEL
         },
-        W = {
+        Y = {
             [O.status]: _ === A.n_.STATUS,
             [O.avatar]: _ === A.n_.AVATAR
         };
     return (0, r.jsx)(l.V, {
-        ref: H,
-        onKeyDown: Z,
+        ref: F,
+        onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(O.container, j, W, { [O.customProfileTheme]: null != x }),
+            className: s()(O.container, Z, Y, { [O.customProfileTheme]: null != U }),
             children: (0, r.jsx)(d.Z, {
-                parentModalKey: y,
+                parentModalKey: R,
                 emojiPickerCloseOnModalOuterClick: !0,
                 innerClassName: O.inner,
                 editorClassName: O.editor,
                 type: u.I.USER_PROFILE_REPLY,
                 placeholder: L(_).format({ username: f.ZP.getName(n, a, t) }),
                 channel: v,
-                textValue: G,
-                richValue: B,
+                textValue: w,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== G) k(t), F(n);
+                    if (t !== w) x(t), k(n);
                 },
-                focused: V.current,
+                focused: B.current,
                 onFocus: () => {
-                    V.current = !0;
+                    B.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -142,9 +139,9 @@ function y(e) {
                         };
                     try {
                         return (
-                            await Y(n),
-                            P(),
-                            null == D || D(),
+                            await H(n),
+                            M(),
+                            null == y || y(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1
