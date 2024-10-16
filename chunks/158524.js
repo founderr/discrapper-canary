@@ -1,79 +1,80 @@
 s.r(a),
     s.d(a, {
         default: function () {
-            return E;
+            return x;
         }
     });
 var t = s(735250),
     o = s(470079),
-    n = s(481060),
-    l = s(442837),
-    i = s(194359),
-    c = s(906732),
+    n = s(990547),
+    l = s(481060),
+    i = s(442837),
+    c = s(194359),
+    r = s(906732),
     d = s(321488),
-    r = s(417183),
+    m = s(417183),
     u = s(170245),
-    m = s(735778),
-    p = s(171368),
-    h = s(974042),
-    _ = s(626135),
+    p = s(735778),
+    h = s(171368),
+    _ = s(974042),
+    N = s(626135),
     C = s(981631),
-    N = s(689938),
-    g = s(61845);
-function x(e) {
+    E = s(689938),
+    I = s(61845);
+function g(e) {
     let { user: a, status: s } = e,
-        l = o.useContext(_.AnalyticsContext),
-        { analyticsLocations: m } = (0, c.ZP)(),
-        h = (e) => {
-            e.stopPropagation(), i.Z.cancelFriendRequest(a.id, { location: 'Spam requests modal' });
+        n = o.useContext(N.AnalyticsContext),
+        { analyticsLocations: i } = (0, r.ZP)(),
+        p = (e) => {
+            e.stopPropagation(), c.Z.cancelFriendRequest(a.id, { location: 'Spam requests modal' });
         },
-        x = (e) => {
+        _ = (e) => {
             e.stopPropagation(),
-                i.Z.addRelationship({
+                c.Z.addRelationship({
                     userId: a.id,
                     context: { location: 'Spam requests modal' }
                 });
         },
-        E = s === C.Skl.OFFLINE ? C.Skl.UNKNOWN : s;
+        g = s === C.Skl.OFFLINE ? C.Skl.UNKNOWN : s;
     return (0, t.jsx)('div', {
-        className: g.spamRequest,
-        children: (0, t.jsx)(r.Z, {
+        className: I.spamRequest,
+        children: (0, t.jsx)(m.Z, {
             isFocused: !1,
             user: a,
-            className: g.listItem,
-            activeClassName: g.active,
+            className: I.listItem,
+            activeClassName: I.active,
             onClick: () =>
-                (0, p.openUserProfileModal)({
+                (0, h.openUserProfileModal)({
                     userId: a.id,
-                    sourceAnalyticsLocations: m,
-                    analyticsLocation: l.location
+                    sourceAnalyticsLocations: i,
+                    analyticsLocation: n.location
                 }),
             children: (e) =>
                 (0, t.jsxs)('div', {
-                    className: g.listItemContents,
+                    className: I.listItemContents,
                     children: [
                         (0, t.jsx)(u.Z, {
                             user: a,
                             hovered: e,
-                            status: E,
+                            status: g,
                             subText: a.username,
-                            className: g.userInfo
+                            className: I.userInfo
                         }),
                         (0, t.jsxs)('div', {
-                            className: g.actions,
+                            className: I.actions,
                             children: [
                                 (0, t.jsx)(d.Z, {
-                                    icon: n.CheckmarkLargeIcon,
+                                    icon: l.CheckmarkLargeIcon,
                                     actionType: d.Z.ActionTypes.ACCEPT,
-                                    tooltip: N.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                                    onClick: x,
+                                    tooltip: E.Z.Messages.FRIEND_REQUEST_ACCEPT,
+                                    onClick: _,
                                     shouldHighlight: e
                                 }),
                                 (0, t.jsx)(d.Z, {
-                                    icon: n.XSmallIcon,
+                                    icon: l.XSmallIcon,
                                     actionType: d.Z.ActionTypes.DENY,
-                                    tooltip: N.Z.Messages.FRIEND_REQUEST_IGNORE,
-                                    onClick: h,
+                                    tooltip: E.Z.Messages.FRIEND_REQUEST_IGNORE,
+                                    onClick: p,
                                     shouldHighlight: e
                                 })
                             ]
@@ -83,52 +84,53 @@ function x(e) {
         })
     });
 }
-function E(e) {
+function x(e) {
     let { transitionState: a, onClose: s } = e,
-        { rows: c } = (0, l.cj)([h.ZP], () => h.ZP.getState()),
-        d = c.filter(C.pJs.SPAM),
-        r = d.length;
+        { rows: r } = (0, i.cj)([_.ZP], () => _.ZP.getState()),
+        d = r.filter(C.pJs.SPAM),
+        m = d.length;
     return (o.useEffect(() => {
-        0 === r && s();
-    }, [r, s]),
-    (0, m.A)({ location: 'friend_request_spam_inbox' }))
-        ? (0, t.jsxs)(n.ModalRoot, {
+        0 === m && s();
+    }, [m, s]),
+    (0, p.A)({ location: 'friend_request_spam_inbox' }))
+        ? (0, t.jsxs)(l.ModalRoot, {
               transitionState: a,
-              className: g.modal,
+              className: I.modal,
+              impression: { impressionName: n.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
               children: [
-                  (0, t.jsxs)(n.ModalHeader, {
+                  (0, t.jsxs)(l.ModalHeader, {
                       separator: !1,
                       children: [
-                          (0, t.jsx)(n.Heading, {
+                          (0, t.jsx)(l.Heading, {
                               variant: 'heading-lg/bold',
-                              className: g.heading,
-                              children: N.Z.Messages.FRIEND_REQUESTS_SPAM_REQUESTS
+                              className: I.heading,
+                              children: E.Z.Messages.FRIEND_REQUESTS_SPAM_REQUESTS
                           }),
-                          (0, t.jsx)(n.ModalCloseButton, {
+                          (0, t.jsx)(l.ModalCloseButton, {
                               onClick: s,
-                              className: g.closeButton
+                              className: I.closeButton
                           })
                       ]
                   }),
-                  (0, t.jsx)(n.ModalContent, {
-                      className: g.modalContent,
+                  (0, t.jsx)(l.ModalContent, {
+                      className: I.modalContent,
                       children: d.map((e) =>
-                          (0, o.createElement)(x, {
+                          (0, o.createElement)(g, {
                               ...e,
                               isFocused: !1,
                               key: e.key
                           })
                       )
                   }),
-                  r > 1 &&
+                  m > 1 &&
                       (0, t.jsx)('div', {
-                          className: g.modalFooter,
-                          children: (0, t.jsx)(n.Button, {
-                              className: g.clearAllButton,
+                          className: I.modalFooter,
+                          children: (0, t.jsx)(l.Button, {
+                              className: I.clearAllButton,
                               onClick: () => {
-                                  i.Z.clearPendingSpam(), s();
+                                  c.Z.clearPendingSpam(), s();
                               },
-                              children: N.Z.Messages.CLEAR_ALL
+                              children: E.Z.Messages.CLEAR_ALL
                           })
                       })
               ]
