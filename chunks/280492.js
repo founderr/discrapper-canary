@@ -21,5 +21,11 @@ let l = {
     o = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
-        action: () => (i.Z.toggleSelfDeaf(), !1)
+        action: () => (
+            i.Z.toggleSelfDeaf({
+                usedKeybind: !0,
+                location: 'Default Keybind'
+            }),
+            !1
+        )
     };

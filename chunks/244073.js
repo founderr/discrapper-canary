@@ -131,7 +131,10 @@ class M extends s.PureComponent {
             }),
             R(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
-                d.Z.toggleSelfDeaf({ context: e });
+                d.Z.toggleSelfDeaf({
+                    context: e,
+                    location: 'Overlay Controls'
+                });
             }),
             R(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;

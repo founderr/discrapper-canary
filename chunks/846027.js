@@ -33,9 +33,10 @@ function p(e, t, n, r) {
 let I = {
         isNotSupported: () => !1,
         enable: (e) => Promise.resolve(!0),
-        trackToggleSelfMute(e) {}
+        trackToggleSelfMute(e) {},
+        trackToggleSelfDeaf(e) {}
     },
-    { enable: m, isNotSupported: T, trackToggleSelfMute: S } = (I = n(929782));
+    { enable: m, isNotSupported: T, trackToggleSelfMute: S, trackToggleSelfDeaf: g } = (I = n(929782));
 t.Z = {
     enable: m,
     toggleSelfMute() {
@@ -71,13 +72,17 @@ t.Z = {
             });
     },
     toggleSelfDeaf() {
-        let { context: e = f.Yn.DEFAULT, syncRemote: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        let { context: e = f.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         !T() &&
+            (g({
+                usedKeybind: n,
+                location: i
+            }),
             r.Z.dispatch({
                 type: 'AUDIO_TOGGLE_SELF_DEAF',
                 context: e,
                 syncRemote: t
-            });
+            }));
     },
     toggleLocalMute(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT;

@@ -4165,6 +4165,7 @@ let ot = Object.freeze({
     (nO.VIDEO_BACKGROUND_DELETED = 'video_background_deleted'),
     (nO.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED = 'audio_local_soundboard_mute_toggled'),
     (nO.INPUT_MUTE_TOGGLED = 'input_mute_toggled'),
+    (nO.SELF_DEAFEN_TOGGLED = 'self_deafen_toggled'),
     (nO.CHANGE_LOG_OPENED = 'change_log_opened'),
     (nO.CHANGE_LOG_CLOSED = 'change_log_closed'),
     (nO.CHANGE_LOG_VIDEO_INTERACTED = 'change_log_video_interacted'),

@@ -72,9 +72,11 @@ let Z = {
         }
     },
     [A.kg4.TOGGLE_DEAFEN]: {
-        onTrigger() {
-            a.Z.toggleSelfDeaf();
-        },
+        onTrigger: () =>
+            a.Z.toggleSelfDeaf({
+                usedKeybind: !0,
+                location: 'Custom Keybind'
+            }),
         keyEvents: {
             keyup: !0,
             keydown: !1

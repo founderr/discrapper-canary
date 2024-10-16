@@ -29,8 +29,8 @@ function g(e) {
         {
             muted: A,
             deafened: N = !1,
-            localVideoDisabled: m = !1,
-            localVideoAutoDisabled: C = !1
+            localVideoDisabled: C = !1,
+            localVideoAutoDisabled: m = !1
         } = (0, i.cj)(
             [d.Z],
             () =>
@@ -54,7 +54,7 @@ function g(e) {
                           id: 'disable-video',
                           label: _.Z.Messages.DISABLE_VIDEO,
                           action: () => {
-                              if (C) {
+                              if (m) {
                                   s.Z.show({
                                       title: _.Z.Messages.UNSTABLE_CONNECTION,
                                       body: _.Z.Messages.UNSTABLE_CONNECTION_REASON_2,
@@ -64,11 +64,11 @@ function g(e) {
                                   });
                                   return;
                               }
-                              let t = m ? M.ZUi.MANUAL_ENABLED : M.ZUi.DISABLED;
+                              let t = C ? M.ZUi.MANUAL_ENABLED : M.ZUi.DISABLED;
                               o.Z.setDisableLocalVideo(e, t, n);
                           },
-                          checked: m,
-                          subtext: C
+                          checked: C,
+                          subtext: m
                               ? (0, l.jsxs)('div', {
                                     className: I.videoPaused,
                                     children: [
@@ -129,7 +129,11 @@ function g(e) {
                   {
                       id: 'deafen',
                       label: _.Z.Messages.DEAFEN,
-                      action: () => o.Z.toggleSelfDeaf({ context: n }),
+                      action: () =>
+                          o.Z.toggleSelfDeaf({
+                              context: n,
+                              location: 'User Context Menu'
+                          }),
                       checked: N
                   },
                   'self-deafen'
