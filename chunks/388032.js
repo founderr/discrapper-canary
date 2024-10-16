@@ -22,33 +22,34 @@ n.r(t),
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(241698),
+    a = n(196095),
     s = n(302454),
     o = n.n(s),
     l = n(424395);
 let u = {},
     c = new a.IntlManager('en-US').withFormatters({
         format: (0, a.makeReactFormatter)({
-            $_: () => '',
             $i: (e, t) => (0, r.jsx)('em', { children: e }, t),
             $b: (e, t) => (0, r.jsx)('strong', { children: e }, t),
             $del: (e, t) => (0, r.jsx)('del', { children: e }, t),
             $p: (e, t) => (0, r.jsx)('p', { children: e }, t),
             $code: (e, t) => (0, r.jsx)('code', { children: e }, t),
-            $link: (e, t) => {
-                let [r, ...a] = e,
+            $link: (e, t, r) => {
+                let [a] = r,
                     { Anchor: s } = n(756715),
                     l = {};
-                switch (typeof r) {
+                switch (typeof a) {
                     case 'string':
-                        l.href = o().sanitizeUrl(r);
+                        l.href = o().sanitizeUrl(a);
+                        break;
+                    case 'function':
+                    default:
+                        l.onClick = a;
                         break;
                     case 'object':
                         var u;
-                        (l.onClick = null !== (u = r.onClick) && void 0 !== u ? u : r), (l.onContextMenu = r.onContextMenu);
-                        break;
-                    default:
-                        l.onClick = r;
+                        if (null == a) break;
+                        (l.onClick = null !== (u = a.onClick) && void 0 !== u ? u : a), (l.onContextMenu = a.onContextMenu);
                 }
                 return (0, i.createElement)(
                     s,
@@ -56,7 +57,7 @@ let u = {},
                         ...l,
                         key: t
                     },
-                    a
+                    e
                 );
             }
         }),
