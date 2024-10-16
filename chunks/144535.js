@@ -7,8 +7,12 @@ var n = o(241698),
     a = o(424395);
 let s = a.vJ
     ? function (e) {
-          let { t } = o(388032);
-          return (0, t[(0, n.runtimeHashMessageKey)(e)])('en-US');
+          let { intl: t, t: a } = o(388032),
+              s = a[(0, n.runtimeHashMessageKey)(e)],
+              l = t.currentLocale;
+          t.currentLocale = 'en-US';
+          let i = t.string(s);
+          return (t.currentLocale = l), i;
       }
     : function (e) {
           return o(375964)[e];
