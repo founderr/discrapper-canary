@@ -122,10 +122,9 @@ function S(e) {
 function I(e) {
     let { storeListing: s, guildId: t } = e,
         { openModal: a } = (0, _.Z)({
-            showBenefitsFirst: !1,
             analyticsLocation: u.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: s.skuId,
-            guildId: t
+            subscribeForGuild: t
         });
     return (0, n.jsx)(
         o.Z,

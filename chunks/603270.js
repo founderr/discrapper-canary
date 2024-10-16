@@ -136,8 +136,7 @@ let v = P(function (e) {
         let y = (0, s.e7)([T.Z], () => (null != u ? T.Z.getParentSKU(u) : void 0), [u]),
             { openModal: B, canOpenModal: k } = (0, _.Z)({
                 skuId: u,
-                guildId: D,
-                showBenefitsFirst: !1
+                subscribeForGuild: D
             });
         if (!U || null == g || null == f) return null;
         let G = f.type === R.epS.SUBSCRIPTION,
