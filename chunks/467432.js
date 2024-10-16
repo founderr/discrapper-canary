@@ -1,7 +1,7 @@
 n.d(t, {
     e: function () {
-        return a;
+        return i;
     }
 });
-var i = n(709054);
-let a = (e) => 86400000 > Math.abs(i.default.extractTimestamp(e.id) - new Date().getTime());
+var a = n(709054);
+let i = (e) => 86400000 > Math.abs(a.default.extractTimestamp(e.id) - new Date().getTime());

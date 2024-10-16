@@ -17,11 +17,11 @@ var i = t(735250),
     E = t(556012),
     M = t(572456),
     g = t(434404),
-    f = t(981631),
-    m = t(273504),
+    m = t(981631),
+    f = t(273504),
     I = t(689938),
     _ = t(561240);
-let Z = m.fX.KEYWORD;
+let Z = f.fX.KEYWORD;
 function S(e, n) {
     let { perGuildMaxCount: t } = u.I6[Z],
         { isLoading: S, saveRule: h, errorMessage: A } = (0, c.w)(),
@@ -39,14 +39,14 @@ function S(e, n) {
     let L = e.split(' '),
         b = L.length;
     try {
-        (0, r.km)(L, m.RH);
+        (0, r.km)(L, f.RH);
     } catch (e) {
         return null;
     }
     let j = () => {
             if (null != n)
                 (0, l.Zy)(),
-                    g.Z.open(n, f.pNK.GUILD_AUTOMOD),
+                    g.Z.open(n, m.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
                         N(n, Z, {
                             triggerMetadata: {

@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(735250),
-    a = n(470079),
+var a = n(735250),
+    i = n(470079),
     s = n(392711),
     l = n(442837),
     r = n(692547),
@@ -20,15 +20,15 @@ var i = n(735250),
 function A() {
     let e = (0, u.P)(),
         t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        [n, A] = a.useState(36),
-        I = a.useRef({
+        [n, A] = i.useState(36),
+        I = i.useRef({
             [_.Sn.ALL_GOOD]: null,
             [_.Sn.LIMITED]: null,
             [_.Sn.VERY_LIMITED]: null,
             [_.Sn.AT_RISK]: null,
             [_.Sn.SUSPENDED]: null
         }),
-        N = a.useCallback(() => {
+        N = i.useCallback(() => {
             A(
                 Math.max(
                     Math.max(
@@ -41,7 +41,7 @@ function A() {
                 )
             );
         }, []);
-    a.useEffect(() => {
+    i.useEffect(() => {
         N();
         let e = (0, s.debounce)(N, 100);
         window.addEventListener('resize', e);
@@ -88,29 +88,29 @@ function A() {
         },
         { title: f, description: C, color: m, Icon: p } = g[e.state],
         U = Object.keys(g).length;
-    return (0, i.jsxs)(o.Card, {
+    return (0, a.jsxs)(o.Card, {
         className: S.container,
         outline: !1,
         children: [
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: S.profile,
-                children: (0, i.jsx)(d.Z, {
+                children: (0, a.jsx)(d.Z, {
                     user: t,
                     size: o.AvatarSizes.SIZE_80
                 })
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: S.status,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: S.title,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, a.jsx)(o.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-lg/normal',
                                 children: f.format({
                                     hook: (e) =>
-                                        (0, i.jsx)(o.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             style: { color: m.css },
                                             variant: 'heading-lg/bold',
                                             tag: 'span',
@@ -118,43 +118,43 @@ function A() {
                                         })
                                 })
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, a.jsx)(o.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/normal',
                                 children: C
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: S.health,
                         style: { height: n },
                         children: [
-                            (0, i.jsx)('div', { className: S.line }),
+                            (0, a.jsx)('div', { className: S.line }),
                             Object.entries(g).map((t, n) => {
-                                let [a, s] = t,
-                                    l = parseInt(a) === e.state;
-                                return (0, i.jsxs)(
+                                let [i, s] = t,
+                                    l = parseInt(i) === e.state;
+                                return (0, a.jsxs)(
                                     'div',
                                     {
                                         className: S.statusOption,
-                                        ref: (e) => (I.current[parseInt(a)] = e),
+                                        ref: (e) => (I.current[parseInt(i)] = e),
                                         children: [
                                             l
-                                                ? (0, i.jsx)(p, {
+                                                ? (0, a.jsx)(p, {
                                                       className: S.marker,
                                                       color: s.color
                                                   })
-                                                : (0, i.jsx)('div', {
+                                                : (0, a.jsx)('div', {
                                                       className: S.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
                                                           marginRight: n === U - 1 ? -6 : 0
                                                       },
-                                                      children: (0, i.jsx)('div', { className: S.empty })
+                                                      children: (0, a.jsx)('div', { className: S.empty })
                                                   }),
                                             s.status.format({
                                                 hook: (e) =>
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, a.jsx)(o.Text, {
                                                         color: 'text-normal',
                                                         variant: 'text-sm/normal',
                                                         className: S.statusLabel,

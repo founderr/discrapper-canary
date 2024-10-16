@@ -61,8 +61,8 @@ var u = t(623292),
     E = t(314897),
     M = t(592125),
     g = t(626135),
-    f = t(934415),
-    m = t(572004),
+    m = t(934415),
+    f = t(572004),
     I = t(585483),
     _ = t(709054),
     Z = t(111618),
@@ -74,14 +74,14 @@ function N(e) {
     null != n && o.Z.open(n, A.pNK.OVERVIEW);
 }
 function v(e, n, t) {
-    (0, m.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
+    (0, f.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
 }
 function T(e, n) {
     g.default.track(A.rMx.MESSAGE_LINK_COPIED, {
         message_id: n.id,
         channel: n.channel_id
     }),
-        (0, m.JG)((0, f.wR)(e.guild_id, e.id, n.id));
+        (0, f.JG)((0, m.wR)(e.guild_id, e.id, n.id));
 }
 function p(e, n, t) {
     n.state === A.yb.SEND_FAILED || t.shiftKey ? a.Z.deleteMessage(e.id, n.id, n.state === A.yb.SEND_FAILED) : s.Z.confirmDelete(e, n);

@@ -621,10 +621,10 @@ var n = (function (e) {
     for (var M = [1]; 2 * M[M.length - 1] <= 10000000; ) M.push(2 * M[M.length - 1]);
     var G = M.length,
         m = M[G - 1];
-    function b(e) {
+    function y(e) {
         return 10000000 >= Math.abs(e);
     }
-    function y(e, t, r) {
+    function b(e, t, r) {
         t = F(t);
         for (var a = e.isNegative(), _ = t.isNegative(), o = a ? e.not() : e, E = _ ? t.not() : t, i = 0, c = 0, s = null, l = null, u = []; !o.isZero() || !E.isZero(); ) (i = (s = C(o, m))[1].toJSNumber()), a && (i = m - 1 - i), (c = (l = C(E, m))[1].toJSNumber()), _ && (c = m - 1 - c), (o = s[0]), (E = l[0]), u.push(r(i, c));
         for (var I = 0 !== r(a ? 1 : 0, _ ? 1 : 0) ? n(-1) : n(0), R = u.length - 1; R >= 0; R -= 1) I = I.multiply(m).add(n(u[R]));
@@ -632,7 +632,7 @@ var n = (function (e) {
     }
     (o.prototype.shiftLeft = function (e) {
         var t = F(e).toJSNumber();
-        if (!b(t)) throw Error(String(t) + ' is too large for shifting.');
+        if (!y(t)) throw Error(String(t) + ' is too large for shifting.');
         if (t < 0) return this.shiftRight(-t);
         var r = this;
         if (r.isZero()) return r;
@@ -643,7 +643,7 @@ var n = (function (e) {
         (o.prototype.shiftRight = function (e) {
             var t,
                 r = F(e).toJSNumber();
-            if (!b(r)) throw Error(String(r) + ' is too large for shifting.');
+            if (!y(r)) throw Error(String(r) + ' is too large for shifting.');
             if (r < 0) return this.shiftLeft(-r);
             for (var n = this; r >= G; ) {
                 if (n.isZero() || (n.isNegative() && n.isUnit())) return n;
@@ -657,19 +657,19 @@ var n = (function (e) {
         }),
         (i.prototype.not = E.prototype.not = o.prototype.not),
         (o.prototype.and = function (e) {
-            return y(this, e, function (e, t) {
+            return b(this, e, function (e, t) {
                 return e & t;
             });
         }),
         (i.prototype.and = E.prototype.and = o.prototype.and),
         (o.prototype.or = function (e) {
-            return y(this, e, function (e, t) {
+            return b(this, e, function (e, t) {
                 return e | t;
             });
         }),
         (i.prototype.or = E.prototype.or = o.prototype.or),
         (o.prototype.xor = function (e) {
-            return y(this, e, function (e, t) {
+            return b(this, e, function (e, t) {
                 return e ^ t;
             });
         }),

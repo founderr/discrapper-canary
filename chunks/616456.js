@@ -31,8 +31,8 @@ var c,
     M = r(467510),
     G = r(101284),
     m = r(622916),
-    b = r(394798),
-    y = r(886115),
+    y = r(394798),
+    b = r(886115),
     v = r(617726),
     w = r(928541),
     B = r(14588),
@@ -344,8 +344,8 @@ function eP(e) {
 function eM(e, t) {
     let r;
     let { doc: _, mirror: o, blockClass: E, blockSelector: i, unblockSelector: c, maskAllText: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, skipChild: A = !1, inlineStylesheet: T = !0, maskInputOptions: d = {}, maskAttributeFn: L, maskTextFn: f, maskInputFn: O, slimDOMOptions: p, dataURLOptions: h = {}, inlineImages: S = !1, recordCanvas: D = !1, onSerialize: C, onIframeLoad: g, iframeLoadTimeout: U = 5000, onStylesheetLoad: P, stylesheetLoadTimeout: M = 5000, keepIframeSrcFn: G = () => !1, newlyAddedElement: m = !1 } = t,
-        { preserveWhiteSpace: b = !0 } = t,
-        y = (function (e, t) {
+        { preserveWhiteSpace: y = !0 } = t,
+        b = (function (e, t) {
             let { doc: r, mirror: _, blockClass: o, blockSelector: E, unblockSelector: i, maskAllText: c, maskAttributeFn: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, inlineStylesheet: A, maskInputOptions: T = {}, maskTextFn: d, maskInputFn: L, dataURLOptions: f = {}, inlineImages: O, recordCanvas: p, keepIframeSrcFn: h, newlyAddedElement: S = !1 } = t,
                 D = (function (e, t) {
                     if (!t.hasNode(e)) return;
@@ -608,7 +608,7 @@ function eM(e, t) {
             keepIframeSrcFn: G,
             newlyAddedElement: m
         });
-    if (!y) return console.warn(e, 'not serialized'), null;
+    if (!b) return console.warn(e, 'not serialized'), null;
     r = o.hasNode(e)
         ? o.getId(e)
         : !(function (e, t) {
@@ -626,11 +626,11 @@ function eM(e, t) {
                     }
                 }
                 return !1;
-            })(y, p) &&
-            (b || y.type !== N.Text || y.isStyle || y.textContent.replace(/^\s+|\s+$/gm, '').length)
+            })(b, p) &&
+            (y || b.type !== N.Text || b.isStyle || b.textContent.replace(/^\s+|\s+$/gm, '').length)
           ? eR()
           : -2;
-    let v = Object.assign(y, { id: r });
+    let v = Object.assign(b, { id: r });
     if ((o.add(e, v), -2 === r)) return null;
     C && C(e);
     let w = !A;
@@ -641,7 +641,7 @@ function eM(e, t) {
     }
     if ((v.type === N.Document || v.type === N.Element) && w) {
         var B;
-        p.headWhitespace && v.type === N.Element && 'head' === v.tagName && (b = !1);
+        p.headWhitespace && v.type === N.Element && 'head' === v.tagName && (y = !1);
         let t = {
             doc: _,
             mirror: o,
@@ -663,7 +663,7 @@ function eM(e, t) {
             dataURLOptions: h,
             inlineImages: S,
             recordCanvas: D,
-            preserveWhiteSpace: b,
+            preserveWhiteSpace: y,
             onSerialize: C,
             onIframeLoad: g,
             iframeLoadTimeout: U,
@@ -733,7 +733,7 @@ function eM(e, t) {
                             dataURLOptions: h,
                             inlineImages: S,
                             recordCanvas: D,
-                            preserveWhiteSpace: b,
+                            preserveWhiteSpace: y,
                             onSerialize: C,
                             onIframeLoad: g,
                             iframeLoadTimeout: U,
@@ -790,7 +790,7 @@ function eM(e, t) {
                             dataURLOptions: h,
                             inlineImages: S,
                             recordCanvas: D,
-                            preserveWhiteSpace: b,
+                            preserveWhiteSpace: y,
                             onSerialize: C,
                             onIframeLoad: g,
                             iframeLoadTimeout: U,
@@ -825,17 +825,17 @@ function em(e, t, r = document) {
     };
     return r.addEventListener(e, t, n), () => r.removeEventListener(e, t, n);
 }
-let eb = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
-    ey = {
+let ey = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
+    eb = {
         map: {},
-        getId: () => (console.error(eb), -1),
-        getNode: () => (console.error(eb), null),
+        getId: () => (console.error(ey), -1),
+        getNode: () => (console.error(ey), null),
         removeNodeFromMap() {
-            console.error(eb);
+            console.error(ey);
         },
-        has: () => (console.error(eb), !1),
+        has: () => (console.error(ey), !1),
         reset() {
-            console.error(eb);
+            console.error(ey);
         }
     };
 function ev(e, t, r = {}) {
@@ -861,7 +861,7 @@ function ev(e, t, r = {}) {
               }, E));
     };
 }
-'undefined' != typeof window && window.Proxy && window.Reflect && (ey = new Proxy(ey, { get: (e, t, r) => ('map' === t && console.error(eb), Reflect.get(e, t, r)) }));
+'undefined' != typeof window && window.Proxy && window.Reflect && (eb = new Proxy(eb, { get: (e, t, r) => ('map' === t && console.error(ey), Reflect.get(e, t, r)) }));
 function ew(e, t, r) {
     try {
         if (!(t in e)) return () => {};
@@ -1002,7 +1002,7 @@ var e3 = (((I = e3 || {})[(I.Mouse = 0)] = 'Mouse'), (I[(I.Pen = 1)] = 'Pen'), (
 function e6(e) {
     return '__ln' in e;
 }
-class e5 {
+class e4 {
     constructor() {
         (this.length = 0), (this.head = null), (this.tail = null);
     }
@@ -1045,7 +1045,7 @@ class e5 {
         if (!!this.head) t.previous ? ((t.previous.next = t.next), t.next ? (t.next.previous = t.previous) : (this.tail = t.previous)) : ((this.head = t.next), this.head ? (this.head.previous = null) : (this.tail = null)), e.__ln && delete e.__ln, this.length--;
     }
 }
-let e4 = (e, t) => `${e}@${t}`;
+let e5 = (e, t) => `${e}@${t}`;
 class e8 {
     constructor() {
         (this.frozen = !1),
@@ -1066,7 +1066,7 @@ class e8 {
                 if (this.frozen || this.locked) return;
                 let e = [],
                     t = new Set(),
-                    r = new e5(),
+                    r = new e4(),
                     n = (e) => {
                         let t = e,
                             r = -2;
@@ -1272,7 +1272,7 @@ class e8 {
                                                   let n = r.getId(t);
                                                   return !r.has(n) || ((!t.parentNode || t.parentNode.nodeType !== t.DOCUMENT_NODE) && (!t.parentNode || e(t.parentNode, r)));
                                               })(e.target, this.mirror) ||
-                                              (this.movedSet.has(t) && this.movedMap[e4(n, a)]
+                                              (this.movedSet.has(t) && this.movedMap[e5(n, a)]
                                                   ? e7(this.movedSet, t)
                                                   : this.removes.push({
                                                         parentId: a,
@@ -1290,7 +1290,7 @@ class e8 {
                             if (ek(e, this.mirror)) return;
                             this.movedSet.add(e);
                             let r = null;
-                            t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e4(this.mirror.getId(e), r)] = !0);
+                            t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e5(this.mirror.getId(e), r)] = !0);
                         } else this.addedSet.add(e), this.droppedSet.delete(e);
                         !eK(e, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                             (e.childNodes.forEach((e) => this.genAdds(e)),
@@ -2456,9 +2456,9 @@ try {
 let tS = new Z();
 function tD(e = {}) {
     let t;
-    let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: i = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: N = null, maskTextSelector: A = null, unmaskTextSelector: T = null, inlineStylesheet: L = !0, maskAllInputs: f, maskInputOptions: O, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: S, maskTextFn: D, maxCanvasSize: C = null, packFn: g, sampling: U = {}, dataURLOptions: P = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: b = !1, recordAfter: y = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: H = () => !1, ignoreCSSAttributes: Y = new Set([]), errorHandler: x, onMutation: K, getCanvasManager: k } = e;
+    let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: i = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: N = null, maskTextSelector: A = null, unmaskTextSelector: T = null, inlineStylesheet: L = !0, maskAllInputs: f, maskInputOptions: O, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: S, maskTextFn: D, maxCanvasSize: C = null, packFn: g, sampling: U = {}, dataURLOptions: P = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: H = () => !1, ignoreCSSAttributes: Y = new Set([]), errorHandler: x, onMutation: K, getCanvasManager: k } = e;
     _ = x;
-    let V = !b || window.parent === window,
+    let V = !y || window.parent === window,
         F = !1;
     if (!V)
         try {
@@ -2587,7 +2587,7 @@ function tD(e = {}) {
                       mirror: tS,
                       mutationCb: J,
                       stylesheetManager: ee,
-                      recordCrossOriginIframes: b,
+                      recordCrossOriginIframes: y,
                       wrappedEmit: o
                   });
     for (let e of W || [])
@@ -2954,7 +2954,7 @@ function tD(e = {}) {
                               type: e0.DomContentLoaded,
                               data: {}
                           }),
-                              'DOMContentLoaded' === y && r();
+                              'DOMContentLoaded' === b && r();
                       })
                   ),
                   e.push(
@@ -2965,7 +2965,7 @@ function tD(e = {}) {
                                   type: e0.Load,
                                   data: {}
                               }),
-                                  'load' === y && r();
+                                  'load' === b && r();
                           },
                           window
                       )
@@ -3028,7 +3028,7 @@ class tm {
         var e;
         let t =
             ((e = () => {
-                this._lastMutation = ty();
+                this._lastMutation = tb();
             }),
             !i &&
                 ((i = []),
@@ -3058,7 +3058,7 @@ class tm {
     handleClick(e, t) {
         if (
             (function (e, t) {
-                return !!(!tb.includes(e.tagName) || ('INPUT' === e.tagName && !['submit', 'button'].includes(e.getAttribute('type') || '')) || ('A' === e.tagName && (e.hasAttribute('download') || (e.hasAttribute('target') && '_self' !== e.getAttribute('target')))) || (t && e.matches(t))) || !1;
+                return !!(!ty.includes(e.tagName) || ('INPUT' === e.tagName && !['submit', 'button'].includes(e.getAttribute('type') || '')) || ('A' === e.tagName && (e.hasAttribute('download') || (e.hasAttribute('target') && '_self' !== e.getAttribute('target')))) || (t && e.matches(t))) || !1;
             })(t, this._ignoreSelector) ||
             !(function (e) {
                 return !!(e.data && 'number' == typeof e.data.nodeId && e.timestamp);
@@ -3093,7 +3093,7 @@ class tm {
     }
     _checkClicks() {
         let e = [],
-            t = ty();
+            t = tb();
         for (let r of (this._clicks.forEach((r) => {
             !r.mutationAfter && this._lastMutation && (r.mutationAfter = r.timestamp <= this._lastMutation ? this._lastMutation - r.timestamp : void 0), !r.scrollAfter && this._lastScroll && (r.scrollAfter = r.timestamp <= this._lastScroll ? this._lastScroll - r.timestamp : void 0), r.timestamp + this._timeout <= t && e.push(r);
         }),
@@ -3149,8 +3149,8 @@ class tm {
         this._checkClickTimeout && clearTimeout(this._checkClickTimeout), (this._checkClickTimeout = (0, H.iK)(() => this._checkClicks(), 1000));
     }
 }
-let tb = ['A', 'BUTTON', 'INPUT'];
-function ty() {
+let ty = ['A', 'BUTTON', 'INPUT'];
+function tb() {
     return Date.now() / 1000;
 }
 function tv(e) {
@@ -3558,9 +3558,9 @@ function t3() {
 function t6(e) {
     return void 0 !== e && Math.random() < e;
 }
-function t5(e) {
+function t4(e) {
     let t = Date.now(),
-        r = e.id || (0, b.DM)(),
+        r = e.id || (0, y.DM)(),
         n = e.started || t,
         a = e.lastActivity || t,
         _ = e.segmentId || 0,
@@ -3574,7 +3574,7 @@ function t5(e) {
         previousSessionId: e.previousSessionId
     };
 }
-function t4(e) {
+function t5(e) {
     if (!!t3())
         try {
             V.sessionStorage.setItem(F, JSON.stringify(e));
@@ -3582,11 +3582,11 @@ function t4(e) {
 }
 function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: n } = {}) {
     var a, _;
-    let o = t5({
+    let o = t4({
         sampled: ((a = e), (_ = t), t6(a) ? 'session' : !!_ && 'buffer'),
         previousSessionId: n
     });
-    return r && t4(o), o;
+    return r && t5(o), o;
 }
 function t7(e, t, r = +new Date()) {
     return null === e || void 0 === t || !!(t < 0) || (0 !== t && e + t <= r);
@@ -3613,7 +3613,7 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
                 let t = V.sessionStorage.getItem(F);
                 if (!t) return null;
                 let r = JSON.parse(t);
-                return tJ('[Replay] Loading existing session', e), t5(r);
+                return tJ('[Replay] Loading existing session', e), t4(r);
             } catch (e) {
                 return null;
             }
@@ -3814,7 +3814,7 @@ function rf(e, t) {
         let n = r.href;
         return !e.endsWith('/') && n.endsWith('/') ? n.slice(0, -1) : n;
     })(e);
-    return (0, y.U0)(r, t);
+    return (0, b.U0)(r, t);
 }
 async function rO(e, t, r) {
     try {
@@ -4113,17 +4113,17 @@ async function rm({ recordingData: e, replayId: t, segmentId: r, eventContext: n
         } catch (e) {}
         throw e;
     }
-    if ('number' == typeof s.statusCode && (s.statusCode < 200 || s.statusCode >= 300)) throw new rb(s.statusCode);
+    if ('number' == typeof s.statusCode && (s.statusCode < 200 || s.statusCode >= 300)) throw new ry(s.statusCode);
     let S = (0, B.WG)({}, s);
-    if ((0, B.Q)(S, 'replay')) throw new ry(S);
+    if ((0, B.Q)(S, 'replay')) throw new rb(S);
     return s;
 }
-class rb extends Error {
+class ry extends Error {
     constructor(e) {
         super(`Transport returned status code ${e}`);
     }
 }
-class ry extends Error {
+class rb extends Error {
     constructor(e) {
         super('Rate limit hit'), (this.rateLimits = e);
     }
@@ -4140,7 +4140,7 @@ async function rv(
         try {
             return await rm(e), !0;
         } catch (r) {
-            if (r instanceof rb || r instanceof ry) throw r;
+            if (r instanceof ry || r instanceof rb) throw r;
             if (((0, p.v)('Replays', { _retryCount: t.count }), t$ && n._experiments && n._experiments.captureExceptions && (0, p.Tb)(r), t.count >= 3)) {
                 let e = Error(`${X} - max retries exceeded`);
                 try {
@@ -4405,7 +4405,7 @@ class rB {
                                     return !0;
                                 if ('buffer' === e.recordingMode && e.session && e.eventBuffer) {
                                     let t = e.eventBuffer.getEarliestTimestamp();
-                                    t && (tq(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t4(e.session));
+                                    t && (tq(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t5(e.session));
                                 }
                                 return 'session' === e.recordingMode && e.flush(), !0;
                             });
@@ -5057,7 +5057,7 @@ class rB {
         };
     }
     _maybeSaveSession() {
-        this.session && this._options.stickySession && t4(this.session);
+        this.session && this._options.stickySession && t5(this.session);
     }
     __init6() {
         this._onMutationHandler = (e) => {

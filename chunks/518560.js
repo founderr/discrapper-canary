@@ -3,8 +3,8 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250),
-    a = n(470079),
+var a = n(735250),
+    i = n(470079),
     s = n(286379),
     l = n(481060),
     r = n(797614),
@@ -24,28 +24,28 @@ function g() {
         t = (0, d.e)(),
         n = (0, _.P)(),
         g = (0, u.i)();
-    return (a.useEffect(() => {
+    return (i.useEffect(() => {
         c.yq();
     }, []),
-    a.useEffect(() => {
+    i.useEffect(() => {
         t && (o.default.track(A.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: s.V.SAFETY_HUB_VIEW }));
     }, [t]),
     e)
-        ? (0, i.jsx)('div', { children: (0, i.jsx)(l.Spinner, {}) })
+        ? (0, a.jsx)('div', { children: (0, a.jsx)(l.Spinner, {}) })
         : null != g
-          ? (0, i.jsxs)(l.Notice, {
+          ? (0, a.jsxs)(l.Notice, {
                 color: l.NoticeColors.DANGER,
                 className: N.nagbar,
                 children: [
                     I.Z.Messages.SAFETY_HUB_ERROR_MESSAGE,
-                    (0, i.jsx)(l.NoticeButton, {
+                    (0, a.jsx)(l.NoticeButton, {
                         onClick: () => c.yq(),
                         children: I.Z.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
                     })
                 ]
             })
-          : (0, i.jsxs)('div', {
+          : (0, a.jsxs)('div', {
                 className: N.container,
-                children: [(0, i.jsx)(T.Z, {}), (0, i.jsx)(S.N, {})]
+                children: [(0, a.jsx)(T.Z, {}), (0, a.jsx)(S.N, {})]
             });
 }

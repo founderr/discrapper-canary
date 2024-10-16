@@ -1,7 +1,7 @@
 let n;
 r.d(t, {
     m: function () {
-        return y;
+        return b;
     }
 });
 var a,
@@ -578,7 +578,7 @@ class m {
             this.pendingCanvasMutations.delete(e);
     }
 }
-let b = {
+let y = {
         low: {
             sampling: { canvas: 1 },
             dataURLOptions: {
@@ -601,7 +601,7 @@ let b = {
             }
         }
     },
-    y = (0, i._I)((e = {}) => {
+    b = (0, i._I)((e = {}) => {
         let t;
         let [r, n] = e.maxCanvasSize || [],
             a = {
@@ -630,7 +630,7 @@ let b = {
                         });
                         return t(a), a;
                     },
-                    ...(b[e || 'medium'] || b.medium)
+                    ...(y[e || 'medium'] || y.medium)
                 };
             },
             async snapshot(e) {

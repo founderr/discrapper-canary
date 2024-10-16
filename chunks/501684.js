@@ -16,7 +16,7 @@ r.d(t, {
         return S;
     },
     cN: function () {
-        return y;
+        return b;
     },
     to: function () {
         return O;
@@ -64,7 +64,7 @@ function S(e, t) {
                     );
             })(e),
             (d[e] = !0)),
-        b(e, t)
+        y(e, t)
     );
 }
 function D(e, t) {
@@ -117,12 +117,12 @@ function M() {
 }
 function G(e, t, r, n, a = !1) {
     let _;
-    return m(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), b(e, t, a ? _ : void 0);
+    return m(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), y(e, t, a ? _ : void 0);
 }
 function m(e, t) {
     (T[e] = T[e] || []), T[e].push(t);
 }
-function b(e, t, r) {
+function y(e, t, r) {
     return () => {
         r && r();
         let n = T[e];
@@ -131,6 +131,6 @@ function b(e, t, r) {
         -1 !== a && n.splice(a, 1);
     };
 }
-function y(e) {
+function b(e) {
     return 'duration' in e;
 }

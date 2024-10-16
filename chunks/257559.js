@@ -11,8 +11,8 @@ var i = t(735250),
     E = t(372900),
     M = t(726521),
     g = t(294218),
-    f = t(699516),
-    m = t(594174),
+    m = t(699516),
+    f = t(594174),
     I = t(630388),
     _ = t(970257),
     Z = t(981631),
@@ -97,7 +97,7 @@ n.Z = {
     confirmPin: function (e, n) {
         (0, r.openModal)((t) => {
             let a;
-            let s = (0, d.F6)(e, m.default, f.Z);
+            let s = (0, d.F6)(e, f.default, m.Z);
             return (
                 (a = e.isPrivate() ? S.Z.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : S.Z.Messages.PIN_MESSAGE_BODY.format({ channelName: s })),
                 (0, i.jsx)(E.Z.Provider, {

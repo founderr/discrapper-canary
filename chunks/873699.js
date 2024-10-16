@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return f;
     }
 }),
     t(724458),
@@ -17,12 +17,12 @@ var i = t(735250),
     E = t(768581),
     M = t(176354),
     g = t(981631),
-    f = t(689938);
-function m(e, n) {
+    m = t(689938);
+function f(e, n) {
     let { reducedMotion: t } = a.useContext(l.AccessibilityPreferencesContext),
         E = (0, d.$R)(n),
         M = (0, s.e7)([c.Z], () => c.Z.can(g.Plq.MANAGE_MESSAGES, n) && E, [n, E]),
-        m = e.reactions.reduce((e, n) => {
+        f = e.reactions.reduce((e, n) => {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
         }, []),
@@ -30,10 +30,10 @@ function m(e, n) {
             t.shiftKey
                 ? (0, u.$E)(n.id, e.id, i)
                 : r.Z.show({
-                      title: f.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
-                      body: f.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
-                      confirmText: f.Z.Messages.YES_TEXT,
-                      cancelText: f.Z.Messages.NO_TEXT,
+                      title: m.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
+                      body: m.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
+                      confirmText: m.Z.Messages.YES_TEXT,
+                      cancelText: m.Z.Messages.NO_TEXT,
                       onConfirm: () => {
                           (0, u.$E)(n.id, e.id, i);
                       }
@@ -43,9 +43,9 @@ function m(e, n) {
         ? null
         : (0, i.jsx)(l.MenuItem, {
               id: 'remove-emoji-reactions',
-              label: f.Z.Messages.REMOVE_EMOJI_REACTIONS,
+              label: m.Z.Messages.REMOVE_EMOJI_REACTIONS,
               color: 'danger',
-              children: m.map((e) => {
+              children: f.map((e) => {
                   var n, a;
                   return (0, i.jsx)(
                       l.MenuItem,

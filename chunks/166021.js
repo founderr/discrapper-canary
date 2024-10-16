@@ -9,7 +9,7 @@ var s = n(735250),
     d = n(281781);
 t.Z = (e) => {
     let { cards: t, className: n, cardType: r } = e,
-        _ = () => (window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3),
+        _ = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
         [E, u] = a.useState(0),
         [T, I] = a.useState(_()),
         [R, g] = a.useState(!1),

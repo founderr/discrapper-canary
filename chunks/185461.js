@@ -1,6 +1,6 @@
 r.d(t, {
     U0: function () {
-        return e5;
+        return e4;
     },
     fA: function () {
         return g;
@@ -112,7 +112,7 @@ let G = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(95%)'
     },
-    b = {
+    y = {
         foreground: '#ebe6ef',
         background: '#29232f',
         accentForeground: 'white',
@@ -124,7 +124,7 @@ let G = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(150%)'
     };
-function y(e) {
+function b(e) {
     return `
   --foreground: ${e.foreground};
   --background: ${e.background};
@@ -241,10 +241,10 @@ let v =
 
   ${'system' !== e ? 'color-scheme: only light;' : ''}
 
-  ${y(
+  ${b(
       'dark' === e
           ? {
-                ...b,
+                ...y,
                 ...t
             }
           : {
@@ -259,8 +259,8 @@ ${
         ? `
 @media (prefers-color-scheme: dark) {
   :host {
-    ${y({
-        ...b,
+    ${b({
+        ...y,
         ...t
     })}
   }
@@ -951,7 +951,7 @@ function em(e, t) {
         }, t)
     );
 }
-function eb() {
+function ey() {
     for (var e; (e = ed.shift()); )
         if (e.__P && e.__H)
             try {
@@ -991,12 +991,12 @@ function eb() {
                         function (e) {
                             var t,
                                 r = function () {
-                                    clearTimeout(n), ey && cancelAnimationFrame(t), setTimeout(e);
+                                    clearTimeout(n), eb && cancelAnimationFrame(t), setTimeout(e);
                                 },
                                 n = setTimeout(r, 100);
-                            ey && (t = requestAnimationFrame(r));
+                            eb && (t = requestAnimationFrame(r));
                         }
-                    )(eb)),
+                    )(ey)),
             t.__H.__.forEach(function (e) {
                 e.i && (e.__H = e.i), e.__V !== eL && (e.__ = e.__V), (e.i = void 0), (e.__V = eL);
             })),
@@ -1035,7 +1035,7 @@ function eb() {
             (r.__H = void 0),
             t && ef.__e(t, r.__v));
     });
-var ey = 'function' == typeof requestAnimationFrame;
+var eb = 'function' == typeof requestAnimationFrame;
 function ev(e) {
     var t = eR,
         r = e.__c;
@@ -1190,10 +1190,10 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
         [g, P] = eU(!1),
         M = s && s.input,
         [G, m] = eU(null),
-        b = em((e) => {
+        y = em((e) => {
             m(e), P(!1);
         }, []),
-        y = em(
+        b = em(
             (e) => {
                 let t = (function (e, t) {
                     let r = [];
@@ -1225,7 +1225,7 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                 message: ek(t, 'message'),
                                 attachments: r ? [r] : void 0
                             };
-                        if (!y(n)) return;
+                        if (!b(n)) return;
                         try {
                             await a(
                                 {
@@ -1253,7 +1253,7 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
         },
         M && g
             ? J(M, {
-                  onError: b,
+                  onError: y,
                   __self: this,
                   __source: {
                       fileName: eK,
@@ -2076,7 +2076,7 @@ ${eQ}
             endY: _ + E
         };
     },
-    e5 = () => ({
+    e4 = () => ({
         name: 'FeedbackScreenshot',
         setupOnce() {},
         createInput: ({ h: e, hooks: t, dialog: r, options: n }) => {

@@ -213,7 +213,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'BLUE_NEW_44',
+                        raw: 'BLUE_NEW_43',
                         opacity: 1
                     }
                 }
@@ -261,7 +261,7 @@ let { Themes: r } = n(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_34',
+                        raw: 'GREEN_NEW_33',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -273,7 +273,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'GREEN_NEW_40',
+                        raw: 'GREEN_NEW_39',
                         opacity: 1
                     }
                 }

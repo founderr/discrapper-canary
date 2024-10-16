@@ -53,8 +53,8 @@ let O = {
                 traceFetch: M,
                 traceXHR: G,
                 shouldCreateSpanForRequest: m,
-                enableHTTPTimings: b,
-                instrumentPageLoad: y,
+                enableHTTPTimings: y,
+                instrumentPageLoad: b,
                 instrumentNavigation: v
             } = {
                 ...O,
@@ -130,7 +130,7 @@ let O = {
                         });
                     }),
                     d.m9.location &&
-                        (y &&
+                        (b &&
                             h(e, {
                                 name: d.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
@@ -199,7 +199,7 @@ let O = {
                         traceXHR: G,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,
                         shouldCreateSpanForRequest: m,
-                        enableHTTPTimings: b
+                        enableHTTPTimings: y
                     });
             }
         };
