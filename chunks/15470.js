@@ -1,13 +1,13 @@
 s.d(t, {
     i: function () {
-        return C;
+        return x;
     }
 }),
     s(47120);
 var n = s(735250),
-    i = s(470079),
-    a = s(120356),
-    r = s.n(a),
+    a = s(470079),
+    i = s(120356),
+    r = s.n(i),
     l = s(302454),
     o = s.n(l),
     h = s(481060),
@@ -30,16 +30,16 @@ function g(e, t, s) {
     );
 }
 let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    C = {
+    x = {
         ...u.Z.rules,
         heading: {
             ...u.Z.rules.heading,
             react(e, t, s) {
-                let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
+                let a = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
                 return (0, n.jsx)(
                     d.Z,
                     {
-                        tag: i,
+                        tag: a,
                         children: t(e.content, s)
                     },
                     s.key
@@ -77,9 +77,9 @@ let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 )
         }
     },
-    x = o().parserFor(C),
-    f = o().reactFor(o().ruleOutput(C, 'react'));
-class N extends i.PureComponent {
+    C = o().parserFor(x),
+    v = o().reactFor(o().ruleOutput(x, 'react'));
+class N extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
@@ -87,10 +87,10 @@ class N extends i.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: s, className: i, assets: a } = this.props,
+        let { applicationId: e, description: t, blurb: s, className: a, assets: i } = this.props,
             { collapsed: l, collapsable: o } = this.state;
         return (0, n.jsxs)('div', {
-            className: i,
+            className: a,
             children: [
                 (0, n.jsx)('div', {
                     className: r()({ [m.collapsed]: o && l }),
@@ -103,10 +103,10 @@ class N extends i.PureComponent {
                             }),
                             (0, n.jsx)(u.Z, {
                                 className: m.description,
-                                parser: x,
-                                output: f,
+                                parser: C,
+                                output: v,
                                 state: {
-                                    assets: a,
+                                    assets: i,
                                     applicationId: e
                                 },
                                 children: t

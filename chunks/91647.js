@@ -7,33 +7,33 @@ var n = r(101284),
     a = r(696486),
     _ = r(147498),
     o = r(218234),
-    i = r(823878),
-    E = r(939747);
+    E = r(823878),
+    i = r(939747);
 class c {
     constructor(e) {
         (this._client = e), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), _.RF));
     }
     add(e, t, r, o = 'none', c = {}, s = (0, n.ph)()) {
-        let I = Math.floor(s),
-            u = (0, E.s3)(t),
-            l = (0, E.Bg)(c),
-            R = (0, E.OC)(o),
-            A = (0, E.Ic)(e, u, R, l),
-            T = this._buckets.get(A),
-            N = T && e === _.is ? T.metric.weight : 0;
-        T
-            ? (T.metric.add(r), T.timestamp < I && (T.timestamp = I))
-            : ((T = {
-                  metric: new i.ZN[e](r),
-                  timestamp: I,
+        let l = Math.floor(s),
+            u = (0, i.s3)(t),
+            I = (0, i.Bg)(c),
+            R = (0, i.OC)(o),
+            N = (0, i.Ic)(e, u, R, I),
+            A = this._buckets.get(N),
+            T = A && e === _.is ? A.metric.weight : 0;
+        A
+            ? (A.metric.add(r), A.timestamp < l && (A.timestamp = l))
+            : ((A = {
+                  metric: new E.ZN[e](r),
+                  timestamp: l,
                   metricType: e,
                   name: u,
                   unit: R,
-                  tags: l
+                  tags: I
               }),
-              this._buckets.set(A, T));
-        let d = 'string' == typeof r ? T.metric.weight - N : r;
-        (0, a.yc)(e, u, d, R, c, A);
+              this._buckets.set(N, A));
+        let d = 'string' == typeof r ? A.metric.weight - T : r;
+        (0, a.yc)(e, u, d, R, c, N);
     }
     flush() {
         if (0 === this._buckets.size) return;

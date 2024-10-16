@@ -1,15 +1,15 @@
 r.d(t, {
     BO: function () {
-        return E;
+        return i;
     },
     Cd: function () {
-        return O;
+        return L;
     },
     HY: function () {
         return d;
     },
     Jd: function () {
-        return i;
+        return E;
     },
     KQ: function () {
         return R;
@@ -21,26 +21,26 @@ r.d(t, {
         return u;
     },
     f4: function () {
-        return l;
+        return I;
     },
     gv: function () {
         return c;
     },
     mL: function () {
-        return N;
+        return T;
     },
     zQ: function () {
-        return A;
+        return N;
     }
 });
 var n = r(967752),
     a = r(202811),
     _ = r(370336),
     o = r(899517);
-function i(e, t = []) {
+function E(e, t = []) {
     return [e, t];
 }
-function E(e, t) {
+function i(e, t) {
     let [r, n] = e;
     return [r, [...n, t]];
 }
@@ -54,14 +54,14 @@ function c(e, t) {
 function s(e, t) {
     return c(e, (e, r) => t.includes(r));
 }
-function I(e) {
+function l(e) {
     return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(e) : new TextEncoder().encode(e);
 }
 function u(e) {
     let [t, r] = e,
         n = JSON.stringify(t);
     function _(e) {
-        'string' == typeof n ? (n = 'string' == typeof e ? n + e : [I(n), e]) : n.push('string' == typeof e ? I(e) : e);
+        'string' == typeof n ? (n = 'string' == typeof e ? n + e : [l(n), e]) : n.push('string' == typeof e ? l(e) : e);
     }
     for (let e of r) {
         let [t, r] = e;
@@ -91,8 +91,8 @@ ${JSON.stringify(t)}
               return t;
           })(n);
 }
-function l(e) {
-    let t = 'string' == typeof e ? I(e) : e;
+function I(e) {
+    let t = 'string' == typeof e ? l(e) : e;
     function r(e) {
         let r = t.subarray(0, e);
         return (t = t.subarray(e + 1)), r;
@@ -114,8 +114,8 @@ function l(e) {
 function R(e) {
     return [{ type: 'span' }, e];
 }
-function A(e) {
-    let t = 'string' == typeof e.data ? I(e.data) : e.data;
+function N(e) {
+    let t = 'string' == typeof e.data ? l(e.data) : e.data;
     return [
         (0, _.Jr)({
             type: 'attachment',
@@ -127,7 +127,7 @@ function A(e) {
         t
     ];
 }
-let T = {
+let A = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -144,8 +144,8 @@ let T = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function N(e) {
-    return T[e];
+function T(e) {
+    return A[e];
 }
 function d(e) {
     if (!e || !e.sdk) return;
@@ -155,7 +155,7 @@ function d(e) {
         version: r
     };
 }
-function O(e, t, r, a) {
+function L(e, t, r, a) {
     let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,

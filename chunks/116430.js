@@ -7,12 +7,12 @@ var n = r(622916),
     a = r(899517),
     _ = r(910731),
     o = r(954211),
-    i = r(394798),
-    E = r(886115),
+    E = r(394798),
+    i = r(886115),
     c = r(263449),
     s = r(233517),
-    I = r(151122);
-let u = (0, I._I)((e = {}) => {
+    l = r(151122);
+let u = (0, l._I)((e = {}) => {
     let t = e.levels || n.RU;
     return {
         name: 'CaptureConsole',
@@ -30,7 +30,7 @@ let u = (0, I._I)((e = {}) => {
                                     (n.addEventProcessor(
                                         (e) => (
                                             (e.logger = 'console'),
-                                            (0, i.EG)(e, {
+                                            (0, E.EG)(e, {
                                                 handled: !1,
                                                 type: 'console'
                                             }),
@@ -40,7 +40,7 @@ let u = (0, I._I)((e = {}) => {
                                     'assert' === t)
                                 ) {
                                     if (!e[0]) {
-                                        let t = `Assertion failed: ${(0, E.nK)(e.slice(1), ' ') || 'console.assert'}`;
+                                        let t = `Assertion failed: ${(0, i.nK)(e.slice(1), ' ') || 'console.assert'}`;
                                         n.setExtra('arguments', e.slice(1)), (0, s.uT)(t, r);
                                     }
                                     return;
@@ -50,7 +50,7 @@ let u = (0, I._I)((e = {}) => {
                                     (0, s.Tb)(a, r);
                                     return;
                                 }
-                                let _ = (0, E.nK)(e, ' ');
+                                let _ = (0, i.nK)(e, ' ');
                                 (0, s.uT)(_, r);
                             });
                         })(r, n);

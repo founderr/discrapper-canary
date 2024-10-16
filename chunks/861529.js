@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
 var l = t(735250),
@@ -13,7 +13,7 @@ var l = t(735250),
     u = t(870456),
     d = t(662762),
     m = t(554034);
-function f(e) {
+function _(e) {
     let { content: n, className: t } = e,
         a = (function (e) {
             let n = (0, c.CJ)();

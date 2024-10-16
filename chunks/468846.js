@@ -1,42 +1,42 @@
-n.d(t, {
+t.d(l, {
     ZP: function () {
         return h;
     },
     pn: function () {
-        return r;
+        return i;
     }
 });
-var l,
-    r,
-    i = n(735250),
-    a = n(470079),
-    o = n(729594),
-    s = n(269625);
+var n,
+    i,
+    r = t(735250),
+    a = t(470079),
+    s = t(729594),
+    o = t(269625);
 function d(e) {
-    let { autoMute: t, ...n } = e,
-        l = a.useRef(null),
-        r = a.useCallback(
+    let { autoMute: l, ...t } = e,
+        n = a.useRef(null),
+        i = a.useCallback(
             (e) => {
                 if (!!e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin) {
                     if ('onPlayerReady' === e.data.type) {
-                        var n, r, i, a;
-                        t &&
-                            (null === (a = l.current) ||
+                        var t, i, r, a;
+                        l &&
+                            (null === (a = n.current) ||
                                 void 0 === a ||
-                                null === (i = a.contentWindow) ||
-                                void 0 === i ||
-                                i.postMessage(
+                                null === (r = a.contentWindow) ||
+                                void 0 === r ||
+                                r.postMessage(
                                     {
                                         type: 'mute',
                                         'x-tiktok-player': !0
                                     },
                                     e.origin
                                 )),
-                            null === (r = l.current) ||
-                                void 0 === r ||
-                                null === (n = r.contentWindow) ||
-                                void 0 === n ||
-                                n.postMessage(
+                            null === (i = n.current) ||
+                                void 0 === i ||
+                                null === (t = i.contentWindow) ||
+                                void 0 === t ||
+                                t.postMessage(
                                     {
                                         type: 'play',
                                         'x-tiktok-player': !0
@@ -46,36 +46,36 @@ function d(e) {
                     }
                 }
             },
-            [t]
+            [l]
         );
     return (
-        a.useEffect(() => (window.addEventListener('message', r), () => window.removeEventListener('message', r)), [r]),
-        (0, i.jsx)(m, {
-            ref: l,
-            ...n
+        a.useEffect(() => (window.addEventListener('message', i), () => window.removeEventListener('message', i)), [i]),
+        (0, r.jsx)(m, {
+            ref: n,
+            ...t
         })
     );
 }
 function u(e) {
-    let { src: t, autoMute: n, ...l } = e,
-        r = o.parse(null != t ? t : '', !0);
-    (r.query = {
-        ...r.query,
+    let { src: l, autoMute: t, ...n } = e,
+        i = s.parse(null != l ? l : '', !0);
+    (i.query = {
+        ...i.query,
         autoplay: '1',
         auto_play: '1'
     }),
-        n && (r.query.mute = '1'),
-        (r.search = null);
-    let a = o.format(r);
-    return (0, i.jsx)(m, {
+        t && (i.query.mute = '1'),
+        (i.search = null);
+    let a = s.format(i);
+    return (0, r.jsx)(m, {
         src: a,
-        ...l
+        ...n
     });
 }
-let m = a.forwardRef(function (e, t) {
-    return (0, i.jsx)('iframe', {
-        ref: t,
-        className: s.embedIframe,
+let m = a.forwardRef(function (e, l) {
+    return (0, r.jsx)('iframe', {
+        ref: l,
+        className: o.embedIframe,
         allow: 'autoplay',
         frameBorder: 0,
         scrolling: 'no',
@@ -86,11 +86,11 @@ let m = a.forwardRef(function (e, t) {
 function h(e) {
     switch (e.provider) {
         case 'YouTube':
-            return (0, i.jsx)(u, { ...e });
+            return (0, r.jsx)(u, { ...e });
         case 'TikTok':
-            return (0, i.jsx)(d, { ...e });
+            return (0, r.jsx)(d, { ...e });
         default:
-            return (0, i.jsx)(m, { ...e });
+            return (0, r.jsx)(m, { ...e });
     }
 }
-((l = r || (r = {})).YOUTUBE = 'YouTube'), (l.TIKTOK = 'TikTok');
+((n = i || (i = {})).YOUTUBE = 'YouTube'), (n.TIKTOK = 'TikTok');

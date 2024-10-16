@@ -111,8 +111,8 @@ g(R, 'Types', r),
     });
 function O(e) {
     let t = (0, m.Q)('Checkbox'),
-        { value: n, size: r, shape: i, checkboxColor: a, type: s, color: o, disabled: c } = e,
-        _ = (function (e, t) {
+        { className: n, value: r, size: i, shape: a, checkboxColor: s, type: o, color: c, disabled: _ } = e,
+        p = (function (e, t) {
             var n;
             let { value: r, type: i, color: a } = e,
                 s = null !== (n = e.style) && void 0 !== n ? n : {};
@@ -147,22 +147,22 @@ function O(e) {
                 }
             return s;
         })(e, t),
-        p = u.useMemo(() => (n ? (t ? h.Z.colors.WHITE.css : 'inverted' === s || 'row' === s ? h.Z.colors.WHITE.css : null != o ? o : h.Z.unsafe_rawColors.BRAND_500.css) : h.Z.unsafe_rawColors.TRANSPARENT.css), [n, s, o, t]);
+        I = u.useMemo(() => (r ? (t ? h.Z.colors.WHITE.css : 'inverted' === o || 'row' === o ? h.Z.colors.WHITE.css : null != c ? c : h.Z.unsafe_rawColors.BRAND_500.css) : h.Z.unsafe_rawColors.TRANSPARENT.css), [r, o, c, t]);
     return (0, l.jsx)('div', {
-        className: d()(S.checkbox, i, {
-            [S.checked]: n,
-            [S.checkboxDisabled]: c
+        className: d()(S.checkbox, a, n, {
+            [S.checked]: r,
+            [S.checkboxDisabled]: _
         }),
         style: {
-            width: r,
-            height: r,
-            borderColor: a,
-            ..._
+            width: i,
+            height: i,
+            borderColor: s,
+            ...p
         },
         children: (0, l.jsx)(v, {
             isVisualRefreshEnabled: t,
             size: 'sm',
-            color: p,
+            color: I,
             'aria-hidden': !0
         })
     });

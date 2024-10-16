@@ -3,13 +3,13 @@ r.d(t, {
         return u;
     },
     _I: function () {
-        return l;
-    },
-    m7: function () {
         return I;
     },
+    m7: function () {
+        return l;
+    },
     m8: function () {
-        return E;
+        return i;
     },
     q4: function () {
         return c;
@@ -22,8 +22,8 @@ var n = r(394798),
     a = r(622916),
     _ = r(263449),
     o = r(255768);
-let i = [];
-function E(e) {
+let E = [];
+function i(e) {
     let t;
     let r = e.defaultIntegrations || [],
         a = e.integrations;
@@ -52,7 +52,7 @@ function c(e, t) {
     let r = {};
     return (
         t.forEach((t) => {
-            t && I(e, t, r);
+            t && l(e, t, r);
         }),
         r
     );
@@ -60,12 +60,12 @@ function c(e, t) {
 function s(e, t) {
     for (let r of t) r && r.afterAllSetup && r.afterAllSetup(e);
 }
-function I(e, t, r) {
+function l(e, t, r) {
     if (r[t.name]) {
         o.X && a.kg.log(`Integration skipped because it was already installed: ${t.name}`);
         return;
     }
-    if (((r[t.name] = t), -1 === i.indexOf(t.name) && 'function' == typeof t.setupOnce && (t.setupOnce(), i.push(t.name)), t.setup && 'function' == typeof t.setup && t.setup(e), 'function' == typeof t.preprocessEvent)) {
+    if (((r[t.name] = t), -1 === E.indexOf(t.name) && 'function' == typeof t.setupOnce && (t.setupOnce(), E.push(t.name)), t.setup && 'function' == typeof t.setup && t.setup(e), 'function' == typeof t.preprocessEvent)) {
         let r = t.preprocessEvent.bind(t);
         e.on('preprocessEvent', (t, n) => r(t, n, e));
     }
@@ -84,6 +84,6 @@ function u(e) {
     }
     t.addIntegration(e);
 }
-function l(e) {
+function I(e) {
     return e;
 }

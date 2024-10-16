@@ -1,39 +1,39 @@
-t.d(n, {
+n.d(i, {
     EW: function () {
         return s;
     },
     Np: function () {
-        return o;
+        return l;
     },
     tb: function () {
-        return u;
+        return r;
     }
 });
-var i,
-    r,
-    a = t(626135),
-    l = t(981631);
-function u(e, n, t, i) {
-    a.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+var t,
+    o,
+    a = n(626135),
+    c = n(981631);
+function r(e, i, n, t) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
-        total_duration_secs: n,
-        start_duration_secs: Math.min(null != n ? n : t, t),
-        sender_user_id: i
+        total_duration_secs: i,
+        start_duration_secs: Math.min(null != i ? i : n, n),
+        sender_user_id: t
     });
 }
-function s(e, n, t, i, r) {
-    a.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function s(e, i, n, t, o) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
-        total_duration_secs: n,
-        end_duration_secs: Math.min(null != n ? n : t, t),
-        sender_user_id: i,
-        duration_listening_secs: r
+        total_duration_secs: i,
+        end_duration_secs: Math.min(null != i ? i : n, n),
+        sender_user_id: t,
+        duration_listening_secs: o
     });
 }
-function o(e, n) {
-    a.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function l(e, i) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: n
+        error_message: i
     });
 }
-((i = r || (r = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+((t = o || (o = {})).SENT = 'sent'), (t.CANCELLED_DURATION = 'cancelled_duration'), (t.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (t.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (t.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');

@@ -8,9 +8,9 @@ var n = r(899517),
 let _ = null;
 function o(e) {
     let t = 'error';
-    (0, a.Hj)(t, e), (0, a.D2)(t, i);
+    (0, a.Hj)(t, e), (0, a.D2)(t, E);
 }
-function i() {
+function E() {
     (_ = n.n.onerror),
         (n.n.onerror = function (e, t, r, n, o) {
             return (

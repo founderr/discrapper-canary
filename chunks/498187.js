@@ -13,11 +13,11 @@ var l = t(876215),
     u = t(96513),
     d = t(701488),
     m = t(689938);
-let f = {
+let _ = {
         [i.z.XBOX]: c.kG.XBOX,
         [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
-    _ = { [u._.EMBED]: r.m1.Embed };
+    f = { [u._.EMBED]: r.m1.Embed };
 function p(e) {
     let n,
         t,
@@ -26,11 +26,11 @@ function p(e) {
         p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
         C = i.extra.game_name;
     if (null != i.extra.platform) {
-        let e = f[i.extra.platform];
+        let e = _[i.extra.platform];
         null != e && (n = { type: e });
     }
     t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2;
-    let h = _[r],
+    let h = f[r],
         I = {
             onClick: (0, o.Z)({
                 location: h,

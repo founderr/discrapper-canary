@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     t(789020);
@@ -16,7 +16,7 @@ var i = t(735250),
     _ = t(689938),
     p = t(568161);
 let m = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
-function f(e) {
+function I(e) {
     let { icon: n, heading: t, body: a } = e;
     return (0, i.jsxs)('li', {
         className: p.intentContainer,
@@ -50,10 +50,10 @@ function f(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { application: n } = e,
         { hasMessageContent: t, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, s.w)({ flags: null == n ? void 0 : n.flags }),
-        I = a.useCallback(() => {
+        f = a.useCallback(() => {
             (null == n ? void 0 : n.privacy_policy_url) != null && (0, d.q)({ href: n.privacy_policy_url });
         }, [null == n ? void 0 : n.privacy_policy_url]);
     return (0, i.jsxs)(i.Fragment, {
@@ -74,19 +74,19 @@ function I(e) {
                             className: p.intentsList,
                             children: [
                                 t &&
-                                    (0, i.jsx)(f, {
+                                    (0, i.jsx)(I, {
                                         icon: l.ChatIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
                                     }),
                                 r &&
-                                    (0, i.jsx)(f, {
+                                    (0, i.jsx)(I, {
                                         icon: l.UserCircleStatusIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
                                     }),
                                 c &&
-                                    (0, i.jsx)(f, {
+                                    (0, i.jsx)(I, {
                                         icon: l.GroupIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
@@ -106,7 +106,7 @@ function I(e) {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     className: p.privacyPolicy,
-                                    children: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({ onClick: I })
+                                    children: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({ onClick: f })
                                 })
                         ]
                     })

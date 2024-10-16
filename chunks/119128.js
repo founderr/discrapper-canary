@@ -1,24 +1,24 @@
 r.d(t, {
     j: function () {
-        return E;
+        return i;
     }
 });
 var n = r(696486),
     a = r(793373),
     _ = r(622916),
     o = r(454463),
-    i = r(163162);
-function E() {
-    i.m9 && i.m9.document
-        ? i.m9.document.addEventListener('visibilitychange', () => {
+    E = r(163162);
+function i() {
+    E.m9 && E.m9.document
+        ? E.m9.document.addEventListener('visibilitychange', () => {
               let e = (0, n.HN)();
               if (!e) return;
               let t = (0, n.Gx)(e);
-              if (i.m9.document.hidden && t) {
+              if (E.m9.document.hidden && t) {
                   let e = 'cancelled',
-                      { op: r, status: i } = (0, n.XU)(t);
+                      { op: r, status: E } = (0, n.XU)(t);
                   o.X && _.kg.log(`[Tracing] Transaction: ${e} -> since tab moved to the background, op: ${r}`),
-                      !i &&
+                      !E &&
                           t.setStatus({
                               code: a.jt,
                               message: e

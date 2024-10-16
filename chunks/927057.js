@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var l = t(735250),
@@ -13,12 +13,12 @@ var l = t(735250),
     u = t(811654),
     d = t(344991),
     m = t(981631),
-    f = t(967831);
-function _(e) {
+    _ = t(967831);
+function f(e) {
     var n;
     let { channelTypes: t } = e,
-        _ = (0, c.CJ)(),
-        p = null == _ ? void 0 : null === (n = _.message) || void 0 === n ? void 0 : n.getChannelId(),
+        f = (0, c.CJ)(),
+        p = null == f ? void 0 : null === (n = f.message) || void 0 === n ? void 0 : n.getChannelId(),
         C = o.Z.getChannel(p),
         h = s.Z.getGuild(null == C ? void 0 : C.getGuildId()),
         I = i.useMemo(() => (0, u.tx)(e.defaultValues, null == h ? void 0 : h.id, t), [e.defaultValues, h, t]);
@@ -40,7 +40,7 @@ function _(e) {
         },
         renderOptionLabel: (e) =>
             (0, l.jsx)('span', {
-                className: f.label,
+                className: _.label,
                 children: e.label
             }),
         defaultValues: I

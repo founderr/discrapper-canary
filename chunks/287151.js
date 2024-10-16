@@ -60,8 +60,8 @@ var i,
     K = n(89729),
     Y = n(620652),
     J = n(640753),
-    q = n(981631),
-    X = n(474936),
+    X = n(981631),
+    q = n(474936),
     $ = n(689938),
     Q = n(507444),
     ee = n(96042),
@@ -270,10 +270,10 @@ class el extends (i = o.PureComponent) {
                 if (s && !this.userCanBurstReact()) {
                     (0, A.openBurstReactionsUpsellModal)({
                         analytics: {
-                            type: X.cd.BURST_REACTION_UPSELL,
-                            page: (null == c ? void 0 : c.getGuildId()) != null ? q.ZY5.GUILD_CHANNEL : q.ZY5.DM_CHANNEL,
+                            type: q.cd.BURST_REACTION_UPSELL,
+                            page: (null == c ? void 0 : c.getGuildId()) != null ? X.ZY5.GUILD_CHANNEL : X.ZY5.DM_CHANNEL,
                             section: null != c ? (0, M.s4)(c) : void 0,
-                            object: q.qAy.EMOJI_REACTION_UPSELL
+                            object: X.qAy.EMOJI_REACTION_UPSELL
                         }
                     });
                     return;
@@ -321,7 +321,7 @@ class el extends (i = o.PureComponent) {
                 (this.isReactionEventActive = !1), (this.isKeyboardNavigation = !1), this.timeout.stop(), U.Z.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1);
             }),
             ei(this, 'hideTooltip', () => {
-                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && B.default.track(q.rMx.CLOSE_POPOUT, { nonce: this.nonce });
+                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && B.default.track(X.rMx.CLOSE_POPOUT, { nonce: this.nonce });
             }),
             ei(this, 'isMe', () => {
                 let { me: e, me_burst: t, type: n } = this.props;
@@ -330,7 +330,7 @@ class el extends (i = o.PureComponent) {
             ei(this, 'updateTooltipText', () => {
                 let { message: e, emoji: t, type: n } = this.props,
                     i = (0, K.g)(e, t, n),
-                    s = this.isKeyboardNavigation ? i : (0, K.g)(e, t, n, q.dG4);
+                    s = this.isKeyboardNavigation ? i : (0, K.g)(e, t, n, X.dG4);
                 this.setState({
                     tooltipText: s,
                     tooltipTextAria: i,
@@ -459,7 +459,7 @@ class el extends (i = o.PureComponent) {
                                                       children: $.Z.Messages.SUPER_REACTION_TOOLTIP_UPSELL
                                                   }),
                                                   (0, s.jsx)(Z.Z, {
-                                                      subscriptionTier: X.Si.TIER_2,
+                                                      subscriptionTier: q.Si.TIER_2,
                                                       buttonText: $.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                                                       className: en.burstReactionTooltipUpsellCta,
                                                       onClick: (e) => e.stopPropagation()
@@ -516,9 +516,9 @@ class el extends (i = o.PureComponent) {
                     s = y.Z.getChannel(t.getChannelId()),
                     o = n === H.O.BURST,
                     a = (0, F.I5)(i),
-                    l = o ? X.cd.EMOJI_IN_BURST_REACTION_HOVER : X.cd.EMOJI_IN_REACTION_HOVER;
-                o && !this.userCanBurstReact() && !a && (l = X.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
-                    T.ZP.trackWithMetadata(q.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+                    l = o ? q.cd.EMOJI_IN_BURST_REACTION_HOVER : q.cd.EMOJI_IN_REACTION_HOVER;
+                o && !this.userCanBurstReact() && !a && (l = q.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
+                    T.ZP.trackWithMetadata(X.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                         type: l,
                         expression_id: e.id,
                         expression_name: e.name,
@@ -530,12 +530,12 @@ class el extends (i = o.PureComponent) {
                         null != s &&
                         !a &&
                         !this.userCanBurstReact() &&
-                        B.default.track(q.rMx.PREMIUM_UPSELL_VIEWED, {
-                            type: X.cd.BURST_REACTION_UPSELL,
+                        B.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
+                            type: q.cd.BURST_REACTION_UPSELL,
                             location: {
-                                page: (null == s ? void 0 : s.getGuildId()) != null ? q.ZY5.GUILD_CHANNEL : q.ZY5.DM_CHANNEL,
+                                page: (null == s ? void 0 : s.getGuildId()) != null ? X.ZY5.GUILD_CHANNEL : X.ZY5.DM_CHANNEL,
                                 section: (0, M.s4)(s),
-                                object: q.qAy.EMOJI_REACTION_TOOLTIP_UPSELL
+                                object: X.qAy.EMOJI_REACTION_TOOLTIP_UPSELL
                             }
                         });
             });

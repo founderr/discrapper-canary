@@ -12,7 +12,7 @@ function s() {
     !(!e && (0, i.hasAnyModalOpen)()) &&
         (0, i.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('72181'), n.e('56602'), n.e('44808')]).then(n.bind(n, 678420));
+                let { default: e } = await Promise.all([n.e('22878'), n.e('56602'), n.e('44808')]).then(n.bind(n, 678420));
                 return (t) => (0, r.jsx)(e, { ...t });
             },
             { modalKey: a.Xd }

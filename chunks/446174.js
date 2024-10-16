@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     alignCenter: 'alignCenter_ad2a08',
     alignLeft: 'alignLeft_ad2a08',
     horizontalPaginationItemContainer: 'horizontalPaginationItemContainer_ad2a08',

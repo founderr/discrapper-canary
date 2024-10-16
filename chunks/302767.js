@@ -2,8 +2,8 @@ var n = r(553070),
     a = r(883638),
     _ = r(538444),
     o = r(455877),
-    i = r(58990);
-function E(e) {
+    E = r(58990);
+function i(e) {
     var t = -1,
         r = null == e ? 0 : e.length;
     for (this.clear(); ++t < r; ) {
@@ -11,4 +11,4 @@ function E(e) {
         this.set(n[0], n[1]);
     }
 }
-(E.prototype.clear = n), (E.prototype.delete = a), (E.prototype.get = _), (E.prototype.has = o), (E.prototype.set = i), (e.exports = E);
+(i.prototype.clear = n), (i.prototype.delete = a), (i.prototype.get = _), (i.prototype.has = o), (i.prototype.set = E), (e.exports = i);

@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(l, {
     Z: function () {
         return c;
     },
@@ -6,24 +6,24 @@ n.d(t, {
         return m;
     }
 });
-var l = n(735250);
-n(470079);
-var r = n(120356),
-    i = n.n(r),
-    a = n(729594),
-    o = n(689938),
-    s = n(413224);
+var n = t(735250);
+t(470079);
+var i = t(120356),
+    r = t.n(i),
+    a = t(729594),
+    s = t(689938),
+    o = t(413224);
 let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
-    u = (e, t, n) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(n),
+    u = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
     m = ['PlayStation'],
-    h = (e, t) => {
-        let { host: n, pathname: l } = t,
-            r = [];
-        switch ((null != l && (r = l.split('/')), e)) {
+    h = (e, l) => {
+        let { host: t, pathname: n } = l,
+            i = [];
+        switch ((null != n && (i = n.split('/')), e)) {
             case 'PlayStation':
-                if (null == n || !d.includes(n) || 2 !== r.length) break;
+                if (null == t || !d.includes(t) || 2 !== i.length) break;
                 return {
-                    embedUrl: u(n, r[1], o.Z.getLocale()),
+                    embedUrl: u(t, i[1], s.Z.getLocale()),
                     style: {
                         width: 400,
                         height: 300,
@@ -34,22 +34,22 @@ let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
         return null;
     };
 function c(e) {
-    var t;
-    let n = e.embed.url,
-        r = null === (t = e.embed.provider) || void 0 === t ? void 0 : t.name;
-    if (null == n || null == r) return null;
-    let o = null;
+    var l;
+    let t = e.embed.url,
+        i = null === (l = e.embed.provider) || void 0 === l ? void 0 : l.name;
+    if (null == t || null == i) return null;
+    let s = null;
     try {
-        o = a.parse(n, !0);
+        s = a.parse(t, !0);
     } catch (e) {
         return null;
     }
-    let d = h(r, o);
+    let d = h(i, s);
     return null == d
         ? null
-        : (0, l.jsx)('iframe', {
+        : (0, n.jsx)('iframe', {
               src: d.embedUrl,
-              className: i()(s.embedIFrame, e.className),
+              className: r()(o.embedIFrame, e.className),
               style: d.style,
               sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
           });

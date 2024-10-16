@@ -7,22 +7,22 @@ var n = r(824851),
     a = r(753642),
     _ = r(622916),
     o = r(255768),
-    i = r(696486),
-    E = r(793373);
+    E = r(696486),
+    i = r(793373);
 let c = !1;
 function s() {
-    if (!c) (c = !0), (0, n.V)(I), (0, a.h)(I);
+    if (!c) (c = !0), (0, n.V)(l), (0, a.h)(l);
 }
-function I() {
-    let e = (0, i.HN)(),
-        t = e && (0, i.Gx)(e);
+function l() {
+    let e = (0, E.HN)(),
+        t = e && (0, E.Gx)(e);
     if (t) {
         let e = 'internal_error';
         o.X && _.kg.log(`[Tracing] Root span: ${e} -> Global error occured`),
             t.setStatus({
-                code: E.jt,
+                code: i.jt,
                 message: e
             });
     }
 }
-I.tag = 'sentry_tracingErrorCallback';
+l.tag = 'sentry_tracingErrorCallback';

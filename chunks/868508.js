@@ -6,8 +6,8 @@ a.r(t),
     });
 var r = a(735250);
 a(470079);
-var n = a(442837),
-    s = a(704215),
+var s = a(442837),
+    n = a(704215),
     o = a(481060),
     l = a(2052),
     c = a(100527),
@@ -32,7 +32,7 @@ let b = '2023_summer_bogo',
 function D(e) {
     let { renderModalProps: t } = e,
         { onClose: a } = t,
-        D = (0, n.e7)([i.default], () => i.default.locale),
+        D = (0, s.e7)([i.default], () => i.default.locale),
         y = D.split('-')[0],
         R = 'zh-CN' === D ? 'zh-Hans' : 'zh-TW' === D ? 'zh-Hant' : y,
         v = {
@@ -45,7 +45,7 @@ function D(e) {
         },
         { location: B } = (0, l.O)(),
         { analyticsLocations: L } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        G = (0, n.e7)([_.default], () => _.default.getCurrentUser()),
+        G = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         S = (0, g.M5)(G, N.p9.TIER_2),
         H = (0, g.I5)(G) && !S;
     return (0, r.jsx)(m.Z, {
@@ -60,7 +60,7 @@ function D(e) {
             },
             href: 'https://youtu.be/'.concat(T)
         },
-        modalDismissibleContent: s.z.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
+        modalDismissibleContent: n.z.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
         header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
         subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
         subHeaderExtra: () =>

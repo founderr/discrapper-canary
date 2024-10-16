@@ -6,10 +6,10 @@ r.d(t, {
         return n;
     },
     Fr: function () {
-        return I;
+        return l;
     },
     Sq: function () {
-        return i;
+        return E;
     },
     pE: function () {
         return o;
@@ -21,7 +21,7 @@ let n = '?',
 function o(...e) {
     let t = e.sort((e, t) => e[0] - t[0]).map((e) => e[1]);
     return (e, r = 0, o = 0) => {
-        let i = [],
+        let E = [],
             c = e.split('\n');
         for (let e = r; e < c.length; e++) {
             let r = c[e];
@@ -31,33 +31,33 @@ function o(...e) {
                 for (let e of t) {
                     let t = e(n);
                     if (t) {
-                        i.push(t);
+                        E.push(t);
                         break;
                     }
                 }
-                if (i.length >= 50 + o) break;
+                if (E.length >= 50 + o) break;
             }
         }
         return (function (e) {
             if (!e.length) return [];
             let t = Array.from(e);
             return (
-                /sentryWrapped/.test(E(t).function || '') && t.pop(),
+                /sentryWrapped/.test(i(t).function || '') && t.pop(),
                 t.reverse(),
-                _.test(E(t).function || '') && (t.pop(), _.test(E(t).function || '') && t.pop()),
+                _.test(i(t).function || '') && (t.pop(), _.test(i(t).function || '') && t.pop()),
                 t.slice(0, 50).map((e) => ({
                     ...e,
-                    filename: e.filename || E(t).filename,
+                    filename: e.filename || i(t).filename,
                     function: e.function || n
                 }))
             );
-        })(i.slice(o));
+        })(E.slice(o));
     };
 }
-function i(e) {
+function E(e) {
     return Array.isArray(e) ? o(...e) : e;
 }
-function E(e) {
+function i(e) {
     return e[e.length - 1] || {};
 }
 let c = '<anonymous>';
@@ -69,7 +69,7 @@ function s(e) {
         return c;
     }
 }
-function I(e) {
+function l(e) {
     let t = e.exception;
     if (t) {
         let e = [];

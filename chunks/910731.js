@@ -1,17 +1,17 @@
 r.d(t, {
     e: function () {
-        return i;
+        return E;
     }
 });
 var n = r(622916),
     a = r(370336),
     _ = r(899517),
     o = r(578346);
-function i(e) {
+function E(e) {
     let t = 'console';
-    (0, o.Hj)(t, e), (0, o.D2)(t, E);
+    (0, o.Hj)(t, e), (0, o.D2)(t, i);
 }
-function E() {
+function i() {
     if ('console' in _.n)
         n.RU.forEach(function (e) {
             if (e in _.n.console)

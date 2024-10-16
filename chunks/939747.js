@@ -9,10 +9,10 @@ r.d(t, {
         return _;
     },
     OC: function () {
-        return i;
+        return E;
     },
     s3: function () {
-        return E;
+        return i;
     },
     uv: function () {
         return o;
@@ -38,10 +38,10 @@ function o(e) {
     }
     return t;
 }
-function i(e) {
+function E(e) {
     return e.replace(/[^\w]+/gi, '_');
 }
-function E(e) {
+function i(e) {
     return e.replace(/[^\w\-.]+/gi, '_');
 }
 let c = [

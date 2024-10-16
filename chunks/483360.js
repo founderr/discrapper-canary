@@ -297,12 +297,12 @@ t.ZP = {
                                 isFullMatch: !1
                             };
                         });
-                if (e.includes(' ')) {
+                if (e.includes(' ') || e.includes('-')) {
                     let t = e.toLocaleLowerCase();
                     n.unshift({
                         queryLower: t,
-                        exactQuery: RegExp('^'.concat(F.Z.escape(t).replace(' ', '( |-)')), 'i'),
-                        containQuery: RegExp(F.Z.escape(t).replace(' ', '( |-)'), 'i'),
+                        exactQuery: RegExp('^'.concat(F.Z.escape(t).replace(/ |-/g, '( |-)')), 'i'),
+                        containQuery: RegExp(F.Z.escape(t).replace(/ |-/g, '( |-)'), 'i'),
                         isFullMatch: !0
                     });
                 }

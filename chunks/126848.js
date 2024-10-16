@@ -15,8 +15,8 @@ var i = n(120356),
     d = n(639119),
     h = n(655525),
     m = n(52188),
-    f = n(248042),
-    p = n(924540),
+    p = n(248042),
+    f = n(924540),
     S = n(351402),
     N = n(170671),
     b = n(474936),
@@ -24,49 +24,49 @@ var i = n(120356),
 function v(e) {
     let t,
         { decoration: n, label: i, isSelected: v } = e,
-        { fractionalState: g, endsAt: T } = (0, o.Z)({ forceFetch: !0 }),
-        _ = (0, d.N)(),
-        A = (0, u.Ng)(),
-        E = (0, f.Vi)(),
-        C = (0, l.e7)([S.Z], () => S.Z.isLocalizedPromoEnabled) && null == _ && null == n,
+        { fractionalState: _, endsAt: T } = (0, o.Z)({ forceFetch: !0 }),
+        g = (0, d.N)(),
+        C = (0, u.Ng)(),
+        j = (0, p.Vi)(),
+        E = (0, l.e7)([S.Z], () => S.Z.isLocalizedPromoEnabled) && null == g && null == n,
         { enabled: I } = a._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        R = I && (null == _ ? void 0 : _.trial_id) === b.a7;
+        R = I && (null == g ? void 0 : g.trial_id) === b.a7;
     return (
         (t =
-            g !== b.a$.NONE
+            _ !== b.a$.NONE
                 ? (0, s.jsx)(c.Z, {
                       className: '',
                       endsAt: T
                   })
-                : E
+                : j
                   ? (0, s.jsx)(h.Z, {})
-                  : null != A
-                    ? (0, s.jsx)(p.GN, {
+                  : null != C
+                    ? (0, s.jsx)(f.GN, {
                           isTabSelected: v,
-                          userDiscount: A,
+                          userDiscount: C,
                           includesAmountOff: !1
                       })
-                    : null == _ || R
+                    : null == g || R
                       ? null != n
                           ? n
-                          : C
+                          : E
                             ? (0, s.jsx)(m.k, { entryPoint: m.U.SettingsMenu })
                             : (0, s.jsx)(N.Z, { isSelected: v })
-                      : (0, s.jsx)(p.$H, {
+                      : (0, s.jsx)(f.$H, {
                             isTabSelected: v,
-                            trialOffer: _
+                            trialOffer: g
                         })),
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)('div', {
-                    className: r()(x.premiumLabel, { [x.selected]: (v || C) && !E }),
+                    className: r()(x.premiumLabel, { [x.selected]: (v || E) && !j }),
                     children: [i, t]
                 }),
                 (0, s.jsx)('div', {
                     className: r()(x.background, {
-                        [x.auPromo]: C && !v,
-                        [x.auPromoSelected]: C && v,
-                        [x.selectedBackground]: !C && !E && v
+                        [x.auPromo]: E && !v,
+                        [x.auPromoSelected]: E && v,
+                        [x.selectedBackground]: !E && !j && v
                     })
                 })
             ]

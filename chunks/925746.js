@@ -1,13 +1,13 @@
 r.d(t, {
     L: function () {
-        return i;
+        return E;
     }
 });
 var n = r(617726),
     a = r(688838),
     _ = r(151122),
     o = r(166394);
-let i = (0, _._I)((e) => ({
+let E = (0, _._I)((e) => ({
         name: 'ThirdPartyErrorsFilter',
         setup(e) {
             e.on('beforeEnvelope', (e) => {
@@ -33,8 +33,8 @@ let i = (0, _._I)((e) => ({
                         .map((e) =>
                             e.module_metadata
                                 ? Object.keys(e.module_metadata)
-                                      .filter((e) => e.startsWith(E))
-                                      .map((e) => e.slice(E.length))
+                                      .filter((e) => e.startsWith(i))
+                                      .map((e) => e.slice(i.length))
                                 : []
                         );
             })(t);
@@ -48,4 +48,4 @@ let i = (0, _._I)((e) => ({
             return t;
         }
     })),
-    E = '_sentryBundlerPluginAppKey:';
+    i = '_sentryBundlerPluginAppKey:';

@@ -5,13 +5,13 @@ r.d(t, {
     }
 });
 var o = r(578346),
-    i = r(370336),
-    E = r(394798),
+    E = r(370336),
+    i = r(394798),
     c = r(395848);
 function s(e) {
-    (0, o.Hj)('dom', e), (0, o.D2)('dom', I);
+    (0, o.Hj)('dom', e), (0, o.D2)('dom', l);
 }
-function I() {
+function l() {
     if (!c.m.document) return;
     let e = o.rK.bind(null, 'dom'),
         t = u(e, !0);
@@ -20,7 +20,7 @@ function I() {
         ['EventTarget', 'Node'].forEach((t) => {
             let r = c.m[t] && c.m[t].prototype;
             if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
-                (0, i.hl)(r, 'addEventListener', function (t) {
+                (0, E.hl)(r, 'addEventListener', function (t) {
                     return function (r, n, a) {
                         if ('click' === r || 'keypress' == r)
                             try {
@@ -35,7 +35,7 @@ function I() {
                         return t.call(this, r, n, a);
                     };
                 }),
-                    (0, i.hl)(r, 'removeEventListener', function (e) {
+                    (0, E.hl)(r, 'removeEventListener', function (e) {
                         return function (t, r, n) {
                             if ('click' === t || 'keypress' == t)
                                 try {
@@ -52,15 +52,15 @@ function u(e, t = !1) {
     return (r) => {
         var o, s;
         if (!r || r._sentryCaptured) return;
-        let I = (function (e) {
+        let l = (function (e) {
             try {
                 return e.target;
             } catch (e) {
                 return null;
             }
         })(r);
-        if (((o = r.type), (s = I), 'keypress' === o && (!s || !s.tagName || ('INPUT' !== s.tagName && 'TEXTAREA' !== s.tagName && !s.isContentEditable)))) return;
-        (0, i.xp)(r, '_sentryCaptured', !0), I && !I._sentryId && (0, i.xp)(I, '_sentryId', (0, E.DM)());
+        if (((o = r.type), (s = l), 'keypress' === o && (!s || !s.tagName || ('INPUT' !== s.tagName && 'TEXTAREA' !== s.tagName && !s.isContentEditable)))) return;
+        (0, E.xp)(r, '_sentryCaptured', !0), l && !l._sentryId && (0, E.xp)(l, '_sentryId', (0, i.DM)());
         let u = 'keypress' === r.type ? 'input' : r.type;
         !(function (e) {
             if (e.type !== a) return !1;
@@ -75,7 +75,7 @@ function u(e, t = !1) {
                 global: t
             }),
             (a = r.type),
-            (_ = I ? I._sentryId : void 0)),
+            (_ = l ? l._sentryId : void 0)),
             clearTimeout(n),
             (n = c.m.setTimeout(() => {
                 (_ = void 0), (a = void 0);

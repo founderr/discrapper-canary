@@ -26,7 +26,7 @@ function p(e) {
         }, [m]),
         (0, r.jsxs)(o.P, {
             innerRef: N,
-            className: s()(h.item, h.labelContainer, f._[t], g, {
+            className: s()(h.item, h.checkboxContainer, h.labelContainer, f._[t], g, {
                 [h.disabled]: I,
                 [h.focused]: m,
                 [null != A ? A : '']: m

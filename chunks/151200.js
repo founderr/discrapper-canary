@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return E;
     }
 });
 var l = t(735250);
@@ -14,8 +14,8 @@ var i = t(120356),
     u = t(206295),
     d = t(297781),
     m = t(313201),
-    f = t(231338),
-    _ = t(689938),
+    _ = t(231338),
+    f = t(689938),
     p = t(790246),
     C = t(615934);
 function h(e) {
@@ -68,17 +68,17 @@ function I(e) {
         clickableClassName: C.clickable
     });
 }
-function x(e) {
-    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
+function E(e) {
+    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: E, titleClickable: x, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
         g = (0, m.Dt)(),
-        { primaryColor: S, secondaryColor: O } = (0, u.Z)(x);
+        { primaryColor: S, secondaryColor: O } = (0, u.Z)(E);
     return (
-        null != x && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
+        null != E && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
         (0, l.jsx)(r.ThemeProvider, {
-            theme: f.BR.DARK,
+            theme: _.BR.DARK,
             children: (e) =>
                 (0, l.jsxs)('figure', {
-                    'aria-roledescription': _.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
+                    'aria-roledescription': f.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
                     'aria-labelledby': g,
                     'data-disable-adaptive-theme': !0,
                     className: a()(p.container, e),
@@ -89,7 +89,7 @@ function x(e) {
                             clickableClassName: p.clickable,
                             clickable: T,
                             children: (0, l.jsx)(s.f, {
-                                src: x,
+                                src: E,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -105,7 +105,7 @@ function x(e) {
                                 }),
                                 (0, l.jsx)(r.Spacer, { size: 2 }),
                                 (0, l.jsx)(I, {
-                                    clickable: E,
+                                    clickable: x,
                                     className: p.clickableText,
                                     children: (0, l.jsx)(r.Heading, {
                                         id: g,

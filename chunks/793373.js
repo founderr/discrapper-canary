@@ -3,7 +3,7 @@ r.d(t, {
         return a;
     },
     Q0: function () {
-        return i;
+        return E;
     },
     ix: function () {
         return o;
@@ -91,7 +91,7 @@ function o(e) {
         message: 'unknown_error'
     };
 }
-function i(e, t) {
+function E(e, t) {
     e.setAttribute('http.response.status_code', t);
     let r = o(t);
     'unknown_error' !== r.message && e.setStatus(r);

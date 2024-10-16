@@ -1,81 +1,81 @@
-let n, a, _, o, i;
+let n, a, _, o, E;
 r.d(t, {
     $A: function () {
-        return p;
+        return f;
     },
     PR: function () {
-        return O;
-    },
-    YF: function () {
-        return S;
-    },
-    _4: function () {
         return L;
     },
+    YF: function () {
+        return h;
+    },
+    _4: function () {
+        return p;
+    },
     _j: function () {
-        return D;
+        return S;
     },
     cN: function () {
-        return b;
+        return y;
     },
     to: function () {
-        return f;
+        return O;
     }
 });
-var E = r(622916),
+var i = r(622916),
     c = r(688838),
     s = r(665909),
-    I = r(795927),
+    l = r(795927),
     u = r(661129),
-    l = r(231550),
+    I = r(231550),
     R = r(428983),
-    A = r(622574),
-    T = r(288570);
-let N = {},
+    N = r(622574),
+    A = r(288570);
+let T = {},
     d = {};
-function O(e, t = !1) {
-    return m('cls', e, C, n, t);
+function L(e, t = !1) {
+    return G('cls', e, C, n, t);
 }
-function p(e, t = !1) {
-    return m('lcp', e, P, _, t);
+function f(e, t = !1) {
+    return G('lcp', e, U, _, t);
 }
-function f(e) {
-    return m('fid', e, g, a);
+function O(e) {
+    return G('fid', e, g, a);
 }
-function L(e) {
-    return m('ttfb', e, M, o);
+function p(e) {
+    return G('ttfb', e, P, o);
 }
-function S(e) {
-    return m('inp', e, U, i);
+function h(e) {
+    return G('inp', e, M, E);
 }
-function D(e, t) {
+function S(e, t) {
     return (
-        G(e, t),
+        m(e, t),
         !d[e] &&
             ((function (e) {
                 let t = {};
                 'event' === e && (t.durationThreshold = 0),
-                    (0, A.N)(
+                    (0, N.N)(
                         e,
                         (t) => {
-                            h(e, { entries: t });
+                            D(e, { entries: t });
                         },
                         t
                     );
             })(e),
             (d[e] = !0)),
-        y(e, t)
+        b(e, t)
     );
 }
-function h(e, t) {
-    let r = N[e];
+function D(e, t) {
+    let r = T[e];
     if (!!r && !!r.length)
         for (let n of r)
             try {
                 n(t);
             } catch (t) {
                 s.X &&
-                    E.kg.error(
+                    i.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${e}
 Name: ${(0, c.$P)(n)}
@@ -85,52 +85,52 @@ Error:`,
             }
 }
 function C() {
-    return (0, I.m)(
+    return (0, l.m)(
         (e) => {
-            h('cls', { metric: e }), (n = e);
+            D('cls', { metric: e }), (n = e);
         },
         { reportAllChanges: !0 }
     );
 }
 function g() {
     return (0, u.F)((e) => {
-        h('fid', { metric: e }), (a = e);
+        D('fid', { metric: e }), (a = e);
     });
 }
-function P() {
+function U() {
     return (0, R.N)(
         (e) => {
-            h('lcp', { metric: e }), (_ = e);
+            D('lcp', { metric: e }), (_ = e);
         },
         { reportAllChanges: !0 }
     );
 }
+function P() {
+    return (0, A.m)((e) => {
+        D('ttfb', { metric: e }), (o = e);
+    });
+}
 function M() {
-    return (0, T.m)((e) => {
-        h('ttfb', { metric: e }), (o = e);
+    return (0, I.Y)((e) => {
+        D('inp', { metric: e }), (E = e);
     });
 }
-function U() {
-    return (0, l.Y)((e) => {
-        h('inp', { metric: e }), (i = e);
-    });
-}
-function m(e, t, r, n, a = !1) {
+function G(e, t, r, n, a = !1) {
     let _;
-    return G(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), y(e, t, a ? _ : void 0);
+    return m(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), b(e, t, a ? _ : void 0);
 }
-function G(e, t) {
-    (N[e] = N[e] || []), N[e].push(t);
+function m(e, t) {
+    (T[e] = T[e] || []), T[e].push(t);
 }
-function y(e, t, r) {
+function b(e, t, r) {
     return () => {
         r && r();
-        let n = N[e];
+        let n = T[e];
         if (!n) return;
         let a = n.indexOf(t);
         -1 !== a && n.splice(a, 1);
     };
 }
-function b(e) {
+function y(e) {
     return 'duration' in e;
 }

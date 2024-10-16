@@ -10,8 +10,8 @@ var a = l(735250),
     t = l(481060),
     s = l(239091),
     d = l(561472),
-    o = l(36311),
-    c = l(367907),
+    c = l(36311),
+    o = l(367907),
     u = l(188471),
     h = l(541716),
     m = l(526120),
@@ -54,8 +54,8 @@ function k(e) {
             null != H &&
                 !F.current &&
                 ((F.current = !0),
-                (0, c.yw)(T.rMx.CHANNEL_OPENED, {
-                    ...(0, c.$H)(H.id),
+                (0, o.yw)(T.rMx.CHANNEL_OPENED, {
+                    ...(0, o.$H)(H.id),
                     channel_view: y
                 }),
                 (0, u.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: H.id }));
@@ -126,5 +126,5 @@ function k(e) {
                   })
               ]
           })
-        : (0, a.jsx)(o.Z, { guild: L });
+        : (0, a.jsx)(c.Z, { guild: L });
 }

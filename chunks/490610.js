@@ -41,7 +41,7 @@ t.Z = a.memo(function (e) {
         v = a.useMemo(() => (null != f && (0, m.Pw)(f) ? T : []), [T, f]),
         Z = a.useCallback(
             (e) => {
-                e && (0, c.Oe)('top_picks', S);
+                e && (0, c.Oe)('top_picks', S, 'control');
             },
             [S]
         );

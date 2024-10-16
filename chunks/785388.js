@@ -187,7 +187,7 @@ class J extends s.PureComponent {
         });
     }
 }
-function q(e) {
+function X(e) {
     let { emoji: t, user: n, message: s, channel: o, guildId: a, reactionType: l, onRemoveReactor: r, disableManage: c = !1 } = e,
         u = (0, d.e7)([Z.default], () => Z.default.getId()),
         m = (0, d.e7)([U.default], () => U.default.getUser(n.id), [n]),
@@ -254,7 +254,7 @@ function q(e) {
         ]
     });
 }
-class X extends s.PureComponent {
+class q extends s.PureComponent {
     componentDidMount() {
         this.loadMore();
     }
@@ -350,7 +350,7 @@ class X extends s.PureComponent {
                     ? (0, i.jsx)(h.Spinner, { className: G.spinner }, 'loadingMore')
                     : null != u &&
                           (0, i.jsx)(
-                              q,
+                              X,
                               {
                                   message: s,
                                   emoji: l.emoji,
@@ -380,7 +380,7 @@ let $ = d.ZP.connectStores([M.Z], (e) => {
         reactors: o,
         hasMore: a
     };
-})(X);
+})(q);
 function Q(e) {
     var t;
     let { message: n, selectedReaction: o, disableManage: a = !1, disableTabs: l = !1, onClose: r, transitionState: c, 'aria-label': m = H.Z.Messages.REACTIONS } = e,

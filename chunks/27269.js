@@ -1,6 +1,6 @@
 r.d(t, {
     R: function () {
-        return E;
+        return i;
     }
 });
 var n = r(263449),
@@ -24,13 +24,13 @@ let o = {
         sessionTimingIntegration: 'sessiontiming',
         browserProfilingIntegration: 'browserprofiling'
     },
-    i = _.m9;
-async function E(e) {
+    E = _.m9;
+async function i(e) {
     let t = o[e],
-        r = (i.Sentry = i.Sentry || {});
+        r = (E.Sentry = E.Sentry || {});
     if (!t) throw Error(`Cannot lazy load integration: ${e}`);
-    let E = r[e];
-    if ('function' == typeof E) return E;
+    let i = r[e];
+    if ('function' == typeof i) return i;
     let c = (function (e) {
             let t = (0, n.s3)(),
                 r = t && t.getOptions(),
@@ -39,12 +39,12 @@ async function E(e) {
         })(t),
         s = _.m9.document.createElement('script');
     (s.src = c), (s.crossOrigin = 'anonymous'), (s.referrerPolicy = 'origin');
-    let I = new Promise((e, t) => {
+    let l = new Promise((e, t) => {
         s.addEventListener('load', () => e()), s.addEventListener('error', t);
     });
     _.m9.document.body.appendChild(s);
     try {
-        await I;
+        await l;
     } catch (t) {
         throw Error(`Error when loading integration: ${e}`);
     }

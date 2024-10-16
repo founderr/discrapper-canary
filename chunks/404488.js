@@ -3,7 +3,7 @@ l.d(n, {
         return u;
     },
     q: function () {
-        return c;
+        return o;
     }
 });
 var a = l(735250);
@@ -13,20 +13,20 @@ var i = l(442837),
     t = l(213557),
     s = l(433355),
     d = l(981631),
-    o = l(176505);
-let c = 656;
+    c = l(176505);
+let o = 656;
 function u(e) {
     let { pageWidth: n, onSidebarResize: l } = e,
-        u = (0, i.e7)([s.ZP], () => s.ZP.getSidebarState(o.oC.GUILD_HOME));
+        u = (0, i.e7)([s.ZP], () => s.ZP.getSidebarState(c.oC.GUILD_HOME));
     if (null == u || null == u.channelId) return null;
-    let h = n - d.PrS - c;
+    let h = n - d.PrS - o;
     return (0, a.jsx)(r.Z, {
         sidebarType: r.y.HomeSidebar,
         maxWidth: h,
         onWidthChange: l,
         children: (0, a.jsx)(t.Z, {
             channelId: u.channelId,
-            baseChannelId: o.oC.GUILD_HOME,
+            baseChannelId: c.oC.GUILD_HOME,
             channelViewSource: 'Home View',
             isResourceChannelView: !0
         })

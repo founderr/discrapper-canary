@@ -4,8 +4,8 @@ var a = l(735250),
     t = l.n(r),
     s = l(442837),
     d = l(692547),
-    o = l(481060),
-    c = l(410030),
+    c = l(481060),
+    o = l(410030),
     u = l(565138),
     h = l(523751),
     m = l(637853),
@@ -42,23 +42,23 @@ function b(e) {
             g.Z.open(n.id, v.pNK.ONBOARDING, void 0, v.KsC.SERVER_GUIDE);
         };
     return n.hasFeature(v.oNc.BANNER)
-        ? (0, a.jsxs)(o.Button, {
+        ? (0, a.jsxs)(c.Button, {
               className: Z.editButton,
               innerClassName: Z.editButtonInner,
               type: 'button',
-              size: o.Button.Sizes.MEDIUM,
-              color: o.Button.Colors.BRAND,
+              size: c.Button.Sizes.MEDIUM,
+              color: c.Button.Colors.BRAND,
               onClick: l,
               children: [
-                  (0, a.jsx)(o.ImagePlusIcon, {
+                  (0, a.jsx)(c.ImagePlusIcon, {
                       size: 'xs',
                       color: d.Z.unsafe_rawColors.WHITE_500.css
                   }),
                   _.Z.Messages.EDIT_IMAGE
               ]
           })
-        : (0, a.jsxs)(o.ShinyButton, {
-              color: o.Button.Colors.GREEN,
+        : (0, a.jsxs)(c.ShinyButton, {
+              color: c.Button.Colors.GREEN,
               className: Z.editButton,
               innerClassName: Z.editButtonInner,
               onClick: l,
@@ -76,7 +76,7 @@ let E = i.memo(function (e) {
         { homeHeaderImage: r, isHomeHeaderImageSet: d } = p(n),
         g = (0, m.b$)(n.id),
         f = (0, s.e7)([x.Z], () => (0, C.b)(x.Z, n)),
-        I = (0, c.ZP)();
+        I = (0, o.ZP)();
     return (0, a.jsxs)('div', {
         className: Z.header,
         children: [
@@ -101,11 +101,11 @@ let E = i.memo(function (e) {
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
-                        (0, a.jsx)(o.HeadingLevel, {
+                        (0, a.jsx)(c.HeadingLevel, {
                             children: (0, a.jsxs)('div', {
                                 className: Z.headerName,
                                 children: [
-                                    (0, a.jsx)(o.Heading, {
+                                    (0, a.jsx)(c.Heading, {
                                         className: Z.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
@@ -114,15 +114,15 @@ let E = i.memo(function (e) {
                                         size: 24,
                                         guild: n,
                                         tooltipPosition: 'bottom',
-                                        tooltipColor: o.Tooltip.Colors.PRIMARY
+                                        tooltipColor: c.Tooltip.Colors.PRIMARY
                                     }),
                                     f &&
-                                        (0, a.jsx)(o.Button, {
+                                        (0, a.jsx)(c.Button, {
                                             className: Z.inviteButton,
-                                            size: o.Button.Sizes.MEDIUM,
-                                            color: o.Button.Colors.PRIMARY,
+                                            size: c.Button.Sizes.MEDIUM,
+                                            color: c.Button.Colors.PRIMARY,
                                             onClick: () =>
-                                                (0, o.openModalLazy)(async () => {
+                                                (0, c.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([l.e('7654'), l.e('85683')]).then(l.bind(l, 560114));
                                                     return (l) =>
                                                         (0, a.jsx)(e, {

@@ -2,7 +2,7 @@ var n = r(751177),
     a = r(135615),
     _ = Object.prototype.propertyIsEnumerable,
     o = Object.getOwnPropertySymbols,
-    i = o
+    E = o
         ? function (e) {
               return null == e
                   ? []
@@ -11,4 +11,4 @@ var n = r(751177),
                     });
           }
         : a;
-e.exports = i;
+e.exports = E;

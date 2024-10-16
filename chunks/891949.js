@@ -1,18 +1,18 @@
-t.d(n, {
+a.d(n, {
     Z: function () {
         return _;
     }
 }),
-    t(47120);
-var a = t(735250),
-    r = t(470079),
-    s = t(481060),
-    i = t(341176),
-    o = t(810568),
-    l = t(701865),
-    c = t(689938),
-    d = t(51527),
-    u = t(133512);
+    a(47120);
+var t = a(735250),
+    r = a(470079),
+    s = a(481060),
+    i = a(341176),
+    o = a(810568),
+    l = a(701865),
+    c = a(689938),
+    d = a(51527),
+    u = a(133512);
 function _(e) {
     let { detectedGame: n, trackAction: _ } = e,
         E = r.useRef(null),
@@ -40,23 +40,23 @@ function _(e) {
     }
     return 0 === m.length
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, t.jsxs)('div', {
               children: [
-                  (0, a.jsx)(s.Heading, {
+                  (0, t.jsx)(s.Heading, {
                       className: d.sectionHeader,
                       variant: 'text-md/semibold',
                       color: 'header-primary',
                       children: c.Z.Messages.GAME_PROFILE_SCREENSHOTS
                   }),
-                  (0, a.jsxs)('div', {
+                  (0, t.jsxs)('div', {
                       className: I ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
                       children: [
-                          (0, a.jsx)(s.AdvancedScrollerNone, {
+                          (0, t.jsx)(s.AdvancedScrollerNone, {
                               ref: E,
                               className: u.imageScroller,
                               orientation: 'horizontal',
                               children: m.map((e, n) =>
-                                  (0, a.jsx)(
+                                  (0, t.jsx)(
                                       s.Clickable,
                                       {
                                           className: u.imageClickable,
@@ -68,11 +68,11 @@ function _(e) {
                                               _(o.as.ClickImage),
                                                   (0, s.openModalLazy)(
                                                       async () => {
-                                                          let { default: e } = await Promise.all([t.e('87267'), t.e('79693')]).then(t.bind(t, 950120));
-                                                          return (t) =>
-                                                              (0, a.jsx)(e, {
+                                                          let { default: e } = await Promise.resolve().then(a.bind(a, 950120));
+                                                          return (a) =>
+                                                              (0, t.jsx)(e, {
                                                                   className: u.mediaModal,
-                                                                  ...t,
+                                                                  ...a,
                                                                   items: m,
                                                                   fit: i.D.SCALE_DOWN,
                                                                   startingIndex: n,
@@ -83,7 +83,7 @@ function _(e) {
                                                       { modalKey: l.U }
                                                   );
                                           },
-                                          children: (0, a.jsx)('img', {
+                                          children: (0, t.jsx)('img', {
                                               src: e.url,
                                               className: u.gameArtwork,
                                               alt: c.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: name })
@@ -94,23 +94,23 @@ function _(e) {
                               )
                           }),
                           I &&
-                              (0, a.jsxs)('div', {
+                              (0, t.jsxs)('div', {
                                   className: u.mediaOverlay,
                                   children: [
-                                      (0, a.jsx)('div', { className: u.gradientLeft }),
-                                      (0, a.jsx)(s.Clickable, {
+                                      (0, t.jsx)('div', { className: u.gradientLeft }),
+                                      (0, t.jsx)(s.Clickable, {
                                           className: u.arrowClickable,
                                           onClick: () => A(-1),
-                                          children: (0, a.jsx)(s.ArrowSmallLeftIcon, {
+                                          children: (0, t.jsx)(s.ArrowSmallLeftIcon, {
                                               className: u.arrow,
                                               color: 'currentColor'
                                           })
                                       }),
-                                      (0, a.jsx)('div', { className: u.gradientRight }),
-                                      (0, a.jsx)(s.Clickable, {
+                                      (0, t.jsx)('div', { className: u.gradientRight }),
+                                      (0, t.jsx)(s.Clickable, {
                                           className: u.arrowClickable,
                                           onClick: () => A(1),
-                                          children: (0, a.jsx)(s.ArrowSmallRightIcon, {
+                                          children: (0, t.jsx)(s.ArrowSmallRightIcon, {
                                               className: u.arrow,
                                               color: 'currentColor'
                                           })

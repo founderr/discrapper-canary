@@ -37,13 +37,13 @@ r.r(t),
             return n.Ts;
         },
         breadcrumbsIntegration: function () {
-            return I.f;
+            return l.f;
         },
         browserApiErrorsIntegration: function () {
-            return A.t;
+            return N.t;
         },
         browserProfilingIntegration: function () {
-            return M.x;
+            return P.x;
         },
         browserTracingIntegration: function () {
             return g.E8;
@@ -70,13 +70,13 @@ r.r(t),
             return s.Jd;
         },
         chromeStackLineParser: function () {
-            return i.$3;
+            return E.$3;
         },
         close: function () {
             return n.xv;
         },
         contextLinesIntegration: function () {
-            return O.S;
+            return L.S;
         },
         continueTrace: function () {
             return n.yn;
@@ -97,34 +97,34 @@ r.r(t),
             return C.k3;
         },
         defaultStackLineParsers: function () {
-            return i.d8;
+            return E.d8;
         },
         defaultStackParser: function () {
-            return i.Dt;
+            return E.Dt;
         },
         endSession: function () {
             return n.TM;
         },
         eventFromException: function () {
-            return E.dr;
+            return i.dr;
         },
         eventFromMessage: function () {
-            return E.aB;
+            return i.aB;
         },
         exceptionFromError: function () {
-            return E.GJ;
+            return i.GJ;
         },
         extraErrorDataIntegration: function () {
             return n.EY;
         },
         feedbackAsyncIntegration: function () {
-            return L.Q;
+            return p.Q;
         },
         feedbackIntegration: function () {
-            return S.r;
+            return h.r;
         },
         feedbackSyncIntegration: function () {
-            return S.r;
+            return h.r;
         },
         flush: function () {
             return n.yl;
@@ -136,7 +136,7 @@ r.r(t),
             return n.CP;
         },
         geckoStackLineParser: function () {
-            return i.$Q;
+            return E.$Q;
         },
         getActiveSpan: function () {
             return n.HN;
@@ -154,7 +154,7 @@ r.r(t),
             return s.nV;
         },
         getFeedback: function () {
-            return D.qm;
+            return S.qm;
         },
         getGlobalScope: function () {
             return n.lW;
@@ -163,7 +163,7 @@ r.r(t),
             return n.aF;
         },
         getReplay: function () {
-            return p.T;
+            return f.T;
         },
         getRootSpan: function () {
             return n.Gx;
@@ -181,7 +181,7 @@ r.r(t),
             return d.l;
         },
         httpContextIntegration: function () {
-            return l.s;
+            return I.s;
         },
         inboundFiltersIntegration: function () {
             return n.SG;
@@ -199,13 +199,13 @@ r.r(t),
             return n.eW;
         },
         lazyLoadIntegration: function () {
-            return T.R;
+            return A.R;
         },
         linkedErrorsIntegration: function () {
             return R.O;
         },
         makeBrowserOfflineTransport: function () {
-            return P.O1;
+            return U.O1;
         },
         makeFetchTransport: function () {
             return o.f;
@@ -214,7 +214,7 @@ r.r(t),
             return n.Wq;
         },
         metrics: function () {
-            return h.q;
+            return D.q;
         },
         moduleMetadataIntegration: function () {
             return n.wo;
@@ -223,10 +223,10 @@ r.r(t),
             return s.lA;
         },
         opera10StackLineParser: function () {
-            return i.NP;
+            return E.NP;
         },
         opera11StackLineParser: function () {
-            return i.HH;
+            return E.HH;
         },
         parameterize: function () {
             return n.XB;
@@ -235,19 +235,19 @@ r.r(t),
             return n.ar;
         },
         replayCanvasIntegration: function () {
-            return f.m;
+            return O.m;
         },
         replayIntegration: function () {
-            return p.G;
+            return f.G;
         },
         reportingObserverIntegration: function () {
-            return N.y;
+            return T.y;
         },
         rewriteFramesIntegration: function () {
             return n.vU;
         },
         sendFeedback: function () {
-            return D.fA;
+            return S.fA;
         },
         sessionTimingIntegration: function () {
             return n.rE;
@@ -316,7 +316,7 @@ r.r(t),
             return n.Lw;
         },
         winjsStackLineParser: function () {
-            return i.R2;
+            return E.R2;
         },
         withActiveSpan: function () {
             return n._d;
@@ -335,26 +335,26 @@ var n = r(148503),
     a = r(163162),
     _ = r(833772),
     o = r(387486),
-    i = r(297117),
-    E = r(878719),
+    E = r(297117),
+    i = r(878719),
     c = r(463461),
     s = r(509068),
-    I = r(408720),
+    l = r(408720),
     u = r(804410),
-    l = r(376457),
+    I = r(376457),
     R = r(42367),
-    A = r(515737),
-    T = r(27269),
-    N = r(17411),
+    N = r(515737),
+    A = r(27269),
+    T = r(17411),
     d = r(453574),
-    O = r(386797),
-    p = r(616456),
-    f = r(778600),
-    L = r(780850),
-    S = r(226483),
-    D = r(185461),
-    h = r(166800),
+    L = r(386797),
+    f = r(616456),
+    O = r(778600),
+    p = r(780850),
+    h = r(226483),
+    S = r(185461),
+    D = r(166800),
     C = r(799033),
     g = r(325124),
-    P = r(281894),
-    M = r(130260);
+    U = r(281894),
+    P = r(130260);

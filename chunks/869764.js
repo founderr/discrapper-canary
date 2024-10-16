@@ -13,8 +13,8 @@ var a = l(735250),
     t = l(481060),
     s = l(933557),
     d = l(471445),
-    o = l(905362),
-    c = l(353093),
+    c = l(905362),
+    o = l(353093),
     u = l(979264),
     h = l(937111),
     m = l(592125),
@@ -34,13 +34,13 @@ var a = l(735250),
     M = l(689938),
     A = l(571413);
 function S(e) {
-    let { title: n, emojiId: l, emojiName: i, icon: r, completed: s, Icon: d, ...o } = e,
-        c = 'channel' === o.variant ? o.channelId : null,
-        u = 'static' === o.variant ? o.subtitle : o.channelName,
+    let { title: n, emojiId: l, emojiName: i, icon: r, completed: s, Icon: d, ...c } = e,
+        o = 'channel' === c.variant ? c.channelId : null,
+        u = 'static' === c.variant ? c.subtitle : c.channelName,
         h =
-            null != c
+            null != o
                 ? I.ZP.getNewMemberActionIconURL({
-                      channelId: c,
+                      channelId: o,
                       icon: r
                   })
                 : null;
@@ -102,10 +102,10 @@ function S(e) {
 }
 function T(e) {
     var n;
-    let { action: l, completed: o } = e,
-        { channelId: c, title: u, emoji: h, icon: g } = l,
+    let { action: l, completed: c } = e,
+        { channelId: o, title: u, emoji: h, icon: g } = l,
         { id: C, name: f } = null != h ? h : {},
-        I = (0, r.e7)([m.Z], () => m.Z.getChannel(c)),
+        I = (0, r.e7)([m.Z], () => m.Z.getChannel(o)),
         v = (0, s.ZP)(I, !0),
         Z = (0, r.e7)([x.Z], () => x.Z.can(p.Plq.VIEW_CHANNEL, I)),
         N = i.useCallback(() => {
@@ -119,13 +119,13 @@ function T(e) {
         onClick: N,
         children: (0, a.jsx)(S, {
             variant: 'channel',
-            channelId: c,
+            channelId: o,
             title: u,
             channelName: v,
             emojiId: C,
             emojiName: f,
             icon: g,
-            completed: o,
+            completed: c,
             Icon: j
         })
     });
@@ -137,7 +137,7 @@ function R(e) {
         d = (0, r.e7)([N.Z], () => N.Z.getCompletedActions(l)),
         m = (0, r.e7)([g.ZP], () => g.ZP.getSelfMember(l)),
         x = (0, r.e7)([C.Z], () => C.Z.getGuild(l)),
-        f = null != x ? (0, c.ky)(x.id, null === (n = x.clan) || void 0 === n ? void 0 : n.badge, b.NC.SIZE_16) : null,
+        f = null != x ? (0, o.ky)(x.id, null === (n = x.clan) || void 0 === n ? void 0 : n.badge, b.NC.SIZE_16) : null,
         I = (0, r.e7)([h.Z], () => h.Z.getRequest(l));
     i.useEffect(() => {
         var e;
@@ -160,7 +160,7 @@ function R(e) {
                       null != f &&
                       (0, a.jsx)(t.Clickable, {
                           className: A.clickableAction,
-                          onClick: () => (0, o.CK)(l, null == I ? void 0 : I.joinRequestId),
+                          onClick: () => (0, c.CK)(l, null == I ? void 0 : I.joinRequestId),
                           children: (0, a.jsxs)('div', {
                               className: A.action,
                               children: [

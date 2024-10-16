@@ -4,8 +4,8 @@ var a = l(735250),
     t = l(481060),
     s = l(904245),
     d = l(368844),
-    o = l(249842),
-    c = l(838367),
+    c = l(249842),
+    o = l(838367),
     u = l(6025),
     h = l(592125),
     m = l(375954),
@@ -18,10 +18,10 @@ var a = l(735250),
     _ = l(469085);
 let Z = i.memo(function (e) {
         let { guild: n } = e,
-            l = (0, r.e7)([c.Z], () => c.Z.getGuild(n.id), [n]);
+            l = (0, r.e7)([o.Z], () => o.Z.getGuild(n.id), [n]);
         return (
             i.useEffect(() => {
-                null == l && (0, o.P)(n.id);
+                null == l && (0, c.P)(n.id);
             }, [n.id, l]),
             (0, a.jsx)('div', {
                 className: _.sidebarCardWrapper,
@@ -66,14 +66,14 @@ let Z = i.memo(function (e) {
         );
     }),
     N = (e) => {
-        let { channelId: n, title: l, icon: o } = e,
-            c = (0, r.e7)([h.Z], () => h.Z.getChannel(n)),
+        let { channelId: n, title: l, icon: c } = e,
+            o = (0, r.e7)([h.Z], () => h.Z.getChannel(n)),
             f = (0, r.e7)([m.Z], () => m.Z.getMessages(n)),
-            v = (0, r.e7)([g.Z], () => g.Z.can(I.Plq.VIEW_CHANNEL, c)),
+            v = (0, r.e7)([g.Z], () => g.Z.can(I.Plq.VIEW_CHANNEL, o)),
             Z = f.first(),
             N = (0, d.zy)(Z, !1),
             j = (null == N ? void 0 : N.length) > 0 ? N[0] : null,
-            p = null != c && null == Z && !f.loadingMore && !f.ready && !f.hasFetched && v;
+            p = null != o && null == Z && !f.loadingMore && !f.ready && !f.hasFetched && v;
         i.useEffect(() => {
             p &&
                 s.Z.fetchMessages({
@@ -83,12 +83,12 @@ let Z = i.memo(function (e) {
                 });
         }, [n, p]);
         let b = (e) => {
-            null != c &&
+            null != o &&
                 (e.shiftKey
-                    ? (0, x.C3)(c.guild_id, c.id)
+                    ? (0, x.C3)(o.guild_id, o.id)
                     : u.Z.openResourceChannelAsSidebar({
-                          guildId: c.guild_id,
-                          channelId: c.id
+                          guildId: o.guild_id,
+                          channelId: o.id
                       }));
         };
         return (0, a.jsx)(
@@ -101,9 +101,9 @@ let Z = i.memo(function (e) {
                         (() => {
                             let e = C.ZP.getResourceChannelIconURL({
                                 channelId: n,
-                                icon: o
+                                icon: c
                             });
-                            return null != o && null != e
+                            return null != c && null != e
                                 ? (0, a.jsx)('img', {
                                       src: e,
                                       className: _.resourceImage,

@@ -1,14 +1,14 @@
 r.d(t, {
     t: function () {
-        return E;
+        return i;
     }
 });
 var n = r(151122),
     a = r(370336),
     _ = r(688838),
     o = r(163162);
-let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
-    E = (0, n._I)((e = {}) => {
+let E = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
+    i = (0, n._I)((e = {}) => {
         let t = {
             XMLHttpRequest: !0,
             eventTarget: !0,
@@ -20,9 +20,9 @@ let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                t.setTimeout && (0, a.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, a.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, a.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
+                t.setTimeout && (0, a.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, a.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, a.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', l);
                 let e = t.eventTarget;
-                e && (Array.isArray(e) ? e : i).forEach(u);
+                e && (Array.isArray(e) ? e : E).forEach(u);
             }
         };
     });
@@ -57,7 +57,7 @@ function s(e) {
         ]);
     };
 }
-function I(e) {
+function l(e) {
     return function (...t) {
         let r = this;
         return (

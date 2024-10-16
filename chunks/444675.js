@@ -8,7 +8,7 @@ function _() {
 function o() {
     throw Error('clearTimeout has not been defined');
 }
-function i(e) {
+function E(e) {
     if (t === setTimeout) return setTimeout(e, 0);
     if ((t === _ || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
     try {
@@ -33,19 +33,19 @@ function i(e) {
         r = o;
     }
 })();
-var E = [],
+var i = [],
     c = !1,
     s = -1;
-function I() {
-    if (!!c && !!n) (c = !1), n.length ? (E = n.concat(E)) : (s = -1), E.length && u();
+function l() {
+    if (!!c && !!n) (c = !1), n.length ? (i = n.concat(i)) : (s = -1), i.length && u();
 }
 function u() {
     if (!c) {
-        var e = i(I);
+        var e = E(l);
         c = !0;
-        for (var t = E.length; t; ) {
-            for (n = E, E = []; ++s < t; ) n && n[s].run();
-            (s = -1), (t = E.length);
+        for (var t = i.length; t; ) {
+            for (n = i, i = []; ++s < t; ) n && n[s].run();
+            (s = -1), (t = i.length);
         }
         (n = null),
             (c = !1),
@@ -64,16 +64,16 @@ function u() {
             })(e);
     }
 }
-function l(e, t) {
+function I(e, t) {
     (this.fun = e), (this.array = t);
 }
 function R() {}
 (a.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-    E.push(new l(e, t)), 1 === E.length && !c && i(u);
+    i.push(new I(e, t)), 1 === i.length && !c && E(u);
 }),
-    (l.prototype.run = function () {
+    (I.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
     (a.title = 'browser'),

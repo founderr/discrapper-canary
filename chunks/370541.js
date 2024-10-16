@@ -1,6 +1,6 @@
 r.d(t, {
     $p: function () {
-        return i;
+        return E;
     },
     pT: function () {
         return o;
@@ -25,21 +25,21 @@ function o(e, t) {
                 );
         })(e),
         o = (0, n.EN)(t),
-        { traceId: i, parentSpanId: E, parentSampled: c } = r || {};
+        { traceId: E, parentSpanId: i, parentSampled: c } = r || {};
     return r
         ? {
-              traceId: i || (0, a.DM)(),
-              parentSpanId: E || (0, a.DM)().substring(16),
+              traceId: E || (0, a.DM)(),
+              parentSpanId: i || (0, a.DM)().substring(16),
               spanId: (0, a.DM)().substring(16),
               sampled: c,
               dsc: o || {}
           }
         : {
-              traceId: i || (0, a.DM)(),
+              traceId: E || (0, a.DM)(),
               spanId: (0, a.DM)().substring(16)
           };
 }
-function i(e = (0, a.DM)(), t = (0, a.DM)().substring(16), r) {
+function E(e = (0, a.DM)(), t = (0, a.DM)().substring(16), r) {
     let n = '';
     return void 0 !== r && (n = r ? '-1' : '-0'), `${e}-${t}${n}`;
 }

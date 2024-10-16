@@ -1,6 +1,6 @@
 r.d(t, {
     W: function () {
-        return i;
+        return E;
     }
 });
 var n = r(617726),
@@ -10,39 +10,39 @@ function o(e, t) {
     let r;
     return (0, n.gv)(e, (e, n) => (t.includes(n) && (r = Array.isArray(e) ? e[1] : void 0), !!r)), r;
 }
-function i(e, t) {
+function E(e, t) {
     return (r) => {
-        let i = e(r),
-            E = new Map();
+        let E = e(r),
+            i = new Map();
         function c(t, n) {
-            let i = n ? `${t}:${n}` : t,
-                c = E.get(i);
+            let E = n ? `${t}:${n}` : t,
+                c = i.get(E);
             if (!c) {
-                var s, I;
+                var s, l;
                 let u = (0, a.U4)(t);
                 if (!u) return;
-                let l = (0, _.U)(u, r.tunnel);
+                let I = (0, _.U)(u, r.tunnel);
                 (c = n
                     ? ((s = e),
-                      (I = n),
+                      (l = n),
                       (e) => {
                           let t = s(e);
                           return {
                               ...t,
                               send: async (e) => {
                                   let r = o(e, ['event', 'transaction', 'profile', 'replay_event']);
-                                  return r && (r.release = I), t.send(e);
+                                  return r && (r.release = l), t.send(e);
                               }
                           };
                       })({
                           ...r,
-                          url: l
+                          url: I
                       })
                     : e({
                           ...r,
-                          url: l
+                          url: I
                       })),
-                    E.set(i, c);
+                    i.set(E, c);
             }
             return [t, c];
         }
@@ -56,7 +56,7 @@ function i(e, t) {
                     })
                         .map((e) => ('string' == typeof e ? c(e, void 0) : c(e.dsn, e.release)))
                         .filter((e) => !!e),
-                    a = r.length ? r : [['', i]];
+                    a = r.length ? r : [['', E]];
                 return (
                     await Promise.all(
                         a.map(([t, r]) => {
@@ -79,7 +79,7 @@ function i(e, t) {
                 )[0];
             },
             flush: async function e(e) {
-                let t = [...E.values(), i];
+                let t = [...i.values(), E];
                 return (await Promise.all(t.map((t) => t.flush(e)))).every((e) => e);
             }
         };

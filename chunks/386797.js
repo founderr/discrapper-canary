@@ -1,27 +1,27 @@
 r.d(t, {
     S: function () {
-        return E;
+        return i;
     }
 });
 var n = r(151122),
     a = r(899517),
     _ = r(873567),
     o = r(394798);
-let i = a.n,
-    E = (0, n._I)((e = {}) => {
+let E = a.n,
+    i = (0, n._I)((e = {}) => {
         let t = null != e.frameContextLines ? e.frameContextLines : 7;
         return {
             name: 'ContextLines',
             processEvent: (e) =>
                 (function (e, t) {
-                    let r = i.document,
-                        n = i.location && (0, _.rt)(i.location.href);
+                    let r = E.document,
+                        n = E.location && (0, _.rt)(E.location.href);
                     if (!r || !n) return e;
                     let a = e.exception && e.exception.values;
                     if (!a || !a.length) return e;
-                    let E = r.documentElement.innerHTML;
-                    if (!E) return e;
-                    let c = ['<!DOCTYPE html>', '<html>', ...E.split('\n'), '</html>'];
+                    let i = r.documentElement.innerHTML;
+                    if (!i) return e;
+                    let c = ['<!DOCTYPE html>', '<html>', ...i.split('\n'), '</html>'];
                     return (
                         a.forEach((e) => {
                             let r = e.stacktrace;

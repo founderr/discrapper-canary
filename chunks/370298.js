@@ -22,9 +22,9 @@ var i = t(735250),
     C = t(667204),
     g = t(873387),
     A = t(809090),
-    f = t(147391),
-    v = t(583027),
-    I = t(978983),
+    v = t(147391),
+    I = t(583027),
+    f = t(978983),
     h = t(592125),
     N = t(703558),
     S = t(430824),
@@ -158,7 +158,7 @@ function y(e) {
                         },
                         commandOrigin: t === p.Vh.IMAGE_RECS_SUBMENU ? p.bB.IMAGE_RECS_SUBMENU : p.bB.IMAGE_RECS_MENU
                     }),
-                    (0, v.Mo)({
+                    (0, I.Mo)({
                         command: e,
                         location: t,
                         sectionName: n.name
@@ -174,7 +174,7 @@ function y(e) {
                     c = (null === (i = G.result) || void 0 === i ? void 0 : i.sections[l]) != null,
                     d = (null === (a = F.result) || void 0 === a ? void 0 : a.sections[l]) != null;
                 c || d || E.ZP.queryInstallOnDemandApp(e.applicationId, o.id);
-                let r = await (0, f.L)({
+                let r = await (0, v.L)({
                     applicationId: l,
                     userIndexState: G,
                     guildIndexState: F,
@@ -235,7 +235,7 @@ function y(e) {
                       c.MenuItem,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, i.jsx)(I.Z, {}),
+                          render: () => (0, i.jsx)(f.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },

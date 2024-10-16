@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return x;
     }
 }),
     t(47120),
@@ -21,19 +21,19 @@ var i = t(735250),
     _ = t(626135),
     p = t(463571),
     m = t(887706),
-    f = t(214912),
-    I = t(290247),
+    I = t(214912),
+    f = t(290247),
     h = t(981631),
     g = t(689938),
     C = t(319333);
 let v = g.Z.getAvailableLocales();
-function x(e) {
+function b(e) {
     var n, t, a;
     let { onClick: r, url: o, children: c } = e,
         _ = (0, d.ZP)(),
         p = u.Z.getByUrl(o),
         m = (0, l.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.lightSVG;
-    return (0, i.jsx)(b, {
+    return (0, i.jsx)(E, {
         icon: void 0 === m ? s.LinkIcon : void 0,
         imageSrc: m,
         onClick: r,
@@ -42,7 +42,7 @@ function x(e) {
         children: c
     });
 }
-function b(e) {
+function E(e) {
     let { icon: n, imageSrc: t, iconColor: a, url: r, type: l, children: d, onClick: u } = e,
         _ = (0, m.Z)(),
         p = null;
@@ -60,7 +60,7 @@ function b(e) {
               src: t,
               alt: ''
           }));
-    let f = (0, i.jsxs)(i.Fragment, {
+    let I = (0, i.jsxs)(i.Fragment, {
         children: [
             p,
             (0, i.jsx)(s.Text, {
@@ -77,20 +77,20 @@ function b(e) {
         onClick: () => (u(r, l), !1),
         trusted: !_,
         useDefaultUnderlineStyles: !1,
-        children: f
+        children: I
     });
 }
-function E(e) {
+function x(e) {
     var n, t, r;
     let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [E, P] = a.useState(null),
-        T = [],
+        [x, T] = a.useState(null),
+        P = [],
         S = null !== (t = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
         if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(l.directory_entry.supported_locales);
-            P(v.filter((n) => e.has(n.value)).map((e) => e.localizedName));
+            T(v.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
     }, [l.directory_entry]);
     let A = (e, n) => {
@@ -104,7 +104,7 @@ function E(e) {
     return (
         null != l.categories &&
             l.categories.length > 0 &&
-            T.push(
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
@@ -140,9 +140,9 @@ function E(e) {
                     ]
                 })
             ),
-        null != E &&
-            E.length > 0 &&
-            T.push(
+        null != x &&
+            x.length > 0 &&
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
@@ -150,12 +150,12 @@ function E(e) {
                             variant: 'eyebrow',
                             children: g.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(I.Z, { supportedLanguages: E })
+                        (0, i.jsx)(f.Z, { supportedLanguages: x })
                     ]
                 })
             ),
         (null != l.terms_of_service_url || null != l.privacy_policy_url || S.length > 0) &&
-            T.push(
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
@@ -165,7 +165,7 @@ function E(e) {
                         }),
                         S.map((e, n) =>
                             (0, i.jsx)(
-                                x,
+                                b,
                                 {
                                     url: e.url,
                                     onClick: A,
@@ -175,7 +175,7 @@ function E(e) {
                             )
                         ),
                         null != l.terms_of_service_url
-                            ? (0, i.jsx)(b, {
+                            ? (0, i.jsx)(E, {
                                   icon: s.LinkIcon,
                                   onClick: A,
                                   url: l.terms_of_service_url,
@@ -184,7 +184,7 @@ function E(e) {
                               })
                             : null,
                         null != l.privacy_policy_url
-                            ? (0, i.jsx)(b, {
+                            ? (0, i.jsx)(E, {
                                   icon: s.LockIcon,
                                   onClick: A,
                                   url: l.privacy_policy_url,
@@ -197,7 +197,7 @@ function E(e) {
             ),
         null != l.guild &&
             l.guild.features.includes(h.oNc.DISCOVERABLE) &&
-            T.push(
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
@@ -205,7 +205,7 @@ function E(e) {
                             variant: 'eyebrow',
                             children: g.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(I.Z, {
                             guild: l.guild,
                             onClick: m
                         })
@@ -215,9 +215,9 @@ function E(e) {
         (0, i.jsx)('div', {
             className: o()(C.sidebar, d),
             children:
-                T.length > 0
+                P.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: T.map((e, n) =>
+                          children: P.map((e, n) =>
                               (0, i.jsx)(
                                   'div',
                                   {

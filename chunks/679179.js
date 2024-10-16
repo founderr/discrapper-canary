@@ -1,6 +1,6 @@
 r.d(t, {
     EZ: function () {
-        return i;
+        return E;
     },
     Gf: function () {
         return o;
@@ -42,17 +42,17 @@ function o(e, t) {
     let r = _(e.split('/')),
         n = _(t.split('/')),
         o = Math.min(r.length, n.length),
-        i = o;
+        E = o;
     for (let e = 0; e < o; e++)
         if (r[e] !== n[e]) {
-            i = e;
+            E = e;
             break;
         }
-    let E = [];
-    for (let e = i; e < r.length; e++) E.push('..');
-    return (E = E.concat(n.slice(i))).join('/');
+    let i = [];
+    for (let e = E; e < r.length; e++) i.push('..');
+    return (i = i.concat(n.slice(E))).join('/');
 }
-function i(e, t) {
+function E(e, t) {
     let r =
         (function (e) {
             let t = e.length > 1024 ? `<truncated>${e.slice(-1024)}` : e,

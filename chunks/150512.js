@@ -9,8 +9,8 @@ var a = l(735250),
     t = l.n(r),
     s = l(866442),
     d = l(399606),
-    o = l(481060),
-    c = l(749210),
+    c = l(481060),
+    o = l(749210),
     u = l(410030),
     h = l(607070),
     m = l(603368),
@@ -36,13 +36,13 @@ function p(e) {
             displayProfile: A
         }),
         R = (0, u.ZP)(),
-        P = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, S).hex(),
+        P = (0, c.useToken)(c.tokens.colors.BACKGROUND_SECONDARY, S).hex(),
         k = i.useMemo(() => {
             var e;
             return null !== (e = null == l ? void 0 : l.authorIds) && void 0 !== e ? e : [];
         }, [l]);
     i.useEffect(() => {
-        c.Z.requestMembersById(n, k);
+        o.Z.requestMembersById(n, k);
     }, [n, k]),
         i.useEffect(() => {
             null != E && (0, x.Z)(E.id, E.getAvatarURL(n, 48), { guildId: n });
@@ -64,15 +64,15 @@ function p(e) {
             children: [
                 (0, a.jsx)('div', { className: j.avatarBackground }),
                 b
-                    ? (0, a.jsx)(o.Avatar, {
+                    ? (0, a.jsx)(c.Avatar, {
                           src: E.getAvatarURL(n, 48),
-                          size: o.AvatarSizes.SIZE_48,
+                          size: c.AvatarSizes.SIZE_48,
                           className: j.avatar,
                           'aria-label': E.username
                       })
-                    : (0, a.jsx)(o.AnimatedAvatar, {
+                    : (0, a.jsx)(c.AnimatedAvatar, {
                           src: E.getAvatarURL(n, 48),
-                          size: o.AvatarSizes.SIZE_48,
+                          size: c.AvatarSizes.SIZE_48,
                           className: j.avatar,
                           'aria-label': E.username
                       }),
@@ -87,13 +87,13 @@ function p(e) {
                         (0, a.jsxs)('div', {
                             className: j.adminUsernameContainer,
                             children: [
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(c.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'currentColor',
                                     children: _.ZP.getName(n, null, E)
                                 }),
                                 L
-                                    ? (0, a.jsx)(o.CrownIcon, {
+                                    ? (0, a.jsx)(c.CrownIcon, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: j.ownerIcon
@@ -101,7 +101,7 @@ function p(e) {
                                     : null
                             ]
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'currentColor',
                             children: (function (e, n) {
@@ -114,7 +114,7 @@ function p(e) {
                                                 children: [
                                                     e,
                                                     r < l.length - 1
-                                                        ? (0, a.jsx)(o.Text, {
+                                                        ? (0, a.jsx)(c.Text, {
                                                               tag: 'span',
                                                               variant: 'text-md/semibold',
                                                               children: '@'.concat(n)

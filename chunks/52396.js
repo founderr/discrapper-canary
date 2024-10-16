@@ -17,8 +17,8 @@ var l = t(735250),
     u = t(214597),
     d = t(498187),
     m = t(482417),
-    f = t(301419),
-    _ = t(397035);
+    _ = t(301419),
+    f = t(397035);
 let p = i.createContext(void 0);
 function C() {
     let e = i.useContext(p);
@@ -35,7 +35,7 @@ function h(e) {
         };
     switch (n.content_type) {
         case o.s.TOP_ARTIST:
-            return (0, l.jsx)(E, {
+            return (0, l.jsx)(x, {
                 entry: n,
                 ...i
             });
@@ -60,7 +60,7 @@ function h(e) {
                 ...i
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(x, {
+            return (0, l.jsx)(E, {
                 entry: n,
                 ...i
             });
@@ -75,7 +75,7 @@ function I(e) {
         children: (0, l.jsx)(h, { ...t })
     });
 }
-function x(e) {
+function E(e) {
     let { entry: n, children: t, ...i } = e,
         a = (0, c.Z)({
             entry: n,
@@ -89,9 +89,9 @@ function x(e) {
         children: t
     });
 }
-function E(e) {
+function x(e) {
     let { entry: n, children: t, ...i } = e,
-        a = (0, f.Z)({
+        a = (0, _.Z)({
             entry: n,
             ...i
         });
@@ -133,7 +133,7 @@ function T(e) {
 }
 function N(e) {
     let { entry: n, children: t, ...i } = e,
-        a = (0, _.Z)({
+        a = (0, f.Z)({
             entry: n,
             ...i
         });

@@ -3,7 +3,7 @@ r.d(t, {
         return s;
     },
     m9: function () {
-        return E;
+        return i;
     },
     re: function () {
         return function e(t, r = {}, _) {
@@ -15,7 +15,7 @@ r.d(t, {
             } catch (e) {
                 return t;
             }
-            let E = function () {
+            let i = function () {
                 let o = Array.prototype.slice.call(arguments);
                 try {
                     _ && 'function' == typeof _ && _.apply(this, arguments);
@@ -30,7 +30,7 @@ r.d(t, {
                         (0, n.$e)((t) => {
                             t.addEventProcessor(
                                 (e) => (
-                                    r.mechanism && ((0, i.Db)(e, void 0, void 0), (0, i.EG)(e, r.mechanism)),
+                                    r.mechanism && ((0, E.Db)(e, void 0, void 0), (0, E.EG)(e, r.mechanism)),
                                     (e.extra = {
                                         ...e.extra,
                                         arguments: o
@@ -45,13 +45,13 @@ r.d(t, {
                 }
             };
             try {
-                for (let e in t) Object.prototype.hasOwnProperty.call(t, e) && (E[e] = t[e]);
+                for (let e in t) Object.prototype.hasOwnProperty.call(t, e) && (i[e] = t[e]);
             } catch (e) {}
-            (0, o.$Q)(E, t), (0, o.xp)(t, '__sentry_wrapped__', E);
+            (0, o.$Q)(i, t), (0, o.xp)(t, '__sentry_wrapped__', i);
             try {
-                Object.getOwnPropertyDescriptor(E, 'name').configurable && Object.defineProperty(E, 'name', { get: () => t.name });
+                Object.getOwnPropertyDescriptor(i, 'name').configurable && Object.defineProperty(i, 'name', { get: () => t.name });
             } catch (e) {}
-            return E;
+            return i;
         };
     }
 });
@@ -59,8 +59,8 @@ var n = r(263449),
     a = r(233517),
     _ = r(899517),
     o = r(370336),
-    i = r(394798);
-let E = _.n,
+    E = r(394798);
+let i = _.n,
     c = 0;
 function s() {
     return c > 0;

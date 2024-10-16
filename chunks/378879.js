@@ -1,97 +1,97 @@
-a.r(n),
-    a.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return I;
+            return g;
         },
         openProfileUpsellModal: function () {
-            return L;
+            return p;
         }
     });
-var t = a(735250);
-a(470079);
-var s = a(481060),
-    c = a(921813),
-    o = a(687158),
-    i = a(576635),
-    r = a(594174),
-    d = a(98278),
-    l = a(792254),
-    u = a(790527),
-    A = a(474936),
-    f = a(981631),
-    p = a(486324),
-    E = a(689938),
-    _ = a(821774);
-function L(e, n) {
-    let c = r.default.getCurrentUser();
+var i = n(735250);
+n(470079);
+var a = n(481060),
+    s = n(921813),
+    r = n(687158),
+    l = n(576635),
+    o = n(594174),
+    c = n(98278),
+    d = n(792254),
+    u = n(790527),
+    _ = n(474936),
+    E = n(981631),
+    h = n(486324),
+    m = n(689938),
+    I = n(821774);
+function p(e, t) {
+    let s = o.default.getCurrentUser();
     return (
-        null != c &&
-        ((0, s.openModalLazy)(async () => {
-            let { default: o } = await Promise.resolve().then(a.bind(a, 378879));
-            return (a) =>
-                (0, t.jsx)(o, {
-                    user: c,
-                    imageSrc: n,
+        null != s &&
+        ((0, a.openModalLazy)(async () => {
+            let { default: r } = await Promise.resolve().then(n.bind(n, 378879));
+            return (n) =>
+                (0, i.jsx)(r, {
+                    user: s,
+                    imageSrc: t,
                     uploadType: e,
-                    analyticsSource: f.Sbl.PROFILE_PANEL,
+                    analyticsSource: E.Sbl.PROFILE_PANEL,
                     analyticsLocation: {
-                        section: f.jXE.USER_PROFILE,
-                        object: f.qAy.BUTTON_CTA
+                        section: E.jXE.USER_PROFILE,
+                        object: E.qAy.BUTTON_CTA
                     },
-                    onSecondaryClick: s.closeAllModals,
-                    ...a
+                    onSecondaryClick: a.closeAllModals,
+                    ...n
                 });
         }),
         !0)
     );
 }
-function I(e) {
-    let { user: n, uploadType: a, imageSrc: s, onClose: r, analyticsSource: f, analyticsLocation: L, onSecondaryClick: I, ...P } = e,
-        R = (0, o.ZP)(n.id),
-        { primaryColor: b, secondaryColor: Z } = (0, i.Z)({
-            user: n,
-            displayProfile: R,
-            pendingAvatar: a === p.pC.AVATAR ? s : void 0,
+function g(e) {
+    let { user: t, uploadType: n, imageSrc: a, onClose: o, analyticsSource: E, analyticsLocation: p, onSecondaryClick: g, ...T } = e,
+        f = (0, r.ZP)(t.id),
+        { primaryColor: S, secondaryColor: C } = (0, l.Z)({
+            user: t,
+            displayProfile: f,
+            pendingAvatar: n === h.pC.AVATAR ? a : void 0,
             isPreview: !0
         }),
-        N = a === p.pC.AVATAR || a === p.pC.BANNER,
-        m = null != s,
-        T = (0, l.Z)(a === p.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
+        N = n === h.pC.AVATAR || n === h.pC.BANNER,
+        A = null != a,
+        v = (0, d.Z)(n === h.pC.AVATAR ? _.cd.ANIMATED_AVATAR_MODAL_UPSELL : _.cd.ANIMATED_BANNER_MODAL_UPSELL);
     return N
-        ? (0, t.jsx)(u.Z, {
-              artURL: m ? void 0 : T,
-              modalClassName: m ? _.modal : void 0,
-              modalContentClassName: m ? _.modalContent : void 0,
-              type: a === p.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
-              title: a === p.pC.AVATAR ? E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_TITLE : E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_TITLE,
-              body: a === p.pC.AVATAR ? E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
-              glowUp: a === p.pC.AVATAR ? E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : E.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
+        ? (0, i.jsx)(u.Z, {
+              artURL: A ? void 0 : v,
+              modalClassName: A ? I.modal : void 0,
+              modalContentClassName: A ? I.modalContent : void 0,
+              type: n === h.pC.AVATAR ? _.cd.ANIMATED_AVATAR_MODAL_UPSELL : _.cd.ANIMATED_BANNER_MODAL_UPSELL,
+              title: n === h.pC.AVATAR ? m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_TITLE : m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_TITLE,
+              body: n === h.pC.AVATAR ? m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
+              glowUp: n === h.pC.AVATAR ? m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_MODAL_UPSELL_DESCRIPTION : m.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_MODAL_UPSELL_DESCRIPTION,
               onSecondaryClick: () => {
-                  null == I || I(), (0, d.$)(r);
+                  null == g || g(), (0, c.$)(o);
               },
-              secondaryCTA: E.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-              onClose: r,
+              secondaryCTA: m.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+              onClose: o,
               enableArtBoxShadow: !1,
-              analyticsSource: f,
-              analyticsLocation: L,
+              analyticsSource: E,
+              analyticsLocation: p,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
-              LeadingComponent: m
-                  ? (0, t.jsx)('div', {
-                        className: _.previewContainerParent,
-                        children: (0, t.jsx)(c.Z, {
-                            containerClassName: _.previewContainer,
-                            user: n,
+              LeadingComponent: A
+                  ? (0, i.jsx)('div', {
+                        className: I.previewContainerParent,
+                        children: (0, i.jsx)(s.Z, {
+                            containerClassName: I.previewContainer,
+                            user: t,
                             canUsePremiumCustomization: !0,
                             disabledInputs: !0,
-                            pendingAvatar: a === p.pC.AVATAR ? s : void 0,
-                            pendingBanner: a === p.pC.BANNER ? s : void 0,
-                            pendingThemeColors: [b, Z],
+                            pendingAvatar: n === h.pC.AVATAR ? a : void 0,
+                            pendingBanner: n === h.pC.BANNER ? a : void 0,
+                            pendingThemeColors: [S, C],
                             hideExampleButton: !0
                         })
                     })
                   : void 0,
-              ...P
+              ...T
           })
         : null;
 }

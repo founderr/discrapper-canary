@@ -1,12 +1,12 @@
 r.d(t, {
     QV: function () {
-        return E;
+        return i;
     },
     XL: function () {
         return c;
     },
     Y: function () {
-        return i;
+        return E;
     },
     nl: function () {
         return o;
@@ -18,7 +18,7 @@ var n = r(696486),
 function o(e) {
     return 'number' == typeof e && isFinite(e);
 }
-function i(e, t, r, { ..._ }) {
+function E(e, t, r, { ..._ }) {
     let o = (0, n.XU)(e).start_timestamp;
     return (
         o && o > t && 'function' == typeof e.updateStartTime && e.updateStartTime(t),
@@ -31,7 +31,7 @@ function i(e, t, r, { ..._ }) {
         })
     );
 }
-function E() {
+function i() {
     return _.m && _.m.addEventListener && _.m.performance;
 }
 function c(e) {

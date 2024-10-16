@@ -17,8 +17,8 @@ var l,
     u = t(911969),
     d = t(868819),
     m = t(970184),
-    f = t(280501),
-    _ = t(689938),
+    _ = t(280501),
+    f = t(689938),
     p = t(128422),
     C = t(601648);
 function h(e) {
@@ -34,7 +34,7 @@ function h(e) {
 }
 function I(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: I, placeholder: x, maxValues: E, disabled: v } = n,
+        { type: I, placeholder: E, maxValues: x, disabled: v } = n,
         [T, N] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
@@ -50,30 +50,30 @@ function I(e) {
     }, [o, Z]);
     let {
             state: P,
-            executeStateUpdate: k,
-            visualState: A,
+            executeStateUpdate: A,
+            visualState: k,
             isDisabled: U,
             error: B
         } = (0, m.Ee)(n, {
             type: I,
             selectedOptions: Array.from(S.values())
         }),
-        w = A === f.gH.LOADING;
+        G = k === _.gH.LOADING;
     r.useEffect(() => {
         if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
             O(e), M(new Set(e.keys()));
         }
     }, [P]);
-    let G = r.useCallback(() => {
-        k({
+    let w = r.useCallback(() => {
+        A({
             type: I,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
-    }, [k, I, S]);
+    }, [A, I, S]);
     r.useEffect(() => {
-        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
-    }, [T, b, j, S, G]);
+        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) w();
+    }, [T, b, j, S, w]);
     let D = 0 === S.size || T,
         V = {
             isDisabled: v || U,
@@ -82,7 +82,7 @@ function I(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != x ? x : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: D ? (null != E ? E : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => N(!1),
             onOpen: () => N(!0),
             onBlur: () => g(!1),
@@ -106,7 +106,7 @@ function I(e) {
             (0, a.jsxs)('div', {
                 className: p.container,
                 children: [
-                    E > 1
+                    x > 1
                         ? (0, a.jsx)(
                               c.SearchableSelect,
                               {
@@ -139,7 +139,7 @@ function I(e) {
                               },
                               R
                           ),
-                    w
+                    G
                         ? (0, a.jsx)('div', {
                               className: p.loading,
                               children: (0, a.jsx)(c.Dots, {

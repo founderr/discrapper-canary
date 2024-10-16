@@ -1,7 +1,7 @@
 s(47120), s(411104);
 var n,
-    i = s(735250),
-    a = s(470079),
+    a = s(735250),
+    i = s(470079),
     r = s(120356),
     l = s.n(r),
     o = s(481060),
@@ -13,9 +13,9 @@ var n,
     m = s(80966),
     g = s(524444),
     I = s(843445),
-    C = s(981631),
-    x = s(689938),
-    f = s(310436);
+    x = s(981631),
+    C = s(689938),
+    v = s(310436);
 function N(e, t, s) {
     return (
         t in e
@@ -29,18 +29,18 @@ function N(e, t, s) {
         e
     );
 }
-let v = (e) => {
+let b = (e) => {
         let { className: t, ...s } = e;
-        return (0, i.jsx)(m.Z, {
+        return (0, a.jsx)(m.Z, {
             ...s,
-            className: l()(f.sizedToParent, t),
-            mediaPlayerClassName: f.sizedToParent,
+            className: l()(v.sizedToParent, t),
+            mediaPlayerClassName: v.sizedToParent,
             renderLinkComponent: g.iT
         });
     },
-    b = (e) => {
+    f = (e) => {
         let { containerClassName: t, className: s, ...n } = e;
-        return (0, i.jsx)(p.ZP, {
+        return (0, a.jsx)(p.ZP, {
             ...n,
             className: l()(s, t)
         });
@@ -57,37 +57,37 @@ let v = (e) => {
         let t,
             s,
             n,
-            { item: a, onPlay: r, volume: l, onVolumeChange: o, onMute: c, isMuted: p, autoPlay: m } = e;
-        if (a.type === C.s9s.YOUTUBE_VIDEO)
+            { item: i, onPlay: r, volume: l, onVolumeChange: o, onMute: c, isMuted: p, autoPlay: m } = e;
+        if (i.type === x.s9s.YOUTUBE_VIDEO)
             (t = {
-                url: (0, C.n8r)(a.youtubeVideoId),
+                url: (0, x.n8r)(i.youtubeVideoId),
                 ...P
             }),
                 (s = {
-                    url: ''.concat((0, C.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
+                    url: ''.concat((0, x.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
                     ...S
                 }),
                 (n = u.pn.YOUTUBE);
         else {
-            let e = null != a.width ? a.width : 0,
-                n = null != a.height ? a.height : 0;
+            let e = null != i.width ? i.width : 0,
+                n = null != i.height ? i.height : 0;
             (t = {
-                url: a.thumbnailSrc,
+                url: i.thumbnailSrc,
                 width: e,
                 height: n
             }),
                 (s = {
-                    url: a.src,
-                    proxyURL: a.src,
+                    url: i.src,
+                    proxyURL: i.src,
                     width: e,
                     height: n
                 });
         }
-        return (0, i.jsx)('div', {
-            className: f.embedContainer,
-            children: (0, i.jsx)(d.BC, {
-                className: f.sizedToParent,
-                iframeWrapperClassName: f.sizedToParent,
+        return (0, a.jsx)('div', {
+            className: v.embedContainer,
+            children: (0, a.jsx)(d.BC, {
+                className: v.sizedToParent,
+                iframeWrapperClassName: v.sizedToParent,
                 href: null,
                 thumbnail: t,
                 video: s,
@@ -101,31 +101,31 @@ let v = (e) => {
                 autoMute: p,
                 onMute: c,
                 autoPlay: m,
-                renderImageComponent: b,
-                renderVideoComponent: v,
+                renderImageComponent: f,
+                renderVideoComponent: b,
                 renderLinkComponent: g.iT
             })
         });
     };
-class L extends (n = a.PureComponent) {
+class y extends (n = i.PureComponent) {
     componentDidMount() {
         let { items: e } = this.props;
-        e.length > 0 && e[0].type === C.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
+        e.length > 0 && e[0].type === x.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: s } = this.props;
         null != s && s(e, t), this.setState({ hasInteracted: !0 });
     }
     render() {
-        let { items: e, autoplayInterval: t, className: s, paused: n, themedPagination: a } = this.props,
+        let { items: e, autoplayInterval: t, className: s, paused: n, themedPagination: i } = this.props,
             { hasInteracted: r } = this.state;
-        return (0, i.jsx)(c.Z, {
+        return (0, a.jsx)(c.Z, {
             items: e.slice(0, 12),
             delay: t,
             initialPaused: n || r,
             renderItem: this.renderItem,
-            className: l()(f.smallCarousel, s),
-            themedPagination: a,
+            className: l()(v.smallCarousel, s),
+            themedPagination: i,
             onIntentionalChange: this.handleIntentionalChange,
             onChangeItem: this.handleChangeItem
         });
@@ -159,12 +159,12 @@ class L extends (n = a.PureComponent) {
                 });
             }),
             N(this, 'handleChangeItem', (e) => {
-                this.setState({ isVideoPlaying: !1 }), e.type === C.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
+                this.setState({ isVideoPlaying: !1 }), e.type === x.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
             }),
             N(this, 'handleIntentionalChange', (e, t, s, n) => {
                 this.setState({ hasInteracted: !0 });
-                let { onIntentionalChange: i } = this.props;
-                null != i && i(e, t, s, n);
+                let { onIntentionalChange: a } = this.props;
+                null != a && a(e, t, s, n);
             }),
             N(this, 'handleOnErrorImg', (e) => {
                 this.setState({ status: new Map(this.state.status).set(e.target.src, 'errored') });
@@ -182,45 +182,45 @@ class L extends (n = a.PureComponent) {
             }),
             N(this, 'renderItem', (e, t) => {
                 let s;
-                let { isMuted: n, volume: a } = this.state,
+                let { isMuted: n, volume: i } = this.state,
                     { videoAutoPlay: r } = this.props;
                 switch (e.type) {
-                    case C.s9s.YOUTUBE_VIDEO:
-                    case C.s9s.VIDEO:
-                        s = (0, i.jsx)(E, {
+                    case x.s9s.YOUTUBE_VIDEO:
+                    case x.s9s.VIDEO:
+                        s = (0, a.jsx)(E, {
                             item: e,
                             onPlay: this.handlePlay,
                             isMuted: n,
-                            volume: a,
+                            volume: i,
                             onVolumeChange: this.handleVolumeChange,
                             onMute: this.handleMute,
                             autoPlay: r
                         });
                         break;
-                    case C.s9s.IMG:
+                    case x.s9s.IMG:
                         if ('errored' === this.state.status.get(e.src)) {
-                            let e = (0, i.jsx)(o.Heading, {
+                            let e = (0, a.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
-                                children: x.Z.Messages.ERRORS_IMAGE_NOT_FOUND
+                                children: C.Z.Messages.ERRORS_IMAGE_NOT_FOUND
                             });
-                            return (0, i.jsx)('div', {
-                                className: f.errorContainer,
+                            return (0, a.jsx)('div', {
+                                className: v.errorContainer,
                                 children: void 0 !== this.props.errorComponent ? this.props.errorComponent : e
                             });
                         }
                         {
                             var h;
-                            let t = null !== (h = e.alt) && void 0 !== h ? h : x.Z.Messages.IMAGE;
-                            s = (0, i.jsxs)(i.Fragment, {
+                            let t = null !== (h = e.alt) && void 0 !== h ? h : C.Z.Messages.IMAGE;
+                            s = (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, i.jsx)(o.Spinner, {
-                                        className: l()(f.spinner, { [f.hidden]: void 0 !== this.state.status.get(e.src) }),
+                                    (0, a.jsx)(o.Spinner, {
+                                        className: l()(v.spinner, { [v.hidden]: void 0 !== this.state.status.get(e.src) }),
                                         type: o.Spinner.Type.SPINNING_CIRCLE
                                     }),
-                                    (0, i.jsx)('img', {
+                                    (0, a.jsx)('img', {
                                         onError: this.handleOnErrorImg,
                                         onLoad: this.handleOnLoadImg,
-                                        className: l()(f.smallCarouselImage, { [f.hidden]: 'loaded' !== this.state.status.get(e.src) }),
+                                        className: l()(v.smallCarouselImage, { [v.hidden]: 'loaded' !== this.state.status.get(e.src) }),
                                         src: e.src,
                                         alt: t
                                     })
@@ -231,16 +231,16 @@ class L extends (n = a.PureComponent) {
                     default:
                         throw Error('Unexpected MediaType');
                 }
-                return (0, i.jsx)(o.Clickable, {
-                    className: f.smallCarouselItem,
+                return (0, a.jsx)(o.Clickable, {
+                    className: v.smallCarouselItem,
                     onClick: () => this.handleCurrentItemClick(e, t),
                     children: s
                 });
             });
     }
 }
-N(L, 'defaultProps', {
+N(y, 'defaultProps', {
     paused: !1,
     videoAutoPlay: !0
 }),
-    (t.Z = L);
+    (t.Z = y);

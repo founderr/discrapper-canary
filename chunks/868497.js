@@ -1,27 +1,27 @@
 r.d(t, {
     m: function () {
-        return A;
+        return N;
     }
 });
 var n = r(873567),
     a = r(370541),
     _ = r(285883),
     o = r(573736),
-    i = r(263449),
-    E = r(988097),
+    E = r(263449),
+    i = r(988097),
     c = r(73453),
     s = r(696486),
-    I = r(789112),
+    l = r(789112),
     u = r(793373),
-    l = r(152228),
+    I = r(152228),
     R = r(305625);
-function A(e, t, r, A, T = 'auto.http.browser') {
+function N(e, t, r, N, A = 'auto.http.browser') {
     if (!e.fetchData) return;
-    let N = (0, c.z)() && t(e.fetchData.url);
-    if (e.endTimestamp && N) {
+    let T = (0, c.z)() && t(e.fetchData.url);
+    if (e.endTimestamp && T) {
         let t = e.fetchData.__span;
         if (!t) return;
-        let r = A[t];
+        let r = N[t];
         r &&
             ((function (e, t) {
                 if (t.response) {
@@ -39,79 +39,79 @@ function A(e, t, r, A, T = 'auto.http.browser') {
                         });
                 e.end();
             })(r, e),
-            delete A[t]);
+            delete N[t]);
         return;
     }
-    let d = (0, i.nZ)(),
-        O = (0, i.s3)(),
-        { method: p, url: f } = e.fetchData,
-        L = (function (e) {
+    let d = (0, E.nZ)(),
+        L = (0, E.s3)(),
+        { method: f, url: O } = e.fetchData,
+        p = (function (e) {
             try {
                 return new URL(e).href;
             } catch (e) {
                 return;
             }
-        })(f),
-        S = L ? (0, n.en)(L).host : void 0,
-        D = !!(0, s.HN)(),
-        h =
-            N && D
-                ? (0, l.qp)({
-                      name: `${p} ${f}`,
+        })(O),
+        h = p ? (0, n.en)(p).host : void 0,
+        S = !!(0, s.HN)(),
+        D =
+            T && S
+                ? (0, I.qp)({
+                      name: `${f} ${O}`,
                       attributes: {
-                          url: f,
+                          url: O,
                           type: 'fetch',
-                          'http.method': p,
-                          'http.url': L,
-                          'server.address': S,
-                          [E.S3]: T,
-                          [E.$J]: 'http.client'
+                          'http.method': f,
+                          'http.url': p,
+                          'server.address': h,
+                          [i.S3]: A,
+                          [i.$J]: 'http.client'
                       }
                   })
-                : new I.b();
-    if (((e.fetchData.__span = h.spanContext().spanId), (A[h.spanContext().spanId] = h), r(e.fetchData.url) && O)) {
+                : new l.b();
+    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && L)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
-        r.headers = (function (e, t, r, n, E) {
+        r.headers = (function (e, t, r, n, i) {
             let {
                     traceId: c,
-                    spanId: I,
+                    spanId: l,
                     sampled: u,
-                    dsc: l
+                    dsc: I
                 } = {
-                    ...(0, i.aF)().getPropagationContext(),
+                    ...(0, E.aF)().getPropagationContext(),
                     ...r.getPropagationContext()
                 },
-                A = E ? (0, s.Hb)(E) : (0, a.$p)(c, I, u),
-                T = (0, _.IQ)(l || (E ? (0, R.jC)(E) : (0, R._l)(c, t))),
-                N = n.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
-            if (!N)
+                N = i ? (0, s.Hb)(i) : (0, a.$p)(c, l, u),
+                A = (0, _.IQ)(I || (i ? (0, R.jC)(i) : (0, R._l)(c, t))),
+                T = n.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
+            if (!T)
                 return {
-                    'sentry-trace': A,
-                    baggage: T
+                    'sentry-trace': N,
+                    baggage: A
                 };
-            if ('undefined' != typeof Headers && (0, o.V9)(N, Headers)) {
-                let e = new Headers(N);
-                return e.append('sentry-trace', A), T && e.append(_.bU, T), e;
+            if ('undefined' != typeof Headers && (0, o.V9)(T, Headers)) {
+                let e = new Headers(T);
+                return e.append('sentry-trace', N), A && e.append(_.bU, A), e;
             }
-            if (Array.isArray(N)) {
-                let e = [...N, ['sentry-trace', A]];
-                return T && e.push([_.bU, T]), e;
+            if (Array.isArray(T)) {
+                let e = [...T, ['sentry-trace', N]];
+                return A && e.push([_.bU, A]), e;
             } else {
-                let e = 'baggage' in N ? N.baggage : void 0,
+                let e = 'baggage' in T ? T.baggage : void 0,
                     t = [];
                 return (
                     Array.isArray(e) ? t.push(...e) : e && t.push(e),
-                    T && t.push(T),
+                    A && t.push(A),
                     {
-                        ...N,
-                        'sentry-trace': A,
+                        ...T,
+                        'sentry-trace': N,
                         baggage: t.length > 0 ? t.join(',') : void 0
                     }
                 );
             }
-        })(t, O, d, r, (0, c.z)() && D ? h : void 0);
+        })(t, L, d, r, (0, c.z)() && S ? D : void 0);
     }
-    return h;
+    return D;
 }

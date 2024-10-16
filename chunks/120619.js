@@ -2,13 +2,13 @@ s(47120);
 var n,
     t,
     r,
-    i,
-    d = s(442837),
+    d,
+    i = s(442837),
     l = s(570140);
 let c = new Map(),
     o = new Set(),
     _ = new Set();
-class E extends (n = d.ZP.Store) {
+class h extends (n = i.ZP.Store) {
     getPrice(e) {
         return c.get(e);
     }
@@ -19,16 +19,16 @@ class E extends (n = d.ZP.Store) {
         return _.has(e);
     }
 }
-(i = 'ConsumablesStore'),
-    (r = 'displayName') in (t = E)
+(d = 'ConsumablesStore'),
+    (r = 'displayName') in (t = h)
         ? Object.defineProperty(t, r, {
-              value: i,
+              value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (t[r] = i),
-    (a.Z = new E(l.Z, {
+        : (t[r] = d),
+    (a.Z = new h(l.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
             o.add(e.skuId);
         },

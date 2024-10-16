@@ -1,29 +1,29 @@
-n.d(t, {
+t.d(l, {
     Z: function () {
         return u;
     }
 });
-var l = n(735250),
-    r = n(470079),
-    i = n(70097),
-    a = n(947849),
-    o = n(981631),
-    s = n(689938);
+var n = t(735250),
+    i = t(470079),
+    r = t(70097),
+    a = t(947849),
+    s = t(981631),
+    o = t(689938);
 function d(e) {
-    let { poster: t, src: n, width: a, height: s, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
-        b = r.useRef(null);
-    return (r.useEffect(() => {
+    let { poster: l, src: t, width: a, height: o, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
+        b = i.useRef(null);
+    return (i.useEffect(() => {
         let { current: e } = b;
         if (null != e) m ? e.play() : e.pause();
     }, [m]),
-    (d <= o.N_j && u <= o.XKF) || (d <= o.XKF && u <= o.N_j))
-        ? (0, l.jsx)(i.Z, {
+    (d <= s.N_j && u <= s.XKF) || (d <= s.XKF && u <= s.N_j))
+        ? (0, n.jsx)(r.Z, {
               ref: b,
               className: h,
-              poster: t,
-              src: n,
+              poster: l,
+              src: t,
               width: a,
-              height: s,
+              height: o,
               responsive: p,
               muted: !0,
               loop: !0,
@@ -31,44 +31,44 @@ function d(e) {
               preload: 'none',
               'aria-label': c
           })
-        : (0, l.jsx)('img', {
+        : (0, n.jsx)('img', {
               alt: '',
-              src: t,
+              src: l,
               width: a,
-              height: s
+              height: o
           });
 }
 function u(e) {
-    let { src: t, poster: n, naturalWidth: r, naturalHeight: i, responsive: o, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, renderForwardComponent: p, alt: b = s.Z.Messages.GIF, ...g } = e;
-    return (0, l.jsx)(a.h.Consumer, {
+    let { src: l, poster: t, naturalWidth: i, naturalHeight: r, responsive: s, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, alt: p = o.Z.Messages.GIF, sourceMetadata: b, ...g } = e;
+    return (0, n.jsx)(a.h.Consumer, {
         children: (e) =>
             c({
                 ...g,
-                alt: b,
-                src: n,
+                alt: p,
+                src: t,
                 containerClassName: m,
                 autoPlay: u,
                 animated: h,
-                responsive: o,
+                responsive: s,
                 renderAccessory: e,
-                renderForwardComponent: p,
                 tabIndex: h ? 0 : -1,
-                dataSafeSrc: t,
+                dataSafeSrc: l,
                 children(e) {
-                    let { src: n, size: a, animating: s, alt: u } = e;
-                    return (0, l.jsx)(d, {
+                    let { src: t, size: a, animating: o, alt: u } = e;
+                    return (0, n.jsx)(d, {
                         alt: u,
                         className: m,
-                        poster: n,
-                        src: t,
+                        poster: t,
+                        src: l,
                         width: a.width,
                         height: a.height,
-                        naturalWidth: r,
-                        naturalHeight: i,
-                        responsive: o,
-                        play: h && s
+                        naturalWidth: i,
+                        naturalHeight: r,
+                        responsive: s,
+                        play: h && o
                     });
-                }
+                },
+                sourceMetadata: b
             })
     });
 }

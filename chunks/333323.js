@@ -10,8 +10,8 @@ var a = l(735250),
     t = l.n(r),
     s = l(399606),
     d = l(481060),
-    o = l(749210),
-    c = l(131388),
+    c = l(749210),
+    o = l(131388),
     u = l(367907),
     h = l(644080),
     m = l(984370),
@@ -63,7 +63,7 @@ function k(e) {
         O = null == D ? void 0 : D.welcomeMessage,
         U = (0, _.Z)(r.id),
         G = !U && (null !== (l = null == D ? void 0 : null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0) === 0,
-        W = (0, c.Z)('(max-width: 1300px)'),
+        W = (0, o.Z)('(max-width: 1300px)'),
         z = m - E.PrS - B,
         F = (L && z < R) || W || G;
     return (i.useEffect(() => {
@@ -85,7 +85,7 @@ function k(e) {
         []
     ),
     i.useEffect(() => {
-        G && D !== I.P && o.Z.escapeToDefaultChannel(r.id);
+        G && D !== I.P && c.Z.escapeToDefaultChannel(r.id);
     }, [r.id, G, D]),
     G)
         ? null

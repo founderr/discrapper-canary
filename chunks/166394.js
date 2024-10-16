@@ -1,6 +1,6 @@
 r.d(t, {
     CC: function () {
-        return i;
+        return E;
     },
     GY: function () {
         return o;
@@ -13,12 +13,12 @@ function o(e, t) {
     try {
         t.exception.values.forEach((t) => {
             if (!!t.stacktrace)
-                for (let i of t.stacktrace.frames || []) {
+                for (let E of t.stacktrace.frames || []) {
                     var r, o;
-                    if (!i.filename || i.module_metadata) continue;
+                    if (!E.filename || E.module_metadata) continue;
                     let t =
                         ((r = e),
-                        (o = i.filename),
+                        (o = E.filename),
                         !(function (e) {
                             if (!!n.n._sentryModuleMetadata)
                                 for (let t of Object.keys(n.n._sentryModuleMetadata)) {
@@ -33,12 +33,12 @@ function o(e, t) {
                                 }
                         })(r),
                         a.get(o));
-                    t && (i.module_metadata = t);
+                    t && (E.module_metadata = t);
                 }
         });
     } catch (e) {}
 }
-function i(e) {
+function E(e) {
     try {
         e.exception.values.forEach((e) => {
             if (!!e.stacktrace) for (let t of e.stacktrace.frames || []) delete t.module_metadata;

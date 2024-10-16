@@ -1,10 +1,10 @@
 r.d(t, {
     Fv: function () {
-        return i;
+        return E;
     },
     Qy: function () {
         return function e(t, r = 3, n = 102400) {
-            let a = i(t, r);
+            let a = E(t, r);
             return (function (e) {
                 return ~-encodeURI(JSON.stringify(e)).split(/%..|./).length;
             })(a) > n
@@ -17,10 +17,10 @@ var n = r(573736),
     a = r(41754),
     _ = r(370336),
     o = r(688838);
-function i(e, t = 100, r = Infinity) {
+function E(e, t = 100, r = Infinity) {
     try {
-        return (function e(t, r, i = Infinity, E = Infinity, c = (0, a.i)()) {
-            let [s, I] = c;
+        return (function e(t, r, E = Infinity, i = Infinity, c = (0, a.i)()) {
+            let [s, l] = c;
             if (null == r || (['number', 'boolean', 'string'].includes(typeof r) && !Number.isNaN(r))) return r;
             let u = (function (e, t) {
                 try {
@@ -47,27 +47,27 @@ function i(e, t = 100, r = Infinity) {
             })(t, r);
             if (!u.startsWith('[object ')) return u;
             if (r.__sentry_skip_normalization__) return r;
-            let l = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : i;
-            if (0 === l) return u.replace('object ', '');
+            let I = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : E;
+            if (0 === I) return u.replace('object ', '');
             if (s(r)) return '[Circular ~]';
             if (r && 'function' == typeof r.toJSON)
                 try {
                     let t = r.toJSON();
-                    return e('', t, l - 1, E, c);
+                    return e('', t, I - 1, i, c);
                 } catch (e) {}
             let R = Array.isArray(r) ? [] : {},
-                A = 0,
-                T = (0, _.Sh)(r);
-            for (let t in T) {
-                if (!Object.prototype.hasOwnProperty.call(T, t)) continue;
-                if (A >= E) {
+                N = 0,
+                A = (0, _.Sh)(r);
+            for (let t in A) {
+                if (!Object.prototype.hasOwnProperty.call(A, t)) continue;
+                if (N >= i) {
                     R[t] = '[MaxProperties ~]';
                     break;
                 }
-                let r = T[t];
-                (R[t] = e(t, r, l - 1, E, c)), A++;
+                let r = A[t];
+                (R[t] = e(t, r, I - 1, i, c)), N++;
             }
-            return I(r), R;
+            return l(r), R;
         })('', e, t, r);
     } catch (e) {
         return { ERROR: `**non-serializable** (${e})` };

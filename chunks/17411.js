@@ -7,8 +7,8 @@ var n = r(263449),
     a = r(233517),
     _ = r(151122),
     o = r(899517),
-    i = r(694043);
-let E = o.n,
+    E = r(694043);
+let i = o.n,
     c = new WeakMap(),
     s = (0, _._I)((e = {}) => {
         let t = e.types || ['crash', 'deprecation', 'intervention'];
@@ -33,8 +33,8 @@ let E = o.n,
         return {
             name: 'ReportingObserver',
             setupOnce() {
-                if (!!(0, i.zb)())
-                    new E.ReportingObserver(r, {
+                if (!!(0, E.zb)())
+                    new i.ReportingObserver(r, {
                         buffered: !0,
                         types: t
                     }).observe();

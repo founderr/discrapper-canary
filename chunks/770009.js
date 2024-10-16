@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
 var l = t(735250);
@@ -22,7 +22,7 @@ function m(e) {
         channel: t
     });
 }
-function f(e) {
+function _(e) {
     let n = (0, c.CJ)();
     a()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
     let { channelId: t } = n,
