@@ -99,6 +99,9 @@ class d extends a.Z {
     overwriteQualityForTesting(e) {
         this.videoQualityManager.setQualityOverwrite(e), this.updateVideoQuality();
     }
+    configureGoLiveSimulcast(e, t) {
+        this.videoQualityManager.configGoLiveSimulcast(e, t);
+    }
     applyQualityConstraints() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = arguments.length > 1 ? arguments[1] : void 0;
