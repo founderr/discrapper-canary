@@ -5,6 +5,9 @@ n.d(t, {
     KF: function () {
         return c;
     },
+    LP: function () {
+        return h;
+    },
     Mq: function () {
         return f;
     },
@@ -62,4 +65,7 @@ function E(e) {
 }
 function f(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
+}
+function h(e) {
+    return o(e) || d(e) || _(e) || l(e);
 }
