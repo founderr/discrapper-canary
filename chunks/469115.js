@@ -1,9 +1,15 @@
 n.d(t, {
+    Qf: function () {
+        return E;
+    },
     XV: function () {
         return _;
     },
+    bV: function () {
+        return f;
+    },
     qt: function () {
-        return E;
+        return h;
     }
 }),
     n(47120);
@@ -500,6 +506,25 @@ let u = [
             getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
             midpointPercentage: 50
         }
-    ];
-[...c, ...u], ((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM'), o.BR.DARK, o.BR.LIGHT, o.BR.DARKER, o.BR.LIGHT, o.BR.MIDNIGHT, () => l.Z.Messages.THEME_MIDNIGHT;
-let E = (0, a.keyBy)(_, 'id');
+    ],
+    E = [d, ...c, ...u];
+((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM');
+let f = [
+        {
+            theme: o.BR.DARKER,
+            getName: () => l.Z.Messages.THEME_DARK
+        },
+        {
+            theme: o.BR.LIGHT,
+            getName: () => l.Z.Messages.THEME_LIGHT
+        },
+        {
+            theme: o.BR.MIDNIGHT,
+            getName: () => l.Z.Messages.THEME_MIDNIGHT
+        },
+        {
+            theme: 'system',
+            getName: () => l.Z.Messages.MOBILE_AUTOMATIC_THEME
+        }
+    ],
+    h = (0, a.keyBy)(_, 'id');
