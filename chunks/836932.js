@@ -15,8 +15,8 @@ function d(e, t, n, d, u) {
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: f, title: _, body: g } = (0, o.Xi)(e, t, n),
-        { trackView: m, trackClick: E } = (0, r.R)(l.n0.ActivityInvite, {
+    let { icon: f, title: _, body: E } = (0, o.Xi)(e, t, n),
+        { trackView: g, trackClick: m } = (0, r.R)(l.n0.ActivityInvite, {
             notif_type: l.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
@@ -31,10 +31,10 @@ function d(e, t, n, d, u) {
         colorScheme: a.ZP.ColorSchemes.PRIMARY,
         icon: f,
         title: _,
-        body: g,
+        body: E,
         hint: (e) => (0, a.QR)(e, (0, r.P)(), c.Z.Messages.OVERLAY_UNLOCK_TO_JOIN),
         onNotificationShow: () => {
-            m();
+            g();
         },
         confirmText: c.Z.Messages.JOIN,
         onConfirmClick: (a, o) => {
@@ -46,10 +46,10 @@ function d(e, t, n, d, u) {
                 messageId: t.id
             }),
                 s.Z.updateNotificationStatus(o),
-                E('join');
+                m('join');
         },
         onDismissClick: () => {
-            E('dismiss');
+            m('dismiss');
         }
     };
 }

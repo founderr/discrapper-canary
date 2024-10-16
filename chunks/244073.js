@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return L;
     }
 }),
     n(47120);
@@ -17,21 +17,21 @@ var i = n(735250),
     p = n(933557),
     f = n(600164),
     _ = n(870569),
-    g = n(345243),
-    m = n(873596),
-    E = n(917405),
-    Z = n(430824),
-    I = n(131951),
-    S = n(699516),
-    v = n(594174),
+    E = n(345243),
+    g = n(873596),
+    m = n(917405),
+    I = n(430824),
+    Z = n(131951),
+    v = n(699516),
+    S = n(594174),
     C = n(979651),
     x = n(362446),
-    T = n(518084),
-    N = n(981631),
+    N = n(518084),
+    T = n(981631),
     O = n(689938),
     A = n(945768),
     y = n(663031);
-function b(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,15 +50,15 @@ class M extends s.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, v.default, S.Z),
+            n = (0, p.F6)(e, S.default, v.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            a = null != t ? t.id : N.ME;
+            a = null != t ? t.id : T.ME;
         return (0, i.jsx)(r.rU, {
-            to: N.Z5c.CHANNEL(a),
+            to: T.Z5c.CHANNEL(a),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(a, e.id);
             },
-            children: (0, i.jsx)(g.Z, {
+            children: (0, i.jsx)(E.Z, {
                 className: y.channel,
                 children: s
             })
@@ -68,9 +68,9 @@ class M extends s.PureComponent {
         let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: a, quality: r, lastPing: l, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
         return null == a
             ? null
-            : (0, i.jsx)(T.ZP.Bar, {
+            : (0, i.jsx)(N.ZP.Bar, {
                   className: o()(e, A.controls, { [A.unpinned]: !n }),
-                  children: (0, i.jsxs)(T.ZP.Content, {
+                  children: (0, i.jsxs)(N.ZP.Content, {
                       className: o()(t, A.content),
                       dynamicSize: !0,
                       children: [
@@ -82,7 +82,7 @@ class M extends s.PureComponent {
                                   children: (e) =>
                                       (0, i.jsx)(c.Clickable, {
                                           ...e,
-                                          children: (0, i.jsx)(E.Z, {
+                                          children: (0, i.jsx)(m.Z, {
                                               channelId: a.id,
                                               quality: r,
                                               lastPing: l,
@@ -122,20 +122,20 @@ class M extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleToggleSelfMute', () => {
+            R(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfMute({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
-            b(this, 'handleToggleSelfDeaf', () => {
+            R(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfDeaf({ context: e });
             }),
-            b(this, 'renderPopout', (e) => {
+            R(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
-                return (0, i.jsx)(m.Z, {
+                return (0, i.jsx)(g.Z, {
                     channelId: e,
                     lobbyId: t,
                     isOverlay: !0
@@ -143,11 +143,11 @@ class M extends s.PureComponent {
             });
     }
 }
-function R(e) {
+function L(e) {
     let { context: t, lobbyId: n, channel: s, ...a } = e,
-        o = (0, l.e7)([Z.Z], () => Z.Z.getGuild(null == s ? void 0 : s.getGuildId())),
+        o = (0, l.e7)([I.Z], () => I.Z.getGuild(null == s ? void 0 : s.getGuildId())),
         r = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
-        [c, d] = (0, l.Wu)([I.Z], () => [I.Z.isSelfMute(t) || I.Z.isSelfMutedTemporarily(t), I.Z.isSelfDeaf(t)]),
+        [c, d] = (0, l.Wu)([Z.Z], () => [Z.Z.isSelfMute(t) || Z.Z.isSelfMutedTemporarily(t), Z.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, l.Wu)([x.Z], () => [x.Z.getConnectionState(n), x.Z.getLastPing(n), x.Z.getQuality(n)]);
     return (0, i.jsx)(M, {
         ...a,

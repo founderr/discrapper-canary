@@ -1,6 +1,6 @@
 n.d(t, {
     wB: function () {
-        return E;
+        return m;
     }
 }),
     n(411104);
@@ -17,20 +17,20 @@ var i,
     p = n(481060),
     f = n(981631),
     _ = n(344037),
-    g = n(739017);
-let m = f.t_t.DEFAULT,
-    E = 1,
-    Z = l.createContext({
-        type: m,
-        opacity: E
+    E = n(739017);
+let g = f.t_t.DEFAULT,
+    m = 1,
+    I = l.createContext({
+        type: g,
+        opacity: m
     }),
-    I = l.createContext(void 0),
-    S = (e) => {
+    Z = l.createContext(void 0),
+    v = (e) => {
         let { children: t, className: n, ...i } = e;
-        return (0, r.jsx)(Z.Consumer, {
+        return (0, r.jsx)(I.Consumer, {
             children: (e) => {
                 let { type: s } = e;
-                return (0, r.jsx)(I.Consumer, {
+                return (0, r.jsx)(Z.Consumer, {
                     children: (e) =>
                         (0, r.jsx)('div', {
                             className: d()(n, _.bar, _[h()(s)]),
@@ -42,12 +42,12 @@ let m = f.t_t.DEFAULT,
             }
         });
     };
-class v extends (i = l.PureComponent) {
+class S extends (i = l.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(I.Consumer, {
+        return (0, r.jsx)(Z.Consumer, {
             children: (i) =>
-                (0, r.jsx)(Z.Consumer, {
+                (0, r.jsx)(I.Consumer, {
                     children: (s) => {
                         let a = d()(_.body, _[h()(s.type)], n);
                         return e
@@ -67,7 +67,7 @@ class v extends (i = l.PureComponent) {
     }
 }
 (o = { disableScroll: !1 }),
-    (a = 'defaultProps') in (s = v)
+    (a = 'defaultProps') in (s = S)
         ? Object.defineProperty(s, a, {
               value: o,
               enumerable: !0,
@@ -76,8 +76,8 @@ class v extends (i = l.PureComponent) {
           })
         : (s[a] = o);
 let C = (e) => {
-        let { type: t = m, width: n, height: i, children: s, className: a, opacity: o = E, onClick: l } = e;
-        return (0, r.jsx)(Z.Provider, {
+        let { type: t = g, width: n, height: i, children: s, className: a, opacity: o = m, onClick: l } = e;
+        return (0, r.jsx)(I.Provider, {
             value: {
                 type: t,
                 opacity: o
@@ -95,7 +95,7 @@ let C = (e) => {
     },
     x = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(I.Consumer, {
+        return (0, r.jsx)(Z.Consumer, {
             children: (e) =>
                 (0, r.jsx)('div', {
                     className: d()(_.content, n, { [_.staticSize]: !i }),
@@ -107,14 +107,14 @@ let C = (e) => {
 (C.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [S, v, x];
-    return (0, r.jsx)(Z.Consumer, {
+    let i = [v, S, x];
+    return (0, r.jsx)(I.Consumer, {
         children: (e) => {
             let { opacity: s } = e,
                 a = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
             if ('string' == typeof t.type) return l.cloneElement(t, { style: a });
             if (i.includes(t.type))
-                return (0, r.jsx)(I.Provider, {
+                return (0, r.jsx)(Z.Provider, {
                     value: a,
                     children: t
                 });
@@ -125,7 +125,7 @@ let C = (e) => {
         }
     });
 }),
-    (C.Body = v),
+    (C.Body = S),
     (C.Content = x),
     (C.Icon = (e) => {
         let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: a = 'top', size: o = 20, isTutorial: l = !1 } = e;
@@ -149,7 +149,7 @@ let C = (e) => {
                     onMouseEnter: a,
                     onMouseLeave: l,
                     className: d()(_.icon, { [_.toggledIconOn]: s }),
-                    innerClassName: g.flexCenter,
+                    innerClassName: E.flexCenter,
                     'aria-label': n,
                     children: (0, r.jsx)(t, {
                         color: 'currentColor',
@@ -162,5 +162,5 @@ let C = (e) => {
             }
         });
     }),
-    (C.Bar = S),
+    (C.Bar = v),
     (t.ZP = C);

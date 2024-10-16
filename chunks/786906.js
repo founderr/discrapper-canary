@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -17,13 +17,13 @@ var i = n(735250),
     p = n(910611),
     f = n(131704),
     _ = n(523746),
-    g = n(592125),
-    m = n(430824),
-    E = n(699516),
-    Z = n(944486),
-    I = n(707878),
-    S = n(518084),
-    v = n(689938),
+    E = n(592125),
+    g = n(430824),
+    m = n(699516),
+    I = n(944486),
+    Z = n(707878),
+    v = n(518084),
+    S = n(689938),
     C = n(64437);
 function x(e, t, n) {
     return (
@@ -38,7 +38,7 @@ function x(e, t, n) {
         e
     );
 }
-class T extends s.Component {
+class N extends s.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
@@ -49,7 +49,7 @@ class T extends s.Component {
         let r = l.PhoneCallIcon,
             c = !1;
         return (
-            s ? (a ? ((e = v.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = v.Z.Messages.JOIN_CALL)) : o ? ((e = v.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = v.Z.Messages.START_VOICE_CALL),
+            s ? (a ? ((e = S.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = S.Z.Messages.JOIN_CALL)) : o ? ((e = S.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = S.Z.Messages.START_VOICE_CALL),
             (0, i.jsx)(h.Z.Icon, {
                 icon: r,
                 tooltip: e,
@@ -63,18 +63,18 @@ class T extends s.Component {
         let { className: e, draggableClassName: t, locked: n, channel: s, channelName: a, guild: r, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
             { showOpacitySlider: _ } = this.state;
         return _ && !n
-            ? (0, i.jsxs)(S.ZP.Bar, {
+            ? (0, i.jsxs)(v.ZP.Bar, {
                   className: C.opacityHeader,
                   children: [
-                      (0, i.jsx)(I.Z, {}),
+                      (0, i.jsx)(Z.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
                           icon: l.XSmallIcon,
                           onClick: this.handleCloseOpacitySettings,
-                          tooltip: v.Z.Messages.CLOSE
+                          tooltip: S.Z.Messages.CLOSE
                       })
                   ]
               })
-            : (0, i.jsx)(S.ZP.Background, {
+            : (0, i.jsx)(v.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
                       className: o()(e, t, C.headerContainer),
@@ -130,7 +130,7 @@ class T extends s.Component {
             }),
             x(this, 'renderWidgetButtons', () => {
                 let { locked: e, handlePin: t, pinned: n } = this.props,
-                    a = n ? v.Z.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : v.Z.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
+                    a = n ? S.Z.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : S.Z.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
                 return e
                     ? null
                     : (0, i.jsxs)(s.Fragment, {
@@ -139,7 +139,7 @@ class T extends s.Component {
                               n
                                   ? (0, i.jsx)(h.Z.Icon, {
                                         icon: l.BrowserCheckeredIcon,
-                                        tooltip: v.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
+                                        tooltip: S.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
                                         onClick: this.handleOpenOpacitySettings
                                     })
                                   : null,
@@ -154,17 +154,17 @@ class T extends s.Component {
             });
     }
 }
-function N(e) {
+function T(e) {
     let { channel: t, ...n } = e,
-        s = (0, r.e7)([Z.Z, g.Z], () => {
-            let e = Z.Z.getVoiceChannelId();
-            return g.Z.getChannel(e);
+        s = (0, r.e7)([I.Z, E.Z], () => {
+            let e = I.Z.getVoiceChannelId();
+            return E.Z.getChannel(e);
         }),
-        a = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
+        a = (0, r.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
         o = (0, r.e7)([_.Z], () => _.Z.isCallActive(t.id)),
         l = (0, u.ZP)(t),
-        c = (0, r.e7)([E.Z], () => !!t.isDM() && null != t.getRecipientId() && E.Z.isBlocked(t.getRecipientId()));
-    return (0, i.jsx)(T, {
+        c = (0, r.e7)([m.Z], () => !!t.isDM() && null != t.getRecipientId() && m.Z.isBlocked(t.getRecipientId()));
+    return (0, i.jsx)(N, {
         channel: t,
         channelName: l,
         guild: a,

@@ -17,11 +17,11 @@ var s = n(13245),
     p = n(987650),
     f = n(689938);
 function _(e, t, n, _) {
-    var g;
-    let { icon: m, title: E, body: Z } = (0, c.Xi)(e, t, n),
-        { trackView: I, trackClick: S } = (0, u.R)(p.n0.TextChat, {
+    var E;
+    let { icon: g, title: m, body: I } = (0, c.Xi)(e, t, n),
+        { trackView: Z, trackClick: v } = (0, u.R)(p.n0.TextChat, {
             notif_type: p.n0.TextChat,
-            notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
+            notif_user_id: null === (E = t.author) || void 0 === E ? void 0 : E.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -30,9 +30,9 @@ function _(e, t, n, _) {
         });
     return {
         colorScheme: a.IC.PRIMARY,
-        icon: m,
-        title: E,
-        body: Z,
+        icon: g,
+        title: m,
+        body: I,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)('div', {
@@ -42,13 +42,13 @@ function _(e, t, n, _) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            _ && (0, d.GN)(r.Ay, r.yk), I();
+            _ && (0, d.GN)(r.Ay, r.yk), Z();
         },
         onNotificationClick: () => {
-            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), v('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            S('dismiss');
+            v('dismiss');
         }
     };
 }

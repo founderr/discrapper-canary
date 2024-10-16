@@ -17,13 +17,13 @@ var i,
     p = n(556296),
     f = n(237997),
     _ = n(998502),
-    g = n(13140),
-    m = n(658785),
-    E = n(981631),
-    Z = n(689938),
-    I = n(635958),
-    S = n(113207);
-function v(e, t, n) {
+    E = n(13140),
+    g = n(658785),
+    m = n(981631),
+    I = n(689938),
+    Z = n(635958),
+    v = n(113207);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,63 +39,63 @@ function v(e, t, n) {
 ((s = i || (i = {})).GENERAL = 'GENERAL'), (s.VOICE = 'VOICE'), (s.DEVELOPER = 'DEVELOPER');
 let C = () => [
         {
-            value: E.ipw.LARGE,
-            name: Z.Z.Messages.AVATAR_SIZE_OPTION_LARGE
+            value: m.ipw.LARGE,
+            name: I.Z.Messages.AVATAR_SIZE_OPTION_LARGE
         },
         {
-            value: E.ipw.SMALL,
-            name: Z.Z.Messages.AVATAR_SIZE_OPTION_SMALL
+            value: m.ipw.SMALL,
+            name: I.Z.Messages.AVATAR_SIZE_OPTION_SMALL
         }
     ],
     x = () => [
         {
-            value: E.wC$.ALWAYS,
-            name: Z.Z.Messages.DISPLAY_OPTION_ALWAYS
+            value: m.wC$.ALWAYS,
+            name: I.Z.Messages.DISPLAY_OPTION_ALWAYS
         },
         {
-            value: E.wC$.ONLY_WHILE_SPEAKING,
-            name: Z.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
+            value: m.wC$.ONLY_WHILE_SPEAKING,
+            name: I.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
         },
         {
-            value: E.wC$.NEVER,
-            name: Z.Z.Messages.DISPLAY_OPTION_NEVER
+            value: m.wC$.NEVER,
+            name: I.Z.Messages.DISPLAY_OPTION_NEVER
         }
     ],
-    T = () => [
+    N = () => [
         {
-            value: E.OYC.ALWAYS,
-            name: Z.Z.Messages.DISPLAY_OPTION_ALWAYS
+            value: m.OYC.ALWAYS,
+            name: I.Z.Messages.DISPLAY_OPTION_ALWAYS
         },
         {
-            value: E.OYC.ONLY_WHILE_SPEAKING,
-            name: Z.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
+            value: m.OYC.ONLY_WHILE_SPEAKING,
+            name: I.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
         }
     ];
-function N() {
+function T() {
     let e = f.Z.getNotificationPositionMode(),
-        t = e !== E._vf.DISABLED,
+        t = e !== m._vf.DISABLED,
         n = p.Z.getOverlayKeybind(),
         i = p.Z.getOverlayChatKeybind();
-    c.Z.track(E.rMx.OVERLAY_SETTINGS_UPDATED, {
+    c.Z.track(m.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
         text_notifications_mode: f.Z.getTextChatNotificationMode(),
         text_opacity_slider: f.Z.getTextWidgetOpacity(),
-        hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
-        text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null
+        hotkey: null != n ? (0, E.BB)(n.shortcut) : null,
+        text_activation_hotkey: null != i ? (0, E.BB)(i.shortcut) : null
     });
 }
 class O extends o.PureComponent {
     componentDidMount() {
-        c.Z.track(E.rMx.SETTINGS_PANE_VIEWED, {
+        c.Z.track(m.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
             destination_pane: 'OVERLAY SETTINGS',
             origin_pane: null
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        c.Z.setNotificationPositionMode(t), N();
+        c.Z.setNotificationPositionMode(t), T();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -114,17 +114,17 @@ class O extends o.PureComponent {
             direction: d.Z.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
-            className: I.header,
+            className: Z.header,
             children: [
                 (0, a.jsxs)(d.Z, {
                     children: [
                         (0, a.jsx)(l.FormTitle, {
-                            className: I.headerTitle,
+                            className: Z.headerTitle,
                             tag: 'h1',
-                            children: Z.Z.Messages.OVERLAY_SETTINGS_TITLE
+                            children: I.Z.Messages.OVERLAY_SETTINGS_TITLE
                         }),
                         (0, a.jsx)(l.ModalCloseButton, {
-                            className: I.headerClose,
+                            className: Z.headerClose,
                             onClick: this.props.onClose
                         })
                     ]
@@ -138,25 +138,25 @@ class O extends o.PureComponent {
             t = h.Z.isDeveloper
                 ? (0, a.jsx)(l.TabBar.Item, {
                       id: 'DEVELOPER',
-                      className: I.tabBarItem,
+                      className: Z.tabBarItem,
                       children: 'Developer'
                   })
                 : null;
         return (0, a.jsxs)(l.TabBar, {
             selectedItem: e,
             type: 'top',
-            className: I.__invalid_tabBar,
+            className: Z.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
                 (0, a.jsx)(l.TabBar.Item, {
                     id: 'GENERAL',
-                    className: I.tabBarItem,
-                    children: Z.Z.Messages.OVERLAY_SETTINGS_GENERAL_TAB
+                    className: Z.tabBarItem,
+                    children: I.Z.Messages.OVERLAY_SETTINGS_GENERAL_TAB
                 }),
                 (0, a.jsx)(l.TabBar.Item, {
                     id: 'VOICE',
-                    className: I.tabBarItem,
-                    children: Z.Z.Messages.OVERLAY_SETTINGS_VOICE_TAB
+                    className: Z.tabBarItem,
+                    children: I.Z.Messages.OVERLAY_SETTINGS_VOICE_TAB
                 }),
                 t
             ]
@@ -178,7 +178,7 @@ class O extends o.PureComponent {
         return (0, a.jsx)(
             l.ModalContent,
             {
-                className: I.content,
+                className: Z.content,
                 children: e
             },
             t
@@ -186,30 +186,30 @@ class O extends o.PureComponent {
     }
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
-            s = t !== E._vf.DISABLED;
+            s = t !== m._vf.DISABLED;
         return (0, a.jsxs)(o.Fragment, {
             children: [
                 (0, a.jsx)(l.FormItem, {
-                    title: Z.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-                    className: S.marginBottom20,
+                    title: I.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
+                    className: v.marginBottom20,
                     children: (0, a.jsx)(u.Z, {
                         position: t,
                         onChange: this.handleChangeNotificationPositionMode
                     })
                 }),
                 (0, a.jsx)(l.FormSwitch, {
-                    value: s && e === E.Ypu.ENABLED,
+                    value: s && e === m.Ypu.ENABLED,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !s,
                     hideBorder: !0,
-                    children: Z.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS
+                    children: I.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS
                 }),
                 i &&
                     (0, a.jsx)(l.FormSwitch, {
                         value: n,
                         onChange: (e) => c.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
-                        children: Z.Z.Messages.FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS
+                        children: I.Z.Messages.FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS
                     })
             ]
         });
@@ -219,8 +219,8 @@ class O extends o.PureComponent {
         return (0, a.jsxs)(o.Fragment, {
             children: [
                 (0, a.jsx)(l.FormItem, {
-                    title: Z.Z.Messages.FORM_LABEL_AVATAR_SIZE,
-                    className: S.marginBottom20,
+                    title: I.Z.Messages.FORM_LABEL_AVATAR_SIZE,
+                    className: v.marginBottom20,
                     children: (0, a.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
                         options: C(),
@@ -229,8 +229,8 @@ class O extends o.PureComponent {
                     })
                 }),
                 (0, a.jsx)(l.FormItem, {
-                    title: Z.Z.Messages.FORM_LABEL_DISPLAY_NAMES,
-                    className: S.marginBottom20,
+                    title: I.Z.Messages.FORM_LABEL_DISPLAY_NAMES,
+                    className: v.marginBottom20,
                     children: (0, a.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
                         options: x(),
@@ -239,11 +239,11 @@ class O extends o.PureComponent {
                     })
                 }),
                 (0, a.jsx)(l.FormItem, {
-                    title: Z.Z.Messages.FORM_LABEL_DISPLAY_USERS,
-                    className: S.marginBottom20,
+                    title: I.Z.Messages.FORM_LABEL_DISPLAY_USERS,
+                    className: v.marginBottom20,
                     children: (0, a.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
-                        options: T(),
+                        options: N(),
                         value: n,
                         size: l.RadioGroup.Sizes.SMALL
                     })
@@ -255,7 +255,7 @@ class O extends o.PureComponent {
         return (0, a.jsx)(o.Fragment, {
             children: (0, a.jsx)(l.FormItem, {
                 title: 'Crashes',
-                className: S.marginBottom20,
+                className: v.marginBottom20,
                 children: (0, a.jsx)(l.SingleSelect, {
                     value: void 0,
                     options: [
@@ -291,21 +291,21 @@ class O extends o.PureComponent {
     }
     render() {
         return (0, a.jsxs)(l.ModalRoot, {
-            'aria-label': Z.Z.Messages.OVERLAY_SETTINGS_TITLE,
+            'aria-label': I.Z.Messages.OVERLAY_SETTINGS_TITLE,
             transitionState: l.ModalTransitionState.ENTERED,
             children: [this.renderHeader(), this.renderBody()]
         });
     }
     constructor(...e) {
         super(...e),
-            v(this, 'state', { selectedSection: 'GENERAL' }),
-            v(this, 'handleSelectSection', (e) => {
+            S(this, 'state', { selectedSection: 'GENERAL' }),
+            S(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
-            v(this, 'handleToggleTextChatNotifications', () => {
-                let { ENABLED: e, DISABLED: t } = E.Ypu,
+            S(this, 'handleToggleTextChatNotifications', () => {
+                let { ENABLED: e, DISABLED: t } = m.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
-                c.Z.setTextChatNotificationMode(n), N();
+                c.Z.setTextChatNotificationMode(n), T();
             });
     }
 }
@@ -326,7 +326,7 @@ function A(e) {
             textChatNotificationMode: f.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: f.Z.showKeybindIndicators
         })),
-        { showKeybindIndicators: d } = m.Z.useExperiment({ location: 'Overlay Settings' });
+        { showKeybindIndicators: d } = g.Z.useExperiment({ location: 'Overlay Settings' });
     return (0, a.jsx)(O, {
         onClose: t,
         avatarSizeMode: n,

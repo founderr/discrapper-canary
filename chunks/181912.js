@@ -18,7 +18,7 @@ function f(e) {
     let t = (0, o.F6)(e, c.default, l.Z),
         n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
         f = (0, a.x)(e),
-        { trackView: _, trackClick: g } = (0, d.R)(h.n0.IncomingCall, {
+        { trackView: _, trackClick: E } = (0, d.R)(h.n0.IncomingCall, {
             notif_type: h.n0.IncomingCall,
             notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
             guild_id: e.guild_id,
@@ -38,7 +38,7 @@ function f(e) {
         },
         onConfirmClick: () => {
             s.Z.callPrivateChannel(e.id),
-                g('join'),
+                E('join'),
                 s.Z.track(u.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: null,
@@ -47,10 +47,10 @@ function f(e) {
                 });
         },
         onCancelClick: () => {
-            i.Z.stopRinging(e.id), g('decline');
+            i.Z.stopRinging(e.id), E('decline');
         },
         onDismissClick: () => {
-            g('dismiss');
+            E('dismiss');
         }
     };
 }

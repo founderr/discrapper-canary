@@ -43,7 +43,7 @@ function h(e) {
             }
             return e;
         })(d(), e),
-        { trackView: g, trackClick: m } = (0, r.R)(_, { notif_type: _ });
+        { trackView: E, trackClick: g } = (0, r.R)(_, { notif_type: _ });
     return {
         colorScheme: f,
         icon: n,
@@ -59,13 +59,13 @@ function h(e) {
                 children: c.Z.Messages.OVERLAY_CLICK_TO_UNLOCK
             }),
         onNotificationShow: () => {
-            g();
+            E();
         },
         onNotificationClick: (e, n) => {
-            m('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            g('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            m('dismiss');
+            g('dismiss');
         }
     };
 }

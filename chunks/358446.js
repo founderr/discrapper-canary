@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     Z: function () {
-        return g;
+        return E;
     }
 }),
     n(47120);
@@ -28,7 +28,7 @@ function _() {
         dismissKeybindNotification: t
     };
 }
-function g(e) {
+function E(e) {
     let { markAsDismissed: t } = e,
         { trackView: n, trackClick: s } = (0, r.R)(u.n0.KeybindIndicatorsNotification, { notif_type: u.n0.KeybindIndicatorsNotification });
     return {

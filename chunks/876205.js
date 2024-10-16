@@ -32,11 +32,11 @@ function p(e) {
     if (null == d || !s) return null;
     let f = c.BB(d.shortcut),
         _ = p ? h[n].new : h[n].legacy,
-        g = t ? _.slash : _.default;
+        E = t ? _.slash : _.default;
     return (0, i.jsxs)('div', {
         className: u.keybindIndicator,
         children: [
-            (0, i.jsx)(g, {
+            (0, i.jsx)(E, {
                 className: u.keybindIcon,
                 size: 'xs',
                 color: 'currentColor'

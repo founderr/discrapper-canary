@@ -12,8 +12,8 @@ var i = n(735250),
     p = n(689938),
     f = n(824425);
 let _ = Object.values(u.wF).map((e) => 100 * e),
-    g = (0, l.hQ)();
-class m extends s.PureComponent {
+    E = (0, l.hQ)();
+class g extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         r.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
@@ -25,7 +25,7 @@ class m extends s.PureComponent {
             className: f.container,
             children: [
                 (0, i.jsx)(o.FormTitle, {
-                    id: g,
+                    id: E,
                     tag: o.FormTitleTags.H5,
                     className: f.title,
                     children: p.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
@@ -45,7 +45,7 @@ class m extends s.PureComponent {
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': g
+                        'aria-labelledby': E
                     })
                 })
             ]
@@ -67,4 +67,4 @@ class m extends s.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = a.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(m);
+t.Z = a.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(g);

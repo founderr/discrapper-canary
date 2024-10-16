@@ -25,7 +25,7 @@ let h = 0,
         }
     },
     _ = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
-function g(e) {
+function E(e) {
     let { position: t, onChange: n } = e,
         [a] = s.useState(() => p()),
         h = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
@@ -79,4 +79,4 @@ function g(e) {
         ]
     });
 }
-(g.Positions = l._vf), (t.Z = g);
+(E.Positions = l._vf), (t.Z = E);
