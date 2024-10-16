@@ -79,7 +79,8 @@ function Z(e) {
                             {
                                 user: n,
                                 entry: e,
-                                onClose: Z
+                                onClose: Z,
+                                hideHeader: !0
                             },
                             e.id
                         )

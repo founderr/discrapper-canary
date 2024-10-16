@@ -27,10 +27,10 @@ var s = n(442837),
     v = n(689938),
     S = n(299336);
 function N(e) {
-    let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M } = e,
-        b = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
-        R = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
-        L = (0, s.e7)([c.Z], () => {
+    let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M, recentActivitySectionEnabled: b = !1 } = e,
+        R = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
+        L = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
+        j = (0, s.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
@@ -50,7 +50,7 @@ function N(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(m.Z, { userId: t.id }),
-                        !R &&
+                        !L &&
                             (0, i.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: Z,
@@ -59,7 +59,7 @@ function N(e) {
                     ]
                 })
             }),
-            b === x.OGo.PENDING_INCOMING &&
+            R === x.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(g.Z.Overlay, {
                     children: (0, i.jsx)(_.Z, {
                         user: t,
@@ -67,15 +67,16 @@ function N(e) {
                     })
                 }),
             t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
-            (0, i.jsx)(p.Z, {
-                user: t,
-                currentUser: n,
-                className: S.activity
-            }),
+            !b &&
+                (0, i.jsx)(p.Z, {
+                    user: t,
+                    currentUser: n,
+                    className: S.activity
+                }),
             (0, i.jsxs)(g.Z.Overlay, {
                 className: S.overlay,
                 children: [
-                    !R &&
+                    !L &&
                         (null == N ? void 0 : N.bio) != null &&
                         (null == N ? void 0 : N.bio) !== '' &&
                         (0, i.jsx)(E.Z, {
@@ -88,10 +89,10 @@ function N(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == L ? void 0 : L.popularApplicationCommandIds) != null &&
+                    (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(u.Z, {
-                            applicationId: L.id,
-                            commandIds: L.popularApplicationCommandIds,
+                            applicationId: j.id,
+                            commandIds: j.popularApplicationCommandIds,
                             channel: A
                         }),
                     (0, i.jsx)(E.Z, {
@@ -100,7 +101,13 @@ function N(e) {
                         children: (0, i.jsx)(f.Z, { userId: t.id })
                     })
                 ]
-            })
+            }),
+            b &&
+                (0, i.jsx)(p.Z, {
+                    user: t,
+                    currentUser: n,
+                    className: S.activity
+                })
         ]
     });
 }

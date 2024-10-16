@@ -19657,13 +19657,8 @@ h3.improved_f017d0:after {
 
 .headerContextMenu_ae1fa2.absolute_ae1fa2 {
     position: absolute;
-    top: 8px;
-    right: 8px
-}
-
-.headerContextMenu_ae1fa2.absolute_ae1fa2.panel_ae1fa2 {
-    top: 12px;
-    right: 12px
+    display: inline-flex;
+    align-self: flex-end
 }
 
 .platformIcon_ae1fa2 {

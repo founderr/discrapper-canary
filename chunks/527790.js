@@ -317,54 +317,53 @@ function G(e) {
     });
 }
 function k(e) {
-    let { user: t, entry: n, className: i, onClose: a, hideContextMenu: s = !1 } = e,
-        { analyticsLocations: o } = (0, u.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { profileType: c } = (0, v.z)();
+    let { user: t, entry: n, className: i, onClose: a, hideHeader: s = !1, hideContextMenu: o = !1 } = e,
+        { analyticsLocations: c } = (0, u.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
     return (0, R.Z)(n)
         ? (0, r.jsx)(u.Gt, {
-              value: o,
+              value: c,
               children: (0, r.jsx)(y.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {
-                      let { onAutoDismiss: o } = e,
-                          l = (e) =>
+                      let { onAutoDismiss: l } = e,
+                          u = (e) =>
                               (0, r.jsx)(C.Z, {
-                                  text: c === b.y0.FULL_SIZE ? null : e,
-                                  contextMenu: s
+                                  text: s ? null : e,
+                                  contextMenu: o
                                       ? null
                                       : (0, r.jsx)(D.Z, {
                                             display: 'recent',
                                             entry: n,
                                             user: t,
                                             onClose: a,
-                                            onRequestOpen: o
+                                            onRequestOpen: l
                                         })
                               });
                       return (0, d.dX)(n)
                           ? (0, r.jsx)(U, {
-                                header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
+                                header: u(M.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
                                 user: t,
                                 entry: n,
                                 className: i
                             })
                           : (0, d.y0)(n)
                             ? (0, r.jsx)(w, {
-                                  header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
+                                  header: u(M.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
                                   user: t,
                                   entry: n,
                                   className: i
                               })
                             : (0, d.dU)(n)
                               ? (0, r.jsx)(x, {
-                                    header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+                                    header: u(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
                                     user: t,
                                     entry: n,
                                     className: i
                                 })
                               : (0, d.KF)(n)
                                 ? (0, r.jsx)(G, {
-                                      header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+                                      header: u(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
                                       user: t,
                                       entry: n,
                                       className: i

@@ -252,6 +252,9 @@ class ea extends (r = d.ZP.Store) {
         var t;
         return null !== (t = B[e]) && void 0 !== t && t;
     }
+    getAllChatOpen() {
+        return B;
+    }
     isFullscreenInContext() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.IlC.APP;
         return Object.values(x).some((t) => t[e] === L.AEg.FULL_SCREEN);

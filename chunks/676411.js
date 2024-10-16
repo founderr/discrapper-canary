@@ -4,7 +4,6 @@ e.exports = {
     headerText: 'headerText_ae1fa2',
     headerContextMenu: 'headerContextMenu_ae1fa2',
     absolute: 'absolute_ae1fa2',
-    panel: 'panel_ae1fa2',
     platformIcon: 'platformIcon_ae1fa2',
     body: 'body_ae1fa2',
     content: 'content_ae1fa2',
