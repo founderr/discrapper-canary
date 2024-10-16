@@ -4972,6 +4972,8 @@ let ot = Object.freeze({
     (nO.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED = 'guild_game_discovery_entrypoint_viewed'),
     (nO.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP = 'guild_game_discovery_entrypoint_deep_link_to_desktop'),
     (nO.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
+    (nO.APP_DMS_QUICK_LAUNCHER_IMPRESSION = 'app_dms_quick_launcher_impression'),
+    (nO.APP_DMS_QUICK_LAUNCHER_CLICKED = 'app_dms_quick_launcher_clicked'),
     ((np = eF || (eF = {})).CANARY = 'canary'),
     (np.PTB = 'ptb'),
     (np.STABLE = 'stable'),
