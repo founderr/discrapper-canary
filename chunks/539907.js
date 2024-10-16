@@ -96,7 +96,7 @@ class O extends (r = a.Component) {
         if (!r) return e;
         let i = n.offsetWidth,
             a = e + t.offsetWidth - i + 12;
-        return a > 0 ? Math.max(12, e - a) : e;
+        return a > 0 ? Math.max(12, e - a) : Math.max(12, e);
     }
     getHorizontalAlignmentStyle(e, t, n, r) {
         let { align: i } = this.props;

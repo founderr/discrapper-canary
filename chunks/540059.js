@@ -25,5 +25,5 @@ let r = (0, n(818083).B)({
     ]
 });
 function i(e) {
-    return r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;
+    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

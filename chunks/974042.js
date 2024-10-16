@@ -16,8 +16,8 @@ var i,
     p = n(699516),
     g = n(594174),
     T = n(981631),
-    f = n(474936);
-function S(e, t, n) {
+    S = n(474936);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -66,7 +66,7 @@ class v extends c.Z {
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (a = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : this.usernameLower];
     }
     constructor(e) {
-        super(), S(this, 'key', void 0), S(this, 'type', void 0), S(this, 'status', void 0), S(this, 'isMobile', void 0), S(this, 'activities', void 0), S(this, 'applicationStream', void 0), S(this, 'user', void 0), S(this, 'usernameLower', void 0), S(this, 'mutualGuildsLength', void 0), S(this, 'mutualGuilds', void 0), S(this, 'nickname', void 0), S(this, 'spam', void 0), S(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
+        super(), f(this, 'key', void 0), f(this, 'type', void 0), f(this, 'status', void 0), f(this, 'isMobile', void 0), f(this, 'activities', void 0), f(this, 'applicationStream', void 0), f(this, 'user', void 0), f(this, 'usernameLower', void 0), f(this, 'mutualGuildsLength', void 0), f(this, 'mutualGuilds', void 0), f(this, 'nickname', void 0), f(this, 'spam', void 0), f(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
     }
 }
 class Z {
@@ -82,7 +82,7 @@ class Z {
                         ...N(t),
                         ...A(t),
                         spam: (0, _.A)({ location: 'friend-store' }) && p.Z.isSpam(t),
-                        giftIntentType: e === T.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? f.hX.FRIEND_ANNIVERSARY : void 0
+                        giftIntentType: e === T.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? S.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
             t = s().map(
@@ -157,23 +157,23 @@ class Z {
         );
     }
     constructor(e = []) {
-        S(this, '_rows', void 0), (this._rows = e);
+        f(this, '_rows', void 0), (this._rows = e);
     }
 }
 let L = !0,
-    R = !1,
-    O = T.pJs.ONLINE,
+    O = !1,
+    R = T.pJs.ONLINE,
     x = new Z(),
     b = !0,
     M = !1;
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (O !== T.pJs.ONLINE && O !== T.pJs.ADD_FRIEND)) && !R && ((L = !1), (R = !0), o.Z.fetchRelationships());
+    L && (e || (R !== T.pJs.ONLINE && R !== T.pJs.ADD_FRIEND)) && !O && ((L = !1), (O = !0), o.Z.fetchRelationships());
 }
 function D() {
-    if (((L = !0), b ? (R = !1) : P(), (x = x.reset()), M)) return;
+    if (((L = !0), b ? (O = !1) : P(), (x = x.reset()), M)) return;
     let e = x.getRelationshipCounts();
-    O = 0 === e[T.OGo.FRIEND] ? (0 !== e[T.OGo.PENDING_INCOMING] ? T.pJs.PENDING : T.pJs.ADD_FRIEND) : T.pJs.ONLINE;
+    R = 0 === e[T.OGo.FRIEND] ? (0 !== e[T.OGo.PENDING_INCOMING] ? T.pJs.PENDING : T.pJs.ADD_FRIEND) : T.pJs.ONLINE;
 }
 function y() {
     x = b ? new Z() : x.reset();
@@ -189,36 +189,36 @@ class U extends (i = r.ZP.Store) {
     }
     getState() {
         return {
-            fetching: R,
-            section: O,
+            fetching: O,
+            section: R,
             pendingCount: p.Z.getPendingCount(),
             rows: x
         };
     }
 }
-S(U, 'displayName', 'FriendsStore'),
+f(U, 'displayName', 'FriendsStore'),
     (t.ZP = new U(l.Z, {
         CONNECTION_OPEN: function () {
             D();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (O = e.section), P();
+            (R = e.section), P();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             return (b = null != t), y(), !b;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
-            R = !1;
+            O = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (L = !0), (R = !0);
+            (L = !0), (O = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
             return (b = t !== T.cII.FRIENDS), y(), !b;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (O = e.section), (M = !0);
+            (R = e.section), (M = !0);
         }
     }));

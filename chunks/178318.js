@@ -15,7 +15,7 @@ var s = n(836560),
     p = n(186901),
     g = n(981631),
     T = n(413135).Buffer;
-function f(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ try {
         i = _.ZP.requireModule('erlpack');
     } catch (e) {}
 }
-let S = _.ZP.requireModule('discord_rpc').RPCWebSocket,
+let f = _.ZP.requireModule('discord_rpc').RPCWebSocket,
     C = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     N = new d.Z('RPCServer:WSS'),
     A = [];
@@ -80,7 +80,7 @@ function L(e, t, n) {
         }),
         t.end(n);
 }
-function R(e, t, n, i) {
+function O(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
     L(
         e,
@@ -92,7 +92,7 @@ function R(e, t, n, i) {
         n
     );
 }
-class O extends m.Z {
+class R extends m.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== g.Etm.OVERLAY && e.evt !== g.zMe.OVERLAY)) && N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
@@ -100,7 +100,7 @@ class O extends m.Z {
         this._socket.close(e, t);
     }
     constructor(e, t, n) {
-        if ((super('ws', t, n), f(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new E.Z({ closeCode: g.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
+        if ((super('ws', t, n), S(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new E.Z({ closeCode: g.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
         if ('etf' === n && null == i) throw new E.Z({ closeCode: g.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
         this._socket = e;
     }
@@ -113,7 +113,7 @@ class x extends m.Z {
         this._closeCallback(t, e);
     }
     constructor(e, t, n, i) {
-        if ((super('http', n, i), f(this, '_sendCallback', void 0), f(this, '_closeCallback', void 0), 'json' !== i)) throw new E.Z({ closeCode: g.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
+        if ((super('http', n, i), S(this, '_sendCallback', void 0), S(this, '_closeCallback', void 0), 'json' !== i)) throw new E.Z({ closeCode: g.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
@@ -134,12 +134,12 @@ class b extends s.EventEmitter {
                     let { protocol: i, host: a } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
                     i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
                 },
-                c = new x(s ? L.bind(null, e, t) : l, s ? R.bind(null, e, t, 400) : l, Number(n.get('v')), a);
+                c = new x(s ? L.bind(null, e, t) : l, s ? O.bind(null, e, t, 400) : l, Number(n.get('v')), a);
             if (s)
                 (0, I.em)(c, v(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
-                        e.on('data', (e) => (n += e)), e.on('error', () => R(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
+                        e.on('data', (e) => (n += e)), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
                     })
                     .catch((e) => {
                         let { code: t, message: n } = e;
@@ -151,7 +151,7 @@ class b extends s.EventEmitter {
             }
             return;
         }
-        R(e, t, 404, 'Not Found');
+        O(e, t, 404, 'Not Found');
     }
     handleConnection(e) {
         var t, n;
@@ -159,7 +159,7 @@ class b extends s.EventEmitter {
         let a = new URLSearchParams(v(e.upgradeReq).url.split('?')[1]),
             s = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
         try {
-            i = new O(e, Number(a.get('v')), null !== (n = a.get('encoding')) && void 0 !== n ? n : 'json');
+            i = new R(e, Number(a.get('v')), null !== (n = a.get('encoding')) && void 0 !== n ? n : 'json');
         } catch (t) {
             e.close(t.code, t.message);
             return;
@@ -194,7 +194,7 @@ class b extends s.EventEmitter {
         var e;
         super();
         let t = 0;
-        (a = S.http.createServer()).on('error', (e) => {
+        (a = f.http.createServer()).on('error', (e) => {
             N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
         }),
             a.on('request', this.handleRequest.bind(this)),
@@ -203,7 +203,7 @@ class b extends s.EventEmitter {
             instanceId: null !== (e = a.instanceId) && void 0 !== e ? e : 0,
             server: a
         };
-        new S.ws.Server(n).on('connection', (e) => this.handleConnection(e));
+        new f.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
 t.Z = new b();

@@ -15,8 +15,8 @@ var i = n(570140),
     p = n(199902),
     g = n(131951),
     T = n(246946),
-    f = n(808506),
-    S = n(237997),
+    S = n(808506),
+    f = n(237997),
     C = n(626135),
     N = n(554174),
     A = n(981631),
@@ -92,8 +92,8 @@ let Z = {
     },
     [A.kg4.TOGGLE_OVERLAY]: {
         onTrigger() {
-            let e = f.Z.enabled;
-            s.Z.setEnabled(!e, f.Z.legacyEnabled);
+            let e = S.Z.enabled;
+            s.Z.setEnabled(!e, S.Z.legacyEnabled);
         },
         keyEvents: {
             keyup: !0,
@@ -103,7 +103,7 @@ let Z = {
     [A.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger(e) {
             let t = (0, N.Z)();
-            if (null != t) e ? s.Z.setUILocked(!S.Z.isUILocked(t), t) : s.Z.setInputLocked(!f.Z.isInputLocked(t), t);
+            if (null != t) e ? s.Z.setUILocked(!f.Z.isUILocked(t), t) : s.Z.setInputLocked(!S.Z.isInputLocked(t), t);
         },
         keyEvents: {
             keyup: !0,
@@ -112,9 +112,9 @@ let Z = {
     },
     [A.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
         onTrigger() {
-            let e = f.Z.getFocusedPID(),
+            let e = S.Z.getFocusedPID(),
                 t = null != e;
-            null != e && t && S.Z.isPinned(A.Odu.TEXT) && f.Z.isReady(e) && f.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
+            null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
         },
         keyEvents: {
             keyup: !0,
@@ -163,7 +163,7 @@ let Z = {
         onTrigger: () => {
             if (!(0, m.D)()) return;
             let e = (0, N.Z)();
-            null != e && (S.Z.isUILocked(e) ? (0, I.IN)(!0, e) : (0, I.oZ)(e));
+            null != e && (f.Z.isUILocked(e) ? (0, I.IN)(!0, e) : (0, I.oZ)(e));
         },
         keyEvents: {
             keyup: !0,

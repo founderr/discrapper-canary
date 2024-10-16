@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(922409),
     g = n(727813),
     T = n(355350),
-    f = n(307947),
-    S = n(125855),
+    S = n(307947),
+    f = n(125855),
     C = n(687683),
     N = n(981631),
     A = n(689938),
@@ -33,11 +33,11 @@ function Z() {
         s = (0, m.V)(),
         Z = (0, d.N)(),
         L = (0, u.Z)('message-requests-spam-list'),
-        { channelId: R } = (0, p._)(),
-        O = a.useCallback(() => {
+        { channelId: O } = (0, p._)(),
+        R = a.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
         }, []),
-        { rejectAll: x } = (0, I.m)({ onError: O }),
+        { rejectAll: x } = (0, I.m)({ onError: R }),
         b = a.useCallback(() => {
             x(t.map((e) => e.channel.id));
         }, [t, x]);
@@ -52,12 +52,12 @@ function Z() {
                     c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    S.Z,
+                    f.Z,
                     {
                         index: l,
                         className: r()({
-                            [v.selected]: null != R && R === d,
-                            [v.siblingSelected]: null != R && R === c
+                            [v.selected]: null != O && O === d,
+                            [v.siblingSelected]: null != O && O === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -66,7 +66,7 @@ function Z() {
                     d
                 );
             },
-            [t, s, R]
+            [t, s, O]
         ),
         P = a.useCallback(
             () =>
@@ -105,7 +105,7 @@ function Z() {
             [n, b, Z]
         );
     return 0 === t.length
-        ? (0, i.jsx)(f.Z, { section: C.pS.SPAM })
+        ? (0, i.jsx)(S.Z, { section: C.pS.SPAM })
         : (0, i.jsx)(l.bG, {
               navigator: L,
               children: (0, i.jsx)(l.SJ, {

@@ -16,16 +16,16 @@ var i,
     p = n(430824),
     g = n(375954),
     T = n(306680),
-    f = n(699516),
-    S = n(9156),
+    S = n(699516),
+    f = n(9156),
     C = n(626135),
     N = n(70956),
     A = n(900849),
     v = n(761080),
     Z = n(584925),
     L = n(207205),
-    R = n(981631),
-    O = n(206583);
+    O = n(981631),
+    R = n(206583);
 function x(e, t, n) {
     return (
         t in e
@@ -135,7 +135,7 @@ function er() {
                 i = {},
                 s = [],
                 r = [],
-                d = null !== (t = null === (e = l.Z.getFeed(O.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
+                d = null !== (t = null === (e = l.Z.getFeed(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
             d.sort((e, t) => e.rank - t.rank),
                 d.forEach((e) => {
                     if (n.has(e.content.id) || (e.content.content_type !== a.s.PLAYED_GAME && e.content.content_type !== a.s.CUSTOM_STATUS && e.content.content_type !== a.s.TOP_GAME) || (0, c.n2)(e.content)) return;
@@ -193,7 +193,7 @@ function eo(e) {
     }
     if ((er(), null != k.load_id && D !== k.load_id)) {
         var t;
-        C.default.track(R.rMx.FEED_LOADED, {
+        C.default.track(O.rMx.FEED_LOADED, {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
@@ -257,7 +257,7 @@ function eI(e) {
 }
 class ep extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, S.ZP, h.default, Z.Z, l.Z), null != e)) {
+        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, f.ZP, h.default, Z.Z, l.Z), null != e)) {
             var t, n, i, a, s, r;
             (P = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
@@ -371,7 +371,7 @@ x(ep, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         j.forEach((e) => {
-                            (B[e.id] = e), e.type === v.Rr.CUSTOM_STATUS && (f.Z.isBlocked(e.data.user_id) ? (H[e.id] = !0) : (V[e.id] = (0, L.mV)(e)));
+                            (B[e.id] = e), e.type === v.Rr.CUSTOM_STATUS && (S.Z.isBlocked(e.data.user_id) ? (H[e.id] = !0) : (V[e.id] = (0, L.mV)(e)));
                         });
                 })(),
                 (k = {
@@ -520,7 +520,7 @@ x(ep, 'displayName', 'GravityStore'),
         MESSAGE_ACK: eI,
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t } = e;
-            if (t !== O.YN.GLOBAL_FEED) return !1;
+            if (t !== R.YN.GLOBAL_FEED) return !1;
             if (!q) {
                 let [e, t] = ec(P);
                 ($ = e), (ee = t), er(), (K = ea(e));

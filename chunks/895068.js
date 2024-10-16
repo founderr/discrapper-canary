@@ -24,16 +24,16 @@ var i,
     p = n(594174),
     g = n(823379),
     T = n(51144),
-    f = n(945124),
-    S = n(231467),
+    S = n(945124),
+    f = n(231467),
     C = n(301544),
     N = n(931515),
     A = n(286083),
     v = n(207796),
     Z = n(777734),
     L = n(976757),
-    R = n(981631),
-    O = n(689938),
+    O = n(981631),
+    R = n(689938),
     x = n(641388),
     b = n(882008);
 function M(e) {
@@ -50,12 +50,12 @@ function P(e) {
         },
         className: x.animatedCard,
         children: (0, l.jsx)(
-            S.ZP,
+            f.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, f.y)(n, s),
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, S.y)(n, s),
                 className: d()(x.card, r),
-                source: null != o ? o : R.jXE.DISCOVER_SEARCH,
+                source: null != o ? o : O.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
             },
@@ -66,8 +66,8 @@ function P(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: f = 16, paddingHorizontal: S = 32, variant: R = 'default', onUpdatePage: M } = e,
-        D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
+    let { width: c, paddingVertical: S = 16, paddingHorizontal: f = 32, variant: O = 'default', onUpdatePage: M } = e,
+        D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
         y = o.useMemo(() => {
             if (0 === D) return 1;
             let e = D / 256,
@@ -76,7 +76,7 @@ t.ZP = o.memo(function (e) {
                 i = D / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [D]),
-        { loaded: j, clans: U, searchResult: G, searchCriteria: w, hasError: k } = (0, N.ML)(y, 'saved_guilds' === R),
+        { loaded: j, clans: U, searchResult: G, searchCriteria: w, hasError: k } = (0, N.ML)(y, 'saved_guilds' === O),
         B = (0, v.GN)((e) => e.selectedTraits, u.Z),
         V = (0, v.GN)((e) => e.selectedGames, u.Z),
         H = (0, h.Z)(G),
@@ -86,11 +86,11 @@ t.ZP = o.memo(function (e) {
     o.useEffect(() => {
         if (null != G && !!(0, L.Pw)(G)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= G.loadedAt)) && (0, m.Oe)('top_picks', w, q);
     }, [w, G, H, q]);
-    let Q = V.length > 0 || B.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != K ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(K) }) : '';
+    let Q = V.length > 0 || B.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != K ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(K) }) : '';
     let X =
             ((t = U),
             (n = y),
-            (i = R),
+            (i = O),
             (a = F),
             (s = Q),
             (r = j),
@@ -123,7 +123,7 @@ t.ZP = o.memo(function (e) {
                                 items: t.slice(0, n),
                                 itemHeight: 400,
                                 sectionHeight: 24,
-                                header: a > 1 ? O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+                                header: a > 1 ? R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
                                 props: { style: { paddingTop: 8 } },
                                 subtitle: a > 1 ? void 0 : s,
                                 skeletonCount: n
@@ -135,7 +135,7 @@ t.ZP = o.memo(function (e) {
                                       itemHeight: 400,
                                       sectionHeight: a > 1 ? 0 : 24,
                                       props: { style: { paddingTop: 16 } },
-                                      header: a > 1 ? void 0 : O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
+                                      header: a > 1 ? void 0 : R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
                                       skeletonCount: 4 * n
                                   }
                                 : null,
@@ -210,10 +210,10 @@ t.ZP = o.memo(function (e) {
                         hide: n,
                         entranceDelay: o
                     },
-                    ''.concat(r.id, ':').concat(R)
+                    ''.concat(r.id, ':').concat(O)
                 );
             },
-            [X, y, F, W, en, R, w, B, ee, et]
+            [X, y, F, W, en, O, w, B, ee, et]
         ),
         ea = o.useCallback((e) => (0, l.jsx)(C.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         es = o.useCallback(
@@ -271,18 +271,18 @@ t.ZP = o.memo(function (e) {
         ? (0, l.jsx)('div', {
               className: x.emptySavedGuilds,
               children:
-                  'saved_guilds' === R
+                  'saved_guilds' === O
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
+                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                                 }),
                                 (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
+                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
                                 })
                             ]
                         })
@@ -291,12 +291,12 @@ t.ZP = o.memo(function (e) {
                                 (0, l.jsx)(E.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
+                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                                 }),
                                 (0, l.jsx)(E.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
+                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
                                 })
                             ]
                         })
@@ -312,23 +312,23 @@ t.ZP = o.memo(function (e) {
                     }),
                     (0, l.jsx)(E.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: O.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
+                        children: R.Z.Messages.CLAN_DISCOVERY_ERROR_TITLE
                     }),
                     (0, l.jsx)(E.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: O.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION
+                        children: R.Z.Messages.CLAN_DISCOVERY_ERROR_DESCRIPTION
                     })
                 ]
             })
           : (0, l.jsx)('div', {
                 className: x.sectionContainer,
                 style: {
-                    paddingTop: f,
-                    paddingLeft: S,
-                    paddingRight: S,
-                    paddingBottom: f,
-                    width: 'calc(100% - '.concat(2 * S, 'px)'),
+                    paddingTop: S,
+                    paddingLeft: f,
+                    paddingRight: f,
+                    paddingBottom: S,
+                    width: 'calc(100% - '.concat(2 * f, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
                 children: er.map((e, t) => {

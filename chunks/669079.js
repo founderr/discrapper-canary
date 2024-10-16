@@ -78,7 +78,7 @@ let S = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
     g = [S, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
     A = RegExp('(?: |^|https?://)(?:'.concat(g, ')/([a-z0-9-]+)'), 'gi'),
     N = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => h.Z.escape(e))].join('|'),
-    R = RegExp('(?: |^|https?://)(?:'.concat(N, ')/([a-z0-9-]+)'), 'gi'),
+    R = RegExp('(?: |^|https?://)(?:'.concat(N, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     O = (e, t) =>
         Array(t)
             .fill(void 0)
@@ -117,7 +117,7 @@ let x = (e) => (null == e ? void 0 : e.type) === I.uaV.CUSTOM_GIFT && (null == e
         if (null == e) return [];
         let n = new Set();
         for (; null != (t = A.exec(e)) && n.size < 3; ) n.add(w(t[1]));
-        for (; null != (t = R.exec(e)) && n.size < 3; ) n.add(w(t[1]));
+        for (; null != (t = R.exec(e)) && n.size < 3; ) n.add(w(t[t.length - 1]));
         return Array.from(n);
     };
 function k() {

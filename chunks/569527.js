@@ -21,15 +21,15 @@ var i = n(735250),
     p = n(283293),
     g = n(797908),
     T = n(120549),
-    f = n(979007),
-    S = n(463051);
+    S = n(979007),
+    f = n(463051);
 function C(e) {
     var t;
     let { query: n, onSelectApplication: C } = e,
         [N, A] = a.useState(void 0),
         [v, Z] = a.useState(1),
-        [L, R] = a.useState(!0),
-        O = a.useRef(L),
+        [L, O] = a.useState(!0),
+        R = a.useRef(L),
         [x, b] = a.useState(0),
         M = a.useRef(null),
         { fetchState: P, searchResults: D } = (0, l.cj)([E.Z], () => ({
@@ -83,7 +83,7 @@ function C(e) {
             let n = null == e ? void 0 : e.getBoundingClientRect();
             if (null == n) return;
             let i = n.width;
-            i < 1024 && O.current ? ((O.current = !1), R(!1)) : i > 1024 && !O.current && ((O.current = !0), R(!0));
+            i < 1024 && R.current ? ((R.current = !1), O(!1)) : i > 1024 && !R.current && ((R.current = !0), O(!0));
             let a = null === (t = M.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             null != a && b(a.width);
         }),
@@ -112,7 +112,7 @@ function C(e) {
                             children: (0, i.jsx)('div', {
                                 ref: w,
                                 children: (0, i.jsx)('div', {
-                                    className: S.content,
+                                    className: f.content,
                                     style: { paddingRight: L ? x + 32 : void 0 },
                                     children:
                                         null == U
@@ -135,9 +135,9 @@ function C(e) {
                             })
                         }),
                         (0, i.jsx)(o.Paginator, {
-                            className: S.paginationInput,
-                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * f.IV, f.Et * f.IV),
-                            pageSize: f.IV,
+                            className: f.paginationInput,
+                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * S.IV, S.Et * S.IV),
+                            pageSize: S.IV,
                             disablePaginationGap: !0,
                             hideMaxPage: !0,
                             currentPage: v,
@@ -148,10 +148,10 @@ function C(e) {
             }),
             L &&
                 (0, i.jsx)('div', {
-                    className: S.sidebar,
+                    className: f.sidebar,
                     ref: M,
                     children: (0, i.jsx)('div', {
-                        className: S.sidebarContent,
+                        className: f.sidebarContent,
                         children: (0, i.jsx)(T.Z, {
                             countsByCategory: y,
                             selectedCategoryId: null != N ? N : h.MU,

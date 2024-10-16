@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         openGuildRoleConnectionsConnectAccountModal: function () {
-            return O;
+            return R;
         }
     }),
     n(47120),
@@ -23,16 +23,16 @@ var i = n(735250),
     p = n(598077),
     g = n(314897),
     T = n(271383),
-    f = n(430824),
-    S = n(626135),
+    S = n(430824),
+    f = n(626135),
     C = n(63063),
     N = n(134433),
     A = n(225104),
     v = n(981631),
     Z = n(689938),
     L = n(140167),
-    R = n(621925);
-function O(e, t) {
+    O = n(621925);
+function R(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: a } = await Promise.all([n.e('82412'), n.e('18993')]).then(n.bind(n, 107807));
         return (n) =>
@@ -45,7 +45,7 @@ function O(e, t) {
 }
 t.default = function (e) {
     let { guildId: t, transitionState: s, onClose: x } = e,
-        b = (0, l.e7)([f.Z], () => f.Z.getRoles(t)),
+        b = (0, l.e7)([S.Z], () => S.Z.getRoles(t)),
         M = (0, l.e7)([g.default], () => g.default.getId()),
         P = (0, l.e7)([T.ZP], () => T.ZP.getMember(t, M)),
         [D, y] = a.useState([]),
@@ -54,7 +54,7 @@ t.default = function (e) {
     if (
         (a.useEffect(() => {
             if (0 !== D.length)
-                S.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
+                f.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
                     role_ids: D.map((e) => {
                         let { role_id: t } = e;
                         return t;
@@ -124,7 +124,7 @@ t.default = function (e) {
                                                     ? (0, i.jsx)('img', {
                                                           src: new p.Z(a.bot).getAvatarURL(t, 24),
                                                           alt: '',
-                                                          className: r()(L.botAvatar, R.avatar)
+                                                          className: r()(L.botAvatar, O.avatar)
                                                       })
                                                     : null;
                                         } else {
@@ -132,7 +132,7 @@ t.default = function (e) {
                                             l = (0, i.jsx)('img', {
                                                 src: (0, o.ap)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: '',
-                                                className: R.avatar
+                                                className: O.avatar
                                             });
                                         }
                                         if (null != l) a[''.concat(e.connection_type, ':').concat(e.application_id)] = l;
@@ -143,7 +143,7 @@ t.default = function (e) {
                                 c.Clickable,
                                 {
                                     className: r()(L.verifiedRole, s ? L.verifiedRoleHasRole : null),
-                                    onClick: s ? void 0 : () => O(e, t),
+                                    onClick: s ? void 0 : () => R(e, t),
                                     onContextMenu: s
                                         ? (a) => {
                                               var s, r, l;

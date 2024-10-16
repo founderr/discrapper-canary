@@ -16,16 +16,16 @@ var i = n(735250),
     p = n(585500),
     g = n(475595),
     T = n(566078),
-    f = n(602667),
-    S = n(611855),
+    S = n(602667),
+    f = n(611855),
     C = n(670638),
     N = n(667105),
     A = n(860151),
     v = n(341907),
     Z = n(46140),
     L = n(981631),
-    R = n(689938),
-    O = n(233342);
+    O = n(689938),
+    R = n(233342);
 function x(e) {
     var t;
     let { quest: n } = e,
@@ -35,25 +35,25 @@ function x(e) {
         u = (0, o.wj)(r) ? L.BRd.DARK : L.BRd.LIGHT,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
-        className: O.heading,
+        className: R.heading,
         children: [
             (0, i.jsx)('img', {
-                className: O.headingGameTile,
+                className: R.headingGameTile,
                 alt: '',
                 src: (0, g.fh)(n, g.Bd.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
-                className: O.headingCopy,
+                className: R.headingCopy,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: _ ? R.Z.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL : R.Z.Messages.QUESTS_TITLE.format({ questName: n.config.messages.questName })
+                        children: _ ? O.Z.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL : O.Z.Messages.QUESTS_TITLE.format({ questName: n.config.messages.questName })
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
-                        children: _ ? R.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s }) : R.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: a })
+                        children: _ ? O.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s }) : O.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: a })
                     })
                 ]
             })
@@ -111,7 +111,7 @@ t.Z = function (e) {
         });
     return B || U || k || !(0, I.dl)(o)
         ? null
-        : (0, i.jsx)(f.A, {
+        : (0, i.jsx)(S.A, {
               questOrQuests: o,
               questContent: m.jn.ACTIVITY_PANEL,
               children: (e) => {
@@ -120,7 +120,7 @@ t.Z = function (e) {
                       ref: (t) => {
                           e.current = t;
                       },
-                      className: r()(O.wrapper, { [O.wrapperQuestAccepted]: G }),
+                      className: r()(R.wrapper, { [R.wrapperQuestAccepted]: G }),
                       onClick: M,
                       onKeyPress: M,
                       onFocus: L,
@@ -129,9 +129,9 @@ t.Z = function (e) {
                       onMouseLeave: b,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: O.utils,
+                              className: R.utils,
                               children: [
-                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
+                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
                                   (0, i.jsx)(C.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,
@@ -140,11 +140,11 @@ t.Z = function (e) {
                                       children: (e) =>
                                           (0, i.jsx)(c.Clickable, {
                                               ...e,
-                                              'aria-label': R.Z.Messages.ACTIONS,
+                                              'aria-label': O.Z.Messages.ACTIONS,
                                               children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: O.submenuIcon
+                                                  className: R.submenuIcon
                                               })
                                           })
                                   })
@@ -155,7 +155,7 @@ t.Z = function (e) {
                                   children: [
                                       (0, i.jsx)(x, { quest: o }),
                                       (0, i.jsx)(c.Text, {
-                                          className: O.instructions,
+                                          className: R.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
                                           children: H
@@ -166,55 +166,55 @@ t.Z = function (e) {
                               !w &&
                               (0, i.jsx)(A.Z, {
                                   autoplay: g,
-                                  className: O.rewardTileWithInstructions,
+                                  className: R.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: m.jn.ACTIVITY_PANEL,
                                   location: Z.dr.ACTIVITY_PANEL,
                                   taskDetails: V
                               }),
                           (0, i.jsxs)('div', {
-                              className: O.ctas,
+                              className: R.ctas,
                               children: [
                                   !G &&
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: R.cta,
                                                   color: c.Button.Colors.PRIMARY,
                                                   fullWidth: !0,
                                                   size: c.Button.Sizes.SMALL,
                                                   onClick: y,
-                                                  children: R.Z.Messages.QUESTS_LEARN_MORE_V2
+                                                  children: O.Z.Messages.QUESTS_LEARN_MORE_V2
                                               }),
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: R.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
                                                   onClick: P,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
-                                                  children: R.Z.Messages.QUESTS_ACCEPT_QUEST
+                                                  children: O.Z.Messages.QUESTS_ACCEPT_QUEST
                                               })
                                           ]
                                       }),
                                   G &&
                                       !w &&
                                       (0, i.jsx)(c.Button, {
-                                          className: O.cta,
+                                          className: R.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: D,
                                           size: c.Button.Sizes.SMALL,
-                                          children: R.Z.Messages.QUESTS_CHECK_PROGRESS
+                                          children: O.Z.Messages.QUESTS_CHECK_PROGRESS
                                       }),
                                   w &&
                                       (0, i.jsx)(c.Button, {
-                                          className: O.cta,
+                                          className: R.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: j,
                                           size: c.Button.Sizes.SMALL,
-                                          children: R.Z.Messages.QUESTS_CLAIM_REWARD
+                                          children: O.Z.Messages.QUESTS_CLAIM_REWARD
                                       })
                               ]
                           })

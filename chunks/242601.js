@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ef;
+        return eS;
     }
 }),
     n(47120),
@@ -22,16 +22,16 @@ var i = n(735250),
     p = n(100527),
     g = n(906732),
     T = n(211242),
-    f = n(536687),
-    S = n(745837),
+    S = n(536687),
+    f = n(745837),
     C = n(13228),
     N = n(1259),
     A = n(211644),
     v = n(605236),
     Z = n(243778),
     L = n(492162),
-    R = n(818634),
-    O = n(596557),
+    O = n(818634),
+    R = n(596557),
     x = n(817520),
     b = n(999309),
     M = n(408987),
@@ -181,7 +181,7 @@ class eT extends a.PureComponent {
                       animation: u.Popout.Animation.SCALE,
                       shouldShow: n,
                       onRequestClose: () => {
-                          (0, R.l)(!1);
+                          (0, O.l)(!1);
                       },
                       children: (a) => {
                           let { onClick: s, ...r } = a;
@@ -283,7 +283,7 @@ class eT extends a.PureComponent {
                             tutorialType: ea._.GAME_NIGHT
                         });
                     default:
-                        if (t) return (0, i.jsx)(S.Z, {});
+                        if (t) return (0, i.jsx)(f.Z, {});
                         return (0, i.jsx)(i.Fragment, {});
                 }
             }
@@ -331,7 +331,7 @@ class eT extends a.PureComponent {
             }),
             em(this, 'handleHeaderMenuToggle', (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, R.l)(!t), this.closeAllHeaderNotices();
+                e.stopPropagation(), (0, O.l)(!t), this.closeAllHeaderNotices();
             }),
             em(this, 'handleContextMenu', (e) => {
                 let { guild: t } = this.props;
@@ -415,7 +415,7 @@ class eT extends a.PureComponent {
             });
     }
 }
-function ef(e) {
+function eS(e) {
     var t;
     let { guildId: n, hideSelectedChannel: s, selectedChannelId: l } = e,
         d = (0, o.e7)([q.Z], () => q.Z.getGuild(n));
@@ -423,7 +423,7 @@ function ef(e) {
     let _ = (0, L.Z)(n),
         E = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo),
         h = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
-        [S, Z, M] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
+        [f, Z, M] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
         y = (0, o.e7)([z.Z], () => z.Z.isUnavailable(n)),
         G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
         k = (0, o.e7)([H.Z], () => (H.Z.darkSidebar ? ec.BRd.DARK : H.Z.theme)),
@@ -437,29 +437,29 @@ function ef(e) {
         n !== es && ea(!W);
     }, [n, es, W]);
     let [eo, e_] = (0, A.ZP)((e) => [ed.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)]),
-        eE = (0, f.Z)(d),
+        eE = (0, S.Z)(d),
         eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
         em = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()),
         eI = (0, o.e7)([B.Z], () => B.Z.shouldShow(ep)),
-        eg = S && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
-        ef = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)),
-        eS = S && null != ef && ef >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
-        eC = Z && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || (null != ef && ef > 50)),
+        eg = f && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
+        eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)),
+        ef = f && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
+        eC = Z && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || (null != eS && eS > 50)),
         eN = (0, b.Z)(n),
         eA = (0, N._)(n),
         ev = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0,
-        eZ = S && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
+        eZ = f && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
         eL = (0, T.Q)(),
-        eR = (S || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
-        eO = (0, o.e7)([P.Z, Q.Z], () => null != d && null != G && S && !Q.Z.hasLayers() && P.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eO = (f || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
+        eR = (0, o.e7)([P.Z, Q.Z], () => null != d && null != G && f && !Q.Z.hasLayers() && P.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)),
-        { isPopoutOpen: eb } = (0, R.y)(),
+        { isPopoutOpen: eb } = (0, O.y)(),
         eM = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
         eP = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))),
         eD = et.ZP.isNewUser(G),
         ey = ei && !eD,
         ej = (0, C.Z)(G);
-    (0, O.Z)(d);
+    (0, R.Z)(d);
     let eU = (0, v.wE)(c.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, j.Z)(n),
         ew = (0, x.Z)(n),
@@ -483,16 +483,16 @@ function ef(e) {
         hasChannelNotice: null != eE || eo,
         anyLayerOpen: eh || em,
         showGuildBoostingProgressBarUpsell: eg,
-        showGuildBoostingProgressBarSizeUpsell: eS,
-        showInviteSplashUpsell: eR,
+        showGuildBoostingProgressBarSizeUpsell: ef,
+        showInviteSplashUpsell: eO,
         showDiscoveryLandingPageSettingsUpsell: eZ,
         showGuildHeaderTutorial: eI,
-        showGuildTemplateDirtyTooltip: eO,
+        showGuildTemplateDirtyTooltip: eR,
         showRoleSubscriptionUpsell: eN,
         showDiscoveryTooltip: eA,
         showHubPrivacySettingsTooltip: ev,
         showNewUnreadsBar: eM,
-        showActiveThreadsNotice: M && null != ef && ef >= 200 && eP,
+        showActiveThreadsNotice: M && null != eS && eS >= 200 && eP,
         showGuildSoundboardPermissionUpsell: eC,
         showMediaChannelUpsell: eG,
         showTierTemplatesUpsell: ew,

@@ -47,10 +47,10 @@ function p(e, t) {
 }
 function g(e) {
     let { user: t, uploadType: n, imageSrc: a, onClose: o, analyticsSource: E, analyticsLocation: p, onSecondaryClick: g, ...T } = e,
-        f = (0, r.ZP)(t.id),
-        { primaryColor: S, secondaryColor: C } = (0, l.Z)({
+        S = (0, r.ZP)(t.id),
+        { primaryColor: f, secondaryColor: C } = (0, l.Z)({
             user: t,
-            displayProfile: f,
+            displayProfile: S,
             pendingAvatar: n === h.pC.AVATAR ? a : void 0,
             isPreview: !0
         }),
@@ -86,7 +86,7 @@ function g(e) {
                             disabledInputs: !0,
                             pendingAvatar: n === h.pC.AVATAR ? a : void 0,
                             pendingBanner: n === h.pC.BANNER ? a : void 0,
-                            pendingThemeColors: [S, C],
+                            pendingThemeColors: [f, C],
                             hideExampleButton: !0
                         })
                     })

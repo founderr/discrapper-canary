@@ -16,16 +16,16 @@ var i = n(735250),
     p = n(523924),
     g = n(390500),
     T = n(200305),
-    f = n(981631),
-    S = n(898625),
+    S = n(981631),
+    f = n(898625),
     C = n(689938),
     N = n(250010);
 t.Z = (e) => {
     var t;
     let n, A;
     let { guildId: v, inviteCode: Z } = e,
-        [L, R] = a.useState(S.hO.INITIAL),
-        O = (0, s.e7)([h.Z], () => h.Z.get(v)),
+        [L, O] = a.useState(f.hO.INITIAL),
+        R = (0, s.e7)([h.Z], () => h.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
         { hasFetchedRequestToJoinGuilds: M, guildPreviewDisabled: P } = (0, s.cj)([I.Z], () => ({
@@ -33,13 +33,13 @@ t.Z = (e) => {
             guildPreviewDisabled: I.Z.getJoinRequestGuild(v)
         }));
     a.useEffect(() => {
-        null != b && (0, o.uL)(f.Z5c.CHANNEL(v));
+        null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
     }, [b, v]),
         a.useEffect(() => {
             !M && _.Z.fetchRequestToJoinGuilds();
         }, [M]);
     let D = a.useCallback((e) => {
-            R((t) => Math.max(t, e));
+            O((t) => Math.max(t, e));
         }, []),
         y = async (e) => {
             await E.ZP.submitVerificationForm(v, e);
@@ -50,7 +50,7 @@ t.Z = (e) => {
     let U =
             ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == P ? void 0 : P.toString() })),
             (A = () => {
-                R(Math.max(L, S.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(f.Z5c.ME);
+                O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>
@@ -70,10 +70,10 @@ t.Z = (e) => {
                 );
             }),
         G =
-            (null == O ? void 0 : null === (t = O.guild) || void 0 === t ? void 0 : t.splash) != null
+            (null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.splash) != null
                 ? u.ZP.getGuildSplashURL({
-                      id: O.guild.id,
-                      splash: O.guild.splash
+                      id: R.guild.id,
+                      splash: R.guild.splash
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {

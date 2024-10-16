@@ -21,16 +21,16 @@ var i = n(735250),
     p = n(801077),
     g = n(626135),
     T = n(70956),
-    f = n(225559),
-    S = n(910436),
+    S = n(225559),
+    f = n(910436),
     C = n(203028),
     N = n(358924),
     A = n(292140),
     v = n(525296),
     Z = n(981631),
     L = n(674563),
-    R = n(689938),
-    O = n(888816);
+    O = n(689938),
+    R = n(888816);
 let x = 15 * T.Z.Millis.MINUTE,
     b = (0, v.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: s, quest: r } = e,
@@ -38,7 +38,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(S.Z, {
+            c = (0, i.jsx)(f.Z, {
                 party: t,
                 onChannelContextMenu: s,
                 quest: r
@@ -48,7 +48,7 @@ let x = 15 * T.Z.Millis.MINUTE,
             I = _.length,
             p = E.length,
             T = h.length > 0,
-            f = a.useCallback(() => {
+            S = a.useCallback(() => {
                 let e = E.filter((e) => {
                     var t, n;
                     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
@@ -61,7 +61,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [m, I, p, T, E]),
-            v = o()(f, x);
+            v = o()(S, x);
         return null != l || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -79,7 +79,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                           ...e,
                           onMouseEnter: v,
                           'aria-haspopup': 'menu',
-                          className: O.itemCard,
+                          className: R.itemCard,
                           active: n,
                           children: (0, i.jsxs)('div', {
                               children: [l, c]
@@ -105,7 +105,7 @@ function P() {
             currentUser: I.default.getCurrentUser()
         })),
         l = (0, c.e7)([_.Z], () => _.Z.quests);
-    a.useEffect(() => (u.Z.wait(() => f.L()), () => u.Z.wait(() => f.v())), [null == r ? void 0 : r.id]),
+    a.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]),
         a.useEffect(() => {
             n && !s && M();
         }, [n, s]);
@@ -138,24 +138,24 @@ function P() {
                         );
                     })
                   : (0, i.jsxs)('div', {
-                        className: O.emptyCard,
+                        className: R.emptyCard,
                         children: [
                             (0, i.jsx)(d.Heading, {
                                 variant: 'heading-md/semibold',
-                                className: O.emptyHeader,
-                                children: R.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+                                className: R.emptyHeader,
+                                children: O.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
                             }),
                             (0, i.jsx)(d.Text, {
                                 color: 'none',
-                                className: O.emptyText,
+                                className: R.emptyText,
                                 variant: 'text-sm/normal',
-                                children: R.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+                                children: O.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
                             })
                         ]
                     })),
           (0, i.jsx)(i.Fragment, { children: h }))
         : (0, i.jsx)('div', {
-              className: O.emptyCard,
+              className: R.emptyCard,
               children: (0, i.jsx)(d.Spinner, {})
           });
 }

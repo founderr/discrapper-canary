@@ -9,10 +9,10 @@ n.d(t, {
         return g;
     },
     NL: function () {
-        return O;
+        return R;
     },
     QW: function () {
-        return f;
+        return S;
     },
     U0: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(t, {
         return T;
     },
     lg: function () {
-        return S;
+        return f;
     },
     oT: function () {
         return L;
@@ -112,7 +112,7 @@ function T(e) {
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function f(e) {
+function S(e) {
     switch (e) {
         case E.vf.FEATURED:
             return I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_FEATURED;
@@ -130,7 +130,7 @@ function f(e) {
             return null;
     }
 }
-function S(e) {
+function f(e) {
     switch (e) {
         case E.vf.FEATURED:
             return m.Hk;
@@ -236,7 +236,7 @@ function L(e) {
             offset: 0
         });
 }
-async function R(e) {
+async function O(e) {
     return (
         !(0, a.x)(e) &&
         (
@@ -248,7 +248,7 @@ async function R(e) {
         ).body.valid
     );
 }
-async function O(e) {
+async function R(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: a } = e;
     if ('' === i.trim()) return;
     let s = d.Z.getIsFetchingCounts(i),
@@ -259,7 +259,7 @@ async function O(e) {
                 fetchedQuery: i,
                 resultsQuery: ''
             }),
-            u.Z.getIsBlocked(i) || !(await R(i)))
+            u.Z.getIsBlocked(i) || !(await O(i)))
         ) {
             c.Z.handleBlockedSearchQuery(i);
             return;

@@ -19,19 +19,19 @@ var a = r(735250),
     E = r(906732),
     I = r(1585),
     x = r(333867),
-    v = r(197115),
-    T = r(300284),
+    T = r(197115),
+    v = r(300284),
     S = r(876917),
-    L = r(642619),
-    N = r(210887),
+    N = r(642619),
+    L = r(210887),
     O = r(74538),
     B = r(335131),
     k = r(1870),
     j = r(884697),
     R = r(664018),
     Z = r(890249),
-    P = r(635552),
-    A = r(724994),
+    A = r(635552),
+    P = r(724994),
     M = r(390698),
     y = r(813083),
     w = r(680942),
@@ -85,9 +85,9 @@ t.Z = function (e) {
         eo = n.useMemo(() => (0, j.BH)(t, es), [t, es]),
         el = (0, j.G1)(t),
         ec = (0, j.rN)(t),
-        { isPurchased: ed, isPartiallyPurchased: eu } = (0, A.L)(t),
+        { isPurchased: ed, isPartiallyPurchased: eu } = (0, P.L)(t),
         [ef, ep] = (0, p.Wu)([k.Z], () => [k.Z.isClaiming === t.skuId, null != k.Z.isClaiming && k.Z.isClaiming !== t.skuId]),
-        em = (0, p.e7)([N.Z], () => (0, m.wj)(N.Z.theme)),
+        em = (0, p.e7)([L.Z], () => (0, m.wj)(L.Z.theme)),
         eC = (0, Z.m)('CollectiblesCollectedModal'),
         e_ = (0, j.x6)(t) || eC,
         eg = (0, j.Yq)(t.skuId),
@@ -108,10 +108,10 @@ t.Z = function (e) {
         n.useEffect(() => {
             null == o || o(J);
         }, [o]);
-    let eE = (0, T.Z)({ analyticsLocations: q }),
+    let eE = (0, v.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: ev } = (0, P.W)({ product: t }),
-        eT = () => {
+        { handleUseNow: ex, isApplying: eT } = (0, A.W)({ product: t }),
+        ev = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
@@ -121,7 +121,7 @@ t.Z = function (e) {
                 return;
             }
             t.type === f.Z.PROFILE_EFFECT &&
-                (0, L.H)({
+                (0, N.H)({
                     initialSelectedEffectId: ea.id,
                     analyticsLocations: q
                 });
@@ -136,12 +136,12 @@ t.Z = function (e) {
                     returnRef: eI
                 });
         },
-        eL = eS(b.Z.COLLECTIBLES_SHOP_CARD),
-        eN = eS(b.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+        eN = eS(b.Z.COLLECTIBLES_SHOP_CARD),
+        eL = eS(b.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
         eO = () =>
             (0, a.jsx)('div', {
                 className: z.hoverUpsellContainer,
-                children: (0, a.jsx)(v.Z, {
+                children: (0, a.jsx)(T.Z, {
                     fullWidth: !0,
                     className: z.__invalid_premiumSubscribeButton,
                     disabled: ep,
@@ -172,7 +172,7 @@ t.Z = function (e) {
             el || d.tq
                 ? null
                 : ec
-                  ? (0, a.jsx)(K, { onClick: eN })
+                  ? (0, a.jsx)(K, { onClick: eL })
                   : (0, a.jsx)(w.Z, {
                         product: t,
                         returnRef: J,
@@ -211,8 +211,8 @@ t.Z = function (e) {
                         : ed
                           ? (0, a.jsx)(Y, {
                                 disabled: ep,
-                                onClick: e_ ? ex : eT,
-                                submitting: ev,
+                                onClick: e_ ? ex : ev,
+                                submitting: eT,
                                 children: V.Z.Messages.COLLECTIBLES_USE_NOW
                             })
                           : (0, a.jsx)(Y, {
@@ -237,7 +237,7 @@ t.Z = function (e) {
                       [z.mysteryShopCard]: eb
                   }),
                   onBlur: () => et(!1),
-                  onClick: eL,
+                  onClick: eN,
                   id: 'shop-item-'.concat(t.skuId),
                   children: [
                       el &&

@@ -15,8 +15,8 @@ var i = n(735250),
     p = n(370648),
     g = n(569527),
     T = n(979007),
-    f = n(689938),
-    S = n(842221);
+    S = n(689938),
+    f = n(842221);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
         { tabs: C, selectedTab: N, onSelectTab: A } = (0, E.i)();
@@ -29,7 +29,7 @@ t.Z = function () {
         a.useEffect(() => {
             r.g5();
         }, []);
-    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, isSearchVisible: x } = (0, _.M)(),
+    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: O, onSearchSubmit: R, isSearchVisible: x } = (0, _.M)(),
         {
             searchBarState: b,
             onTabsAvailableWidthChange: M,
@@ -43,28 +43,28 @@ t.Z = function () {
         G = null != U,
         w = a.useCallback(
             (e) => {
-                A(e), x && R();
+                A(e), x && O();
             },
-            [x, R, A]
+            [x, O, A]
         );
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: f.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: x ? S.search : void 0,
+                className: x ? f.search : void 0,
                 children: [
                     !x && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     (0, i.jsx)(c.aV, {
                         icon: x || G ? s.ArrowLargeLeftIcon : s.AppsIcon,
                         iconColor: x ? s.tokens.colors.INTERACTIVE_NORMAL : void 0,
-                        onClick: G ? j : x ? R : void 0
+                        onClick: G ? j : x ? O : void 0
                     }),
                     G || x
                         ? (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
                               color: G ? void 0 : 'header-primary',
-                              className: S.alternateHeader,
-                              children: G ? f.Z.Messages.BACK : f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
+                              className: f.alternateHeader,
+                              children: G ? S.Z.Messages.BACK : S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
                           })
                         : (0, i.jsx)(d.Z, {
                               tabs: C,
@@ -75,10 +75,10 @@ t.Z = function () {
                     !G &&
                         (0, i.jsx)(u.Z, {
                             query: v,
-                            placeholder: f.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
+                            placeholder: S.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
                             onTextChange: L,
-                            onClear: R,
-                            onSubmit: O,
+                            onClear: O,
+                            onSubmit: R,
                             onCollapsedClick: P,
                             state: b,
                             onBlur: D

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 });
 var i = n(735250),
@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(479446),
     g = n(522558),
     T = n(441623),
-    f = n(317271),
-    S = n(674701),
+    S = n(317271),
+    f = n(674701),
     C = n(474936),
     N = n(981631),
     A = n(689938),
@@ -31,9 +31,9 @@ let L = {
     width: 14,
     height: 14
 };
-function R(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: R } = e,
-        { analyticsLocations: O } = (0, u.ZP)(),
+function O(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: O } = e,
+        { analyticsLocations: R } = (0, u.ZP)(),
         { isHovered: x, setIsHovered: b, onMouseEnter: M, onMouseLeave: P } = (0, h.Z)(200, 300),
         { enableEmojiCTA: D } = g.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     a.useEffect(() => {
@@ -64,8 +64,8 @@ function R(e) {
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
-                    analyticsLocation: (0, f.F)(n).actionButton,
-                    analyticsLocations: O,
+                    analyticsLocation: (0, S.F)(n).actionButton,
+                    analyticsLocations: R,
                     analyticsObject: {
                         page: s,
                         section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
@@ -89,7 +89,7 @@ function R(e) {
                       'aria-label': G(),
                       onClick: j,
                       className: r()(Z.actionButton, v.popoutButton, {
-                          [Z.highlight]: R,
+                          [Z.highlight]: O,
                           [Z.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: y,
@@ -133,9 +133,9 @@ function R(e) {
             b(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(S.Z, {
+            (0, i.jsx)(f.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: S.U.COACHMARK,
+                premiumGiftIntentCardType: f.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: M,
                 onMouseLeave: P,

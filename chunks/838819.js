@@ -19,19 +19,19 @@ var a = r(735250),
     E = r(214852),
     I = r(479446),
     x = r(981632),
-    v = r(290026),
-    T = r(819640),
+    T = r(290026),
+    v = r(819640),
     S = r(594174),
-    L = r(626135),
-    N = r(74538),
+    N = r(626135),
+    L = r(74538),
     O = r(335131),
     B = r(597688),
     k = r(328347),
     j = r(307043),
     R = r(223143),
     Z = r(298228),
-    P = r(937510),
-    A = r(309956),
+    A = r(937510),
+    P = r(309956),
     M = r(853748),
     y = r(426171),
     w = r(823941),
@@ -95,7 +95,7 @@ function ea(e) {
 }
 function en(e) {
     let { category: t, initialItemCardRef: r, ...s } = e,
-        i = (0, P.l)(t.products),
+        i = (0, A.l)(t.products),
         l = (0, c.e7)([k.Z], () => k.Z.initialProductSkuId),
         d = n.useCallback(
             (e) => (t) => {
@@ -165,19 +165,19 @@ t.default = function (e) {
     let r = (0, j.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
-        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
-        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, A.B)(r, x),
+        { sessionId: I, scrollerRef: x, scrollHandler: A } = (0, g._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
+        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, P.B)(r, x),
         [z, X] = n.useState(!1),
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
         [el, ec] = n.useState(),
-        ed = (0, c.e7)([T.Z], () => T.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
+        ed = (0, c.e7)([v.Z], () => v.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
         eu = (0, u.f9)(),
         { onClose: ef } = (0, D.Db)(),
         ep = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
-        em = N.ZP.canUseCollectibles(ep),
+        em = L.ZP.canUseCollectibles(ep),
         { categories: eC, isFetchingCategories: e_, error: eg, refreshCategories: eh } = (0, R.Z)();
-    (0, v.P)();
+    (0, T.P)();
     let eb = (0, Z.O)(eC),
         eE = n.useRef(null),
         [eI, ex] = n.useState(!1);
@@ -192,7 +192,7 @@ t.default = function (e) {
                 var e;
                 let t;
                 (t = r ? (w === q.f7.VISIBLE ? el : s) : s),
-                    L.default.track(J.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    N.default.track(J.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: m,
                         source: t,
                         page_session_id: I,
@@ -201,19 +201,19 @@ t.default = function (e) {
                     });
             }
             !em &&
-                L.default.track(J.rMx.PREMIUM_UPSELL_VIEWED, {
+                N.default.track(J.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: et.cd.COLLECTIBLES_SHOP,
                     location_stack: m
                 });
         }, [r, em, m, s, I, M, w, ei, eo, el]);
-    let { dismissCollectiblesShopTabNewBadge: ev } = (0, Y.Z)();
+    let { dismissCollectiblesShopTabNewBadge: eT } = (0, Y.Z)();
     n.useEffect(() => {
-        if ((ev(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
+        if ((eT(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, h.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
                 dismissAction: Q.L.AUTO_DISMISS,
                 forceTrack: !0
             });
-    }, [ev]),
+    }, [eT]),
         n.useEffect(() => {
             !t && (0, p.Y)(J.Z5c.COLLECTIBLES_SHOP);
         }, [t]),
@@ -233,11 +233,11 @@ t.default = function (e) {
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [t, ed, eu, ef]);
-    let eT = n.useCallback(() => {
+    let ev = n.useCallback(() => {
             eh();
         }, [eh]),
-        { setCategoryRef: eS, handleScrollToCategory: eL } = (0, y.xV)(x.current),
-        { reducedMotion: eN } = n.useContext(f.AccessibilityPreferencesContext),
+        { setCategoryRef: eS, handleScrollToCategory: eN } = (0, y.xV)(x.current),
+        { reducedMotion: eL } = n.useContext(f.AccessibilityPreferencesContext),
         eO = n.useRef(null),
         eB = n.useRef(null);
     (0, f.useFocusLock)(eO),
@@ -249,10 +249,10 @@ t.default = function (e) {
         }, [t]);
     let ek = n.useCallback(
         async (e, r, a) => {
-            let n = a && !t && !eN.enabled;
-            ec(e), eo(r), await W(n), r && eL(r);
+            let n = a && !t && !eL.enabled;
+            ec(e), eo(r), await W(n), r && eN(r);
         },
-        [W, eL, t, eN]
+        [W, eN, t, eL]
     );
     return (0, a.jsxs)(_.Gt, {
         value: m,
@@ -265,7 +265,7 @@ t.default = function (e) {
                     className: er.shopScroll,
                     ref: x,
                     onScroll: () => {
-                        if ((P(), null != x.current)) {
+                        if ((A(), null != x.current)) {
                             let e = x.current.getDistanceFromBottom();
                             ea >= q.iA ? X(e < 20) : e <= 200 && en(ea + q.IV);
                         }
@@ -315,7 +315,7 @@ t.default = function (e) {
                                             children: e_
                                                 ? (0, a.jsx)(U.Z, {})
                                                 : null != eg
-                                                  ? (0, a.jsx)(F.Z, { onRetry: eT })
+                                                  ? (0, a.jsx)(F.Z, { onRetry: ev })
                                                   : (0, a.jsx)('div', {
                                                         className: er.categories,
                                                         children: eb

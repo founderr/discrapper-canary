@@ -22,7 +22,7 @@ function h(e) {
     let { isFullScreen: t, isLayer: r, onClose: s, isCatalogView: h, handleTransition: b, transparent: E } = e,
         I = (0, u.ZP)(),
         x = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        v = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
+        T = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
     return (0, a.jsx)(c.ThemeProvider, {
         theme: I,
         children: (e) =>
@@ -34,7 +34,7 @@ function h(e) {
                     [g.headerBarTransparentDarkBackground]: E && (0, l.wj)(I)
                 }),
                 transparent: E,
-                toolbar: t || !v ? null : (0, a.jsx)(n.Fragment, {}),
+                toolbar: t || !T ? null : (0, a.jsx)(n.Fragment, {}),
                 children: [
                     (0, a.jsxs)(a.Fragment, {
                         children: [

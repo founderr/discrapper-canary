@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(164991),
     g = n(28494),
     T = n(746728),
-    f = n(140700),
-    S = n(665807),
+    S = n(140700),
+    f = n(665807),
     C = n(188493),
     N = n(294330),
     A = n(981631),
@@ -40,12 +40,12 @@ let Z = Object.freeze({
         left: 32,
         right: 32
     }),
-    R = {
+    O = {
         page: A.ZY5.GUILD_DISCOVERY,
         object: A.qAy.CARD,
         section: A.jXE.DISCOVER_SEARCH
     },
-    O = o().throttle(m.c6, 1000, {
+    R = o().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
@@ -86,7 +86,7 @@ function x(e) {
             j((0, u.P)());
         }, [A]),
         a.useEffect(() => {
-            O({
+            R({
                 loadId: t,
                 searchId: y,
                 query: A,
@@ -113,9 +113,9 @@ function x(e) {
                                     !U &&
                                         (0, i.jsxs)('div', {
                                             className: v.headingFilters,
-                                            children: [(0, i.jsx)(f.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(S.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
                                         }),
-                                    (P || M) && (0, i.jsx)(S.Z, { loadId: t })
+                                    (P || M) && (0, i.jsx)(f.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -182,7 +182,7 @@ function x(e) {
                             style: n,
                             children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await J(e, t, b, R),
+                                onClick: async (e) => await J(e, t, b, O),
                                 onView: (e) => z(e)
                             })
                         },

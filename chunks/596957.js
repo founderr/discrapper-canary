@@ -16,16 +16,16 @@ var i = n(735250),
     p = n(699516),
     g = n(974042),
     T = n(451478),
-    f = n(434184),
-    S = n(701861),
+    S = n(434184),
+    f = n(701861),
     C = n(437314),
     N = n(696577),
     A = n(163417),
     v = n(492347),
     Z = n(42575),
     L = n(617015),
-    R = n(981631),
-    O = n(689938),
+    O = n(981631),
+    R = n(689938),
     x = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: s } = e,
@@ -35,7 +35,7 @@ t.Z = function (e) {
         y = (0, l.e7)([p.Z], () => p.Z.getRelationshipCount()),
         [j, U] = a.useState(() => {
             let e = {};
-            for (let t of Object.values(R.pJs)) e[t] = '';
+            for (let t of Object.values(O.pJs)) e[t] = '';
             return e;
         }),
         G = () => {
@@ -59,11 +59,11 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [j, t]),
-        B = (0, I.A)({ location: 'people_list' }) && t === R.pJs.PENDING && M.filter(R.pJs.SPAM).length > 0,
+        B = (0, I.A)({ location: 'people_list' }) && t === O.pJs.PENDING && M.filter(O.pJs.SPAM).length > 0,
         V = M.filter(t, j[t]);
     if (
         (a.useEffect(() => {
-            t === R.pJs.ALL && (0, m.d$)();
+            t === O.pJs.ALL && (0, m.d$)();
         }, [t]),
         0 === V.length && '' === j[t])
     )
@@ -75,9 +75,9 @@ t.Z = function (e) {
                     type: t,
                     onClick: B
                         ? G
-                        : t !== R.pJs.PENDING
+                        : t !== O.pJs.PENDING
                           ? () => {
-                                c.Z.setSection(R.pJs.ADD_FRIEND);
+                                c.Z.setSection(O.pJs.ADD_FRIEND);
                             }
                           : void 0
                 },
@@ -86,12 +86,12 @@ t.Z = function (e) {
         });
     let H = [V],
         F = 0 === V.length && '' !== j[t],
-        Y = V.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
-        z = t === R.pJs.PENDING && Y > 0 && Y >= L.yf;
+        Y = V.filter((e) => e.type === O.OGo.PENDING_INCOMING).length,
+        z = t === O.pJs.PENDING && Y > 0 && Y >= L.yf;
     return (0, i.jsx)(h.Gt, {
         value: b,
         children: (0, i.jsxs)(u.Z, {
-            section: R.jXE.FRIENDS_LIST,
+            section: O.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
                     className: r()(x.searchBar, F ? x.searchEmptyState : null),
@@ -107,16 +107,16 @@ t.Z = function (e) {
                             id: s,
                             title: (function (e, t) {
                                 switch (e) {
-                                    case R.pJs.ONLINE:
-                                        return O.Z.Messages.FRIENDS_ONLINE_HEADER.format({ online: t.toString() });
-                                    case R.pJs.PENDING:
-                                        return O.Z.Messages.FRIENDS_PENDING_HEADER.format({ count: t.toString() });
-                                    case R.pJs.SUGGESTIONS:
-                                        return O.Z.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({ count: t.toString() });
-                                    case R.pJs.BLOCKED:
-                                        return O.Z.Messages.FRIENDS_BLOCKED_HEADER.format({ count: t.toString() });
+                                    case O.pJs.ONLINE:
+                                        return R.Z.Messages.FRIENDS_ONLINE_HEADER.format({ online: t.toString() });
+                                    case O.pJs.PENDING:
+                                        return R.Z.Messages.FRIENDS_PENDING_HEADER.format({ count: t.toString() });
+                                    case O.pJs.SUGGESTIONS:
+                                        return R.Z.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({ count: t.toString() });
+                                    case O.pJs.BLOCKED:
+                                        return R.Z.Messages.FRIENDS_BLOCKED_HEADER.format({ count: t.toString() });
                                     default:
-                                        return O.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
+                                        return R.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
                                 }
                             })(t, V.length)
                         }),
@@ -129,8 +129,8 @@ t.Z = function (e) {
                                 onClick: (e) => {
                                     e.stopPropagation(), d.Z.confirmClearPendingRelationships(Y);
                                 },
-                                'aria-label': O.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
-                                children: O.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
+                                'aria-label': R.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
+                                children: R.Z.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
                             })
                     ]
                 }),
@@ -144,25 +144,25 @@ t.Z = function (e) {
                           statusSections: H,
                           renderRow: function (e) {
                               switch (t) {
-                                  case R.pJs.BLOCKED:
-                                      return (0, i.jsx)(f.Z, {
+                                  case O.pJs.BLOCKED:
+                                      return (0, i.jsx)(S.Z, {
                                           ...e,
                                           isFocused: D
                                       });
-                                  case R.pJs.PENDING:
+                                  case O.pJs.PENDING:
                                       return (0, i.jsx)(N.Z, {
                                           ...e,
                                           isFocused: D
                                       });
-                                  case R.pJs.SUGGESTIONS:
+                                  case O.pJs.SUGGESTIONS:
                                       return (0, i.jsx)(Z.Z, {
                                           ...e,
                                           isFocused: D
                                       });
-                                  case R.pJs.ONLINE:
-                                  case R.pJs.ALL:
+                                  case O.pJs.ONLINE:
+                                  case O.pJs.ALL:
                                   default:
-                                      return (0, i.jsx)(S.Z, {
+                                      return (0, i.jsx)(f.Z, {
                                           ...e,
                                           isFocused: D
                                       });
@@ -180,7 +180,7 @@ t.Z = function (e) {
                                     size: o.ButtonSizes.TINY,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-xs/medium',
-                                        children: O.Z.Messages.FRIEND_REQUESTS_VIEW_SPAM_REQUESTS
+                                        children: R.Z.Messages.FRIEND_REQUESTS_VIEW_SPAM_REQUESTS
                                     })
                                 })
                               : null

@@ -16,16 +16,16 @@ var i,
     p = n(122810),
     g = n(833664),
     T = n(503438),
-    f = n(420660),
-    S = n(74433),
+    S = n(420660),
+    f = n(74433),
     C = n(906732),
     N = n(812206),
     A = n(933557),
     v = n(194082),
     Z = n(264165),
     L = n(630186),
-    R = n(925329),
-    O = n(382182),
+    O = n(925329),
+    R = n(382182),
     x = n(871118),
     b = n(707409),
     M = n(849171),
@@ -388,7 +388,7 @@ let ee = (e) => {
         let t,
             { activity: i, user: a, getAssetImage: r, guildId: l } = e,
             { name: c, details: d, assets: _, application_id: E } = i;
-        if (null != _ && (0, f.Z)(i)) {
+        if (null != _ && (0, S.Z)(i)) {
             var m;
             t = (0, s.jsx)(Z.Z, {
                 className: F.twitchSectionPreviewWrapper,
@@ -446,7 +446,7 @@ let ee = (e) => {
         var t, n;
         let { activity: i, user: a, applicationStream: r, onPreviewClick: l, guildId: o } = e,
             d = (0, c.e7)([D.Z], () => D.Z.getChannel(r.channelId)),
-            [_, E] = (0, O.wq)(d),
+            [_, E] = (0, R.wq)(d),
             h = (0, s.jsxs)(u.Clickable, {
                 onClick: _ ? l : void 0,
                 className: F.applicationStreamingPreviewWrapper,
@@ -459,11 +459,11 @@ let ee = (e) => {
                         className: F.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: (0, O.P9)(E)
+                        children: (0, R.P9)(E)
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(Q, {
             children: [
                 (0, s.jsxs)('div', {
@@ -513,9 +513,9 @@ let ee = (e) => {
                 (0, s.jsxs)('div', {
                     className: F.embeddedActivityTopRow,
                     children: [
-                        (0, s.jsx)(R.Z, {
+                        (0, s.jsx)(O.Z, {
                             game: p,
-                            size: R.Z.Sizes.XSMALL,
+                            size: O.Z.Sizes.XSMALL,
                             className: F.embeddedActivityIcon
                         }),
                         (0, s.jsx)('div', {

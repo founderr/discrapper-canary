@@ -27,16 +27,16 @@ var i,
     p = n(565799),
     g = n(501655),
     T = n(192079),
-    f = n(427679),
-    S = n(448206),
+    S = n(427679),
+    f = n(448206),
     C = n(496675),
     N = n(938475),
     A = n(626135),
     v = n(823379),
     Z = n(15274),
     L = n(924301),
-    R = n(504160),
-    O = n(151864),
+    O = n(504160),
+    R = n(151864),
     x = n(835184),
     b = n(725436),
     M = n(497656),
@@ -138,7 +138,7 @@ function H(e) {
         ),
         a = (0, _.KS)(n);
     return (0, s.jsx)(V, {
-        onClickCloseIcon: () => (0, R.ji)({ eventId: null == t ? void 0 : t.id }),
+        onClickCloseIcon: () => (0, O.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
         topic: t.name,
         location: n.name,
@@ -163,13 +163,13 @@ function F(e) {
         a = (0, c.e7)([L.ZP], () => L.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         r = (0, c.e7)([x.Z], () => x.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
-        !a && null == r && (0, R._6)(t.id),
+        !a && null == r && (0, O._6)(t.id),
         (0, s.jsxs)(d.Button, {
             fullWidth: !0,
             className: B.joinButton,
             innerClassName: B.rsvpButton,
             onClick: function () {
-                (0, U.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, R.L_)(t.id), 1000)),
+                (0, U.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, O.L_)(t.id), 1000)),
                     A.default.track(w.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
@@ -238,7 +238,7 @@ function Y(e) {
                                     notice_type: i,
                                     guild_id: n.guild_id
                                 }),
-                                    (0, R.L_)(n.id);
+                                    (0, O.L_)(n.id);
                             },
                             className: B.closeIcon,
                             'aria-label': k.Z.Messages.CLOSE,
@@ -305,7 +305,7 @@ function z(e) {
     return null == n
         ? null
         : (0, s.jsx)(V, {
-              onClickCloseIcon: () => (0, R.ji)({ eventId: null == t ? void 0 : t.id }),
+              onClickCloseIcon: () => (0, O.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: k.Z.Messages.HAPPENING_NOW,
               topic: t.name,
               location: (0, b.m)(n, !0),
@@ -352,7 +352,7 @@ function q(e) {
         a = (0, c.e7)([p.Z], () => p.Z.getParticipantCount(n.id, g.pV.AUDIENCE), [n.id]),
         r = k.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(a) });
     return (0, s.jsx)(V, {
-        onClickCloseIcon: () => (0, R.ji)({ stageId: null == t ? void 0 : t.id }),
+        onClickCloseIcon: () => (0, O.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
         location: n.name,
         details: r,
@@ -383,7 +383,7 @@ function Q(e) {
         a = t.getGuildId(),
         l = r.useMemo(() => n.slice(0, 3), [n]),
         _ = (0, c.e7)([C.Z], () => C.Z.can(w.Plq.CONNECT, t)),
-        E = (0, S.Z)(t.id),
+        E = (0, f.Z)(t.id),
         h = k.Z.Messages.JOIN;
     switch (i) {
         case 1:
@@ -439,12 +439,12 @@ function Q(e) {
             i = (0, M.y)(t.id),
             a = (0, D.k5)(t.id),
             r = (0, D.Vm)(t.id),
-            l = (0, c.e7)([f.Z], () => f.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+            l = (0, c.e7)([S.Z], () => S.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
             { isStageNoticeHidden: o, isEventNoticeHidden: d } = (0, c.cj)(
-                [O.Z],
+                [R.Z],
                 () => ({
-                    isStageNoticeHidden: O.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
-                    isEventNoticeHidden: O.Z.isLiveChannelNoticeHidden({ eventId: null == a ? void 0 : a.id })
+                    isStageNoticeHidden: R.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
+                    isEventNoticeHidden: R.Z.isLiveChannelNoticeHidden({ eventId: null == a ? void 0 : a.id })
                 }),
                 [l, a]
             ),

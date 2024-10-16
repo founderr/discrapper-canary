@@ -27,8 +27,8 @@ var i = n(735250),
     p = n(960048),
     g = n(565216),
     T = n(981631),
-    f = n(921944),
-    S = n(689938),
+    S = n(921944),
+    f = n(689938),
     C = n(67037);
 let N = [],
     A = (e) => {
@@ -72,7 +72,7 @@ let N = [],
         });
     };
 function Z(e) {
-    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: M, changeLogId: P, button: D, body: y } = e,
+    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: O, headerClassName: R, subHeader: x, subHeaderExtra: b, featureCards: M, changeLogId: P, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
         G = (0, _.Dt)(),
         w = M.length % 2 == 0,
@@ -161,7 +161,7 @@ function Z(e) {
                         change_log_id: P,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != Z && (0, h.EW)(Z, { dismissAction: f.L.DISMISS });
+                        null != Z && (0, h.EW)(Z, { dismissAction: S.L.DISMISS });
                 }
             );
         }, [Z, P]),
@@ -181,8 +181,8 @@ function Z(e) {
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'display-md',
-                            className: r()(C.headerText, O),
-                            children: R
+                            className: r()(C.headerText, R),
+                            children: O
                         }),
                         'video' === s.type
                             ? (0, i.jsx)(E.Z, {
@@ -211,7 +211,7 @@ function Z(e) {
                                       null == en
                                           ? void 0
                                           : en.map((e) => {
-                                                let t = S.Z.getLanguages().find((t) => t.code === e.locale);
+                                                let t = f.Z.getLanguages().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, i.jsx)(

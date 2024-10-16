@@ -22,16 +22,16 @@ var r = n(91192),
     p = n(626135),
     g = n(74538),
     T = n(502087),
-    f = n(650032),
-    S = n(104494),
+    S = n(650032),
+    f = n(104494),
     C = n(639119),
     N = n(655525),
     A = n(314684),
     v = n(52188),
     Z = n(248042),
     L = n(924540),
-    R = n(649765),
-    O = n(565626),
+    O = n(649765),
+    R = n(565626),
     x = n(976465),
     b = n(701910),
     M = n(938736),
@@ -54,11 +54,11 @@ let B = (e) => {
         z = (0, g.Qo)(F, Y),
         W = (0, r.JA)('nitro'),
         K = (0, C.N)(),
-        q = (0, S.Ng)(),
+        q = (0, f.Ng)(),
         Q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
         X = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == K,
         J = (0, Z.Vi)(),
-        $ = (0, O.ZP)(),
+        $ = (0, R.ZP)(),
         ee = (0, A.$_)(),
         et = (0, x.V6)(),
         en = (0, M.Kn)(w),
@@ -68,7 +68,7 @@ let B = (e) => {
         er = (0, l.e7)([E.Z], () => E.Z.hasLayers()),
         el = null != es ? es : null == F ? void 0 : F.createdAt,
         eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || z,
-        { enabled: ec } = f._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
+        { enabled: ec } = S._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         ed = ec && (null == K ? void 0 : K.trial_id) === D.a7,
         [eu, e_] = (0, _.US)(Q ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(eo = eo || (null != F && null != el && Date.now() - el.getTime() > k))) return null;
@@ -99,7 +99,7 @@ let B = (e) => {
                         (i = 3))
                       : null == K || ed
                         ? en
-                            ? ((n = (0, s.jsx)(R.ZP, {
+                            ? ((n = (0, s.jsx)(O.ZP, {
                                   isSelected: a,
                                   onSelect: () => (0, u.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: j.L.TAKE_ACTION })
                               })),
@@ -128,5 +128,5 @@ let B = (e) => {
         className: t,
         children: n
     });
-    return en ? (0, s.jsx)(R.Em, { children: eE }) : ei && !er ? (0, s.jsx)(R.A7, { children: () => eE }) : eE;
+    return en ? (0, s.jsx)(O.Em, { children: eE }) : ei && !er ? (0, s.jsx)(O.A7, { children: () => eE }) : eE;
 };

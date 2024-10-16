@@ -20,7 +20,7 @@ var a = n(704215),
     I = n(74316);
 function p(e) {
     var t, n;
-    let { content: p, renderModalProps: g, analyticsLocations: T, analyticsLocation: f, isLightTheme: S } = e,
+    let { content: p, renderModalProps: g, analyticsLocations: T, analyticsLocation: S, isLightTheme: f } = e,
         C = 'AnnouncementModalVariant1_'.concat(a.z[Number(p.dismissKey)]),
         { onClose: N } = g,
         A = null != p.button && '' !== p.button.copy ? p.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
@@ -35,7 +35,7 @@ function p(e) {
                           subscriptionTier: _.Si.TIER_2,
                           analyticsLocations: T,
                           analyticsObject: {
-                              ...f,
+                              ...S,
                               object: E.qAy.BUTTON_CTA,
                               objectType: E.Qqv.TIER_2
                           },
@@ -52,29 +52,29 @@ function p(e) {
                           children: h.Z.Messages.BOGO_TERMS_APPLY
                       })
                 : void 0,
-        R = {
+        O = {
             type: 'video',
-            src: S ? p.heroArtVideoLinkLightTheme : p.videoLink
+            src: f ? p.heroArtVideoLinkLightTheme : p.videoLink
         };
     null != p.heroArtVideoSubtitles &&
-        (R.subtitles = p.heroArtVideoSubtitles.map((e) => ({
+        (O.subtitles = p.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
         ('' !== p.heroArtImageLinkDarkTheme || '' !== p.heroArtImageLinkLightTheme) &&
-            (R = {
+            (O = {
                 type: 'image',
-                src: S ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
+                src: f ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
             });
-    let O = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let R = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         x =
             '' !== p.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
                           text: p.modalTopPill,
                           className: m.modalTopPill,
-                          colorOptions: O
+                          colorOptions: R
                       })
                 : void 0;
     return {
@@ -84,11 +84,11 @@ function p(e) {
         subHeader: p.subheader,
         subHeaderExtra: L,
         body: p.body,
-        heroArt: R,
+        heroArt: O,
         featureCards: p.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: S ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
         changeLogId: C,

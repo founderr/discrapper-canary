@@ -17,16 +17,16 @@ var a = n(243814),
     p = n(592125),
     g = n(293273),
     T = n(885110),
-    f = n(451478),
-    S = n(630388),
+    S = n(451478),
+    f = n(630388),
     C = n(823379),
     N = n(591759),
     A = n(228488),
     v = n(996106),
     Z = n(914946),
     L = n(452426),
-    R = n(561205),
-    O = n(600027),
+    O = n(561205),
+    R = n(600027),
     x = n(852926),
     b = n(186901),
     M = n(981631);
@@ -140,7 +140,7 @@ t.Z = {
         },
         handler(e) {
             let { socket: t } = e,
-                { channel: a, guild: s } = (0, O.T)(),
+                { channel: a, guild: s } = (0, R.T)(),
                 l = I.Z.getWindow(M.KJ3.CHANNEL_CALL_POPOUT);
             (null == l ? void 0 : l.closed) && (l = null);
             let o = null != l ? M.IlC.POPOUT : M.IlC.APP;
@@ -171,12 +171,12 @@ t.Z = {
             let { socket: n } = e,
                 i = n.application.id;
             if (null == i) throw new v.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            let a = null === (t = (0, R.Z)()) || void 0 === t ? void 0 : t.id;
+            let a = null === (t = (0, O.Z)()) || void 0 === t ? void 0 : t.id;
             if (null == a) throw new v.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'Unable to find selected channel');
             return new Promise((e, t) => {
                 !(function (e, t) {
                     var n;
-                    let i = f.Z.getLastFocusedWindowId(),
+                    let i = S.Z.getLastFocusedWindowId(),
                         a = null == i ? null : null === (n = (0, _.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
                     if (null == a) throw new v.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'No valid window found');
                     let s = a.document.createElement('input');
@@ -221,8 +221,8 @@ t.Z = {
             (0, Z.bu)(n.transport);
             let a = n.application.id;
             if (null == a) throw new v.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            if (!(0, S.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new v.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let s = (0, R.Z)();
+            if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new v.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            let s = (0, O.Z)();
             if (null == s) throw new v.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
             if (!N.Z.isDiscordCdnUrl(i)) throw new v.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, m.Z)({

@@ -15,16 +15,16 @@ var s,
     p = n(981631),
     g = n(71080);
 let T = new Set(),
-    f = p.QZA.CLOSED,
-    S = !1,
+    S = p.QZA.CLOSED,
+    f = !1,
     C = null,
     N = null,
     A = null,
     v = null,
     Z = null,
     L = null,
-    R = _.K.get(g.kf) || !1;
-function O(e) {
+    O = _.K.get(g.kf) || !1;
+function R(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
     return null != t && null == n[t] && (n[t] = h.we(t)), n;
@@ -32,14 +32,14 @@ function O(e) {
 function x() {
     if (((A = m.Z.getChannel()), (v = m.Z.getCategory()), null == A)) return !1;
     let e = A.getGuildId();
-    (N = C = O(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (S = !1), (f = p.QZA.CLOSED), T.clear();
+    (N = C = R(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (S = p.QZA.CLOSED), T.clear();
 }
 class b extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, I.Z);
     }
     hasChanges() {
-        return S;
+        return f;
     }
     showNotice() {
         return this.hasChanges();
@@ -57,7 +57,7 @@ class b extends (s = u.ZP.Store) {
         return Z;
     }
     get formState() {
-        return f;
+        return S;
     }
     get isLockable() {
         return a;
@@ -72,7 +72,7 @@ class b extends (s = u.ZP.Store) {
         return v;
     }
     get advancedMode() {
-        return R;
+        return O;
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
@@ -105,8 +105,8 @@ class b extends (s = u.ZP.Store) {
                     [t]: s
                 }),
                 T.add(t),
-                (f = p.QZA.OPEN),
-                (S = !d().isEqual(C, N)),
+                (S = p.QZA.OPEN),
+                (f = !d().isEqual(C, N)),
                 (i = h.o4(A, v));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
@@ -118,7 +118,7 @@ class b extends (s = u.ZP.Store) {
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (f = p.QZA.CLOSED), (C = null), (N = null), (A = null), (v = null), (S = !1), T.clear(), (Z = null), (L = null);
+            (S = p.QZA.CLOSED), (C = null), (N = null), (A = null), (v = null), (f = !1), T.clear(), (Z = null), (L = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -131,7 +131,7 @@ class b extends (s = u.ZP.Store) {
                         v = m.Z.getCategory();
                         let t = A.getGuildId();
                         if (null == t) return !1;
-                        N = O(A);
+                        N = R(A);
                         let n = {};
                         return (
                             T.forEach((e) => {
@@ -152,14 +152,14 @@ class b extends (s = u.ZP.Store) {
             return n;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-            f = p.QZA.SUBMITTING;
+            S = p.QZA.SUBMITTING;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
             let { silent: t } = e;
-            t ? (f = p.QZA.OPEN) : ((f = p.QZA.CLOSED), x());
+            t ? (S = p.QZA.OPEN) : ((S = p.QZA.CLOSED), x());
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;
-            (R = t), _.K.set(g.kf, t);
+            (O = t), _.K.set(g.kf, t);
         }
     }));

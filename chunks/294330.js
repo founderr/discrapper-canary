@@ -24,16 +24,16 @@ var i = n(735250),
     p = n(66637),
     g = n(782738),
     T = n(371260),
-    f = n(372769),
-    S = n(134432),
+    S = n(372769),
+    f = n(134432),
     C = n(695346),
     N = n(768581),
     A = n(356164),
     v = n(981631),
     Z = n(689938),
     L = n(534238),
-    R = n(129512),
-    O = n(330065),
+    O = n(129512),
+    R = n(330065),
     x = n(755386);
 function b(e) {
     let { guild: t, onClick: s, onView: l } = e,
@@ -80,15 +80,15 @@ function b(e) {
             let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, S.x_)()
+                size: 300 * (0, f.x_)()
             });
             if (null != e) return e;
             if (G) return x;
             switch (U) {
                 case v.BRd.DARK:
-                    return R;
-                case v.BRd.LIGHT:
                     return O;
+                case v.BRd.LIGHT:
+                    return R;
             }
         }, [t.discoverySplash, t.id, G, U]),
         k = a.useMemo(
@@ -170,7 +170,7 @@ function b(e) {
                                 (0, i.jsxs)('div', {
                                     className: L.title,
                                     children: [
-                                        (0, i.jsx)(f.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             className: L.guildBadge,
                                             guild: t,
                                             tooltipColor: c.Tooltip.Colors.PRIMARY

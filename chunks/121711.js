@@ -15,8 +15,8 @@ var i = n(735250),
     p = n(113434),
     g = n(833435),
     T = n(150560),
-    f = n(558652),
-    S = n(736683),
+    S = n(558652),
+    f = n(736683),
     C = n(452081),
     N = n(46140),
     A = n(981631),
@@ -24,18 +24,18 @@ var i = n(735250),
     Z = n(431418);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
-        { onScroll: L, scrollPosition: R } = (0, c.M)(),
-        O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
+        { onScroll: L, scrollPosition: O } = (0, c.M)(),
+        R = T.Z.getState().getUtmCurrentContext(),
+        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? f.Z : f.j;
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
             type: s.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: O.utmSourceCurrent,
-                utm_medium_current: O.utmMediumCurrent,
-                utm_campaign_current: O.utmCampaignCurrent,
-                utm_content_current: O.utmContentCurrent,
+                utm_source_current: R.utmSourceCurrent,
+                utm_medium_current: R.utmMediumCurrent,
+                utm_campaign_current: R.utmCampaignCurrent,
+                utm_content_current: R.utmContentCurrent,
                 tab: t
             }
         });
@@ -49,7 +49,7 @@ t.Z = function () {
         className: Z.container,
         children: [
             (0, i.jsxs)(h.ZP, {
-                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(h.z6, { scrollPosition: R }), (0, i.jsx)(h.aV, { icon: r.QuestsIcon })]
+                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(h.z6, { scrollPosition: O }), (0, i.jsx)(h.aV, { icon: r.QuestsIcon })]
             }),
             (0, i.jsxs)(m.Z, {
                 onScroll: L,
@@ -75,7 +75,7 @@ t.Z = function () {
                                 onTabSelect: n,
                                 className: Z.tabs
                             }),
-                            t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
+                            t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {})
                         ]
                     })
                 ]

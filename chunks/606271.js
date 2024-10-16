@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -21,15 +21,15 @@ var i = n(392711),
     p = n(594174),
     g = n(979651),
     T = n(626135),
-    f = n(823379),
-    S = n(358085),
+    S = n(823379),
+    f = n(358085),
     C = n(914946),
     N = n(238679),
     A = n(863141),
     v = n(981631),
     Z = n(701488),
     L = n(65154);
-function R(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,9 +42,9 @@ function R(e, t, n) {
         e
     );
 }
-class O {
+class R {
     loadServer() {
-        for (let e of (S.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+        for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
     }
@@ -89,7 +89,7 @@ class O {
                 (t = v.zMe.MESSAGE_DELETE), (n = e.channelId), (i = { id: e.id }), (a = ''.concat(t).concat(e.id));
                 break;
             default:
-                return (0, f.vE)(e);
+                return (0, S.vE)(e);
         }
         null != n &&
             this.rpcServer.dispatchToSubscriptions(
@@ -285,6 +285,6 @@ class O {
         this.rpcServer.dispatchToSubscriptions(v.zMe.USER_ACHIEVEMENT_UPDATE, (e) => e.socket.application.id === n, { user_achievement: t });
     }
     constructor(e) {
-        R(this, 'rpcServer', void 0), R(this, 'transports', void 0), R(this, 'rpcCommandHandlers', void 0), R(this, 'rpcEventHandlers', void 0), R(this, 'stores', void 0), R(this, 'registerTransportsForEmbeddedPlatform', void 0), (this.rpcServer = e.server), (this.transports = e.transports), (this.rpcCommandHandlers = e.commands), (this.rpcEventHandlers = e.events), (this.stores = e.stores), (this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform);
+        O(this, 'rpcServer', void 0), O(this, 'transports', void 0), O(this, 'rpcCommandHandlers', void 0), O(this, 'rpcEventHandlers', void 0), O(this, 'stores', void 0), O(this, 'registerTransportsForEmbeddedPlatform', void 0), (this.rpcServer = e.server), (this.transports = e.transports), (this.rpcCommandHandlers = e.commands), (this.rpcEventHandlers = e.events), (this.stores = e.stores), (this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform);
     }
 }

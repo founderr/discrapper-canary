@@ -22,16 +22,16 @@ var i = n(735250),
     p = n(410575),
     g = n(941129),
     T = n(634894),
-    f = n(586902),
-    S = n(570928),
+    S = n(586902),
+    f = n(570928),
     C = n(100527),
     N = n(906732),
     A = n(676742),
     v = n(1585),
     Z = n(304761),
     L = n(865427),
-    R = n(571250),
-    O = n(628581),
+    O = n(571250),
+    R = n(628581),
     x = n(55311),
     b = n(575175),
     M = n(64220),
@@ -42,7 +42,7 @@ var i = n(735250),
     U = n(605236),
     G = n(243778),
     w = n(258609),
-    k = n(331541),
+    k = n(443669),
     B = n(332473),
     V = n(240504),
     H = n(637906),
@@ -76,8 +76,8 @@ var i = n(735250),
     ep = n(51144),
     eg = n(998502),
     eT = n(870569),
-    ef = n(345243),
-    eS = n(115530),
+    eS = n(345243),
+    ef = n(115530),
     eC = n(981631),
     eN = n(215023),
     eA = n(689938),
@@ -96,8 +96,8 @@ function eZ(e, t, n) {
     );
 }
 let eL = eg.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
-    eR = 30 * eh.Z.Millis.DAY;
-function eO(e) {
+    eO = 30 * eh.Z.Millis.DAY;
+function eR(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, A.Z)(null == a ? void 0 : a.avatarDecoration),
         d = (0, e_.NZ)({
@@ -188,7 +188,7 @@ class ex extends a.PureComponent {
             c = null != n;
         return (
             (c || (o && s.isPomelo())) &&
-                (e = (0, i.jsx)(S.Z, {
+                (e = (0, i.jsx)(f.Z, {
                     hoverText: a,
                     forceHover: t,
                     children: c
@@ -203,18 +203,18 @@ class ex extends a.PureComponent {
                 children: [
                     (0, i.jsx)('div', {
                         className: ev.panelTitleContainer,
-                        children: (0, i.jsx)(eS.Z, { children: l })
+                        children: (0, i.jsx)(ef.Z, { children: l })
                     }),
                     (0, i.jsx)('div', {
                         className: ev.panelSubtextContainer,
-                        children: (0, i.jsx)(ef.Z, { children: null != e ? e : a })
+                        children: (0, i.jsx)(eS.Z, { children: null != e ? e : a })
                     })
                 ]
             })
         );
     }
     renderAvatarWithPopout() {
-        return (0, i.jsx)(eO, {
+        return (0, i.jsx)(eR, {
             ...this.props,
             handleMouseLeave: this.handleMouseLeave,
             renderNameTag: () => this.renderNameTag()
@@ -259,7 +259,7 @@ class ex extends a.PureComponent {
                                   serverMute: s,
                                   suppress: l,
                                   awaitingRemote: a,
-                                  tooltipText: d ? eA.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, O.Z)(n, s, l, a),
+                                  tooltipText: d ? eA.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, R.Z)(n, s, l, a),
                                   tooltipColor: d ? E.TooltipColors.GREEN : void 0,
                                   tooltipForceOpen: d || void 0,
                                   onMouseEnter: this.handleMouseEnterMute,
@@ -487,20 +487,20 @@ function eb() {
             streaming: null != el.Z.findActivity((e) => e.type === eC.IIU.STREAMING),
             status: el.Z.getStatus()
         })),
-        d = (0, f.Z)({ userId: n }),
+        d = (0, S.Z)({ userId: n }),
         u = ep.ZP.useUserTag(t, { decoration: 'never' }),
         _ = (0, l.e7)([eo.Z], () => eo.Z.hidePersonalInformation),
         m = (0, l.e7)([er.Z, ei.Z], () => {
             let e = er.Z.getChannelId();
             return null != e ? ei.Z.getChannel(e) : null;
         }),
-        { mute: I, selfMute: p, suppress: S } = (0, et.Z)(m),
+        { mute: I, selfMute: p, suppress: f } = (0, et.Z)(m),
         { selfDeaf: A, deaf: v } = (0, ee.Z)(m),
-        R = (0, l.e7)([Z.C], () => {
+        O = (0, l.e7)([Z.C], () => {
             var e;
             return (0, L.fD)() ? (null === (e = Z.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        O = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
+        R = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
         x = (0, l.e7)([es.Z], () => es.Z.getEverSpeakingWhileMuted()),
         b = (0, l.e7)([ea.Z], () => ea.Z.hasLayers()),
         M = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || b || eI.s.isDisallowPopupsSet(),
@@ -528,7 +528,7 @@ function eb() {
                 { enabled: r } = H.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != s && (s.status === eC.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eR);
+                    return null != s && (s.status === eC.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eO);
                 }, [s]);
             return (
                 a.useEffect(() => {
@@ -560,7 +560,7 @@ function eb() {
                 userTag: u,
                 hidePrivateData: _,
                 occluded: M,
-                premiumSubscription: O,
+                premiumSubscription: R,
                 selfDeaf: A,
                 selfMute: p,
                 serverDeaf: v,
@@ -569,8 +569,8 @@ function eb() {
                 speakingWhileMuted: x,
                 status: c,
                 streaming: r,
-                suppress: S,
-                webBuildOverride: R,
+                suppress: f,
+                webBuildOverride: O,
                 awaitingRemote: D,
                 isEligibleForPomelo: P
             })
@@ -616,17 +616,17 @@ function eP(e) {
     let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
         I = t || s || n,
         { Component: p, play: g, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
-        f = n || s ? E.MicrophoneDenyIcon : p,
-        { analyticsLocations: S } = (0, N.ZP)(C.Z.AUDIO_INPUT_BUTTON);
+        S = n || s ? E.MicrophoneDenyIcon : p,
+        { analyticsLocations: f } = (0, N.ZP)(C.Z.AUDIO_INPUT_BUTTON);
     a.useEffect(() => () => g(), [I, g]);
     let A = a.useCallback(
         (e) => {
-            m(e, S);
+            m(e, f);
         },
-        [m, S]
+        [m, f]
     );
     return (0, i.jsx)(N.Gt, {
-        value: S,
+        value: f,
         children: (0, i.jsx)(eT.Z, {
             tooltipText: l,
             tooltipColor: o,
@@ -637,7 +637,7 @@ function eP(e) {
             onMouseLeave: () => {
                 _(), T.onMouseLeave();
             },
-            icon: (0, i.jsx)(f, {
+            icon: (0, i.jsx)(S, {
                 size: 'custom',
                 width: 20,
                 height: 20,
@@ -673,7 +673,7 @@ function eD(e) {
     return (0, i.jsx)(N.Gt, {
         value: p,
         children: (0, i.jsx)(eT.Z, {
-            tooltipText: (0, R.Z)(t, n, s),
+            tooltipText: (0, O.Z)(t, n, s),
             onMouseEnter: h,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {

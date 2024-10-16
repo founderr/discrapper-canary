@@ -15,18 +15,18 @@ var a = n(481060),
 t.Z = (0, E.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: E, redirectUri: I, codeChallenge: p, codeChallengeMethod: g, state: T, guildId: f, channelId: S, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(f, '_').concat(S),
-            R = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
-            O = null !== (t = null == R ? void 0 : R.application) && void 0 !== t ? t : l.Z.getApplication(n);
+        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: E, redirectUri: I, codeChallenge: p, codeChallengeMethod: g, state: T, guildId: S, channelId: f, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(f),
+            O = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
+            R = null !== (t = null == O ? void 0 : O.application) && void 0 !== t ? t : l.Z.getApplication(n);
         return new Promise((e, t) => {
             let l = (0, h.jU)(Z),
-                R = (i) => {
+                O = (i) => {
                     let { clientId: a, location: r } = i;
-                    if (null == a || a === n) l.lock(), s.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', R), null != location ? e(r) : t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
+                    if (null == a || a === n) l.lock(), s.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', O), null != location ? e(r) : t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 };
             if (l.context === m.IlC.OVERLAY) {
-                s.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', R),
+                s.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', O),
                     s.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
                         clientId: n,
@@ -41,8 +41,8 @@ t.Z = (0, E.Z)(
                             codeChallengeMethod: g,
                             state: T,
                             permissions: u.toString(),
-                            guildId: f,
-                            channelId: S,
+                            guildId: S,
+                            channelId: f,
                             prompt: C,
                             disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                             integrationType: v
@@ -58,15 +58,15 @@ t.Z = (0, E.Z)(
                         clientId: n,
                         scopes: null != d ? d : [],
                         disclosures: null != A ? A : [],
-                        callback: R,
+                        callback: O,
                         responseType: E,
                         redirectUri: I,
                         codeChallenge: p,
                         codeChallengeMethod: g,
                         state: T,
                         permissions: u,
-                        guildId: f,
-                        channelId: S,
+                        guildId: S,
+                        channelId: f,
                         prompt: C,
                         disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                         integrationType: v
@@ -77,7 +77,7 @@ t.Z = (0, E.Z)(
                         (0, a.closeModal)(L), t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                null != O && (0, r.Z)(O, S) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+                null != R && (0, r.Z)(R, f) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
             );
         });
     },

@@ -20,8 +20,8 @@ var i = n(442837),
     p = n(28747),
     g = n(962658),
     T = n(29971),
-    f = n(730837),
-    S = n(95897),
+    S = n(730837),
+    f = n(95897),
     C = n(171362),
     N = n(945720);
 function A(e) {
@@ -31,9 +31,9 @@ function A(e) {
         ? (function (e, t) {
               switch (e) {
                   case r.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-                      return t === l.BR.DARK ? I.Z : f.Z;
+                      return t === l.BR.DARK ? I.Z : S.Z;
                   case r.cd.ANIMATED_BANNER_MODAL_UPSELL:
-                      return t === l.BR.DARK ? p.Z : S.Z;
+                      return t === l.BR.DARK ? p.Z : f.Z;
                   case r.cd.PROFILE_EFFECT_MODAL_UPSELL:
                       return t === l.BR.DARK ? T.Z : N.Z;
                   case r.cd.AVATAR_DECORATION_MODAL_UPSELL:

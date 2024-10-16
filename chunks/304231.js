@@ -31,7 +31,7 @@ function T() {
         minGames: 0
     });
 }
-function f() {
+function S() {
     let e = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
         t = a.useCallback((e) => m.GN.getState().setSelectedPlaystyle(e), []);
     return (0, i.jsx)(u.Z, {
@@ -41,7 +41,7 @@ function f() {
         playstyle: e
     });
 }
-function S() {
+function f() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
@@ -65,18 +65,18 @@ t.Z = a.memo(function (e) {
         [N, A] = a.useState(0),
         [v, Z] = a.useState(0),
         L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
-        R = a.useCallback(
+        O = a.useCallback(
             (e) => {
                 A(e), v < e && Z(e);
             },
             [v]
         ),
-        O = a.useCallback(() => {
-            0 === N ? t() : R(N - 1);
-        }, [N, R, t]),
+        R = a.useCallback(() => {
+            0 === N ? t() : O(N - 1);
+        }, [N, O, t]),
         x = a.useCallback(() => {
-            2 === N ? t() : R(N + 1);
-        }, [N, R, t]),
+            2 === N ? t() : O(N + 1);
+        }, [N, O, t]),
         b = a.useMemo(() => 1 === N && null == L, [L, N]),
         M = a.useMemo(
             () => [
@@ -141,9 +141,9 @@ t.Z = a.memo(function (e) {
                 case 0:
                     return (0, i.jsx)(T, {});
                 case 1:
-                    return (0, i.jsx)(f, {});
-                case 2:
                     return (0, i.jsx)(S, {});
+                case 2:
+                    return (0, i.jsx)(f, {});
             }
         }, []);
     return (0, i.jsxs)(s.animated.div, {
@@ -168,14 +168,14 @@ t.Z = a.memo(function (e) {
                         currentStepIndex: N,
                         steps: M,
                         furthestStepIndex: v,
-                        onStepClick: R
+                        onStepClick: O
                     }),
                     (0, i.jsx)(_.i, {
                         className: p.footerButtons,
                         isBackDisabled: !1,
                         isNextDisabled: b,
                         onNextClick: x,
-                        onBackClick: O
+                        onBackClick: R
                     })
                 ]
             })

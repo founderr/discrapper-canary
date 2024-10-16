@@ -1,6 +1,6 @@
 n.d(t, {
     A7: function () {
-        return S;
+        return f;
     },
     Em: function () {
         return C;
@@ -47,8 +47,8 @@ let p = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    f = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION }),
-    S = (e) => {
+    S = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION }),
+    f = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
             shouldShow: !0,
@@ -56,13 +56,13 @@ let p = 'url(#dark-purple-gradient)',
                 (0, i.jsx)(o.Z, {
                     artClassName: I.coachmarkArt,
                     dismissIconClassName: I.exitIcon,
-                    onDismissIconClick: f,
+                    onDismissIconClick: S,
                     dismissIcon: (0, i.jsx)(T, {}),
                     headerClassName: I.incentiveCoachtipContent,
                     contentClassName: I.incentiveCoachtipContainer,
                     pointerClassName: I.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(E.Z5c.NITRO_HOME), f();
+                        (0, c.uL)(E.Z5c.NITRO_HOME), S();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.Z, {

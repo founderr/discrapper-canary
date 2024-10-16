@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getPageSize: function () {
-            return R;
+            return O;
         }
     }),
     n(47120);
@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(628123),
     g = n(703656),
     T = n(108427),
-    f = n(911314),
-    S = n(429899),
+    S = n(911314),
+    f = n(429899),
     C = n(843445),
     N = n(981631),
     A = n(689938),
@@ -45,11 +45,11 @@ let L = (0, I.Un)({
     createPromise: () => Promise.all([n.e('68148'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
-function R(e) {
+function O(e) {
     return e < C.x ? C.b.SMALL : C.b.LARGE;
 }
 l.ZP.initialize();
-class O extends a.PureComponent {
+class R extends a.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, g.s1)().listen((e) => {
@@ -101,13 +101,13 @@ class O extends a.PureComponent {
                 return (0, i.jsx)(d.Z, {
                     page: N.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(S.Z, {
+                    children: (0, i.jsx)(f.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: a,
                         location: r,
                         storeListingId: o.store_listing_id,
-                        pageSize: R(l)
+                        pageSize: O(l)
                     })
                 });
             }),
@@ -121,7 +121,7 @@ class O extends a.PureComponent {
                                 (0, i.jsx)(d.Z, {
                                     page: N.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
-                                    children: (0, i.jsx)(f.Z, {})
+                                    children: (0, i.jsx)(S.Z, {})
                                 })
                         }),
                         (0, i.jsx)(r.AW, {
@@ -146,4 +146,4 @@ class O extends a.PureComponent {
             );
     }
 }
-t.default = (0, r.EN)((0, u.Z)((0, _.Z)(O)));
+t.default = (0, r.EN)((0, u.Z)((0, _.Z)(R)));

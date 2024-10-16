@@ -20,16 +20,16 @@ var i = n(735250),
     p = n(440051),
     g = n(734934),
     T = n(158238),
-    f = n(300284),
-    S = n(680295),
+    S = n(300284),
+    f = n(680295),
     C = n(785717),
     N = n(221292),
     A = n(481046),
     v = n(687158),
     Z = n(899007),
     L = n(648052),
-    R = n(867176),
-    O = n(438163),
+    O = n(867176),
+    R = n(438163),
     x = n(483424),
     b = n(681837),
     M = n(502762),
@@ -296,9 +296,9 @@ function ea(e) {
             });
         })(e_),
         eg = (0, W.g)(z),
-        eT = (0, f.Z)({ analyticsLocations: eo }),
-        { customStatusBubbleEditEnabled: ef } = (0, A.K)({ location: 'AccountProfilePopout' }),
-        eS = (e) => {
+        eT = (0, S.Z)({ analyticsLocations: eo }),
+        { customStatusBubbleEditEnabled: eS } = (0, A.K)({ location: 'AccountProfilePopout' }),
+        ef = (e) => {
             null == z || z(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eo,
@@ -330,7 +330,7 @@ function ea(e) {
                     displayProfile: er,
                     profileType: X.y0.BITE_SIZE,
                     children: [
-                        !ef &&
+                        !eS &&
                             (0, i.jsx)(D.Z, {
                                 profileType: X.y0.BITE_SIZE,
                                 children: (0, i.jsx)(j.Z, {
@@ -341,7 +341,7 @@ function ea(e) {
                         (0, i.jsxs)('header', {
                             className: ee.header,
                             children: [
-                                (0, i.jsx)(R.Z, {
+                                (0, i.jsx)(O.Z, {
                                     user: H,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE
@@ -350,9 +350,9 @@ function ea(e) {
                                     user: H,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
-                                    onOpenProfile: es ? void 0 : eS
+                                    onOpenProfile: es ? void 0 : ef
                                 }),
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: H,
                                     profileType: X.y0.BITE_SIZE,
                                     onCloseProfile: z
@@ -360,7 +360,7 @@ function ea(e) {
                             ]
                         }),
                         (null == er ? void 0 : er.profileEffectId) != null &&
-                            (0, i.jsx)(S.Z, {
+                            (0, i.jsx)(f.Z, {
                                 profileEffectId: null == er ? void 0 : er.profileEffectId,
                                 isHovering: eu
                             }),
@@ -372,7 +372,7 @@ function ea(e) {
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
                                     nickname: F.ZP.getName(null, null, H),
-                                    onOpenProfile: es ? void 0 : eS,
+                                    onOpenProfile: es ? void 0 : ef,
                                     pronouns: null == er ? void 0 : er.pronouns,
                                     tags: (0, i.jsx)(L.Z, {
                                         displayProfile: er,
@@ -408,7 +408,7 @@ function ea(e) {
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'profile-'.concat(H.id),
                                                 children: [
-                                                    ef &&
+                                                    eS &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)(K.Mv, {
@@ -475,7 +475,7 @@ function ea(e) {
                                                               }
                                                             : void 0
                                                     }),
-                                                    !ef &&
+                                                    !eS &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: $.menuDivider }),

@@ -129,8 +129,8 @@ t.Z = function (e) {
         }, []),
         h = a.useCallback(() => d(!1), []),
         T = (0, _.ye)(t),
-        f = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
-        [S, C, N] = (0, E.Cf)(n, f),
+        S = (0, o.useToken)(o.tokens.colors.BACKGROUND_PRIMARY).hex(),
+        [f, C, N] = (0, E.Cf)(n, S),
         A = t.bot,
         { botBannerUrl: v, botBannerUrlAnimated: Z } = a.useMemo(
             () =>
@@ -156,7 +156,7 @@ t.Z = function (e) {
         );
     return (0, i.jsx)('div', {
         className: I.banner,
-        style: { backgroundImage: 'linear-gradient(45deg, '.concat(S, ', ').concat(null != N ? N : C, ')') },
+        style: { backgroundImage: 'linear-gradient(45deg, '.concat(f, ', ').concat(null != N ? N : C, ')') },
         onMouseEnter: u,
         onFocus: u,
         onMouseLeave: h,

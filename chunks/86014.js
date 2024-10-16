@@ -16,16 +16,16 @@ var i = n(735250),
     p = n(374939),
     g = n(233374),
     T = n(283293),
-    f = n(84615),
-    S = n(229893),
+    S = n(84615),
+    f = n(229893),
     C = n(931515),
     N = n(702646),
     A = n(207796),
     v = n(895068),
     Z = n(308083),
     L = n(689938),
-    R = n(641388);
-function O(e) {
+    O = n(641388);
+function R(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n } = e,
         { guilds: s } = (0, _.C3)({
             location: 'ClanDiscoveryContentCtaContent',
@@ -51,7 +51,7 @@ function O(e) {
                 guildId: r,
                 location: d.Z.GLOBAL_DISCOVERY
             }),
-                (0, f.q4)(
+                (0, S.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
                         return (0, i.jsx)(h.Z, {
@@ -70,8 +70,8 @@ function O(e) {
                               look: c.ButtonLooks.FILLED,
                               size: c.ButtonSizes.LARGE,
                               color: m ? c.ButtonColors.TRANSPARENT : c.ButtonColors.BRAND,
-                              className: R.heroButton,
-                              innerClassName: R.heroButtonInner,
+                              className: O.heroButton,
+                              innerClassName: O.heroButtonInner,
                               onClick: () => {
                                   (0, u.GS)({ location: d.Z.GLOBAL_DISCOVERY }), (0, A.fH)(A.v0.GET_STARTED);
                               },
@@ -95,7 +95,7 @@ function O(e) {
                           children: [
                               s.length > 0 &&
                                   (0, i.jsx)(c.SearchableSelect, {
-                                      className: R.upsellSelect,
+                                      className: O.upsellSelect,
                                       value: r,
                                       options: o,
                                       onChange: l
@@ -105,7 +105,7 @@ function O(e) {
                                       look: c.ButtonLooks.FILLED,
                                       size: c.ButtonSizes.MEDIUM,
                                       color: c.ButtonColors.BRAND,
-                                      className: R.heroButton,
+                                      className: O.heroButton,
                                       onClick: I,
                                       children: (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
@@ -120,30 +120,30 @@ function O(e) {
             [n, s.length, o, r, I]
         );
     return (0, i.jsxs)('div', {
-        className: R.contentCtaContainer,
+        className: O.contentCtaContainer,
         children: [g, p]
     });
 }
 t.Z = a.memo(function (e) {
     let t,
         { width: n, paddingVertical: s = 16, paddingHorizontal: d = 32, variant: u = v.Bj.DEFAULT, onScroll: E, withAdminContent: h = !1 } = e,
-        f = a.useRef(null),
+        S = a.useRef(null),
         Z = (0, A.GN)((e) => e.completedNux, l.Z),
         x = (0, A.GN)((e) => e.entrypointGameId, l.Z),
         { backgroundImageUrl: b, gameName: M } = (0, C.kN)(x),
         P = a.useCallback(() => {
             var e;
-            null === (e = f.current) || void 0 === e || e.scrollToTop();
+            null === (e = S.current) || void 0 === e || e.scrollToTop();
         }, []),
         D = a.useMemo(
             () =>
-                (0, i.jsx)(O, {
+                (0, i.jsx)(R, {
                     showPickGameButton: !Z,
                     showAdminGuildPicker: h
                 }),
             [Z, h]
         ),
-        y = (0, o.e7)([S.Z], () => S.Z.getSavedGuilds().length),
+        y = (0, o.e7)([f.Z], () => f.Z.getSavedGuilds().length),
         j = a.useMemo(
             () => [
                 {
@@ -170,15 +170,15 @@ t.Z = a.memo(function (e) {
             null != x && null != M
                 ? (0, i.jsxs)(I.Z, {
                       title: (0, i.jsx)(c.Text, {
-                          className: r()(R.globalDiscoveryTitle, R.customDiscoveryTitle),
+                          className: r()(O.globalDiscoveryTitle, O.customDiscoveryTitle),
                           variant: 'display-lg',
                           color: 'header-primary',
                           children: L.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_HEADER.format({ gameName: M })
                       }),
                       description: L.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_SUBHEADER.format({ gameName: M }),
                       button: (0, i.jsx)(c.Button, {
-                          className: R.heroButton,
-                          innerClassName: R.heroButtonInner,
+                          className: O.heroButton,
+                          innerClassName: O.heroButtonInner,
                           look: c.ButtonLooks.FILLED,
                           size: c.ButtonSizes.MEDIUM,
                           color: c.ButtonColors.WHITE,
@@ -192,15 +192,15 @@ t.Z = a.memo(function (e) {
                       children: [
                           (0, i.jsx)(m.Z, {}),
                           (0, i.jsx)('div', {
-                              className: R.gameArt,
+                              className: O.gameArt,
                               style: { backgroundImage: 'url("'.concat(b, '")') }
                           }),
-                          (0, i.jsx)('div', { className: R.imageBackdrop })
+                          (0, i.jsx)('div', { className: O.imageBackdrop })
                       ]
                   })
                 : (0, i.jsx)(I.Z, {
                       title: (0, i.jsx)(c.Text, {
-                          className: R.globalDiscoveryTitle,
+                          className: O.globalDiscoveryTitle,
                           variant: 'display-lg',
                           color: 'header-primary',
                           children: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
@@ -210,7 +210,7 @@ t.Z = a.memo(function (e) {
                       children: (0, i.jsx)(m.Z, {})
                   })),
         (0, i.jsxs)(T.Z, {
-            ref: f,
+            ref: S,
             onScroll: E,
             children: [
                 t,
@@ -218,7 +218,7 @@ t.Z = a.memo(function (e) {
                     children: [
                         k &&
                             (0, i.jsxs)('div', {
-                                className: R.contentTabs,
+                                className: O.contentTabs,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         tabs: j,
