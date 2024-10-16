@@ -21,57 +21,60 @@ var i = n(735250),
 function _(e) {
     let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: A, children: S, ...R } = e,
         { canShowReactionsOnMessageHover: x } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
-    return (0, i.jsx)(r.Tooltip, {
-        text: null != a ? a : t,
-        color: null != _ ? _ : r.TooltipColors.PRIMARY,
-        'aria-label': t,
-        onTooltipShow: T,
-        onTooltipHide: h,
-        hideOnClick: !0,
-        tooltipClassName: d.tooltip,
-        children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: c, onClick: _ } = e;
-            return (0, i.jsxs)(i.Fragment, {
-                children: [
-                    (0, i.jsxs)(o.zx, {
-                        className: s()(A, { [d.hoverBarButton]: x }),
-                        onMouseEnter: a,
-                        onMouseLeave: c,
-                        onClick: (e) => {
-                            null == _ || _(), m(e);
-                        },
-                        'aria-label': null != n ? n : t,
-                        disabled: N,
-                        dangerous: f,
-                        ...R,
-                        children: [
-                            null != E
-                                ? (0, i.jsx)(E, {
-                                      className: d.icon,
-                                      color: 'currentColor',
-                                      ...I
-                                  })
-                                : null,
-                            null != S
-                                ? (0, i.jsx)('div', {
-                                      className: s()(d.icon, d.buttonContent),
-                                      children: S
-                                  })
-                                : null,
-                            p && (0, i.jsx)(r.LottieSparkle, {}),
-                            g &&
-                                (0, i.jsx)(r.TextBadge, {
-                                    text: u.Z.Messages.NEW,
-                                    color: l.Z.BG_BRAND,
-                                    className: d.newBadge
-                                })
-                        ]
-                    }),
-                    C && (0, i.jsx)(o.Z0, {})
-                ]
-            });
-        }
-    });
+    return (
+        c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
+        (0, i.jsx)(r.Tooltip, {
+            text: null != a ? a : t,
+            color: null != _ ? _ : r.TooltipColors.PRIMARY,
+            'aria-label': t,
+            onTooltipShow: T,
+            onTooltipHide: h,
+            hideOnClick: !0,
+            tooltipClassName: d.tooltip,
+            children: (e) => {
+                let { onMouseEnter: a, onMouseLeave: c, onClick: _ } = e;
+                return (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsxs)(o.zx, {
+                            className: s()(A, { [d.hoverBarButton]: x }),
+                            onMouseEnter: a,
+                            onMouseLeave: c,
+                            onClick: (e) => {
+                                null == _ || _(), m(e);
+                            },
+                            'aria-label': null != n ? n : t,
+                            disabled: N,
+                            dangerous: f,
+                            ...R,
+                            children: [
+                                null != E
+                                    ? (0, i.jsx)(E, {
+                                          className: d.icon,
+                                          color: 'currentColor',
+                                          ...I
+                                      })
+                                    : null,
+                                null != S
+                                    ? (0, i.jsx)('div', {
+                                          className: s()(d.icon, d.buttonContent),
+                                          children: S
+                                      })
+                                    : null,
+                                p && (0, i.jsx)(r.LottieSparkle, {}),
+                                g &&
+                                    (0, i.jsx)(r.TextBadge, {
+                                        text: u.Z.Messages.NEW,
+                                        color: l.Z.BG_BRAND,
+                                        className: d.newBadge
+                                    })
+                            ]
+                        }),
+                        C && (0, i.jsx)(o.Z0, {})
+                    ]
+                });
+            }
+        })
+    );
 }
 function E(e) {
     let { className: t } = e;
@@ -80,8 +83,11 @@ function E(e) {
 function I(e) {
     let { children: t, ...n } = e,
         { canShowReactionsOnMessageHover: a } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
-    return (0, i.jsx)(o.ZP, {
-        className: s()(n.className, d.popover, { [d.popoverReactionHoverBar]: a }),
-        children: t
-    });
+    return (
+        c.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
+        (0, i.jsx)(o.ZP, {
+            className: s()(n.className, d.popover, { [d.popoverReactionHoverBar]: a }),
+            children: t
+        })
+    );
 }

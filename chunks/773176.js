@@ -269,246 +269,249 @@ function eo(e) {
             [em]
         ),
         { canShowReactionsOnMessageHover: eT } = E.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            M
-                ? (0, i.jsxs)(i.Fragment, {
-                      children: [
-                          a && ei
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.COPY_ID_MESSAGE,
-                                        icon: d.IdIcon,
-                                        onClick: (e) => (0, q.F4)(t, n, e)
-                                    },
-                                    'copy-id'
-                                )
-                              : null,
-                          a && !es
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.COPY_LINK,
-                                        icon: d.LinkIcon,
-                                        onClick: () => (0, q.fB)(t, n)
-                                    },
-                                    'copy-link'
-                                )
-                              : null,
-                          C
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.CONFIGURE,
-                                        icon: d.CircleQuestionIcon,
-                                        onClick: () => (0, q.zW)(t)
-                                    },
-                                    'configure'
-                                )
-                              : null,
-                          eu
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.MARK_UNREAD,
-                                        icon: d.ChatMarkUnreadIcon,
-                                        onClick: () => (0, q.B8)(t, n)
-                                    },
-                                    'mark-unread'
-                                )
-                              : null,
-                          V
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: J ? en.Z.Messages.MESSAGE_BOOKMARKS_REMOVE : en.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
-                                        icon: J ? d.BookmarkIcon : d.BookmarkOutlineIcon,
-                                        onClick: () => (J ? (0, q.eM)(t, n) : (0, q.dF)(t, n))
-                                    },
-                                    'bookmark'
-                                )
-                              : null,
-                          l
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: n.pinned ? en.Z.Messages.UNPIN_MESSAGE : en.Z.Messages.PIN_MESSAGE,
-                                        icon: d.PinIcon,
-                                        onClick: (e) => (0, q.rY)(t, n, e)
-                                    },
-                                    'pin'
-                                )
-                              : null,
-                          S && Z
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.CREATE_THREAD,
-                                        icon: d.ThreadIcon,
-                                        onClick: () => (0, q.gK)(t, n)
-                                    },
-                                    'thread'
-                                )
-                              : null,
-                          v && h
-                              ? (0, i.jsx)(
-                                    K.sF,
-                                    {
-                                        label: en.Z.Messages.MESSAGE_ACTION_REPLY,
-                                        icon: d.ArrowAngleLeftUpIcon,
-                                        onClick: (e) => (0, q.HH)(t, n, e)
-                                    },
-                                    'reply-self'
-                                )
-                              : null
-                      ]
-                  })
-                : null,
-            g && !es
-                ? (0, i.jsxs)(i.Fragment, {
-                      children: [
-                          eT && !M
-                              ? (0, i.jsxs)(i.Fragment, {
-                                    children: [
-                                        (0, i.jsx)(er, {
-                                            channel: t,
-                                            message: n
-                                        }),
-                                        (0, i.jsx)(K.fO, {})
-                                    ]
-                                })
-                              : null,
-                          (0, i.jsx)(X.Z, {
-                              togglePopout: ec,
-                              renderEmojiPicker: ed,
-                              shouldShow: G,
-                              isFocused: ea,
-                              channel: t,
-                              message: n
-                          })
-                      ]
-                  })
-                : null,
-            v && !h
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.MESSAGE_ACTION_REPLY,
-                          icon: d.ArrowAngleLeftUpIcon,
-                          onClick: (e) => (0, q.HH)(t, n, e)
-                      },
-                      'reply-other'
-                  )
-                : null,
-            h
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.EDIT,
-                          icon: d.PencilIcon,
-                          onClick: () => (0, q.Hd)(t, n)
-                      },
-                      'edit'
-                  )
-                : null,
-            Z
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.MESSAGE_ACTION_FORWARD,
-                          icon: x.Z,
-                          onClick: () => eI(t, n),
-                          onTooltipShow: eg,
-                          onTooltipHide: eC,
-                          showNewBadge: !ef && e_
-                      },
-                      'forward'
-                  )
-                : null,
-            S && !Z
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.CREATE_THREAD,
-                          icon: d.ThreadIcon,
-                          onClick: () => (0, q.gK)(t, n)
-                      },
-                      'thread'
-                  )
-                : null,
-            !S && A
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.VIEW_THREAD,
-                          icon: d.ThreadIcon,
-                          onClick: () => (0, q.qe)(t, n)
-                      },
-                      'view-thread'
-                  )
-                : null,
-            f
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: eh ? en.Z.Messages.NEWS_CHANNEL_PUBLISHED : en.Z.Messages.NEWS_CHANNEL_PUBLISH,
-                          icon: d.AnnouncementsIcon,
-                          onClick: () => (0, q.Xl)(t, n),
-                          disabled: eh
-                      },
-                      'publish'
-                  )
-                : null,
-            r && (es || M)
-                ? (0, i.jsx)(
-                      K.sF,
-                      {
-                          label: en.Z.Messages.DELETE,
-                          icon: d.TrashIcon,
-                          onClick: (e) => (0, q.$Z)(t, n, e),
-                          dangerous: !0,
-                          separator: !M
-                      },
-                      'delete'
-                  )
-                : null,
-            M && r
-                ? null
-                : (0, i.jsx)(d.Popout, {
-                      renderPopout: (e) => {
-                          let { updatePosition: s, closePopout: a } = e;
-                          return (0, i.jsx)(el, {
-                              channel: t,
-                              message: n,
-                              canReport: o,
-                              onClose: a,
-                              updatePosition: s
-                          });
-                      },
-                      shouldShow: y,
-                      onRequestClose: eo,
-                      position: 'left',
-                      align: 'top',
-                      animation: d.Popout.Animation.NONE,
-                      children: (e, t) => {
-                          let { onClick: n, ...s } = e,
-                              { isShown: a } = t;
-                          return (0, i.jsx)(
-                              K.sF,
-                              {
-                                  label: en.Z.Messages.MORE,
-                                  icon: d.MoreHorizontalIcon,
-                                  selected: a,
-                                  onClick: eo,
-                                  ...s
-                              },
-                              'more'
-                          );
-                      }
-                  })
-        ]
-    });
+    return (
+        E.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 }),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                M
+                    ? (0, i.jsxs)(i.Fragment, {
+                          children: [
+                              a && ei
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.COPY_ID_MESSAGE,
+                                            icon: d.IdIcon,
+                                            onClick: (e) => (0, q.F4)(t, n, e)
+                                        },
+                                        'copy-id'
+                                    )
+                                  : null,
+                              a && !es
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.COPY_LINK,
+                                            icon: d.LinkIcon,
+                                            onClick: () => (0, q.fB)(t, n)
+                                        },
+                                        'copy-link'
+                                    )
+                                  : null,
+                              C
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.CONFIGURE,
+                                            icon: d.CircleQuestionIcon,
+                                            onClick: () => (0, q.zW)(t)
+                                        },
+                                        'configure'
+                                    )
+                                  : null,
+                              eu
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.MARK_UNREAD,
+                                            icon: d.ChatMarkUnreadIcon,
+                                            onClick: () => (0, q.B8)(t, n)
+                                        },
+                                        'mark-unread'
+                                    )
+                                  : null,
+                              V
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: J ? en.Z.Messages.MESSAGE_BOOKMARKS_REMOVE : en.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
+                                            icon: J ? d.BookmarkIcon : d.BookmarkOutlineIcon,
+                                            onClick: () => (J ? (0, q.eM)(t, n) : (0, q.dF)(t, n))
+                                        },
+                                        'bookmark'
+                                    )
+                                  : null,
+                              l
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: n.pinned ? en.Z.Messages.UNPIN_MESSAGE : en.Z.Messages.PIN_MESSAGE,
+                                            icon: d.PinIcon,
+                                            onClick: (e) => (0, q.rY)(t, n, e)
+                                        },
+                                        'pin'
+                                    )
+                                  : null,
+                              S && Z
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.CREATE_THREAD,
+                                            icon: d.ThreadIcon,
+                                            onClick: () => (0, q.gK)(t, n)
+                                        },
+                                        'thread'
+                                    )
+                                  : null,
+                              v && h
+                                  ? (0, i.jsx)(
+                                        K.sF,
+                                        {
+                                            label: en.Z.Messages.MESSAGE_ACTION_REPLY,
+                                            icon: d.ArrowAngleLeftUpIcon,
+                                            onClick: (e) => (0, q.HH)(t, n, e)
+                                        },
+                                        'reply-self'
+                                    )
+                                  : null
+                          ]
+                      })
+                    : null,
+                g && !es
+                    ? (0, i.jsxs)(i.Fragment, {
+                          children: [
+                              eT && !M
+                                  ? (0, i.jsxs)(i.Fragment, {
+                                        children: [
+                                            (0, i.jsx)(er, {
+                                                channel: t,
+                                                message: n
+                                            }),
+                                            (0, i.jsx)(K.fO, {})
+                                        ]
+                                    })
+                                  : null,
+                              (0, i.jsx)(X.Z, {
+                                  togglePopout: ec,
+                                  renderEmojiPicker: ed,
+                                  shouldShow: G,
+                                  isFocused: ea,
+                                  channel: t,
+                                  message: n
+                              })
+                          ]
+                      })
+                    : null,
+                v && !h
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.MESSAGE_ACTION_REPLY,
+                              icon: d.ArrowAngleLeftUpIcon,
+                              onClick: (e) => (0, q.HH)(t, n, e)
+                          },
+                          'reply-other'
+                      )
+                    : null,
+                h
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.EDIT,
+                              icon: d.PencilIcon,
+                              onClick: () => (0, q.Hd)(t, n)
+                          },
+                          'edit'
+                      )
+                    : null,
+                Z
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.MESSAGE_ACTION_FORWARD,
+                              icon: x.Z,
+                              onClick: () => eI(t, n),
+                              onTooltipShow: eg,
+                              onTooltipHide: eC,
+                              showNewBadge: !ef && e_
+                          },
+                          'forward'
+                      )
+                    : null,
+                S && !Z
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.CREATE_THREAD,
+                              icon: d.ThreadIcon,
+                              onClick: () => (0, q.gK)(t, n)
+                          },
+                          'thread'
+                      )
+                    : null,
+                !S && A
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.VIEW_THREAD,
+                              icon: d.ThreadIcon,
+                              onClick: () => (0, q.qe)(t, n)
+                          },
+                          'view-thread'
+                      )
+                    : null,
+                f
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: eh ? en.Z.Messages.NEWS_CHANNEL_PUBLISHED : en.Z.Messages.NEWS_CHANNEL_PUBLISH,
+                              icon: d.AnnouncementsIcon,
+                              onClick: () => (0, q.Xl)(t, n),
+                              disabled: eh
+                          },
+                          'publish'
+                      )
+                    : null,
+                r && (es || M)
+                    ? (0, i.jsx)(
+                          K.sF,
+                          {
+                              label: en.Z.Messages.DELETE,
+                              icon: d.TrashIcon,
+                              onClick: (e) => (0, q.$Z)(t, n, e),
+                              dangerous: !0,
+                              separator: !M
+                          },
+                          'delete'
+                      )
+                    : null,
+                M && r
+                    ? null
+                    : (0, i.jsx)(d.Popout, {
+                          renderPopout: (e) => {
+                              let { updatePosition: s, closePopout: a } = e;
+                              return (0, i.jsx)(el, {
+                                  channel: t,
+                                  message: n,
+                                  canReport: o,
+                                  onClose: a,
+                                  updatePosition: s
+                              });
+                          },
+                          shouldShow: y,
+                          onRequestClose: eo,
+                          position: 'left',
+                          align: 'top',
+                          animation: d.Popout.Animation.NONE,
+                          children: (e, t) => {
+                              let { onClick: n, ...s } = e,
+                                  { isShown: a } = t;
+                              return (0, i.jsx)(
+                                  K.sF,
+                                  {
+                                      label: en.Z.Messages.MORE,
+                                      icon: d.MoreHorizontalIcon,
+                                      selected: a,
+                                      onClick: eo,
+                                      ...s
+                                  },
+                                  'more'
+                              );
+                          }
+                      })
+            ]
+        })
+    );
 }
 function ec(e) {
     let { channel: t, message: n } = e,

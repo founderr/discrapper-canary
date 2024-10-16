@@ -103,8 +103,9 @@ let L = function (e, t) {
             p = (0, c.p3)({
                 location: 'useEmojiCategories',
                 autoTrackExposure: !0
-            }),
-            I = H(n),
+            });
+        c.Xb.useExperiment({ location: 'useEmojiCategories' }, { autoTrackExposure: !0 });
+        let I = H(n),
             { topEmojis: N, newlyAddedEmojis: O } = (0, g.Z)(n, e),
             { allEmojis: v } = (0, S.Z)({
                 topEmojis: N,

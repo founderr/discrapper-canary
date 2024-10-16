@@ -35,8 +35,9 @@ function I(e) {
         A = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
-        }),
-        N = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        });
+    o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
+    let N = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         R = null != T ? a.ZP.getDisambiguatedEmojiContext(T.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
         O = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         v = N.slice(0, O),

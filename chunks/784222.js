@@ -70,8 +70,9 @@ let B = (e) => {
         Z = (0, m.p3)({
             location: 'useEmojiGrid',
             autoTrackExposure: !0
-        }),
-        { topEmojis: Y, newlyAddedEmojis: j } = (0, w.Z)(S, i),
+        });
+    m.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
+    let { topEmojis: Y, newlyAddedEmojis: j } = (0, w.Z)(S, i),
         W = (0, E.Wu)([v.ZP], () => v.ZP.getFlattenedGuildIds(), []),
         K = (0, E.e7)([h.ZP], () => h.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: z } = (0, A.XJ)(f),
