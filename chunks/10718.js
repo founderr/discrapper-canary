@@ -124,54 +124,53 @@ function m(e) {
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
-function T(e) {
-    let { channel: t, filters: n, options: s, allowFetch: u } = e,
-        c = null == t ? void 0 : t.guild_id,
-        d = (0, i.e7)([a.Z], () => a.Z.getGuild(c), [c]),
+function T(e, t, n) {
+    let s = null == e ? void 0 : e.guild_id,
+        u = (0, i.e7)([a.Z], () => a.Z.getGuild(s), [s]),
         {
-            descriptors: f,
-            commands: h,
-            sectionedCommands: p,
-            loading: I
-        } = (0, l.JK)(t, d, n, {
-            ...s,
-            allowFetch: u
+            descriptors: c,
+            commands: d,
+            sectionedCommands: f,
+            loading: h
+        } = (0, l.JK)(e, u, t, {
+            ...n,
+            allowFetch: !0
         }),
-        [m, T] = r.useState(null),
-        S = r.useRef(!1);
-    S.current = I;
-    let g = r.useMemo(() => {
+        [p, I] = r.useState(null),
+        m = r.useRef(!1);
+    m.current = h;
+    let T = r.useMemo(() => {
         var e;
-        return R(null !== (e = s.placeholderCount) && void 0 !== e ? e : 0, n.commandTypes[0]);
-    }, [n.commandTypes, s.placeholderCount]);
+        return R(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
+    }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: S,
-            commands: h,
-            activeSections: f,
-            commandsByActiveSection: p,
-            filteredSectionId: m,
+            loading: m,
+            commands: d,
+            activeSections: c,
+            commandsByActiveSection: f,
+            filteredSectionId: p,
             hasMoreAfter: !1,
-            placeholders: I ? g : [],
-            sectionDescriptors: f,
+            placeholders: h ? T : [],
+            sectionDescriptors: c,
             filterSection: (e) => {
-                T(e);
+                I(e);
             },
             scrollDown: E.dG4
         };
-        if (null != m) {
-            let t = p.find((e) => e.section.id === m);
+        if (null != p) {
+            let t = f.find((e) => e.section.id === p);
             (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
         }
-        if (I) {
-            let t = p[0];
+        if (h) {
+            let t = f[0];
             if (null != t)
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...g]
+                        data: [...t.data, ...T]
                     },
-                    ...p.slice(1)
+                    ...f.slice(1)
                 ];
             else {
                 let t = o.Tm[_.bi.BUILT_IN];
@@ -179,14 +178,14 @@ function T(e) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: g
+                            data: T
                         }
                     ]);
             }
-            e.commands = [...h, ...g];
+            e.commands = [...d, ...T];
         }
         return e;
-    }, [h, f, m, p, I, g]);
+    }, [d, c, p, f, h, T]);
 }
 function S(e, t, n) {
     var r;

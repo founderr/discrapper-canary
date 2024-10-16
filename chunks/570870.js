@@ -26,16 +26,7 @@ n.Z = (e) => {
             channel: A,
             context: h
         }),
-        {
-            commands: M,
-            sectionDescriptors: Z,
-            loading: G
-        } = l.wi({
-            channel: A,
-            filters: { commandTypes: [t] },
-            options: { limit: f.lr },
-            allowFetch: !0
-        }),
+        { commands: M, sectionDescriptors: Z, loading: G } = l.wi(A, { commandTypes: [t] }, { limit: f.lr }),
         { sections: g } = r.useMemo(() => {
             let e = {};
             return (
