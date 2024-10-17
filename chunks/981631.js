@@ -1860,6 +1860,7 @@ let aq = '@me',
         COLLECTIBLES_VALID_GIFT_RECIPIENT: '/users/@me/valid-collectibles-gift-recipient',
         COLLECTIBLES_MARKETING: '/users/@me/collectibles-marketing',
         CONSUMABLE_FETCH_PRICE: (e) => '/store/consumable/pricing/'.concat(e),
+        CONSUME_HD_STREAMING_POTION: '/users/@me/consumable/hd-streaming',
         GUILD_MEMBER_BANNER: function (e, t, r) {
             let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'png';
             return '/guilds/'.concat(e, '/users/').concat(t, '/banners/').concat(r, '.').concat(n);

@@ -343,4 +343,5 @@ var n, r;
     (r.IN_CASE_YOU_MISSED_IT_TAB = 'ICYMI Tab'),
     (r.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
     (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
+    (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
     (t.Z = n);

@@ -1,44 +1,54 @@
-s(47120);
-var n,
-    t,
-    r,
-    d,
-    i = s(442837),
-    l = s(570140);
-let c = new Map(),
-    o = new Set(),
-    _ = new Set();
-class h extends (n = i.ZP.Store) {
+n(47120);
+var i,
+    s,
+    a,
+    l,
+    r = n(442837),
+    o = n(570140),
+    c = n(215023);
+let u = new Map(),
+    d = new Set(),
+    h = new Set(),
+    p = null;
+class m extends (i = r.ZP.Store) {
     getPrice(e) {
-        return c.get(e);
+        return u.get(e);
     }
     getFetching(e) {
-        return o.has(e);
+        return d.has(e);
     }
     getErrored(e) {
-        return _.has(e);
+        return h.has(e);
+    }
+    getEntitlement() {
+        return p;
     }
 }
-(d = 'ConsumablesStore'),
-    (r = 'displayName') in (t = h)
-        ? Object.defineProperty(t, r, {
-              value: d,
+(l = 'ConsumablesStore'),
+    (a = 'displayName') in (s = m)
+        ? Object.defineProperty(s, a, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (t[r] = d),
-    (a.Z = new h(l.Z, {
+        : (s[a] = l),
+    (t.Z = new m(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
-            o.add(e.skuId);
+            d.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            c.set(e.skuId, e.price), o.delete(e.skuId);
+            u.set(e.skuId, e.price), d.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            o.delete(e.skuId), _.add(e.skuId);
+            d.delete(e.skuId), h.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
-            _.delete(e.skuId);
+            h.delete(e.skuId);
+        },
+        SKU_PURCHASE_SUCCESS: (e) => {
+            if (1 !== e.entitlements.length) return;
+            let t = e.entitlements[0];
+            if (t.sku_id === c.FX) p = t;
         }
     }));
