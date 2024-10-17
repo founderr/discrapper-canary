@@ -79,8 +79,9 @@ e.ZP = (n) => {
         { analyticsLocations: M } = (0, d.ZP)(),
         F = (0, h.Ev)(Z, null != r ? r : void 0),
         D = (0, h.cr)(Z, null != r ? r : void 0),
-        { entitlementsLoaded: y } = (0, h.LM)({ guildId: r }),
-        U = (0, p.Z)(),
+        { entitlementsLoaded: y } = (0, h.LM)({ guildId: r });
+    null == r && (y = !0);
+    let U = (0, p.Z)(),
         B = (0, x.KK)(null !== (l = null == R ? void 0 : R.flags) && void 0 !== l ? l : 0);
     return (
         U ? (y && null != k && null != E ? (P ? ((null == F ? void 0 : F.subscriptionPlan.skuId) === E && (null == D ? void 0 : D.subscriptionPlan.id) === (null == F ? void 0 : F.subscriptionPlan.id) ? (i = 2) : (null == D ? void 0 : null === (t = D.subscriptionPlan) || void 0 === t ? void 0 : t.skuId) === E ? (i = 3) : B && A && null == F && (i = 4)) : (i = 1)) : (i = 0)) : (i = 5),
