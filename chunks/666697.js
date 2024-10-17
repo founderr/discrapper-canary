@@ -10,8 +10,8 @@ var i,
     u = n(374939),
     _ = n(233374),
     E = n(283293),
-    h = n(973616),
-    m = n(292191),
+    h = n(292191),
+    m = n(680474),
     I = n(571737),
     p = n(689938),
     g = n(850258);
@@ -23,10 +23,9 @@ t.Z = function (e) {
     r.useEffect(() => {
         null != t && null == i && o.i6(t);
     }, [t, i]);
-    let T = null != i ? h.Z.createFromServer(i) : null,
-        S = null == T ? void 0 : T.storefront_available,
-        [f, C] = r.useState('about'),
-        N = r.useMemo(
+    let T = null == i ? void 0 : i.storefront_available,
+        [S, f] = r.useState('about'),
+        C = r.useMemo(
             () => [
                 {
                     id: 'about',
@@ -38,7 +37,16 @@ t.Z = function (e) {
                 }
             ],
             []
-        );
+        ),
+        N = r.useMemo(() => {
+            if (null == i) return null;
+            switch (S) {
+                case 'about':
+                    return (0, s.jsx)(m.Z, { application: i });
+                case 'store':
+                    return null;
+            }
+        }, [S, i]);
     if (null == i)
         return a === c.M.FETCHING
             ? (0, s.jsx)('div', {
@@ -47,22 +55,28 @@ t.Z = function (e) {
               })
             : (0, s.jsx)('div', {
                   className: g.centerContainer,
-                  children: (0, s.jsx)(m.Z, { className: g.error })
+                  children: (0, s.jsx)(h.Z, { className: g.error })
               });
     return (0, s.jsx)(E.Z, {
         onScroll: n,
         children: (0, s.jsxs)(u.Z, {
             children: [
                 (0, s.jsx)(I.Z, { application: i }),
-                S &&
-                    (0, s.jsx)('div', {
-                        className: g.contentTabs,
-                        children: (0, s.jsx)(_.Z, {
-                            tabs: N,
-                            onTabSelect: C,
-                            selectedTab: f
-                        })
-                    })
+                (0, s.jsxs)('div', {
+                    className: g.contentContainer,
+                    children: [
+                        T &&
+                            (0, s.jsx)('div', {
+                                className: g.contentTabs,
+                                children: (0, s.jsx)(_.Z, {
+                                    tabs: C,
+                                    onTabSelect: f,
+                                    selectedTab: S
+                                })
+                            }),
+                        N
+                    ]
+                })
             ]
         })
     });

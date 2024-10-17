@@ -1,21 +1,24 @@
 t.d(n, {
     $_: function () {
-        return O;
-    },
-    KQ: function () {
-        return _;
-    },
-    MU: function () {
-        return T;
-    },
-    m0: function () {
-        return d;
-    },
-    rf: function () {
         return A;
     },
-    tu: function () {
+    KQ: function () {
         return I;
+    },
+    MU: function () {
+        return E;
+    },
+    RF: function () {
+        return p;
+    },
+    m0: function () {
+        return _;
+    },
+    rf: function () {
+        return C;
+    },
+    tu: function () {
+        return O;
     }
 }),
     t(610138),
@@ -26,55 +29,56 @@ t.d(n, {
     t(315314);
 var c = t(860911),
     a = t(477690),
-    o = t(481060),
-    l = t(134432),
-    r = t(703656),
-    i = t(768581),
-    s = t(981631),
-    u = t(689938);
-let T = 0,
-    { API_ENDPOINT: E, CDN_HOST: N } = window.GLOBAL_ENV;
-function d(e) {
-    return e.id === T;
+    l = t(481060),
+    o = t(911969),
+    r = t(134432),
+    i = t(703656),
+    s = t(768581),
+    u = t(981631),
+    T = t(689938);
+let E = 0,
+    { API_ENDPOINT: d, CDN_HOST: N } = window.GLOBAL_ENV;
+function _(e) {
+    return e.id === E;
 }
-function _() {
+function I() {
     return {
-        id: T,
-        name: u.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
+        id: E,
+        name: T.Z.Messages.APP_DIRECTORY_ALL_CATEGORY
     };
 }
-function I(e) {
+function O(e) {
     switch (e.id) {
         case 0:
-            return o.GlobeEarthIcon;
+            return l.GlobeEarthIcon;
         case 4:
-            return o.TvIcon;
+            return l.TvIcon;
         case 5:
-            return o.AnalyticsIcon;
+            return l.AnalyticsIcon;
         case 6:
-            return o.GameControllerIcon;
+            return l.GameControllerIcon;
         case 8:
             break;
         case 9:
-            return o.FriendsIcon;
+            return l.FriendsIcon;
         case 10:
-            return o.WrenchIcon;
+            return l.WrenchIcon;
     }
-    return o.AsteriskIcon;
+    return l.AsteriskIcon;
 }
-function O(e) {
+function A(e) {
     let { itemId: n, hash: t } = e,
-        c = new URLSearchParams({ size: (0, l.oO)(parseFloat(a.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, l.x_)()).toString() }).toString(),
-        o = i.$k ? 'webp' : 'png';
+        c = new URLSearchParams({ size: (0, r.oO)(parseFloat(a.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, r.x_)()).toString() }).toString(),
+        l = s.$k ? 'webp' : 'png';
     return null != N
-        ? ''.concat(location.protocol, '//').concat(N, '/app-assets/application-directory/collection-items/').concat(n, '/').concat(t, '.').concat(o, '?').concat(c)
+        ? ''.concat(location.protocol, '//').concat(N, '/app-assets/application-directory/collection-items/').concat(n, '/').concat(t, '.').concat(l, '?').concat(c)
         : ''
               .concat(location.protocol)
-              .concat(E)
-              .concat(s.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(n, t, o), '?')
+              .concat(d)
+              .concat(u.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(n, t, l), '?')
               .concat(c);
 }
-function A() {
+function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = new URL(location.href);
     for (let t in e) {
@@ -83,5 +87,31 @@ function A() {
     }
     let t = n.pathname + n.search,
         a = (0, c.Ui)(t, !1);
-    (0, r.uL)(a);
+    (0, i.uL)(a);
+}
+let m = (e) => {
+    if (null == e) return null;
+    let n = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
+    return null != n ? n[1] : null;
+};
+function p(e) {
+    switch (e.type) {
+        case o.ee.MEDIA_PROXY:
+            var n;
+            let t = null !== (n = e.proxy_url) && void 0 !== n ? n : e.url;
+            return {
+                type: u.s9s.IMG,
+                width: 0,
+                height: 0,
+                src: t
+            };
+        case o.ee.YOUTUBE:
+            let c = m(e.url);
+            if (null != c)
+                return {
+                    type: u.s9s.YOUTUBE_VIDEO,
+                    youtubeVideoId: c
+                };
+    }
+    return console.warn('Unsupported carousel item', e), null;
 }
