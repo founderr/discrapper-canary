@@ -1,4 +1,4 @@
-var s, r, i, a, o, l;
+var s, r, i, a, l, o;
 n.d(t, {
     EW: function () {
         return r;
@@ -10,17 +10,18 @@ n.d(t, {
     (a.INPUT_ERROR = 'input_error'),
     (a.RESPONSE_ERROR = 'response_error'),
     (a.SUCCESS = 'success'),
-    ((o = r || (r = {})).IDENTITY = 'identity'),
-    (o.DISPLAY_NAME = 'display_name'),
-    (o.ACCOUNT_INFORMATION = 'account_information'),
-    (o.FULL = 'full'),
-    (o.AGE_GATE = 'age_gate'),
-    (o.INVITE = 'invite'),
-    (o.SMS_VERIFY = 'sms_verify'),
-    ((l = i || (i = {})).ACCOUNT_IDENTITY = 'Account Identity'),
-    (l.ACCOUNT_DISPLAY_NAME = 'Account Display Name'),
-    (l.ACCOUNT_INFORMATION = 'Account Information'),
-    (l.AGE_GATE = 'Age Gate'),
-    (l.AGE_GATE_UNDERAGE = 'Age Gate Underage'),
-    (l.PHONE_VERIFICATION = 'Phone Verification'),
-    (l.REGISTER = 'Register');
+    ((l = r || (r = {})).IDENTITY = 'identity'),
+    (l.DISPLAY_NAME = 'display_name'),
+    (l.ACCOUNT_INFORMATION = 'account_information'),
+    (l.FULL = 'full'),
+    (l.AGE_GATE = 'age_gate'),
+    (l.INVITE = 'invite'),
+    (l.SMS_VERIFY = 'sms_verify'),
+    ((o = i || (i = {})).ACCOUNT_IDENTITY = 'Account Identity'),
+    (o.ACCOUNT_DISPLAY_NAME = 'Account Display Name'),
+    (o.ACCOUNT_INFORMATION = 'Account Information'),
+    (o.AGE_GATE = 'Age Gate'),
+    (o.AGE_GATE_UNDERAGE = 'Age Gate Underage'),
+    (o.PHONE_VERIFICATION = 'Phone Verification'),
+    (o.REGISTER = 'Register'),
+    (o.CAPTCHA = 'Captcha');
