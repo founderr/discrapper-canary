@@ -4,78 +4,73 @@ var i = n(735250),
     r = n.n(s),
     l = n(143927),
     o = n(636977),
-    c = n(731965),
-    d = n(481060),
-    u = n(352057),
-    _ = n(341907),
-    E = n(703656),
-    h = n(836768),
-    m = n(766219),
-    I = n(906899),
-    p = n(49898),
-    g = n(981631),
-    T = n(46140),
-    S = n(689938),
-    f = n(696165);
-function C(e) {
+    c = n(481060),
+    d = n(352057),
+    u = n(836768),
+    _ = n(766219),
+    E = n(749681),
+    h = n(49898),
+    m = n(46140),
+    I = n(689938),
+    p = n(696165);
+function g(e) {
     let { tab: t } = e,
-        n = (0, h.d)((e) => e.selectedTab === t, l.Z),
+        n = (0, u.dj)((e) => e.selectedTab === t, l.Z),
         s = a.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
-                        case p.F$.SERVERS:
-                            return (0, i.jsx)(d.ServerIcon, { color: 'currentColor' });
-                        case p.F$.APPS:
-                            return (0, i.jsx)(d.AppsIcon, { color: 'currentColor' });
-                        case p.F$.QUESTS:
-                            return (0, i.jsx)(d.QuestsIcon, { color: 'currentColor' });
+                        case h.F$.SERVERS:
+                            return (0, i.jsx)(c.ServerIcon, { color: 'currentColor' });
+                        case h.F$.APPS:
+                            return (0, i.jsx)(c.AppsIcon, { color: 'currentColor' });
+                        case h.F$.QUESTS:
+                            return (0, i.jsx)(c.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
             [t]
         ),
-        u = a.useMemo(() => (0, m.sm)(t), [t]),
-        S = a.useCallback(() => {
-            switch (((0, c.j)(() => h.d.setState({ selectedTab: t })), t)) {
-                case p.F$.QUESTS:
-                    return (0, _.navigateToQuestHome)(T.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
-                case p.F$.APPS:
-                    return (0, E.uL)(g.Z5c.GLOBAL_DISCOVERY_APPS);
-                case p.F$.SERVERS:
-                    return (0, I.R)();
-            }
+        d = a.useMemo(() => (0, _.sm)(t), [t]),
+        I = a.useCallback(() => {
+            if (t === h.F$.QUESTS)
+                return (0, E.transitionToGlobalDiscovery)({
+                    tab: h.F$.QUESTS,
+                    location: m.dr.DISCOVERY_SIDEBAR,
+                    questContent: o.j.DISCOVERY_SIDEBAR
+                });
+            return (0, E.transitionToGlobalDiscovery)({ tab: t });
         }, [t]);
-    return (0, i.jsxs)(d.Clickable, {
-        onClick: S,
-        className: r()(f.navItem, { [f.selected]: n }),
+    return (0, i.jsxs)(c.Clickable, {
+        onClick: I,
+        className: r()(p.navItem, { [p.selected]: n }),
         children: [
             (0, i.jsx)('div', {
-                className: f.navItemIcon,
+                className: p.navItemIcon,
                 children: s
             }),
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 color: 'none',
-                children: u
+                children: d
             })
         ]
     });
 }
 t.Z = function () {
-    let e = (0, u.h)({ location: 'GlobalDiscoverySidebar' });
+    let e = (0, d.h)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: p.container,
         children: [
             (0, i.jsx)('div', {
-                className: f.header,
-                children: (0, i.jsx)(d.Heading, {
+                className: p.header,
+                children: (0, i.jsx)(c.Heading, {
                     variant: 'text-lg/semibold',
-                    children: S.Z.Messages.GLOBAL_DISCOVERY_TITLE
+                    children: I.Z.Messages.GLOBAL_DISCOVERY_TITLE
                 })
             }),
             (0, i.jsx)('nav', {
-                className: f.nav,
-                children: p.mc.map((t) => (t !== p.F$.APPS || e ? (0, i.jsx)(C, { tab: t }, t) : null))
+                className: p.nav,
+                children: h.mc.map((t) => (t !== h.F$.APPS || e ? (0, i.jsx)(g, { tab: t }, t) : null))
             })
         ]
     });
