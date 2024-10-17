@@ -12,7 +12,6 @@ function d() {
 }
 function _(e) {
     let { relationship: t } = e;
-    if (!(0, o.w)({ location: 'VoiceChannelBlockedUserStore_blockStateChange' })) return !1;
     if (t.type === l.OGo.BLOCKED) {
         let e = s.Z.getVoiceStateForUser(t.id);
         if (null != e && null != e.channelId) return E(e.channelId, t.id);
@@ -38,16 +37,15 @@ t.Z = new f(i.Z, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
     OVERLAY_INITIALIZE: function () {
-        if ((d(), !(0, o.w)({ location: 'VoiceChannelBlockedUserStore_open' }))) return !1;
+        d();
         let e = s.Z.getAllVoiceStates(),
             t = !1;
         for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = E(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
-        let { voiceStates: t } = e;
-        if (!(0, o.w)({ location: 'VoiceChannelBlockedUserStore_voiceStateUpdates' })) return !1;
-        let n = !1;
+        let { voiceStates: t } = e,
+            n = !1;
         return (
             t.forEach((e) => {
                 if (null != e.oldChannelId && null != u[e.oldChannelId]) {
