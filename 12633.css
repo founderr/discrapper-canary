@@ -17933,7 +17933,9 @@ span.clanTag_a31c43 {
     top: 1px;
     height: calc(4px + 1rem);
     width: calc(4px + 1rem);
-    cursor: pointer
+    cursor: pointer;
+    text-indent: 0;
+    text-indent: 0
 }
 
 .badge_ba89c1 {
