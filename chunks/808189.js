@@ -2,81 +2,82 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(535322),
-    l = n(31698),
-    u = n(528771),
-    c = n(267642),
-    d = n(981631),
-    _ = n(474936),
-    E = n(689938),
-    f = n(209430);
-let h = [
+    s = n(692547),
+    o = n(481060),
+    l = n(535322),
+    u = n(31698),
+    c = n(528771),
+    d = n(267642),
+    _ = n(981631),
+    E = n(474936),
+    f = n(689938),
+    h = n(209430);
+let p = [
     {
-        tier: d.Eu4.TIER_1,
+        tier: _.Eu4.TIER_1,
         perks: [
             {
-                icon: s.ReactionIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({ numEmojiSlots: _.HO[d.Eu4.TIER_1].limits.emoji })
+                icon: o.ReactionIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({ numEmojiSlots: E.HO[_.Eu4.TIER_1].limits.emoji })
             },
             {
-                icon: s.SoundboardIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({ numSoundboardSlots: _.HO[d.Eu4.TIER_1].limits.soundboardSounds }),
+                icon: o.SoundboardIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({ numSoundboardSlots: E.HO[_.Eu4.TIER_1].limits.soundboardSounds }),
                 isNew: !0
             },
             {
-                icon: s.GifIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_ICON
+                icon: o.GifIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_ICON
             },
             {
-                icon: s.VoiceNormalIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_AUDIO_QUALITY
+                icon: o.VoiceNormalIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_AUDIO_QUALITY
             }
         ]
     },
     {
-        tier: d.Eu4.TIER_2,
+        tier: _.Eu4.TIER_2,
         perks: [
             {
-                icon: s.ScreenArrowIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY
+                icon: o.ScreenArrowIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY
             },
             {
-                icon: s.UploadIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2 })
+                icon: o.UploadIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: f.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2 })
             },
             {
-                icon: s.ReactionIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ROLE_ICONS
+                icon: o.ReactionIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ROLE_ICONS
             },
             {
-                icon: s.ServerGridIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_GUILD_BANNER
+                icon: o.ServerGridIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_GUILD_BANNER
             }
         ]
     },
     {
-        tier: d.Eu4.TIER_3,
+        tier: _.Eu4.TIER_3,
         perks: [
             {
-                icon: s.LinkIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL
+                icon: o.LinkIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL
             },
             {
-                icon: s.UploadIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3 })
+                icon: o.UploadIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: f.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3 })
             },
             {
-                icon: s.VoiceNormalIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_HIGHEST_AUDIO_QUALITY
+                icon: o.VoiceNormalIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_HIGHEST_AUDIO_QUALITY
             },
             {
-                icon: s.GifIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER
+                icon: o.GifIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER
             },
             {
-                icon: s.StageIcon,
-                getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({ numStageSeats: d.RcX })
+                icon: o.StageIcon,
+                getCopy: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({ numStageSeats: _.RcX })
             }
         ]
     }
@@ -84,71 +85,77 @@ let h = [
 t.Z = function (e) {
     let { guild: t } = e;
     return (0, r.jsx)('div', {
-        className: f.tierCards,
-        children: h.map((e) =>
+        className: h.tierCards,
+        children: p.map((e) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: f.tierCard,
+                    className: h.tierCard,
                     children: [
-                        e.tier === d.Eu4.TIER_3 &&
+                        e.tier === _.Eu4.TIER_3 &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)('div', { className: a()(f.tierCardBorderHighlight, f.tierCardBorderHighlightTopRight) }),
-                                    (0, r.jsx)('div', { className: a()(f.tierCardBorderHighlight, f.tierCardBorderHighlightBottomLeft) }),
+                                    (0, r.jsx)('div', { className: a()(h.tierCardBorderHighlight, h.tierCardBorderHighlightTopRight) }),
+                                    (0, r.jsx)('div', { className: a()(h.tierCardBorderHighlight, h.tierCardBorderHighlightBottomLeft) }),
                                     (0, r.jsxs)('div', {
-                                        className: a()(f.tierCardSparkleHighlight, f.tierCardSparkleHighlightTopRight),
-                                        children: [(0, r.jsx)(u.Z, { className: f.tierCardSparkle1 }), (0, r.jsx)(u.Z, { className: f.tierCardSparkle2 }), (0, r.jsx)(l.Z, { className: f.tierCardSparkle3 })]
+                                        className: a()(h.tierCardSparkleHighlight, h.tierCardSparkleHighlightTopRight),
+                                        children: [(0, r.jsx)(c.Z, { className: h.tierCardSparkle1 }), (0, r.jsx)(c.Z, { className: h.tierCardSparkle2 }), (0, r.jsx)(u.Z, { className: h.tierCardSparkle3 })]
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: a()(f.tierCardSparkleHighlight, f.tierCardSparkleHighlightBottomLeft),
-                                        children: (0, r.jsx)(u.Z, { className: f.tierCardSparkle1 })
+                                        className: a()(h.tierCardSparkleHighlight, h.tierCardSparkleHighlightBottomLeft),
+                                        children: (0, r.jsx)(c.Z, { className: h.tierCardSparkle1 })
                                     })
                                 ]
                             }),
                         e.tier === t.premiumTier &&
-                            (0, r.jsx)(s.Text, {
-                                className: f.tierCardCurrentTier,
+                            (0, r.jsx)(o.Text, {
+                                className: h.tierCardCurrentTier,
                                 tag: 'div',
                                 variant: 'text-xs/semibold',
                                 color: 'always-white',
-                                children: E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
+                                children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
                             }),
                         (0, r.jsxs)('div', {
-                            className: f.tierCardHeader,
+                            className: h.tierCardHeader,
                             children: [
-                                (0, r.jsx)(s.Heading, {
-                                    className: f.tierCardHeading,
+                                (0, r.jsx)(o.Heading, {
+                                    className: h.tierCardHeading,
                                     variant: 'heading-xxl/semibold',
                                     color: 'always-white',
-                                    children: (0, c.nW)(e.tier, { useLevels: !1 })
+                                    children: (0, d.nW)(e.tier, { useLevels: !1 })
                                 }),
-                                (0, r.jsx)(s.Text, {
-                                    className: f.tierCardBoostRequirement,
+                                (0, r.jsx)(o.Text, {
+                                    className: h.tierCardBoostRequirement,
                                     variant: 'text-md/normal',
                                     color: 'always-white',
-                                    children: E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({ numBoostsRequired: d.oCV[e.tier] })
+                                    children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({ numBoostsRequired: _.oCV[e.tier] })
                                 })
                             ]
                         }),
                         (0, r.jsx)('ul', {
-                            className: f.tierCardList,
+                            className: h.tierCardList,
                             children: e.perks.map((e, t) =>
                                 null == e.predicate || e.predicate()
                                     ? (0, r.jsxs)(
                                           'li',
                                           {
-                                              className: f.tierCardPerkRow,
+                                              className: h.tierCardPerkRow,
                                               children: [
-                                                  (0, r.jsxs)(s.Text, {
-                                                      className: f.tierCardListItem,
+                                                  (0, r.jsxs)(o.Text, {
+                                                      className: h.tierCardListItem,
                                                       variant: 'text-md/normal',
                                                       color: 'always-white',
-                                                      children: [(0, r.jsx)(e.icon, { className: f.tierCardListIcon }), e.getCopy()]
+                                                      children: [
+                                                          (0, r.jsx)(e.icon, {
+                                                              className: h.tierCardListIcon,
+                                                              color: s.Z.colors.WHITE
+                                                          }),
+                                                          e.getCopy()
+                                                      ]
                                                   }),
                                                   e.isNew
-                                                      ? (0, r.jsx)(o.Z, {
-                                                            className: f.tierCardNewFeatureBadge,
+                                                      ? (0, r.jsx)(l.Z, {
+                                                            className: h.tierCardNewFeatureBadge,
                                                             forceUseColorForSparkles: !0,
                                                             shouldInheritBackgroundColor: !0,
                                                             shouldInheritTextColor: !0
