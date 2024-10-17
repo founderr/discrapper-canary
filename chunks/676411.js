@@ -1,5 +1,6 @@
 e.exports = {
     card: 'card_ae1fa2',
+    disabled: 'disabled_ae1fa2',
     header: 'header_ae1fa2',
     headerText: 'headerText_ae1fa2',
     headerContextMenu: 'headerContextMenu_ae1fa2',

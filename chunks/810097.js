@@ -94,7 +94,8 @@ function R(e) {
                   [S.visible]: i,
                   [S.expandable]: s,
                   [S.statusPopover]: n === m.n_.STATUS,
-                  [S.avatarPopover]: n === m.n_.AVATAR
+                  [S.avatarPopover]: n === m.n_.AVATAR,
+                  [S.activityPopover]: n === m.n_.ACTIVITY
               }),
               children: [
                   (0, r.jsx)(u.TooltipContainer, {

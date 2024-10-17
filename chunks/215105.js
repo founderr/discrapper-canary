@@ -101,11 +101,13 @@ function y(e) {
         },
         Z = {
             [O.biteSize]: o === A.y0.BITE_SIZE,
-            [O.panel]: o === A.y0.PANEL
+            [O.panel]: o === A.y0.PANEL,
+            [O.fullSize]: o === A.y0.FULL_SIZE
         },
         Y = {
             [O.status]: _ === A.n_.STATUS,
-            [O.avatar]: _ === A.n_.AVATAR
+            [O.avatar]: _ === A.n_.AVATAR,
+            [O.activity]: _ === A.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
         ref: F,
