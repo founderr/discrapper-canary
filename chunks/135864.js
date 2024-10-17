@@ -30,7 +30,8 @@ function p(e) {
             [t]
         ),
         c = a.useMemo(() => (0, u.sm)(t), [t]),
-        m = a.useCallback(() => {
+        m = n === t,
+        p = a.useCallback(() => {
             if (t === E.F$.QUESTS)
                 return (0, _.transitionToGlobalDiscovery)({
                     tab: E.F$.QUESTS,
@@ -40,8 +41,8 @@ function p(e) {
             return (0, _.transitionToGlobalDiscovery)({ tab: t });
         }, [t]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: m,
-        className: r()(I.navItem, { [I.selected]: n }),
+        onClick: p,
+        className: r()(I.navItem, { [I.selected]: m }),
         children: [
             (0, i.jsx)('div', {
                 className: I.navItemIcon,
