@@ -362,6 +362,32 @@ x(ep, 'displayName', 'GravityStore'),
         LOGOUT: function () {
             return !1;
         },
+        LOAD_GRAVITY_FROM_NOTIFICATION: function (e) {
+            let { messageItem: t } = e;
+            if (null == t) return !1;
+            let n = {
+                id: t.message.id,
+                type: v.Rr.MESSAGE,
+                score: 50,
+                data: {
+                    channel_id: t.channel_id,
+                    message_id: t.message.id,
+                    guild_id: t.guild_id,
+                    channel_type: R.d4z.GUILD_TEXT
+                }
+            };
+            if (
+                ((B[t.message.id] = n),
+                (V[t.message.id] = {
+                    ...n,
+                    message: (0, _.e5)(t.message)
+                }),
+                null == D && null == k)
+            ) {
+                let [e, t] = ec((P = [n, ...P]));
+                ($ = e), (ee = t);
+            } else (j = [n, ...j]), eo();
+        },
         LOAD_GRAVITY_DEHYDRATED: function (e) {
             let { items: t, loadId: n, startTime: i, isReloading: a } = e;
             (j = t.filter((e) => v.zd.has(e.type))),

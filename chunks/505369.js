@@ -74,6 +74,31 @@ t.Z = {
             channelId: e
         });
     },
+    async fetchForNotification(e, t) {
+        if (!!(0, l.rK)('fetchInitial'))
+            try {
+                let n = await i.tn.post({
+                    url: o.ANM.GRAVITY_ITEMS_HYDRATE,
+                    body: {
+                        message_items: [
+                            {
+                                channel_id: e,
+                                message_id: t
+                            }
+                        ],
+                        summary_items: [],
+                        activity_items: []
+                    }
+                });
+                if (0 === n.body.message_items.length) return;
+                a.Z.dispatch({
+                    type: 'LOAD_GRAVITY_FROM_NOTIFICATION',
+                    messageItem: n.body.message_items[0]
+                });
+            } catch (e) {
+                s.Z.captureException(e);
+            }
+    },
     async fetchHydrated(e, t, n, r, c) {
         if (!!(0, l.rK)('fetchHydrated')) {
             if (0 === e.length && 0 === t.length && 0 === n.length) {
