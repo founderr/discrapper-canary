@@ -1,9 +1,9 @@
-i.d(t, {
+t.d(s, {
     j: function () {
-        return o;
+        return a;
     }
 });
-let n = (0, i(818083).B)({
+let n = (0, t(818083).B)({
     kind: 'user',
     id: '2023-07_mfa_email_verification',
     label: 'Safety Experience Mfa Email Verification',
@@ -16,7 +16,7 @@ let n = (0, i(818083).B)({
         }
     ]
 });
-function o() {
+function a() {
     let { enabled: e } = n.getCurrentConfig({ location: '41ef90_2' }, { autoTrackExposure: !0 });
     return e;
 }

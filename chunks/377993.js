@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(111583),
     T = n(594174),
     x = n(626135),
-    v = n(768581),
-    S = n(585483),
+    S = n(768581),
+    v = n(585483),
     N = n(233870),
     A = n(51144),
     Z = n(998502),
@@ -67,7 +67,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -113,7 +113,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        p = v.ZP.getApplicationIconURL({
+        p = S.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -210,7 +210,7 @@ function k(e) {
                 [t],
                 U
             )),
-        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
+        { installedIntegrations: I, applicationsShelf: S, fetched: v, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
     s.useEffect(() => {
         x.default.track(b.rMx.MEMBER_LIST_VIEWED, {
             channel_id: a.id,
@@ -244,7 +244,7 @@ function k(e) {
                         )
                     ),
                     A &&
-                        (I.length > 0 || (S && v.length > 0)) &&
+                        (I.length > 0 || (v && S.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {

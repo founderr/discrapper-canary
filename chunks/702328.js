@@ -6,8 +6,8 @@ var s = n(735250),
     l = n(442837),
     o = n(622535),
     c = n(481060),
-    d = n(634894),
-    _ = n(100527),
+    _ = n(634894),
+    d = n(100527),
     E = n(906732),
     u = n(433811),
     T = n(214852),
@@ -17,9 +17,9 @@ var s = n(735250),
     N = n(140465),
     m = n(184508),
     C = n(67645),
-    f = n(599659),
-    p = n(257944),
-    A = n(91802),
+    A = n(599659),
+    f = n(257944),
+    p = n(91802),
     M = n(104494),
     S = n(639119),
     h = n(8647),
@@ -31,13 +31,13 @@ var s = n(735250),
     L = n(241158),
     Z = n(135785),
     D = n(498765),
-    B = n(635921),
-    U = n(177839),
+    U = n(635921),
+    B = n(177839),
     j = n(794484),
     G = n(392521),
     w = n(349803),
-    y = n(179984),
-    H = n(409100),
+    H = n(179984),
+    y = n(409100),
     k = n(391110),
     F = n(71363),
     V = n(781800),
@@ -46,18 +46,18 @@ var s = n(735250),
     Y = n(689938),
     z = n(445615),
     Q = n(865215),
-    X = n(735035),
-    J = n(786362);
+    J = n(735035),
+    X = n(786362);
 let q = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
-        return (t && null == n) || (n === W.p9.TIER_2 && t) ? null : (0, s.jsx)(U.Z, { className: t ? z.perkCardsContainerSpacingFullscreen : z.perkCardsContainerSpacingSettings });
+        return (t && null == n) || (n === W.p9.TIER_2 && t) ? null : (0, s.jsx)(B.Z, { className: t ? z.perkCardsContainerSpacingFullscreen : z.perkCardsContainerSpacingSettings });
     },
     $ = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
         return t || n ? (0, s.jsx)(D.Z, { lifted: !t && n }) : null;
     },
     ee = (e) => {
-        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: l, BestOfNitroV2Enabled: c, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: _, isWhatsNewBoxVisible: E, isBestOfNitroVisible: u, hasRenderedOnce: T } = e,
+        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: l, BestOfNitroV2Enabled: c, setIsWhatsNewBoxVisible: _, setIsBestOfNitroVisible: d, isWhatsNewBoxVisible: E, isBestOfNitroVisible: u, hasRenderedOnce: T } = e,
             I = a.useRef(0),
             g = a.useRef(0),
             N = a.useRef(0),
@@ -99,14 +99,14 @@ let q = (e) => {
                           }),
                       l &&
                           (0, s.jsx)(o.$, {
-                              onChange: (e) => d(e),
+                              onChange: (e) => _(e),
                               threshold: 0,
                               active: !0,
                               children: (0, s.jsx)(L.Z, { shouldLoadVideo: T })
                           }),
                       c &&
                           (0, s.jsx)(o.$, {
-                              onChange: (e) => _(e),
+                              onChange: (e) => d(e),
                               threshold: 0,
                               active: !0,
                               children: (0, s.jsx)(L.Z, {
@@ -144,42 +144,42 @@ t.Z = (e) => {
     var t;
     let { isFullscreen: n, entrypoint: r } = e;
     (0, T.z)(u.X);
-    let L = (0, p.z7)('PremiumMarketingHome'),
+    let L = (0, f.z7)('PremiumMarketingHome'),
         D = (0, C.g)('PremiumMarketingHome'),
-        U = (0, m.tY)('PremiumMarketingHome'),
+        B = (0, m.tY)('PremiumMarketingHome'),
         j = a.useRef(null),
         [G, V] = a.useState(!1),
         [et, en] = a.useState(!1),
         [es, ea] = a.useState(!1),
         [er, ei] = a.useState(!1),
         [el, eo] = a.useState(!1),
-        [ec, ed] = a.useState(!1),
-        e_ = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
-        eE = null != e_ ? (0, g.Af)(e_) : null,
+        [ec, e_] = a.useState(!1),
+        ed = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
+        eE = null != ed ? (0, g.Af)(ed) : null,
         eu = null != eE ? g.ZP.getSkuIdForPlan(eE.planId) : null,
         eT = null !== eu && eu !== W.Si.TIER_2 ? W.Si.TIER_2 : null,
-        eI = (0, A.n)(),
+        eI = (0, p.n)(),
         eR = null != eI,
         [eg, eN] = a.useState(!1),
         em = (0, M.Ng)(),
         eC = (0, S.N)(),
-        ef = null == eC ? void 0 : null === (t = eC.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        ep = (0, N.Nx)(),
-        eA = (0, O.Vi)(),
-        { analyticsLocations: eM } = (0, E.ZP)(_.Z.PREMIUM_MARKETING),
+        eA = null == eC ? void 0 : null === (t = eC.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        ef = (0, N.Nx)(),
+        ep = (0, O.Vi)(),
+        { analyticsLocations: eM } = (0, E.ZP)(d.Z.PREMIUM_MARKETING),
         eS = 'PremiumMarketingHome';
-    (0, d.j)({
+    (0, _.j)({
         location: eS + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, d.j)({
+        (0, _.j)({
             location: eS + ' auto off',
             autoTrackExposure: !1
         }),
         a.useEffect(() => {
-            ed(!0);
+            e_(!0);
         }, []);
-    let { enabled: eh } = f.O.useExperiment({ location: 'PremiumMarketingHome' }, { autoTrackExposure: !1 }),
+    let { enabled: eh } = A.O.useExperiment({ location: 'PremiumMarketingHome' }, { autoTrackExposure: !1 }),
         eb = (0, s.jsx)('div', {
             className: i()({
                 [z.premiumTierCardsContainerSettings]: !n,
@@ -190,11 +190,11 @@ t.Z = (e) => {
                 threshold: 0.1,
                 active: !0,
                 children: (0, s.jsx)(v.ZP, {
-                    variant: U ? (n ? v.NN.TAGLINE_XP_COPY_HOME : v.NN.TAGLINE_XP_COPY_SETTINGS) : v.NN.DEFAULT,
-                    showWumpus: !U,
+                    variant: B ? (n ? v.NN.TAGLINE_XP_COPY_HOME : v.NN.TAGLINE_XP_COPY_SETTINGS) : v.NN.DEFAULT,
+                    showWumpus: !B,
                     tier0CTAButton:
-                        ef === W.Si.TIER_2 || eA || null != em
-                            ? (0, s.jsx)(H.Z, {
+                        eA === W.Si.TIER_2 || ep || null != em
+                            ? (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_0,
@@ -203,7 +203,7 @@ t.Z = (e) => {
                                   color: c.ButtonColors.WHITE,
                                   buttonShineClassName: z.buttonShine
                               })
-                            : (0, s.jsx)(H.Z, {
+                            : (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_0,
@@ -211,8 +211,8 @@ t.Z = (e) => {
                                   buttonShineClassName: z.buttonShine
                               }),
                     tier2CTAButton:
-                        ef === W.Si.TIER_0
-                            ? (0, s.jsx)(H.Z, {
+                        eA === W.Si.TIER_0
+                            ? (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_2,
@@ -221,12 +221,12 @@ t.Z = (e) => {
                                   color: c.ButtonColors.WHITE,
                                   buttonShineClassName: z.buttonShine
                               })
-                            : (0, s.jsx)(H.Z, {
+                            : (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: W.Si.TIER_2,
                                   className: z.marginTopForButtons,
-                                  isEligibleForBogoPromotion: eA,
+                                  isEligibleForBogoPromotion: ep,
                                   buttonShineClassName: z.buttonShine
                               })
                 })
@@ -238,13 +238,13 @@ t.Z = (e) => {
             'data-cy': 'tier-0-marketing-page',
             children: [
                 (0, s.jsx)(Z.Z, {
-                    premiumSubscription: e_,
-                    className: i()(n ? z.fullscreenExistingSubscriberSpacing : z.existingSubscriberSpacing, { [z.zIndex1]: ep }),
+                    premiumSubscription: ed,
+                    className: i()(n ? z.fullscreenExistingSubscriberSpacing : z.existingSubscriberSpacing, { [z.zIndex1]: ef }),
                     isFullscreen: n
                 }),
                 (0, s.jsx)($, {
                     isFullscreen: n,
-                    inOfferExperience: ep
+                    inOfferExperience: ef
                 }),
                 !n && eR
                     ? (0, s.jsx)(x.Z, {
@@ -255,16 +255,16 @@ t.Z = (e) => {
                           onChange: (e) => V(e),
                           threshold: 0,
                           active: !0,
-                          children: (0, s.jsx)(B.Z, {
+                          children: (0, s.jsx)(U.Z, {
                               subscriptionTier: eT,
-                              isFullscreen: n || ep,
+                              isFullscreen: n || ef,
                               className: i()({
                                   [z.fullscreenHero]: n,
-                                  [z.settingsHeroNoBackground]: !n && ep,
-                                  [z.trialMarketingMargin]: ep,
-                                  [z.settingsHeroBogoHeight]: !n && eA,
-                                  [z.settingsHeroBogoMarginFullscreen]: n && eA,
-                                  [z.noTopPaddingOverride]: null != e_
+                                  [z.settingsHeroNoBackground]: !n && ef,
+                                  [z.trialMarketingMargin]: ef,
+                                  [z.settingsHeroBogoHeight]: !n && ep,
+                                  [z.settingsHeroBogoMarginFullscreen]: n && ep,
+                                  [z.noTopPaddingOverride]: null != ed
                               }),
                               entrypoint: r
                           })
@@ -277,7 +277,7 @@ t.Z = (e) => {
                 ex && (0, s.jsx)(P.d, { className: z.nitroweenGiftCard }),
                 (0, s.jsx)(ee, {
                     isFullscreen: n,
-                    inOfferExperience: ep,
+                    inOfferExperience: ef,
                     setIsAllPerksVisible: eN,
                     whatsNewV2Enabled: L,
                     BestOfNitroV2Enabled: D,
@@ -291,7 +291,7 @@ t.Z = (e) => {
                 (0, s.jsxs)('div', {
                     className: z.planComparisonTableContainer,
                     children: [
-                        (0, s.jsx)(y.Z, {
+                        (0, s.jsx)(H.Z, {
                             className: z.planComparisonTable,
                             hideCTAs: !0
                         }),
@@ -299,14 +299,14 @@ t.Z = (e) => {
                             ? (0, s.jsxs)(s.Fragment, {
                                   children: [
                                       (0, s.jsx)('img', {
-                                          src: X,
+                                          src: J,
                                           className: z.tableLeftSideDecoration,
                                           width: 197,
                                           height: 486,
                                           alt: Y.Z.Messages.IMAGE
                                       }),
                                       (0, s.jsx)('img', {
-                                          src: J,
+                                          src: X,
                                           className: z.tableRightSideDecoration,
                                           width: 241,
                                           height: 552,

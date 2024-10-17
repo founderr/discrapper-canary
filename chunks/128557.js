@@ -28,8 +28,8 @@ var i = n(735250),
     I = n(594174),
     T = n(259580),
     x = n(585483),
-    v = n(63063),
-    S = n(358085),
+    S = n(63063),
+    v = n(358085),
     N = n(709054),
     A = n(967128),
     Z = n(981631),
@@ -287,7 +287,7 @@ function P(e) {
                     'message'
                 )
             ),
-        (0, S.isWeb)() &&
+        (0, v.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -322,7 +322,7 @@ function P(e) {
         ));
     let q = T ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(v.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let X = ''.concat(S.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(A.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {

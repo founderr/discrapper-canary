@@ -1,9 +1,9 @@
-r.d(t, {
+s.d(t, {
     m: function () {
-        return n;
+        return r;
     }
 });
-let a = (0, r(818083).B)({
+let a = (0, s(818083).B)({
         kind: 'user',
         id: '2024-09_shop_browse_backend',
         label: 'Collectibles Shop Home Backend',
@@ -16,4 +16,4 @@ let a = (0, r(818083).B)({
             }
         ]
     }),
-    n = (e) => a.useExperiment({ location: e }).enabled;
+    r = (e) => a.useExperiment({ location: e }).enabled;

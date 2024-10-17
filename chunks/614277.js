@@ -1,69 +1,69 @@
-t.d(n, {
+n.d(r, {
     C3: function () {
-        return f;
+        return m;
     },
     O3: function () {
-        return m;
+        return f;
     },
     ZP: function () {
         return _;
     }
 });
-var o = t(735250),
-    r = t(470079),
-    a = t(120356),
-    i = t.n(a),
-    c = t(512722),
-    l = t.n(c),
-    s = t(699581),
-    u = t(481060),
-    d = t(598),
-    p = t(130298);
+var l = n(735250),
+    o = n(470079),
+    s = n(120356),
+    t = n.n(s),
+    a = n(512722),
+    c = n.n(a),
+    i = n(699581),
+    d = n(481060),
+    u = n(598),
+    p = n(130298);
 function _(e) {
-    var n, t, a, c, s, _;
+    var r, n, s, a, i, _;
     let {
-            header: f,
-            isLargeModal: m,
-            stepProps: h
+            header: m,
+            isLargeModal: f,
+            stepProps: N
         } = (function (e) {
-            let { header: n, isLargeModal: t, ...o } = e;
+            let { header: r, isLargeModal: n, ...l } = e;
             return {
-                header: n,
-                isLargeModal: t,
-                stepProps: o
+                header: r,
+                isLargeModal: n,
+                stepProps: l
             };
         })(e),
-        { step: g, stepConfigs: S, setBodyNode: b, setFooterNode: E, setModalOverlayNode: I, setReadySlideId: P } = (0, d.usePaymentContext)(),
-        T = S.find((e) => e.key === g);
-    r.useEffect(() => {
-        I(null);
-    }, [g, I]),
-        l()(null != T, 'Unknown step for current payment flow.');
-    let x = null !== (s = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.hideSlider) && void 0 !== s && s,
-        y = null == T ? void 0 : null === (t = T.options) || void 0 === t ? void 0 : t.bodyClassName,
-        M = void 0 !== m && m ? p.sliderBodyLarge : null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.sliderBodyClassName;
-    return (0, o.jsxs)(o.Fragment, {
+        { step: h, stepConfigs: E, setBodyNode: x, setFooterNode: I, setModalOverlayNode: S, setReadySlideId: C } = (0, u.usePaymentContext)(),
+        T = E.find((e) => e.key === h);
+    o.useEffect(() => {
+        S(null);
+    }, [h, S]),
+        c()(null != T, 'Unknown step for current payment flow.');
+    let b = null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
+        j = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
+        v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (s = T.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            null === (_ = null == T ? void 0 : null === (c = T.options) || void 0 === c ? void 0 : c.renderHeader) || void 0 === _ || _ ? f : null,
-            T.renderStep(h),
-            null == g || x
+            null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === _ || _ ? m : null,
+            T.renderStep(N),
+            null == h || b
                 ? null
-                : (0, o.jsxs)(o.Fragment, {
+                : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, o.jsx)(u.ModalContent, {
-                              className: i()(p.body, y),
-                              children: (0, o.jsx)(u.Slides, {
-                                  activeSlide: g,
+                          (0, l.jsx)(d.ModalContent, {
+                              className: t()(p.body, j),
+                              children: (0, l.jsx)(d.Slides, {
+                                  activeSlide: h,
                                   centered: !1,
-                                  onSlideReady: (e) => P(e),
-                                  children: S.filter((e) => null != e.key).map((e) =>
-                                      (0, o.jsx)(
-                                          u.Slide,
+                                  onSlideReady: (e) => C(e),
+                                  children: E.filter((e) => null != e.key).map((e) =>
+                                      (0, l.jsx)(
+                                          d.Slide,
                                           {
                                               id: e.key,
-                                              children: (0, o.jsx)('form', {
-                                                  className: i()(p.sliderBody, M),
-                                                  ref: (e) => b(e),
+                                              children: (0, l.jsx)('form', {
+                                                  className: t()(p.sliderBody, v),
+                                                  ref: (e) => x(e),
                                                   onSubmit: (e) => e.preventDefault()
                                               })
                                           },
@@ -72,20 +72,20 @@ function _(e) {
                                   )
                               })
                           }),
-                          (0, o.jsx)('div', { ref: (e) => E(e) }),
-                          (0, o.jsx)('div', { ref: (e) => I(e) })
+                          (0, l.jsx)('div', { ref: (e) => I(e) }),
+                          (0, l.jsx)('div', { ref: (e) => S(e) })
                       ]
                   })
         ]
     });
 }
-function f(e) {
-    let { children: n } = e,
-        { bodyNode: t } = (0, d.usePaymentContext)();
-    return null == t ? null : s.createPortal(n, t);
-}
 function m(e) {
-    let { children: n } = e,
-        { footerNode: t } = (0, d.usePaymentContext)();
-    return null == t ? null : s.createPortal(n, t);
+    let { children: r } = e,
+        { bodyNode: n } = (0, u.usePaymentContext)();
+    return null == n ? null : i.createPortal(r, n);
+}
+function f(e) {
+    let { children: r } = e,
+        { footerNode: n } = (0, u.usePaymentContext)();
+    return null == n ? null : i.createPortal(r, n);
 }

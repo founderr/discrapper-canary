@@ -19,9 +19,9 @@ var a = t(512722),
     S = t(212632),
     I = t(658785),
     N = t(556296),
-    m = t(808506),
+    A = t(808506),
     C = t(237997),
-    A = t(626135);
+    m = t(626135);
 t(63063);
 var g = t(13140),
     h = t(981631),
@@ -35,14 +35,14 @@ function x(e) {
         a = N.Z.getOverlayKeybind(),
         i = N.Z.getOverlayChatKeybind();
     return {
-        enabled: m.Z.enabled,
+        enabled: A.Z.enabled,
         notifications_enabled: n,
         notifications_position: n ? t : null,
         text_notifications_mode: C.Z.getTextChatNotificationMode(),
         hotkey: null != a ? (0, g.BB)(a.shortcut) : null,
         text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
         text_opacity_slider: C.Z.getTextWidgetOpacity(),
-        old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : m.Z.enabled
+        old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : A.Z.enabled
     };
 }
 function M(e) {
@@ -55,9 +55,9 @@ function M(e) {
 }
 function f(e) {
     let { className: s, showHeader: t = !0 } = e,
-        { enabled: a, legacyEnabled: r } = (0, l.cj)([m.Z], () => ({
-            enabled: m.Z.enabled,
-            legacyEnabled: m.Z.legacyEnabled
+        { enabled: a, legacyEnabled: r } = (0, l.cj)([A.Z], () => ({
+            enabled: A.Z.enabled,
+            legacyEnabled: A.Z.legacyEnabled
         })),
         {
             avatarSizeMode: g,
@@ -79,14 +79,14 @@ function f(e) {
         j = (0, E.$1)();
     function B(e) {
         _.Z.setEnabled(e, r),
-            A.default.track(h.rMx.OVERLAY_TOGGLED, {
+            m.default.track(h.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
     function U(e) {
         _.Z.setEnabled(a, e),
-            A.default.track(h.rMx.OVERLAY_TOGGLED, {
+            m.default.track(h.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - legacy'
             });
@@ -94,7 +94,7 @@ function f(e) {
     return (
         !(function () {
             let e = x(R);
-            !o().isEqual(e, R) && (A.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (R = e));
+            !o().isEqual(e, R) && (m.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (R = e));
         })(),
         (0, n.jsxs)(n.Fragment, {
             children: [

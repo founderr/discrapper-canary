@@ -32,7 +32,7 @@ function d(e) {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: v, focusedIndex: S } = T,
+        { itemCount: S, focusedIndex: v } = T,
         [N] = i.useState(() => (0, l.P2)(x, 16));
     return (
         i.useEffect(() => {
@@ -44,17 +44,17 @@ function d(e) {
         (function (e) {
             let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: p = u, getNewFocusIndex: m, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: T } = e,
                 x = i.useRef(n),
-                v = i.useRef(T);
-            (v.current = T), (x.current = n);
-            let S = i.useRef();
+                S = i.useRef(T);
+            (S.current = T), (x.current = n);
+            let v = i.useRef();
             i.useEffect(() => {
-                S.current = C;
+                v.current = C;
             }, [C]);
             let [N, A] = i.useState(!1),
                 [Z] = i.useState(
                     () =>
                         new l.$o((e) => () => {
-                            let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
+                            let t = null != S.current && 'string' == typeof e ? S.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
                                 _({
@@ -66,7 +66,7 @@ function d(e) {
             i.useEffect(() => () => Z.clean(), [Z]);
             let M = i.useCallback(
                     (e, t) => {
-                        S.current && p(e, t);
+                        v.current && p(e, t);
                     },
                     [p]
                 ),
@@ -93,7 +93,7 @@ function d(e) {
                 ),
                 P = i.useCallback(
                     (e) => {
-                        if (!S.current) return;
+                        if (!v.current) return;
                         if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), L();
                             return;
@@ -184,7 +184,7 @@ function d(e) {
                             'aria-posinset': E ? n + 1 : void 0,
                             id: I(t, n),
                             tabIndex: f && n === d ? 0 : -1,
-                            onFocus: Z.get(null != v.current ? I(t, n) : n)
+                            onFocus: Z.get(null != S.current ? I(t, n) : n)
                         };
                     },
                     [I, t, d, f, Z, E]
@@ -199,8 +199,8 @@ function d(e) {
             );
         })({
             navId: t,
-            itemCount: v,
-            focusedIndex: S,
+            itemCount: S,
+            focusedIndex: v,
             dispatch: N,
             onSelect: h,
             setFocus: p,

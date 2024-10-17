@@ -14,7 +14,7 @@ var a = n(120356),
     u = n(831557);
 function d(e) {
     let { message: t, channel: n, content: a, className: d, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...T } = e,
-        h = (0, r.ZP)(t);
+        f = (0, r.ZP)(t);
     return (0, i.jsx)('div', {
         className: s()({ [u.withFooter]: m }, u.embedCard, { [u.compact]: _ }, d),
         children: (0, i.jsx)(l.Z, {
@@ -28,7 +28,7 @@ function d(e) {
             childrenHeader: (0, i.jsx)(c.ZP, {
                 message: t,
                 channel: n,
-                author: h,
+                author: f,
                 guildId: null == n ? void 0 : n.guild_id,
                 compact: _,
                 hideTimestamp: I,

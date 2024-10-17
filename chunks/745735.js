@@ -3,15 +3,15 @@ t.d(n, {
         return o;
     }
 });
-var i = t(470079),
-    r = t(512722),
-    l = t.n(r);
+var r = t(470079),
+    i = t(512722),
+    l = t.n(i);
 function o(e, n) {
-    let t = (0, i.useRef)(e);
-    (0, i.useEffect)(() => {
+    let t = (0, r.useRef)(e);
+    (0, r.useEffect)(() => {
         t.current = e;
     }, [e]),
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (null === n) return;
             let e = setInterval(function () {
                 l()(null != t.current, 'Missing callback'), t.current();

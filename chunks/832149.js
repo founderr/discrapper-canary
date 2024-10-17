@@ -1,14 +1,14 @@
 var i = s(735250);
 s(470079);
-var n = s(481060);
+var l = s(481060);
 t.Z = (e) => {
-    let { product: t, analyticsLocations: a } = e;
-    (0, n.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([s.e('87624'), s.e('28428')]).then(s.bind(s, 331042));
+    let { product: t, analyticsLocations: n } = e;
+    (0, l.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([s.e('87624'), s.e('74665')]).then(s.bind(s, 331042));
         return (s) =>
             (0, i.jsx)(e, {
                 product: t,
-                analyticsLocations: a,
+                analyticsLocations: n,
                 ...s
             });
     });

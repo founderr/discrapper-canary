@@ -24,9 +24,9 @@ function N() {
         t = u.R$.useSetting(),
         a = u.cC.useSetting(),
         N = u.vF.useSetting(),
-        m = u.H1.useSetting(),
+        A = u.H1.useSetting(),
         C = u.ev.useSetting(),
-        A = u.x4.useSetting(),
+        m = u.x4.useSetting(),
         g = u.RS.useSetting(),
         h = u.NA.useSetting(),
         O = u.nc.useSetting(),
@@ -55,7 +55,7 @@ function N() {
                         setting: E.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, n.jsx)(r.FormSwitch, {
                             className: i()(I.marginTop8, I.marginBottom20),
-                            value: A,
+                            value: m,
                             note: S.Z.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({ maxSize: 10 }),
                             onChange: u.x4.updateSetting,
                             children: S.Z.Messages.INLINE_ATTACHMENT_MEDIA
@@ -65,7 +65,7 @@ function N() {
                         setting: E.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, n.jsx)(r.FormSwitch, {
                             className: i()(I.marginTop8, I.marginBottom40),
-                            value: m,
+                            value: A,
                             note: S.Z.Messages.IMAGE_DESCRIPTION_HELP,
                             onChange: u.H1.updateSetting,
                             children: S.Z.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS

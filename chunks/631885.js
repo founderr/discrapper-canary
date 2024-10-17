@@ -15,10 +15,10 @@ n.d(t, {
         return R;
     },
     mq: function () {
-        return d;
+        return _;
     },
     rW: function () {
-        return _;
+        return d;
     }
 });
 var s = n(399606),
@@ -28,7 +28,7 @@ var s = n(399606),
     l = n(652262),
     o = n(880257),
     c = n(292352);
-function d(e) {
+function _(e) {
     let t = Object.values((0, s.e7)([r.Z], () => r.Z.getLinkedUsers()))
         .filter((t) => null != t && t.link_status === e)
         .sort((e, t) => new Date(e.updated_at).getTime() - new Date(t.updated_at).getTime())
@@ -39,14 +39,14 @@ function d(e) {
         .filter((e) => null != e);
     return (0, s.Wu)([a.default], () => t.map((e) => a.default.getUser(e))).filter((e) => null != e);
 }
-function _() {
+function d() {
     let e = (0, s.e7)([r.Z], () => r.Z.getLinkCode()),
         t = (0, s.e7)([a.default], () => a.default.getCurrentUser());
     return null == e || null == t ? null : (0, c._w)(t.id, e);
 }
 function E() {
     let e = (0, o.Z)(),
-        t = d(c.ne.ACTIVE),
+        t = _(c.ne.ACTIVE),
         n = e ? c.AG : c.i0;
     return t.length >= n;
 }

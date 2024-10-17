@@ -1,40 +1,40 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-    r = t.n(a),
-    s = t(481060),
-    l = t(203748);
-function o(e) {
-    let { className: n, copy: t, bannerImage: a, textColor: o = 'always-white', hideGiftIcon: c = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(l.bannerContainer, n),
+var t = s(735250);
+s(470079);
+var l = s(120356),
+    i = s.n(l),
+    r = s(481060),
+    a = s(203748);
+function c(e) {
+    let { className: n, copy: s, bannerImage: l, textColor: c = 'always-white', hideGiftIcon: o = !1 } = e;
+    return (0, t.jsxs)('div', {
+        className: i()(a.bannerContainer, n),
         children: [
-            null == a
+            null == l
                 ? null
-                : (0, i.jsx)('img', {
+                : (0, t.jsx)('img', {
                       alt: '',
-                      className: l.banner,
-                      src: a
+                      className: a.banner,
+                      src: l
                   }),
-            (0, i.jsxs)('div', {
-                className: l.textContainer,
+            (0, t.jsxs)('div', {
+                className: a.textContainer,
                 children: [
-                    !1 === c &&
-                        (0, i.jsx)(s.GiftIcon, {
+                    !1 === o &&
+                        (0, t.jsx)(r.GiftIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.giftIcon
+                            className: a.giftIcon
                         }),
-                    (0, i.jsx)(s.Heading, {
-                        className: r()(l.textHeader, { [l.textHeaderWithGiftIcon]: !c }),
-                        color: o,
+                    (0, t.jsx)(r.Heading, {
+                        className: i()(a.textHeader, { [a.textHeaderWithGiftIcon]: !o }),
+                        color: c,
                         variant: 'eyebrow',
-                        children: t
+                        children: s
                     })
                 ]
             })

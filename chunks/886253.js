@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
     A: function () {
         return f;
     }
@@ -6,93 +6,93 @@ t.d(n, {
 var l = t(735250);
 t(470079);
 var i = t(442837),
-    s = t(481060),
-    a = t(264043),
-    o = t(812206),
-    r = t(572004),
+    o = t(481060),
+    r = t(264043),
+    a = t(812206),
+    s = t(572004),
     u = t(601911),
     c = t(504211),
     d = t(981631),
     p = t(689938),
-    m = t(213891),
-    v = t(566809);
-function f(e) {
-    let { appId: n, skuId: t, transitionState: f, onClose: h, onHeaderTitleClick: I, children: S, footer: x } = e,
-        T = (0, i.e7)(
-            [o.Z, a.Z],
+    v = t(213891),
+    m = t(566809);
+function f(n) {
+    let { appId: e, skuId: t, transitionState: f, onClose: I, onHeaderTitleClick: h, children: S, footer: x } = n,
+        g = (0, i.e7)(
+            [a.Z, r.Z],
             () => {
-                var e;
-                return null !== (e = o.Z.getApplication(n)) && void 0 !== e ? e : a.Z.getApplicationRecord(n);
+                var n;
+                return null !== (n = a.Z.getApplication(e)) && void 0 !== n ? n : r.Z.getApplicationRecord(e);
             },
-            [n]
+            [e]
         );
-    if (null == T) return null;
-    let N = (0, u.y)(T, 25),
-        { termsOfServiceUrl: E, privacyPolicyUrl: g } = T;
-    return (0, l.jsxs)(s.ModalRoot, {
+    if (null == g) return null;
+    let T = (0, u.y)(g, 25),
+        { termsOfServiceUrl: E, privacyPolicyUrl: N } = g;
+    return (0, l.jsxs)(o.ModalRoot, {
         transitionState: f,
-        size: s.ModalSize.DYNAMIC,
-        className: v.modal,
+        size: o.ModalSize.DYNAMIC,
+        className: m.modal,
         children: [
-            (0, l.jsxs)(s.ModalHeader, {
-                className: m.modalHeader,
+            (0, l.jsxs)(o.ModalHeader, {
+                className: v.modalHeader,
                 children: [
-                    (0, l.jsxs)(s.Clickable, {
-                        className: m.modalTitle,
-                        onClick: I,
+                    (0, l.jsxs)(o.Clickable, {
+                        className: v.modalTitle,
+                        onClick: h,
                         children: [
-                            null != N &&
+                            null != T &&
                                 (0, l.jsx)('img', {
-                                    src: N.href,
+                                    src: T.href,
                                     alt: '',
-                                    className: v.appIcon
+                                    className: m.appIcon
                                 }),
-                            (0, l.jsx)(s.Heading, {
+                            (0, l.jsx)(o.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: T.name
+                                children: g.name
                             })
                         ]
                     }),
-                    (0, l.jsx)(s.ModalCloseButton, {
-                        onClick: h,
-                        className: m.modalCloseBtn
+                    (0, l.jsx)(o.ModalCloseButton, {
+                        onClick: I,
+                        className: v.modalCloseBtn
                     })
                 ]
             }),
             S,
-            (0, l.jsxs)(s.ModalFooter, {
-                className: v.footer,
+            (0, l.jsxs)(o.ModalFooter, {
+                className: m.footer,
                 children: [
-                    null != E && null != g
-                        ? (0, l.jsx)(s.Text, {
+                    null != E && null != N
+                        ? (0, l.jsx)(o.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
                               children: p.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
                                   tosUrl: E,
-                                  ppUrl: g
+                                  ppUrl: N
                               })
                           })
-                        : (0, l.jsx)(s.Text, {
+                        : (0, l.jsx)(o.Text, {
                               color: 'header-primary',
                               variant: 'text-xs/normal',
                               children: p.Z.Messages.STOREFRONT_NO_TOS_PP
                           }),
                     (0, l.jsxs)('div', {
-                        className: v.footerButtons,
+                        className: m.footerButtons,
                         children: [
-                            r.wS &&
-                                (0, l.jsx)(s.Button, {
-                                    look: s.Button.Looks.FILLED,
-                                    size: s.Button.Sizes.ICON,
-                                    color: s.Button.Colors.PRIMARY,
+                            s.wS &&
+                                (0, l.jsx)(o.Button, {
+                                    look: o.Button.Looks.FILLED,
+                                    size: o.Button.Sizes.ICON,
+                                    color: o.Button.Colors.PRIMARY,
                                     'aria-label': p.Z.Messages.COPY_LINK,
-                                    className: v.linkButton,
-                                    innerClassName: v.innerLinkButton,
+                                    className: m.linkButton,
+                                    innerClassName: m.innerLinkButton,
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
-                                        (0, r.JG)(e), (0, s.showToast)((0, s.createToast)(p.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)), (0, c.X)(n, c.B.DETAILS_MODAL, t);
+                                        let n = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
+                                        (0, s.JG)(n), (0, o.showToast)((0, o.createToast)(p.Z.Messages.COPIED_LINK, o.ToastType.SUCCESS)), (0, c.X)(e, c.B.DETAILS_MODAL, t);
                                     },
-                                    children: (0, l.jsx)(s.LinkIcon, {
+                                    children: (0, l.jsx)(o.LinkIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     })

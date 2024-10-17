@@ -12,37 +12,37 @@ t.d(n, {
         return a;
     }
 });
-var i = t(570140),
-    r = t(881052),
+var r = t(570140),
+    i = t(881052),
     l = t(824389);
 let o = async (e) => {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_PRODUCTS_FETCH',
             guildId: e
         });
         try {
             let n = await l.uV(e);
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_SUCCESS',
                 guildId: e,
                 products: n
             });
         } catch (n) {
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_FAILURE',
                 guildId: e
             });
         }
     },
     u = async (e, n) => {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_PRODUCT_FETCH',
             productId: n
         });
         try {
             let t = await l.p9(e, n);
             return (
-                i.Z.dispatch({
+                r.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_SUCCESS',
                     product: t
                 }),
@@ -50,29 +50,29 @@ let o = async (e) => {
             );
         } catch (e) {
             throw (
-                (i.Z.dispatch({
+                (r.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_FAILURE',
                     productId: n,
-                    error: new r.Hx(e)
+                    error: new i.Hx(e)
                 }),
                 e)
             );
         }
     };
 async function s(e, n, t) {
-    let r = await l.Je(e, n, t);
+    let i = await l.Je(e, n, t);
     return (
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_PRODUCT_UPDATE',
-            product: r
+            product: i
         }),
-        r
+        i
     );
 }
 async function a(e, n) {
     return (
         await l.mh(e, n),
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_PRODUCT_DELETE',
             productId: n
         }),

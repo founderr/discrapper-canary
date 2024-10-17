@@ -3,23 +3,23 @@ t.d(a, {
         return o;
     }
 });
-var s = t(735250);
+var n = t(735250);
 t(470079);
-var n = t(481060),
-    l = t(689938),
-    r = t(848855);
+var s = t(481060),
+    r = t(689938),
+    l = t(848855);
 let o = (e) => {
     let { onClick: a, children: t } = e;
-    return (0, s.jsx)(n.Anchor, {
+    return (0, n.jsx)(s.Anchor, {
         onClick: a,
-        className: r.link,
+        className: l.link,
         children: t
     });
 };
 a.Z = (e) => {
     let { onClick: a } = e;
-    return (0, s.jsx)(o, {
+    return (0, n.jsx)(o, {
         onClick: a,
-        children: l.Z.Messages.BACK
+        children: r.Z.Messages.BACK
     });
 };

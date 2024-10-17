@@ -21,23 +21,23 @@ var i = n(735250),
     I = n(481060),
     m = n(239091),
     T = n(494404),
-    h = n(724757),
-    N = n(213609),
-    f = n(294218),
-    C = n(373662),
-    p = n(695346),
+    f = n(724757),
+    h = n(213609),
+    N = n(294218),
+    p = n(373662),
+    C = n(695346),
     g = n(496675),
-    A = n(626135),
-    S = n(585483),
-    R = n(70956),
-    x = n(324701),
+    S = n(626135),
+    A = n(585483),
+    x = n(70956),
+    R = n(324701),
     O = n(575016),
-    M = n(768943),
-    v = n(686478),
+    v = n(768943),
+    M = n(686478),
     L = n(664559),
     Z = n(767893),
-    P = n(206697),
-    b = n(74551),
+    b = n(206697),
+    P = n(74551),
     D = n(981631),
     j = n(689938),
     U = n(982138);
@@ -66,20 +66,20 @@ function B(e) {
 function k(e) {
     let { closePopout: t } = e,
         n = (0, L.Z)();
-    return ((0, N.Z)(
+    return ((0, h.Z)(
         {
             type: d.ImpressionTypes.POPOUT,
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: M.Z.getOverdueMessageReminderCount()
+                overdue_count: v.Z.getOverdueMessageReminderCount()
             }
         },
         {},
         [n.length]
     ),
     0 === n.length)
-        ? (0, i.jsx)(P.w, {})
+        ? (0, i.jsx)(b.w, {})
         : (0, i.jsx)(F, {
               savedMessageKeys: n,
               closePopout: t
@@ -94,8 +94,8 @@ function G(e) {
         d = a.useCallback(() => {
             c(!o), o ? null == n || n() : null == t || t();
         }, [n, t, o]);
-    a.useEffect(() => (S.S.subscribe(D.CkL.TOGGLE_FOR_LATER, d), () => void S.S.unsubscribe(D.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let _ = (0, E.e7)([M.Z], () => M.Z.hasOverdueReminder(), []);
+    a.useEffect(() => (A.S.subscribe(D.CkL.TOGGLE_FOR_LATER, d), () => void A.S.unsubscribe(D.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    let _ = (0, E.e7)([v.Z], () => v.Z.hasOverdueReminder(), []);
     return (0, i.jsx)(I.Popout, {
         animation: I.Popout.Animation.NONE,
         position: r,
@@ -116,11 +116,11 @@ function G(e) {
 function F(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         s = a.useRef(null),
-        r = (0, h.Z)('for-later', s),
+        r = (0, f.Z)('for-later', s),
         [l, o] = a.useState(new Date());
     return (
         a.useEffect(() => {
-            let e = setInterval(() => o(new Date()), R.Z.Millis.MINUTE);
+            let e = setInterval(() => o(new Date()), x.Z.Millis.MINUTE);
             return () => {
                 clearInterval(e);
             };
@@ -162,11 +162,11 @@ function w(e) {
                 var i;
                 await (0, O.fC)(t, l),
                     !e.shiftKey && n(),
-                    A.default.track(D.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    S.default.track(D.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
-                        type: null != t.saveData.dueAt ? v._l.REMINDER : v._l.BOOKMARK,
+                        type: null != t.saveData.dueAt ? M._l.REMINDER : M._l.BOOKMARK,
                         due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
                     });
             },
@@ -183,26 +183,26 @@ function w(e) {
                       'aria-label': j.Z.Messages.JUMP_TO_MESSAGE
                   }),
                   null != t.saveData.dueAt
-                      ? (0, i.jsx)(b.Z, {
+                      ? (0, i.jsx)(P.Z, {
                             reminder: t,
                             throttledNow: s
                         })
                       : null,
                   (0, i.jsx)(Z.Z, { channel: l }),
                   (0, i.jsx)(
-                      f.Z,
+                      N.Z,
                       {
                           message: t.message,
                           channel: l,
                           className: U.message,
-                          compact: p.jU.getSetting(),
+                          compact: C.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: y,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
                   ),
-                  (0, i.jsx)(C.ZP, {
+                  (0, i.jsx)(p.ZP, {
                       className: U.hoverBar,
                       children: (0, i.jsx)(H, {
                           savedMessage: t,
@@ -226,15 +226,15 @@ function w(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? j.Z.Messages.FOR_LATER_REMINDER_DELETED : j.Z.Messages.FOR_LATER_BOOKMARK_DELETED
                   }),
-                  (0, i.jsx)(C.ZP, {
+                  (0, i.jsx)(p.ZP, {
                       className: U.hoverBar,
                       children: (0, i.jsx)(
-                          C.sF,
+                          p.sF,
                           {
                               label: j.Z.Messages.FOR_LATER_REMOVE,
                               icon: I.TrashIcon,
                               dangerous: !0,
-                              onClick: () => (0, x.x)(t.saveData)
+                              onClick: () => (0, R.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -244,7 +244,7 @@ function w(e) {
 }
 function V(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: a } = e,
-        s = (0, E.e7)([M.Z], () => M.Z.getSavedMessage(t.channelId, t.messageId));
+        s = (0, E.e7)([v.Z], () => v.Z.getSavedMessage(t.channelId, t.messageId));
     return null == s
         ? null
         : (0, i.jsx)(w, {
@@ -259,12 +259,12 @@ function H(e) {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                           icon: I.CheckmarkLargeIcon,
                           onClick: () =>
-                              (0, x.z)({
+                              (0, R.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0
@@ -273,7 +273,7 @@ function H(e) {
                       'mark-complete'
                   ),
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_EDIT,
                           icon: I.PencilIcon,
@@ -290,9 +290,9 @@ function H(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, i.jsx)(C.fO, {}),
+                  (0, i.jsx)(p.fO, {}),
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -301,11 +301,11 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,
-                          onClick: () => (0, x.x)(t.saveData)
+                          onClick: () => (0, R.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -314,7 +314,7 @@ function H(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.MESSAGE_REMINDERS_CREATE,
                           icon: I.ClockIcon,
@@ -332,7 +332,7 @@ function H(e) {
                       'create-reminder'
                   ),
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -341,11 +341,11 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      C.sF,
+                      p.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkIcon,
-                          onClick: () => (0, x.x)(t.saveData)
+                          onClick: () => (0, R.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )

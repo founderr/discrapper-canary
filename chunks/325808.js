@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(131951),
     I = t(358085),
     N = t(962100),
-    m = t(981631),
+    A = t(981631),
     C = t(689938),
-    A = t(592142),
+    m = t(592142),
     g = t(113207);
 let h = !I.isPlatformEmbedded,
     O = (0, T.hQ)();
@@ -33,19 +33,19 @@ function R(e) {
         { shortcut: a, delay: i } = (0, o.cj)([S.Z], () => S.Z.getModeOptions());
     return (
         (s =
-            I.isPlatformEmbedded || t !== m.pM4.PUSH_TO_TALK
+            I.isPlatformEmbedded || t !== A.pM4.PUSH_TO_TALK
                 ? (0, n.jsx)(l.FormText, {
                       type: l.FormText.Types.DESCRIPTION,
-                      className: r()(A.pttToolsMessage, g.marginBottom8),
-                      children: C.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => d.Z.setSection(m.oAB.KEYBINDS) })
+                      className: r()(m.pttToolsMessage, g.marginBottom8),
+                      children: C.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => d.Z.setSection(A.oAB.KEYBINDS) })
                   })
                 : (0, n.jsx)(l.FormText, {
                       type: l.FormText.Types.DESCRIPTION,
-                      className: r()(A.pttToolsMessage, A.pttToolsWarning, g.marginBottom8),
+                      className: r()(m.pttToolsMessage, m.pttToolsWarning, g.marginBottom8),
                       children: C.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, N.y)('Help Text PTT') })
                   })),
         (0, n.jsxs)('div', {
-            className: A.pttTools,
+            className: m.pttTools,
             children: [
                 (0, n.jsxs)(E.Z, {
                     children: [
@@ -73,7 +73,7 @@ function R(e) {
                                         initialValue: i,
                                         onValueChange: (e) => c.Z.setMode(t, { delay: e }),
                                         onValueRender: p,
-                                        maxValue: m.qhL,
+                                        maxValue: A.qhL,
                                         'aria-labelledby': O
                                     })
                                 ]
@@ -91,18 +91,18 @@ function x() {
         s = (0, o.e7)([S.Z], () => S.Z.getMode()),
         i = [
             {
-                value: m.pM4.VOICE_ACTIVITY,
+                value: A.pM4.VOICE_ACTIVITY,
                 name: C.Z.Messages.INPUT_MODE_VAD
             },
             {
-                value: m.pM4.PUSH_TO_TALK,
+                value: A.pM4.PUSH_TO_TALK,
                 name: h ? C.Z.Messages.INPUT_MODE_PTT_LIMITED : C.Z.Messages.INPUT_MODE_PTT
             }
         ],
         r = a.useCallback(
             (s) => {
                 let { value: a } = s;
-                a === m.pM4.PUSH_TO_TALK &&
+                a === A.pM4.PUSH_TO_TALK &&
                     h &&
                     (0, l.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
@@ -131,7 +131,7 @@ function x() {
                     value: s
                 })
             }),
-            s === m.pM4.PUSH_TO_TALK && (0, n.jsx)(R, { inputMode: s })
+            s === A.pM4.PUSH_TO_TALK && (0, n.jsx)(R, { inputMode: s })
         ]
     });
 }

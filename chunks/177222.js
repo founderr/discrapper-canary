@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(510659),
     T = n(113557),
     x = n(867176),
-    v = n(169979),
-    S = n(451834),
+    S = n(169979),
+    v = n(451834),
     N = n(502762),
     A = n(952124),
     Z = n(544989),
@@ -111,7 +111,7 @@ function k(e) {
                                             animateOnHover: !K,
                                             className: U.banner
                                         }),
-                                        (0, i.jsx)(S.Z, {
+                                        (0, i.jsx)(v.Z, {
                                             userId: t.id,
                                             className: U.toast
                                         }),
@@ -123,7 +123,7 @@ function k(e) {
                                             profileType: O.y0.PANEL,
                                             onOpenProfile: w ? void 0 : J
                                         }),
-                                        (0, i.jsx)(v.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
                                             channelId: k.id,

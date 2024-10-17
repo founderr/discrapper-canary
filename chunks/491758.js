@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(556296),
     I = t(924557),
     N = t(435064),
-    m = t(894694),
+    A = t(894694),
     C = t(779618),
-    A = t(39604),
+    m = t(39604),
     g = t(442334),
     h = t(356659),
     O = t(981631),
@@ -119,7 +119,7 @@ function L() {
                             className: f.formItem,
                             children: x.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({ onClick: () => d.Z.open(O.oAB.VOICE, null, { scrollPosition: R.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    b === m.x.BELOW_MINIMUM
+                    b === A.x.BELOW_MINIMUM
                         ? (0, n.jsx)(E.Z, {
                               look: E.z.WARNING,
                               className: f.formItem,
@@ -133,7 +133,7 @@ function L() {
                         value: s,
                         note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
                         onChange: (e) =>
-                            A.em({
+                            m.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
@@ -161,7 +161,7 @@ function L() {
                                 value: i,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
                                 onChange: (e) =>
-                                    A._Q({
+                                    m._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -181,7 +181,7 @@ function L() {
                                 className: f.formItem,
                                 value: t,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-                                onChange: (e) => A.N0(e),
+                                onChange: (e) => m.N0(e),
                                 children: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
                             })
                         })
@@ -193,7 +193,7 @@ function L() {
                 children: [
                     (0, n.jsx)(g.Q, {
                         className: f.formItem,
-                        select: A.eU,
+                        select: m.eU,
                         title: x.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: x.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
                         value: L,
@@ -202,7 +202,7 @@ function L() {
                     (0, n.jsx)(g.Q, {
                         className: f.formItem,
                         select: (e) =>
-                            A.yi({
+                            m.yi({
                                 resolution: e,
                                 frameRate: P.frameRate
                             }),
@@ -214,7 +214,7 @@ function L() {
                     (0, n.jsx)(g.Q, {
                         className: f.formItem,
                         select: (e) =>
-                            A.yi({
+                            m.yi({
                                 resolution: P.resolution,
                                 frameRate: e
                             }),

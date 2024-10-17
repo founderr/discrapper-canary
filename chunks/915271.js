@@ -1,14 +1,14 @@
-var s = t(735250),
-    n = t(470079),
-    l = t(442837),
-    r = t(481060),
+var n = t(735250),
+    s = t(470079),
+    r = t(442837),
+    l = t(481060),
     o = t(873115),
     i = t(219929),
     c = t(618541),
     u = t(975060),
     d = t(689938),
     E = t(299490);
-class A extends n.PureComponent {
+class _ extends s.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && o.by();
     }
@@ -17,31 +17,31 @@ class A extends n.PureComponent {
     }
     render() {
         let { venmoUsername: e, className: a, venmoClient: t } = this.props,
-            n = null != e && '' !== e;
-        return (0, s.jsxs)('div', {
+            s = null != e && '' !== e;
+        return (0, n.jsxs)('div', {
             className: a,
             children: [
-                (0, s.jsx)(i.ZP, {
+                (0, n.jsx)(i.ZP, {
                     type: i.ZP.Types.VENMO,
                     size: i.Uy.MEDIUM,
                     className: E.venmoIcon
                 }),
-                n
-                    ? (0, s.jsxs)(s.Fragment, {
+                s
+                    ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, s.jsx)(r.Heading, {
+                              (0, n.jsx)(l.Heading, {
                                   variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
                                   className: E.connectionInstructions,
                                   children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS.format({ venmoUsername: e })
                               }),
-                              (0, s.jsx)(r.Text, {
+                              (0, n.jsx)(l.Text, {
                                   variant: 'text-md/medium',
                                   className: E.connectionInstructions,
                                   children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS_INSTRUCTIONS
                               })
                           ]
                       })
-                    : (0, s.jsx)(r.Text, {
+                    : (0, n.jsx)(l.Text, {
                           variant: 'text-md/medium',
                           className: E.connectionInstructions,
                           children: null == t ? d.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING : d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
@@ -50,7 +50,7 @@ class A extends n.PureComponent {
         });
     }
 }
-a.Z = l.ZP.connectStores([c.Z, u.Z], () => ({
+a.Z = r.ZP.connectStores([c.Z, u.Z], () => ({
     venmoUsername: u.Z.venmoUsername,
     venmoClient: c.Z.getVenmoClient()
-}))(A);
+}))(_);

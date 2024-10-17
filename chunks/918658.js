@@ -6,10 +6,10 @@ t.d(n, {
         return Z;
     }
 });
-var i = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(120356),
-    l = t.n(r),
+var i = t(120356),
+    l = t.n(i),
     o = t(442837),
     u = t(692547),
     s = t(481060),
@@ -21,35 +21,35 @@ var r = t(120356),
     f = t(703656),
     I = t(944486),
     S = t(914010),
-    T = t(671533),
-    C = t(259580),
-    p = t(358085),
-    N = t(962086),
-    A = t(160404),
-    g = t(889695),
-    m = t(981631),
-    L = t(176505),
-    O = t(302463),
-    R = t(293810),
-    h = t(689938),
-    v = t(489666);
+    p = t(671533),
+    T = t(259580),
+    C = t(358085),
+    g = t(962086),
+    N = t(160404),
+    m = t(889695),
+    A = t(981631),
+    h = t(176505),
+    v = t(302463),
+    L = t(293810),
+    O = t(689938),
+    R = t(489666);
 function M(e) {
-    let { className: n, onClick: t, children: r } = e;
-    return (0, i.jsx)(s.Button, {
-        className: l()(v.button, n),
-        innerClassName: v.buttonInner,
+    let { className: n, onClick: t, children: i } = e;
+    return (0, r.jsx)(s.Button, {
+        className: l()(R.button, n),
+        innerClassName: R.buttonInner,
         look: s.Button.Looks.OUTLINED,
         color: s.Button.Colors.WHITE,
         size: s.Button.Sizes.NONE,
         onClick: t,
-        children: r
+        children: i
     });
 }
 function D(e) {
     let { onClick: n } = e;
-    return (0, i.jsx)(M, {
+    return (0, r.jsx)(M, {
         onClick: n,
-        children: h.Z.Messages.DISABLE
+        children: O.Z.Messages.DISABLE
     });
 }
 function U() {
@@ -57,121 +57,121 @@ function U() {
         n = (0, o.e7)([I.Z], () => I.Z.getChannelId(e)),
         {
             viewingRoles: t,
-            backNavigationSection: r,
+            backNavigationSection: i,
             isFullServerPreview: l,
-            isServerShopPreview: p
-        } = (0, o.cj)([A.Z], () => ({
-            viewingRoles: null != e ? A.Z.getViewingRoles(e) : null,
-            backNavigationSection: A.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && A.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && A.Z.isViewingServerShop(e)
+            isServerShopPreview: C
+        } = (0, o.cj)([N.Z], () => ({
+            viewingRoles: null != e ? N.Z.getViewingRoles(e) : null,
+            backNavigationSection: N.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && N.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && N.Z.isViewingServerShop(e)
         }));
     if (null == t || null == e) return null;
     let U = (function (e) {
             switch (e) {
-                case m.pNK.INTEGRATIONS:
-                    return h.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-                case m.pNK.ROLE_SUBSCRIPTIONS:
-                    return h.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-                case m.pNK.ONBOARDING:
-                    return h.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+                case A.pNK.INTEGRATIONS:
+                    return O.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+                case A.pNK.ROLE_SUBSCRIPTIONS:
+                    return O.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+                case A.pNK.ONBOARDING:
+                    return O.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
                 default:
-                    return h.Z.Messages.VIEWING_AS_ROLES_BACK;
+                    return O.Z.Messages.VIEWING_AS_ROLES_BACK;
             }
-        })(r),
-        Z = r === m.pNK.ROLE_SUBSCRIPTIONS ? h.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : h.Z.Messages.VIEWING_AS_ROLES_SELECT,
-        P = n === L.oC.GUILD_ONBOARDING,
-        b = (n) => {
+        })(i),
+        Z = i === A.pNK.ROLE_SUBSCRIPTIONS ? O.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : O.Z.Messages.VIEWING_AS_ROLES_SELECT,
+        b = n === h.oC.GUILD_ONBOARDING,
+        P = (n) => {
             let { backToSettings: t } = n;
-            null != e && (A.Z.isFullServerPreview(e) && (0, f.uL)(m.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (a.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, N.mL)(e), t && E.Z.open(e, r), r === m.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+            null != e && (N.Z.isFullServerPreview(e) && (0, f.uL)(A.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (a.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, g.mL)(e), t && E.Z.open(e, i), i === A.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
         };
-    return (0, i.jsxs)(s.Notice, {
+    return (0, r.jsxs)(s.Notice, {
         color: s.NoticeColors.BRAND,
-        className: v.notice,
+        className: R.notice,
         children: [
-            (0, i.jsxs)(M, {
-                onClick: () => b({ backToSettings: !0 }),
-                className: v.backButton,
+            (0, r.jsxs)(M, {
+                onClick: () => P({ backToSettings: !0 }),
+                className: R.backButton,
                 children: [
-                    (0, i.jsx)(T.Z, {
+                    (0, r.jsx)(p.Z, {
                         width: 16,
                         height: 16,
-                        direction: T.Z.Directions.LEFT,
-                        className: v.backArrow
+                        direction: p.Z.Directions.LEFT,
+                        className: R.backArrow
                     }),
                     U
                 ]
             }),
-            P && l
-                ? (0, i.jsx)('div', {
-                      className: v.noticeContents,
-                      children: (0, i.jsx)('div', {
-                          className: v.noticeText,
-                          children: h.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
+            b && l
+                ? (0, r.jsx)('div', {
+                      className: R.noticeContents,
+                      children: (0, r.jsx)('div', {
+                          className: R.noticeText,
+                          children: O.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
                       })
                   })
-                : (0, i.jsxs)('div', {
-                      className: v.noticeContents,
+                : (0, r.jsxs)('div', {
+                      className: R.noticeContents,
                       children: [
-                          (0, i.jsx)('div', {
-                              className: v.noticeText,
-                              children: l ? h.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length }) : h.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
+                          (0, r.jsx)('div', {
+                              className: R.noticeText,
+                              children: l ? O.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length }) : O.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
                           }),
-                          (0, i.jsx)(s.Popout, {
+                          (0, r.jsx)(s.Popout, {
                               position: 'bottom',
-                              renderPopout: () => (0, i.jsx)(g.Z, { guildId: e }),
+                              renderPopout: () => (0, r.jsx)(m.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: n } = e;
-                                  return (0, i.jsxs)(M, {
+                                  return (0, r.jsxs)(M, {
                                       onClick: n,
                                       children: [
                                           Z,
-                                          (0, i.jsx)(C.Z, {
+                                          (0, r.jsx)(T.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: C.Z.Directions.DOWN,
-                                              className: v.selectCaret
+                                              direction: T.Z.Directions.DOWN,
+                                              className: R.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
                           l &&
-                              (0, i.jsx)(s.TooltipContainer, {
-                                  className: v.previewWarning,
-                                  text: h.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-                                  children: (0, i.jsx)(s.CircleWarningIcon, {
+                              (0, r.jsx)(s.TooltipContainer, {
+                                  className: R.previewWarning,
+                                  text: O.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+                                  children: (0, r.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
                                       color: u.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          p &&
-                              (0, i.jsx)(s.TooltipContainer, {
-                                  className: v.previewWarning,
-                                  text: h.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-                                      maxTiers: R.fF,
-                                      maxProducts: O.dD
+                          C &&
+                              (0, r.jsx)(s.TooltipContainer, {
+                                  className: R.previewWarning,
+                                  text: O.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+                                      maxTiers: L.fF,
+                                      maxProducts: v.dD
                                   }),
-                                  children: (0, i.jsx)(s.CircleWarningIcon, {
+                                  children: (0, r.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
                                       color: u.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            l || r === m.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(D, { onClick: () => b({ backToSettings: !1 }) })
+            l || i === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(D, { onClick: () => P({ backToSettings: !1 }) })
         ]
     });
 }
 function Z(e) {
     let { guildId: n } = e;
-    return (0, o.e7)([A.Z], () => A.Z.isViewingRoles(n))
-        ? (0, i.jsx)('div', {
-              className: l()(v.settingsWrapper, {
-                  [v.windows]: (0, p.isWindows)(),
-                  [v.osx]: (0, p.isMac)()
+    return (0, o.e7)([N.Z], () => N.Z.isViewingRoles(n))
+        ? (0, r.jsx)('div', {
+              className: l()(R.settingsWrapper, {
+                  [R.windows]: (0, C.isWindows)(),
+                  [R.osx]: (0, C.isMac)()
               }),
-              children: (0, i.jsx)(U, {})
+              children: (0, r.jsx)(U, {})
           })
         : null;
 }

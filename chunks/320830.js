@@ -3,13 +3,13 @@ var s = n(735250),
     r = n(470079),
     i = n(954955),
     a = n.n(i),
-    o = n(748780),
-    l = n(873546),
+    l = n(748780),
+    o = n(873546),
     c = n(477690),
     u = n(481060),
     d = n(624138),
-    _ = n(954757);
-function h(e, t, n) {
+    h = n(954757);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ let E = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
 t.Z = function (e) {
     return class extends r.Component {
         componentDidMount() {
-            !l.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
+            !o.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
         }
         componentWillUnmount() {
             clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
@@ -49,7 +49,7 @@ t.Z = function (e) {
             this.state.shouldAnimate ? this.animateTo(g.START, e) : e();
         }
         animateTo(e, t) {
-            o.Z.spring(this.anim, {
+            l.Z.spring(this.anim, {
                 toValue: e,
                 ...p
             }).start(t);
@@ -80,11 +80,11 @@ t.Z = function (e) {
         }
         render() {
             return (0, s.jsx)('div', {
-                className: _.wrapper,
+                className: h.wrapper,
                 children: (0, s.jsx)(u.AccessibilityPreferencesContext.Consumer, {
                     children: (t) => {
                         let { reducedMotion: n } = t;
-                        return (0, s.jsx)(o.Z.div, {
+                        return (0, s.jsx)(l.Z.div, {
                             style: this.getAnimatedStyle(n.enabled),
                             children: (0, s.jsx)(e, { ...this.props })
                         });
@@ -94,14 +94,14 @@ t.Z = function (e) {
         }
         constructor(...e) {
             super(...e),
-                h(this, 'timeout', void 0),
-                h(this, 'anim', new o.Z.Value(g.START)),
-                h(this, 'state', { shouldAnimate: !l.tq }),
-                h(this, 'handleResize', () => {
+                _(this, 'timeout', void 0),
+                _(this, 'anim', new l.Z.Value(g.START)),
+                _(this, 'state', { shouldAnimate: !o.tq }),
+                _(this, 'handleResize', () => {
                     let e = window.innerWidth > E;
                     !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({ shouldAnimate: e });
                 }),
-                h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
+                _(this, 'handleResizeDebounced', a()(this.handleResize, 60));
         }
     };
 };

@@ -6,7 +6,7 @@ var s = n(392711),
     l = n(314897),
     o = n(287328),
     c = n(261875);
-function d(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,26 +19,26 @@ function d(e, t, n) {
         e
     );
 }
-let _ = new r.Z('UserSettingsProto');
+let d = new r.Z('UserSettingsProto');
 t.Z = new (class e {
     async getAll(e) {
         let t = performance.now(),
             n = await o.Z.userSettings(e).getMany(),
             s = performance.now();
-        _.verbose('loaded in '.concat(s - t, 'ms (settings: ').concat(n.length, ')'));
+        d.verbose('loaded in '.concat(s - t, 'ms (settings: ').concat(n.length, ')'));
         let a = {};
         for (let e of n) a[e.id] = e.value;
         return a;
     }
     resetInMemoryState() {}
     constructor() {
-        d(this, 'actions', {
+        _(this, 'actions', {
             CONNECTION_OPEN: () => this.throttledOnChange(),
             USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
             USER_SETTINGS_PROTO_ENQUEUE_UPDATE: () => this.throttledOnChange(),
             USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: () => this.throttledOnChange()
         }),
-            d(this, 'handleUserSettingsProtoChange', () => {
+            _(this, 'handleUserSettingsProtoChange', () => {
                 let e = l.default.getId(),
                     t = c.Z.database(e);
                 null == t ||
@@ -58,6 +58,6 @@ t.Z = new (class e {
                         });
                     }, 'handleUserSettingsProtoChange');
             }),
-            d(this, 'throttledOnChange', a().debounce(this.handleUserSettingsProtoChange, 0));
+            _(this, 'throttledOnChange', a().debounce(this.handleUserSettingsProtoChange, 0));
     }
 })();

@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(921813),
     I = t(621853),
     N = t(246946),
-    m = t(594174),
+    A = t(594174),
     C = t(63063),
-    A = t(74538),
+    m = t(74538),
     g = t(18438),
     h = t(778825),
     O = t(856607),
@@ -44,8 +44,8 @@ function f(e) {
 function D(e) {
     let { selectedGuild: s } = e,
         { analyticsLocations: t } = (0, E.ZP)(_.Z.GUILD_PROFILE),
-        i = (0, o.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
+        i = (0, o.e7)([A.default], () => {
+            let e = A.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
@@ -87,7 +87,7 @@ function D(e) {
                                       profilePreview: (0, n.jsx)(S.Z, {
                                           user: i,
                                           guild: s,
-                                          canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
+                                          canUsePremiumCustomization: m.ZP.canUsePremiumProfileCustomization(i),
                                           onUpsellClick: f,
                                           ...b
                                       }),

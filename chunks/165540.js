@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(404295),
     T = n(605236),
     x = n(819640),
-    v = n(291407),
-    S = n(61356),
+    S = n(291407),
+    v = n(61356),
     N = n(981631),
     A = n(314734),
     Z = n(921944),
@@ -127,14 +127,14 @@ t.Z = s.memo(function (e) {
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(t.id) : null };
         }),
         d = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
-        h = (0, S.Z)({ type: n }),
+        h = (0, v.Z)({ type: n }),
         _ = (0, I.h9)(t.id, 'ChannelAppLauncher'),
         f = (0, r.e7)([m.Z], () => m.Z.appDMChannelsWithFailedLoads().has(t.id));
     return d && null == u && c
         ? (0, i.jsxs)('div', {
               className: b.channelAppLauncher,
               children: [
-                  (0, i.jsx)(v.Z, {
+                  (0, i.jsx)(S.Z, {
                       channel: t,
                       animationContainerClassName: b.entrypointAnimation,
                       glowClassName: b.animationGlow,

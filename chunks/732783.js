@@ -15,9 +15,9 @@ var n = t(735250),
     _ = t(308083),
     u = t(403893);
 function E(e) {
-    let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: S, guildIcon: I, guildIconSize: N, memberCount: m } = e,
+    let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: S, guildIcon: I, guildIconSize: N, memberCount: A } = e,
         C = a.useRef(null),
-        [A, g] = a.useState(!1);
+        [m, g] = a.useState(!1);
     return (
         a.useEffect(() => {
             let e = C.current;
@@ -43,7 +43,7 @@ function E(e) {
                                 (0, n.jsx)(o.Tooltip, {
                                     text: S,
                                     color: o.Tooltip.Colors.PRIMARY,
-                                    shouldShow: A,
+                                    shouldShow: m,
                                     children: (e) =>
                                         (0, n.jsx)('span', {
                                             ref: C,
@@ -52,7 +52,7 @@ function E(e) {
                                             children: S
                                         })
                                 }),
-                                null != m && (0, n.jsx)(c.Z, { count: m })
+                                null != A && (0, n.jsx)(c.Z, { count: A })
                             ]
                         })
                     ]

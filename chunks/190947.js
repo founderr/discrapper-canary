@@ -1,36 +1,36 @@
-t.d(n, {
+s.d(n, {
     b: function () {
-        return s;
+        return r;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    r = t(991862);
-function s(e) {
-    let { currencies: n, className: t, children: a } = e;
+var t = s(735250);
+s(470079);
+var l = s(481060),
+    i = s(991862);
+function r(e) {
+    let { currencies: n, className: s, children: l } = e;
     return n.length < 2
         ? null
-        : (0, i.jsx)('div', {
-              className: t,
-              children: a
+        : (0, t.jsx)('div', {
+              className: s,
+              children: l
           });
 }
 n.Z = function (e) {
-    let { currencies: n, onChange: t, selectedCurrency: s, className: l, disabled: o = !1 } = e;
+    let { currencies: n, onChange: s, selectedCurrency: r, className: a, disabled: c = !1 } = e;
     if (n.length < 2) return null;
-    let c = n.map((e, n) => ({
+    let o = n.map((e, n) => ({
         key: n,
         value: e,
-        label: ''.concat(e.toUpperCase(), ' - ').concat((0, r.T)(e))
+        label: ''.concat(e.toUpperCase(), ' - ').concat((0, i.T)(e))
     }));
-    return (0, i.jsx)(a.SingleSelect, {
-        value: s,
-        options: c,
+    return (0, t.jsx)(l.SingleSelect, {
+        value: r,
+        options: o,
         onChange: (e) => {
-            null != e && t(e);
+            null != e && s(e);
         },
-        className: l,
-        isDisabled: o
+        className: a,
+        isDisabled: c
     });
 };

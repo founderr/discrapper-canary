@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(594174),
     T = n(585483),
     x = n(51144),
-    v = n(566620),
-    S = n(317381),
+    S = n(566620),
+    v = n(317381),
     N = n(619915),
     A = n(988980),
     Z = n(952561),
@@ -46,15 +46,15 @@ function k(e) {
     var t, n;
     let { maxHeight: a, connectedChannelId: k, renderExternalHeader: w } = e,
         B = (0, Z.Z)(),
-        H = (0, r.Wu)([S.ZP], () => (null != k ? S.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
+        H = (0, r.Wu)([v.ZP], () => (null != k ? v.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
         G = (0, r.e7)([E.Z], () => E.Z.getChannel(k)),
         V = (0, N.gb)(H),
         F = (0, N.uF)(V),
         W = s.useCallback(() => {
-            (0, v.tg)(P.Ez.PIP);
+            (0, S.tg)(P.Ez.PIP);
         }, []),
         z = s.useRef(null),
-        Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
         K = Y !== P.MI.NO_CHAT,
         [q, X] = s.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {

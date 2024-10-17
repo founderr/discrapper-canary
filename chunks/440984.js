@@ -1,6 +1,6 @@
 t.d(s, {
     D: function () {
-        return A;
+        return m;
     }
 }),
     t(47120);
@@ -19,12 +19,12 @@ var n = t(735250),
     S = t(474936),
     I = t(689938),
     N = t(265791),
-    m = t(982404),
+    A = t(982404),
     C = t(299156);
-function A(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: A, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
+function m(e) {
+    let { premiumSubscription: s, premiumType: t, onClose: m, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? m : C,
+        R = (0, r.wj)(p) ? A : C,
         x = a.useRef(null),
         [M, f] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
@@ -50,7 +50,7 @@ function A(e) {
             className: N.whatYouLoseButtonContainer,
             children: (0, n.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
-                onClick: A,
+                onClick: m,
                 children: I.Z.Messages.PREMIUM_DISCOUNT_SWEET
             })
         });
@@ -59,7 +59,7 @@ function A(e) {
             (0, n.jsx)(T.Z, {
                 premiumType: t,
                 className: N.cancellationHeader,
-                onClose: A
+                onClose: m
             }),
             (0, n.jsx)('div', {
                 ref: x,

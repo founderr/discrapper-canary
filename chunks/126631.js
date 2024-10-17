@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 }),
     t(47120);
@@ -22,8 +22,8 @@ let S = (0, c.hQ)(),
         type: u.d4z.DM
     }),
     N = (0, c.hQ)();
-function m(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: C, disabled: A = !1 } = e,
+function A(e) {
+    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: A, currentBio: C, disabled: m = !1 } = e,
         [g, h] = a.useState(null != d ? d : C),
         [O, p] = a.useState((0, o.JM)(g)),
         R = a.useRef(!1);
@@ -39,7 +39,7 @@ function m(e) {
             titleId: S,
             description: E.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
             errors: t,
-            disabled: A,
+            disabled: m,
             children: [
                 (0, n.jsx)(l.Z, {
                     'aria-describedby': N,
@@ -49,7 +49,7 @@ function m(e) {
                     onChange: function (e, s, t) {
                         s !== g && (h(s), p(t), c(s));
                     },
-                    placeholder: m,
+                    placeholder: A,
                     channel: I,
                     textValue: g,
                     richValue: O,

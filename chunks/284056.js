@@ -11,8 +11,8 @@ var s = n(735250),
     l = n(442837),
     o = n(46973),
     c = n(846519),
-    d = n(481060),
-    _ = n(846027),
+    _ = n(481060),
+    d = n(846027),
     E = n(794347),
     u = n(131951),
     T = n(19780),
@@ -42,14 +42,14 @@ class C extends a.PureComponent {
     }
     _micTestStart() {
         let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: s, outputVolume: a, inputMode: r, vadAutoThreshold: i, vadThreshold: l, location: o, isDeafened: c } = this.props,
-            d = !1;
-        e && !c && (_.Z.toggleSelfDeaf(), (d = !0)),
-            _.Z.setLoopback(!0),
+            _ = !1;
+        e && !c && (d.Z.toggleSelfDeaf(), (_ = !0)),
+            d.Z.setLoopback(!0),
             (this._micTestStartTime = Date.now()),
             this.setState({
                 isMicTesting: !0,
                 isDetectingInput: !0,
-                didDeafenUser: d
+                didDeafenUser: _
             }),
             I.default.track(R.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
@@ -67,8 +67,8 @@ class C extends a.PureComponent {
             { isVoiceConnected: n, isDeafened: s } = this.props;
         if (!t) return;
         if (
-            (n && s && e && _.Z.toggleSelfDeaf(),
-            _.Z.setLoopback(!1),
+            (n && s && e && d.Z.toggleSelfDeaf(),
+            d.Z.setLoopback(!1),
             this.setState({
                 isMicTesting: !1,
                 didDeafenUser: !1
@@ -80,53 +80,53 @@ class C extends a.PureComponent {
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: a } = this.state;
-        return (0, s.jsx)(d.FormText, {
+        return (0, s.jsx)(_.FormText, {
             className: N.micTestCaption,
-            type: d.FormText.Types.DESCRIPTION,
+            type: _.FormText.Types.DESCRIPTION,
             children: n ? (a ? e : t) : null
         });
     }
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: a, buttonTest: r, buttonStop: i, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
-            { isMicTesting: _, volume: u } = this.state,
-            T = e && !_ ? g.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+            { isMicTesting: d, volume: u } = this.state,
+            T = e && !d ? g.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
         return (
-            _ && e && !c && this._micTestStop(),
+            d && e && !c && this._micTestStop(),
             (0, s.jsxs)('div', {
                 className: N.container,
                 children: [
-                    (0, s.jsx)(d.FormTitle, {
-                        tag: d.FormTitleTags.H5,
+                    (0, s.jsx)(_.FormTitle, {
+                        tag: _.FormTitleTags.H5,
                         className: N.title,
                         children: t
                     }),
                     null != n &&
-                        (0, s.jsx)(d.FormText, {
-                            type: d.FormText.Types.DESCRIPTION,
+                        (0, s.jsx)(_.FormText, {
+                            type: _.FormText.Types.DESCRIPTION,
                             className: N.description,
                             children: n
                         }),
                     (0, s.jsxs)('div', {
                         className: N.micTest,
                         children: [
-                            (0, s.jsx)(d.Tooltip, {
+                            (0, s.jsx)(_.Tooltip, {
                                 text: T,
                                 children: (e) => {
                                     let { onMouseEnter: t, onMouseLeave: n } = e;
-                                    return (0, s.jsx)(d.Button, {
+                                    return (0, s.jsx)(_.Button, {
                                         grow: !1,
                                         onClick: this.handleToggleMicTest,
                                         onMouseEnter: t,
                                         onMouseLeave: n,
-                                        size: d.Button.Sizes.SMALL,
+                                        size: _.Button.Sizes.SMALL,
                                         className: l,
                                         color: o,
-                                        children: _ ? i : r
+                                        children: d ? i : r
                                     });
                                 }
                             }),
                             (0, s.jsx)(E.Z, {
-                                progress: _ ? u + 100 : 0,
+                                progress: d ? u + 100 : 0,
                                 notchBackground: a
                             }),
                             this.renderCaption()

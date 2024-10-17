@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250),
@@ -17,13 +17,13 @@ var i = n(735250),
     I = n(559725),
     m = n(439041),
     T = n(981631),
-    h = n(689938);
-function N(e) {
+    f = n(689938);
+function h(e) {
     let { onClose: t } = e,
         s = d.default.getCurrentUser();
     r()(void 0 !== s, 'User must not be null');
-    let N = (0, _.I5)(s),
-        f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
+    let h = (0, _.I5)(s),
+        N = h ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
     return (
         a.useEffect(() => {
             null == m.Z.cashAppPayComponent && (0, I.eI)();
@@ -35,22 +35,22 @@ function N(e) {
                     onClick: t,
                     noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR
                 }),
-                N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
+                h ? f.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : f.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
                 (0, i.jsx)(l.PrimaryCTANoticeButton, {
                     onClick: () => {
-                        c.Z.open(f),
+                        c.Z.open(N),
                             setTimeout(() => {
                                 (0, l.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([n.e('96427'), n.e('54803'), n.e('52619'), n.e('61275')]).then(n.bind(n, 623573));
+                                        let { default: e } = await Promise.all([n.e('52619'), n.e('81369')]).then(n.bind(n, 623573));
                                         return (t) =>
                                             (0, i.jsx)(e, {
                                                 ...t,
                                                 initialStep: u.h8.CASH_APP_INFORMATION,
                                                 analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NAGBAR,
                                                 onAddPaymentSource: (e) => (0, E.i1)(e.id),
-                                                toastContent: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NITRO_PAYMENT_METHOD_TOAST : h.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NON_NITRO_PAYMENT_METHOD_TOAST,
-                                                overwriteSubscriptionPaymentSource: N
+                                                toastContent: h ? f.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NITRO_PAYMENT_METHOD_TOAST : f.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NON_NITRO_PAYMENT_METHOD_TOAST,
+                                                overwriteSubscriptionPaymentSource: h
                                             });
                                     },
                                     {
@@ -62,7 +62,7 @@ function N(e) {
                             t();
                     },
                     noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR,
-                    children: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
+                    children: h ? f.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : f.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
                 })
             ]
         })

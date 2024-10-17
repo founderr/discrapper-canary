@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     gx: function () {
-        return p;
+        return f;
     },
     k3: function () {
         return N;
@@ -18,7 +18,7 @@ n.d(t, {
         return S;
     },
     t2: function () {
-        return f;
+        return A;
     },
     vZ: function () {
         return m;
@@ -33,8 +33,8 @@ var s = n(278074),
     l = n(594174),
     o = n(78839),
     c = n(74538),
-    d = n(331119),
-    _ = n(575595),
+    _ = n(331119),
+    d = n(575595),
     E = n(915296),
     u = n(650032),
     T = n(391110),
@@ -78,7 +78,7 @@ let N = (e) => {
                 return;
         }
     };
-function f(e, t) {
+function A(e, t) {
     switch (e) {
         case R.EB.PENDING:
             return null != t ? g.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
@@ -90,8 +90,8 @@ function f(e, t) {
             return '';
     }
 }
-let p = (e, t, n) => ((0, r.wj)(e) ? t : n),
-    A = 'getWhatsNewRow',
+let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    p = 'getWhatsNewRow',
     M = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
@@ -102,9 +102,9 @@ let p = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: E } = u._.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
-            { enabled: T } = _.r.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
-            { enabled: I } = d.C.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
+            { enabled: E } = u._.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
+            { enabled: T } = d.r.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
+            { enabled: I } = _.C.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
             R = E && !T && !I,
             g = x();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;

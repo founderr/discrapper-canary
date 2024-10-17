@@ -6,8 +6,8 @@ var s = n(768433),
     l = n(314897),
     o = n(592125),
     c = n(430824),
-    d = n(496675),
-    _ = n(386438),
+    _ = n(496675),
+    d = n(386438),
     E = n(287328),
     u = n(458772);
 function T(e, t, n) {
@@ -25,7 +25,7 @@ function T(e, t, n) {
 }
 let I = new a.Z('GuildBasicChannels');
 function R(e, t) {
-    return null == e || e.type !== t.type || e.parent_id !== t.parent_id || d.Z.computeBasicPermissions(e) !== d.Z.computeBasicPermissions(t);
+    return null == e || e.type !== t.type || e.parent_id !== t.parent_id || _.Z.computeBasicPermissions(e) !== _.Z.computeBasicPermissions(t);
 }
 t.Z = new (class e {
     async getAsync(e) {
@@ -161,7 +161,7 @@ t.Z = new (class e {
                         type: e.type,
                         guild_id: e.guild_id,
                         parent_id: e.parent_id,
-                        basicPermissions: _.Z.asBasicFlag(d.Z.computePermissions(e))
+                        basicPermissions: d.Z.asBasicFlag(_.Z.computePermissions(e))
                     }));
                 })(e)
             ),

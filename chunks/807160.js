@@ -21,9 +21,9 @@ var n,
     S = t(481060),
     I = t(37234),
     N = t(782568),
-    m = t(812206),
+    A = t(812206),
     C = t(593061),
-    A = t(600164),
+    m = t(600164),
     g = t(925329),
     h = t(267101),
     O = t(240864),
@@ -78,8 +78,8 @@ let et = [z.PyE.FAILED, z.PyE.REVERSED, z.PyE.CANCELED],
         let { description: s, cost: t } = e;
         return (0, r.jsx)('li', {
             className: J.paymentDetail,
-            children: (0, r.jsxs)(A.Z, {
-                justify: A.Z.Justify.BETWEEN,
+            children: (0, r.jsxs)(m.Z, {
+                justify: m.Z.Justify.BETWEEN,
                 children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
             })
         });
@@ -117,8 +117,8 @@ let er = (e) => {
     let { description: s, detail: t } = e;
     return (0, r.jsx)('li', {
         className: J.guildProductDetail,
-        children: (0, r.jsxs)(A.Z, {
-            justify: A.Z.Justify.BETWEEN,
+        children: (0, r.jsxs)(m.Z, {
+            justify: m.Z.Justify.BETWEEN,
             children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
         })
     });
@@ -574,7 +574,7 @@ class ec extends (a = o.PureComponent) {
                 className: J.date,
                 children: (0, V.vc)(_()(n.createdAt), 'MM/DD/YYYY')
             }),
-            m = n.isGift
+            A = n.isGift
                 ? (0, r.jsx)(S.Tooltip, {
                       text: q.Z.Messages.BILLING_GIFT_PURCHASE_TOOLTIP,
                       children: (e) =>
@@ -594,7 +594,7 @@ class ec extends (a = o.PureComponent) {
                       (0, r.jsxs)('div', {
                           children: [s, N]
                       }),
-                      m
+                      A
                   ]
               })
             : (0, r.jsxs)(o.Fragment, {
@@ -602,7 +602,7 @@ class ec extends (a = o.PureComponent) {
                       N,
                       (0, r.jsxs)('div', {
                           className: J.description,
-                          children: [e, (0, r.jsx)('div', { children: s }), m]
+                          children: [e, (0, r.jsx)('div', { children: s }), A]
                       })
                   ]
               });
@@ -662,9 +662,9 @@ class ec extends (a = o.PureComponent) {
                     focusProps: { offset: 4 },
                     ...e,
                     children: [
-                        (0, r.jsxs)(A.Z, {
+                        (0, r.jsxs)(m.Z, {
                             className: J.summaryInfo,
-                            align: A.Z.Align.CENTER,
+                            align: m.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 (0, r.jsxs)('div', {
@@ -768,25 +768,25 @@ function ed(e) {
             applicationStatistics: E,
             gameApplication: S,
             paymentSources: I
-        } = (0, T.cj)([B.Z, G.Z, m.Z], () => {
+        } = (0, T.cj)([B.Z, G.Z, A.Z], () => {
             var e, s;
             return {
                 applicationStatistics: null != d ? G.Z.getCurrentUserStatisticsForApplication(d) : null,
-                gameApplication: null !== (s = m.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
+                gameApplication: null !== (s = A.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
                 paymentSources: B.Z.paymentSources
             };
         }),
-        N = (0, T.e7)([m.Z], () => (null != _ ? m.Z.getApplication(_) : null));
+        N = (0, T.e7)([A.Z], () => (null != _ ? A.Z.getApplication(_) : null));
     o.useEffect(() => {
         u && null != _ && (0, P.UM)(_);
     }, [_, u]);
     let C = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
-        A = c ? S : void 0,
+        m = c ? S : void 0,
         g = n.subscription,
         h = (0, T.e7)([U.Z], () => (null != g && g.type !== z.NYc.PREMIUM ? U.Z.get(g.items[0].planId) : null));
     return (0, r.jsx)(ec, {
         applicationStatistics: E,
-        application: u ? N : A,
+        application: u ? N : m,
         guild: C,
         stickerPack: null,
         paymentSources: I,

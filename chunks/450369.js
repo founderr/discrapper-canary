@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(199902),
     T = n(430824),
     x = n(496675),
-    v = n(979651),
-    S = n(88751),
+    S = n(979651),
+    v = n(88751),
     N = n(252132),
     A = n(248400),
     Z = n(981631),
@@ -80,7 +80,7 @@ let R = 16 / 9,
     P = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, width: l, isModerator: u, onContextMenu: h, inPopout: g } = e,
             { reducedMotion: C } = s.useContext(o.AccessibilityPreferencesContext),
-            { id: S, blocked: L } = t,
+            { id: v, blocked: L } = t,
             P = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
             { selectedParticipant: j, largeStream: O } = (0, r.cj)([p.Z], () => ({
                 selectedParticipant: null != a ? p.Z.getSelectedParticipant(a.id) : null,
@@ -89,7 +89,7 @@ let R = 16 / 9,
             y = s.useCallback(
                 (e, t) => {
                     if (e.type === M.fO.STREAM && 0 === P.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
-                        if (!(0, f.p9)(a, v.Z, T.Z, x.Z, m.Z)[0]) return;
+                        if (!(0, f.p9)(a, S.Z, T.Z, x.Z, m.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == j ? void 0 : j.id) === e.id ? (O ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
@@ -114,7 +114,7 @@ let R = 16 / 9,
                 width: l,
                 children: u && n.type === M.fO.USER && (0, i.jsx)(A.Z, {})
             },
-            S
+            v
         );
     };
 t.Z = s.memo(function (e) {
@@ -125,7 +125,7 @@ t.Z = s.memo(function (e) {
     l()(null != d, 'Channel cannot be guildless');
     let { user: m } = s,
         _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(a.id, s.id), [a.id, s.id]),
-        f = (0, r.e7)([S.ZP], () => S.ZP.isModerator(m.id, a.id), [a.id, m.id]);
+        f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, a.id), [a.id, m.id]);
     if (null == _ || _.type === M.fO.ACTIVITY) return null;
     let E = (e, t) => {
             switch (e.type) {

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 });
 var n = t(735250);
@@ -19,8 +19,8 @@ var a = t(120356),
     S = t(993413),
     I = t(689938),
     N = t(96923);
-function m(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: A, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
+function A(e) {
+    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: A, guildId: C, className: m, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
         p = (0, _.ZP)(s.id, C),
         { primaryColor: R, secondaryColor: x } = (0, u.Z)({
             user: s,
@@ -38,8 +38,8 @@ function m(e) {
     };
     return (0, n.jsx)(S.Z, {
         title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !M && !m,
-        className: i()(N.__invalid_profileThemesSection, A),
+        disabled: !M && !A,
+        className: i()(N.__invalid_profileThemesSection, m),
         showPremiumIcon: g,
         forcedDivider: O,
         children: (0, n.jsxs)('div', {

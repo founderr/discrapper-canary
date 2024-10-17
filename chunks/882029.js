@@ -5,7 +5,7 @@ var s,
     l = n(57562),
     o = n(351780),
     c = n(843693);
-function d(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,12 +18,12 @@ function d(e, t, n) {
         e
     );
 }
-let _ = { unlockedAchievements: {} },
-    E = { ..._ };
+let d = { unlockedAchievements: {} },
+    E = { ...d };
 class u extends (s = a.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(i.default, c.ZP);
-        let t = null != e ? e : { ..._ };
+        let t = null != e ? e : { ...d };
         for (let e in t) E[e] = t[e];
     }
     getState() {
@@ -37,8 +37,8 @@ class u extends (s = a.ZP.PersistedStore) {
         return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null;
     }
 }
-d(u, 'displayName', 'PoggermodeAchievementStore'),
-    d(u, 'persistKey', 'PoggermodeAchievementStore'),
+_(u, 'displayName', 'PoggermodeAchievementStore'),
+    _(u, 'persistKey', 'PoggermodeAchievementStore'),
     (t.Z = new u(r.Z, {
         POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
             var t;

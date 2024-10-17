@@ -1,13 +1,13 @@
-var i = t(442837),
-    r = t(339085);
+var r = t(442837),
+    i = t(339085);
 n.Z = function (e, n) {
-    return (0, i.e7)(
-        [r.ZP],
+    return (0, r.e7)(
+        [i.ZP],
         () => {
             var t;
             if (null == n) return null;
-            let i = r.ZP.getDisambiguatedEmojiContext(e);
-            return null !== (t = i.getById(n)) && void 0 !== t ? t : i.getByName(n);
+            let r = i.ZP.getDisambiguatedEmojiContext(e);
+            return null !== (t = r.getById(n)) && void 0 !== t ? t : r.getByName(n);
         },
         [e, n]
     );

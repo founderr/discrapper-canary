@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
 });
 var s = n(735250);
@@ -11,10 +11,10 @@ var a = n(481060),
     l = n(292352),
     o = n(981631),
     c = n(689938),
-    d = n(386676);
-function _() {
+    _ = n(386676);
+function d() {
     return (0, s.jsxs)(a.Button, {
-        innerClassName: d.qrCodeButtonContent,
+        innerClassName: _.qrCodeButtonContent,
         size: a.Button.Sizes.LARGE,
         onClick: () => {
             (0, a.openModalLazy)(async () => {

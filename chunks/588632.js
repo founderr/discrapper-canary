@@ -1,33 +1,33 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     t(47120);
-var r = t(735250),
-    o = t(470079),
-    a = t(658722),
-    l = t.n(a),
+var l = t(735250),
+    a = t(470079),
+    o = t(658722),
+    r = t.n(o),
     i = t(692547),
     s = t(481060),
     c = t(596454),
-    u = t(285888),
-    d = t(689938),
+    d = t(285888),
+    u = t(689938),
     m = t(481455);
 function h(e) {
     return null != e && (null != e.id || null != e.name);
 }
 let v = {
-    ...u.v,
+    ...d.v,
     control: (e, n) => {
-        let { isDisabled: t, menuIsOpen: r } = n;
+        let { isDisabled: t, menuIsOpen: l } = n;
         return {
             ...e,
             backgroundColor: 'var(--input-background)',
             borderColor: 'var(--input-background)',
             opacity: t ? 0.6 : 1,
             boxShadow: void 0,
-            borderRadius: r ? '8px 8px 0 0' : '8px',
+            borderRadius: l ? '8px 8px 0 0' : '8px',
             minHeight: 40,
             transition: 'border 0.15s ease',
             cursor: t ? 'not-allowed' : void 0,
@@ -49,7 +49,7 @@ let v = {
         paddingTop: 4
     }),
     option: (e, n) => {
-        let { isSelected: t, isFocused: r } = n;
+        let { isSelected: t, isFocused: l } = n;
         return {
             ...e,
             ...(t
@@ -57,7 +57,7 @@ let v = {
                       backgroundColor: 'var(--background-modifier-selected)',
                       color: 'var(--interactive-active)'
                   }
-                : r
+                : l
                   ? {
                         backgroundColor: 'var(--background-modifier-hover)',
                         color: 'var(--interactive-hover)'
@@ -79,34 +79,34 @@ let v = {
         };
     }
 };
-function p(e) {
-    let { options: n, value: t, onChange: a, canBeNew: p, memberCounts: g } = e,
-        x = (e) => {
+function g(e) {
+    let { options: n, value: t, onChange: o, canBeNew: g, memberCounts: x } = e,
+        p = (e) => {
             e.preventDefault(), e.stopPropagation();
         },
-        f = o.useCallback(
+        C = a.useCallback(
             (e) => {
-                var o, l, i, u;
-                return (0, r.jsxs)('div', {
+                var a, r, i, d;
+                return (0, l.jsxs)('div', {
                     className: m.selectValuePill,
-                    onMouseDown: x,
+                    onMouseDown: p,
                     children: [
                         h(e.emoji) &&
-                            (0, r.jsx)(c.Z, {
-                                emojiId: null === (o = e.emoji) || void 0 === o ? void 0 : o.id,
-                                emojiName: null === (l = e.emoji) || void 0 === l ? void 0 : l.name,
-                                animated: null !== (u = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== u && u
+                            (0, l.jsx)(c.Z, {
+                                emojiId: null === (a = e.emoji) || void 0 === a ? void 0 : a.id,
+                                emojiName: null === (r = e.emoji) || void 0 === r ? void 0 : r.name,
+                                animated: null !== (d = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== d && d
                             }),
-                        (0, r.jsx)(s.Text, {
+                        (0, l.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             children: e.title
                         }),
-                        (0, r.jsx)(s.Clickable, {
+                        (0, l.jsx)(s.Clickable, {
                             className: m.selectValuePillClose,
                             onClick: () => {
-                                a(n.filter((n) => t.includes(n.id) && n.id !== e.id));
+                                o(n.filter((n) => t.includes(n.id) && n.id !== e.id));
                             },
-                            children: (0, r.jsx)(s.XSmallIcon, {
+                            children: (0, l.jsx)(s.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: m.selectValuePillCloseIcon
@@ -115,67 +115,67 @@ function p(e) {
                     ]
                 });
             },
-            [a, n, t]
+            [o, n, t]
         ),
-        C = o.useCallback(
+        f = a.useCallback(
             (e) => {
-                var n, t, o, a;
-                let l = null == g || null == e.roleIds ? 0 : Math.max(...e.roleIds.map((e) => g[e])),
-                    u = null != g && l > 0;
-                return (0, r.jsxs)('div', {
+                var n, t, a, o;
+                let r = null == x || null == e.roleIds ? 0 : Math.max(...e.roleIds.map((e) => x[e])),
+                    d = null != x && r > 0;
+                return (0, l.jsxs)('div', {
                     className: m.selectOption,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, l.jsxs)('div', {
                             className: m.selectOptionTitle,
                             children: [
                                 h(e.emoji) &&
-                                    (0, r.jsx)(c.Z, {
+                                    (0, l.jsx)(c.Z, {
                                         emojiId: null === (n = e.emoji) || void 0 === n ? void 0 : n.id,
                                         emojiName: null === (t = e.emoji) || void 0 === t ? void 0 : t.name,
-                                        animated: null !== (a = null === (o = e.emoji) || void 0 === o ? void 0 : o.animated) && void 0 !== a && a
+                                        animated: null !== (o = null === (a = e.emoji) || void 0 === a ? void 0 : a.animated) && void 0 !== o && o
                                     }),
-                                (0, r.jsx)(s.Text, {
+                                (0, l.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     children: e.title
                                 })
                             ]
                         }),
-                        p &&
+                        g &&
                             e.isUnseen &&
-                            (0, r.jsx)(s.TextBadge, {
+                            (0, l.jsx)(s.TextBadge, {
                                 color: i.Z.unsafe_rawColors.BRAND_260.css,
-                                text: d.Z.Messages.NEW,
+                                text: u.Z.Messages.NEW,
                                 className: m.optionNewBadge
                             }),
-                        u &&
-                            (0, r.jsx)('div', {
+                        d &&
+                            (0, l.jsx)('div', {
                                 className: m.selectOptionMemberCount,
                                 'data-hover': !0,
-                                children: (0, r.jsx)(s.Text, {
+                                children: (0, l.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
-                                    children: d.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: l })
+                                    children: u.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: r })
                                 })
                             })
                     ]
                 });
             },
-            [p, g]
+            [g, x]
         ),
-        b = o.useCallback((e, n) => {
+        N = a.useCallback((e, n) => {
             let { data: t } = e;
-            return 0 === n.length || l()(n.toLowerCase(), t.title.toLowerCase());
+            return 0 === n.length || r()(n.toLowerCase(), t.title.toLowerCase());
         }, []);
-    return (0, r.jsx)(u.Z, {
+    return (0, l.jsx)(d.Z, {
         styleOverrides: v,
         clearable: !1,
         isMulti: !0,
         options: n,
-        onChange: a,
+        onChange: o,
         value: t,
         closeMenuOnSelect: !1,
-        multiValueRenderer: f,
-        optionRenderer: C,
-        filterOption: b
+        multiValueRenderer: C,
+        optionRenderer: f,
+        filterOption: N
     });
 }

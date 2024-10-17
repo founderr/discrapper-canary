@@ -1,10 +1,10 @@
 var t = n(735250);
 n(470079);
 s.Z = (e) => {
-    let { className: s, width: n = 83, height: r = 45 } = e;
+    let { className: s, width: n = 83, height: l = 45 } = e;
     return (0, t.jsxs)('svg', {
         width: n,
-        height: r,
+        height: l,
         viewBox: '0 0 83 45',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',

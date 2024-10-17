@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return ep;
+        return eC;
     },
     c: function () {
-        return ef;
+        return eN;
     }
 });
 var i = n(735250),
@@ -20,23 +20,23 @@ var i = n(735250),
     I = n(37234),
     m = n(254854),
     T = n(195500),
-    h = n(287734),
-    N = n(205355),
-    f = n(558381),
-    C = n(223245),
-    p = n(491428),
+    f = n(287734),
+    h = n(205355),
+    N = n(558381),
+    p = n(223245),
+    C = n(491428),
     g = n(401430),
-    A = n(230711),
-    S = n(726542),
-    R = n(100527),
-    x = n(906732),
+    S = n(230711),
+    A = n(726542),
+    x = n(100527),
+    R = n(906732),
     O = n(812206),
-    M = n(391650),
-    v = n(600164),
+    v = n(391650),
+    M = n(600164),
     L = n(605236),
     Z = n(749277),
-    P = n(492435),
-    b = n(353926),
+    b = n(492435),
+    P = n(353926),
     D = n(506357),
     j = n(36459),
     U = n(236069),
@@ -50,8 +50,8 @@ var i = n(735250),
     H = n(963249),
     Y = n(774276),
     W = n(14335),
-    K = n(246965),
-    z = n(272008),
+    z = n(246965),
+    K = n(272008),
     X = n(523255),
     Q = n(852923),
     J = n(592125),
@@ -74,13 +74,13 @@ var i = n(735250),
     eI = n(65154),
     em = n(689938),
     eT = n(569252);
-let eh = () =>
+let ef = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
                 (0, i.jsx)(c.NoticeCloseButton, {
                     onClick: () => {
-                        ef(), (0, eu.b)();
+                        eN(), (0, eu.b)();
                     }
                 }),
                 em.Z.Messages.NOTICE_NO_INPUT_DETECTED,
@@ -90,67 +90,67 @@ let eh = () =>
                 })
             ]
         }),
-    eN = () =>
+    eh = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
                 (0, i.jsx)(c.NoticeCloseButton, {
                     onClick: () => {
-                        ef(), (0, eu.b)();
+                        eN(), (0, eu.b)();
                     }
                 }),
                 em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS,
                 (0, i.jsx)(c.NoticeButton, {
                     onClick: () => {
-                        (0, I.jN)(ed.S9g.USER_SETTINGS), A.Z.setSection(ed.oAB.VOICE);
+                        (0, I.jN)(ed.S9g.USER_SETTINGS), S.Z.setSection(ed.oAB.VOICE);
                     },
                     children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
                 })
             ]
         });
-function ef(e) {
+function eN(e) {
     m.Z.dismiss(null != e ? { untilAtLeast: r()(e) } : void 0);
 }
-let eC =
+let ep =
     12633 == n.j
         ? a.memo(function () {
               var e, t, s;
               let m = (0, o.e7)([en.default], () => en.default.getCurrentUser()),
-                  R = (0, o.e7)([et.Z], () => et.Z.getGuildId()),
+                  x = (0, o.e7)([et.Z], () => et.Z.getGuildId()),
                   eu = (0, o.e7)([es.Z], () => es.Z.getNotice()),
-                  eC = (0, o.e7)([q.Z], () => q.Z.getGuild(R)),
-                  { analyticsLocations: ep } = (0, x.ZP)(),
+                  ep = (0, o.e7)([q.Z], () => q.Z.getGuild(x)),
+                  { analyticsLocations: eC } = (0, R.ZP)(),
                   eg = null == eu ? void 0 : eu.type,
-                  eA = (0, B.J)(R);
+                  eS = (0, B.J)(x);
               a.useEffect(() => {
                   null != eg &&
                       !(function (e, t) {
                           let n = { notice_type: e };
                           null != t && (n.guild_id = t), er.default.track(ed.rMx.APP_NOTICE_VIEWED, n);
-                      })(eg, R);
-              }, [eg, R]),
+                      })(eg, x);
+              }, [eg, x]),
                   a.useEffect(() => {
                       if (null != eu && eu.type === ed.kVF.SURVEY && null != eu.metadata) {
                           let { metadata: e } = eu,
-                              t = b.Z.getUserExperimentDescriptor(e.id);
-                          null != t && (0, P.W9)(e.id, t),
+                              t = P.Z.getUserExperimentDescriptor(e.id);
+                          null != t && (0, b.W9)(e.id, t),
                               (async () => {
                                   var e, t;
-                                  (null === (e = eu.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, p.g8)(null === (t = eu.metadata) || void 0 === t ? void 0 : t.id));
+                                  (null === (e = eu.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, C.g8)(null === (t = eu.metadata) || void 0 === t ? void 0 : t.id));
                               })();
                       }
                   }, [eu]);
-              let eS = (function (e) {
+              let eA = (function (e) {
                   let { enabled: t } = (0, Y.ZP)(!0, e !== ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
                   return t || null == e ? null : es.m[e];
               })(eg);
               if (null == eu) return null;
-              if (null != eS)
+              if (null != eA)
                   return (0, i.jsx)(Z.A, {
-                      dismissibleContent: eS,
+                      dismissibleContent: eA,
                       noticeType: eu.type
                   });
-              let eR = null === (e = eu.metadata) || void 0 === e ? void 0 : e.premiumType;
+              let ex = null === (e = eu.metadata) || void 0 === e ? void 0 : e.premiumType;
               switch (eu.type) {
                   case ed.kVF.LURKING_GUILD:
                       return (0, i.jsx)(V.Z, {});
@@ -159,39 +159,39 @@ let eC =
                   case ed.kVF.INVITED_TO_SPEAK:
                       return (0, i.jsx)(Q.Z, {});
                   case ed.kVF.GUILD_RAID_NOTIFICATION:
-                      let { dismissUntil: ex } = eu.metadata;
-                      return (0, i.jsx)(D.Z, { onDismiss: () => ef(ex) });
+                      let { dismissUntil: eR } = eu.metadata;
+                      return (0, i.jsx)(D.Z, { onDismiss: () => eN(eR) });
                   case ed.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: eO } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(eO),
+                                  onClick: () => eN(eO),
                                   noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
                               }),
                               em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
                           ]
                       });
                   case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
-                      let { dismissUntil: eM } = eu.metadata;
+                      let { dismissUntil: ev } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(eM),
+                                  onClick: () => eN(ev),
                                   noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
                               }),
                               em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE) })
                           ]
                       });
                   case ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
-                      let { dismissUntil: ev } = eu.metadata;
+                      let { dismissUntil: eM } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(ev),
+                                  onClick: () => eN(eM),
                                   noticeType: ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE
                               }),
                               em.Z.Messages.MACOS_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE) })
@@ -202,7 +202,7 @@ let eC =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.GENERIC
                               }),
                               eu.message,
@@ -220,7 +220,7 @@ let eC =
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.LAUNCH_GAME_FAILURE
                               }),
                               eu.message,
@@ -239,7 +239,7 @@ let eC =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      T.Z.clearRemoteDisconnectVoiceChannelId(), ef();
+                                      T.Z.clearRemoteDisconnectVoiceChannelId(), eN();
                                   },
                                   noticeType: ed.kVF.VOICE_DISABLED
                               }),
@@ -247,7 +247,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_DISABLED,
                                   children: em.Z.Messages.RECONNECT
@@ -260,7 +260,7 @@ let eC =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      T.Z.clearLastSessionVoiceChannelId(), ef();
+                                      T.Z.clearLastSessionVoiceChannelId(), eN();
                                   },
                                   noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION
                               }),
@@ -268,7 +268,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION,
                                   children: em.Z.Messages.RECONNECT
@@ -276,12 +276,12 @@ let eC =
                           ]
                       });
                   case ed.kVF.SPOTIFY_AUTO_PAUSED:
-                      let eL = S.Z.get(ed.ABu.SPOTIFY);
+                      let eL = A.Z.get(ed.ABu.SPOTIFY);
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.SPOTIFY_AUTO_PAUSED
                               }),
                               (0, i.jsx)('img', {
@@ -291,7 +291,7 @@ let eC =
                               }),
                               em.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                                  onClick: () => A.Z.open(ed.oAB.VOICE),
+                                  onClick: () => S.Z.open(ed.oAB.VOICE),
                                   noticeType: ed.kVF.SPOTIFY_AUTO_PAUSED,
                                   children: em.Z.Messages.VOICE_SETTINGS
                               }),
@@ -310,7 +310,7 @@ let eC =
                               em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
-                                  onClick: () => (eA && null != R ? (0, y.hk)(R) : M.j()),
+                                  onClick: () => (eS && null != x ? (0, y.hk)(x) : v.j()),
                                   children: em.Z.Messages.CLAIM_ACCOUNT
                               })
                           ]
@@ -328,7 +328,7 @@ let eC =
                                               title: em.Z.Messages.VERIFICATION_EMAIL_TITLE,
                                               body: em.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null == m ? void 0 : m.email }),
                                               secondaryConfirmText: em.Z.Messages.CHANGE_EMAIL,
-                                              onConfirmSecondary: M.j
+                                              onConfirmSecondary: v.j
                                           });
                                   },
                                   children: em.Z.Messages.RESEND_EMAIL_SHORT
@@ -341,7 +341,7 @@ let eC =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => N.Z.ackScheduledMaintenance(),
+                                  onClick: () => h.Z.ackScheduledMaintenance(),
                                   noticeType: ed.kVF.SCHEDULED_MAINTENANCE
                               }),
                               em.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(eu.metadata),
@@ -352,25 +352,25 @@ let eC =
                           ]
                       });
                   case ed.kVF.NO_INPUT_DETECTED:
-                      if (!$.Z.supports(eI.AN.LOOPBACK)) return (0, i.jsx)(eh, {});
-                      return (0, i.jsx)(eN, {});
+                      if (!$.Z.supports(eI.AN.LOOPBACK)) return (0, i.jsx)(ef, {});
+                      return (0, i.jsx)(eh, {});
                   case ed.kVF.HARDWARE_MUTE:
                       if (null == eu.metadata) return null;
-                      let { vendor: eZ, model: eP } = eu.metadata;
+                      let { vendor: eZ, model: eb } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               em.Z.Messages.NOTICE_HARDWARE_MUTE.format({
                                   vendorName: eZ.name,
-                                  modelName: eP.name
+                                  modelName: eb.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      d.Z.setEnableHardwareMuteNotice(!1), ef();
+                                      d.Z.setEnableHardwareMuteNotice(!1), eN();
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
-                                  href: eP.url,
+                                  href: eb.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
                                   children: em.Z.Messages.SUPPORT
@@ -382,12 +382,12 @@ let eC =
                           color: c.NoticeColors.STREAMER_MODE,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.STREAMER_MODE
                               }),
                               em.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                                  onClick: () => C.Z.setEnabled(!1),
+                                  onClick: () => p.Z.setEnabled(!1),
                                   noticeType: ed.kVF.STREAMER_MODE,
                                   children: em.Z.Messages.DISABLE
                               })
@@ -399,13 +399,13 @@ let eC =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      ef();
+                                      eN();
                                   }
                               }),
                               em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS,
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
-                                      (0, I.jN)(ed.S9g.USER_SETTINGS), A.Z.setSection(ed.oAB.VOICE);
+                                      (0, I.jN)(ed.S9g.USER_SETTINGS), S.Z.setSection(ed.oAB.VOICE);
                                   },
                                   children: em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
                               })
@@ -413,8 +413,8 @@ let eC =
                       });
                   case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == eu.metadata) return null;
-                      let { skuId: eb, applicationId: eD } = eu.metadata,
-                          ej = ei.Z.get(eb),
+                      let { skuId: eP, applicationId: eD } = eu.metadata,
+                          ej = ei.Z.get(eP),
                           eU = O.Z.getApplication(eD);
                       if (null == ej || null == eU) return null;
                       let ey = { page: ed.ZY5.IN_APP };
@@ -444,11 +444,11 @@ let eC =
                                               (0, H.Z)({
                                                   initialPlanId: null,
                                                   subscriptionTier: e_.Si.TIER_2,
-                                                  analyticsLocations: ep,
+                                                  analyticsLocations: eC,
                                                   analyticsObject: ey
                                               });
                                           },
-                                          analyticsLocations: ep,
+                                          analyticsLocations: eC,
                                           analyticsLocationObject: ey,
                                           context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
                                       }).then(() => E.Z(ej.id)),
@@ -466,7 +466,7 @@ let eC =
                           color: c.NoticeColors.PREMIUM_TIER_1,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
                               }),
                               (0, i.jsx)(c.NitroWheelIcon, {
@@ -480,7 +480,7 @@ let eC =
                               }),
                               (0, i.jsx)(c.NoticeButton, {
                                   children: (0, i.jsx)(l.rU, {
-                                      onClick: () => ef(),
+                                      onClick: () => eN(),
                                       to: {
                                           pathname: ed.Z5c.APPLICATION_STORE_LISTING_SKU(n.id),
                                           state: { scrollRestoration: !1 }
@@ -501,14 +501,14 @@ let eC =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: ed.kVF.SURVEY,
                                   onClick: () => {
-                                      (0, p.hZ)(t, !0);
+                                      (0, C.hZ)(t, !0);
                                   }
                               }),
                               n,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.SURVEY,
                                   onClick: () => {
-                                      window.open(s, '_blank'), (0, p.hZ)(t, !1);
+                                      window.open(s, '_blank'), (0, C.hZ)(t, !1);
                                   },
                                   children: a
                               })
@@ -522,16 +522,16 @@ let eC =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: ed.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
-                                      ef();
+                                      eN();
                                   }
                               }),
-                              em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == eC ? void 0 : eC.name) && void 0 !== t ? t : 'this server' }),
+                              em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ep ? void 0 : ep.name) && void 0 !== t ? t : 'this server' }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
-                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == eC ? void 0 : eC.id), '_blank'), ef();
+                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ep ? void 0 : ep.id), '_blank'), eN();
                                   },
-                                  additionalTrackingProps: { guild_id: null == eC ? void 0 : eC.id },
+                                  additionalTrackingProps: { guild_id: null == ep ? void 0 : ep.id },
                                   children: em.Z.Messages.SERVER_USAGE_SURVEY_CTA
                               })
                           ]
@@ -553,7 +553,7 @@ let eC =
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.VIDEO_UNSUPPORTED_BROWSER
                               }),
                               em.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
@@ -580,7 +580,7 @@ let eC =
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.DISPATCH_ERROR
                               }),
                               null == eB ? void 0 : eB.displayMessage,
@@ -602,11 +602,11 @@ let eC =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
                               }),
-                              (0, i.jsxs)(v.Z, {
-                                  justify: v.Z.Justify.CENTER,
+                              (0, i.jsxs)(M.Z, {
+                                  justify: M.Z.Justify.CENTER,
                                   children: [
                                       null != eF
                                           ? em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
@@ -631,9 +631,9 @@ let eC =
                       if (null != ea.Z.testModeEmbeddedApplicationId)
                           return (0, i.jsx)(c.Notice, {
                               color: c.NoticeColors.WARNING,
-                              children: (0, i.jsxs)(v.Z, {
-                                  justify: v.Z.Justify.CENTER,
-                                  align: v.Z.Align.CENTER,
+                              children: (0, i.jsxs)(M.Z, {
+                                  justify: M.Z.Justify.CENTER,
+                                  align: M.Z.Align.CENTER,
                                   children: [
                                       (0, i.jsx)('div', { children: em.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({ applicationName: eu.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
@@ -645,9 +645,9 @@ let eC =
                           });
                       return (0, i.jsx)(c.Notice, {
                           color: c.NoticeColors.WARNING,
-                          children: (0, i.jsxs)(v.Z, {
-                              justify: v.Z.Justify.CENTER,
-                              align: v.Z.Align.CENTER,
+                          children: (0, i.jsxs)(M.Z, {
+                              justify: M.Z.Justify.CENTER,
+                              align: M.Z.Align.CENTER,
                               children: [
                                   (0, i.jsx)('div', { children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({ applicationName: eu.metadata.applicationName }) }),
                                   (0, i.jsx)(ec.Z, {
@@ -657,7 +657,7 @@ let eC =
                                       look: ec.E.Looks.OUTLINED,
                                       size: ec.E.Sizes.MIN,
                                       onSKUSelect: (e) =>
-                                          f.yt(e.id, {
+                                          N.yt(e.id, {
                                               analyticsSource: {
                                                   page: null,
                                                   section: ed.jXE.NOTIFICATION_BAR,
@@ -680,13 +680,13 @@ let eC =
                       return (0, i.jsx)(w.Z, {});
                   case ed.kVF.PREMIUM_UNCANCEL:
                       return (0, i.jsxs)(c.Notice, {
-                          color: eR === e_.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eR === e_.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
+                          color: ex === e_.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : ex === e_.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: ed.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               (0, i.jsx)(c.NitroWheelIcon, {
@@ -694,25 +694,25 @@ let eC =
                                   color: 'currentColor',
                                   className: eT.premiumIcon
                               }),
-                              eR === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : eR === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }),
+                              ex === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : ex === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
                                           (0, c.openModalLazy)(async () => {
-                                              let { default: e } = await Promise.all([n.e('52249'), n.e('72652'), n.e('8016'), n.e('68136'), n.e('78836')]).then(n.bind(n, 561623));
+                                              let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('87446')]).then(n.bind(n, 561623));
                                               return (t) =>
                                                   (0, i.jsx)(e, {
                                                       ...t,
                                                       daysLeft: eu.metadata.daysLeft,
-                                                      premiumType: eR,
+                                                      premiumType: ex,
                                                       analyticsSource: 'Nag Bar',
                                                       premiumSubscription: eu.metadata.premiumSubscription
                                                   });
                                           });
                                   },
-                                  children: eR === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eR === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+                                  children: ex === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : ex === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
                               })
                           ]
                       });
@@ -724,14 +724,14 @@ let eC =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eg,
                                   onClick: () => {
-                                      ef(eV);
+                                      eN(eV);
                                   }
                               }),
                               em.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({ daysPastDue: ew }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   onClick: () => {
-                                      ef(eV), A.Z.open(ed.oAB.SUBSCRIPTIONS);
+                                      eN(eV), S.Z.open(ed.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
                               })
@@ -745,7 +745,7 @@ let eC =
                                   noticeType: ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT,
@@ -753,7 +753,7 @@ let eC =
                                   noticeType: ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(ed.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), S.Z.open(ed.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
                               })
@@ -767,7 +767,7 @@ let eC =
                                   noticeType: ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT,
@@ -775,7 +775,7 @@ let eC =
                                   noticeType: ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(ed.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), S.Z.open(ed.oAB.SUBSCRIPTIONS);
                                   },
                                   children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                               })
@@ -789,17 +789,17 @@ let eC =
                                   noticeType: ed.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              eR === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : eR === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }),
+                              ex === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : ex === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({ daysLeft: eu.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ef(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.Z.open(ed.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), S.Z.open(ed.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eR === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eR === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+                                  children: ex === e_.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : ex === e_.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                               })
                           ]
                       });
@@ -807,14 +807,14 @@ let eC =
                       return (0, i.jsx)(G.h, {
                           buttonText: null !== (s = eu.buttonText) && void 0 !== s ? s : em.Z.Messages.GO_BACK,
                           onGoBack: eu.callback,
-                          onDismiss: () => ef(),
+                          onDismiss: () => eN(),
                           showCloseButton: !0
                       });
                   case ed.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
                       let e = { page: ed.ZY5.IN_APP };
                       return (0, i.jsx)(U.Z, {
-                          guildId: R,
-                          analyticsLocations: ep,
+                          guildId: x,
+                          analyticsLocations: eC,
                           analyticsLocation: e
                       });
                   }
@@ -847,7 +847,7 @@ let eC =
                                   children: em.Z.Messages.LEARN_MORE
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(),
+                                  onClick: () => eN(),
                                   noticeType: ed.kVF.BLOCKED_BY_PROXY
                               })
                           ]
@@ -860,22 +860,22 @@ let eC =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: ed.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION,
                                   onClick: () => {
-                                      null != R && (0, j.T9)(R), ef(eH);
+                                      null != x && (0, j.T9)(x), eN(eH);
                                   }
                               }),
                               em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE,
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
-                                      null != R &&
-                                          (0, j.UE)(R, eY, () => {
-                                              ef(eH), (0, j.T9)(R);
+                                      null != x &&
+                                          (0, j.UE)(x, eY, () => {
+                                              eN(eH), (0, j.T9)(x);
                                           });
                                   },
                                   children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
                               }),
-                              null != R
+                              null != x
                                   ? (0, i.jsx)(c.NoticeButton, {
-                                        onClick: () => F.Z.open(R, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
+                                        onClick: () => F.Z.open(x, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
                                         children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
                                     })
                                   : null
@@ -888,7 +888,7 @@ let eC =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
                                   onClick: () => {
-                                      X.hZ(), ef();
+                                      X.hZ(), eN();
                                   }
                               }),
                               em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
@@ -900,7 +900,7 @@ let eC =
                                           return (t) => (0, i.jsx)(e, { ...t });
                                       }),
                                           X.hZ(),
-                                          ef();
+                                          eN();
                                   },
                                   children: em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
                               })
@@ -908,9 +908,9 @@ let eC =
                       });
                   case ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
                       let eW = r()().add(5, 'days').toDate();
-                      return (0, i.jsx)(K.Z, {
+                      return (0, i.jsx)(z.Z, {
                           dismissCurrentNotice: () => {
-                              (0, L.EW)(es.m[ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ef(eW);
+                              (0, L.EW)(es.m[ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eW);
                           },
                           subscriptionTier: e_.Si.TIER_2
                       });
@@ -922,7 +922,7 @@ let eC =
                                   noticeType: ed.kVF.QUESTS_PROGRESS_INTERRUPTION,
                                   onClick: () => {
                                       var e;
-                                      (null === (e = eu.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, z.nE)(eu.metadata.streamKey);
+                                      (null === (e = eu.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, K.nE)(eu.metadata.streamKey);
                                   }
                               }),
                               em.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE
@@ -933,10 +933,10 @@ let eC =
               }
           })
         : null;
-function ep() {
-    let { analyticsLocations: e } = (0, x.ZP)(R.Z.NOTICE);
-    return (0, i.jsx)(x.Gt, {
+function eC() {
+    let { analyticsLocations: e } = (0, R.ZP)(x.Z.NOTICE);
+    return (0, i.jsx)(R.Gt, {
         value: e,
-        children: (0, i.jsx)(eC, {})
+        children: (0, i.jsx)(ep, {})
     });
 }

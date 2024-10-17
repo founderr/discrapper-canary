@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(857595),
     T = n(607070),
     x = n(367907),
-    v = n(450936),
-    S = n(993766),
+    S = n(450936),
+    v = n(993766),
     N = n(499254),
     A = n(541099),
     Z = n(827498),
@@ -73,8 +73,8 @@ var i = n(735250),
     eI = n(944486),
     eT = n(117530),
     ex = n(594174),
-    ev = n(626135),
-    eS = n(934415),
+    eS = n(626135),
+    ev = n(934415),
     eN = n(459273),
     eA = n(585483),
     eZ = n(709054),
@@ -137,7 +137,7 @@ class eY extends s.PureComponent {
             let e = e_.Z.getDraft(n.id, e_.d.ChannelMessage);
             e !== i && this.setState((0, w.eK)(e));
         }
-        t.textValue.length < eB.J6R && i.length >= eB.J6R && ev.default.track(eB.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
+        t.textValue.length < eB.J6R && i.length >= eB.J6R && eS.default.track(eB.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
@@ -496,7 +496,7 @@ class eK extends s.PureComponent {
     render() {
         var e;
         let t;
-        let { channel: n, guild: s, keyboardModeEnabled: a, hasModalOpen: l, pendingReply: r, chatInputType: o, placeholder: u, accessibilityLabel: h, showQuarantinedUserBanner: p, filterAfterTimestamp: m, communicationDisabledUntil: _, shakeIntensity: f, poggermodeEnabled: C, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: T, showAppDMsUI: x, isInitialLoading: v, entryPointCommandButtonRef: S, isFailedAppDMLoad: N } = this.props,
+        let { channel: n, guild: s, keyboardModeEnabled: a, hasModalOpen: l, pendingReply: r, chatInputType: o, placeholder: u, accessibilityLabel: h, showQuarantinedUserBanner: p, filterAfterTimestamp: m, communicationDisabledUntil: _, shakeIntensity: f, poggermodeEnabled: C, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: T, showAppDMsUI: x, isInitialLoading: S, entryPointCommandButtonRef: v, isFailedAppDMLoad: N } = this.props,
             { textAreaFocused: A, textAreaHighlighted: Z } = this.state,
             M = o === k.I.SIDEBAR;
         t = M && n.type === eB.d4z.GUILD_VOICE ? eH.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : M && n.type === eB.d4z.GUILD_STAGE_VOICE ? eH.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : c.T.THREADS.has(n.type) ? eH.Z.Messages.THREAD_A11Y_LABEL : eH.Z.Messages.CHANNEL_A11Y_LABEL;
@@ -535,24 +535,24 @@ class eK extends s.PureComponent {
                             channel: n,
                             type: o,
                             animateRef: this.appIconAnimateRef,
-                            entryPointCommandButtonRef: S
+                            entryPointCommandButtonRef: v
                         })
                     }),
                     x && !N
                         ? (0, i.jsx)(eD.Z, {
                               channel: n,
-                              entryPointCommandButtonRef: S,
+                              entryPointCommandButtonRef: v,
                               type: o
                           })
                         : null
                 ]
             }),
-            L = x && v,
-            P = L && v ? b : R;
+            L = x && S,
+            P = L && S ? b : R;
         return (0, i.jsx)(
             g.Z,
             {
-                page: (0, eS.mE)(this.props.channel),
+                page: (0, ev.mE)(this.props.channel),
                 children: (0, i.jsx)($.sW, {
                     children: (0, i.jsxs)(eN.I3, {
                         ref: this.dispatchGroupRef,
@@ -745,8 +745,8 @@ t.Z = s.memo(function (e) {
         E = (0, er.Z)(t.id),
         g = (0, J.Z)(t.id),
         C = (0, U.h9)(t.id, 'ChannelChatMemo'),
-        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: P } = (0, v.Z)({ channel: t });
-    (0, S.Z)({
+        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: P } = (0, S.Z)({ channel: t });
+    (0, v.Z)({
         isProfileFetching: N,
         wasProfileFetching: Z,
         applicationId: M,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 }),
     n(47120);
@@ -18,11 +18,11 @@ var i = n(735250),
     I = n(592125),
     m = n(823379),
     T = n(709054),
-    h = n(124368),
-    N = n(302762);
-function f(e) {
+    f = n(124368),
+    h = n(302762);
+function N(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
-        f = (0, l.Wu)(
+        N = (0, l.Wu)(
             [_.Z, I.Z],
             () =>
                 r()(_.Z.getThreadsForParent(n.guild_id, n.id))
@@ -40,8 +40,8 @@ function f(e) {
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        C = a.useCallback((e, t) => {
-            (0, E.ok)(e, t, h.on.INBOX);
+        p = a.useCallback((e, t) => {
+            (0, E.ok)(e, t, f.on.INBOX);
         }, []);
     return (
         a.useEffect(() => {
@@ -49,22 +49,22 @@ function f(e) {
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
-                0 === f.length &&
+                0 === N.length &&
                 o.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), s(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
-            className: N.container,
-            children: f.map((e) =>
+            className: h.container,
+            children: N.map((e) =>
                 (0, i.jsx)(
                     d.oL,
                     {
                         createStore: () => (0, d.NU)(n),
                         children: (0, i.jsx)(u.ZP, {
-                            className: N.forumPost,
+                            className: h.forumPost,
                             threadId: e.id,
-                            goToThread: C
+                            goToThread: p
                         })
                     },
                     e.id

@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return d;
+        return _;
     },
     T: function () {
         return c;
@@ -19,7 +19,7 @@ function c(e) {
         achievementId: e
     });
 }
-function d(e, t) {
+function _(e, t) {
     let n = (0, i.oX)(e);
     if (null != n)
         (0, a.showToast)(

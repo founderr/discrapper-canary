@@ -6,13 +6,13 @@ var s = n(710845),
     l = n(411198),
     o = n(625137),
     c = n(287328);
-let d = new s.Z('Guilds');
+let _ = new s.Z('Guilds');
 t.Z = new (class e {
     async getAsync(e) {
         let t = performance.now(),
             n = await c.Z.guilds(e).getMany(),
             s = performance.now();
-        return d.verbose('loaded in '.concat(s - t, 'ms (guilds: ').concat(n.length, ')')), n;
+        return _.verbose('loaded in '.concat(s - t, 'ms (guilds: ').concat(n.length, ')')), n;
     }
     async getOneAsync(e, t) {
         return await c.Z.guilds(e).get(t);

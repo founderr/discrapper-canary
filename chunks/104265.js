@@ -1,62 +1,62 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     t(47120);
-var r = t(735250),
-    o = t(470079),
-    a = t(120356),
-    l = t.n(a),
+var l = t(735250),
+    a = t(470079),
+    o = t(120356),
+    r = t.n(o),
     i = t(212433),
     s = t(399606),
     c = t(692547),
-    u = t(780384),
-    d = t(481060),
+    d = t(780384),
+    u = t(481060),
     m = t(596454),
     h = t(410030),
     v = t(339085),
-    p = t(14263),
-    g = t(689938),
-    x = t(695352);
-function f(e) {
-    let { guildId: n, option: t, selected: a, onSelect: f, hideMemberCount: C, canBeNew: b } = e,
-        O = (0, u.wj)((0, h.ZP)()),
-        [N, j] = o.useState(!1),
-        _ = N && !C,
-        M = o.useRef(null),
-        { reducedMotion: k } = o.useContext(d.AccessibilityPreferencesContext),
-        Z = (0, s.e7)([v.ZP], () => {
-            var e, n, r, o;
-            return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.ZP.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
+    g = t(14263),
+    x = t(689938),
+    p = t(695352);
+function C(e) {
+    let { guildId: n, option: t, selected: o, onSelect: C, hideMemberCount: f, canBeNew: N } = e,
+        j = (0, d.wj)((0, h.ZP)()),
+        [O, _] = a.useState(!1),
+        Z = O && !f,
+        T = a.useRef(null),
+        { reducedMotion: M } = a.useContext(u.AccessibilityPreferencesContext),
+        I = (0, s.e7)([v.ZP], () => {
+            var e, n, l, a;
+            return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (a = null === (n = v.ZP.getCustomEmojiById(null === (l = t.emoji) || void 0 === l ? void 0 : l.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== a && a;
         }),
-        y = (0, p.Z)(n, 1000),
-        T = null == y || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => y[e])),
-        S = b && !a && t.isUnseen,
-        w = (0, d.useSpring)(
+        b = (0, g.Z)(n, 1000),
+        A = null == b || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => b[e])),
+        D = N && !o && t.isUnseen,
+        E = (0, u.useSpring)(
             {
-                transform: a || k.enabled ? 'scale(1)' : 'scale(0.7)',
-                opacity: a ? 1 : 0,
+                transform: o || M.enabled ? 'scale(1)' : 'scale(0.7)',
+                opacity: o ? 1 : 0,
                 config: { duration: 150 }
             },
             'animate-always'
         ),
-        I = (0, d.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT),
-        R = (0, d.useToken)(c.Z.unsafe_rawColors.BRAND_500),
-        E = (0, d.useSpring)(
+        k = (0, u.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT),
+        y = (0, u.useToken)(c.Z.unsafe_rawColors.BRAND_500),
+        S = (0, u.useSpring)(
             {
-                from: { color: R.spring() },
-                color: I.spring({ opacity: O ? 0.5 : 0.25 }),
+                from: { color: y.spring() },
+                color: k.spring({ opacity: j ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500
             },
             'animate-always'
         ),
-        A = (0, d.useTransition)(
-            _,
+        R = (0, u.useTransition)(
+            Z,
             {
                 from: {
-                    transform: k.enabled ? 'translateX(0)' : 'translateX(8px)',
+                    transform: M.enabled ? 'translateX(0)' : 'translateX(8px)',
                     opacity: 0
                 },
                 enter: {
@@ -69,53 +69,53 @@ function f(e) {
             },
             'animate-always'
         ),
-        [D, B] = o.useState(!1);
-    o.useEffect(() => {
-        if (_)
+        [w, L] = a.useState(!1);
+    a.useEffect(() => {
+        if (Z)
             return (
-                (M.current = setTimeout(() => {
-                    j(!1), (M.current = null);
+                (T.current = setTimeout(() => {
+                    _(!1), (T.current = null);
                 }, 3000)),
                 () => {
-                    null != M.current && clearTimeout(M.current);
+                    null != T.current && clearTimeout(T.current);
                 }
             );
-    }, [_]);
-    let L = l()(x.optionButtonWrapper, {
-            [x.selected]: a,
-            [x.pressed]: D
+    }, [Z]);
+    let B = r()(p.optionButtonWrapper, {
+            [p.selected]: o,
+            [p.pressed]: w
         }),
-        P = S ? { borderColor: E.color } : {};
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(i.animated.div, {
+        P = D ? { borderColor: S.color } : {};
+    return (0, l.jsx)(l.Fragment, {
+        children: (0, l.jsx)(i.animated.div, {
             style: P,
-            className: L,
-            children: (0, r.jsxs)(d.Clickable, {
-                className: l()(x.optionButton),
+            className: B,
+            children: (0, l.jsxs)(u.Clickable, {
+                className: r()(p.optionButton),
                 onClick: () => {
-                    j(!a), f(!a);
+                    _(!o), C(!o);
                 },
-                onMouseDown: () => B(!0),
-                onMouseUp: () => B(!1),
+                onMouseDown: () => L(!0),
+                onMouseUp: () => L(!1),
                 children: [
                     null != t.emoji && (null != t.emoji.id || null != t.emoji.name)
-                        ? (0, r.jsx)(m.Z, {
-                              animated: t.emoji.animated || Z,
-                              className: x.buttonEmoji,
+                        ? (0, l.jsx)(m.Z, {
+                              animated: t.emoji.animated || I,
+                              className: p.buttonEmoji,
                               emojiId: t.emoji.id,
                               emojiName: t.emoji.name
                           })
                         : null,
-                    (0, r.jsxs)('div', {
-                        className: x.buttonText,
+                    (0, l.jsxs)('div', {
+                        className: p.buttonText,
                         children: [
-                            (0, r.jsx)(d.Text, {
+                            (0, l.jsx)(u.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
                                 children: t.title
                             }),
                             t.description.length > 0
-                                ? (0, r.jsx)(d.Text, {
+                                ? (0, l.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
                                       children: t.description
@@ -123,35 +123,35 @@ function f(e) {
                                 : null
                         ]
                     }),
-                    (0, r.jsx)(i.animated.div, {
-                        className: x.checkIcon,
-                        style: w,
-                        children: (0, r.jsx)(d.CheckmarkLargeIcon, {
+                    (0, l.jsx)(i.animated.div, {
+                        className: p.checkIcon,
+                        style: E,
+                        children: (0, l.jsx)(u.CheckmarkLargeIcon, {
                             size: 'custom',
                             width: 10,
                             height: 10,
                             color: c.Z.unsafe_rawColors.WHITE_500.css
                         })
                     }),
-                    A(
+                    R(
                         (e, n) =>
-                            T > 0 &&
+                            A > 0 &&
                             n &&
-                            (0, r.jsx)(i.animated.div, {
-                                className: x.memberCount,
+                            (0, l.jsx)(i.animated.div, {
+                                className: p.memberCount,
                                 style: e,
-                                children: (0, r.jsx)(d.Text, {
+                                children: (0, l.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
-                                    children: g.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: T })
+                                    children: x.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: A })
                                 })
                             })
                     ),
-                    S &&
-                        (0, r.jsx)(d.TextBadge, {
+                    D &&
+                        (0, l.jsx)(u.TextBadge, {
                             color: c.Z.unsafe_rawColors.BRAND_260.css,
-                            text: g.Z.Messages.NEW,
-                            className: x.newBadge
+                            text: x.Z.Messages.NEW,
+                            className: p.newBadge
                         })
                 ]
             })

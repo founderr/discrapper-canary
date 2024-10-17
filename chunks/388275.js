@@ -18,29 +18,29 @@ var l = n(735250),
     f = n(689938),
     E = n(463061);
 function g(e) {
-    let { message: t, forwardOptions: n, sendLabel: g, canSend: m, selectedDestinations: S, isSending: I, onSend: A, showPreview: p } = e,
+    let { message: t, forwardOptions: n, sendLabel: g, canSend: m, selectedDestinations: S, isSending: A, onSend: I, showPreview: p } = e,
         C = (0, c.Z)(),
         N = (0, u.nm)(S),
-        v = (0, u.y)(S),
-        L = (0, d.Ad)(),
-        [b, T] = a.useState(() => (0, r.H2)()),
-        { textValue: x, richValue: Z } = b,
-        [M, y] = a.useState(!1),
-        P = a.useCallback(() => y(!0), []),
-        R = a.useCallback(() => y(!1), []),
+        L = (0, u.y)(S),
+        v = (0, d.Ad)(),
+        [T, b] = a.useState(() => (0, r.H2)()),
+        { textValue: x, richValue: Z } = T,
+        [y, M] = a.useState(!1),
+        P = a.useCallback(() => M(!0), []),
+        R = a.useCallback(() => M(!1), []),
         O = a.useCallback(
             (e, n, l) => {
-                T({
+                b({
                     textValue: n,
                     richValue: l
                 }),
-                    L(t.channel_id, t.id);
+                    v(t.channel_id, t.id);
             },
-            [L, t]
+            [v, t]
         ),
         D = a.useCallback(() => {
-            A(x);
-        }, [x, A]),
+            I(x);
+        }, [x, I]),
         w = a.useCallback(
             () =>
                 !m || x.length > C
@@ -83,7 +83,7 @@ function g(e) {
                                 type: i.I.FORWARD_MESSAGE_INPUT,
                                 onBlur: R,
                                 onFocus: P,
-                                focused: M,
+                                focused: y,
                                 onSubmit: w,
                                 parentModalKey: h.so,
                                 autoCompletePosition: 'bottom',
@@ -91,21 +91,21 @@ function g(e) {
                             }),
                             (0, l.jsx)(s.Button, {
                                 className: E.sendWithMessage,
-                                submitting: I,
+                                submitting: A,
                                 disabled: !m || x.length > C,
                                 onClick: D,
                                 children: g
                             })
                         ]
                     }),
-                    v.length > 0 &&
+                    L.length > 0 &&
                         x.length > 0 &&
                         (0, l.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: f.Z.Messages.MESSAGE_FORWARD_SLOWMODE_WARNING.format({
-                                count: v.length,
-                                channelNames: v.join(', ')
+                                count: L.length,
+                                channelNames: L.join(', ')
                             })
                         })
                 ]

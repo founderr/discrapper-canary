@@ -19,8 +19,8 @@ var i = n(735250),
     u = n(689938),
     d = n(189265);
 function _(e) {
-    let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: A, children: S, ...R } = e,
-        { canShowReactionsOnMessageHover: x } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: f, disabled: h, dangerous: N, separator: p, sparkle: C, showNewBadge: g, buttonClassName: S, children: A, ...x } = e,
+        { canShowReactionsOnMessageHover: R } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
         (0, i.jsx)(r.Tooltip, {
@@ -28,7 +28,7 @@ function _(e) {
             color: null != _ ? _ : r.TooltipColors.PRIMARY,
             'aria-label': t,
             onTooltipShow: T,
-            onTooltipHide: h,
+            onTooltipHide: f,
             hideOnClick: !0,
             tooltipClassName: d.tooltip,
             children: (e) => {
@@ -36,16 +36,16 @@ function _(e) {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(o.zx, {
-                            className: s()(A, { [d.hoverBarButton]: x }),
+                            className: s()(S, { [d.hoverBarButton]: R }),
                             onMouseEnter: a,
                             onMouseLeave: c,
                             onClick: (e) => {
                                 null == _ || _(), m(e);
                             },
                             'aria-label': null != n ? n : t,
-                            disabled: N,
-                            dangerous: f,
-                            ...R,
+                            disabled: h,
+                            dangerous: N,
+                            ...x,
                             children: [
                                 null != E
                                     ? (0, i.jsx)(E, {
@@ -54,13 +54,13 @@ function _(e) {
                                           ...I
                                       })
                                     : null,
-                                null != S
+                                null != A
                                     ? (0, i.jsx)('div', {
                                           className: s()(d.icon, d.buttonContent),
-                                          children: S
+                                          children: A
                                       })
                                     : null,
-                                p && (0, i.jsx)(r.LottieSparkle, {}),
+                                C && (0, i.jsx)(r.LottieSparkle, {}),
                                 g &&
                                     (0, i.jsx)(r.TextBadge, {
                                         text: u.Z.Messages.NEW,
@@ -69,7 +69,7 @@ function _(e) {
                                     })
                             ]
                         }),
-                        C && (0, i.jsx)(o.Z0, {})
+                        p && (0, i.jsx)(o.Z0, {})
                     ]
                 });
             }

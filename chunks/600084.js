@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(496675),
     T = n(594174),
     x = n(51144),
-    v = n(7782),
-    S = n(967128),
+    S = n(7782),
+    v = n(967128),
     N = n(320781),
     A = n(269203),
     Z = n(86863),
@@ -108,7 +108,7 @@ function H(e) {
                           })
                       ]
                   }))
-                : (e = (0, i.jsx)(v.Z, {
+                : (e = (0, i.jsx)(S.Z, {
                       userId: d.getRecipientId(),
                       channel: d,
                       showingBanner: h
@@ -132,9 +132,9 @@ function H(e) {
     }
     if (d.isMultiUserDM())
         return d.isManaged()
-            ? (0, i.jsxs)(S.ZP, {
+            ? (0, i.jsxs)(v.ZP, {
                   channelId: d.id,
-                  children: [(0, i.jsx)(S.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
+                  children: [(0, i.jsx)(v.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
               })
             : d.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(A.Z, { channel: d })
@@ -147,8 +147,8 @@ function H(e) {
               channel: d,
               canManageRoles: P
           })
-        : (0, i.jsx)(S.ZP, {
+        : (0, i.jsx)(v.ZP, {
               channelId: d.id,
-              children: (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
+              children: (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
           });
 }

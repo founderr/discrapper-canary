@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return R;
+        return x;
     }
 });
 var i = n(735250);
@@ -18,66 +18,66 @@ var a = n(120356),
     I = n(954551),
     m = n(208450),
     T = n(358085),
-    h = n(998502),
-    N = n(665149),
-    f = n(300986),
-    C = n(314451),
-    p = n(35583),
+    f = n(998502),
+    h = n(665149),
+    N = n(300986),
+    p = n(314451),
+    C = n(35583),
     g = n(981631),
-    A = n(176505),
-    S = n(228856);
-async function R() {
+    S = n(176505),
+    A = n(228856);
+async function x() {
     if ((0, T.isMac)() && T.isPlatformEmbedded) {
         var e, t, n;
         let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
-        'Minimize' === i ? h.ZP.minimize() : 'Maximize' === i && h.ZP.maximize();
+        'Minimize' === i ? f.ZP.minimize() : 'Maximize' === i && f.ZP.maximize();
     }
 }
-function x(e) {
-    let { children: t, className: n, channelId: a, guildId: s, innerClassname: l, transparent: o = !1, toolbar: T, mobileToolbar: h, 'aria-label': g, 'aria-labelledby': A, scrollable: x, role: O, hideSearch: M, showDivider: v } = e,
+function R(e) {
+    let { children: t, className: n, channelId: a, guildId: s, innerClassname: l, transparent: o = !1, toolbar: T, mobileToolbar: f, 'aria-label': g, 'aria-labelledby': S, scrollable: R, role: O, hideSearch: v, showDivider: M } = e,
         { hasBugReporterAccess: L } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
-        { enabled: Z, inInbox: P } = E.Z.useExperiment({ location: 'HeaderBar' }),
-        b = (0, d.Q)('HeaderBar');
-    return (0, i.jsx)(N.ZP, {
+        { enabled: Z, inInbox: b } = E.Z.useExperiment({ location: 'HeaderBar' }),
+        P = (0, d.Q)('HeaderBar');
+    return (0, i.jsx)(h.ZP, {
         className: n,
         innerClassName: l,
         toolbar: (function () {
             if (null == T) return null;
-            let e = null != a && !M;
+            let e = null != a && !v;
             return r.tq
-                ? h
+                ? f
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [T, e ? (0, i.jsx)(m.Z, { className: S.search }, null != s ? s : a) : null, v && (0, i.jsx)(N.ZP.Divider, {}), !b && (0, i.jsx)(p.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !b && (0, i.jsx)(_.Z, {}), Z && !P ? (0, i.jsx)(I.Z, {}) : null, !b && (L ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {}))]
+                      children: [T, e ? (0, i.jsx)(m.Z, { className: A.search }, null != s ? s : a) : null, M && (0, i.jsx)(h.ZP.Divider, {}), !P && (0, i.jsx)(C.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !P && (0, i.jsx)(_.Z, {}), Z && !b ? (0, i.jsx)(I.Z, {}) : null, !P && (L ? (0, i.jsx)(p.Z, {}) : (0, i.jsx)(N.Z, {}))]
                   });
         })(),
         transparent: o,
-        onDoubleClick: R,
+        onDoubleClick: x,
         'aria-label': g,
-        'aria-labelledby': A,
+        'aria-labelledby': S,
         role: O,
-        scrollable: x,
+        scrollable: R,
         children: t
     });
 }
 function O(e) {
     let { children: t, className: n, 'aria-label': a, 'aria-labelledby': s, role: r } = e;
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(h.ZP, {
         className: n,
-        onDoubleClick: R,
+        onDoubleClick: x,
         'aria-label': a,
         'aria-labelledby': s,
         role: r,
         children: t
     });
 }
-function M(e) {
+function v(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: a } = (0, o.ZP)(l.Z.HEADER_BAR),
-        r = s()(n.className, { [S.forumOrHome]: (null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === A.oC.GUILD_HOME });
+        r = s()(n.className, { [A.forumOrHome]: (null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === S.oC.GUILD_HOME });
     return (0, i.jsx)(o.Gt, {
         value: a,
         children: t
-            ? (0, i.jsx)(x, {
+            ? (0, i.jsx)(R, {
                   ...n,
                   className: r
               })
@@ -87,4 +87,4 @@ function M(e) {
               })
     });
 }
-(M.Title = N.ZP.Title), (M.Icon = N.ZP.Icon), (M.Divider = N.ZP.Divider), (M.Caret = N.ZP.Caret), (t.Z = M);
+(v.Title = h.ZP.Title), (v.Icon = h.ZP.Icon), (v.Divider = h.ZP.Divider), (v.Caret = h.ZP.Caret), (t.Z = v);

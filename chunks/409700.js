@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     g: function () {
-        return d;
+        return _;
     }
 }),
     n(411104);
@@ -34,7 +34,7 @@ function c() {
         })
         .then(l, (e) => Promise.reject(Error(e.body.message)));
 }
-function d(e, t) {
+function _(e, t) {
     return s.tn
         .post({
             url: r.ANM.SETTINGS_CONSENT,

@@ -26,8 +26,8 @@ var i,
     I = n(51144),
     T = n(981631),
     x = n(354459),
-    v = n(927923),
-    S = n(689938),
+    S = n(927923),
+    v = n(689938),
     N = n(557369);
 function A(e, t, n) {
     return (
@@ -57,7 +57,7 @@ let Z = (e) => {
                   o.TooltipContainer,
                   {
                       className: N.iconSpacing,
-                      text: S.Z.Messages.HANG_STATUS_VC_ROW_ADD,
+                      text: v.Z.Messages.HANG_STATUS_VC_ROW_ADD,
                       children: (0, s.jsx)(o.PlusLargeIcon, { className: r()(N.icon, n) })
                   },
                   'add-status'
@@ -80,7 +80,7 @@ class b extends (i = a.Component) {
         let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: a } = this.props;
         return t && !n
             ? (0, s.jsx)(o.Tooltip, {
-                  text: S.Z.Messages.PRIORITY_SPEAKER,
+                  text: v.Z.Messages.PRIORITY_SPEAKER,
                   children: (t) =>
                       (0, s.jsx)('div', {
                           className: r()(N.iconPriortySpeaker, { [N.iconPriortySpeakerSpeaking]: !i && !a && e }),
@@ -112,7 +112,7 @@ class b extends (i = a.Component) {
                     c
                         ? (0, s.jsxs)('span', {
                               className: N.guestSuffix,
-                              children: ['\xA0', S.Z.Messages.GUEST_NAME_SUFFIX]
+                              children: ['\xA0', v.Z.Messages.GUEST_NAME_SUFFIX]
                           })
                         : ''
                 ]
@@ -157,7 +157,7 @@ class b extends (i = a.Component) {
                           o.TooltipContainer,
                           {
                               className: N.iconSpacing,
-                              text: S.Z.Messages.LOCAL_VIDEO_DISABLED,
+                              text: v.Z.Messages.LOCAL_VIDEO_DISABLED,
                               children: (0, s.jsx)(o.VideoSlashIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -173,7 +173,7 @@ class b extends (i = a.Component) {
                           o.TooltipContainer,
                           {
                               className: N.iconSpacing,
-                              text: S.Z.Messages.VIDEO,
+                              text: v.Z.Messages.VIDEO,
                               children: (0, s.jsx)(o.VideoIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -189,7 +189,7 @@ class b extends (i = a.Component) {
                         o.TooltipContainer,
                         {
                             className: N.iconSpacing,
-                            text: S.Z.Messages.NOTICE_USER_DISCONNECTED,
+                            text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
                             children: (0, s.jsx)(o.CircleWarningIcon, {
                                 className: r()(N.icon, f),
                                 color: o.tokens.colors.STATUS_WARNING_BACKGROUND
@@ -214,7 +214,7 @@ class b extends (i = a.Component) {
                         'activity'
                     )
                 ),
-            A === v.YE.XBOX || Z === x.wR.XBOX
+            A === S.YE.XBOX || Z === x.wR.XBOX
                 ? H.push(
                       (0, s.jsx)(
                           'div',
@@ -225,7 +225,7 @@ class b extends (i = a.Component) {
                           'xbox'
                       )
                   )
-                : (A === v.YE.PLAYSTATION || Z === x.wR.PLAYSTATION) &&
+                : (A === S.YE.PLAYSTATION || Z === x.wR.PLAYSTATION) &&
                   H.push(
                       (0, s.jsx)(
                           'div',
@@ -253,7 +253,7 @@ class b extends (i = a.Component) {
                           o.TooltipContainer,
                           {
                               className: N.iconSpacing,
-                              text: S.Z.Messages.WATCH_STREAM_WATCHING,
+                              text: v.Z.Messages.WATCH_STREAM_WATCHING,
                               children: (0, s.jsx)(o.EyeIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -372,8 +372,8 @@ function R(e) {
                 });
         }, [t.id, l, i, u, h]),
         (0, s.jsx)(o.TooltipContainer, {
-            text: S.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
-            'aria-label': S.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
+            text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
+            'aria-label': v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
             className: N.iconSpacing,
             children: (0, s.jsx)('div', {
                 ref: _,
@@ -418,7 +418,7 @@ function L(e) {
             (0, s.jsx)(
                 o.TooltipContainer,
                 {
-                    text: i ? S.Z.Messages.LOCAL_MUTED : a ? S.Z.Messages.SERVER_MUTED : S.Z.Messages.VOICE_CHANNEL_MUTED,
+                    text: i ? v.Z.Messages.LOCAL_MUTED : a ? v.Z.Messages.SERVER_MUTED : v.Z.Messages.VOICE_CHANNEL_MUTED,
                     className: N.iconSpacing,
                     children: e
                 },
@@ -445,7 +445,7 @@ function L(e) {
                 o.TooltipContainer,
                 {
                     className: N.iconSpacing,
-                    text: c ? S.Z.Messages.SERVER_DEAFENED : S.Z.Messages.VOICE_CHANNEL_DEAFENED,
+                    text: c ? v.Z.Messages.SERVER_DEAFENED : v.Z.Messages.VOICE_CHANNEL_DEAFENED,
                     children: e
                 },
                 'deaf'

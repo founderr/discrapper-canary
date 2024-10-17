@@ -14,12 +14,12 @@ var s = n(470079),
     l = n(605236),
     o = n(706140),
     c = n(581883),
-    d = n(494127),
-    _ = n(687362),
+    _ = n(494127),
+    d = n(687362),
     E = n(526761);
 let u = [
-        [r.z.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.F_, r.z.WHATS_NEW_AVATAR_DECOS_FLIP],
-        [r.z.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.YQ, r.z.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+        [r.z.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, _.F_, r.z.WHATS_NEW_AVATAR_DECOS_FLIP],
+        [r.z.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, _.YQ, r.z.WHATS_NEW_PROFILE_EFFECTS_FLIP]
     ],
     T = (e) => {
         let t = u.some((e) => {
@@ -27,7 +27,7 @@ let u = [
                     { flipped: a } = n.getCurrentConfig({ location: 'useShouldShowNewBadge' });
                 return !!a && !(0, l.un)(t);
             }),
-            n = (0, _.v)(e);
+            n = (0, d.v)(e);
         return t || !0 === n;
     },
     I = () => {

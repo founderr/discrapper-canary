@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return A;
     }
 });
 var i = n(735250);
@@ -18,23 +18,23 @@ var a = n(120356),
     I = n(313201),
     m = n(565138),
     T = n(199902),
-    h = n(592125),
-    N = n(430824),
-    f = n(158776),
-    C = n(594174),
-    p = n(689938),
+    f = n(592125),
+    h = n(430824),
+    N = n(158776),
+    p = n(594174),
+    C = n(689938),
     g = n(699420);
-let A = {
+let S = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function S(e) {
+function A(e) {
     let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: l, toggleCollapsed: c } = e,
         u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
-        offset: A,
+        offset: S,
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
             ...u,
@@ -44,11 +44,11 @@ function S(e) {
                 null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
             },
             children: [
-                (0, i.jsx)(R, {
+                (0, i.jsx)(x, {
                     channel: t,
                     gotoChannel: a
                 }),
-                (0, i.jsx)(M, {
+                (0, i.jsx)(v, {
                     channel: t,
                     gotoChannel: a,
                     mentionCount: s
@@ -58,10 +58,10 @@ function S(e) {
         })
     });
 }
-function R(e) {
+function x(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(R, {
               channel: t,
               gotoChannel: n
           })
@@ -70,9 +70,9 @@ function R(e) {
               gotoChannel: n
           });
 }
-function x(e) {
+function R(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
+        a = (0, l.e7)([p.default], () => (t.isDM() ? p.default.getUser(t.getRecipientId()) : null)),
         s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
@@ -87,7 +87,7 @@ function x(e) {
 }
 function O(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
+        a = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null == a
         ? null
         : (0, i.jsx)(m.Z, {
@@ -100,17 +100,17 @@ function O(e) {
               tabIndex: -1
           });
 }
-function M(e) {
+function v(e) {
     let { channel: t, gotoChannel: n, mentionCount: a } = e,
-        r = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id)),
-        c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
+        r = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
+        c = (0, l.e7)([f.Z], () => f.Z.getChannel(t.parent_id)),
         u = (0, _.KS)(t, r),
         I = (0, d.ZP)(t, !1),
         m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
         T = t.isMultiUserDM()
-            ? p.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
+            ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, i.jsx)(v, { channel: t })
+              ? (0, i.jsx)(M, { channel: t })
               : (0, i.jsx)(o.Clickable, {
                     className: s()(g.subtext, g.guildName),
                     onClick: n,
@@ -157,17 +157,17 @@ function M(e) {
         ]
     });
 }
-function v(e) {
+function M(e) {
     let { channel: t } = e,
         {
             user: n,
             activities: a,
             applicationStream: s
-        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, l.cj)([p.default, N.Z, T.Z], () => {
+            let e = p.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? f.Z.getActivities(e.id) : null,
+                activities: null != e ? N.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
             };
         });

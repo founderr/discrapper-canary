@@ -1,16 +1,16 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(723484),
-    r = t(51499),
-    s = t(614277),
-    l = t(542781);
-function o() {
-    return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(r.Z, {}), (0, i.jsx)(s.C3, { children: (0, i.jsx)(a.F, { className: l.awaitingAuthenticationStep }) })]
+var t = s(735250);
+s(470079);
+var l = s(723484),
+    i = s(51499),
+    r = s(614277),
+    a = s(542781);
+function c() {
+    return (0, t.jsxs)(t.Fragment, {
+        children: [(0, t.jsx)(i.Z, {}), (0, t.jsx)(r.C3, { children: (0, t.jsx)(l.F, { className: a.awaitingAuthenticationStep }) })]
     });
 }

@@ -21,9 +21,9 @@ function T(e) {
         S = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.useToken)(T).spring({ opacity: 0 }),
         N = (0, c.useToken)(T).spring({ opacity: 0.1 }),
-        m = (0, c.useToken)(T).spring({ opacity: 0 }),
+        A = (0, c.useToken)(T).spring({ opacity: 0 }),
         C = (0, c.useToken)(T).spring({ opacity: 1 }),
-        A = (e) => {
+        m = (e) => {
             e.finished && (null == i || i());
         },
         [g, h] = (0, c.useSpring)(
@@ -70,15 +70,15 @@ function T(e) {
                     immediate: S,
                     to: [
                         {
-                            backgroundColor: m,
-                            borderColor: m
+                            backgroundColor: A,
+                            borderColor: A
                         }
                     ],
                     config: {
                         duration: p,
                         easing: l.Z.Easing.ease
                     },
-                    onRest: A
+                    onRest: m
                 });
         }, [h]),
         (0, n.jsx)(o.animated.div, {

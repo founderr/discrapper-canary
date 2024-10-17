@@ -1,118 +1,118 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return N;
+        return A;
     }
 }),
-    t(47120);
-var s = t(735250),
-    a = t(470079),
-    l = t(120356),
-    i = t.n(l),
-    r = t(887024),
-    o = t(100527),
-    d = t(906732),
-    c = t(987209),
-    u = t(598),
-    E = t(409813),
-    C = t(791785),
-    h = t(961830),
-    x = t(742956),
-    f = t(346790),
-    T = t(49308),
-    p = t(117652),
-    I = t(126982),
-    m = t(981631),
-    S = t(302800),
-    g = t(231338),
-    _ = t(556709);
-function N(e) {
-    let { onClose: n, onComplete: t, onStepChange: l, transitionState: N, loadId: v, skuId: A, isGift: j = !1, giftRecipient: O, giftMessage: Z, analyticsLocations: M, returnRef: L } = e,
-        { analyticsLocations: R } = (0, d.ZP)([...M, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        P = a.useRef(new r.qA()),
-        [y, D] = a.useState(null),
-        [k, F] = a.useState(!1),
-        b = a.useMemo(() => (0, S.UY)(A), [A]),
-        B = a.useCallback(() => {
-            F(!0), null == t || t();
-        }, [t]),
+    n(47120);
+var i = n(735250),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
+    l = n(887024),
+    o = n(100527),
+    c = n(906732),
+    u = n(987209),
+    d = n(598),
+    _ = n(409813),
+    E = n(791785),
+    I = n(961830),
+    m = n(742956),
+    T = n(346790),
+    f = n(49308),
+    h = n(117652),
+    N = n(126982),
+    p = n(981631),
+    C = n(302800),
+    g = n(231338),
+    S = n(556709);
+function A(e) {
+    let { onClose: t, onComplete: n, onStepChange: s, transitionState: A, loadId: x, skuId: R, isGift: O = !1, giftRecipient: v, giftMessage: M, analyticsLocations: L, returnRef: Z } = e,
+        { analyticsLocations: b } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        P = a.useRef(new l.qA()),
+        [D, j] = a.useState(null),
+        [U, y] = a.useState(!1),
+        B = a.useMemo(() => (0, C.UY)(R), [R]),
+        k = a.useCallback(() => {
+            y(!0), null == n || n();
+        }, [n]),
         G = a.useCallback(
             (e) => {
-                F(!1), n(e);
+                y(!1), t(e);
             },
-            [n]
+            [t]
         ),
-        w = a.useMemo(
+        F = a.useMemo(
             () => [
-                h.WA,
-                p.Dd,
-                f.n,
-                ...h.yp,
-                h.wo,
+                I.WA,
+                h.Dd,
+                T.n,
+                ...I.yp,
+                I.wo,
                 {
-                    key: E.h8.CONFIRM,
+                    key: _.h8.CONFIRM,
                     renderStep: (e) =>
-                        (0, s.jsx)(T.x, {
+                        (0, i.jsx)(f.x, {
                             ...e,
-                            confettiCanvas: y,
-                            analyticsLocations: R,
-                            hideConfetti: null != b
+                            confettiCanvas: D,
+                            analyticsLocations: b,
+                            hideConfetti: null != B
                         }),
                     options: {
-                        bodyClassName: _.modalOverrideBody,
-                        sliderBodyClassName: _.modalOverrideSliderBody
+                        bodyClassName: S.modalOverrideBody,
+                        sliderBodyClassName: S.modalOverrideSliderBody
                     }
                 }
             ],
-            [R, y, b]
+            [b, D, B]
         );
-    return (0, s.jsxs)(d.Gt, {
-        value: R,
+    return (0, i.jsxs)(c.Gt, {
+        value: b,
         children: [
-            (0, s.jsx)(r.O_, {
-                ref: D,
-                className: _.confettiCanvas,
+            (0, i.jsx)(l.O_, {
+                ref: j,
+                className: S.confettiCanvas,
                 environment: P.current
             }),
-            null != b &&
-                (0, s.jsx)('img', {
-                    src: b.imageSrc,
-                    className: i()(_.customConfetti, { [_.hidden]: !k }),
-                    style: b.style,
+            null != B &&
+                (0, i.jsx)('img', {
+                    src: B.imageSrc,
+                    className: r()(S.customConfetti, { [S.hidden]: !U }),
+                    style: B.style,
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, s.jsx)(u.PaymentContextProvider, {
-                loadId: v,
-                stepConfigs: w,
-                applicationId: m.XAJ,
-                skuIDs: [A],
-                isGift: j,
+            (0, i.jsx)(d.PaymentContextProvider, {
+                loadId: x,
+                stepConfigs: F,
+                applicationId: p.XAJ,
+                skuIDs: [R],
+                isGift: O,
                 activeSubscription: null,
                 purchaseType: g.GZ.ONE_TIME,
-                children: (0, s.jsx)(c.KB, {
-                    isGift: j,
-                    giftRecipient: O,
-                    giftMessage: Z,
-                    children: (0, s.jsx)(C.PaymentModal, {
+                children: (0, i.jsx)(u.KB, {
+                    isGift: O,
+                    giftRecipient: v,
+                    giftMessage: M,
+                    children: (0, i.jsx)(E.PaymentModal, {
                         onClose: G,
-                        onComplete: B,
-                        applicationId: m.XAJ,
-                        skuId: A,
+                        onComplete: k,
+                        applicationId: p.XAJ,
+                        skuId: R,
                         initialPlanId: null,
-                        analyticsLocations: R,
-                        transitionState: N,
-                        renderHeader: (e, n, t) =>
-                            j
-                                ? (0, s.jsx)(x.Z, {
-                                      step: t,
-                                      onClose: () => n(!1)
+                        analyticsLocations: b,
+                        transitionState: A,
+                        renderHeader: (e, t, n) =>
+                            O
+                                ? (0, i.jsx)(m.Z, {
+                                      step: n,
+                                      onClose: () => t(!1)
                                   })
-                                : (0, s.jsx)(I.Z, {
-                                      step: t,
-                                      onClose: () => n(!1)
+                                : (0, i.jsx)(N.Z, {
+                                      step: n,
+                                      onClose: () => t(!1)
                                   }),
-                        returnRef: L,
-                        onStepChange: l,
+                        returnRef: Z,
+                        onStepChange: s,
                         hideShadow: !0
                     })
                 })

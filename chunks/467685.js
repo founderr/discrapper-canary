@@ -6,25 +6,25 @@ var a = n(120356),
     l = n(976465),
     o = n(474936),
     c = n(689938),
-    d = n(305675);
-let _ = (e) => {
+    _ = n(305675);
+let d = (e) => {
     switch (e) {
         case o.VU.PREMIUM_TENURE_1_MONTH:
-            return d.badgeBronzeGlow;
+            return _.badgeBronzeGlow;
         case o.VU.PREMIUM_TENURE_3_MONTH:
-            return d.badgeSilverGlow;
+            return _.badgeSilverGlow;
         case o.VU.PREMIUM_TENURE_6_MONTH:
-            return d.badgeGoldGlow;
+            return _.badgeGoldGlow;
         case o.VU.PREMIUM_TENURE_12_MONTH:
-            return d.badgePlatinumGlow;
+            return _.badgePlatinumGlow;
         case o.VU.PREMIUM_TENURE_24_MONTH:
-            return d.badgeDiamondGlow;
+            return _.badgeDiamondGlow;
         case o.VU.PREMIUM_TENURE_36_MONTH:
-            return d.badgeEmeraldGlow;
+            return _.badgeEmeraldGlow;
         case o.VU.PREMIUM_TENURE_60_MONTH:
-            return d.badgeRubyGlow;
+            return _.badgeRubyGlow;
         case o.VU.PREMIUM_TENURE_72_MONTH:
-            return d.badgeFireGlow;
+            return _.badgeFireGlow;
         default:
             return;
     }
@@ -34,21 +34,21 @@ t.Z = () => {
     return null == e
         ? null
         : (0, s.jsxs)('div', {
-              className: r()(d.container, _(e)),
+              className: r()(_.container, d(e)),
               children: [
                   (0, s.jsx)('div', {}),
                   ' ',
                   (0, s.jsx)('img', {
                       src: t,
                       alt: n,
-                      className: d.badgeImage
+                      className: _.badgeImage
                   }),
                   (0, s.jsxs)('div', {
-                      className: d.textColumn,
+                      className: _.textColumn,
                       children: [
                           (0, s.jsx)(i.xv, {
                               variant: 'text-lg/semibold',
-                              className: d.badgeText,
+                              className: _.badgeText,
                               children: n
                           }),
                           (0, s.jsx)(i.xv, {

@@ -1,42 +1,42 @@
-n.d(r, {
+t.d(a, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
-    n(390547);
-var l = n(735250);
-n(470079);
-var o = n(120356),
-    s = n.n(o),
-    t = n(481060),
-    a = n(598),
-    c = n(409813),
-    i = n(548458);
-function d(e) {
-    let { className: r, isEligibleForTrial: n = !1 } = e,
-        { step: o, breadcrumbs: d, startedPaymentFlowWithPaymentSourcesRef: u } = (0, a.usePaymentContext)();
-    if (null == d || 0 === d.length) return null;
-    let p = d.flatMap((e) => {
-        let r = e.useBreadcrumbLabel(n);
-        return null != r
+    t(390547);
+var n = t(735250);
+t(470079);
+var s = t(120356),
+    r = t.n(s),
+    l = t(481060),
+    o = t(598),
+    i = t(409813),
+    c = t(548458);
+function u(e) {
+    let { className: a, isEligibleForTrial: t = !1 } = e,
+        { step: s, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d } = (0, o.usePaymentContext)();
+    if (null == u || 0 === u.length) return null;
+    let E = u.flatMap((e) => {
+        let a = e.useBreadcrumbLabel(t);
+        return null != a
             ? {
                   id: e.id,
-                  label: r
+                  label: a
               }
             : [];
     });
-    return 0 === p.length
+    return 0 === E.length
         ? null
-        : ((p = p.filter((e) => {
-              let r = e.id !== c.h8.ADD_PAYMENT_STEPS,
-                  l = e.id === c.h8.ADD_PAYMENT_STEPS && !u.current;
-              return !n || (n && (r || l));
+        : ((E = E.filter((e) => {
+              let a = e.id !== i.h8.ADD_PAYMENT_STEPS,
+                  n = e.id === i.h8.ADD_PAYMENT_STEPS && !d.current;
+              return !t || (t && (a || n));
           })),
-          (0, l.jsx)('div', {
-              className: s()('breadcrumb', i.wrapper, r),
-              children: (0, l.jsx)(t.Breadcrumbs, {
-                  activeId: o,
-                  breadcrumbs: p
+          (0, n.jsx)('div', {
+              className: r()('breadcrumb', c.wrapper, a),
+              children: (0, n.jsx)(l.Breadcrumbs, {
+                  activeId: s,
+                  breadcrumbs: E
               })
           }));
 }

@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     w: function () {
-        return h;
+        return p;
     }
 });
-var r = n(735250);
-n(470079);
-var a = n(512722),
-    i = n.n(a),
-    l = n(481060),
-    s = n(598),
-    o = n(698708),
-    u = n(614277),
-    c = n(689938),
-    d = n(525550);
-function h(e) {
-    let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: a, application: h } = (0, s.usePaymentContext)();
-    i()(null != a, 'Expected selectedSkuId'), i()(null != h, 'Expected application');
-    let I = n[a];
-    i()(null != I, 'Expected sku');
-    let _ = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-        applicationName: h.name,
-        itemName: I.name
+var o = t(735250);
+t(470079);
+var r = t(512722),
+    i = t.n(r),
+    a = t(481060),
+    c = t(598),
+    d = t(698708),
+    l = t(614277),
+    s = t(689938),
+    u = t(525550);
+function p(e) {
+    let { handleClose: n } = e,
+        { skusById: t, selectedSkuId: r, application: p } = (0, c.usePaymentContext)();
+    i()(null != r, 'Expected selectedSkuId'), i()(null != p, 'Expected application');
+    let f = t[r];
+    i()(null != f, 'Expected sku');
+    let b = s.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+        applicationName: p.name,
+        itemName: f.name
     });
-    return (0, r.jsxs)(u.C3, {
+    return (0, o.jsxs)(l.C3, {
         children: [
-            (0, r.jsx)(o.Z, {}),
-            (0, r.jsxs)('div', {
-                className: d.confirmation,
+            (0, o.jsx)(d.Z, {}),
+            (0, o.jsxs)('div', {
+                className: u.confirmation,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, o.jsx)(a.Heading, {
                         variant: 'heading-xxl/bold',
-                        className: d.confirmationHeader,
+                        className: u.confirmationHeader,
                         children: 'Success!'
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, o.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: _
+                        children: b
                     }),
-                    (0, r.jsx)('div', { className: d.divider }),
-                    (0, r.jsx)(l.Button, {
-                        onClick: t,
-                        children: c.Z.Messages.CLOSE
+                    (0, o.jsx)('div', { className: u.divider }),
+                    (0, o.jsx)(a.Button, {
+                        onClick: n,
+                        children: s.Z.Messages.CLOSE
                     })
                 ]
             })

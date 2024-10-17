@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250),
@@ -17,24 +17,24 @@ var i = n(735250),
     I = n(430824),
     m = n(689938),
     T = n(239048);
-let h = {
+let f = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function N(e) {
+function h(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
-        offset: h,
+        offset: f,
         children: (0, i.jsxs)('div', {
             className: T.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(f, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(C, { channel: t }), n]
+            children: [(0, i.jsx)(N, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
         })
     });
 }
-function f(e) {
+function N(e) {
     let { channel: t } = e,
         n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
     return null != n
@@ -55,7 +55,7 @@ function f(e) {
                 children: (0, i.jsx)(l.kBi, { size: 'xxs' })
             });
 }
-function C(e) {
+function p(e) {
     let { channel: t } = e,
         n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
         a = (0, u.ZP)(t, !1),

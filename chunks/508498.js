@@ -1,39 +1,39 @@
-r.d(t, {
+s.d(t, {
     Db: function () {
         return d;
     }
 }),
-    r(610138),
-    r(216116),
-    r(78328),
-    r(815648),
-    r(47120);
+    s(610138),
+    s(216116),
+    s(78328),
+    s(815648),
+    s(47120);
 var a,
-    n,
-    s = r(470079),
-    i = r(266067),
-    o = r(37234),
-    l = r(703656),
-    c = r(981631);
+    r,
+    n = s(470079),
+    i = s(266067),
+    l = s(37234),
+    o = s(703656),
+    c = s(981631);
 function d() {
     let { search: e } = (0, i.TH)(),
         t = (0, i.UO)(),
-        r = s.useMemo(() => new URLSearchParams(e), [e]).get('source'),
-        a = null != r ? parseInt(r, 10) : null;
+        s = n.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+        a = null != s ? parseInt(s, 10) : null;
     return {
-        onClose: s.useCallback(() => {
+        onClose: n.useCallback(() => {
             if (0 === a) {
-                (0, l.op)(), (0, o.jN)(c.S9g.USER_SETTINGS);
+                (0, o.op)(), (0, l.jN)(c.S9g.USER_SETTINGS);
                 return;
             }
-            if ((0, l.uv)()) {
-                (0, l.op)();
+            if ((0, o.uv)()) {
+                (0, o.op)();
                 return;
             }
-            (0, l.uL)(c.Z5c.APP);
+            (0, o.uL)(c.Z5c.APP);
         }, [a]),
         source: a,
         ...t
     };
 }
-((n = a || (a = {}))[(n.SETTINGS = 0)] = 'SETTINGS'), (n[(n.CHANGELOG = 1)] = 'CHANGELOG'), (n[(n.DM_LIST = 2)] = 'DM_LIST');
+((r = a || (a = {}))[(r.SETTINGS = 0)] = 'SETTINGS'), (r[(r.CHANGELOG = 1)] = 'CHANGELOG'), (r[(r.DM_LIST = 2)] = 'DM_LIST');

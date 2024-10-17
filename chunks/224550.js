@@ -1,146 +1,146 @@
 t(411104);
-var s = t(735250);
+var a = t(735250);
 t(470079);
-var r = t(442837),
-    i = t(858987),
-    l = t(78839),
-    a = t(122289),
-    c = t(63063),
-    o = t(74538),
+var s = t(442837),
+    r = t(858987),
+    i = t(78839),
+    l = t(122289),
+    o = t(63063),
+    c = t(74538),
     u = t(937615),
-    I = t(296848),
+    d = t(296848),
     _ = t(981631),
-    E = t(474936),
-    T = t(689938),
-    d = t(930543);
+    I = t(474936),
+    E = t(689938),
+    T = t(930543);
 n.Z = function (e) {
-    let n, t, N, M;
-    let { subscriptionPlan: A, isGift: L, isEmbeddedIAP: P, renewalInvoice: R, paymentSourceType: m, hide: S, purchaseType: U, productLine: p, basePrice: O, currentSubscription: v } = e,
-        C = (0, r.e7)([l.ZP], () => l.ZP.inReverseTrial());
-    if (S) return null;
-    let h = null == e.planGroup ? [] : e.planGroup;
+    let n, t, A, N;
+    let { subscriptionPlan: P, isGift: M, isEmbeddedIAP: p, renewalInvoice: R, paymentSourceType: L, hide: f, purchaseType: S, productLine: C, basePrice: m, currentSubscription: b } = e,
+        v = (0, s.e7)([i.ZP], () => i.ZP.inReverseTrial());
+    if (f) return null;
+    let g = null == e.planGroup ? [] : e.planGroup;
     if (null != R) {
-        let e = o.ZP.getIntervalForInvoice(R);
-        (n = e.intervalType), (t = e.intervalCount), (N = (0, u.og)((0, u.T4)(R.total, R.currency), n, t)), (M = (0, u.og)((0, u.T4)(R.subtotal, R.currency), n, t));
-    } else null != A && ((n = A.interval), (t = A.intervalCount));
-    let f = (0, i.K)({
-            purchaseType: U || _.GZQ.SUBSCRIPTION,
-            plan: A,
-            premiumSubscription: null == v ? null : v,
-            isGift: !!L,
-            planGroup: h,
+        let e = c.ZP.getIntervalForInvoice(R);
+        (n = e.intervalType), (t = e.intervalCount), (A = (0, u.og)((0, u.T4)(R.total, R.currency), n, t)), (N = (0, u.og)((0, u.T4)(R.subtotal, R.currency), n, t));
+    } else null != P && ((n = P.interval), (t = P.intervalCount));
+    let O = (0, r.K)({
+            purchaseType: S || _.GZQ.SUBSCRIPTION,
+            plan: P,
+            premiumSubscription: null == b ? null : b,
+            isGift: !!M,
+            planGroup: g,
             isPrepaidPaymentSource: !1
         }),
-        g = '',
-        x = '';
-    if (P) {
-        if (null != N && (null == R ? void 0 : R.subscriptionPeriodEnd) != null) g = T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL_V2.format({ subtotalRate: M });
+        h = '',
+        U = '';
+    if (p) {
+        if (null != A && (null == R ? void 0 : R.subscriptionPeriodEnd) != null) h = E.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL_V2.format({ subtotalRate: N });
         else
             switch (n) {
-                case E.rV.MONTH:
-                    g = 1 === t ? T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MONTHLY_V2.format({}) : T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MULTI_MONTH_V2.format({ intervalCount: t });
+                case I.rV.MONTH:
+                    h = 1 === t ? E.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MONTHLY_V2.format({}) : E.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MULTI_MONTH_V2.format({ intervalCount: t });
                     break;
-                case E.rV.YEAR:
-                    g = T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY_V2.format({});
+                case I.rV.YEAR:
+                    h = E.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY_V2.format({});
                     break;
                 case void 0:
-                    (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
-                        primaryText: f,
+                    (U = E.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                        primaryText: O,
                         paidURL: _.EYA.PAID_TERMS
                     })),
-                        (g = T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE.format({}));
+                        (h = E.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE.format({}));
                     break;
                 default:
                     throw Error('Unexpected interval: '.concat(n));
             }
-    } else if (U === _.GZQ.ONE_TIME)
-        (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V3.format({
-            primaryText: f,
+    } else if (S === _.GZQ.ONE_TIME)
+        (U = E.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V3.format({
+            primaryText: O,
             paidURL: _.EYA.PAID_TERMS
         })),
-            (g = p === _.POd.COLLECTIBLES ? (L ? T.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : T.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT) : T.Z.Messages.ONE_TIME_PURCHASE_FINE_PRINT);
-    else if (null == A || L)
+            (h = C === _.POd.COLLECTIBLES ? (M ? E.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT) : E.Z.Messages.ONE_TIME_PURCHASE_FINE_PRINT);
+    else if (null == P || M)
         switch (
-            (L &&
-                (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
-                    primaryText: f,
+            (M &&
+                (U = E.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                    primaryText: O,
                     paidURL: _.EYA.PAID_TERMS
                 })),
             n)
         ) {
-            case E.rV.MONTH:
-                (g = L ? T.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY), (g = L ? T.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === t ? T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({ intervalCount: t }));
+            case I.rV.MONTH:
+                (h = M ? E.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY), (h = M ? E.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === t ? E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({ intervalCount: t }));
                 break;
-            case E.rV.YEAR:
-                g = L ? T.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
+            case I.rV.YEAR:
+                h = M ? E.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
                 break;
             case void 0:
-                g = '';
+                h = '';
                 break;
             default:
                 throw Error('Unexpected interval: '.concat(n));
         }
     else {
         let e;
-        let s = (0, i.K)({
+        let a = (0, r.K)({
             purchaseType: _.GZQ.SUBSCRIPTION,
-            plan: A,
-            premiumSubscription: null == v ? null : v,
+            plan: P,
+            premiumSubscription: null == b ? null : b,
             isGift: !1,
-            planGroup: h,
+            planGroup: g,
             isPrepaidPaymentSource: !1
         });
-        if ((null != O && null != n && null != t && (e = (0, u.og)((0, u.T4)(O.amount, O.currency), n, t)), null == e)) {
+        if ((null != m && null != n && null != t && (e = (0, u.og)((0, u.T4)(m.amount, m.currency), n, t)), null == e)) {
             let e = Error('Missing base rate for legal fine print');
-            (0, a.q2)(e, { tags: { planId: A.id } });
+            (0, l.q2)(e, { tags: { planId: P.id } });
         }
-        g = (null == v ? void 0 : v.isPaused)
-            ? T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_RESUME.format({
-                  primaryText: s,
+        h = (null == b ? void 0 : b.isPaused)
+            ? E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_RESUME.format({
+                  primaryText: a,
                   rate: e,
                   paidURL: _.EYA.PAID_TERMS,
                   contactLink: _.EYA.CONTACT,
-                  helpdeskArticle: c.Z.getArticleURL(_.BhN.BILLING)
+                  helpdeskArticle: o.Z.getArticleURL(_.BhN.BILLING)
               })
-            : null != v && (0, I.GY)(v, A.id, h)
-              ? T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
-                    primaryText: s,
+            : null != b && (0, d.GY)(b, P.id, g)
+              ? E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
+                    primaryText: a,
                     rate: e,
                     paidURL: _.EYA.PAID_TERMS,
                     contactLink: _.EYA.CONTACT,
-                    helpdeskArticle: c.Z.getArticleURL(_.BhN.BILLING)
+                    helpdeskArticle: o.Z.getArticleURL(_.BhN.BILLING)
                 })
-              : C && p === _.POd.BOOST && null != O
-                ? T.Z.Messages.BILLING_BOOST_PURCHASE_IN_REVERSE_TRIAL_LEGAL_COPY.format({
-                      price: (0, u.T4)(O.amount, O.currency),
+              : v && C === _.POd.BOOST && null != m
+                ? E.Z.Messages.BILLING_BOOST_PURCHASE_IN_REVERSE_TRIAL_LEGAL_COPY.format({
+                      price: (0, u.T4)(m.amount, m.currency),
                       paidServiceTermsArticle: _.EYA.PAID_TERMS,
                       contactUsArticle: _.EYA.CONTACT,
-                      subscriptionFAQArticle: c.Z.getArticleURL(_.BhN.BILLING)
+                      subscriptionFAQArticle: o.Z.getArticleURL(_.BhN.BILLING)
                   })
-                : T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_V2.format({
-                      primaryText: s,
+                : E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_V2.format({
+                      primaryText: a,
                       rate: e,
                       paidURL: _.EYA.PAID_TERMS,
                       contactLink: _.EYA.CONTACT,
-                      helpdeskArticle: c.Z.getArticleURL(_.BhN.BILLING)
+                      helpdeskArticle: o.Z.getArticleURL(_.BhN.BILLING)
                   });
     }
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            '' !== x &&
-                (0, s.jsxs)('div', {
-                    children: [(0, s.jsx)('div', { children: x }), (0, s.jsx)('div', { className: d.divider })]
+            '' !== U &&
+                (0, a.jsxs)('div', {
+                    children: [(0, a.jsx)('div', { children: U }), (0, a.jsx)('div', { className: T.divider })]
                 }),
-            '' !== g && (0, s.jsx)('div', { children: g }),
-            m === _.HeQ.PAYSAFE_CARD &&
-                (0, s.jsx)('div', {
-                    className: d.paymentSourceNoticeCopy,
-                    children: T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
+            '' !== h && (0, a.jsx)('div', { children: h }),
+            L === _.HeQ.PAYSAFE_CARD &&
+                (0, a.jsx)('div', {
+                    className: T.paymentSourceNoticeCopy,
+                    children: E.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
                 }),
-            m === _.HeQ.SOFORT &&
-                (0, s.jsxs)('div', {
-                    className: d.paymentSourceNoticeCopy,
-                    children: [T.Z.Messages.SOFORT_MANDATE_AGREEMENT, ' ']
+            L === _.HeQ.SOFORT &&
+                (0, a.jsxs)('div', {
+                    className: T.paymentSourceNoticeCopy,
+                    children: [E.Z.Messages.SOFORT_MANDATE_AGREEMENT, ' ']
                 })
         ]
     });

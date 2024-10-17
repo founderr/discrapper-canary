@@ -1,24 +1,24 @@
-var o = t(735250);
-t(470079);
-var r = t(120356),
-    a = t.n(r),
-    i = t(772848),
-    c = t(841261);
-let l = (0, i.Z)();
-n.Z = (e) => {
-    let { open: n, className: t, withHighlight: r = !1 } = e;
+var o = n(735250);
+n(470079);
+var t = n(120356),
+    r = n.n(t),
+    a = n(772848),
+    l = n(841261);
+let s = (0, a.Z)();
+i.Z = (e) => {
+    let { open: i, className: n, withHighlight: t = !1 } = e;
     return (0, o.jsxs)('svg', {
         width: '18',
         height: '18',
-        className: a()(c.button, t, {
-            [c.open]: n,
-            [c.withHighlight]: r
+        className: r()(l.button, n, {
+            [l.open]: i,
+            [l.withHighlight]: t
         }),
         children: [
-            r &&
+            t &&
                 (0, o.jsx)('defs', {
                     children: (0, o.jsxs)('linearGradient', {
-                        id: l,
+                        id: s,
                         x1: '0',
                         y1: '0',
                         x2: '0',
@@ -42,12 +42,12 @@ n.Z = (e) => {
                 children: [
                     (0, o.jsx)('path', { d: 'M0 0h18v18H0' }),
                     (0, o.jsx)('path', {
-                        stroke: r ? 'url(#'.concat(l, ')') : 'currentColor',
+                        stroke: t ? 'url(#'.concat(s, ')') : 'currentColor',
                         d: 'M4.5 4.5l9 9',
                         strokeLinecap: 'round'
                     }),
                     (0, o.jsx)('path', {
-                        stroke: r ? 'url(#'.concat(l, ')') : 'currentColor',
+                        stroke: t ? 'url(#'.concat(s, ')') : 'currentColor',
                         d: 'M13.5 4.5l-9 9',
                         strokeLinecap: 'round'
                     })

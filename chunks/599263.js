@@ -7,8 +7,8 @@ n.r(t),
     n(47120);
 var s = n(735250),
     r = n(470079),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     i = n(212433),
     a = n(442837),
     d = n(481060),
@@ -19,13 +19,13 @@ var s = n(735250),
     h = n(480608),
     g = n(160404),
     x = n(703656),
-    f = n(430824),
-    _ = n(768581),
+    _ = n(430824),
+    f = n(768581),
     N = n(302221),
     I = n(956664),
-    b = n(549817),
-    C = n(45966),
-    E = n(819553),
+    C = n(549817),
+    E = n(45966),
+    b = n(819553),
     v = n(548473),
     j = n(15320),
     O = n(973051),
@@ -53,31 +53,31 @@ async function T(e) {
 }
 function D(e) {
     let { guildId: t } = e,
-        { ref: n, width: o, height: I } = (0, m.Z)(),
+        { ref: n, width: l, height: I } = (0, m.Z)(),
         [D, M] = r.useState(),
-        P = (0, a.Wu)([C.Z], () => C.Z.getOnboardingPromptsForOnboarding(t)),
-        k = (0, a.e7)([C.Z], () => C.Z.getEnabled(t)),
+        P = (0, a.Wu)([E.Z], () => E.Z.getOnboardingPromptsForOnboarding(t)),
+        k = (0, a.e7)([E.Z], () => E.Z.getEnabled(t)),
         S = r.useCallback(
             (e, n, s) => {
-                b.Z.selectOption(t, e, n, s);
+                C.Z.selectOption(t, e, n, s);
             },
             [t]
         ),
         L = r.useCallback(() => {
-            b.Z.completeOnboarding(t, P);
+            C.Z.completeOnboarding(t, P);
         }, [t, P]),
-        A = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
+        A = (0, a.e7)([_.Z], () => _.Z.getGuild(t)),
         w = r.useMemo(
             () =>
                 null == A
                     ? null
-                    : _.ZP.getGuildSplashURL({
+                    : f.ZP.getGuildSplashURL({
                           id: A.id,
                           splash: A.splash
                       }),
             [A]
         ),
-        F = (0, a.e7)([E.ZP], () => E.ZP.getCurrentOnboardingStep(t)),
+        F = (0, a.e7)([b.ZP], () => b.ZP.getCurrentOnboardingStep(t)),
         [U, G] = r.useState(null != w ? null : 'cover');
     null != w &&
         null == D &&
@@ -86,18 +86,18 @@ function D(e) {
         });
     let H = r.useCallback(
             (e) => {
-                G(F), b.Z.setUserOnboardingStep(t, e);
+                G(F), C.Z.setUserOnboardingStep(t, e);
             },
             [t, F]
         ),
         y = (0, a.e7)([g.Z], () => g.Z.isFullServerPreview(t)),
-        q = (0, a.e7)([E.ZP], () => E.ZP.getOnboardingStatus(t)),
+        q = (0, a.e7)([b.ZP], () => b.ZP.getOnboardingStatus(t)),
         V = null != P && P.length > 0,
         z = r.useCallback(() => {
-            (0, E.kp)(q) && k && V ? H(0) : L();
+            (0, b.kp)(q) && k && V ? H(0) : L();
         }, [q, k, V, H, L]);
     r.useEffect(() => {
-        if (!E.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
+        if (!b.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
         (0, h.E)(t);
     }, [t]);
     let Y = (0, d.useTransition)(
@@ -115,7 +115,7 @@ function D(e) {
             },
             'cover' !== U && null !== U ? 'animate-never' : 'respect-motion-settings'
         ),
-        Q = E.ZP.shouldShowOnboarding(t),
+        Q = b.ZP.shouldShowOnboarding(t),
         W = null == A;
     if (
         (r.useEffect(() => {
@@ -126,7 +126,7 @@ function D(e) {
                 return () => clearTimeout(e);
             }
         }, [Q, W, t]),
-        !E.ZP.shouldShowOnboarding(t) || null == A)
+        !b.ZP.shouldShowOnboarding(t) || null == A)
     )
         return null;
     let X = () => {
@@ -134,7 +134,7 @@ function D(e) {
             case 'cover':
                 return (0, s.jsx)(v.ZP, {
                     guild: A,
-                    onboardingStatus: E.uX.READY,
+                    onboardingStatus: b.uX.READY,
                     onStart: z,
                     disableTracking: y
                 });
@@ -167,9 +167,9 @@ function D(e) {
         children: [
             null != w
                 ? (0, s.jsx)(p.Z, {
-                      className: l()(R.artwork),
+                      className: o()(R.artwork),
                       src: w,
-                      width: o,
+                      width: l,
                       height: I,
                       imageClassName: R.cover
                   })

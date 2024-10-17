@@ -44,7 +44,7 @@ let I = (e) => {
         I = (0, c.Z)(),
         [m] = o._T(t),
         [T] = o.d9(t, I),
-        [h] = o.H9(t);
+        [f] = o.H9(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_, { listingName: m }),
@@ -58,7 +58,7 @@ let I = (e) => {
                 variant: 'heading-xl/semibold',
                 className: d.tierPrice,
                 tag: 'div',
-                children: (0, r.T4)(h.price, h.currency)
+                children: (0, r.T4)(f.price, f.currency)
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
@@ -66,8 +66,8 @@ let I = (e) => {
                 className: d.tierPeriod,
                 children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
                     period: (0, l.JE)({
-                        interval: h.interval,
-                        interval_count: h.interval_count
+                        interval: f.interval,
+                        interval_count: f.interval_count
                     })
                 })
             })

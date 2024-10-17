@@ -27,7 +27,7 @@ function I(e) {
         H = a()('payment-modal');
     return (0, o.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('96427'), n.e('77298'), n.e('23357'), n.e('52249'), n.e('54803'), n.e('29549'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('8016'), n.e('68136'), n.e('31605'), n.e('30671'), n.e('52774'), n.e('51199'), n.e('24482')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e('96427'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('8016'), n.e('12013'), n.e('52249'), n.e('17938'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('54433'), n.e('24488')]).then(n.bind(n, 7305));
             return (n) => {
                 let { onClose: a, ...s } = n;
                 return (0, r.jsx)(e, {

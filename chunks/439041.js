@@ -1,39 +1,39 @@
-var t,
-    r,
-    o,
+var n,
     s,
-    l = a(442837),
-    i = a(570140);
-let _ = null,
-    C = null;
-class A extends (s = l.ZP.Store) {
+    r,
+    l,
+    o = t(442837),
+    i = t(570140);
+let c = null,
+    u = null;
+class d extends (l = o.ZP.Store) {
     get client() {
-        return _;
+        return c;
     }
     get cashAppPayComponent() {
-        return C;
+        return u;
     }
 }
-(o = 'AdyenStore'),
-    (r = 'displayName') in (t = A)
-        ? Object.defineProperty(t, r, {
-              value: o,
+(r = 'AdyenStore'),
+    (s = 'displayName') in (n = d)
+        ? Object.defineProperty(n, s, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (t[r] = o);
-let u = new A(i.Z, {
+        : (n[s] = r);
+let E = new d(i.Z, {
     ADYEN_CREATE_CLIENT_SUCCESS: function (e) {
-        let { client: n } = e;
-        _ = n;
+        let { client: a } = e;
+        c = a;
     },
     ADYEN_TEARDOWN_CLIENT: function () {
-        _ = null;
+        c = null;
     },
     ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: function (e) {
-        let { component: n } = e;
-        C = n;
+        let { component: a } = e;
+        u = a;
     }
 });
-n.Z = u;
+a.Z = E;

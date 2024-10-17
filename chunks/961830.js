@@ -1,65 +1,65 @@
-n.d(t, {
+t.d(n, {
     F7: function () {
-        return S;
+        return x;
     },
     WA: function () {
-        return I;
+        return f;
     },
     s2: function () {
-        return _;
+        return b;
     },
     wo: function () {
-        return E;
+        return g;
     },
     yp: function () {
-        return p;
+        return m;
     }
 });
-var r = n(735250);
-n(470079);
-var a = n(853872),
-    i = n(409813),
-    l = n(276442),
-    s = n(793541),
-    o = n(380898),
-    u = n(713316),
-    c = n(710094),
-    d = n(865921),
-    h = n(689938);
-let I = {
+var o = t(735250);
+t(470079);
+var r = t(853872),
+    i = t(409813),
+    a = t(276442),
+    c = t(793541),
+    d = t(380898),
+    l = t(713316),
+    s = t(710094),
+    u = t(865921),
+    p = t(689938);
+let f = {
         key: null,
-        renderStep: (e) => (0, r.jsx)(d.v, { ...e })
+        renderStep: (e) => (0, o.jsx)(u.v, { ...e })
     },
-    _ = {
+    b = {
         key: i.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(r.Fragment, {
-                children: (0, r.jsx)(l.J, {
+            (0, o.jsx)(o.Fragment, {
+                children: (0, o.jsx)(a.J, {
                     ...e,
                     breadcrumbSteps: [i.h8.ADD_PAYMENT_STEPS, i.h8.REVIEW, i.h8.CONFIRM],
                     onReturn: () => {
-                        0 === Object.keys(a.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(i.h8.REVIEW, { trackedFromStep: i.h8.ADD_PAYMENT_STEPS });
+                        0 === Object.keys(r.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(i.h8.REVIEW, { trackedFromStep: i.h8.ADD_PAYMENT_STEPS });
                     }
                 })
             }),
         options: { renderHeader: !0 }
     },
-    f = {
+    _ = {
         key: i.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, r.jsx)(o.Z, {})
+        renderStep: () => (0, o.jsx)(d.Z, {})
     },
-    m = {
+    h = {
         key: i.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, r.jsx)(s.Z, {}),
+        renderStep: () => (0, o.jsx)(c.Z, {}),
         options: { renderHeader: !0 }
     },
-    E = {
+    g = {
         key: i.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(c.l, { ...e }),
-        options: { useBreadcrumbLabel: () => h.Z.Messages.BILLING_STEP_REVIEW }
+        renderStep: (e) => (0, o.jsx)(s.l, { ...e }),
+        options: { useBreadcrumbLabel: () => p.Z.Messages.BILLING_STEP_REVIEW }
     },
-    S = {
+    x = {
         key: i.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(u.w, { ...e })
+        renderStep: (e) => (0, o.jsx)(l.w, { ...e })
     },
-    p = [f, m];
+    m = [_, h];

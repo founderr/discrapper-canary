@@ -6,7 +6,7 @@ var s = n(735250),
     l = n(119269),
     o = n(315566);
 let c = 'url(#gradient)',
-    d = (e, t) => {
+    _ = (e, t) => {
         switch (e) {
             case l.Q.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
@@ -15,7 +15,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    _ = (e) => {
+    d = (e) => {
         switch (e) {
             case l.Q.NITRO_GEM:
                 return 'var(--background-primary)';
@@ -46,11 +46,11 @@ t.Z = (e) => {
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let f = (0, i.ZP)(),
-        p = (0, r.ap)(f),
-        A = _(I),
-        M = d(I, p),
-        S = null != R ? R : E(p, I);
+    let A = (0, i.ZP)(),
+        f = (0, r.ap)(A),
+        p = d(I),
+        M = _(I, f),
+        S = null != R ? R : E(f, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -65,7 +65,7 @@ t.Z = (e) => {
                         r: ''.concat(g),
                         cx: '50%',
                         cy: '50%',
-                        stroke: A,
+                        stroke: p,
                         strokeOpacity: M
                     }),
                     (0, s.jsx)('circle', {

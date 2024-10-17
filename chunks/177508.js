@@ -17,7 +17,7 @@ let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
     u = Object.keys(l.Button.Sizes).filter((e) => 'NONE' !== e);
 function E() {
     return (0, n.jsxs)('div', {
-        children: [(0, n.jsx)(T, {}), (0, n.jsx)(A, {}), (0, n.jsx)(g, {}), (0, n.jsx)(m, {}), (0, n.jsx)(N, {}), (0, n.jsx)(I, {}), (0, n.jsx)(S, {})]
+        children: [(0, n.jsx)(T, {}), (0, n.jsx)(m, {}), (0, n.jsx)(g, {}), (0, n.jsx)(A, {}), (0, n.jsx)(N, {}), (0, n.jsx)(I, {}), (0, n.jsx)(S, {})]
     });
 }
 function T() {
@@ -354,7 +354,7 @@ function N() {
         ]
     });
 }
-function m() {
+function A() {
     let [e, s] = a.useState(!1),
         [t, i] = a.useState(!1),
         [r, o] = a.useState('auto');
@@ -576,7 +576,7 @@ function C() {
         ]
     });
 }
-function A() {
+function m() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),

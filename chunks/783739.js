@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(74538),
     I = t(296533),
     N = t(901750),
-    m = t(112863),
+    A = t(112863),
     C = t(701157),
-    A = t(912152),
+    m = t(912152),
     g = t(615603),
     h = t(474936),
     O = t(20154);
@@ -46,13 +46,13 @@ function p(e) {
                 isUserPremiumTier2: x,
                 subscriptionIsPausedOrPausePending: Z
             }),
-            (0, n.jsx)(A.Z, {
+            (0, n.jsx)(m.Z, {
                 hasAppliedGuildBoosts: P,
                 isUserPremiumTier2: x,
                 hasGuildAffinitiesOrInGuild: D,
                 subscriptionIsPausedOrPausePending: Z
             }),
-            !D && (0, n.jsx)(m.Z, {}),
+            !D && (0, n.jsx)(A.Z, {}),
             (null == s ? void 0 : s.isPaused)
                 ? (0, n.jsx)(I.r, {
                       appliedGuildBoosts: b,

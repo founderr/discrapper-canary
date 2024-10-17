@@ -6,15 +6,15 @@ var a = n(120356),
     l = n(481060),
     o = n(410030),
     c = n(197115),
-    d = n(474936),
-    _ = n(689938),
+    _ = n(474936),
+    d = n(689938),
     E = n(983712);
 t.Z = (e) => {
     let { className: t, forceWhite: n, giftMessage: a, subscriptionTier: u, ...T } = e,
         I = (0, o.ZP)(),
         R = (0, i.wj)(I) || n,
         g = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
-        N = u === d.Si.TIER_0 ? _.Z.Messages.GIFT_NITRO_TIER_0 : _.Z.Messages.GIFT_NITRO;
+        N = u === _.Si.TIER_0 ? d.Z.Messages.GIFT_NITRO_TIER_0 : d.Z.Messages.GIFT_NITRO;
     return (0, s.jsx)(c.Z, {
         isGift: !0,
         color: g,

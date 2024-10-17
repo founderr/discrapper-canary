@@ -21,9 +21,9 @@ var n = t(735250),
     S = t(594174),
     I = t(51144),
     N = t(689938),
-    m = t(8007),
+    A = t(8007),
     C = t(113207);
-function A(e) {
+function m(e) {
     let { userId: s, count: t } = e,
         c = (0, i.e7)([S.default], () => S.default.getUser(s)),
         d = I.ZP.getFormattedName(c),
@@ -36,19 +36,19 @@ function A(e) {
             (0, o.PR)(s);
         }, [s]),
         (0, n.jsxs)('div', {
-            className: m.section,
+            className: A.section,
             children: [
                 null != c &&
                     (0, n.jsx)(l.Z, {
-                        className: m.avatar,
+                        className: A.avatar,
                         user: c,
                         size: r.AvatarSizes.SIZE_40
                     }),
                 (0, n.jsxs)('div', {
-                    className: m.text,
+                    className: A.text,
                     children: [
                         (0, n.jsx)(r.Clickable, {
-                            className: m.username,
+                            className: A.username,
                             onClick: E,
                             children: (0, n.jsx)(r.Text, {
                                 variant: 'text-md/semibold',
@@ -65,7 +65,7 @@ function A(e) {
                 }),
                 (0, n.jsx)(r.Clickable, {
                     onClick: u,
-                    className: m.sectionIconContainer,
+                    className: A.sectionIconContainer,
                     children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
                 })
             ]
@@ -82,7 +82,7 @@ function g(e) {
         className: s,
         children: [
             (0, n.jsxs)('div', {
-                className: m.text,
+                className: A.text,
                 children: [
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/semibold',
@@ -97,7 +97,7 @@ function g(e) {
                 ]
             }),
             (0, n.jsx)(r.Clickable, {
-                className: m.icon,
+                className: A.icon,
                 onClick: c,
                 children: (0, n.jsx)(r.XSmallIcon, {
                     size: 'md',
@@ -112,7 +112,7 @@ function h(e) {
         t = (0, u._)(s);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(A, {
+            (0, n.jsx)(m, {
                 userId: s,
                 count: t.length
             }),
@@ -122,12 +122,12 @@ function h(e) {
                     {
                         children: [
                             (0, n.jsx)(g, {
-                                className: m.row,
+                                className: A.row,
                                 userId: s,
                                 index: i,
                                 verification: e
                             }),
-                            i !== t.length - 1 && (0, n.jsx)('div', { className: m.divider })
+                            i !== t.length - 1 && (0, n.jsx)('div', { className: A.divider })
                         ]
                     },
                     ''.concat(i, '-').concat(e.timestamp)
@@ -160,7 +160,7 @@ function O(e) {
                       (0, n.jsx)(
                           'div',
                           {
-                              className: m.item,
+                              className: A.item,
                               children: (0, n.jsx)(h, { userId: e })
                           },
                           e

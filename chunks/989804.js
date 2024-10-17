@@ -9,8 +9,8 @@ var o = n(735250),
     u = n(110924),
     d = n(100527),
     _ = n(367907),
-    b = n(906732),
-    S = n(254901),
+    S = n(906732),
+    b = n(254901),
     g = n(45493),
     f = n(332473),
     m = n(113434),
@@ -19,13 +19,13 @@ var o = n(735250),
     I = n(996733),
     C = n(394644),
     N = n(295545),
-    p = n(839469),
-    R = n(981631),
-    k = n(689938);
+    R = n(839469),
+    k = n(981631),
+    p = n(689938);
 let Z = a.forwardRef(function () {
-    g.Z.trackExposure({ location: 'cd25e4_1' }), S.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), S.Z.trackExposure({ location: 'user_setting_manual' });
+    g.Z.trackExposure({ location: 'cd25e4_1' }), b.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), b.Z.trackExposure({ location: 'user_setting_manual' });
     let e = (0, c.e7)([E.Z], () => E.Z.theme),
-        t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? R.BRd.DARK : void 0)),
+        t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? k.BRd.DARK : void 0)),
         {
             section: n,
             subsection: Z,
@@ -45,12 +45,12 @@ let Z = a.forwardRef(function () {
         h = (0, u.Z)(n),
         A = (0, u.Z)(Z),
         P = (0, I.Z7)(),
-        { analyticsLocations: M } = (0, b.ZP)(d.Z.USER_SETTINGS);
+        { analyticsLocations: M } = (0, S.ZP)(d.Z.USER_SETTINGS);
     a.useEffect(() => {
         if (!!(null != n && (n !== h || Z !== A)))
             !(function (e) {
                 let { destinationPane: t, originPane: n = null, source: o = null, subsection: a = null, locationStack: c = null, searchQuery: i = null } = e;
-                _.ZP.trackWithMetadata(R.rMx.SETTINGS_PANE_VIEWED, {
+                _.ZP.trackWithMetadata(k.rMx.SETTINGS_PANE_VIEWED, {
                     settings_type: 'user',
                     origin_pane: n,
                     destination_pane: t,
@@ -69,7 +69,7 @@ let Z = a.forwardRef(function () {
             });
     }, [n, h, Z, A, B, G, P]);
     let x = (0, N.eA)({ location: 'user_settings' }),
-        { hasSearchResults: U, searchResults: O } = (0, p.E)(),
+        { hasSearchResults: U, searchResults: O } = (0, R.E)(),
         D = a.useMemo(() => x && U, [x, U]),
         W = (0, C.VO)(),
         v = (0, C.q8)(O),
@@ -79,14 +79,14 @@ let Z = a.forwardRef(function () {
         L = a.useCallback((e) => {
             r.Z.setSection(e);
         }, []);
-    return (0, o.jsx)(b.Gt, {
+    return (0, o.jsx)(S.Gt, {
         value: M,
         children: (0, o.jsx)(l.Z, {
             root: !0,
-            page: R.ZY5.USER_SETTINGS,
+            page: k.ZY5.USER_SETTINGS,
             children: (0, o.jsx)(s.ZP, {
                 theme: e,
-                title: k.Z.Messages.USER_SETTINGS,
+                title: p.Z.Messages.USER_SETTINGS,
                 sidebarTheme: t,
                 section: n,
                 onSetSection: L,
@@ -101,8 +101,8 @@ let Z = a.forwardRef(function () {
 });
 t.default = a.forwardRef(function () {
     let e = (0, c.e7)([T.Z], () => T.Z.getProps().analyticsLocations),
-        { analyticsLocations: t } = (0, b.ZP)(e);
-    return (0, o.jsx)(b.Gt, {
+        { analyticsLocations: t } = (0, S.ZP)(e);
+    return (0, o.jsx)(S.Gt, {
         value: t,
         children: (0, o.jsx)(Z, {})
     });

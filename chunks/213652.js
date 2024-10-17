@@ -28,8 +28,8 @@ function E(e) {
             isAtMaxSavingClipOperations: r.Z.getIsAtMaxSaveClipOperations()
         })),
         x = r.Z.getSettings().clipsEnabled,
-        v = (null == g ? void 0 : g.ownerId) === h.default.getId(),
-        S = !x || !(v || I) || T || null == n,
+        S = (null == g ? void 0 : g.ownerId) === h.default.getId(),
+        v = !x || !(S || I) || T || null == n,
         N = s.useCallback(
             (e) =>
                 (0, i.jsx)(l.CameraIcon, {
@@ -41,11 +41,11 @@ function E(e) {
     return (0, i.jsx)(u.Z, {
         className: f.actionBarButton,
         onClick: () => {
-            !S && (v ? (0, o.C1)() : (0, o.C1)(n.id));
+            !v && (S ? (0, o.C1)() : (0, o.C1)(n.id));
         },
-        disabled: S,
+        disabled: v,
         iconComponent: N,
-        label: null == g ? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : v || I ? (x ? (T ? void 0 : _.Z.Messages.CLIPS_SAVE) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+        label: null == g ? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : S || I ? (x ? (T ? void 0 : _.Z.Messages.CLIPS_SAVE) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
         grow: !1
     });
 }

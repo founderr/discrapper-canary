@@ -1,24 +1,24 @@
-r.d(t, {
+s.d(t, {
     P: function () {
         return c;
     }
 }),
-    r(47120);
-var a = r(470079),
-    n = r(979554),
-    s = r(442837),
-    i = r(597688),
-    o = r(365943),
-    l = r(25251);
+    s(47120);
+var a = s(470079),
+    r = s(979554),
+    n = s(442837),
+    i = s(597688),
+    l = s(365943),
+    o = s(25251);
 let c = () => {
-    let e = (0, s.e7)([i.Z], () => i.Z.products);
+    let e = (0, n.e7)([i.Z], () => i.Z.products);
     a.useEffect(() => {
         let t = [...e.values()]
-            .filter((e) => e.type === n.Z.PROFILE_EFFECT)
+            .filter((e) => e.type === r.Z.PROFILE_EFFECT)
             .some((e) => {
                 let t = e.items[0].id;
-                return null != t && null == l.Z.getProfileEffectById(t);
+                return null != t && null == o.Z.getProfileEffectById(t);
             });
-        (0, o.z)(t);
+        (0, l.z)(t);
     }, [e]);
 };

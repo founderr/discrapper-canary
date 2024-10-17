@@ -1,53 +1,53 @@
-r.d(t, {
+s.d(t, {
     Z: function () {
-        return O;
+        return k;
     },
     n: function () {
-        return N;
+        return S;
     }
 });
-var a = r(735250),
-    n = r(470079),
-    s = r(120356),
-    i = r.n(s),
-    o = r(180650),
-    l = r(399606),
-    c = r(481060),
-    d = r(906732),
-    u = r(963249),
-    f = r(594174),
-    p = r(754347),
-    m = r(74538),
-    C = r(884697),
-    _ = r(624377),
-    g = r(141011),
-    h = r(813083),
-    b = r(67938),
-    E = r(372654),
-    I = r(215023),
-    x = r(474936),
-    T = r(689938),
-    v = r(462972),
-    S = r(275001);
-let N = (0, C.IC)(96),
-    L = (e) => {
+var a = s(735250),
+    r = s(470079),
+    n = s(120356),
+    i = s.n(n),
+    l = s(180650),
+    o = s(399606),
+    c = s(481060),
+    d = s(906732),
+    u = s(963249),
+    m = s(594174),
+    C = s(754347),
+    f = s(74538),
+    p = s(884697),
+    h = s(624377),
+    g = s(141011),
+    _ = s(813083),
+    b = s(67938),
+    x = s(372654),
+    E = s(215023),
+    I = s(474936),
+    T = s(689938),
+    L = s(462972),
+    v = s(275001);
+let S = (0, p.IC)(96),
+    N = (e) => {
         let { category: t } = e,
-            { analyticsLocations: r } = (0, d.ZP)(),
-            s = n.useRef(null),
-            i = (0, l.e7)([f.default], () => f.default.getCurrentUser());
-        return m.ZP.canUseCollectibles(i)
+            { analyticsLocations: s } = (0, d.ZP)(),
+            n = r.useRef(null),
+            i = (0, o.e7)([m.default], () => m.default.getCurrentUser());
+        return f.ZP.canUseCollectibles(i)
             ? (0, a.jsx)(a.Fragment, { children: t.summary })
             : (0, a.jsx)(a.Fragment, {
                   children: T.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
                       getPremium: (e) =>
                           (0, a.jsx)(c.Clickable, {
-                              innerRef: s,
-                              className: v.getPremiumHook,
+                              innerRef: n,
+                              className: L.getPremiumHook,
                               onClick: () => {
                                   (0, u.Z)({
-                                      subscriptionTier: x.Si.TIER_2,
-                                      analyticsLocations: r,
-                                      returnRef: s
+                                      subscriptionTier: I.Si.TIER_2,
+                                      analyticsLocations: s,
+                                      returnRef: n
                                   });
                               },
                               tag: 'span',
@@ -61,62 +61,62 @@ let N = (0, C.IC)(96),
                   })
               });
     };
-function O(e) {
-    var t, r, n, s;
-    let { category: l, className: d, hideLimitedTimeBadge: u = !1 } = e,
-        { backgroundColors: f } = (0, _.Z)(l.styles),
-        m = !!(null === (t = I.Ve[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-    return l.skuId === o.T.CHANCE
-        ? (0, a.jsx)(b.O, { category: l })
+function k(e) {
+    var t, s, r, n;
+    let { category: o, className: d, hideLimitedTimeBadge: u = !1 } = e,
+        { backgroundColors: m } = (0, h.Z)(o.styles),
+        f = !!(null === (t = E.Ve[o.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
+    return o.skuId === l.T.CHANCE
+        ? (0, a.jsx)(b.O, { category: o })
         : (0, a.jsxs)(g.Z, {
-              asset: l.banner,
-              className: i()(v.shopBanner, d),
+              asset: o.banner,
+              className: i()(L.shopBanner, d),
               style:
-                  null != f
+                  null != m
                       ? {
-                            background: ''.concat((0, E.nH)(f), ' border-box border-box'),
-                            outlineColor: f.border.toHslString()
+                            background: ''.concat((0, x.nH)(m), ' border-box border-box'),
+                            outlineColor: m.border.toHslString()
                         }
                       : void 0,
               children: [
-                  l.skuId === o.T.BAND &&
+                  o.skuId === l.T.BAND &&
                       (0, a.jsx)('img', {
-                          src: S,
+                          src: v,
                           alt: '',
-                          className: v.animationAsset
+                          className: L.animationAsset
                       }),
-                  (null === (r = I.Ve[l.skuId]) || void 0 === r ? void 0 : r.addAttributionLogo)
+                  (null === (s = E.Ve[o.skuId]) || void 0 === s ? void 0 : s.addAttributionLogo)
                       ? (0, a.jsxs)('div', {
-                            className: v.discordLogo,
+                            className: L.discordLogo,
                             children: [
                                 (0, a.jsx)(c.ClydeIcon, {
                                     size: 'custom',
                                     width: 28,
                                     height: 28,
                                     color: 'currentColor',
-                                    className: v.discordIcon
+                                    className: L.discordIcon
                                 }),
-                                (0, a.jsx)(p.Z, { className: v.discordWordmark })
+                                (0, a.jsx)(C.Z, { className: L.discordWordmark })
                             ]
                         })
                       : (0, a.jsx)(c.Spacer, { size: 28 }),
-                  (null === (n = I.Ve[l.skuId]) || void 0 === n ? void 0 : n.addLogo)
+                  (null === (r = E.Ve[o.skuId]) || void 0 === r ? void 0 : r.addLogo)
                       ? (0, a.jsx)('img', {
-                            className: v.categoryLogo,
-                            src: (0, C.uV)(l.logo, { size: N }),
-                            alt: l.name,
-                            style: { maxWidth: null === (s = I.Ve[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
+                            className: L.categoryLogo,
+                            src: (0, p.uV)(o.logo, { size: S }),
+                            alt: o.name,
+                            style: { maxWidth: null === (n = E.Ve[o.skuId]) || void 0 === n ? void 0 : n.logoMaxWidth }
                         })
                       : (0, a.jsx)(c.Spacer, { size: 96 }),
                   (0, a.jsx)(c.Text, {
-                      className: i()(v.summary, { [v.blackSummary]: m }),
+                      className: i()(L.summary, { [L.blackSummary]: f }),
                       variant: 'text-md/normal',
-                      children: l.skuId === o.T.DISXCORE ? (0, a.jsx)(L, { category: l }) : l.summary
+                      children: o.skuId === l.T.DISXCORE ? (0, a.jsx)(N, { category: o }) : o.summary
                   }),
                   !u &&
-                      (0, a.jsx)(h.Z, {
-                          category: l,
-                          className: v.limitedTimeBadge,
+                      (0, a.jsx)(_.Z, {
+                          category: o,
+                          className: L.limitedTimeBadge,
                           display: 'banner'
                       })
               ]

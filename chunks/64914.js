@@ -25,7 +25,7 @@ function I() {
         N = a.useCallback((e) => {
             _.bm.updateSetting(!e);
         }, []),
-        m = a.useCallback((e) => {
+        A = a.useCallback((e) => {
             e ? (0, r.openModal)((e) => (0, n.jsx)(u.Z, { ...e })) : o.mc();
         }, []),
         C = a.useCallback((e) => {
@@ -79,7 +79,7 @@ function I() {
                 children: (0, n.jsx)(r.FormSwitch, {
                     value: null != I,
                     note: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
-                    onChange: m,
+                    onChange: A,
                     children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE
                 })
             })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return x;
     }
 }),
     n(47120);
@@ -18,23 +18,23 @@ var i = n(735250),
     I = n(267101),
     m = n(336197),
     T = n(661824),
-    h = n(430824),
-    N = n(626135),
-    f = n(76535),
-    C = n(866104),
-    p = n(886176),
+    f = n(430824),
+    h = n(626135),
+    N = n(76535),
+    p = n(866104),
+    C = n(886176),
     g = n(981631),
-    A = n(689938),
-    S = n(140171);
-function R(e) {
+    S = n(689938),
+    A = n(140171);
+function x(e) {
     var t;
     let { guildId: n } = e,
-        s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)),
-        { loading: R, subscriptionsSettings: x } = (0, f.H)(n),
+        s = (0, c.e7)([f.Z], () => f.Z.getGuild(n)),
+        { loading: x, subscriptionsSettings: R } = (0, N.H)(n),
         { listingsLoaded: O } = (0, I.eD)(n),
-        M = (0, I.ue)(n, { publishedOnly: !0 }),
-        v = a.useCallback(async () => {
-            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+        v = (0, I.ue)(n, { publishedOnly: !0 }),
+        M = a.useCallback(async () => {
+            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
@@ -43,23 +43,23 @@ function R(e) {
         },
         { disableTrack: null == s }
     );
-    let L = M.length > 0 ? new Date(Math.min(...M.map((e) => Date.parse(e.published_at)))) : void 0;
-    return R || !O
+    let L = v.length > 0 ? new Date(Math.min(...v.map((e) => Date.parse(e.published_at)))) : void 0;
+    return x || !O
         ? (0, i.jsx)('div', {
-              className: r()(S.guildShopEmbed, S.spinnerContainer),
+              className: r()(A.guildShopEmbed, A.spinnerContainer),
               children: (0, i.jsx)(u.Spinner, {})
           })
-        : null == s || null == x
+        : null == s || null == R
           ? null
           : (0, i.jsxs)('div', {
-                className: S.guildShopEmbed,
+                className: A.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(C.Z, { coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(p.Z, { coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
-                        className: S.serverShopLabel,
+                        className: A.serverShopLabel,
                         children: [
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(C.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: o.Z.INTERACTIVE_NORMAL
@@ -67,8 +67,8 @@ function R(e) {
                             (0, i.jsx)(u.Heading, {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
-                                className: S.serverShopLabelText,
-                                children: A.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
+                                className: A.serverShopLabelText,
+                                children: S.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
                             })
                         ]
                     }),
@@ -76,30 +76,30 @@ function R(e) {
                     (0, i.jsx)(u.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
+                        children: S.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
                     }),
                     (0, i.jsx)(u.Spacer, { size: 4 }),
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         lineClamp: 2,
-                        children: x.description
+                        children: R.description
                     }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsx)(T.Z, {}),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
-                        className: S.guildShopEmbedFooter,
+                        className: A.guildShopEmbedFooter,
                         children: [
                             (0, i.jsx)(E.Z, { guild: s }),
                             (0, i.jsxs)('ul', {
-                                className: S.guildShopSummary,
+                                className: A.guildShopSummary,
                                 children: [
                                     (0, i.jsx)('li', {
                                         children: (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: A.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: M.length })
+                                            children: S.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({ listingCount: v.length })
                                         })
                                     }),
                                     null != L &&
@@ -107,25 +107,25 @@ function R(e) {
                                             children: (0, i.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: A.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
+                                                children: S.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({ createdYear: L.getFullYear() })
                                             })
                                         })
                                 ]
                             }),
                             (0, i.jsx)(u.Button, {
-                                className: S.guildShopEmbedCta,
-                                onClick: v,
+                                className: A.guildShopEmbedCta,
+                                onClick: M,
                                 children: (0, i.jsxs)('div', {
-                                    className: S.guildShopEmbedCtaContent,
+                                    className: A.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, i.jsx)(p.Z, {
+                                        (0, i.jsx)(C.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: A.Z.Messages.GUILD_SHOP_EMBED_CTA
+                                            children: S.Z.Messages.GUILD_SHOP_EMBED_CTA
                                         })
                                     ]
                                 })

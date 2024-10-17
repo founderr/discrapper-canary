@@ -11,8 +11,8 @@ var s,
     l = n.n(i),
     o = n(692547),
     c = n(477690),
-    d = n(162168),
-    _ = n(624138),
+    _ = n(162168),
+    d = n(624138),
     E = n(229684);
 function u(e, t, n) {
     return (
@@ -27,7 +27,7 @@ function u(e, t, n) {
         e
     );
 }
-let T = (0, _.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
+let T = (0, d.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
     I = Object.freeze({
         BLACK: E.black,
         GRAY: E.gray
@@ -72,7 +72,7 @@ class R extends (s = r.Component) {
                         style: this.getProgressStyles()
                     }),
                     0 !== n &&
-                        (0, a.jsx)(d.Z, {
+                        (0, a.jsx)(_.Z, {
                             width: n,
                             className: l()(E.notches, t)
                         })

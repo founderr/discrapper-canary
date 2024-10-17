@@ -106,7 +106,7 @@ function ea(e) {
         let u = n[h];
         u instanceof R.Z ? ((r = u), (e = null === (m = C.ZP.getNick(l, r.id)) || void 0 === m ? void 0 : m.toLocaleLowerCase())) : ((e = null === (T = u.nick) || void 0 === T ? void 0 : T.toLocaleLowerCase()), (r = o[u.userId]));
         let f = null === (I = Z.ZP.getGlobalName(r)) || void 0 === I ? void 0 : I.toLocaleLowerCase();
-        if (null == i || (null != r && i(r))) {
+        if (null != r && (null == i || i(r))) {
             let n = r.username.toLocaleLowerCase(),
                 i = (0, H._I)(n),
                 o = (0, H.Fv)(i),

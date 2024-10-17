@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(481060),
     o = n(100527),
     c = n(906732),
-    d = n(535322),
-    _ = n(357355),
+    _ = n(535322),
+    d = n(357355),
     E = n(140465),
     u = n(775412),
     T = n(650032),
@@ -17,9 +17,9 @@ var a = n(120356),
     N = n(206127),
     m = n(710220),
     C = n(318747),
-    f = n(409100),
-    p = n(474936),
-    A = n(689938),
+    A = n(409100),
+    f = n(474936),
+    p = n(689938),
     M = n(679757);
 let S = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
@@ -28,7 +28,7 @@ let S = (e) => {
             (l = (0, s.jsxs)('div', {
                 className: M.buttonContainer,
                 children: [
-                    (0, s.jsx)(f.Z, {
+                    (0, s.jsx)(A.Z, {
                         forceInverted: !0,
                         className: r()(M.button, i),
                         subscriptionTier: a
@@ -57,7 +57,7 @@ let S = (e) => {
     h = (e) => {
         let { isFullscreen: t } = e;
         return (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4 })]
+            children: [(0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4 })]
         });
     };
 function b(e) {
@@ -67,19 +67,19 @@ function b(e) {
         variant: t,
         color: 'always-white',
         className: r()(M.description, { [M.descriptionBottomMargin]: n }),
-        children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
+        children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: f, entrypoint: x } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: _, hideSparkles: N, hideSubscribeAndGiftButton: A, entrypoint: x } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, u._O)(),
         v = (0, E.Nx)(),
         L = (0, R.Vi)(),
-        Z = (0, i.e7)([_.Z], () => _.Z.affinities),
+        Z = (0, i.e7)([d.Z], () => d.Z.affinities),
         D = (0, I.Z)(),
-        { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        U = x === p.EZ.ApplicationStoreHome && null != D && B,
+        { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        B = x === f.EZ.ApplicationStoreHome && null != D && U,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -96,9 +96,9 @@ t.Z = (e) => {
                         (0, s.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
+                            children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
-                        U
+                        B
                             ? (0, s.jsx)(m.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
@@ -117,16 +117,16 @@ t.Z = (e) => {
                                       forceWhite: !0
                                   })
                               })
-                            : f
+                            : A
                               ? null
                               : (0, s.jsx)(S, {
-                                    subscriptionTier: d,
+                                    subscriptionTier: _,
                                     inOfferExperience: v,
                                     inTrial: P,
                                     buttonClassName: a
                                 }),
                         j &&
-                            !U &&
+                            !B &&
                             (0, s.jsx)(b, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1

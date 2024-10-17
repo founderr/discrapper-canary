@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
     u: function () {
         return u;
     }
@@ -6,29 +6,29 @@ t.d(n, {
 var l = t(735250);
 t(470079);
 var i = t(409794),
-    s = t(777207),
-    a = t(541822),
-    o = t(330711),
-    r = t(770561);
-function u(e) {
-    let { benefits: n, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = e,
-        m = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
+    o = t(777207),
+    r = t(541822),
+    a = t(330711),
+    s = t(770561);
+function u(n) {
+    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = n,
+        v = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
     return (0, l.jsx)('div', {
-        className: r.container,
-        children: (0, l.jsx)(a.Z, {
-            className: r.scroller,
+        className: s.container,
+        children: (0, l.jsx)(r.Z, {
+            className: s.scroller,
             children: (0, l.jsxs)('div', {
-                className: r.scrollContent,
+                className: s.scrollContent,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: r.header,
+                        className: s.header,
                         children: [
                             (0, l.jsx)('div', {
-                                className: r.headerBackground,
-                                style: m
+                                className: s.headerBackground,
+                                style: v
                             }),
                             (0, l.jsx)('div', {
-                                className: r.headerImage,
+                                className: s.headerImage,
                                 children:
                                     null != u
                                         ? (0, l.jsx)('img', {
@@ -45,10 +45,10 @@ function u(e) {
                         ]
                     }),
                     (0, l.jsxs)('div', {
-                        className: r.content,
+                        className: s.content,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: r.details,
+                                className: s.details,
                                 children: [
                                     null != d && (0, l.jsx)('div', { children: d }),
                                     (0, l.jsx)(i.X, {
@@ -58,24 +58,24 @@ function u(e) {
                                     }),
                                     null != t &&
                                         '' !== t &&
-                                        (0, l.jsx)(s.x, {
+                                        (0, l.jsx)(o.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
-                                            className: r.description,
+                                            className: s.description,
                                             children: t
                                         })
                                 ]
                             }),
-                            null != n &&
+                            null != e &&
                                 (0, l.jsxs)('div', {
-                                    className: r.benefits,
+                                    className: s.benefits,
                                     children: [
-                                        (0, l.jsx)(s.x, {
+                                        (0, l.jsx)(o.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
-                                            children: o.Z.Messages.STOREFRONT_BENEFITS_TITLE
+                                            children: a.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                         }),
-                                        n
+                                        e
                                     ]
                                 })
                         ]

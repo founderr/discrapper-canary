@@ -1,27 +1,27 @@
 n.d(e, {
     a: function () {
-        return E;
+        return y;
     }
 }),
     n(411104),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(913527),
-    o = n.n(a),
+    o = n(470079),
+    s = n(913527),
+    a = n.n(s),
     l = n(442837),
     r = n(481060),
     c = n(372123),
     d = n(224706),
     u = n(812206),
     p = n(600164),
-    h = n(293245),
-    C = n(626135),
+    C = n(293245),
+    h = n(626135),
     f = n(981631),
-    A = n(689938),
+    N = n(689938),
     O = n(621839),
-    N = n(113207);
-function _(t, e, n) {
+    _ = n(113207);
+function L(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -34,12 +34,12 @@ function _(t, e, n) {
         t
     );
 }
-class T extends s.PureComponent {
-    renderConflictButton(t, e, n, s) {
+class A extends o.PureComponent {
+    renderConflictButton(t, e, n, o) {
         return (0, i.jsxs)(r.Button, {
             className: O.conflictButton,
             innerClassName: O.conflictButtonInner,
-            onClick: s,
+            onClick: o,
             children: [
                 (0, i.jsx)('div', { className: n }),
                 (0, i.jsxs)('div', {
@@ -49,10 +49,10 @@ class T extends s.PureComponent {
                             className: O.conflictTitle,
                             children: t
                         }),
-                        (0, i.jsx)('div', { children: A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_LAST_MODIFIED }),
+                        (0, i.jsx)('div', { children: N.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_LAST_MODIFIED }),
                         (0, i.jsx)('div', {
                             className: O.timestamp,
-                            children: o()(e).calendar()
+                            children: a()(e).calendar()
                         })
                     ]
                 })
@@ -61,7 +61,7 @@ class T extends s.PureComponent {
     }
     renderError() {
         let { application: t } = this.props;
-        return (0, i.jsxs)(s.Fragment, {
+        return (0, i.jsxs)(o.Fragment, {
             children: [
                 (0, i.jsxs)(r.ModalContent, {
                     children: [
@@ -71,7 +71,7 @@ class T extends s.PureComponent {
                         }),
                         (0, i.jsx)('div', {
                             className: O.description,
-                            children: A.Z.Messages.CLOUD_SYNC_MODAL_ERROR_DESCRIPTION.format({ applicationName: t.name })
+                            children: N.Z.Messages.CLOUD_SYNC_MODAL_ERROR_DESCRIPTION.format({ applicationName: t.name })
                         })
                     ]
                 }),
@@ -85,7 +85,7 @@ class T extends s.PureComponent {
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.PRIMARY,
                                 onClick: this.onClose,
-                                children: A.Z.Messages.CANCEL
+                                children: N.Z.Messages.CANCEL
                             }),
                             (0, i.jsxs)(p.Z, {
                                 direction: p.Z.Direction.HORIZONTAL,
@@ -96,11 +96,11 @@ class T extends s.PureComponent {
                                         color: r.Button.Colors.PRIMARY,
                                         onClick: () => this.handlePlay(),
                                         className: O.retryButton,
-                                        children: A.Z.Messages.RETRY
+                                        children: N.Z.Messages.RETRY
                                     }),
                                     (0, i.jsx)(r.Button, {
                                         onClick: () => this.handlePlay(!1),
-                                        children: A.Z.Messages.GAME_ACTION_BUTTON_PLAY
+                                        children: N.Z.Messages.GAME_ACTION_BUTTON_PLAY
                                     })
                                 ]
                             })
@@ -114,13 +114,13 @@ class T extends s.PureComponent {
         let { application: t, cloudSyncState: e } = this.props;
         if (e.type !== f.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
         return (0, i.jsxs)(r.ModalContent, {
-            className: N.marginBottom20,
+            className: _.marginBottom20,
             children: [
                 (0, i.jsx)('div', {
                     className: O.description,
-                    children: A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_DESCRIPTION.format({ applicationName: t.name })
+                    children: N.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_DESCRIPTION.format({ applicationName: t.name })
                 }),
-                this.renderConflictButton(A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD, e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
+                this.renderConflictButton(N.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD, e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
                 (0, i.jsxs)(p.Z, {
                     className: O.choiceWrapper,
                     align: p.Z.Align.CENTER,
@@ -128,18 +128,18 @@ class T extends s.PureComponent {
                         (0, i.jsx)('div', { className: O.choiceLine }),
                         (0, i.jsx)('div', {
                             className: O.choiceTitle,
-                            children: A.Z.Messages.CLOUD_SYNC_MODAL_OR
+                            children: N.Z.Messages.CLOUD_SYNC_MODAL_OR
                         }),
                         (0, i.jsx)('div', { className: O.choiceLine })
                     ]
                 }),
-                this.renderConflictButton(A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_UPLOAD, e.next.timestamp, O.conflictUploadArt, this.handleChooseUpload)
+                this.renderConflictButton(N.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_UPLOAD, e.next.timestamp, O.conflictUploadArt, this.handleChooseUpload)
             ]
         });
     }
     render() {
         let { cloudSyncState: t, transitionState: e } = this.props,
-            n = t.type === f.TzF.CONFLICT ? A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_HEADER : A.Z.Messages.CLOUD_SYNC_MODAL_ERROR_HEADER;
+            n = t.type === f.TzF.CONFLICT ? N.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_HEADER : N.Z.Messages.CLOUD_SYNC_MODAL_ERROR_HEADER;
         return (0, i.jsxs)(r.ModalRoot, {
             transitionState: e,
             className: O.modal,
@@ -154,7 +154,7 @@ class T extends s.PureComponent {
                         }),
                         (0, i.jsx)(r.FormTitle, {
                             tag: 'h2',
-                            className: N.marginReset,
+                            className: _.marginReset,
                             children: n
                         })
                     ]
@@ -167,48 +167,48 @@ class T extends s.PureComponent {
         var e;
         super(...t),
             (e = this),
-            _(this, 'onClose', () => {
+            L(this, 'onClose', () => {
                 this.props.onClose();
             }),
-            _(this, 'handlePlay', function () {
+            L(this, 'handlePlay', function () {
                 let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                    { libraryApplication: i, analyticsParams: s } = e.props;
+                    { libraryApplication: i, analyticsParams: o } = e.props;
                 e.onClose(),
-                    E(i.id, i, {
-                        analyticsParams: s,
+                    y(i.id, i, {
+                        analyticsParams: o,
                         cloudSync: t,
                         cloudSyncForceHash: n
                     });
             }),
-            _(this, 'handleChooseDownload', () => {
+            L(this, 'handleChooseDownload', () => {
                 let { cloudSyncState: t } = this.props;
                 t.type === f.TzF.CONFLICT && this.handlePlay(!0, t.remote.hash);
             }),
-            _(this, 'handleChooseUpload', () => {
+            L(this, 'handleChooseUpload', () => {
                 let { cloudSyncState: t } = this.props;
                 t.type === f.TzF.CONFLICT && this.handlePlay(!0, t.next.hash);
             });
     }
 }
-let L = l.ZP.connectStores([h.Z, u.Z], (t) => {
+let T = l.ZP.connectStores([C.Z, u.Z], (t) => {
     let { libraryApplication: e, branchId: n } = t;
     return {
-        cloudSyncState: h.Z.getState(e.id, n),
+        cloudSyncState: C.Z.getState(e.id, n),
         application: u.Z.getApplication(e.id)
     };
-})(T);
-async function E(t, e, n) {
-    let s = u.Z.getApplication(t);
-    if (null == s) return;
-    let { cloudSync: a = !0, cloudSyncForceHash: o = null, analyticsParams: l } = n;
-    if (a && null != e) {
+})(A);
+async function y(t, e, n) {
+    let o = u.Z.getApplication(t);
+    if (null == o) return;
+    let { cloudSync: s = !0, cloudSyncForceHash: a = null, analyticsParams: l } = n;
+    if (s && null != e) {
         let t = e.branchId;
         try {
-            await c.Z(e.id, t, o);
+            await c.Z(e.id, t, a);
         } catch (n) {
             (0, r.openModal)((n) =>
-                (0, i.jsx)(L, {
+                (0, i.jsx)(T, {
                     libraryApplication: e,
                     analyticsParams: l,
                     branchId: t,
@@ -219,15 +219,15 @@ async function E(t, e, n) {
         }
     }
     return (
-        C.default.track(f.rMx.APPLICATION_OPENED, {
-            application_id: s.id,
-            application_name: s.name,
+        h.default.track(f.rMx.APPLICATION_OPENED, {
+            application_id: o.id,
+            application_name: o.name,
             type: f.q5t.LAUNCH,
             distributor: null != e ? e.getDistributor() : null,
             ...l
         }),
         d.Z.launch({
-            applicationId: s.id,
+            applicationId: o.id,
             branchId: null == e ? void 0 : e.branchId
         })
     );

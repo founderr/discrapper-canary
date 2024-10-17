@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     },
     v: function () {
         return E;
@@ -13,8 +13,8 @@ var s = n(704215),
     l = n(595878),
     o = n(314684),
     c = n(735825),
-    d = n(689938);
-function _() {
+    _ = n(689938);
+function d() {
     let e = (0, o.yQ)(),
         t = (0, l.cG)({ location: r.MQ.HOME }),
         n = (0, l.AK)({ location: r.MQ.HOME }),
@@ -25,7 +25,7 @@ function _() {
             subtitle: (0, i.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId, a && !n),
             description: (0, i.BS)(e.nitroTenureStatus),
             ctaDescription: (0, i.t2)(e.nitroTenureStatus, e.redeemableInDays),
-            pillText: e.nitroTenureStatus === c.EB.PENDING ? d.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
+            pillText: e.nitroTenureStatus === c.EB.PENDING ? _.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? s.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }

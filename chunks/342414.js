@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(481060),
     o = n(100527),
     c = n(906732),
-    d = n(78839),
-    _ = n(775412),
+    _ = n(78839),
+    d = n(775412),
     E = n(520540),
     u = n(197115),
     T = n(823188),
@@ -17,8 +17,8 @@ var a = n(120356),
     N = n(689938),
     m = n(993270),
     C = n(872905),
-    f = n(578478);
-let p = (e) => {
+    A = n(578478);
+let f = (e) => {
         let { className: t, inTrial: n } = e;
         return (0, s.jsx)(s.Fragment, {
             children: (0, s.jsxs)('div', {
@@ -58,14 +58,14 @@ let p = (e) => {
             })
         });
     },
-    A = (e) => {
+    p = (e) => {
         let { inTrial: t, location: n } = e,
             { subscriberHomeVariant: a } = E.g.useExperiment({ location: n }, { autoTrackExposure: !1 }),
             i = a === E.p.VARIANT_2;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: f,
+                    src: A,
                     alt: '',
                     className: m.headerArtV2
                 }),
@@ -106,7 +106,7 @@ let p = (e) => {
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: f,
+                    src: A,
                     alt: '',
                     className: m.headerArtV2
                 }),
@@ -133,18 +133,18 @@ let p = (e) => {
 t.Z = (e) => {
     let { className: t, location: n } = e,
         { analyticsLocations: a } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        r = (0, i.e7)([d.ZP], () => d.ZP.inReverseTrial()),
-        l = (0, _._O)(),
+        r = (0, i.e7)([_.ZP], () => _.ZP.inReverseTrial()),
+        l = (0, d._O)(),
         E = (0, R.bD)(n),
         u = (0, R.pn)(n),
-        T = (0, s.jsx)(p, {
+        T = (0, s.jsx)(f, {
             className: t,
             inTrial: l
         });
     return (
         r && (T = (0, s.jsx)(M, {})),
         (E || u) &&
-            (T = (0, s.jsx)(A, {
+            (T = (0, s.jsx)(p, {
                 inTrial: l,
                 location: n
             })),

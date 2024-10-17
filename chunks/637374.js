@@ -13,23 +13,23 @@ var i = n(735250),
     I = n(112724),
     m = n(607070),
     T = n(884697),
-    h = n(600164),
-    N = n(479446),
-    f = n(930114),
-    C = n(981632),
-    p = n(108989),
+    f = n(600164),
+    h = n(479446),
+    N = n(930114),
+    p = n(981632),
+    C = n(108989),
     g = n(703656),
-    A = n(314897),
-    S = n(82142),
-    R = n(283595),
-    x = n(594174),
+    S = n(314897),
+    A = n(82142),
+    x = n(283595),
+    R = n(594174),
     O = n(509545),
-    M = n(55563),
-    v = n(199480),
+    v = n(55563),
+    M = n(199480),
     L = n(626135),
     Z = n(669079),
-    P = n(74538),
-    b = n(296848),
+    b = n(74538),
+    P = n(296848),
     D = n(51144),
     j = n(626799),
     U = n(981631),
@@ -113,10 +113,10 @@ class V extends a.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(f.Z, {
+            justify: f.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(h.Z, {
+                (0, i.jsxs)(f.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends a.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(h.Z, {
-                    align: h.Z.Align.END,
-                    justify: h.Z.Justify.END,
+                (0, i.jsxs)(f.Z, {
+                    align: f.Z.Align.END,
+                    justify: f.Z.Justify.END,
                     className: k.metadata,
-                    direction: h.Z.Direction.VERTICAL,
+                    direction: f.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -149,7 +149,7 @@ class V extends a.Component {
                 onClick: this.handleAccept,
                 color: u.Button.Colors.BRAND
             },
-            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n));
+            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, b.I5)(n));
         return (
             (e.redeemed || r || e.isClaimed || !n.verified) && ((s.color = u.Button.Colors.BRAND), (s.disabled = !0)),
             (0, i.jsx)(u.Button, {
@@ -295,7 +295,7 @@ class V extends a.Component {
                         }
                     });
                 let r = a !== U.uaV.CUSTOM_GIFT ? void 0 : i;
-                (0, f.V)({
+                (0, N.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: r,
@@ -331,14 +331,14 @@ class V extends a.Component {
                     children: [
                         !t &&
                             y.eZ.includes(e.giftStyle) &&
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(C.Z, {
                                 className: k.snow,
                                 wind: 5
                             }),
-                        a && (0, i.jsx)(v.Z, { className: k.headerIcon }),
+                        a && (0, i.jsx)(M.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(C.Z, {
-                                defaultAnimationState: e.redeemed ? N.SR.LOOP : N.SR.IDLE,
+                            (0, i.jsx)(p.Z, {
+                                defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })
@@ -348,21 +348,21 @@ class V extends a.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([S.Z, M.Z, x.default, R.Z, O.Z, A.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([A.Z, v.Z, R.default, x.Z, O.Z, S.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
-        a = S.Z.get(t),
-        s = null != a ? M.Z.get(a.skuId) : null,
-        r = null != a && null != a.userId ? x.default.getUser(a.userId) : null,
+        a = A.Z.get(t),
+        s = null != a ? v.Z.get(a.skuId) : null,
+        r = null != a && null != a.userId ? R.default.getUser(a.userId) : null,
         l = m.Z.useReducedMotion;
     return {
         sku: s,
         giftCode: a,
         gifter: r,
         currentUser: i,
-        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
-        isSelfGift: null != a ? A.default.getId() === a.userId : A.default.getId() === n.id,
-        resolved: S.Z.getIsResolved(t),
-        libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, R.Z) : null,
+        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, P.oE)(a.subscriptionPlanId) : null,
+        isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
+        resolved: A.Z.getIsResolved(t),
+        libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, x.Z) : null,
         useReducedMotion: l
     };
 })(H);

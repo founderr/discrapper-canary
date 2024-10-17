@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(523746),
     T = n(819640),
     x = n(131951),
-    v = n(699516),
-    S = n(594174),
+    S = n(699516),
+    v = n(594174),
     N = n(979651),
     A = n(585483),
     Z = n(63063),
@@ -178,11 +178,11 @@ function D(e) {
             callUnavailable: I.Z.isCallUnavailable(n.id)
         })),
         g = n.getRecipientId(),
-        { notFriend: C, isBlocked: x } = (0, a.cj)([v.Z], () => ({
-            notFriend: n.type === b.d4z.DM && null != g && !v.Z.isFriend(g),
-            isBlocked: n.type === b.d4z.DM && null != g && v.Z.isBlocked(g)
+        { notFriend: C, isBlocked: x } = (0, a.cj)([S.Z], () => ({
+            notFriend: n.type === b.d4z.DM && null != g && !S.Z.isFriend(g),
+            isBlocked: n.type === b.d4z.DM && null != g && S.Z.isBlocked(g)
         })),
-        A = (0, a.e7)([S.default], () => S.default.getUser(g)),
+        A = (0, a.e7)([v.default], () => v.default.getUser(g)),
         Z = (0, u.bp)(),
         M = [],
         R = (0, h.Z)(n.id),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return R;
     }
 });
 var i,
@@ -17,11 +17,11 @@ var i,
     I = n(739566),
     m = n(942951),
     T = n(834129),
-    h = n(809026),
-    N = n(139256),
-    f = n(489887),
-    C = n(689938),
-    p = n(167919);
+    f = n(809026),
+    h = n(139256),
+    N = n(489887),
+    p = n(689938),
+    C = n(167919);
 function g() {
     return (0, s.jsx)('svg', {
         width: '24',
@@ -37,7 +37,7 @@ function g() {
         })
     });
 }
-function A(e) {
+function S(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
     if (n) t = (0, s.jsx)(g, {});
@@ -51,13 +51,13 @@ function A(e) {
     }
     return null != t
         ? (0, s.jsx)('div', {
-              className: p.imageContainer,
+              className: C.imageContainer,
               children: t
           })
         : null;
 }
 ((i = a || (a = {})).NO_VOTES = 'NO_VOTES'), (i.VICTOR = 'VICTOR'), (i.TIE = 'TIE');
-function S(e) {
+function A(e) {
     let t,
         { type: n, ...i } = e;
     switch (n) {
@@ -66,7 +66,7 @@ function S(e) {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
-                children: C.Z.Messages.POLL_RESULT_NO_VOTERS
+                children: p.Z.Messages.POLL_RESULT_NO_VOTERS
             });
             break;
         case 'VICTOR':
@@ -74,18 +74,18 @@ function S(e) {
             t = (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsxs)('div', {
-                        className: p.victorAnswer,
+                        className: C.victorAnswer,
                         children: [
                             (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-normal',
-                                className: p.victorAnswerText,
+                                className: C.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, s.jsx)(N.ZY, {
+                            (0, s.jsx)(h.ZY, {
                                 size: 16,
-                                className: p.victorIcon,
+                                className: C.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0
                             })
@@ -95,7 +95,7 @@ function S(e) {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
-                        children: [C.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', r, '%']
+                        children: [p.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', r, '%']
                     })
                 ]
             });
@@ -108,7 +108,7 @@ function S(e) {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
-                        children: C.Z.Messages.POLL_RESULT_TIED
+                        children: p.Z.Messages.POLL_RESULT_TIED
                     }),
                     (0, s.jsxs)(u.Text, {
                         variant: 'text-xs/medium',
@@ -120,11 +120,11 @@ function S(e) {
             });
     }
     return (0, s.jsx)('div', {
-        className: p.description,
+        className: C.description,
         children: t
     });
 }
-function R(e) {
+function x(e) {
     let { className: t, data: n, onClickPollLink: i } = e,
         a = r.useMemo(
             () =>
@@ -147,16 +147,16 @@ function R(e) {
         ),
         l = null != n.victorEmoji || 'NO_VOTES' === a.type;
     return (0, s.jsxs)('div', {
-        className: o()(p.container, { [p.containerWithImage]: l }, t),
+        className: o()(C.container, { [C.containerWithImage]: l }, t),
         children: [
-            (0, s.jsx)(A, {
+            (0, s.jsx)(S, {
                 hasNoVotes: 'NO_VOTES' === a.type,
                 victorEmoji: n.victorEmoji
             }),
-            (0, s.jsx)(S, { ...a }),
+            (0, s.jsx)(A, { ...a }),
             null != i &&
                 (0, s.jsx)(u.Button, {
-                    className: p.button,
+                    className: C.button,
                     size: u.Button.Sizes.TINY,
                     onClick: i,
                     color: u.Button.Colors.PRIMARY,
@@ -164,35 +164,35 @@ function R(e) {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
-                        children: C.Z.Messages.POLL_RESULT_VIEW_POLL
+                        children: p.Z.Messages.POLL_RESULT_VIEW_POLL
                     })
                 })
         ]
     });
 }
-function x(e) {
+function R(e) {
     var t;
     let { message: n, channel: i, compact: a, disableInteraction: l = !1 } = e,
         o = n.embeds[0],
-        _ = r.useMemo(() => (0, h.Z)(o), [o]),
-        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', f.Dv),
-        N = (0, I.ZP)(n),
+        _ = r.useMemo(() => (0, f.Z)(o), [o]),
+        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', N.Dv),
+        h = (0, I.ZP)(n),
         g = (0, m.l)({
             user: n.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: n.id
         }),
-        A = n.messageReference,
-        S = r.useCallback(() => {
-            null != A &&
+        S = n.messageReference,
+        A = r.useCallback(() => {
+            null != S &&
                 d.Z.jumpToMessage({
-                    channelId: A.channel_id,
-                    messageId: A.message_id,
+                    channelId: S.channel_id,
+                    messageId: S.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, A]);
+        }, [n.id, S]);
     return null == _
         ? null
         : (0, s.jsxs)(s.Fragment, {
@@ -201,17 +201,17 @@ function x(e) {
                       iconNode: (0, s.jsx)(u.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: C.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
-                          username: N.nick,
-                          usernameHook: g(N),
+                      children: p.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+                          username: h.nick,
+                          usernameHook: g(h),
                           title: E,
-                          titleOnClick: S
+                          titleOnClick: A
                       })
                   }),
-                  (0, s.jsx)(R, {
-                      className: p.embed,
+                  (0, s.jsx)(x, {
+                      className: C.embed,
                       data: _,
-                      onClickPollLink: l ? void 0 : S
+                      onClickPollLink: l ? void 0 : A
                   })
               ]
           });

@@ -1,52 +1,52 @@
-t.d(n, {
+s.d(n, {
     m: function () {
-        return x;
+        return T;
     }
 });
-var i = t(735250),
-    a = t(470079),
-    r = t(481060),
-    s = t(474936),
-    l = t(910485),
-    o = t(426831),
-    c = t(257510),
-    u = t(74838),
-    d = t(720834),
-    _ = t(385925),
-    p = t(588921),
-    m = t(718720),
-    I = t(721513),
-    f = t(959191);
-let E = {
-        [s.Cj.STANDARD_BOX]: _,
-        [s.Cj.CAKE]: p,
-        [s.Cj.CHEST]: m,
-        [s.Cj.COFFEE]: I,
-        [s.Cj.SNOWGLOBE]: '',
-        [s.Cj.BOX]: '',
-        [s.Cj.CUP]: '',
-        [s.Cj.SEASONAL_CAKE]: c,
-        [s.Cj.SEASONAL_CHEST]: u,
-        [s.Cj.SEASONAL_COFFEE]: d,
-        [s.Cj.SEASONAL_STANDARD_BOX]: o,
-        [s.Cj.NITROWEEN_STANDARD]: f.Z
+var t = s(735250),
+    l = s(470079),
+    i = s(481060),
+    r = s(474936),
+    a = s(910485),
+    c = s(426831),
+    o = s(257510),
+    u = s(74838),
+    d = s(720834),
+    _ = s(385925),
+    m = s(588921),
+    I = s(718720),
+    E = s(721513),
+    p = s(959191);
+let N = {
+        [r.Cj.STANDARD_BOX]: _,
+        [r.Cj.CAKE]: m,
+        [r.Cj.CHEST]: I,
+        [r.Cj.COFFEE]: E,
+        [r.Cj.SNOWGLOBE]: '',
+        [r.Cj.BOX]: '',
+        [r.Cj.CUP]: '',
+        [r.Cj.SEASONAL_CAKE]: o,
+        [r.Cj.SEASONAL_CHEST]: u,
+        [r.Cj.SEASONAL_COFFEE]: d,
+        [r.Cj.SEASONAL_STANDARD_BOX]: c,
+        [r.Cj.NITROWEEN_STANDARD]: p.Z
     },
-    x = a.forwardRef(function (e, n) {
-        let { isSelected: t, giftStyle: a, setSelectedGiftStyle: s, onFocus: o, onBlur: c } = e;
-        return (0, i.jsx)(r.Clickable, {
-            className: l.button,
+    T = l.forwardRef(function (e, n) {
+        let { isSelected: s, giftStyle: l, setSelectedGiftStyle: r, onFocus: c, onBlur: o } = e;
+        return (0, t.jsx)(i.Clickable, {
+            className: a.button,
             innerRef: n,
-            onClick: () => s(a),
-            onFocus: o,
-            onBlur: c,
-            children: (0, i.jsx)('img', {
+            onClick: () => r(l),
+            onFocus: c,
+            onBlur: o,
+            children: (0, t.jsx)('img', {
                 style: {
                     width: '100%',
                     height: '100%'
                 },
                 alt: '',
-                src: E[a],
-                className: t ? l.customGiftBoxHighlighted : l.customGiftBox
+                src: N[l],
+                className: s ? a.customGiftBoxHighlighted : a.customGiftBox
             })
         });
     });

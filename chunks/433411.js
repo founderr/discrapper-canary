@@ -18,7 +18,7 @@ var n = t(735250),
     S = t(689938),
     I = t(406926);
 function N(e) {
-    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: A = !1 } = e,
+    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: m = !1 } = e,
         { analyticsLocations: g } = (0, l.ZP)(),
         h = null != t,
         { userAvatarDecoration: O, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, E.$U)(s, t),
@@ -27,12 +27,12 @@ function N(e) {
             () =>
                 (0, d.ps)({
                     analyticsLocations: g,
-                    isTryItOutFlow: A,
+                    isTryItOutFlow: m,
                     guild: t
                 }),
-            [g, A, t]
+            [g, m, t]
         ),
-        D = A || void 0 !== R ? null != R : (h ? p : O) != null,
+        D = m || void 0 !== R ? null != R : (h ? p : O) != null,
         L = C ? o.ShinyButton : o.Button;
     return (0, n.jsxs)(T.Z, {
         className: i,
@@ -63,11 +63,11 @@ function N(e) {
                         })
                 ]
             }),
-            s.isStaff() && M && (0, n.jsx)(m, { user: s })
+            s.isStaff() && M && (0, n.jsx)(A, { user: s })
         ]
     });
 }
-let m = (e) => {
+let A = (e) => {
     let { user: s } = e;
     return (0, n.jsxs)('div', {
         className: I.overrideButtonsContainer,

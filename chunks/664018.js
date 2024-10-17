@@ -1,16 +1,16 @@
-r.d(t, {
+s.d(t, {
     D: function () {
-        return n;
+        return r;
     },
     E: function () {
-        return o;
+        return l;
     }
 });
 var a,
-    n,
-    s = r(818083);
-((a = n || (n = {}))[(a.CONTROL = 0)] = 'CONTROL'), (a[(a.TRANSFORMATION = 1)] = 'TRANSFORMATION'), (a[(a.NO_MOVEMENT = 2)] = 'NO_MOVEMENT');
-let i = (0, s.B)({
+    r,
+    n = s(818083);
+((a = r || (r = {}))[(a.CONTROL = 0)] = 'CONTROL'), (a[(a.TRANSFORMATION = 1)] = 'TRANSFORMATION'), (a[(a.NO_MOVEMENT = 2)] = 'NO_MOVEMENT');
+let i = (0, n.B)({
         kind: 'user',
         id: '2024-03_shop_card_hover_animation',
         label: 'Shop card hover animation experiment',
@@ -28,4 +28,4 @@ let i = (0, s.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e });
+    l = (e) => i.useExperiment({ location: e });

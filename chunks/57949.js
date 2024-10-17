@@ -20,7 +20,7 @@ function u(e) {
         };
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('96427'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('47691')]).then(n.bind(n, 578780));
+            let { default: e } = await n.e('88806').then(n.bind(n, 578780));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,

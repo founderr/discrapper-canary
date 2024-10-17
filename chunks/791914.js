@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var i = n(735250);
@@ -18,13 +18,13 @@ var a = n(399606),
     I = n(818186),
     m = n(689938),
     T = n(811304);
-function h(e) {
-    let { tab: t, setTab: n, children: h, badgeState: N, closePopout: f } = e,
-        { showReminders: C } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: p, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: A } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        S = (0, a.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        R = (0, a.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
+function f(e) {
+    let { tab: t, setTab: n, children: f, badgeState: h, closePopout: N } = e,
+        { showReminders: p } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: C, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        A = (0, a.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        x = (0, a.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(l.h4, {
         className: T.header,
         children: [
@@ -44,7 +44,7 @@ function h(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: T.controls,
-                        children: [h, (0, i.jsx)(I.Z, { closePopout: f })]
+                        children: [f, (0, i.jsx)(I.Z, { closePopout: N })]
                     })
                 ]
             }),
@@ -63,7 +63,7 @@ function h(e) {
                             className: T.tab,
                             children: [
                                 m.Z.Messages.FOR_YOU,
-                                (null == N ? void 0 : N.badgeForYou)
+                                (null == h ? void 0 : h.badgeForYou)
                                     ? (0, i.jsx)(r.CircleBadge, {
                                           color: o.Z.STATUS_DANGER,
                                           className: T.iconBadge
@@ -82,14 +82,14 @@ function h(e) {
                             className: T.tab,
                             children: m.Z.Messages.MENTIONS
                         }),
-                        A
+                        S
                             ? (0, i.jsxs)(r.TabBar.Item, {
                                   'aria-label': 'game_invites',
                                   id: s.X.GAME_INVITES,
                                   className: T.tab,
                                   children: [
                                       m.Z.Messages.GAME_INVITES,
-                                      S > 0
+                                      A > 0
                                           ? (0, i.jsx)(r.CircleBadge, {
                                                 color: o.Z.STATUS_DANGER,
                                                 className: T.iconBadge
@@ -98,20 +98,20 @@ function h(e) {
                                   ]
                               })
                             : null,
-                        p && g
+                        C && g
                             ? (0, i.jsx)(r.TabBar.Item, {
                                   'aria-label': m.Z.Messages.FOR_LATER,
                                   id: s.X.BOOKMARKS,
                                   className: T.tab,
-                                  children: 0 === R ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: R })
+                                  children: 0 === x ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: x })
                               })
                             : null,
-                        C && !p
+                        p && !C
                             ? (0, i.jsx)(r.TabBar.Item, {
                                   'aria-label': 'todos',
                                   id: s.X.TODOS,
                                   className: T.tab,
-                                  children: 0 === R ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: R })
+                                  children: 0 === x ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: x })
                               })
                             : null
                     ]

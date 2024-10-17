@@ -1,91 +1,91 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return S;
+        return m;
     }
 });
-var s = t(735250);
-t(470079);
-var r = t(120356),
-    a = t.n(r),
-    i = t(442837),
-    c = t(481060),
-    l = t(607070),
-    L = t(409813),
-    o = t(669079),
-    u = t(170579),
-    C = t(616030),
-    d = t(474936),
-    f = t(689938),
-    p = t(251300);
-function S(e) {
-    let { currentStep: n, className: t, purchaseState: r, premiumType: S, useWinterTheme: h = !1, onClose: T, hideCloseButton: N, showTrialBadge: R, showDiscountBadge: E, isGift: I, giftRecipient: m } = e,
-        M = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        _ = h ? d.nL.WINTER : d.nL.DEFAULT;
-    return I && (0, o.pO)(m) && n !== L.h8.CONFIRM
-        ? (0, s.jsxs)(c.ModalHeader, {
-              className: p.modalHeaderCustomGift,
+var i = n(735250);
+n(470079);
+var l = n(120356),
+    a = n.n(l),
+    r = n(442837),
+    s = n(481060),
+    o = n(607070),
+    u = n(409813),
+    c = n(669079),
+    d = n(170579),
+    _ = n(616030),
+    f = n(474936),
+    C = n(689938),
+    L = n(251300);
+function m(e) {
+    let { currentStep: t, className: n, purchaseState: l, premiumType: m, useWinterTheme: T = !1, onClose: E, hideCloseButton: S, showTrialBadge: p, showDiscountBadge: N, isGift: h, giftRecipient: A } = e,
+        g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        R = T ? f.nL.WINTER : f.nL.DEFAULT;
+    return h && (0, c.pO)(A) && t !== u.h8.CONFIRM
+        ? (0, i.jsxs)(s.ModalHeader, {
+              className: L.modalHeaderCustomGift,
               separator: !1,
               children: [
-                  (0, s.jsx)('div', {
-                      className: p.giftNitroInfo,
-                      children: (0, s.jsx)(c.Heading, {
+                  (0, i.jsx)('div', {
+                      className: L.giftNitroInfo,
+                      children: (0, i.jsx)(s.Heading, {
                           variant: 'heading-lg/semibold',
                           children: (() => {
-                              switch (n) {
-                                  case L.h8.PLAN_SELECT:
-                                      return S === d.p9.TIER_0 ? f.Z.Messages.GIFT_NITRO_TIER_0 : f.Z.Messages.GIFT_NITRO_ACTION;
-                                  case L.h8.ADD_PAYMENT_STEPS:
-                                      return f.Z.Messages.PAYMENT_METHOD_SELECTION;
-                                  case L.h8.REVIEW:
-                                      return f.Z.Messages.GIFT_PURCHASE_REVIEW;
+                              switch (t) {
+                                  case u.h8.PLAN_SELECT:
+                                      return m === f.p9.TIER_0 ? C.Z.Messages.GIFT_NITRO_TIER_0 : C.Z.Messages.GIFT_NITRO_ACTION;
+                                  case u.h8.ADD_PAYMENT_STEPS:
+                                      return C.Z.Messages.PAYMENT_METHOD_SELECTION;
+                                  case u.h8.REVIEW:
+                                      return C.Z.Messages.GIFT_PURCHASE_REVIEW;
                                   default:
-                                      return f.Z.Messages.GIFT_NITRO_ACTION;
+                                      return C.Z.Messages.GIFT_NITRO_ACTION;
                               }
                           })()
                       })
                   }),
-                  (0, s.jsx)(c.ModalCloseButton, {
-                      onClick: T,
-                      className: p.closeButton
+                  (0, i.jsx)(s.ModalCloseButton, {
+                      onClick: E,
+                      className: L.closeButton
                   })
               ]
           })
-        : (0, s.jsx)(c.ModalHeader, {
-              className: a()(p.modalHeader, t),
+        : (0, i.jsx)(s.ModalHeader, {
+              className: a()(L.modalHeader, n),
               separator: !1,
-              children: (0, s.jsx)(u.Z, {
+              children: (0, i.jsx)(d.Z, {
                   hideCloseOnFullScreen: !0,
-                  hideCloseButton: N,
+                  hideCloseButton: S,
                   shouldShowPrice: !0,
-                  upgradeToPremiumType: S,
+                  upgradeToPremiumType: m,
                   renderAnimation: () =>
-                      S === d.p9.TIER_0
-                          ? (0, s.jsx)(C.zC, {
-                                className: p.headerAnimation,
-                                currentStep: n,
-                                purchaseState: r,
-                                pause: M
+                      m === f.p9.TIER_0
+                          ? (0, i.jsx)(_.zC, {
+                                className: L.headerAnimation,
+                                currentStep: t,
+                                purchaseState: l,
+                                pause: g
                             })
-                          : S === d.p9.TIER_1
-                            ? (0, s.jsx)(C.tK, {
-                                  className: p.headerAnimation,
-                                  currentStep: n,
-                                  purchaseState: r,
-                                  pause: M
+                          : m === f.p9.TIER_1
+                            ? (0, i.jsx)(_.tK, {
+                                  className: L.headerAnimation,
+                                  currentStep: t,
+                                  purchaseState: l,
+                                  pause: g
                               })
-                            : (0, s.jsx)(C.Bk, {
-                                  className: p.headerAnimation,
-                                  currentStep: n,
-                                  purchaseState: r,
-                                  pause: M
+                            : (0, i.jsx)(_.Bk, {
+                                  className: L.headerAnimation,
+                                  currentStep: t,
+                                  purchaseState: l,
+                                  pause: g
                               }),
                   plan: null,
                   isGift: !1,
-                  className: p.header,
-                  onClose: T,
-                  headerTheme: _,
-                  showTrialBadge: R,
-                  showDiscountBadge: E
+                  className: L.header,
+                  onClose: E,
+                  headerTheme: R,
+                  showTrialBadge: p,
+                  showDiscountBadge: N
               })
           });
 }

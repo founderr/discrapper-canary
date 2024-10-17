@@ -28,7 +28,7 @@ function I() {
     a.useEffect(() => {
         e === _.Th && N && s(t[0]), e !== _.Th && I && s(_.Th);
     }, [e, s, N, I, t]);
-    let m = a.useMemo(() => {
+    let A = a.useMemo(() => {
             let e = I
                 ? []
                 : t
@@ -79,7 +79,7 @@ function I() {
             s(e);
         },
         value: e,
-        options: m,
+        options: A,
         renderOptionPrefix: C
     });
 }

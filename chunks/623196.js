@@ -20,9 +20,9 @@ var n = t(735250),
     S = t(838436),
     I = t(726985),
     N = t(981631),
-    m = t(689938),
+    A = t(689938),
     C = t(472346);
-let A = (e) => {
+let m = (e) => {
     (0, l.openModalLazy)(async () => {
         let { default: s } = await t.e('25120').then(t.bind(t, 926281));
         return (t) =>
@@ -43,11 +43,11 @@ function g() {
     let h = (0, u.$6)(s, e) || t,
         O = h && null != s,
         p = () => {
-            A({
-                header: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-                body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_PACKAGE_CONTENTS) }),
-                confirmText: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
-                cancelText: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
+            m({
+                header: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
+                body: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_PACKAGE_CONTENTS) }),
+                confirmText: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
+                cancelText: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
                 confirmButtonColor: l.Button.Colors.BRAND,
                 onConfirm: (e) => {
                     g(!0),
@@ -55,16 +55,16 @@ function g() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS })
+                                        ? c.Z.show({ body: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS })
                                         : c.Z.show({
-                                              title: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                              body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                              title: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
+                                              body: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
                                           });
                                 },
                                 () =>
                                     c.Z.show({
-                                        title: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                        body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                        title: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
+                                        body: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
                                     })
                             )
                             .finally(() => g(!1));
@@ -75,21 +75,21 @@ function g() {
         setting: I.s6.PRIVACY_DATA_REQUEST,
         children: [
             (0, n.jsx)(S.H, {
-                header: m.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE,
-                description: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_REQUEST_DATA) })
+                header: A.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE,
+                description: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_REQUEST_DATA) })
             }),
             O
                 ? (0, n.jsx)(l.Card, {
                       className: C.card,
                       children: (0, n.jsx)(l.Text, {
                           variant: 'text-md/normal',
-                          children: m.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: r()(s.created_at).add(N.eBq, 'days').format('MMMM Do YYYY') })
+                          children: A.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: r()(s.created_at).add(N.eBq, 'days').format('MMMM Do YYYY') })
                       })
                   })
                 : (0, n.jsx)('div', {
                       className: C.button,
                       children: (0, n.jsx)(l.Tooltip, {
-                          text: e.verified ? null : m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
+                          text: e.verified ? null : A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
                           children: (e) => {
                               let { onMouseEnter: s, onMouseLeave: a } = e;
                               return (0, n.jsx)(l.Button, {
@@ -100,7 +100,7 @@ function g() {
                                   look: l.Button.Looks.FILLED,
                                   color: l.Button.Colors.BRAND,
                                   submitting: i || t,
-                                  children: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
+                                  children: A.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
                               });
                           }
                       })

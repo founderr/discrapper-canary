@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 });
 var n = t(735250),
@@ -18,22 +18,22 @@ var n = t(735250),
     S = t(755451),
     I = t(699623),
     N = t(820350);
-function m(e) {
-    let { user: s, showOverlay: t, children: m } = e,
+function A(e) {
+    let { user: s, showOverlay: t, children: A } = e,
         C = (0, r.ZP)(),
-        { analyticsLocations: A } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
+        { analyticsLocations: m } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
     return (a.useEffect(() => {
         t &&
             d.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: A,
+                location_stack: m,
                 type: E.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
             });
-    }, [t, A]),
+    }, [t, m]),
     t)
         ? (0, n.jsxs)('div', {
               className: S.upsellOverlayContainer,
               children: [
-                  (0, n.jsx)('div', { children: m }),
+                  (0, n.jsx)('div', { children: A }),
                   (0, n.jsxs)('div', {
                       className: S.upsellOverlay,
                       children: [
@@ -74,5 +74,5 @@ function m(e) {
                   })
               ]
           })
-        : (0, n.jsx)(n.Fragment, { children: m });
+        : (0, n.jsx)(n.Fragment, { children: A });
 }

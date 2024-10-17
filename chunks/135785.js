@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(230711),
     o = n(63063),
     c = n(74538),
-    d = n(140465),
-    _ = n(474936),
+    _ = n(140465),
+    d = n(474936),
     E = n(981631),
     u = n(689938),
     T = n(47821);
@@ -15,12 +15,12 @@ t.Z = (e) => {
     let t,
         n,
         { premiumSubscription: a, className: I, isFullscreen: R = !1, textColor: g } = e,
-        N = (0, d.Nx)();
+        N = (0, _.Nx)();
     if (null == a) return null;
     let m = null != a ? c.ZP.getPremiumPlanItem(a) : null;
     if ((c.ZP.isBoostOnlySubscription(a) ? (t = u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION) : null != m && (t = c.ZP.getDisplayPremiumType(m.planId)), null == t)) return null;
     let C = () => l.Z.open(E.oAB.SUBSCRIPTIONS),
-        f = (null != m ? c.ZP.getSkuIdForPlan(m.planId) : null) === _.Si.TIER_1;
+        A = (null != m ? c.ZP.getSkuIdForPlan(m.planId) : null) === d.Si.TIER_1;
     return (
         (n = null != g ? g : N || R ? 'always-white' : 'text-normal'),
         (0, s.jsxs)(i.Card, {
@@ -40,7 +40,7 @@ t.Z = (e) => {
                 (0, s.jsx)(i.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: f
+                    children: A
                         ? u.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
                               helpdeskArticle: o.Z.getArticleURL(E.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: C

@@ -1,13 +1,13 @@
 t.d(n, {
     u: function () {
-        return o;
+        return u;
     }
 });
 var r = t(735250);
 t(470079);
-var a = t(481060);
-function o(e) {
-    (0, a.openModalLazy)(async () => {
+var o = t(481060);
+function u(e) {
+    (0, o.openModalLazy)(async () => {
         let { default: n } = await t.e('16359').then(t.bind(t, 588091));
         return (t) =>
             (0, r.jsx)(n, {

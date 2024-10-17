@@ -17,11 +17,11 @@ function _(e) {
     let { processedCode: t, channelContext: _, customGiftMessage: E, giftInfo: I } = e,
         m = !1,
         T = null,
-        h = s.default.getCurrentUser(),
-        N = (0, o.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
+        f = s.default.getCurrentUser(),
+        h = (0, o.yd)(null == f ? void 0 : f.premiumType, u.p9.TIER_0);
     (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('92446'), n.e('7312')]).then(n.bind(n, 409858));
+            let { default: e } = await Promise.all([n.e('92446'), n.e('63264')]).then(n.bind(n, 409858));
             return (n) => {
                 var a, s;
                 return (0, i.jsx)(e, {
@@ -40,7 +40,7 @@ function _(e) {
         {
             onCloseCallback: () => {
                 var e;
-                m && null != T && !N && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                m && null != T && !h && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

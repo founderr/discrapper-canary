@@ -27,23 +27,23 @@ var i,
     I = n(637374),
     m = n(626799),
     T = n(624367),
-    h = n(433074),
-    N = n(421474),
-    f = n(603270),
-    C = n(171364),
-    p = n(162297),
+    f = n(433074),
+    h = n(421474),
+    N = n(603270),
+    p = n(171364),
+    C = n(162297),
     g = n(222709),
-    A = n(446411),
-    S = n(960904),
-    R = n(161314),
-    x = n(119392),
+    S = n(446411),
+    A = n(960904),
+    x = n(161314),
+    R = n(119392),
     O = n(163268),
-    M = n(25610),
-    v = n(703751),
+    v = n(25610),
+    M = n(703751),
     L = n(761538),
     Z = n(674611),
-    P = n(346610),
-    b = n(868643),
+    b = n(346610),
+    P = n(868643),
     D = n(294734),
     j = n(426275),
     U = n(947849),
@@ -57,8 +57,8 @@ var i,
     H = n(505104),
     Y = n(954654),
     W = n(41776),
-    K = n(628238),
-    z = n(454585),
+    z = n(628238),
+    K = n(454585),
     X = n(768494),
     Q = n(124347),
     J = n(976853),
@@ -81,23 +81,23 @@ var i,
     eI = n(607744),
     em = n(496675),
     eT = n(594174),
-    eh = n(52824),
-    eN = n(626135),
-    ef = n(70956),
-    eC = n(408433),
-    ep = n(630388),
+    ef = n(52824),
+    eh = n(626135),
+    eN = n(70956),
+    ep = n(408433),
+    eC = n(630388),
     eg = n(709054),
-    eA = n(591759),
-    eS = n(169525),
-    eR = n(786761),
-    ex = n(161010),
+    eS = n(591759),
+    eA = n(169525),
+    ex = n(786761),
+    eR = n(161010),
     eO = n(461157),
-    eM = n(901461),
-    ev = n(432376),
+    ev = n(901461),
+    eM = n(432376),
     eL = n(384203),
     eZ = n(633957),
-    eP = n(530472),
-    eb = n(29909),
+    eb = n(530472),
+    eP = n(29909),
     eD = n(782658),
     ej = n(219797),
     eU = n(453687),
@@ -111,8 +111,8 @@ var i,
     eH = n(817384),
     eY = n(981631),
     eW = n(474936),
-    eK = n(689938),
-    ez = n(916315),
+    ez = n(689938),
+    eK = n(916315),
     eX = n(287847),
     eQ = n(680674);
 function eJ(e, t, n) {
@@ -140,18 +140,18 @@ function eq() {
             (0, a.jsx)(_.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: eK.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({ onClick: () => (0, en.z)() })
+                children: ez.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({ onClick: () => (0, en.z)() })
             })
         ]
     });
 }
-let e$ = 15 * ef.Z.Millis.MINUTE,
+let e$ = 15 * eN.Z.Millis.MINUTE,
     e0 = new Set(['discord-developers', 'discord-testers', 'discord-townhall', 'discordgameslab']),
     e1 = (e, t, n) => () => {
         let i = null != t ? t : n;
         if (null == i) return null;
         let { url: s, proxyURL: r, width: l, height: o } = i;
-        return (0, a.jsx)(eb.Z, {
+        return (0, a.jsx)(eP.Z, {
             width: l,
             height: o,
             src: null != r && '' !== r ? r : s,
@@ -163,7 +163,7 @@ let e$ = 15 * ef.Z.Millis.MINUTE,
     e7 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: s } = e;
         return null != i && null != s && Q.uo.test(n)
-            ? (0, a.jsx)(eb.Z, {
+            ? (0, a.jsx)(eP.Z, {
                   width: i,
                   height: s,
                   src: n,
@@ -218,14 +218,14 @@ class e3 extends (i = s.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eW.Lw);
-        return (0, ex.M)('attachment') && t ? (0, a.jsx)(eq, {}) : null;
+        return (0, eR.M)('attachment') && t ? (0, a.jsx)(eq, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
             ? null
             : e.codedLinks.map((t) => {
                   let { type: n, code: i } = t;
-                  if (n === S.g.INVITE)
+                  if (n === A.g.INVITE)
                       return this.shouldRenderInvite(i)
                           ? (0, a.jsx)(
                                 eD.Z,
@@ -237,9 +237,9 @@ class e3 extends (i = s.Component) {
                                 i
                             )
                           : null;
-                  if (n === S.g.TEMPLATE) return (0, a.jsx)(F.Z, { code: i }, i);
-                  if (n === S.g.EVENT) return (0, a.jsx)(G.Z, { code: i }, i);
-                  else if (n === S.g.CHANNEL_LINK)
+                  if (n === A.g.TEMPLATE) return (0, a.jsx)(F.Z, { code: i }, i);
+                  if (n === A.g.EVENT) return (0, a.jsx)(G.Z, { code: i }, i);
+                  else if (n === A.g.CHANNEL_LINK)
                       return (0, a.jsx)(
                           eL.Z,
                           {
@@ -248,16 +248,16 @@ class e3 extends (i = s.Component) {
                           },
                           i
                       );
-                  else if (n === S.g.APP_DIRECTORY_PROFILE)
+                  else if (n === A.g.APP_DIRECTORY_PROFILE)
                       return (0, a.jsx)(
-                          h.Z,
+                          f.Z,
                           {
                               code: i,
                               message: e
                           },
                           i
                       );
-                  else if (n === S.g.ACTIVITY_BOOKMARK)
+                  else if (n === A.g.ACTIVITY_BOOKMARK)
                       return (0, a.jsx)(
                           T.Z,
                           {
@@ -266,34 +266,34 @@ class e3 extends (i = s.Component) {
                           },
                           i
                       );
-                  else if (n === S.g.GUILD_PRODUCT) return (0, a.jsx)(k.Z, { code: i }, i);
-                  else if (n === S.g.SERVER_SHOP) return (0, a.jsx)(R.Z, { guildId: i }, i);
-                  else if (n === S.g.QUESTS_EMBED) return (0, a.jsx)(ea.Z, { questId: i }, i);
-                  else if (n === S.g.APP_DIRECTORY_STOREFRONT)
+                  else if (n === A.g.GUILD_PRODUCT) return (0, a.jsx)(k.Z, { code: i }, i);
+                  else if (n === A.g.SERVER_SHOP) return (0, a.jsx)(x.Z, { guildId: i }, i);
+                  else if (n === A.g.QUESTS_EMBED) return (0, a.jsx)(ea.Z, { questId: i }, i);
+                  else if (n === A.g.APP_DIRECTORY_STOREFRONT)
                       return (0, a.jsx)(
-                          f.P,
+                          N.P,
                           {
                               appId: i,
                               message: e
                           },
                           i
                       );
-                  else if (n === S.g.APP_DIRECTORY_STOREFRONT_SKU) {
-                      let t = (0, N.Q)(i);
+                  else if (n === A.g.APP_DIRECTORY_STOREFRONT_SKU) {
+                      let t = (0, h.Q)(i);
                       return null == t
                           ? null
                           : (0, a.jsx)(
-                                f.F,
+                                N.F,
                                 {
                                     skuId: t.skuId,
                                     message: e
                                 },
                                 i
                             );
-                  } else if (n === S.g.DISCOVERY_GAME) return (0, a.jsx)(x.Z, { gameId: i }, i);
-                  else if (n === S.g.APP_OAUTH2_LINK) {
-                      let { enabled: e } = C.I.getCurrentConfig({ location: 'MessageAccessories' }, { autoTrackExposure: !1 });
-                      return e ? (0, a.jsx)(p.Z, { applicationId: i }, i) : null;
+                  } else if (n === A.g.DISCOVERY_GAME) return (0, a.jsx)(R.Z, { gameId: i }, i);
+                  else if (n === A.g.APP_OAUTH2_LINK) {
+                      let { enabled: e } = p.I.getCurrentConfig({ location: 'MessageAccessories' }, { autoTrackExposure: !1 });
+                      return e ? (0, a.jsx)(C.Z, { applicationId: i }, i) : null;
                   } else throw Error('Unknown coded link type: '.concat(n));
               });
     }
@@ -358,14 +358,14 @@ class e3 extends (i = s.Component) {
         let { channel: t, hasInlineForwardButton: n, gifAutoPlay: i, canDeleteAttachments: s, inlineAttachmentMedia: r, onMediaItemContextMenu: l, shouldRedactExplicitContent: o, shouldHideMediaOptions: c } = this.props,
             { attachments: u, flags: d } = e;
         if (0 === u.length || e.isPoll() || e.isUIKitComponents()) return null;
-        let _ = u.filter((e) => null == e.flags || !(0, ep.yE)(e.flags, eY.J0y.IS_THUMBNAIL));
+        let _ = u.filter((e) => null == e.flags || !(0, eC.yE)(e.flags, eY.J0y.IS_THUMBNAIL));
         if (0 === _.length) return null;
         let E = _.map((t) => {
                 var n;
                 return {
                     ...(0, X.JD)(t, e),
                     original: t.url,
-                    srcIsAnimated: (0, ep.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, eY.J0y.IS_ANIMATED)
+                    srcIsAnimated: (0, eC.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, eY.J0y.IS_ANIMATED)
                 };
             }).filter((e) => 'INVALID' !== e.type),
             I = {
@@ -385,11 +385,11 @@ class e3 extends (i = s.Component) {
                           I
                       )
                     : {},
-            T = (0, ep.yE)(d, eY.iLy.IS_VOICE_MESSAGE);
-        function h(e, t) {
-            return (0, eS.dn)(e.originalItem, t);
+            T = (0, eC.yE)(d, eY.iLy.IS_VOICE_MESSAGE);
+        function f(e, t) {
+            return (0, eA.dn)(e.originalItem, t);
         }
-        let N = _.map((n) => {
+        let h = _.map((n) => {
                 let a = (0, X.VY)(n),
                     o = {
                         message: e,
@@ -398,7 +398,7 @@ class e3 extends (i = s.Component) {
                         canRemoveItem: s && (_.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
                         className: eX.embedWrapper,
-                        getObscureReason: h,
+                        getObscureReason: f,
                         onContextMenu:
                             null != l
                                 ? (e) => {
@@ -412,7 +412,7 @@ class e3 extends (i = s.Component) {
                         renderGenericFileComponent: ej.ZK,
                         renderMosaicItemFooter: ej.L9,
                         onPlay: (e, i, a) => {
-                            eN.default.track(eY.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+                            eh.default.track(eY.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.id,
                                 channel_type: t.type,
@@ -425,37 +425,37 @@ class e3 extends (i = s.Component) {
                         gifFavoriteButton: e7(a),
                         isSearchResult: this.props.isSearchResult
                     },
-                    c = (0, eh.q)({
+                    c = (0, ef.q)({
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
                 return c in m && (o.onClick = m[c]), o;
             }),
-            f = n
+            N = n
                 ? (0, a.jsx)(j.Z, {
-                      className: ez.hideIfMessageNotFocused,
+                      className: eK.hideIfMessageNotFocused,
                       messageId: e.id,
                       channelId: t.id,
                       targetKind: 'media'
                   })
                 : void 0;
         return (0, a.jsx)(eF.Z, {
-            items: N,
-            inlineForwardButton: f
+            items: h,
+            inlineForwardButton: N
         });
     }
     renderEmbeds(e) {
         let { renderEmbeds: t } = this.props;
         return 0 !== e.embeds.length && t
             ? e.embeds.map((t, n) => {
-                  if (eH.b.has(t.type) || (0, eC.l3)(t) || ((0, V.b)(t) && !(0, H.M)(e))) return null;
+                  if (eH.b.has(t.type) || (0, ep.l3)(t) || ((0, V.b)(t) && !(0, H.M)(e))) return null;
                   let i = {
                       renderImageComponent: ek.Yi,
                       renderVideoComponent: ek.lV,
                       renderLinkComponent: ek.iT
                   };
                   if (t.type === eY.hBH.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && 'Discord' === t.provider.name) {
-                      let s = eA.Z.safeParseWithQuery(t.url);
+                      let s = eS.Z.safeParseWithQuery(t.url);
                       if (null != s && null != s.pathname) {
                           let r = s.pathname.split('/')[3];
                           if (null != r)
@@ -508,8 +508,8 @@ class e3 extends (i = s.Component) {
               });
     }
     renderEphemeralAccessories(e) {
-        return (0, eR.Pv)(e)
-            ? (0, a.jsx)(eP.Z, {
+        return (0, ex.Pv)(e)
+            ? (0, a.jsx)(eb.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       E.Z.dismissAutomatedMessage(e);
@@ -546,7 +546,7 @@ class e3 extends (i = s.Component) {
             if (!(Date.now() - eg.default.extractTimestamp(e.id) >= e$))
                 return (0, a.jsx)('div', {
                     className: eX.threadRoleMentionFailure,
-                    children: eK.Z.Messages.THREAD_ROLE_MENTION_FAILURE
+                    children: ez.Z.Messages.THREAD_ROLE_MENTION_FAILURE
                 });
         }
     }
@@ -554,9 +554,9 @@ class e3 extends (i = s.Component) {
         let { channel: e, message: t } = this.props;
         return (0, a.jsxs)(_.DeclarativeConfirmModal, {
             dismissable: !0,
-            header: eK.Z.Messages.SUPPRESS_EMBED_TITLE,
-            confirmText: eK.Z.Messages.SUPPRESS_EMBED_CONFIRM,
-            cancelText: eK.Z.Messages.CANCEL,
+            header: ez.Z.Messages.SUPPRESS_EMBED_TITLE,
+            confirmText: ez.Z.Messages.SUPPRESS_EMBED_CONFIRM,
+            cancelText: ez.Z.Messages.CANCEL,
             onCancel: () => this.setState({ showSuppressModal: !1 }),
             onConfirm: () => {
                 E.Z.suppressEmbeds(e.id, t.id), this.setState({ showSuppressModal: !1 });
@@ -566,12 +566,12 @@ class e3 extends (i = s.Component) {
                     variant: 'text-md/normal',
                     color: 'text-normal',
                     className: eX.confirmText,
-                    children: eK.Z.Messages.SUPPRESS_EMBED_BODY
+                    children: ez.Z.Messages.SUPPRESS_EMBED_BODY
                 }),
                 (0, a.jsx)(_.Text, {
                     variant: 'text-md/normal',
                     color: 'text-muted',
-                    children: eK.Z.Messages.SUPPRESS_EMBED_TIP
+                    children: ez.Z.Messages.SUPPRESS_EMBED_TIP
                 })
             ]
         });
@@ -585,9 +585,9 @@ class e3 extends (i = s.Component) {
         }
         return (0, a.jsx)(_.DeclarativeConfirmModal, {
             dismissable: !0,
-            header: eK.Z.Messages.REMOVE_ATTACHMENT_TITLE,
-            confirmText: eK.Z.Messages.REMOVE_ATTACHMENT_CONFIRM,
-            cancelText: eK.Z.Messages.CANCEL,
+            header: ez.Z.Messages.REMOVE_ATTACHMENT_TITLE,
+            confirmText: ez.Z.Messages.REMOVE_ATTACHMENT_CONFIRM,
+            cancelText: ez.Z.Messages.CANCEL,
             onCancel: () =>
                 this.setState({
                     showRemoveAttachmentModal: !1,
@@ -605,7 +605,7 @@ class e3 extends (i = s.Component) {
                 variant: 'text-md/normal',
                 color: 'text-normal',
                 className: eX.confirmText,
-                children: eK.Z.Messages.REMOVE_ATTACHMENT_BODY
+                children: ez.Z.Messages.REMOVE_ATTACHMENT_BODY
             })
         });
     }
@@ -684,27 +684,27 @@ class e3 extends (i = s.Component) {
             I = this.renderEmbeds(t),
             m = this.renderActivityInvite(t),
             T = this.renderReactions(t),
-            h = this.renderPublishBump(t),
-            N = this.renderEphemeralAccessories(t),
-            f = this.renderStickersAccessories(t),
-            C = this.renderThreadAccessories(t),
-            p = this.renderComponentAccessories(t),
+            f = this.renderPublishBump(t),
+            h = this.renderEphemeralAccessories(t),
+            N = this.renderStickersAccessories(t),
+            p = this.renderThreadAccessories(t),
+            C = this.renderComponentAccessories(t),
             g = this.renderThreadRoleMentionWarning(t),
-            A = this.renderEmbeddedApplicationInstanceEmbed(t),
-            S = this.renderInteractionPremiumUpsell(t),
-            R = this.renderMediaPostEmbeds(t),
-            x = this.renderSafetyPolicyNotice(t),
+            S = this.renderEmbeddedApplicationInstanceEmbed(t),
+            A = this.renderInteractionPremiumUpsell(t),
+            x = this.renderMediaPostEmbeds(t),
+            R = this.renderSafetyPolicyNotice(t),
             O = this.renderSafetySystemNotification(t),
-            M = this.renderVoiceChannelInvite(t, n),
-            v = this.renderMediaObscureNotice(t),
+            v = this.renderVoiceChannelInvite(t, n),
+            M = this.renderMediaObscureNotice(t),
             L = this.renderPoll(t, i),
             Z = this.renderForwardedMessage(t);
-        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == f && null == C && null == p && null == A && null == g && null == R && null == x && null != S && null == L && null == M && null == Z
+        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == f && null == h && null == N && null == p && null == C && null == S && null == g && null == x && null == R && null != A && null == L && null == v && null == Z
             ? null
             : (0, a.jsxs)('div', {
                   id: (0, eU.bX)(t),
                   className: l()(e, eX.container),
-                  children: [Z, g, L, o, c, u, R, d, _, I, v, m, f, p, A, S, E, T, h, N, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), C, x, O, M]
+                  children: [Z, g, L, o, c, u, x, d, _, I, M, m, N, C, S, A, E, T, f, h, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), p, R, O, v]
               });
     }
     constructor(...e) {
@@ -728,13 +728,13 @@ class e3 extends (i = s.Component) {
                 let { gifAutoPlay: s, inlineEmbedMedia: r, canSuppressEmbeds: l, hasSpoilerEmbeds: o, shouldRedactExplicitContent: c, hasInlineForwardButton: u, isSearchResult: d } = this.props,
                     _ = i.channel_id,
                     E = i.id,
-                    I = (0, eS.BP)(e, _, E, o, c);
+                    I = (0, eA.BP)(e, _, E, o, c);
                 if (e.type === eY.hBH.GIFT) return null;
                 let m = (0, a.jsx)(
                     U.h.Provider,
                     {
                         value: e1(e.url, e.image, e.video),
-                        children: (0, a.jsx)(A.ZP, {
+                        children: (0, a.jsx)(S.ZP, {
                             className: eX.embedWrapper,
                             embed: e,
                             obscureReason: null != I ? I : void 0,
@@ -758,7 +758,7 @@ class e3 extends (i = s.Component) {
                           children: [
                               m,
                               (0, a.jsx)(j.Z, {
-                                  className: ez.hideIfMessageNotFocused,
+                                  className: eK.hideIfMessageNotFocused,
                                   messageId: E,
                                   channelId: _,
                                   targetKind: 'embed',
@@ -768,10 +768,10 @@ class e3 extends (i = s.Component) {
                       })
                     : m;
             }),
-            eJ(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? z.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
+            eJ(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? K.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
             eJ(this, 'renderEmbedDescription', (e, t, n) =>
                 e.type === eY.hBH.RICH
-                    ? z.Z.parse(t, !0, {
+                    ? K.Z.parse(t, !0, {
                           channelId: this.props.channel.id,
                           allowLinks: !0,
                           allowEmojiLinks: !0,
@@ -800,18 +800,18 @@ function e2(e) {
         l = (0, c.e7)([e_.default], () => e_.default.getId()),
         o = ed.x4.useSetting(),
         u = ed.RS.useSetting(),
-        d = ed.NA.useSetting() && !(0, eM.Z)(e.message),
+        d = ed.NA.useSetting() && !(0, ev.Z)(e.message),
         _ = ed.nc.useSetting(),
         E = ed.QK.useSetting(),
         I = (0, c.e7)([eI.Z], () => null == n.guild_id || eI.Z.canChatInGuild(n.guild_id), [n]),
         m = (0, c.e7)([W.Z], () => null != n.guild_id && W.Z.isLurking(n.guild_id), [n]),
         T = (0, c.e7)([eE.ZP], () => eE.ZP.isCurrentUserGuest(n.guild_id), [n]),
-        h = (0, c.e7)([eE.ZP, eT.default], () => {
+        f = (0, c.e7)([eE.ZP, eT.default], () => {
             var e, t;
             let i = eT.default.getCurrentUser();
             return null !== (t = null != n.guild_id && null != i ? (null === (e = eE.ZP.getMember(n.guild_id, i.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
-        { canAddNewReactions: N, canManageMessages: f } = (0, c.cj)(
+        { canAddNewReactions: h, canManageMessages: N } = (0, c.cj)(
             [em.Z],
             () => ({
                 canAddNewReactions: I && em.Z.can(eY.Plq.ADD_REACTIONS, n),
@@ -819,41 +819,41 @@ function e2(e) {
             }),
             [I, n]
         ),
-        C = (0, y.ux)(n.guild_id),
-        [, p] = (0, B.AB)(n.guild_id),
+        p = (0, y.ux)(n.guild_id),
+        [, C] = (0, B.AB)(n.guild_id),
         g = (0, ec.$R)(n),
-        A = (l === i.author.id || f) && i.author.id !== eY.LAt && !1 !== s && !(0, ep.yE)(i.flags, eY.iLy.EPHEMERAL) && g && 1 === (0, eO.Z)(i),
-        S = l === i.author.id && g && !r,
-        R = i.author.id === l,
-        x = i.isFirstMessageInForumPost(n),
-        O = (0, ev.Z)({
+        S = (l === i.author.id || N) && i.author.id !== eY.LAt && !1 !== s && !(0, eC.yE)(i.flags, eY.iLy.EPHEMERAL) && g && 1 === (0, eO.Z)(i),
+        A = l === i.author.id && g && !r,
+        x = i.author.id === l,
+        R = i.isFirstMessageInForumPost(n),
+        O = (0, eM.Z)({
             channel: n,
             canChat: I,
             renderReactions: _,
-            canAddNewReactions: N,
+            canAddNewReactions: h,
             isLurking: m,
             isGuest: T,
-            communicationDisabled: p,
+            communicationDisabled: C,
             isActiveChannelOrUnarchivableThread: g,
-            isAutomodQuarantined: C
+            isAutomodQuarantined: p
         }),
-        L = (0, K.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
+        L = (0, z.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
         Z = (0, J.Z)(null == n ? void 0 : n.id),
         D = (0, ee.Z)(i),
-        j = (0, M.V)(n.id, i.author.id),
-        U = (0, v.r)(i.id),
-        { hasInlineForwardButton: k } = (0, P.yk)({ location: 'MessageAccessories' }),
-        G = (0, b.a)(i) && k;
+        j = (0, v.V)(n.id, i.author.id),
+        U = (0, M.r)(i.id),
+        { hasInlineForwardButton: k } = (0, b.yk)({ location: 'MessageAccessories' }),
+        G = (0, P.a)(i) && k;
     return (0, a.jsx)(e3, {
-        canSuppressEmbeds: A,
-        canDeleteAttachments: S,
+        canSuppressEmbeds: S,
+        canDeleteAttachments: A,
         ...O,
-        disableReactionReads: !!x || O.disableReactionReads,
+        disableReactionReads: !!R || O.disableReactionReads,
         ...e,
         isLurking: m && I,
         isGuest: T && I,
-        isPendingMember: h && I,
-        isCurrentUser: R,
+        isPendingMember: f && I,
+        isCurrentUser: x,
         inlineAttachmentMedia: o,
         inlineEmbedMedia: u,
         renderEmbeds: d,
@@ -879,11 +879,11 @@ let e4 = (e) => {
         E = ed.RS.useSetting(),
         I = ed.NA.useSetting(),
         m = ed.QK.useSetting(),
-        T = (0, K.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        h = (0, J.Z)(null == i ? void 0 : i.id),
-        N = (0, M.V)(i.id, n.author.id),
-        f = (0, v.r)(n.id),
-        C = (0, ee.Z)(n);
+        T = (0, z.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        f = (0, J.Z)(null == i ? void 0 : i.id),
+        h = (0, v.V)(i.id, n.author.id),
+        N = (0, M.r)(n.id),
+        p = (0, ee.Z)(n);
     return (0, a.jsx)(e3, {
         ...d,
         message: n,
@@ -899,12 +899,12 @@ let e4 = (e) => {
         inlineEmbedMedia: E,
         renderEmbeds: I,
         gifAutoPlay: m,
-        poll: C,
+        poll: p,
         showListsAndHeaders: T,
         showMaskedLinks: T,
-        shouldHideMediaOptions: h,
-        shouldRedactExplicitContent: N,
-        shouldRenderCtaButton: f,
+        shouldHideMediaOptions: f,
+        shouldRedactExplicitContent: h,
+        shouldRenderCtaButton: N,
         hasInlineForwardButton: !1,
         isSearchResult: u
     });

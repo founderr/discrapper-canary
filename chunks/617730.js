@@ -8,13 +8,13 @@ n(470079);
 var r = n(481060),
     i = n(973616),
     a = n(131704),
-    o = n(601964),
-    l = n(598077),
+    l = n(601964),
+    o = n(598077),
     c = n(230224),
     u = n(258356),
     d = n(981631),
-    _ = n(689938),
-    h = n(39578);
+    h = n(689938),
+    _ = n(39578);
 let E = (e) => {
     let { state: t } = e;
     switch (t) {
@@ -28,50 +28,50 @@ let E = (e) => {
 function g(e) {
     let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
     if (null == t) return null;
-    let p = null != t.guild ? new o.ZP(t.guild) : null,
-        m = null != t.channel ? (0, a.jD)(t.channel) : null,
-        f = null != t.target_application ? new i.Z(t.target_application) : null,
-        I = g || null == t.inviter ? null : new l.Z(t.inviter),
+    let p = null != t.guild ? new l.ZP(t.guild) : null,
+        f = null != t.channel ? (0, a.jD)(t.channel) : null,
+        m = null != t.target_application ? new i.Z(t.target_application) : null,
+        I = g || null == t.inviter ? null : new o.Z(t.inviter),
         N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         T = E(t),
-        x = {
+        A = {
             invite: t,
             user: I,
             guild: p,
-            channel: m,
-            application: f
+            channel: f,
+            application: m
         };
     return (0, c.JI)(t)
         ? (0, s.jsx)(u.Z, {
               invite: t,
-              channel: m,
+              channel: f,
               isSubmitting: T,
               onAcceptInvite: n
           })
         : (0, s.jsxs)('div', {
-              className: h.container,
+              className: _.container,
               children: [
                   (0, s.jsx)(c.GB, {
-                      application: f,
+                      application: m,
                       guild: p,
                       user: N || (0, c.X7)(t) ? I : null
                   }),
                   (0, c.X7)(t)
                       ? null
                       : (0, s.jsx)(c.jq, {
-                            ...x,
+                            ...A,
                             showBigUserIcon: N
                         }),
                   (0, s.jsx)(c.UM, {
-                      ...x,
+                      ...A,
                       showBigUserIcon: N
                   }),
-                  (0, s.jsx)(c.V6, { ...x }),
+                  (0, s.jsx)(c.V6, { ...A }),
                   (0, s.jsx)(r.Button, {
                       onClick: n,
                       submitting: T,
-                      className: h.acceptButton,
-                      children: _.Z.Messages.INSTANT_INVITE_ACCEPT
+                      className: _.acceptButton,
+                      children: h.Z.Messages.INSTANT_INVITE_ACCEPT
                   })
               ]
           });

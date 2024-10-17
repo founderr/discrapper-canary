@@ -1,18 +1,18 @@
 n.d(t, {
     RB: function () {
-        return x;
+        return R;
     },
     VH: function () {
-        return A;
+        return S;
     },
     Vi: function () {
         return O;
     },
     Vu: function () {
-        return M;
+        return v;
     },
     q7: function () {
-        return R;
+        return x;
     }
 });
 var i,
@@ -29,31 +29,31 @@ var i,
     I = n(319707),
     m = n(584914),
     T = n(334702),
-    h = n(333722),
-    N = n(549931),
-    f = n(178561),
-    C = n(39863),
-    p = n(130312);
+    f = n(333722),
+    h = n(549931),
+    N = n(178561),
+    p = n(39863),
+    C = n(130312);
 ((i = s || (s = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
 let g = {
     CHECKED: _,
     FRIENDS: I,
-    SHARE_SCREEN: C,
-    NEW_MESSAGE: N
+    SHARE_SCREEN: p,
+    NEW_MESSAGE: h
 };
 ((a = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (a.TOP_MESSAGES = 'TOP_MESSAGES'), (a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (a.UPDATE_PROFILE = 'UPDATE_PROFILE'), (a.FIND_FRIENDS = 'FIND_FRIENDS'), (a.ADD_FRIEND = 'ADD_FRIEND'), (a.FIRST_MESSAGE = 'FIRST_MESSAGE');
-let A = {
-        MISSED_MESSAGES: h,
+let S = {
+        MISSED_MESSAGES: f,
         FRIEND_REQUEST_REMINDER: m,
         SCHEDULED_GUILD_EVENT: E,
         TOP_MESSAGES: T,
         NOTIFICATION_CENTER: d,
-        UPDATE_PROFILE: p,
+        UPDATE_PROFILE: C,
         FIND_FRIENDS: u,
         ADD_FRIEND: u,
-        FIRST_MESSAGE: f
+        FIRST_MESSAGE: N
     },
-    S = (e) => {
+    A = (e) => {
         switch (e.item_enum) {
             case o.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -67,10 +67,10 @@ let A = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    R = (e) => {
+    x = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return S(e);
+                return A(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -83,7 +83,7 @@ let A = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    x = (e) => {
+    R = (e) => {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
@@ -120,7 +120,7 @@ let A = {
                 return null;
         }
     },
-    M = (e) => {
+    v = (e) => {
         switch (e.item_enum) {
             case o.AM.UPDATE_PROFILE:
                 return c.Y9;

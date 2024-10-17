@@ -19,9 +19,9 @@ var i,
     I = n(233573);
 let T = 424,
     x = 624,
-    v = 824;
+    S = 824;
 ((s = i || (i = {}))[(s.SELECTED = 0)] = 'SELECTED'), (s[(s.SPEAKER = 1)] = 'SPEAKER'), (s[(s.AUDIENCE = 2)] = 'AUDIENCE');
-let S = (e, t) => {
+let v = (e, t) => {
         let n = Math.floor(e / t - 8),
             i = Math.floor(n / g.Q);
         return {
@@ -29,7 +29,7 @@ let S = (e, t) => {
             speakerTileHeight: i
         };
     },
-    N = (e, t) => (e < T ? 1 : e < x ? 2 : e < v ? 3 : t ? 3 : 4),
+    N = (e, t) => (e < T ? 1 : e < x ? 2 : e < S ? 3 : t ? 3 : 4),
     A = (e) => Math.floor((e - 32) / 102);
 function Z(e) {
     return e.type === h.Ui.VOICE;
@@ -40,7 +40,7 @@ t.Z = (0, o.Z)((e) => {
         {
             selectedParticipantId: T,
             largeStream: x,
-            chatOpen: v
+            chatOpen: S
         } = (0, r.cj)(
             [c.Z],
             () => ({
@@ -57,7 +57,7 @@ t.Z = (0, o.Z)((e) => {
         P = L.filter(Z),
         j = null != L.find((e) => e.type === h.Ui.STREAM),
         O = A(s),
-        y = N(s, v),
+        y = N(s, S),
         D = {
             [h.pV.SPEAKER]: y,
             [h.pV.AUDIENCE]: O,
@@ -66,7 +66,7 @@ t.Z = (0, o.Z)((e) => {
         U = (0, p.Dx)(i.id),
         [k, w] = (0, p.aP)(i.id, D, U),
         B = [Math.max(null !== (t = k[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = k[1]) && void 0 !== n ? n : 1, 1), k[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = S(s, y),
+        { speakerTileWidth: H, speakerTileHeight: G } = v(s, y),
         V = x ? s - 32 : Math.min(s - 64, 3 * H + 8),
         F = (e) => e === k.length - 1 || (0 === b && 1 === e),
         [W, z] = l.useState(!1),

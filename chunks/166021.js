@@ -6,17 +6,17 @@ var s = n(735250),
     l = n(212433),
     o = n(481060),
     c = n(320319),
-    d = n(281781);
+    _ = n(281781);
 t.Z = (e) => {
     let { cards: t, className: n, cardType: r } = e,
-        _ = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
+        d = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
         [E, u] = a.useState(0),
-        [T, I] = a.useState(_()),
+        [T, I] = a.useState(d()),
         [R, g] = a.useState(!1),
         N = t.length;
     a.useEffect(() => {
         let e = () => {
-            I(_());
+            I(d());
         };
         return (
             window.addEventListener('resize', e),
@@ -29,15 +29,15 @@ t.Z = (e) => {
             N > T && E > N - T ? u(N - T) : N <= T && u(0);
         }, [N, T]);
     let m = a.useCallback((e) => ({ x: (e - E) * 100 }), [E]),
-        [C, f] = (0, o.useSprings)(t.length, m);
+        [C, A] = (0, o.useSprings)(t.length, m);
     return (
         a.useEffect(() => {
-            f(m);
-        }, [f, m]),
+            A(m);
+        }, [A, m]),
         (0, s.jsx)('div', {
             className: n,
             children: (0, s.jsxs)('div', {
-                className: d.cardContainer,
+                className: _.cardContainer,
                 children: [
                     N > T &&
                         (0, s.jsx)(o.Clickable, {
@@ -47,22 +47,22 @@ t.Z = (e) => {
                                   }
                                 : void 0,
                             className: i()({
-                                [d.leftArrow]: R,
-                                [d.inactiveArrow]: !R
+                                [_.leftArrow]: R,
+                                [_.inactiveArrow]: !R
                             }),
                             children: (0, s.jsx)(o.ArrowSmallLeftIcon, {
-                                className: d.arrowIcon,
-                                colorClass: d.arrowIcon
+                                className: _.arrowIcon,
+                                colorClass: _.arrowIcon
                             })
                         }),
                     (0, s.jsx)('div', {
-                        className: d.cardInnerContainer,
+                        className: _.cardInnerContainer,
                         children: C.map((e, n) => {
                             let { x: a } = e;
                             return (0, s.jsx)(
                                 l.animated.div,
                                 {
-                                    className: d.card,
+                                    className: _.card,
                                     style: { transform: null == a ? void 0 : a.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
                                     children: (0, s.jsx)(
                                         c.Z,
@@ -82,17 +82,17 @@ t.Z = (e) => {
                             onClick: () => {
                                 u((e) => (e >= N - T ? (g(!0), 0) : e + 1));
                             },
-                            className: d.rightArrow,
+                            className: _.rightArrow,
                             children: (0, s.jsx)(o.ArrowSmallRightIcon, {
-                                className: d.arrowIcon,
-                                colorClass: d.arrowIcon
+                                className: _.arrowIcon,
+                                colorClass: _.arrowIcon
                             })
                         }),
                     N > T &&
                         (0, s.jsx)('div', {
-                            className: d.cardProgressBar,
+                            className: _.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > N - T)) return (0, s.jsx)('div', { className: t === E ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > N - T)) return (0, s.jsx)('div', { className: t === E ? _.selectedDot : _.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

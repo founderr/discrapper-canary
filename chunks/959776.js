@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
 });
 var s = n(913527),
     r = n.n(s),
     i = n(626135),
     a = n(981631);
-function o(e, t) {
+function l(e, t) {
     i.default.track(a.rMx.AGE_GATE_SUBMITTED, {
         dob: 18 > r()().diff(e, 'years') ? e.format('YYYY-MM-DD') : null,
         dob_day: e.date(),

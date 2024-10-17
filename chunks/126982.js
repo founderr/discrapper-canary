@@ -1,39 +1,39 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var s = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(131388),
-    i = t(409813),
-    r = t(750143),
-    o = t(264499),
-    d = t(60314);
-function c(e) {
-    let { step: n, onClose: t } = e,
-        c = (0, l.Z)(r.X);
-    return n === i.h8.BENEFITS || n === i.h8.CONFIRM
+var i = n(735250);
+n(470079);
+var a = n(481060),
+    s = n(131388),
+    r = n(409813),
+    l = n(750143),
+    o = n(264499),
+    c = n(60314);
+function u(e) {
+    let { step: t, onClose: n } = e,
+        u = (0, s.Z)(l.X);
+    return t === r.h8.BENEFITS || t === r.h8.CONFIRM
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: o.headerContainer,
               children: [
-                  !c &&
-                      (0, s.jsx)('div', {
+                  !u &&
+                      (0, i.jsx)('div', {
                           className: o.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
-                          children: (0, s.jsx)('img', {
-                              src: d,
+                          children: (0, i.jsx)('img', {
+                              src: c,
                               alt: '',
                               className: o.headerImage
                           })
                       }),
-                  (0, s.jsx)(a.ModalCloseButton, {
+                  (0, i.jsx)(a.ModalCloseButton, {
                       withCircleBackground: !0,
                       className: o.closeButton,
-                      onClick: t
+                      onClick: n
                   })
               ]
           });

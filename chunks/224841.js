@@ -3,11 +3,11 @@ n(470079);
 var r = n(481060),
     i = n(388905),
     a = n(703656),
-    o = n(63063),
-    l = n(981631),
+    l = n(63063),
+    o = n(981631),
     c = n(689938),
     u = n(634645);
-let d = () => (0, a.uL)(l.Z5c.LOGIN);
+let d = () => (0, a.uL)(o.Z5c.LOGIN);
 t.Z = (e) => {
     let { authBoxClassName: t, underageMessage: a } = e;
     return (0, s.jsxs)(i.ZP, {
@@ -26,7 +26,7 @@ t.Z = (e) => {
                 className: u.subtitle,
                 children: c.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
                     underageMessage: null != a ? a : c.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
-                    helpURL: o.Z.getArticleURL(l.BhN.AGE_GATE)
+                    helpURL: l.Z.getArticleURL(o.BhN.AGE_GATE)
                 })
             }),
             (0, s.jsx)(r.Button, {

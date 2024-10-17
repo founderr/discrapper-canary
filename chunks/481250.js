@@ -65,7 +65,7 @@ let S = {
 };
 function D(e, t, n, a, D) {
     return e.map((R, b) => {
-        var v, E;
+        var E, v;
         let Z = [];
         for (let e of Object.keys(R).sort((e, t) => {
             let n = S[e],
@@ -119,8 +119,8 @@ function D(e, t, n, a, D) {
                         null != n &&
                         null != a &&
                         null != D &&
-                        ((v = a),
-                        (E = t),
+                        ((E = a),
+                        (v = t),
                         (0, r.jsx)(c.Z, {
                             className: f.marginBottom20,
                             children: (0, r.jsxs)(c.Z.Child, {
@@ -132,9 +132,9 @@ function D(e, t, n, a, D) {
                                         children: 'Simulcast Override'
                                     }),
                                     (0, r.jsx)(o.SingleSelect, {
-                                        value: m.ZP.getSimulcastDebugOverride(v, E),
+                                        value: m.ZP.getSimulcastDebugOverride(E, v),
                                         onChange: (e) => {
-                                            s.MS(v, E, e);
+                                            s.MS(E, v, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,

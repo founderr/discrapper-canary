@@ -1,68 +1,68 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return x;
+        return m;
     }
 }),
-    t(47120);
-var s = t(735250);
-t(470079);
-var a = t(772848),
-    l = t(481060),
-    i = t(976255),
-    r = t(667),
-    o = t(335131),
-    d = t(626135),
-    c = t(409813),
-    u = t(608579),
-    E = t(981631);
-let C = 'payment-modal',
-    h = new Set([c.h8.REVIEW, c.h8.CONFIRM]);
-function x(e) {
-    let n;
-    let { skuId: t, isGift: c = !1, giftMessage: x, onClose: f, onComplete: T, analyticsLocations: p, analyticsObject: I } = e,
-        m = !1,
-        S = (0, a.Z)(),
+    n(47120);
+var i = n(735250);
+n(470079);
+var a = n(772848),
+    s = n(481060),
+    r = n(976255),
+    l = n(667),
+    o = n(335131),
+    c = n(626135),
+    u = n(409813),
+    d = n(608579),
+    _ = n(981631);
+let E = 'payment-modal',
+    I = new Set([u.h8.REVIEW, u.h8.CONFIRM]);
+function m(e) {
+    let t;
+    let { skuId: n, isGift: u = !1, giftMessage: m, onClose: T, onComplete: f, analyticsLocations: h, analyticsObject: N } = e,
+        p = !1,
+        C = (0, a.Z)(),
         g = (e) => {
-            n = e;
+            t = e;
         };
-    (0, l.openModalLazy)(
+    (0, s.openModalLazy)(
         async () => (e) => {
-            let { onClose: n, returnRef: a, ...l } = e;
-            return (0, s.jsx)(u.Z, {
-                ...l,
-                loadId: S,
-                skuId: t,
-                isGift: c,
-                giftMessage: x,
-                analyticsLocations: p,
+            let { onClose: t, returnRef: a, ...s } = e;
+            return (0, i.jsx)(d.Z, {
+                ...s,
+                loadId: C,
+                skuId: n,
+                isGift: u,
+                giftMessage: m,
+                analyticsLocations: h,
                 onClose: (e) => {
-                    n(), null == f || f(e);
+                    t(), null == T || T(e);
                 },
                 onComplete: () => {
-                    (m = !0), null == T || T();
+                    (p = !0), null == f || f();
                 },
                 returnRef: a,
                 onStepChange: g
             });
         },
         {
-            modalKey: C,
+            modalKey: E,
             onCloseCallback: () => {
-                !m &&
-                    d.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: S,
-                        payment_type: E.Zuq[E.GZQ.ONE_TIME],
-                        location: I,
-                        is_gift: c,
-                        location_stack: p
+                !p &&
+                    c.default.track(_.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: C,
+                        payment_type: _.Zuq[_.GZQ.ONE_TIME],
+                        location: N,
+                        is_gift: u,
+                        location_stack: h
                     }),
-                    (0, i.fw)(),
-                    (0, r.p)(),
-                    null == f || f(m),
-                    m && (0, o.qg)();
+                    (0, r.fw)(),
+                    (0, l.p)(),
+                    null == T || T(p),
+                    p && (0, o.qg)();
             },
             onCloseRequest: () => {
-                null != n && h.has(n) && (0, l.closeModal)(C);
+                null != t && I.has(t) && (0, s.closeModal)(E);
             }
         }
     );

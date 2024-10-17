@@ -1,19 +1,19 @@
 t.d(n, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var s = t(735250);
+var a = t(735250);
 t(470079);
-var r = t(937615),
-    i = t(653798),
-    l = t(689938);
-function a(e) {
+var s = t(937615),
+    r = t(653798),
+    i = t(689938);
+function l(e) {
     let { invoice: n } = e;
     return n.taxInclusive || n.tax <= 0
         ? null
-        : (0, s.jsx)(i.R$, {
-              label: l.Z.Messages.TAX_LABEL,
-              value: (0, r.T4)(n.tax, n.currency)
+        : (0, a.jsx)(r.R$, {
+              label: i.Z.Messages.TAX_LABEL,
+              value: (0, s.T4)(n.tax, n.currency)
           });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250),
@@ -17,41 +17,41 @@ var i = n(735250),
     I = n(222940),
     m = n(490897),
     T = n(689938),
-    h = n(233194);
-function N(e) {
-    let { onOpen: t, onClose: n, className: N } = e,
-        f = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        C = a.useRef(null),
-        p = (0, s.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0),
+    f = n(233194);
+function h(e) {
+    let { onOpen: t, onClose: n, className: h } = e,
+        N = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        p = a.useRef(null),
+        C = (0, s.e7)([d.ZP], () => (null == N ? void 0 : N.id) != null && d.ZP.getMentionCount(N.id, m.W.NOTIFICATION_CENTER) > 0),
         { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        A = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
+        S = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: p },
+        badgeState: { badgeForYou: C },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n, a) =>
             (0, i.jsxs)('div', {
-                ref: C,
-                className: h.recentsIcon,
+                ref: p,
+                className: f.recentsIcon,
                 children: [
                     g &&
                         (0, i.jsx)(I.Z, {
-                            inboxIconRef: C,
+                            inboxIconRef: p,
                             recentsPopoutShown: t
                         }),
                     (0, i.jsx)(u.U, {
                         location: 'inbox-button',
                         children: (0, i.jsx)(c.JO, {
                             ...n,
-                            className: N,
+                            className: h,
                             onClick: e,
                             icon: r.InboxIcon,
                             'aria-label': T.Z.Messages.INBOX,
                             tooltip: t ? null : T.Z.Messages.INBOX,
                             selected: t,
-                            showBadge: p || A || a
+                            showBadge: C || S || a
                         })
                     })
                 ]

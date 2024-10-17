@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return A;
     }
 }),
     t(47120);
@@ -23,23 +23,23 @@ function N(e) {
     let s,
         { subscription: t, withOverheadSeparator: a } = e,
         { analyticsLocations: N } = (0, l.ZP)(),
-        [m] = (0, u.ED)({
+        [A] = (0, u.ED)({
             subscriptionId: t.id,
             renewal: !0,
             analyticsLocations: N,
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == m) return null;
+    if (null == A) return null;
     let C = a ? I.finePrintWithOverheadSeparator : I.finePrint,
-        A = m.invoiceItems.find((e) => {
+        m = A.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
         });
-    if (null == A) return null;
-    let g = A.subscriptionPlanId,
+    if (null == m) return null;
+    let g = m.subscriptionPlanId,
         h = c.Z.get(g);
     i()(null != h, 'Missing plan');
-    let O = (0, _.T4)(m.total, m.currency);
+    let O = (0, _.T4)(A.total, A.currency);
     return (
         h.interval === E.rV.YEAR
             ? (s = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
@@ -72,7 +72,7 @@ function N(e) {
         })
     );
 }
-function m(e) {
+function A(e) {
     let { subscription: s, withOverheadSeparator: t } = e;
     return s.status === T.O0b.CANCELED || s.isPurchasedExternally
         ? null

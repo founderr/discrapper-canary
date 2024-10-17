@@ -20,9 +20,9 @@ var a = t(442837),
 function S(e) {
     var s;
     let { app: t, currentSubscription: _, currentListing: u, alternativeListings: S, bundleSku: N } = e,
-        m = (0, r.y)(t, 100),
+        A = (0, r.y)(t, 100),
         C = (0, d.KK)(N.flags),
-        A = C ? i.ServerIcon : i.UserIcon,
+        m = C ? i.ServerIcon : i.UserIcon,
         g = C ? E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS,
         h = null === (s = _.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
         O = (0, a.e7)([c.Z], () => (C && null != h ? c.Z.getGuild(h) : void 0), [h, C]);
@@ -31,9 +31,9 @@ function S(e) {
             (0, n.jsxs)('div', {
                 className: T.header,
                 children: [
-                    null != m &&
+                    null != A &&
                         (0, n.jsx)(i.Image, {
-                            src: m.href,
+                            src: A.href,
                             imageClassName: T.appIcon,
                             width: 48,
                             height: 48
@@ -51,7 +51,7 @@ function S(e) {
                                         variant: 'heading-md/normal',
                                         className: T.subInfoType,
                                         children: [
-                                            (0, n.jsx)(A, {
+                                            (0, n.jsx)(m, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
@@ -121,7 +121,7 @@ function S(e) {
 }
 function I(e) {
     let { storeListing: s, guildId: t } = e,
-        { openModal: a } = (0, _.Z)({
+        { openModal: a } = (0, _.ZP)({
             analyticsLocation: u.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: s.skuId,
             subscribeForGuild: t

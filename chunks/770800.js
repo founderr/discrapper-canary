@@ -19,8 +19,8 @@ var r = n(735250),
     D = n(513547),
     R = n(65154),
     b = n(689938),
-    v = n(701491),
-    E = n(113207);
+    E = n(701491),
+    v = n(113207);
 class Z extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: n, hostname: a } = this.props;
@@ -91,8 +91,8 @@ class Z extends a.PureComponent {
         return (0, r.jsxs)(l.FormSection, {
             tag: l.FormTitleTags.H2,
             title: b.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? ' - ' + t : ''),
-            className: v.allowSelection,
-            children: [(0, y.a)(s), 0 === p.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }), (0, y.a)(p)]
+            className: E.allowSelection,
+            children: [(0, y.a)(s), 0 === p.length ? null : (0, r.jsx)(l.FormDivider, { className: v.marginBottom20 }), (0, y.a)(p)]
         });
     }
 }

@@ -5,8 +5,8 @@ var n,
     o = t(120356),
     i = t.n(o),
     c = t(481060),
-    l = t(37234),
-    u = t(230711),
+    u = t(37234),
+    l = t(230711),
     d = t(981631),
     f = t(689938),
     p = t(243014);
@@ -23,7 +23,7 @@ function g(e, s, t) {
         e
     );
 }
-class x extends (n = r.Component) {
+class b extends (n = r.Component) {
     render() {
         return (0, a.jsxs)('div', {
             className: p.streamerModeEnabled,
@@ -40,8 +40,8 @@ class x extends (n = r.Component) {
     constructor(...e) {
         super(...e),
             g(this, 'handleClick', () => {
-                !this.props.disableButton && ((0, l.jN)(d.S9g.USER_SETTINGS), u.Z.setSection(d.oAB.STREAMER_MODE));
+                !this.props.disableButton && ((0, u.jN)(d.S9g.USER_SETTINGS), l.Z.setSection(d.oAB.STREAMER_MODE));
             });
     }
 }
-g(x, 'defaultProps', { disableButton: !1 }), (s.Z = x);
+g(b, 'defaultProps', { disableButton: !1 }), (s.Z = b);

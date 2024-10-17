@@ -37,7 +37,7 @@ class p extends r.Z {
         let { source: t } = e;
         (0, a.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('96427'), n.e('1716')]).then(n.bind(n, 746882));
+                let { default: e } = await n.e('1716').then(n.bind(n, 746882));
                 return (n) =>
                     (0, i.jsx)(e, {
                         source: t,

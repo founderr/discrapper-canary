@@ -1,68 +1,68 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return x;
+        return T;
     }
 }),
-    t(47120);
-var i = t(735250),
-    a = t(470079),
-    r = t(120356),
-    s = t.n(r),
-    l = t(481060),
-    o = t(541716),
-    c = t(752305),
-    u = t(893718),
-    d = t(993413),
-    _ = t(131704),
-    p = t(474936),
-    m = t(981631),
-    I = t(689938),
-    f = t(45785);
-let E = (0, _.kt)({
+    s(47120);
+var t = s(735250),
+    l = s(470079),
+    i = s(120356),
+    r = s.n(i),
+    a = s(481060),
+    c = s(541716),
+    o = s(752305),
+    u = s(893718),
+    d = s(993413),
+    _ = s(131704),
+    m = s(474936),
+    I = s(981631),
+    E = s(689938),
+    p = s(45785);
+let N = (0, _.kt)({
     id: '1',
-    type: m.d4z.DM
+    type: I.d4z.DM
 });
-function x(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: _, placeholder: m, currentText: x, className: N, innerClassName: S, disabled: T = !1, disableThemedBackground: h = !1 } = e,
-        [b, g] = a.useState(null != _ ? _ : x),
-        [P, v] = a.useState((0, c.JM)(b)),
-        A = a.useRef(!1);
+function T(e) {
+    let { sectionTitle: n, errors: s, onTextChange: i, pendingText: _, placeholder: I, currentText: T, className: S, innerClassName: x, disabled: h = !1, disableThemedBackground: P = !1 } = e,
+        [f, A] = l.useState(null != _ ? _ : T),
+        [v, M] = l.useState((0, o.JM)(f)),
+        g = l.useRef(!1);
     return (
-        a.useEffect(() => {
-            A.current = !0;
+        l.useEffect(() => {
+            g.current = !0;
         }, []),
-        a.useEffect(() => {
+        l.useEffect(() => {
             if (void 0 === _) {
-                let e = (0, c.JM)(x);
-                g(x), v(e);
+                let e = (0, o.JM)(T);
+                A(T), M(e);
             }
-        }, [_, x]),
-        (0, i.jsx)('div', {
-            className: s()(f.body, N),
-            children: (0, i.jsxs)(d.Z, {
+        }, [_, T]),
+        (0, t.jsx)('div', {
+            className: r()(p.body, S),
+            children: (0, t.jsxs)(d.Z, {
                 title: n,
-                errors: t,
-                disabled: T,
+                errors: s,
+                disabled: h,
                 children: [
-                    (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, S),
-                        editorClassName: f.editorTextArea,
-                        maxCharacterCount: p.$n,
-                        onChange: function (e, n, t) {
-                            n !== b && (g(n), v(t), r(n));
+                    (0, t.jsx)(u.Z, {
+                        innerClassName: r()(p.textArea, x),
+                        editorClassName: p.editorTextArea,
+                        maxCharacterCount: m.$n,
+                        onChange: function (e, n, s) {
+                            n !== f && (A(n), M(s), i(n));
                         },
-                        placeholder: m,
-                        channel: E,
-                        textValue: b,
-                        richValue: P,
-                        type: o.I.CUSTOM_GIFT,
+                        placeholder: I,
+                        channel: N,
+                        textValue: f,
+                        richValue: v,
+                        type: c.I.CUSTOM_GIFT,
                         onBlur: () => {
-                            A.current = !1;
+                            g.current = !1;
                         },
                         onFocus: () => {
-                            A.current = !0;
+                            g.current = !0;
                         },
-                        focused: A.current,
+                        focused: g.current,
                         onSubmit: function () {
                             return new Promise((e) => {
                                 e({
@@ -71,9 +71,9 @@ function x(e) {
                                 });
                             });
                         },
-                        disableThemedBackground: h
+                        disableThemedBackground: P
                     }),
-                    (0, i.jsx)(l.HiddenVisually, { children: I.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: p.$n }) })
+                    (0, t.jsx)(a.HiddenVisually, { children: E.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: m.$n }) })
                 ]
             })
         })

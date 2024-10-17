@@ -6,11 +6,11 @@ var s = n(570140),
     l = n(19780),
     o = n(944486),
     c = n(111583),
-    d = n(557177),
-    _ = n(351780),
+    _ = n(557177),
+    d = n(351780),
     E = n(843693),
     u = n(981631);
-let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
+let T = (0, _.uk)('poggermode_applause', r.Z.getSoundpack()),
     I = !1,
     R = !1,
     g = [],
@@ -21,24 +21,24 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
     C = () => {
         T.stop(), (I = !1);
     },
-    f = () => {
-        let e = _.Z.isEnabled(),
-            t = _.Z.comboSoundsEnabled;
+    A = () => {
+        let e = d.Z.isEnabled(),
+            t = d.Z.comboSoundsEnabled;
         return (!!e && !!t && null != o.Z.getChannelId()) || !1;
     },
-    p = () => {
-        if (0 === g.length || !f() || R) return;
+    f = () => {
+        if (0 === g.length || !A() || R) return;
         R = !0;
         let [e, t] = g[g.length - 1];
-        (0, d.GN)(e, t), (N = setTimeout(A, 1000));
+        (0, _.GN)(e, t), (N = setTimeout(p, 1000));
     },
-    A = () => {
-        g.pop(), (R = !1), p();
+    p = () => {
+        g.pop(), (R = !1), f();
     },
     M = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = l.Z.isConnected();
-        g.push([e, t * (n ? 0.1 : 1)]), p();
+        g.push([e, t * (n ? 0.1 : 1)]), f();
     };
 class S extends a.Z {
     _initialize() {
@@ -60,7 +60,7 @@ class S extends a.Z {
     }
     startAudio() {
         var e;
-        if (!f()) return;
+        if (!A()) return;
         let t = o.Z.getChannelId();
         if (null == t) return;
         let n = i.default.getId(),
@@ -70,7 +70,7 @@ class S extends a.Z {
         s && r >= 7 ? m() : C();
     }
     playAchievementUnlockSound() {
-        if (!!f()) M('poggermode_achievement_unlock');
+        if (!!A()) M('poggermode_achievement_unlock');
     }
 }
 t.Z = new S();

@@ -1,18 +1,18 @@
 n.d(s, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var t = n(470079),
-    r = n(442837),
+    l = n(442837),
     i = n(598077),
-    l = n(699516),
-    a = n(295226),
-    o = n(786397),
-    C = n(474936);
-function d() {
-    let e = (0, o.w)(C.a7),
-        s = (0, r.e7)([a.Z], () => a.Z.getReferrer(null == e ? void 0 : e.trial_id)),
-        n = (0, r.e7)([l.Z], () => null == s || l.Z.isBlocked(s.id));
+    C = n(699516),
+    r = n(295226),
+    a = n(786397),
+    o = n(474936);
+function _() {
+    let e = (0, a.w)(o.a7),
+        s = (0, l.e7)([r.Z], () => r.Z.getReferrer(null == e ? void 0 : e.trial_id)),
+        n = (0, l.e7)([C.Z], () => null == s || C.Z.isBlocked(s.id));
     return t.useMemo(() => (n || null == s ? null : new i.Z(s)), [s, n]);
 }

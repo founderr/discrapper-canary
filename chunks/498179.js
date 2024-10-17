@@ -13,32 +13,32 @@ var a = n(442837),
     c = n(701560),
     u = n(785547);
 function d(e) {
-    let { application: t, fullWidth: n = !1, size: d = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: h, source: N, hover: f, innerClassName: C } = e,
-        p = {
+    let { application: t, fullWidth: n = !1, size: d = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: f, source: h, hover: N, innerClassName: p } = e,
+        C = {
             fullWidth: n,
             size: d,
             color: _,
             customDisabledColor: E,
             tooltipPosition: m,
             onClick: T,
-            className: h,
-            hover: f,
-            innerClassName: C
+            className: f,
+            hover: N,
+            innerClassName: p
         },
         g = (0, a.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)),
-        A = null != g ? g.sku.id : null,
-        S = null != A ? A : t.primarySkuId,
-        R = (0, a.e7)([l.Z], () => null != S && !l.Z.didFetchingSkuFail(S));
+        S = null != g ? g.sku.id : null,
+        A = null != S ? S : t.primarySkuId,
+        x = (0, a.e7)([l.Z], () => null != A && !l.Z.didFetchingSkuFail(A));
     return null != g && (0, o.Je)(g)
         ? (0, i.jsx)(u.Z, {
-              ...p,
+              ...C,
               libraryApplication: g,
-              source: N
+              source: h
           })
-        : R
+        : x
           ? (0, i.jsx)('div', { children: 'deprecated!' })
           : (0, i.jsx)(c.Z, {
-                ...p,
+                ...C,
                 hideNotLaunchable: I,
                 applicationId: t.id
             });

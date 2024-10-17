@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(23551),
     I = t(468026),
     N = t(410030),
-    m = t(726542),
+    A = t(726542),
     C = t(122021),
-    A = t(275759),
+    m = t(275759),
     g = t(231757),
     h = t(888496),
     O = t(605236),
@@ -87,7 +87,7 @@ let k = (e) => {
                                     children: i.guild.toString()
                                 }),
                                 (0, n.jsx)(_.Anchor, {
-                                    href: null === (t = m.Z.get(i.type)) || void 0 === t ? void 0 : null === (s = t.getPlatformUserUrl) || void 0 === s ? void 0 : s.call(t, i.account),
+                                    href: null === (t = A.Z.get(i.type)) || void 0 === t ? void 0 : null === (s = t.getPlatformUserUrl) || void 0 === s ? void 0 : s.call(t, i.account),
                                     children: (0, n.jsx)(_.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
@@ -125,7 +125,7 @@ function w(e) {
         [W, K] = a.useState(!1),
         [z, Q] = a.useState([]),
         X = (0, C.rR)(T.type),
-        q = m.Z.get(X);
+        q = A.Z.get(X);
     a.useEffect(() => {
         p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
     }, [T]),
@@ -139,7 +139,7 @@ function w(e) {
         });
     }
     function $() {
-        let e = m.Z.get(T.type),
+        let e = A.Z.get(T.type),
             s = y.Z.Messages.DISCONNECT_ACCOUNT_BODY;
         (0, Z.Z)(T) &&
             (s = (0, n.jsxs)(n.Fragment, {
@@ -199,8 +199,8 @@ function w(e) {
         children: [
             (function (e) {
                 var s;
-                let t = m.Z.get(e.type),
-                    a = m.Z.get(X),
+                let t = A.Z.get(e.type),
+                    a = A.Z.get(X),
                     i = '1' === (null !== (s = e.metadata) && void 0 !== s ? s : {})[G.PC.TWITTER_VERIFIED],
                     r = null;
                 return (
@@ -289,7 +289,7 @@ function w(e) {
                 var s;
                 let t = null !== (s = e.metadata) && void 0 !== s ? s : {},
                     a = null,
-                    i = (0, A.FI)(t[G.PC.CREATED_AT], N);
+                    i = (0, m.FI)(t[G.PC.CREATED_AT], N);
                 switch (e.type) {
                     case U.ABu.REDDIT:
                         a = (0, h.oP)(t, V.metadataItem);
@@ -327,7 +327,7 @@ function w(e) {
                 let r = z.includes(e.id),
                     o = y.Z.Messages.REFRESH;
                 if (null == a || 0 === a.length) {
-                    if (!0 !== m.Z.get(e.type).hasMetadata) return null;
+                    if (!0 !== A.Z.get(e.type).hasMetadata) return null;
                     (a = [
                         (0, n.jsx)(
                             _.TextBadge,
@@ -405,7 +405,7 @@ function w(e) {
                         children: y.Z.Messages.DISPLAY_ACTIVITY.format({ platform: t.name })
                     })
                 })),
-            (null === (i = m.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 &&
+            (null === (i = A.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 &&
                 (l = (0, n.jsx)(_.FormSwitch, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
@@ -495,7 +495,7 @@ function H() {
     );
 }
 function W(e) {
-    let s = m.Z.get(e);
+    let s = A.Z.get(e);
     (0, g.Z)({ platformType: s.type }),
         L.default.track(U.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
@@ -582,7 +582,7 @@ function z(e) {
                     ]
                 })
               : i
-                    .filter((e) => m.Z.isSupported(e.type))
+                    .filter((e) => A.Z.isSupported(e.type))
                     .map((e, s) =>
                         (0, n.jsx)(
                             w,

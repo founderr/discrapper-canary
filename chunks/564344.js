@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(839469),
     I = t(25990),
     N = t(594174),
-    m = t(585483),
+    A = t(585483),
     C = t(16703),
-    A = t(785145),
+    m = t(785145),
     g = t(981631),
     h = t(526761),
     O = t(726985),
@@ -33,17 +33,17 @@ function x() {
         t = (0, i.e7)([_.Z, I.Z], () => _.Z.showNotice() || I.Z.showNotice()),
         x = null != e ? e : s,
         M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
-        { subsection: f, setSubsection: D } = (0, A.Z)(),
+        { subsection: f, setSubsection: D } = (0, m.Z)(),
         { analyticsLocations: L } = (0, l.ZP)(),
         { hasSearchResults: P, searchResults: b } = (0, S.E)();
     function Z(s) {
         if (f !== s) {
             if (t) {
-                m.S.dispatch(g.CkL.SHAKE_APP, {
+                A.S.dispatch(g.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: o.$x
                 }),
-                    m.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
+                    A.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
                 return;
             }
             s === h.NB.GUILD && null == e && null != x && (0, d.Fq)(x, L), D(s);

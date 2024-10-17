@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(565138),
     I = t(374649),
     N = t(908951),
-    m = t(255078),
+    A = t(255078),
     C = t(430824),
-    A = t(509545),
+    m = t(509545),
     g = t(55563),
     h = t(551428),
     O = t(937615),
@@ -33,8 +33,8 @@ var n = t(735250),
     D = t(73282);
 function L(e) {
     var s, t, r, c, E;
-    let { subscription: m, navigateToSwitchPlan: R } = e,
-        x = null === (s = m.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
+    let { subscription: A, navigateToSwitchPlan: R } = e,
+        x = null === (s = A.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
         {
             appId: L,
             plan: B,
@@ -44,10 +44,10 @@ function L(e) {
             subscriptionForGuild: y,
             sku: V
         } = (0, o.cj)(
-            [A.Z, g.Z, h.Z, C.Z],
+            [m.Z, g.Z, h.Z, C.Z],
             () => {
-                let e = m.planId,
-                    s = A.Z.get(e),
+                let e = A.planId,
+                    s = m.Z.get(e),
                     t = null != s ? g.Z.get(s.skuId) : null,
                     n = null == t ? void 0 : t.applicationId,
                     a = null != s ? h.Z.getForSKU(s.skuId) : null,
@@ -64,22 +64,22 @@ function L(e) {
                     subscriptionForGuild: o
                 };
             },
-            [x, m.planId]
+            [x, A.planId]
         ),
         { data: Y } = (0, T.IX)(L),
         k = a.useMemo(() => (null != Y ? (0, u.y)(Y, 100) : null), [Y]),
         w = null !== (t = null == V ? void 0 : V.deleted) && void 0 !== t && t,
         H = null != V && (0, p.OL)(V),
-        W = (0, p.Jf)(m, V),
-        K = m.status === M.O0b.PAST_DUE,
+        W = (0, p.Jf)(A, V),
+        K = A.status === M.O0b.PAST_DUE,
         { analyticsLocations: z } = (0, _.ZP)(),
         [Q] = (0, I.ED)({
-            subscriptionId: m.id,
+            subscriptionId: A.id,
             renewal: !0,
             analyticsLocations: z,
             analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        X = b(m.currentPeriodEnd);
+        X = b(A.currentPeriodEnd);
     return (0, n.jsxs)(i.l, {
         header: (0, n.jsxs)(n.Fragment, {
             children: [
@@ -115,7 +115,7 @@ function L(e) {
                         null != U &&
                         null != V &&
                         (0, n.jsx)(v, {
-                            subscription: m,
+                            subscription: A,
                             app: Y,
                             sku: V,
                             storeListing: U,
@@ -177,7 +177,7 @@ function L(e) {
                         }),
                     (0, n.jsx)(P, {
                         title: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_START_DATE,
-                        content: b(null !== (E = m.createdAt) && void 0 !== E ? E : m.currentPeriodStart)
+                        content: b(null !== (E = A.createdAt) && void 0 !== E ? E : A.currentPeriodStart)
                     }),
                     (0, n.jsx)(P, {
                         title: W ? f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
@@ -191,7 +191,7 @@ function L(e) {
                     (0, n.jsx)(l.FormTitle, { children: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }),
                     null != Q &&
                         (0, n.jsx)(N.Z, {
-                            subscription: m,
+                            subscription: A,
                             currentInvoicePreview: Q,
                             disabled: w || W
                         })
@@ -242,14 +242,14 @@ function v(e) {
     let { app: s, storeListing: i, sku: r, subscription: d, isCancelled: u, guild: T, navigateToSwitchPlan: S } = e,
         I = (0, p.OL)(r),
         { analyticsLocations: N } = (0, _.ZP)(),
-        [C, A] = a.useState(!1),
+        [C, m] = a.useState(!1),
         h = (0, E.q)(s.id),
         O = (0, o.e7)([g.Z], () => g.Z.getParentSKU(i.skuId), [i.skuId]),
         R = a.useMemo(() => (null == O ? [] : (0, x.$)(i.id, O, h.subscriptions)), [i.id, h, O]),
         M = 0 !== R.length,
         L = async () => {
             try {
-                A(!0);
+                m(!0);
                 let { subscription: e } = await (0, c.pl)(d, N);
                 if (null == e) return;
                 (0, l.openModalLazy)(async () => {
@@ -258,11 +258,11 @@ function v(e) {
                         (0, n.jsx)(s, {
                             ...t,
                             storeListing: i,
-                            subscription: m.Z.createFromServer(e)
+                            subscription: A.Z.createFromServer(e)
                         });
                 });
             } finally {
-                A(!1);
+                m(!1);
             }
         };
     return (0, n.jsxs)('div', {

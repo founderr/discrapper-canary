@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(607070),
     I = t(627845),
     N = t(514361),
-    m = t(600164),
+    A = t(600164),
     C = t(313201),
-    A = t(605236),
+    m = t(605236),
     g = t(786761),
     h = t(3148),
     O = t(739566),
@@ -170,8 +170,8 @@ class Q extends a.Component {
                     className: y.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
                 }),
-                (0, n.jsx)(m.Z, {
-                    align: m.Z.Align.CENTER,
+                (0, n.jsx)(A.Z, {
+                    align: A.Z.Align.CENTER,
                     children: (0, n.jsx)(d.Slider, {
                         className: r()(y.marginTop20, y.marginBottom4),
                         initialValue: this.props.fontSize,
@@ -387,8 +387,8 @@ class Q extends a.Component {
     }
 }
 let X = (e) => {
-    !(0, A.un)(e) &&
-        (0, A.EW)(e, {
+    !(0, m.un)(e) &&
+        (0, m.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });

@@ -8,14 +8,14 @@ var s = n(735250),
 t.Z = (e) => {
     let { entrypoint: t } = e,
         n = (0, l.N)(),
-        d = (0, i.Ng)(),
-        _ = t === c.EZ.ApplicationStoreHome;
+        _ = (0, i.Ng)(),
+        d = t === c.EZ.ApplicationStoreHome;
     return (
         a.useEffect(() => {
-            (null != n || null != d) && (0, r.a)(n, d);
-        }, [n, d]),
+            (null != n || null != _) && (0, r.a)(n, _);
+        }, [n, _]),
         (0, s.jsx)(o.Z, {
-            isFullscreen: _,
+            isFullscreen: d,
             entrypoint: t
         })
     );

@@ -1,18 +1,18 @@
-n.d(t, {
+t.d(s, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var r = n(735250);
-n(470079);
-var s = n(481060),
-    i = n(981631);
-function l() {
-    (0, s.openModalLazy)(async () => {
-        let { default: e } = await n.e('38047').then(n.bind(n, 975863));
-        return (t) =>
-            (0, r.jsx)(e, {
-                ...t,
+var n = t(735250);
+t(470079);
+var a = t(481060),
+    i = t(981631);
+function r() {
+    (0, a.openModalLazy)(async () => {
+        let { default: e } = await t.e('38047').then(t.bind(t, 975863));
+        return (s) =>
+            (0, n.jsx)(e, {
+                ...s,
                 source: {
                     page: i.ZY5.USER_SETTINGS,
                     section: i.jXE.SETTINGS_CUSTOMIZE_PROFILE,

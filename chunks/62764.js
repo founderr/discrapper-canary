@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(216337),
     T = n(920888),
     x = n(287151),
-    v = n(569471),
-    S = n(346479),
+    S = n(569471),
+    v = n(346479),
     N = n(592125),
     A = n(934415),
     Z = n(456269),
@@ -43,7 +43,7 @@ function O(e) {
         [H, G] = (0, m.Z)(!1, 2000),
         V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: F } = (0, M.cl)(V),
-        W = (0, o.e7)([v.Z], () => v.Z.hasJoined(t)),
+        W = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
         { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
         J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
         Q = (0, Z.Bs)(J),
@@ -80,7 +80,7 @@ function O(e) {
         return null;
     let ei = F.reactions.length > 0,
         es = () => {
-            W ? S.Z.leaveThread(V, 'Forum Toolbar') : S.Z.joinThread(V, 'Forum Toolbar');
+            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
         },
         ea = () => {
             (0, b.B)({

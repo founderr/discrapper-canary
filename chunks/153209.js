@@ -18,59 +18,59 @@ var i = n(735250),
     I = n(626135),
     m = n(709054),
     T = n(791914),
-    h = n(981631),
-    N = n(689938),
-    f = n(802840),
-    C = n(811304);
-function p(e) {
+    f = n(981631),
+    h = n(689938),
+    N = n(802840),
+    p = n(811304);
+function C(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.CircleIconButton, {
-        tooltip: N.Z.Messages.MARK_ALL_AS_READ,
+        tooltip: h.Z.Messages.MARK_ALL_AS_READ,
         color: l.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
-        className: C.controlButton,
+        className: p.controlButton,
         onClick: t
     });
 }
 function g(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: N, items: C, loading: g, loadMore: A } = (0, d.y6)(),
-        S = (0, s.e7)([o.Z], () => o.Z.localItems),
-        R = a.useMemo(() => [...[...C, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [C, S]),
-        x = C.length > 0 ? C[0] : null,
+        { initialized: h, items: p, loading: g, loadMore: S } = (0, d.y6)(),
+        A = (0, s.e7)([o.Z], () => o.Z.localItems),
+        x = a.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
+        R = p.length > 0 ? p[0] : null,
         O = E.d$.useSetting(),
-        M = a.useMemo(() => {
-            if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
-            for (let e of R) {
+        v = a.useMemo(() => {
+            if (null != R && 0 >= m.default.compare(R.id, O)) return !1;
+            for (let e of x) {
                 if (0 >= m.default.compare(e.id, O)) break;
                 if (!(0, u.r)(e, O)) return !0;
             }
             return !1;
-        }, [x, O, R]);
+        }, [R, O, x]);
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: N.container,
         children: [
             (0, i.jsx)(T.Z, {
                 tab: r.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
                 closePopout: l,
-                children: M
-                    ? (0, i.jsx)(p, {
+                children: v
+                    ? (0, i.jsx)(C, {
                           onClick: () => {
-                              null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != R && (E.d$.updateSetting(R.id), I.default.track(f.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }
                       })
                     : null
             }),
             (0, i.jsx)(_.Z, {
-                initialized: N,
-                items: R,
+                initialized: h,
+                items: x,
                 loading: g,
-                loadMore: A
+                loadMore: S
             })
         ]
     });

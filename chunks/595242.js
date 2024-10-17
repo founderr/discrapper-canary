@@ -18,9 +18,9 @@ var n = t(735250),
     S = t(899667),
     I = t(853872),
     N = t(78839),
-    m = t(783739),
+    A = t(783739),
     C = t(981631),
-    A = t(589104);
+    m = t(589104);
 function g() {
     a.useEffect(() => {
         c.Z.wait(() => {
@@ -36,17 +36,17 @@ function g() {
         g = (0, o.e7)([S.Z], () => S.Z.isFetchingCurrentUserAppliedBoosts);
     return ((0, T.JR)(), e && t && i && !g)
         ? (0, n.jsxs)('div', {
-              className: A.container,
+              className: m.container,
               children: [
-                  (0, n.jsx)('div', { className: A.background }),
+                  (0, n.jsx)('div', { className: m.background }),
                   (0, n.jsx)('div', {
-                      className: A.content,
-                      children: (0, n.jsx)(m.Z, { premiumSubscription: s })
+                      className: m.content,
+                      children: (0, n.jsx)(A.Z, { premiumSubscription: s })
                   })
               ]
           })
         : (0, n.jsx)('div', {
-              className: r()(A.container, A.loading),
+              className: r()(m.container, m.loading),
               children: (0, n.jsx)(l.Spinner, {})
           });
 }

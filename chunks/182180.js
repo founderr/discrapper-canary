@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return C;
     }
 });
 var i = n(735250),
@@ -17,18 +17,18 @@ var i = n(735250),
     I = n(891614),
     m = n(981631),
     T = n(176505),
-    h = n(689938),
-    N = n(341738);
-function f(e) {
+    f = n(689938),
+    h = n(341738);
+function N(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {
-        className: N.welcomeCardText,
+        className: h.welcomeCardText,
         children: (0, i.jsx)(s.Text, {
             tag: 'p',
-            className: N.welcomeCardText,
+            className: h.welcomeCardText,
             color: 'status-positive-text',
             variant: 'heading-xl/medium',
-            children: h.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
+            children: f.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
                 username: t,
                 usernameHook: (e, t) =>
                     (0, i.jsx)(
@@ -46,27 +46,27 @@ function f(e) {
         })
     });
 }
-function C(e) {
+function p(e) {
     let { guildId: t, user: n, username: a } = e;
     return (0, i.jsxs)('div', {
-        className: N.welcomeCard,
+        className: h.welcomeCard,
         role: 'img',
-        'aria-label': h.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: a }),
+        'aria-label': f.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: a }),
         children: [
             (0, i.jsx)(I.Z, {
                 guildId: t,
                 user: n,
-                className: N.welcomeCardBadge
+                className: h.welcomeCardBadge
             }),
-            (0, i.jsx)(f, { username: a })
+            (0, i.jsx)(N, { username: a })
         ]
     });
 }
-function p(e) {
+function C(e) {
     var t, s;
-    let { channel: I, message: h, compact: N } = e,
-        f = (0, o.ZP)(h),
-        p = (function (e) {
+    let { channel: I, message: f, compact: h } = e,
+        N = (0, o.ZP)(f),
+        C = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 s = n.guild_id,
                 o = (0, c.l)({
@@ -91,29 +91,29 @@ function p(e) {
                   });
         })({
             channel: I,
-            message: h,
-            author: f
+            message: f,
+            author: N
         }),
-        g = (null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
-    return null == p
+        g = (null === (t = f.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = f.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
+    return null == C
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(u.Z, {
                       icon: n(570111),
-                      timestamp: h.timestamp,
-                      compact: N,
-                      children: p
+                      timestamp: f.timestamp,
+                      compact: h,
+                      children: C
                   }),
                   g &&
-                      (0, i.jsx)(C, {
+                      (0, i.jsx)(p, {
                           guildId: I.guild_id,
-                          user: h.author,
-                          username: f.nick
+                          user: f.author,
+                          username: N.nick
                       }),
                   (0, i.jsx)(E.Z, {
                       channel: I,
-                      message: h
+                      message: f
                   })
               ]
           });

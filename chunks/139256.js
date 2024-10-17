@@ -1,6 +1,6 @@
 n.d(t, {
     $e: function () {
-        return P;
+        return b;
     },
     $w: function () {
         return y;
@@ -33,38 +33,38 @@ var i,
     I = n(124347),
     m = n(695346),
     T = n(186523),
-    h = n(553826),
-    N = n(506071),
-    f = n(203143),
-    C = n(79390),
-    p = n(839963),
+    f = n(553826),
+    h = n(506071),
+    N = n(203143),
+    p = n(79390),
+    C = n(839963),
     g = n(294608),
-    A = n(65145),
-    S = n(981631),
-    R = n(689938),
-    x = n(142822);
+    S = n(65145),
+    A = n(981631),
+    x = n(689938),
+    R = n(142822);
 function O(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)('ul', {
-        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
-        className: t,
-        children: n
-    });
-}
-function M(e) {
-    let { className: t, children: n } = e;
-    return (0, s.jsx)('div', {
-        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
-        role: 'group',
+        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
         className: t,
         children: n
     });
 }
 function v(e) {
+    let { className: t, children: n } = e;
+    return (0, s.jsx)('div', {
+        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
+        role: 'group',
+        className: t,
+        children: n
+    });
+}
+function M(e) {
     let { className: t, children: n } = e,
         i = (0, u.useRadioGroup)({ orientation: 'vertical' });
     return (0, s.jsx)('div', {
-        'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
+        'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
         ...i,
         className: t,
         children: n
@@ -72,10 +72,10 @@ function v(e) {
 }
 function L(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: a, children: r } = e,
-        { pollAnswerRef: l } = (0, A.dv)();
+        { pollAnswerRef: l } = (0, S.dv)();
     return (0, s.jsx)(u.Clickable, {
         role: 'checkbox',
-        className: o()(t, x.enabled),
+        className: o()(t, R.enabled),
         onClick: n,
         'aria-checked': i,
         ref: a ? l : void 0,
@@ -86,10 +86,10 @@ function Z(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: r, hasSelectedAnyAnswer: l, isFirstAnswer: c } = e;
     t = l ? (r ? 0 : -1) : c ? 0 : -1;
-    let { pollAnswerRef: d } = (0, A.dv)();
+    let { pollAnswerRef: d } = (0, S.dv)();
     return (0, s.jsx)(u.Clickable, {
         role: 'radio',
-        className: o()(n, x.enabled),
+        className: o()(n, R.enabled),
         onClick: a,
         'aria-checked': r,
         tabIndex: t,
@@ -97,24 +97,24 @@ function Z(e) {
         children: i
     });
 }
-function P(e) {
+function b(e) {
     let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: i, canTapAnswers: a, hasSelectedAnyAnswer: r, className: l, answerClassName: u, renderAnswerContent: d } = e,
         { ContainerComponent: _, answerElementType: E } = (0, c.EQ)({
             canTapAnswers: a,
             answersInteraction: n
         })
-            .with({ answersInteraction: p.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: v,
+            .with({ answersInteraction: C.Y7.RADIO_BUTTONS }, () => ({
+                ContainerComponent: M,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: p.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: M,
+            .with({ answersInteraction: C.Y7.CHECKBOXES }, () => ({
+                ContainerComponent: v,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: p.Y7.LIST
+                    answersInteraction: C.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: O,
@@ -129,9 +129,9 @@ function P(e) {
         className: l,
         children: t.map((e, t) =>
             (0, s.jsx)(
-                b,
+                P,
                 {
-                    className: o()(x.__invalid_answer, u),
+                    className: o()(R.__invalid_answer, u),
                     answer: e,
                     isFirstAnswer: 0 === t,
                     elementType: E,
@@ -144,13 +144,13 @@ function P(e) {
         )
     });
 }
-function b(e) {
+function P(e) {
     let { className: t, answer: n, children: i, hasSelectedAnyAnswer: a, isFirstAnswer: l, elementType: c } = e,
         { channelId: u, messageId: d } = (0, g.pE)(),
         _ = (0, g.$B)(n.style),
         E = !0 === n.isSelected,
         I = r.useCallback(() => {
-            f.Z.handlePollAnswerTapped({
+            N.Z.handlePollAnswerTapped({
                 channelId: u,
                 messageId: d,
                 answerId: n.answerId
@@ -185,13 +185,13 @@ function b(e) {
 function D(e) {
     var t;
     let { attachment: n, className: i } = e,
-        a = (0, N.n)(),
+        a = (0, h.n)(),
         r = m.QK.useSetting();
     return (0, s.jsx)(I.ZP, {
         className: i,
-        imageClassName: x.attachmentImage,
+        imageClassName: R.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,
@@ -259,7 +259,7 @@ function B(e) {
                 },
                 () => ({
                     color: E.Z.BUTTON_POSITIVE_BACKGROUND,
-                    backgroundColor: (0, _.Lq)(S.Ilk.WHITE_500)
+                    backgroundColor: (0, _.Lq)(A.Ilk.WHITE_500)
                 })
             )
             .with(
@@ -273,8 +273,8 @@ function B(e) {
                 })
             )
             .otherwise(() => ({
-                color: (0, _.Lq)(S.Ilk.BRAND_500),
-                backgroundColor: (0, _.Lq)(S.Ilk.WHITE_500)
+                color: (0, _.Lq)(A.Ilk.BRAND_500),
+                backgroundColor: (0, _.Lq)(A.Ilk.WHITE_500)
             }));
     return (0, s.jsx)(u.CircleCheckIcon, {
         size: 'custom',
@@ -291,13 +291,13 @@ function k(e) {
         a = {
             width: n,
             height: n,
-            background: x.radioBackground,
+            background: R.radioBackground,
             'aria-hidden': !0
         };
     return t
-        ? (0, s.jsx)(h.Z, {
+        ? (0, s.jsx)(f.Z, {
               ...a,
-              foreground: x.radioForeground,
+              foreground: R.radioForeground,
               className: i
           })
         : (0, s.jsx)(T.Z, {
@@ -309,7 +309,7 @@ function G(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = 0.85 * n;
     return (0, s.jsx)('div', {
-        className: o()(x.checkbox, { [x.checkboxSelected]: t }, i),
+        className: o()(R.checkbox, { [R.checkboxSelected]: t }, i),
         style: {
             width: n,
             height: n
@@ -321,7 +321,7 @@ function G(e) {
                 size: 'custom',
                 width: a,
                 height: a,
-                color: (0, _.Lq)(S.Ilk.WHITE_500)
+                color: (0, _.Lq)(A.Ilk.WHITE_500)
             })
     });
 }

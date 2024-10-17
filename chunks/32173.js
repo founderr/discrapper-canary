@@ -11,8 +11,8 @@ var i = n(399606),
     l = n(704215),
     o = n(481060),
     c = n(230711),
-    d = n(410030),
-    _ = n(100527),
+    _ = n(410030),
+    d = n(100527),
     E = n(906732),
     u = n(779618),
     T = n(300284),
@@ -22,9 +22,9 @@ var i = n(399606),
     N = n(78839),
     m = n(626135),
     C = n(424218),
-    f = n(63063),
-    p = n(74538),
-    A = n(860489),
+    A = n(63063),
+    f = n(74538),
+    p = n(860489),
     M = n(471309),
     S = n(494127),
     h = n(314684),
@@ -36,13 +36,13 @@ var i = n(399606),
     L = n(976465),
     Z = n(474936),
     D = n(981631),
-    B = n(526761),
-    U = n(332325),
+    U = n(526761),
+    B = n(332325),
     j = n(689938),
     G = n(977341),
     w = n(660372),
-    y = n(926433),
-    H = n(302036),
+    H = n(926433),
+    y = n(302036),
     k = n(994554),
     F = n(704565),
     V = n(393305),
@@ -51,8 +51,8 @@ var i = n(399606),
     Y = n(203302),
     z = n(766491),
     Q = n(193943),
-    X = n(707046),
-    J = n(488459),
+    J = n(707046),
+    X = n(488459),
     q = n(334347),
     $ = n(132015),
     ee = n(142416),
@@ -65,33 +65,33 @@ var i = n(399606),
     el = n(637810),
     eo = n(570423),
     ec = n(912429),
-    ed = n(91394),
-    e_ = n(209672),
+    e_ = n(91394),
+    ed = n(209672),
     eE = n(698173),
     eu = n(926262);
 ((s = a || (a = {})).AVATAR_DECORATIONS = 'avatarDecorations'), (s.CLIENT_THEMES = 'clientThemes'), (s.CLIPS = 'clips'), (s.EARLY_ACCESS = 'earlyAccess'), (s.ENTRANCE_SOUNDS = 'entranceSounds'), (s.PROFILE_EFFECTS = 'profileEffects'), (s.PROFILES = 'profiles'), (s.REMIXING = 'remixing'), (s.SERVER_BOOSTS = 'serverBoosts'), (s.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (s.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (s.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (s.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (s.SUPER_REACTIONS = 'superReactions'), (s.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (s.CUSTOM_APP_ICONS = 'customAppIcons'), (s.MORE_EMOJI_POWER = 'moreEmojiPower'), (s.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (s.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (s.LARGE_UPLOADS = 'largeUploads'), (s.HD_VIDEO = 'hdVideo'), (s.BADGE = 'badge'), (s.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (s.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (s.FREE_BOOST = 'freeBoost'), (s.REFERRAL_PROGRAM = 'referralProgram'), (s.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (s.SERVER_PROFILES = 'serverProfiles'), (s.SHY_PROJECT = 'shyProject'), (s.TENURE_BADGE = 'tenureBadge');
 t.Z = () => {
-    let { analyticsLocations: e } = (0, E.ZP)(_.Z.PREMIUM_MARKETING_PERK_CARD),
-        t = (0, d.ZP)(),
+    let { analyticsLocations: e } = (0, E.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
+        t = (0, _.ZP)(),
         s = (0, C.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
         a = (0, i.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
-        eT = null != a ? p.ZP.getPremiumPlanItem(a) : null,
-        eI = null != eT ? p.ZP.getSkuIdForPlan(eT.planId) : null,
+        eT = null != a ? f.ZP.getPremiumPlanItem(a) : null,
+        eI = null != eT ? f.ZP.getSkuIdForPlan(eT.planId) : null,
         eR = eI === Z.Si.TIER_2,
         eg = eI === Z.Si.TIER_0,
         { flipped: eN } = (0, S.JP)(),
         { flipped: em } = (0, S.as)(),
         eC = (0, h.nY)({ showAnimations: !0 }),
-        ef = null != eC ? eC.initialPercentage : void 0,
-        ep = null != eC ? eC.percentage : void 0,
-        eA = (0, u.Z)(g.Z),
+        eA = null != eC ? eC.initialPercentage : void 0,
+        ef = null != eC ? eC.percentage : void 0,
+        ep = (0, u.Z)(g.Z),
         eM = (0, b.Z)(),
         eS = (0, T.Z)({
-            scrollPosition: B.Y_.TRY_IT_OUT,
+            scrollPosition: U.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         eh = () => {
-            c.Z.open(D.oAB.VOICE, B.GA, {
+            c.Z.open(D.oAB.VOICE, U.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
@@ -100,7 +100,7 @@ t.Z = () => {
             (0, I.uL)(D.Z5c.COLLECTIBLES_SHOP);
         },
         ex = () => {
-            c.Z.open(D.oAB.APPEARANCE, null, { scrollPosition: B.h1.CUSTOM_APP_ICONS });
+            c.Z.open(D.oAB.APPEARANCE, null, { scrollPosition: U.h1.CUSTOM_APP_ICONS });
         },
         eO = {
             avatarDecorations: eR
@@ -146,17 +146,17 @@ t.Z = () => {
                       title: j.Z.Messages.CLIPS,
                       subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-                      descriptionCta: eA ? j.Z.Messages.TAKE_ME_THERE : j.Z.Messages.LEARN_MORE,
+                      descriptionCta: ep ? j.Z.Messages.TAKE_ME_THERE : j.Z.Messages.LEARN_MORE,
                       pillText: j.Z.Messages.EARLY_ACCESS,
-                      onCtaClick: eA
+                      onCtaClick: ep
                           ? () => {
-                                (0, R.Z)(U.Z.CLIPS, {
+                                (0, R.Z)(B.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
                             }
                           : () => {
-                                window.open(f.Z.getArticleURL(D.BhN.CLIPS), '_blank');
+                                window.open(A.Z.getArticleURL(D.BhN.CLIPS), '_blank');
                             },
                       perkImage: z
                   }
@@ -174,7 +174,7 @@ t.Z = () => {
                       title: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-                      perkImage: X
+                      perkImage: J
                   }
                 : {
                       name: 'earlyAccess',
@@ -182,7 +182,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                       isPremiumGetCta: !0,
-                      perkImage: X
+                      perkImage: J
                   },
             earlyAccessSeeAllVariant: eR
                 ? {
@@ -190,7 +190,7 @@ t.Z = () => {
                       title: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-                      perkImage: J
+                      perkImage: X
                   }
                 : {
                       name: 'earlyAccess',
@@ -198,7 +198,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                       isPremiumGetCta: !0,
-                      perkImage: J
+                      perkImage: X
                   },
             entranceSounds: eR
                 ? {
@@ -376,7 +376,7 @@ t.Z = () => {
                 title: j.Z.Messages.NITRO_HOME_SUPER_REACTIONS,
                 subtitle: j.Z.Messages.NITRO_HOME_SUPER_REACTIONS_DESCRIPTION,
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
-                perkImage: e_
+                perkImage: ed
             },
             upcomingDropUntimed: {
                 name: 'upcomingDropUntimed',
@@ -411,7 +411,7 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: j.Z.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
                 subtitle: j.Z.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-                perkImage: (0, v.gx)(t, y, H),
+                perkImage: (0, v.gx)(t, H, y),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
             },
             specialStickerAccess: {
@@ -432,7 +432,7 @@ t.Z = () => {
                 name: 'hdVideo',
                 title: j.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-                perkImage: ed,
+                perkImage: e_,
                 description: j.Z.Messages.NITRO_HOME_STREAM_UP_TO_4K
             },
             newAppStylesUpdateJune2024: {
@@ -449,7 +449,7 @@ t.Z = () => {
                 name: 'referralProgram',
                 title: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
-                description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: f.Z.getArticleURL(D.BhN.REFERRAL_PROGRAM) }),
+                description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: A.Z.getArticleURL(D.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: j.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eR || void 0,
                 perkImage: ea
@@ -470,8 +470,8 @@ t.Z = () => {
                 className: G.cardComponent,
                 children: (0, r.jsx)(x.Z, {
                     showAnimations: !0,
-                    percentage: ep,
-                    initialPercentage: ef
+                    percentage: ef,
+                    initialPercentage: eA
                 })
             });
         eO.freeBoost = {
@@ -495,8 +495,8 @@ t.Z = () => {
             m.default.track(D.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
                 location_stack: e,
-                location: _.Z.PREMIUM_MARKETING_PERK_CARD,
-                source: _.Z.PREMIUM_MARKETING_PERK_CARD
+                location: d.Z.PREMIUM_MARKETING_PERK_CARD,
+                source: d.Z.PREMIUM_MARKETING_PERK_CARD
             }),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('16133').then(n.bind(n, 743648));
@@ -514,7 +514,7 @@ t.Z = () => {
                 cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eL()
             }),
-        (0, A.ZP)('usePerksDiscoverabilityCard') === A.P0.SUMMER_2024 &&
+        (0, p.ZP)('usePerksDiscoverabilityCard') === p.P0.SUMMER_2024 &&
             (eO.shyProject = {
                 name: 'shyProject',
                 title: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,

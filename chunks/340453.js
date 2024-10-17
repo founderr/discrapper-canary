@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
 });
 var s = n(735250);
@@ -11,12 +11,12 @@ var a = n(481060),
     l = n(631885),
     o = n(329242),
     c = n(539559);
-let d = i.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
-function _(e) {
+let _ = i.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+function d(e) {
     let { otherUser: t, status: n } = e,
         i = (0, l.j_)(t.id, n),
         {
-            avatarSrc: _,
+            avatarSrc: d,
             avatarDecorationSrc: E,
             eventHandlers: u
         } = (0, r.Z)({
@@ -28,9 +28,9 @@ function _(e) {
         children: [
             (0, s.jsx)('div', {
                 ...u,
-                children: (0, s.jsx)(d, {
+                children: (0, s.jsx)(_, {
                     className: c.avatar,
-                    src: _,
+                    src: d,
                     avatarDecoration: E,
                     size: a.AvatarSizes.SIZE_40,
                     'aria-label': t.username

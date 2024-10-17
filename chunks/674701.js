@@ -20,24 +20,24 @@ var i,
     I = n(700582),
     m = n(906732),
     T = n(213609),
-    h = n(963249),
-    N = n(703656),
-    f = n(594174),
-    C = n(626135),
-    p = n(51144),
+    f = n(963249),
+    h = n(703656),
+    N = n(594174),
+    p = n(626135),
+    C = n(51144),
     g = n(479446),
-    A = n(441623),
-    S = n(317271),
-    R = n(474936),
-    x = n(981631),
+    S = n(441623),
+    A = n(317271),
+    x = n(474936),
+    R = n(981631),
     O = n(182294),
-    M = n(689938),
-    v = n(17500);
+    v = n(689938),
+    M = n(17500);
 function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
-        j = (0, u.e7)([f.default], () => f.default.getCurrentUser()),
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: b, glow: P, showSecondaryCta: D } = e,
+        j = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: U } = (0, m.ZP)(),
-        y = (0, u.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
+        y = (0, u.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(i.id));
     r.useEffect(() => {
         (0, T.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -45,37 +45,37 @@ function L(e) {
             properties: {
                 gift_intent_type: t,
                 type: n,
-                num_friend_anniversaries: A.Z.getFriendAnniversaries().length
+                num_friend_anniversaries: S.Z.getFriendAnniversaries().length
             }
         });
     }, [t, n]);
     let B = () => {
-            if (t === R.hX.FRIEND_ANNIVERSARY) return M.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: y });
+            if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: y });
             return (0, g.Ou)(t);
         },
         k = 'coachmark' === n,
-        G = k ? v.innerContentCoachmark : v.innerContent,
-        F = k ? v.recipientUserAvatarCoachmark : v.recipientUserAvatar,
-        w = k ? v.currentUserAvatarCoachmark : v.currentUserAvatar,
-        V = k ? v.subHeaderTextCoachmark : v.subHeaderText,
+        G = k ? M.innerContentCoachmark : M.innerContent,
+        F = k ? M.recipientUserAvatarCoachmark : M.recipientUserAvatar,
+        w = k ? M.currentUserAvatarCoachmark : M.currentUserAvatar,
+        V = k ? M.subHeaderTextCoachmark : M.subHeaderText,
         H = k ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
         Y = k ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
-        W = k ? v.buttonTextPrimaryCoachmark : v.buttonTextPrimary;
+        W = k ? M.buttonTextPrimaryCoachmark : M.buttonTextPrimary;
     return (0, s.jsx)('div', {
-        className: o()(v.content, {
-            [v.outerGlow]: b,
-            [v.contentCoachmark]: k
+        className: o()(M.content, {
+            [M.outerGlow]: P,
+            [M.contentCoachmark]: k
         }),
         onMouseEnter: a,
         onMouseLeave: l,
         children: (0, s.jsxs)('div', {
-            className: o()(G, { [v.innerGlow]: b }),
+            className: o()(G, { [M.innerGlow]: P }),
             children: [
                 (0, s.jsxs)('div', {
-                    className: v.subContent,
+                    className: M.subContent,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: v.avatars,
+                            className: M.avatars,
                             children: [
                                 (0, s.jsx)(I.Z, {
                                     className: F,
@@ -93,14 +93,14 @@ function L(e) {
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: v.textContainer,
+                            className: M.textContainer,
                             children: [
                                 (0, s.jsx)(_.Text, {
                                     variant: 'text-md/medium',
                                     color: k ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === R.hX.FRIEND_ANNIVERSARY) return M.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: p.ZP.getName(i) });
+                                        if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: C.ZP.getName(i) });
                                         return (0, g.Ou)(t);
                                     })()
                                 }),
@@ -108,7 +108,7 @@ function L(e) {
                                     className: V,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === R.hX.FRIEND_ANNIVERSARY) return M.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: y });
+                                        if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: y });
                                         return (0, g.Ou)(t);
                                     })()
                                 })
@@ -117,34 +117,34 @@ function L(e) {
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: v.buttonContainer,
+                    className: M.buttonContainer,
                     children: [
                         D &&
                             (0, s.jsx)(_.Button, {
-                                className: o()(v.button, v.buttonSecondary),
+                                className: o()(M.button, M.buttonSecondary),
                                 onClick: (e) => {
-                                    e.stopPropagation(), C.default.track(x.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, { gift_intent_type: t }), (0, N.uL)(x.Z5c.FRIENDS), E.Z.setSection(x.pJs.ALL);
+                                    e.stopPropagation(), p.default.track(R.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, { gift_intent_type: t }), (0, h.uL)(R.Z5c.FRIENDS), E.Z.setSection(R.pJs.ALL);
                                 },
                                 size: _.Button.Sizes.MEDIUM,
                                 color: _.Button.Colors.CUSTOM,
                                 look: _.Button.Looks.OUTLINED,
                                 children: (0, s.jsx)('div', {
-                                    className: v.buttonContentContainer,
+                                    className: M.buttonContentContainer,
                                     children: (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(v.buttonText, v.buttonTextSecondary),
+                                        className: o()(M.buttonText, M.buttonTextSecondary),
                                         children: (() => {
-                                            if (t === R.hX.FRIEND_ANNIVERSARY) return M.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
+                                            if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
                                         })()
                                     })
                                 })
                             }),
                         (0, s.jsx)(_.Button, {
-                            className: v.button,
+                            className: M.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let a = (0, S.F)(t);
-                                (0, h.Z)({
+                                let a = (0, A.F)(t);
+                                (0, f.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: i,
@@ -152,9 +152,9 @@ function L(e) {
                                     analyticsLocations: U,
                                     analyticsObject: {
                                         page: Z,
-                                        section: P,
-                                        object: x.qAy.BUTTON_CTA,
-                                        objectType: x.Qqv.GIFT
+                                        section: b,
+                                        object: R.qAy.BUTTON_CTA,
+                                        objectType: R.Qqv.GIFT
                                     },
                                     giftMessage: B()
                                 });
@@ -162,7 +162,7 @@ function L(e) {
                             size: _.Button.Sizes.MEDIUM,
                             color: H,
                             children: (0, s.jsxs)('div', {
-                                className: v.buttonContentContainer,
+                                className: M.buttonContentContainer,
                                 children: [
                                     (0, s.jsx)(_.GiftIcon, {
                                         color: Y,
@@ -172,8 +172,8 @@ function L(e) {
                                     }),
                                     (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
-                                        className: o()(v.buttonText, W),
-                                        children: M.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
+                                        className: o()(M.buttonText, W),
+                                        children: v.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
                                     })
                                 ]
                             })
@@ -182,9 +182,9 @@ function L(e) {
                 }),
                 null != L &&
                     (0, s.jsx)('div', {
-                        className: o()(v.connector, {
-                            [v.leftPopoutConnector]: 'left' === L,
-                            [v.rightPopoutConnector]: 'right' === L
+                        className: o()(M.connector, {
+                            [M.leftPopoutConnector]: 'left' === L,
+                            [M.rightPopoutConnector]: 'right' === L
                         })
                     })
             ]

@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(768581),
     T = n(525541),
     x = n(981631),
-    v = n(377668),
-    S = n(228168),
+    S = n(377668),
+    v = n(228168),
     N = n(689938),
     A = n(995593);
 let Z = (e) => {
@@ -86,7 +86,7 @@ let Z = (e) => {
                               (0, f.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: S.oh.MUTUAL_GUILDS,
+                                  section: v.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: x.jXE.DIRECT_MESSAGE }
                               });
                           },
@@ -258,7 +258,7 @@ t.Z = (e) => {
         o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]),
         c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]),
         d = n.id === r;
-    return t === v.fL
+    return t === S.fL
         ? null
         : o || d
           ? (0, i.jsxs)('div', {

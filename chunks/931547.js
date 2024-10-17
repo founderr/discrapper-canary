@@ -10,7 +10,7 @@ var a = n(120356),
     i = n(481060),
     l = n(315771);
 function o(e) {
-    let { message: t, error: n, onClick: a, submitting: o, className: c, ctaMessage: d } = e;
+    let { message: t, error: n, onClick: a, submitting: o, className: c, ctaMessage: _ } = e;
     return (0, s.jsxs)('div', {
         className: r()(l.container, c),
         children: [
@@ -57,7 +57,7 @@ function o(e) {
                 size: i.Button.Sizes.ICON,
                 onClick: a,
                 submitting: o,
-                children: d
+                children: _
             })
         ]
     });

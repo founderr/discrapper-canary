@@ -24,15 +24,15 @@ var i = n(735250),
     I = n(585483),
     T = n(739830),
     x = n(488131),
-    v = n(981631),
-    S = n(689938);
+    S = n(981631),
+    v = n(689938);
 function N(e) {
     let { channel: t } = e,
         [n, l] = s.useState(!1);
     function r() {
         l((e) => !e);
     }
-    let o = S.Z.Messages.MORE;
+    let o = v.Z.Messages.MORE;
     return (0, i.jsx)(a.Popout, {
         shouldShow: n,
         animation: a.Popout.Animation.NONE,
@@ -72,7 +72,7 @@ function A(e) {
         b = (0, r.Z)(t),
         R = (0, f.Z)({
             id: t.id,
-            label: S.Z.Messages.COPY_ID_THREAD
+            label: v.Z.Messages.COPY_ID_THREAD
         }),
         L = (0, _.Z)(t);
     function P() {
@@ -81,7 +81,7 @@ function A(e) {
     return (0, i.jsxs)(a.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': S.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
         onSelect: s,
         children: [
             (0, i.jsxs)(a.MenuGroup, {
@@ -89,7 +89,7 @@ function A(e) {
                     E,
                     (0, i.jsx)(a.MenuItem, {
                         id: 'open',
-                        label: S.Z.Messages.OPEN_IN_FULL_VIEW,
+                        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
                         action: P
                     })
                 ]
@@ -104,21 +104,21 @@ function A(e) {
                 children: [
                     (0, i.jsx)(a.MenuItem, {
                         id: 'search',
-                        label: S.Z.Messages.SEARCH,
+                        label: v.Z.Messages.SEARCH,
                         icon: a.WindowLaunchIcon,
                         action: function () {
                             P(),
                                 setTimeout(() => {
-                                    I.S.dispatch(v.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    I.S.dispatch(S.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
                     (0, i.jsx)(a.MenuItem, {
                         id: 'pins',
-                        label: S.Z.Messages.PINS,
+                        label: v.Z.Messages.PINS,
                         icon: a.WindowLaunchIcon,
                         action: function () {
-                            P(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
+                            P(), I.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
@@ -138,7 +138,7 @@ function Z(e) {
             (0, i.jsx)(N, { channel: t }),
             (0, i.jsx)(g.ZP.Icon, {
                 icon: a.XSmallIcon,
-                tooltip: S.Z.Messages.CLOSE,
+                tooltip: v.Z.Messages.CLOSE,
                 onClick: () => (0, x.vN)((0, E.e)(t), null != n ? n : t.parent_id)
             })
         ]

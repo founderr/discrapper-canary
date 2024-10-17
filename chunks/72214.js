@@ -27,7 +27,7 @@ function _(e) {
             }),
             [g]
         ),
-        { search: S, query: I, results: A } = (0, d.Z)(m),
+        { search: S, query: A, results: I } = (0, d.Z)(m),
         p = l.useMemo(
             () =>
                 (function (e) {
@@ -46,33 +46,33 @@ function _(e) {
             [t]
         ),
         { queryMode: C } = p,
-        [N, v] = l.useState(null != _ ? _ : []);
+        [N, L] = l.useState(null != _ ? _ : []);
     l.useLayoutEffect(() => {
         let { query: e, resultTypes: t } = p;
         S({
             query: e,
             resultTypes: t
         }),
-            v(null != _ ? _ : []);
+            L(null != _ ? _ : []);
     }, [S, p]),
         (0, r.D)();
-    let L = (0, a.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
-        b = (0, a.e7)([s.Z], () => s.Z.isConnected()),
-        T = '' !== I;
+    let v = (0, a.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
+        T = (0, a.e7)([s.Z], () => s.Z.isConnected()),
+        b = '' !== A;
     return l.useMemo(
         () =>
             (0, u.ZP)({
-                results: A,
-                hasQuery: T,
+                results: I,
+                hasQuery: b,
                 queryMode: C,
                 targetDestination: n,
-                frequentChannels: L,
+                frequentChannels: v,
                 selectedDestinations: _,
                 pinnedDestinations: N,
                 originDestination: f,
                 includeMissingDMs: E,
-                isConnected: b
+                isConnected: T
             }),
-        [A, T, C, n, L, _, N, f, E, b]
+        [I, b, C, n, v, _, N, f, E, T]
     );
 }

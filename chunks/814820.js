@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return C;
+        return p;
     }
 }),
     n(47120);
@@ -18,9 +18,9 @@ var i = n(735250),
     I = n(838440),
     m = n(779139),
     T = n(981631),
-    h = n(689938),
-    N = n(280586);
-let f = (e) => {
+    f = n(689938),
+    h = n(280586);
+let N = (e) => {
         let { channel: t, message: n } = e,
             [s, c] = a.useState(!1),
             u = (0, m.y6)(n.id),
@@ -35,27 +35,27 @@ let f = (e) => {
                 });
             }, [t, n, u]);
         return (0, i.jsx)('div', {
-            className: N.welcomeCTA,
+            className: h.welcomeCTA,
             children: (0, i.jsxs)(r.Button, {
-                className: N.welcomeCTAButtonOuter,
-                innerClassName: N.welcomeCTAButton,
+                className: h.welcomeCTAButtonOuter,
+                innerClassName: h.welcomeCTAButton,
                 color: r.ButtonColors.PRIMARY,
                 onMouseEnter: () => c(!0),
                 onMouseLeave: () => c(!1),
                 onClick: d,
                 children: [
                     (0, i.jsx)(o.ZP, {
-                        className: N.welcomeCTASticker,
+                        className: h.welcomeCTASticker,
                         isInteracting: s,
                         sticker: u,
                         size: 28
                     }),
-                    h.Z.Messages.WELCOME_CTA_LABEL
+                    f.Z.Messages.WELCOME_CTA_LABEL
                 ]
             })
         });
     },
-    C = (e) => {
+    p = (e) => {
         let { message: t, channel: n } = e,
             a = n.getGuildId(),
             r = (0, s.e7)([E.default, _.Z, d.Z, u.ZP], () => {
@@ -70,7 +70,7 @@ let f = (e) => {
                 return r && !s && !l && !o && m;
             });
         return null != a && r
-            ? (0, i.jsx)(f, {
+            ? (0, i.jsx)(N, {
                   message: t,
                   channel: n
               })

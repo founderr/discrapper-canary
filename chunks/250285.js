@@ -6,16 +6,16 @@ var s = n(735250),
     l = n(789978),
     o = n(748780),
     c = n(91192),
-    d = n(906732),
-    _ = n(171368),
+    _ = n(906732),
+    d = n(171368),
     E = n(981631),
     u = n(823120);
 t.Z = (e) => {
     let { userId: t, children: n, isLast: r, className: T } = e,
         [I, R] = a.useState(!1),
-        { analyticsLocations: g } = (0, d.ZP)(),
+        { analyticsLocations: g } = (0, _.ZP)(),
         N = a.useCallback(() => {
-            (0, _.openUserProfileModal)({
+            (0, d.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: g,
                 analyticsLocation: { section: E.jXE.FAMILY_CENTER }

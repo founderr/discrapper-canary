@@ -6,8 +6,8 @@ var s = n(735250),
     l = n(399606),
     o = n(481060),
     c = n(607070),
-    d = n(100527),
-    _ = n(906732),
+    _ = n(100527),
+    d = n(906732),
     E = n(66595),
     u = n(535322),
     T = n(477734),
@@ -17,7 +17,7 @@ var s = n(735250),
     N = n(689938),
     m = n(212749);
 let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE),
-    f = (e) => {
+    A = (e) => {
         let { isShowingAll: t, onClick: n } = e;
         return (0, s.jsxs)(o.Clickable, {
             onClick: n,
@@ -38,10 +38,10 @@ let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.
             ]
         });
     },
-    p = (e) => {
+    f = (e) => {
         let { title: t, description: n, className: a, imageSource: r, imageClassName: l, titleBadge: c, isNew: T = !1, isEarlyAccess: I = !1 } = e,
-            { analyticsLocations: R } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
-        return (0, s.jsx)(_.Gt, {
+            { analyticsLocations: R } = (0, d.ZP)(_.Z.PREMIUM_MARKETING_PERK_CARD);
+        return (0, s.jsx)(d.Gt, {
             value: R,
             children: (0, s.jsxs)('div', {
                 className: i()(m.perkCard, a),
@@ -79,12 +79,12 @@ let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.
     };
 t.Z = (e) => {
     let { className: t, isSubscriberNitroHome: n = !1 } = e,
-        [r, d] = a.useState(!1),
+        [r, _] = a.useState(!1),
         E = (0, R.N)({ styles: m }),
         u = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { analyticsLocations: N } = (0, _.ZP)(),
-        A = (0, T._f)(),
-        M = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, A ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
+        { analyticsLocations: N } = (0, d.ZP)(),
+        p = (0, T._f)(),
+        M = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, p ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
     return (0, s.jsxs)('div', {
         className: i()(m.perksContainer, t, {
             [m.partiallyHidden]: n && !r,
@@ -99,7 +99,7 @@ t.Z = (e) => {
             }),
             (0, s.jsx)('div', {
                 className: i()(m.perkCardContainer, { [m.perkCardContainerExpanded]: r }),
-                children: M.map((e) => null != e && (0, s.jsx)(p, { ...e }, e.title))
+                children: M.map((e) => null != e && (0, s.jsx)(f, { ...e }, e.title))
             }),
             n &&
                 (0, s.jsxs)(s.Fragment, {
@@ -109,13 +109,13 @@ t.Z = (e) => {
                                 [m.sizeGizmo]: !r,
                                 [m.sizeGizmoExpanded]: r
                             }),
-                            children: (0, s.jsx)(f, {
+                            children: (0, s.jsx)(A, {
                                 onClick: () => {
                                     I.default.track(g.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
                                         location_stack: N,
                                         was_expanded: r
                                     }),
-                                        d(!r);
+                                        _(!r);
                                 },
                                 isShowingAll: r
                             })

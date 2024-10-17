@@ -20,7 +20,7 @@ function I(e) {
         m = (0, l.p)(),
         T = a.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
     (0, r.$)(T);
-    let h = a.useMemo(
+    let f = a.useMemo(
         () =>
             null != t.content && '' !== t.content
                 ? (0, o.ZP)(t, {
@@ -68,7 +68,7 @@ function I(e) {
                             l
                         ]
                     });
-                })(t, h, I)
+                })(t, f, I)
             })
         ]
     });

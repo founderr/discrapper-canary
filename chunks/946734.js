@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(665149),
     T = n(981631),
     x = n(228168),
-    v = n(689938),
-    S = n(289304);
+    S = n(689938),
+    v = n(289304);
 function N(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ class A {
             return (
                 a.length > 0 &&
                     (l = (0, i.jsx)(o.TooltipContainer, {
-                        className: S.tooltip,
+                        className: v.tooltip,
                         text: a.join(', '),
                         position: 'bottom',
                         children: l
@@ -104,15 +104,15 @@ class A {
                 (0, i.jsx)(
                     o.TooltipContainer,
                     {
-                        text: v.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
+                        text: S.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
                         position: 'bottom',
                         children: (0, i.jsx)(o.Clickable, {
-                            className: S.moreAvatars,
+                            className: v.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, i.jsx)(o.CirclePlusIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: S.plusIcon
+                                className: v.plusIcon
                             })
                         })
                     },
@@ -167,15 +167,15 @@ function Z(e) {
             channelId: t.id
         });
     return 0 === _.getNicknameGuildPairs().length && 0 === a.length
-        ? (0, i.jsx)('div', { className: S.spacer })
+        ? (0, i.jsx)('div', { className: v.spacer })
         : (0, i.jsxs)(d.Gt, {
               value: m,
               children: [
                   (0, i.jsx)(I.iz, {}),
                   (0, i.jsx)(o.TextBadge, {
-                      text: v.Z.Messages.AKA,
+                      text: S.Z.Messages.AKA,
                       disableColor: !0,
-                      className: S.akaBadge
+                      className: v.akaBadge
                   }),
                   a.length > 0
                       ? (0, i.jsx)(c.Z, {
@@ -195,7 +195,7 @@ function Z(e) {
                                               position: 'bottom',
                                               children: (0, i.jsx)('img', {
                                                   alt: '',
-                                                  className: S.avatar,
+                                                  className: v.avatar,
                                                   onClick: _.handleClick,
                                                   src: l.getAvatarURL(r, 16),
                                                   'aria-hidden': !0
@@ -207,13 +207,13 @@ function Z(e) {
                             renderMoreUsers: _.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: S.avatars
+                            className: v.avatars
                         })
                       : null,
                   _.getNicknameGuildPairs().length > 0
                       ? (0, i.jsx)(h.Z, {
                             position: 'bottom',
-                            className: S.nicknames,
+                            className: v.nicknames,
                             children: _.renderNicknamePairs()
                         })
                       : null

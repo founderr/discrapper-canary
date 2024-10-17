@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return h;
+        return f;
     }
 });
 var i = n(735250);
@@ -18,26 +18,26 @@ var a = n(512722),
     I = n(689011),
     m = n(55563),
     T = n(981631);
-async function h(e) {
-    let { applicationId: t, skuId: n, initialPlanId: a, analyticsLocations: h, analyticsLocationObject: N } = e,
-        f = m.Z.get(n);
-    if (null == f) {
+async function f(e) {
+    let { applicationId: t, skuId: n, initialPlanId: a, analyticsLocations: f, analyticsLocationObject: h } = e,
+        N = m.Z.get(n);
+    if (null == N) {
         let e = (await (0, l.oJ)(t)).find((e) => e.sku.id === n);
         s()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
     }
-    (f = null != f ? f : m.Z.get(n)), s()(null != f && f.applicationId === t, 'SKU must belong to application'), f.type === T.epS.SUBSCRIPTION && !(0, c.a)([f.id]) && (await (0, o.GZ)(f.id));
-    let C = (function () {
+    (N = null != N ? N : m.Z.get(n)), s()(null != N && N.applicationId === t, 'SKU must belong to application'), N.type === T.epS.SUBSCRIPTION && !(0, c.a)([N.id]) && (await (0, o.GZ)(N.id));
+    let p = (function () {
         let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
         return null == e || e.closed ? r.DEFAULT_MODAL_CONTEXT : r.POPOUT_MODAL_CONTEXT;
     })();
-    if (f.type !== T.epS.SUBSCRIPTION)
+    if (N.type !== T.epS.SUBSCRIPTION)
         return new Promise((e, i) => {
             (0, d.Z)({
                 applicationId: t,
                 skuId: n,
-                analyticsLocationObject: N,
-                analyticsLocations: h,
-                contextKey: C,
+                analyticsLocationObject: h,
+                analyticsLocations: f,
+                contextKey: p,
                 onComplete: (t) => {
                     var n;
                     e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : []);
@@ -60,5 +60,5 @@ async function h(e) {
                     onClose: () => t(!1)
                 })
         });
-    })(t, n, a, N, h);
+    })(t, n, a, h, f);
 }

@@ -6,23 +6,23 @@ var a = n(442837),
     l = n(906732),
     o = n(963249),
     c = n(78839),
-    d = n(74538),
-    _ = n(823188),
+    _ = n(74538),
+    d = n(823188),
     E = n(474936),
     u = n(981631),
     T = n(689938),
     I = n(687171);
 t.Z = () => {
     let e = (0, a.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
-        t = (0, d.u0)(null == e ? void 0 : e.trialId),
+        t = (0, _.u0)(null == e ? void 0 : e.trialId),
         n = (0, l.ZP)([i.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
     return (0, s.jsxs)('div', {
         className: I.banner,
         children: [
-            (0, s.jsx)(_.Cy, {
+            (0, s.jsx)(d.Cy, {
                 text: T.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                 className: I.trialPill,
-                colorOptions: _.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: d.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, s.jsx)('div', {
                 className: I.body,

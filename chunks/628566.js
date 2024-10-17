@@ -20,11 +20,11 @@ let E = new Map(),
     I = new Map(),
     m = [],
     T = 0,
-    h = [];
-class N extends (a = c.ZP.Store) {
+    f = [];
+class h extends (a = c.ZP.Store) {
     getIntegrations(e) {
         var t;
-        return null !== (t = E.get(e)) && void 0 !== t ? t : h;
+        return null !== (t = E.get(e)) && void 0 !== t ? t : f;
     }
     getIntegration(e, t) {
         var n;
@@ -44,11 +44,11 @@ class N extends (a = c.ZP.Store) {
         return m;
     }
 }
-function f(e) {
+function N(e) {
     return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
 (o = 'PrivateChannelIntegrationStore'),
-    (l = 'displayName') in (r = N)
+    (l = 'displayName') in (r = h)
         ? Object.defineProperty(r, l, {
               value: o,
               enumerable: !0,
@@ -56,7 +56,7 @@ function f(e) {
               writable: !0
           })
         : (r[l] = o);
-let C = new N(u.Z, {
+let p = new h(u.Z, {
     LOGOUT() {
         E.clear();
     },
@@ -84,7 +84,7 @@ let C = new N(u.Z, {
     },
     FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
         let { channelId: t, integrations: n } = e;
-        E.set(t, f(n.map(_.F))), I.set(t, 2);
+        E.set(t, N(n.map(_.F))), I.set(t, 2);
     },
     FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
         let { channelId: t } = e;
@@ -94,7 +94,7 @@ let C = new N(u.Z, {
         let { integration: t } = e,
             n = E.get(t.channel_id);
         if (null == n) return !1;
-        E.set(t.channel_id, f([...n, (0, _.F)(t)]));
+        E.set(t.channel_id, N([...n, (0, _.F)(t)]));
     },
     PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
         let { integration: t } = e,
@@ -103,7 +103,7 @@ let C = new N(u.Z, {
         let i = (0, _.F)(t),
             a = n.findIndex((e) => e.application.id === i.application.id),
             s = [...n];
-        -1 === a ? s.push(i) : (s[a] = i), E.set(i.channel_id, f(s));
+        -1 === a ? s.push(i) : (s[a] = i), E.set(i.channel_id, N(s));
     },
     PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
         let { channelId: t, applicationId: n } = e,
@@ -119,4 +119,4 @@ let C = new N(u.Z, {
         return E.delete(t.id);
     }
 });
-t.Z = C;
+t.Z = p;

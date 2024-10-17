@@ -12,44 +12,44 @@ var i = n(735250),
     I = n(305325),
     m = n(246364),
     T = n(937111),
-    h = n(281956),
-    N = n(41776),
-    f = n(738737),
-    C = n(509545),
-    p = n(63063),
+    f = n(281956),
+    h = n(41776),
+    N = n(738737),
+    p = n(509545),
+    C = n(63063),
     g = n(817460),
-    A = n(584825),
-    S = n(697227),
-    R = n(934826),
-    x = n(896083),
+    S = n(584825),
+    A = n(697227),
+    x = n(934826),
+    R = n(896083),
     O = n(939872),
-    M = n(265985),
-    v = n(293810),
+    v = n(265985),
+    M = n(293810),
     L = n(981631),
     Z = n(689938);
 t.Z = (e, t, n, s) => {
     let l;
-    let P = (0, c.e7)([N.Z], () => N.Z.isLurking(t)),
-        b = (0, h.J)(t),
+    let b = (0, c.e7)([h.Z], () => h.Z.isLurking(t)),
+        P = (0, f.J)(t),
         D = (0, c.e7)([T.Z], () => (null != t ? T.Z.getRequest(t) : null)),
         j = (null == D ? void 0 : D.applicationStatus) === m.wB.SUBMITTED,
         U = null == e ? void 0 : e.subscription_plans[0],
         y = null == U ? void 0 : U.id,
         B = (null == e ? void 0 : e.published) === !0,
         k = null == U ? void 0 : U.sku_id,
-        G = (0, c.e7)([C.Z], () => (null != y ? C.Z.get(y) : null)),
-        { activeSubscription: F, activeSubscriptionPlanFromStore: w } = (0, R.Z)(n),
+        G = (0, c.e7)([p.Z], () => (null != y ? p.Z.get(y) : null)),
+        { activeSubscription: F, activeSubscriptionPlanFromStore: w } = (0, x.Z)(n),
         V = null == F || null != w,
-        H = (0, A._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
-        Y = (0, S.V)(F),
+        H = (0, S._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
+        Y = (0, A.V)(F),
         W = null != Y,
-        K = (null == F ? void 0 : F.trialId) != null,
-        { loading: z, getTrialPurchaseEligibility: X } = (0, x.F)(),
-        Q = (0, A.oC)(null == e ? void 0 : e.id),
+        z = (null == F ? void 0 : F.trialId) != null,
+        { loading: K, getTrialPurchaseEligibility: X } = (0, R.F)(),
+        Q = (0, S.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: J } = (0, E.ZP)(),
         q = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
-    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !b ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : q && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
-    let $ = (0, _.Z)(v.iP);
+    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : b && !P ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : z ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : q && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+    let $ = (0, _.Z)(M.iP);
     a.useEffect(() => {
         B &&
             null != k &&
@@ -66,7 +66,7 @@ t.Z = (e, t, n, s) => {
                     n = null == Q ? void 0 : null === (l = Q.active_trial) || void 0 === l ? void 0 : l.id;
                 } else a = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
             }
-            (0, f.Z)({
+            (0, N.Z)({
                 activeSubscription: F,
                 analyticsSubscriptionType: L.NYc.GUILD,
                 trialId: n,
@@ -77,16 +77,16 @@ t.Z = (e, t, n, s) => {
                               interval: (0, g.iG)(U),
                               days: 1,
                               contactLink: L.EYA.CONTACT,
-                              cancelSubscriptionArticle: p.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_CANCEL),
-                              helpdeskArticle: p.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_TRIAL),
-                              paidServiceTermsArticle: p.Z.getArticleURL(L.BhN.PAID_TERMS),
+                              cancelSubscriptionArticle: C.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_CANCEL),
+                              helpdeskArticle: C.Z.getArticleURL(L.BhN.ROLE_SUBSCRIPTION_TRIAL),
+                              paidServiceTermsArticle: C.Z.getArticleURL(L.BhN.PAID_TERMS),
                               tierName: U.name
                           })
                         : void 0,
                 analyticsLocations: J,
                 analyticsLocation: s,
                 renderHeader: (n, a, s) =>
-                    (0, i.jsx)(M.h, {
+                    (0, i.jsx)(v.h, {
                         onClose: a,
                         listing: e,
                         step: s,
@@ -102,7 +102,7 @@ t.Z = (e, t, n, s) => {
                               onClose: a,
                               guildId: t
                           })
-                        : (0, i.jsx)(M.x, {
+                        : (0, i.jsx)(v.x, {
                               listing: e,
                               onClose: a,
                               guildId: t
@@ -114,9 +114,9 @@ t.Z = (e, t, n, s) => {
             (0, I.hk)(t);
         }, [t]);
     return {
-        openModal: b ? et : ee,
-        canOpenModal: !P && null != G && V && !j && !W && !K && !q,
+        openModal: P ? et : ee,
+        canOpenModal: !b && null != G && V && !j && !W && !z && !q,
         cannotOpenReason: l,
-        isCheckingTrialEligibility: z
+        isCheckingTrialEligibility: K
     };
 };

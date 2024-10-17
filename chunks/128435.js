@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return C;
     }
 }),
     n(627341);
@@ -26,7 +26,7 @@ function T(e) {
         children: t.text
     });
 }
-function h(e) {
+function f(e) {
     let { children: t, onClick: n, variant: a = 'text-sm/medium', color: s = 'interactive-active', className: l, buttonRef: o } = e;
     return (0, i.jsx)(c.Button, {
         onClick: n,
@@ -42,13 +42,13 @@ function h(e) {
         })
     });
 }
-function N(e) {
+function h(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: a, isInteractive: s, className: l } = e;
     return (0, i.jsxs)('div', {
         className: r()(m.detailsText, l),
         children: [
             s
-                ? (0, i.jsx)(h, {
+                ? (0, i.jsx)(f, {
                       onClick: a,
                       variant: 'text-sm/normal',
                       color: 'none',
@@ -71,7 +71,7 @@ function N(e) {
         ]
     });
 }
-function f(e) {
+function N(e) {
     let { action: t, channelId: n, messageId: s, isInteractive: l, className: o } = e,
         { actionButtonRef: d, manageFocusOnAction: _ } = (0, E.dv)(),
         I = a.useCallback(async () => {
@@ -105,13 +105,13 @@ function f(e) {
                 t.presentation
             )
           : 'textButton' === t.presentation
-            ? (0, i.jsx)(h, {
+            ? (0, i.jsx)(f, {
                   buttonRef: d,
                   onClick: I,
                   className: o,
                   children: t.label
               })
-            : (0, i.jsx)(N, {
+            : (0, i.jsx)(h, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: I,
@@ -119,7 +119,7 @@ function f(e) {
                   className: o
               });
 }
-function C(e) {
+function p(e) {
     let { message: t, poll: n, className: a } = e,
         s = (0, _.$B)(n.containerStyle),
         u = (function (e, t) {
@@ -162,20 +162,20 @@ function C(e) {
                       (0, i.jsxs)('div', {
                           className: m.bottomBar,
                           children: [
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(N, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
                                   className: m.secondaryAction,
                                   isInteractive: n.isInteractive
                               }),
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(N, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
                                   className: m.tertiaryAction
                               }),
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(N, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.primaryAction
@@ -186,13 +186,13 @@ function C(e) {
               })
           });
 }
-function p(e) {
+function C(e) {
     let { message: t, poll: n, className: a } = e;
     return (0, i.jsx)(_.XL, {
         message: t,
         poll: n,
         children: (0, i.jsx)(E.Pk, {
-            children: (0, i.jsx)(C, {
+            children: (0, i.jsx)(p, {
                 message: t,
                 poll: n,
                 className: a

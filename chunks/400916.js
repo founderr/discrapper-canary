@@ -18,10 +18,10 @@ var a = n(512722),
 function I(e) {
     var t, n, a, I;
     let { guildId: m, productId: T } = e,
-        h = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(T)),
-        N = (null !== (I = null == h ? void 0 : null === (t = h.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
-        f = null == h ? void 0 : null === (a = h.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
-    return N
+        f = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(T)),
+        h = (null !== (I = null == f ? void 0 : null === (t = f.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
+        N = null == f ? void 0 : null === (a = f.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
+    return h
         ? (0, i.jsxs)(l.Button, {
               onClick: function () {
                   u.Z.open({
@@ -43,11 +43,11 @@ function I(e) {
                   })
               ]
           })
-        : (s()(null != f, 'No attachment'),
+        : (s()(null != N, 'No attachment'),
           (0, i.jsxs)(d.Z, {
               guildId: m,
               productId: T,
-              attachmentId: f,
+              attachmentId: N,
               innerClassName: E.textWithIcon,
               children: [
                   (0, i.jsx)('div', { children: _.Z.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE }),

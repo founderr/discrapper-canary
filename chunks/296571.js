@@ -16,15 +16,15 @@ function d(e) {
     var t;
     let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,
         T = (0, l.ZP)(n),
-        h = _(T),
-        N = (0, a.e7)([r.Z], () => {
+        f = _(T),
+        h = (0, a.e7)([r.Z], () => {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+        N = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
             actorName: T.nick,
-            actorHook: h,
-            threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
+            actorHook: f,
+            threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: E,
                 onContextMenu: m
@@ -39,6 +39,6 @@ function d(e) {
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: f
+        children: N
     });
 }

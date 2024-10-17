@@ -13,13 +13,13 @@ var i = n(735250),
     I = n(419922),
     m = n(217588),
     T = n(981631),
-    h = n(474936),
-    N = n(231206);
-let f = (0, d.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    C = (e) => {
+    f = n(474936),
+    h = n(231206);
+let N = (0, d.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    p = (e) => {
         if (null != e)
             o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                type: h.cd.STICKER_IN_MESSAGE_HOVER,
+                type: f.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, E.aQ)(e.format_type),
@@ -30,21 +30,21 @@ t.Z = (e) => {
     let { renderableSticker: t, channel: n, isInteracting: s } = e,
         [o, d] = a.useState(!0),
         [E, T] = a.useState(String(Date.now())),
-        [h] = (0, _.XW)(t, s),
-        { analyticsLocations: p } = (0, c.ZP)(l.Z.STICKER_MESSAGE),
+        [f] = (0, _.XW)(t, s),
+        { analyticsLocations: C } = (0, c.ZP)(l.Z.STICKER_MESSAGE),
         g = (0, i.jsxs)('span', {
-            className: N.stickerName,
+            className: h.stickerName,
             children: [
                 (0, i.jsx)(r.StickerSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: N.stickerIcon
+                    className: h.stickerIcon
                 }),
-                (null != h ? h : t).name
+                (null != f ? f : t).name
             ]
         });
     return (0, i.jsx)(c.Gt, {
-        value: p,
+        value: C,
         children: (0, i.jsx)(r.Popout, {
             align: 'center',
             animation: r.Popout.Animation.TRANSLATE,
@@ -67,20 +67,20 @@ t.Z = (e) => {
                     text: (0, u.Y)(g),
                     'aria-label': !1,
                     onTooltipShow: () => {
-                        C(h);
+                        p(f);
                     },
                     children: (e) =>
                         (0, i.jsx)(r.Clickable, {
                             ...e,
-                            className: N.clickableSticker,
+                            className: h.clickableSticker,
                             onClick: (e) => {
                                 d(!o), n(e);
                             },
                             tag: 'span',
                             children: (0, i.jsx)(I.ZP, {
                                 isInteracting: s,
-                                size: f,
-                                sticker: null != h ? h : t
+                                size: N,
+                                sticker: null != f ? f : t
                             })
                         })
                 });

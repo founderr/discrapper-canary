@@ -12,8 +12,8 @@ var i = n(780384),
 ((s = a || (a = {}))[(s.TOP = 0)] = 'TOP'), (s[(s.BOTTOM = 1)] = 'BOTTOM');
 let o = 'premium_tier_2_gradient',
     c = 'premium_tier_2_fill',
-    d = 'white_gradient',
-    _ = (0, r.jsxs)('linearGradient', {
+    _ = 'white_gradient',
+    d = (0, r.jsxs)('linearGradient', {
         id: o,
         x1: '0%',
         y1: '0%',
@@ -64,7 +64,7 @@ let o = 'premium_tier_2_gradient',
         ]
     }),
     u = (0, r.jsxs)('linearGradient', {
-        id: d,
+        id: _,
         x1: '0.005697',
         y1: '18.3495',
         x2: '393.132',
@@ -93,7 +93,7 @@ let o = 'premium_tier_2_gradient',
         ]
     }),
     T = (0, r.jsxs)('defs', {
-        children: [_, E, u]
+        children: [d, E, u]
     }),
     I = (e) => {
         let { className: t, fill: n, gradient: s } = e;
@@ -160,19 +160,19 @@ let o = 'premium_tier_2_gradient',
 t.ZP = (e) => {
     let { className: t, variant: n } = e,
         s = (0, l.ZP)(),
-        a = (0, i.wj)(s) ? d : o,
-        _ = (0, i.wj)(s) ? '#F2F3F5' : 'url(#'.concat(c, ')');
+        a = (0, i.wj)(s) ? _ : o,
+        d = (0, i.wj)(s) ? '#F2F3F5' : 'url(#'.concat(c, ')');
     switch (n) {
         case 0:
             return (0, r.jsx)(R, {
                 className: t,
-                fill: _,
+                fill: d,
                 gradient: a
             });
         case 1:
             return (0, r.jsx)(I, {
                 className: t,
-                fill: _,
+                fill: d,
                 gradient: a
             });
         default:

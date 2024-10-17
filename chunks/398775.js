@@ -3,7 +3,7 @@ t.d(s, {
         return g;
     },
     of: function () {
-        return A;
+        return m;
     }
 }),
     t(653041),
@@ -23,7 +23,7 @@ var n = t(735250),
     S = t(798769),
     I = t(981631),
     N = t(689938),
-    m = t(689230);
+    A = t(689230);
 async function C(e) {
     let { premiumSubscription: s, pauseDuration: t, onClose: n, setHasError: a, setIsCancelling: i, analyticsLocations: r, analyticsLocation: o } = e;
     try {
@@ -32,7 +32,7 @@ async function C(e) {
         a(!0), i(!1);
     }
 }
-function A(e) {
+function m(e) {
     let { premiumType: s, onClose: t, pauseDuration: i, setPauseDuration: r, footer: l, premiumSubscription: d } = e,
         _ = a.useCallback(
             (e) => {
@@ -51,7 +51,7 @@ function A(e) {
                 a.push({
                     name: s.format({ days: t - n }),
                     value: t,
-                    radioItemIconClassName: m.radioOption
+                    radioItemIconClassName: A.radioOption
                 });
             }
             return (
@@ -59,8 +59,8 @@ function A(e) {
                 a.push({
                     name: N.Z.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
                     value: 0,
-                    radioBarClassName: m.cancelText,
-                    radioItemIconClassName: m.cancelText
+                    radioBarClassName: A.cancelText,
+                    radioItemIconClassName: A.cancelText
                 }),
                 a
             );
@@ -78,23 +78,23 @@ function A(e) {
                 (0, n.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, n.jsxs)('div', {
-                        className: m.__invalid_header,
+                        className: A.__invalid_header,
                         children: [
                             (0, n.jsx)(c.Heading, {
                                 variant: 'heading-xl/bold',
-                                className: m.__invalid_modalHeader,
+                                className: A.__invalid_modalHeader,
                                 children: N.Z.Messages.PREMIUM_PAUSE_SELECT_TITLE
                             }),
                             (0, n.jsx)(c.Heading, {
                                 variant: 'heading-sm/medium',
-                                className: m.subtitle,
+                                className: A.subtitle,
                                 children: u
                             })
                         ]
                     })
                 }),
                 (0, n.jsx)(c.ModalContent, {
-                    className: m.body,
+                    className: A.body,
                     children: (0, n.jsx)(c.RadioGroup, {
                         options: C,
                         onChange: _,
@@ -111,7 +111,7 @@ function A(e) {
 }
 function g(e) {
     let { premiumSubscription: s, premiumType: t, onClose: i, pauseDuration: o, analyticsLocation: d } = e,
-        [T, A] = a.useState(!1),
+        [T, m] = a.useState(!1),
         { analyticsLocations: g } = (0, u.ZP)(),
         [h, O] = a.useState(!1),
         p = (0, _.ZP)(),
@@ -138,7 +138,7 @@ function g(e) {
     }
     return (
         (R = (0, n.jsx)('div', {
-            className: m.body,
+            className: A.body,
             children: x
         })),
         (0, n.jsxs)(n.Fragment, {
@@ -150,20 +150,20 @@ function g(e) {
                 (0, n.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, n.jsx)('div', {
-                        className: m.__invalid_header,
+                        className: A.__invalid_header,
                         children: (0, n.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
-                            className: m.__invalid_modalHeader,
+                            className: A.__invalid_modalHeader,
                             children: N.Z.Messages.PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED
                         })
                     })
                 }),
                 (0, n.jsxs)(c.ModalContent, {
-                    className: m.body,
+                    className: A.body,
                     children: [
                         T
                             ? (0, n.jsx)(c.FormErrorBlock, {
-                                  className: m.errorBlock,
+                                  className: A.errorBlock,
                                   children: N.Z.Messages.BILLING_ERROR_GENERIC
                               })
                             : null,
@@ -173,7 +173,7 @@ function g(e) {
                 (0, n.jsx)(c.ModalFooter, {
                     justify: E.Z.Justify.START,
                     children: (0, n.jsxs)('div', {
-                        className: m.whatYouLoseButtonContainer,
+                        className: A.whatYouLoseButtonContainer,
                         children: [
                             (0, n.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
@@ -183,7 +183,7 @@ function g(e) {
                                         premiumSubscription: s,
                                         pauseDuration: o,
                                         setIsCancelling: O,
-                                        setHasError: A,
+                                        setHasError: m,
                                         onClose: i,
                                         analyticsLocations: g,
                                         analyticsLocation: d

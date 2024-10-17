@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(434404),
     T = n(454585),
     x = n(430824),
-    v = n(496675),
-    S = n(594174),
+    S = n(496675),
+    v = n(594174),
     N = n(700785),
     A = n(51144),
     Z = n(396769),
@@ -40,9 +40,9 @@ function j(e) {
         r = (0, _.ZP)(t, !0),
         j = t.guild_id,
         O = (0, d.e7)([x.Z], () => (null != j ? x.Z.getRoles(j) : void 0)),
-        y = (0, d.e7)([S.default, x.Z], () => {
+        y = (0, d.e7)([v.default, x.Z], () => {
             var e;
-            return S.default.getUser(null === (e = x.Z.getGuild(j)) || void 0 === e ? void 0 : e.ownerId);
+            return v.default.getUser(null === (e = x.Z.getGuild(j)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = s.useMemo(
             () =>
@@ -69,12 +69,12 @@ function j(e) {
             [t, j, D]
         ),
         k = (0, d.Wu)(
-            [S.default],
+            [v.default],
             () => {
                 let e = {};
                 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
                     if (n.type !== m.BN.MEMBER || null != e[n.id]) continue;
-                    let t = S.default.getUser(n.id);
+                    let t = v.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
@@ -93,7 +93,7 @@ function j(e) {
             },
             [t, y]
         ),
-        w = v.Z.can(R.Plq.MANAGE_CHANNELS, t) || v.Z.can(R.Plq.MANAGE_ROLES, t);
+        w = S.Z.can(R.Plq.MANAGE_CHANNELS, t) || S.Z.can(R.Plq.MANAGE_ROLES, t);
     function B() {
         p.ZP.open(t.id);
     }

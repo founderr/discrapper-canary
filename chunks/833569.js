@@ -24,9 +24,9 @@ var n,
     S = t(355467),
     I = t(410030),
     N = t(100527),
-    m = t(906732),
+    A = t(906732),
     C = t(211242),
-    A = t(600164),
+    m = t(600164),
     g = t(509545),
     h = t(626135),
     O = t(122289),
@@ -72,7 +72,7 @@ function H(e) {
         [_, u] = r.useState(!1),
         [S, N] = r.useState(!1),
         g = (0, I.ZP)(),
-        { analyticsLocations: h } = (0, m.ZP)(),
+        { analyticsLocations: h } = (0, A.ZP)(),
         O = null;
     switch (t.status) {
         case V.O0b.PAST_DUE:
@@ -177,7 +177,7 @@ function H(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                justify: A.Z.Justify.START,
+                justify: m.Z.Justify.START,
                 children: [M, f]
             })
         ]
@@ -186,7 +186,7 @@ function H(e) {
 function W(e) {
     var s, t;
     let { premiumSubscription: n } = e,
-        { analyticsLocations: a } = (0, m.ZP)(),
+        { analyticsLocations: a } = (0, A.ZP)(),
         [r] = (0, M.ED)({
             subscriptionId: n.id,
             items: (0, R.Ue)(null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t ? t : n.items),
@@ -233,7 +233,7 @@ function K(e) {
     let { premiumSubscription: s, premiumType: t, onBack: n, onClose: a, analyticsLocation: o } = e,
         [c, d] = r.useState(!1),
         [_, u] = r.useState(!1),
-        { analyticsLocations: E } = (0, m.ZP)();
+        { analyticsLocations: E } = (0, A.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(U.Z, {
@@ -253,8 +253,8 @@ function K(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                align: A.Z.Align.CENTER,
-                justify: A.Z.Justify.BETWEEN,
+                align: m.Z.Align.CENTER,
+                justify: m.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(T.Button, {
                         color: T.Button.Colors.RED,
@@ -301,7 +301,7 @@ function X(e) {
     let t,
         { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: u } = e,
         S = r.useRef(new c.qA()),
-        [C, A] = r.useState(null),
+        [C, m] = r.useState(null),
         g = (0, D.yQ)(),
         p = (null == g ? void 0 : g.showCard) === !0,
         x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
@@ -313,7 +313,7 @@ function X(e) {
     }, [n]);
     let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
     null == u && (u = j ? 1 : 2);
-    let { analyticsLocations: B } = (0, m.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+    let { analyticsLocations: B } = (0, A.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [U, w, W, X] = (function (e, s, t) {
             let [n, a] = r.useState(e),
                 [i, o] = r.useState(Date.now()),
@@ -484,11 +484,11 @@ function X(e) {
         default:
             throw Error('Unexpected step: '.concat(U));
     }
-    return (0, i.jsxs)(m.Gt, {
+    return (0, i.jsxs)(A.Gt, {
         value: B,
         children: [
             (0, i.jsx)(c.O_, {
-                ref: A,
+                ref: m,
                 className: k.confettiCanvas,
                 environment: S.current
             }),

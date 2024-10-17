@@ -1,24 +1,24 @@
-r.d(t, {
+s.d(t, {
     K: function () {
-        return f;
+        return m;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-    s = r.n(n),
-    i = r(213731),
-    o = r(462972),
-    l = r(17504),
-    c = r(352177);
+var a = s(735250);
+s(470079);
+var r = s(120356),
+    n = s.n(r),
+    i = s(213731),
+    l = s(462972),
+    o = s(17504),
+    c = s(352177);
 let d = () => 4 * Math.random() + 8,
     u = [d(), d(), d()],
-    f = () =>
+    m = () =>
         (0, a.jsx)('div', {
-            className: s()(l.skeleton, c.shopCard),
+            className: n()(o.skeleton, c.shopCard),
             children: (0, a.jsxs)('div', {
-                className: l.cardBody,
-                children: [(0, a.jsx)('div', { className: l.cardAvatar }), (0, a.jsx)('div', { className: l.cardTitle }), (0, a.jsx)('div', { className: l.cardDescription }), (0, a.jsx)('div', { className: l.cardSummary })]
+                className: o.cardBody,
+                children: [(0, a.jsx)('div', { className: o.cardAvatar }), (0, a.jsx)('div', { className: o.cardTitle }), (0, a.jsx)('div', { className: o.cardDescription }), (0, a.jsx)('div', { className: o.cardSummary })]
             })
         });
 t.Z = () =>
@@ -31,10 +31,10 @@ t.Z = () =>
                     className: i.cardsContainer,
                     children: [
                         (0, a.jsx)('div', {
-                            className: s()(l.skeleton, o.shopBanner),
-                            children: (0, a.jsx)('div', { className: l.bannerBody })
+                            className: n()(o.skeleton, l.shopBanner),
+                            children: (0, a.jsx)('div', { className: o.bannerBody })
                         }),
-                        Array.from({ length: e }, (e, t) => t).map((e) => (0, a.jsx)(f, {}, e))
+                        Array.from({ length: e }, (e, t) => t).map((e) => (0, a.jsx)(m, {}, e))
                     ]
                 },
                 e

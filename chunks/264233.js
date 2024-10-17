@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 }),
     n(47120);
@@ -18,22 +18,22 @@ var i = n(735250),
     I = n(326838),
     m = n(689938),
     T = n(706897);
-function h(e) {
-    let { setTab: t, badgeState: s, closePopout: h } = e,
-        f = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
-        C = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [p, g] = a.useMemo(
+function f(e) {
+    let { setTab: t, badgeState: s, closePopout: f } = e,
+        N = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
+        p = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [C, g] = a.useMemo(
             () =>
-                r().partition(f, (e) => {
+                r().partition(N, (e) => {
                     var t;
-                    return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [f, C]
+            [N, p]
         );
     return (a.useEffect(() => {
         (0, d.sJ)();
     }),
-    0 === f.length)
+    0 === N.length)
         ? (0, i.jsxs)('div', {
               className: T.container,
               children: [
@@ -41,7 +41,7 @@ function h(e) {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: h
+                      closePopout: f
                   }),
                   (0, i.jsx)('div', {
                       className: T.__invalid_emptyStateContainer,
@@ -60,7 +60,7 @@ function h(e) {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: h,
+                      closePopout: f,
                       children: (0, i.jsx)(c.CircleIconButton, {
                           className: T.__invalid_deleteButton,
                           tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
@@ -84,12 +84,12 @@ function h(e) {
                       children: (0, i.jsxs)('div', {
                           className: T.invitesContainer,
                           children: [
-                              p.length > 0 &&
+                              C.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: p.map((e) =>
+                                              children: C.map((e) =>
                                                   (0, i.jsx)(
                                                       I.Z,
                                                       {
@@ -105,7 +105,7 @@ function h(e) {
                               g.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
                                               children: g.map((e) =>
                                                   (0, i.jsx)(
@@ -126,7 +126,7 @@ function h(e) {
               ]
           });
 }
-function N(e) {
+function h(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
         className: T.headerContainer,

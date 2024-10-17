@@ -21,9 +21,9 @@ var n = t(735250),
     S = t(104494),
     I = t(639119),
     N = t(311476),
-    m = t(165583),
+    A = t(165583),
     C = t(197115),
-    A = t(504983),
+    m = t(504983),
     g = t(626135),
     h = t(981631),
     O = t(921944),
@@ -93,10 +93,10 @@ let f = () => {
                             : (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(E.ZP.Basic, { className: x.basicThemeSelectors }),
-                                      (0, n.jsxs)(A.Z, {
+                                      (0, n.jsxs)(m.Z, {
                                           className: x.featureBorder,
                                           isShown: r,
-                                          type: A.Y.PREMIUM,
+                                          type: m.Y.PREMIUM,
                                           children: [
                                               (0, n.jsx)(E.ZP.Gradient, {
                                                   disabled: r,
@@ -113,7 +113,7 @@ let f = () => {
                                                               children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                                           }),
                                                           (0, n.jsx)('div', { className: x.premiumTier2Divider }),
-                                                          (0, n.jsx)(m.ZP, {
+                                                          (0, n.jsx)(A.ZP, {
                                                               type: p.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: p.Si.TIER_2
                                                           })

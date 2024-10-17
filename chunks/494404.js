@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     },
     nH: function () {
-        return P;
+        return b;
     }
 }),
     n(47120),
@@ -25,19 +25,19 @@ var i = n(735250),
     I = n(724757),
     m = n(951844),
     T = n(294218),
-    h = n(703656),
-    N = n(210887),
-    f = n(592125),
-    C = n(375954),
-    p = n(496675),
+    f = n(703656),
+    h = n(210887),
+    N = n(592125),
+    p = n(375954),
+    C = n(496675),
     g = n(933429),
-    A = n(451478),
-    S = n(626135),
-    R = n(585483),
-    x = n(981631),
+    S = n(451478),
+    A = n(626135),
+    x = n(585483),
+    R = n(981631),
     O = n(689938),
-    M = n(177387);
-function v(e, t, n) {
+    v = n(177387);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,10 +56,10 @@ function L(e) {
 let Z = (e) => {
         let { title: t, icon: n, children: a, className: s } = e;
         return (0, i.jsxs)('div', {
-            className: r()(s, M.header),
+            className: r()(s, v.header),
             children: [
                 (0, i.jsxs)('div', {
-                    className: M.titleContainer,
+                    className: v.titleContainer,
                     children: [
                         null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_NORMAL }) : null,
                         null == t
@@ -75,36 +75,36 @@ let Z = (e) => {
             ]
         });
     },
-    P = (e) => {
+    b = (e) => {
         let { msg: t, image: n } = e;
         return (0, i.jsxs)('div', {
-            className: M.emptyPlaceholder,
+            className: v.emptyPlaceholder,
             children: [
                 (0, i.jsx)('div', {
-                    className: M.image,
+                    className: v.image,
                     style: { backgroundImage: 'url('.concat(n, ')') }
                 }),
                 (0, i.jsx)('div', {
-                    className: M.body,
+                    className: v.body,
                     children: t
                 })
             ]
         });
     };
-class b extends a.PureComponent {
+class P extends a.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, i.jsxs)(d.Clickable, {
-            className: M.jumpButton,
+            className: v.jumpButton,
             onClick: this.handleClickJump,
             children: [
                 (0, i.jsx)('div', {
-                    className: r()(M.__invalid_text, { hidden: e }),
+                    className: r()(v.__invalid_text, { hidden: e }),
                     children: O.Z.Messages.JUMP
                 }),
                 (0, i.jsx)(d.Spinner, {
                     type: d.Spinner.Type.PULSING_ELLIPSIS,
-                    className: r()(M.loading, { [M.visible]: e })
+                    className: r()(v.loading, { [v.visible]: e })
                 })
             ]
         });
@@ -119,41 +119,41 @@ class b extends a.PureComponent {
                   children: (0, i.jsx)(d.XSmallIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: M.closeIcon
+                      className: v.closeIcon
                   })
               })
             : null;
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: M.actionButtons,
+            className: v.actionButtons,
             children: [this.renderJumpButton(), this.renderCloseButton()]
         });
     }
     constructor(...e) {
         super(...e),
-            v(this, 'handleClickJump', (e) => {
+            M(this, 'handleClickJump', (e) => {
                 let { jumpTo: t, message: n } = this.props;
                 t(n, e);
             }),
-            v(this, 'handleClickClose', (e) => {
+            M(this, 'handleClickClose', (e) => {
                 let { onCloseMessage: t, message: n } = this.props;
                 null != t && t(n, e);
             });
     }
 }
-let D = u.ZP.connectStores([p.Z], (e) => {
+let D = u.ZP.connectStores([C.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t) };
-})(b);
+    return { canManageMessages: null != t && C.Z.can(R.Plq.MANAGE_MESSAGES, t) };
+})(P);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: f, scrollerClassName: C, className: p, listName: v } = e,
+    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: f, getProTip: N, scrollerClassName: p, className: C, listName: M } = e,
         Z = a.useRef(null),
-        P = (0, I.Z)(v, Z),
-        b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
-        D = (0, u.e7)([A.Z], () => A.Z.windowSize());
+        b = (0, I.Z)(M, Z),
+        P = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
+        D = (0, u.e7)([S.Z], () => S.Z.windowSize());
     a.useEffect(() => {
-        S.default.track(x.rMx.OPEN_POPOUT, { type: t });
+        A.default.track(R.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         a.useEffect(() => {
             function e() {
@@ -165,10 +165,10 @@ function j(e) {
                 null === (e = Z.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
-                R.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t),
-                R.S.subscribe(x.CkL.SCROLL_PAGE_UP, e),
+                x.S.subscribe(R.CkL.SCROLL_PAGE_DOWN, t),
+                x.S.subscribe(R.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    R.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e);
+                    x.S.unsubscribe(R.CkL.SCROLL_PAGE_DOWN, t), x.S.unsubscribe(R.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
@@ -184,18 +184,18 @@ function j(e) {
               (0, i.jsx)(
                   'div',
                   {
-                      className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
+                      className: r()(v.emptyPlaceholder, v.loadingPlaceholder),
                       children: (0, i.jsx)(d.Spinner, {})
                   },
                   'spinner'
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(a.Fragment, { children: T(N.Z.theme) }, 'empty-state'))
+          ? U.push((0, i.jsx)(a.Fragment, { children: T(h.Z.theme) }, 'empty-state'))
           : ((y = !1),
             (U = []),
             o().each(n, (e) => {
-                U.push(...h(e));
+                U.push(...f(e));
             }));
     let B = null;
     null != n &&
@@ -205,14 +205,14 @@ function j(e) {
             ? (0, i.jsx)(
                   'div',
                   {
-                      className: M.loadingMore,
+                      className: v.loadingMore,
                       children: (0, i.jsx)(d.Spinner, {})
                   },
                   'loading-more-after'
               )
             : s
               ? (0, i.jsx)('div', {
-                    className: M.hasMore,
+                    className: v.hasMore,
                     children: (0, i.jsx)(d.Button, {
                         look: d.Button.Looks.FILLED,
                         color: d.Button.Colors.PRIMARY,
@@ -222,14 +222,14 @@ function j(e) {
                     })
                 })
               : (0, i.jsx)('div', {
-                    className: M.scrollingFooterWrap,
-                    children: T(N.Z.theme)
+                    className: v.scrollingFooterWrap,
+                    children: T(h.Z.theme)
                 }));
-    let k = null == f ? void 0 : f(),
+    let k = null == N ? void 0 : N(),
         G =
             y && null != k
                 ? (0, i.jsx)('div', {
-                      className: M.footer,
+                      className: v.footer,
                       children: (0, i.jsx)(m.Z, {
                           style: {
                               width: '100%',
@@ -241,10 +241,10 @@ function j(e) {
                   })
                 : null,
         F = { maxHeight: D.height - 43 - 25 };
-    b && (F.maxHeight -= 40);
+    P && (F.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
-        className: r()(p, M.messagesPopoutWrap),
+        className: r()(C, v.messagesPopoutWrap),
         style: F,
         onClick: L,
         onDoubleClick: L,
@@ -253,12 +253,12 @@ function j(e) {
             component: E(),
             children: [
                 (0, i.jsxs)(d.AdvancedScroller, {
-                    className: r()(M.messagesPopout, C),
+                    className: r()(v.messagesPopout, p),
                     onScroll: w ? j : void 0,
                     ref: Z,
                     children: [
                         (0, i.jsx)(c.bG, {
-                            navigator: P,
+                            navigator: b,
                             children: (0, i.jsx)(c.SJ, {
                                 children: (e) => {
                                     let { ref: t, ...n } = e;
@@ -279,9 +279,9 @@ function j(e) {
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: A, className: S, onCloseMessage: R, listName: v } = e,
-        L = (0, u.e7)([C.Z], () => {
-            let e = null != s ? C.Z.getMessages(s.id) : null;
+    let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: C, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: x, listName: M } = e,
+        L = (0, u.e7)([p.Z], () => {
+            let e = null != s ? p.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function Z(e, n) {
@@ -293,14 +293,14 @@ function U(e) {
                 confirmText: O.Z.Messages.OKAY
             });
         else if (!L) {
-            let e = f.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            let e = N.Z.getChannel(r);
+            null != e && (E.Z.trackJump(r, i, t), (0, f.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     a.useEffect(() => {
         n(s);
     }, [s, n]);
-    let P = a.useMemo(
+    let b = a.useMemo(
         () =>
             null == r
                 ? void 0
@@ -311,12 +311,12 @@ function U(e) {
         [r, s]
     );
     return (0, i.jsx)(j, {
-        className: S,
-        scrollerClassName: A,
-        items: P,
+        className: A,
+        scrollerClassName: S,
+        items: b,
         loading: o,
         analyticsName: t,
-        renderEmptyState: N,
+        renderEmptyState: h,
         renderHeader: m,
         hasMore: l,
         loadMore: c,
@@ -324,7 +324,7 @@ function U(e) {
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != p) return p(t, (e) => Z(t, e));
+            if (null != C) return C(t, (e) => Z(t, e));
             let a = [];
             return null == n
                 ? []
@@ -332,10 +332,10 @@ function U(e) {
                       (0, i.jsxs)(
                           'div',
                           {
-                              className: M.messageGroupWrapper,
+                              className: v.messageGroupWrapper,
                               children: [
                                   (0, i.jsx)(T.Z, {
-                                      className: M.messageGroupCozy,
+                                      className: v.messageGroupCozy,
                                       message: t,
                                       channel: n
                                   }),
@@ -345,7 +345,7 @@ function U(e) {
                                       jumping: L,
                                       canCloseAllMessages: I,
                                       jumpTo: Z,
-                                      onCloseMessage: R
+                                      onCloseMessage: x
                                   })
                               ]
                           },
@@ -354,7 +354,7 @@ function U(e) {
                   ),
                   a);
         },
-        listName: v,
+        listName: M,
         'aria-label': e['aria-label']
     });
 }

@@ -3,12 +3,12 @@ t.d(n, {
         return l;
     }
 });
-var i = t(990547),
-    r = t(213609);
+var r = t(990547),
+    i = t(213609);
 function l(e, n) {
-    (0, r.Z)({
-        type: i.ImpressionTypes.VIEW,
-        name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
+    (0, i.Z)({
+        type: r.ImpressionTypes.VIEW,
+        name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
         properties: {
             country_code: n,
             action_location: e

@@ -4,8 +4,8 @@ t.d(n, {
     }
 }),
     t(653041);
-var i = t(131704),
-    r = t(699516),
+var r = t(131704),
+    i = t(699516),
     l = t(594174),
     o = t(933557),
     u = t(981631),
@@ -17,7 +17,7 @@ function a(e) {
 function c(e) {
     let n,
         { channel: t, unread: c = !1, mentionCount: d = 0, userCount: _, embeddedActivitiesCount: E, isSubscriptionGated: f, needSubscriptionToAccess: I } = e,
-        S = (0, o.F6)(t, l.default, r.Z);
+        S = (0, o.F6)(t, l.default, i.Z);
     switch (t.type) {
         case u.d4z.DM:
             n = c ? s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL;
@@ -35,39 +35,39 @@ function c(e) {
             n = d > 0 ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL;
             break;
         case u.d4z.GUILD_VOICE:
-            let T = [s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t.name })];
-            if ((d > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: d })), c && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), null != _)) {
+            let p = [s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t.name })];
+            if ((d > 0 && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: d })), c && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), null != _)) {
                 let e = t.userLimit;
                 null != e && e > 0
-                    ? T.push(
+                    ? p.push(
                           s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_LIMIT.format({
                               userCount: _,
                               limit: e
                           })
                       )
-                    : T.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
+                    : p.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
             }
-            null != E && E > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: E }));
-            let C = a({
+            null != E && E > 0 && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: E }));
+            let T = a({
                 isSubscriptionGated: f,
                 needSubscriptionToAccess: I
             });
-            return null != C && T.push(C), T.join(', ');
+            return null != T && p.push(T), p.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
             n = s.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL;
             break;
         default:
-            n = i.Ec.has(t.type) ? (d > 0 ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL) : d > 0 ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL;
+            n = r.Ec.has(t.type) ? (d > 0 ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL) : d > 0 ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL;
     }
-    let p = [
+    let C = [
             n.format({
                 channelName: S,
                 mentionCount: d
             })
         ],
-        N = a({
+        g = a({
             isSubscriptionGated: f,
             needSubscriptionToAccess: I
         });
-    return null != N && p.push(N), p.join(', ');
+    return null != g && C.push(g), C.join(', ');
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return B;
     }
 }),
     n(653041),
@@ -27,14 +27,14 @@ var r = n(735250),
     D = n(189648),
     R = n(775194),
     b = n(499848),
-    v = n(724392),
-    E = n(442580),
+    E = n(724392),
+    v = n(442580),
     Z = n(770800),
     F = n(981631),
     P = n(65154),
     _ = n(689938),
-    x = n(701491);
-let T = (e, t, n) =>
+    T = n(701491);
+let x = (e, t, n) =>
         (0, r.jsx)(m.Z, {
             align: m.Z.Align.CENTER,
             children: (0, r.jsx)(m.Z.Child, {
@@ -45,10 +45,10 @@ let T = (e, t, n) =>
                             size: l.AvatarSizes.SIZE_24,
                             src: e.getAvatarURL(n, 24),
                             'aria-label': e.username,
-                            className: x.avatar
+                            className: T.avatar
                         }),
                         (0, r.jsx)('span', {
-                            className: x.username,
+                            className: T.username,
                             children: null != t ? t : S.ZP.getName(e)
                         })
                     ]
@@ -62,7 +62,7 @@ let T = (e, t, n) =>
                 children: (0, r.jsx)(m.Z, {
                     align: m.Z.Align.CENTER,
                     children: (0, r.jsx)('span', {
-                        className: x.username,
+                        className: T.username,
                         children: e
                     })
                 })
@@ -95,7 +95,7 @@ function I(e, t, n, r, a) {
             i.push({
                 section: (0, C.J$)(e, F._s_.OUTBOUND, n),
                 label: _.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
-                element: v.Z,
+                element: E.Z,
                 elementProps: {
                     context: e,
                     index: n
@@ -123,7 +123,7 @@ function I(e, t, n, r, a) {
                 l[i].length > 0 &&
                 t.push({
                     section: d,
-                    label: null != o ? T(o, s, a) : N(null != s ? s : i),
+                    label: null != o ? x(o, s, a) : N(null != s ? s : i),
                     ariaLabel: null != o ? o.tag : i,
                     onClick: () => {
                         c.zc(d);
@@ -145,7 +145,7 @@ function I(e, t, n, r, a) {
     }
     return i;
 }
-function j() {
+function B() {
     var e, t;
     let { defaultStats: n, streamStats: i } = (0, s.e7)(
             [C.ZP],
@@ -163,7 +163,7 @@ function j() {
         S = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? F.BRd.DARK : void 0)),
         D = (0, s.e7)([C.ZP], () => C.ZP.getSection()),
         b = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()),
-        v = (function (e) {
+        E = (function (e) {
             let { defaultStats: t, streamStats: n, videoStreams: a, screenshare: i, clips: o, channel: s, connectionState: c } = e,
                 d = t.flatMap((e, t) => I(P.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
                 m = n.flatMap((e, t) => I(P.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
@@ -175,7 +175,7 @@ function j() {
                 p.push({
                     section: F._s_.SCREENSHARE,
                     label: _.Z.Messages.RTC_DEBUG_SCREENSHARE,
-                    element: E.Z,
+                    element: v.Z,
                     elementProps: { screenshare: i }
                 })),
                 null != o &&
@@ -195,7 +195,7 @@ function j() {
                               label: 'Channel Name',
                               element: () =>
                                   (0, r.jsx)(l.Heading, {
-                                      className: x.channelName,
+                                      className: T.channelName,
                                       variant: 'heading-lg/semibold',
                                       children: s.name
                                   })
@@ -209,7 +209,7 @@ function j() {
                     label: 'Connection State',
                     element: () =>
                         (0, r.jsx)(l.Heading, {
-                            className: x.channelName,
+                            className: T.channelName,
                             variant: 'heading-md/normal',
                             children: c === F.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
                         })
@@ -240,7 +240,7 @@ function j() {
             sidebarTheme: S,
             section: D,
             onSetSection: c.zc,
-            sections: v
+            sections: E
         })
     );
 }

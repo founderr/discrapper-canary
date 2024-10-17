@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return f;
+        return N;
     }
 });
 var i = n(735250),
@@ -17,9 +17,9 @@ var i = n(735250),
     I = n(474936),
     m = n(689938),
     T = n(169458),
-    h = n(492764),
-    N = n(235810);
-function f() {
+    f = n(492764),
+    h = n(235810);
+function N() {
     return (0, _.Z)()
         ? (0, i.jsx)('div', {
               className: T.emptyContainer,
@@ -27,7 +27,7 @@ function f() {
                   className: T.emptyInner,
                   children: [
                       (0, i.jsx)('img', {
-                          src: h,
+                          src: f,
                           className: T.image,
                           alt: ''
                       }),
@@ -52,7 +52,7 @@ function f() {
                       className: T.emptyInner,
                       children: [
                           (0, i.jsx)('img', {
-                              src: N,
+                              src: h,
                               className: T.image,
                               alt: ''
                           }),
@@ -69,11 +69,11 @@ function f() {
                           })
                       ]
                   }),
-                  (0, i.jsx)(C, {})
+                  (0, i.jsx)(p, {})
               ]
           });
 }
-function C() {
+function p() {
     let e = (0, d.Px)(I.p9.TIER_2),
         t = a.useCallback(
             () =>

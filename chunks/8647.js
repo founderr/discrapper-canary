@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(481060),
     o = n(100527),
     c = n(182567),
-    d = n(78839),
-    _ = n(63063),
+    _ = n(78839),
+    d = n(63063),
     E = n(74538),
     u = n(276800),
     T = n(248042),
@@ -19,10 +19,10 @@ var a = n(120356),
     C = n(44085);
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: a } = e,
-        { promotion: f } = (0, R.mq)(),
-        p = (0, i.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
+        { promotion: A } = (0, R.mq)(),
+        f = (0, i.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription());
     if (!(0, T.Vi)()) return null;
-    let A = new Date(f.endDate);
+    let p = new Date(A.endDate);
     return (0, s.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, s.jsxs)('div', {
@@ -44,17 +44,17 @@ t.Z = function (e) {
                                 (0, s.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == p || null == (0, E.he)(p) ? m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+                                    children: null == f || null == (0, E.he)(f) ? m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     className: C.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, s.jsx)(u.Z, { endDate: A })
+                                    children: (0, s.jsx)(u.Z, { endDate: p })
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({ helpCenterLink: _.Z.getArticleURL(N.BhN.SUMMER_BOGO_2024) })
+                                    children: m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({ helpCenterLink: d.Z.getArticleURL(N.BhN.SUMMER_BOGO_2024) })
                                 })
                             ]
                         }),

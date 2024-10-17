@@ -31,8 +31,8 @@ function S(e) {
             avatarDecoration: null != S.avatarDecorationSkuId ? (null === (e = l.Z.getProduct(S.avatarDecorationSkuId)) || void 0 === e ? void 0 : e.items[0]) : void 0
         });
     }, [S, N]);
-    let m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        C = (0, c.g2)({ useReducedMotion: m });
+    let A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        C = (0, c.g2)({ useReducedMotion: A });
     return (0, n.jsxs)('div', {
         className: T.container,
         children: [

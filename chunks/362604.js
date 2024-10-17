@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 }),
     n(47120),
@@ -19,39 +19,39 @@ var i = n(735250),
     I = n(585483),
     m = n(115610),
     T = n(981631),
-    h = n(689938),
-    N = n(809858);
-function f(e) {
-    let { message: t, channel: s, compact: f } = e,
-        C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [p, g] = a.useState(null);
+    f = n(689938),
+    h = n(809858);
+function N(e) {
+    let { message: t, channel: s, compact: N } = e,
+        p = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [C, g] = a.useState(null);
     return (a.useEffect(() => {
         let e = setInterval(() => {
-            C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
+            p.length > 0 && g(p[Math.floor(Math.random() * p.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [C]),
+    }, [p]),
     null == s.guild_id)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(N.mainContainer, { [N.compact]: f }),
+                      className: r()(h.mainContainer, { [h.compact]: N }),
                       icon: n(570111),
-                      compact: f,
+                      compact: N,
                       children: (0, i.jsx)('div', {
-                          className: r()(N.__invalid_content, { [N.compact]: f }),
+                          className: r()(h.__invalid_content, { [h.compact]: N }),
                           children: (0, i.jsx)('div', {
-                              className: r()(N.__invalid_messageContent, { [N.compact]: f }),
-                              children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
+                              className: r()(h.__invalid_messageContent, { [h.compact]: N }),
+                              children: '' !== t.content ? t.content : f.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: N.actions,
+                      className: h.actions,
                       children: [
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: h.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
+                              text: f.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {
@@ -75,7 +75,7 @@ function f(e) {
                               })
                           }),
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: h.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
+                              text: f.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {
@@ -88,10 +88,10 @@ function f(e) {
                                           (0, m.O)(t.id, s);
                                   },
                                   children:
-                                      null != p
+                                      null != C
                                           ? (0, i.jsx)(_.ZP, {
                                                 size: 32,
-                                                sticker: p
+                                                sticker: C
                                             })
                                           : (0, i.jsx)(o.ReactionIcon, {
                                                 size: 'md',

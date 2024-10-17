@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(481060),
     o = n(104494),
     c = n(639119),
-    d = n(318747),
-    _ = n(409100),
+    _ = n(318747),
+    d = n(409100),
     E = n(474936),
     u = n(981631),
     T = n(774946);
@@ -25,7 +25,7 @@ t.Z = function (e) {
                 friction: 12
             }
         }),
-        f = { section: u.jXE.MARKETING_FLOATING_CTA };
+        A = { section: u.jXE.MARKETING_FLOATING_CTA };
     return (0, s.jsx)(i.animated.div, {
         className: r()(T.wrapper, {
             [T.fullscreenWrapper]: I,
@@ -35,15 +35,15 @@ t.Z = function (e) {
         children: (0, s.jsxs)('div', {
             className: T.innerWrapper,
             children: [
-                (0, s.jsx)(_.Z, {
-                    className: T.button,
-                    subscriptionTier: null !== (n = null != R ? R : null == g ? void 0 : g.sku_id) && void 0 !== n ? n : m,
-                    premiumModalAnalyticsLocation: f,
-                    isPersistentCTA: !0
-                }),
                 (0, s.jsx)(d.Z, {
                     className: T.button,
-                    premiumModalAnalyticsLocation: f
+                    subscriptionTier: null !== (n = null != R ? R : null == g ? void 0 : g.sku_id) && void 0 !== n ? n : m,
+                    premiumModalAnalyticsLocation: A,
+                    isPersistentCTA: !0
+                }),
+                (0, s.jsx)(_.Z, {
+                    className: T.button,
+                    premiumModalAnalyticsLocation: A
                 })
             ]
         })

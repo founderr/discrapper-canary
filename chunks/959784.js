@@ -1,23 +1,23 @@
 t.d(n, {
     NR: function () {
-        return a;
+        return l;
     },
     Ob: function () {
-        return l;
+        return s;
     },
     ZI: function () {
         return i;
     },
     m1: function () {
-        return s;
+        return c;
     },
     uc: function () {
-        return c;
+        return a;
     }
 });
 var o = t(987170),
     r = t(987338);
-let a = (0, o.Z)({
+let l = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_vanilla',
         label: 'CTP payment flow started - A/A test - Vanilla',
@@ -45,7 +45,7 @@ let a = (0, o.Z)({
             }
         ]
     }),
-    c = (0, o.Z)({
+    a = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_multiple_buckets',
         label: 'CTP payment flow started - A/A test - Multiple buckets',
@@ -64,7 +64,7 @@ let a = (0, o.Z)({
             }
         ]
     }),
-    l = (0, o.Z)({
+    s = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_everyone',
         label: 'CTP payment flow started - A/A test - Everyone',
@@ -78,7 +78,7 @@ let a = (0, o.Z)({
             }
         ]
     }),
-    s = (0, o.Z)({
+    c = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_uneven_buckets_',
         label: 'CTP payment flow started - A/A test - Uneven buckets',

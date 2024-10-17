@@ -1,19 +1,19 @@
-t.d(n, {
+t.d(e, {
     B: function () {
         return i;
     },
     X: function () {
-        return o;
+        return a;
     }
 });
 var l,
     i,
-    s = t(626135),
-    a = t(981631);
-function o(e, n, t) {
-    s.default.track(a.rMx.STOREFRONT_COPY_LINK_CLICKED, {
-        application_id: e,
-        area: n,
+    o = t(626135),
+    r = t(981631);
+function a(n, e, t) {
+    o.default.track(r.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+        application_id: n,
+        area: e,
         sku_id: t
     });
 }

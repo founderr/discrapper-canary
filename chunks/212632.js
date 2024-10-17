@@ -1,16 +1,16 @@
-n(47120);
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    o = n(481060),
-    l = n(981631),
-    c = n(689938),
-    d = n(167740),
-    u = n(113207);
-let h = 0,
-    p = () => 'notification-position-selector-'.concat(h++),
-    f = (e) => {
+t(47120);
+var n = t(735250),
+    a = t(470079),
+    i = t(120356),
+    r = t.n(i),
+    o = t(481060),
+    l = t(981631),
+    c = t(689938),
+    d = t(167740),
+    _ = t(113207);
+let u = 0,
+    E = () => 'notification-position-selector-'.concat(u++),
+    T = (e) => {
         switch (e) {
             case l._vf.TOP_LEFT:
                 return c.Z.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
@@ -24,24 +24,24 @@ let h = 0,
                 return c.Z.Messages.OVERLAY_NOTIFICATIONS_DISABLED;
         }
     },
-    _ = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
-function E(e) {
-    let { position: t, onChange: n } = e,
-        [a] = s.useState(() => p()),
-        h = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
-    return (0, i.jsxs)('div', {
+    S = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
+function I(e) {
+    let { position: s, onChange: t } = e,
+        [i] = a.useState(() => E()),
+        u = s === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: T(s) });
+    return (0, n.jsxs)('div', {
         children: [
-            (0, i.jsx)(o.FocusRing, {
+            (0, n.jsx)(o.FocusRing, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)('div', {
-                    className: r()(d.wrapper, { [d.disabledSelected]: t === l._vf.DISABLED }),
-                    children: _.map((e) =>
-                        (0, i.jsxs)(
+                children: (0, n.jsx)('div', {
+                    className: r()(d.wrapper, { [d.disabledSelected]: s === l._vf.DISABLED }),
+                    children: S.map((e) =>
+                        (0, n.jsxs)(
                             'label',
                             {
                                 className: r()({
-                                    [d.selected]: e === t,
+                                    [d.selected]: e === s,
                                     [d.disabled]: e === l._vf.DISABLED,
                                     [d.topRight]: e === l._vf.TOP_RIGHT,
                                     [d.topLeft]: e === l._vf.TOP_LEFT,
@@ -49,19 +49,19 @@ function E(e) {
                                     [d.bottomLeft]: e === l._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    f(e),
+                                    T(e),
                                     e === l._vf.DISABLED
-                                        ? (0, i.jsx)(o.DenyIcon, {
+                                        ? (0, n.jsx)(o.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
                                           })
                                         : null,
-                                    (0, i.jsx)('input', {
+                                    (0, n.jsx)('input', {
                                         type: 'radio',
-                                        name: a,
+                                        name: i,
                                         value: e,
-                                        onChange: (t) => n(t, e),
+                                        onChange: (s) => t(s, e),
                                         className: d.hiddenInput
                                     })
                                 ]
@@ -71,12 +71,12 @@ function E(e) {
                     )
                 })
             }),
-            (0, i.jsx)(o.FormText, {
+            (0, n.jsx)(o.FormText, {
                 type: o.FormTextTypes.DESCRIPTION,
-                className: u.marginTop8,
-                children: h
+                className: _.marginTop8,
+                children: u
             })
         ]
     });
 }
-(E.Positions = l._vf), (t.Z = E);
+(I.Positions = l._vf), (s.Z = I);

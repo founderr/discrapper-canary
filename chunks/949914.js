@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(906732),
     I = t(377171),
     N = t(878596),
-    m = t(313201),
+    A = t(313201),
     C = t(674180),
-    A = t(565138),
+    m = t(565138),
     g = t(374649),
     h = t(908951),
     O = t(703656),
@@ -121,7 +121,7 @@ s.Z = (e) => {
     let { subscription: s } = e,
         { listing: t, groupListing: i, guild: l, expanded: T, handleToggleExpanded: N, subscriptionInfo: g } = (0, R.Z)(s),
         [h, p] = a.useState(!1),
-        G = (0, m.Dt)(),
+        G = (0, A.Dt)(),
         { analyticsLocations: F } = (0, S.ZP)(),
         { shouldHideGuildPurchaseEntryPoints: y } = (0, C.uP)(null == l ? void 0 : l.id),
         V = (null == s ? void 0 : s.paymentGateway) === L.gg$.APPLE_PARTNER;
@@ -194,10 +194,10 @@ s.Z = (e) => {
                     return (0, n.jsxs)(n.Fragment, {
                         children: [
                             null != l &&
-                                (0, n.jsx)(A.Z, {
+                                (0, n.jsx)(m.Z, {
                                     guild: l,
                                     active: !0,
-                                    size: A.Z.Sizes.MEDIUM
+                                    size: m.Z.Sizes.MEDIUM
                                 }),
                             (0, n.jsxs)('div', {
                                 className: v.headerTextContainer,

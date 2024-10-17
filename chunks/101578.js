@@ -14,22 +14,22 @@ t.Z = (e) => {
     var t;
     let { channel: n, message: I, hideParty: m } = e,
         { analyticsLocations: T } = (0, r.ZP)(),
-        h = (0, a.e7)([c.default], () => c.default.getId()),
-        N = (0, a.e7)(
+        f = (0, a.e7)([c.default], () => c.default.getId()),
+        h = (0, a.e7)(
             [u.Z],
             () => {
                 if (null == I.application) return u.Z.findActivity(I.author.id, (e) => e.type === d.IIU.LISTENING);
                 {
                     var e;
                     let t = I.author.id;
-                    return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === h && n.isPrivate() ? n.getRecipientId() : h), u.Z.getApplicationActivity(t, I.application.id);
+                    return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === f && n.isPrivate() ? n.getRecipientId() : f), u.Z.getApplicationActivity(t, I.application.id);
                 }
             },
-            [I, n, h]
+            [I, n, f]
         );
     return (0, i.jsx)(s.Z, {
         className: E.container,
-        activity: N,
+        activity: h,
         activityActionType: null != I.activity ? I.activity.type : null,
         partyId: null != I.activity ? I.activity.party_id : null,
         userId: I.author.id,
@@ -38,7 +38,7 @@ t.Z = (e) => {
         channelId: n.id,
         guildId: n.getGuildId(),
         hideParty: m,
-        isSender: I.author.id === h,
+        isSender: I.author.id === f,
         analyticsLocations: T
     });
 };

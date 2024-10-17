@@ -6,8 +6,8 @@ var a = n(399606),
     l = n(785681),
     o = n(780985),
     c = n(631885),
-    d = n(552045),
-    _ = n(87792),
+    _ = n(552045),
+    d = n(87792),
     E = n(302289),
     u = n(946690),
     T = n(456771),
@@ -21,7 +21,7 @@ t.Z = () => {
         N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
         m = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
         C = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
-        f = (0, r.useRedesignIconContext)().enabled;
+        A = (0, r.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
         : (0, s.jsxs)('div', {
@@ -29,7 +29,7 @@ t.Z = () => {
               children: [
                   (0, s.jsx)('div', {
                       className: g.banner,
-                      children: (0, s.jsx)(d.Z, {})
+                      children: (0, s.jsx)(_.Z, {})
                   }),
                   (0, s.jsxs)('div', {
                       className: g.featureCards,
@@ -46,14 +46,14 @@ t.Z = () => {
                               description: m
                           }),
                           (0, s.jsx)(u.Z, {
-                              icon: f ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
+                              icon: A ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
                               description: C
                           })
                       ]
                   }),
                   0 === e.length ? (0, s.jsx)(E.Z, {}) : null,
-                  void 0 !== t && e.length > 0 ? (0, s.jsx)(_.Z, { user: t }) : null
+                  void 0 !== t && e.length > 0 ? (0, s.jsx)(d.Z, { user: t }) : null
               ]
           });
 };

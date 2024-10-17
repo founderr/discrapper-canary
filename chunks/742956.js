@@ -1,40 +1,40 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
-    t(627341);
-var s = t(735250);
-t(470079);
-var a = t(120356),
-    l = t.n(a),
-    i = t(278074),
-    r = t(481060),
-    o = t(409813),
-    d = t(689938),
-    c = t(73913);
-function u(e) {
-    let { step: n, onClose: t } = e,
-        a = (0, i.EQ)(n)
-            .with(o.h8.REVIEW, () => d.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER)
-            .with(o.h8.ADD_PAYMENT_STEPS, () => d.Z.Messages.BILLING_STANDALONE_ADD_PAYMENT_TITLE)
-            .with(o.h8.GIFT_CUSTOMIZATION, () => d.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER)
-            .with(o.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => d.Z.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING)
+    n(627341);
+var i = n(735250);
+n(470079);
+var a = n(120356),
+    s = n.n(a),
+    r = n(278074),
+    l = n(481060),
+    o = n(409813),
+    c = n(689938),
+    u = n(73913);
+function d(e) {
+    let { step: t, onClose: n } = e,
+        a = (0, r.EQ)(t)
+            .with(o.h8.REVIEW, () => c.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER)
+            .with(o.h8.ADD_PAYMENT_STEPS, () => c.Z.Messages.BILLING_STANDALONE_ADD_PAYMENT_TITLE)
+            .with(o.h8.GIFT_CUSTOMIZATION, () => c.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER)
+            .with(o.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => c.Z.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING)
             .with(o.h8.CONFIRM, () => '')
             .otherwise(() => null);
     return null == a
         ? null
-        : (0, s.jsxs)(r.ModalHeader, {
-              className: l()(c.headerContainerGift),
-              separator: n !== o.h8.CONFIRM,
+        : (0, i.jsxs)(l.ModalHeader, {
+              className: s()(u.headerContainerGift),
+              separator: t !== o.h8.CONFIRM,
               children: [
-                  (0, s.jsx)(r.Heading, {
+                  (0, i.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
                       children: a
                   }),
-                  (0, s.jsx)(r.ModalCloseButton, {
-                      onClick: t,
-                      className: c.closeButtonGift
+                  (0, i.jsx)(l.ModalCloseButton, {
+                      onClick: n,
+                      className: u.closeButtonGift
                   })
               ]
           });

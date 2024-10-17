@@ -27,13 +27,13 @@ var i = n(735250),
     I = n(419922),
     T = n(375954),
     x = n(699516),
-    v = n(768581),
-    S = n(70956),
+    S = n(768581),
+    v = n(70956),
     N = n(823379),
     A = n(981631),
     Z = n(217702),
     M = n(837161);
-let b = 10 * S.Z.Millis.SECOND;
+let b = 10 * v.Z.Millis.SECOND;
 function R(e) {
     var t;
     let { message: n } = e,
@@ -41,7 +41,7 @@ function R(e) {
         r = (0, E.Uj)(n),
         o = s.useContext(m.Z),
         [d, T] = s.useState(!1),
-        S = (0, _.p)(),
+        v = (0, _.p)(),
         N = s.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
@@ -58,7 +58,7 @@ function R(e) {
             null != n.content && '' !== n.content
                 ? (0, f.ZP)(n, {
                       isInteracting: d,
-                      shouldFilterKeywords: S
+                      shouldFilterKeywords: v
                   }).content
                 : null,
         {
@@ -105,7 +105,7 @@ function R(e) {
                 alt: '',
                 src:
                     (null == r ? void 0 : r.guildMemberAvatar) != null && null != o
-                        ? (0, v.JM)({
+                        ? (0, S.JM)({
                               guildId: o,
                               userId: n.author.id,
                               avatar: r.guildMemberAvatar

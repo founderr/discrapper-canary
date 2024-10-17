@@ -18,15 +18,15 @@ function o(e, t, n) {
     );
 }
 let c = {},
-    d = () => {
+    _ = () => {
         c = {
             guildAffinitiesByGuildId: {},
             guildAffinities: [],
             lastFetched: 0
         };
     };
-d();
-class _ extends (s = a.ZP.PersistedStore) {
+_();
+class d extends (s = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (c = e), this.waitFor(l.Z);
     }
@@ -43,9 +43,9 @@ class _ extends (s = a.ZP.PersistedStore) {
         return 0 !== c.lastFetched;
     }
 }
-o(_, 'displayName', 'GuildAffinitiesStore'),
-    o(_, 'persistKey', 'GuildAffinitiesStore'),
-    (t.Z = new _(r.Z, {
+o(d, 'displayName', 'GuildAffinitiesStore'),
+    o(d, 'persistKey', 'GuildAffinitiesStore'),
+    (t.Z = new d(r.Z, {
         CONNECTION_OPEN: function () {
             return Date.now() - c.lastFetched > 86400000 && (0, i.j)(), !1;
         },
@@ -65,6 +65,6 @@ o(_, 'displayName', 'GuildAffinitiesStore'),
                 });
         },
         LOGOUT: function () {
-            d();
+            _();
         }
     }));

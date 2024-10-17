@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(314684),
     o = n(176782),
     c = n(743612),
-    d = n(735825),
-    _ = n(977341),
+    _ = n(735825),
+    d = n(977341),
     E = n(721239),
     u = n(557634),
     T = n(992429);
@@ -15,18 +15,18 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: m, onCtaClick: C, perkComponent: f, subtitle: p = '', descriptionCta: A = '', cardVariant: M, subtitleClassName: S } = e,
+        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: m, onCtaClick: C, perkComponent: A, subtitle: f = '', descriptionCta: p = '', cardVariant: M, subtitleClassName: S } = e,
         h = (0, o._)(M),
         b = (0, l.yQ)(),
-        x = (null == b ? void 0 : b.nitroTenureStatus) === d.EB.REDEEMABLE;
+        x = (null == b ? void 0 : b.nitroTenureStatus) === _.EB.REDEEMABLE;
     switch (null == b ? void 0 : b.nitroTenureStatus) {
-        case d.EB.REDEEMABLE:
+        case _.EB.REDEEMABLE:
             (n = T), (a = 'unlocked icon');
             break;
-        case d.EB.PENDING:
+        case _.EB.PENDING:
             (n = E), (a = 'locked icon');
             break;
-        case d.EB.REDEEMED:
+        case _.EB.REDEEMED:
             (n = u), (a = 'thumbs up icon');
             break;
         default:
@@ -34,13 +34,13 @@ t.Z = (e) => {
     }
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)('div', { className: r()(_.cover, _.below) }),
+            (0, s.jsx)('div', { className: r()(d.cover, d.below) }),
             (0, s.jsx)(c.Z, {
                 title: I,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: h,
                 titleClassName: R,
-                subtitle: p,
+                subtitle: f,
                 subtitleClassName: S
             }),
             null != N &&
@@ -48,17 +48,17 @@ t.Z = (e) => {
                     src: N,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !m,
-                        [_.carouselCardImage]: m
+                        [d.cardImage]: !m,
+                        [d.carouselCardImage]: m
                     })
                 }),
-            null != f &&
+            null != A &&
                 (0, s.jsx)(s.Fragment, {
                     children: (0, s.jsxs)('div', {
-                        className: _.cardIllustrationNoHover,
+                        className: d.cardIllustrationNoHover,
                         children: [
-                            f,
-                            0 !== A.length &&
+                            A,
+                            0 !== p.length &&
                                 null != C &&
                                 (0, s.jsx)(i.Button, {
                                     className: g,
@@ -72,7 +72,7 @@ t.Z = (e) => {
                                                 alt: a,
                                                 src: n
                                             }),
-                                            A
+                                            p
                                         ]
                                     })
                                 })

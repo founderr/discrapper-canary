@@ -19,8 +19,8 @@ var s,
     I = n(580005),
     T = n(699516),
     x = n(594174),
-    v = n(981631);
-let S = !1,
+    S = n(981631);
+let v = !1,
     N = '',
     A = 0,
     Z = [],
@@ -28,13 +28,13 @@ let S = !1,
     b = new Set(),
     R = null;
 function L() {
-    (N = ''), (A = 0), (Z = []), (b = new Set()), (S = !1), (R = null);
+    (N = ''), (A = 0), (Z = []), (b = new Set()), (v = !1), (R = null);
 }
 function P(e) {
     (N = e), (A = 0), j();
 }
 function j() {
-    if (!S) return !1;
+    if (!v) return !1;
     let e = g.Z.getChannel(R);
     if (0 === N.trim().length)
         return (
@@ -88,12 +88,12 @@ function j() {
     );
 }
 function O() {
-    if (!S) return !1;
+    if (!v) return !1;
     let e = M;
-    return (M = c().some(T.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
+    return (M = c().some(T.Z.getRelationships(), (e) => e === S.OGo.FRIEND)) !== e;
 }
 function y(e, t) {
-    if (C.Z.hasConsented(v.pjP.PERSONALIZATION)) {
+    if (C.Z.hasConsented(S.pjP.PERSONALIZATION)) {
         var n, i, s, a;
         let l = null !== (s = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== s ? s : 0,
             r = null !== (a = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
@@ -103,7 +103,7 @@ function y(e, t) {
 }
 function D(e) {
     let { results: t } = e;
-    if (!!S && '' !== N)
+    if (!!v && '' !== N)
         (Z = t
             .map((e) => {
                 let { id: t } = e;
@@ -116,11 +116,11 @@ function U() {
     return null != i && (i.destroy(), (i = null)), h.Z.getSearchContext(D, 1000);
 }
 function k(e) {
-    if (e.key !== v.vTt) return !1;
-    (S = !0), O(), (i = U()), (R = null), P('');
+    if (e.key !== S.vTt) return !1;
+    (v = !0), O(), (i = U()), (R = null), P('');
 }
 function w(e) {
-    if (e.key !== v.vTt) return !1;
+    if (e.key !== S.vTt) return !1;
     B();
 }
 function B() {
@@ -168,13 +168,13 @@ let G = new H(d.Z, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
-        let i = S;
-        return L(), (S = i), (R = n), j();
+        let i = v;
+        return L(), (v = i), (R = n), j();
     },
     MODAL_PUSH: k,
     SHOW_ACTION_SHEET: k,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (S = !0), O(), (i = U()), (R = e.channelId), P('');
+        (v = !0), O(), (i = U()), (R = e.channelId), P('');
     },
     MODAL_POP: w,
     HIDE_ACTION_SHEET: w,

@@ -13,8 +13,8 @@ var i,
     I = n(568836),
     m = n(345898),
     T = n(981631),
-    h = n(262203);
-function N(e, t, n) {
+    f = n(262203);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function N(e, t, n) {
         e
     );
 }
-class f extends (i = s.PureComponent) {
+class N extends (i = s.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: s, renderCustomTitle: r, renderCustomMedia: l, isEmbed: o } = this.props,
             c = o ? I.$G : m.Z;
@@ -42,34 +42,34 @@ class f extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'renderActions', () => {
+            h(this, 'renderActions', () => {
                 let { inLibrary: e, sku: t, renderCustomActions: n, isMouseOver: i, showBuyInline: s } = this.props,
                     r = (s || !t.requiresPayment) && !e;
                 return null != n
                     ? n()
                     : (0, a.jsxs)('div', {
-                          className: h.priceOs,
+                          className: f.priceOs,
                           children: [
                               (0, a.jsx)(o.Z, {
                                   type: o.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: r && i ? h.tilePriceWithVisibleBuyButton : h.tilePrice
+                                  className: r && i ? f.tilePriceWithVisibleBuyButton : f.tilePrice
                               }),
                               (0, a.jsx)(c.n, {
                                   systems: [T.TaA.WINDOWS],
-                                  className: h.platform
+                                  className: f.platform
                               }),
                               r ? (0, a.jsx)('div', { children: 'deprecated!' }) : null
                           ]
                       });
             }),
-            N(this, 'renderMedia', () => {
+            h(this, 'renderMedia', () => {
                 let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: i, sku: r, isHorizontal: o, storeListing: c } = this.props;
                 return (0, a.jsxs)(s.Fragment, {
                     children: [
                         (0, a.jsx)(_.Z, {
-                            className: l()(h.splashContainer, { [h.splashContainerHorizontal]: o }),
+                            className: l()(f.splashContainer, { [f.splashContainerHorizontal]: o }),
                             video: null != c.previewVideo ? (0, E._W)(r.applicationId, c.previewVideo) : void 0,
                             image: null != c.thumbnail ? (0, E._W)(r.applicationId, c.thumbnail, 600) : null,
                             title: r.name,
@@ -77,20 +77,20 @@ class f extends (i = s.PureComponent) {
                             muted: t,
                             placeholder: n,
                             onToggleMute: i,
-                            splashClassName: h.splashVideo,
-                            splashPlaceholderClassName: h.splashPlaceholder
+                            splashClassName: f.splashVideo,
+                            splashPlaceholderClassName: f.splashPlaceholder
                         }),
-                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : null
+                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });
     }
 }
-N(f, 'defaultProps', {
+h(N, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 }),
-    (t.Z = f);
+    (t.Z = N);

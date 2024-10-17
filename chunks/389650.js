@@ -20,9 +20,9 @@ var n = t(735250),
     S = t(721383),
     I = t(612226),
     N = t(714338),
-    m = t(924557),
+    A = t(924557),
     C = t(600164),
-    A = t(74299),
+    m = t(74299),
     g = t(131951),
     h = t(556296),
     O = t(808506),
@@ -470,9 +470,9 @@ class y extends a.PureComponent {
 }
 function V() {
     let e = (0, c.e7)([h.Z], () => h.Z.getState()),
-        s = (0, c.e7)([g.Z], () => (0, A.Z)(g.Z)),
+        s = (0, c.e7)([g.Z], () => (0, m.Z)(g.Z)),
         t = (0, c.e7)([O.Z], () => O.Z.isSupported()),
-        a = (0, m.Go)();
+        a = (0, A.Go)();
     return (0, n.jsx)(y, {
         keybinds: e,
         canGoLive: s,

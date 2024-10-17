@@ -6,8 +6,8 @@ var a = n(120356),
     l = n(906732),
     o = n(646476),
     c = n(197115),
-    d = n(689938),
-    _ = n(222301),
+    _ = n(689938),
+    d = n(222301),
     E = n(568147),
     u = n(332796);
 t.Z = (e) => {
@@ -19,27 +19,27 @@ t.Z = (e) => {
     return (0, s.jsx)(l.Gt, {
         value: R,
         children: (0, s.jsxs)('div', {
-            className: r()(_.container, t),
+            className: r()(d.container, t),
             children: [
                 (0, s.jsxs)('div', {
-                    className: _.textContainer,
+                    className: d.textContainer,
                     style: a,
                     children: [
                         (0, s.jsx)(i.Heading, {
                             variant: 'heading-lg/extrabold',
-                            className: _.heading,
-                            children: m ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
+                            className: d.heading,
+                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : _.Z.Messages.GIFT_NITRO
                         }),
                         (0, s.jsx)(i.Text, {
                             variant: 'text-sm/medium',
-                            children: m ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                         }),
                         (0, s.jsx)(c.Z, {
                             isGift: !0,
-                            className: _.giftCardButton,
+                            className: d.giftCardButton,
                             look: i.Button.Looks.OUTLINED,
-                            buttonText: d.Z.Messages.GIFT_NITRO,
-                            buttonTextClassName: _.giftButtonCTA,
+                            buttonText: _.Z.Messages.GIFT_NITRO,
+                            buttonTextClassName: d.giftButtonCTA,
                             color: i.Button.Colors.CUSTOM,
                             premiumModalAnalyticsLocation: I
                         })
@@ -47,7 +47,7 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)('img', {
                     src: m ? u : E,
-                    className: r()(_.bannerImage, n),
+                    className: r()(d.bannerImage, n),
                     alt: 'gift nitro banner'
                 })
             ]

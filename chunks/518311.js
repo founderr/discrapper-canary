@@ -26,8 +26,8 @@ var i,
     I = n(708690),
     T = n(194359),
     x = n(425493),
-    v = n(461745),
-    S = n(40851),
+    S = n(461745),
+    v = n(40851),
     N = n(367907),
     A = n(43267),
     Z = n(933557),
@@ -266,13 +266,13 @@ class ec extends (i = a.PureComponent) {
             (0, s.jsxs)(M.Z, {
                 className: r()(ee.searchBar, en.marginTop20),
                 children: [
-                    (0, s.jsx)(v.ZP, {
+                    (0, s.jsx)(S.ZP, {
                         ref: this.searchBarRef,
                         className: ee.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? $.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: v.ZP.Sizes.MEDIUM,
+                        size: S.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -777,4 +777,4 @@ function eh(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-ei(ec, 'contextType', S.ZP);
+ei(ec, 'contextType', v.ZP);

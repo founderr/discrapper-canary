@@ -12,7 +12,7 @@ n.d(t, {
         return U;
     },
     Sq: function () {
-        return M;
+        return v;
     },
     Wg: function () {
         return y;
@@ -21,7 +21,7 @@ n.d(t, {
         return O;
     },
     c2: function () {
-        return P;
+        return b;
     },
     eE: function () {
         return j;
@@ -30,10 +30,10 @@ n.d(t, {
         return k;
     },
     iK: function () {
-        return b;
+        return P;
     },
     lv: function () {
-        return v;
+        return M;
     },
     nR: function () {
         return L;
@@ -42,13 +42,13 @@ n.d(t, {
         return s.a;
     },
     x0: function () {
-        return R;
+        return x;
     },
     xb: function () {
         return G;
     },
     yd: function () {
-        return x;
+        return R;
     }
 }),
     n(47120),
@@ -67,14 +67,14 @@ var i = n(371917),
     I = n(71716),
     m = n.n(I),
     T = n(869045),
-    h = n.n(T),
-    N = n(110599),
-    f = n.n(N),
-    C = n(801539),
-    p = n.n(C),
+    f = n.n(T),
+    h = n(110599),
+    N = n.n(h),
+    p = n(801539),
+    C = n.n(p),
     g = n(887868),
-    A = n.n(g);
-function S(e, t, n, a) {
+    S = n.n(g);
+function A(e, t, n, a) {
     let s = a.getCurrentContent(),
         r = null;
     null != e && (r = (s = s.createEntity(...e)).getLastCreatedEntityKey());
@@ -87,7 +87,7 @@ function S(e, t, n, a) {
         });
     return (s = i.Modifier.applyEntity(s, o, r)), i.EditorState.set(a, { currentContent: s });
 }
-function R(e, t, n, a) {
+function x(e, t, n, a) {
     let s, r;
     let o = t.getCurrentContent(),
         c = o.getFirstBlock(),
@@ -106,14 +106,14 @@ function R(e, t, n, a) {
         _ = l()(o, s);
     return s.isCollapsed() ? ((o = i.Modifier.insertText(o, s, e, d, _)), (r = 'insert-characters')) : ((o = i.Modifier.replaceText(o, s, e, d, _)), (r = 'replace-characters')), i.EditorState.push(t, o, r);
 }
-function x(e, t) {
+function R(e, t) {
     switch (e) {
         case 'delete':
-            return p()(t);
+            return C()(t);
         case 'delete-word':
             return E()(t);
         case 'backspace':
-            return f()(t);
+            return N()(t);
         case 'backspace-word':
             return d()(t);
         case 'backspace-to-start-of-line':
@@ -125,19 +125,19 @@ function x(e, t) {
 function O(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return A()(t);
+            return S()(t);
         case 'move-selection-to-start-of-block':
-            return h()(t);
+            return f()(t);
         case 'move-selection-to-end-of-block':
             return m()(t);
         default:
             return t;
     }
 }
-function M(e) {
+function v(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function v(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = t.getCurrentContent(),
         a = i.getFirstBlock(),
@@ -164,16 +164,16 @@ function v(e, t) {
                 (r.forEach((n) => {
                     let { type: a, start: s, end: r } = e,
                         l = e.getFullMatch();
-                    if (!n.processed) n.type === a && n.start === s && n.text === l ? ((n.processed = !0), (i = !0)) : ((s >= n.start && s < n.end) || (r > n.start && r <= n.end)) && ((n.processed = !0), (t = S(null, n.start, n.end, t)));
+                    if (!n.processed) n.type === a && n.start === s && n.text === l ? ((n.processed = !0), (i = !0)) : ((s >= n.start && s < n.end) || (r > n.start && r <= n.end)) && ((n.processed = !0), (t = A(null, n.start, n.end, t)));
                 }),
                 i)
             )
                 return;
             let a = n[e.type];
-            t = S([e.type, null != a && a.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
+            t = A([e.type, null != a && a.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
         }),
         r.forEach((e) => {
-            !e.processed && (t = S(null, e.start, e.end, t));
+            !e.processed && (t = A(null, e.start, e.end, t));
         }),
         t
     );
@@ -186,35 +186,35 @@ function Z(e) {
         n = e.getSelection();
     return null != n && n.hasFocus && (t = i.EditorState.moveFocusToEnd(t)), t;
 }
-function P(e, t) {
-    let n = M(t);
-    return R(e, t, 0, n.length);
-}
 function b(e, t) {
+    let n = v(t);
+    return x(e, t, 0, n.length);
+}
+function P(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), i.EditorState.forceSelection(t, n);
 }
 function D(e) {
-    return b(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return P(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function j(e) {
-    return b(0, e);
+    return P(0, e);
 }
 function U(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), i.EditorState.forceSelection(e, t);
 }
 function y(e) {
-    let t = M(e),
+    let t = v(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), i.EditorState.forceSelection(e, n);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        n = M(e);
+        n = v(e);
     if (n.length > t) {
         let a = e.getSelection();
-        (e = R('', e, t, n.length)), a.getAnchorOffset() > t && (a = a.set('anchorOffset', t)), a.getFocusOffset() > t && (a = a.set('focusOffset', t)), (e = i.EditorState.forceSelection(e, a));
+        (e = x('', e, t, n.length)), a.getAnchorOffset() > t && (a = a.set('anchorOffset', t)), a.getFocusOffset() > t && (a = a.set('focusOffset', t)), (e = i.EditorState.forceSelection(e, a));
     }
     return e;
 }
@@ -239,5 +239,5 @@ function k(e) {
     s < e.scrollLeft ? (e.scrollLeft = s - 10) : s > e.scrollLeft + e.offsetWidth && (e.scrollLeft = s - e.offsetWidth + 3);
 }
 function G(e) {
-    return 0 === M(e).length;
+    return 0 === v(e).length;
 }

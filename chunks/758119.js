@@ -1,6 +1,6 @@
 n.d(t, {
     C8: function () {
-        return d;
+        return _;
     },
     mN: function () {
         return l;
@@ -44,7 +44,7 @@ function c(e) {
             action: r.Al.AGE_GATE_SUCCESS
         });
 }
-function d(e, t) {
+function _(e, t) {
     s.Z.wait(() => {
         s.Z.dispatch({
             type: 'AGE_GATE_FAILURE_MODAL_OPEN',

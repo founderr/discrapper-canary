@@ -6,14 +6,14 @@ var a = n(442837),
     l = n(78839),
     o = n(985754),
     c = n(222727),
-    d = n(474494),
-    _ = n(981631),
+    _ = n(474494),
+    d = n(981631),
     E = n(366750);
 t.Z = function (e) {
     let { localizedPricingPromo: t } = e,
         n = t.countryCode,
         u = (0, a.e7)([i.default], () => i.default.locale);
-    (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
+    (0, c.U)(d.jXE.SETTINGS_PREMIUM_BANNER, n);
     let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
         { localizedPricingBannerBody: I } = (0, o.vB)({
             localizedPricingPromo: t,
@@ -24,7 +24,7 @@ t.Z = function (e) {
     return (0, s.jsxs)('div', {
         className: E.bannerContainer,
         children: [
-            (0, s.jsx)(d.Z, {
+            (0, s.jsx)(_.Z, {
                 className: E.badge,
                 countryCode: n
             }),

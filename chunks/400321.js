@@ -31,6 +31,6 @@ function l(e) {
         },
         { fillColor: I, outlineColor: T } = (0, i.bg)(t.userId, c, u, o),
         x = C(T, 6 + a.q2),
-        v = null != x && E(x);
-    v && (0, s.I)(n, x.x, x.y, T, a.q2), C(I, 6), v && (0, s.T)(n, x.x, x.y, t.userId);
+        S = null != x && E(x);
+    S && (0, s.I)(n, x.x, x.y, T, a.q2), C(I, 6), S && (0, s.T)(n, x.x, x.y, t.userId);
 }

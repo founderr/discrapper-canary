@@ -10,8 +10,8 @@ var s = n(735250),
     l = n(399606),
     o = n(481060),
     c = n(594174),
-    d = n(933970),
-    _ = n(340453),
+    _ = n(933970),
+    d = n(340453),
     E = n(292352),
     u = n(689938),
     T = n(279324);
@@ -35,14 +35,14 @@ function I(e) {
         children: [
             (0, s.jsx)('div', {
                 className: T.details,
-                children: (0, s.jsx)(_.Z, {
+                children: (0, s.jsx)(d.Z, {
                     otherUser: t,
                     status: E.ne.ACTIVE
                 })
             }),
             (0, s.jsx)('div', {
                 className: T.actions,
-                children: (0, s.jsx)(d.Z, {
+                children: (0, s.jsx)(_.Z, {
                     icon: o.XSmallIcon,
                     className: T.__invalid_actionDeny,
                     tooltip: u.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,

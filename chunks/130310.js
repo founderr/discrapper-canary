@@ -6,21 +6,21 @@ var a = n(120356),
     l = n(785681),
     o = n(231994),
     c = n(689938),
-    d = n(205402),
-    _ = n(113207);
+    _ = n(205402),
+    d = n(113207);
 let E = (e) => {
     let { header: t, description: n, icon: a, inModal: l } = e;
     return (0, s.jsxs)('div', {
-        className: r()(d.row, _.marginBottom8, { [d.inModal]: l }),
+        className: r()(_.row, d.marginBottom8, { [_.inModal]: l }),
         children: [
             (0, s.jsx)('div', {
-                className: d.iconContainer,
+                className: _.iconContainer,
                 children: a
             }),
             (0, s.jsxs)('div', {
                 children: [
                     (0, s.jsx)(i.Text, {
-                        className: d.header,
+                        className: _.header,
                         variant: 'text-sm/bold',
                         color: 'header-primary',
                         children: t
@@ -40,11 +40,11 @@ t.Z = (e) => {
         n = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT),
         a = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT),
         r = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT),
-        _ = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
+        d = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
     return (0, s.jsxs)('div', {
         children: [
             (0, s.jsx)(i.Text, {
-                className: d.groupHeader,
+                className: _.groupHeader,
                 variant: 'text-xxs/bold',
                 color: 'header-secondary',
                 children: n
@@ -82,14 +82,14 @@ t.Z = (e) => {
                 inModal: t
             }),
             (0, s.jsx)(i.Text, {
-                className: d.groupHeader,
+                className: _.groupHeader,
                 variant: 'text-xxs/bold',
                 color: 'header-secondary',
                 children: a
             }),
             (0, s.jsx)(E, {
                 header: r,
-                description: _,
+                description: d,
                 icon: (0, s.jsx)(i.XSmallIcon, {
                     size: 'custom',
                     width: 20,

@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 }),
     n(47120);
-var a = n(735250),
-    r = n(470079),
-    l = n(887024);
-let i = [n(123353)],
+var i = n(735250),
+    l = n(470079),
+    a = n(887024);
+let r = [n(123353)],
     s = ['#FFFFFF'],
     o = 1000 / 60,
-    d = {
+    u = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -62,19 +62,19 @@ let i = [n(123353)],
             value: 0.3
         }
     };
-function u(e) {
-    let { className: t, firing: n = !0, wind: u = 2, sprites: c = i, spriteColors: f = s, confettiConfig: h } = e,
-        [b, _] = r.useState(null),
-        [m, E] = r.useState(null),
-        N = (0, l.uR)(m, b),
-        S = r.useMemo(() => new l.qA({ wind: u }), [u]),
-        g = r.useCallback(() => {
+function c(e) {
+    let { className: t, firing: n = !0, wind: c = 2, sprites: d = r, spriteColors: _ = s, confettiConfig: f } = e,
+        [C, L] = l.useState(null),
+        [m, T] = l.useState(null),
+        E = (0, a.uR)(m, C),
+        S = l.useMemo(() => new a.qA({ wind: c }), [c]),
+        p = l.useCallback(() => {
             let e = null == m ? void 0 : m.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            N.createConfetti({
-                ...d,
-                ...h,
+            E.createConfetti({
+                ...u,
+                ...f,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -87,23 +87,23 @@ function u(e) {
                     }
                 }
             });
-        }, [N, m, h]);
+        }, [E, m, f]);
     return (
-        r.useEffect(() => {
-            let e = n ? setInterval(g, o) : null;
+        l.useEffect(() => {
+            let e = n ? setInterval(p, o) : null;
             return () => clearInterval(e);
-        }, [n, g]),
-        (0, a.jsxs)(a.Fragment, {
+        }, [n, p]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, a.jsx)(l.O_, {
-                    ref: E,
+                (0, i.jsx)(a.O_, {
+                    ref: T,
                     className: t,
                     environment: S
                 }),
-                (0, a.jsx)(l.Ji, {
-                    ref: _,
-                    colors: f,
-                    sprites: c,
+                (0, i.jsx)(a.Ji, {
+                    ref: L,
+                    colors: _,
+                    sprites: d,
                     spriteWidth: 6,
                     spriteHeight: 6
                 })

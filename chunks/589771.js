@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
-    n(47120);
-var r = n(735250),
-    a = n(470079),
-    i = n(89057),
-    l = n(509545),
-    s = n(74538),
-    o = n(987209),
-    u = n(598),
-    c = n(456251);
-function d(e) {
-    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: h, handleClose: I } = e,
-        { blockedPayments: _, setStep: f, hasFetchedSubscriptions: m, hasFetchedSubscriptionPlans: E, currencyLoading: S, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
-        { isGift: O } = (0, o.wD)(),
-        [P, b] = a.useState(!m || !E || S);
-    return (a.useEffect(() => {
-        b(!m || !E || S);
-    }, [S, E, m]),
-    a.useEffect(() => {
-        null != d && A({ guild_id: d });
-    }, [d, A]),
-    a.useEffect(() => {
-        C(n);
-        let e = null != n ? l.Z.get(n) : null;
-        if (!P && !_)
-            h((t) => {
-                let n = null != e ? (0, s.aS)(e.id, !1, O, N) : void 0;
+    t(47120);
+var i = t(735250),
+    r = t(470079),
+    o = t(89057),
+    a = t(509545),
+    l = t(74538),
+    s = t(987209),
+    c = t(598),
+    d = t(456251);
+function u(e) {
+    let { initialStep: n, initialPlanId: t, guildId: u, setAnalyticsData: _, handleClose: p } = e,
+        { blockedPayments: f, setStep: I, hasFetchedSubscriptions: C, hasFetchedSubscriptionPlans: b, currencyLoading: m, selectedSkuId: S, setSelectedSkuId: h, setSelectedPlanId: T, priceOptions: g, setSubscriptionMetadataRequest: x } = (0, c.usePaymentContext)(),
+        { isGift: O } = (0, s.wD)(),
+        [N, P] = r.useState(!C || !b || m);
+    return (r.useEffect(() => {
+        P(!C || !b || m);
+    }, [m, b, C]),
+    r.useEffect(() => {
+        null != u && x({ guild_id: u });
+    }, [u, x]),
+    r.useEffect(() => {
+        T(t);
+        let e = null != t ? a.Z.get(t) : null;
+        if (!N && !f)
+            _((n) => {
+                let t = null != e ? (0, l.aS)(e.id, !1, O, g) : void 0;
                 return {
-                    ...t,
+                    ...n,
                     subscription_plan_id: null == e ? void 0 : e.id,
-                    price: null == n ? void 0 : n.amount,
+                    price: null == t ? void 0 : t.amount,
                     regular_price: null == e ? void 0 : e.price,
-                    currency: N.currency
+                    currency: g.currency
                 };
             }),
-                null != e && (T(null == e ? void 0 : e.skuId), f(t));
-    }, [_, n, O, P, N, p, h, C, T, f, t]),
-    P)
-        ? (0, r.jsx)(c.Z, {})
-        : _
-          ? (0, r.jsx)(i.Vq, { onClose: I })
+                null != e && (h(null == e ? void 0 : e.skuId), I(n));
+    }, [f, t, O, N, g, S, _, T, h, I, n]),
+    N)
+        ? (0, i.jsx)(d.Z, {})
+        : f
+          ? (0, i.jsx)(o.Vq, { onClose: p })
           : null;
 }

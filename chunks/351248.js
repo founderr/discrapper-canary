@@ -48,8 +48,8 @@ let I = {
         EASING_OUT: r.Z.Easing.quad
     },
     x = 200,
-    v = 125;
-class S extends s.PureComponent {
+    S = 125;
+class v extends s.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -93,7 +93,7 @@ class S extends s.PureComponent {
             r.Z.sequence(a),
             r.Z.timing(s, {
                 toValue: 0,
-                duration: v
+                duration: S
             })
         ]).start(e);
     }
@@ -166,7 +166,7 @@ function N(e) {
             if (e.type !== _.fO.USER) return null;
             let { user: s, voiceState: l, speaking: r, ringing: o } = e;
             return (0, i.jsx)(
-                S,
+                v,
                 {
                     className: f.participant,
                     width: (0, d.getAvatarSize)(I),

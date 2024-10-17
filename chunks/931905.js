@@ -1,92 +1,92 @@
-n.d(t, {
+t.d(n, {
     h: function () {
-        return o;
+        return s;
     },
     m: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
-n(470079);
-var a = n(481060),
-    i = n(17894),
-    l = n(689938),
-    s = n(632354);
-let o = (e) => {
-    let { onConfirm: t, onCancel: n, title: o, subtitle: u, confirmCta: c, showOpenDiscord: d = !0 } = e;
-    return (0, r.jsxs)('div', {
-        className: s.confirmationContainer,
+var i = t(735250);
+t(470079);
+var r = t(481060),
+    o = t(17894),
+    a = t(689938),
+    l = t(632354);
+let s = (e) => {
+    let { onConfirm: n, onCancel: t, title: s, subtitle: c, confirmCta: d, showOpenDiscord: u = !0 } = e;
+    return (0, i.jsxs)('div', {
+        className: l.confirmationContainer,
         children: [
-            (0, r.jsx)(a.Heading, {
-                className: s.confirmationHeader,
+            (0, i.jsx)(r.Heading, {
+                className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: o
+                children: s
             }),
-            null != u
-                ? (0, r.jsx)(a.Text, {
-                      className: s.confirmationSubtitle,
+            null != c
+                ? (0, i.jsx)(r.Text, {
+                      className: l.confirmationSubtitle,
                       variant: 'text-sm/normal',
                       color: 'header-secondary',
-                      children: u
+                      children: c
                   })
                 : null,
-            (0, r.jsxs)('div', {
-                className: s.buttonContainer,
+            (0, i.jsxs)('div', {
+                className: l.buttonContainer,
                 children: [
-                    d &&
-                        (0, r.jsx)(a.Button, {
+                    u &&
+                        (0, i.jsx)(r.Button, {
                             fullWidth: !0,
-                            onClick: () => (0, i.Z)('application_sub_mweb_success_modal'),
-                            children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+                            onClick: () => (0, o.Z)('application_sub_mweb_success_modal'),
+                            children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
                         }),
-                    (0, r.jsx)(a.Button, {
+                    (0, i.jsx)(r.Button, {
                         fullWidth: !0,
-                        color: a.Button.Colors.PRIMARY,
-                        onClick: t,
-                        children: c
+                        color: r.Button.Colors.PRIMARY,
+                        onClick: n,
+                        children: d
                     }),
-                    null != n &&
-                        (0, r.jsx)(a.Button, {
+                    null != t &&
+                        (0, i.jsx)(r.Button, {
                             fullWidth: !0,
-                            color: a.Button.Colors.PRIMARY,
-                            look: a.Button.Looks.LINK,
-                            onClick: n,
-                            children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CANCEL_BUTTON
+                            color: r.Button.Colors.PRIMARY,
+                            look: r.Button.Looks.LINK,
+                            onClick: t,
+                            children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CANCEL_BUTTON
                         })
                 ]
             })
         ]
     });
 };
-function u(e) {
-    let { onConfirm: t, tierName: n, subscription: o } = e;
-    return (0, r.jsxs)('div', {
-        className: s.confirmationContainer,
+function c(e) {
+    let { onConfirm: n, tierName: t, subscription: s } = e;
+    return (0, i.jsxs)('div', {
+        className: l.confirmationContainer,
         children: [
-            (0, r.jsx)(a.Heading, {
-                className: s.confirmationHeader,
+            (0, i.jsx)(r.Heading, {
+                className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({ tier: n })
+                children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({ tier: t })
             }),
-            (0, r.jsx)(a.Text, {
-                className: s.confirmationSubtitle,
+            (0, i.jsx)(r.Text, {
+                className: l.confirmationSubtitle,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == o ? void 0 : o.currentPeriodEnd })
+                children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == s ? void 0 : s.currentPeriodEnd })
             }),
-            (0, r.jsxs)('div', {
-                className: s.buttonContainer,
+            (0, i.jsxs)('div', {
+                className: l.buttonContainer,
                 children: [
-                    (0, r.jsx)(a.Button, {
-                        className: s.__invalid_openDiscordButton,
-                        onClick: () => (0, i.Z)('application_sub_mweb_success_modal'),
-                        children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+                    (0, i.jsx)(r.Button, {
+                        className: l.__invalid_openDiscordButton,
+                        onClick: () => (0, o.Z)('application_sub_mweb_success_modal'),
+                        children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
                     }),
-                    (0, r.jsx)(a.Button, {
-                        className: s.__invalid_doneButton,
-                        look: a.Button.Looks.BLANK,
-                        onClick: t,
-                        children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+                    (0, i.jsx)(r.Button, {
+                        className: l.__invalid_doneButton,
+                        look: r.Button.Looks.BLANK,
+                        onClick: n,
+                        children: a.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
                     })
                 ]
             })

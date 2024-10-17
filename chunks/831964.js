@@ -13,8 +13,8 @@ var s,
     l = n(906732),
     o = n(300284),
     c = n(526167),
-    d = n(981631),
-    _ = n(526761),
+    _ = n(981631),
+    d = n(526761),
     E = n(689938),
     u = n(509614),
     T = n(880511),
@@ -24,9 +24,9 @@ var s,
     N = n(860528),
     m = n(872532),
     C = n(91342),
-    f = n(181708),
-    p = n(821721),
-    A = n(158897),
+    A = n(181708),
+    f = n(821721),
+    p = n(158897),
     M = n(290650),
     S = n(751125),
     h = n(904505),
@@ -46,7 +46,7 @@ let D = () => {
             title: E.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_EMOJI_TITLE,
             description: E.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
             previewImage: u,
-            videoUrl: e ? C.Z : f.Z,
+            videoUrl: e ? C.Z : A.Z,
             isCompact: !0
         },
         noLimits: {
@@ -62,7 +62,7 @@ let D = () => {
 t.ZP = (e) => {
     let { analyticsLocations: t } = (0, l.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
         n = (0, o.Z)({
-            scrollPosition: _.Y_.TRY_IT_OUT,
+            scrollPosition: d.Y_.TRY_IT_OUT,
             analyticsLocations: t
         }),
         s = (0, c.rO)(),
@@ -89,7 +89,7 @@ t.ZP = (e) => {
                 description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_SUBTITLE,
                 descriptionCta: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
                 previewImage: g,
-                videoUrl: s ? p.Z : A.Z
+                videoUrl: s ? f.Z : p.Z
             }
         },
         u = {
@@ -109,7 +109,7 @@ t.ZP = (e) => {
                 descriptionCta: E.Z.Messages.TAKE_ME_THERE,
                 previewImage: I,
                 onClick: () => {
-                    r.Z.open(d.oAB.APPEARANCE, null, {
+                    r.Z.open(_.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: t
                     });

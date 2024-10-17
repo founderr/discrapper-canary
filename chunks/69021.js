@@ -28,11 +28,11 @@ function d() {
         }),
         { horizontalSpacing: d, verticalSpacing: _, maxHorizontalSpacing: S, maxVerticalSpacing: g } = (0, l.i)(),
         { setHorizontalSpacing: E, setVerticalSpacing: m } = l.i.getState(),
-        b = [];
+        I = [];
     return (
         n &&
             t &&
-            (b.push(
+            (I.push(
                 (0, o.jsx)(
                     a.MenuCheckboxItem,
                     {
@@ -47,7 +47,7 @@ function d() {
                 )
             ),
             e &&
-                (b.push(
+                (I.push(
                     (0, o.jsx)(
                         a.MenuControlItem,
                         {
@@ -68,7 +68,7 @@ function d() {
                         'horizontal-spacing'
                     )
                 ),
-                b.push(
+                I.push(
                     (0, o.jsx)(
                         a.MenuControlItem,
                         {
@@ -89,6 +89,6 @@ function d() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === b.length ? null : (0, o.jsx)(o.Fragment, { children: b })
+        0 === I.length ? null : (0, o.jsx)(o.Fragment, { children: I })
     );
 }

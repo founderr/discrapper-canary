@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 }),
     n(47120);
@@ -18,20 +18,20 @@ var i = n(735250),
     I = n(924301),
     m = n(482241),
     T = n(11868),
-    h = n(231338);
-function N(e) {
+    f = n(231338);
+function h(e) {
     let { code: t } = e,
-        [n, N, f] = t.split('-'),
+        [n, h, N] = t.split('-'),
         {
-            guildScheduledEvent: C,
-            guild: p,
+            guildScheduledEvent: p,
+            guild: C,
             channel: g,
-            isMember: A
+            isMember: S
         } = (0, s.cj)(
             [I.ZP, d.Z, c.Z, u.ZP, _.default],
             () => {
                 var e, t;
-                let i = null !== (t = I.ZP.getGuildScheduledEvent(N)) && void 0 !== t ? t : void 0,
+                let i = null !== (t = I.ZP.getGuildScheduledEvent(h)) && void 0 !== t ? t : void 0,
                     a = d.Z.getGuild(n),
                     s = c.Z.getChannel(null == i ? void 0 : i.channel_id);
                 return {
@@ -41,18 +41,18 @@ function N(e) {
                     isMember: u.ZP.isMember(n, null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 };
             },
-            [n, N]
+            [n, h]
         );
     return (
         a.useEffect(() => {
-            (null == C ? void 0 : C.id) == null && m.Z.fetchGuildEvent(n, N), E.Z.getGuildEventUserCounts(n, N, null != f ? [f] : []), E.Z.getGuildEventsForCurrentUser(n);
-        }, [N, n, null == C ? void 0 : C.id, f]),
+            (null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, h), E.Z.getGuildEventUserCounts(n, h, null != N ? [N] : []), E.Z.getGuildEventsForCurrentUser(n);
+        }, [h, n, null == p ? void 0 : p.id, N]),
         (0, i.jsx)(T.ZP, {
-            guild: p,
+            guild: C,
             channel: g,
-            guildScheduledEvent: C,
-            isMember: A,
-            onAcceptInstantInvite: h.dG,
+            guildScheduledEvent: p,
+            isMember: S,
+            onAcceptInstantInvite: f.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, l.n)(n)) {
                     (0, r.hk)(n);
@@ -60,7 +60,7 @@ function N(e) {
                 }
                 (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.Cq)(g) : (null == g ? void 0 : g.isGuildVoice()) && m.Z.joinVoiceEvent(g.guild_id, g.id);
             },
-            recurrenceId: f
+            recurrenceId: N
         })
     );
 }

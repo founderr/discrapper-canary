@@ -19,7 +19,7 @@ var n,
     S = t(689938),
     I = t(80366),
     N = t(113207);
-let m = /^\d+$|^$/;
+let A = /^\d+$|^$/;
 ((a = n || (n = {})).LOCALHOST = 'localhost'), (a.PROXY = 'proxy');
 function C(e) {
     let { onClose: s, transitionState: t } = e,
@@ -32,11 +32,11 @@ function C(e) {
             authorizationError: T.Z.error,
             authorizing: T.Z.isFetchingAuthorization
         })),
-        [A, g] = r.useState(null != n ? n : ''),
+        [m, g] = r.useState(null != n ? n : ''),
         [h, O] = r.useState('8080'),
         [p, R] = r.useState('localhost'),
         x = (0, E.Dt)(),
-        M = m.test(A);
+        M = A.test(m);
     async function f() {
         d.q$();
         let e = (function (e, s, t) {
@@ -47,11 +47,11 @@ function C(e) {
                 case 'proxy':
                     return (0, _.Z)(t);
             }
-        })(p, h, A);
-        null != (await d.Wt(A, e)) && s();
+        })(p, h, m);
+        null != (await d.Wt(m, e)) && s();
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let D = null != n && n === A,
+    let D = null != n && n === m,
         L = D
             ? function () {
                   d.mc(), g(''), R(null);
@@ -101,7 +101,7 @@ function C(e) {
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, i.jsx)(l.TextInput, {
-                                        value: A,
+                                        value: m,
                                         maxLength: 19,
                                         error: M ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
@@ -114,7 +114,7 @@ function C(e) {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !M || '' === A,
+                                        isDisabled: !M || '' === m,
                                         value: p,
                                         options: [
                                             {
@@ -150,7 +150,7 @@ function C(e) {
                                 (0, i.jsx)(l.Button, {
                                     submitting: C,
                                     type: 'submit',
-                                    disabled: !M || 0 === A.length || ('localhost' === p && 0 === h.length),
+                                    disabled: !M || 0 === m.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
                                     children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })

@@ -1,51 +1,51 @@
-t.d(n, {
+s.d(n, {
     U: function () {
-        return f;
+        return p;
     }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-    r = t.n(a),
-    s = t(512722),
-    l = t.n(s),
-    o = t(481060),
-    c = t(63063),
-    u = t(631818),
-    d = t(987033),
-    _ = t(53900),
-    p = t(981631),
-    m = t(689938),
-    I = t(3936);
-function f() {
+var t = s(735250);
+s(470079);
+var l = s(120356),
+    i = s.n(l),
+    r = s(512722),
+    a = s.n(r),
+    c = s(481060),
+    o = s(63063),
+    u = s(631818),
+    d = s(987033),
+    _ = s(53900),
+    m = s(981631),
+    I = s(689938),
+    E = s(3936);
+function p() {
     let e = (0, _.Z)(),
         { enabled: n } = u.Z.useExperiment({ location: '5ebfcf_1' }, { autoTrackExposure: !1 }),
-        { enabled: t } = d.Z.useExperiment({ location: '5ebfcf_2' }, { autoTrackExposure: !1 });
-    return null != e && ('PL' === e ? n : 'TR' === e && t);
+        { enabled: s } = d.Z.useExperiment({ location: '5ebfcf_2' }, { autoTrackExposure: !1 });
+    return null != e && ('PL' === e ? n : 'TR' === e && s);
 }
 n.Z = (e) => {
-    var n, t;
-    let { fromBoostCancelModal: a, className: s } = e,
+    var n, s;
+    let { fromBoostCancelModal: l, className: r } = e,
         u = (0, _.Z)();
-    if (!f()) return null;
+    if (!p()) return null;
     return (
-        l()(null != u, 'Subscription billing country should not be null'),
-        (0, i.jsxs)('div', {
-            className: r()(I.noticeRoot, s),
+        a()(null != u, 'Subscription billing country should not be null'),
+        (0, t.jsxs)('div', {
+            className: i()(E.noticeRoot, r),
             children: [
-                (0, i.jsx)('div', {
-                    className: I.iconContainer,
-                    children: (0, i.jsx)(o.CircleWarningIcon, {
+                (0, t.jsx)('div', {
+                    className: E.iconContainer,
+                    children: (0, t.jsx)(c.CircleWarningIcon, {
                         size: 'custom',
                         width: 20,
                         height: 20,
                         color: 'currentColor',
-                        className: I.infoIcon
+                        className: E.infoIcon
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: I.text,
-                    children: ((n = u), (t = a), 'PL' === n ? (t ? m.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING) : 'TR' === n ? (t ? m.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING) : t ? m.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({ helpCenterLink: c.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })
+                (0, t.jsx)('div', {
+                    className: E.text,
+                    children: ((n = u), (s = l), 'PL' === n ? (s ? I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING) : 'TR' === n ? (s ? I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING) : s ? I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({ helpCenterLink: o.Z.getArticleURL(m.BhN.LOCALIZED_PRICING) })
                 })
             ]
         })

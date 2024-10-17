@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return R;
     }
 }),
     n(47120);
@@ -18,23 +18,23 @@ var i = n(735250),
     I = n(220082),
     m = n(240991),
     T = n(914010),
-    h = n(768581),
-    N = n(135431),
-    f = n(728345),
-    C = n(812206),
-    p = n(981631),
+    f = n(768581),
+    h = n(135431),
+    N = n(728345),
+    p = n(812206),
+    C = n(981631),
     g = n(689938),
-    A = n(166272),
-    S = n(413097),
-    R = n(970952);
-function x(e) {
+    S = n(166272),
+    A = n(413097),
+    x = n(970952);
+function R(e) {
     let { applicationId: t } = e,
-        [n, s, l] = (0, r.Wu)([C.Z], () => [C.Z.getApplication(t), C.Z.isFetchingApplication(t), C.Z.didFetchingApplicationFail(t)], [t]);
+        [n, s, l] = (0, r.Wu)([p.Z], () => [p.Z.getApplication(t), p.Z.isFetchingApplication(t), p.Z.didFetchingApplicationFail(t)], [t]);
     return (a.useEffect(() => {
-        null == n && !s && !l && f.ZP.fetchApplication(t);
+        null == n && !s && !l && N.ZP.fetchApplication(t);
     }, [n, s, l, t]),
     null != n &&
-        (0, N.Eb)({
+        (0, h.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
@@ -55,68 +55,68 @@ function O(e) {
         } = a.useMemo(
             () =>
                 (0, E.sl)(t, {
-                    fakeAppIconURL: S,
+                    fakeAppIconURL: A,
                     size: 56
                 }),
             [t]
         ),
-        h = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
-        [f, C] = a.useState(!1),
-        x = a.useCallback((e) => {
-            e && C(!0);
+        f = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
+        [N, p] = a.useState(!1),
+        R = a.useCallback((e) => {
+            e && p(!0);
         }, []),
-        O = (0, o.O)(x);
+        O = (0, o.O)(R);
     return (
         a.useEffect(() => {
-            f &&
+            N &&
                 (0, _.h)({
                     type: s.ImpressionTypes.VIEW,
                     name: s.ImpressionNames.APP_OAUTH2_LINK_EMBED,
                     properties: { application_id: t.id }
                 });
-        }, [f, t]),
+        }, [N, t]),
         (0, i.jsxs)('div', {
             ref: O,
-            className: A.embedContainer,
+            className: S.embedContainer,
             children: [
-                (0, i.jsx)(M, {
+                (0, i.jsx)(v, {
                     application: t,
                     iconUrl: c
                 }),
                 (0, i.jsx)('img', {
-                    className: A.icon,
+                    className: S.icon,
                     alt: t.name,
-                    src: null != c ? c : R,
+                    src: null != c ? c : x,
                     'aria-hidden': !0,
                     draggable: !1
                 }),
                 (0, i.jsxs)('div', {
-                    className: A.body,
+                    className: S.body,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: A.details,
+                            className: S.details,
                             children: [
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'interactive-active',
                                     children: u
                                 }),
-                                null != h &&
+                                null != f &&
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: h
+                                        children: f
                                     })
                             ]
                         }),
                         (0, i.jsx)(l.Button, {
                             color: l.Button.Colors.PRIMARY,
-                            className: A.button,
+                            className: S.button,
                             type: 'button',
                             size: l.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                d.ZP.trackWithMetadata(p.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
-                                    (0, N.LO)({
+                                d.ZP.trackWithMetadata(C.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
+                                    (0, h.LO)({
                                         applicationId: t.id,
                                         customInstallUrl: t.customInstallUrl,
                                         installParams: t.installParams,
@@ -133,7 +133,7 @@ function O(e) {
         })
     );
 }
-function M(e) {
+function v(e) {
     let { application: t, iconUrl: n } = e,
         a = (0, c.Z)({
             applicationId: t.id,
@@ -148,11 +148,11 @@ function M(e) {
         l = (0, i.jsx)(u.Z, {
             imageBackground: a,
             applicationName: t.name,
-            imageClassName: A.bannerImage,
-            imageNotFoundClassName: A.bannerImage
+            imageClassName: S.bannerImage,
+            imageNotFoundClassName: S.bannerImage
         });
     else if ((null == r ? void 0 : r.banner) != null) {
-        let e = (0, h.aN)({
+        let e = (0, f.aN)({
             id: r.id,
             banner: r.banner,
             size: 280,
@@ -161,11 +161,11 @@ function M(e) {
         l = (0, i.jsx)('img', {
             alt: t.name,
             src: e,
-            className: A.bannerImage
+            className: S.bannerImage
         });
     } else o = { backgroundColor: s };
     return (0, i.jsx)('div', {
-        className: A.banner,
+        className: S.banner,
         style: o,
         children: l
     });

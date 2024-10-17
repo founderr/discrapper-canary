@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(689938),
     I = t(325582),
     N = t(113207);
-function m(e) {
+function A(e) {
     let { label: s, onChange: t, enabled: a, subLabel: i } = e;
     return (0, n.jsx)(l.FormSwitch, {
         value: !!a,
@@ -40,7 +40,7 @@ function C() {
         }
     }, [i, s, e]);
     let C = E.M0.reduce((e, s) => e || !!t[s], !1),
-        A = {
+        m = {
             [E.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [E.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [E.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -59,9 +59,9 @@ function C() {
                       children: [
                           E.Od.map((e) => {
                               let { category: s, label: a, subLabel: i } = e,
-                                  r = A[s],
+                                  r = m[s],
                                   o = (0, n.jsx)(
-                                      m,
+                                      A,
                                       {
                                           label: a(),
                                           subLabel: i(),

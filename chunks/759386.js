@@ -1,67 +1,67 @@
-n.r(t),
-    n.d(t, {
+t.r(n),
+    t.d(n, {
         getApplicationPaymentSteps: function () {
-            return h;
+            return _;
         }
     }),
-    n(47120);
-var r = n(735250);
-n(470079);
-var a = n(409813),
-    i = n(276442),
-    l = n(961830),
-    s = n(721165),
-    o = n(519801),
-    u = n(589771),
-    c = n(883419),
-    d = n(689938);
-function h(e) {
-    let { guildId: t, showBenefitsFirst: n } = e;
+    t(47120);
+var i = t(735250);
+t(470079);
+var r = t(409813),
+    o = t(276442),
+    a = t(961830),
+    l = t(721165),
+    s = t(519801),
+    c = t(589771),
+    d = t(883419),
+    u = t(689938);
+function _(e) {
+    let { guildId: n, showBenefitsFirst: t } = e;
     return [
         {
             key: null,
             renderStep: (e) =>
-                (0, r.jsx)(u.Z, {
-                    initialStep: n ? a.h8.BENEFITS : a.h8.REVIEW,
-                    guildId: t,
+                (0, i.jsx)(c.Z, {
+                    initialStep: t ? r.h8.BENEFITS : r.h8.REVIEW,
+                    guildId: n,
                     ...e
                 })
         },
         {
-            key: a.h8.BENEFITS,
-            renderStep: (e) => (0, r.jsx)(s.Z, { ...e }),
-            options: { useBreadcrumbLabel: () => d.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS }
+            key: r.h8.BENEFITS,
+            renderStep: (e) => (0, i.jsx)(l.Z, { ...e }),
+            options: { useBreadcrumbLabel: () => u.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS }
         },
         {
-            key: a.h8.ADD_PAYMENT_STEPS,
+            key: r.h8.ADD_PAYMENT_STEPS,
             renderStep: (e) =>
-                (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsx)(i.J, {
+                (0, i.jsx)(i.Fragment, {
+                    children: (0, i.jsx)(o.J, {
                         ...e,
-                        breadcrumbSteps: [a.h8.ADD_PAYMENT_STEPS, a.h8.REVIEW, a.h8.CONFIRM]
+                        breadcrumbSteps: [r.h8.ADD_PAYMENT_STEPS, r.h8.REVIEW, r.h8.CONFIRM]
                     })
                 }),
             options: { renderHeader: !0 }
         },
-        ...l.yp,
+        ...a.yp,
         {
-            key: a.h8.REVIEW,
+            key: r.h8.REVIEW,
             renderStep: (e) =>
-                (0, r.jsx)(c.Z, {
-                    backButtonEligible: !!n || void 0,
-                    prevStep: n ? a.h8.BENEFITS : void 0,
+                (0, i.jsx)(d.Z, {
+                    backButtonEligible: !!t || void 0,
+                    prevStep: t ? r.h8.BENEFITS : void 0,
                     ...e
                 }),
             options: {
                 renderHeader: !0,
-                useBreadcrumbLabel: () => d.Z.Messages.BILLING_STEP_REVIEW
+                useBreadcrumbLabel: () => u.Z.Messages.BILLING_STEP_REVIEW
             }
         },
         {
-            key: a.h8.CONFIRM,
+            key: r.h8.CONFIRM,
             renderStep: (e) =>
-                (0, r.jsx)(o.Z, {
-                    showBenefits: !n,
+                (0, i.jsx)(s.Z, {
+                    showBenefits: !t,
                     ...e
                 })
         }

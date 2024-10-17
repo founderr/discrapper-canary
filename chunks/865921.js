@@ -1,45 +1,45 @@
-n.d(t, {
+t.d(n, {
     v: function () {
-        return I;
+        return f;
     }
 }),
-    n(47120);
-var r = n(735250),
-    a = n(470079),
-    i = n(512722),
-    l = n.n(i),
-    s = n(89057),
-    o = n(987209),
-    u = n(598),
-    c = n(409813),
-    d = n(456251),
-    h = n(981631);
-function I(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: i, hasFetchedSkus: I, paymentSources: _, hasFetchedPaymentSources: f, application: m, skusById: E, selectedSkuId: S } = (0, u.usePaymentContext)(),
-        { isGift: p } = (0, o.wD)(),
-        [T, C] = a.useState(!0);
-    return (a.useEffect(() => {
-        let e = null != m;
-        if (!!I && !!f && !!e) C(!1);
-    }, [I, f, m]),
-    a.useEffect(() => {
-        if (T || i) return;
-        l()(null != S, 'Expected selectedSkuId');
-        let e = E[S];
-        if (p && (null == e ? void 0 : e.productLine) === h.POd.COLLECTIBLES) {
-            t(c.h8.GIFT_CUSTOMIZATION);
+    t(47120);
+var o = t(735250),
+    r = t(470079),
+    i = t(512722),
+    a = t.n(i),
+    c = t(89057),
+    d = t(987209),
+    l = t(598),
+    s = t(409813),
+    u = t(456251),
+    p = t(981631);
+function f(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        { blockedPayments: i, hasFetchedSkus: f, paymentSources: b, hasFetchedPaymentSources: _, application: h, skusById: g, selectedSkuId: x } = (0, l.usePaymentContext)(),
+        { isGift: m } = (0, d.wD)(),
+        [v, C] = r.useState(!0);
+    return (r.useEffect(() => {
+        let e = null != h;
+        if (!!f && !!_ && !!e) C(!1);
+    }, [f, _, h]),
+    r.useEffect(() => {
+        if (v || i) return;
+        a()(null != x, 'Expected selectedSkuId');
+        let e = g[x];
+        if (m && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
+            n(s.h8.GIFT_CUSTOMIZATION);
             return;
         }
-        if (0 === Object.keys(_).length) {
-            t(c.h8.ADD_PAYMENT_STEPS);
+        if (0 === Object.keys(b).length) {
+            n(s.h8.ADD_PAYMENT_STEPS);
             return;
         }
-        t(c.h8.REVIEW);
-    }, [T, i, t, _, p, E, S]),
-    T)
-        ? (0, r.jsx)(d.Z, {})
+        n(s.h8.REVIEW);
+    }, [v, i, n, b, m, g, x]),
+    v)
+        ? (0, o.jsx)(u.Z, {})
         : i
-          ? (0, r.jsx)(s.Vq, { onClose: n })
+          ? (0, o.jsx)(c.Vq, { onClose: t })
           : null;
 }

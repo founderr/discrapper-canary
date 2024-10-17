@@ -3,33 +3,33 @@ t.d(n, {
         return u;
     }
 });
-var s = t(735250);
+var a = t(735250);
 t(470079);
-var r = t(120356),
-    i = t.n(r),
-    l = t(937615),
-    a = t(474936),
-    c = t(689938),
-    o = t(446236);
+var s = t(120356),
+    r = t.n(s),
+    i = t(937615),
+    l = t(474936),
+    o = t(689938),
+    c = t(446236);
 function u(e) {
-    let { price: n, currency: t, intervalType: r, className: u, intervalCount: I = 1, isPrepaidPaymentSource: _ = !1 } = e,
-        E = (0, l.T4)(n, t),
-        T = null;
+    let { price: n, currency: t, intervalType: s, className: u, intervalCount: d = 1, isPrepaidPaymentSource: _ = !1 } = e,
+        I = (0, i.T4)(n, t),
+        E = null;
     return (
-        r === a.rV.YEAR
-            ? (T = c.Z.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({ price: E }))
-            : r === a.rV.MONTH && 1 === I
-              ? (T = c.Z.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({ price: E }))
-              : r === a.rV.MONTH &&
-                I > 1 &&
-                (T = c.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
-                    price: E,
-                    intervalCount: I
+        s === l.rV.YEAR
+            ? (E = o.Z.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({ price: I }))
+            : s === l.rV.MONTH && 1 === d
+              ? (E = o.Z.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({ price: I }))
+              : s === l.rV.MONTH &&
+                d > 1 &&
+                (E = o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
+                    price: I,
+                    intervalCount: d
                 })),
-        (0, s.jsx)('div', {
-            className: i()(o.pricePerInterval, u),
+        (0, a.jsx)('div', {
+            className: r()(c.pricePerInterval, u),
             'data-testid': 'PricePerInterval-'.concat(t),
-            children: null == r || _ ? (0, s.jsx)('strong', { children: E }) : T
+            children: null == s || _ ? (0, a.jsx)('strong', { children: I }) : E
         })
     );
 }

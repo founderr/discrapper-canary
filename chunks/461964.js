@@ -1,38 +1,38 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return f;
+            return E;
         }
     });
 var c = n(735250),
     l = n(470079),
     i = n(481060),
     a = n(561716),
-    o = n(721383),
-    r = n(313201),
-    s = n(63063),
-    _ = n(857595),
-    u = n(981631),
+    r = n(721383),
+    s = n(313201),
+    o = n(63063),
+    u = n(857595),
+    _ = n(981631),
     d = n(689938),
     h = n(312573);
-function f(e) {
+function E(e) {
     let { transitionState: t, onClose: n } = e,
-        f = (0, r.Dt)();
+        E = (0, s.Dt)();
     return (
         l.useEffect(() => {
-            _.r_();
+            u.r_();
         }, []),
         (0, c.jsxs)(i.ModalRoot, {
             transitionState: t,
             role: 'alertdialog',
-            'aria-labelledby': f,
+            'aria-labelledby': E,
             children: [
                 (0, c.jsxs)(i.ModalContent, {
                     className: h.content,
                     children: [
                         (0, c.jsx)(i.Heading, {
                             variant: 'heading-xl/semibold',
-                            id: f,
+                            id: E,
                             className: h.header,
                             children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_TITLE.format({
                                 tab: (e, t) =>
@@ -55,7 +55,7 @@ function f(e) {
                             children: [
                                 (0, c.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(i.KeyCombo, { shortcut: o._.binds['0'] }),
+                                        (0, c.jsx)(i.KeyCombo, { shortcut: r._.binds['0'] }),
                                         (0, c.jsx)(i.Text, {
                                             variant: 'text-md/normal',
                                             children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_LIST_SHORTCUT
@@ -75,7 +75,7 @@ function f(e) {
                         }),
                         (0, c.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
+                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: o.Z.getArticleURL(_.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),

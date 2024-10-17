@@ -1,17 +1,17 @@
-r.d(t, {
+n.d(t, {
     l: function () {
         return o;
     }
 }),
-    r(47120);
-var n = r(399606),
-    a = r(597688),
-    s = r(267097);
+    n(47120);
+var a = n(399606),
+    r = n(597688),
+    s = n(267097);
 function o(e) {
     (0, s.Z)();
-    let [t, r] = (0, n.Wu)([a.Z], () => [a.Z.isFetchingCategories, a.Z.getCategoryForProduct(e)]);
+    let [t, n] = (0, a.Wu)([r.Z], () => [r.Z.isFetchingCategories, r.Z.getCategoryForProduct(e)]);
     return {
         isFetching: t,
-        category: r
+        category: n
     };
 }

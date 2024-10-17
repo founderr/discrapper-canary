@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(5200),
     T = n(558317),
     x = n(403404),
-    v = n(981631),
-    S = n(689938),
+    S = n(981631),
+    v = n(689938),
     N = n(735338);
 let A = 'vc-activities-'.concat((0, r.Z)()),
     Z = s.forwardRef(function (e, t) {
@@ -33,7 +33,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
             L = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: P, guild_id: j } = n;
         s.useEffect(() => {
-            E.default.track(v.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+            E.default.track(S.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: P,
                 guild_id: j
             });
@@ -44,7 +44,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
         let O = (0, d.bp)(),
             { analyticsLocations: y } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: D } = (0, m.ZP)([...y, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            U = O === v.IlC.POPOUT,
+            U = O === S.IlC.POPOUT,
             k = (0, u.O)(),
             w = (function (e) {
                 return (0, C.Z)({ guildId: e }).slice(0, 5);
@@ -69,7 +69,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
             H = s.useCallback(
                 (e) => {
                     Z(),
-                        E.default.track(v.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                        E.default.track(S.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
@@ -89,7 +89,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
                                     id: A,
-                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
                         }),
@@ -111,7 +111,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
@@ -121,7 +121,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',

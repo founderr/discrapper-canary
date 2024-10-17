@@ -1,206 +1,206 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return B;
+        return U;
     }
 }),
-    t(789020);
-var i = t(735250),
-    a = t(470079),
-    r = t(512722),
-    s = t.n(r),
-    l = t(742280),
-    o = t(399606),
-    c = t(481060),
-    u = t(16084),
-    d = t(224550),
-    _ = t(609194),
-    p = t(275850),
-    m = t(672971),
-    I = t(115130),
-    f = t(925329),
-    E = t(653798),
-    x = t(314182),
-    N = t(251660),
-    S = t(246946),
-    T = t(351402),
-    h = t(853872),
-    b = t(855775),
-    g = t(695103),
-    P = t(4912),
-    v = t(630388),
-    A = t(669079),
-    M = t(937615),
-    C = t(987209),
-    y = t(598),
-    R = t(45572),
-    O = t(119226),
-    L = t(981631),
-    j = t(689938),
-    Z = t(679640);
+    s(789020);
+var t = s(735250),
+    l = s(470079),
+    i = s(512722),
+    r = s.n(i),
+    a = s(742280),
+    c = s(399606),
+    o = s(481060),
+    u = s(16084),
+    d = s(224550),
+    _ = s(609194),
+    m = s(275850),
+    I = s(672971),
+    E = s(115130),
+    p = s(925329),
+    N = s(653798),
+    T = s(314182),
+    S = s(251660),
+    x = s(246946),
+    h = s(351402),
+    P = s(853872),
+    f = s(855775),
+    A = s(695103),
+    v = s(4912),
+    M = s(630388),
+    g = s(669079),
+    R = s(937615),
+    L = s(987209),
+    O = s(598),
+    C = s(45572),
+    j = s(119226),
+    Z = s(981631),
+    y = s(689938),
+    b = s(679640);
 function D(e) {
-    let { sku: n, skuPricePreview: t } = e;
-    s()(null != t.amount, 'SKU must have a price set.');
-    let a = t.amount - t.tax;
-    return !t.tax_inclusive && t.tax > 0
-        ? (0, i.jsxs)(E.PO, {
-              className: Z.invoice,
+    let { sku: n, skuPricePreview: s } = e;
+    r()(null != s.amount, 'SKU must have a price set.');
+    let l = s.amount - s.tax;
+    return !s.tax_inclusive && s.tax > 0
+        ? (0, t.jsxs)(N.PO, {
+              className: b.invoice,
               children: [
-                  (0, i.jsx)(E.R$, {
+                  (0, t.jsx)(N.R$, {
                       label: n.name,
-                      value: (0, M.T4)(a, t.currency),
-                      className: Z.subscriptionCostRow
+                      value: (0, R.T4)(l, s.currency),
+                      className: b.subscriptionCostRow
                   }),
-                  (0, i.jsx)(E.R$, {
-                      label: j.Z.Messages.PURCHASE_REVIEW_TAX_LABEL,
-                      value: (0, M.T4)(t.tax, t.currency),
-                      className: Z.subscriptionCostRow
+                  (0, t.jsx)(N.R$, {
+                      label: y.Z.Messages.PURCHASE_REVIEW_TAX_LABEL,
+                      value: (0, R.T4)(s.tax, s.currency),
+                      className: b.subscriptionCostRow
                   }),
-                  (0, i.jsx)(E.KU, {}),
-                  (0, i.jsx)(E.Ji, {
-                      label: j.Z.Messages.BILLING_INVOICE_TOTAL.format(),
-                      value: (0, M.T4)(t.amount, t.currency),
-                      className: Z.subscriptionCostRow
+                  (0, t.jsx)(N.KU, {}),
+                  (0, t.jsx)(N.Ji, {
+                      label: y.Z.Messages.BILLING_INVOICE_TOTAL.format(),
+                      value: (0, R.T4)(s.amount, s.currency),
+                      className: b.subscriptionCostRow
                   })
               ]
           })
-        : (0, i.jsx)(E.PO, {
-              className: Z.invoice,
-              children: (0, i.jsx)(E.R$, {
+        : (0, t.jsx)(N.PO, {
+              className: b.invoice,
+              children: (0, t.jsx)(N.R$, {
                   label: n.name,
-                  value: (0, M.T4)(t.amount, t.currency),
-                  className: Z.subscriptionCostRow
+                  value: (0, R.T4)(s.amount, s.currency),
+                  className: b.subscriptionCostRow
               })
           });
 }
-function w(e) {
-    let { application: n, sku: t, isEmbeddedIAP: a } = e;
-    return !0 !== a
+function G(e) {
+    let { application: n, sku: s, isEmbeddedIAP: l } = e;
+    return !0 !== l
         ? null
-        : (0, i.jsxs)('div', {
-              className: Z.skuHeading,
+        : (0, t.jsxs)('div', {
+              className: b.skuHeading,
               children: [
-                  (0, i.jsx)(f.Z, { game: n }),
-                  (0, i.jsx)(c.Heading, {
+                  (0, t.jsx)(p.Z, { game: n }),
+                  (0, t.jsx)(o.Heading, {
                       variant: 'heading-lg/bold',
-                      className: Z.skuHeadingText,
-                      children: t.name
+                      className: b.skuHeadingText,
+                      children: s.name
                   })
               ]
           });
 }
-function B(e) {
-    let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: M, purchaseState: B, paymentSources: G, paymentSourceId: F, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: H, selectedSkuId: W, isEmbeddedIAP: Y, purchaseType: V, purchasePreviewError: K, devShelfFetchState: z } = (0, y.usePaymentContext)(),
-        { isGift: X, giftRecipient: q } = (0, C.wD)(),
-        J = X && (0, A.pO)(q),
-        { defaultPaymentSourceId: Q, hasFetchedPaymentSources: $ } = (0, o.cj)([h.Z], () => ({
-            defaultPaymentSourceId: h.Z.defaultPaymentSourceId,
-            hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
+function U(e) {
+    let { hasLegalTermsFlash: n, legalTermsNodeRef: s, onPaymentSourceChange: i, handlePaymentSourceAdd: p } = e,
+        { application: R, purchaseState: U, paymentSources: F, paymentSourceId: B, setHasAcceptedTerms: w, skusById: H, skuPricePreviewsById: k, selectedSkuId: W, isEmbeddedIAP: Y, purchaseType: V, purchasePreviewError: K, devShelfFetchState: z } = (0, O.usePaymentContext)(),
+        { isGift: X, giftRecipient: J } = (0, L.wD)(),
+        q = X && (0, g.pO)(J),
+        { defaultPaymentSourceId: Q, hasFetchedPaymentSources: $ } = (0, c.cj)([P.Z], () => ({
+            defaultPaymentSourceId: P.Z.defaultPaymentSourceId,
+            hasFetchedPaymentSources: P.Z.hasFetchedPaymentSources
         }));
-    s()(null != W, 'Expected selectedSkuId');
-    let ee = k[W],
-        en = H[W],
-        et = null != F ? F : b.c,
-        ei = null != en ? en[et] : null;
-    s()(null != ee, 'SKU must exist and be fetched.'), s()(null != M, 'Application must exist.');
-    let ea = (0, o.e7)([I.Z, g.Z], () => g.Z.inTestModeForApplication(M.id) || I.Z.inDevModeForApplication(M.id), [M.id]),
-        er = (0, o.e7)([S.Z], () => S.Z.enabled),
-        es = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
-        el = B === R.A.PURCHASING || B === R.A.COMPLETED,
-        eo = null != F ? G[F].type : null;
+    r()(null != W, 'Expected selectedSkuId');
+    let ee = H[W],
+        en = k[W],
+        es = null != B ? B : f.c,
+        et = null != en ? en[es] : null;
+    r()(null != ee, 'SKU must exist and be fetched.'), r()(null != R, 'Application must exist.');
+    let el = (0, c.e7)([E.Z, A.Z], () => A.Z.inTestModeForApplication(R.id) || E.Z.inDevModeForApplication(R.id), [R.id]),
+        ei = (0, c.e7)([x.Z], () => x.Z.enabled),
+        er = a.M.EEA_COUNTRIES.has(h.Z.ipCountryCodeWithFallback),
+        ea = U === C.A.PURCHASING || U === C.A.COMPLETED,
+        ec = null != B ? F[B].type : null;
     return (
-        a.useEffect(() => {
-            $ && F === Q && Q !== b.c && null == ei && (0, u.x2)(ee.applicationId, ee.id, Q, { isGift: X });
-        }, [Q, $, F, ee.applicationId, ee.id, ei, X]),
-        (0, i.jsxs)('div', {
-            className: Z.stepBody,
+        l.useEffect(() => {
+            $ && B === Q && Q !== f.c && null == et && (0, u.x2)(ee.applicationId, ee.id, Q, { isGift: X });
+        }, [Q, $, B, ee.applicationId, ee.id, et, X]),
+        (0, t.jsxs)('div', {
+            className: b.stepBody,
             children: [
-                ea
-                    ? (0, i.jsx)(
+                el
+                    ? (0, t.jsx)(
                           _.Z,
                           {
-                              icon: (0, c.makeIconCompat)(P.Z),
+                              icon: (0, o.makeIconCompat)(v.Z),
                               iconSize: _.Z.Sizes.SMALL,
                               color: _.Z.Colors.WARNING,
-                              className: Z.errorBlock,
-                              children: j.Z.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
+                              className: b.errorBlock,
+                              children: y.Z.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
                           },
                           'TEST_MODE'
                       )
                     : null,
-                (0, v.yE)(M.flags, L.udG.EMBEDDED) && z === I.O.ERROR
-                    ? (0, i.jsx)(
+                (0, M.yE)(R.flags, Z.udG.EMBEDDED) && z === E.O.ERROR
+                    ? (0, t.jsx)(
                           _.Z,
                           {
-                              icon: (0, c.makeIconCompat)(P.Z),
+                              icon: (0, o.makeIconCompat)(v.Z),
                               iconSize: _.Z.Sizes.SMALL,
                               color: _.Z.Colors.ERROR,
-                              className: Z.errorBlock,
-                              children: j.Z.Messages.APPLICATION_STORE_PURCHASE_DEV_SHELF_FETCH_FAILED
+                              className: b.errorBlock,
+                              children: y.Z.Messages.APPLICATION_STORE_PURCHASE_DEV_SHELF_FETCH_FAILED
                           },
                           'DEV_SHELF_ERROR'
                       )
                     : null,
-                (0, i.jsx)(w, {
-                    application: M,
+                (0, t.jsx)(G, {
+                    application: R,
                     sku: ee,
                     isEmbeddedIAP: Y
                 }),
-                J && (0, i.jsx)(O.Z, { sku: ee }),
-                null != q ? (0, i.jsx)(N.s, { giftRecipient: q }) : null,
-                (0, i.jsx)(c.FormTitle, {
-                    tag: c.FormTitleTags.H5,
-                    children: X ? j.Z.Messages.PREMIUM_GIFTING_BUTTON : j.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
+                q && (0, t.jsx)(j.Z, { sku: ee }),
+                null != J ? (0, t.jsx)(S.s, { giftRecipient: J }) : null,
+                (0, t.jsx)(o.FormTitle, {
+                    tag: o.FormTitleTags.H5,
+                    children: X ? y.Z.Messages.PREMIUM_GIFTING_BUTTON : y.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
                 }),
-                null != ei
-                    ? (0, i.jsx)(D, {
+                null != et
+                    ? (0, t.jsx)(D, {
                           sku: ee,
-                          skuPricePreview: ei
+                          skuPricePreview: et
                       })
                     : null == K
-                      ? (0, i.jsx)(c.Spinner, {
-                            type: c.Spinner.Type.WANDERING_CUBES,
-                            className: Z.invoiceSpinner
+                      ? (0, t.jsx)(o.Spinner, {
+                            type: o.Spinner.Type.WANDERING_CUBES,
+                            className: b.invoiceSpinner
                         })
-                      : (0, i.jsx)(E.PO, {
-                            className: Z.invoice,
-                            children: (0, i.jsx)(E.R$, {
+                      : (0, t.jsx)(N.PO, {
+                            className: b.invoice,
+                            children: (0, t.jsx)(N.R$, {
                                 label: ee.name,
                                 value: null,
-                                className: Z.subscriptionCostRow
+                                className: b.subscriptionCostRow
                             })
                         }),
-                (0, i.jsxs)('div', {
-                    className: Z.paymentSourceWrapper,
+                (0, t.jsxs)('div', {
+                    className: b.paymentSourceWrapper,
                     children: [
-                        (0, i.jsx)(c.FormTitle, {
-                            tag: c.FormTitleTags.H5,
-                            children: j.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
+                        (0, t.jsx)(o.FormTitle, {
+                            tag: o.FormTitleTags.H5,
+                            children: y.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
                         }),
-                        (0, i.jsx)(p.Z, {
-                            paymentSources: Object.values(G),
-                            selectedPaymentSourceId: F,
-                            onChange: r,
-                            onPaymentSourceAdd: f,
-                            hidePersonalInformation: er
+                        (0, t.jsx)(m.Z, {
+                            paymentSources: Object.values(F),
+                            selectedPaymentSourceId: B,
+                            onChange: i,
+                            onPaymentSourceAdd: p,
+                            hidePersonalInformation: ei
                         })
                     ]
                 }),
-                (0, i.jsx)(x.Z, {
+                (0, t.jsx)(T.Z, {
                     isActive: n,
-                    ref: t,
-                    children: (0, i.jsx)(m.Z, {
-                        onChange: U,
+                    ref: s,
+                    children: (0, t.jsx)(I.Z, {
+                        onChange: w,
                         forceShow: !0,
-                        showWithdrawalWaiver: es,
-                        disabled: el,
+                        showWithdrawalWaiver: er,
+                        disabled: ea,
                         subscriptionPlan: null,
-                        finePrintClassname: Z.fineprint,
+                        finePrintClassname: b.fineprint,
                         purchaseType: V,
                         isGift: X,
-                        checkboxLabel: ee.productLine === L.POd.COLLECTIBLES ? j.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: L.EYA.PAID_TERMS }) : void 0,
-                        finePrint: (0, i.jsx)(d.Z, {
-                            paymentSourceType: eo,
+                        checkboxLabel: ee.productLine === Z.POd.COLLECTIBLES ? y.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: Z.EYA.PAID_TERMS }) : void 0,
+                        finePrint: (0, t.jsx)(d.Z, {
+                            paymentSourceType: ec,
                             isEmbeddedIAP: Y,
                             purchaseType: V,
                             productLine: ee.productLine,

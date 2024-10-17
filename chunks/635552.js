@@ -1,34 +1,34 @@
-r.d(t, {
+n.d(t, {
     W: function () {
         return d;
     }
 }),
-    r(47120);
-var n = r(470079),
-    a = r(979554),
-    s = r(809206),
-    o = r(350327),
-    i = r(884697),
-    l = r(328456),
-    c = r(689938);
+    n(47120);
+var a = n(470079),
+    r = n(979554),
+    s = n(809206),
+    o = n(350327),
+    i = n(884697),
+    l = n(328456),
+    c = n(689938);
 let d = (e) => {
     let { product: t, onSuccess: d, onError: u } = e,
-        [f, g] = n.useState(!1),
-        { firstAvatarDecoration: p, firstProfileEffect: v } = (0, l.R)(t),
-        C = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === a.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
+        [f, g] = a.useState(!1),
+        { firstAvatarDecoration: p, firstProfileEffect: E } = (0, l.R)(t),
+        T = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
     return {
-        handleUseNow: n.useCallback(async () => {
+        handleUseNow: a.useCallback(async () => {
             g(!0);
             try {
-                if ((null != p && (await (0, s.Mn)({ avatarDecoration: p })), null != v)) {
-                    let e = { profile_effect_id: v.id };
+                if ((null != p && (await (0, s.Mn)({ avatarDecoration: p })), null != E)) {
+                    let e = { profile_effect_id: E.id };
                     await (0, o.Z)(e);
                 }
                 {
-                    let { ToastPosition: e, ToastType: t, createToast: n, popToast: a, showToast: s } = await Promise.resolve().then(r.bind(r, 481060));
-                    a(),
+                    let { ToastPosition: e, ToastType: t, createToast: a, popToast: r, showToast: s } = await Promise.resolve().then(n.bind(n, 481060));
+                    r(),
                         s(
-                            n(C, t.MESSAGE, {
+                            a(T, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP
                             })
@@ -40,7 +40,7 @@ let d = (e) => {
             } finally {
                 g(!1);
             }
-        }, [p, v, d, C, u]),
+        }, [p, E, d, T, u]),
         isApplying: f
     };
 };

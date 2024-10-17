@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     header: 'header_f7625d',
     customGiftHeader: 'customGiftHeader_f7625d',
     backSplash: 'backSplash_f7625d',

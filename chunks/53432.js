@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return T;
     }
 });
 var o = t(735250);
@@ -18,14 +18,14 @@ var r = t(442837),
     g = t(695346),
     E = t(874893),
     m = t(981631),
-    b = t(689938);
-function I() {
+    I = t(689938);
+function T() {
     let e = g.jU.useSetting(),
         { analyticsLocations: n } = (0, u.ZP)(),
         {
             theme: t,
-            useSystemTheme: I,
-            useForcedColors: T
+            useSystemTheme: T,
+            useForcedColors: b
         } = (0, r.cj)([_.Z, S.ZP, c.Z], () => ({
             theme: _.Z.theme,
             useSystemTheme: S.ZP.useSystemTheme,
@@ -37,8 +37,8 @@ function I() {
                 id: e,
                 group: 'input-modes',
                 label: r,
-                disabled: T,
-                checked: I === E.K.ON ? 'system' === e : e === t,
+                disabled: b,
+                checked: T === E.K.ON ? 'system' === e : e === t,
                 action: () => {
                     (0, s.Yk)({
                         isPersisted: !0,
@@ -53,13 +53,13 @@ function I() {
             a.MenuGroup,
             {
                 children: [
-                    M(m.BRd.DARK, b.Z.Messages.THEME_DARK),
-                    M(m.BRd.LIGHT, b.Z.Messages.THEME_LIGHT),
+                    M(m.BRd.DARK, I.Z.Messages.THEME_DARK),
+                    M(m.BRd.LIGHT, I.Z.Messages.THEME_LIGHT),
                     f &&
                         (0, o.jsxs)(o.Fragment, {
-                            children: [M(m.BRd.DARKER, 'Darker'), M(m.BRd.MIDNIGHT, b.Z.Messages.THEME_MIDNIGHT)]
+                            children: [M(m.BRd.DARKER, 'Darker'), M(m.BRd.MIDNIGHT, I.Z.Messages.THEME_MIDNIGHT)]
                         }),
-                    M('system', b.Z.Messages.THEME_SYSTEM)
+                    M('system', I.Z.Messages.THEME_SYSTEM)
                 ]
             },
             'theme-items'
@@ -69,7 +69,7 @@ function I() {
             {
                 children: (0, o.jsx)(a.MenuItem, {
                     id: 'compact-mode',
-                    label: e ? b.Z.Messages.SWITCH_TO_COZY_MODE : b.Z.Messages.SWITCH_TO_COMPACT_MODE,
+                    label: e ? I.Z.Messages.SWITCH_TO_COZY_MODE : I.Z.Messages.SWITCH_TO_COMPACT_MODE,
                     action: () => {
                         g.jU.updateSetting(!e), (0, l.ZZ)();
                     }

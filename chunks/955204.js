@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     F7: function () {
-        return _;
+        return d;
     },
     LG: function () {
         return c;
@@ -12,7 +12,7 @@ n.d(t, {
         return r;
     },
     oX: function () {
-        return d;
+        return _;
     }
 });
 var s,
@@ -180,10 +180,10 @@ let c = {
         checkUnlock: (e) => 113 === e.value
     }
 };
-function d(e) {
+function _(e) {
     return c[e];
 }
-let _ = (e) => {
+let d = (e) => {
     switch (e) {
         case 0:
             return { color: '#1ABC9C' };

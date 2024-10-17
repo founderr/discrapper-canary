@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(757692),
     T = n(933843),
     x = n(141321),
-    v = n(2818),
-    S = n(954551),
+    S = n(2818),
+    v = n(954551),
     N = n(44136),
     A = n(651183),
     Z = n(618158),
@@ -104,7 +104,7 @@ function Y(e) {
         q = (0, T.So)(c.q.STREAM_HIGH_QUALITY),
         X = (0, I.o)(D, Y),
         J = (0, C.lL)('CallHeader', !0, Y, X),
-        { enabled: Q, inInbox: $ } = v.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        { enabled: Q, inInbox: $ } = S.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         ee = (0, _.Q)('ChannelCallHeaderToolbar'),
         { preventIdle: et, allowIdle: en } = (0, Z.Y)('popup'),
         ei = [];
@@ -227,7 +227,7 @@ function Y(e) {
                     'recents'
                 )
             ),
-        Q && !$ && ei.push((0, i.jsx)(S.Z, { className: W.button }, 'for-later')),
+        Q && !$ && ei.push((0, i.jsx)(v.Z, { className: W.button }, 'for-later')),
         ei.push(
             (0, i.jsx)(
                 d.Popout,

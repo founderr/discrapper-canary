@@ -3,9 +3,9 @@ t.d(n, {
         return function e(n) {
             return null == n
                 ? n
-                : Object.keys(n).reduce((t, r) => {
-                      let l = (0, i.camelCase)(r);
-                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), t;
+                : Object.keys(n).reduce((t, i) => {
+                      let l = (0, r.camelCase)(i);
+                      return 'object' != typeof n[i] || Array.isArray(n[i]) ? (t[l] = n[i]) : (t[l] = e(n[i])), t;
                   }, {});
         };
     },
@@ -13,12 +13,12 @@ t.d(n, {
         return function e(n) {
             return null == n
                 ? n
-                : Object.keys(n).reduce((t, r) => {
-                      let l = (0, i.snakeCase)(r);
-                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), (t[l] = n[r]), t;
+                : Object.keys(n).reduce((t, i) => {
+                      let l = (0, r.snakeCase)(i);
+                      return 'object' != typeof n[i] || Array.isArray(n[i]) ? (t[l] = n[i]) : (t[l] = e(n[i])), (t[l] = n[i]), t;
                   }, {});
         };
     }
 }),
     t(724458);
-var i = t(392711);
+var r = t(392711);

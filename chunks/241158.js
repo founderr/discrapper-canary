@@ -6,8 +6,8 @@ var s = n(735250),
     l = n(392711),
     o = n(481060),
     c = n(70097),
-    d = n(626135),
-    _ = n(526167),
+    _ = n(626135),
+    d = n(526167),
     E = n(409100),
     u = n(831964),
     T = n(981631),
@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(689938),
     g = n(916548);
 let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: f, onClick: p, index: A } = e,
-        M = (0, _.rO)(),
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: A, onClick: f, index: p } = e,
+        M = (0, d.rO)(),
         S = a.useRef(null),
         [h, b] = a.useState(0),
         x = (function (e) {
@@ -46,7 +46,7 @@ let N = (e) => {
             return t;
         })(t),
         O = (0, l.debounce)(() => {
-            d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+            _.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
         P = () => {
             null != S.current && ((S.current.currentTime = h), S.current.play());
@@ -57,16 +57,16 @@ let N = (e) => {
         L = () =>
             (0, s.jsxs)('div', {
                 className: i()({
-                    [g.whatsNewTextBoxOuter]: !f,
-                    [g.compactTextBox]: f
+                    [g.whatsNewTextBoxOuter]: !A,
+                    [g.compactTextBox]: A
                 }),
                 children: [
                     (0, s.jsx)(o.Heading, {
                         variant: 'display-md',
                         color: 'header-primary',
                         className: i()({
-                            [g.whatsNewBoxHeader]: !f,
-                            [g.compactBoxHeader]: f
+                            [g.whatsNewBoxHeader]: !A,
+                            [g.compactBoxHeader]: A
                         }),
                         children: n
                     }),
@@ -77,11 +77,11 @@ let N = (e) => {
                         children: r
                     }),
                     null != R &&
-                        (null != p
+                        (null != f
                             ? (0, s.jsx)(o.Button, {
                                   className: g.whatsNewBoxButton,
                                   onClick: () => {
-                                      O(), p();
+                                      O(), f();
                                   },
                                   children: R
                               })
@@ -99,8 +99,8 @@ let N = (e) => {
             let { isLeft: t } = e;
             return (0, s.jsx)('div', {
                 className: i()({
-                    [g.whatsNewArtContainer]: !f,
-                    [g.compactBoxArtContainer]: f
+                    [g.whatsNewArtContainer]: !A,
+                    [g.compactBoxArtContainer]: A
                 }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
@@ -109,9 +109,9 @@ let N = (e) => {
                     poster: N,
                     loop: !0,
                     className: i()({
-                        [g.perkBoxVideo]: !f,
-                        [g.leftSideArt]: t && !f,
-                        [g.compactBoxVideo]: f
+                        [g.perkBoxVideo]: !A,
+                        [g.leftSideArt]: t && !A,
+                        [g.compactBoxVideo]: A
                     }),
                     ref: S,
                     children: (0, s.jsx)('source', {
@@ -121,11 +121,11 @@ let N = (e) => {
                 })
             });
         };
-    return A % 2 != 0
+    return p % 2 != 0
         ? (0, s.jsxs)('div', {
               className: i()(x, {
-                  [g.whatsNewBoxContainer]: !f,
-                  [g.compactBoxContainer]: f
+                  [g.whatsNewBoxContainer]: !A,
+                  [g.compactBoxContainer]: A
               }),
               onMouseEnter: P,
               onFocus: P,
@@ -135,8 +135,8 @@ let N = (e) => {
           })
         : (0, s.jsxs)('div', {
               className: i()(x, {
-                  [g.whatsNewBoxContainer]: !f,
-                  [g.compactBoxContainer]: f,
+                  [g.whatsNewBoxContainer]: !A,
+                  [g.compactBoxContainer]: A,
                   boxBackgroundColor: x
               }),
               onMouseEnter: P,

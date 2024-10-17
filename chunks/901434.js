@@ -21,15 +21,15 @@ t.Z = function (e) {
             I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
         }, [g.id, g.guild_id, I]),
         x = p.filter((e) => e.type === m.Ui.VOICE),
-        v = 4 === x.length ? 2 : 3,
-        S = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
+        S = 4 === x.length ? 2 : 3,
+        v = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
-                style: { maxWidth: 168 * v },
-                children: S.slice(0, 5).map((e) =>
+                style: { maxWidth: 168 * S },
+                children: v.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {

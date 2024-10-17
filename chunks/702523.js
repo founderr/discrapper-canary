@@ -5,25 +5,25 @@ n.d(e, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(51025),
-    o = n(850840),
+var o = n(481060),
+    s = n(51025),
+    a = n(850840),
     l = n(391690);
 function r(t, e, r, c, d) {
     let u = l.Z.getInstallationPath(t.id, e),
-        p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
+        p = null != t.eulaId && !a.Z.hasAcceptedEULA(t.eulaId);
     null == u || p
-        ? (0, s.openModalLazy)(async () => {
-              let { default: s } = await n.e('226').then(n.bind(n, 472064));
+        ? (0, o.openModalLazy)(async () => {
+              let { default: o } = await n.e('226').then(n.bind(n, 472064));
               return (n) =>
-                  (0, i.jsx)(s, {
+                  (0, i.jsx)(o, {
                       ...n,
                       applicationId: t.id,
                       branchId: e,
                       analyticsLocation: d
                   });
           })
-        : (0, a.LO)({
+        : (0, s.LO)({
               application: t,
               branchId: e,
               buildId: r,

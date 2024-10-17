@@ -21,9 +21,9 @@ var n,
     S = t(600164),
     I = t(374649),
     N = t(431369),
-    m = t(55610),
+    A = t(55610),
     C = t(653798),
-    A = t(311821),
+    m = t(311821),
     g = t(42818),
     h = t(314884),
     O = t(509545),
@@ -65,7 +65,7 @@ function Z(e) {
                                   ? P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format({ endDate: s.currentPeriodEnd })
                                   : P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_GUILD.format({ endDate: s.currentPeriodEnd })
                     }),
-                    (0, i.jsx)(m.Z, { fromBoostCancelModal: !0 })
+                    (0, i.jsx)(A.Z, { fromBoostCancelModal: !0 })
                 ]
             }),
             s.isPurchasedExternally
@@ -106,7 +106,7 @@ async function v(e, s, t, n) {
 function j(e) {
     var s, t, n;
     let { premiumSubscription: a, guildBoostSlotId: o, onBack: l, onNext: _, onClose: u } = e,
-        [m, h] = r.useState(!1),
+        [A, h] = r.useState(!1),
         [p, R] = r.useMemo(() => {
             try {
                 return [(0, N.g)(a, -1), !1];
@@ -198,7 +198,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(d.Button, {
                         color: d.Button.Colors.RED,
-                        disabled: m,
+                        disabled: A,
                         onClick: async () => {
                             try {
                                 h(!0), await v(a, p, j, o), _();
@@ -208,7 +208,7 @@ function j(e) {
                         },
                         children: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON
                     }),
-                    (0, i.jsx)(A.Z, { onClick: l })
+                    (0, i.jsx)(m.Z, { onClick: l })
                 ]
             })
         ]

@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(319978);
 function N(e) {
     let { cta: s, storeListing: t, className: i } = e,
-        { applicationId: N, benefits: m, description: C } = t,
-        A = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(N, t.thumbnail, 256)), [N, t.thumbnail]),
+        { applicationId: N, benefits: A, description: C } = t,
+        m = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(N, t.thumbnail, 256)), [N, t.thumbnail]),
         { data: g } = (0, d.X)(t.skuId),
         h = a.useMemo(() => {
             if (null == g || 0 === g.length) return null;
@@ -36,9 +36,9 @@ function N(e) {
                       (0, n.jsxs)('div', {
                           className: I.headerTitle,
                           children: [
-                              null != A &&
+                              null != m &&
                                   (0, n.jsx)(c.Image, {
-                                      src: A.href,
+                                      src: m.href,
                                       imageClassName: I.subscriptionImg,
                                       width: 48,
                                       height: 48
@@ -69,11 +69,11 @@ function N(e) {
                               children: C
                           })
                       }),
-                  null != m &&
-                      m.length > 0 &&
+                  null != A &&
+                      A.length > 0 &&
                       (0, n.jsx)('div', {
                           className: I.benefits,
-                          children: m.map((e) => {
+                          children: A.map((e) => {
                               let { id: s, name: t, description: a, icon: i } = e;
                               return (0, n.jsx)(
                                   l.G,

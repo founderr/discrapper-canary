@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return P;
     }
 }),
     n(47120),
@@ -20,48 +20,48 @@ var a = n(613828),
     I = n(522474),
     m = n(523746),
     T = n(592125),
-    h = n(594174),
-    N = n(630388),
-    f = n(823379),
-    C = n(624138),
-    p = n(317381),
+    f = n(594174),
+    h = n(630388),
+    N = n(823379),
+    p = n(624138),
+    C = n(317381),
     g = n(638880),
-    A = n(122613),
-    S = n(147865),
-    R = n(778569),
-    x = n(884338),
+    S = n(122613),
+    A = n(147865),
+    x = n(778569),
+    R = n(884338),
     O = n(403404),
-    M = n(701488),
-    v = n(981631),
+    v = n(701488),
+    M = n(981631),
     L = n(689938),
     Z = n(896219);
-let P = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function b(e) {
-    var t, n, r, C;
-    let { applicationId: b, message: D } = e,
+let b = (0, p.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function P(e) {
+    var t, n, r, p;
+    let { applicationId: P, message: D } = e,
         { analyticsLocations: j } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
         y = D.channel_id,
         B = (0, s.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
         G = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == F ? void 0 : F.applicationId) === b,
-        [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
-        H = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
-        [Y] = (0, s.Wu)([p.ZP], () => (G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
-        W = Array.from(null !== (C = null == Y ? void 0 : Y.userIds) && void 0 !== C ? C : []),
-        K = (0, s.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(f.lm), [W]),
-        z = (0, R.Z)({
-            applicationId: b,
-            size: P,
+        F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)),
+        w = (null == F ? void 0 : F.applicationId) === P,
+        [V] = (0, E.Z)([P, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
+        [Y] = (0, s.Wu)([C.ZP], () => (G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === P) : []), [P, y, G]),
+        W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
+        z = (0, s.Wu)([f.default], () => W.map((e) => f.default.getUser(e)).filter(N.lm), [W]),
+        K = (0, x.Z)({
+            applicationId: P,
+            size: b,
             names: ['embedded_cover']
         }),
-        X = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
-        Q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
+        X = I.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT),
+        Q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
         J = async () => {
             if (G) {
-                if (null != Y && K.length > 0)
+                if (null != Y && z.length > 0)
                     await (0, g.Z)({
                         applicationId: Y.applicationId,
                         activityChannelId: y,
@@ -71,8 +71,8 @@ function b(e) {
                 else {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
-                            await (0, A.Z)({
-                                targetApplicationId: b,
+                            await (0, S.Z)({
+                                targetApplicationId: P,
                                 channelId: y,
                                 analyticsLocations: j,
                                 commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
@@ -92,12 +92,12 @@ function b(e) {
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: X,
-                    initialSelectedApplicationId: b,
-                    initialSlide: M.ag.SELECT_CHANNEL,
+                    initialSelectedApplicationId: P,
+                    initialSlide: v.ag.SELECT_CHANNEL,
                     analyticsLocations: j
                 });
         };
-    return null != V && (0, N.yE)(V.flags, v.udG.EMBEDDED)
+    return null != V && (0, h.yE)(V.flags, M.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: j,
               children: (0, i.jsxs)('div', {
@@ -108,7 +108,7 @@ function b(e) {
                           children: (0, i.jsx)('img', {
                               className: Z.img,
                               alt: V.name,
-                              src: z.url
+                              src: K.url
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -128,19 +128,19 @@ function b(e) {
                                   className: Z.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(a.rU, {
-                                      to: v.Z5c.ACTIVITY_DETAILS(b),
+                                      to: M.Z5c.ACTIVITY_DETAILS(P),
                                       children: L.Z.Messages.LEARN_MORE
                                   })
                               }),
                               (0, i.jsxs)('div', {
                                   className: Z.cta,
                                   children: [
-                                      K.length > 0
+                                      z.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(R.Z, {
                                                     guildId: k,
-                                                    users: K,
+                                                    users: z,
                                                     max: 4
                                                 })
                                             })

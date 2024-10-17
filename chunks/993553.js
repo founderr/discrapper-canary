@@ -39,7 +39,7 @@ function _(e) {
                     ]
                 })
             }),
-        [N, m] = a.useState(null),
+        [N, A] = a.useState(null),
         C = a.useCallback(() => {
             if (null == N) return;
             let { scrollHeight: e, clientHeight: s } = N;
@@ -52,17 +52,17 @@ function _(e) {
     a.useEffect(() => {
         requestAnimationFrame(C);
     }, [C, s, t]);
-    let A = 'auto';
+    let m = 'auto';
     return (
-        null != T && (A = u ? ''.concat(T.expandedHeight, 'px') : ''.concat(T.truncatedHeight, 'px')),
+        null != T && (m = u ? ''.concat(T.expandedHeight, 'px') : ''.concat(T.truncatedHeight, 'px')),
         (0, n.jsxs)('div', {
             children: [
                 (0, n.jsx)(l.Text, {
                     ..._,
                     className: d.content,
                     lineClamp: u ? void 0 : t,
-                    ref: m,
-                    style: { height: A },
+                    ref: A,
+                    style: { height: m },
                     children: s
                 }),
                 I

@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return x;
+        return R;
     }
 }),
     n(47120);
@@ -18,20 +18,20 @@ var i = n(735250),
     I = n(742989),
     m = n(675478),
     T = n(581883),
-    h = n(585483),
-    N = n(400445),
-    f = n(153209),
-    C = n(956961),
-    p = n(903672),
+    f = n(585483),
+    h = n(400445),
+    N = n(153209),
+    p = n(956961),
+    C = n(903672),
     g = n(946443),
-    A = n(264233),
-    S = n(981631),
-    R = n(689938);
-function x(e) {
-    let { onOpen: t, onClose: n, children: x, badgeState: O, popoutPosition: M, popoutAlign: v } = e,
+    S = n(264233),
+    A = n(981631),
+    x = n(689938);
+function R(e) {
+    let { onOpen: t, onClose: n, children: R, badgeState: O, popoutPosition: v, popoutAlign: M } = e,
         { analyticsLocations: L } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [Z, P] = a.useState(!1),
-        [b, D] = (function () {
+        [Z, b] = a.useState(!1),
+        [P, D] = (function () {
             let e = (0, r.e7)([T.Z], () => {
                 var e, t;
                 return null !== (t = null === (e = T.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
@@ -68,20 +68,20 @@ function x(e) {
                 showTutorial: !t && e === l.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(b),
+        })(P),
         y = a.useCallback(() => {
-            P(!1), Z && (null == n || n());
+            b(!1), Z && (null == n || n());
         }, [n, Z]),
         B = a.useCallback(() => {
-            P(!Z), Z ? null == n || n() : null == t || t();
+            b(!Z), Z ? null == n || n() : null == t || t();
         }, [n, t, Z]);
-    a.useEffect(() => (h.S.subscribe(S.CkL.TOGGLE_INBOX, B), () => void h.S.unsubscribe(S.CkL.TOGGLE_INBOX, B)), [B]);
+    a.useEffect(() => (f.S.subscribe(A.CkL.TOGGLE_INBOX, B), () => void f.S.unsubscribe(A.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: k } = I.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: G, inInbox: F } = _.Z.useExperiment({ location: 'RecentsPopout' }),
         w = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(), []) && G && F,
         { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
     a.useEffect(() => {
-        (((!k || (G && F)) && b === l.X.TODOS) || (b === l.X.BOOKMARKS && !(G || F))) && D(l.X.MENTIONS);
+        (((!k || (G && F)) && P === l.X.TODOS) || (P === l.X.BOOKMARKS && !(G || F))) && D(l.X.MENTIONS);
     });
     let H = a.useCallback(
         (e) => {
@@ -93,42 +93,42 @@ function x(e) {
         value: L,
         children: (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
-            position: M,
-            align: v,
+            position: v,
+            align: M,
             autoInvert: !1,
             shouldShow: Z,
             onRequestClose: y,
             renderPopout: function () {
                 return (0, i.jsx)(o.Dialog, {
-                    'aria-label': R.Z.Messages.INBOX,
+                    'aria-label': x.Z.Messages.INBOX,
                     children:
-                        b === l.X.FOR_YOU
-                            ? (0, i.jsx)(f.Z, {
+                        P === l.X.FOR_YOU
+                            ? (0, i.jsx)(N.Z, {
                                   setTab: D,
                                   badgeState: O,
                                   closePopout: y
                               })
-                            : b === l.X.MENTIONS
-                              ? (0, i.jsx)(p.Z, {
+                            : P === l.X.MENTIONS
+                              ? (0, i.jsx)(C.Z, {
                                     setTab: D,
                                     onJump: H,
                                     badgeState: O,
                                     closePopout: y
                                 })
-                              : V && b === l.X.GAME_INVITES
-                                ? (0, i.jsx)(A.Z, {
+                              : V && P === l.X.GAME_INVITES
+                                ? (0, i.jsx)(S.Z, {
                                       setTab: D,
                                       badgeState: O,
                                       closePopout: y
                                   })
-                                : k && b === l.X.TODOS
-                                  ? (0, i.jsx)(C.Z, {
+                                : k && P === l.X.TODOS
+                                  ? (0, i.jsx)(p.Z, {
                                         setTab: D,
                                         onJump: H,
                                         closePopout: y
                                     })
-                                  : G && F && b === l.X.BOOKMARKS
-                                    ? (0, i.jsx)(N.Z, {
+                                  : G && F && P === l.X.BOOKMARKS
+                                    ? (0, i.jsx)(h.Z, {
                                           setTab: D,
                                           badgeState: O,
                                           closePopout: y
@@ -153,7 +153,7 @@ function x(e) {
             ignoreModalClicks: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return x(B, n, e, w);
+                return R(B, n, e, w);
             }
         })
     });

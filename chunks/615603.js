@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(98278),
     I = t(314684),
     N = t(594174),
-    m = t(78839),
+    A = t(78839),
     C = t(267642),
-    A = t(74538),
+    m = t(74538),
     g = t(283029),
     h = t(357956),
     O = t(275909),
@@ -109,7 +109,7 @@ function P(e) {
 s.Z = function (e) {
     let s, t;
     let { guildBoostSlots: i } = e,
-        E = (0, o.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
+        E = (0, o.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()),
         T = (null == E ? void 0 : E.isPausedOrPausePending) === !0,
         { fractionalState: h } = (0, d.Z)(),
         O = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -166,7 +166,7 @@ s.Z = function (e) {
         z = a.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
     let Q = U.length;
-    if (((s = w ? (1 === Q && K ? M.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (y ? M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: Q })) : (y ? M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: Q })), A.ZP.isPremium(b))) {
+    if (((s = w ? (1 === Q && K ? M.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (y ? M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: Q })) : (y ? M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : M.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: Q })), m.ZP.isPremium(b))) {
         if (w && 1 === Q && K) t = Z.skuId === x.Ft.FREE_GUILD_BOOST_1_MONTH ? M.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : M.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
         else {
             let e = (e, s) =>

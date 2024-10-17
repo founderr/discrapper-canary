@@ -21,18 +21,18 @@ var n,
     S = t(906732),
     I = t(600164),
     N = t(431369),
-    m = t(210887),
+    A = t(210887),
     C = t(78839),
-    A = t(74538),
+    m = t(74538),
     g = t(689938),
     h = t(946839);
 async function O(e, s, t, n) {
-    await (0, E.bG)(t), await (0, u.Mg)(e, { items: (0, A.MY)(e, s) }, n);
+    await (0, E.bG)(t), await (0, u.Mg)(e, { items: (0, m.MY)(e, s) }, n);
 }
 function p(e) {
     let { premiumSubscription: s, guildBoostSlotId: t, onNext: n, onClose: a } = e,
         [o, u] = r.useState(!1),
-        E = (0, c.e7)([m.Z], () => m.Z.theme),
+        E = (0, c.e7)([A.Z], () => A.Z.theme),
         { analyticsLocations: T } = (0, S.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -58,7 +58,7 @@ function p(e) {
                             try {
                                 u(!0);
                                 let e = (0, N.g)(s, 1);
-                                l()((0, A.uV)(e) <= (0, A.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(s, e, t, T), n();
+                                l()((0, m.uV)(e) <= (0, m.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(s, e, t, T), n();
                             } catch (e) {
                                 u(!1);
                             }

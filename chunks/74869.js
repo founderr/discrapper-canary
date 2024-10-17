@@ -97,7 +97,7 @@ function m() {
             [a]
         ),
         m = r.useMemo(() => d.map(E), [d]),
-        b = r.useMemo(() => S.map(E), [S]);
+        I = r.useMemo(() => S.map(E), [S]);
     return [
         (0, o.jsx)(
             s.MenuControlItem,
@@ -117,6 +117,6 @@ function m() {
         (0, o.jsx)(s.MenuSeparator, {}, 'separator'),
         ...m,
         m.length > 0 ? (0, o.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
-        ...b
+        ...I
     ];
 }

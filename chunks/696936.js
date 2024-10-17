@@ -1,33 +1,33 @@
-t.d(n, {
+n.d(s, {
     W: function () {
         return i;
     },
     Z: function () {
-        return c;
+        return E;
     }
 });
-var s = t(735250);
-t(470079);
-var o = t(120356),
-    r = t.n(o),
-    a = t(481060),
-    l = t(915938);
+var t = n(735250);
+n(470079);
+var o = n(120356),
+    a = n.n(o),
+    l = n(481060),
+    r = n(915938);
 let i = {
-    RED: l.redMessageBlock,
-    YELLOW: l.yellowMessageBlock,
-    BROWN: l.brownMessageBlock
+    RED: r.redMessageBlock,
+    YELLOW: r.yellowMessageBlock,
+    BROWN: r.brownMessageBlock
 };
-function c(e) {
-    let { color: n, icon: t, children: o, className: i } = e;
-    return (0, s.jsx)(a.FormErrorBlock, {
+function E(e) {
+    let { color: s, icon: n, children: o, className: i } = e;
+    return (0, t.jsx)(l.FormErrorBlock, {
         icon: (e) =>
-            (0, s.jsx)(t, {
+            (0, t.jsx)(n, {
                 height: 20,
                 width: 20,
                 ...e
             }),
-        iconClassName: l.messageBlockIcon,
-        className: r()(n, i),
+        iconClassName: r.messageBlockIcon,
+        className: a()(s, i),
         children: o
     });
 }

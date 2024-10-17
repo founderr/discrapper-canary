@@ -1,5 +1,5 @@
-var i = t(735250),
-    r = t(470079),
+var r = t(735250),
+    i = t(470079),
     l = t(120356),
     o = t.n(l),
     u = t(628238),
@@ -8,18 +8,18 @@ var i = t(735250),
     c = t(963550),
     d = t(845080),
     _ = t(916315);
-n.Z = r.memo(function (e) {
+n.Z = i.memo(function (e) {
     var n;
-    let { message: t, channel: r, compact: l, className: E, isGroupStart: f, hideSimpleEmbedContent: I = !0, disableInteraction: S } = e,
-        T = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()),
-        { content: C } = (0, a.Z)(t, {
+    let { message: t, channel: i, compact: l, className: E, isGroupStart: f, hideSimpleEmbedContent: I = !0, disableInteraction: S } = e,
+        p = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()),
+        { content: T } = (0, a.Z)(t, {
             hideSimpleEmbedContent: I,
-            allowList: T,
-            allowHeading: T,
+            allowList: p,
+            allowHeading: p,
             allowLinks: !0,
             previewLinkTarget: !0
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(s.Z, {
         compact: l,
         className: o()(E, {
             [_.message]: !0,
@@ -28,10 +28,10 @@ n.Z = r.memo(function (e) {
         }),
         childrenHeader: (0, d.Z)({
             ...e,
-            channel: r,
+            channel: i,
             guildId: void 0
         }),
-        childrenMessageContent: (0, c.Z)(e, C),
+        childrenMessageContent: (0, c.Z)(e, T),
         disableInteraction: S
     });
 });

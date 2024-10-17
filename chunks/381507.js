@@ -1,27 +1,27 @@
 var t = n(735250);
 n(470079);
-var r = n(780384),
+var l = n(780384),
     i = n(481060),
-    l = n(410030),
-    a = n(518950),
-    o = n(51144),
-    C = n(105759),
-    d = n(898969),
-    u = n(703614),
-    c = n(182294),
-    _ = n(689938),
+    C = n(410030),
+    r = n(518950),
+    a = n(51144),
+    o = n(105759),
+    _ = n(898969),
+    d = n(703614),
+    u = n(182294),
+    c = n(689938),
     p = n(279521);
 s.Z = () => {
-    let e = (0, C.Z)(),
-        { avatarSrc: s, eventHandlers: n } = (0, a.Z)({
+    let e = (0, o.Z)(),
+        { avatarSrc: s, eventHandlers: n } = (0, r.Z)({
             user: e,
-            size: c.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        x = (0, l.Fg)(),
-        h = (0, r.ap)(x),
-        L = o.ZP.getName(e),
-        f = h ? d.Z : u.Z;
+        x = (0, C.Fg)(),
+        L = (0, l.ap)(x),
+        I = a.ZP.getName(e),
+        E = L ? _.Z : d.Z;
     return null == e
         ? null
         : (0, t.jsxs)('div', {
@@ -32,16 +32,16 @@ s.Z = () => {
                       children: (0, t.jsx)(i.Avatar, {
                           src: s,
                           'aria-label': e.username,
-                          size: c.EF.SIZE_32,
+                          size: u.EF.SIZE_32,
                           ...n
                       })
                   }),
                   (0, t.jsx)(i.Text, {
                       variant: 'text-xs/bold',
                       className: p.bannerHeader,
-                      children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({ userName: L })
+                      children: c.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({ userName: I })
                   }),
-                  (0, t.jsx)(f, { className: p.bannerIcon })
+                  (0, t.jsx)(E, { className: p.bannerIcon })
               ]
           });
 };

@@ -1,6 +1,6 @@
 t.d(s, {
     $H: function () {
-        return b;
+        return x;
     },
     GN: function () {
         return v;
@@ -12,20 +12,20 @@ var n = t(735250),
     o = t.n(r),
     i = t(481060),
     c = t(774078),
-    l = t(55935),
-    u = t(74538),
+    u = t(55935),
+    l = t(74538),
     d = t(639119),
     f = t(474936),
     p = t(689938),
     g = t(742774);
-function x(e) {
+function b(e) {
     let { isTabSelected: s, expiresAt: t, trialDuration: r } = e,
-        u = a.useMemo(() => Date.parse(t), [t]),
-        d = (0, c.Z)(u, 60000);
+        l = a.useMemo(() => Date.parse(t), [t]),
+        d = (0, c.Z)(l, 60000);
     return Object.values(d).every((e) => 0 === e)
         ? null
         : (0, n.jsx)(i.Tooltip, {
-              text: (0, l.QX)(d, {
+              text: (0, u.QX)(d, {
                   days: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
                   hours: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
                   minutes: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
@@ -50,11 +50,11 @@ function x(e) {
                   })
           });
 }
-function b(e) {
+function x(e) {
     var s;
     let { isTabSelected: t, trialOffer: a } = e,
         r = null === (s = (0, d.N)()) || void 0 === s ? void 0 : s.subscription_trial,
-        o = (0, u.a5)({
+        o = (0, l.a5)({
             intervalType: null == r ? void 0 : r.interval,
             intervalCount: null == r ? void 0 : r.interval_count
         });
@@ -78,7 +78,7 @@ function v(e) {
 function _(e) {
     let { isTabSelected: s, badgeCopy: t, offerExpiresAt: a, className: r } = e;
     return null != a
-        ? (0, n.jsx)(x, {
+        ? (0, n.jsx)(b, {
               expiresAt: a,
               isTabSelected: s,
               trialDuration: t

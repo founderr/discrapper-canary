@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var s = n(735250);
@@ -11,10 +11,10 @@ var a = n(481060),
     l = n(689938),
     o = n(458269),
     c = n(144343);
-function d(e) {
+function _(e) {
     var t;
     let { referrer: n } = e,
-        { avatarSrc: d, eventHandlers: _ } = (0, r.Z)({
+        { avatarSrc: _, eventHandlers: d } = (0, r.Z)({
             user: n,
             size: i.EF.SIZE_32,
             animateOnHover: !0
@@ -28,10 +28,10 @@ function d(e) {
                     className: o.iconContainer,
                     children: (0, s.jsx)(a.Avatar, {
                         className: o.icon,
-                        src: d,
+                        src: _,
                         'aria-label': n.username,
                         size: i.EF.SIZE_32,
-                        ..._
+                        ...d
                     })
                 }),
                 (0, s.jsx)(a.Heading, {

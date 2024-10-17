@@ -13,9 +13,9 @@ var n = t(735250),
     S = t(874703),
     I = t(410154),
     N = t(302800),
-    m = t(981631),
+    A = t(981631),
     C = t(474936),
-    A = t(689938),
+    m = t(689938),
     g = t(200895),
     h = t(786792),
     O = t(161594);
@@ -41,12 +41,12 @@ let p = (e) => {
                         variant: 'heading-lg/extrabold',
                         color: 'currentColor',
                         className: g.title,
-                        children: null !== (i = null == l ? void 0 : null === (s = l.title) || void 0 === s ? void 0 : s.call(l)) && void 0 !== i ? i : A.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
+                        children: null !== (i = null == l ? void 0 : null === (s = l.title) || void 0 === s ? void 0 : s.call(l)) && void 0 !== i ? i : m.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
                     }),
                     (0, n.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'currentColor',
-                        children: null !== (o = null == l ? void 0 : null === (t = l.description) || void 0 === t ? void 0 : t.call(l)) && void 0 !== o ? o : A.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+                        children: null !== (o = null == l ? void 0 : null === (t = l.description) || void 0 === t ? void 0 : t.call(l)) && void 0 !== o ? o : m.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
                     })
                 ]
             })
@@ -71,7 +71,7 @@ s.Z = () => {
                   }
                 : N.GX[O]),
         a.useEffect(() => {
-            E.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+            E.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: t
             });
@@ -94,7 +94,7 @@ s.Z = () => {
                     },
                     className: g.ctaButton,
                     color: d.Button.Colors.BRAND_INVERTED,
-                    children: A.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                    children: m.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                 })
             ]
         })

@@ -1,91 +1,91 @@
-n.d(t, {
+t.d(n, {
     EK: function () {
-        return d;
+        return u;
     },
     G0: function () {
         return m;
     },
     QC: function () {
-        return f;
+        return _;
     },
     dd: function () {
-        return p;
+        return f;
     }
 }),
-    n(47120);
-var o = n(735250);
-n(470079);
-var r = n(120356),
-    a = n.n(r),
-    i = n(481060),
-    s = n(454585),
-    l = n(489813),
-    c = n(689938),
-    u = n(738912);
-function d(e) {
-    let { terms: t, channelId: n, className: r } = e;
-    return (0, o.jsx)('div', {
-        className: a()(u.termsFieldBody, r),
-        children: t.map((e, t) =>
-            (0, o.jsxs)(
+    t(47120);
+var a = t(735250);
+t(470079);
+var r = t(120356),
+    i = t.n(r),
+    s = t(481060),
+    o = t(454585),
+    l = t(489813),
+    c = t(689938),
+    d = t(738912);
+function u(e) {
+    let { terms: n, channelId: t, className: r } = e;
+    return (0, a.jsx)('div', {
+        className: i()(d.termsFieldBody, r),
+        children: n.map((e, n) =>
+            (0, a.jsxs)(
                 'div',
                 {
-                    className: u.termsRow,
+                    className: d.termsRow,
                     children: [
-                        (0, o.jsx)(i.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            children: ''.concat(t + 1, '.')
+                            children: ''.concat(n + 1, '.')
                         }),
-                        (0, o.jsx)(i.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            className: u.termsRowContent,
-                            children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
+                            className: d.termsRowContent,
+                            children: o.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
                         })
                     ]
                 },
-                'term-'.concat(t)
+                'term-'.concat(n)
             )
         )
     });
 }
 function m(e) {
-    let { onChange: t, checked: n, disabled: r } = e;
-    return (0, o.jsx)(i.Checkbox, {
+    let { onChange: n, checked: t, disabled: r } = e;
+    return (0, a.jsx)(s.Checkbox, {
         size: 20,
-        type: i.Checkbox.Types.INVERTED,
-        value: n,
-        onChange: t,
+        type: s.Checkbox.Types.INVERTED,
+        value: t,
+        onChange: n,
         disabled: r,
         style: { borderWidth: 2 },
-        className: u.checkbox,
-        children: (0, o.jsx)(i.Text, {
+        className: d.checkbox,
+        children: (0, a.jsx)(s.Text, {
             variant: 'text-sm/normal',
             children: c.Z.Messages.MEMBER_VERIFICATION_READ_RULES
         })
     });
 }
-function f(e) {
-    let { formField: t } = e;
-    return (0, o.jsx)(l.Ih, {
-        icon: i.BookCheckIcon,
+function _(e) {
+    let { formField: n } = e;
+    return (0, a.jsx)(l.Ih, {
+        icon: s.BookCheckIcon,
         text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
-        meetsRequirement: !!t.response
+        meetsRequirement: !!n.response
     });
 }
-let p = (e) => {
-    let { channelId: t, formField: n, onChange: r } = e;
-    return (0, o.jsxs)(l.hK, {
+let f = (e) => {
+    let { channelId: n, formField: t, onChange: r } = e;
+    return (0, a.jsxs)(l.hK, {
         title: c.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
         children: [
-            (0, o.jsx)(d, {
-                className: u.fieldBackground,
-                terms: n.values,
-                channelId: t
+            (0, a.jsx)(u, {
+                className: d.fieldBackground,
+                terms: t.values,
+                channelId: n
             }),
-            (0, o.jsx)(m, {
+            (0, a.jsx)(m, {
                 onChange: r,
-                checked: n.response
+                checked: t.response
             })
         ]
     });

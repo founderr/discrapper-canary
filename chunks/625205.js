@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return m;
     }
 }),
     t(47120);
@@ -20,12 +20,12 @@ var a = t(392711),
     S = t(962100),
     I = t(65154),
     N = t(689938),
-    m = t(416805),
+    A = t(416805),
     C = t(113207);
-function A() {
+function m() {
     let e, s;
     let { analyticsLocations: a } = (0, d.ZP)(),
-        A = (0, r.e7)([T.Z], () => T.Z.theme),
+        m = (0, r.e7)([T.Z], () => T.Z.theme),
         {
             canSetInputDevice: g,
             canSetOutputDevice: h,
@@ -59,20 +59,20 @@ function A() {
         let s,
             { label: a, value: i } = e;
         if (u.Z.isCertified(i)) {
-            let e = (0, o.ap)(A) ? t(561259) : t(887695);
+            let e = (0, o.ap)(m) ? t(561259) : t(887695);
             s = (0, n.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: m.deviceOptionCertified
+                className: A.deviceOptionCertified
             });
         }
         return (0, n.jsxs)(
             'span',
             {
-                className: m.deviceOption,
+                className: A.deviceOption,
                 children: [
                     (0, n.jsx)('span', {
-                        className: m.deviceOptionLabel,
+                        className: A.deviceOptionLabel,
                         children: u.Z.getCertifiedDeviceName(i, a)
                     }),
                     s

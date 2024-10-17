@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(594174),
     T = n(189357),
     x = n(718617),
-    v = n(327250),
-    S = n(7340);
+    S = n(327250),
+    v = n(7340);
 function N(e) {
     let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: A, style: Z } = e,
         M = (0, T.ms)(n),
@@ -72,7 +72,7 @@ function N(e) {
     M)
         ? L || null == b || null == R
             ? (0, i.jsx)('div', {
-                  className: l()(S.sidebarContainer, S.loadingContainer, N),
+                  className: l()(v.sidebarContainer, v.loadingContainer, N),
                   style: Z,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function N(e) {
             : (0, i.jsx)(m.Gt, {
                   value: y,
                   children: (0, i.jsx)('div', {
-                      className: l()(S.sidebarContainer, N),
+                      className: l()(v.sidebarContainer, N),
                       style: Z,
                       children: (0, i.jsx)(g.Z, {
                           user: b,
@@ -90,11 +90,11 @@ function N(e) {
                           profileType: null,
                           themeOverride: U,
                           forceShowPremium: !0,
-                          className: S.profileThemedContainer,
+                          className: v.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: S.innerContainer,
+                              className: v.innerContainer,
                               children: [
-                                  (0, i.jsx)(v.Z, {
+                                  (0, i.jsx)(S.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: a

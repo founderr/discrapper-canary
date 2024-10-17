@@ -17,22 +17,22 @@ var i = n(735250),
     I = n(438075),
     m = n(695346),
     T = n(592125),
-    h = n(906467),
-    N = n(430824),
-    f = n(496675),
-    C = n(699516),
-    p = n(594174),
+    f = n(906467),
+    h = n(430824),
+    N = n(496675),
+    p = n(699516),
+    C = n(594174),
     g = n(100604),
-    A = n(694784),
-    S = n(39154),
-    R = n(245216),
-    x = n(689938),
+    S = n(694784),
+    A = n(39154),
+    x = n(245216),
+    R = n(689938),
     O = n(85961);
-function M() {
+function v() {
     return (0, i.jsxs)('div', {
         className: O.headerContainer,
         children: [
-            (0, i.jsx)(R.Z, {
+            (0, i.jsx)(x.Z, {
                 size: 'xs',
                 className: O.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
@@ -41,17 +41,17 @@ function M() {
                 className: O.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
-                children: x.Z.Messages.MESSAGE_FORWARDED
+                children: R.Z.Messages.MESSAGE_FORWARDED
             })
         ]
     });
 }
-function v(e) {
+function M(e) {
     let { message: t, snapshot: n, index: d } = e,
         _ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
-        E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
+        E = (0, r.e7)([T.Z, C.default, p.Z, N.Z, h.Z, u.Z], () => _.getForwardInfo(T.Z, C.default, p.Z, N.Z, h.Z, u.Z).footerInfo, [_], l.Z),
         I = a.useCallback(() => {
-            (0, A.Z)(t);
+            (0, S.Z)(t);
         }, [t]);
     return null == E
         ? null
@@ -82,23 +82,23 @@ function v(e) {
 function L(e) {
     var t;
     let { message: n, snapshot: s, index: l } = e,
-        o = a.useMemo(() => (0, S.Z)(n, s), [n, s]),
+        o = a.useMemo(() => (0, A.Z)(n, s), [n, s]),
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
-        N = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
-        f = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: C, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
+        h = (0, r.e7)([f.Z], () => f.Z.isDeveloper),
+        N = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
+        { content: p, hasSpoilerEmbeds: C } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
-            allowList: f,
-            allowHeading: f,
+            allowList: N,
+            allowHeading: N,
             allowLinks: !0,
-            allowDevLinks: N,
+            allowDevLinks: h,
             previewLinkTarget: !0
         }),
         g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
-        A = m.jU.useSetting();
+        S = m.jU.useSetting();
     return null == g
         ? null
         : (0, i.jsxs)(
@@ -110,23 +110,23 @@ function L(e) {
                       (0, i.jsxs)('div', {
                           className: O.content,
                           children: [
-                              (0, i.jsx)(M, {}),
+                              (0, i.jsx)(v, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
-                                  content: C
+                                  content: p
                               }),
                               (0, I.Z)({
                                   channelMessageProps: {
                                       message: o,
                                       channel: g,
-                                      compact: A
+                                      compact: S
                                   },
-                                  hasSpoilerEmbeds: p,
+                                  hasSpoilerEmbeds: C,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1
                               }),
-                              (0, i.jsx)(v, {
+                              (0, i.jsx)(M, {
                                   message: n,
                                   snapshot: s,
                                   index: l

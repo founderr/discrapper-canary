@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return m;
     }
 }),
     t(47120);
@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(603074),
     I = t(689938),
     N = t(995235);
-function m(e) {
+function A(e) {
     let { onSelect: s } = e,
         [t, r] = a.useState(!1),
         l = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
@@ -81,7 +81,7 @@ function C(e) {
         })
     });
 }
-function A(e) {
+function m(e) {
     let { sound: s, isGlobal: t, onSelect: a } = e,
         i = null != s,
         c = null == s ? void 0 : s.emojiId,
@@ -132,7 +132,7 @@ function A(e) {
             (0, n.jsxs)('div', {
                 className: N.container,
                 children: [
-                    (0, n.jsx)(m, { onSelect: a }),
+                    (0, n.jsx)(A, { onSelect: a }),
                     i &&
                         !t &&
                         (0, n.jsx)(T.hU, {

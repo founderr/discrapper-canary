@@ -22,7 +22,7 @@ function I() {
     var e;
     let s = null === (e = (0, l.Z)()) || void 0 === e || e,
         { explicitContentGuilds: t, explicitContentFriendDm: I, explicitContentNonFriendDm: N } = (0, o.B)(),
-        m = [
+        A = [
             {
                 value: a.Q4.BLUR,
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
@@ -38,12 +38,12 @@ function I() {
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             }
         ],
-        A = {
+        m = {
             value: a.Q4.SHOW,
             label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
         };
     return (
-        s && (m.unshift(A), C.unshift(A)),
+        s && (A.unshift(m), C.unshift(m)),
         (0, n.jsxs)(d.U, {
             setting: u.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2,
@@ -57,7 +57,7 @@ function I() {
                     title: T.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
-                        options: m,
+                        options: A,
                         value: I,
                         onChange: (e) => (0, r.zj)({ explicitContentFriendDm: e })
                     })
@@ -67,7 +67,7 @@ function I() {
                     title: T.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
-                        options: m,
+                        options: A,
                         value: N,
                         onChange: (e) => (0, r.zj)({ explicitContentNonFriendDm: e })
                     })

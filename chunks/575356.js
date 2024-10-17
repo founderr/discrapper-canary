@@ -5,17 +5,17 @@ var a,
     l,
     o = n(442837),
     c = n(570140);
-let d = !1;
-class _ extends (l = o.ZP.Store) {
+let _ = !1;
+class d extends (l = o.ZP.Store) {
     get harvestType() {
         return s;
     }
     get requestingHarvest() {
-        return d;
+        return _;
     }
 }
 (i = 'DataHarvestStore'),
-    (r = 'displayName') in (a = _)
+    (r = 'displayName') in (a = d)
         ? Object.defineProperty(a, r, {
               value: i,
               enumerable: !0,
@@ -23,21 +23,21 @@ class _ extends (l = o.ZP.Store) {
               writable: !0
           })
         : (a[r] = i),
-    (t.Z = new _(c.Z, {
+    (t.Z = new d(c.Z, {
         CONNECTION_OPEN: function () {
             s = void 0;
         },
         UPDATE_DATA_HARVEST_TYPE: function (e) {
             let { harvestType: t } = e;
-            (d = !1), (s = t);
+            (_ = !1), (s = t);
         },
         LOAD_DATA_HARVEST_TYPE_START: function () {
-            d = !0;
+            _ = !0;
         },
         LOAD_DATA_HARVEST_TYPE_FAILURE: function () {
-            d = !1;
+            _ = !1;
         },
         LOGOUT: function () {
-            (d = !1), (s = null);
+            (_ = !1), (s = null);
         }
     }));

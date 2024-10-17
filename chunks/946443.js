@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return R;
     },
     h: function () {
-        return M;
+        return v;
     }
 }),
     n(47120);
@@ -21,20 +21,20 @@ var i = n(735250),
     I = n(607070),
     m = n(724757),
     T = n(626135),
-    h = n(585483),
-    N = n(143316),
-    f = n(240126),
-    C = n(791914),
-    p = n(147522),
+    f = n(585483),
+    h = n(143316),
+    N = n(240126),
+    p = n(791914),
+    C = n(147522),
     g = n(809780),
-    A = n(981631),
-    S = n(689938),
-    R = n(129640);
-function x(e) {
-    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
-        v = a.useRef(null),
-        [L, Z] = (0, g.ZP)(v),
-        { loadState: P, channels: b } = L,
+    S = n(981631),
+    A = n(689938),
+    x = n(129640);
+function R(e) {
+    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: R, badgeState: v } = e,
+        M = a.useRef(null),
+        [L, Z] = (0, g.ZP)(M),
+        { loadState: b, channels: P } = L,
         { maybeLoadMore: D, markAllRead: j } = Z;
     (function (e, t, n) {
         a.useLayoutEffect(() => {
@@ -50,7 +50,7 @@ function x(e) {
             let { scrollTop: o, scrollHeight: c } = s.getScrollerState();
             (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({ to: l.offsetTop });
         });
-    })(v, L, Z),
+    })(M, L, Z),
         (function (e, t) {
             a.useEffect(() => {
                 let n = () => {
@@ -58,56 +58,56 @@ function x(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    h.S.subscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    f.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        h.S.unsubscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        f.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
         })(L, Z),
         a.useEffect(() => {
-            T.default.track(A.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         a.useEffect(
             () => (
-                E.Z.subscribe('CONNECTION_OPEN', x),
+                E.Z.subscribe('CONNECTION_OPEN', R),
                 () => {
-                    E.Z.unsubscribe('CONNECTION_OPEN', x);
+                    E.Z.unsubscribe('CONNECTION_OPEN', R);
                 }
             ),
-            [x]
+            [R]
         );
     let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
-        y = (0, m.Z)('unreads', v);
-    if (0 === b.length) {
+        y = (0, m.Z)('unreads', M);
+    if (0 === P.length) {
         var B;
         return (0, i.jsxs)('div', {
-            className: R.container,
+            className: x.container,
             children: [
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(p.Z, {
                     tab: d.X.UNREADS,
                     setTab: t,
-                    badgeState: M,
-                    closePopout: x
+                    badgeState: v,
+                    closePopout: R
                 }),
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(N.Z, {
                     Icon: _.InboxIcon,
-                    header: S.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
-                    tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? S.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : S.Z.Messages.UNREADS_EMPTY_STATE_TIP
+                    header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
+                    tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
                 })
             ]
         });
     }
     return (0, i.jsxs)('div', {
-        className: r()(R.container, 'group-spacing-'.concat(U)),
-        'aria-label': S.Z.Messages.UNREADS_TAB_LABEL,
+        className: r()(x.container, 'group-spacing-'.concat(U)),
+        'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(p.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
-                badgeState: M,
-                closePopout: x,
-                children: (0, i.jsx)(N.Z, {
+                badgeState: v,
+                closePopout: R,
+                children: (0, i.jsx)(h.Z, {
                     type: 'top-header',
                     onClick: j
                 })
@@ -120,12 +120,12 @@ function x(e) {
                         return (0, i.jsxs)(_.AdvancedScrollerThin, {
                             ref: (e) => {
                                 var n;
-                                (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                (M.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...a,
-                            onScroll: P === g.jd.Done ? void 0 : D,
-                            className: R.scroller,
-                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
+                            onScroll: b === g.jd.Done ? void 0 : D,
+                            className: x.scroller,
+                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, C.Z)(P, Z, n), b === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: x.spinner })]
                         });
                     }
                 })
@@ -136,10 +136,10 @@ function x(e) {
 function O(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)('div', {
-        className: R.tutorial,
+        className: x.tutorial,
         children: [
             (0, i.jsx)('div', {
-                className: R.tutorialIcon,
+                className: x.tutorialIcon,
                 children: (0, i.jsx)(_.InboxIcon, {
                     size: 'md',
                     color: 'currentColor'
@@ -148,42 +148,42 @@ function O(e) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(_.Heading, {
-                        className: R.__invalid_tutorialHeader,
+                        className: x.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
-                        children: S.Z.Messages.UNREADS_TUTORIAL_HEADER
+                        children: A.Z.Messages.UNREADS_TUTORIAL_HEADER
                     }),
                     (0, i.jsx)(_.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: S.Z.Messages.UNREADS_TUTORIAL_BODY
+                        children: A.Z.Messages.UNREADS_TUTORIAL_BODY
                     }),
                     (0, i.jsx)(_.Button, {
-                        className: R.tutorialButton,
+                        className: x.tutorialButton,
                         onClick: t,
                         size: _.Button.Sizes.SMALL,
-                        children: S.Z.Messages.TUTORIAL_CLOSE
+                        children: A.Z.Messages.TUTORIAL_CLOSE
                     })
                 ]
             })
         ]
     });
 }
-function M(e) {
+function v(e) {
     let { setTab: t, badgeState: n, closePopout: a } = e;
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: x.container,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(p.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: a
             }),
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(N.Z, {
                 Icon: _.InboxIcon,
                 disableStars: !0,
-                header: S.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
-                tip: S.Z.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
+                header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
+                tip: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
             })
         ]
     });

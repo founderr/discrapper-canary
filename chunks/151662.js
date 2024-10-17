@@ -5,15 +5,15 @@ var s,
     l = n(442837),
     o = n(570140);
 let c = {},
-    d = null;
-function _() {
-    (c = {}), (d = null);
+    _ = null;
+function d() {
+    (c = {}), (_ = null);
 }
 class E extends (i = l.ZP.Store) {
     getEmailSettings() {
         return {
             categories: c,
-            initialized: d
+            initialized: _
         };
     }
 }
@@ -27,11 +27,11 @@ class E extends (i = l.ZP.Store) {
           })
         : (s[a] = r),
     (t.Z = new E(o.Z, {
-        CONNECTION_OPEN: _,
-        LOGOUT: _,
+        CONNECTION_OPEN: d,
+        LOGOUT: d,
         EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: t } = e;
-            (c = t.categories), (d = t.initialized);
+            (c = t.categories), (_ = t.initialized);
         },
         EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
             let { settings: t } = e;

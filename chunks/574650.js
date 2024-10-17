@@ -14,80 +14,80 @@ var a = n(120356),
     I = n(937111),
     m = n(981631),
     T = n(176505),
-    h = n(689938),
-    N = n(373359),
-    f = n(250812);
+    f = n(689938),
+    h = n(373359),
+    N = n(250812);
 t.Z = () => {
     var e, t;
     let a = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
-        C = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-        p = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
+        p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+        C = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
         g = (0, r.TH)(),
-        A = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == C ? void 0 : C.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == C || !C.hasVerificationGate() || A) return null;
-    let S = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
-        R = null,
+        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == p || !p.hasVerificationGate() || S) return null;
+    let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         x = null,
+        R = null,
         O = null,
-        M = [N.notice, f.notice];
-    switch (S) {
+        v = [h.notice, N.notice];
+    switch (A) {
         case E.wB.SUBMITTED:
-            (R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
-                (x = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
+            (x = f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
+                (R = f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
                 (O = () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                            confirmText: h.Z.Messages.CONFIRM,
-                            cancelText: h.Z.Messages.CANCEL,
-                            onConfirm: () => d.Z.removeGuildJoinRequest(C.id),
+                            header: f.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+                            confirmText: f.Z.Messages.CONFIRM,
+                            cancelText: f.Z.Messages.CANCEL,
+                            onConfirm: () => d.Z.removeGuildJoinRequest(p.id),
                             confirmButtonColor: o.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+                                children: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
                             })
                         })
                     );
                 });
             break;
         case E.wB.REJECTED:
-            (R = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
-                (x = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
+            (x = f.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
+                (R = f.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
                 (O = () => {
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                guildId: C.id,
+                                guildId: p.id,
                                 ...t
                             });
                     });
                 }),
-                M.push(N.error);
+                v.push(h.error);
             break;
         default:
-            (R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
-                (x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
+            (x = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
+                (R = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
                 (O = () => {
-                    (0, _.hk)(C.id);
+                    (0, _.hk)(p.id);
                 });
     }
     return (0, i.jsxs)('div', {
-        className: s()(...M),
+        className: s()(...v),
         children: [
             (0, i.jsx)(o.Text, {
-                className: N.header,
+                className: h.header,
                 variant: 'text-sm/normal',
-                children: R
+                children: x
             }),
             (0, i.jsx)(o.Button, {
-                className: N.button,
+                className: h.button,
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,
                 onClick: O,
-                children: x
+                children: R
             })
         ]
     });
