@@ -25,7 +25,7 @@ var r = n(392711),
     v = n(981631),
     C = n(185923),
     L = n(689938);
-function y(e, t, n) {
+function D(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -48,7 +48,7 @@ function y(e, t, n) {
         })
         .first();
 }
-function D(e) {
+function y(e) {
     return {
         order: e.order,
         match: e.match,
@@ -75,11 +75,11 @@ let M = c.Z.RULES,
     G = /^<a?:(\w+):(\d+)>/,
     k = /(@everyone|@here|@Clyde)\b/,
     B = {
-        link: D(s().defaultRules.link),
-        autolink: D(s().defaultRules.autolink),
-        url: D(s().defaultRules.url),
-        inlineCode: D(M.inlineCode),
-        codeBlock: D(M.codeBlock),
+        link: y(s().defaultRules.link),
+        autolink: y(s().defaultRules.autolink),
+        url: y(s().defaultRules.url),
+        inlineCode: y(M.inlineCode),
+        codeBlock: y(M.codeBlock),
         rawUserMention: b(U),
         rawRoleMention: b(w),
         rawChannelMention: b(x),
@@ -88,10 +88,10 @@ let M = c.Z.RULES,
             match(e, t, n) {
                 let r = n.split(' ').pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = y('@', e, t.users, 'mention');
-                if (i || (i = y('@', e, t.mentionableRoles, 'roleMention'))) return i;
+                let i = D('@', e, t.users, 'mention');
+                if (i || (i = D('@', e, t.mentionableRoles, 'roleMention'))) return i;
                 if (
-                    !(i = y(
+                    !(i = D(
                         '@',
                         e,
                         t.users.map((e) => ({
@@ -127,7 +127,7 @@ let M = c.Z.RULES,
                 (function (e, t, n) {
                     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     if (t[0] !== e) return null;
-                    if ('"' !== t[1]) return y(e, t, n, r);
+                    if ('"' !== t[1]) return D(e, t, n, r);
                     let i = 2;
                     for (; i < t.length; i++) {
                         if ('\\' === t[i]) {
@@ -224,8 +224,8 @@ let M = c.Z.RULES,
         }
     },
     F = {
-        inlineCode: D(M.inlineCode),
-        codeBlock: D(M.codeBlock),
+        inlineCode: y(M.inlineCode),
+        codeBlock: y(M.codeBlock),
         mention: {
             match: s().anyScopeRegex(U),
             parse(e, t, n) {

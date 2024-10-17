@@ -54,8 +54,8 @@ var r,
     v = n(367790),
     C = n(895924),
     L = n(581364),
-    y = n(807169),
-    D = n(104793),
+    D = n(807169),
+    y = n(104793),
     b = n(689079),
     M = n(981631);
 function P(e, t, n) {
@@ -218,7 +218,7 @@ class q extends (r = c.ZP.Store) {
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
             s = this.getApplicationStates(),
-            o = (0, y.k)(e, t.commandTypes),
+            o = (0, D.k)(e, t.commandTypes),
             l = null == e || (null == o ? void 0 : o.hasBaseAccessPermissions) === !0,
             u = !1 !== t.applicationCommands && l,
             c = !1;
@@ -604,7 +604,7 @@ let et = Object.freeze({
     }
 });
 function en(e, t, n) {
-    let r = (0, y.Hs)(e, t.commandTypes),
+    let r = (0, D.Hs)(e, t.commandTypes),
         i = !1 !== t.applicationCommands,
         a = X(e, i, n.allowFetch),
         o = J(i, n.allowFetch),
@@ -651,14 +651,14 @@ function er(e) {
     let { permissionContext: u, contextState: c, userState: d, applicationStates: _, text: E, builtIns: h = v.D.ALLOW, allowApplicationCommands: p = !0, singleApplicationId: m, allowEmptySections: S = !1, scoreMethod: g = v.p.NONE, sortOptions: N = et, installOnDemand: O = !1 } = e,
         { commandTypes: C } = u,
         L = null == E ? void 0 : E.toLowerCase(),
-        y = null == L ? void 0 : L.split(' '),
-        D = h === v.D.ONLY_TEXT,
-        M = h !== v.D.DENY ? (0, A.Kh)(C, !0, D) : [],
+        D = null == L ? void 0 : L.split(' '),
+        y = h === v.D.ONLY_TEXT,
+        M = h !== v.D.DENY ? (0, A.Kh)(C, !0, y) : [],
         P = [],
         U = {
             permissionContext: u,
             query: L,
-            splitQuery: y,
+            splitQuery: D,
             allowEmptySections: S,
             scoreMethod: g,
             installOnDemand: O
@@ -769,17 +769,17 @@ function ei(e, t, n, r, i) {
     let a,
         { query: s, splitQuery: o, allowEmptySections: l, scoreMethod: u, permissionContext: c, installOnDemand: d } = i,
         { context: _, userId: E, roleIds: f, isImpersonating: h } = c,
-        p = (null == _ ? void 0 : _.guild_id) != null ? D.ML(e.permissions, _.guild_id, E, f, h) : null,
-        I = (null == _ ? void 0 : _.guild_id) != null ? D.ZJ(e.permissions, _, _.guild_id) : null,
+        p = (null == _ ? void 0 : _.guild_id) != null ? y.ML(e.permissions, _.guild_id, E, f, h) : null,
+        I = (null == _ ? void 0 : _.guild_id) != null ? y.ZJ(e.permissions, _, _.guild_id) : null,
         m = [];
     for (let i of t)
-        D.Ft(i, c, {
+        y.Ft(i, c, {
             applicationAllowedForUser: p,
             applicationAllowedForChannel: I,
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: r || d
-        }) === D.mF.ALLOWED && m.push(i);
+        }) === y.mF.ALLOWED && m.push(i);
     return 0 !==
         (a =
             u !== v.p.NONE && null != s && null != o

@@ -53,13 +53,13 @@ function C(e) {
 function L(e) {
     return [o.tI.VIEW_CHANNEL, o.tI.VIEW_THREAD, o.tI.VIEW_MESSAGE_REQUEST].includes(e.type);
 }
-function y(e) {
+function D(e) {
     let t = !1;
     R && ((R = !1), (t = !0));
     let n = C(E.Z.getChannelId());
     return null != n && n in O && (delete O[n], (t = !0)), t && e ? e : !e;
 }
-function D() {
+function y() {
     let e = !1;
     for (let t in O) {
         let n = O[t];
@@ -80,7 +80,7 @@ class M extends (r = a.ZP.PersistedStore) {
             var t, n, r, i, a;
             (g = null !== (t = e.isMembersOpen) && void 0 !== t && t), (A = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (N = null === (r = e.isProfileOpen) || void 0 === r || r), (O = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (v = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
         }
-        this.syncWith([_.Z], b), this.syncWith([d.Z], D);
+        this.syncWith([_.Z], b), this.syncWith([d.Z], y);
     }
     getState() {
         return {
@@ -121,13 +121,13 @@ T(M, 'displayName', 'ChannelSectionStore'),
     T(M, 'persistKey', 'ChannelSectionStore2'),
     (t.ZP = new M(s.Z, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            A && (A = y(A)), (g = y(g));
+            A && (A = D(A)), (g = D(g));
         },
         PROFILE_PANEL_TOGGLE_SECTION: function () {
-            !N && l.S.dispatch(p.CkL.SEARCH_RESULTS_CLOSE), (N = y(N));
+            !N && l.S.dispatch(p.CkL.SEARCH_RESULTS_CLOSE), (N = D(N));
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
-            g && (g = y(g)), (A = y(A));
+            g && (g = D(g)), (A = D(A));
         },
         SIDEBAR_VIEW_CHANNEL: function (e) {
             let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;

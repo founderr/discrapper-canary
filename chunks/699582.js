@@ -407,7 +407,7 @@ var r = n(863714),
 function L(e) {
     return !(!r.expBCP47Syntax.test(e) || r.expVariantDupes.test(e) || r.expSingletonDupes.test(e)) && !0;
 }
-function y(e) {
+function D(e) {
     if (void 0 === e) return new $();
     for (var t = new $(), e = 'string' == typeof e ? [e] : e, n = et(e), i = n.length, a = 0; a < i; ) {
         var s = String(a);
@@ -433,7 +433,7 @@ function y(e) {
     }
     return t;
 }
-function D(e, t) {
+function y(e, t) {
     for (var n = t; ; ) {
         if (d.call(e, n) > -1) return n;
         var r = n.lastIndexOf('-');
@@ -445,7 +445,7 @@ function b(e, t) {
     for (var n, r = 0, i = t.length; r < i && !n; ) {
         var s = t[r],
             o = String(s).replace(O, ''),
-            n = D(e, o);
+            n = y(e, o);
         r++;
     }
     var l = new X();
@@ -503,7 +503,7 @@ function M(e, t, n, r, i) {
 function P(e, t) {
     for (var n = t.length, r = new $(), i = 0; i < n; ) {
         var a = t[i];
-        void 0 !== D(e, String(a).replace(O, '')) && h.call(r, a), i++;
+        void 0 !== y(e, String(a).replace(O, '')) && h.call(r, a), i++;
     }
     return E.call(r);
 }
@@ -539,7 +539,7 @@ function G(e, t, n) {
         }
     }),
         (i['[[initializedIntlObject]]'] = !0);
-    var s = y(t);
+    var s = D(t);
     n = void 0 === n ? {} : et(n);
     var o = new X(),
         u = U(n, 'localeMatcher', 'string', new $('lookup', 'best fit'), 'best fit');
@@ -573,8 +573,8 @@ function G(e, t, n) {
     (void 0 !== O || void 0 !== v) && ((O = w(n, 'minimumSignificantDigits', 1, 21, 1)), (v = w(n, 'maximumSignificantDigits', O, 21, 21)), (i['[[minimumSignificantDigits]]'] = O), (i['[[maximumSignificantDigits]]'] = v));
     var L = U(n, 'useGrouping', 'boolean', void 0, !0);
     i['[[useGrouping]]'] = L;
-    var D = d[E].patterns[f];
-    return (i['[[positivePattern]]'] = D.positivePattern), (i['[[negativePattern]]'] = D.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), l && (e.format = k.call(e)), a.exp.test(a.input), e;
+    var y = d[E].patterns[f];
+    return (i['[[positivePattern]]'] = y.positivePattern), (i['[[negativePattern]]'] = y.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), l && (e.format = k.call(e)), a.exp.test(a.input), e;
 }
 c(s, 'NumberFormat', {
     configurable: !0,
@@ -727,7 +727,7 @@ function H(e, t, n) {
         }
     }),
         (r['[[initializedIntlObject]]'] = !0);
-    var s = y(t),
+    var s = D(t),
         n = Y(n, 'any', 'date'),
         o = new X();
     (N = U(n, 'localeMatcher', 'string', new $('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = N);
@@ -1022,7 +1022,7 @@ function q(e) {
     var t = J(),
         n = arguments[1],
         r = this['[[availableLocales]]'],
-        i = y(e);
+        i = D(e);
     return (
         t.exp.test(t.input),
         (function (e, t, n) {

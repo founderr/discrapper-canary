@@ -61,7 +61,7 @@ function T(e) {
         y = d.ZP.getName(Z, void 0, R);
     if (null == P) return null;
     if (0 === P.users.length || null == S) return (0, l.jsx)(g, { selected: I });
-    let { sort_by_statistic_id: O } = P.settings,
+    let { sort_by_statistic_id: O } = P.guild_settings,
         j = null !== (p = null == A ? void 0 : null === (n = A.statistics) || void 0 === n ? void 0 : null === (t = n[O]) || void 0 === t ? void 0 : t.value) && void 0 !== p ? p : 0,
         { currentRank: w } = S;
     return (

@@ -27,16 +27,16 @@ function T(e) {
         v = (0, c.Z)(),
         C = null != A ? A : v,
         L = null !== (T = null != N ? N : A) && void 0 !== T ? T : v / 10,
-        y = g.length,
-        D = null != S.upsellLongMessages && (null != y ? y : 0) > h.J6R && O,
+        D = g.length,
+        y = null != S.upsellLongMessages && (null != D ? D : 0) > h.J6R && O,
         b = null != S.upsellLongMessages && !O,
         M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2,
-        P = C - y,
+        P = C - D,
         U = P > L,
         w = P < 0 && M,
         x = 0 === P ? I.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) : I.Z.Messages.CHARACTER_COUNT_OVER_LIMIT,
         { analyticsLocations: G } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (D && P >= 0) || !U || (b && !U)
+    return (y && P >= 0) || !U || (b && !U)
         ? (0, r.jsx)(u.Gt, {
               value: G,
               children: (0, r.jsxs)('div', {
@@ -45,7 +45,7 @@ function T(e) {
                       (0, r.jsxs)('div', {
                           className: m.flairContainer,
                           children: [
-                              D && P >= 0
+                              y && P >= 0
                                   ? (0, r.jsx)(o.Tooltip, {
                                         text: I.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({ maxLength: C }),
                                         position: 'top',

@@ -28,8 +28,8 @@ function N(e) {
     let { summary: t, channel: _, members: T, guildId: N, unread: R, onClick: O } = e,
         [v, C] = i.useState(!1),
         L = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
-        y = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
-        D = (e, n) => {
+        D = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
+        y = (e, n) => {
             e.stopPropagation(),
                 (0, I.Z)({
                     summary: t,
@@ -112,12 +112,12 @@ function N(e) {
                 })
             }),
             v &&
-                !y &&
+                !D &&
                 (0, r.jsxs)('div', {
                     className: A.feedbackContainer,
                     children: [
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, g.aZ.GOOD),
+                            onClick: (e) => y(e, g.aZ.GOOD),
                             children: (0, r.jsx)(f.Z, {
                                 className: A.thumbIcon,
                                 width: 12,
@@ -125,7 +125,7 @@ function N(e) {
                             })
                         }),
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, g.aZ.BAD),
+                            onClick: (e) => y(e, g.aZ.BAD),
                             children: (0, r.jsx)(E.Z, {
                                 className: A.thumbIcon,
                                 width: 12,

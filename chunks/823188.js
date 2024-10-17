@@ -54,8 +54,8 @@ var _ = n(120356),
     v = n(78839),
     C = n(709586),
     L = n(483444),
-    y = n(599250),
-    D = n(942659),
+    D = n(599250),
+    y = n(942659),
     b = n(930153),
     M = n(74538),
     P = n(357355),
@@ -211,9 +211,9 @@ function et(e) {
         R = (0, U.lr)(),
         C = u === j.p9.TIER_0 ? j.Si.TIER_0 : j.Si.TIER_2,
         L = (null == g ? void 0 : g.trialId) != null ? (null == A ? void 0 : A.premiumType) : N ? j.p9.TIER_2 : null,
-        y = (0, B.N)(),
-        D = (0, k.Ng)(),
-        b = null == y ? void 0 : y.subscription_trial;
+        D = (0, B.N)(),
+        y = (0, k.Ng)(),
+        b = null == D ? void 0 : D.subscription_trial;
     if (!l && null != L && u === L && null != g && null != g.planIdFromItems) {
         let e = null != g.trialEndsAt ? h()(null == g ? void 0 : g.trialEndsAt).diff(h()(), 'd') : 0,
             i = j.GP[g.planIdFromItems],
@@ -260,7 +260,7 @@ function et(e) {
                 })
             });
         }
-        if (null != D)
+        if (null != y)
             return (0, d.jsx)(T.Heading, {
                 variant: 'heading-md/normal',
                 color: 'always-white',
@@ -268,7 +268,7 @@ function et(e) {
                 children: (0, d.jsx)(ee, {
                     defaultPriceString: e,
                     subscriptionPlan: j.Xh.PREMIUM_MONTH_TIER_2,
-                    discountOffer: D
+                    discountOffer: y
                 })
             });
     }
@@ -411,7 +411,7 @@ function er(e) {
                 children: [
                     (0, d.jsxs)('div', {
                         children: [
-                            r ? (0, d.jsx)(D.Z, { className: E()(z.title, z.taglineXPTier0Title) }) : (0, d.jsx)(y.Z, { className: E()(z.title, z.tier0Title) }),
+                            r ? (0, d.jsx)(y.Z, { className: E()(z.title, z.taglineXPTier0Title) }) : (0, d.jsx)(D.Z, { className: E()(z.title, z.tier0Title) }),
                             r &&
                                 (0, d.jsx)(T.Text, {
                                     variant: 'display-md',
@@ -552,8 +552,8 @@ function ea(e) {
         N = (null == h ? void 0 : h.trialId) != null ? (null == I ? void 0 : I.premiumType) : null,
         R = (0, U.Nx)(),
         C = (0, k.Ng)(),
-        y = (0, U.t7)(),
-        D = null != A || null != N ? 0 : null != C || y ? 1 : null,
+        D = (0, U.t7)(),
+        y = null != A || null != N ? 0 : null != C || D ? 1 : null,
         b = (0, V.Vi)(),
         M = !o && R,
         P = (0, V.W1)(),
@@ -574,7 +574,7 @@ function ea(e) {
                 ? (0, d.jsxs)(d.Fragment, {
                       children: [
                           (0, d.jsx)($, {
-                              text: y ? K.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : K.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: C.discount.amount }),
+                              text: D ? K.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : K.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: C.discount.amount }),
                               className: z.topRimPill,
                               colorOptions: F
                           }),
@@ -607,7 +607,7 @@ function ea(e) {
                       ]
                   }),
             !o &&
-                y &&
+                D &&
                 (0, d.jsxs)(d.Fragment, {
                     children: [
                         (0, d.jsx)($, {
@@ -661,7 +661,7 @@ function ea(e) {
                             (0, d.jsx)(et, {
                                 isGift: o,
                                 premiumTier: j.p9.TIER_2,
-                                offerType: D,
+                                offerType: y,
                                 offerTierMatchesCard: A === j.Si.TIER_2 || (0, k.Wp)(C, j.Si.TIER_2),
                                 showYearlyPrice: i,
                                 priceOptions: u,

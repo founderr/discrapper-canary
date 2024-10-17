@@ -6,10 +6,10 @@ n.d(t, {
         return b;
     },
     k: function () {
-        return D;
+        return y;
     },
     l2: function () {
-        return y;
+        return D;
     }
 });
 var r = n(913527),
@@ -110,12 +110,12 @@ async function L() {
         mostRecentSubscription: l
     });
 }
-async function y() {
+async function D() {
     if (!(await L())) return;
     let e = A.Z.bogoPromotion;
     if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, S.L9)();
 }
-async function D() {
+async function y() {
     let e = A.Z.bogoPromotion,
         t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
         n = await L(),

@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     N4: function () {
-        return D;
+        return y;
     },
     UI: function () {
         return R;
@@ -33,7 +33,7 @@ n.d(t, {
         return L;
     },
     x9: function () {
-        return y;
+        return D;
     }
 }),
     n(757143),
@@ -95,7 +95,7 @@ function L(e, t) {
     let r = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
     return t === s.C.DEFAULT && null != e.image && (null == r || 0 === r.length);
 }
-function y(e) {
+function D(e) {
     var t, n;
     if (null == e) return;
     let r =
@@ -129,7 +129,7 @@ function y(e) {
         answers: r
     };
 }
-function D(e) {
+function y(e) {
     let t = (0, c.ZH)(e),
         n = (function (e, t) {
             var n, r, i, a;

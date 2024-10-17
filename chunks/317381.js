@@ -49,8 +49,8 @@ let g = {
     v = new Map(),
     C = new Map(),
     L = new Map(),
-    y = new Map(),
     D = new Map(),
+    y = new Map(),
     b = new Map(),
     M = new Map(),
     P = new Map(),
@@ -66,8 +66,8 @@ function k(e) {
         C = (0, f.Z)(p);
     if (null == C) return;
     let L = null !== (n = v.get(o)) && void 0 !== n ? n : A,
-        y = 0 === L.length,
-        D = L.find((e) => e.applicationId === p),
+        D = 0 === L.length,
+        y = L.find((e) => e.applicationId === p),
         b = N.map((e) => e.userId),
         M = l.default.getId(),
         P = b.some((e) => e === M),
@@ -137,8 +137,8 @@ function k(e) {
               compositeInstanceId: g,
               location: E,
               participants: N,
-              isFirstActivityInChannel: y,
-              isStart: null == D
+              isFirstActivityInChannel: D,
+              isStart: null == y
           });
     let V = (null !== (i = v.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== p),
         Z = G(s),
@@ -226,17 +226,17 @@ class Z extends (i = a.ZP.PersistedStore) {
     }
     getShelfFetchStatus(e) {
         let t = G(e);
-        return y.get(t);
+        return D.get(t);
     }
     shouldFetchShelf(e) {
         var t, n;
         let r = G(e),
-            i = null !== (t = y.get(r)) && void 0 !== t ? t : { isFetching: !1 },
+            i = null !== (t = D.get(r)) && void 0 !== t ? t : { isFetching: !1 },
             a = Date.now() - (null !== (n = null == i ? void 0 : i.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 21600000;
         return !(null == i ? void 0 : i.isFetching) && a;
     }
     getOrientationLockStateForApp(e) {
-        return D.get(e);
+        return y.get(e);
     }
     getPipOrientationLockStateForApp(e) {
         var t;
@@ -399,8 +399,8 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = y.get(n);
-        y.set(n, {
+            r = D.get(n);
+        D.set(n, {
             isFetching: !0,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });
@@ -431,7 +431,7 @@ let Y = new Z(s.Z, {
             activities: n,
             now: i
         }),
-            y.set(r, {
+            D.set(r, {
                 isFetching: !1,
                 lastFetchTimestampMs: i
             });
@@ -439,8 +439,8 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = y.get(n);
-        y.set(n, {
+            r = D.get(n);
+        D.set(n, {
             isFetching: !1,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });
@@ -450,7 +450,7 @@ let Y = new Z(s.Z, {
     },
     EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
-        null == n ? D.delete(t) : D.set(t, n), null === r ? b.delete(t) : void 0 !== r && b.set(t, r), null === i ? M.delete(t) : void 0 !== i && M.set(t, i);
+        null == n ? y.delete(t) : y.set(t, n), null === r ? b.delete(t) : void 0 !== r && b.set(t, r), null === i ? M.delete(t) : void 0 !== i && M.set(t, i);
     },
     EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;

@@ -25,7 +25,7 @@ t.Z = function (e) {
         v = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
         { analyticsLocations: L } = (0, u.ZP)(),
-        y = i.useCallback(() => {
+        D = i.useCallback(() => {
             N(),
                 c.default.track(S.rMx.MODAL_DISMISSED, {
                     type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -36,7 +36,7 @@ t.Z = function (e) {
                     duration_open_ms: Date.now() - C
                 });
         }, [N, t, L, C, n.id]),
-        D = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 e &&
                     !v.current &&
@@ -63,7 +63,7 @@ t.Z = function (e) {
         }, [n.id, t, L]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && y();
+                'Escape' === e.key && D();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,14 +71,14 @@ t.Z = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [y]),
+        }, [D]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: A.closeIconWrapper,
                     children: (0, r.jsx)(l.Z, {
                         className: A.closeIcon,
-                        closeAction: y,
+                        closeAction: D,
                         keybind: 'ESC',
                         variant: l.Z.Variants.SOLID
                     })
@@ -100,7 +100,7 @@ t.Z = function (e) {
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             guild: n,
-                                            closeLayer: y,
+                                            closeLayer: D,
                                             onCtaVisibilityChange: O
                                         }),
                                         (0, r.jsx)(h.Z, { guild: n }),
@@ -133,7 +133,7 @@ t.Z = function (e) {
                             ]
                         }),
                         (0, r.jsx)(s.$, {
-                            onChange: D,
+                            onChange: y,
                             children: (0, r.jsx)('div', { className: A.persistentCtaSpacer })
                         })
                     ]
@@ -141,7 +141,7 @@ t.Z = function (e) {
                 (0, r.jsx)(f.Z, {
                     guild: n,
                     isVisible: !R,
-                    closeLayer: y
+                    closeLayer: D
                 })
             ]
         })

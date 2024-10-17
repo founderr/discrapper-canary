@@ -1,6 +1,6 @@
 n.d(t, {
     UB: function () {
-        return D;
+        return y;
     },
     Uc: function () {
         return o;
@@ -38,20 +38,20 @@ let N = !1,
 function L() {
     return p.Z.getUseSystemScreensharePicker();
 }
-function y() {
+function D() {
     let e = L() && (O > 0 || (N && 0 === R));
     if (e !== v) {
         var t, n;
         (v = e), null === (n = p.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, v);
     }
 }
-function D() {
+function y() {
     return (0, u.useEffect)(
         () => (
             R++,
-            y(),
+            D(),
             () => {
-                0 == --R && y();
+                0 == --R && D();
             }
         ),
         []
@@ -61,9 +61,9 @@ function b() {
     return (0, u.useEffect)(
         () => (
             O++,
-            y(),
+            D(),
             () => {
-                --O, y();
+                --O, D();
             }
         ),
         []
@@ -71,11 +71,11 @@ function b() {
 }
 function M() {
     let e = f.Z.getChannel(m.Z.getVoiceChannelId());
-    return (N = null != e && (0, S.Z)(p.Z) && (0, T.JL)(e, h.Z, I.Z, !1)), y(), !1;
+    return (N = null != e && (0, S.Z)(p.Z) && (0, T.JL)(e, h.Z, I.Z, !1)), D(), !1;
 }
 class P extends (l = c.ZP.Store) {
     initialize() {
-        this.syncWith([p.Z, m.Z, f.Z, h.Z, I.Z], M), E.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, y), M();
+        this.syncWith([p.Z, m.Z, f.Z, h.Z, I.Z], M), E.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, D), M();
     }
     supported() {
         return p.Z.supports(A.AN.NATIVE_SCREENSHARE_PICKER);

@@ -33,8 +33,8 @@ var i,
     v = n(358085),
     C = n(624138),
     L = n(24933),
-    y = n(115130),
-    D = n(566620),
+    D = n(115130),
+    y = n(566620),
     b = n(317381),
     M = n(969345),
     P = n(148720),
@@ -139,11 +139,11 @@ async function K(e) {
         O = null == m && (null == I ? void 0 : I.isVocal()) === !0 && (null == I ? void 0 : I.isPrivate()) === !1;
     if (null == A || O) return;
     let v = (0, s.Z)(),
-        y = 'location' in f ? 2 : 1,
-        D = null == I ? void 0 : I.getGuildId(),
+        D = 'location' in f ? 2 : 1,
+        y = null == I ? void 0 : I.getGuildId(),
         P = N.default.getCurrentUser();
     if (null == I || null == P) return;
-    let U = b.ZP.getShelfActivities(D),
+    let U = b.ZP.getShelfActivities(y),
         w = L.Z.getState().shelfOrder,
         x = (0, M.Z)({
             applicationId: o,
@@ -158,7 +158,7 @@ async function K(e) {
             activityUserSessionId: v,
             launchId: f.launchId,
             mediaSessionIds: V,
-            activitiesInfraVersion: y
+            activitiesInfraVersion: D
         };
     H[o] = j;
     let W = Z[o];
@@ -195,7 +195,7 @@ async function K(e) {
             is_activity_start: c,
             shelf_rank: null == x ? void 0 : null === (r = x.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
-            activities_infra_version: y
+            activities_infra_version: D
         });
 }
 function z(e) {
@@ -260,10 +260,10 @@ class q extends c.Z {
                 let d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
                 if (i instanceof f.Z) {
                     (t = 0), (r = i.reason);
-                    let e = y.Z.getFetchState();
-                    switch ((I.Sb.getSetting() && e !== y.O.LOADED && (await (0, D.$h)()), i.reason)) {
+                    let e = D.Z.getFetchState();
+                    switch ((I.Sb.getSetting() && e !== D.O.LOADED && (await (0, y.$h)()), i.reason)) {
                         case f.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                            y.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
+                            D.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
                             break;
                         case f.Z.Reasons.INVALID_CHANNEL:
                             d = F.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
@@ -362,14 +362,14 @@ class q extends c.Z {
                     return;
                 }
                 let _ = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : void 0,
-                    { activityConfigs: E, applications: f } = await (0, D.w1)({ guildId: _ }),
+                    { activityConfigs: E, applications: f } = await (0, y.w1)({ guildId: _ }),
                     h = (0, M.Z)({
                         applicationId: a,
                         activityConfigs: E,
                         applications: f
                     });
                 if (null == h) {
-                    let e = await (0, D.w1)({
+                    let e = await (0, y.w1)({
                         guildId: _,
                         force: !0
                     });

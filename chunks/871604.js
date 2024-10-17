@@ -36,7 +36,7 @@ function N(e) {
         }),
         C = (0, o.Z)({ channelId: null != O ? O : void 0 }),
         L = t.id,
-        y = i.useCallback(() => {
+        D = i.useCallback(() => {
             null != R &&
                 (C
                     ? (l.__(u._b.TEXT, d.I.NORMAL, { applicationId: R.id }), (0, s.closeModal)((0, T.z)(L, v)), null == n || n(), f.default.track(g.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id }))
@@ -45,7 +45,7 @@ function N(e) {
                           ...R
                       }));
         }, [C, R, L, v, n]),
-        D = C ? A.Z.Messages.APP_LAUNCHER_OPEN_APP : A.Z.Messages.APPLICATION_ADD_BUTTON;
+        y = C ? A.Z.Messages.APP_LAUNCHER_OPEN_APP : A.Z.Messages.APPLICATION_ADD_BUTTON;
     if (null == R || !(0, I.Eb)(R)) return null;
     let { customInstallUrl: b } = R,
         M = null == b || p.Z.isDiscordUrl(b) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
@@ -72,10 +72,10 @@ function N(e) {
                   let { onClick: t, ...n } = e;
                   return (0, r.jsx)(S.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: D,
+                      text: y,
                       icon: P,
                       onContextMenu: t,
-                      onClick: y,
+                      onClick: D,
                       ...n,
                       ...N
                   });
@@ -83,9 +83,9 @@ function N(e) {
           })
         : (0, r.jsx)(S.tG, {
               action: 'PRESS_ADD_APP',
-              text: D,
+              text: y,
               icon: P,
-              onClick: y,
+              onClick: D,
               ...N
           });
 }

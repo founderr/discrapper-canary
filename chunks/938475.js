@@ -193,7 +193,7 @@ function L() {
         });
     });
 }
-class y extends (r = s.ZP.Store) {
+class D extends (r = s.ZP.Store) {
     initialize() {
         L(), this.waitFor(c.default, E.default, _.ZP, f.Z), this.syncWith([E.default], C);
     }
@@ -221,8 +221,8 @@ class y extends (r = s.ZP.Store) {
         return g(null != e ? e : I.ME).getVersion();
     }
 }
-m(y, 'displayName', 'SortedVoiceStateStore'),
-    (t.ZP = new y(l.Z, {
+m(D, 'displayName', 'SortedVoiceStateStore'),
+    (t.ZP = new D(l.Z, {
         CONNECTION_OPEN: function () {
             S = {};
         },

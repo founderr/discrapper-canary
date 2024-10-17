@@ -26,8 +26,8 @@ async function I(e) {
         C = null == v || '' === v,
         L = s.default.getCurrentUser();
     if (null == O || (C && !O.isPrivate()) || null == I || null == L) return Promise.resolve(!1);
-    let y = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == y ? void 0 : y.applicationId) != null && (t = r.Z.getApplication(null == y ? void 0 : y.applicationId)), a.Z.getVoiceChannelId() === I && (null == y ? void 0 : y.applicationId) === n && (null == y ? void 0 : y.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(v, I), Promise.resolve(!0);
+    let D = u.ZP.getCurrentEmbeddedActivity();
+    if (((null == D ? void 0 : D.applicationId) != null && (t = r.Z.getApplication(null == D ? void 0 : D.applicationId)), a.Z.getVoiceChannelId() === I && (null == D ? void 0 : D.applicationId) === n && (null == D ? void 0 : D.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(v, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
@@ -39,9 +39,9 @@ async function I(e) {
         }))
     )
         return !1;
-    let D = (0, E.Z)(O.id),
+    let y = (0, E.Z)(O.id),
         b = p.wP.includes(O.type);
-    if (D) {
+    if (y) {
         if (
             !(await (0, f.Z)({
                 channelId: O.id,

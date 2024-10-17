@@ -44,8 +44,8 @@ var r = n(230012),
     v = n(247674),
     C = n(917177),
     L = n(158005),
-    y = n(159257),
-    D = n(363964),
+    D = n(159257),
+    y = n(363964),
     b = n(681772),
     M = n(711792),
     P = n(640900),
@@ -483,8 +483,8 @@ function eC(e, t, n) {
         }, [e, t, n]);
 }
 let eL = (0, x.createContext)(!1),
-    ey = (0, x.createContext)({}),
-    eD = (0, x.createContext)(null),
+    eD = (0, x.createContext)({}),
+    ey = (0, x.createContext)(null),
     eb = (0, x.createContext)(null);
 function eM({ node: e, isCurrent: t, isDisabled: n }) {
     var r;
@@ -500,13 +500,13 @@ function eM({ node: e, isCurrent: t, isDisabled: n }) {
             {
                 values: [
                     [
-                        eD,
+                        ey,
                         {
                             'aria-current': t ? 'page' : null,
                             isDisabled: n || t
                         }
                     ],
-                    [ey, t ? { 'aria-current': 'page' } : null]
+                    [eD, t ? { 'aria-current': 'page' } : null]
                 ]
             },
             e.rendered
@@ -1482,8 +1482,8 @@ function tv({ item: e }) {
 }
 let tC = (0, x.createContext)(null),
     tL = (0, x.createContext)(null),
-    ty = (0, x.createContext)(null),
     tD = (0, x.createContext)(null),
+    ty = (0, x.createContext)(null),
     tb = (0, x.createContext)(null),
     tM = (0, x.createContext)(null),
     tP = (0, x.createContext)(null),

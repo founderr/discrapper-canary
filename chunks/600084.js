@@ -64,7 +64,7 @@ function H(e) {
         })),
         O = (0, a.e7)([_.Z], () => (C === y.d4z.DM ? _.Z.getMutualGuilds(d.getRecipientId()) : null), [d, C]),
         { systemDMRedesignEnabled: H } = m.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = d.isSystemDM()) && void 0 !== t && t }),
-        G = (0, c.Z)(null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : y.lds, d),
+        G = (0, c.Z)(null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : y.lds),
         { authorizedAppToken: V, authorizedAppsFetchState: F } = (0, a.cj)([g.Z], () => {
             var e;
             return {

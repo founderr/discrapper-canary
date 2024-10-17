@@ -65,16 +65,16 @@ function L(e) {
     for (t = 0; t < 19; t++) e.bl_tree[2 * t] = 0;
     (e.dyn_ltree[512] = 1), (e.opt_len = e.static_len = 0), (e.last_lit = e.matches = 0);
 }
-function y(e) {
+function D(e) {
     e.bi_valid > 8 ? N(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), (e.bi_buf = 0), (e.bi_valid = 0);
 }
-function D(e, t, n, r) {
+function y(e, t, n, r) {
     var i = 2 * t,
         a = 2 * n;
     return e[i] < e[a] || (e[i] === e[a] && r[t] <= r[n]);
 }
 function b(e, t, n) {
-    for (var r = e.heap[n], i = n << 1; i <= e.heap_len && (i < e.heap_len && D(t, e.heap[i + 1], e.heap[i], e.depth) && i++, !D(t, r, e.heap[i], e.depth)); ) {
+    for (var r = e.heap[n], i = n << 1; i <= e.heap_len && (i < e.heap_len && y(t, e.heap[i + 1], e.heap[i], e.depth) && i++, !y(t, r, e.heap[i], e.depth)); ) {
         (e.heap[n] = e.heap[i]), (n = i), (i <<= 1);
     }
     e.heap[n] = r;
@@ -174,7 +174,7 @@ function w(e, t, n) {
 var x = !1;
 function G(e, t, n, r) {
     var i, a, o, l;
-    R(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), y(i), l && (N(i, o), N(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
+    R(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), D(i), l && (N(i, o), N(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
 }
 (t._tr_init = function (e) {
     !x &&
@@ -241,7 +241,7 @@ function G(e, t, n, r) {
                     })(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, s + 1),
                     M(e, e.dyn_ltree, e.dyn_dtree)),
             L(e),
-            r && y(e);
+            r && D(e);
     }),
     (t._tr_tally = function (e, t, n) {
         return (e.pending_buf[e.d_buf + 2 * e.last_lit] = (t >>> 8) & 255), (e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t), (e.pending_buf[e.l_buf + e.last_lit] = 255 & n), e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(I[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * A(t)]++), e.last_lit === e.lit_bufsize - 1;

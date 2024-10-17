@@ -44,12 +44,12 @@ function L(e, t) {
     var n, r, i, a, s;
     return (n = e), v(t) - v(n) || ((r = e), C(t) - C(r)) || ((i = e), (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (s = i.created_at) && void 0 !== s ? s : 0));
 }
-function y(e) {
+function D(e) {
     if ((delete g[e], delete A[e], delete N[e], null == S[e])) return;
     let [t] = c().sortBy(S[e], (e) => -e.timestamp);
     t.status !== m.Skl.OFFLINE ? ((g[e] = t.status), (A[e] = t.activities), null != t.clientStatus && (N[e] = t.clientStatus)) : c().every(S[e], (e) => e.status === m.Skl.OFFLINE) && delete S[e];
 }
-function D(e) {
+function y(e) {
     let t = S[e];
     if (null == t) return;
     let n = c().maxBy(Object.values(t), (e) => e.timestamp);
@@ -81,7 +81,7 @@ function b(e) {
                 timestamp: Date.now()
             });
     }
-    return delete R[n], y(n), !0;
+    return delete R[n], D(n), !0;
 }
 function M(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, timestamp: s } = e;
@@ -112,7 +112,7 @@ function P(e, t) {
     if (t === p.default.getId()) return !1;
     let n = S[t];
     if (null == n || null == n[e]) return !1;
-    delete n[e], 0 === Object.keys(n).length && delete S[t], y(t);
+    delete n[e], 0 === Object.keys(n).length && delete S[t], D(t);
 }
 function U(e) {
     for (let t of h.default.keys(S)) P(e, t);
@@ -236,7 +236,7 @@ class w extends (r = d.ZP.Store) {
                         i.add(t.id));
                 }),
                 i.delete(r),
-                i.forEach(D);
+                i.forEach(y);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { presences: t } = e;

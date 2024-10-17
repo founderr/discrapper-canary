@@ -42,8 +42,8 @@ var r = n(735250),
     v = n(687476),
     C = n(761966),
     L = n(563927),
-    y = n(98278),
-    D = n(197115),
+    D = n(98278),
+    y = n(197115),
     b = n(703656),
     M = n(944486),
     P = n(914010),
@@ -308,7 +308,7 @@ let W = () => ({
                             location_page: et.page,
                             location_section: et.section
                         }),
-                        (0, y.z)();
+                        (0, D.z)();
                 }
             }),
             eu = J && er && !ea && ((Q && en) || !Q),
@@ -369,7 +369,7 @@ let W = () => ({
                                 ]
                             }),
                             eE
-                                ? (0, r.jsx)(D.Z, {
+                                ? (0, r.jsx)(y.Z, {
                                       className: j.ctaButton,
                                       subscriptionTier: Z.Si.TIER_2,
                                       size: c.Button.Sizes.SMALL,
@@ -499,7 +499,7 @@ let W = () => ({
                     (d === B.$.GET_PREMIUM
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(D.Z, {
+                                  (0, r.jsx)(y.Z, {
                                       subscriptionTier: Z.Si.TIER_2,
                                       buttonText: s.text,
                                       className: j.ctaButton,

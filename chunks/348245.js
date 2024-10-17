@@ -37,24 +37,24 @@ function L(e, t, n) {
         e
     );
 }
-let y = new a.Y('MessageManager');
-function D(e) {
+let D = new a.Y('MessageManager');
+function y(e) {
     let { guildId: t, channelId: n, messageId: i, forceFetch: a, isPreload: o, jumpType: l, skipLocalFetch: d, logFailures: h } = e;
     if (null == n) {
-        h && y.log('Skipping fetch because channelId is null');
+        h && D.log('Skipping fetch because channelId is null');
         return;
     }
     if ((0, v.AB)(n)) {
-        h && y.log('Skipping fetch because channelId is a static route');
+        h && D.log('Skipping fetch because channelId is a static route');
         return;
     }
     let p = m.Z.getChannel(n);
     if ((null == p ? void 0 : p.type) === O.d4z.GUILD_STORE || ((null == p ? void 0 : p.type) != null && O.TPd.GUILD_THREADS_ONLY.has(p.type))) {
-        h && y.log('Skipping fetch because channel is a forum/store');
+        h && D.log('Skipping fetch because channel is a forum/store');
         return;
     }
     let I = _.Z.getOrCreate(n);
-    I.some(R.k5) && (y.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
+    I.some(R.k5) && (D.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
         null != I.jumpTargetId &&
             null == i &&
             ((I = I.mutate({
@@ -65,7 +65,7 @@ function D(e) {
             _.Z.commit(I)),
         null != I.focusTargetId && null == i && ((I = I.mutate({ focusTargetId: null })), _.Z.commit(I));
     let g = a;
-    if ((!o || f.Z.isConnected() || I.loadingMore ? (I.loadingMore || (I.ready && !I.cached) ? (null != i ? (g = !0) : h && y.log('Skipping fetch because no other conditions matched')) : null == t || null != T.Z.getGuild(t) ? (g = !0) : h && y.log('Skipping fetch we are connected and have loaded messages')) : (g = !0), (0, E.Z)(n) && S.ZP.hasUnread(n) && (g = !0), g)) {
+    if ((!o || f.Z.isConnected() || I.loadingMore ? (I.loadingMore || (I.ready && !I.cached) ? (null != i ? (g = !0) : h && D.log('Skipping fetch because no other conditions matched')) : null == t || null != T.Z.getGuild(t) ? (g = !0) : h && D.log('Skipping fetch we are connected and have loaded messages')) : (g = !0), (0, E.Z)(n) && S.ZP.hasUnread(n) && (g = !0), g)) {
         if ((_.Z.commit(I.mutate({ loadingMore: !0 })), null != i))
             u.Z.jumpToMessage({
                 channelId: n,
@@ -92,7 +92,7 @@ function D(e) {
                 })(n)
             )
                 return (
-                    y.log('Jumping to start of thread '.concat(p.id)),
+                    D.log('Jumping to start of thread '.concat(p.id)),
                     u.Z.fetchMessages({
                         channelId: n,
                         limit: O.AQB,
@@ -115,7 +115,7 @@ function D(e) {
             else {
                 let e = S.ZP.getTrackedAckMessageId(p.id);
                 return (
-                    y.log('Jumping to most recent message in thread '.concat(p.id, ' - ').concat(e)),
+                    D.log('Jumping to most recent message in thread '.concat(p.id, ' - ').concat(e)),
                     u.Z.fetchMessages({
                         channelId: n,
                         limit: O.AQB,
@@ -144,7 +144,7 @@ function P() {
                 path: O.Z5c.CHANNEL(':guild', ':channel', ':message'),
                 exact: !0
             });
-            D({
+            y({
                 guildId: n.getGuildId(),
                 channelId: n.id,
                 messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
@@ -160,21 +160,21 @@ function U() {
         let i = m.Z.getChannel(r);
         null != i
             ? ((0, p.Qm)(i.type)
-                  ? D({
+                  ? y({
                         guildId: i.getGuildId(),
                         channelId: i.id,
                         isPreload: e,
                         skipLocalFetch: t,
                         logFailures: n
                     })
-                  : n && y.log('Skipping fetch because the selected channel is not a text channel'),
+                  : n && D.log('Skipping fetch because the selected channel is not a text channel'),
               G(i.getGuildId(), i.id))
-            : n && y.log('Skipping fetch because channel is null');
-    } else n && y.log('Skipping fetch because there is no selected channel');
+            : n && D.log('Skipping fetch because channel is null');
+    } else n && D.log('Skipping fetch because there is no selected channel');
 }
 function w(e) {
     let { guildId: t, channelId: n, messageId: r, jumpType: i } = e;
-    D({
+    y({
         guildId: t,
         channelId: n,
         messageId: r,
@@ -184,7 +184,7 @@ function w(e) {
 }
 function x(e) {
     let { guildId: t, channelId: n } = e;
-    D({
+    y({
         guildId: t,
         channelId: n
     });
@@ -192,7 +192,7 @@ function x(e) {
 function G(e, t) {
     let n = I.ZP.getCurrentSidebarChannelId(t);
     if (null != n)
-        D({
+        y({
             guildId: e,
             channelId: n,
             messageId: I.ZP.getCurrentSidebarMessageId(t)
@@ -208,7 +208,7 @@ function k() {
 function B(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === O.e3s &&
-        (D({
+        (y({
             guildId: t,
             channelId: n
         }),
@@ -219,7 +219,7 @@ function F(e) {
         r = t.guild_id;
     null != r &&
         g.Z.getChannelId(r) === t.id &&
-        D({
+        y({
             guildId: r,
             channelId: t.id,
             messageId: n
@@ -284,7 +284,7 @@ class W extends d.Z {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'fetchMessages', D),
+            L(this, 'fetchMessages', y),
             L(this, 'loadSelectedChannelIfNecessary', U),
             L(this, 'stores', new Map().set(I.ZP, k)),
             L(this, 'actions', {

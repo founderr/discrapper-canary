@@ -67,7 +67,7 @@ let R = (0, I.hQ)(),
             })
         });
     },
-    y = (e) => {
+    D = (e) => {
         let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: o } = e,
             d = (0, p.Z)('diversity'),
             _ = (0, E.useSpring)({
@@ -144,7 +144,7 @@ t.Z = (e) => {
                       onKeyDown: (e) => {
                           e.keyCode === g.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
                       },
-                      children: (0, r.jsx)(y, {
+                      children: (0, r.jsx)(D, {
                           id: R,
                           hasTabWrapper: s,
                           selectedSurrogate: n,

@@ -32,11 +32,11 @@ function h(e) {
         }),
         L = !(null == p || 0 === p || null == I || 0 === I);
     if ('VIDEO' === g && L && null != T) {
-        var y;
+        var D;
         let e = c.Z.toURLSafe(T);
         if (null == e) return null;
         e.searchParams.append('format', 'webp');
-        let n = null !== (y = t.renderLinkComponent) && void 0 !== y ? y : s.iT;
+        let n = null !== (D = t.renderLinkComponent) && void 0 !== D ? D : s.iT;
         return (0, r.jsx)(_.Z, {
             ...R,
             src: C,

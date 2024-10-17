@@ -25,8 +25,8 @@ var r,
     v = n(93093),
     C = n(430824),
     L = n(771845),
-    y = n(594174),
-    D = n(70956),
+    D = n(594174),
+    y = n(70956),
     b = n(176354),
     M = n(823379),
     P = n(226951),
@@ -103,7 +103,7 @@ class Q {
         W(this, 'id', void 0), W(this, '_userId', void 0), W(this, '_dirty', !0), W(this, '_emojis', void 0), W(this, '_emojiMap', {}), W(this, '_emoticons', []), W(this, '_usableEmojis', []), W(this, '_canSeeServerSubIAP', !1), W(this, '_totalUsable', 0), (this.id = e), (this._userId = t), (this._emojis = n), (this._canSeeServerSubIAP = r);
     }
 }
-let X = U.default.fromTimestamp(Date.now() - 60 * D.Z.Millis.DAY),
+let X = U.default.fromTimestamp(Date.now() - 60 * y.Z.Millis.DAY),
     $ = [];
 ((a = r || (r = {}))[(a.Unloaded = 0)] = 'Unloaded'), (a[(a.MaybeLoaded = 1)] = 'MaybeLoaded'), (a[(a.Loading = 2)] = 'Loading'), (a[(a.Loaded = 3)] = 'Loaded');
 let J = 3,
@@ -362,7 +362,7 @@ function ef() {
 }
 function eh(e, t) {
     if ((eE(e), eu.clear(e), null == t)) return;
-    let n = y.default.getCurrentUser();
+    let n = D.default.getCurrentUser();
     if (null == n) return;
     let r = (0, A.r)(e);
     et[e] = new Q(e, n.id, t, r);
@@ -430,7 +430,7 @@ function eT(e) {
 }
 class eS extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.Z, v.Z, O.ZP, C.Z, N.default, g.Z, F.Z, y.default, m.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([R.Z], ep), this.syncWith([m.Z], eI);
+        this.waitFor(f.Z, v.Z, O.ZP, C.Z, N.default, g.Z, F.Z, D.default, m.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([R.Z], ep), this.syncWith([m.Z], eI);
     }
     getState() {
         return q;
@@ -602,7 +602,7 @@ W(eS, 'displayName', 'EmojiStore'),
         GUILD_MEMBER_UPDATE: function (e) {
             var t;
             let { guildId: n, user: r } = e;
-            if (r.id !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
+            if (r.id !== (null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
             let i = et[n];
             eh(n, null == i ? void 0 : i.usableEmojis), ef();
         },

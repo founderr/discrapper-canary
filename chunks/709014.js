@@ -31,28 +31,28 @@ let f = i.forwardRef(function (e, t) {
         v = !(0, _.Z)('lottie_hover_multiple_loop'),
         C = i.useContext(u.S).reducedMotion.enabled,
         { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        y = C || !L,
-        D = i.useRef(m);
+        D = C || !L,
+        y = i.useRef(m);
     return (
         i.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
                     if (null != R.current) {
-                        if (((N.current = e), y)) {
+                        if (((N.current = e), D)) {
                             let t = T[e];
                             R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop();
                         } else R.current.setLoop(!v && e.includes('hover')), R.current.resetSegments(!0), R.current.playSegments([T[e].start, T[e].start + T[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == R.current || y) return;
+                    if (null == R.current || D) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != R.current && !y && N.current === e && (R.current.resetSegments(!0), R.current.setSegment(T[e].start, T[e].start), R.current.stop());
+                    null != R.current && !D && N.current === e && (R.current.resetSegments(!0), R.current.setSegment(T[e].start, T[e].start), R.current.stop());
                 }
             }),
-            [y, v, T]
+            [D, v, T]
         ),
         i.useEffect(() => {
             null == S && o().then((e) => g(e.default));
@@ -66,7 +66,7 @@ let f = i.forwardRef(function (e, t) {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = N.current) && void 0 !== t ? t : D.current;
+                            i = null !== (t = N.current) && void 0 !== t ? t : y.current;
                         if (null != i && null != T[i]) {
                             let e = T[i];
                             n = [e.start, e.start + e.duration];

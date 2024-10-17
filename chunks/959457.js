@@ -24,8 +24,8 @@ var a,
     v = n(19780),
     C = n(981631),
     L = n(65154);
-let y = {},
-    D = {},
+let D = {},
+    y = {},
     b = {},
     M = {},
     P = C.hVg.THEATRE,
@@ -201,7 +201,7 @@ class B extends (a = E.ZP.Store) {
                               ownerId: N.default.getId()
                           });
                       if (
-                          ((y[o] = i),
+                          ((D[o] = i),
                           _().forEach(U, (e) => {
                               let { analyticsContext: t } = e;
                               t.setActionContext(i);
@@ -212,7 +212,7 @@ class B extends (a = E.ZP.Store) {
                       ) {
                           let e = p.ZP.getGameForPID(a);
                           null != e &&
-                              (D[o] = {
+                              (y[o] = {
                                   name: e.name,
                                   id: e.id,
                                   exe: e.exeName,
@@ -222,7 +222,7 @@ class B extends (a = E.ZP.Store) {
                   },
                   STREAM_STOP: function (e) {
                       let { appContext: t, streamKey: n } = e;
-                      (y[n] = t),
+                      (D[n] = t),
                           _().forEach(U, (e) => {
                               let { analyticsContext: n } = e;
                               n.setActionContext(t);
@@ -236,12 +236,12 @@ class B extends (a = E.ZP.Store) {
                       let o = U[t];
                       if (null == o && null != n) {
                           var l, u, d;
-                          null == b[t] && (D[t] = null);
+                          null == b[t] && (y[t] = null);
                           let e = (0, m.my)(t);
-                          null == D[t] && null == M[t] && (D[t] = (0, T.L2)(e, O.Z));
+                          null == y[t] && null == M[t] && (y[t] = (0, T.L2)(e, O.Z));
                           let i = new I.A({
                               streamRegion: a,
-                              streamApplication: D[t],
+                              streamApplication: y[t],
                               streamSourceType: (function (e) {
                                   var t, n, r;
                                   if (null == e) return 'unknown';
@@ -253,7 +253,7 @@ class B extends (a = E.ZP.Store) {
                                   else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
                                   return 'unknown';
                               })(M[t]),
-                              actionContext: y[t],
+                              actionContext: D[t],
                               numViewers: null != s ? s.length : 0
                           });
                           (l = t),
@@ -266,7 +266,7 @@ class B extends (a = E.ZP.Store) {
                                   serverId: u,
                                   initialLayout: P,
                                   analyticsContext: d,
-                                  isStreamer: null != D[l],
+                                  isStreamer: null != y[l],
                                   parentMediaSessionId: v.Z.getMediaSessionId()
                               })),
                               (U[t] = o);

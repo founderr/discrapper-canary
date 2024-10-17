@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(496675),
     C = n(699516),
     L = n(944486),
-    y = n(979651),
-    D = n(181106),
+    D = n(979651),
+    y = n(181106),
     b = n(417363),
     M = n(358085),
     P = n(804739),
@@ -70,8 +70,8 @@ function k(e) {
                 return t === j && n === K;
             })
         ),
-        Q = (0, a.e7)([D.Z], () => null != j && D.Z.getState(j, w.mFx.JOIN) === w.OcF.LOADING),
-        X = (0, a.e7)([g.Z, R.Z, N.Z, C.Z, L.Z, y.Z, v.Z], () =>
+        Q = (0, a.e7)([y.Z], () => null != j && y.Z.getState(j, w.mFx.JOIN) === w.OcF.LOADING),
+        X = (0, a.e7)([g.Z, R.Z, N.Z, C.Z, L.Z, D.Z, v.Z], () =>
             (0, E.Z)({
                 user: t,
                 activity: k,
@@ -84,7 +84,7 @@ function k(e) {
                 GuildMemberCountStore: N.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: L.Z,
-                VoiceStateStore: y.Z,
+                VoiceStateStore: D.Z,
                 PermissionStore: v.Z
             })
         ),

@@ -26,8 +26,8 @@ var i = n(442837),
     A = n(981631),
     N = n(451563);
 function R(e) {
-    let { user: t, currentUser: n, displayProfile: R, guild: O, isHovering: v, onOpenProfile: C, channelId: L, onClose: y } = e,
-        D = u.ZP.getName(null == O ? void 0 : O.id, L, t),
+    let { user: t, currentUser: n, displayProfile: R, guild: O, isHovering: v, onOpenProfile: C, channelId: L, onClose: D } = e,
+        y = u.ZP.getName(null == O ? void 0 : O.id, L, t),
         b = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         M = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, r.jsxs)(a.Scroller, {
@@ -42,14 +42,14 @@ function R(e) {
                     t.hasAvatarForGuild(null == O ? void 0 : O.id) &&
                     (0, r.jsx)(m.Z, {
                         user: t,
-                        nickname: D
+                        nickname: y
                     }),
-                nickname: D,
+                nickname: y,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(c.Z, {
                     displayProfile: R,
                     profileType: g.y0.BITE_SIZE,
-                    onClose: y
+                    onClose: D
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -82,12 +82,12 @@ function R(e) {
                       user: t,
                       bio: null == R ? void 0 : R.bio,
                       hidePersonalInformation: M,
-                      onClose: y
+                      onClose: D
                   }),
             (0, r.jsx)(d.Z, {
                 user: t,
                 currentUser: n,
-                onClose: y,
+                onClose: D,
                 className: N.activity
             }),
             null != O &&

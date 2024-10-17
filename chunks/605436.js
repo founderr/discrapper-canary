@@ -15,7 +15,7 @@ n.d(t, {
         return H;
     },
     RZ: function () {
-        return y;
+        return D;
     },
     Tj: function () {
         return j;
@@ -151,7 +151,7 @@ function L(e, t, n, r, i) {
     let c = [];
     return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && O(a, e)))).sort(S).map((e) => T(e))).length ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
-function y(e, t, n, i, a) {
+function D(e, t, n, i, a) {
     var s, o, l, u, c;
     let d = [];
     return 0 ===
@@ -169,7 +169,7 @@ function y(e, t, n, i, a) {
         ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
         : d;
 }
-function D(e, t) {
+function y(e, t) {
     var n;
     return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : f.ZP.getName(e);
 }
@@ -181,7 +181,7 @@ function M(e, t) {
     let a = ((r = e), t.isOwner(r) ? h.aC.OWNER : h.aC.MEMBER);
     return {
         rowType: a,
-        name: D(e, t),
+        name: y(e, t),
         nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
         username: f.ZP.getName(e),
         id: e.id,
@@ -200,7 +200,7 @@ function U(e, t, n, r) {
     return e
         .map(u.default.getUser)
         .filter(d.lm)
-        .filter((e) => !n.isOwner(e) && A(t, e.id, r) && (i(D(e, n)) || i(e.username) || i(e.discriminator)))
+        .filter((e) => !n.isOwner(e) && A(t, e.id, r) && (i(y(e, n)) || i(e.username) || i(e.discriminator)))
         .map((e) => M(e, n))
         .sort(P);
 }

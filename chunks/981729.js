@@ -9,7 +9,7 @@ n.d(t, {
         return r;
     },
     u: function () {
-        return D;
+        return y;
     }
 }),
     n(411104),
@@ -121,7 +121,7 @@ let O = (e) => {
         scale: 1,
         opacity: 1
     },
-    y = (e) => {
+    D = (e) => {
         let { isVisible: t, onAnimationRest: n, targetElementRef: r, ...i } = e,
             { reducedMotion: a } = o.useContext(p.S);
         return (0, I.useTransition)(
@@ -145,7 +145,7 @@ let O = (e) => {
                 : null
         );
     };
-class D extends (i = o.Component) {
+class y extends (i = o.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -194,7 +194,7 @@ class D extends (i = o.Component) {
             m = null;
         return (
             (m = e instanceof Function ? (I ? e() : null) : e),
-            (0, s.jsx)(y, {
+            (0, s.jsx)(D, {
                 disableTooltipPointerEvents: (!1 !== u && !p) || !0 === u,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: o,
@@ -260,8 +260,8 @@ class D extends (i = o.Component) {
             });
     }
 }
-g(D, 'Colors', r),
-    g(D, 'defaultProps', {
+g(y, 'Colors', r),
+    g(y, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',
@@ -273,7 +273,7 @@ g(D, 'Colors', r),
     });
 let b = (e) => {
     let { children: t, className: n, element: r = 'div', ...i } = e;
-    return (0, s.jsx)(D, {
+    return (0, s.jsx)(y, {
         ...i,
         children: (e) =>
             o.createElement(

@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(502762),
     C = n(652853),
     L = n(979038),
-    y = n(448980),
-    D = n(194811),
+    D = n(448980),
+    y = n(194811),
     b = n(373826),
     M = n(315324),
     P = n(582123),
@@ -205,7 +205,7 @@ function H(e) {
                               children: [ea(), es(), eo()]
                           }),
                           !t.bot &&
-                              (0, r.jsx)(y.Z, {
+                              (0, r.jsx)(D.Z, {
                                   user: t,
                                   activity: i,
                                   className: V.badges
@@ -223,7 +223,7 @@ function H(e) {
                               },
                               children: [ea(), es(), eo()]
                           }),
-                          (0, r.jsx)(y.Z, {
+                          (0, r.jsx)(D.Z, {
                               user: t,
                               activity: i,
                               className: V.badges
@@ -280,7 +280,7 @@ function H(e) {
                                       className: V.body,
                                       sourceType: G.n_.ACTIVITY,
                                       children: [
-                                          (0, r.jsx)(D.Z, {
+                                          (0, r.jsx)(y.Z, {
                                               text: et.text,
                                               icon: et.icon,
                                               contextMenu: (0, r.jsx)(w.Z, {

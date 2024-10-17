@@ -11,16 +11,16 @@ let c = i.forwardRef(function (e, t) {
         v = i.useRef(!1),
         C = i.useRef(null),
         L = (0, o.Iu)((e) => e.searchQuery),
-        y = c.useStore((e) => e.activeCategoryIndex),
-        D = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+        D = c.useStore((e) => e.activeCategoryIndex),
+        y = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
         b = (0, l.Uf)({
             listRef: C,
             searchQuery: L,
-            nitroLockedSectionStates: D,
+            nitroLockedSectionStates: y,
             setShowUpsell: O
         }),
         M = (0, l.Qs)({
-            activeCategoryIndex: y,
+            activeCategoryIndex: D,
             isScrolling: v,
             listRef: C,
             onActiveCategoryIndexChange: c.setActiveCategoryIndex,
@@ -36,7 +36,7 @@ let c = i.forwardRef(function (e, t) {
     return (
         (0, l.Xs)({
             searchQuery: L,
-            activeCategoryIndex: y,
+            activeCategoryIndex: D,
             listRef: C
         }),
         i.useImperativeHandle(

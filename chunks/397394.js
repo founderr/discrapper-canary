@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     Xg: function () {
-        return y;
+        return D;
     },
     ZP: function () {
         return R;
@@ -18,7 +18,7 @@ n.d(t, {
         return O;
     },
     j3: function () {
-        return D;
+        return y;
     }
 }),
     n(177593);
@@ -177,7 +177,7 @@ function L(e) {
         headerClassName: N.headerFailure
     });
 }
-function y() {
+function D() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(S.G, {
@@ -188,7 +188,7 @@ function y() {
         })
     });
 }
-function D(e) {
+function y(e) {
     var t, n;
     let { location: a } = e;
     i.useEffect(() => {

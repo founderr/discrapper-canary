@@ -37,7 +37,7 @@ t.Z = (e) => {
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
             size: 40
         },
-        y = v
+        D = v
             ? () => {
                   (0, E.uL)(S.Z5c.CHANNEL(n.id, g.oC.ROLE_SUBSCRIPTIONS));
               }
@@ -86,7 +86,7 @@ t.Z = (e) => {
                         className: N.ctaButton,
                         innerClassName: N.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: y,
+                        onClick: D,
                         autoFocus: !0,
                         children: [
                             (0, r.jsx)(I.Z, {

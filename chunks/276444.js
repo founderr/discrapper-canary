@@ -25,8 +25,8 @@ let E = null,
     v = 0,
     C = !1,
     L = null,
-    y = !1,
     D = !1,
+    y = !1,
     b = !1,
     M = _.g2L.NOT_ELIGIBLE,
     P = () => !0;
@@ -95,10 +95,10 @@ class G extends (r = l.ZP.Store) {
         return p;
     }
     getIsSenderEligibleForIncentive() {
-        return y;
+        return D;
     }
     getIsSenderQualifiedForIncentive() {
-        return D;
+        return y;
     }
     getIsFetchingReferralIncentiveEligibility() {
         return b;
@@ -130,7 +130,7 @@ class G extends (r = l.ZP.Store) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
             let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
-            (C = null == r && a), (m = !1), (E = t), (h = n), (L = r), (p = i), (y = s && (a || p.size > 0)), (D = o), (M = l);
+            (C = null == r && a), (m = !1), (E = t), (h = n), (L = r), (p = i), (D = s && (a || p.size > 0)), (y = o), (M = l);
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
@@ -142,7 +142,7 @@ class G extends (r = l.ZP.Store) {
         },
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: function (e) {
             let { isUserEligibleForIncentive: t } = e;
-            (b = !1), null != t && (y = t);
+            (b = !1), null != t && (D = t);
         },
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: function () {
             b = !1;
@@ -191,6 +191,6 @@ class G extends (r = l.ZP.Store) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: w,
         LOGOUT: function () {
-            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (S = new Set()), (g = {}), (A = 0), (N = null), (R = []), (O = !1), (v = 0), (C = !1), (L = null), (p = new Map()), (y = !1), (D = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
+            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (S = new Set()), (g = {}), (A = 0), (N = null), (R = []), (O = !1), (v = 0), (C = !1), (L = null), (p = new Map()), (D = !1), (y = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
         }
     }));

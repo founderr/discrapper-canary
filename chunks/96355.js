@@ -207,7 +207,7 @@ var n;
         function L(e) {
             return 'M' + e.join('L') + 'Z';
         }
-        function y(e, t) {
+        function D(e, t) {
             for (var n = e.length + t, r = er(e) / t, i = 0, a = 0, s = r / 2; e.length < n; ) {
                 var o = e[i],
                     l = e[(i + 1) % e.length],
@@ -215,7 +215,7 @@ var n;
                 s <= a + u ? (e.splice(i + 1, 0, u ? A(o, l, (s - a) / u) : o.slice(0)), (s += r)) : ((a += u), i++);
             }
         }
-        function D(e, t) {
+        function y(e, t) {
             if ('string' == typeof e) {
                 var n,
                     r,
@@ -296,7 +296,7 @@ var n;
         }
         function b(e, t, n) {
             var r;
-            return (r = e.length - t.length), y(e, r < 0 ? -1 * r : 0), y(t, r > 0 ? r : 0), eD(e, t), N(e, t, n);
+            return (r = e.length - t.length), D(e, r < 0 ? -1 * r : 0), D(t, r > 0 ? r : 0), ey(e, t), N(e, t, n);
         }
         function M(e, t, n) {
             n = n || 2;
@@ -663,12 +663,12 @@ var n;
             void 0 === i && (i = !0);
             var a = n.single;
             void 0 === a && (a = !1);
-            var s = D(e, r);
-            s.length < t.length + 2 && y(s, t.length + 2 - s.length);
+            var s = y(e, r);
+            s.length < t.length + 2 && D(s, t.length + 2 - s.length);
             var o,
                 l = eV(s, t.length),
                 u = t.map(function (e) {
-                    return D(e, r);
+                    return y(e, r);
                 }),
                 c = 'string' == typeof e && e;
             return (
@@ -809,9 +809,9 @@ var n;
             var s = i.string;
             void 0 === s && (s = !0);
             var o,
-                l = D(t, a);
+                l = y(t, a);
             return (
-                R(r) && l.length < r / a && y(l, Math.ceil(r / a - l.length)),
+                R(r) && l.length < r / a && D(l, Math.ceil(r / a - l.length)),
                 (o = N(e(l), l, s)),
                 s
                     ? function (e) {
@@ -1022,8 +1022,8 @@ var n;
                     v,
                     C,
                     L,
-                    y,
                     D,
+                    y,
                     b,
                     M,
                     P = Math.sin((u * ed) / 360),
@@ -1034,7 +1034,7 @@ var n;
                 o = Math.abs(o);
                 var G = (w * w) / (o * o) + (x * x) / ((l = Math.abs(l)) * l);
                 G > 1 && ((o *= Math.sqrt(G)), (l *= Math.sqrt(G)));
-                var k = ((c = e), (d = t), (_ = n), (E = r), (f = i), (h = a), (p = o), (I = l), (m = P), (S = ((T = U) * (c - _)) / 2 + (m * (d - E)) / 2), (g = (-m * (c - _)) / 2 + (T * (d - E)) / 2), (A = p * p), (N = I * I), (R = S * S), (v = A * N - A * (O = g * g) - N * R) < 0 && (v = 0), (v /= A * O + N * R), (C = (((v = Math.sqrt(v) * (f === h ? -1 : 1)) * p) / I) * g), (L = (-(v * I) / p) * S), (b = s(1, 0, (y = (S - C) / p), (D = (g - L) / I))), (M = s(y, D, (-S - C) / p, (-g - L) / I)), 0 === h && M > 0 && (M -= ed), 1 === h && M < 0 && (M += ed), [T * C - m * L + (c + _) / 2, m * C + T * L + (d + E) / 2, b, M]),
+                var k = ((c = e), (d = t), (_ = n), (E = r), (f = i), (h = a), (p = o), (I = l), (m = P), (S = ((T = U) * (c - _)) / 2 + (m * (d - E)) / 2), (g = (-m * (c - _)) / 2 + (T * (d - E)) / 2), (A = p * p), (N = I * I), (R = S * S), (v = A * N - A * (O = g * g) - N * R) < 0 && (v = 0), (v /= A * O + N * R), (C = (((v = Math.sqrt(v) * (f === h ? -1 : 1)) * p) / I) * g), (L = (-(v * I) / p) * S), (b = s(1, 0, (D = (S - C) / p), (y = (g - L) / I))), (M = s(D, y, (-S - C) / p, (-g - L) / I)), 0 === h && M > 0 && (M -= ed), 1 === h && M < 0 && (M += ed), [T * C - m * L + (c + _) / 2, m * C + T * L + (d + E) / 2, b, M]),
                     B = [],
                     F = k[2],
                     V = k[3],
@@ -1480,8 +1480,8 @@ var n;
                     v,
                     C,
                     L,
-                    y,
                     D,
+                    y,
                     b,
                     M,
                     P = Math.sin((i * eN) / 360),
@@ -1492,7 +1492,7 @@ var n;
                 n = Math.abs(n);
                 var G = (w * w) / (n * n) + (x * x) / ((r = Math.abs(r)) * r);
                 G > 1 && ((n *= Math.sqrt(G)), (r *= Math.sqrt(G)));
-                var k = ((u = e), (c = t), (d = o), (_ = l), (E = a), (f = s), (h = n), (p = r), (I = P), (S = ((T = U) * (u - d)) / 2 + (I * (c - _)) / 2), (g = (-I * (u - d)) / 2 + (T * (c - _)) / 2), (A = h * h), (N = p * p), (R = S * S), (v = A * N - A * (O = g * g) - N * R) < 0 && (v = 0), (v /= A * O + N * R), (C = (((v = Math.sqrt(v) * (E === f ? -1 : 1)) * h) / p) * g), (L = (-(v * p) / h) * S), (b = m(1, 0, (y = (S - C) / h), (D = (g - L) / p))), (M = m(y, D, (-S - C) / h, (-g - L) / p)), 0 === f && M > 0 && (M -= eN), 1 === f && M < 0 && (M += eN), [T * C - I * L + (u + d) / 2, I * C + T * L + (c + _) / 2, b, M]),
+                var k = ((u = e), (c = t), (d = o), (_ = l), (E = a), (f = s), (h = n), (p = r), (I = P), (S = ((T = U) * (u - d)) / 2 + (I * (c - _)) / 2), (g = (-I * (u - d)) / 2 + (T * (c - _)) / 2), (A = h * h), (N = p * p), (R = S * S), (v = A * N - A * (O = g * g) - N * R) < 0 && (v = 0), (v /= A * O + N * R), (C = (((v = Math.sqrt(v) * (E === f ? -1 : 1)) * h) / p) * g), (L = (-(v * p) / h) * S), (b = m(1, 0, (D = (S - C) / h), (y = (g - L) / p))), (M = m(D, y, (-S - C) / h, (-g - L) / p)), 0 === f && M > 0 && (M -= eN), 1 === f && M < 0 && (M += eN), [T * C - I * L + (u + d) / 2, I * C + T * L + (c + _) / 2, b, M]),
                     B = [],
                     F = k[2],
                     V = k[3],
@@ -1623,8 +1623,8 @@ var n;
                 return t(e);
             },
             eL = 'All shapes must be supplied as arrays of [x, y] points or an SVG path string (https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d).\nExample valid ways of supplying a shape would be:\n[[0, 0], [10, 0], [10, 10]]\n"M0,0 L10,0 L10,10Z"\n',
-            ey = 'flubber.all() expects two arrays of equal length as arguments. Each element in both arrays should be an array of [x, y] points or an SVG path string (https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d).',
-            eD = function (e, t) {
+            eD = 'flubber.all() expects two arrays of equal length as arguments. Each element in both arrays should be an array of [x, y] points or an SVG path string (https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d).',
+            ey = function (e, t) {
                 for (var n, r, i, a = e.length, s = 1 / 0, o = 0; o < a; o++)
                     !(function (i) {
                         (r = 0),
@@ -2053,7 +2053,7 @@ var n;
             void 0 === r && (r = 10);
             var i = n.string;
             void 0 === i && (i = !0);
-            var a = b(D(e, r), D(t, r), i);
+            var a = b(y(e, r), y(t, r), i);
             return i && ('string' == typeof e || 'string' == typeof t)
                 ? function (n) {
                       return n < 0.0001 && 'string' == typeof e ? e : 1 - n < 0.0001 && 'string' == typeof t ? t : a(n);
@@ -2091,11 +2091,11 @@ var n;
                 var i = n.string;
                 void 0 === i && (i = !0);
                 var a = n.single;
-                if ((void 0 === a && (a = !1), !Array.isArray(e) || !Array.isArray(t) || e.length !== t.length || !e.length)) throw TypeError(ey);
+                if ((void 0 === a && (a = !1), !Array.isArray(e) || !Array.isArray(t) || e.length !== t.length || !e.length)) throw TypeError(eD);
                 var s,
                     o,
                     l = function (e) {
-                        return D(e, r);
+                        return y(e, r);
                     },
                     u = e.map(l),
                     c = t.map(l);

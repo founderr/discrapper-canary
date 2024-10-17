@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(28546),
     C = n(805680),
     L = n(151574),
-    y = n(368844),
-    D = n(41776),
+    D = n(368844),
+    y = n(41776),
     b = n(849522),
     M = n(780291),
     P = n(913663),
@@ -61,7 +61,7 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em, eT, eS;
-        let { textValue: eg, richValue: eA, className: eN, innerClassName: eR, editorClassName: eO, id: ev, required: eC, disabled: eL, placeholder: ey, accessibilityLabel: eD, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e5 } = e;
+        let { textValue: eg, richValue: eA, className: eN, innerClassName: eR, editorClassName: eO, id: ev, required: eC, disabled: eL, placeholder: eD, accessibilityLabel: ey, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e5 } = e;
         u()(null != eM, 'chat input type must be set');
         let { analyticsLocations: e6 } = (0, T.ZP)(m.Z.CHANNEL_TEXT_AREA),
             e7 = (function (e) {
@@ -96,7 +96,7 @@ t.Z = i.memo(
                 canEveryoneSendMessages: t_
             } = (function (e, t, n, r) {
                 let i = e.getGuildId(),
-                    a = (0, E.e7)([D.Z], () => null != i && D.Z.isLurking(i), [i]),
+                    a = (0, E.e7)([y.Z], () => null != i && y.Z.isLurking(i), [i]),
                     s = (0, E.e7)([k.ZP, Z.default], () => {
                         var e, t;
                         let n = Z.default.getCurrentUser();
@@ -198,7 +198,7 @@ t.Z = i.memo(
                             l(!0);
                             let T = null !== (I = null === (p = P.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== I ? I : [],
                                 S = null !== (m = H.Z.getUploads(s, t.drafts.type)) && void 0 !== m ? m : [];
-                            if (null == c && !_ && !E && (0, y.CB)(S, s)) {
+                            if (null == c && !_ && !E && (0, D.CB)(S, s)) {
                                 l(!1),
                                     (0, f.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([n.e('23755'), n.e('90508'), n.e('18895'), n.e('53289')]).then(n.bind(n, 273602));
@@ -245,7 +245,7 @@ t.Z = i.memo(
             {
                 autocompleteRef: tC,
                 handleMaybeShowAutocomplete: tL,
-                handleHideAutocomplete: ty
+                handleHideAutocomplete: tD
             } = (function () {
                 let e = i.useRef(null),
                     t = i.useCallback(() => {
@@ -262,7 +262,7 @@ t.Z = i.memo(
                     handleHideAutocomplete: n
                 };
             })();
-        let tD =
+        let ty =
             ((ep = tO),
             (eI = eM),
             (em = e9),
@@ -491,9 +491,9 @@ t.Z = i.memo(
                                                     textValue: eg,
                                                     richValue: eA,
                                                     disabled: tu,
-                                                    placeholder: ey,
+                                                    placeholder: eD,
                                                     required: eC,
-                                                    accessibilityLabel: eD,
+                                                    accessibilityLabel: ey,
                                                     isPreviewing: (to || tl) && t_,
                                                     channel: eb,
                                                     type: eM,
@@ -513,7 +513,7 @@ t.Z = i.memo(
                                                     onMoveSelection: tB,
                                                     onSelectionChanged: tN,
                                                     onMaybeShowAutocomplete: tL,
-                                                    onHideAutocomplete: ty,
+                                                    onHideAutocomplete: tD,
                                                     promptToUpload: eZ,
                                                     fontSize: tm,
                                                     spellcheckEnabled: tT,
@@ -599,7 +599,7 @@ t.Z = i.memo(
                         : (0, r.jsx)(C.Z, {
                               positionTargetRef: e7,
                               type: eM,
-                              onSelectGIF: tD,
+                              onSelectGIF: ty,
                               onSelectEmoji: tb,
                               onSelectSticker: tM,
                               onSelectSound: tP,

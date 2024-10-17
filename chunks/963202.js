@@ -12,7 +12,7 @@ n.d(t, {
         return T;
     },
     YH: function () {
-        return y;
+        return D;
     },
     iN: function () {
         return _;
@@ -337,10 +337,10 @@ let L = (0, a.B)({
         }
     ]
 });
-function y(e) {
+function D(e) {
     return L.useExperiment({ location: e }).canAdminsBrowse;
 }
-let D = (0, a.B)({
+let y = (0, a.B)({
     kind: 'user',
     id: '2024-10_rapidash_discovery_entrypoint',
     label: 'Rapidash Discovery Entrypoint',
@@ -354,5 +354,5 @@ let D = (0, a.B)({
     ]
 });
 function b(e) {
-    return D.useExperiment({ location: e }).showDiscovery;
+    return y.useExperiment({ location: e }).showDiscovery;
 }

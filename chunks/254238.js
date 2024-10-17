@@ -21,7 +21,7 @@ n.d(t, {
         return T;
     },
     sh: function () {
-        return y;
+        return D;
     }
 }),
     n(653041),
@@ -229,7 +229,7 @@ async function L(e, t, n) {
         commandId: n
     });
 }
-async function y(e, t, n) {
+async function D(e, t, n) {
     await E.Z.maybeShowPTTAlert(e), await T();
     let r = await R();
     await C(e, t, n, r), (0, h.Z)(n.id, e);

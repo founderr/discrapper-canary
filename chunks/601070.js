@@ -25,7 +25,7 @@ let g = {},
     v = {},
     C = null,
     L = {};
-function y() {
+function D() {
     for (let e in ((g = {}), (O = {}), (A = {}), (N = {}), (R = {}), (C = h.Z.getChannelId()), L)) clearTimeout(L[e]);
     (L = {}),
         I.Z.forEachGuild((e) => {
@@ -33,7 +33,7 @@ function y() {
         }),
         M();
 }
-function D(e) {
+function y(e) {
     for (let t in (delete g[e], delete O[e], delete A[e], delete N[e], delete R[e], b(e), N[e])) U(e, t);
 }
 function b(e) {
@@ -296,22 +296,22 @@ class J extends (r = u.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new J(c.Z, {
-        CONNECTION_OPEN: y,
-        OVERLAY_INITIALIZE: y,
+        CONNECTION_OPEN: D,
+        OVERLAY_INITIALIZE: D,
         THREAD_LIST_SYNC: function (e) {
             let { guildId: t } = e;
-            return D(t);
+            return y(t);
         },
-        LOAD_THREADS_SUCCESS: y,
-        LOAD_ARCHIVED_THREADS_SUCCESS: y,
-        SEARCH_FINISH: y,
-        MOD_VIEW_SEARCH_FINISH: y,
+        LOAD_THREADS_SUCCESS: D,
+        LOAD_ARCHIVED_THREADS_SUCCESS: D,
+        SEARCH_FINISH: D,
+        MOD_VIEW_SEARCH_FINISH: D,
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            return D(t.id);
+            return y(t.id);
         },
-        GUILD_DELETE: y,
-        CURRENT_USER_UPDATE: y,
+        GUILD_DELETE: D,
+        CURRENT_USER_UPDATE: D,
         THREAD_CREATE: x,
         THREAD_UPDATE: x,
         THREAD_DELETE: x,
@@ -335,7 +335,7 @@ class J extends (r = u.ZP.Store) {
                         return !1;
                     })(e.guild_id, e.parent_id)
                 ) {
-                    y();
+                    D();
                     return;
                 }
             return !1;
@@ -358,7 +358,7 @@ class J extends (r = u.ZP.Store) {
             k(e), F();
         },
         PASSIVE_UPDATE_V2: function (e) {
-            if (e.channels.length > 0) return D(e.guildId);
+            if (e.channels.length > 0) return y(e.guildId);
         },
         WINDOW_FOCUS: B,
         UPDATE_CHANNEL_DIMENSIONS: B,

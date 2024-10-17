@@ -47,11 +47,11 @@ let T = new _.h(
 function L(e) {
     return T.values(h(e));
 }
-function y(e) {
-    var t;
-    for (let n of (T.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) D(n);
-}
 function D(e) {
+    var t;
+    for (let n of (T.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) y(n);
+}
+function y(e) {
     S.set(e.id, e);
 }
 let b = [];
@@ -125,7 +125,7 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
-            for (let e of ((g[t] = 2), n)) y(e);
+            for (let e of ((g[t] = 2), n)) D(e);
             for (let e of ((N[t] = r), i)) R[e.id] = e;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
@@ -134,7 +134,7 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
             let { listing: t } = e;
-            y(t);
+            D(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: function (e) {
             let { groupListingId: t } = e;
@@ -146,15 +146,15 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;
-            y(t);
+            D(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: function (e) {
             let { listing: t, groupListing: n } = e;
-            D(t), y(n);
+            y(t), D(n);
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: function (e) {
             let { listing: t } = e;
-            D(t);
+            y(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: function (e) {
             let { listingId: t } = e;

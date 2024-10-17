@@ -32,7 +32,7 @@ var f = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
           },
     g = !0;
 try {
-    var A = y('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    var A = D('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     g = (null === (r = A.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
 } catch (e) {
     g = !1;
@@ -91,14 +91,14 @@ var N = f
         : function (e) {
               return e.replace(_, '');
           };
-function y(e, t) {
+function D(e, t) {
     return new RegExp(e, t);
 }
 if (g) {
-    var D = y('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    var y = D('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     i = function (e, t) {
         var n;
-        return (D.lastIndex = t), null !== (n = D.exec(e)[1]) && void 0 !== n ? n : '';
+        return (y.lastIndex = t), null !== (n = y.exec(e)[1]) && void 0 !== n ? n : '';
     };
 } else
     i = function (e, t) {
@@ -668,18 +668,18 @@ var b = (function () {
                         if (p.err) return p;
                         this.bumpSpace(), (R = this.parseIdentifierIfPossible()), (v = p.val);
                     }
-                    var y = this.tryParsePluralOrSelectOptions(e, d, t, R);
-                    if (y.err) return y;
+                    var D = this.tryParsePluralOrSelectOptions(e, d, t, R);
+                    if (D.err) return D;
                     var m = this.tryParseArgumentClose(r);
                     if (m.err) return m;
-                    var D = E(r, this.clonePosition());
+                    var y = E(r, this.clonePosition());
                     if ('select' === d)
                         return {
                             val: {
                                 type: o.wD.select,
                                 value: n,
-                                options: O(y.val),
-                                location: D
+                                options: O(D.val),
+                                location: y
                             },
                             err: null
                         };
@@ -687,10 +687,10 @@ var b = (function () {
                         val: {
                             type: o.wD.plural,
                             value: n,
-                            options: O(y.val),
+                            options: O(D.val),
                             offset: v,
                             pluralType: 'plural' === d ? 'cardinal' : 'ordinal',
-                            location: D
+                            location: y
                         },
                         err: null
                     };

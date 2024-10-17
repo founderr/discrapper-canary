@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(319417),
     C = n(728386),
     L = n(474936),
-    y = n(933283);
-function D(e) {
+    D = n(933283);
+function y(e) {
     let { disabled: t, channel: n } = e,
         { enabled: a } = E.ZP.useExperiment({ location: 'dc120b_1' }, { autoTrackExposure: !1 }),
         s = (0, E.rK)();
@@ -104,7 +104,7 @@ t.Z = i.memo(function (e) {
             (null == q || T.ZP.isPremiumEligible(q)) &&
             Y.push(
                 (0, r.jsx)(
-                    D,
+                    y,
                     {
                         disabled: M,
                         channel: P
@@ -166,7 +166,7 @@ t.Z = i.memo(function (e) {
     0 === Y.length)
         ? null
         : (0, r.jsx)('div', {
-              className: y.buttons,
+              className: D.buttons,
               children: Y
           });
 });

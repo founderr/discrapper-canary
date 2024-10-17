@@ -60,7 +60,7 @@ n.d(t, {
         return j;
     },
     hv: function () {
-        return D;
+        return y;
     },
     iR: function () {
         return ee;
@@ -167,9 +167,9 @@ function C(e) {
     return 'SELECTABLE' !== e && v.has(e);
 }
 let L = new Set([h.d4z.GUILD_STAGE_VOICE]),
-    y = new Set([h.d4z.DM, h.d4z.GROUP_DM]);
-function D(e) {
-    return y.has(e);
+    D = new Set([h.d4z.DM, h.d4z.GROUP_DM]);
+function y(e) {
+    return D.has(e);
 }
 let b = new Set([h.d4z.GROUP_DM]);
 function M(e) {
@@ -319,7 +319,7 @@ class e_ extends eu {
         return null != this.application_id;
     }
     isPrivate() {
-        return D(this.type);
+        return y(this.type);
     }
     isGroupDM() {
         return this.type === h.d4z.GROUP_DM;

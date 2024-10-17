@@ -87,9 +87,9 @@ t.ZP = {
             C = O.trim();
         if (0 === R.trim().length || 0 === C.length) return _();
         let L = A(l().unescapeUrl(s)),
-            y = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
-        if (null == L || y) return _();
-        let D = {
+            D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
+        if (null == L || D) return _();
+        let y = {
                 ...n,
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
@@ -97,8 +97,8 @@ t.ZP = {
             b = n.allowEmojiLinks ? I : p,
             M = [...b, ...m],
             P = [...T, ...S],
-            U = g(t(O, D), M, [d.b.EMOJI]),
-            w = g(t(v, D), P);
+            U = g(t(O, y), M, [d.b.EMOJI]),
+            w = g(t(v, y), P);
         if (
             null == U ||
             null == w ||
@@ -144,7 +144,7 @@ t.ZP = {
         )
             return _();
         let x = i().pick(t.rules, b),
-            G = l().parserFor(x)(h.whitespaceSanitized, D),
+            G = l().parserFor(x)(h.whitespaceSanitized, y),
             k = N.whitespaceSanitized,
             { target: B } = L;
         return {

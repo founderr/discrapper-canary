@@ -108,15 +108,15 @@ function L(e) {
                 return C(n.key);
         }
 }
-function y() {
+function D() {
     for (let e of Object.keys(T)) {
         let t = T[e];
         null != t && t.close();
     }
 }
-class D extends (r = u.ZP.PersistedStore) {
+class y extends (r = u.ZP.PersistedStore) {
     initialize(e) {
-        window.addEventListener('message', L), window.addEventListener('beforeunload', y), (I = null != e ? e : {});
+        window.addEventListener('message', L), window.addEventListener('beforeunload', D), (I = null != e ? e : {});
     }
     getWindow(e) {
         return T[e];
@@ -151,8 +151,8 @@ class D extends (r = u.ZP.PersistedStore) {
         return C(e);
     }
 }
-p(D, 'displayName', 'PopoutWindowStore'), p(D, 'persistKey', 'PopoutWindowStore');
-let b = new D(c.Z, {
+p(y, 'displayName', 'PopoutWindowStore'), p(y, 'persistKey', 'PopoutWindowStore');
+let b = new y(c.Z, {
     POPOUT_WINDOW_OPEN: function (e) {
         let { key: t, features: n, render: r } = e;
         if (_.isPlatformEmbedded && !E.ZP.supportsFeature(h.eRX.POPOUT_WINDOWS)) throw Error('Popout windows not supported on this native module version!');
@@ -200,6 +200,6 @@ let b = new D(c.Z, {
         let { key: t, alwaysOnTop: n } = e;
         _.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, n), (m[t] = n), E.ZP.isAlwaysOnTop(t).then((e) => (m[t] = e)));
     },
-    LOGOUT: y
+    LOGOUT: D
 });
 t.Z = b;

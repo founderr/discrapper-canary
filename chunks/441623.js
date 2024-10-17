@@ -50,7 +50,7 @@ function O(e, t) {
 }
 function v() {
     if (null != R) {
-        y(R);
+        D(R);
         return;
     }
     if ((C(), !_.Z.hasConsented(I.pjP.PERSONALIZATION))) return;
@@ -82,7 +82,7 @@ function C() {
 function L(e) {
     null == S.messageGiftIntentLastShownMap[e] && (S.messageGiftIntentLastShownMap[e] = Date.now());
 }
-function y(e) {
+function D(e) {
     C();
     let { enabled: t } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
@@ -99,7 +99,7 @@ function y(e) {
         }),
         (A = new Set(g.slice(0, 5)));
 }
-class D extends (r = l.ZP.PersistedStore) {
+class y extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         (S = T()),
             null != e && ((S.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (S.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (S.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })),
@@ -140,9 +140,9 @@ class D extends (r = l.ZP.PersistedStore) {
         return R;
     }
 }
-m(D, 'displayName', 'PremiumGiftingIntentStore'),
-    m(D, 'persistKey', 'PremiumGiftingIntentStore'),
-    m(D, 'migrations', [
+m(y, 'displayName', 'PremiumGiftingIntentStore'),
+    m(y, 'persistKey', 'PremiumGiftingIntentStore'),
+    m(y, 'migrations', [
         (e) => {
             var t, n;
             return null == e
@@ -154,7 +154,7 @@ m(D, 'displayName', 'PremiumGiftingIntentStore'),
                   };
         }
     ]),
-    (t.Z = new D(u.Z, {
+    (t.Z = new y(u.Z, {
         CONNECTION_OPEN: function () {
             C();
         },
@@ -190,6 +190,6 @@ m(D, 'displayName', 'PremiumGiftingIntentStore'),
                 (R = null), v();
                 return;
             }
-            y(t);
+            D(t);
         }
     }));

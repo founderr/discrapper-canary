@@ -33,8 +33,8 @@ function I(e) {
                       className: p.clickableUsername,
                       children: e
                   }),
-        y = null != S && S.length > 0,
-        D = (0, c.D)(t),
+        D = null != S && S.length > 0,
+        y = (0, c.D)(t),
         b = (0, _.Z)('UserProfileUsername'),
         M = i.useMemo(
             () => ({
@@ -44,7 +44,7 @@ function I(e) {
             [v, t.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(p.container, { [p.bot]: null != D }, g),
+        className: s()(p.container, { [p.bot]: null != y }, g),
         children: [
             (0, r.jsxs)('div', {
                 className: p.usernameRow,
@@ -56,9 +56,9 @@ function I(e) {
                             children: m
                         })
                     ),
-                    null != D &&
+                    null != y &&
                         (0, r.jsx)(d.Z, {
-                            type: D,
+                            type: y,
                             verified: t.isVerifiedBot()
                         }),
                     null != T &&
@@ -70,8 +70,8 @@ function I(e) {
             }),
             (0, r.jsxs)('div', {
                 className: s()(p.tags, C, {
-                    [p.pronouns]: y,
-                    [p.bot]: null != D
+                    [p.pronouns]: D,
+                    [p.bot]: null != y
                 }),
                 children: [
                     L(
@@ -86,7 +86,7 @@ function I(e) {
                             hideBotTag: !0
                         })
                     ),
-                    y &&
+                    D &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', {

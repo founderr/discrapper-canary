@@ -36,10 +36,10 @@ function T(e) {
             platform: p.S4.DESKTOP
         },
         [C, L] = i.useState(!1),
-        y = _.Z.theme,
-        D = { ...a };
+        D = _.Z.theme,
+        y = { ...a };
     return (
-        y === I.BRd.LIGHT ? (D.colorScheme = 'light') : (D.colorScheme = 'dark'),
+        D === I.BRd.LIGHT ? (y.colorScheme = 'light') : (y.colorScheme = 'dark'),
         i.useEffect(
             () => (
                 E.S.dispatch(I.CkL.IFRAME_MOUNT, { id: N }),
@@ -61,10 +61,10 @@ function T(e) {
                 }
             );
         }, []),
-        C && (D.pointerEvents = 'none'),
+        C && (y.pointerEvents = 'none'),
         null != t
             ? (0, r.jsx)('iframe', {
-                  style: D,
+                  style: y,
                   allow: 'autoplay; encrypted-media',
                   referrerPolicy: g,
                   onLoad: function (e) {

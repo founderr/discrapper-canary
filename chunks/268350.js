@@ -12,7 +12,7 @@ n.d(t, {
         return O;
     },
     SA: function () {
-        return y;
+        return D;
     },
     Um: function () {
         return N;
@@ -21,7 +21,7 @@ n.d(t, {
         return v;
     },
     hW: function () {
-        return D;
+        return y;
     },
     lY: function () {
         return R;
@@ -146,7 +146,7 @@ function C(e, t) {
 function L(e) {
     return _.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function y(e) {
+function D(e) {
     c.DZ.updateAsync(
         'favoriteStickers',
         (t) =>
@@ -160,7 +160,7 @@ function y(e) {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function D(e) {
+function y(e) {
     c.DZ.updateAsync(
         'favoriteStickers',
         (t) => {

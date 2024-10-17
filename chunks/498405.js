@@ -130,7 +130,7 @@ function o(e) {
             },
             [t, h, v, _.focusIndex, m]
         ),
-        y = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = 'menuitem' } = e,
                     o = n.join('--');
@@ -155,10 +155,10 @@ function o(e) {
             dispatch: f,
             getContainerProps: C,
             getSubmenuProps: L,
-            getItemProps: y,
+            getItemProps: D,
             isFocused: v,
             isUsingKeyboardNavigation: m
         }),
-        [f, C, L, y, v, m]
+        [f, C, L, D, v, m]
     );
 }

@@ -18,13 +18,13 @@ n.d(t, {
         return I;
     },
     XZ: function () {
-        return D;
+        return y;
     },
     Y$: function () {
         return O;
     },
     Yn: function () {
-        return y;
+        return D;
     },
     jD: function () {
         return S;
@@ -152,10 +152,10 @@ function L(e) {
     let t = R(e);
     return null != t && t.displays_advertisements;
 }
-function y(e) {
+function D(e) {
     return e === E._b.TEXT;
 }
-function D(e) {
+function y(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
 }
 function b(e) {

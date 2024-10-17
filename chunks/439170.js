@@ -50,7 +50,7 @@ function v(e, t, n) {
 }
 let C = 'everyone',
     L = 0;
-function y(e, t, n, r) {
+function D(e, t, n, r) {
     switch (t) {
         case R.Skl.ONLINE:
         case R.Skl.OFFLINE:
@@ -85,7 +85,7 @@ function y(e, t, n, r) {
             };
     }
 }
-function D(e, t, n) {
+function y(e, t, n) {
     let r = n === p.default.getId(),
         i = g.Z.isMobileOnline(n),
         a = r ? A.Z.getStatus() : g.Z.getStatus(n, e),
@@ -141,7 +141,7 @@ class M {
             var n;
             let r = t,
                 i = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
-            return (t += i + 1), y(this.guildId, e.id, i, r);
+            return (t += i + 1), D(this.guildId, e.id, i, r);
         })),
             (this.rows.length = t);
     }
@@ -160,9 +160,9 @@ class M {
     }
     insert(e, t) {
         let { group: n, member: r } = t;
-        if (null != n) this.rows.splice(e, 0, y(this.guildId, n.id, n.count));
+        if (null != n) this.rows.splice(e, 0, D(this.guildId, n.id, n.count));
         else if (null != r) {
-            let t = D(this.guildId, this.ownerId, r.user.id);
+            let t = y(this.guildId, this.ownerId, r.user.id);
             if (null == t) return;
             this.rows.splice(e, 0, t), (this.members[r.user.id] = t);
         }
@@ -171,9 +171,9 @@ class M {
     update(e, t) {
         let { group: n, member: r } = t,
             i = this.rows[e];
-        if ((null != i && 'MEMBER' === i.type && delete this.members[i.user.id], null != n)) this.rows[e] = y(this.guildId, n.id, n.count);
+        if ((null != i && 'MEMBER' === i.type && delete this.members[i.user.id], null != n)) this.rows[e] = D(this.guildId, n.id, n.count);
         else if (null != r) {
-            let t = D(this.guildId, this.ownerId, r.user.id);
+            let t = y(this.guildId, this.ownerId, r.user.id);
             if (null == t) return;
             (this.rows[e] = t), (this.members[r.user.id] = t);
         }
@@ -185,7 +185,7 @@ class M {
     }
     rebuildMember(e) {
         let t = this.members[e];
-        if (null != t) Object.assign(t, D(this.guildId, this.ownerId, e)), this.version++;
+        if (null != t) Object.assign(t, y(this.guildId, this.ownerId, e)), this.version++;
     }
     rebuildMembers() {
         let e = Object.keys(this.members);

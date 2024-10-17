@@ -165,7 +165,7 @@ function _(e, n, r) {
         e.seen.push(n),
         (a = A
             ? (function (e, t, n, r, i) {
-                  for (var a = [], s = 0, o = t.length; s < o; ++s) y(t, String(s)) ? a.push(f(e, t, n, r, String(s), !0)) : a.push('');
+                  for (var a = [], s = 0, o = t.length; s < o; ++s) D(t, String(s)) ? a.push(f(e, t, n, r, String(s), !0)) : a.push('');
                   return (
                       i.forEach(function (i) {
                           !i.match(/^\d+$/) && a.push(f(e, t, n, r, i, !0));
@@ -194,7 +194,7 @@ function f(e, t, n, r, i, a) {
     var s, o, l;
     if (
         ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get ? (o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special')) : l.set && (o = e.stylize('[Setter]', 'special')),
-        !y(r, i) && (s = '[' + i + ']'),
+        !D(r, i) && (s = '[' + i + ']'),
         !o &&
             (0 > e.seen.indexOf(l.value)
                 ? (o = I(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
@@ -289,7 +289,7 @@ function C(e) {
 }),
     (t.isBuffer = n(102439));
 var L = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-function y(e, t) {
+function D(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
 (t.log = function () {
@@ -302,7 +302,7 @@ function y(e, t) {
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });
-var D = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
+var y = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
 function b(e, t) {
     if (!e) {
         var n = Error('Promise was rejected with a falsy value');
@@ -312,11 +312,11 @@ function b(e, t) {
 }
 (t.promisify = function (e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
-    if (D && e[D]) {
-        var t = e[D];
+    if (y && e[y]) {
+        var t = e[y];
         if ('function' != typeof t) throw TypeError('The "util.promisify.custom" argument must be of type Function');
         return (
-            Object.defineProperty(t, D, {
+            Object.defineProperty(t, y, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -350,8 +350,8 @@ function b(e, t) {
     }
     return (
         Object.setPrototypeOf(t, Object.getPrototypeOf(e)),
-        D &&
-            Object.defineProperty(t, D, {
+        y &&
+            Object.defineProperty(t, y, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -360,7 +360,7 @@ function b(e, t) {
         Object.defineProperties(t, i(e))
     );
 }),
-    (t.promisify.custom = D);
+    (t.promisify.custom = y);
 t.callbackify = function (e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
     function t() {

@@ -1,6 +1,6 @@
 n.d(t, {
     A3: function () {
-        return y;
+        return D;
     },
     C1: function () {
         return Z;
@@ -27,7 +27,7 @@ n.d(t, {
         return G;
     },
     PC: function () {
-        return D;
+        return y;
     },
     Y1: function () {
         return k;
@@ -112,12 +112,12 @@ let L = function (e, t) {
                 newlyAddedEmojis: O
             }),
             L = (0, s.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
-            y = (0, s.e7)([E.Z], () => {
+            D = (0, s.e7)([E.Z], () => {
                 var e;
                 return null === (e = E.Z.getGuild(n)) || void 0 === e ? void 0 : e.name;
             }),
-            D = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-            b = (0, T.I5)(D);
+            y = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+            b = (0, T.I5)(y);
         return r.useMemo(() => {
             let r = L.getGroupedCustomEmoji(),
                 s = f.ZP.getFlattenedGuildIds(),
@@ -158,7 +158,7 @@ let L = function (e, t) {
                         t.push({
                             type: A.En.TOP_GUILD_EMOJI,
                             id: r,
-                            name: C.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({ guildName: y }),
+                            name: C.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({ guildName: D }),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e
@@ -198,16 +198,16 @@ let L = function (e, t) {
                     return t;
                 }, [])
             );
-        }, [L, t, n, e, b, v, y, _, p, o, a, I, i]);
+        }, [L, t, n, e, b, v, D, _, p, o, a, I, i]);
     },
-    y = (e) => {
+    D = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
         p.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
             location_page: t ? N.ZY5.GUILD_CHANNEL : N.ZY5.DM_CHANNEL,
             location_section: null != e ? N.jXE.EMOJI_PICKER_POPOUT : N.jXE.CUSTOM_STATUS_MODAL
         });
     },
-    D = (e, t) => {
+    y = (e, t) => {
         o.ZP.trackWithMetadata(N.rMx.SEARCH_STARTED, {
             search_type: null != t && t === R.Hz.REACTION ? N.aib.EMOJI_REACTION : N.aib.EMOJI,
             location: e

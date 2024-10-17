@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     R7: function () {
-        return y;
+        return D;
     },
     Tg: function () {
         return b;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     gK: function () {
-        return D;
+        return y;
     },
     hM: function () {
         return N;
@@ -158,7 +158,7 @@ function L() {
         query: ''
     });
 }
-function y(e) {
+function D(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: o, query: l, gifId: c } = e,
         d = (0, h._)(E.Z.getAnalyticsID(), t, {
             offset: r,
@@ -182,7 +182,7 @@ function y(e) {
                 oldFormErrors: !0
             });
 }
-function D() {
+function y() {
     let e = (0, a.Z)().replace(g, '');
     u.ZP.trackWithMetadata(m.rMx.SEARCH_OPENED, {
         search_type: m.aib.GIF,

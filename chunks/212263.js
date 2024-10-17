@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(543241),
     C = n(149203),
     L = n(981631),
-    y = n(185923),
-    D = n(474936),
+    D = n(185923),
+    y = n(474936),
     b = n(689938),
     M = n(145834);
 t.Z = (e) => {
@@ -61,7 +61,7 @@ t.Z = (e) => {
         ),
         ee = $.enabled || J.enabled,
         et = $.addSocialProof;
-    P = k === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == G ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : G.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : G.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    P = k === D.Hz.REACTION ? y.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == G ? y.cd.EMOJI_PICKER_FLOATING_UPSELL : G.subCategory === C.t0.TOP_GUILD_EMOJI ? y.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : G.subCategory === C.t0.NEWLY_ADDED_EMOJI ? y.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : y.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let en = null != G ? G.emoji : void 0,
         er = null != en && en.animated,
         ei = null != en && !R.ZP.isInternalEmojiForGuildId(en, null == x ? void 0 : x.getGuildId()),
@@ -78,7 +78,7 @@ t.Z = (e) => {
                     object: ea
                 },
                 location_stack: X,
-                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
+                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(y.p9.TIER_2))
             });
     }, [B, X, Q, er, ei, P, ea, ee]);
     let es = (0, o.e7)([E.Z], () => E.Z.affinities),
@@ -108,7 +108,7 @@ t.Z = (e) => {
                       object: ea
                   },
                   location_stack: X,
-                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
+                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(y.p9.TIER_2)),
                   has_search_query: null != Q && '' !== Q,
                   is_animated: er
               }
@@ -125,8 +125,8 @@ t.Z = (e) => {
                       children: [
                           q
                               ? (0, r.jsx)(m.ZP, {
-                                    type: D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
+                                    type: y.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                                    subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : y.Si.TIER_2,
                                     onClose: w,
                                     trialOffer: K,
                                     discountOffer: z,
@@ -151,7 +151,7 @@ t.Z = (e) => {
                                 }),
                           !q &&
                               (0, r.jsx)(T.Z, {
-                                  subscriptionTier: D.Si.TIER_2,
+                                  subscriptionTier: y.Si.TIER_2,
                                   submitting: H,
                                   premiumModalAnalyticsLocation: {
                                       section: L.jXE.EMOJI_PICKER_POPOUT,

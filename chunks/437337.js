@@ -42,7 +42,7 @@ let h = {
             O = (0, E.Q)('Switch'),
             v = (0, d.d)(O ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
             C = (0, d.d)(O ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
-            { state: L, opacity: y } = (0, _.useSpring)(
+            { state: L, opacity: D } = (0, _.useSpring)(
                 {
                     config: h,
                     opacity: I ? (O ? 0.5 : 0.3) : 1,
@@ -63,7 +63,7 @@ let h = {
                 onMouseUp: () => R(!1),
                 onMouseLeave: () => R(!1),
                 style: {
-                    opacity: y,
+                    opacity: D,
                     backgroundColor: L.to({
                         output: [v, C]
                     })

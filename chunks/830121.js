@@ -12,7 +12,7 @@ n.d(t, {
         return Y;
     },
     oO: function () {
-        return y;
+        return D;
     },
     zO: function () {
         return W;
@@ -49,15 +49,15 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     v = /^\/quests\/([0-9-]+)\/?$/,
     C = /^\/discovery\/game\/([0-9-]+)\/?$/,
     L = /^\/oauth2\/authorize/,
-    y = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-    D = B(window.GLOBAL_ENV.INVITE_HOST),
+    D = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
+    y = B(window.GLOBAL_ENV.INVITE_HOST),
     b = B(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
     M = B(null !== (r = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== r ? r : '//canary.'.concat(p.$R1)),
     P = B('//canary.'.concat(p.$R1)),
     U = B('//ptb.'.concat(p.$R1)),
     w = B('discordapp.com'),
     x = B('discord.com'),
-    G = [E.Z.escape(null !== (i = D.host) && void 0 !== i ? i : ''), E.Z.escape(null !== (a = b.host) && void 0 !== a ? a : ''), E.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), E.Z.escape(null !== (o = w.host) && void 0 !== o ? o : ''), E.Z.escape(null !== (l = x.host) && void 0 !== l ? l : '')].filter(Boolean),
+    G = [E.Z.escape(null !== (i = y.host) && void 0 !== i ? i : ''), E.Z.escape(null !== (a = b.host) && void 0 !== a ? a : ''), E.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), E.Z.escape(null !== (o = w.host) && void 0 !== o ? o : ''), E.Z.escape(null !== (l = x.host) && void 0 !== l ? l : '')].filter(Boolean),
     k = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(G.join('|'), ')'), 'g');
 function B(e) {
     if (null == e)
@@ -100,7 +100,7 @@ function H(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null
         };
-    let s = F(D, a),
+    let s = F(y, a),
         o = F(b, a),
         l = null !== (i = null !== (r = null !== (n = null !== (t = F(M, a)) && void 0 !== t ? t : F(P, a)) && void 0 !== n ? n : F(U, a)) && void 0 !== r ? r : F(w, a)) && void 0 !== i ? i : F(x, a);
     return {
@@ -115,7 +115,7 @@ function Z(e) {
     let t = new Set(),
         n = [],
         r = (e = e.replace(k, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e))).match(f.Z.URL_REGEX),
-        i = e.match(y);
+        i = e.match(D);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
         if (n.length >= 10) break;
@@ -180,10 +180,10 @@ function Z(e) {
         }
         let v = null == s ? void 0 : s.match(R);
         null != v && o(h.g.GUILD_PRODUCT, ''.concat(v[1], '-').concat(v[2]));
-        let y = null == s ? void 0 : s.match(O);
-        null != y && o(h.g.SERVER_SHOP, y[1]);
-        let D = Y(e);
-        null != D && o(h.g.QUESTS_EMBED, D);
+        let D = null == s ? void 0 : s.match(O);
+        null != D && o(h.g.SERVER_SHOP, D[1]);
+        let y = Y(e);
+        null != y && o(h.g.QUESTS_EMBED, y);
         let b = (function (e) {
             var t, n;
             let r = H(e),

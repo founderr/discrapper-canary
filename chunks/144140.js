@@ -66,11 +66,11 @@ function L(e) {
     let { channel: t } = e;
     v(t);
 }
-function y(e) {
+function D(e) {
     let { threads: t } = e;
     t.forEach(C);
 }
-function D(e) {
+function y(e) {
     let { messages: t, threads: n } = e;
     for (let e of t) for (let t of e) C(t.thread);
     n.forEach(C);
@@ -147,10 +147,10 @@ class b extends (r = u.ZP.Store) {
                             });
                     });
         },
-        LOAD_THREADS_SUCCESS: y,
-        LOAD_ARCHIVED_THREADS_SUCCESS: y,
-        SEARCH_FINISH: D,
-        MOD_VIEW_SEARCH_FINISH: D,
+        LOAD_THREADS_SUCCESS: D,
+        LOAD_ARCHIVED_THREADS_SUCCESS: D,
+        SEARCH_FINISH: y,
+        MOD_VIEW_SEARCH_FINISH: y,
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
             delete g[t.id];

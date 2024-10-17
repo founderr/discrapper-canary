@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return D;
+        return y;
     }
 });
 var r = n(526167),
@@ -29,10 +29,10 @@ var r = n(526167),
     v = n(34721),
     C = n(410693),
     L = n(185672),
-    y = n(235731);
-function D() {
+    D = n(235731);
+function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? y : i;
+    return e ? D : i;
 }
 t.Z = {
     DEFAULT_AVATARS: [a, s, o, l, u, c],

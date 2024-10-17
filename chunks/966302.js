@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(131951),
     C = n(594174),
     L = n(451478),
-    y = n(358221),
-    D = n(584511),
+    D = n(358221),
+    y = n(584511),
     b = n(793865),
     M = n(981631),
     P = n(65154),
@@ -142,7 +142,7 @@ function Z(e) {
         T = (0, h.ZP)(_),
         [S, g] = (0, l.Wu)([v.Z], () => [v.Z.supports(P.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
         A = (0, l.e7)([L.Z], () => L.Z.isFocused()),
-        N = (0, l.e7)([y.Z], () => y.Z.getMode(_.id)),
+        N = (0, l.e7)([D.Z], () => D.Z.getMode(_.id)),
         R = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -165,11 +165,11 @@ function Z(e) {
     let C = N === M.WtW.VIDEO && S && g > 0,
         b = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(D.Z, {
+                (0, r.jsx)(y.Z, {
                     className: w.icon,
                     ringing: A,
                     src: null != m ? m : '',
-                    ringingType: D.Z.RingingType.INCOMING,
+                    ringingType: y.Z.RingingType.INCOMING,
                     size: p ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
                 }),
                 (0, r.jsxs)('div', {

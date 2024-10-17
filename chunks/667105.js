@@ -1,6 +1,6 @@
 n.d(t, {
     DH: function () {
-        return y;
+        return D;
     },
     Ks: function () {
         return L;
@@ -18,7 +18,7 @@ n.d(t, {
         return C;
     },
     qN: function () {
-        return D;
+        return y;
     },
     tP: function () {
         return O;
@@ -218,13 +218,13 @@ function L(e) {
         }
     }, [t, r, u, a, f, n, s, o, h, c]);
 }
-function y() {
+function D() {
     return (0, s.e7)([f.Z], () => {
         var e, t;
         return null !== (t = null !== (e = f.Z.questDeliveryOverride) && void 0 !== e ? e : (0, p.PM)(f.Z.quests, f.Z.questToDeliverForPlacement, h.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, p._)(f.Z.quests, h.jn.QUEST_BAR);
     });
 }
-function D(e) {
+function y(e) {
     var t;
     let { location: n, quest: r } = e,
         i = (0, I.Zy)({ location: n }),
@@ -236,9 +236,9 @@ function D(e) {
 }
 function b(e) {
     let { location: t } = e,
-        n = D({
+        n = y({
             location: t,
-            quest: y()
+            quest: D()
         });
     return 0 !== (0, s.e7)([f.Z], () => f.Z.lastFetchedCurrentQuests) && !n;
 }

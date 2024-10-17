@@ -22,11 +22,11 @@ var o,
     v = n(979651),
     C = n(981631),
     L = n(70722);
-let y = null,
-    D = {},
+let D = null,
+    y = {},
     b = null;
 function M() {
-    (r = new Map()), (i = {}), (a = {}), (s = {}), (D = {});
+    (r = new Map()), (i = {}), (a = {}), (s = {}), (y = {});
 }
 M();
 function P(e) {
@@ -67,7 +67,7 @@ class k extends (o = d.ZP.Store) {
     }
     isSelfStreamHidden(e) {
         var t;
-        return null !== (t = D[e]) && void 0 !== t && t;
+        return null !== (t = y[e]) && void 0 !== t && t;
     }
     getLastActiveStream() {
         var e;
@@ -224,7 +224,7 @@ class k extends (o = d.ZP.Store) {
                     ...n,
                     state: C.jm8.CONNECTING
                 }),
-                n.ownerId === T.default.getId() && (D[n.channelId] = !1);
+                n.ownerId === T.default.getId() && (y[n.channelId] = !1);
         },
         STREAM_START: function (e) {
             var t;
@@ -289,7 +289,7 @@ class k extends (o = d.ZP.Store) {
                 ...o,
                 state: l
             }),
-                l === C.jm8.ENDED && y !== t && P(t);
+                l === C.jm8.ENDED && D !== t && P(t);
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
@@ -297,7 +297,7 @@ class k extends (o = d.ZP.Store) {
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e;
-            (0, h.DB)(y) && (null == y ? void 0 : y.includes(T.default.getId())) && !1 === D[t] && !0 === n && (y = null), (D[t] = n);
+            (0, h.DB)(D) && (null == D ? void 0 : D.includes(T.default.getId())) && !1 === y[t] && !0 === n && (D = null), (y[t] = n);
         },
         SET_STREAM_APP_INTENT: function (e) {
             let { intent: t } = e;
@@ -325,13 +325,13 @@ class k extends (o = d.ZP.Store) {
         CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
             let { id: t, channelId: n } = e;
             if (
-                ((y = t),
+                ((D = t),
                 Array.from(r.values()).forEach((e) => {
-                    (0, h.V9)(e) !== y && e.state === C.jm8.ENDED && P((0, h.V9)(e));
+                    (0, h.V9)(e) !== D && e.state === C.jm8.ENDED && P((0, h.V9)(e));
                 }),
                 null != t)
             )
-                (0, h.DB)(t) && t.includes(T.default.getId()) && (D[n] = !1);
+                (0, h.DB)(t) && t.includes(T.default.getId()) && (y[n] = !1);
         },
         CONNECTION_OPEN: M,
         CONNECTION_CLOSED: M,

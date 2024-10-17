@@ -172,11 +172,11 @@ function C(e, t, n, d) {
                                                         });
                                             });
                                             let L = null;
-                                            return null != R ? (T.Q.selectCommandOption(e, R.optionName), (L = R.optionName)) : null != v ? (T.Q.selectCommandOption(e, v.optionName, !1), (L = v.optionName)) : T.Q.resetSelectionToEnd(e), null == v && y(e, c), L;
+                                            return null != R ? (T.Q.selectCommandOption(e, R.optionName), (L = R.optionName)) : null != v ? (T.Q.selectCommandOption(e, v.optionName, !1), (L = v.optionName)) : T.Q.resetSelectionToEnd(e), null == v && D(e, c), L;
                                         })(s, c, l),
                                         t = p.tM(s, R, c.id);
                                     return (
-                                        D({
+                                        y({
                                             guildId: c.guild_id,
                                             channelId: c.id,
                                             command: R,
@@ -278,7 +278,7 @@ function C(e, t, n, d) {
                                         }),
                                         !0)
                                     );
-                                })(s, R) && y(s, R);
+                                })(s, R) && D(s, R);
                                 let e = p.tM(s, R, c.id),
                                     t = S.bN.above(s, {
                                         match: (e) => S.bN.isInline(s, e) && 'applicationCommandOption' === e.type,
@@ -286,7 +286,7 @@ function C(e, t, n, d) {
                                     }),
                                     r = null !== (n = null == t ? void 0 : t[0].optionName) && void 0 !== n ? n : null;
                                 return (
-                                    D({
+                                    y({
                                         guildId: c.guild_id,
                                         channelId: c.id,
                                         command: R,
@@ -345,7 +345,7 @@ function L(e, t, n, r) {
             section: null
         });
 }
-function y(e, t) {
+function D(e, t) {
     if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || O.has(t.options[0].type) || p.cu(e).length > 0 || null == p.cr(e)) return !1;
     let n = S.bN.getFirstText(e);
     if (null == n) return !1;
@@ -377,7 +377,7 @@ function y(e, t) {
         !0)
     );
 }
-function D(e) {
+function y(e) {
     let { guildId: t, channelId: n, command: r, activeOption: i, currentOptionValues: s, previousOptionValues: o, validateAll: u, allowEmpty: c } = e;
     if (null == r.options) return !1;
     let _ = u ? null : l.Z.getActiveOptionName(n),

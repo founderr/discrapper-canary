@@ -174,7 +174,7 @@ function L(e) {
         c = _.ANM.GUILD_MEMBER_BANNER(r, n, i, u);
     return (t = (null != o ? ''.concat(location.protocol, '//').concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + '?size='.concat((0, l.oO)(s * (0, l.x_)())));
 }
-function y(e) {
+function D(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -182,7 +182,7 @@ function y(e) {
     let a = window.GLOBAL_ENV.CDN_HOST;
     return (t = (null != a ? ''.concat(location.protocol, '//').concat(a, '/splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.ANM.GUILD_SPLASH(n, r)) + '?size='.concat(i));
 }
-function D(e) {
+function y(e) {
     let t,
         { id: n, banner: r } = e,
         i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -342,15 +342,15 @@ t.ZP = {
     isAnimatedIconHash: B,
     getUserAvatarSource: (e, t, n) => H(N(e, t, n)),
     getGuildIconURL: P,
-    getGuildSplashURL: y,
+    getGuildSplashURL: D,
     getGuildSplashSource: function (e) {
-        return H(y(e));
+        return H(D(e));
     },
     getGuildDiscoverySplashURL: M,
     getGuildDiscoverySplashSource: function (e) {
         return H(M(e));
     },
-    getGuildBannerURL: D,
+    getGuildBannerURL: y,
     getGuildHomeHeaderURL: b,
     getResourceChannelIconURL: function (e) {
         let { channelId: t, icon: n } = e;
@@ -389,7 +389,7 @@ t.ZP = {
     getGuildTemplateIconSource: (e) => H(U(e)),
     getGuildBannerSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return H(D(e, t));
+        return H(y(e, t));
     },
     getGuildHomeHeaderSource: (e) => H(b(e)),
     getChannelIconSource: (e) => H(k(e)),

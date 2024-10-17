@@ -22,7 +22,7 @@ var r = n(735250),
 let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
     R = (0, l.Mg)(A.__invalid_stickerPickerPreviewPadding),
     O = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: O, gutterWidth: v, inspectedStickerPosition: C, isScrolling: L, isUsingKeyboardNavigation: y, onInspect: D, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = R, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: O, gutterWidth: v, inspectedStickerPosition: C, isScrolling: L, isUsingKeyboardNavigation: D, onInspect: y, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = R, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
             { location: H } = (0, d.O)(),
             Z = x + 2 * w,
             Y = i.useMemo(
@@ -52,7 +52,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                 let _ = e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) && e.columnIndex === (null == C ? void 0 : C.columnIndex),
                     N = e.type === p.al.STICKER && k && _,
                     R = (0, o.throttle)(() => {
-                        (null == L ? void 0 : L.current) !== !0 && (null == y ? void 0 : y.current) !== !0 && !_ && (null == D || D(e));
+                        (null == L ? void 0 : L.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && !_ && (null == y || y(e));
                     }, 250),
                     { ref: O, tabIndex: v, onFocus: U, ...w } = null !== (d = null == l ? void 0 : l(e.columnIndex, M)) && void 0 !== d ? d : {};
                 switch (e.type) {
@@ -122,7 +122,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                 onFocus: null != U ? U : R,
                                 onMouseMove: R,
                                 onClick: (t) => {
-                                    if ((null == L ? void 0 : L.current) === !0 || (null == y ? void 0 : y.current) === !0) return;
+                                    if ((null == L ? void 0 : L.current) === !0 || (null == D ? void 0 : D.current) === !0) return;
                                     let n = t.altKey;
                                     n && e.type === p.al.STICKER && !(0, I.gM)(e.sticker.id) && K(e.sticker.id), null == b || b(e, n);
                                 },

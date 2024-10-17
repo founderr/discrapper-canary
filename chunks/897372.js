@@ -25,8 +25,8 @@ var r,
     v = A.URLSearchParams,
     C = A.getState,
     L = o.URL,
-    y = o.TypeError,
-    D = o.parseInt,
+    D = o.TypeError,
+    y = o.parseInt,
     b = Math.floor,
     M = Math.pow,
     P = u(''.charAt),
@@ -71,7 +71,7 @@ var r,
             if (((a = 10), i.length > 1 && '0' === P(i, 0) && ((a = U(X, i) ? 16 : 8), (i = H(i, 8 === a ? 1 : 2))), '' === i)) s = 0;
             else {
                 if (!U(10 === a ? J : 8 === a ? $ : ee, i)) return e;
-                s = D(i, a);
+                s = y(i, a);
             }
             k(n, s);
         }
@@ -108,7 +108,7 @@ var r,
                 d++, (c = ++u);
                 continue;
             }
-            for (t = n = 0; n < 4 && U(ee, _()); ) (t = 16 * t + D(_(), 16)), d++, n++;
+            for (t = n = 0; n < 4 && U(ee, _()); ) (t = 16 * t + y(_(), 16)), d++, n++;
             if ('.' === _()) {
                 if (0 === n) return;
                 if (((d -= n), u > 6)) return;
@@ -119,7 +119,7 @@ var r,
                     }
                     if (!U(Q, _())) return;
                     for (; U(Q, _()); ) {
-                        if (((a = D(_(), 10)), null === i)) i = a;
+                        if (((a = y(_(), 10)), null === i)) i = a;
                         else {
                             if (0 === i) return;
                             i = 10 * i + a;
@@ -214,8 +214,8 @@ var r,
     ev = {},
     eC = {},
     eL = {},
-    ey = {},
     eD = {},
+    ey = {},
     eb = {},
     eM = {},
     eP = {},
@@ -230,10 +230,10 @@ var r,
             a,
             s = T(e);
         if (t) {
-            if ((i = this.parse(s))) throw y(i);
+            if ((i = this.parse(s))) throw D(i);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw y(i);
+            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw D(i);
             (a = C(new v())).bindURL(this), (this.searchParams = a);
         }
     };
@@ -340,7 +340,7 @@ eB.prototype = {
                     } else s += d;
                     break;
                 case eL:
-                case ey:
+                case eD:
                     if (t && 'file' === this.scheme) {
                         i = eP;
                         continue;
@@ -356,15 +356,15 @@ eB.prototype = {
                     } else {
                         if ('' === s) return W;
                         if ((f = this.parseHost(s))) return f;
-                        if (((s = ''), (i = eD), t === ey)) return;
+                        if (((s = ''), (i = ey), t === eD)) return;
                     }
                     break;
-                case eD:
+                case ey:
                     if (U(Q, d)) s += d;
                     else {
                         if (!(d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) && !t) return K;
                         if ('' !== s) {
-                            var N = D(s, 10);
+                            var N = y(s, 10);
                             if (N > 65535) return K;
                             (this.port = this.isSpecial() && N === eh[this.scheme] ? null : N), (s = '');
                         }
@@ -491,7 +491,7 @@ eB.prototype = {
     },
     setHref: function (e) {
         var t = this.parse(e);
-        if (t) throw y(t);
+        if (t) throw D(t);
         this.searchParams.update();
     },
     getOrigin: function () {
@@ -544,14 +544,14 @@ eB.prototype = {
         return null === e ? '' : eu(e);
     },
     setHostname: function (e) {
-        !this.cannotBeABaseURL && this.parse(e, ey);
+        !this.cannotBeABaseURL && this.parse(e, eD);
     },
     getPort: function () {
         var e = this.port;
         return null === e ? '' : T(e);
     },
     setPort: function (e) {
-        !this.cannotHaveUsernamePasswordPort() && ('' === (e = T(e)) ? (this.port = null) : this.parse(e, eD));
+        !this.cannotHaveUsernamePasswordPort() && ('' === (e = T(e)) ? (this.port = null) : this.parse(e, ey));
     },
     getPathname: function () {
         var e = this.path;

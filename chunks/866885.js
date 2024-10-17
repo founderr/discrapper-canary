@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(963614),
     C = n(917107),
     L = n(208156),
-    y = n(748492),
-    D = n(701488),
+    D = n(748492),
+    y = n(701488),
     b = n(918559),
     M = n(981631),
     P = n(354459),
@@ -76,7 +76,7 @@ function G(e) {
     }
     i.useEffect(() => {
         if ((null == B ? void 0 : B.applicationId) != null) {
-            let e = ee ? D.cE.PIP : D.cE.FOCUSED;
+            let e = ee ? y.cE.PIP : y.cE.FOCUSED;
             u.Z.dispatch({
                 type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
                 layoutMode: e,
@@ -123,7 +123,7 @@ function G(e) {
                                 (c = ei),
                                 ee && null != B && ((null == K ? void 0 : K.type) === P.fO.ACTIVITY || u)
                                     ? (null === (d = B.config) || void 0 === d ? void 0 : d.useInteractivePIP)
-                                        ? (0, r.jsx)(y.of, {
+                                        ? (0, r.jsx)(D.of, {
                                               onJumpToChannel: en,
                                               applicationId: B.applicationId,
                                               channel: R,
@@ -137,7 +137,7 @@ function G(e) {
                                           })
                                         : u
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: (0, r.jsx)(y.q5, {
+                                                children: (0, r.jsx)(D.q5, {
                                                     idle: o,
                                                     onMouseMove: i,
                                                     onMouseDown: i,
@@ -161,7 +161,7 @@ function G(e) {
                                                           className: U.clickShield,
                                                           onDoubleClick: en
                                                       }),
-                                                      (0, r.jsx)(y.YB, {
+                                                      (0, r.jsx)(D.YB, {
                                                           idle: o,
                                                           onMouseMove: i,
                                                           onMouseDown: i,
@@ -184,7 +184,7 @@ function G(e) {
                               })
                             : (0, r.jsx)(L.J, {
                                   allowPopups: (0, v.h)(V),
-                                  referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
+                                  referrerPolicy: y.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,
                                   queryParams: ea,
                                   className: s()(U.iframe, {
@@ -195,7 +195,7 @@ function G(e) {
                                   shouldRefocus: !ee && Z
                               }),
                         !ee &&
-                            (0, r.jsx)(y.Ds, {
+                            (0, r.jsx)(D.Ds, {
                                 participantsOpen: q,
                                 showToggleParticipants: !1,
                                 channelId: R.id

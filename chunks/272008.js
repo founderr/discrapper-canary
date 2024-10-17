@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     Ag: function () {
-        return D;
+        return y;
     },
     CS: function () {
         return p;
@@ -12,7 +12,7 @@ n.d(t, {
         return L;
     },
     OR: function () {
-        return y;
+        return D;
     },
     QB: function () {
         return g;
@@ -364,14 +364,14 @@ function L(e) {
         questId: e
     });
 }
-function y(e, t) {
+function D(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
 }
-async function D() {
+async function y() {
     if (!c.Z.isFetchingClaimedQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
         try {

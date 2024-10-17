@@ -52,8 +52,8 @@ var r,
     v = n(367907),
     C = n(702493),
     L = n(424602),
-    y = n(728345),
-    D = n(979200),
+    D = n(728345),
+    y = n(979200),
     b = n(560067),
     M = n(353926),
     P = n(341298),
@@ -142,8 +142,8 @@ function ed(e) {
         L,
         b,
         { clientId: P, responseType: k, redirectUri: et, codeChallenge: eu, codeChallengeMethod: ec, state: ed, nonce: e_, prompt: eE, authorizations: ef, scopes: eh, permissions: ep, guildId: eI, channelId: em, integrationType: eT, disableGuildSelect: eS = !1, showLogout: eg = !1, cancelCompletesFlow: eA = !0, isTrustedName: eN = !1, isEmbeddedFlow: eR = !1, callback: eO, callbackWithoutPost: ev, onClose: eC, disclosures: eL } = e,
-        ey = null != eT ? (null == ef ? void 0 : ef.get(eT)) : void 0,
-        eD = (0, u.TH)(),
+        eD = null != eT ? (null == ef ? void 0 : ef.get(eT)) : void 0,
+        ey = (0, u.TH)(),
         eb = (0, h.e7)([M.Z], () => M.Z.hasLoadedExperiments);
     s.useEffect(() => {
         G.default.isAuthenticated() && !eb && A.Z.getExperiments();
@@ -162,11 +162,11 @@ function ed(e) {
         [eX, e$] = s.useState(null),
         eJ = s.useMemo(() => {
             var e;
-            return null == ey && null == eT && (null !== (e = null == eh ? void 0 : eh.length) && void 0 !== e ? e : 0) === 0 && null == et;
-        }, [ey, null == eh ? void 0 : eh.length, et, eT]),
+            return null == eD && null == eT && (null !== (e = null == eh ? void 0 : eh.length) && void 0 !== e ? e : 0) === 0 && null == et;
+        }, [eD, null == eh ? void 0 : eh.length, et, eT]),
         [e0, e1] = s.useState(null);
     s.useEffect(() => {
-        eJ && y.ZP.fetchApplication(P).then((e) => e1(w.Z.createFromServer(e)));
+        eJ && D.ZP.fetchApplication(P).then((e) => e1(w.Z.createFromServer(e)));
     }, [P, eJ]);
     let e2 = s.useMemo(() => {
             var e, t;
@@ -194,12 +194,12 @@ function ed(e) {
         let e = async () => {
             e6.current = !0;
             try {
-                let { disclosures: e, allAcked: t } = await (0, D.de)(P);
+                let { disclosures: e, allAcked: t } = await (0, y.de)(P);
                 te(!t), e8(e);
             } catch (n) {
                 let { status: e, body: t } = n;
                 if (401 === e) {
-                    (0, Z.c$)(eD);
+                    (0, Z.c$)(ey);
                     return;
                 }
                 eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -209,12 +209,12 @@ function ed(e) {
         };
         if (null == eL) {
             if (!G.default.isAuthenticated()) {
-                (0, Z.c$)(eD);
+                (0, Z.c$)(ey);
                 return;
             }
             e();
         }
-    }, [P, eD, eL, e8, eG, te, ew]);
+    }, [P, ey, eL, e8, eG, te, ew]);
     let tt = s.useCallback(
             async (e) => {
                 if (null != ev) {
@@ -251,7 +251,7 @@ function ed(e) {
                         guildId: eX === _.Y.GUILD_INSTALL && null != eZ ? eZ : void 0,
                         channelId: eX === _.Y.GUILD_INSTALL && null != ej ? ej : void 0
                     });
-                    if ((e && (N.Z.fetch(), await (0, D.x9)(P, e7)), null != eO))
+                    if ((e && (N.Z.fetch(), await (0, y.x9)(P, e7)), null != eO))
                         eO({
                             application: null == eM ? void 0 : eM.application,
                             location: t.location,
@@ -279,7 +279,7 @@ function ed(e) {
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
             if (!G.default.isAuthenticated()) {
-                (0, Z.c$)(eD);
+                (0, Z.c$)(ey);
                 return;
             }
             if (!e6.current) {
@@ -287,8 +287,8 @@ function ed(e) {
                     tn.current = !0;
                     try {
                         let e =
-                            null != ey
-                                ? ey
+                            null != eD
+                                ? eD
                                 : await (0, Z.Ww)({
                                       clientId: P,
                                       scopes: e3,
@@ -304,7 +304,7 @@ function ed(e) {
                     } catch (n) {
                         let { status: e, body: t } = n;
                         if (401 === e) {
-                            (0, Z.c$)(eD);
+                            (0, Z.c$)(ey);
                             return;
                         }
                         eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -313,7 +313,7 @@ function ed(e) {
                     }
                 }
             }
-        }, [eD, ey, P, e3, k, et, eu, ec, ed, e_, eX, eE, tt, e9]),
+        }, [ey, eD, P, e3, k, et, eu, ec, ed, e_, eX, eE, tt, e9]),
         ti = s.useMemo(() => {
             var e;
             return null != e0 && eJ
@@ -342,11 +342,11 @@ function ed(e) {
     }, [P, eX, e5, e3, eU]),
         s.useEffect(() => {
             if (null == eU && (!eJ || null != e0) && !!eb)
-                if (null != ey) {
+                if (null != eD) {
                     var e;
-                    e$(null !== (e = ey.integration_type) && void 0 !== e ? e : _.Y.GUILD_INSTALL), ew('AUTHORIZE_SCOPES');
+                    e$(null !== (e = eD.integration_type) && void 0 !== e ? e : _.Y.GUILD_INSTALL), ew('AUTHORIZE_SCOPES');
                 } else ti.length > 1 ? ew('SELECT_INSTALL_TYPE') : (1 === ti.length ? e$(ti[0]) : null != eT ? e$(eT) : e$(_.Y.GUILD_INSTALL), ew('AUTHORIZE_SCOPES'));
-        }, [ey, ti, e0, eJ, eT, eU, eb]),
+        }, [eD, ti, e0, eJ, eT, eU, eb]),
         s.useEffect(() => {
             if (null == eX || null != eM || null != ex) return;
             eX === _.Y.USER_INSTALL && (eY(null), eW(null));
@@ -470,7 +470,7 @@ function ed(e) {
                 bot: eM.bot,
                 accountScopes: e4,
                 showLogout: eg || !1,
-                location: eD
+                location: ey
             })),
         t_ &&
             (b = (0, a.jsxs)('div', {

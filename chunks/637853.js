@@ -9,7 +9,7 @@ n.d(t, {
         return N;
     },
     VF: function () {
-        return D;
+        return y;
     },
     b$: function () {
         return I;
@@ -184,10 +184,10 @@ function L(e, t) {
         i
     ];
 }
-function y(e, t) {
+function D(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
-function D(e, t) {
+function y(e, t) {
     return (0, r.e7)(
         [o.ZP],
         () => {
@@ -199,7 +199,7 @@ function D(e, t) {
             return [i, r];
         },
         [e, t],
-        y
+        D
     );
 }
 function b(e) {

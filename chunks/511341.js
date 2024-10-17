@@ -45,9 +45,9 @@ function R(e) {
         { trackUserProfileAction: O } = (0, d.KZ)(),
         { sendReact: v } = (0, _.Q)(u),
         { resetInteraction: C, setInteractionToast: L } = (0, f.Xo)(),
-        { theme: y } = (0, p.z)(),
-        D = (0, a.e7)([l.Z], () => l.Z.theme),
-        b = (0, s.wj)(D) ? !(0, s.wj)(y) : (0, s.wj)(y),
+        { theme: D } = (0, p.z)(),
+        y = (0, a.e7)([l.Z], () => l.Z.theme),
+        b = (0, s.wj)(y) ? !(0, s.wj)(D) : (0, s.wj)(D),
         M = i.useRef(null);
     i.useEffect(() => {
         null == g || g(null == M ? void 0 : M.current);

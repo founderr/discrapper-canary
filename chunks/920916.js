@@ -35,8 +35,8 @@ var r = n(735250),
     v = n(918701),
     C = n(475595),
     L = n(566078),
-    y = n(114732),
-    D = n(46140),
+    D = n(114732),
+    y = n(46140),
     b = n(675654),
     M = n(689938),
     P = n(837053);
@@ -54,15 +54,15 @@ function w(e) {
         N = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         v = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         L = i.useMemo(() => (0, C.fh)(l, C.Bd.HERO), [l]),
-        D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [M, U] = i.useState(!0 === I || D ? 'claimed' : 'loading');
+        y = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        [M, U] = i.useState(!0 === I || y ? 'claimed' : 'loading');
     i.useEffect(() => {
-        !D &&
+        !y &&
             !0 !== I &&
             (0, R.QB)(l.id, O.y$.CROSS_PLATFORM, d)
                 .then(() => U('claimed'))
                 .catch(() => U('error'));
-    }, [l, d, D, I]);
+    }, [l, d, y, I]);
     let w = null == v || null == f || 'loading' === M;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -81,7 +81,7 @@ function w(e) {
                     children: w
                         ? (0, r.jsx)(c.Spinner, { type: c.Spinner.Type.SPINNING_CIRCLE })
                         : 'error' === M
-                          ? (0, r.jsx)(y.Z, { onClose: a })
+                          ? (0, r.jsx)(D.Z, { onClose: a })
                           : (0, r.jsx)(G, {
                                 quest: l,
                                 user: v,
@@ -99,7 +99,7 @@ function w(e) {
                 })
             }),
             !N &&
-                !D &&
+                !y &&
                 'claimed' === M &&
                 (0, r.jsx)(p.Z, {
                     confettiTarget: m.current,
@@ -199,7 +199,7 @@ function G(e) {
                             onClick: _,
                             children: M.Z.Messages.COLLECTIBLES_USE_NOW
                         }),
-                        (0, v.zK)(t, D.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(x, { quest: t })
+                        (0, v.zK)(t, y.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(x, { quest: t })
                     ]
                 })
             })
@@ -221,7 +221,7 @@ function k(e) {
             return [r, () => (null == r ? (N.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), U()))];
         })(null !== (n = null == _ ? void 0 : _.skuId) && void 0 !== n ? n : null);
     if (null == _) return null;
-    let I = (0, v.zK)(a, D.S7.IN_HOUSE_CONSOLE_QUEST);
+    let I = (0, v.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
     return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || I
         ? (0, r.jsx)(w, {
               onClose: o,

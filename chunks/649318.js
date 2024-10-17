@@ -1,6 +1,6 @@
 n.d(t, {
     $6: function () {
-        return D;
+        return y;
     },
     MP: function () {
         return O;
@@ -21,7 +21,7 @@ n.d(t, {
         return b;
     },
     sc: function () {
-        return y;
+        return D;
     }
 }),
     n(47120),
@@ -420,7 +420,7 @@ function L(e) {
     );
     return (t.codecs = _()(t.codecs, c())), t;
 }
-function y(e) {
+function D(e) {
     var t;
     let { codecs: n } = L(e),
         r = n.find((e) => e.name === I.ad.VP8),
@@ -430,7 +430,7 @@ function y(e) {
         codecs: n
     };
 }
-function D(e) {
+function y(e) {
     if (!e.includes('a=fingerprint')) return T.error('Remote SDP does not include fingerprint!'), !1;
     if (!e.includes('a=ice-ufrag')) return T.error('Remote SDP does not include ICE user name!'), !1;
     if (!e.includes('a=ice-pwd')) return T.error('Remote SDP does not include ICE password!'), !1;

@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(15682),
     C = n(189472),
     L = n(749534),
-    y = n(521332),
-    D = n(905434),
+    D = n(521332),
+    y = n(905434),
     b = n(196627),
     M = n(739319),
     P = n(842401),
@@ -180,7 +180,7 @@ t.Z = (e) => {
                         'message' === n.name &&
                         null != eh &&
                         ep &&
-                        (0, r.jsx)(y.Z, {
+                        (0, r.jsx)(D.Z, {
                             settingsUpsells: eh,
                             channelId: n.record.channel_id,
                             onModalClose: Z,
@@ -188,7 +188,7 @@ t.Z = (e) => {
                             reportType: n,
                             reportSubType: F
                         }),
-                    null != k(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
+                    null != k(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(y.Z, { stageInstance: n.record }),
                     null != k(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(g.Z, { event: n.record }),
                     null != k(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
                     null != k(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(S.Z, { entry: n.record }),

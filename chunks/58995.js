@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(689938),
     C = n(679583),
     L = n(933283);
-let y = S.Z.Millis.DAYS_30;
-function D(e) {
+let D = S.Z.Millis.DAYS_30;
+function y(e) {
     let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
         o = !a || i;
     return (0, r.jsxs)('div', {
@@ -65,7 +65,7 @@ t.Z = i.memo(function (e) {
         M = null != b ? g.default.age(b.id) : 0,
         { enabled: P } = p.O.useExperiment({ location: 'gift-button' }),
         U = [];
-    P && !t && S && M >= y && U.push(l.z.NITROWEEN_COACHMARKS);
+    P && !t && S && M >= D && U.push(l.z.NITROWEEN_COACHMARKS);
     let [w, x] = (0, f.US)(U),
         G = null != w,
         k = (0, A.Ft)(n),
@@ -109,7 +109,7 @@ t.Z = i.memo(function (e) {
                     V(), c(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: O.L.TAKE_ACTION }), H();
                 },
                 ...F,
-                children: (0, r.jsx)(D, {
+                children: (0, r.jsx)(y, {
                     animatedIconComponent: B,
                     hovered: s,
                     isCoachmarkDismissed: !G

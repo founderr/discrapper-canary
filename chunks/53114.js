@@ -354,7 +354,7 @@ class p extends s.Z {
                 duration_decoder_unknown: f(e.decoderBuckets[_.gr.UNKNOWN]),
                 ...u
             },
-            { bytes: d, framesDropped: E, framesCodecError: h, framesCodec: p, framesNetwork: I, packets: m, packetsLost: T, nackCount: S, pliCount: g, qpSum: A, pauseCount: N, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: v, totalFramesDuration: C, keyframes: L, passthroughCount: y, cryptorSuccessCount: D, cryptorFailureCount: b, cryptorDuration: M, cryptorAttempts: P, qualityDecodeErrors: U, qualityDecoderReboots: w, qualityScoreErrors: x, qualityFrameDrops: G, qualitySizeMismatches: k } = e.aggregatedProperties;
+            { bytes: d, framesDropped: E, framesCodecError: h, framesCodec: p, framesNetwork: I, packets: m, packetsLost: T, nackCount: S, pliCount: g, qpSum: A, pauseCount: N, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: v, totalFramesDuration: C, keyframes: L, passthroughCount: D, cryptorSuccessCount: y, cryptorFailureCount: b, cryptorDuration: M, cryptorAttempts: P, qualityDecodeErrors: U, qualityDecoderReboots: w, qualityScoreErrors: x, qualityFrameDrops: G, qualitySizeMismatches: k } = e.aggregatedProperties;
         return {
             ...c,
             avg_bitrate: r > 0 ? Math.round(((null != d ? d : 0) * 8) / r) : 0,
@@ -375,8 +375,8 @@ class p extends s.Z {
             receiver_total_freezes_duration: v,
             receiver_total_frames_duration: C,
             num_keyframes: L,
-            cryptor_passthrough_count: y,
-            cryptor_success_count: D,
+            cryptor_passthrough_count: D,
+            cryptor_success_count: y,
             cryptor_failure_count: b,
             cryptor_duration: M,
             cryptor_attempts: P,

@@ -49,8 +49,8 @@ function N(e, t, n, r) {
 }
 function R(e) {
     let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: R, onDrag: O, onDragStart: v, onDragEnd: C } = e,
-        { ref: L, width: y } = (0, u.Z)(),
-        D = i.useMemo(() => {
+        { ref: L, width: D } = (0, u.Z)(),
+        y = i.useMemo(() => {
             var e;
             let t;
             return Math.floor(((t = (e = d) <= p ? 40 : e >= 45 ? 294 : ((Math.min(e, 45) - p) / (45 - p)) * 254 + 40) + 4) / I) * I - 4;
@@ -95,7 +95,7 @@ function R(e) {
                     ? e
                     : T;
             }, [n, r]);
-        })(n, y),
+        })(n, D),
         P = i.useRef(m),
         U = i.useRef(R),
         w = i.useRef(null),
@@ -203,7 +203,7 @@ function R(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [L, x, M, y, a, d, m, R, G, k, B, F, V, H]);
+        }, [L, x, M, D, a, d, m, R, G, k, B, F, V, H]);
     let [, Z] = (0, c.Z)({
         ref: L,
         onDrag: O,
@@ -213,9 +213,9 @@ function R(e) {
     return (0, r.jsx)('canvas', {
         onMouseDown: Z,
         className: s()(h.canvas, t),
-        style: { width: D },
+        style: { width: y },
         ref: L,
         height: 32 * window.devicePixelRatio,
-        width: (null != y ? y : 0) * window.devicePixelRatio
+        width: (null != D ? D : 0) * window.devicePixelRatio
     });
 }

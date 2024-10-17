@@ -25,8 +25,8 @@ var r = n(147018),
     v = n(11697),
     C = n(202934),
     L = n(641236),
-    y = n(976418),
-    D = L('iterator'),
+    D = n(976418),
+    y = L('iterator'),
     b = 'URLSearchParams',
     M = b + 'Iterator',
     P = f.set,
@@ -229,7 +229,7 @@ if (
             },
             sort: function () {
                 var e = U(this);
-                y(e.entries, function (e, t) {
+                D(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
                     e.updateURL();
@@ -249,7 +249,7 @@ if (
         },
         { enumerable: !0 }
     ),
-    u(e_, D, e_.entries, { name: 'entries' }),
+    u(e_, y, e_.entries, { name: 'entries' }),
     u(
         e_,
         'toString',

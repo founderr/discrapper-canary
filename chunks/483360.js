@@ -33,8 +33,8 @@ var i = n(658722),
     v = n(984933),
     C = n(271383),
     L = n(430824),
-    y = n(375954),
-    D = n(496675),
+    D = n(375954),
+    y = n(496675),
     b = n(158776),
     M = n(699516),
     P = n(944486),
@@ -158,7 +158,7 @@ function eo(e, t) {
     let n = O.Z.getChannel(e);
     return null == e || null == n
         ? []
-        : o()(y.Z.getMessages(e).toArray())
+        : o()(D.Z.getMessages(e).toArray())
               .reverse()
               .uniqBy((e) => e.author.id)
               .map((e) => w.default.getUser(e.author.id))
@@ -319,7 +319,7 @@ t.ZP = {
             I = [];
         for (let e of t) {
             var m, T, S, A, R;
-            if (((m = l), (T = e.type), (S = null != r), !(m === T || ((S || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !D.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            if (((m = l), (T = e.type), (S = null != r), !(m === T || ((S || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !y.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 o = f && n === e.id,

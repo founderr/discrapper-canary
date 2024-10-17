@@ -26,7 +26,7 @@ function p() {
 async function I(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
     clearTimeout(a);
-    let { next_update_timestamp: i } = await (0, c._)({
+    let { next_update_timestamp: i } = await (0, c._7)({
             riotConnectionId: t,
             lolConnectionId: n,
             onlyUpdateIfStale: r
@@ -35,7 +35,7 @@ async function I(e) {
         o = new Date();
     a = setTimeout(
         () => {
-            (0, c._)({
+            (0, c._7)({
                 riotConnectionId: t,
                 lolConnectionId: n
             });

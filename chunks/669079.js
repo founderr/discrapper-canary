@@ -87,8 +87,8 @@ let S = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
     v = O(4, 4),
     C = O(4, 6),
     L = O(5, 3),
-    y = [v, C, L, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
-    D = new RegExp('^('.concat('WUMP-?', ')?(').concat(y, ')$'));
+    D = [v, C, L, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
+    y = new RegExp('^('.concat('WUMP-?', ')?(').concat(D, ')$'));
 ((i = r || (r = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (i[(i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD');
 let b = (e, t) => (s.tq || s.Em ? 0 : null != e || t ? 2 : 1),
     M = (e) => 0 !== b(e);
@@ -294,7 +294,7 @@ function W(e, t, n) {
     return a.length === i.length ? a[0] : null;
 }
 function K(e) {
-    let t = e.trim().split('/').pop().match(D);
+    let t = e.trim().split('/').pop().match(y);
     if (null == t) return null;
     let [n, r, i] = t;
     return null == i ? null : i.replace(/-/g, '');

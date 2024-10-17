@@ -33,8 +33,8 @@ function S(e) {
             roleId: N
         }),
         L = i.useRef(null),
-        y = (0, _.ZP)(t.id, n),
-        D = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
+        D = (0, _.ZP)(t.id, n),
+        y = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
     return (
         i.useEffect(() => {
             null == S || S(null == L ? void 0 : L.current);
@@ -43,13 +43,13 @@ function S(e) {
             value: v,
             children: (0, r.jsx)(c.Mt, {
                 value: C,
-                shouldTrackViewOnMount: null == D || null != D.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == y || null != y.fullProfileLoadedTimestamp,
                 children: (0, r.jsx)(s.Dialog, {
                     ref: L,
                     'aria-label': t.username,
                     children: (0, r.jsx)(f.Z, {
                         user: t,
-                        displayProfile: y,
+                        displayProfile: D,
                         profileType: p.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
                             className: m.container,

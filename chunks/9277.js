@@ -39,7 +39,7 @@ t.Z = i.memo(
         let C = i.useCallback(() => {
                 (0, d.RO)(p.X1.GIF, a);
             }, [a]),
-            { Component: L, events: y, play: D } = (0, u.V)();
+            { Component: L, events: D, play: y } = (0, u.V)();
         if (n) return null;
         let b = A === p.X1.GIF && N === a;
         return (0, r.jsx)(c.Tooltip, {
@@ -52,10 +52,10 @@ t.Z = i.memo(
                     ...e,
                     children: (0, r.jsx)(f.Z, {
                         innerClassName: m.button,
-                        onMouseEnter: y.onMouseEnter,
-                        onMouseLeave: y.onMouseLeave,
+                        onMouseEnter: D.onMouseEnter,
+                        onMouseLeave: D.onMouseLeave,
                         onClick: () => {
-                            C(), D();
+                            C(), y();
                         },
                         isActive: b,
                         pulse: T,

@@ -34,8 +34,8 @@ var r,
     v = n(626135),
     C = n(238302),
     L = n(514361),
-    y = n(583901),
-    D = n(469115),
+    D = n(583901),
+    y = n(469115),
     b = n(981631),
     M = n(474936),
     P = n(874893),
@@ -215,7 +215,7 @@ let k = Object.freeze({
             [T, S] = s.useState(-1),
             A = (0, c.e7)([f.Z], () => f.Z.useReducedMotion);
         s.useEffect(() => {
-            ((T === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && m(!0);
+            ((T === y.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && m(!0);
         }, [T, r, u]);
         let { enabled: N } = g.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             R = (e, t) => {
@@ -266,12 +266,12 @@ let k = Object.freeze({
             };
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                D.XV.filter((e) => {
+                y.XV.filter((e) => {
                     let { id: t } = e;
                     return t !== d.Us.EASTER_EGG;
                 }).map((e, n) =>
                     (0, a.jsx)(
-                        y.DR,
+                        D.DR,
                         {
                             preset: e,
                             isSelected: u === e.id,
@@ -286,7 +286,7 @@ let k = Object.freeze({
                 ),
                 (() => {
                     if (!I) return null;
-                    let e = D.qt[d.Us.EASTER_EGG];
+                    let e = y.qt[d.Us.EASTER_EGG];
                     if (null == e) return null;
                     async function t() {
                         let { default: e } = await n.e('5217').then(n.t.bind(n, 801048, 19));
@@ -295,7 +295,7 @@ let k = Object.freeze({
                     return (0, a.jsxs)('div', {
                         className: G.easterEggSelection,
                         children: [
-                            (0, a.jsx)(y.DR, {
+                            (0, a.jsx)(D.DR, {
                                 preset: e,
                                 isSelected: u === d.Us.EASTER_EGG,
                                 onSelect: () => R(e)
@@ -330,17 +330,17 @@ let k = Object.freeze({
             children: [
                 !n &&
                     t &&
-                    (0, a.jsx)(y.bD, {
+                    (0, a.jsx)(D.bD, {
                         theme: 'system',
                         isSelected: l && u,
                         onSelect: () => d('system')
                     }),
-                (0, a.jsx)(y.bD, {
+                (0, a.jsx)(D.bD, {
                     theme: w.BR.LIGHT,
                     isSelected: l && !u && o === w.BR.LIGHT,
                     onSelect: () => d(w.BR.LIGHT)
                 }),
-                (0, a.jsx)(y.bD, {
+                (0, a.jsx)(D.bD, {
                     theme: w.BR.DARK,
                     isSelected: l && !u && o === w.BR.DARK,
                     onSelect: () => d(w.BR.DARK)
@@ -348,12 +348,12 @@ let k = Object.freeze({
                 _ &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(y.bD, {
+                            (0, a.jsx)(D.bD, {
                                 theme: w.BR.DARKER,
                                 isSelected: l && !u && o === w.BR.DARKER,
                                 onSelect: () => d(w.BR.DARKER)
                             }),
-                            (0, a.jsx)(y.bD, {
+                            (0, a.jsx)(D.bD, {
                                 theme: w.BR.MIDNIGHT,
                                 isSelected: l && !u && o === w.BR.MIDNIGHT,
                                 onSelect: () => d(w.BR.MIDNIGHT)
@@ -362,7 +362,7 @@ let k = Object.freeze({
                     }),
                 !n &&
                     !t &&
-                    (0, a.jsx)(y.bD, {
+                    (0, a.jsx)(D.bD, {
                         theme: 'system',
                         isSelected: l && u,
                         onSelect: () => d('system')

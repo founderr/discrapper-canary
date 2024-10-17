@@ -105,12 +105,12 @@ function R(e, t, n, I) {
     if (!C.match) throw RangeError('locale must contain match property');
     var L = (0, c.Z)(null !== (x = null !== (G = null !== (k = null !== (B = null == I ? void 0 : I.firstWeekContainsDate) && void 0 !== B ? B : null == I ? void 0 : null === (F = I.locale) || void 0 === F ? void 0 : null === (V = F.options) || void 0 === V ? void 0 : V.firstWeekContainsDate) && void 0 !== k ? k : v.firstWeekContainsDate) && void 0 !== G ? G : null === (H = v.locale) || void 0 === H ? void 0 : null === (Z = H.options) || void 0 === Z ? void 0 : Z.firstWeekContainsDate) && void 0 !== x ? x : 1);
     if (!(L >= 1 && L <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var y = (0, c.Z)(null !== (Y = null !== (j = null !== (W = null !== (K = null == I ? void 0 : I.weekStartsOn) && void 0 !== K ? K : null == I ? void 0 : null === (z = I.locale) || void 0 === z ? void 0 : null === (q = z.options) || void 0 === q ? void 0 : q.weekStartsOn) && void 0 !== W ? W : v.weekStartsOn) && void 0 !== j ? j : null === (Q = v.locale) || void 0 === Q ? void 0 : null === (X = Q.options) || void 0 === X ? void 0 : X.weekStartsOn) && void 0 !== Y ? Y : 0);
-    if (!(y >= 0 && y <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
+    var D = (0, c.Z)(null !== (Y = null !== (j = null !== (W = null !== (K = null == I ? void 0 : I.weekStartsOn) && void 0 !== K ? K : null == I ? void 0 : null === (z = I.locale) || void 0 === z ? void 0 : null === (q = z.options) || void 0 === q ? void 0 : q.weekStartsOn) && void 0 !== W ? W : v.weekStartsOn) && void 0 !== j ? j : null === (Q = v.locale) || void 0 === Q ? void 0 : null === (X = Q.options) || void 0 === X ? void 0 : X.weekStartsOn) && void 0 !== Y ? Y : 0);
+    if (!(D >= 0 && D <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if ('' === O) return '' === R ? (0, a.default)(n) : new Date(NaN);
-    var D = {
+    var y = {
             firstWeekContainsDate: L,
-            weekStartsOn: y,
+            weekStartsOn: D,
             locale: C
         },
         b = [new _.GT()],
@@ -161,7 +161,7 @@ function R(e, t, n, I) {
                         token: n,
                         fullToken: t
                     });
-                    var s = r.run(R, t, C.match, D);
+                    var s = r.run(R, t, C.match, y);
                     if (!s) return { v: new Date(NaN) };
                     b.push(s.setter), (R = s.rest);
                 } else {
@@ -218,8 +218,8 @@ function R(e, t, n, I) {
     try {
         for (es.s(); !(ea = es.n()).done; ) {
             var eo = ea.value;
-            if (!eo.validate(er, D)) return new Date(NaN);
-            var el = eo.set(er, ei, D);
+            if (!eo.validate(er, y)) return new Date(NaN);
+            var el = eo.set(er, ei, y);
             Array.isArray(el) ? ((er = el[0]), (0, s.Z)(ei, el[1])) : (er = el);
         }
     } catch (e) {

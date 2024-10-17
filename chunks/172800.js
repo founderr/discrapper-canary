@@ -24,7 +24,7 @@ var r = n(735250),
     O = n(689938),
     v = n(886028);
 t.Z = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: L, surrogateCodePoint: y, getEmojiItemProps: D, getEmojiRowProps: b, isScrolling: M, isUsingKeyboardNavigation: P, rowIndex: U, allowAnimatedEmoji: w, showEmojiFavoriteTooltip: x, channelGuildId: G, category: k, selectedItemClassName: B, messageId: F, isBurstReaction: V, inNitroLockedSection: H, handleScrollUpOnSectionCollapse: Z } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: L, surrogateCodePoint: D, getEmojiItemProps: y, getEmojiRowProps: b, isScrolling: M, isUsingKeyboardNavigation: P, rowIndex: U, allowAnimatedEmoji: w, showEmojiFavoriteTooltip: x, channelGuildId: G, category: k, selectedItemClassName: B, messageId: F, isBurstReaction: V, inNitroLockedSection: H, handleScrollUpOnSectionCollapse: Z } = e,
         { enabled: Y } = S.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         { useTransparentIcons: j } = T.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         W = j ? n(187119) : n(137321),
@@ -55,7 +55,7 @@ t.Z = (e) => {
                     var n;
                     let { onMouseEnter: a, onMouseLeave: o, handleSelect: u, icon: c, ariaLabel: d, shouldShowRoundHighlight: _ } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: E, columnIndex: f } = e,
-                        { ref: h, tabIndex: p, onFocus: I, ...m } = null !== (n = D(f, U)) && void 0 !== n ? n : {},
+                        { ref: h, tabIndex: p, onFocus: I, ...m } = null !== (n = y(f, U)) && void 0 !== n ? n : {},
                         T = $.rowIndex === E && $.columnIndex === f,
                         S = () => {
                             !M.current && !P.current && L(e);
@@ -164,13 +164,13 @@ t.Z = (e) => {
                             isInspected: s,
                             isScrolling: M,
                             isUsingKeyboardNavigation: P,
-                            surrogateCodePoint: y,
+                            surrogateCodePoint: D,
                             allowAnimatedEmoji: w,
                             selectedItemClassName: B,
                             onSelect: C,
                             onInspect: L,
                             channelGuildId: G,
-                            getEmojiItemProps: D,
+                            getEmojiItemProps: y,
                             isMediumSize: ei,
                             isLargeSize: er,
                             pulseItemKey: ee,

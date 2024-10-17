@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return D;
     }
 }),
     n(477488),
@@ -63,9 +63,9 @@ function L(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
-function y(e) {
+function D(e) {
     var t, n, a;
-    let { items: s, onIndexChange: o, fit: h, startIndex: T = 0, shouldRedactExplicitContent: C = !1, shouldHideMediaOptions: y = !1, shouldAnimateCarousel: D = !1 } = e,
+    let { items: s, onIndexChange: o, fit: h, startIndex: T = 0, shouldRedactExplicitContent: C = !1, shouldHideMediaOptions: D = !1, shouldAnimateCarousel: y = !1 } = e,
         [b, M] = (0, i.useState)(T),
         P = (0, i.useRef)(T),
         [U, w] = (0, i.useState)([]);
@@ -122,7 +122,7 @@ function y(e) {
             },
             C
         ),
-        j = y
+        j = D
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
@@ -153,7 +153,7 @@ function y(e) {
                     tension: 250
                 }
             },
-            D ? 'respect-motion-settings' : 'animate-never'
+            y ? 'respect-motion-settings' : 'animate-never'
         );
     return (0, r.jsxs)('div', {
         className: v.wrapper,
@@ -187,7 +187,7 @@ function y(e) {
                                             })
                                     }),
                                     ('IMAGE' !== t.type || null != t.original) &&
-                                        !y &&
+                                        !D &&
                                         (0, r.jsxs)('div', {
                                             className: v.optionsContainer,
                                             children: [

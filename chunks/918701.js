@@ -54,7 +54,7 @@ n.d(t, {
         return z;
     },
     Qe: function () {
-        return y;
+        return D;
     },
     Rs: function () {
         return K;
@@ -190,7 +190,7 @@ var f = n(572004),
     v = n(981631),
     C = n(701488),
     L = n(689938);
-function y(e) {
+function D(e) {
     try {
         return (0, a.EQ)(e.config)
             .with({ config_version: 2 }, () => !0)
@@ -200,13 +200,13 @@ function y(e) {
         return console.error("Unknown config version '".concat(null == e ? void 0 : null === (t = e.config) || void 0 === t ? void 0 : t.config_version, "'"), n), !1;
     }
 }
-let D = (e) => e.application_id === C.Ev || e.platform === v.M7m.XBOX,
+let y = (e) => e.application_id === C.Ev || e.platform === v.M7m.XBOX,
     b = (e) => e.platform === v.M7m.PS4 || e.platform === v.M7m.PS5;
 function M(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = N.r.build(t.config).application.name.toLowerCase();
-    return D(e) || b(e) ? n === r : null != e.application_id && U(e.application_id, t);
+    return y(e) || b(e) ? n === r : null != e.application_id && U(e.application_id, t);
 }
 function P(e, t) {
     for (let [n, r] of e) if (M(t, r) && !G(r)) return r;
@@ -600,12 +600,12 @@ let em = (e, t) => {
                 percentComplete: 0,
                 taskType: s.X.STREAM_ON_DESKTOP
             };
-        if (ey(e))
+        if (eD(e))
             return eO({
                 quest: e,
                 includeTaskTypes: null != t ? t : eP(e) ? s.T.CONSOLE : s.T.ALL
             });
-        if (eD(e)) {
+        if (ey(e)) {
             var n, r, i, a, o;
             let t = null !== (a = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
                 l = null !== (o = null === (i = e.config.taskConfig.tasks[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === i ? void 0 : i.target) && void 0 !== o ? o : 1000,
@@ -644,10 +644,10 @@ function eC(e) {
     };
 }
 let eL = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
-    ey = eL([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
-    eD = eL([s.X.PLAY_ON_DESKTOP_V2]);
+    eD = eL([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
+    ey = eL([s.X.PLAY_ON_DESKTOP_V2]);
 function eb(e) {
-    return ey(e);
+    return eD(e);
 }
 let eM = (e, t) => {
     var n, r;
@@ -750,7 +750,7 @@ function eH(e) {
                 let { quest: t } = e;
                 return t.config.taskConfig.type === u.L.FIRST_PARTY && null != t.config.taskConfig.tasks[s.X.STREAM_ON_DESKTOP];
             })({ quest: e }),
-        n = ey(e),
+        n = eD(e),
         r = [];
     return t && r.push(O.cd.DESKTOP), n && r.push(O.cd.CONSOLE), r;
 }

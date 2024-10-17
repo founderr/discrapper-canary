@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(639119),
     C = n(53691),
     L = n(75145),
-    y = n(631771),
-    D = n(695346),
+    D = n(631771),
+    y = n(695346),
     b = n(594174),
     M = n(78839),
     P = n(626135),
@@ -53,7 +53,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     ee = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     et = (e) => e + 2 * ee,
     en = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: R, channelGuildId: O, messageId: v, isBurstReaction: C, listHeaderClassName: y, activeSectionIndex: D, upsellGlowOpacity: b, emojiListRef: U } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: R, channelGuildId: O, messageId: v, isBurstReaction: C, listHeaderClassName: D, activeSectionIndex: y, upsellGlowOpacity: b, emojiListRef: U } = e,
             w = (0, f.O)(),
             x = i.useRef(Z.xAR),
             j = i.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -169,14 +169,14 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                       : null,
                             c = null == i ? void 0 : i.toString();
                         null != a && (c = (0, G.Y1)(a, null == i ? void 0 : i.toString()));
-                        let d = D === e,
+                        let d = y === e,
                             _ = n.isNitroLocked,
                             f = _ && !d,
                             h = _ && d;
                         return (0, r.jsx)(
                             g.Z,
                             {
-                                className: s()(K.header, y, {
+                                className: s()(K.header, D, {
                                     [K.inactiveNitroHeader]: f,
                                     [K.activeNitroHeader]: h
                                 }),
@@ -188,7 +188,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                             l
                         );
                     }),
-                [E, t, et, y, D]
+                [E, t, et, D, y]
             ),
             es = (0, c.e7)([M.ZP], () => M.ZP.inReverseTrial()),
             eo = i.useCallback(
@@ -244,7 +244,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             H = i.useRef(!1),
             Y = I.kJ.useStore((e) => e.activeCategoryIndex),
             z = (0, m.Iu)((e) => e.searchQuery),
-            q = D.Yk.useSetting(),
+            q = y.Yk.useSetting(),
             Q = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
             X = (0, U.I5)(Q),
             { location: $ } = (0, f.O)(),
@@ -256,7 +256,7 @@ let z = (0, x.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             eu = (0, O.Ng)(),
             ec = ei && !X && !u.tq,
             ed = null != el || null != eu,
-            { enabled: e_ } = y.Gi.useExperiment(
+            { enabled: e_ } = D.Gi.useExperiment(
                 { location: 'Premium Emoji Roadblock' },
                 {
                     autoTrackExposure: ec && !ed,

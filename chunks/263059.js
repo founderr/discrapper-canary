@@ -29,8 +29,8 @@ var r = n(735250),
     v = n(315324),
     C = n(582123),
     L = n(262210),
-    y = n(666984),
-    D = n(290274),
+    D = n(666984),
+    y = n(290274),
     b = n(228168),
     M = n(676411);
 function P(e) {
@@ -120,7 +120,7 @@ function P(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: s()(M.actions, k),
-                      children: (0, r.jsx)(y.Z, {
+                      children: (0, r.jsx)(D.Z, {
                           user: t,
                           activity: a,
                           onAction: Y
@@ -149,7 +149,7 @@ function P(e) {
                                     (0, r.jsx)(R.Z, {
                                         text: V.text,
                                         icon: V.icon,
-                                        contextMenu: (0, r.jsx)(D.Z, {
+                                        contextMenu: (0, r.jsx)(y.Z, {
                                             display: 'live',
                                             user: t,
                                             activity: a,

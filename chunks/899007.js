@@ -28,8 +28,8 @@ var r = n(735250),
 let R = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function O(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: O, animateOnHover: v, onOpenProfile: C, className: L } = e,
-        { theme: y } = (0, T.z)(),
-        { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
+        { theme: D } = (0, T.z)(),
+        { analyticsLocations: y } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: b } = (0, p.KZ)(),
         M = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2),
         P = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
@@ -66,7 +66,7 @@ function O(e) {
             'aria-label': t.username,
             imageClassName: null != C ? N.overlay : void 0,
             status: P ? g.Skl.UNKNOWN : x,
-            statusBackdropColor: M && !P ? (0, l.getStatusBackdropColor)(y) : void 0,
+            statusBackdropColor: M && !P ? (0, l.getStatusBackdropColor)(D) : void 0,
             isMobile: G,
             statusTooltip: !0,
             statusTooltipDelay: S.vB
@@ -84,7 +84,7 @@ function O(e) {
               onClick: () => {
                   b({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: D
+                      analyticsLocations: y
                   }),
                       null == C || C();
               },

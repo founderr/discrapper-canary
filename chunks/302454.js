@@ -160,17 +160,17 @@ var t, n;
             L = function (e, t, n) {
                 return { content: C(t, e[1], n) };
             },
-            y = function () {
+            D = function () {
                 return {};
             },
-            D = '(?:[*+-]|\\d+\\.)',
-            b = '( *)(' + D + ') +',
+            y = '(?:[*+-]|\\d+\\.)',
+            b = '( *)(' + y + ') +',
             M = RegExp('^' + b),
-            P = RegExp(b + '[^\\n]*(?:\\n(?!\\1' + D + ' )[^\\n]*)*(\n|$)', 'gm'),
+            P = RegExp(b + '[^\\n]*(?:\\n(?!\\1' + y + ' )[^\\n]*)*(\n|$)', 'gm'),
             U = /\n{2,}$/,
             w = /^ (?= *`)|(` *) $/g,
             x = / *\n+$/,
-            G = RegExp('^( *)(' + D + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + D + ' )\\n*|\\s*\n*$)'),
+            G = RegExp('^( *)(' + y + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + y + ' )\\n*|\\s*\n*$)'),
             k = /(?:^|\n)( *)$/;
         var B =
                 ((e = /^ *\| *| *\| *$/g),
@@ -329,7 +329,7 @@ var t, n;
                 hr: {
                     order: j++,
                     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
-                    parse: y,
+                    parse: D,
                     react: function (e, t, n) {
                         return m('hr', n.key, S);
                     },
@@ -529,7 +529,7 @@ var t, n;
                     order: j++,
                     requiredFirstCharacters: ['\n'],
                     match: h(/^(?:\n *)*\n/),
-                    parse: y,
+                    parse: D,
                     react: function (e, t, n) {
                         return '\n';
                     },
@@ -797,7 +797,7 @@ var t, n;
                     order: j++,
                     requiredFirstCharacters: [' '],
                     match: p(/^ {2,}\n/),
-                    parse: y,
+                    parse: D,
                     react: function (e, t, n) {
                         return m('br', n.key, S);
                     },

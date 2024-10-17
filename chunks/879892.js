@@ -41,16 +41,16 @@ async function p(e) {
         );
         return;
     }
-    let y = [];
-    !c.Z.isLoadedForPremiumSKUs() && y.push((0, o.Y2)()), !u.Z.hasFetched && (y.push(a.jg()), y.push((0, s.X8)())), y.length > 0 && (await Promise.allSettled(y));
-    let D = (0, _.vx)(u.Z.boostSlots),
-        b = D.length,
+    let D = [];
+    !c.Z.isLoadedForPremiumSKUs() && D.push((0, o.Y2)()), !u.Z.hasFetched && (D.push(a.jg()), D.push((0, s.X8)())), D.length > 0 && (await Promise.allSettled(D));
+    let y = (0, _.vx)(u.Z.boostSlots),
+        b = y.length,
         M = (e) => {
             null == T || T(), null == N || N(e);
         };
     if (b > 0 && (null == m || b >= m)) {
         let e;
-        1 === b ? (e = D.slice(0, 1)) : null != m && (e = D.slice(0, m)),
+        1 === b ? (e = y.slice(0, 1)) : null != m && (e = y.slice(0, m)),
             await (0, i.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e('29549'), n.e('8016'), n.e('12013'), n.e('52249'), n.e('22646'), n.e('30419'), n.e('94872')]).then(n.bind(n, 760558));

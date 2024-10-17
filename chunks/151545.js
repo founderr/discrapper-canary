@@ -37,8 +37,8 @@ function A(e) {
         ),
         C = v && E.Z.can(g.Plq.CONNECT, O),
         L = (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && C ? O : null,
-        y = (0, p.F)({ location: 'UserProfileActivityCardWrapper' }),
-        D = t.id === n.id,
+        D = (0, p.F)({ location: 'UserProfileActivityCardWrapper' }),
+        y = t.id === n.id,
         b = (0, a.e7)([_.Z, f.Z, d.Z], () => {
             if ((0, s.Z)(A)) {
                 var e, n;
@@ -63,7 +63,7 @@ function A(e) {
     )
         return null;
     if ((0, o.Z)(A))
-        return y && !D
+        return D && !y
             ? (0, r.jsx)(S.Z, {
                   user: t,
                   currentUser: n,
@@ -82,7 +82,7 @@ function A(e) {
                   className: N,
                   onClose: R
               });
-    return y && !D
+    return D && !y
         ? (0, r.jsx)(m.Z, {
               user: t,
               currentUser: n,

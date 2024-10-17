@@ -90,13 +90,13 @@ let L = (e) => {
     );
 };
 t.ZP = (e) => {
-    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: y, hasQuest: D } = e,
+    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: D, hasQuest: y } = e,
         b = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
-        M = (0, o.e7)([T.default], () => T.default.getId() === (null == y ? void 0 : y.id)),
+        M = (0, o.e7)([T.default], () => T.default.getId() === (null == D ? void 0 : D.id)),
         P = (0, o.e7)([p.Z], () => (M ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
         U = (0, o.e7)([A.Z, S.Z], () => {
             var e;
-            return null != P && null != y ? S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(y.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != P && null != D ? S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(D.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         { enableHangStatus: w } = h.n.useExperiment(
             {
@@ -135,7 +135,7 @@ t.ZP = (e) => {
                       text: V,
                       className: a
                   }),
-                  D &&
+                  y &&
                       (0, r.jsx)(l.QuestsIcon, {
                           size: 'custom',
                           className: O.questsIcon,

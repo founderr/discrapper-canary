@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(981631),
     C = n(921944),
     L = n(474936),
-    y = n(689938),
-    D = n(746734),
+    D = n(689938),
+    y = n(746734),
     b = n(933283);
 let M = [
         {
@@ -184,7 +184,7 @@ t.Z = i.memo(function (e) {
             });
         },
         Z = (0, r.jsxs)('div', {
-            className: D.container,
+            className: y.container,
             onMouseEnter: () => {
                 !l && d(!0);
             },
@@ -201,13 +201,13 @@ t.Z = i.memo(function (e) {
                     }),
                 (0, r.jsx)(O.Z, {
                     innerClassName: b.button,
-                    'aria-label': y.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
                         d(!1), (0, f.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: C.L.TAKE_ACTION }), H();
                     },
                     children: (0, r.jsx)('div', {
-                        className: D.noPointerEvents,
+                        className: y.noPointerEvents,
                         children: (0, r.jsx)(B, {
                             hovered: l,
                             isContentDismissed: !k
@@ -219,7 +219,7 @@ t.Z = i.memo(function (e) {
     return k
         ? Z
         : (0, r.jsx)(u.TooltipContainer, {
-              className: D.container,
+              className: y.container,
               text: (0, c.i)(V),
               children: Z
           });

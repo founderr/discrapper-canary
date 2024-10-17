@@ -38,10 +38,10 @@ let O = !1,
 function L() {
     O = !0;
 }
-function y() {
+function D() {
     v && (r = void 0), (C = !1), (O = !1);
 }
-let D = () => {
+let y = () => {
         v = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
     },
     b = () => {
@@ -67,7 +67,7 @@ let D = () => {
     };
 class P extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], D), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], y), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
     }
     getState() {
         return v ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -125,7 +125,7 @@ R(P, 'displayName', 'ClientThemesBackgroundStore'),
             })();
         },
         CLIENT_THEMES_EDITOR_CLOSE: (e) => {
-            y();
+            D();
         },
         RESET_PREVIEW_CLIENT_THEME: (e) => {
             r = void 0;
@@ -143,6 +143,6 @@ R(P, 'displayName', 'ClientThemesBackgroundStore'),
                 })());
         },
         LOGOUT: function () {
-            y();
+            D();
         }
     }));

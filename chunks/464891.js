@@ -38,8 +38,8 @@ var r = n(735250),
     v = n(430824),
     C = n(496675),
     L = n(594174),
-    y = n(768581),
-    D = n(585483),
+    D = n(768581),
+    y = n(585483),
     b = n(630388),
     M = n(74538),
     P = n(276554),
@@ -229,7 +229,7 @@ function z(e) {
                     var e, t;
                     return V && null == U.avatar && (null === (e = h.application) || void 0 === e ? void 0 : e.icon) != null
                         ? null !==
-                              (t = y.ZP.getApplicationIconURL({
+                              (t = D.ZP.getApplicationIconURL({
                                   id: h.application.id,
                                   icon: h.application.icon,
                                   size: x,
@@ -240,7 +240,7 @@ function z(e) {
                         : G;
                 }, [V, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, U.avatar, x, G]);
             return (i.useEffect(() => {
-                if (null != m) return D.S.subscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L), () => void D.S.unsubscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L);
+                if (null != m) return y.S.subscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L), () => void y.S.unsubscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L);
             }, [w, m]),
             I && !M)
                 ? void 0
@@ -254,7 +254,7 @@ function z(e) {
                                       return (0, R.Z)(
                                           h.author.id,
                                           null != p.guildMemberAvatar && null != s
-                                              ? y.ZP.getGuildMemberAvatarURLSimple({
+                                              ? D.ZP.getGuildMemberAvatarURLSimple({
                                                     guildId: s,
                                                     userId: h.author.id,
                                                     avatar: p.guildMemberAvatar,

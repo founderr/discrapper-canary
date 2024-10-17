@@ -140,7 +140,7 @@ function f(e, t) {
             case 'hex':
                 return n >>> 1;
             case 'base64':
-                return y(e).length;
+                return D(e).length;
             default:
                 if (i) return r ? -1 : C(e).length;
                 (t = ('' + t).toLowerCase()), (i = !0);
@@ -360,7 +360,7 @@ function m(e, t, n, r, i) {
         return I(this, e, t, n, !1);
     });
 function T(e, t, n, r) {
-    return D(L(t), e, n, r);
+    return y(L(t), e, n, r);
 }
 (o.prototype.write = function (e, t, n, r) {
     if (void 0 === t) (r = 'utf8'), (n = this.length), (t = 0);
@@ -409,17 +409,17 @@ function T(e, t, n, r) {
                 })(this, e, t, n);
             case 'utf8':
             case 'utf-8':
-                return (i = this), (a = e), (s = t), (o = n), D(C(a, i.length - s), i, s, o);
+                return (i = this), (a = e), (s = t), (o = n), y(C(a, i.length - s), i, s, o);
             case 'ascii':
-                return (l = this), (u = e), (c = t), (d = n), D(L(u), l, c, d);
+                return (l = this), (u = e), (c = t), (d = n), y(L(u), l, c, d);
             case 'latin1':
             case 'binary':
                 return (function (e, t, n, r) {
                     var i, a, s, o;
-                    return (i = e), (a = t), (s = n), (o = r), D(L(a), i, s, o);
+                    return (i = e), (a = t), (s = n), (o = r), y(L(a), i, s, o);
                 })(this, e, t, n);
             case 'base64':
-                return (_ = this), (E = e), (f = t), (h = n), D(y(E), _, f, h);
+                return (_ = this), (E = e), (f = t), (h = n), y(D(E), _, f, h);
             case 'ucs2':
             case 'ucs-2':
             case 'utf16le':
@@ -429,7 +429,7 @@ function T(e, t, n, r) {
                     (I = e),
                     (m = t),
                     (T = n),
-                    D(
+                    y(
                         (function (e, t) {
                             for (var n, r, i, a = [], s = 0; s < e.length && !((t -= 2) < 0); ++s) (r = (n = e.charCodeAt(s)) >> 8), (i = n % 256), a.push(i), a.push(r);
                             return a;
@@ -734,7 +734,7 @@ function L(e) {
     for (var t = [], n = 0; n < e.length; ++n) t.push(255 & e.charCodeAt(n));
     return t;
 }
-function y(e) {
+function D(e) {
     return r.toByteArray(
         (function (e) {
             if ((e = (e = e.split('=')[0]).trim().replace(v, '')).length < 2) return '';
@@ -743,7 +743,7 @@ function y(e) {
         })(e)
     );
 }
-function D(e, t, n, r) {
+function y(e, t, n, r) {
     for (var i = 0; i < r && !(i + n >= t.length) && !(i >= e.length); ++i) t[i + n] = e[i];
     return i;
 }

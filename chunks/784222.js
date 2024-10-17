@@ -43,8 +43,8 @@ var r,
     v = n(771845),
     C = n(594174),
     L = n(78839),
-    y = n(176354),
-    D = n(111361),
+    D = n(176354),
+    y = n(111361),
     b = n(111846),
     M = n(392552),
     P = n(543241),
@@ -77,7 +77,7 @@ let B = (e) => {
         K = (0, E.e7)([h.ZP], () => h.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: z } = (0, A.XJ)(f),
         q = (0, E.e7)([C.default], () => C.default.getCurrentUser()),
-        Q = (0, D.I5)(q),
+        Q = (0, y.I5)(q),
         X = (0, E.e7)([L.ZP], () => L.ZP.inReverseTrial()),
         $ = g.getCustomEmoji(),
         J = (e) => {
@@ -112,7 +112,7 @@ let B = (e) => {
                     let o = new Map(),
                         c = n.has(s.sectionId),
                         [_, f] = d().partition(a, (e) => {
-                            let n = y.ZP.isEmojiDisabled({
+                            let n = D.ZP.isEmojiDisabled({
                                 emoji: e,
                                 channel: t,
                                 intention: i
@@ -128,8 +128,8 @@ let B = (e) => {
                         C = null != g && N && et && en === M.B.WITH_TOP_LIST && ee[g.id].length < g.getMaxEmojiSlots(),
                         L = r && z && null != g && (R || v || C);
                     L && C && T.length === m && T.shift();
-                    let D = T.length > S,
-                        b = er && D && null != g && s.isNitroLocked,
+                    let y = T.length > S,
+                        b = er && y && null != g && s.isNitroLocked,
                         U = b && !K.has(g.id);
                     U && T.splice(S - 1);
                     let w = et && L && !c,
@@ -231,7 +231,7 @@ let B = (e) => {
                             if (null == r) return;
                             let a = r.filter(
                                 (e) =>
-                                    y.ZP.getEmojiUnavailableReason({
+                                    D.ZP.getEmojiUnavailableReason({
                                         emoji: e,
                                         channel: null != t ? t : N.ZP.getDefaultChannel(n),
                                         intention: i
@@ -242,7 +242,7 @@ let B = (e) => {
                                 o =
                                     X ||
                                     (!Q &&
-                                        y.ZP.isEmojiCategoryNitroLocked({
+                                        D.ZP.isEmojiCategoryNitroLocked({
                                             categoryEmojis: a,
                                             channel: t,
                                             intention: i
@@ -276,7 +276,7 @@ let B = (e) => {
                     } else if (e === x.UX.RECENT) {
                         let n = (i === G.Hz.REACTION && (H || Z) ? V : F).filter(
                             (e) =>
-                                !y.ZP.isEmojiFiltered({
+                                !D.ZP.isEmojiFiltered({
                                     emoji: e,
                                     channel: t,
                                     intention: i
@@ -292,7 +292,7 @@ let B = (e) => {
                     } else if (e === x.UX.FAVORITES) {
                         let n = B.filter(
                             (e) =>
-                                !y.ZP.isEmojiFiltered({
+                                !D.ZP.isEmojiFiltered({
                                     emoji: e,
                                     channel: t,
                                     intention: i
@@ -339,7 +339,7 @@ let F = (e) => {
                     case 0: {
                         let { emoji: u } = e;
                         if (null == u) return;
-                        let c = y.ZP.getEmojiUnavailableReason({
+                        let c = D.ZP.getEmojiUnavailableReason({
                             emoji: u,
                             channel: n,
                             intention: t

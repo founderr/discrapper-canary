@@ -31,7 +31,7 @@ function C(e) {
 function L(e) {
     return v(e.entitlement);
 }
-class y extends (r = u.yh) {
+class D extends (r = u.yh) {
     initialize() {
         this.syncWith([_.Z], () => !0);
     }
@@ -109,7 +109,7 @@ class y extends (r = u.yh) {
     }
 }
 (s = 'EntitlementStore'),
-    (a = 'displayName') in (i = y)
+    (a = 'displayName') in (i = D)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -117,7 +117,7 @@ class y extends (r = u.yh) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new y(c.Z, {
+    (t.Z = new D(c.Z, {
         ENTITLEMENT_FETCH_APPLICATION_START: function (e) {
             let { applicationId: t } = e;
             N.add(t);

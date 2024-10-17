@@ -179,19 +179,19 @@ let L = new (class e {
         p(this, '_nextCheck', void 0), p(this, '_started', void 0), (this._started = !1);
     }
 })();
-function y() {
+function D() {
     f.Z.enabled ? L.start() : L.stop();
 }
-class D extends (r = s.ZP.Store) {
+class y extends (r = s.ZP.Store) {
     initialize() {
-        y(), this.waitFor(E.Z), this.syncWith([f.Z], y);
+        D(), this.waitFor(E.Z), this.syncWith([f.Z], D);
     }
     getStream() {
         return g;
     }
 }
-p(D, 'displayName', 'ExternalStreamingStore'),
-    (t.Z = new D(l.Z, {
+p(y, 'displayName', 'ExternalStreamingStore'),
+    (t.Z = new y(l.Z, {
         STREAMING_UPDATE: function (e) {
             var t;
             if (a()(e.stream, g)) return !1;

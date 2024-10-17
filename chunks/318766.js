@@ -50,10 +50,10 @@ let A = {
 t.Z = function (e) {
     var t;
     let { tabIndex: n, className: a, renderButtonContents: R, active: O, onClick: v, 'aria-controls': C, focusProps: L } = e,
-        [y, D] = i.useState(!1),
+        [D, y] = i.useState(!1),
         [b, M] = i.useState(50),
         P = (0, l.e7)([f.ZP], () => f.ZP.inReverseTrial()),
-        U = y || O,
+        U = D || O,
         w = (0, p.l)(g, 'emojiButton', U ? 'Hovered' : 'Normal');
     let x =
             ((t = b),
@@ -65,11 +65,11 @@ t.Z = function (e) {
         G = i.useCallback(() => {
             if (U) return;
             let e = Math.floor(77 * Math.random());
-            D(!0), M(e), (0, E.x)(T.qR.EmojiButtonMouseEntered);
-        }, [U, D, M]),
+            y(!0), M(e), (0, E.x)(T.qR.EmojiButtonMouseEntered);
+        }, [U, y, M]),
         k = i.useCallback(() => {
-            D(!1);
-        }, [D]),
+            y(!1);
+        }, [y]),
         B = i.useCallback(() => (0, E.x)(T.qR.EmojiButtonFocused), []),
         [F, V] = (0, _.US)(P ? [u.z.REVERSE_TRIAL_EMOJI_BUTTON] : [], void 0, !0),
         H = F === u.z.REVERSE_TRIAL_EMOJI_BUTTON,

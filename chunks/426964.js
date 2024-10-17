@@ -24,8 +24,8 @@ var r = n(735250),
     v = n(954138),
     C = n(169559),
     L = n(284019),
-    y = n(308083),
-    D = n(981631),
+    D = n(308083),
+    y = n(981631),
     b = n(49898),
     M = n(128449),
     P = n(689938),
@@ -48,7 +48,7 @@ t.Z = i.memo(function (e) {
             var e;
             return (null == F ? void 0 : F.id) != null && (null === (e = f.Z.getRequest(F.id)) || void 0 === e ? void 0 : e.applicationStatus) === E.wB.SUBMITTED;
         }),
-        z = null != F && F.memberCount >= y.Du,
+        z = null != F && F.memberCount >= D.Du,
         q = (0, c.wE)(a.z.CLAN_TAG_WAITLIST),
         Q = (0, o.e7)([T.default], () => T.default.getUser(j), [j]),
         X = (null == W ? void 0 : W.joinedAt) != null,
@@ -103,10 +103,10 @@ t.Z = i.memo(function (e) {
             [F, B, J, G, k]
         ),
         ea = i.useCallback(() => {
-            open(S.Z.getArticleURL(D.BhN.CLANS_FAQ));
+            open(S.Z.getArticleURL(y.BhN.CLANS_FAQ));
         }, []),
         es = i.useCallback(() => {
-            if (null != B) (0, g.hM)(B, g.UE.APPLICATION), (0, p.uL)(D.Z5c.GUILD_MEMBER_VERIFICATION(B));
+            if (null != B) (0, g.hM)(B, g.UE.APPLICATION), (0, p.uL)(y.Z5c.GUILD_MEMBER_VERIFICATION(B));
         }, [B]),
         eo = i.useCallback(() => {
             if (null != B) (0, g.hM)(B, g.UE.GUILD), (0, p.XU)(B);
@@ -155,7 +155,7 @@ t.Z = i.memo(function (e) {
                         ...el,
                         children: P.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
-                case !X && (null == F ? void 0 : null === (e = F.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(D.oNc.CLAN_DISCOVERY_DISABLED)):
+                case !X && (null == F ? void 0 : null === (e = F.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(y.oNc.CLAN_DISCOVERY_DISABLED)):
                     return null;
                 case !X && ee:
                     return (0, r.jsx)(L.Z, {

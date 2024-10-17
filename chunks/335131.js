@@ -18,10 +18,10 @@ n.d(t, {
         return C;
     },
     SN: function () {
-        return D;
+        return y;
     },
     Zu: function () {
-        return y;
+        return D;
     },
     fK: function () {
         return R;
@@ -255,13 +255,13 @@ let p = (e) => {
             );
         }
     },
-    y = async (e) => {
+    D = async (e) => {
         await a.tn.post({
             url: h.ANM.CONSUME_HD_STREAMING_POTION,
             body: { channel_id: e }
         });
     },
-    D = (e) => {
+    y = (e) => {
         s.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e

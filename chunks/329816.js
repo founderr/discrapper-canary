@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(94795),
     C = n(327943),
     L = n(907459),
-    y = n(559407),
-    D = n(556766),
+    D = n(559407),
+    y = n(556766),
     b = n(514361),
     M = n(724145),
     P = n(260035),
@@ -176,7 +176,7 @@ t.Z = function (e) {
                                                                                     className: s()(T ? ei.mobileApp : ei.app),
                                                                                     children: t
                                                                                 }),
-                                                                                (0, r.jsx)(y.Z, {}),
+                                                                                (0, r.jsx)(D.Z, {}),
                                                                                 (0, r.jsx)(p.Z, {}),
                                                                                 (0, r.jsx)(E.Modals, {}),
                                                                                 (0, r.jsx)(I.Z, {}),
@@ -192,7 +192,7 @@ t.Z = function (e) {
                                                                     })
                                                                 })
                                                             }),
-                                                            (0, r.jsx)(D.Z, {}),
+                                                            (0, r.jsx)(y.Z, {}),
                                                             (0, r.jsx)(h.Z, {}),
                                                             eS && !eN && (0, r.jsx)(M.Z, { markAsDismissed: ep }),
                                                             eg &&

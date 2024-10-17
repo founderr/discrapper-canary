@@ -108,7 +108,7 @@ class N extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: E, stickToMarkers: f, className: m, children: S, barStyles: g, fillStyles: A, mini: N, hideBubble: O, defaultValue: v, orientation: C, onValueRender: L, renderMarker: y, getAriaValueText: D, barClassName: b, grabberClassName: M, grabberStyles: P = {}, markerPosition: U = 0, 'aria-hidden': w, 'aria-label': x, 'aria-labelledby': G, 'aria-describedby': k } = this.props,
+            { disabled: E, stickToMarkers: f, className: m, children: S, barStyles: g, fillStyles: A, mini: N, hideBubble: O, defaultValue: v, orientation: C, onValueRender: L, renderMarker: D, getAriaValueText: y, barClassName: b, grabberClassName: M, grabberStyles: P = {}, markerPosition: U = 0, 'aria-hidden': w, 'aria-label': x, 'aria-labelledby': G, 'aria-describedby': k } = this.props,
             B = 0;
         f ? null != a && (null != l ? (B = a[l]) : null != o && (B = a[o])) : (B = this.scaleValue(t));
         let F = ''.concat(B, '%'),
@@ -128,8 +128,8 @@ class N extends (i = o.PureComponent) {
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
-                                      null != y
-                                          ? y(n)
+                                      null != D
+                                          ? D(n)
                                           : (0, s.jsxs)(s.Fragment, {
                                                 children: [
                                                     (0, s.jsx)('div', {
@@ -145,7 +145,7 @@ class N extends (i = o.PureComponent) {
                       })
                     : null,
             H = null != L ? L(t) : ''.concat(B.toFixed(0), '%'),
-            Z = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+            Z = null !== (e = null == y ? void 0 : y(t)) && void 0 !== e ? e : void 0;
         return (0, s.jsx)(R, {
             active: n,
             keyboardFocused: r && I.Z.keyboardModeEnabled,

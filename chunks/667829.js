@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(4484),
     C = n(925994),
     L = n(981631),
-    y = n(689938),
-    D = n(933283);
+    D = n(689938),
+    y = n(933283);
 function b(e, t, n) {
     return (
         t in e
@@ -51,13 +51,13 @@ let M = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     P = {
-        12: D.fontSize12Padding,
-        14: D.fontSize14Padding,
-        15: D.fontSize15Padding,
-        16: D.fontSize16Padding,
-        18: D.fontSize18Padding,
-        20: D.fontSize20Padding,
-        24: D.fontSize24Padding
+        12: y.fontSize12Padding,
+        14: y.fontSize14Padding,
+        15: y.fontSize15Padding,
+        16: y.fontSize16Padding,
+        18: y.fontSize18Padding,
+        20: y.fontSize20Padding,
+        24: y.fontSize24Padding
     };
 class U extends i.Component {
     componentDidMount() {
@@ -158,17 +158,17 @@ class U extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n } = this.props;
-        return e && !n ? y.Z.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t;
+        return e && !n ? D.Z.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t;
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: E, onResize: f, onSubmit: h, channel: p, type: I, fontSize: m, useSlate: T, spellcheckEnabled: g, useNewSlashCommands: R, canOnlyUseTextCommands: C, className: y, id: b, required: M, maxCharacterCount: U, allowNewLines: w, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: E, onResize: f, onSubmit: h, channel: p, type: I, fontSize: m, useSlate: T, spellcheckEnabled: g, useNewSlashCommands: R, canOnlyUseTextCommands: C, className: D, id: b, required: M, maxCharacterCount: U, allowNewLines: w, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
             { submitting: B, popup: F } = this.state,
             V = {
                 channel: p,
-                className: s()(y, D.textArea, {
-                    [D.textAreaSlate]: T,
-                    [D.textAreaDisabled]: c || B
+                className: s()(D, y.textArea, {
+                    [y.textAreaSlate]: T,
+                    [y.textAreaDisabled]: c || B
                 }),
                 id: b,
                 placeholder: this.getPlaceholder(),
@@ -191,10 +191,10 @@ class U extends i.Component {
                 onKeyDown: E,
                 onSubmit: h,
                 textAreaPaddingClassName: s()(P[m], {
-                    [D.textAreaWithoutAttachmentButton]: I !== A.I.NORMAL && I !== A.I.OVERLAY && I !== A.I.THREAD_CREATION && I !== A.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: I === A.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: I === A.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: I === A.I.USER_PROFILE
+                    [y.textAreaWithoutAttachmentButton]: I !== A.I.NORMAL && I !== A.I.OVERLAY && I !== A.I.THREAD_CREATION && I !== A.I.SIDEBAR,
+                    [y.textAreaForPostCreation]: I === A.I.CREATE_FORUM_POST,
+                    [y.textAreaCustomGift]: I === A.I.CUSTOM_GIFT,
+                    [y.textAreaForUserProfile]: I === A.I.USER_PROFILE
                 }),
                 spellcheckEnabled: g,
                 useNewSlashCommands: R,

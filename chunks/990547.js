@@ -44,7 +44,7 @@ n.r(t),
             return C;
         },
         getDevice: function () {
-            return y;
+            return D;
         },
         getOS: function () {
             return L;
@@ -152,7 +152,7 @@ function L() {
     else if (/Linux/i.test(e)) return 'Linux';
     else return '';
 }
-function y() {
+function D() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'BlackBerry';
     if (/Windows Phone/i.test(e)) return 'Windows Phone';
@@ -161,7 +161,7 @@ function y() {
     else if (/iPad/.test(e)) return 'iPad';
     else return '';
 }
-function D() {
+function y() {
     let e = {};
     return (
         (e.referrer = document.referrer),
@@ -223,20 +223,20 @@ if (null == r)
                             else if (/Gecko/.test(e)) return 'Mozilla';
                             else return '';
                         })()),
-                        (e.device = y()),
+                        (e.device = D()),
                         (e.system_locale = (0, _.qf)()),
                         e
                     );
                 })()),
                 E.K.set(S, e)),
             (t = E.K.get(g)),
-            null == t && ((t = D()), E.K.set(g, t)),
+            null == t && ((t = y()), E.K.set(g, t)),
             (n = f.x.get(g)),
             null == n &&
                 ((n = (function (e, t) {
                     let n = {};
                     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
-                })(D(), '_current')),
+                })(y(), '_current')),
                 f.x.set(g, n)),
             (r = {
                 ...e,
@@ -270,7 +270,7 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '336351'), '336351'), 10);
+        let a = parseInt(((n = '336417'), '336417'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

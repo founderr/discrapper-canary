@@ -21,11 +21,11 @@ async function _(e, t) {
     if (((null == O ? void 0 : null === (n = O.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == O ? void 0 : null === (_ = O.fetchError) || void 0 === _ ? void 0 : _.status) === 429) && !v) return;
     let C = c.Z.getGuildMemberProfile(e, g),
         L = c.Z.getMutualGuilds(e),
-        y = c.Z.getMutualFriends(e),
-        D = c.Z.getMutualFriendsCount(e);
+        D = c.Z.getMutualFriends(e),
+        y = c.Z.getMutualFriendsCount(e);
     h = h || null != g;
-    let b = null == y && I,
-        M = null == D && p,
+    let b = null == D && I,
+        M = null == y && p,
         P = null != g && null == C;
     if (!(null == L && h) && !b && !M && !P && !v) return;
     (0, o.z)(), null != t && (0, a.vM)(t);

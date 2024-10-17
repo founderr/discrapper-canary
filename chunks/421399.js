@@ -38,7 +38,7 @@ function R(e) {
 function O(e) {
     var t;
     let n,
-        { author: r, message: i, channel: o, userOverride: h, compact: O = !1, withMentionPrefix: v = !1, showPopout: C = !1, className: L, onClick: y, onContextMenu: D, onPopoutRequestClose: b, renderPopout: M, renderRemixTag: P = !1, decorations: U } = e,
+        { author: r, message: i, channel: o, userOverride: h, compact: O = !1, withMentionPrefix: v = !1, showPopout: C = !1, className: L, onClick: D, onContextMenu: y, onPopoutRequestClose: b, renderPopout: M, renderRemixTag: P = !1, decorations: U } = e,
         w = s.useContext(I.Z),
         x = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : w,
         { analyticsLocations: G } = (0, f.ZP)(E.Z.USERNAME),
@@ -57,8 +57,8 @@ function O(e) {
         j = {
             className: N.username,
             style: 'username' === H && null != B ? { color: B } : void 0,
-            onClick: y,
-            onContextMenu: D,
+            onClick: D,
+            onContextMenu: y,
             children: (0, a.jsx)(a.Fragment, { children: (v ? '@' : '') + k })
         },
         W = s.useMemo(

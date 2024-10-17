@@ -35,8 +35,8 @@ let O = new f.Z('GuildMemberStore'),
     v = {},
     C = {},
     L = {},
-    y = {},
-    D = !1,
+    D = {},
+    y = !1,
     b = 0,
     M = 0,
     P = {},
@@ -48,19 +48,19 @@ let O = new f.Z('GuildMemberStore'),
 function x(e, t) {
     if (null == t.communicationDisabledUntil || !(0, h.b)(t)) return G(e, t.userId);
     let n = F(e, t.userId);
-    y[n] !== t.communicationDisabledUntil && (0, h.b)(t) && ((y[n] = t.communicationDisabledUntil), k(n));
+    D[n] !== t.communicationDisabledUntil && (0, h.b)(t) && ((D[n] = t.communicationDisabledUntil), k(n));
 }
 function G(e, t) {
     if (null != t) {
         let n = F(e, t);
-        null != y[n] && k(n), B(F(e, t));
-    } else for (let t in y) H(t) === e && (k(t), B(t));
+        null != D[n] && k(n), B(F(e, t));
+    } else for (let t in D) H(t) === e && (k(t), B(t));
 }
 function k(e) {
     (b += 1), (P[e] = b);
 }
 function B(e) {
-    V(e) === g.default.getId() && (0, p.l)(H(e)), delete y[e];
+    V(e) === g.default.getId() && (0, p.l)(H(e)), delete D[e];
 }
 function F(e, t) {
     let n = [];
@@ -451,7 +451,7 @@ class en extends (i = _.ZP.Store) {
         return null != n ? n.nick : null;
     }
     getCommunicationDisabledUserMap() {
-        return y;
+        return D;
     }
     getCommunicationDisabledVersion() {
         return b;
@@ -481,8 +481,8 @@ class en extends (i = _.ZP.Store) {
         : (s[o] = l),
     (t.ZP = new en(E.Z, {
         CONNECTION_OPEN: function (e) {
-            D ? (D = !1) : (v = {}),
-                (y = {}),
+            y ? (y = !1) : (v = {}),
+                (D = {}),
                 (function (e) {
                     e.guilds.forEach((e) => {
                         Q(e);
@@ -510,7 +510,7 @@ class en extends (i = _.ZP.Store) {
         },
         CACHE_LOADED: function (e) {
             let { guildMembers: t, guilds: n } = e;
-            (D = !0), (v = { ...t }), (L = {}), j(n);
+            (y = !0), (v = { ...t }), (L = {}), j(n);
         },
         CACHE_LOADED_LAZY: function (e) {
             let { guilds: t } = e;
@@ -662,9 +662,9 @@ class en extends (i = _.ZP.Store) {
         LOCAL_MESSAGES_LOADED: function (e) {
             var t, n;
             if (null == e.guildId || null == N.Z.getGuild(e.guildId)) return !1;
-            (D = !0), (v[e.guildId] = null !== (t = v[e.guildId]) && void 0 !== t ? t : {});
+            (y = !0), (v[e.guildId] = null !== (t = v[e.guildId]) && void 0 !== t ? t : {});
             let r = !1;
-            for (let t of ((D = !0), (v[e.guildId] = null !== (n = v[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == v[e.guildId][t.userId] && ((r = !0), (v[e.guildId][t.userId] = t));
+            for (let t of ((y = !0), (v[e.guildId] = null !== (n = v[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == v[e.guildId][t.userId] && ((r = !0), (v[e.guildId][t.userId] = t));
             return r;
         },
         MESSAGE_CREATE: J,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return y;
     }
 });
 var r = n(735250),
@@ -110,7 +110,7 @@ function L(e) {
         ]
     });
 }
-function y(e) {
+function D(e) {
     let { badgeType: t, guildTraits: n } = e,
         {
             tooltipTitle: i,
@@ -192,10 +192,10 @@ function y(e) {
         ]
     });
 }
-function D(e) {
+function y(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: S, iconClassName: g, badgeStrokeColor: O, badgeColor: L, size: D = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: S, iconClassName: g, badgeStrokeColor: O, badgeColor: L, size: y = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
         P = (0, o.e7)([m.default, I.ZP], () => {
             let e = m.default.getCurrentUser();
             return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -223,14 +223,14 @@ function D(e) {
     if (x === A.Q.NONE) return null;
     if (x === A.Q.CLAN) {
         var k;
-        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, D);
+        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, y);
         return null == e
             ? null
             : (0, r.jsx)(c.Tooltip, {
                   color: l,
                   position: E,
                   'aria-label': M,
-                  text: (0, r.jsx)(y, {
+                  text: (0, r.jsx)(D, {
                       badgeType: x,
                       guildTraits: w
                   }),
@@ -242,7 +242,7 @@ function D(e) {
                           className: s()(v.clanBadgeContainer, T),
                           children: (0, r.jsx)(_.KQ, {
                               src: e,
-                              size: D
+                              size: y
                           })
                       })
               });
@@ -253,12 +253,12 @@ function D(e) {
     let K = (0, u.wj)(U) ? H : Z,
         z = (0, u.wj)(U) ? F : V;
     (t = null != t ? t : K), (n = null != n ? n : z);
-    let q = Math.floor(0.75 * D) - (null != W ? W : 0);
+    let q = Math.floor(0.75 * y) - (null != W ? W : 0);
     return (0, r.jsx)(c.Tooltip, {
         color: l,
         position: E,
         'aria-label': M,
-        text: (0, r.jsx)(y, {
+        text: (0, r.jsx)(D, {
             badgeType: x,
             guildTraits: w
         }),
@@ -273,7 +273,7 @@ function D(e) {
                     allowFullSizedIcon: !0,
                     color: null != n ? n : L,
                     stroke: O,
-                    size: D,
+                    size: y,
                     children: (0, r.jsx)(B, {
                         size: 'custom',
                         width: q,

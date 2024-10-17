@@ -22,8 +22,8 @@ var o,
     v = n(779618),
     C = n(710845),
     L = n(811660),
-    y = n(353926),
-    D = n(646047),
+    D = n(353926),
+    y = n(646047),
     b = n(594190),
     M = n(502286),
     P = n(12898),
@@ -146,8 +146,8 @@ let eg = (0, m.Mt)((0, m.jj)()),
     ev = eE.Yn.STREAM,
     eC = { [eE.w5]: to(ef.Z.Messages.NO_INPUT_DEVICES) },
     eL = { [eE.w5]: to(ef.Z.Messages.NO_OUTPUT_DEVICES) },
-    ey = { [eE.w5]: to(ef.Z.Messages.NO_VIDEO_DEVICES) },
-    eD = !1,
+    eD = { [eE.w5]: to(ef.Z.Messages.NO_VIDEO_DEVICES) },
+    ey = !1,
     eb = !1,
     eM = !1,
     eP = !1,
@@ -207,14 +207,14 @@ function e7(e) {
 function e8(e) {
     let t = e5(e.context),
         n = !eR || t.mute || t.deaf;
-    e.context === eE.Yn.DEFAULT ? (n = n || eD || eb || eM || !Z.Z.didHavePermission(ed.Eu.AUDIO)) : e.context === eE.Yn.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eE.Yn.DEFAULT && R.Z.updateNativeMute();
+    e.context === eE.Yn.DEFAULT ? (n = n || ey || eb || eM || !Z.Z.didHavePermission(ed.Eu.AUDIO)) : e.context === eE.Yn.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eE.Yn.DEFAULT && R.Z.updateNativeMute();
 }
 function e9() {
     var e, t, n;
     let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eU,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
         o = a;
-    if (((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == s ? void 0 : null === (e = s.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, q.isWindows)() && N.pn(o.desktopSource.soundshareId), eg.setGoLiveSource(null, ev)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == s ? void 0 : null === (t = s.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == s ? void 0 : null === (n = s.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eg.setGoLiveSource(null, ev), (eU || i) && ((ew = (eU = i) ? tu(ey, e5().videoDeviceId) : eE.Av), eg.setVideoInputDevice(ew)), (a = s), null != s)) {
+    if (((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == s ? void 0 : null === (e = s.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, q.isWindows)() && N.pn(o.desktopSource.soundshareId), eg.setGoLiveSource(null, ev)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == s ? void 0 : null === (t = s.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == s ? void 0 : null === (n = s.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eg.setGoLiveSource(null, ev), (eU || i) && ((ew = (eU = i) ? tu(eD, e5().videoDeviceId) : eE.Av), eg.setVideoInputDevice(ew)), (a = s), null != s)) {
         let e = {
             resolution: s.quality.resolution,
             frameRate: s.quality.frameRate
@@ -795,7 +795,7 @@ class tA extends (l = I.ZP.Store) {
                 [eE.AN.DESKTOP_CAPTURE]: eg.supports(eE.AN.DESKTOP_CAPTURE),
                 [eE.AN.HYBRID_VIDEO]: eg.supports(eE.AN.HYBRID_VIDEO)
             }),
-            this.waitFor(ee.default, en.Z, er.Z, ei.Z, ea.Z, b.ZP, Z.Z.storage, j.Z, y.Z, O.Z);
+            this.waitFor(ee.default, en.Z, er.Z, ei.Z, ea.Z, b.ZP, Z.Z.storage, j.Z, D.Z, O.Z);
     }
     supports(e) {
         return eg.supports(e);
@@ -846,7 +846,7 @@ class tA extends (l = I.ZP.Store) {
         return eR;
     }
     isMute() {
-        return this.isSelfMute() || eD;
+        return this.isSelfMute() || ey;
     }
     isDeaf() {
         return this.isSelfDeaf() || eP;
@@ -883,7 +883,7 @@ class tA extends (l = I.ZP.Store) {
         return eU && eB;
     }
     isVideoAvailable() {
-        return Object.values(ey).some((e) => {
+        return Object.values(eD).some((e) => {
             let { disabled: t } = e;
             return !t;
         });
@@ -979,7 +979,7 @@ class tA extends (l = I.ZP.Store) {
         return tu(eL, e5().outputDeviceId);
     }
     getVideoDeviceId() {
-        return tu(ey, e5().videoDeviceId);
+        return tu(eD, e5().videoDeviceId);
     }
     getInputDevices() {
         return eC;
@@ -988,7 +988,7 @@ class tA extends (l = I.ZP.Store) {
         return eL;
     }
     getVideoDevices() {
-        return ey;
+        return eD;
     }
     getEchoCancellation() {
         let e = e5();
@@ -1191,11 +1191,11 @@ eh(tA, 'displayName', 'MediaEngineStore'),
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
-            return t.reduce((e, t) => (i === t.sessionId ? ((eD = t.mute || t.suppress), (eP = t.deaf), eg.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eW && eW !== t.channelId) && eU), (eW = t.channelId), !0) : (!__OVERLAY__ && t.userId === ee.default.getId() && null == ea.Z.getChannelId() && e9(!1, null), e)), !1);
+            return t.reduce((e, t) => (i === t.sessionId ? ((ey = t.mute || t.suppress), (eP = t.deaf), eg.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eW && eW !== t.channelId) && eU), (eW = t.channelId), !0) : (!__OVERLAY__ && t.userId === ee.default.getId() && null == ea.Z.getChannelId() && e9(!1, null), e)), !1);
         },
         CONNECTION_OPEN: function (e) {
             (i = e.sessionId),
-                (eD = !1),
+                (ey = !1),
                 (eP = !1),
                 !(0, q.isWeb)() &&
                     F.Z.subscribe({ location: 'handleConnectionOpen' }, (e) => {
@@ -1416,10 +1416,10 @@ eh(tA, 'displayName', 'MediaEngineStore'),
                 })(n),
                 !(function (e) {
                     eB = e.length > 0;
-                    let t = ey;
-                    if (((ey = tl(e, ef.Z.Messages.NO_VIDEO_DEVICES)), eU && !E().isEqual(ey, t))) {
+                    let t = eD;
+                    if (((eD = tl(e, ef.Z.Messages.NO_VIDEO_DEVICES)), eU && !E().isEqual(eD, t))) {
                         var n;
-                        let e = void 0 !== ey[ew],
+                        let e = void 0 !== eD[ew],
                             r = ew === eE.w5 && (null === (n = t[eE.w5]) || void 0 === n ? void 0 : n.disabled);
                         e9(e || r);
                     }
@@ -1523,7 +1523,7 @@ eh(tA, 'displayName', 'MediaEngineStore'),
         },
         MEDIA_ENGINE_SET_VIDEO_DEVICE: function (e) {
             let { id: t } = e;
-            ta({ videoDeviceId: (t = tu(ey, t)) }), e9();
+            ta({ videoDeviceId: (t = tu(eD, t)) }), e9();
         },
         MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS: function (e) {
             let t = ta({ experimentalEncoders: e.enabled });
@@ -1572,7 +1572,7 @@ eh(tA, 'displayName', 'MediaEngineStore'),
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e,
-                n = D.Z.isEnabled();
+                n = y.Z.isEnabled();
             if (t === eu.$7l.BACKGROUND && eU && !n) (ek = !0), e9(!1);
             else {
                 if (t !== eu.$7l.ACTIVE || !ek) return !1;

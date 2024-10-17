@@ -128,7 +128,7 @@ e.exports = function (e) {
         contains: ['self'].concat(C)
     });
     let L = [].concat(v, A.contains),
-        y = L.concat([
+        D = L.concat([
             {
                 begin: /\(/,
                 end: /\)/,
@@ -136,14 +136,14 @@ e.exports = function (e) {
                 contains: ['self'].concat(L)
             }
         ]),
-        D = {
+        y = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: I,
-            contains: y
+            contains: D
         },
         b = {
             variants: [
@@ -194,14 +194,14 @@ e.exports = function (e) {
                 1: 'keyword',
                 3: 'title.function'
             },
-            contains: [D]
+            contains: [y]
         };
     return {
         name: 'Javascript',
         aliases: ['js', 'jsx', 'mjs', 'cjs'],
         keywords: I,
         exports: {
-            PARAMS_CONTAINS: y,
+            PARAMS_CONTAINS: D,
             CLASS_REFERENCE: M
         },
         illegal: /#(?![$_A-z])/,
@@ -263,7 +263,7 @@ e.exports = function (e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: I,
-                                        contains: y
+                                        contains: D
                                     }
                                 ]
                             }
@@ -316,7 +316,7 @@ e.exports = function (e) {
                     3: 'title.function'
                 },
                 label: 'func.def',
-                contains: [D],
+                contains: [y],
                 illegal: /%/
             },
             { beginKeywords: 'while if switch catch for' },
@@ -325,7 +325,7 @@ e.exports = function (e) {
                 returnBegin: !0,
                 label: 'func.def',
                 contains: [
-                    D,
+                    y,
                     e.inherit(e.TITLE_MODE, {
                         begin: t,
                         className: 'title.function'
@@ -344,7 +344,7 @@ e.exports = function (e) {
             {
                 match: [/\bconstructor(?=\s*\()/],
                 className: { 1: 'title.function' },
-                contains: [D]
+                contains: [y]
             },
             P,
             {
@@ -359,7 +359,7 @@ e.exports = function (e) {
                     1: 'keyword',
                     3: 'title.function'
                 },
-                contains: [{ begin: /\(\)/ }, D]
+                contains: [{ begin: /\(\)/ }, y]
             },
             { match: /\$[(.]/ }
         ]

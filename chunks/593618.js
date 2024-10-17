@@ -34,8 +34,8 @@ var r = n(735250),
     v = n(517334),
     C = n(344185),
     L = n(199902),
-    y = n(77498),
-    D = n(984933),
+    D = n(77498),
+    y = n(984933),
     b = n(607744),
     M = n(158776),
     P = n(699516),
@@ -97,10 +97,10 @@ function K(e) {
         } = (function (e) {
             let t = e.id,
                 n = (0, u.Wu)(
-                    [D.ZP, C.Z],
+                    [y.ZP, C.Z],
                     () => {
-                        let e = D.ZP.getChannels(t)
-                            [D.Zb].filter((e) => {
+                        let e = y.ZP.getChannels(t)
+                            [y.Zb].filter((e) => {
                                 let { channel: t } = e;
                                 return t.type === V.d4z.GUILD_VOICE;
                             })
@@ -153,8 +153,8 @@ function K(e) {
                     },
                     [c, o, t]
                 ),
-                m = (0, u.Wu)([M.Z, y.Z], () => {
-                    let e = _.filter((e) => M.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != y.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
+                m = (0, u.Wu)([M.Z, D.Z], () => {
+                    let e = _.filter((e) => M.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != D.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
                     return c ? (0, E.Qj)(e, o) : e;
                 }),
                 T = (0, G.kM)('Guild Tooltip', !1),

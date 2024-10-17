@@ -26,10 +26,10 @@ function s(e) {
         L = (e) => {
             (v.current = e), S(e);
         },
-        y = (e) => {
+        D = (e) => {
             (C.current = e), A(e);
         };
-    function D(e) {
+    function y(e) {
         return (e - s) / (c - s);
     }
     function b(e) {
@@ -65,12 +65,12 @@ function s(e) {
         setThumbDragging: function (e, t) {
             if (n || !P(e)) return;
             let r = C.current[e];
-            (C.current = o(C.current, e, t)), y(C.current), m && r && !C.current.some(Boolean) && m(v.current);
+            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(v.current);
         },
         focusedThumb: R,
         setFocusedThumb: O,
-        getThumbPercent: (e) => D(T[e]),
-        getValuePercent: D,
+        getThumbPercent: (e) => y(T[e]),
+        getValuePercent: y,
         getThumbValueLabel: (e) => w(T[e]),
         getFormattedValue: w,
         getThumbMinValue: b,

@@ -25,8 +25,8 @@ var r,
     v = n(955132),
     C = n(645436),
     L = n(344651),
-    y = n(981631),
-    D = n(526761);
+    D = n(981631),
+    y = n(526761);
 let b = window.DiscordNative;
 v.Wb.dispatcher.getDispatchHandler = L.Z;
 let M = new _.Z('ConnectionStore'),
@@ -112,7 +112,7 @@ class H extends (r = u.ZP.Store) {
             M.verbose('connection closed dispatched'), (P = Date.now());
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.state !== y.hes.DISCONNECTED) return !1;
+            if (e.state !== D.hes.DISCONNECTED) return !1;
             e.willReconnect && (null != e.streamKey ? v.Wb.streamPing(e.streamKey) : v.Wb.voiceServerPing());
         },
         VOICE_CHANNEL_SELECT: function (e) {
@@ -121,7 +121,7 @@ class H extends (r = u.ZP.Store) {
                     guildId: e.guildId,
                     channelId: e.channelId
                 }),
-                (0, R.isIOS)() && x === y.$7l.BACKGROUND && (null == e.channelId ? v.Wb.close(!0) : v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())),
+                (0, R.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? v.Wb.close(!0) : v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())),
                 !1
             );
         },
@@ -168,7 +168,7 @@ class H extends (r = u.ZP.Store) {
                 });
         },
         APP_STATE_UPDATE: function (e) {
-            return (0, R.isIOS)() ? (h.default.isAuthenticated() && (x === y.$7l.INACTIVE && e.state === y.$7l.BACKGROUND && null == v.GC.channelId ? v.Wb.close(!0) : x === y.$7l.BACKGROUND && e.state === y.$7l.ACTIVE && v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())), (x = e.state)) : e.state === y.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && v.Wb.resetBackoff('App state is active')), !1;
+            return (0, R.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == v.GC.channelId ? v.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())), (x = e.state)) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && v.Wb.resetBackoff('App state is active')), !1;
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             return (
@@ -273,6 +273,6 @@ class H extends (r = u.ZP.Store) {
         RUNNING_GAMES_CHANGE: k,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             var t;
-            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k();
+            e.settings.type === y.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k();
         }
     }));

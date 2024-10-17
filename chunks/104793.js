@@ -31,13 +31,13 @@ var r,
 function m(e, t, n) {
     var r;
     let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: m, userId: T, roleIds: S, isImpersonating: N, hasBaseAccessPermissions: R } = t,
-        { applicationAllowedForUser: O, applicationAllowedForChannel: v, isGuildInstalled: C, isUserInstalled: L, commandBotId: y } = n;
+        { applicationAllowedForUser: O, applicationAllowedForChannel: v, isGuildInstalled: C, isUserInstalled: L, commandBotId: D } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
-    let D = null != i ? (0, h.Vh)(i, y) : void 0;
+    let y = null != i ? (0, h.Vh)(i, D) : void 0;
     if (null != e.contexts) {
-        if (null != D && !e.contexts.includes(D)) return 4;
-    } else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && D === u.D.BOT_DM) || D === u.D.PRIVATE_CHANNEL)) return 4;
+        if (null != y && !e.contexts.includes(y)) return 4;
+    } else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && y === u.D.BOT_DM) || y === u.D.PRIVATE_CHANNEL)) return 4;
     if (null != e.predicate && i instanceof d.Sf) {
         let t = _.Z.getGuild(i.guild_id);
         if (

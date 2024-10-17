@@ -30,7 +30,7 @@
                         e = e.replace(a, '').replace(s, '').toLowerCase();
                         var t,
                             n = !1;
-                        if (D[e]) (e = D[e]), (n = !0);
+                        if (y[e]) (e = y[e]), (n = !0);
                         else if ('transparent' == e)
                             return {
                                 r: 0,
@@ -342,7 +342,7 @@
             return this._applyCombination(R, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(y, arguments);
+            return this._applyCombination(D, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(C, arguments);
@@ -525,7 +525,7 @@
         for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) (r.h = (r.h + i) % 360), a.push(_(r));
         return a;
     }
-    function y(e, t) {
+    function D(e, t) {
         t = t || 6;
         for (var n = _(e).toHsv(), r = n.h, i = n.s, a = n.v, s = [], o = 1 / t; t--; )
             s.push(
@@ -618,7 +618,7 @@
                 ? o
                 : ((n.includeFallbackColors = !1), _.mostReadable(e, ['#fff', '#000'], n));
         });
-    var D = (_.names = {
+    var y = (_.names = {
             aliceblue: 'f0f8ff',
             antiquewhite: 'faebd7',
             aqua: '0ff',
@@ -773,7 +773,7 @@
             var t = {};
             for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
             return t;
-        })(D));
+        })(y));
     function M(e) {
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }

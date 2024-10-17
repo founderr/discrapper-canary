@@ -25,12 +25,12 @@ var r = n(735250),
 let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     C = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     L = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
-    y = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    D = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    D = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
+    y = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     b = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     M = [v, v, v, v],
     P = (C + L) * 2 + v,
-    U = D + 2 * b,
+    U = y + 2 * b,
     w = (e) => {
         let { activeIndex: t, stickerPickerCategories: n, categoryListRef: a, firstStandardStickerCategoryOffsetTop: o, setShouldRenderShortcut: d } = e,
             E = (0, u.O)(),
@@ -42,7 +42,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                     let I = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === T.Ih.FAVORITE,
                         v = I ? 1 : 0,
                         L = (null === (d = n[v]) || void 0 === d ? void 0 : d.type) === T.Ih.RECENT,
-                        D = n.length > 0,
+                        y = n.length > 0,
                         b = n.length;
                     if (0 === a && I)
                         return (0, r.jsx)(
@@ -54,7 +54,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 children: (0, r.jsx)(l.Clickable, {
                                     'aria-label': R.Z.Messages.CATEGORY_FAVORITE,
                                     className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
-                                        [O.stickerCategoryGenericDisabled]: D && !I,
+                                        [O.stickerCategoryGenericDisabled]: y && !I,
                                         [O.stickerCategoryGenericSelected]: !p && I && 0 === t
                                     }),
                                     onClick: o,
@@ -62,8 +62,8 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: O.stickerCategoryGenericIcon,
-                                        height: y,
-                                        width: y
+                                        height: D,
+                                        width: D
                                     })
                                 })
                             },
@@ -79,7 +79,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 children: (0, r.jsx)(l.Clickable, {
                                     'aria-label': R.Z.Messages.STICKER_PICKER_CATEGORIES_RECENT,
                                     className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
-                                        [O.stickerCategoryGenericDisabled]: D && !L,
+                                        [O.stickerCategoryGenericDisabled]: y && !L,
                                         [O.stickerCategoryGenericSelected]: !p && L && t === v
                                     }),
                                     onClick: o,
@@ -87,8 +87,8 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: O.stickerCategoryGenericIcon,
-                                        height: y,
-                                        width: y
+                                        height: D,
+                                        width: D
                                     })
                                 })
                             },
@@ -181,7 +181,7 @@ let v = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                     let n = null === (t = a.current) || void 0 === t ? void 0 : t.getListDimensions();
                     if (null == n) return;
                     let r = e + n.height;
-                    d(r - D < o);
+                    d(r - y < o);
                 },
                 [o]
             )

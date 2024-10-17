@@ -31,10 +31,10 @@ function C(e) {
     let { onClose: t, ...n } = e,
         C = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         L = (0, a.e7)([c.Z], () => c.Z.theme),
-        y = null == C ? void 0 : C.premiumType,
-        D = (0, T.N)(),
+        D = null == C ? void 0 : C.premiumType,
+        y = (0, T.N)(),
         b = (0, m.Ng)(),
-        M = null != D || null != b,
+        M = null != y || null != b,
         { enabled: P } = S.MP.useExperiment(
             { location: 'File Upload Roadblock' },
             {
@@ -58,7 +58,7 @@ function C(e) {
         }, [C]),
         B = i.useMemo(() => {
             let e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k });
-            switch (y) {
+            switch (D) {
                 case A.p9.TIER_0:
                     e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: k });
                     break;
@@ -66,7 +66,7 @@ function C(e) {
                     e = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: k });
             }
             return e;
-        }, [y, k]),
+        }, [D, k]),
         F = (0, E.BU)(A.Uq / 1024, { useKibibytes: !0 }),
         V = U ? O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE_V2 : O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
         H = w

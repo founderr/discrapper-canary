@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(718582),
     C = n(177963),
     L = n(835248),
-    y = n(437431),
-    D = n(874070),
+    D = n(437431),
+    y = n(874070),
     b = n(185885),
     M = n(126134),
     P = n(981631),
@@ -90,7 +90,7 @@ function B(e) {
     var t, n;
     let { cardData: a, guildId: c, cardIndex: _ } = e,
         { category: L } = a,
-        [D, b] = i.useState(!1),
+        [y, b] = i.useState(!1),
         B = L === M.L.HANGOUT && a.streamUserIds.length > 0,
         F = (0, l.e7)([T.Z], () => (B ? T.Z.getPreviewURL(c, a.channelId, a.streamUserIds[0]) : null)),
         V = (0, l.e7)([T.Z], () => (L === M.L.HANGOUT ? T.Z.getIsPreviewLoading(c, a.channelId, a.streamUserIds[0]) : null)),
@@ -127,7 +127,7 @@ function B(e) {
                             guildId: t,
                             users: c
                         });
-                    return e.isStage ? (0, r.jsx)(y.Z, { className: x.imageIcon }) : (0, r.jsx)(C.Z, { className: x.imageIcon });
+                    return e.isStage ? (0, r.jsx)(D.Z, { className: x.imageIcon }) : (0, r.jsx)(C.Z, { className: x.imageIcon });
                 case M.L.EMBEDDED_ACTIVITY:
                     let { embeddedActivities: h } = e;
                     if (null == h[0].applicationId)
@@ -144,7 +144,7 @@ function B(e) {
                     let { streamUserIds: i, userIds: a, channelHasVideo: s, isStage: l } = e,
                         d = l ? c : [];
                     if (l) {
-                        if (0 === d.length) return (0, r.jsx)(y.Z, { className: x.imageIcon });
+                        if (0 === d.length) return (0, r.jsx)(D.Z, { className: x.imageIcon });
                         return (0, r.jsx)(O.Z, {
                             guildId: t,
                             users: d
@@ -564,7 +564,7 @@ function B(e) {
                         })
                 ]
             }),
-            D && ee
+            y && ee
         ]
     });
 }

@@ -30,9 +30,9 @@ var r = n(735250),
     v = n(998502),
     C = n(981631),
     L = n(188785),
-    y = n(436620);
+    D = n(436620);
 n(928518), n(972830), n(704806);
-let D = (0, h.Un)({
+let y = (0, h.Un)({
         createPromise: () => n.e('91134').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
@@ -153,7 +153,7 @@ class J extends i.Component {
             (e =
                 n === I.P.IN_PROGRESS
                     ? null
-                    : y.KO
+                    : D.KO
                       ? O.isPlatformEmbedded
                           ? (0, r.jsxs)(s.rs, {
                                 children: [
@@ -340,7 +340,7 @@ class J extends i.Component {
                                     (0, r.jsx)(s.AW, { render: Q })
                                 ]
                             })
-                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
+                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: y }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
                 children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]

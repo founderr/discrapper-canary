@@ -109,8 +109,8 @@ let v = [];
 function C(e) {
     let { channelId: t, guildId: a, participant: o, className: f, compact: m = !1, disableInteraction: g = !1, maxVisibleUsers: N = 3 } = e,
         [C, L] = i.useState(!1),
-        y = i.useRef(new c.sW(150, () => L(!1))),
-        D = (0, u.Wu)(
+        D = i.useRef(new c.sW(150, () => L(!1))),
+        y = (0, u.Wu)(
             [h.Z, p.default],
             () => {
                 if (o.type === T.fO.STREAM) {
@@ -128,10 +128,10 @@ function C(e) {
             [o]
         ),
         b = i.useCallback(() => {
-            y.current.cancel(), L(!0);
+            D.current.cancel(), L(!0);
         }, []),
         M = i.useCallback(() => {
-            y.current.delay();
+            D.current.delay();
         }, []),
         P = i.useCallback(
             (e, t) => {
@@ -151,17 +151,17 @@ function C(e) {
             },
             [M, b]
         );
-    if (0 === D.length) return null;
+    if (0 === y.length) return null;
     if (m)
         return (0, r.jsx)(O, {
             maxVisibleUsers: N,
-            users: D,
+            users: y,
             guildId: a,
             channelId: t,
             className: f,
             participantType: o.type
         });
-    let U = l()(D)
+    let U = l()(y)
         .take(N)
         .map((e) =>
             (0, r.jsx)(
@@ -177,12 +177,12 @@ function C(e) {
         )
         .value();
     return (
-        D.length > N &&
+        y.length > N &&
             (U[U.length - 1] = (0, r.jsxs)(
                 'div',
                 {
                     className: A.overflow,
-                    children: ['+', D.length - N + 1]
+                    children: ['+', y.length - N + 1]
                 },
                 'overflow'
             )),
@@ -198,7 +198,7 @@ function C(e) {
                             handleUserContextMenu: P,
                             guildId: a,
                             channelId: t,
-                            users: D,
+                            users: y,
                             disableInteraction: g
                         }),
                     shouldShow: C,

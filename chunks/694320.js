@@ -43,7 +43,7 @@ function N(e) {
         v = (0, _.Ng)(),
         C = (0, E.N)(),
         L = (0, _.Wp)(v, T.Si.TIER_2),
-        y = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
+        D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
     return (i.useEffect(() => {
         I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
@@ -54,7 +54,7 @@ function N(e) {
             location_stack: O
         });
     }, [R, O]),
-    (y || L) && N < 0)
+    (D || L) && N < 0)
         ? (0, r.jsx)(f.ZP, {
               type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
               subscriptionTier: T.Si.TIER_2,

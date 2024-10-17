@@ -12,7 +12,7 @@ n.d(t, {
         return L;
     },
     XT: function () {
-        return y;
+        return D;
     },
     al: function () {
         return v;
@@ -188,7 +188,7 @@ function L(e, t) {
     let n = a.Z.getApplication(e);
     null != n && _.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath);
 }
-function y(e, t) {
+function D(e, t) {
     let i = a.Z.getApplication(e);
     r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),

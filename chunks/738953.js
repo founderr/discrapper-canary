@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(481932),
     C = n(195387),
     L = n(272510),
-    y = n(171368),
-    D = n(978395),
+    D = n(171368),
+    y = n(978395),
     b = n(161572),
     M = n(228168),
     P = n(981631),
@@ -70,7 +70,7 @@ function x(e) {
     }, [Q, V]);
     let et = (e) => {
         null == F || F(),
-            (0, y.openUserProfileModal)({
+            (0, D.openUserProfileModal)({
                 sourceAnalyticsLocations: Y,
                 ...W,
                 ...e
@@ -166,7 +166,7 @@ function x(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(D.Z, {
+                                (0, r.jsx)(y.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: X,

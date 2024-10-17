@@ -67,7 +67,7 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
         });
     });
 function R(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: g, isUsingKeyboardNavigation: R, showEmojiFavoriteTooltip: O, surrogateCodePoint: v, selectedItemClassName: C, getEmojiItemProps: L, isMediumSize: y, isLargeSize: D, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
+    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: g, isUsingKeyboardNavigation: R, showEmojiFavoriteTooltip: O, surrogateCodePoint: v, selectedItemClassName: C, getEmojiItemProps: L, isMediumSize: D, isLargeSize: y, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
         [k, B] = i.useState(''),
         F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         V = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(f), [f]),
@@ -108,8 +108,8 @@ function R(e) {
                         ref: o,
                         emoji: Z,
                         isFavorite: V.isFavoriteEmojiWithoutFetchingLatest(Z),
-                        isLargeSize: D,
-                        isMediumSize: y,
+                        isLargeSize: y,
+                        isMediumSize: D,
                         isInspected: s,
                         isDisabled: j,
                         showPulse: b === a,

@@ -15,10 +15,10 @@ function C() {
 function L() {
     (O = R.QZA.CLOSED), (v = {});
 }
-function y() {
-    D(), b(), (v = {});
-}
 function D() {
+    y(), b(), (v = {});
+}
+function y() {
     (r = void 0), (i = void 0), (a = void 0), (s = void 0);
 }
 function b() {
@@ -124,7 +124,7 @@ class P extends (S = A.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_CLOSE: L,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function () {
-            y(), M(), L();
+            D(), M(), L();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
             (O = R.QZA.SUBMITTING), (v = {});
@@ -203,9 +203,9 @@ class P extends (S = A.ZP.Store) {
         USER_SETTINGS_CLEAR_ERRORS: function () {
             v = {};
         },
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: D,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: y,
         USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: b,
-        USER_SETTINGS_RESET_ALL_PENDING: y,
+        USER_SETTINGS_RESET_ALL_PENDING: D,
         USER_SETTINGS_RESET_ALL_TRY_IT_OUT: M,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function () {
             a = void 0;

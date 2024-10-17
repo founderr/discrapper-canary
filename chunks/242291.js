@@ -9,10 +9,10 @@ n.d(t, {
         return O;
     },
     SZ: function () {
-        return D;
+        return y;
     },
     aC: function () {
-        return y;
+        return D;
     },
     pI: function () {
         return N;
@@ -86,7 +86,7 @@ function L(e) {
     }
     return o;
 }
-function y(e, t) {
+function D(e, t) {
     (0, o.PS)(
         e,
         (n) => {
@@ -101,7 +101,7 @@ function y(e, t) {
         o.fy.INFREQUENT_USER_ACTION
     );
 }
-function D(e, t, n) {
+function y(e, t, n) {
     (0, o.PS)(
         e,
         (r) => {

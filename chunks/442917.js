@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(788983),
     C = n(703656),
     L = n(937995),
-    y = n(618158),
-    D = n(922745),
+    D = n(618158),
+    y = n(922745),
     b = n(197016),
     M = n(800965),
     P = n(445062),
@@ -170,7 +170,7 @@ class ei extends i.PureComponent {
                 timeout: 1800,
                 children: (e) => {
                     var t;
-                    return (0, r.jsx)(D.Z, {
+                    return (0, r.jsx)(y.Z, {
                         title: s,
                         backgroundKey: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
                         screenMessage: null == l ? this.getScreenMessage() : null,
@@ -178,7 +178,7 @@ class ei extends i.PureComponent {
                         onHide: this.handleHidePIP,
                         renderBottomLeftControls: this.renderBottomLeftControls,
                         renderBottomRightControls: this.renderBottomRightControls,
-                        preventIdleComponent: y.Z,
+                        preventIdleComponent: D.Z,
                         width: a,
                         className: en.elevationHigh,
                         ...e,
@@ -249,7 +249,7 @@ class ei extends i.PureComponent {
                 let { participantOnScreen: e, channel: t } = this.props;
                 return (
                     s()((0, ee._5)(e) || (null == e ? void 0 : e.type) === ee.fO.ACTIVITY, 'Cannot render participants for participant type '.concat(null == e ? void 0 : e.type)),
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(D.Z, {
                         children: (0, r.jsx)(T.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),

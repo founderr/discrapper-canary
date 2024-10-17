@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(448980),
     C = n(194811),
     L = n(373826),
-    y = n(315324),
-    D = n(582123),
+    D = n(315324),
+    y = n(582123),
     b = n(262210),
     M = n(290274),
     P = n(553375),
@@ -232,7 +232,7 @@ function B(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: k.voiceChannelDivider }),
-                          (0, r.jsx)(y.Z, {
+                          (0, r.jsx)(D.Z, {
                               user: t,
                               guild: F,
                               channel: V,
@@ -256,7 +256,7 @@ function B(e) {
                   });
     return (0, r.jsx)(d.Gt, {
         value: Y,
-        children: (0, r.jsx)(D.Z, {
+        children: (0, r.jsx)(y.Z, {
             user: t,
             onClose: Z,
             children: (e) => {

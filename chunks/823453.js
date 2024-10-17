@@ -35,9 +35,9 @@ t.Z = i.memo(function (e) {
                     { theme: a, density: o } = (0, _.useThemeContext)(),
                     { reducedMotion: d } = i.useContext(_.AccessibilityPreferencesContext),
                     { accessibilitySettings: E, appWrapperClassName: T } = (0, S.I)(),
-                    { fontScale: N, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: y } = E,
-                    D = (0, l.TH)(),
-                    b = i.useMemo(() => R.has(D.pathname), [D.pathname]);
+                    { fontScale: N, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: D } = E,
+                    y = (0, l.TH)(),
+                    b = i.useMemo(() => R.has(y.pathname), [y.pathname]);
                 (0, g.Z)(window, b);
                 let M = (0, A.Z)(window, __OVERLAY__ || n),
                     P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
@@ -57,7 +57,7 @@ t.Z = i.memo(function (e) {
                             'is-mobile': u.tq,
                             'app-focused': n,
                             'desaturate-user-colors': C,
-                            'disable-forced-colors': !L && 'active' === y,
+                            'disable-forced-colors': !L && 'active' === D,
                             'enable-forced-colors': L,
                             'show-redesigned-icons': U,
                             'visual-refresh': w

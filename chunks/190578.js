@@ -74,12 +74,12 @@ e.exports = function (e) {
             literal: c
         },
         L = [N, R, v],
-        y = {
+        D = {
             match: r(/\./, i(...E)),
             relevance: 0
         },
-        D = [
-            y,
+        y = [
+            D,
             {
                 className: 'built_in',
                 match: r(/\b/, i(...E), /(?=\()/)
@@ -218,7 +218,7 @@ e.exports = function (e) {
                 },
                 ...I,
                 ...L,
-                ...D,
+                ...y,
                 ...M,
                 w,
                 V,
@@ -286,7 +286,7 @@ e.exports = function (e) {
     for (let e of V.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...L, ...D, ...M, w, V, ...Z];
+        let n = [...L, ...y, ...M, w, V, ...Z];
         t.contains = [
             ...n,
             {
@@ -336,7 +336,7 @@ e.exports = function (e) {
                 relevance: 0
             },
             ...L,
-            ...D,
+            ...y,
             ...M,
             w,
             V,

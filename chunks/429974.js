@@ -26,11 +26,11 @@ async function m(e) {
     let { userId: T, section: S, subsection: g, guildId: A = f.ME, channelId: N, friendToken: R, analyticsLocation: O, showGuildProfile: v = !0, ...C } = e,
         L = d.default.getUser(T);
     if (null == L) return;
-    let y = E.Z.getUserProfile(T),
-        D = u.Z.getPrimaryActivity(T),
+    let D = E.Z.getUserProfile(T),
+        y = u.Z.getPrimaryActivity(T),
         b = u.Z.getStatus(T),
         M = u.Z.isMobileOnline(T),
-        { party: P, assets: U, application_id: w } = null != D ? D : {},
+        { party: P, assets: U, application_id: w } = null != y ? y : {},
         x = null != w ? l.Z.getApplication(w) : null,
         G = M ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
         k = b === f.Skl.ONLINE ? G : b;
@@ -57,18 +57,18 @@ async function m(e) {
             guild_id: A !== f.ME ? A : null,
             channel_id: N,
             other_user_id: T,
-            application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
-            application_name: null == D ? void 0 : D.name,
+            application_id: null !== (a = null == y ? void 0 : y.application_id) && void 0 !== a ? a : null,
+            application_name: null == y ? void 0 : y.name,
             sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(T),
             has_images: !!(null !== (m = null == U ? void 0 : U.large_image) && void 0 !== m ? m : null == U ? void 0 : U.small_image),
             party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
             party_id: null == P ? void 0 : P.id,
             party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
-            game_platform: (0, o.Z)(D),
+            game_platform: (0, o.Z)(y),
             profile_user_status: k,
-            profile_has_nitro_customization: (null == y ? void 0 : y.banner) != null,
-            profile_has_profile_effect: (null == y ? void 0 : y.profileEffectId) != null,
+            profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
+            profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
             ...(null == O ? null : (0, _.expandLocation)(O))
         });
 }

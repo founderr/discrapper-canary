@@ -25,20 +25,20 @@ var r,
     v = n(594174),
     C = n(981631),
     L = n(478743);
-let y = {},
-    D = {},
+let D = {},
+    y = {},
     b = {},
     M = 0;
 function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = y[e];
+        n = D[e];
     if (null != n) return n;
     let r = v.default.getCurrentUser();
     if (null == r) return g.Hn;
     let i = O.Z.getGuild(e);
     return null == i
         ? g.Hn
-        : (y[e] = g.uB({
+        : (D[e] = g.uB({
               user: r,
               context: i,
               checkElevated: t
@@ -63,8 +63,8 @@ function U(e) {
 }
 function w(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = D[e];
-    return null != n ? n : (D[e] = U(e, t));
+        n = y[e];
+    return null != n ? n : (y[e] = U(e, t));
 }
 function x(e) {
     if (null != e) {
@@ -73,7 +73,7 @@ function x(e) {
     }
 }
 function G() {
-    for (let e in ((y = {}), (D = {}), b)) b[e] += 1;
+    for (let e in ((D = {}), (y = {}), b)) b[e] += 1;
     M += 1;
 }
 function k() {
@@ -97,10 +97,10 @@ function H(e) {
 }
 function Z(e) {
     let { guildId: t } = e;
-    delete y[t];
+    delete D[t];
     let n = A.Z.getMutableBasicGuildChannelsForGuild(t);
     l().forEach(n, (e) => {
-        delete D[e.id];
+        delete y[e.id];
     }),
         (M += 1),
         x(t);
@@ -114,15 +114,15 @@ function Y(e) {
             user: r,
             context: n
         });
-    if (i === D[n.id]) return !1;
-    (D[n.id] = i), (M += 1);
+    if (i === y[n.id]) return !1;
+    (y[n.id] = i), (M += 1);
 }
 function j(e) {
     let { guildId: t } = e;
-    delete y[t];
+    delete D[t];
     let n = A.Z.getMutableBasicGuildChannelsForGuild(t);
     l().forEach(n, (e) => {
-        delete D[e.id];
+        delete y[e.id];
     }),
         (M += 1),
         x(t);
@@ -232,7 +232,7 @@ class K extends (r = c.ZP.Store) {
     }
 }
 function z() {
-    (D = {}), (y = {}), (b = {}), (M = 0);
+    (y = {}), (D = {}), (b = {}), (M = 0);
 }
 (s = 'PermissionStore'),
     (a = 'displayName') in (i = K)
@@ -269,8 +269,8 @@ function z() {
                     user: r,
                     context: n
                 });
-            if (D[n.id] === i) return !1;
-            (D[n.id] = i), (M += 1), x(n.getGuildId());
+            if (y[n.id] === i) return !1;
+            (y[n.id] = i), (M += 1), x(n.getGuildId());
         },
         THREAD_CREATE: V,
         THREAD_UPDATE: V,
@@ -288,7 +288,7 @@ function z() {
                         user: r,
                         context: t
                     });
-                if (D[t.id] !== i) (D[t.id] = i), x(t.getGuildId()), (n = !0);
+                if (y[t.id] !== i) (y[t.id] = i), x(t.getGuildId()), (n = !0);
             }
             return !!n && ((M += 1), n);
         },
@@ -307,7 +307,7 @@ function z() {
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            return delete D[t.id], (M += 1), x(t.guild_id), !1;
+            return delete y[t.id], (M += 1), x(t.guild_id), !1;
         },
         GUILD_ROLE_CREATE: Z,
         GUILD_ROLE_UPDATE: Z,

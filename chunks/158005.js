@@ -52,8 +52,8 @@ function E(e, t, n) {
         });
     (S.onKeyDown = S.onKeyDownCapture), delete S.onKeyDownCapture;
     let L = (0, r.zL)(e, { labelable: !0 }),
-        y = (0, r.dG)(S, m, O),
-        D = (0, r.Me)();
+        D = (0, r.dG)(S, m, O),
+        y = (0, r.Me)();
     return (
         _.set(t, {
             isDisabled: d,
@@ -69,10 +69,10 @@ function E(e, t, n) {
                 }
             },
             triggerProps: (0, r.dG)(L, {
-                ...y,
+                ...D,
                 isDisabled: d,
                 onKeyDown: (0, r.tS)(
-                    y.onKeyDown,
+                    D.onKeyDown,
                     (e) => {
                         switch (e.key) {
                             case 'ArrowLeft': {
@@ -91,7 +91,7 @@ function E(e, t, n) {
                     e.onKeyDown
                 ),
                 onKeyUp: e.onKeyUp,
-                'aria-labelledby': [D, y['aria-labelledby'], y['aria-label'] && !y['aria-labelledby'] ? y.id : null].filter(Boolean).join(' '),
+                'aria-labelledby': [y, D['aria-labelledby'], D['aria-label'] && !D['aria-labelledby'] ? D.id : null].filter(Boolean).join(' '),
                 onFocus(n) {
                     !t.isFocused && (e.onFocus && e.onFocus(n), e.onFocusChange && e.onFocusChange(!0), t.setFocused(!0));
                 },
@@ -99,7 +99,7 @@ function E(e, t, n) {
                     !t.isOpen && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 }
             }),
-            valueProps: { id: D },
+            valueProps: { id: y },
             menuProps: {
                 ...T,
                 autoFocus: t.focusStrategy || !0,
@@ -110,7 +110,7 @@ function E(e, t, n) {
                 onBlur: (n) => {
                     !n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 },
-                'aria-labelledby': [O['aria-labelledby'], y['aria-label'] && !O['aria-labelledby'] ? y.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [O['aria-labelledby'], D['aria-label'] && !O['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
             },
             descriptionProps: v,
             errorMessageProps: C,

@@ -64,8 +64,8 @@ var r = n(990547),
     v = n(430824),
     C = n(496675),
     L = n(594174),
-    y = n(979651),
-    D = n(585483),
+    D = n(979651),
+    y = n(585483),
     b = n(630388),
     M = n(823379),
     P = n(573261),
@@ -259,7 +259,7 @@ async function X(e) {
         c = L.default.getCurrentUser();
     if (null == n) return !1;
     let d = await (0, k.Z)(n, i);
-    if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    if (null == i) return y.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let _ = O.Z.getChannel(i);
     if (null == _ || null == c || null == d) return !1;
     let E =
@@ -269,7 +269,7 @@ async function X(e) {
                   ChannelStore: O.Z,
                   GuildStore: v.Z,
                   PermissionStore: C.Z,
-                  VoiceStateStore: y.Z
+                  VoiceStateStore: D.Z
               })
             : B.jy.NO_CHANNEL;
     if (E !== B.jy.CAN_LAUNCH)

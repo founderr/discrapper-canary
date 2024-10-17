@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(689938),
     C = n(705236);
 let L = 'text-sm/medium',
-    y = 36,
-    D = 144;
+    D = 36,
+    y = 144;
 function b(e) {
     let { statusActivity: t, user: a, guildId: h, channelId: I, profileType: T, hasEntered: b = !0, animate: M = !0, editEnabled: P, onCloseProfile: U } = e,
         { analyticsLocations: w } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
@@ -50,8 +50,8 @@ function b(e) {
         Q = q && !z,
         X = q ? 1.25 : 0,
         $ = 18 + X,
-        J = D + X,
-        ee = y + X,
+        J = y + X,
+        ee = D + X,
         et = q || z,
         { interactionType: en, interactionSource: er, resetInteraction: ei } = (0, S.Xo)(),
         ea = er === O.n_.STATUS && en === O.P.REACT,
@@ -178,13 +178,13 @@ function b(e) {
             [C.panel]: T === O.y0.PANEL
         },
         eL = s()(C.background, { [C.editable]: eu }),
-        ey = { [C.hoisted]: eo },
-        eD = s()({
+        eD = { [C.hoisted]: eo },
+        ey = s()({
             [C.statusBubbleShape]: (!z && q) || !ec,
             [C.statusBubbleSingleLineWithTextShape]: (ec && z) || el
         }),
-        eb = s()(C.statusBubbleOuter, eC, eD, { [C.statusBubbleOuterAddStatusCursor]: el }),
-        eM = s()(C.statusBubble, eD, {
+        eb = s()(C.statusBubbleOuter, eC, ey, { [C.statusBubbleOuterAddStatusCursor]: el }),
+        eM = s()(C.statusBubble, ey, {
             [C.statusBubbleEmojiOnlyPadding]: Q,
             [C.statusBubbleWithTextPadding]: z || el,
             [C.statusBubbleWithTextMinWidth]: z,
@@ -193,10 +193,10 @@ function b(e) {
         eP = () => {
             var e;
             return (0, r.jsx)(c.FocusRing, {
-                ringClassName: eD,
+                ringClassName: ey,
                 children: (0, r.jsxs)('div', {
                     ref: ep,
-                    className: s()(C.visibleContainer, eC, eL, ey),
+                    className: s()(C.visibleContainer, eC, eL, eD),
                     role: 'tooltip',
                     'aria-label': v.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
                         emoji: null !== (e = null == j ? void 0 : j.name) && void 0 !== e ? e : '',
@@ -246,7 +246,7 @@ function b(e) {
                   'aria-label': v.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL,
                   onClick: ev,
                   className: s()(C.addCustomStatusButtonBubble, eC, eL),
-                  focusProps: { ringClassName: eD },
+                  focusProps: { ringClassName: ey },
                   children: (0, r.jsx)('div', {
                       className: eb,
                       children: (0, r.jsx)('span', {

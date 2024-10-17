@@ -25,8 +25,8 @@ let A = new Set(),
     v = new Set(),
     C = {},
     L = 10 * T.Z.Millis.MINUTE,
-    y = 6 * T.Z.Millis.HOUR,
-    D = 10 * T.Z.Millis.MINUTE,
+    D = 6 * T.Z.Millis.HOUR,
+    y = 10 * T.Z.Millis.MINUTE,
     b = new c.V7();
 function M(e) {
     b.start(e + Math.random() * L, _.o);
@@ -90,7 +90,7 @@ class x extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new x(d.Z, {
         CONNECTION_OPEN: function () {
-            return M(y), P();
+            return M(D), P();
         },
         GAMES_DATABASE_UPDATE: function () {
             if (!(0, g.Q)()) return !1;
@@ -152,10 +152,10 @@ class x extends (r = u.ZP.Store) {
                 }
                 C[t] = r;
             }
-            M(y);
+            M(D);
         },
         APPLICATION_BRANCHES_FETCH_FAIL: function () {
-            M(D);
+            M(y);
         },
         CONNECTION_CLOSED: w,
         LOGOUT: w,

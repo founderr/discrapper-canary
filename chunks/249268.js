@@ -26,11 +26,11 @@ function f(e) {
         T = i.useMemo(() => {
             var e;
             if (null == m) return null;
-            let { sort_by_statistic_id: t } = m.settings;
+            let { sort_by_statistic_id: t } = m.guild_settings;
             return null === (e = m.users.find((e) => e.user_id === n)) || void 0 === e ? void 0 : e.statistics[t];
         }, [m, n]);
     if (null == I || null == m) return null;
-    let { sort_by_statistic_id: S } = m.settings,
+    let { sort_by_statistic_id: S } = m.guild_settings,
         g = u.ZP.getName(f, void 0, I);
     return (0, r.jsxs)('div', {
         className: E.container,
