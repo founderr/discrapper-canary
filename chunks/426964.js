@@ -201,11 +201,7 @@ t.Z = i.memo(function (e) {
                 (0, r.jsxs)('div', {
                     className: P.buttonGroupContainer,
                     children: [
-                        null != el &&
-                            (0, r.jsx)('div', {
-                                className: P.buttonContainer,
-                                children: el
-                            }),
+                        null != el && el,
                         V &&
                             H &&
                             (0, r.jsx)(s.Button, {
