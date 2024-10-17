@@ -22,8 +22,8 @@ var a = n(735250),
     g = n(399606),
     m = n(481060),
     f = n(209613),
-    C = n(626135),
-    p = n(674588),
+    p = n(626135),
+    C = n(674588),
     h = n(463571),
     x = n(894653),
     I = n(809547),
@@ -90,6 +90,7 @@ function D() {
                 query: b,
                 guildId: n,
                 page: f,
+                pageSize: 7,
                 categoryId: L
             })
         ),
@@ -97,9 +98,10 @@ function D() {
             query: '',
             guildId: void 0,
             page: void 0,
+            pageSize: void 0,
             categoryId: void 0
         }),
-        V = (0, g.cj)([I.Z], () => {
+        z = (0, g.cj)([I.Z], () => {
             let e = I.Z.getSearchResults({
                 query: b,
                 guildId: n
@@ -112,7 +114,7 @@ function D() {
                 : {};
         }),
         {
-            pageResults: z,
+            pageResults: V,
             pageCount: W,
             searchResultsType: q,
             loadId: K
@@ -122,6 +124,7 @@ function D() {
                     query: b,
                     guildId: n,
                     page: f,
+                    pageSize: 7,
                     categoryId: L
                 },
                 i = I.Z.getSearchResults(a);
@@ -135,12 +138,12 @@ function D() {
                 }
             );
         }),
-        J = i.useMemo(() => (null == z ? void 0 : z.filter((e) => !(q === _.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))), [z, q]),
+        J = i.useMemo(() => (null == V ? void 0 : V.filter((e) => !(q === _.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))), [V, q]),
         Q = i.useRef(null),
         X = (0, N.getCurrentView)(),
         $ = i.useCallback(
             (e) => {
-                C.default.track(y.rMx.APP_DIRECTORY_SEARCHED, {
+                p.default.track(y.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: b,
                     num_results: e,
                     current_page: null == X ? void 0 : X.type,
@@ -155,15 +158,16 @@ function D() {
         ee = i.useCallback((e) => {
             let { query: t, page: n, activeCategoryId: a, onSuccessCallback: i, guildId: l, fetchCounts: r } = e;
             r &&
-                p.yC({
+                C.yC({
                     query: t,
                     guildId: l
                 }),
-                p.yC({
+                C.yC({
                     query: t,
                     guildId: l,
                     options: {
                         page: n,
+                        pageSize: 7,
                         categoryId: a
                     },
                     onSuccessCallback: i
@@ -185,7 +189,7 @@ function D() {
         ea = i.useCallback(
             (e) => {
                 let { application: t, mutualGuilds: a } = e;
-                C.default.track(y.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                p.default.track(y.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: N.ApplicationDirectoryViews.SEARCH,
                     application_id: t.id,
                     load_id: K,
@@ -217,7 +221,7 @@ function D() {
                 onSuccessCallback: $
             });
         }, [b, et]);
-    let ei = i.useMemo(() => Object.keys(V).length > 0, [V]);
+    let ei = i.useMemo(() => Object.keys(z).length > 0, [z]);
     return (
         (null != J && 0 === W) || G === I.M.ERROR
             ? (t = (0, a.jsx)(A.Z, {
@@ -256,7 +260,7 @@ function D() {
                             }),
                             (0, a.jsx)(j.Z, {
                                 className: O.categoryList,
-                                countsByCategory: ei ? V : void 0,
+                                countsByCategory: ei ? z : void 0,
                                 currentCategoryId: L,
                                 onView: H
                             })

@@ -31,6 +31,7 @@ t.Z = function (e) {
             () => ({
                 query: m.Mm,
                 page: T,
+                pageSize: m.IV,
                 categoryId: n
             }),
             [T, n]
@@ -39,6 +40,7 @@ t.Z = function (e) {
             u.Z.getFetchState({
                 query: m.Mm,
                 page: T,
+                pageSize: m.IV,
                 categoryId: n
             })
         ),
@@ -61,6 +63,7 @@ t.Z = function (e) {
                     guildId: a,
                     options: {
                         page: t,
+                        pageSize: m.IV,
                         categoryId: n
                     },
                     onSuccessCallback: i

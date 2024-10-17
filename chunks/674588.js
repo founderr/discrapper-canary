@@ -174,39 +174,42 @@ async function T(e) {
 async function S(e) {
     var t;
     let { query: n, guildId: r, options: l, onSuccessCallback: u } = e,
-        { page: c, categoryId: _, integrationType: E, minUserInstallCommandCount: h, excludeAppsWithCustomInstallUrl: p, excludeNonEmbeddedApps: I, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m, source: T = i.F.APP_DIRECTORY } = null != l ? l : {},
-        S = Date.now(),
-        g = d.Z.getFetchState({
+        { page: c, pageSize: _, categoryId: E, integrationType: h, minUserInstallCommandCount: p, excludeAppsWithCustomInstallUrl: I, excludeNonEmbeddedApps: m, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: T, source: S = i.F.APP_DIRECTORY } = null != l ? l : {},
+        g = Date.now(),
+        A = d.Z.getFetchState({
             query: n,
             guildId: r,
             page: c,
-            categoryId: _,
-            integrationType: E
+            pageSize: _,
+            categoryId: E,
+            integrationType: h
         }),
-        { lastFetchTimeMs: A } =
+        { lastFetchTimeMs: N } =
             null !==
                 (t = d.Z.getSearchResults({
                     query: n,
                     guildId: r,
                     page: c,
-                    categoryId: _,
-                    integrationType: E
+                    pageSize: _,
+                    categoryId: E,
+                    integrationType: h
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (g !== d.M.FETCHING && (null == A || !(A + 600000 > S))) {
+    if (A !== d.M.FETCHING && (null == N || !(N + 600000 > g))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
             guildId: r,
             page: c,
-            categoryId: _,
-            integrationType: E,
-            minUserInstallCommandCount: h,
-            excludeAppsWithCustomInstallUrl: p,
-            excludeNonEmbeddedApps: I,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
-            source: T
+            pageSize: _,
+            categoryId: E,
+            integrationType: h,
+            minUserInstallCommandCount: p,
+            excludeAppsWithCustomInstallUrl: I,
+            excludeNonEmbeddedApps: m,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: T,
+            source: S
         });
         try {
             let e = await a.tn.get({
@@ -215,14 +218,15 @@ async function S(e) {
                     query: n,
                     guild_id: r,
                     page: c,
-                    category_id: _,
+                    page_size: _,
+                    category_id: E,
                     locale: o.default.locale,
-                    integration_type: E,
-                    min_user_install_command_count: h,
-                    exclude_apps_with_custom_install_url: p,
-                    exclude_non_embedded_apps: I,
-                    exclude_embedded_apps_without_primary_entry_point_app_command: m,
-                    source: T
+                    integration_type: h,
+                    min_user_install_command_count: p,
+                    exclude_apps_with_custom_install_url: I,
+                    exclude_non_embedded_apps: m,
+                    exclude_embedded_apps_without_primary_entry_point_app_command: T,
+                    source: S
                 }
             });
             s.Z.dispatch({
@@ -230,8 +234,9 @@ async function S(e) {
                 query: n,
                 guildId: r,
                 page: c,
-                categoryId: _,
-                integrationType: E,
+                pageSize: _,
+                categoryId: E,
+                integrationType: h,
                 result: {
                     results: e.body.results,
                     countsByCategory: e.body.counts_by_category,
@@ -240,11 +245,11 @@ async function S(e) {
                     type: e.body.type,
                     loadId: e.body.load_id
                 },
-                minUserInstallCommandCount: h,
-                excludeAppsWithCustomInstallUrl: p,
-                excludeNonEmbeddedApps: I,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
-                source: T
+                minUserInstallCommandCount: p,
+                excludeAppsWithCustomInstallUrl: I,
+                excludeNonEmbeddedApps: m,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: T,
+                source: S
             }),
                 null == u || u(e.body.result_count);
         } catch (e) {
@@ -253,13 +258,14 @@ async function S(e) {
                 query: n,
                 guildId: r,
                 page: c,
-                categoryId: _,
-                integrationType: E,
-                minUserInstallCommandCount: h,
-                excludeAppsWithCustomInstallUrl: p,
-                excludeNonEmbeddedApps: I,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
-                source: T
+                pageSize: _,
+                categoryId: E,
+                integrationType: h,
+                minUserInstallCommandCount: p,
+                excludeAppsWithCustomInstallUrl: I,
+                excludeNonEmbeddedApps: m,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: T,
+                source: S
             });
         }
     }

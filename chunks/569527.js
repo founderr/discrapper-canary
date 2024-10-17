@@ -37,12 +37,14 @@ function C(e) {
                 query: n,
                 categoryId: N,
                 page: v,
+                pageSize: S.IV,
                 source: r.F.APP_DIRECTORY
             }),
             searchResults: E.Z.getSearchResults({
                 query: n,
                 categoryId: N,
                 page: v,
+                pageSize: S.IV,
                 source: r.F.APP_DIRECTORY
             })
         })),
@@ -70,6 +72,7 @@ function C(e) {
                     query: n,
                     options: {
                         page: e,
+                        pageSize: S.IV,
                         source: r.F.APP_DIRECTORY,
                         categoryId: N
                     }
