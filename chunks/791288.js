@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(735250),
     s = n(470079),
     a = n(512722),
-    o = n.n(a),
-    r = n(442837),
+    r = n.n(a),
+    o = n(442837),
     l = n(481060),
     c = n(493683),
     d = n(13245),
@@ -57,14 +57,14 @@ function L(e) {
     });
 }
 function b(e) {
-    let { entry: t, key: n, onTrackEvent: a } = e,
-        d = (0, r.e7)([x.default], () => x.default.getUser(t.author_id)),
+    let { entry: t, idx: n, onTrackEvent: a } = e,
+        d = (0, o.e7)([x.default], () => x.default.getUser(t.author_id)),
         h = (0, m.kr)(t),
         f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
         [I, T] = s.useState('unsent'),
         [A, y] = s.useState(!1),
-        L = (0, r.e7)([v.Z], () => (null != d ? v.Z.getAnyStreamForUser(d.id) : null), [d]),
-        { isMobileOnline: b, status: P } = (0, r.cj)(
+        L = (0, o.e7)([v.Z], () => (null != d ? v.Z.getAnyStreamForUser(d.id) : null), [d]),
+        { isMobileOnline: b, status: P } = (0, o.cj)(
             [C.Z],
             () =>
                 null == d
@@ -92,7 +92,7 @@ function b(e) {
                     T('sending');
                     let e = await c.Z.getOrEnsurePrivateChannel(d.id),
                         s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
-                    o()(null != s, 'Send channel must be defined'),
+                    r()(null != s, 'Send channel must be defined'),
                         (0, Z.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, g.p)({
                             channel: s,
@@ -116,7 +116,7 @@ function b(e) {
             if (null == d) return;
             let t = await c.Z.getOrEnsurePrivateChannel(d.id),
                 n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            o()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
+            r()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == d
         ? null
@@ -124,6 +124,7 @@ function b(e) {
               className: M.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
+                      className: M.avatarContainer,
                       user: d,
                       isMobile: b,
                       status: P
@@ -132,9 +133,10 @@ function b(e) {
                       className: M.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: M.username,
+                              className: M.usernameWrapper,
                               children: [
                                   (0, i.jsx)(l.Text, {
+                                      className: M.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
                                       children: N.ZP.getName(void 0, void 0, d)
@@ -196,6 +198,7 @@ function P(e) {
                 (0, i.jsx)(
                     b,
                     {
+                        idx: t,
                         entry: e,
                         onTrackEvent: n
                     },
@@ -208,7 +211,7 @@ function P(e) {
 function D(e, t) {
     let { trackView: n, trackClick: s, trackEvent: a } = (0, T.R)(y.n0.SendGameInvitesNotification, { notif_type: y.n0.SendGameInvitesNotification });
     return (
-        o()(t.length > 0, 'Some entries must be present'),
+        r()(t.length > 0, 'Some entries must be present'),
         {
             colorScheme: I.IC.PRIMARY,
             icon: null,
