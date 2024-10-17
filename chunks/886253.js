@@ -82,11 +82,12 @@ function f(e) {
                         children: [
                             r.wS &&
                                 (0, l.jsx)(s.Button, {
-                                    look: s.ButtonLooks.FILLED,
-                                    size: s.ButtonSizes.ICON,
-                                    color: s.ButtonColors.CUSTOM,
+                                    look: s.Button.Looks.FILLED,
+                                    size: s.Button.Sizes.ICON,
+                                    color: s.Button.Colors.PRIMARY,
                                     'aria-label': p.Z.Messages.COPY_LINK,
                                     className: v.linkButton,
+                                    innerClassName: v.innerLinkButton,
                                     onClick: () => {
                                         let e = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
                                         (0, r.JG)(e), (0, s.showToast)((0, s.createToast)(p.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)), (0, c.X)(n, c.B.DETAILS_MODAL, t);

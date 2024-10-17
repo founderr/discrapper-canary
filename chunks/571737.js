@@ -5,9 +5,10 @@ var i = n(735250),
     r = n(783097),
     l = n(768581),
     o = n(956965),
-    c = n(689938),
-    d = n(613909);
-let u = 64;
+    c = n(548514),
+    d = n(689938),
+    u = n(613909);
+let _ = 64;
 t.Z = function (e) {
     let { application: t } = e,
         n = a.useMemo(
@@ -19,9 +20,9 @@ t.Z = function (e) {
                 }),
             [t]
         ),
-        _ = a.useMemo(() => {
+        E = a.useMemo(() => {
             let e = [];
-            return (0, r.vJ)(t) && e.push(c.Z.Messages.APP_DIRECTORY_PARTNER), (0, r.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(c.Z.Messages.APP_LAUNCHER_IAP_DISCLOSURE)), (0, r.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(c.Z.Messages.APP_LAUNCHER_ADS_DISCLOSURE)), e;
+            return (0, r.vJ)(t) && e.push(d.Z.Messages.APP_DIRECTORY_PARTNER), (0, r.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.Z.Messages.APP_LAUNCHER_IAP_DISCLOSURE)), (0, r.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.Z.Messages.APP_LAUNCHER_ADS_DISCLOSURE)), e;
         }, [t]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -31,12 +32,12 @@ t.Z = function (e) {
                 iconURL: n
             }),
             (0, i.jsx)('div', {
-                className: d.avatarContainer,
-                style: { height: u },
+                className: u.avatarContainer,
+                style: { height: _ },
                 children: (0, i.jsx)('img', {
                     src: n,
                     alt: '',
-                    className: d.avatar,
+                    className: u.avatar,
                     height: 120,
                     width: 120,
                     style: {
@@ -46,10 +47,10 @@ t.Z = function (e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: d.infoContainer,
+                className: u.infoContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: d.metadataContainer,
+                        className: u.metadataContainer,
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'heading-xxl/bold',
@@ -57,12 +58,12 @@ t.Z = function (e) {
                                 children: t.name
                             }),
                             (0, i.jsx)('div', {
-                                className: d.disclosuresContainer,
-                                children: _.map((e, t) =>
+                                className: u.disclosuresContainer,
+                                children: E.map((e, t) =>
                                     (0, i.jsx)(
                                         s.Text,
                                         {
-                                            className: d.disclosuresText,
+                                            className: u.disclosuresText,
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: e
@@ -73,7 +74,7 @@ t.Z = function (e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', { className: d.actionContainer })
+                    (0, i.jsx)(c.Z, { application: t })
                 ]
             })
         ]
