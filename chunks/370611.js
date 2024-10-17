@@ -8,12 +8,12 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(99815),
-    l = n(442837),
-    u = n(481060),
-    c = n(314897),
-    d = n(594174),
-    _ = n(5192),
+    o = n(442837),
+    l = n(481060),
+    u = n(314897),
+    c = n(594174),
+    d = n(5192),
+    _ = n(528567),
     E = n(873128),
     f = n(246627),
     h = n(249268),
@@ -22,8 +22,8 @@ var r = n(735250),
     m = n(721191);
 function T(e) {
     var t;
-    let { guildId: n, leaderboardId: a, intervalOffset: s, previewMode: d = !1 } = e,
-        _ = (0, l.e7)([c.default], () => c.default.getId()),
+    let { guildId: n, leaderboardId: a, intervalOffset: s, previewMode: c = !1 } = e,
+        d = (0, o.e7)([u.default], () => u.default.getId()),
         m = (0, E.Z)({
             guildId: n,
             leaderboardId: a,
@@ -41,7 +41,7 @@ function T(e) {
                 let { userId: n, previousRank: r } = t;
                 e.set(n, r);
             });
-            let { sort_by_statistic_id: t } = m.settings;
+            let { sort_by_statistic_id: t } = m.guild_settings;
             return m.users.map((n, r) => {
                 var i, a;
                 return {
@@ -52,21 +52,22 @@ function T(e) {
                 };
             });
         }, [m, T]),
-        R = i.useMemo(() => null == N.find((e) => e.userId === _) && N.length <= 10, [N, _]);
+        R = i.useMemo(() => null == N.find((e) => e.userId === d) && N.length <= 10, [N, d]);
     if (null == m) return null;
     if (0 === m.users.length) return (0, r.jsx)(S, {});
-    let { sort_by_statistic_id: O } = m.settings,
-        v = N[0];
+    let { sort_by_statistic_id: O, sort_desc: v } = m.guild_settings,
+        C = m.settings.statistics[O],
+        L = N[0];
     return (0, r.jsxs)('div', {
         className: I.container,
         children: [
             (0, r.jsx)(h.Z, {
-                userId: null == v ? void 0 : v.userId,
+                userId: null == L ? void 0 : L.userId,
                 guildId: n,
                 leaderboardId: a,
                 intervalOffset: s
             }),
-            d
+            c
                 ? null
                 : (0, r.jsx)(r.Fragment, {
                       children: (0, r.jsxs)('div', {
@@ -74,27 +75,28 @@ function T(e) {
                               (0, r.jsxs)('div', {
                                   className: I.headerRow,
                                   children: [
-                                      (0, r.jsx)(u.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
                                           className: I.headerRank,
                                           children: '#'
                                       }),
-                                      (0, r.jsx)(u.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
                                           className: I.headerPlayer,
                                           children: p.Z.Messages.LEADERBOARD_TABLE_HEADER_PLAYER
                                       }),
-                                      (0, r.jsx)(u.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
                                           className: I.headerValue,
-                                          children: (function (e) {
-                                              if (e === o.E.LOL_TOTAL_KILLS) return p.Z.Messages.LEADERBOARD_TABLE_HEADER_WEEKLY_KILLS;
-                                              return 'Unknown statistic';
-                                          })(O)
+                                          children: (0, _.s)({
+                                              statisticId: O,
+                                              sortDesc: v,
+                                              aggregationType: null == C ? void 0 : C.aggregation_type
+                                          })
                                       })
                                   ]
                               }),
-                              (0, r.jsxs)(u.ScrollerNone, {
+                              (0, r.jsxs)(l.ScrollerNone, {
                                   className: I.rows,
                                   children: [
                                       N.map((e) =>
@@ -120,13 +122,13 @@ function S() {
             (0, r.jsxs)('span', {
                 className: I.emptyTitleContainer,
                 children: [
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(l.Text, {
                         tag: 'span',
                         variant: 'text-lg/normal',
                         className: I.emptyTitle,
                         children: p.Z.Messages.LEADERBOARD_START_PLAYING_CTA
                     }),
-                    (0, r.jsx)(u.LeagueOfLegendsBrandIcon, {
+                    (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
                         size: 'custom',
                         width: 16,
                         height: 16,
@@ -144,14 +146,14 @@ function S() {
 }
 function g(e) {
     let { userId: t, rank: n, value: i, guildId: a, previousRank: s } = e,
-        o = (0, l.e7)([d.default], () => d.default.getUser(t)),
-        c = _.ZP.getName(a, void 0, o),
+        u = (0, o.e7)([c.default], () => c.default.getUser(t)),
+        _ = d.ZP.getName(a, void 0, u),
         E = null != s && s > n;
     return (0, r.jsxs)('div', {
         className: I.userRow,
         children: [
             E ? (0, r.jsx)('div', { className: I.rankChangeIndicator }) : null,
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xxs/medium',
                 className: I.userRank,
                 children: n
@@ -159,28 +161,28 @@ function g(e) {
             (0, r.jsxs)('div', {
                 className: I.userPlayer,
                 children: [
-                    (0, r.jsx)(u.Avatar, {
-                        src: null == o ? void 0 : o.getAvatarURL(a, 16),
-                        size: u.AvatarSizes.SIZE_16,
+                    (0, r.jsx)(l.Avatar, {
+                        src: null == u ? void 0 : u.getAvatarURL(a, 16),
+                        size: l.AvatarSizes.SIZE_16,
                         'aria-label': 'avatar'
                     }),
-                    (0, r.jsx)(u.Spacer, {
+                    (0, r.jsx)(l.Spacer, {
                         size: 6,
                         horizontal: !0
                     }),
-                    (0, r.jsx)(u.Heading, {
+                    (0, r.jsx)(l.Heading, {
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
-                        children: c
+                        children: _
                     }),
                     1 === n
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(u.Spacer, {
+                                  (0, r.jsx)(l.Spacer, {
                                       size: 4,
                                       horizontal: !0
                                   }),
-                                  (0, r.jsx)(u.LeagueOfLegendsBrandIcon, {
+                                  (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
                                       size: 'custom',
                                       width: 14,
                                       height: 14
@@ -191,7 +193,7 @@ function g(e) {
                     E ? (0, r.jsx)(N, { rankChange: s - n }) : null
                 ]
             }),
-            (0, r.jsx)(u.Heading, {
+            (0, r.jsx)(l.Heading, {
                 variant: 'heading-sm/medium',
                 color: 'header-primary',
                 children: i
@@ -203,12 +205,12 @@ function A() {
     return (0, r.jsxs)('div', {
         className: I.joinLeaderboardCTAContainer,
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
                 className: I.joinLeaderboardCTA,
                 children: p.Z.Messages.LEADERBOARD_START_PLAYING_CTA
             }),
-            (0, r.jsx)(u.LeagueOfLegendsBrandIcon, {
+            (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
                 size: 'custom',
                 width: 14,
                 height: 14,
@@ -222,11 +224,11 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: I.rankChangeBadge,
         children: [
-            (0, r.jsx)(u.ArrowSmallUpIcon, {
+            (0, r.jsx)(l.ArrowSmallUpIcon, {
                 size: 'xxs',
-                color: u.tokens.colors.TEXT_MUTED
+                color: l.tokens.colors.TEXT_MUTED
             }),
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
                 children: t

@@ -2435,7 +2435,8 @@ let aq = '@me',
         VOICE_PUBLIC_KEYS: () => '/voice/public-keys',
         VOICE_MATCH_PUBLIC_KEY: (e) => '/voice/'.concat(e, '/match-public-key'),
         GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t),
-        UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard'
+        UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard',
+        GUILD_LEADERBOARD_SETTINGS: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t, '/settings')
     }),
     a6 = Object.freeze({
         INDEX: '/',
@@ -5478,6 +5479,7 @@ let oE = Object.freeze({
     (nx.END_TO_END_ENCRYPTION = '25968222946071'),
     (nx.SCREEN_SHARING_MACOS = '26459694693783'),
     (nx.SOCIAL_LAYER_CONNECTIONS = '26575242994583'),
+    (nx.GUILD_LEADERBOARD = '26575242994583'),
     ((tr || (tr = {})).INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'),
     ((nK = tn || (tn = {}))[(nK.HIDDEN = 1)] = 'HIDDEN'),
     (nK[(nK.PRIVATE = 2)] = 'PRIVATE'),

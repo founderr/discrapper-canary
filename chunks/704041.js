@@ -38,7 +38,11 @@ function T(e) {
                       onClick: function () {
                           (0, s.openModalLazy)(async () => {
                               let { default: e } = await n.e('73217').then(n.bind(n, 139964));
-                              return (t) => (0, r.jsx)(e, { ...t });
+                              return (n) =>
+                                  (0, r.jsx)(e, {
+                                      ...n,
+                                      guildId: t
+                                  });
                           });
                       },
                       children: p.Z.Messages.JOIN_LEADERBOARD

@@ -52,14 +52,14 @@ async function g(e) {
     if (!h.has(a))
         try {
             h.add(a);
-            let e = await (0, c.p)({
+            let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: 0
                 }),
                 r = d.Z.get(t, n);
             if ((null == r ? void 0 : r.interval_start) !== e.leaderboard.interval_start) {
-                let e = await (0, c.p)({
+                let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: -1
@@ -104,6 +104,9 @@ function N() {
     T(), (f = new Map()), (h = new Set()), (p = new Map()), A();
 }
 class R extends a.Z {
+    fetchLeaderboard(e) {
+        return g(e);
+    }
     constructor(...e) {
         var t, n, r;
         super(...e),

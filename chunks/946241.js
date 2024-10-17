@@ -21,9 +21,10 @@ function c(e) {
             intervalOffset: 0
         });
     return i.useMemo(() => {
-        if (null == E) return !1;
-        let e = E.users[0];
-        return n.author.id === (null == e ? void 0 : e.user_id);
+        var e;
+        if ((null == E ? void 0 : null === (e = E.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
+        let t = E.users[0];
+        return n.author.id === (null == t ? void 0 : t.user_id);
     }, [E, n])
         ? (0, r.jsx)('div', {
               className: u.badge,

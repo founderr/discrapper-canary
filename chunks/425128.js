@@ -1,8 +1,11 @@
 n.d(t, {
-    _: function () {
+    _7: function () {
         return u;
     },
-    p: function () {
+    _b: function () {
+        return c;
+    },
+    pV: function () {
         return l;
     }
 });
@@ -49,6 +52,23 @@ let l = async (e) => {
                     }),
                 e
             );
+        } catch (e) {
+            throw new a.Hx(e);
+        }
+    },
+    c = async (e) => {
+        let { guildId: t, leaderboardId: n, sortByStatisticId: i, sortDesc: s, showWinnerCrown: l } = e;
+        try {
+            return (
+                await r.tn.put({
+                    url: o.ANM.GUILD_LEADERBOARD_SETTINGS(t, n),
+                    body: {
+                        sort_by_statistic_id: i,
+                        sort_desc: s,
+                        show_winner_crown: l
+                    }
+                })
+            ).body;
         } catch (e) {
             throw new a.Hx(e);
         }

@@ -1,142 +1,95 @@
-s.r(a),
-    s.d(a, {
+s.r(t),
+    s.d(t, {
         default: function () {
-            return j;
+            return _;
         }
     });
 var n = s(735250);
 s(470079);
-var t = s(442837),
-    i = s(481060),
-    o = s(231757),
-    l = s(565138),
-    d = s(511010),
+var o = s(442837),
+    a = s(481060),
+    l = s(231757),
+    i = s(511010),
     r = s(553795),
-    c = s(430824),
-    m = s(914010),
-    u = s(979192),
+    d = s(430824),
+    c = s(979192),
+    u = s(647529),
     x = s(981631),
-    h = s(689938),
-    g = s(97741),
-    _ = s(767688);
-function j(e) {
-    let { transitionState: a } = e,
-        s = (0, t.e7)([m.Z], () => m.Z.getGuildId()),
-        o = (0, t.e7)([c.Z], () => c.Z.getGuild(s));
-    return null == o
+    m = s(689938),
+    h = s(97741);
+function _(e) {
+    let { guildId: t, ...s } = e,
+        l = (0, o.e7)([d.Z], () => d.Z.getGuild(t));
+    return null == l
         ? null
-        : (0, n.jsxs)(i.ModalRoot, {
-              transitionState: a,
-              size: i.ModalSize.DYNAMIC,
-              className: g.modalRoot,
-              children: [
-                  (0, n.jsx)('div', { className: g.gradientSplash }),
-                  (0, n.jsxs)(i.ModalHeader, {
-                      separator: !1,
-                      className: g.modalHeader,
-                      children: [
-                          (0, n.jsx)('div', {
-                              className: g.imageFrame,
-                              children: (0, n.jsx)('img', {
-                                  alt: h.Z.Messages.LEADERBOARD_MODAL_TITLE,
-                                  src: _,
-                                  className: g.heroImage
-                              })
-                          }),
-                          (0, n.jsx)(i.Heading, {
-                              variant: 'heading-xl/bold',
-                              color: 'header-primary',
-                              className: g.title,
-                              children: h.Z.Messages.LEADERBOARD_MODAL_TITLE
-                          }),
-                          (0, n.jsxs)('div', {
-                              className: g.guildContainer,
-                              children: [
-                                  (0, n.jsx)(l.Z, {
-                                      guild: o,
-                                      className: g.guildIcon
-                                  }),
-                                  (0, n.jsx)(i.Text, {
-                                      variant: 'text-md/semibold',
-                                      color: 'text-secondary',
-                                      children: o.name
-                                  })
-                              ]
-                          })
-                      ]
-                  }),
-                  (0, n.jsxs)(i.ModalContent, {
-                      className: g.modalContent,
-                      children: [
-                          (0, n.jsxs)('div', {
-                              className: g.subtitleContainer,
-                              children: [
-                                  (0, n.jsx)(i.Text, {
-                                      variant: 'text-md/normal',
-                                      color: 'text-secondary',
-                                      children: h.Z.Messages.LEADERBOARD_MODAL_SUBTITLE
-                                  }),
-                                  (0, n.jsx)(i.LeagueOfLegendsBrandIcon, { size: 'xs' })
-                              ]
-                          }),
-                          (0, n.jsxs)('div', {
-                              className: g.notes,
-                              children: [(0, n.jsx)(C, {}), (0, n.jsx)(d.Z, { className: g.divider }), null != o && (0, n.jsx)(A, { guild: o })]
-                          })
-                      ]
-                  })
-              ]
+        : (0, n.jsx)(u.Z, {
+              guildId: t,
+              title: m.Z.Messages.LEADERBOARD_MODAL_TITLE,
+              ...s,
+              children: (0, n.jsxs)(a.ModalContent, {
+                  className: h.modalContent,
+                  children: [
+                      (0, n.jsxs)('div', {
+                          className: h.subtitleContainer,
+                          children: [
+                              (0, n.jsx)(a.Text, {
+                                  variant: 'text-md/normal',
+                                  color: 'text-secondary',
+                                  children: m.Z.Messages.LEADERBOARD_MODAL_SUBTITLE
+                              }),
+                              (0, n.jsx)(a.LeagueOfLegendsBrandIcon, { size: 'xs' })
+                          ]
+                      }),
+                      (0, n.jsxs)('div', {
+                          className: h.notes,
+                          children: [(0, n.jsx)(g, {}), (0, n.jsx)(a.Spacer, { size: 4 }), (0, n.jsx)(i.Z, { className: h.divider }), null != l && (0, n.jsx)(N, { guild: l })]
+                      })
+                  ]
+              })
           });
 }
-function C() {
+function g() {
     return (0, n.jsxs)('div', {
-        className: g.row,
+        className: h.row,
         children: [
-            (0, n.jsx)(i.Text, {
+            (0, n.jsx)(a.Text, {
                 variant: 'text-md/medium',
-                children: h.Z.Messages.LEADERBOARD_MODAL_CONNECT_RIOT
+                children: m.Z.Messages.LEADERBOARD_MODAL_CONNECT_RIOT
             }),
-            (0, n.jsx)(N, {})
+            (0, n.jsx)(j, {})
         ]
     });
 }
-function N() {
-    return null != (0, t.e7)([r.Z], () => r.Z.getAccount(null, x.ABu.RIOT_GAMES))
-        ? (0, n.jsxs)(i.Button, {
+function j() {
+    return null != (0, o.e7)([r.Z], () => r.Z.getAccount(null, x.ABu.RIOT_GAMES))
+        ? (0, n.jsxs)(a.Button, {
               disabled: !0,
-              color: i.Button.Colors.TRANSPARENT,
-              look: i.Button.Looks.OUTLINED,
-              innerClassName: g.doneButton,
+              color: a.Button.Colors.TRANSPARENT,
+              look: a.Button.Looks.OUTLINED,
+              innerClassName: h.doneButton,
               children: [
-                  (0, n.jsx)(i.CheckmarkSmallIcon, {}),
-                  (0, n.jsx)(i.Text, {
+                  (0, n.jsx)(a.CheckmarkSmallIcon, {}),
+                  (0, n.jsx)(a.Text, {
                       variant: 'text-sm/medium',
-                      children: h.Z.Messages.DONE
+                      children: m.Z.Messages.DONE
                   })
               ]
           })
-        : (0, n.jsx)(i.Button, {
-              onClick: () => (0, o.Z)({ platformType: x.ABu.RIOT_GAMES }),
-              children: h.Z.Messages.CONNECT
+        : (0, n.jsx)(a.Button, {
+              onClick: () => (0, l.Z)({ platformType: x.ABu.RIOT_GAMES }),
+              size: a.Button.Sizes.SMALL,
+              color: a.Button.Colors.PRIMARY,
+              children: m.Z.Messages.LEADERBOARD_SETTINGS_SIGN_IN_TO_CONNECTION
           });
 }
-function A(e) {
-    let { guild: a } = e,
-        { leaderboardsDisabled: s, toggleGuildLeaderboardsDisabled: t } = (0, u.O)(a.id);
-    return (0, n.jsxs)('div', {
-        className: g.row,
-        children: [
-            (0, n.jsx)(i.Text, {
-                variant: 'text-sm/medium',
-                children: h.Z.Messages.LEADERBOARD_SHARE_STATS
-            }),
-            (0, n.jsx)('div', {
-                className: g.switchContainer,
-                children: (0, n.jsx)(i.Switch, {
-                    checked: !s,
-                    onChange: () => t()
-                })
-            })
-        ]
+function N(e) {
+    let { guild: t } = e,
+        { leaderboardsDisabled: s, toggleGuildLeaderboardsDisabled: o } = (0, c.O)(t.id);
+    return (0, n.jsx)(a.FormSwitch, {
+        hideBorder: !0,
+        onChange: o,
+        value: !s,
+        className: h.guildOptoutSwitch,
+        children: m.Z.Messages.LEADERBOARD_SHARE_STATS
     });
 }
