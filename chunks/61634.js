@@ -23,8 +23,8 @@ var i = n(470079),
     I = n(314897),
     E = n(592125),
     N = n(650774),
-    S = n(430824),
-    x = n(496675),
+    x = n(430824),
+    S = n(496675),
     v = n(699516),
     T = n(944486),
     Z = n(9156),
@@ -33,9 +33,9 @@ var i = n(470079),
     M = n(510601),
     R = n(901621),
     L = n(981631);
-let P = [];
-function y(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : x.Z;
+let y = [];
+function P(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.Z;
     return null != e && e.type !== a.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(L.S7T.VIEW_CHANNEL, e);
 }
 function O(e) {
@@ -53,9 +53,9 @@ function O(e) {
             d = (0, s.cj)(
                 [b.Z],
                 () => {
-                    if (!a || t || u) return P;
+                    if (!a || t || u) return y;
                     let n = Object.keys(b.Z.getVoiceStates(e));
-                    return 0 === n.length ? P : n.slice(0, 50);
+                    return 0 === n.length ? y : n.slice(0, 50);
                 },
                 [e, t, u, a]
             );
@@ -91,23 +91,23 @@ function O(e) {
             guildHasVideo: w,
             selectedVoiceChannelHasVideo: U
         } = (0, s.cj)(
-            [T.Z, b.Z, S.Z, x.Z, E.Z],
+            [T.Z, b.Z, x.Z, S.Z, E.Z],
             () => {
                 var t;
                 let i = T.Z.getVoiceChannelId(),
-                    l = null === (t = S.Z.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
+                    l = null === (t = x.Z.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
                     r = b.Z.getUsersWithVideo(e),
                     a = L ? (0, h.DX)(b.Z.getVoiceStates(e)) : b.Z.getVoiceStates(e),
                     s = (() => {
                         if (n) return !1;
-                        for (let e in a) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e in a) if (P(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, S.Z)) return !0;
                         return !1;
                     })();
                 return {
                     guildHasVoice: s,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (y(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, x.Z)) return !0;
+                        for (let e of r) if (P(E.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, S.Z)) return !0;
                         return !1;
                     })(),
                     selectedVoiceChannelHasVideo: null != i && b.Z.hasVideo(i)
@@ -117,7 +117,7 @@ function O(e) {
         ),
         G = I.default.getId();
     return (0, s.cj)(
-        [T.Z, E.Z, d.ZP, m.Z, C.Z, x.Z],
+        [T.Z, E.Z, d.ZP, m.Z, C.Z, S.Z],
         () => {
             var t, i, r;
             let s = T.Z.getVoiceChannelId(),
@@ -139,9 +139,9 @@ function O(e) {
                     gaming: a,
                     isCurrentUserConnected: !1
                 };
-            let S = A.default.keys(m.Z.getStageInstancesByGuild(e)).some((e) => {
+            let x = A.default.keys(m.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = E.Z.getChannel(e);
-                    return null != t && x.Z.can(_.gl, t);
+                    return null != t && S.Z.can(_.gl, t);
                 }),
                 v = o && null !== (r = null === (i = E.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
                 Z = !!o && null != C.Z.getActiveStreamForUser(G, e),
@@ -155,9 +155,9 @@ function O(e) {
                     }
                     return !1;
                 })(),
-                P = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                y = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = M), (I = Z), (N = P)) : ((c = D), (u = null != l), (p = S), (f = w), (I = b), (N = R)),
+                o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (p = v), (f = M), (I = Z), (N = y)) : ((c = D), (u = null != l), (p = x), (f = w), (I = b), (N = R)),
                 {
                     audio: c,
                     video: f,

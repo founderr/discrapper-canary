@@ -1,32 +1,32 @@
-var r, a, l, i, o, s, c;
+var r, i, a, s, o, l, u;
 n.d(t, {
     D7: function () {
-        return u;
+        return d;
     },
     F$: function () {
         return r;
     },
     JU: function () {
-        return i;
+        return s;
     },
     Kl: function () {
-        return h;
+        return _;
     },
     U1: function () {
-        return m;
+        return E;
     },
     WB: function () {
-        return a;
+        return i;
     },
     mc: function () {
-        return d;
+        return c;
     }
 }),
     ((o = r || (r = {})).SERVERS = 'servers'),
     (o.QUESTS = 'quests'),
     (o.APPS = 'apps');
-let d = 12633 == n.j ? ['servers', 'apps', 'quests'] : null,
-    u = 'servers',
-    h = 24,
-    m = 240;
-((s = a || (a = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed'), ((c = l || (l = {})).ROOT = 'root'), (c.SERVER_TAB = 'server_tab'), (c.SERVER_SEARCH = 'server_search'), ((i || (i = {})).GUILDS_BAR_ICON = 'guilds_bar_icon');
+let c = ['servers', 'apps', 'quests'],
+    d = 'servers',
+    _ = 24,
+    E = 240;
+((l = i || (i = {})).DEFAULT = 'default'), (l.FLOATING = 'floating'), (l.COLLAPSED = 'collapsed'), ((u = a || (a = {})).ROOT = 'root'), (u.SERVERS_CATEGORY = 'server_tab'), (u.SERVERS_SEARCH = 'server_search'), ((s || (s = {})).GUILDS_BAR_ICON = 'guilds_bar_icon');

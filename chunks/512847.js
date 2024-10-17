@@ -28,7 +28,7 @@ var i = n(735250),
     v = n(823379),
     Z = n(557177),
     L = n(981631);
-function R(e, t, n, i) {
+function O(e, t, n, i) {
     a.useEffect(() => {
         let a = t(),
             s = new l.Fh(e, () => {
@@ -39,9 +39,9 @@ function R(e, t, n, i) {
         return s.attach('useSound'), () => s.detach();
     });
 }
-function O() {
+function R() {
     return (
-        R(
+        O(
             [g.Z, f.Z],
             () => ({
                 inVoiceChannel: null != f.Z.getVoiceChannelId(),
@@ -69,7 +69,7 @@ function O() {
 }
 function x() {
     return (
-        R(
+        O(
             [I.Z, S.Z, f.Z, c.Z],
             () => {
                 let e = I.Z.getChannel(f.Z.getVoiceChannelId()),
@@ -107,7 +107,7 @@ function x() {
 }
 function b() {
     return (
-        R(
+        O(
             [C.Z],
             () => C.Z.isCurrentUserSpeaking(),
             (e, t) => {
@@ -122,7 +122,7 @@ function b() {
 }
 function M() {
     return (
-        R(
+        O(
             [g.Z],
             () => g.Z.isSelfMutedTemporarily(),
             (e, t) => {
@@ -137,7 +137,7 @@ function M() {
 }
 function P() {
     return (
-        R(
+        O(
             [N.Z],
             () => N.Z.userHasBeenMovedVersion,
             (e, t) => {
@@ -149,7 +149,7 @@ function P() {
 }
 function D() {
     return (
-        R(
+        O(
             [f.Z, N.Z],
             () => {
                 let e = f.Z.getVoiceChannelId();
@@ -166,7 +166,7 @@ function D() {
 }
 function y() {
     return (
-        R(
+        O(
             [f.Z, h.Z, m.default, N.Z, I.Z],
             () => {
                 let e, t;
@@ -229,7 +229,7 @@ function y() {
 }
 function j() {
     return (
-        R(
+        O(
             [f.Z, o.ZP, m.default],
             () => {
                 let e = f.Z.getVoiceChannelId(),
@@ -270,7 +270,7 @@ function j() {
 }
 function U() {
     return (
-        R(
+        O(
             [u.Z, f.Z],
             () => ({
                 hangStatus: u.Z.getCurrentHangStatus(),
@@ -289,6 +289,6 @@ function U() {
 }
 function G() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(O, {}), (0, i.jsx)(x, {}), (0, i.jsx)(b, {}), (0, i.jsx)(M, {}), (0, i.jsx)(P, {}), (0, i.jsx)(y, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(U, {})]
+        children: [(0, i.jsx)(R, {}), (0, i.jsx)(x, {}), (0, i.jsx)(b, {}), (0, i.jsx)(M, {}), (0, i.jsx)(P, {}), (0, i.jsx)(y, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(U, {})]
     });
 }

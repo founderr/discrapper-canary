@@ -50,15 +50,15 @@ function I(e) {
     }, [o, Z]);
     let {
             state: P,
-            executeStateUpdate: A,
-            visualState: k,
+            executeStateUpdate: k,
+            visualState: A,
             isDisabled: U,
             error: B
         } = (0, m.Ee)(n, {
             type: I,
             selectedOptions: Array.from(S.values())
         }),
-        G = k === _.gH.LOADING;
+        G = A === _.gH.LOADING;
     r.useEffect(() => {
         if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
@@ -66,11 +66,11 @@ function I(e) {
         }
     }, [P]);
     let w = r.useCallback(() => {
-        A({
+        k({
             type: I,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
-    }, [A, I, S]);
+    }, [k, I, S]);
     r.useEffect(() => {
         if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) w();
     }, [T, b, j, S, w]);

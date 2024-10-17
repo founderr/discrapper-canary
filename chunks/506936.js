@@ -23,11 +23,11 @@ var a = n(442837),
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
-        { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: S, newMember: x } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
         v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
         T = null,
         Z = null;
-    return (0 === t && (I ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (Z = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (Z = m.Z.Messages.VERIFY_PHONE)) : E ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (Z = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : x ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (Z = m.Z.Messages.OKAY)) : S && ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (Z = m.Z.Messages.OKAY))), null == v || null == T)
+    return (0 === t && (I ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (Z = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (Z = m.Z.Messages.VERIFY_PHONE)) : E ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (Z = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (Z = m.Z.Messages.OKAY)) : x && ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (Z = m.Z.Messages.OKAY))), null == v || null == T)
         ? null
         : (0, r.jsxs)(s.Dialog, {
               className: g.container,

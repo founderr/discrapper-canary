@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return k;
     }
 }),
     n(47120);
@@ -167,7 +167,7 @@ function I(e) {
         ]
     });
 }
-let E = [
+let w = [
     {
         key: 'action',
         cellClassName: j.actionColumn,
@@ -187,7 +187,7 @@ let E = [
         }
     }
 ];
-function w() {
+function k() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
@@ -263,7 +263,7 @@ function w() {
                     })
                 }),
                 (0, r.jsx)(v.Z, {
-                    columns: E,
+                    columns: w,
                     data: t.trim().length > 0 ? c : s,
                     selectedRowKey: null == x ? void 0 : x.id.toString(),
                     onClickRow: (e) => f(e.actionLog)

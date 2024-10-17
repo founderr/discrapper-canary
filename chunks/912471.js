@@ -91,16 +91,16 @@ function v() {
         })();
 }
 function Z() {
-    _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(R), a.Z.subscribe('WINDOW_FOCUS', O), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
+    _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(O), a.Z.subscribe('WINDOW_FOCUS', R), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
 }
 function L() {
     C();
 }
-function R() {
+function O() {
     let e = o.Z.getState();
     N !== e && ((N = e), v());
 }
-function O(e) {
+function R(e) {
     let { focused: t } = e;
     (A = t), v();
 }

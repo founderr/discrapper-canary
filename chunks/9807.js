@@ -29,7 +29,7 @@ function N(e, t, s) {
         e
     );
 }
-let b = (e) => {
+let f = (e) => {
         let { className: t, ...s } = e;
         return (0, a.jsx)(m.Z, {
             ...s,
@@ -38,7 +38,7 @@ let b = (e) => {
             renderLinkComponent: g.iT
         });
     },
-    f = (e) => {
+    b = (e) => {
         let { containerClassName: t, className: s, ...n } = e;
         return (0, a.jsx)(p.ZP, {
             ...n,
@@ -53,7 +53,7 @@ let b = (e) => {
         width: 640,
         height: 360
     },
-    E = (e) => {
+    y = (e) => {
         let t,
             s,
             n,
@@ -101,13 +101,13 @@ let b = (e) => {
                 autoMute: p,
                 onMute: c,
                 autoPlay: m,
-                renderImageComponent: f,
-                renderVideoComponent: b,
+                renderImageComponent: b,
+                renderVideoComponent: f,
                 renderLinkComponent: g.iT
             })
         });
     };
-class y extends (n = i.PureComponent) {
+class E extends (n = i.PureComponent) {
     componentDidMount() {
         let { items: e } = this.props;
         e.length > 0 && e[0].type === x.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
@@ -187,7 +187,7 @@ class y extends (n = i.PureComponent) {
                 switch (e.type) {
                     case x.s9s.YOUTUBE_VIDEO:
                     case x.s9s.VIDEO:
-                        s = (0, a.jsx)(E, {
+                        s = (0, a.jsx)(y, {
                             item: e,
                             onPlay: this.handlePlay,
                             isMuted: n,
@@ -239,8 +239,8 @@ class y extends (n = i.PureComponent) {
             });
     }
 }
-N(y, 'defaultProps', {
+N(E, 'defaultProps', {
     paused: !1,
     videoAutoPlay: !0
 }),
-    (t.Z = y);
+    (t.Z = E);

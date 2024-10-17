@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return y;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(592125),
     E = n(944486),
     N = n(979651),
-    S = n(709054),
-    x = n(853856),
+    x = n(709054),
+    S = n(853856),
     v = n(593214),
     T = n(919755),
     Z = n(110977),
@@ -41,13 +41,13 @@ let L = {
         object: A.qAy.CHANNEL
     }
 };
-function P() {
+function y() {
     let e = (0, s.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
-        [P, y] = l.useState(!1),
-        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([x.Z], () => ({
-            favoriteChannels: x.Z.getFavoriteChannels(),
-            favoriteServerMuted: x.Z.favoriteServerMuted
+        [y, P] = l.useState(!1),
+        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([S.Z], () => ({
+            favoriteChannels: S.Z.getFavoriteChannels(),
+            favoriteServerMuted: S.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
@@ -63,7 +63,7 @@ function P() {
                 }),
                 l = (0, o.e7)([C.Z], () => C.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 r = (0, o.e7)([N.Z], () => n && null != t && N.Z.hasVideo(t), [n, t]),
-                a = (0, o.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, o.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { channelId: n } = t;
@@ -95,7 +95,7 @@ function P() {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: U,
-                hovered: P,
+                hovered: y,
                 unread: k && !O,
                 className: R.pill
             }),
@@ -103,7 +103,7 @@ function P() {
                 onShow: V,
                 children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || P,
+                        selected: U || y,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
@@ -116,9 +116,9 @@ function P() {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
-                            selected: U || P,
-                            onMouseEnter: () => y(!0),
-                            onMouseLeave: () => y(!1),
+                            selected: U || y,
+                            onMouseEnter: () => P(!0),
+                            onMouseLeave: () => P(!1),
                             onMouseDown: function () {
                                 if (null != w) u.Z.preload(w.guild_id, w.id);
                             },

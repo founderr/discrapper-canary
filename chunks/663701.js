@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(880257),
     Z = n(631885),
     L = n(522558),
-    R = n(795448),
-    O = n(441623),
+    O = n(795448),
+    R = n(441623),
     x = n(457396),
     b = n(108989),
     M = n(51596),
@@ -57,7 +57,7 @@ let J = (e) => {
         let { selected: t, ...n } = e,
             s = (0, c.JA)('friends'),
             r = (0, u.e7)([G.Z], () => G.Z.getPendingCount()),
-            l = (0, u.e7)([O.Z], () => O.Z.canShowFriendsTabBadge()),
+            l = (0, u.e7)([R.Z], () => R.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
             { enabled: _ } = L.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             E = l && _;
@@ -75,7 +75,7 @@ let J = (e) => {
             children: [
                 (0, i.jsx)(F.Qj, {
                     onClick: () => {
-                        E && (V.default.track(W.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: q.hX.FRIEND_ANNIVERSARY }), I.Z.setSection(W.pJs.ALL), (0, R.Gk)());
+                        E && (V.default.track(W.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: q.hX.FRIEND_ANNIVERSARY }), I.Z.setSection(W.pJs.ALL), (0, O.Gk)());
                     },
                     interactiveClassName: E ? X.friendsBadge : void 0,
                     selected: t,

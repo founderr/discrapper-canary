@@ -76,7 +76,7 @@ function N(e) {
           }))
         : C;
 }
-function S(e) {
+function x(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         r = null == t ? void 0 : t.details,
         a = null == t ? void 0 : t.name,
@@ -99,7 +99,7 @@ function S(e) {
         children: s
     });
 }
-function x(e) {
+function S(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
@@ -186,12 +186,12 @@ function Z(e) {
                           (0, i.jsxs)('div', {
                               className: I.detailsAndAvatarsContainer,
                               children: [
-                                  (0, i.jsx)(S, {
+                                  (0, i.jsx)(x, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(x, {
+                                  (0, i.jsx)(S, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p

@@ -52,7 +52,7 @@ function I(e) {
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function E(e) {
+function w(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,7 +67,7 @@ function E(e) {
         ]
     });
 }
-let w = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -124,7 +124,7 @@ let w = [
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    E,
+                                    w,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -144,11 +144,11 @@ let w = [
             }
         }
     ],
-    k = {
+    E = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(k)
+                Object.entries(E)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -176,7 +176,7 @@ function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
-        [s, c] = a.useState(Object.keys(k)),
+        [s, c] = a.useState(Object.keys(E)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
         p = a.useCallback(
@@ -206,7 +206,7 @@ function Z() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of s) if (k[t].filter(e)) return !0;
+                    for (let t of s) if (E[t].filter(e)) return !0;
                     return !1;
                 }),
             [h, s]
@@ -214,9 +214,9 @@ function Z() {
     a.useEffect(() => {
         p(t, l);
     }, [t, p, l]);
-    let [I, E] = a.useState(void 0),
+    let [I, w] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, C.Z)({ tabs: w }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, C.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, S.panel),
@@ -241,7 +241,7 @@ function Z() {
                     (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: S.filters,
-                        children: Object.entries(k).map((e) => {
+                        children: Object.entries(E).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
@@ -273,7 +273,7 @@ function Z() {
                 columns: y,
                 data: v,
                 selectedRowKey: I,
-                onClickRow: (e) => E(e.key)
+                onClickRow: (e) => w(e.key)
             }),
             null != Z &&
                 (0, r.jsxs)(_.Z, {
@@ -284,7 +284,7 @@ function Z() {
                         (0, r.jsx)(R, {}),
                         O({
                             loggedEvent: Z,
-                            onClose: () => E(void 0)
+                            onClose: () => w(void 0)
                         })
                     ]
                 })

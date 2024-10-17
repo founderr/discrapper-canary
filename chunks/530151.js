@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(210887),
     Z = n(283595),
     L = n(417363),
-    R = n(941128),
-    O = n(451478),
+    O = n(941128),
+    R = n(451478),
     x = n(424218),
     b = n(780570),
     M = n(353042),
@@ -619,12 +619,12 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, g.Z)(
-    c.ZP.connectStores([T.Z, L.Z, R.Z, v.Z, O.Z], () => {
-        let e = et(R.Z.activeItems, !1, T.Z, L.Z);
+    c.ZP.connectStores([T.Z, L.Z, O.Z, v.Z, R.Z], () => {
+        let e = et(O.Z.activeItems, !1, T.Z, L.Z);
         return {
-            applications: [...e, ...et(R.Z.finishedItems, !0, T.Z, L.Z)],
-            paused: R.Z.paused,
-            isFocused: O.Z.isFocused(),
+            applications: [...e, ...et(O.Z.finishedItems, !0, T.Z, L.Z)],
+            paused: O.Z.paused,
+            isFocused: R.Z.isFocused(),
             theme: v.Z.theme
         };
     })((0, p.Z)(ee))

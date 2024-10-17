@@ -78,14 +78,14 @@ function C(e) {
             }),
                 (0, o.uL)(d.Z5c.GUILD_DISCOVERY);
         }, [t.id]),
-        S = l.useCallback(() => (0, i.jsx)(g, { onClick: N }), [N]);
+        x = l.useCallback(() => (0, i.jsx)(g, { onClick: N }), [N]);
     return (0, i.jsx)(s.Z, {
         className: f.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
         title: E,
         message: I,
-        cta: S,
+        cta: x,
         trackingSource: d.PsQ.CLAN_ADMIN_UPSELL,
         type: d.vID.CLAN_ADMIN_UPSELL
     });

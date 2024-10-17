@@ -72,7 +72,7 @@ function E(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
         { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: N, mentionCount: S, targetChannelId: x } = 'bottom' === t ? h : f,
+        { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : f,
         v = N === _.x.HIDDEN,
         T = (0, u.useSpring)(
             {
@@ -83,9 +83,9 @@ function E(e) {
         ),
         Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != x && d(x);
+                e.preventDefault(), e.stopPropagation(), null != S && d(S);
             },
-            [d, x]
+            [d, S]
         );
     return (0, i.jsx)('div', {
         className: a()(g.container, {
@@ -135,7 +135,7 @@ function E(e) {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: g.barText,
-                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: S })
+                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
                               })
                           })
                         : N === _.x.VOICE_CHANNELS

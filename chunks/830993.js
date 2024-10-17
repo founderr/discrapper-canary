@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(561788),
     E = n(135724),
     N = n(543432),
-    S = n(981631),
-    x = n(689938),
+    x = n(981631),
+    S = n(689938),
     v = n(289223);
 function T(e) {
     var t, d;
@@ -51,7 +51,7 @@ function T(e) {
     let N = (0, o.ZP)(h),
         T = Array.from((0, o.uF)(N).values()),
         b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
-        A = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
         M = (0, r.e7)(
             [f.Z],
             () => {
@@ -69,7 +69,7 @@ function T(e) {
                                               members: [],
                                               activity: n
                                           };
-                            o.members.push(t), !(0, c.Z)(o.activity, S.xjy.JOIN) && (o.activity = n), (e[s] = o);
+                            o.members.push(t), !(0, c.Z)(o.activity, x.xjy.JOIN) && (o.activity = n), (e[s] = o);
                         }
                     }),
                     Object.values(e)
@@ -124,10 +124,10 @@ function T(e) {
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: x.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
+                                      children: S.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('96427'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('18146'), n.e('37229'), n.e('28044'), n.e('35539'), n.e('67760')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('96427'), n.e('23217'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('18146'), n.e('37229'), n.e('28044'), n.e('35539'), n.e('67760')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,
@@ -145,7 +145,7 @@ function T(e) {
 }
 function Z(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, t)),
+        a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
         s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         o = (0, g.ZP)({
             channel: t,

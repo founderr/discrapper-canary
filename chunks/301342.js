@@ -31,8 +31,8 @@ var i = n(735250),
     I = n(203818),
     E = n(438144),
     N = n(981631),
-    S = n(689938),
-    x = n(134743);
+    x = n(689938),
+    S = n(134743);
 function v(e) {
     e.stopPropagation();
 }
@@ -42,11 +42,11 @@ let T = l.memo(function (e) {
         M = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
         R = (0, o.e7)([_.Z], () => _.Z.isCollapsed(r.id)),
         L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
-    t = null != Z ? (T > Z ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
-    let P = l.useCallback(() => {
+    t = null != Z ? (T > Z ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+    let y = l.useCallback(() => {
             R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, R]),
-        y = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = m.Z.getGuild(r.getGuildId());
@@ -95,20 +95,20 @@ let T = l.memo(function (e) {
                     },
                     children: (0, i.jsxs)('div', {
                         ref: G,
-                        className: a()(x.iconVisibility, x.wrapper, {
-                            [x.collapsed]: R,
-                            [x.muted]: M,
-                            [x.clickable]: !0
+                        className: a()(S.iconVisibility, S.wrapper, {
+                            [S.collapsed]: R,
+                            [S.muted]: M,
+                            [S.clickable]: !0
                         }),
-                        onContextMenu: y,
+                        onContextMenu: P,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: U,
-                                className: x.mainContent,
+                                className: S.mainContent,
                                 tabIndex: D,
                                 ...w,
-                                onClick: P,
-                                'aria-label': S.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
+                                onClick: y,
+                                'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
                                 'aria-expanded': !R,
                                 focusProps: { enabled: !1 },
                                 children: [
@@ -117,28 +117,28 @@ let T = l.memo(function (e) {
                                         : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: x.icon
+                                              className: S.icon
                                           }),
                                     (0, i.jsx)(p.Z, {
-                                        className: x.name,
+                                        className: S.name,
                                         children: (0, i.jsx)(f.Z, { children: r.name })
                                     })
                                 ]
                             }),
                             (0, i.jsx)('div', {
                                 onClick: v,
-                                className: x.children,
+                                className: S.children,
                                 children:
                                     L && !E
                                         ? (0, i.jsx)(c.Tooltip, {
-                                              text: S.Z.Messages.CREATE_CHANNEL,
+                                              text: x.Z.Messages.CREATE_CHANNEL,
                                               children: (e) => {
                                                   let { onMouseEnter: t, onMouseLeave: n } = e;
                                                   return (0, i.jsx)(c.Button, {
-                                                      'aria-label': S.Z.Messages.CREATE_CHANNEL,
+                                                      'aria-label': x.Z.Messages.CREATE_CHANNEL,
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
-                                                      className: a()(x.addButton, x.forceVisible),
+                                                      className: a()(S.addButton, S.forceVisible),
                                                       onClick: O,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
@@ -154,7 +154,7 @@ let T = l.memo(function (e) {
                                                       children: (0, i.jsx)(c.PlusSmallIcon, {
                                                           size: 'sm',
                                                           color: 'currentColor',
-                                                          className: x.addButtonIcon
+                                                          className: S.addButtonIcon
                                                       })
                                                   });
                                               }
@@ -173,28 +173,28 @@ t.ZP = (0, h.B)(T);
 let Z = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
-            className: a()(l, x.containerDefault),
+            className: a()(l, S.containerDefault),
             children: (0, i.jsxs)('div', {
-                className: a()(x.iconVisibility, x.wrapperStatic),
+                className: a()(S.iconVisibility, S.wrapperStatic),
                 children: [
                     (0, i.jsx)('div', {
-                        className: x.mainContent,
+                        className: S.mainContent,
                         children: (0, i.jsx)(p.Z, {
-                            className: x.name,
+                            className: S.name,
                             children: (0, i.jsx)(f.Z, { children: t })
                         })
                     }),
                     null != n
                         ? (0, i.jsx)(c.TooltipContainer, {
-                              text: S.Z.Messages.CLEAR_RECENT_CHANNELS,
-                              className: x.dismissWrapper,
+                              text: x.Z.Messages.CLEAR_RECENT_CHANNELS,
+                              className: S.dismissWrapper,
                               children: (0, i.jsx)(c.Clickable, {
-                                  className: x.dismissButton,
+                                  className: S.dismissButton,
                                   onClick: n,
                                   children: (0, i.jsx)(c.CircleXIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: x.dismiss
+                                      className: S.dismiss
                                   })
                               })
                           })
@@ -211,32 +211,32 @@ let Z = l.memo(function (e) {
             }, [t.guild.id, n]);
         return n
             ? (0, i.jsxs)(c.Clickable, {
-                  className: x.voiceChannelsButton,
+                  className: S.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: x.voiceChannelsToggleIcon
+                          className: S.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_EXPAND
+                          children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_EXPAND
                       })
                   ]
               })
             : (0, i.jsxs)(c.Clickable, {
-                  className: x.voiceChannelsButton,
+                  className: S.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: x.voiceChannelsToggleIcon
+                          className: S.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_COLLAPSE
+                          children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_COLLAPSE
                       })
                   ]
               });
@@ -247,12 +247,12 @@ let Z = l.memo(function (e) {
         return l || null == n || n.record.type === N.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
-                      className: a()(x.containerDefault),
+                      className: a()(S.containerDefault),
                       children: (0, i.jsx)('div', {
-                          className: a()(x.iconVisibility, x.wrapperStatic),
+                          className: a()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
-                              className: x.name,
-                              children: (0, i.jsx)(f.Z, { children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER })
+                              className: S.name,
+                              children: (0, i.jsx)(f.Z, { children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER })
                           })
                       })
                   })
@@ -262,11 +262,11 @@ let Z = l.memo(function (e) {
     M = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
-            className: a()(x.containerDefault),
+            className: a()(S.containerDefault),
             children: (0, i.jsx)('div', {
-                className: a()(x.iconVisibility, x.wrapperStatic),
+                className: a()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
-                    className: x.name,
+                    className: S.name,
                     children: (0, i.jsx)(f.Z, { children: t.name })
                 })
             })

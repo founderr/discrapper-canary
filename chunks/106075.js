@@ -28,8 +28,8 @@ function A() {
     let e = a.useRef((0, r.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: A } = (0, l.M)(),
         { tabs: v, selectedTab: Z, setSelectedTab: L } = (0, p.Y)(),
-        R = (0, h.lg)(Z),
-        O = !S.MU.has(Z),
+        O = (0, h.lg)(Z),
+        R = !S.MU.has(Z),
         { searchQuery: x, onSearchTextChange: b, onClearSearch: M, onSearchSubmit: P, isSearchVisible: D } = (0, I.H)({ loadId: e.current }),
         {
             searchBarState: y,
@@ -38,7 +38,7 @@ function A() {
             onSearchBarBlur: G,
             tabsClassName: w
         } = (0, o.U)({
-            isSearchBarVisible: O,
+            isSearchBarVisible: R,
             isSearchBarEmpty: '' === x.trim()
         }),
         k = (0, _.NL)(),
@@ -58,7 +58,7 @@ function A() {
                     : v,
             [v, D]
         ),
-        H = a.useRef(new E.Z(R)),
+        H = a.useRef(new E.Z(O)),
         { onGuildCardSeen: F, onGuildCardClick: Y } = (0, m.H)({
             guildDiscoveryCardSeenManager: H.current,
             loadId: e.current
@@ -66,7 +66,7 @@ function A() {
     return (
         a.useEffect(() => {
             H.current.flushSeenGuilds(e.current);
-        }, [R]),
+        }, [O]),
         a.useEffect(() => {
             A();
         }, [Z, A]),
@@ -99,7 +99,7 @@ function A() {
                                 className: N.searchResultsHeader,
                                 children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: k })
                             }),
-                        O &&
+                        R &&
                             (0, i.jsx)(u.Z, {
                                 query: x,
                                 placeholder: C.Z.Messages.SEARCH,

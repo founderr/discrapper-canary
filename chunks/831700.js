@@ -25,8 +25,8 @@ var l = n(120356),
     I = n(873696),
     E = n(446226),
     N = n(305325),
-    S = n(281956),
-    x = n(66999),
+    x = n(281956),
+    S = n(66999),
     v = n(554747),
     T = n(506936),
     Z = n(574176),
@@ -35,8 +35,8 @@ var l = n(120356),
     M = n(695346),
     R = n(592125),
     L = n(430824),
-    P = n(607744),
-    y = n(496675),
+    y = n(607744),
+    P = n(496675),
     O = n(306680),
     j = n(9156),
     D = n(979651),
@@ -120,7 +120,7 @@ class q extends U.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: S, isSubscriptionGated: x, isFavoriteSuggestion: v, withGuildIcon: T } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: T } = this.props,
             { shouldShowActivities: Z, shouldShowGuildVerificationPopout: b } = this.state,
             M = this.getVoiceStatesCount(),
             R = (0, i.jsxs)('li', {
@@ -165,12 +165,12 @@ class q extends U.ZP {
                                                 unread: l,
                                                 mentionCount: s,
                                                 userCount: M,
-                                                embeddedActivitiesCount: S.length,
-                                                isSubscriptionGated: x
+                                                embeddedActivitiesCount: x.length,
+                                                isSubscriptionGated: S
                                             }),
                                             'aria-describedby': (0, m.Z)({
                                                 channel: e,
-                                                embeddedApps: S
+                                                embeddedApps: x
                                             }),
                                             withGuildIcon: T,
                                             ...h,
@@ -252,7 +252,7 @@ class q extends U.ZP {
             K(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, S.n)(t) && (0, N.hk)(t), this.handleVoiceConnect();
+                null != t && (0, x.n)(t) && (0, N.hk)(t), this.handleVoiceConnect();
             }),
             K(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: l } = this.props;
@@ -332,15 +332,15 @@ function X(e) {
             mentionCount: O.ZP.getMentionCount(n.id)
         })),
         d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([R.Z, P.Z, y.Z], () => {
+        h = (0, a.cj)([R.Z, y.Z, P.Z], () => {
             let e = R.Z.getChannel(n.parent_id),
-                i = P.Z.getCheck(n.guild_id);
+                i = y.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: y.Z.can(F.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? y.Z.can(F.Plq.MANAGE_CHANNELS, e) : y.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: y.Z.can(F.Plq.MOVE_MEMBERS, n),
-                locked: !y.Z.can(F.Plq.CONNECT, n),
-                bypassLimit: y.Z.can(F.Plq.MOVE_MEMBERS, n),
+                canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
+                locked: !P.Z.can(F.Plq.CONNECT, n),
+                bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
@@ -348,10 +348,10 @@ function X(e) {
         _ = (0, p.ZP)(n),
         m = (0, g.ZP)(n),
         C = (0, v.qY)(n.id),
-        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, x.Z)(n.id),
-        S = (0, E.Z)(),
+        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, S.Z)(n.id),
+        x = (0, E.Z)(),
         T = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
-        b = e.connected || (null == S ? void 0 : S.channelId) === n.id,
+        b = e.connected || (null == x ? void 0 : x.channelId) === n.id,
         { enableHangStatus: A, allowChannelTopic: M } = Z.n.useExperiment(
             {
                 guildId: n.guild_id,

@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(906732),
     E = n(358221),
     N = n(963202),
-    S = n(706590),
-    x = n(940777),
+    x = n(706590),
+    S = n(940777),
     v = n(41776),
     T = n(905423),
     Z = n(802718),
@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(430824),
     R = n(771845),
     L = n(358085),
-    P = n(709054),
-    y = n(727258),
+    y = n(709054),
+    P = n(727258),
     O = n(605951),
     j = n(474109),
     D = n(741616),
@@ -172,7 +172,7 @@ function er(e) {
         }),
         d = (0, h.e7)([v.Z], () => v.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        m = (0, h.Wu)([M.Z, A.ZP], () => P.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        m = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         g = p.concat(m),
         $ = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
         ee = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
@@ -207,7 +207,7 @@ function er(e) {
         { analyticsLocations: eI } = (0, I.ZP)(C.Z.GUILDS_LIST),
         { pathname: eE } = (0, c.TH)(),
         eN = eE.startsWith(Q.Z5c.GUILD_DISCOVERY) || eE.startsWith(Q.Z5c.GLOBAL_DISCOVERY),
-        eS = eE.startsWith(Q.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        ex = eE.startsWith(Q.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     l.useLayoutEffect(() => {
         if (!ea.current) {
             if (0 !== o.size) {
@@ -233,7 +233,7 @@ function er(e) {
                 n !== t && ((t = n), eC.scrollToGuild(t, !1));
             });
         }, [o, eC]);
-    let ex = l.useCallback(() => {
+    let eS = l.useCallback(() => {
         eC.scrollTo({
             to: 0,
             animate: !1
@@ -241,7 +241,7 @@ function er(e) {
     }, [eC]);
     function ev(e) {
         switch (e.type) {
-            case y.eD.FOLDER:
+            case P.eD.FOLDER:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -255,7 +255,7 @@ function er(e) {
                     },
                     e.id
                 );
-            case y.eD.GUILD:
+            case P.eD.GUILD:
                 return (0, i.jsx)(
                     Y.Z,
                     {
@@ -274,7 +274,7 @@ function er(e) {
     }
     (0, O.Z)(eC.scrollToGuild);
     let eT = o.getRoots(),
-        eZ = (0, S.Z)(),
+        eZ = (0, x.Z)(),
         eb = (0, Z.U)(),
         eA = l.useCallback(
             (e) => {
@@ -330,12 +330,12 @@ function er(e) {
                                 onScroll: eC.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(x.Z, {}) : null,
-                                    (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eS }),
+                                    eZ ? (0, i.jsx)(S.Z, {}) : null,
+                                    (0, i.jsx)(V.Z, { isOnHubVerificationRoute: ex }),
                                     (0, i.jsx)(D.Z, {}),
                                     eb,
                                     g.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
-                                    (0, i.jsx)(K.Z, { onActivate: ex }),
+                                    (0, i.jsx)(K.Z, { onActivate: eS }),
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': X.Z.Messages.SERVERS,

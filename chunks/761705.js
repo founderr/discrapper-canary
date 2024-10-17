@@ -38,10 +38,10 @@ let N = {
     friction: 10,
     tension: 100
 };
-function b(e, t) {
+function f(e, t) {
     return ((e % t) + t) % t;
 }
-class f extends i.Component {
+class b extends i.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: s, opacity: n } = this.state;
@@ -160,7 +160,7 @@ class P extends (n = i.Component) {
                 null !== (e = r.component) && void 0 !== e
                     ? e
                     : (0, a.jsx)(
-                          f,
+                          b,
                           {
                               item: r,
                               directionHistory: n,

@@ -1,120 +1,120 @@
-var r =
-    r ||
-    (function (e) {
+var e =
+    e ||
+    (function (r) {
         if (!('undefined' != typeof navigator && /MSIE [1-9]\./.test(navigator.userAgent))) {
-            var r = e.document,
+            var e = r.document,
                 t = function () {
-                    return e.URL || e.webkitURL || e;
+                    return r.URL || r.webkitURL || r;
                 },
-                n = r.createElementNS('http://www.w3.org/1999/xhtml', 'a'),
+                n = e.createElementNS('http://www.w3.org/1999/xhtml', 'a'),
                 a = 'download' in n,
-                i = function (e) {
-                    var r = new MouseEvent('click');
-                    e.dispatchEvent(r);
+                i = function (r) {
+                    var e = new MouseEvent('click');
+                    r.dispatchEvent(e);
                 },
-                o = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
-                f = e.webkitRequestFileSystem,
-                s = e.requestFileSystem || f || e.mozRequestFileSystem,
-                l = function (r) {
-                    (e.setImmediate || e.setTimeout)(function () {
-                        throw r;
+                f = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
+                o = r.webkitRequestFileSystem,
+                l = r.requestFileSystem || o || r.mozRequestFileSystem,
+                s = function (e) {
+                    (r.setImmediate || r.setTimeout)(function () {
+                        throw e;
                     }, 0);
                 },
-                c = 'application/octet-stream',
-                u = 0,
-                d = function (e) {
+                u = 'application/octet-stream',
+                c = 0,
+                v = function (r) {
                     setTimeout(function () {
-                        'string' == typeof e ? t().revokeObjectURL(e) : e.remove();
+                        'string' == typeof r ? t().revokeObjectURL(r) : r.remove();
                     }, 40000);
                 },
-                v = function (e, r, t) {
-                    for (var n = (r = [].concat(r)).length; n--; ) {
-                        var a = e['on' + r[n]];
+                h = function (r, e, t) {
+                    for (var n = (e = [].concat(e)).length; n--; ) {
+                        var a = r['on' + e[n]];
                         if ('function' == typeof a)
                             try {
-                                a.call(e, t || e);
-                            } catch (e) {
-                                l(e);
+                                a.call(r, t || r);
+                            } catch (r) {
+                                s(r);
                             }
                     }
                 },
-                h = function (e) {
-                    return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
+                d = function (r) {
+                    return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(r.type) ? new Blob(['ï\xBB\xBF', r], { type: r.type }) : r;
                 },
-                p = function (r, l, p) {
-                    !p && (r = h(r));
-                    var g,
-                        b,
-                        y = this,
-                        w = r.type,
+                g = function (e, s, g) {
+                    !g && (e = d(e));
+                    var p,
+                        w,
+                        b = this,
+                        y = e.type,
                         m = !1,
                         A = function () {
-                            v(y, 'writestart progress write writeend'.split(' '));
+                            h(b, 'writestart progress write writeend'.split(' '));
                         },
                         U = function () {
-                            if (b && o && 'undefined' != typeof FileReader) {
+                            if (w && f && 'undefined' != typeof FileReader) {
                                 var n = new FileReader();
                                 (n.onloadend = function () {
-                                    var e = n.result;
-                                    (b.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (y.readyState = y.DONE), A();
+                                    var r = n.result;
+                                    (w.location.href = 'data:attachment/file' + r.slice(r.search(/[,;]/))), (b.readyState = b.DONE), A();
                                 }),
-                                    n.readAsDataURL(r),
-                                    (y.readyState = y.INIT);
+                                    n.readAsDataURL(e),
+                                    (b.readyState = b.INIT);
                                 return;
                             }
-                            (m || !g) && (g = t().createObjectURL(r)), b ? (b.location.href = g) : void 0 === e.open(g, '_blank') && o && (e.location.href = g), (y.readyState = y.DONE), A(), d(g);
+                            (m || !p) && (p = t().createObjectURL(e)), w ? (w.location.href = p) : void 0 === r.open(p, '_blank') && f && (r.location.href = p), (b.readyState = b.DONE), A(), v(p);
                         },
-                        I = function (e) {
+                        I = function (r) {
                             return function () {
-                                if (y.readyState !== y.DONE) return e.apply(this, arguments);
+                                if (b.readyState !== b.DONE) return r.apply(this, arguments);
                             };
                         },
-                        R = {
+                        x = {
                             create: !0,
                             exclusive: !1
                         };
-                    if (((y.readyState = y.INIT), !l && (l = 'download'), a)) {
-                        (g = t().createObjectURL(r)),
+                    if (((b.readyState = b.INIT), !s && (s = 'download'), a)) {
+                        (p = t().createObjectURL(e)),
                             setTimeout(function () {
-                                (n.href = g), (n.download = l), i(n), A(), d(g), (y.readyState = y.DONE);
+                                (n.href = p), (n.download = s), i(n), A(), v(p), (b.readyState = b.DONE);
                             });
                         return;
                     }
-                    if ((e.chrome && w && w !== c && ((r = (r.slice || r.webkitSlice).call(r, 0, r.size, c)), (m = !0)), f && 'download' !== l && (l += '.download'), (w === c || f) && (b = e), !s)) {
+                    if ((r.chrome && y && y !== u && ((e = (e.slice || e.webkitSlice).call(e, 0, e.size, u)), (m = !0)), o && 'download' !== s && (s += '.download'), (y === u || o) && (w = r), !l)) {
                         U();
                         return;
                     }
-                    (u += r.size),
-                        s(
-                            e.TEMPORARY,
-                            u,
-                            I(function (e) {
-                                e.root.getDirectory(
+                    (c += e.size),
+                        l(
+                            r.TEMPORARY,
+                            c,
+                            I(function (r) {
+                                r.root.getDirectory(
                                     'saved',
-                                    R,
-                                    I(function (e) {
+                                    x,
+                                    I(function (r) {
                                         var t = function () {
-                                            e.getFile(
-                                                l,
-                                                R,
-                                                I(function (e) {
-                                                    e.createWriter(
+                                            r.getFile(
+                                                s,
+                                                x,
+                                                I(function (r) {
+                                                    r.createWriter(
                                                         I(function (t) {
-                                                            (t.onwriteend = function (r) {
-                                                                (b.location.href = e.toURL()), (y.readyState = y.DONE), v(y, 'writeend', r), d(e);
+                                                            (t.onwriteend = function (e) {
+                                                                (w.location.href = r.toURL()), (b.readyState = b.DONE), h(b, 'writeend', e), v(r);
                                                             }),
                                                                 (t.onerror = function () {
-                                                                    var e = t.error;
-                                                                    e.code !== e.ABORT_ERR && U();
+                                                                    var r = t.error;
+                                                                    r.code !== r.ABORT_ERR && U();
                                                                 }),
-                                                                'writestart progress write abort'.split(' ').forEach(function (e) {
-                                                                    t['on' + e] = y['on' + e];
+                                                                'writestart progress write abort'.split(' ').forEach(function (r) {
+                                                                    t['on' + r] = b['on' + r];
                                                                 }),
-                                                                t.write(r),
-                                                                (y.abort = function () {
-                                                                    t.abort(), (y.readyState = y.DONE);
+                                                                t.write(e),
+                                                                (b.abort = function () {
+                                                                    t.abort(), (b.readyState = b.DONE);
                                                                 }),
-                                                                (y.readyState = y.WRITING);
+                                                                (b.readyState = b.WRITING);
                                                         }),
                                                         U
                                                     );
@@ -122,14 +122,14 @@ var r =
                                                 U
                                             );
                                         };
-                                        e.getFile(
-                                            l,
+                                        r.getFile(
+                                            s,
                                             { create: !1 },
-                                            I(function (e) {
-                                                e.remove(), t();
+                                            I(function (r) {
+                                                r.remove(), t();
                                             }),
-                                            I(function (e) {
-                                                e.code === e.NOT_FOUND_ERR ? t() : U();
+                                            I(function (r) {
+                                                r.code === r.NOT_FOUND_ERR ? t() : U();
                                             })
                                         );
                                     }),
@@ -139,28 +139,28 @@ var r =
                             U
                         );
                 },
-                g = p.prototype;
+                p = g.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
-                ? function (e, r, t) {
-                      return !t && (e = h(e)), navigator.msSaveOrOpenBlob(e, r || 'download');
+                ? function (r, e, t) {
+                      return !t && (r = d(r)), navigator.msSaveOrOpenBlob(r, e || 'download');
                   }
-                : ((g.abort = function () {
-                      (this.readyState = this.DONE), v(this, 'abort');
+                : ((p.abort = function () {
+                      (this.readyState = this.DONE), h(this, 'abort');
                   }),
-                  (g.readyState = g.INIT = 0),
-                  (g.WRITING = 1),
-                  (g.DONE = 2),
-                  (g.error = g.onwritestart = g.onprogress = g.onwrite = g.onabort = g.onerror = g.onwriteend = null),
-                  function (e, r, t) {
-                      return new p(e, r, t);
+                  (p.readyState = p.INIT = 0),
+                  (p.WRITING = 1),
+                  (p.DONE = 2),
+                  (p.error = p.onwritestart = p.onprogress = p.onwrite = p.onabort = p.onerror = p.onwriteend = null),
+                  function (r, e, t) {
+                      return new g(r, e, t);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);
-e.exports
-    ? (e.exports.saveAs = r)
+r.exports
+    ? (r.exports.saveAs = e)
     : 'undefined' != typeof define &&
       null !== define &&
       null !== define.amd &&
       define([], function () {
-          return r;
+          return e;
       });

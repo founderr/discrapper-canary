@@ -100,12 +100,12 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: P } = e,
-        y = Z.hasFeature(f.oNc.ANIMATED_BANNER),
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: x, disableBannerAnimation: S, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
+        P = Z.hasFeature(f.oNc.ANIMATED_BANNER),
         O = (0, u.Z)(Z),
         j = !O && Z.hasCommunityInfoSubheader(),
         D = !O && L,
-        w = (0, h.xR)(b) && y && !x,
+        w = (0, h.xR)(b) && P && !S,
         [U, G] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
@@ -145,9 +145,9 @@ t.ZP = l.memo(function (e) {
                             [g.hasBanner]: F(),
                             [g.bannerVisible]: t,
                             [e]: t,
-                            [g.communityInfoVisible]: D || (P && j)
+                            [g.communityInfoVisible]: D || (y && j)
                         }),
-                        onMouseDown: S,
+                        onMouseDown: x,
                         onContextMenu: N,
                         onClick: s,
                         children: [
@@ -192,7 +192,7 @@ t.ZP = l.memo(function (e) {
                                             guild: Z,
                                             controller: n,
                                             hasBanner: null != b,
-                                            hasSubheader: null != P && P
+                                            hasSubheader: null != y && y
                                         })
                                 ]
                             }),

@@ -24,8 +24,8 @@ var i,
     v = n(761080),
     Z = n(584925),
     L = n(207205),
-    R = n(981631),
-    O = n(206583);
+    O = n(981631),
+    R = n(206583);
 function x(e, t, n) {
     return (
         t in e
@@ -135,7 +135,7 @@ function er() {
                 i = {},
                 s = [],
                 r = [],
-                d = null !== (t = null === (e = l.Z.getFeed(O.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
+                d = null !== (t = null === (e = l.Z.getFeed(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
             d.sort((e, t) => e.rank - t.rank),
                 d.forEach((e) => {
                     if (n.has(e.content.id) || (e.content.content_type !== a.s.PLAYED_GAME && e.content.content_type !== a.s.CUSTOM_STATUS && e.content.content_type !== a.s.TOP_GAME) || (0, c.n2)(e.content)) return;
@@ -193,7 +193,7 @@ function eo(e) {
     }
     if ((er(), null != k.load_id && D !== k.load_id)) {
         var t;
-        C.default.track(R.rMx.FEED_LOADED, {
+        C.default.track(O.rMx.FEED_LOADED, {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
@@ -373,7 +373,7 @@ x(ep, 'displayName', 'GravityStore'),
                     channel_id: t.channel_id,
                     message_id: t.message.id,
                     guild_id: t.guild_id,
-                    channel_type: R.d4z.GUILD_TEXT
+                    channel_type: O.d4z.GUILD_TEXT
                 }
             };
             if (
@@ -546,7 +546,7 @@ x(ep, 'displayName', 'GravityStore'),
         MESSAGE_ACK: eI,
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t } = e;
-            if (t !== O.YN.GLOBAL_FEED) return !1;
+            if (t !== R.YN.GLOBAL_FEED) return !1;
             if (!q) {
                 let [e, t] = ec(P);
                 ($ = e), (ee = t), er(), (K = ea(e));

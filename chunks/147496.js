@@ -23,34 +23,34 @@ function I(e) {
     var n, t, I, S;
     let { onClose: x, transitionState: T, skuId: N, appId: E, onHeaderTitleClick: g } = e,
         _ = (0, s.e7)([r.Z], () => r.Z.getForSKU(N), [N]),
-        Z = (0, s.e7)([o.Z], () => o.Z.get(N), [N]),
-        R = (0, d.M)(N);
-    if (null == Z) return null;
-    let O = null !== (t = Z.name) && void 0 !== t ? t : '',
-        C = null !== (I = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== I ? I : void 0,
+        R = (0, s.e7)([o.Z], () => o.Z.get(N), [N]),
+        Z = (0, d.M)(N);
+    if (null == R) return null;
+    let C = null !== (t = R.name) && void 0 !== t ? t : '',
+        O = null !== (I = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== I ? I : void 0,
         j = (null == _ ? void 0 : _.headerBackground) != null && null !== (S = c.Z.toURLSafe((0, u._W)(E, _.headerBackground, 256))) && void 0 !== S ? S : void 0,
-        b = Z.type === f.epS.DURABLE && R,
-        A = Z.type === f.epS.DURABLE ? (b ? h.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
-        { price: L } = Z;
+        A = R.type === f.epS.DURABLE && Z,
+        b = R.type === f.epS.DURABLE ? (A ? h.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        { price: L } = R;
     return null == L
         ? null
         : (0, l.jsx)(p.A, {
               appId: E,
-              skuId: Z.id,
+              skuId: R.id,
               transitionState: T,
               onHeaderTitleClick: null != g ? g : x,
               onClose: x,
               footer: (0, l.jsx)(m.Y, {
                   appId: E,
-                  sku: Z
+                  sku: R
               }),
               children: (0, l.jsx)(v.i, {
                   appId: E,
-                  skuId: Z.id,
-                  title: O,
-                  description: C,
+                  skuId: R.id,
+                  title: C,
+                  description: O,
                   imgSrc: j,
-                  tag: null != A ? (0, l.jsx)(i.V, { text: A }) : void 0,
+                  tag: null != b ? (0, l.jsx)(i.V, { text: b }) : void 0,
                   FallbackIcon: a.TicketIcon
               })
           });

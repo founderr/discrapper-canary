@@ -32,9 +32,9 @@ var v = n(392750),
     N = n(916790),
     y = n(645973),
     I = n(903502),
-    E = n(912072),
-    w = n(272193),
-    k = n(735959),
+    w = n(912072),
+    k = n(272193),
+    E = n(735959),
     Z = n(246992),
     R = n(496025),
     O = n(442954),
@@ -126,7 +126,7 @@ function K() {
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    render: () => (0, r.jsx)(k.Z, {})
+                    render: () => (0, r.jsx)(E.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -141,7 +141,7 @@ function K() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -151,7 +151,7 @@ function K() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -198,7 +198,7 @@ function K() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(k.Z, {})
                 }),
                 e
             );

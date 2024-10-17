@@ -25,8 +25,8 @@ var i,
     I = n(353042),
     E = n(981631),
     N = n(689938),
-    S = n(213169);
-function x(e, t, n) {
+    x = n(213169);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -115,7 +115,7 @@ class T extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'renderProgressBody', (e, t) => {
+            S(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
                     { stage: l, progress: r, total: a, type: s } = n;
                 if (null == r || null == a || null == l) return null;
@@ -162,7 +162,7 @@ class Z extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(o.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: s()(n, S.progressContainer),
+            className: s()(n, x.progressContainer),
             onClick: this.handleOnClick,
             children: (0, l.jsx)(h.Tooltip, {
                 text: this.getTooltipText(),
@@ -177,7 +177,7 @@ class Z extends (i = r.PureComponent) {
                             children: (0, l.jsx)(h.DownloadIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: S.downloadIcon
+                                className: x.downloadIcon
                             })
                         })
                     })
@@ -186,14 +186,14 @@ class Z extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', { animationScale: new o.Z.Value(0) }),
-            x(this, 'handleOnClick', (e) => {
+            S(this, 'state', { animationScale: new o.Z.Value(0) }),
+            S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-x(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+S(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function b(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,

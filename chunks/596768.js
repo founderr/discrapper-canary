@@ -133,7 +133,7 @@ function I() {
         x = o.find((e) => e.key === c),
         { TabBar: f, renderSelectedTab: b } = (0, j.Z)({ tabs: y }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        E = a.useCallback((e) => {
+        w = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -151,7 +151,7 @@ function I() {
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
                             checked: I,
-                            onChange: E,
+                            onChange: w,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),

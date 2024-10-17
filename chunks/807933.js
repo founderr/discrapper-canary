@@ -185,7 +185,7 @@ function Z(e) {
 function L(e) {
     return e;
 }
-function R(e, t, n, a) {
+function O(e, t, n, a) {
     return (0, i.jsx)(
         Z,
         {
@@ -201,7 +201,7 @@ t.Z = a.memo(function (e) {
         n = a.useMemo(() => (null != v[t] ? [t] : []), [t]);
     return (0, i.jsx)(u.TransitionGroup, {
         items: n,
-        renderItem: R,
+        renderItem: O,
         getItemKey: L
     });
 });

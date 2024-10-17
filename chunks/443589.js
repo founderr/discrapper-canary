@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 });
 var i = n(735250),
@@ -31,9 +31,9 @@ let L = {
     width: 14,
     height: 14
 };
-function R(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: R } = e,
-        { analyticsLocations: O } = (0, u.ZP)(),
+function O(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: O } = e,
+        { analyticsLocations: R } = (0, u.ZP)(),
         { isHovered: x, setIsHovered: b, onMouseEnter: M, onMouseLeave: P } = (0, h.Z)(200, 300),
         { enableEmojiCTA: D } = g.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     a.useEffect(() => {
@@ -65,7 +65,7 @@ function R(e) {
                     initialPlanId: null,
                     giftRecipient: t,
                     analyticsLocation: (0, S.F)(n).actionButton,
-                    analyticsLocations: O,
+                    analyticsLocations: R,
                     analyticsObject: {
                         page: s,
                         section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
@@ -89,7 +89,7 @@ function R(e) {
                       'aria-label': G(),
                       onClick: j,
                       className: r()(Z.actionButton, v.popoutButton, {
-                          [Z.highlight]: R,
+                          [Z.highlight]: O,
                           [Z.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: y,

@@ -18,8 +18,8 @@ var i,
     I = n(944486),
     E = n(594174),
     N = n(451478),
-    S = n(276952),
-    x = n(682662),
+    x = n(276952),
+    S = n(682662),
     v = n(662146),
     T = n(674552),
     Z = n(981631),
@@ -120,9 +120,9 @@ class L extends (i = r.PureComponent) {
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, l.jsxs)(x.H, {
+            children: (0, l.jsxs)(S.H, {
                 children: [
-                    (0, l.jsx)(S.Z, {
+                    (0, l.jsx)(x.Z, {
                         hovered: !m && f,
                         selected: !m && n,
                         unread: !m && h,

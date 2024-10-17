@@ -16,7 +16,7 @@ var i = n(735250),
     g = n(909482);
 t.Z = function () {
     let e = (0, c.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = (0, m.d)((e) => e.selectedTab, r.Z),
+        t = (0, m.dj)((e) => e.selectedTab, r.Z),
         n = (function (e) {
             switch (e) {
                 case p.F$.SERVERS:
@@ -34,7 +34,7 @@ t.Z = function () {
         a.useEffect(() => {
             let t = T.pathname,
                 n = (0, I.IE)(t, e);
-            n !== m.d.getState().selectedTab && (0, l.j)(() => m.d.setState({ selectedTab: n }));
+            n !== m.dj.getState().selectedTab && (0, l.j)(() => m.dj.setState({ selectedTab: n }));
         }, [e, T.pathname]),
         a.useEffect(() => {
             (0, h.RI)({ selectedTab: t });

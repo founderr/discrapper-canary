@@ -24,13 +24,13 @@ let A = 'ActivityTrackingStore',
     v = 30 * I.Z.Millis.MINUTE,
     Z = 5 * I.Z.Millis.MINUTE,
     L = null !== (i = c.K.get(A)) && void 0 !== i ? i : {},
-    R = {},
-    O = !1;
+    O = {},
+    R = !1;
 function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && b(e, !0);
-    let n = R[e.applicationId];
-    null != n && (n.stop(), delete R[e.applicationId]), delete L[e.applicationId], c.K.set(A, L);
+    let n = O[e.applicationId];
+    null != n && (n.stop(), delete O[e.applicationId]), delete L[e.applicationId], c.K.set(A, L);
 }
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -54,8 +54,8 @@ function b(e) {
         mediaSessionId: l
     }),
         (e.updatedAt = n);
-    let o = R[e.applicationId];
-    null == o && (o = R[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && ((L[e.applicationId] = e), c.K.set(A, L));
+    let o = O[e.applicationId];
+    null == o && (o = O[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && ((L[e.applicationId] = e), c.K.set(A, L));
 }
 function M() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -77,7 +77,7 @@ function M() {
 }
 function P() {
     for (let e of Object.keys(L)) x(L[e]);
-    O = !1;
+    R = !1;
 }
 class D extends (a = o.ZP.Store) {
     initialize() {
@@ -99,9 +99,9 @@ class D extends (a = o.ZP.Store) {
     new D(u.Z, {
         RUNNING_GAMES_CHANGE: () => M(),
         CONNECTION_OPEN: function () {
-            if (O) return !1;
+            if (R) return !1;
             for (let e of Object.keys(L)) b(L[e]);
-            M(!1), (O = !0);
+            M(!1), (R = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;

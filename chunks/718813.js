@@ -37,7 +37,7 @@ function C(e, t, n) {
     );
 }
 let N = (0, m.Un)({
-        createPromise: () => Promise.all([n.e('96427'), n.e('81039'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('51862')]).then(n.bind(n, 989804)),
+        createPromise: () => Promise.all([n.e('96427'), n.e('23217'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('57674'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('18815'), n.e('51862')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
@@ -62,8 +62,8 @@ let N = (0, m.Un)({
         [S.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(Z, {}),
         [S.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(v, {})
     },
-    R = 'SHOWN',
-    O = 'HIDDEN',
+    O = 'SHOWN',
+    R = 'HIDDEN',
     x = {
         friction: 10,
         tension: 100
@@ -83,7 +83,7 @@ class M extends (i = s.PureComponent) {
     componentDidUpdate(e) {
         let { mode: t } = this.props,
             { mode: n } = e;
-        return t === n ? void 0 : t === R && n === O ? this.animateIn() : t === O && n === R ? this.animateUnder() : void 0;
+        return t === n ? void 0 : t === O && n === R ? this.animateIn() : t === R && n === O ? this.animateUnder() : void 0;
     }
     componentWillEnter(e) {
         let { opacity: t, scale: n } = this.state;
@@ -143,14 +143,14 @@ class M extends (i = s.PureComponent) {
     render() {
         let { animating: e } = this.state,
             { mode: t, children: n, baseLayer: i, ...s } = this.props,
-            r = e || t === O ? this.getAnimatedStyle() : null,
+            r = e || t === R ? this.getAnimatedStyle() : null,
             c = (0, a.jsx)(o.Z.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.refs.node : void 0),
-                'aria-hidden': t === O,
+                'aria-hidden': t === R,
                 className: l()(f.layer, {
                     [f.baseLayer]: i,
                     [f.animating]: e,
-                    'stop-animations': t === O
+                    'stop-animations': t === R
                 }),
                 style: r,
                 ...s,
@@ -175,7 +175,7 @@ class M extends (i = s.PureComponent) {
         super(e), C(this, 'containerRef', s.createRef());
         let t = 1,
             n = 1;
-        e.mode === O && ((t = 0.93), (n = 0)),
+        e.mode === R && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new o.Z.Value(t),
@@ -201,7 +201,7 @@ class P extends s.PureComponent {
                 (0, a.jsx)(
                     M,
                     {
-                        mode: 0 !== i || n ? O : R,
+                        mode: 0 !== i || n ? R : O,
                         baseLayer: !0,
                         children: e
                     },
@@ -219,7 +219,7 @@ class P extends s.PureComponent {
             (0, a.jsxs)(
                 M,
                 {
-                    mode: t === n - 1 ? R : O,
+                    mode: t === n - 1 ? O : R,
                     children: [(0, a.jsx)(b, {}), i]
                 },
                 'layer-'.concat(t)

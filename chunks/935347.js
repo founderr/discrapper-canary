@@ -36,7 +36,7 @@ function L(e, t, n) {
         e
     );
 }
-class R extends a.PureComponent {
+class O extends a.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
             t = (0, f.uk)('discodo', e);
@@ -380,7 +380,7 @@ t.Z = c.ZP.connectStores([h.Z, g.Z, I.Z, E.Z], () => ({
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: a, soundpack: s, reducedMotion: r } = e;
     return t
-        ? (0, i.jsx)(R, {
+        ? (0, i.jsx)(O, {
               reducedMotion: r,
               soundpack: s,
               connected: n,

@@ -24,8 +24,8 @@ t.Z = (e) => {
     var t;
     let n, A;
     let { guildId: v, inviteCode: Z } = e,
-        [L, R] = a.useState(f.hO.INITIAL),
-        O = (0, s.e7)([h.Z], () => h.Z.get(v)),
+        [L, O] = a.useState(f.hO.INITIAL),
+        R = (0, s.e7)([h.Z], () => h.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
         { hasFetchedRequestToJoinGuilds: M, guildPreviewDisabled: P } = (0, s.cj)([I.Z], () => ({
@@ -39,7 +39,7 @@ t.Z = (e) => {
             !M && _.Z.fetchRequestToJoinGuilds();
         }, [M]);
     let D = a.useCallback((e) => {
-            R((t) => Math.max(t, e));
+            O((t) => Math.max(t, e));
         }, []),
         y = async (e) => {
             await E.ZP.submitVerificationForm(v, e);
@@ -50,7 +50,7 @@ t.Z = (e) => {
     let U =
             ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == P ? void 0 : P.toString() })),
             (A = () => {
-                R(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
+                O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>
@@ -70,10 +70,10 @@ t.Z = (e) => {
                 );
             }),
         G =
-            (null == O ? void 0 : null === (t = O.guild) || void 0 === t ? void 0 : t.splash) != null
+            (null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.splash) != null
                 ? u.ZP.getGuildSplashURL({
-                      id: O.guild.id,
-                      splash: O.guild.splash
+                      id: R.guild.id,
+                      splash: R.guild.splash
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {

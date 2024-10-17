@@ -24,8 +24,8 @@ var i,
     I = n(714338),
     E = n(607070),
     N = n(585483),
-    S = n(557177),
-    x = n(264549),
+    x = n(557177),
+    S = n(264549),
     v = n(981631),
     T = n(689938),
     Z = n(126332);
@@ -44,10 +44,10 @@ function b(e, t, n) {
 }
 ((l = i || (i = {})).UP = 'UP'), (l.DOWN = 'DOWN'), (l.LEFT = 'LEFT'), (l.RIGHT = 'RIGHT');
 let A = {
-    UP: h().throttle(() => (0, S.GN)('ddr-up'), 100),
-    DOWN: h().throttle(() => (0, S.GN)('ddr-down'), 100),
-    LEFT: h().throttle(() => (0, S.GN)('ddr-left'), 100),
-    RIGHT: h().throttle(() => (0, S.GN)('ddr-right'), 100)
+    UP: h().throttle(() => (0, x.GN)('ddr-up'), 100),
+    DOWN: h().throttle(() => (0, x.GN)('ddr-down'), 100),
+    LEFT: h().throttle(() => (0, x.GN)('ddr-left'), 100),
+    RIGHT: h().throttle(() => (0, x.GN)('ddr-right'), 100)
 };
 function M(e) {
     switch (e.keyCode) {
@@ -68,7 +68,7 @@ function L(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(Z.backdrop, { [Z.show]: t }) });
 }
-function P() {
+function y() {
     let e = a.useMemo(
         () =>
             h()((0, g.Rv)())
@@ -146,7 +146,7 @@ function P() {
         })
     });
 }
-class y extends a.PureComponent {
+class P extends a.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []), N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
@@ -205,7 +205,7 @@ class y extends a.PureComponent {
                 (0, r.jsx)(m.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(P, {}) })
+                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(y, {}) })
                 })
             ]
         });
@@ -332,7 +332,7 @@ function j(e) {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
-                              x.Z,
+                              S.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);
@@ -341,7 +341,7 @@ function j(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              y,
+                              P,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

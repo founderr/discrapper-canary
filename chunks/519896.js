@@ -23,11 +23,11 @@ function I(e) {
     let { appId: t, subscriptionType: I, onClose: S, skuId: x, guildId: T, transitionState: N, onHeaderTitleClick: E } = e,
         { data: g } = (0, u.H)(x),
         { data: _ } = (0, r.Z)(x),
-        Z = i.useMemo(() => {
+        R = i.useMemo(() => {
             var e;
             return (null == _ ? void 0 : _.thumbnail) != null && null !== (e = m.Z.toURLSafe((0, p._W)(t, _.thumbnail, 256))) && void 0 !== e ? e : void 0;
         }, [t, null == _ ? void 0 : _.thumbnail]),
-        R = i.useMemo(() => {
+        Z = i.useMemo(() => {
             let e = null == _ ? void 0 : _.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
@@ -37,7 +37,7 @@ function I(e) {
                     icon: (0, c.n)(t, e.icon)
                 }));
         }, [t, null == _ ? void 0 : _.benefits]),
-        { openModal: O, canOpenModal: C } = (0, d.Z)({
+        { openModal: C, canOpenModal: O } = (0, d.Z)({
             skuId: x,
             subscribeForGuild: null != T ? T : void 0
         });
@@ -50,19 +50,19 @@ function I(e) {
               onHeaderTitleClick: null != E ? E : S,
               onClose: S,
               footer: (0, l.jsx)(f.p, {
-                  onClick: O,
+                  onClick: C,
                   appId: t,
                   subscriptionType: I,
                   skuId: x,
                   subscriptionPlan: g[0],
-                  canPurchase: C
+                  canPurchase: O
               }),
               children: (0, l.jsx)(h.i, {
                   appId: t,
                   skuId: x,
                   benefits:
-                      null != R
-                          ? R.map((e) =>
+                      null != Z
+                          ? Z.map((e) =>
                                 (0, l.jsx)(
                                     s.G,
                                     {
@@ -75,7 +75,7 @@ function I(e) {
                             )
                           : void 0,
                   description: null !== (n = _.description) && void 0 !== n ? n : void 0,
-                  imgSrc: Z,
+                  imgSrc: R,
                   title: g[0].name,
                   tag: (0, l.jsx)(a.Z, { type: I }),
                   FallbackIcon: o.BadgeIcon

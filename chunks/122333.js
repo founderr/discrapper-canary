@@ -25,15 +25,15 @@ var s = n(481060),
     v = n(981631),
     Z = n(188785),
     L = n(630724);
-function R() {
+function O() {
     null != i && (0, s.closeModal)(i);
 }
-class O extends l.Z {
+class R extends l.Z {
     _initialize() {
-        r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.subscribe('LOGOUT', R);
+        r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.subscribe('LOGOUT', O);
     }
     _terminate() {
-        r.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.unsubscribe('LOGOUT', R);
+        r.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.unsubscribe('LOGOUT', O);
     }
     handleConnectionOpen() {
         var e;
@@ -51,12 +51,12 @@ class O extends l.Z {
                 _.Z.flowStart(L.MK.ORGANIC_MARKETING, L.EW.NUF_STARTED);
         }
         let l = !1,
-            R = p.Z.getGuildId();
+            O = p.Z.getGuildId();
         if (r === N.M5.INVITE_UNCLAIMED) {
-            let e = I.Z.getGuild(R);
+            let e = I.Z.getGuild(O);
             (null == e ? void 0 : e.hasVerificationGate()) && ((l = !0), (0, E.RM)(e.id));
         }
-        let O = () => 0 === m.Z.totalGuilds && !S.isPlatformEmbedded,
+        let R = () => 0 === m.Z.totalGuilds && !S.isPlatformEmbedded,
             x = o.b();
         (e = [
             {
@@ -107,12 +107,12 @@ class O extends l.Z {
                         }
                     );
                 },
-                predicate: () => O() && !Z.a
+                predicate: () => R() && !Z.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => x && !O() && !Z.a
+                predicate: () => x && !R() && !Z.a
             },
             {
                 key: 'Claim Account Modal',
@@ -124,7 +124,7 @@ class O extends l.Z {
             },
             {
                 key: 'Verification Gate with Claim Account',
-                open: (e) => (0, d.hk)(R, null != e ? e : void 0),
+                open: (e) => (0, d.hk)(O, null != e ? e : void 0),
                 predicate: () => {
                     var e;
                     return l && !(null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a;
@@ -139,12 +139,12 @@ class O extends l.Z {
                             return (t) =>
                                 (0, a.jsx)(e, {
                                     ...t,
-                                    guildId: R
+                                    guildId: O
                                 });
                         },
                         { onCloseCallback: e }
                     ),
-                predicate: () => null != R && null != h.Z.get(R) && h.Z.get(R) !== h.a
+                predicate: () => null != O && null != h.Z.get(O) && h.Z.get(O) !== h.a
             }
         ]),
             (t = () => {
@@ -159,4 +159,4 @@ class O extends l.Z {
             t();
     }
 }
-t.Z = new O();
+t.Z = new R();

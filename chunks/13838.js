@@ -33,8 +33,8 @@ function L(e) {
     if (null == a || !(0, g.zM)(a, i.application.id, i.authorization.scopes)) throw new p.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
     if (a.isNSFW() && (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new p.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(a.id));
 }
-let R = (e) => (0, S.Z)(e).keys({ channel_id: e.string().allow(null) });
-function O(e) {
+let O = (e) => (0, S.Z)(e).keys({ channel_id: e.string().allow(null) });
+function R(e) {
     let {
         args: { channel_id: t }
     } = e;
@@ -183,15 +183,15 @@ let x = {
         scope: {
             [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ, A.lH]
         },
-        validation: R,
-        handler: O
+        validation: O,
+        handler: R
     },
     [v.zMe.SPEAKING_STOP]: {
         scope: {
             [A.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ, A.lH]
         },
-        validation: R,
-        handler: O
+        validation: O,
+        handler: R
     },
     [v.zMe.GUILD_CREATE]: {
         scope: s.x.RPC,

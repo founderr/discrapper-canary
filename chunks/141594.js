@@ -20,9 +20,9 @@ t.Z = () => {
         N = i.useMemo(() => ((0, d.Fc)(T) && S && null != f && !C ? [f.dismissibleContent] : []), [T, S, f, C]),
         [A, v] = (0, o.US)(N, void 0, !0),
         [Z, L] = (0, o.XR)(C && (null == f ? void 0 : f.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == f ? void 0 : f.version) && void 0 !== e ? e : 0, void 0, !0),
-        R = null;
+        O = null;
     if ((null != A || null != Z) && S && null != f && f.type === s.Z.COACHTIP) {
-        R = {
+        O = {
             type: E.k2.COACHTIP,
             title: () => f.title,
             body: () => f.body,
@@ -32,7 +32,7 @@ t.Z = () => {
         };
         let e = null === (n = f.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
-            (R.entryPointBackgroundAssets = {
+            (O.entryPointBackgroundAssets = {
                 srcDark: null === (m = e.resting) || void 0 === m ? void 0 : m.dark,
                 srcLight: null === (I = e.resting) || void 0 === I ? void 0 : I.light,
                 srcDarkHovered: null === (p = e.hovered) || void 0 === p ? void 0 : p.dark,
@@ -40,10 +40,10 @@ t.Z = () => {
             });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: R,
+        collectiblesShopTabNewBadgeDisplayOptions: O,
         dismissCollectiblesShopTabNewBadge: () => {
             let e = C ? L : v;
-            null != R && e(h.L.AUTO);
+            null != O && e(h.L.AUTO);
         }
     };
 };

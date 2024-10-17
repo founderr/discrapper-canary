@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return E;
     }
 }),
     n(47120);
@@ -29,7 +29,7 @@ var r = n(735250),
     N = n(206583),
     y = n(768452),
     I = n(219299);
-let E = [
+let w = [
     {
         key: 'type',
         cellClassName: i()(y.cell, y.cellType),
@@ -59,11 +59,11 @@ let E = [
         cellClassName: y.cell,
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(w, { type: t });
+            return (0, r.jsx)(k, { type: t });
         }
     }
 ];
-function w(e) {
+function k(e) {
     var t, n;
     let { type: a } = e,
         l = (0, d.e7)([C.Z], () => C.Z.getFilters()),
@@ -83,7 +83,7 @@ function w(e) {
         }
     });
 }
-function k() {
+function E() {
     var e, t;
     let n = (0, d.e7)([C.Z], () => C.Z.getFeed(N.YN.GLOBAL_FEED)),
         l = (0, d.e7)([C.Z], () => C.Z.getDebugImpressionCappingDisabled()),
@@ -99,18 +99,18 @@ function k() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, d.e7)([C.Z], () => {
+        k = (0, d.e7)([C.Z], () => {
             var e;
             return (null === (e = C.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [k, R] = a.useState(''),
+        [E, R] = a.useState(''),
         O = (0, d.e7)(
             [v.Z, x.Z],
             () => {
                 var e, t, n;
-                return parseInt(k) > 0 ? k : null !== (n = null === (e = v.Z.getGameByName(k)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(k)) || void 0 === t ? void 0 : t.id;
+                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
             },
-            [k]
+            [E]
         ),
         A = (0, b.Z)({
             applicationId: O,
@@ -137,7 +137,7 @@ function k() {
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(p.Z, {
-                                columns: E,
+                                columns: w,
                                 data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
@@ -150,7 +150,7 @@ function k() {
                                     feedId: N.YN.GLOBAL_FEED
                                 });
                             },
-                            submitting: w,
+                            submitting: k,
                             children: 'Refresh Now'
                         })
                     ]
@@ -200,9 +200,9 @@ function k() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
                             },
-                            error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
+                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
                         (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })

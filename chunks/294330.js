@@ -32,8 +32,8 @@ var i = n(735250),
     v = n(981631),
     Z = n(689938),
     L = n(534238),
-    R = n(129512),
-    O = n(330065),
+    O = n(129512),
+    R = n(330065),
     x = n(755386);
 function b(e) {
     let { guild: t, onClick: s, onView: l } = e,
@@ -86,9 +86,9 @@ function b(e) {
             if (G) return x;
             switch (U) {
                 case v.BRd.DARK:
-                    return R;
-                case v.BRd.LIGHT:
                     return O;
+                case v.BRd.LIGHT:
+                    return R;
             }
         }, [t.discoverySplash, t.id, G, U]),
         k = a.useMemo(

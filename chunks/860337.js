@@ -32,7 +32,7 @@ function x() {
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: d.u,
+                onClick: d.uf,
                 children: 'Reset Global Discovery State'
             }),
             (0, r.jsx)(o.Button, {

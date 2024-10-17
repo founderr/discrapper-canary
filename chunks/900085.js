@@ -24,8 +24,8 @@ var i,
     I = n(888369),
     E = n(430824),
     N = n(306680),
-    S = n(944486),
-    x = n(938475),
+    x = n(944486),
+    S = n(938475),
     v = n(585483),
     T = n(63063),
     Z = n(51596),
@@ -34,8 +34,8 @@ var i,
     M = n(670512),
     R = n(981631),
     L = n(689938),
-    P = n(91475);
-function y(e, t, n) {
+    y = n(91475);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,14 +51,14 @@ function y(e, t, n) {
 let O = 10,
     j = () =>
         (0, l.jsxs)('div', {
-            className: P.emptyState,
+            className: y.emptyState,
             children: [
                 (0, l.jsx)('div', {
-                    className: P.emptyStateNote,
+                    className: y.emptyStateNote,
                     children: L.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
                 }),
                 (0, l.jsx)('div', {
-                    className: P.emptyStateCTA,
+                    className: y.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
                         href: T.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: L.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -72,13 +72,13 @@ class D extends (i = r.Component) {
         return (0, l.jsx)(A.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: P.miscContainer,
+                className: y.miscContainer,
                 children: null != e ? e.name : null
             })
         });
     }
 }
-y(D, 'defaultProps', { unread: !1 });
+P(D, 'defaultProps', { unread: !1 });
 let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -87,10 +87,10 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    U = c.ZP.connectStores([x.ZP], (e) => {
+    U = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
     G = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
@@ -113,7 +113,7 @@ function H(e, t, n) {
             children: (e) =>
                 (0, l.jsx)('span', {
                     ...e,
-                    className: P.autocompleteQuerySymbol,
+                    className: y.autocompleteQuerySymbol,
                     children: t
                 })
         },
@@ -154,7 +154,7 @@ class V extends r.PureComponent {
             i = t.length > 0 && '' !== n;
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
-                className: P.input,
+                className: y.input,
                 'aria-label': L.Z.Messages.QUICK_SWITCHER,
                 ref: this.inputRef,
                 type: 'text',
@@ -191,7 +191,7 @@ class V extends r.PureComponent {
                     rowHeight: 34,
                     paddingBottom: O,
                     sections: [t.length],
-                    className: P.scroller,
+                    className: y.scroller,
                     renderRow: this.renderRow,
                     renderSection: this.renderSection
                 });
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(m.Z, {
-            className: s()(P.protip, { [P.hasContent]: this.state.query.length > 0 }),
+            className: s()(y.protip, { [y.hasContent]: this.state.query.length > 0 }),
             type: m.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': L.Z.Messages.QUICK_SWITCHER,
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: s()(P.container, o.tq && P.mobileContainer),
+            className: s()(y.container, o.tq && y.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: s()(P.quickswitcher, o.tq && P.mobileQuickswitcher),
+                className: s()(y.quickswitcher, o.tq && y.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -236,28 +236,28 @@ class V extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, 'scrollerRef', r.createRef()),
-            y(this, 'inputRef', r.createRef()),
-            y(this, '_listId', (0, g.hQ)()),
-            y(this, 'state', {
+            P(this, 'scrollerRef', r.createRef()),
+            P(this, 'inputRef', r.createRef()),
+            P(this, '_listId', (0, g.hQ)()),
+            P(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
             }),
-            y(this, 'handleInputChange', () => {
+            P(this, 'handleInputChange', () => {
                 let { current: e } = this.inputRef;
                 null != e && this.search(e.value);
             }),
-            y(this, 'handleMouseMove', () => {
+            P(this, 'handleMouseMove', () => {
                 let { mouseFocusDisabled: e } = this.state;
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
-            y(this, 'focusResult', (e) => {
+            P(this, 'focusResult', (e) => {
                 if (!this.state.mouseFocusDisabled) (0, Z.tF)(this.props.results.indexOf(e));
             }),
-            y(this, 'selectResult', (e) => {
+            P(this, 'selectResult', (e) => {
                 (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
-            y(this, 'handleContextMenu', (e) => {
+            P(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case f.h8.GUILD:
@@ -344,7 +344,7 @@ class V extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     channel: t.record,
-                                    selected: S.Z.getChannelId() === t.record.id,
+                                    selected: x.Z.getChannelId() === t.record.id,
                                     onSelect: Z.Cp
                                 });
                         });
@@ -360,7 +360,7 @@ class V extends r.PureComponent {
                         });
                 }
             }),
-            y(this, 'handleKeyDown', (e) => {
+            P(this, 'handleKeyDown', (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: i } = this.props;
                 !1 === t && this.setState({ mouseFocusDisabled: !0 });
@@ -399,7 +399,7 @@ class V extends r.PureComponent {
                 }
                 e.preventDefault(), (0, Z.tF)(r);
             }),
-            y(this, 'renderRow', (e) => {
+            P(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,

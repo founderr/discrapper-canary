@@ -23,17 +23,17 @@ var l = n(442837),
     I = n(355363),
     E = n(687352),
     N = n(135724),
-    S = n(25601),
-    x = n(981631),
+    x = n(25601),
+    S = n(981631),
     v = n(490897),
     T = n(689938),
     Z = n(718317);
 function b(e) {
     var t;
-    let { channel: n, isChannelSelected: b, isChannelCollapsed: A, voiceStates: M, enableConnectedUserLimit: R, enableActivities: L, isSubscriptionGated: P, needSubscriptionToAccess: y, isNewChannel: O, muted: j, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: b, isChannelCollapsed: A, voiceStates: M, enableConnectedUserLimit: R, enableActivities: L, isSubscriptionGated: y, needSubscriptionToAccess: P, isNewChannel: O, muted: j, resolvedUnreadSetting: D } = e,
         w = (0, l.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         U = (0, s.ZP)(n),
-        G = (0, l.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, n)),
+        G = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         k = (0, l.e7)([_.Z], () => _.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
         H = (0, I.ZP)({
@@ -46,10 +46,10 @@ function b(e) {
         F = (0, o.n2)(n.guild_id, n.id),
         W = (0, l.e7)([h.Z], () => {
             var e, t;
-            return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(x.oNc.COMMUNITY)) && void 0 !== t && t;
+            return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && void 0 !== t && t;
         });
-    if ((0, C.Z)(w)) return (0, i.jsx)(S.Z, { mentionsCount: w });
-    if ((0, c.O)(P)) return (0, i.jsx)(c.Z, { locked: y });
+    if ((0, C.Z)(w)) return (0, i.jsx)(x.Z, { mentionsCount: w });
+    if ((0, c.O)(y)) return (0, i.jsx)(c.Z, { locked: P });
     if (O)
         return (0, i.jsx)(a.TextBadge, {
             text: T.Z.Messages.NEW,

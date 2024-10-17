@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(267642),
     E = n(624138),
     N = n(667815),
-    S = n(531572),
-    x = n(26323),
+    x = n(531572),
+    S = n(26323),
     v = n(30513),
     T = n(981631),
     Z = n(689938),
@@ -57,7 +57,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     R = 57,
     L = 57 + A,
-    P = {
+    y = {
         tension: 180,
         friction: 80
     };
@@ -69,20 +69,20 @@ t.ZP = (e) => {
         A = (0, I.FZ)(E, t.id),
         R = null == A,
         L = null != A ? A : E,
-        y = (0, c.e7)([S.Z], () => {
+        P = (0, c.e7)([x.Z], () => {
             var e;
-            return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
+            return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
         O = (0, c.e7)([g.Z], () => g.Z.can(T.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        y !== u && (0, N.v)(m, u);
-    }, [m, y, u]);
+        P !== u && (0, N.v)(m, u);
+    }, [m, P, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[L]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
-            from: { width: y === u ? D : '0%' },
+            from: { width: P === u ? D : '0%' },
             to: { width: j },
-            config: P
+            config: y
         },
         [U, G] = (0, d.useSpring)(() => w),
         k = () => {
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: m,
                 location_stack: r
             }),
-                (0, x.Z)({
+                (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: T.ZY5.GUILD_CHANNEL,

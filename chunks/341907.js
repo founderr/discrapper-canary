@@ -22,7 +22,7 @@ n.r(t),
 var r = n(735250);
 n(470079);
 var i = n(481060),
-    a = n(212093),
+    a = n(836768),
     s = n(703656),
     o = n(617136),
     l = n(497505),
@@ -34,7 +34,7 @@ var i = n(481060),
     f = n(150560),
     h = n(46140),
     p = n(981631),
-    I = n(731455);
+    I = n(49898);
 function m(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
@@ -97,7 +97,7 @@ function A(e, t, n) {
         utmContentCurrent: Object.keys(l.jn).find((e) => l.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    (0, a.uY)(I.Gj.Quests), (0, s.uL)(p.Z5c.QUEST_HOME + i);
+    (0, a.Sx)({ selectedTab: I.F$.QUESTS }), (0, s.uL)(p.Z5c.QUEST_HOME + i);
 }
 function N(e) {
     let t = (0, d.T)({ quest: e }),

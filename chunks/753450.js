@@ -354,8 +354,8 @@ function eP(e) {
                 }),
             [eY, e0]
         ),
-        [e6, e3] = (0, E.Z)(!1, 1000),
-        e5 = a.useCallback(() => {
+        [e6, e5] = (0, E.Z)(!1, 1000),
+        e3 = a.useCallback(() => {
             if (null != eB)
                 k.default.track(e_.rMx.APP_SHARE_BUTTON_CLICKED, {
                     source: 'product_page',
@@ -363,8 +363,8 @@ function eP(e) {
                     guild_id: f
                 }),
                     (0, F.JG)(ex(eB.id)),
-                    e3(!0);
-        }, [eB, e3, f]);
+                    e5(!0);
+        }, [eB, e5, f]);
     a.useEffect(() => {
         let e = new URL(location.href);
         if (b && 'true' === e.searchParams.get(eE)) {
@@ -399,8 +399,8 @@ function eP(e) {
                       (0, X.rf)({ [eE]: 'true' }));
             }
         }, [eB, b, eV, p, f]),
-        e2 = (null == eB ? void 0 : eB.id) === em.g,
-        [e9, e4] = a.useState(!1),
+        e9 = (null == eB ? void 0 : eB.id) === em.g,
+        [e2, e4] = a.useState(!1),
         [e7, ne] = a.useState(!1),
         [nn, nt] = a.useState(!0),
         ni = (e) => {
@@ -442,7 +442,7 @@ function eP(e) {
                                               children: r
                                           })
                                       }),
-                                      (e9 || e7) &&
+                                      (e2 || e7) &&
                                           (0, i.jsx)(eA, {
                                               isViewAll: e7,
                                               onToggle: () => {
@@ -591,7 +591,7 @@ function eP(e) {
                     )
                 )
             );
-        }, [I, eG, eB, eO, e7, e9, eX, eD, eJ, no, p, na, nr, eK]),
+        }, [I, eG, eB, eO, e7, e2, eX, eD, eJ, no, p, na, nr, eK]),
         ns = a.useMemo(() => {
             let e = [
                 {
@@ -702,14 +702,14 @@ function eP(e) {
                                                                                   src: t(744050)
                                                                               })
                                                                       }),
-                                                                  e2 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
+                                                                  e9 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
                                                               className: ef.buttons,
                                                               children: [
                                                                   (0, i.jsx)(h.Button, {
-                                                                      onClick: e5,
+                                                                      onClick: e3,
                                                                       color: h.Button.Colors.PRIMARY,
                                                                       children: e6 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                                                   }),

@@ -18,12 +18,12 @@ var l,
     I = n(998502),
     E = n(981631),
     N = n(176505);
-let S = E.IlC.APP,
-    x = !1,
+let x = E.IlC.APP,
+    S = !1,
     v = !1,
     T = [];
 function Z() {
-    x = !0;
+    S = !0;
 }
 class b extends (l = o.ZP.Store) {
     initialize() {
@@ -31,7 +31,7 @@ class b extends (l = o.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
-        return !!(x && T.length > 0 && S === e);
+        return !!(S && T.length > 0 && x === e);
     }
     getProps() {
         return {
@@ -54,7 +54,7 @@ class b extends (l = o.ZP.Store) {
         OVERLAY_INITIALIZE: Z,
         CONNECTION_OPEN: Z,
         CONNECTION_CLOSED: function () {
-            x = !1;
+            S = !1;
         },
         INVITE_MODAL_OPEN: function (e) {
             let t = e.invite;
@@ -87,7 +87,7 @@ class b extends (l = o.ZP.Store) {
                 })
             )
                 return !1;
-            (S = e.context), (v = !1);
+            (x = e.context), (v = !1);
             let n = (function (e) {
                 let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: a, target_application: s, stage_instance: o, type: c, channel: u, guild: d } = e,
                     h = {

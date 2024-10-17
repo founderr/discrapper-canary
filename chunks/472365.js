@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(973616),
     E = n(594174),
     N = n(855981),
-    S = n(55543),
-    x = n(626135),
+    x = n(55543),
+    S = n(626135),
     v = n(768581),
     T = n(358085),
     Z = n(998502),
@@ -33,13 +33,13 @@ var i = n(735250),
     M = n(981631),
     R = n(474936),
     L = n(689938),
-    P = n(56180),
-    y = n(113207);
+    y = n(56180),
+    P = n(113207);
 function O() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
-            x.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: R.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: M.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
@@ -55,19 +55,19 @@ function O() {
                     },
                     analyticsLocations: e
                 }),
-            className: P.experimentUpsellError,
+            className: y.experimentUpsellError,
             children: [
                 (0, i.jsx)(o.NitroWheelIcon, {
                     size: 'md',
-                    className: P.experimentUpsellIcon,
+                    className: y.experimentUpsellIcon,
                     color: _.JX.PREMIUM_TIER_2
                 }),
                 (0, i.jsx)('span', {
-                    className: P.experimentUpsellText,
+                    className: y.experimentUpsellText,
                     children: L.Z.Messages.GUILD_CAP_UPSELL_TOOLTIP
                 }),
                 (0, i.jsx)('span', {
-                    className: P.experimentGetNitro,
+                    className: y.experimentGetNitro,
                     children: L.Z.Messages.GUILD_CAP_UPSELL_GET_NITRO
                 })
             ]
@@ -78,17 +78,17 @@ function j(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
-        className: a()(P.iconContainer, t),
+        className: a()(y.iconContainer, t),
         children: [
-            (0, i.jsx)(N.Z, { className: P.iconSparklePlus }),
+            (0, i.jsx)(N.Z, { className: y.iconSparklePlus }),
             (0, i.jsx)(o.LinkIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: P.iconLink,
+                className: y.iconLink,
                 width: 40,
                 height: 40
             }),
-            (0, i.jsx)(S.Z, { className: P.iconSparkleStar })
+            (0, i.jsx)(x.Z, { className: y.iconSparkleStar })
         ]
     });
 }
@@ -103,9 +103,9 @@ function D(e) {
             'aria-labelledby': n,
             transitionState: t,
             children: (0, i.jsxs)(o.ModalContent, {
-                className: P.errorContent,
+                className: y.errorContent,
                 children: [
-                    (0, i.jsx)(j, { className: P.errorImage }),
+                    (0, i.jsx)(j, { className: y.errorImage }),
                     (0, i.jsx)(o.Heading, {
                         id: n,
                         variant: 'heading-xl/semibold',
@@ -113,7 +113,7 @@ function D(e) {
                         children: L.Z.Messages.INVITE_MODAL_ERROR_INVALID_TITLE
                     }),
                     (0, i.jsx)('div', {
-                        className: P.errorBody,
+                        className: y.errorBody,
                         children: L.Z.Messages.INVITE_MODAL_ERROR_INVALID_BODY
                     }),
                     (0, i.jsx)(h.zx, {
@@ -139,8 +139,8 @@ function w(e) {
     l.useEffect(() => {
         !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? Z.ZP.minimize() : Z.ZP.restore(), Z.ZP.focus());
     }, []);
-    let S = (0, m.Dt)(),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.INVITE_MODAL);
+    let x = (0, m.Dt)(),
+        { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == _) return null;
     if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == _.channel) return null;
@@ -164,25 +164,25 @@ function w(e) {
     return (
         H && (F = L.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
-            value: x,
+            value: S,
             children: (0, i.jsxs)(o.ModalRoot, {
                 size: o.ModalSize.DYNAMIC,
-                'aria-labelledby': S,
+                'aria-labelledby': x,
                 transitionState: r,
-                className: P.container,
+                className: y.container,
                 children: [
                     (0, i.jsx)('div', {
-                        className: P.contentWrapper,
+                        className: y.contentWrapper,
                         children: (0, i.jsx)(o.Scroller, {
-                            className: P.scroller,
+                            className: y.scroller,
                             children: (0, i.jsxs)(f.Z, {
-                                className: P.inviteContent,
+                                className: y.inviteContent,
                                 direction: f.Z.Direction.VERTICAL,
                                 justify: f.Z.Justify.BETWEEN,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        id: S,
-                                        className: y.marginBottom20,
+                                        id: x,
+                                        className: P.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: _,
                                             disableUser: k,
@@ -191,7 +191,7 @@ function w(e) {
                                     }),
                                     B && null != j
                                         ? (0, i.jsx)('div', {
-                                              className: a()(y.marginBottom20, P.stage),
+                                              className: a()(P.marginBottom20, y.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: _.stage_instance,
@@ -221,7 +221,7 @@ function w(e) {
                                                       }
                                                   })
                                                 : (0, i.jsxs)('div', {
-                                                      className: P.buttonGroup,
+                                                      className: y.buttonGroup,
                                                       children: [
                                                           (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
@@ -240,10 +240,10 @@ function w(e) {
                                                   }),
                                             (0, i.jsx)(f.Z, {
                                                 justify: f.Z.Justify.CENTER,
-                                                className: y.marginTop8,
+                                                className: P.marginTop8,
                                                 children: (0, i.jsx)(h.zx, {
                                                     look: h.zx.Looks.LINK,
-                                                    className: P.noThanksButton,
+                                                    className: y.noThanksButton,
                                                     onClick: function () {
                                                         b.Z.close();
                                                     },
@@ -259,7 +259,7 @@ function w(e) {
                     }),
                     null != n &&
                         (0, i.jsx)('div', {
-                            className: P.inviteSplash,
+                            className: y.inviteSplash,
                             style: { backgroundImage: 'url('.concat(n, ')') }
                         })
                 ]

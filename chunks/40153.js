@@ -1,6 +1,6 @@
 n.d(t, {
     OG: function () {
-        return S;
+        return x;
     },
     Zu: function () {
         return N;
@@ -119,7 +119,7 @@ function N(e) {
         })
     });
 }
-function S(e) {
+function x(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, i.jsx)('div', {

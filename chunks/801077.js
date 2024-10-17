@@ -18,8 +18,8 @@ var i,
     I = n(750881),
     E = n(710845),
     N = n(38618),
-    S = n(656063),
-    x = n(761282),
+    x = n(656063),
+    S = n(761282),
     v = n(814443),
     T = n(789407),
     Z = n(974543),
@@ -28,8 +28,8 @@ var i,
     M = n(592125),
     R = n(480294),
     L = n(831506),
-    P = n(731290),
-    y = n(430824),
+    y = n(731290),
+    P = n(430824),
     O = n(496675),
     j = n(158776),
     D = n(699516),
@@ -102,7 +102,7 @@ function ei(e, t, n) {
     for (let e of t) {
         let n = A.Z.getAnyStreamForUser(e.id),
             i = M.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !P.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !y.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let s = Q(e.id);
         if (
             (null != n &&
@@ -114,7 +114,7 @@ function ei(e, t, n) {
             null == s)
         )
             continue;
-        let c = (0, S.Z)(s);
+        let c = (0, x.Z)(s);
         if (null == c) continue;
         R = c === T.XB;
         let u = (function (e) {
@@ -135,12 +135,12 @@ function ei(e, t, n) {
                     ChannelStore: M.Z,
                     VoiceStateStore: U.Z,
                     PermissionStore: O.Z,
-                    GuildStore: y.Z
+                    GuildStore: P.Z
                 }) !== h.Fw.CAN_JOIN
             )
                 continue;
         } else if (null == m) continue;
-        if (!x.JE(s) || null == u || v.has(u.id)) continue;
+        if (!S.JE(s) || null == u || v.has(u.id)) continue;
         let g = null != s ? ee(s) : null;
         (null == g || g.id !== u.id) && (s = null);
         let j = [];
@@ -173,7 +173,7 @@ function ei(e, t, n) {
         let n = et(e.id),
             i = M.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
-            r = y.Z.getGuild(l);
+            r = P.Z.getGuild(l);
         if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
             let e = U.Z.getVoiceStatesForChannel(i.id),
@@ -294,7 +294,7 @@ function ea() {
 }
 class es extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, L.Z, U.Z, A.Z, D.Z, R.Z, v.Z], ea), this.waitFor(N.Z, y.Z, C.Z, w.default, v.Z);
+        this.syncWith([w.default, C.Z, j.Z, L.Z, U.Z, A.Z, D.Z, R.Z, v.Z], ea), this.waitFor(N.Z, P.Z, C.Z, w.default, v.Z);
     }
     get currentActivityParties() {
         return V;

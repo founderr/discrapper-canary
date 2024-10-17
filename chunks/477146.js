@@ -11,10 +11,10 @@ t.d(s, {
 }),
     t(724458);
 var n = t(392711),
-    a = t(423891),
+    a = t(605387),
     i = t.n(a);
 let r = (e) => i().decode(e),
-    o = (e) => e.frames.reduce((e, s) => e + s.delay, 0),
+    o = (e) => Math.round(e.frames.reduce((e, s) => e + s.delay, 0)),
     l = async (e, s, t, n) => ({
         src: e,
         base64: s,

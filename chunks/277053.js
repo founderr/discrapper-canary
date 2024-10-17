@@ -23,8 +23,8 @@ let T = new Set(),
     v = null,
     Z = null,
     L = null,
-    R = _.K.get(g.kf) || !1;
-function O(e) {
+    O = _.K.get(g.kf) || !1;
+function R(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
     return null != t && null == n[t] && (n[t] = h.we(t)), n;
@@ -32,7 +32,7 @@ function O(e) {
 function x() {
     if (((A = m.Z.getChannel()), (v = m.Z.getCategory()), null == A)) return !1;
     let e = A.getGuildId();
-    (N = C = O(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (S = p.QZA.CLOSED), T.clear();
+    (N = C = R(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (S = p.QZA.CLOSED), T.clear();
 }
 class b extends (s = u.ZP.Store) {
     initialize() {
@@ -72,7 +72,7 @@ class b extends (s = u.ZP.Store) {
         return v;
     }
     get advancedMode() {
-        return R;
+        return O;
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
@@ -131,7 +131,7 @@ class b extends (s = u.ZP.Store) {
                         v = m.Z.getCategory();
                         let t = A.getGuildId();
                         if (null == t) return !1;
-                        N = O(A);
+                        N = R(A);
                         let n = {};
                         return (
                             T.forEach((e) => {
@@ -160,6 +160,6 @@ class b extends (s = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;
-            (R = t), _.K.set(g.kf, t);
+            (O = t), _.K.set(g.kf, t);
         }
     }));

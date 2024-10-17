@@ -51,8 +51,8 @@ function g(e) {
                 }
             );
         }, [c, E]),
-        R = L.length,
-        O = (function (e, t, n, i) {
+        O = L.length,
+        R = (function (e, t, n, i) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return h.Z.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({ mutualGuildCount: t });
             let a = t > 0 ? h.Z.Messages.APP_DIRECTORY_GUILD_COUNT_WITH_MUTUALS : h.Z.Messages.APP_DIRECTORY_GUILD_COUNT,
@@ -66,7 +66,7 @@ function g(e) {
                 nonMutualGuildCount: s.format(n)
             });
         })(N, A, v, S);
-    return 0 === Z.length && null == O
+    return 0 === Z.length && null == R
         ? null
         : (0, s.jsxs)('div', {
               className: o()(g, m.wrapper),
@@ -78,7 +78,7 @@ function g(e) {
                               ? (0, s.jsxs)(s.Fragment, {
                                     children: [
                                         Z.map((e, t) => {
-                                            let n = t === Z.length - 1 && 0 === R,
+                                            let n = t === Z.length - 1 && 0 === O,
                                                 i = _.ZP.getGuildIconURL({
                                                     id: e.id,
                                                     icon: e.icon,
@@ -110,7 +110,7 @@ function g(e) {
                                                       e.id
                                                   );
                                         }),
-                                        R > 0
+                                        O > 0
                                             ? (0, s.jsx)(d.Tooltip, {
                                                   text: h.Z.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({ appNames: C.format(L.map((e) => e.name)) }),
                                                   position: 'top',
@@ -118,7 +118,7 @@ function g(e) {
                                                       (0, s.jsxs)('div', {
                                                           ...e,
                                                           className: o()(m.moreGuilds, I[f]),
-                                                          children: ['+', R]
+                                                          children: ['+', O]
                                                       })
                                               })
                                             : null
@@ -132,11 +132,11 @@ function g(e) {
                                     className: m.defaultIcon
                                 })
                   }),
-                  null != O
+                  null != R
                       ? (0, s.jsx)(d.Text, {
                             variant: T,
                             color: 'header-secondary',
-                            children: O
+                            children: R
                         })
                       : null
               ]

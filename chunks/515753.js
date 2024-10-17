@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(702321),
     E = n(201895),
     N = n(43267),
-    S = n(933557),
-    x = n(979264),
+    x = n(933557),
+    S = n(979264),
     v = n(322614),
     T = n(961556),
     Z = n(163889),
@@ -36,8 +36,8 @@ var i = n(735250),
     M = n(93687),
     R = n(785232),
     L = n(878857),
-    P = n(249978),
-    y = n(518950),
+    y = n(249978),
+    P = n(518950),
     O = n(199902),
     j = n(158776),
     D = n(306680),
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function X(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: v, applicationStream: M, entry: P, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: v, applicationStream: M, entry: y, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
         [B, Q] = l.useState(!1),
         X = l.useRef(null),
         J = l.useRef(null),
@@ -133,14 +133,14 @@ function X(e) {
             avatarSrc: $,
             avatarDecorationSrc: ee,
             eventHandlers: et
-        } = (0, y.Z)({
+        } = (0, P.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(s || B)
         }),
         en = (0, h.e7)([U.ZP], () => U.ZP.isChannelMuted(t.getGuildId(), t.id)),
         ei = (0, h.e7)([D.ZP], () => D.ZP.getMentionCount(t.id) > 0),
-        el = (0, S.ZP)(t),
+        el = (0, x.ZP)(t),
         er = (0, h.e7)([A.Z], () => A.Z.isFavorite(t.id)),
         ea = () => {
             Q(!0);
@@ -231,10 +231,10 @@ function X(e) {
                           hideTooltip: !0,
                           user: d
                       })
-                    : null != P
+                    : null != y
                       ? (0, i.jsx)(T.Z, {
                             ...e,
-                            entry: P
+                            entry: y
                         })
                       : null;
         },
@@ -283,7 +283,7 @@ function X(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           el,
-                          (0, i.jsx)(x.ZP, {
+                          (0, i.jsx)(S.ZP, {
                               clan: null == d ? void 0 : d.clan,
                               userId: null == d ? void 0 : d.id,
                               inline: !0,
@@ -401,7 +401,7 @@ t.ZP = (e) => {
             },
             [t, r, s]
         ),
-        { recentActivityStatusEnabled: p } = (0, P.U)({ location: 'PrivateChannel' }),
+        { recentActivityStatusEnabled: p } = (0, y.U)({ location: 'PrivateChannel' }),
         f = (0, v.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)(X, {

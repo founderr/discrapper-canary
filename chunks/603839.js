@@ -46,8 +46,8 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, f.G)(Z), [Z]),
-        [O, x] = a.useState(!1),
+        O = a.useMemo(() => (0, f.G)(Z), [Z]),
+        [R, x] = a.useState(!1),
         [b, M] = a.useState(window.innerWidth),
         [P, D] = a.useState(1),
         [y, j] = a.useState(!0),
@@ -81,7 +81,7 @@ function v(e) {
         }),
         V = a.useCallback(
             (e) => {
-                if (e === R.length) D(0), (0, h.Lp)(t, 'signature');
+                if (e === O.length) D(0), (0, h.Lp)(t, 'signature');
                 else if (0 === P) D(1);
                 else {
                     var n;
@@ -91,7 +91,7 @@ function v(e) {
                     });
                 }
             },
-            [P, t, v.furthestStep, R.length]
+            [P, t, v.furthestStep, O.length]
         );
     a.useEffect(() => {
         (0, h.Lp)(t, (0, h.Qh)(v.currentStep));
@@ -185,7 +185,7 @@ function v(e) {
                                 (0, i.jsx)('div', {
                                     className: r()(N.navigationContainer, { [N.elevatedNavigationContainer]: !y }),
                                     children: (0, i.jsx)(g.Z, {
-                                        steps: R,
+                                        steps: O,
                                         progress: v,
                                         updateCurrentStep: V,
                                         animationStyle: G,
@@ -206,7 +206,7 @@ function v(e) {
                             className: r()(N.sidebar, { [N.sidebarResponsive]: y }),
                             children: (0, i.jsx)(T.Z, {
                                 guildId: t,
-                                signed: O,
+                                signed: R,
                                 setSigned: y ? void 0 : x,
                                 sidebarWidth: 380,
                                 windowWidth: b,
@@ -233,7 +233,7 @@ function v(e) {
                                     (0, i.jsx)(p.Z, {
                                         ...e,
                                         themeColor: v.brandPrimaryColor,
-                                        disabled: !O || H,
+                                        disabled: !R || H,
                                         submitting: L,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

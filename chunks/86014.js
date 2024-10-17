@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(895068),
     Z = n(308083),
     L = n(689938),
-    R = n(641388);
-function O(e) {
+    O = n(641388);
+function R(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n } = e,
         { guilds: s } = (0, _.C3)({
             location: 'ClanDiscoveryContentCtaContent',
@@ -70,8 +70,8 @@ function O(e) {
                               look: c.ButtonLooks.FILLED,
                               size: c.ButtonSizes.LARGE,
                               color: m ? c.ButtonColors.TRANSPARENT : c.ButtonColors.BRAND,
-                              className: R.heroButton,
-                              innerClassName: R.heroButtonInner,
+                              className: O.heroButton,
+                              innerClassName: O.heroButtonInner,
                               onClick: () => {
                                   (0, u.GS)({ location: d.Z.GLOBAL_DISCOVERY }), (0, A.fH)(A.v0.GET_STARTED);
                               },
@@ -95,7 +95,7 @@ function O(e) {
                           children: [
                               s.length > 0 &&
                                   (0, i.jsx)(c.SearchableSelect, {
-                                      className: R.upsellSelect,
+                                      className: O.upsellSelect,
                                       value: r,
                                       options: o,
                                       onChange: l
@@ -105,7 +105,7 @@ function O(e) {
                                       look: c.ButtonLooks.FILLED,
                                       size: c.ButtonSizes.MEDIUM,
                                       color: c.ButtonColors.BRAND,
-                                      className: R.heroButton,
+                                      className: O.heroButton,
                                       onClick: I,
                                       children: (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
@@ -120,7 +120,7 @@ function O(e) {
             [n, s.length, o, r, I]
         );
     return (0, i.jsxs)('div', {
-        className: R.contentCtaContainer,
+        className: O.contentCtaContainer,
         children: [g, p]
     });
 }
@@ -137,7 +137,7 @@ t.Z = a.memo(function (e) {
         }, []),
         D = a.useMemo(
             () =>
-                (0, i.jsx)(O, {
+                (0, i.jsx)(R, {
                     showPickGameButton: !Z,
                     showAdminGuildPicker: h
                 }),
@@ -170,15 +170,15 @@ t.Z = a.memo(function (e) {
             null != x && null != M
                 ? (0, i.jsxs)(I.Z, {
                       title: (0, i.jsx)(c.Text, {
-                          className: r()(R.globalDiscoveryTitle, R.customDiscoveryTitle),
+                          className: r()(O.globalDiscoveryTitle, O.customDiscoveryTitle),
                           variant: 'display-lg',
                           color: 'header-primary',
                           children: L.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_HEADER.format({ gameName: M })
                       }),
                       description: L.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_SUBHEADER.format({ gameName: M }),
                       button: (0, i.jsx)(c.Button, {
-                          className: R.heroButton,
-                          innerClassName: R.heroButtonInner,
+                          className: O.heroButton,
+                          innerClassName: O.heroButtonInner,
                           look: c.ButtonLooks.FILLED,
                           size: c.ButtonSizes.MEDIUM,
                           color: c.ButtonColors.WHITE,
@@ -192,15 +192,15 @@ t.Z = a.memo(function (e) {
                       children: [
                           (0, i.jsx)(m.Z, {}),
                           (0, i.jsx)('div', {
-                              className: R.gameArt,
+                              className: O.gameArt,
                               style: { backgroundImage: 'url("'.concat(b, '")') }
                           }),
-                          (0, i.jsx)('div', { className: R.imageBackdrop })
+                          (0, i.jsx)('div', { className: O.imageBackdrop })
                       ]
                   })
                 : (0, i.jsx)(I.Z, {
                       title: (0, i.jsx)(c.Text, {
-                          className: R.globalDiscoveryTitle,
+                          className: O.globalDiscoveryTitle,
                           variant: 'display-lg',
                           color: 'header-primary',
                           children: L.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
@@ -218,7 +218,7 @@ t.Z = a.memo(function (e) {
                     children: [
                         k &&
                             (0, i.jsxs)('div', {
-                                className: R.contentTabs,
+                                className: O.contentTabs,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         tabs: j,
