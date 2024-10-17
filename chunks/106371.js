@@ -23,6 +23,14 @@ let a = (0, n.B)({
                 enableInAppNotifications: !0,
                 enableNotificationsForAllReactions: !0
             }
+        },
+        {
+            id: 3,
+            label: 'Enable In App Notifications for Reactions (All Reactions)',
+            config: {
+                enableInAppNotifications: !0,
+                enableNotificationsForAllReactions: !0
+            }
         }
     ]
 });
