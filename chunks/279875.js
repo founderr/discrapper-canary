@@ -1,124 +1,136 @@
 t.r(s),
     t.d(s, {
         GuildSubscriptionSelectionModal: function () {
-            return c;
+            return x;
         }
     }),
     t(47120),
     t(733860),
     t(653041);
 var n = t(735250),
-    o = t(470079),
-    a = t(481060),
-    l = t(270144),
-    i = t(689011),
-    r = t(689938),
-    d = t(389142);
-function c(e) {
-    let { transitionState: s, onClose: t, sku: c, onSelect: u, currentGuildId: x } = e,
-        [S, m] = o.useState(),
-        { guilds: b, isFetching: _ } = (0, l.CR)(c.applicationId, c.id, !0),
-        h = o.useMemo(() => {
-            if (!_ && null != x)
+    l = t(470079),
+    o = t(481060),
+    a = t(565138),
+    i = t(430824),
+    r = t(270144),
+    d = t(689011),
+    u = t(689938),
+    c = t(389142);
+function x(e) {
+    let { transitionState: s, onClose: t, sku: x, onSelect: S, currentGuildId: m } = e,
+        [b, _] = l.useState(),
+        { guilds: h, isFetching: E } = (0, r.CR)(x.applicationId, x.id, !0),
+        L = l.useMemo(() => {
+            if (!E && null != m)
                 return (
-                    b.findIndex((e) => {
+                    h.findIndex((e) => {
                         let { id: s } = e;
-                        return s === x;
+                        return s === m;
                     }) >= 0
                 );
-        }, [x, b, _]);
-    o.useLayoutEffect(() => {
-        h && m(x);
-    }, [x, h]);
-    let E = o.useMemo(() => {
+        }, [m, h, E]);
+    l.useLayoutEffect(() => {
+        L && _(m);
+    }, [m, L]);
+    let C = l.useMemo(() => {
         let e = [];
-        for (let s of b) {
+        for (let s of h) {
             let t = {
                 value: s.id,
                 label: s.name
             };
-            h && s.id === x ? e.unshift(t) : e.push(t);
+            L && s.id === m ? e.unshift(t) : e.push(t);
         }
         return e;
-    }, [x, b, h]);
-    return (0, n.jsxs)(a.ModalRoot, {
+    }, [m, h, L]);
+    return (0, n.jsxs)(o.ModalRoot, {
         transitionState: s,
-        size: a.ModalSize.SMALL,
-        className: d.modal,
+        size: o.ModalSize.SMALL,
+        className: c.modal,
         children: [
-            (0, n.jsx)(i.t, { onClose: t }),
-            (0, n.jsxs)(a.ModalContent, {
-                className: d.content,
+            (0, n.jsx)(d.t, { onClose: t }),
+            (0, n.jsxs)(o.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: 'text-sm/medium',
-                        className: d.breadCrumb,
-                        children: r.Z.Messages.APPLICATION_GUILD_SELECTOR_SERVER_SELECTION
+                        className: c.breadCrumb,
+                        children: u.Z.Messages.APPLICATION_GUILD_SELECTOR_SERVER_SELECTION
                     }),
                     (0, n.jsxs)('div', {
-                        className: d.selectionBody,
+                        className: c.selectionBody,
                         children: [
-                            (0, n.jsx)(a.Text, {
+                            (0, n.jsx)(o.Text, {
                                 variant: 'text-md/medium',
-                                children: r.Z.Messages.APPLICATION_GUILD_SELECTOR_CHOOSE_A_SERVER
+                                children: u.Z.Messages.APPLICATION_GUILD_SELECTOR_CHOOSE_A_SERVER
                             }),
-                            (0, n.jsx)(a.Text, {
+                            (0, n.jsx)(o.Text, {
                                 variant: 'eyebrow',
-                                children: r.Z.Messages.SERVER
+                                children: u.Z.Messages.SERVER
                             }),
-                            _
-                                ? (0, n.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS })
-                                : E.length > 0
-                                  ? (0, n.jsx)(a.SearchableSelect, {
-                                        options: E,
-                                        value: S,
-                                        onChange: m,
+                            E
+                                ? (0, n.jsx)(o.Spinner, { type: o.Spinner.Type.PULSING_ELLIPSIS })
+                                : C.length > 0
+                                  ? (0, n.jsx)(o.SearchableSelect, {
+                                        options: C,
+                                        value: b,
+                                        onChange: _,
+                                        renderOptionPrefix: (e) => {
+                                            let s = null == e ? void 0 : e.value,
+                                                t = null != s ? i.Z.getGuild(s) : null;
+                                            return null == t
+                                                ? null
+                                                : (0, n.jsx)(a.Z, {
+                                                      guild: t,
+                                                      size: a.Z.Sizes.MINI
+                                                  });
+                                        },
                                         renderOptionLabel: (e) => {
                                             let { label: s, value: t } = e;
                                             return (0, n.jsxs)('div', {
                                                 children: [
-                                                    (0, n.jsx)(a.Text, {
+                                                    (0, n.jsx)(o.Text, {
                                                         variant: 'text-md/normal',
                                                         children: s
                                                     }),
-                                                    t === x &&
-                                                        (0, n.jsx)(a.Text, {
+                                                    t === m &&
+                                                        (0, n.jsx)(o.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
-                                                            children: r.Z.Messages.APPLICATION_GUILD_SELECTOR_CURRENT_SEVER
+                                                            children: u.Z.Messages.APPLICATION_GUILD_SELECTOR_CURRENT_SEVER
                                                         })
                                                 ]
                                             });
                                         }
                                     })
-                                  : (0, n.jsx)(a.HelpMessage, {
-                                        messageType: a.HelpMessageTypes.WARNING,
-                                        children: (0, n.jsx)(a.Text, {
+                                  : (0, n.jsx)(o.HelpMessage, {
+                                        messageType: o.HelpMessageTypes.WARNING,
+                                        children: (0, n.jsx)(o.Text, {
                                             variant: 'text-sm/normal',
-                                            children: r.Z.Messages.APPLICATION_GUILD_SELECTOR_NO_SERVERS
+                                            children: u.Z.Messages.APPLICATION_GUILD_SELECTOR_NO_SERVERS
                                         })
                                     })
                         ]
                     })
                 ]
             }),
-            (0, n.jsxs)(a.ModalFooter, {
-                className: d.footer,
+            (0, n.jsxs)(o.ModalFooter, {
+                className: c.footer,
                 children: [
-                    (0, n.jsx)(a.Button, {
-                        look: a.Button.Looks.BLANK,
-                        size: a.Button.Sizes.MIN,
-                        className: d.closeBtn,
+                    (0, n.jsx)(o.Button, {
+                        look: o.Button.Looks.BLANK,
+                        size: o.Button.Sizes.MIN,
+                        className: c.closeBtn,
                         onClick: t,
-                        children: r.Z.Messages.CLOSE
+                        children: u.Z.Messages.CLOSE
                     }),
-                    (0, n.jsx)(a.Button, {
-                        size: a.Button.Sizes.SMALL,
-                        disabled: null == S,
+                    (0, n.jsx)(o.Button, {
+                        size: o.Button.Sizes.SMALL,
+                        disabled: null == b,
                         onClick: function () {
-                            null != S && (u(S), t());
+                            null != b && (S(b), t());
                         },
-                        children: r.Z.Messages.CONFIRM
+                        children: u.Z.Messages.CONFIRM
                     })
                 ]
             })
