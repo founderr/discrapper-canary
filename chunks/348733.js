@@ -1,8 +1,8 @@
 var i = n(735250),
     s = n(470079),
     a = n(120356),
-    o = n.n(a),
-    r = n(442837),
+    r = n.n(a),
+    o = n(442837),
     l = n(261435),
     c = n(237997),
     d = n(438015),
@@ -14,7 +14,7 @@ class p extends s.Component {
         if (n === u._vf.DISABLED) return null;
         let a = -1;
         return (0, i.jsx)('div', {
-            className: o()(h.container, h[n]),
+            className: r()(h.container, h[n]),
             children: t.map((t) =>
                 s && t.status === u._1z.TIMED_OUT
                     ? null
@@ -35,7 +35,7 @@ class p extends s.Component {
         });
     }
 }
-t.Z = r.ZP.connectStores([l.Z, c.Z], () => ({
+t.Z = o.ZP.connectStores([l.Z, c.Z], () => ({
     notifications: l.Z.getNotifications(),
     position: c.Z.getNotificationPositionMode()
 }))(p);

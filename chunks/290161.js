@@ -2,8 +2,8 @@ n.r(t);
 var i = n(735250),
     s = n(470079),
     a = n(442837),
-    o = n(481060),
-    r = n(490173),
+    r = n(481060),
+    o = n(490173),
     l = n(735246),
     c = n(40851),
     d = n(503737),
@@ -42,7 +42,7 @@ t.default = function () {
                                 appContext: I.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {
-                                    children: [(0, i.jsx)(m.Z, {}), (0, i.jsx)(o.Modals, {}), (0, i.jsx)(r.Z, {}), (0, i.jsx)(f.Un, {})]
+                                    children: [(0, i.jsx)(m.Z, {}), (0, i.jsx)(r.Modals, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(f.Un, {})]
                                 })
                             })
                         ]

@@ -2,8 +2,8 @@ n(47120);
 var i = n(735250),
     s = n(470079),
     a = n(13245),
-    o = n(593481),
-    r = n(692546),
+    r = n(593481),
+    o = n(692546),
     l = n(981631),
     c = n(668697);
 function d(e, t, n) {
@@ -61,7 +61,7 @@ class u extends s.Component {
             } = this,
             h = (0, i.jsx)('div', {
                 className: c.notificationContainer,
-                children: (0, i.jsx)(o.ZP, {
+                children: (0, i.jsx)(r.ZP, {
                     ...u,
                     onNotificationShow: 0 === t ? this.handleNotificationShow : null,
                     onDismissClick: this.handleDismissClick,
@@ -72,7 +72,7 @@ class u extends s.Component {
                 })
             });
         return 0 === t
-            ? (0, i.jsx)(r.Z, {
+            ? (0, i.jsx)(o.Z, {
                   observeInterval: 200,
                   children: h
               })

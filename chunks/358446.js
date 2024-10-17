@@ -11,8 +11,8 @@ var i = n(735250);
 n(470079);
 var s = n(704215),
     a = n(481060),
-    o = n(13245),
-    r = n(312839),
+    r = n(13245),
+    o = n(312839),
     l = n(706140),
     c = n(593481),
     d = n(658785),
@@ -30,7 +30,7 @@ function _() {
 }
 function E(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: s } = (0, r.R)(u.n0.KeybindIndicatorsNotification, { notif_type: u.n0.KeybindIndicatorsNotification });
+        { trackView: n, trackClick: s } = (0, o.R)(u.n0.KeybindIndicatorsNotification, { notif_type: u.n0.KeybindIndicatorsNotification });
     return {
         icon: null,
         body: (0, i.jsxs)('div', {
@@ -53,7 +53,7 @@ function E(e) {
         }),
         colorScheme: c.IC.PRIMARY,
         onDismissClick: (e, n) => {
-            s('dismiss'), t(h.L.DISMISS), o.Z.updateNotificationStatus(n);
+            s('dismiss'), t(h.L.DISMISS), r.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(h.L.AUTO_DISMISS), n();

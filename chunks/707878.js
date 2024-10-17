@@ -2,8 +2,8 @@ n(47120);
 var i = n(735250),
     s = n(470079),
     a = n(442837),
-    o = n(481060),
-    r = n(13245),
+    r = n(481060),
+    o = n(13245),
     l = n(313201),
     c = n(237997),
     d = n(766032),
@@ -15,24 +15,24 @@ let _ = Object.values(u.wF).map((e) => 100 * e),
     E = (0, l.hQ)();
 class g extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        r.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        o.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        r.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
+        o.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
         return (0, i.jsxs)('div', {
             className: f.container,
             children: [
-                (0, i.jsx)(o.FormTitle, {
+                (0, i.jsx)(r.FormTitle, {
                     id: E,
-                    tag: o.FormTitleTags.H5,
+                    tag: r.FormTitleTags.H5,
                     className: f.title,
                     children: p.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
                 }),
                 (0, i.jsx)('div', {
                     className: f.sliderContainer,
-                    children: (0, i.jsx)(o.Slider, {
+                    children: (0, i.jsx)(r.Slider, {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,

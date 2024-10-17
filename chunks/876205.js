@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var s = n(120356),
     a = n.n(s),
-    o = n(442837),
-    r = n(481060),
+    r = n(442837),
+    o = n(481060),
     l = n(556296),
     c = n(13140),
     d = n(981631),
@@ -16,19 +16,19 @@ var s = n(120356),
 let h = {
     [d.kg4.TOGGLE_MUTE]: {
         legacy: {
-            slash: r.MicrophoneSlashIcon,
-            default: r.MicrophoneIcon
+            slash: o.MicrophoneSlashIcon,
+            default: o.MicrophoneIcon
         },
         new: {
-            slash: r.MicrophoneSlashIcon,
-            default: r.MicrophoneIcon
+            slash: o.MicrophoneSlashIcon,
+            default: o.MicrophoneIcon
         }
     }
 };
 function p(e) {
     let { value: t, action: n, shouldShow: s } = e,
-        d = (0, o.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)),
-        p = (0, r.useRedesignIconContext)().enabled;
+        d = (0, r.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)),
+        p = (0, o.useRedesignIconContext)().enabled;
     if (null == d || !s) return null;
     let f = c.BB(d.shortcut),
         _ = p ? h[n].new : h[n].legacy,
@@ -41,7 +41,7 @@ function p(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xxs/semibold',
                 className: a()(u.keybindIndicatorText),
                 children: f

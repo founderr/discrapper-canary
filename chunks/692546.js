@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     s = n(470079),
     a = n(392711),
-    o = n.n(a),
-    r = n(699581),
+    r = n.n(a),
+    o = n(699581),
     l = n(374470),
     c = n(902704),
     d = n(846519),
@@ -101,10 +101,10 @@ class C extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'zone', o().uniqueId('ClickArea')),
+            E(this, 'zone', r().uniqueId('ClickArea')),
             E(this, 'interval', new d.Xp()),
             E(this, 'updateZone', () => {
-                let e = (0, r.findDOMNode)(this);
+                let e = (0, o.findDOMNode)(this);
                 if ((0, l.k)(e)) {
                     let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
                     v(this.zone, {

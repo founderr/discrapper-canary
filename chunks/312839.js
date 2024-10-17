@@ -9,17 +9,17 @@ n.d(t, {
 var i = n(13245),
     s = n(556296),
     a = n(237997),
-    o = n(13140),
-    r = n(981631),
+    r = n(13140),
+    o = n(981631),
     l = n(987650);
 function c(e, t) {
     return {
         trackView() {
-            i.Z.track(r.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, l.bv.Viewed);
+            i.Z.track(o.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, l.bv.Viewed);
         },
         trackClick(n) {
-            let s = a.Z.isInstanceUILocked() ? r.Sbl.LOCKED_OVERLAY : r.Sbl.UNLOCKED_OVERLAY;
-            i.Z.track(r.rMx.NOTIFICATION_CLICKED, {
+            let s = a.Z.isInstanceUILocked() ? o.Sbl.LOCKED_OVERLAY : o.Sbl.UNLOCKED_OVERLAY;
+            i.Z.track(o.rMx.NOTIFICATION_CLICKED, {
                 ...t,
                 location: s,
                 action_type: n
@@ -27,11 +27,11 @@ function c(e, t) {
                 i.Z.notificationEvent(e, l.bv.Clicked);
         },
         trackEvent(n, s) {
-            let o = a.Z.isInstanceUILocked() ? r.Sbl.LOCKED_OVERLAY : r.Sbl.UNLOCKED_OVERLAY;
+            let r = a.Z.isInstanceUILocked() ? o.Sbl.LOCKED_OVERLAY : o.Sbl.UNLOCKED_OVERLAY;
             i.Z.track(n, {
                 ...t,
                 ...s,
-                location: o
+                location: r
             }),
                 i.Z.notificationEvent(e, l.bv.Clicked);
         }
@@ -39,5 +39,5 @@ function c(e, t) {
 }
 function d() {
     let e = s.Z.getOverlayKeybind();
-    return null != e ? (0, o.BB)(e.shortcut, !0).split(' + ') : ['???'];
+    return null != e ? (0, r.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

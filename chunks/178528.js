@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(735250),
     s = n(470079),
     a = n(212433),
-    o = n(442837),
-    r = n(481060),
+    r = n(442837),
+    o = n(481060),
     l = n(619915),
     c = n(554747),
     d = n(373274),
@@ -111,25 +111,25 @@ class j extends s.PureComponent {
     render() {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
-            { controller: s, renderBanner: a, bannerVisible: o, communityInfoVisible: l } = this.state,
+            { controller: s, renderBanner: a, bannerVisible: r, communityInfoVisible: l } = this.state,
             c = n.id === M._ ? d.j : d.E;
         return (0, i.jsxs)(y.Z, {
             header: (0, i.jsx)(u.ZP, {
                 guild: n,
                 controller: s,
                 renderBanner: a,
-                bannerVisible: o,
+                bannerVisible: r,
                 className: b.guildHeader,
                 headerClassName: b.guildHeaderInner,
                 onMouseDown: e,
                 disableBannerAnimation: !1,
                 communityInfoVisible: l,
-                children: (0, i.jsx)(r.Popout, {
+                children: (0, i.jsx)(o.Popout, {
                     position: 'right',
                     renderPopout: this.renderSettings,
                     children: (e) =>
                         (0, i.jsx)(O.ZP.Icon, {
-                            icon: r.SettingsIcon,
+                            icon: o.SettingsIcon,
                             label: L.Z.Messages.SETTINGS,
                             ...e
                         })
@@ -173,34 +173,34 @@ class j extends s.PureComponent {
 function w(e) {
     var t;
     let { guildId: n } = e,
-        s = (0, o.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        a = (0, o.e7)([m.ZP], () => m.ZP.getChannels(n)),
-        r = (0, o.e7)([g.Z], () => g.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([N.ZP], () => ({
+        s = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
+        a = (0, r.e7)([m.ZP], () => m.ZP.getChannels(n)),
+        o = (0, r.e7)([g.Z], () => g.Z.getCategories(n)),
+        { mutedChannels: d, collapseMuted: u } = (0, r.cj)([N.ZP], () => ({
             mutedChannels: N.ZP.getMutedChannels(n),
             collapseMuted: N.ZP.isGuildCollapsed(n)
         })),
-        h = (0, o.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
-        O = (0, o.e7)([_.Z], () => _.Z.getCollapsed()),
-        { scrollTo: A } = (0, o.e7)([E.Z], () => E.Z.getGuildDimensions(n)),
+        h = (0, r.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
+        O = (0, r.e7)([_.Z], () => _.Z.getCollapsed()),
+        { scrollTo: A } = (0, r.e7)([E.Z], () => E.Z.getGuildDimensions(n)),
         y = (0, p.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
-        M = (0, o.e7)([x.Z], () => x.Z.getVoiceChannelId()),
-        L = (0, o.e7)([v.Z], () => v.Z.getGuildVersion(n)),
-        b = (0, o.e7)([f.Z], () => f.Z.version),
-        P = (0, o.e7)([I.default], () => I.default.getGuildChangeSentinel(n)),
+        M = (0, r.e7)([x.Z], () => x.Z.getVoiceChannelId()),
+        L = (0, r.e7)([v.Z], () => v.Z.getGuildVersion(n)),
+        b = (0, r.e7)([f.Z], () => f.Z.version),
+        P = (0, r.e7)([I.default], () => I.default.getGuildChangeSentinel(n)),
         D = (0, l.QN)(null == s ? void 0 : s.id),
         w = (0, c.gM)(null == s ? void 0 : s.id),
         k = null !== (t = null == s ? void 0 : s.hasFeature(R.oNc.COMMUNITY)) && void 0 !== t && t,
-        V = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
-        B = (0, o.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
+        V = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
+        B = (0, r.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(j, {
         guildId: n,
         guild: s,
         channels: a,
-        categories: r,
+        categories: o,
         mutedChannels: d,
         scrollToChannel: A,
         selectedChannelId: y,

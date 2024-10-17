@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(735250),
     s = n(470079),
     a = n(120356),
-    o = n.n(a),
-    r = n(442837),
+    r = n.n(a),
+    o = n(442837),
     l = n(481060),
     c = n(13245),
     d = n(287734),
@@ -44,14 +44,14 @@ class N extends s.Component {
     }
     renderCallButton() {
         let e, t;
-        let { channel: n, channelHasActiveCall: s, userIsInChannelCall: a, isBlocked: o } = this.props;
+        let { channel: n, channelHasActiveCall: s, userIsInChannelCall: a, isBlocked: r } = this.props;
         if (!(0, f.hv)(n.type)) return null;
-        let r = l.PhoneCallIcon,
+        let o = l.PhoneCallIcon,
             c = !1;
         return (
-            s ? (a ? ((e = S.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = S.Z.Messages.JOIN_CALL)) : o ? ((e = S.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = S.Z.Messages.START_VOICE_CALL),
+            s ? (a ? ((e = S.Z.Messages.LEAVE_CALL), (o = l.PhoneHangUpIcon)) : (e = S.Z.Messages.JOIN_CALL)) : r ? ((e = S.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = S.Z.Messages.START_VOICE_CALL),
             (0, i.jsx)(h.Z.Icon, {
-                icon: r,
+                icon: o,
                 tooltip: e,
                 onClick: this.handleClickCall,
                 tooltipColor: t,
@@ -60,7 +60,7 @@ class N extends s.Component {
         );
     }
     render() {
-        let { className: e, draggableClassName: t, locked: n, channel: s, channelName: a, guild: r, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
+        let { className: e, draggableClassName: t, locked: n, channel: s, channelName: a, guild: o, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
             { showOpacitySlider: _ } = this.state;
         return _ && !n
             ? (0, i.jsxs)(v.ZP.Bar, {
@@ -77,7 +77,7 @@ class N extends s.Component {
             : (0, i.jsx)(v.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
-                      className: o()(e, t, C.headerContainer),
+                      className: r()(e, t, C.headerContainer),
                       onMouseDown: c,
                       onContextMenu: d,
                       children: (0, i.jsxs)(h.Z, {
@@ -91,7 +91,7 @@ class N extends s.Component {
                                   : (0, i.jsx)(l.DragIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: o()(C.dragIcon, t),
+                                        className: r()(C.dragIcon, t),
                                         width: 20,
                                         height: 20
                                     }),
@@ -99,7 +99,7 @@ class N extends s.Component {
                                   channel: s,
                                   channelName: a
                               }),
-                              n ? null : (0, p.v0)(s, r)
+                              n ? null : (0, p.v0)(s, o)
                           ]
                       })
                   })
@@ -156,19 +156,19 @@ class N extends s.Component {
 }
 function T(e) {
     let { channel: t, ...n } = e,
-        s = (0, r.e7)([I.Z, E.Z], () => {
+        s = (0, o.e7)([I.Z, E.Z], () => {
             let e = I.Z.getVoiceChannelId();
             return E.Z.getChannel(e);
         }),
-        a = (0, r.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
-        o = (0, r.e7)([_.Z], () => _.Z.isCallActive(t.id)),
+        a = (0, o.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
+        r = (0, o.e7)([_.Z], () => _.Z.isCallActive(t.id)),
         l = (0, u.ZP)(t),
-        c = (0, r.e7)([m.Z], () => !!t.isDM() && null != t.getRecipientId() && m.Z.isBlocked(t.getRecipientId()));
+        c = (0, o.e7)([m.Z], () => !!t.isDM() && null != t.getRecipientId() && m.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(N, {
         channel: t,
         channelName: l,
         guild: a,
-        channelHasActiveCall: o,
+        channelHasActiveCall: r,
         userIsInChannelCall: null != s && s.id === t.id,
         isBlocked: c,
         ...n

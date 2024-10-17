@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(278323),
     s = n(13245),
     a = n(45114),
-    o = n(593481),
-    r = n(237997),
+    r = n(593481),
+    o = n(237997),
     l = n(312839),
     c = n(981631),
     d = n(987650),
@@ -26,11 +26,11 @@ function h(e, t, n, h) {
             activity_name: n.name
         });
     return {
-        colorScheme: o.ZP.ColorSchemes.PRIMARY,
+        colorScheme: r.ZP.ColorSchemes.PRIMARY,
         icon: _,
         title: p,
         body: f,
-        hint: (e) => (0, o.QR)(e, (0, l.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+        hint: (e) => (0, r.QR)(e, (0, l.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
         confirmText: u.Z.Messages.USER_ACTIVITY_RESPOND_YEAH,
         cancelText: u.Z.Messages.USER_ACTIVITY_RESPOND_NOPE,
         onNotificationShow: () => {
@@ -41,7 +41,7 @@ function h(e, t, n, h) {
                 channelId: e.id,
                 type: c.mFx.JOIN,
                 activity: h,
-                location: r.Z.isInstanceUILocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: o.Z.isInstanceUILocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
                 g('join'),
                 s.Z.updateNotificationStatus(n);

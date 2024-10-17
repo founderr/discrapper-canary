@@ -7,12 +7,12 @@ var i = n(735250);
 n(470079);
 var s = n(382790),
     a = n(430036),
-    o = n(518084),
-    r = n(240038);
+    r = n(518084),
+    o = n(240038);
 function l(e) {
     let { dragStart: t, dragging: n, pinned: l, locked: c } = e;
-    return (0, i.jsxs)(o.ZP, {
-        className: r.wrapper,
+    return (0, i.jsxs)(r.ZP, {
+        className: o.wrapper,
         children: [
             (0, i.jsx)(s.Z, {
                 contained: !0,

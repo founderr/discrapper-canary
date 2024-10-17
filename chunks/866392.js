@@ -1,8 +1,8 @@
 let { createLoader: n } = t(196095),
     a = n(
         {
-            uczI4u: 'INTL_TESTING_VARIABLE_LINK',
             JJ0wpK: 'INTL_TESTING_FORM_HEADER',
+            uczI4u: 'INTL_TESTING_VARIABLE_LINK',
             'Q+eyqq': 'INTL_TESTING_PLURAL',
             rdfRys: 'INTL_TESTING_CODE',
             HMvECw: 'INTL_TESTING_DESCRIPTION',

@@ -1,8 +1,8 @@
 var i = n(470079),
     s = n(149765),
     a = n(442837),
-    o = n(367907),
-    r = n(731429),
+    r = n(367907),
+    o = n(731429),
     l = n(188471),
     c = n(318885),
     d = n(592125),
@@ -35,10 +35,10 @@ class v extends i.Component {
                 (0, l.a)(Z.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t })),
             null != n && n !== e.selectedChannel)
         ) {
-            let e = (0, r.K)(d.Z.getChannel(n), !0);
+            let e = (0, o.K)(d.Z.getChannel(n), !0);
             (0, c.Q)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
-                ...(0, o.$H)(n)
+                ...(0, r.$H)(n)
             }),
                 (0, l.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
         }
@@ -51,9 +51,9 @@ t.Z = a.ZP.connectStores([E.Z, _.Z, p.Z, g.default, m.Z, u.ZP, f.Z, h.ZP], () =>
     var e, t, n;
     let i = E.Z.getGuildId(),
         a = _.Z.getChannelId(i),
-        o = p.Z.getGuild(i),
-        r = g.default.getCurrentUser(),
-        l = null !== (t = u.ZP.getChannels(null == o ? void 0 : o.id)[u.sH]) && void 0 !== t ? t : [],
+        r = p.Z.getGuild(i),
+        o = g.default.getCurrentUser(),
+        l = null !== (t = u.ZP.getChannels(null == r ? void 0 : r.id)[u.sH]) && void 0 !== t ? t : [],
         c =
             l.length > 0
                 ? l.filter((e) => {
@@ -61,12 +61,12 @@ t.Z = a.ZP.connectStores([E.Z, _.Z, p.Z, g.default, m.Z, u.ZP, f.Z, h.ZP], () =>
                       return f.Z.can(s.$e(Z.Plq.SEND_MESSAGES, Z.Plq.VIEW_CHANNEL), t);
                   }).length
                 : 0,
-        d = null != r && null != i && null !== (n = null === (e = h.ZP.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
+        d = null != o && null != i && null !== (n = null === (e = h.ZP.getMember(i, o.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
     return {
         selectedGuild: i,
         selectedChannel: a,
         locked: m.Z.isUILocked((0, I.QF)()),
-        hasPreviewEnabled: null == o ? void 0 : o.features.has(Z.oNc.PREVIEW_ENABLED),
+        hasPreviewEnabled: null == r ? void 0 : r.features.has(Z.oNc.PREVIEW_ENABLED),
         isMemberPending: d,
         postableChannelCount: c
     };

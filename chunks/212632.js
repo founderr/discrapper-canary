@@ -2,8 +2,8 @@ n(47120);
 var i = n(735250),
     s = n(470079),
     a = n(120356),
-    o = n.n(a),
-    r = n(481060),
+    r = n.n(a),
+    o = n(481060),
     l = n(981631),
     c = n(689938),
     d = n(167740),
@@ -31,16 +31,16 @@ function E(e) {
         h = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(r.FocusRing, {
+            (0, i.jsx)(o.FocusRing, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)('div', {
-                    className: o()(d.wrapper, { [d.disabledSelected]: t === l._vf.DISABLED }),
+                    className: r()(d.wrapper, { [d.disabledSelected]: t === l._vf.DISABLED }),
                     children: _.map((e) =>
                         (0, i.jsxs)(
                             'label',
                             {
-                                className: o()({
+                                className: r()({
                                     [d.selected]: e === t,
                                     [d.disabled]: e === l._vf.DISABLED,
                                     [d.topRight]: e === l._vf.TOP_RIGHT,
@@ -51,7 +51,7 @@ function E(e) {
                                 children: [
                                     f(e),
                                     e === l._vf.DISABLED
-                                        ? (0, i.jsx)(r.DenyIcon, {
+                                        ? (0, i.jsx)(o.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
@@ -71,8 +71,8 @@ function E(e) {
                     )
                 })
             }),
-            (0, i.jsx)(r.FormText, {
-                type: r.FormTextTypes.DESCRIPTION,
+            (0, i.jsx)(o.FormText, {
+                type: o.FormTextTypes.DESCRIPTION,
                 className: u.marginTop8,
                 children: h
             })

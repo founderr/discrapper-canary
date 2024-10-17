@@ -8,8 +8,8 @@ var i = n(735250);
 n(470079);
 var s = n(442837),
     a = n(352527),
-    o = n(183584),
-    r = n(487029),
+    r = n(183584),
+    o = n(487029),
     l = n(592125),
     c = n(944486),
     d = n(554174),
@@ -23,7 +23,7 @@ function p() {
     return e && null != p
         ? (0, i.jsx)('div', {
               className: h.widget,
-              children: (0, i.jsx)(r.Z, {
+              children: (0, i.jsx)(o.Z, {
                   width: u.FW.width,
                   height: u.FW.height,
                   guildId: f,
@@ -31,7 +31,7 @@ function p() {
                   keepOpen: t,
                   onClose: function () {
                       let e = (0, d.Z)();
-                      null != e && (0, o.oZ)(e);
+                      null != e && (0, r.oZ)(e);
                   },
                   analyticsSource: 'overlay'
               })

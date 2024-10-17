@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     s,
     a = n(735250),
-    o = n(470079),
-    r = n(442837),
+    r = n(470079),
+    o = n(442837),
     l = n(481060),
     c = n(13245),
     d = n(600164),
@@ -86,7 +86,7 @@ function T() {
         text_activation_hotkey: null != i ? (0, E.BB)(i.shortcut) : null
     });
 }
-class O extends o.PureComponent {
+class O extends r.PureComponent {
     componentDidMount() {
         c.Z.track(m.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
@@ -187,7 +187,7 @@ class O extends o.PureComponent {
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
             s = t !== m._vf.DISABLED;
-        return (0, a.jsxs)(o.Fragment, {
+        return (0, a.jsxs)(r.Fragment, {
             children: [
                 (0, a.jsx)(l.FormItem, {
                     title: I.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
@@ -216,7 +216,7 @@ class O extends o.PureComponent {
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, a.jsxs)(o.Fragment, {
+        return (0, a.jsxs)(r.Fragment, {
             children: [
                 (0, a.jsx)(l.FormItem, {
                     title: I.Z.Messages.FORM_LABEL_AVATAR_SIZE,
@@ -252,7 +252,7 @@ class O extends o.PureComponent {
         });
     }
     renderDeveloperSettings() {
-        return (0, a.jsx)(o.Fragment, {
+        return (0, a.jsx)(r.Fragment, {
             children: (0, a.jsx)(l.FormItem, {
                 title: 'Crashes',
                 className: v.marginBottom20,
@@ -315,10 +315,10 @@ function A(e) {
             avatarSizeMode: n,
             displayNameMode: i,
             displayUserMode: s,
-            notificationPositionMode: o,
+            notificationPositionMode: r,
             textChatNotificationMode: l,
             shouldShowKeybindIndicators: c
-        } = (0, r.cj)([f.Z], () => ({
+        } = (0, o.cj)([f.Z], () => ({
             avatarSizeMode: f.Z.getAvatarSizeMode(),
             displayNameMode: f.Z.getDisplayNameMode(),
             displayUserMode: f.Z.getDisplayUserMode(),
@@ -332,7 +332,7 @@ function A(e) {
         avatarSizeMode: n,
         displayNameMode: i,
         displayUserMode: s,
-        notificationPositionMode: o,
+        notificationPositionMode: r,
         textChatNotificationMode: l,
         shouldShowKeybindIndicators: c,
         showKeybindIndicators: d

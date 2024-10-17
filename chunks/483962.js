@@ -1,8 +1,8 @@
 var i = n(735250),
     s = n(470079),
     a = n(442837),
-    o = n(831218),
-    r = n(840780),
+    r = n(831218),
+    o = n(840780),
     l = n(51596),
     c = n(905423),
     d = n(237997),
@@ -29,7 +29,7 @@ t.Z = s.memo(function () {
                     children: p.Z.Messages.DM_SEARCH_PLACEHOLDER
                 })
             }),
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(r.Z, {
                 padding: 8,
                 theme: h.BRd.DARK,
                 version: e,
@@ -38,7 +38,7 @@ t.Z = s.memo(function () {
             (0, i.jsx)('section', {
                 className: f.panels,
                 'aria-label': p.Z.Messages.ACCOUNT_A11Y_LABEL,
-                children: (0, i.jsx)(r.Z, { guildId: null })
+                children: (0, i.jsx)(o.Z, { guildId: null })
             })
         ]
     });

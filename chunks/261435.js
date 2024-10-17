@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i,
     s,
     a,
-    o,
     r,
+    o,
     l,
     c,
     d,
@@ -43,7 +43,7 @@ var i,
     Y = n(981631),
     W = n(987650),
     F = n(689938);
-((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'), (o[(o.TEXT = 1)] = 'TEXT'), (o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((r = s || (s = {}))[(r.NORMAL = 0)] = 'NORMAL'), (r[(r.HIGH = 1)] = 'HIGH'), (r[(r.URGENT = 2)] = 'URGENT');
+((r = i || (i = {}))[(r.GENERIC = 0)] = 'GENERIC'), (r[(r.TEXT = 1)] = 'TEXT'), (r[(r.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((o = s || (s = {}))[(o.NORMAL = 0)] = 'NORMAL'), (o[(o.HIGH = 1)] = 'HIGH'), (o[(o.URGENT = 2)] = 'URGENT');
 let H = 5 * B.Z.Millis.SECOND,
     K = 8 * B.Z.Millis.SECOND,
     X = 30 * B.Z.Millis.SECOND,
@@ -175,9 +175,9 @@ class es extends (a = f.ZP.Store) {
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
                       let { channelId: s, message: a } = e,
-                          o = M.Z.getChannel(s),
-                          r = w.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
-                      if (null == o || null == r) return !1;
+                          r = M.Z.getChannel(s),
+                          o = w.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+                      if (null == r || null == o) return !1;
                       if ((null === (n = a.activity) || void 0 === n ? void 0 : n.type) === Y.mFx.JOIN || (null === (i = a.activity) || void 0 === i ? void 0 : i.type) === Y.mFx.JOIN_REQUEST) {
                           if (!(0, U.eF)(a, s, !0, !0)) return !1;
                           let e = (function (e, t, n) {
@@ -195,20 +195,20 @@ class es extends (a = f.ZP.Store) {
                                       s = (0, S.Z)(e, n, a, i);
                               }
                               if (null == s) return !1;
-                              let o = en(s, {
+                              let r = en(s, {
                                   priority: 2,
                                   expirationExternallyManaged: !0,
                                   channelId: e.id
                               });
-                              return null != o && q(o, !1, X), !0;
-                          })(o, a, r);
+                              return null != r && q(r, !1, X), !0;
+                          })(r, a, o);
                           if (!1 !== e) return e;
                       }
                       if (((!V.Z.isInstanceUILocked() || V.Z.isPinned(Y.Odu.TEXT)) && s === P.Z.getChannelId()) || V.Z.getTextChatNotificationMode() === Y.Ypu.DISABLED || j.Z.disableNotifications || !(0, U.eF)(a, s)) return !1;
                       let l = !L.Z.isSoundDisabled(k.Ay);
-                      en((0, C.Z)(o, a, r, l), {
+                      en((0, C.Z)(r, a, o, l), {
                           type: 1,
-                          channelId: o.id,
+                          channelId: r.id,
                           messageType: a.type
                       });
                   },

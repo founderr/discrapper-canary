@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
     a = n(13245),
-    o = n(593481),
-    r = n(312839),
+    r = n(593481),
+    o = n(312839),
     l = n(981631),
     c = n(987650),
     d = n(689938),
@@ -28,9 +28,9 @@ function p(e) {
     switch (e.type) {
         case c.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: u } = e,
-                { trackView: p, trackClick: f } = (0, r.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
+                { trackView: p, trackClick: f } = (0, o.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
             return {
-                colorScheme: o.IC.PRIMARY,
+                colorScheme: r.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
@@ -64,9 +64,9 @@ function p(e) {
         }
         case c.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: u, trackClick: p } = (0, r.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
+                { trackView: u, trackClick: p } = (0, o.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
             return {
-                colorScheme: o.IC.PRIMARY,
+                colorScheme: r.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({ game: t.name }),

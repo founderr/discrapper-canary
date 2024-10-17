@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(26151),
     s = n(13245),
     a = n(43267),
-    o = n(933557),
-    r = n(593481),
+    r = n(933557),
+    o = n(593481),
     l = n(699516),
     c = n(594174),
     d = n(312839),
@@ -15,7 +15,7 @@ var i = n(26151),
     h = n(987650),
     p = n(689938);
 function f(e) {
-    let t = (0, o.F6)(e, c.default, l.Z),
+    let t = (0, r.F6)(e, c.default, l.Z),
         n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
         f = (0, a.x)(e),
         { trackView: _, trackClick: E } = (0, d.R)(h.n0.IncomingCall, {
@@ -26,11 +26,11 @@ function f(e) {
             channel_type: e.type
         });
     return {
-        colorScheme: r.ZP.ColorSchemes.PRIMARY,
+        colorScheme: o.ZP.ColorSchemes.PRIMARY,
         icon: f,
         title: t,
         body: n,
-        hint: (e) => (0, r.QR)(e, (0, d.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+        hint: (e) => (0, o.QR)(e, (0, d.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
         confirmText: p.Z.Messages.JOIN_CALL,
         cancelText: p.Z.Messages.DECLINE,
         onNotificationShow: () => {

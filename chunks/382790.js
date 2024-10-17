@@ -2,8 +2,8 @@ n(47120);
 var i,
     s = n(735250),
     a = n(470079),
-    o = n(120356),
-    r = n.n(o),
+    r = n(120356),
+    o = n.n(r),
     l = n(442837),
     c = n(552062),
     d = n(416568),
@@ -53,7 +53,7 @@ class v extends (i = a.PureComponent) {
                       }),
             a = n ? 'div' : h.ZP;
         return (0, s.jsxs)(a, {
-            className: r()(m.base, { [m.widget]: !n }),
+            className: o()(m.base, { [m.widget]: !n }),
             children: [
                 (0, s.jsx)(d.Z, {
                     isOverlay: !0,

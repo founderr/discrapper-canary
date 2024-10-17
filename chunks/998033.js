@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var s = n(13245),
     a = n(593481),
-    o = n(703656),
-    r = n(974180),
+    r = n(703656),
+    o = n(974180),
     l = n(237997),
     c = n(150097),
     d = n(557177),
@@ -42,10 +42,10 @@ function _(e, t, n, _) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            _ && (0, d.GN)(r.Ay, r.yk), Z();
+            _ && (0, d.GN)(o.Ay, o.yk), Z();
         },
         onNotificationClick: () => {
-            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), v('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            (0, r.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), v('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             v('dismiss');
