@@ -18,12 +18,11 @@ var i = n(735250),
     I = n(55869);
 let E = l.forwardRef(function (e, t) {
     let { selected: n, className: E, onClick: N } = e,
-        x = d.dj.getState().selectedTab,
-        S = (0, o.Z)('discovery_button'),
-        v = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
-        [T, Z] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], _.R.SIDEBAR, !0),
-        b = T === a.z.RAPIDASH_MORE_GUILDS_UPSELL && S && v,
-        A = l.useCallback(() => {
+        x = (0, o.Z)('discovery_button'),
+        S = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
+        [v, T] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], _.R.SIDEBAR, !0),
+        Z = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL && x && S,
+        b = l.useCallback(() => {
             null == N || N(),
                 (0, u.k5)({ source: m.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
@@ -34,28 +33,28 @@ let E = l.forwardRef(function (e, t) {
                             questContent: r.j.DISCOVERY_COMPASS
                         });
                     (0, h.transitionToGlobalDiscovery)({ tab: e });
-                })(x),
-                b && Z(_.L.DISMISS);
-        }, [N, x, Z, b]),
-        M = l.useMemo(
+                })((0, d.qe)()),
+                Z && T(_.L.DISMISS);
+        }, [N, T, Z]),
+        A = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: b ? (0, i.jsx)('div', { className: I.guildNotif }) : void 0
+                lowerBadge: Z ? (0, i.jsx)('div', { className: I.guildNotif }) : void 0
             }),
-            [b]
+            [Z]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: E,
-        onClick: A,
+        onClick: b,
         selected: n,
         tooltip: C.Z.Messages.DISCOVER,
         icon: s.CompassIcon,
-        ...M
+        ...A
     });
 });
 t.Z = E;

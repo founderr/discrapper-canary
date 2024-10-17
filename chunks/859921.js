@@ -22,8 +22,13 @@ let o = Object.freeze({
     }),
     l = (0, i.Z)(() => o);
 function u(e) {
-    var t;
-    return l(r.useRef(((t = e), (e) => e[t])).current, a.Z);
+    return l(
+        r.useMemo(() => {
+            var t;
+            return (t = e), (e) => e[t];
+        }, [e]),
+        a.Z
+    );
 }
 let c = () => u('isSearchVisible'),
     d = () => u('selectedTab'),

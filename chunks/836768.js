@@ -1,36 +1,64 @@
 n.d(t, {
-    Sx: function () {
-        return u;
+    OA: function () {
+        return E;
     },
-    dj: function () {
-        return l;
+    Sx: function () {
+        return _;
+    },
+    qe: function () {
+        return f;
     },
     uf: function () {
-        return c;
+        return h;
     }
 });
-var r = n(652874),
-    i = n(868888),
-    a = n(731965),
-    s = n(433517);
-let o = { selectedTab: n(49898).F$.SERVERS },
-    l = (0, r.Z)(
-        (0, i.tJ)(() => o, {
+var r = n(470079),
+    i = n(652874),
+    a = n(868888),
+    s = n(143927),
+    o = n(731965),
+    l = n(433517);
+let u = { selectedTab: n(49898).F$.SERVERS },
+    c = (0, i.Z)(
+        (0, a.tJ)(() => u, {
             name: 'global-discovery-ui-store',
             getStorage: () => ({
                 getItem: (e) => {
                     var t;
-                    return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
+                    return null !== (t = l.K.get(e)) && void 0 !== t ? t : null;
                 },
-                setItem: (e, t) => s.K.set(e, t),
-                removeItem: (e) => s.K.remove(e)
+                setItem: (e, t) => l.K.set(e, t),
+                removeItem: (e) => l.K.remove(e)
             }),
             partialize: (e) => ({ selectedTab: e.selectedTab })
         })
-    ),
-    u = (e) => {
-        (0, a.j)(() => l.setState(e));
-    };
-function c() {
-    u(o);
+    );
+function d(e) {
+    return (t) => t[e];
+}
+let _ = (e) => {
+    (0, o.j)(() => c.setState(e));
+};
+function E() {
+    var e;
+    return (
+        (e = 'selectedTab'),
+        c(
+            r.useMemo(() => {
+                var t;
+                return (t = e), (e) => e[t];
+            }, [e]),
+            s.Z
+        )
+    );
+}
+function f() {
+    return (function (e) {
+        var t;
+        let n = ((t = e), (e) => e[t]);
+        return n(c.getState());
+    })('selectedTab');
+}
+function h() {
+    _(u);
 }

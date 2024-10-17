@@ -54,8 +54,13 @@ function c(e) {
     return (t) => t[e];
 }
 function d(e) {
-    var t;
-    return o(i.useRef(((t = e), (e) => e[t])).current, s.Z);
+    return o(
+        i.useMemo(() => {
+            var t;
+            return (t = e), (e) => e[t];
+        }, [e]),
+        s.Z
+    );
 }
 function u(e) {
     var t;
