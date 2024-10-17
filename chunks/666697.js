@@ -11,47 +11,59 @@ var i,
     _ = n(233374),
     E = n(283293),
     h = n(973616),
-    m = n(689938),
-    I = n(850258);
+    m = n(292191),
+    I = n(571737),
+    p = n(689938),
+    g = n(850258);
 ((a = i || (i = {})).ABOUT = 'about'), (a.STORE = 'store');
 t.Z = function (e) {
     let { applicationId: t, onScroll: n } = e,
-        i = (0, l.e7)([c.Z], () => c.Z.getApplication(t));
+        i = (0, l.e7)([c.Z], () => c.Z.getApplication(t)),
+        a = (0, l.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
     r.useEffect(() => {
         null != t && null == i && o.i6(t);
     }, [t, i]);
-    let a = null != i ? h.Z.createFromServer(i) : null,
-        p = null == a ? void 0 : a.isMonetized,
-        [g, T] = r.useState('about'),
-        S = r.useMemo(
+    let T = null != i ? h.Z.createFromServer(i) : null,
+        S = null == T ? void 0 : T.storefront_available,
+        [f, C] = r.useState('about'),
+        N = r.useMemo(
             () => [
                 {
                     id: 'about',
-                    label: m.Z.Messages.APP_DIRECTORY_ABOUT
+                    label: p.Z.Messages.APP_DIRECTORY_ABOUT
                 },
                 {
                     id: 'store',
-                    label: m.Z.Messages.APP_DIRECTORY_STORE
+                    label: p.Z.Messages.APP_DIRECTORY_STORE
                 }
             ],
             []
         );
-    return (0, s.jsx)(d.Z, {
-        loading: null == a,
-        children: (0, s.jsx)(E.Z, {
-            onScroll: n,
-            children: (0, s.jsx)(u.Z, {
-                children:
-                    p &&
+    if (null == i)
+        return a === c.M.FETCHING
+            ? (0, s.jsx)('div', {
+                  className: g.centerContainer,
+                  children: (0, s.jsx)(d.Z, { loading: !0 })
+              })
+            : (0, s.jsx)('div', {
+                  className: g.centerContainer,
+                  children: (0, s.jsx)(m.Z, { className: g.error })
+              });
+    return (0, s.jsx)(E.Z, {
+        onScroll: n,
+        children: (0, s.jsxs)(u.Z, {
+            children: [
+                (0, s.jsx)(I.Z, { application: i }),
+                S &&
                     (0, s.jsx)('div', {
-                        className: I.contentTabs,
+                        className: g.contentTabs,
                         children: (0, s.jsx)(_.Z, {
-                            tabs: S,
-                            onTabSelect: T,
-                            selectedTab: g
+                            tabs: N,
+                            onTabSelect: C,
+                            selectedTab: f
                         })
                     })
-            })
+            ]
         })
     });
 };

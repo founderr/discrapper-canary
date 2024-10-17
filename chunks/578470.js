@@ -5,16 +5,19 @@ n.d(t, {
 }),
     n(47120);
 var i = n(470079);
-function a() {
-    let [e, t] = i.useState(),
-        n = i.useCallback((e) => {
-            t(e);
-        }, []);
+function a(e) {
+    let [t, n] = i.useState(),
+        a = i.useCallback(
+            (t) => {
+                n(t), e();
+            },
+            [e]
+        );
     return {
-        onSelectApplication: n,
+        onSelectApplication: a,
         onCloseAppDetails: i.useCallback(() => {
-            t(void 0);
-        }, []),
-        selectedAppId: e
+            n(void 0), e();
+        }, [e]),
+        selectedAppId: t
     };
 }

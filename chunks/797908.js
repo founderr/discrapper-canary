@@ -4,12 +4,12 @@ var i = n(735250),
     r = n(783097),
     l = n(924489),
     o = n(491576),
-    c = n(686546),
-    d = n(66637),
-    u = n(768581),
-    _ = n(420372),
-    E = n(689938),
-    h = n(923592);
+    c = n(66637),
+    d = n(768581),
+    u = n(956965),
+    _ = n(689938),
+    E = n(923592);
+let h = 28;
 t.Z = function (e) {
     var t, n, m, I, p;
     let { application: g, onSelectApplication: T, showCategory: S = !1 } = e,
@@ -21,7 +21,7 @@ t.Z = function (e) {
         }, [T, g.id]),
         v = a.useMemo(
             () =>
-                u.ZP.getApplicationIconURL({
+                d.ZP.getApplicationIconURL({
                     id: g.id,
                     icon: g.icon,
                     size: 48
@@ -39,64 +39,59 @@ t.Z = function (e) {
         }),
         R = S && null != C;
     return (0, i.jsx)('div', {
-        className: h.container,
-        children: (0, i.jsxs)(d.Z, {
-            className: h.card,
+        className: E.container,
+        children: (0, i.jsxs)(c.Z, {
+            className: E.card,
             onClick: A,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
-                    className: h.header,
+                    className: E.header,
                     children: [
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(u.Z, {
                             application: g,
+                            bannerType: 'card',
                             iconURL: v
                         }),
                         (0, i.jsx)('div', {
-                            className: h.icon,
-                            children: (0, i.jsx)(c.ZP, {
-                                mask: c.ZP.Masks.SQUIRCLE,
-                                width: 56,
-                                height: 56,
-                                children: (0, i.jsx)('div', {
-                                    className: h.iconMask,
-                                    children: (0, i.jsx)(c.ZP, {
-                                        mask: c.ZP.Masks.SQUIRCLE,
-                                        width: 48,
-                                        height: 48,
-                                        children: (0, i.jsx)('img', {
-                                            src: v,
-                                            alt: '',
-                                            className: h.avatar
-                                        })
-                                    })
-                                })
+                            className: E.avatarContainer,
+                            style: { height: h },
+                            children: (0, i.jsx)('img', {
+                                src: v,
+                                alt: '',
+                                className: E.avatar,
+                                height: 48,
+                                width: 48,
+                                style: {
+                                    borderWidth: 4,
+                                    marginLeft: 12
+                                }
                             })
                         })
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.appDetails,
+                    className: E.appDetails,
                     children: [
                         (0, i.jsx)('div', {
-                            className: h.titleContainer,
+                            className: E.titleContainer,
                             children: (0, i.jsx)('div', {
-                                className: h.title,
+                                className: E.title,
                                 children: (0, i.jsx)(s.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
-                                    className: h.appName,
+                                    className: E.appName,
                                     children: g.name
                                 })
                             })
                         }),
                         R || N
                             ? (0, i.jsxs)('div', {
-                                  className: h.infoContainer,
+                                  className: E.infoContainer,
                                   children: [
                                       R
                                           ? (0, i.jsx)(s.Text, {
-                                                className: h.appCategory,
+                                                className: E.appCategory,
                                                 variant: 'text-xs/medium',
                                                 color: 'text-normal',
                                                 children: C.name
@@ -113,14 +108,14 @@ t.Z = function (e) {
                                           ? (0, i.jsx)(s.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
-                                                children: E.Z.Messages.APP_LAUNCHER_PROMOTED
+                                                children: _.Z.Messages.APP_LAUNCHER_PROMOTED
                                             })
                                           : null
                                   ]
                               })
                             : null,
                         (0, i.jsx)(s.Text, {
-                            className: h.description,
+                            className: E.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             lineClamp: R || N ? 2 : 3,
@@ -128,7 +123,7 @@ t.Z = function (e) {
                         }),
                         Z
                             ? (0, i.jsx)('div', {
-                                  className: h.memberDetails,
+                                  className: E.memberDetails,
                                   children: L
                               })
                             : null

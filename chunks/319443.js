@@ -21,15 +21,12 @@ t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
         { tabs: C, selectedTab: N, onSelectTab: A } = (0, E.i)();
     a.useEffect(() => {
-        n();
-    }, [N, n]),
-        a.useEffect(() => {
-            r.CP();
-        }, []),
+        r.CP();
+    }, []),
         a.useEffect(() => {
             r.g5();
         }, []);
-    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, isSearchVisible: x } = (0, _.M)(),
+    let { searchQuery: v, searchFetchedQuery: Z, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, hasSearchView: x } = (0, _.M)(),
         {
             searchBarState: b,
             onTabsAvailableWidthChange: M,
@@ -39,37 +36,45 @@ t.Z = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === v.trim()
         }),
-        { onSelectApplication: y, onCloseAppDetails: j, selectedAppId: U } = (0, h.g)(),
+        { onSelectApplication: y, onCloseAppDetails: j, selectedAppId: U } = (0, h.g)(n),
         G = null != U,
-        w = a.useCallback(
+        w = x && !G,
+        k = a.useCallback(
             (e) => {
-                A(e), x && R();
+                A(e), w && R(), n();
             },
-            [x, R, A]
+            [w, R, A, n]
         );
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: x ? f.search : void 0,
+                className: w ? f.search : void 0,
                 children: [
-                    !x && (0, i.jsx)(c.z6, { scrollPosition: t }),
+                    !w &&
+                        (0, i.jsx)(
+                            c.z6,
+                            {
+                                scrollPosition: t,
+                                minOpacity: G ? 0.4 : 0
+                            },
+                            G ? 'apps' : ''
+                        ),
                     (0, i.jsx)(c.aV, {
-                        icon: x || G ? s.ArrowLargeLeftIcon : s.AppsIcon,
-                        iconColor: x ? s.tokens.colors.INTERACTIVE_NORMAL : void 0,
-                        onClick: G ? j : x ? R : void 0
+                        icon: w || G ? s.ArrowLargeLeftIcon : s.AppsIcon,
+                        onClick: G ? j : w ? R : void 0
                     }),
-                    G || x
+                    G || w
                         ? (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
-                              color: G ? void 0 : 'header-primary',
+                              color: 'header-primary',
                               className: f.alternateHeader,
                               children: G ? S.Z.Messages.BACK : S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
                           })
                         : (0, i.jsx)(d.Z, {
                               tabs: C,
                               selectedTab: N,
-                              onTabSelect: w,
+                              onTabSelect: k,
                               onAvailableWidthChange: M
                           }),
                     !G &&
@@ -90,7 +95,7 @@ t.Z = function () {
                       onScroll: e,
                       applicationId: U
                   })
-                : x
+                : w
                   ? (0, i.jsx)(g.Z, {
                         query: Z,
                         onSelectApplication: y
