@@ -30,15 +30,15 @@ function N(e) {
         v = (0, _.V)(),
         Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)),
-        O = (0, h.V)(t.id, t.getRecipientId()),
-        R = a.useCallback(() => {
+        R = (0, h.V)(t.id, t.getRecipientId()),
+        O = a.useCallback(() => {
             I.Z.closeChannelSidebar(p.uZ), Z && A && (0, m.Kh)(t.id), L && v && (0, m.Kh)(t.id);
         }, [t.id, L, v, Z, A]),
         x = a.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: b } = (0, E.m)({
-            onAcceptSuccess: R,
+            onAcceptSuccess: O,
             onError: x
         });
     if (null == t || !t.isDM()) return null;
@@ -76,7 +76,7 @@ function N(e) {
                         (0, i.jsx)(r.Button, {
                             className: C.hamBannerButton,
                             size: r.ButtonSizes.SMALL,
-                            onClick: () => b(t, O),
+                            onClick: () => b(t, R),
                             children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
                         })
                     ]

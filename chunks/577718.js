@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(474936),
     Z = n(689938),
     L = n(541194),
-    O = n(592827),
-    R = n(741160),
+    R = n(592827),
+    O = n(741160),
     x = n(829972),
     b = n(31932),
     M = n(642301);
@@ -98,7 +98,7 @@ t.Z = a.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: G,
-                                className: O.fullWidthImage
+                                className: R.fullWidthImage
                             }),
                             content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
                             buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -117,7 +117,7 @@ t.Z = a.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: G,
-                                className: O.fullWidthImage
+                                className: R.fullWidthImage
                             }),
                             content: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
                             buttonCTA: Z.Z.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -162,8 +162,8 @@ t.Z = a.memo(function (e) {
                             header: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
                             asset: (0, i.jsx)('img', {
                                 alt: '',
-                                src: R,
-                                className: O.fullWidthImage
+                                src: O,
+                                className: R.fullWidthImage
                             }),
                             content: e,
                             buttonCTA: t,
@@ -201,7 +201,7 @@ t.Z = a.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: M,
-                                className: O.fullWidthImage
+                                className: R.fullWidthImage
                             }),
                             onClick: () => {
                                 m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);

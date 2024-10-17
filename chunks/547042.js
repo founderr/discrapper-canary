@@ -36,8 +36,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 dismissText: v,
                 description: Z,
                 learnMore: L,
-                title: O,
-                videoPosterUrl: R,
+                title: R,
+                videoPosterUrl: O,
                 videoUrl: x,
                 ctaOnClick: b
             } = (function (e) {
@@ -122,7 +122,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             (0, s.jsx)(h.Z, {
                                 className: S.video,
                                 src: x,
-                                poster: R,
+                                poster: O,
                                 width: 224,
                                 height: 126,
                                 loop: !0,
@@ -135,7 +135,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     className: S.__invalid_headerText,
                                     variant: 'text-sm/bold',
                                     color: 'always-white',
-                                    children: O
+                                    children: R
                                 })
                             }),
                             (0, s.jsxs)(o.Text, {

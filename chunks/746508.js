@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(596040),
     Z = n(588580),
     L = n(374065),
-    O = n(451576),
-    R = n(119315),
+    R = n(451576),
+    O = n(119315),
     x = n(403404),
     b = n(100527),
     M = n(906732),
@@ -78,8 +78,8 @@ var i = n(735250),
     ev = n(63063),
     eZ = n(51144),
     eL = n(870569),
-    eO = n(345243),
-    eR = n(594117),
+    eR = n(345243),
+    eO = n(594117),
     ex = n(226323),
     eb = n(981631),
     eM = n(190378),
@@ -285,9 +285,9 @@ function eB(e) {
         T = (0, Z.a)(),
         S = E !== L.jy.CAN_LAUNCH,
         { enabled: f } = P.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
-        { Component: v, events: O, play: b } = (0, u.s)(),
+        { Component: v, events: R, play: b } = (0, u.s)(),
         { Component: D, events: y, play: j } = (0, _.w)();
-    return (f ? ((t = y), (n = j)) : ((t = O), (n = b)), s)
+    return (f ? ((t = y), (n = j)) : ((t = R), (n = b)), s)
         ? (0, i.jsx)(I.Tooltip, {
               text: h,
               children: (e) =>
@@ -326,7 +326,7 @@ function eB(e) {
                       wrapperClassName: eD.button,
                       children: [
                           T
-                              ? (0, i.jsx)(R.r, {
+                              ? (0, i.jsx)(O.r, {
                                     top: -1,
                                     right: -1
                                 })
@@ -366,9 +366,9 @@ function eV(e) {
         C = _ ? eP.Z.Messages.SHARE_YOUR_SCREEN : eP.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
         N = m || l || p,
         v = null != T,
-        { Component: Z, events: L, play: O } = (0, E.P)(v ? 'disable' : 'enable');
-    a.useEffect(() => () => O(), [O, v]);
-    let R = (0, i.jsx)(Z, {
+        { Component: Z, events: L, play: R } = (0, E.P)(v ? 'disable' : 'enable');
+    a.useEffect(() => () => R(), [R, v]);
+    let O = (0, i.jsx)(Z, {
         color: 'currentColor',
         className: r()(eD.buttonIcon, { [eD.withText]: !N })
     });
@@ -415,10 +415,10 @@ function eV(e) {
                         innerClassName: eD.buttonContents,
                         wrapperClassName: eD.button,
                         children: N
-                            ? R
+                            ? O
                             : (0, i.jsxs)(j.Z, {
                                   align: j.Z.Align.CENTER,
-                                  children: [R, eP.Z.Messages.GO_LIVE_SHARE_SCREEN]
+                                  children: [O, eP.Z.Messages.GO_LIVE_SHARE_SCREEN]
                               })
                     })
             });
@@ -444,7 +444,7 @@ class eH extends a.PureComponent {
                         to: e,
                         onClick: this.handleChannelLinkClick,
                         onContextMenu: this.handleChannelLinkContextMenu,
-                        children: (0, i.jsx)(eO.Z, {
+                        children: (0, i.jsx)(eR.Z, {
                             className: eD.channel,
                             children: o
                         })
@@ -575,7 +575,7 @@ class eH extends a.PureComponent {
                                           grow: 0,
                                           shrink: 0,
                                           className: eD.voiceButtonsContainer,
-                                          children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(eR.Z, { channel: e })]
+                                          children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(eO.Z, { channel: e })]
                                       })
                                   ]
                               }),
@@ -728,11 +728,11 @@ t.Z = (0, f.Z)(function (e) {
     a.useEffect(() => {
         (g || T) && L(!1);
     }, [g, T, L]);
-    let { analyticsLocations: R } = (0, M.ZP)(b.Z.RTC_PANEL),
+    let { analyticsLocations: O } = (0, M.ZP)(b.Z.RTC_PANEL),
         x = (0, v.Z)(null != c ? c : eb.lds, null == o ? void 0 : o.id),
-        P = (0, O.Z)(null == o ? void 0 : o.id);
+        P = (0, R.Z)(null == o ? void 0 : o.id);
     return (0, i.jsx)(M.Gt, {
-        value: R,
+        value: O,
         children: (0, i.jsxs)('div', {
             className: eD.wrapper,
             children: [
@@ -757,7 +757,7 @@ t.Z = (0, f.Z)(function (e) {
                     showVoiceStates: S,
                     shouldShowVoicePanelIntroduction: E,
                     isPrivateChannelWithEnabledActivities: P,
-                    analyticsLocations: R
+                    analyticsLocations: O
                 }),
                 !Z && g && null != c
                     ? (0, i.jsxs)('div', {

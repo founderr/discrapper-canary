@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(308083),
     Z = n(689938),
     L = n(431476),
-    O = n(345480),
-    R = n(236613);
+    R = n(345480),
+    O = n(236613);
 let x = {
     mass: 1,
     tension: 600,
@@ -39,7 +39,7 @@ function b(e) {
             (0, i.jsx)('div', {
                 className: L.clanEnvelopeTop,
                 children: (0, i.jsx)('img', {
-                    src: R,
+                    src: O,
                     alt: ''
                 })
             }),
@@ -47,7 +47,7 @@ function b(e) {
             (0, i.jsx)('div', {
                 className: L.clanEnvelopeBottom,
                 children: (0, i.jsx)('img', {
-                    src: O,
+                    src: R,
                     alt: ''
                 })
             })
@@ -186,7 +186,7 @@ t.Z = a.memo(function (e) {
     let { eligibleGuilds: t, eligibleGuildsIncludingConverted: n } = e,
         s = (0, m.iN)('clan_discovery_admin_upsell'),
         r = 0 === t.length,
-        [C, O] = a.useState(() => {
+        [C, R] = a.useState(() => {
             var e, i;
             let a = new Set(I.ZP.getGuildIds());
             for (let e of t) if (a.has(e.id)) return e.id;
@@ -199,7 +199,7 @@ t.Z = a.memo(function (e) {
                 location: _.Z.CLAN_DISCOVERY
             });
     }, [r, C]);
-    let R = (0, o.e7)([S.Z], () => S.Z.getGuild(C)),
+    let O = (0, o.e7)([S.Z], () => S.Z.getGuild(C)),
         M = (0, o.e7)([I.ZP], () => (null != C ? I.ZP.getStateForGuild(C).progress : null)),
         D = a.useCallback(() => {
             !r &&
@@ -219,7 +219,7 @@ t.Z = a.memo(function (e) {
                 ));
         }, [r, C]),
         y = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, N.L)({ guild: R }),
+        j = (0, N.L)({ guild: O }),
         U = (0, A.n)(),
         [G, w] = a.useState(!0),
         k = (0, c.useSpring)(
@@ -391,7 +391,7 @@ t.Z = a.memo(function (e) {
                 className: L.upsellCtaContainer,
                 children: (0, i.jsx)(P, {
                     selectedGuildId: C,
-                    setSelectedGuildId: O,
+                    setSelectedGuildId: R,
                     eligibleGuilds: t,
                     onButtonClick: D,
                     buttonText: W,

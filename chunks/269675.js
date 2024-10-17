@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 });
 var i = n(735250),
@@ -28,11 +28,11 @@ var i = n(735250),
     v = n(176505),
     Z = n(689938),
     L = n(752335);
-function O(e) {
+function R(e) {
     let { guildId: t } = e,
         n = (0, r.e7)([I.Z], () => I.Z.getGuild(t), [t]),
-        O = (0, r.e7)([h.Z], () => h.Z.isConnected()),
-        R = (0, _.Z)(t),
+        R = (0, r.e7)([h.Z], () => h.Z.isConnected()),
+        O = (0, _.Z)(t),
         x = (0, T.Z)(t),
         b = (0, r.e7)([p.Z], () => p.Z.isSubscriptionFetching),
         M = (0, g.f)(),
@@ -43,7 +43,7 @@ function O(e) {
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(s.tq ? 'role-subscriptions-overview' : void 0);
-    let j = O && (null == n || !(R || x) || (P && !D));
+    let j = R && (null == n || !(O || x) || (P && !D));
     if (
         (a.useEffect(() => {
             o.jg();
@@ -73,7 +73,7 @@ function O(e) {
             (0, i.jsx)('div', { id: A.v }),
             (0, i.jsx)('div', {
                 className: L.content,
-                children: R
+                children: O
                     ? (0, i.jsx)(l.ScrollerNone, {
                           className: L.scroller,
                           children: (0, i.jsx)('div', {
@@ -86,11 +86,11 @@ function O(e) {
         ]
     });
 }
-function R(e) {
+function O(e) {
     let { guildId: t } = e;
     return (0, i.jsx)(g.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, i.jsx)(O, { guildId: t })
+        children: (0, i.jsx)(R, { guildId: t })
     });
 }

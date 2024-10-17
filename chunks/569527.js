@@ -28,8 +28,8 @@ function C(e) {
     let { query: n, onSelectApplication: C } = e,
         [N, A] = a.useState(void 0),
         [v, Z] = a.useState(1),
-        [L, O] = a.useState(!0),
-        R = a.useRef(L),
+        [L, R] = a.useState(!0),
+        O = a.useRef(L),
         [x, b] = a.useState(0),
         M = a.useRef(null),
         { fetchState: P, searchResults: D } = (0, l.cj)([E.Z], () => ({
@@ -86,7 +86,7 @@ function C(e) {
             let n = null == e ? void 0 : e.getBoundingClientRect();
             if (null == n) return;
             let i = n.width;
-            i < 1024 && R.current ? ((R.current = !1), O(!1)) : i > 1024 && !R.current && ((R.current = !0), O(!0));
+            i < 1024 && O.current ? ((O.current = !1), R(!1)) : i > 1024 && !O.current && ((O.current = !0), R(!0));
             let a = null === (t = M.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             null != a && b(a.width);
         }),

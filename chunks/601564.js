@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getPageSize: function () {
-            return O;
+            return R;
         }
     }),
     n(47120);
@@ -45,11 +45,11 @@ let L = (0, I.Un)({
     createPromise: () => Promise.all([n.e('68148'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
-function O(e) {
+function R(e) {
     return e < C.x ? C.b.SMALL : C.b.LARGE;
 }
 l.ZP.initialize();
-class R extends a.PureComponent {
+class O extends a.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, g.s1)().listen((e) => {
@@ -107,7 +107,7 @@ class R extends a.PureComponent {
                         slug: a,
                         location: r,
                         storeListingId: o.store_listing_id,
-                        pageSize: O(l)
+                        pageSize: R(l)
                     })
                 });
             }),
@@ -146,4 +146,4 @@ class R extends a.PureComponent {
             );
     }
 }
-t.default = (0, r.EN)((0, u.Z)((0, _.Z)(R)));
+t.default = (0, r.EN)((0, u.Z)((0, _.Z)(O)));

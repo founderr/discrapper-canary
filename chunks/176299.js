@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(544978),
     Z = n(540059),
     L = n(724383),
-    O = n(135864),
-    R = n(372900),
+    R = n(135864),
+    O = n(372900),
     x = n(6039),
     b = n(637853),
     M = n(326145),
@@ -201,7 +201,7 @@ let eh = 'resizable-sidebar-width',
             (function () {
                 return window.location.pathname.startsWith(ed.Z5c.GUILD_DISCOVERY) || (0, F.OG)();
             })()
-            ? (0, i.jsx)(O.Z, {})
+            ? (0, i.jsx)(R.Z, {})
             : null != e
               ? (0, i.jsx)(
                     D.Z,
@@ -224,7 +224,7 @@ let eh = 'resizable-sidebar-width',
               })
             : null;
     },
-    eO = (e) => {
+    eR = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
             ? (0, i.jsx)(j.Z, {
@@ -233,7 +233,7 @@ let eh = 'resizable-sidebar-width',
               })
             : null;
     },
-    eR = () => (0, i.jsx)(eo.Z, {}),
+    eO = () => (0, i.jsx)(eo.Z, {}),
     ex = () => (0, i.jsx)(ec.Z, {}),
     eb = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -347,8 +347,8 @@ function eG(e) {
         s)
     )
         return null;
-    let O = g ? 'div' : a.Fragment,
-        R = g ? { className: eE.sidebarList } : {};
+    let R = g ? 'div' : a.Fragment,
+        O = g ? { className: eE.sidebarList } : {};
     return (0, i.jsx)(E.ThemeProvider, {
         theme: n,
         children: (e) =>
@@ -368,8 +368,8 @@ function eG(e) {
                             className: eE.guilds,
                             themeOverride: n
                         }),
-                    (0, i.jsx)(O, {
-                        ...R,
+                    (0, i.jsx)(R, {
+                        ...O,
                         children: (0, i.jsx)(eA, {})
                     }),
                     g
@@ -443,7 +443,7 @@ function ew() {
                         className: eE.guilds,
                         themeOverride: n
                     }),
-                (0, i.jsx)(R.Z.Provider, {
+                (0, i.jsx)(O.Z.Provider, {
                     value: (null == h ? void 0 : h.params.guildId) === ed.ME ? void 0 : null == h ? void 0 : h.params.guildId,
                     children: (0, i.jsxs)('div', {
                         className: eE.base,
@@ -481,7 +481,7 @@ function ew() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: ed.Z5c.APPLICATION_LIBRARY,
-                                                    render: eR,
+                                                    render: eO,
                                                     impressionName: o.ImpressionNames.APPLICATION_LIBRARY,
                                                     disableTrack: !0
                                                 }),
@@ -568,7 +568,7 @@ function ew() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: ed.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(W.Hw.guildId(), ':inviteCode?'),
-                                                    render: eO,
+                                                    render: eR,
                                                     impressionName: o.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                     impressionProperties: (e) => {
                                                         let { computedMatch: t } = e;

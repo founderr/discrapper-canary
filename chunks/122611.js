@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(8521),
     Z = n(760326),
     L = n(536687),
-    O = n(652785),
-    R = n(981631),
+    R = n(652785),
+    O = n(981631),
     x = n(921944);
 function b(e) {
     e.stopPropagation();
@@ -33,19 +33,19 @@ function b(e) {
 function M(e) {
     var t;
     let { guild: n } = e,
-        [_, m] = a.useState(null !== (t = l.K.get(O.Iv)) && void 0 !== t ? t : 0),
+        [_, m] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0),
         p = (e) => {
-            l.K.set(O.Iv, e), m(e);
+            l.K.set(R.Iv, e), m(e);
         },
         { defaultGameId: g, enableClanCreation: T } = (0, o.St)({
             guild: n,
             location: 'ChannelNoticesGuard',
             includeConverted: !1
         }),
-        S = (0, s.Wu)(O.HG, () =>
-            O.XN.filter((e) => {
+        S = (0, s.Wu)(R.HG, () =>
+            R.XN.filter((e) => {
                 let { type: t, store: i } = e;
-                if (t === R.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(R.oNc.CLAN) && T;
+                if (t === O.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(O.oNc.CLAN) && T;
                 return null == i ? void 0 : i.channelNoticePredicate(n, _);
             }).map((e) => e.dismissibleContentType)
         );

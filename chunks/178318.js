@@ -80,7 +80,7 @@ function L(e, t, n) {
         }),
         t.end(n);
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
     L(
         e,
@@ -92,7 +92,7 @@ function O(e, t, n, i) {
         n
     );
 }
-class R extends m.Z {
+class O extends m.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== g.Etm.OVERLAY && e.evt !== g.zMe.OVERLAY)) && N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
@@ -134,12 +134,12 @@ class b extends s.EventEmitter {
                     let { protocol: i, host: a } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
                     i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
                 },
-                c = new x(s ? L.bind(null, e, t) : l, s ? O.bind(null, e, t, 400) : l, Number(n.get('v')), a);
+                c = new x(s ? L.bind(null, e, t) : l, s ? R.bind(null, e, t, 400) : l, Number(n.get('v')), a);
             if (s)
                 (0, I.em)(c, v(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
-                        e.on('data', (e) => (n += e)), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
+                        e.on('data', (e) => (n += e)), e.on('error', () => R(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
                     })
                     .catch((e) => {
                         let { code: t, message: n } = e;
@@ -151,7 +151,7 @@ class b extends s.EventEmitter {
             }
             return;
         }
-        O(e, t, 404, 'Not Found');
+        R(e, t, 404, 'Not Found');
     }
     handleConnection(e) {
         var t, n;
@@ -159,7 +159,7 @@ class b extends s.EventEmitter {
         let a = new URLSearchParams(v(e.upgradeReq).url.split('?')[1]),
             s = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
         try {
-            i = new R(e, Number(a.get('v')), null !== (n = a.get('encoding')) && void 0 !== n ? n : 'json');
+            i = new O(e, Number(a.get('v')), null !== (n = a.get('encoding')) && void 0 !== n ? n : 'json');
         } catch (t) {
             e.close(t.code, t.message);
             return;

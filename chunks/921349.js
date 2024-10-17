@@ -712,7 +712,7 @@ function B(e) {
                   shape: E.X.Shapes.BOX,
                   size: 20,
                   disabled: !1,
-                  className: D.multiSelectCheckbox
+                  indicatorClassName: D.multiSelectCheckbox
               })
             : (0, r.jsx)('div', {
                   className: s()(D.multiSelectCheckbox, {

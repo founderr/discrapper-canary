@@ -30,8 +30,8 @@ var i = n(735250),
     v = n(605236),
     Z = n(243778),
     L = n(492162),
-    O = n(818634),
-    R = n(596557),
+    R = n(818634),
+    O = n(596557),
     x = n(817520),
     b = n(999309),
     M = n(408987),
@@ -181,7 +181,7 @@ class eT extends a.PureComponent {
                       animation: u.Popout.Animation.SCALE,
                       shouldShow: n,
                       onRequestClose: () => {
-                          (0, O.l)(!1);
+                          (0, R.l)(!1);
                       },
                       children: (a) => {
                           let { onClick: s, ...r } = a;
@@ -331,7 +331,7 @@ class eT extends a.PureComponent {
             }),
             em(this, 'handleHeaderMenuToggle', (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, O.l)(!t), this.closeAllHeaderNotices();
+                e.stopPropagation(), (0, R.l)(!t), this.closeAllHeaderNotices();
             }),
             em(this, 'handleContextMenu', (e) => {
                 let { guild: t } = this.props;
@@ -450,16 +450,16 @@ function eS(e) {
         ev = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0,
         eZ = f && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
         eL = (0, T.Q)(),
-        eO = (f || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
-        eR = (0, o.e7)([P.Z, Q.Z], () => null != d && null != G && f && !Q.Z.hasLayers() && P.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eR = (f || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
+        eO = (0, o.e7)([P.Z, Q.Z], () => null != d && null != G && f && !Q.Z.hasLayers() && P.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)),
-        { isPopoutOpen: eb } = (0, O.y)(),
+        { isPopoutOpen: eb } = (0, R.y)(),
         eM = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
         eP = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))),
         eD = et.ZP.isNewUser(G),
         ey = ei && !eD,
         ej = (0, C.Z)(G);
-    (0, R.Z)(d);
+    (0, O.Z)(d);
     let eU = (0, v.wE)(c.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, j.Z)(n),
         ew = (0, x.Z)(n),
@@ -484,10 +484,10 @@ function eS(e) {
         anyLayerOpen: eh || em,
         showGuildBoostingProgressBarUpsell: eg,
         showGuildBoostingProgressBarSizeUpsell: ef,
-        showInviteSplashUpsell: eO,
+        showInviteSplashUpsell: eR,
         showDiscoveryLandingPageSettingsUpsell: eZ,
         showGuildHeaderTutorial: eI,
-        showGuildTemplateDirtyTooltip: eR,
+        showGuildTemplateDirtyTooltip: eO,
         showRoleSubscriptionUpsell: eN,
         showDiscoveryTooltip: eA,
         showHubPrivacySettingsTooltip: ev,

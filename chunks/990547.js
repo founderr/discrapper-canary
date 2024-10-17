@@ -270,7 +270,7 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '336208'), '336208'), 10);
+        let a = parseInt(((n = '336268'), '336268'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

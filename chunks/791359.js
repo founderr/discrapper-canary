@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(525296),
     Z = n(981631),
     L = n(674563),
-    O = n(689938),
-    R = n(888816);
+    R = n(689938),
+    O = n(888816);
 let x = 15 * T.Z.Millis.MINUTE,
     b = (0, v.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: s, quest: r } = e,
@@ -79,7 +79,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                           ...e,
                           onMouseEnter: v,
                           'aria-haspopup': 'menu',
-                          className: R.itemCard,
+                          className: O.itemCard,
                           active: n,
                           children: (0, i.jsxs)('div', {
                               children: [l, c]
@@ -138,24 +138,24 @@ function P() {
                         );
                     })
                   : (0, i.jsxs)('div', {
-                        className: R.emptyCard,
+                        className: O.emptyCard,
                         children: [
                             (0, i.jsx)(d.Heading, {
                                 variant: 'heading-md/semibold',
-                                className: R.emptyHeader,
-                                children: O.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+                                className: O.emptyHeader,
+                                children: R.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
                             }),
                             (0, i.jsx)(d.Text, {
                                 color: 'none',
-                                className: R.emptyText,
+                                className: O.emptyText,
                                 variant: 'text-sm/normal',
-                                children: O.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+                                children: R.Z.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
                             })
                         ]
                     })),
           (0, i.jsx)(i.Fragment, { children: h }))
         : (0, i.jsx)('div', {
-              className: R.emptyCard,
+              className: O.emptyCard,
               children: (0, i.jsx)(d.Spinner, {})
           });
 }
