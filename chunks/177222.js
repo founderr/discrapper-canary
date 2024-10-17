@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return U;
     }
 });
 var i = n(735250),
@@ -16,158 +16,156 @@ var i = n(735250),
     p = n(680295),
     m = n(785717),
     _ = n(221292),
-    f = n(719311),
-    E = n(249978),
-    g = n(687158),
-    C = n(326094),
-    I = n(510659),
-    T = n(113557),
-    x = n(867176),
-    v = n(169979),
-    S = n(451834),
-    N = n(502762),
-    A = n(952124),
-    Z = n(544989),
-    M = n(481932),
-    b = n(272510),
-    R = n(171368),
-    L = n(348540),
-    P = n(179142),
-    j = n(101638),
-    O = n(228168),
-    y = n(981631),
-    D = n(689938),
-    U = n(337319);
-function k(e) {
-    let { user: t, currentUser: n, channel: k } = e,
-        w = __OVERLAY__,
-        B = (0, g.ZP)(t.id),
-        H = (0, c.ZP)(),
-        G = (0, C.Z)({
+    f = n(110581),
+    E = n(687158),
+    g = n(326094),
+    C = n(510659),
+    I = n(113557),
+    T = n(867176),
+    x = n(169979),
+    v = n(451834),
+    S = n(502762),
+    N = n(952124),
+    A = n(544989),
+    Z = n(481932),
+    M = n(272510),
+    b = n(171368),
+    R = n(348540),
+    L = n(179142),
+    P = n(101638),
+    j = n(228168),
+    O = n(981631),
+    y = n(689938),
+    D = n(337319);
+function U(e) {
+    let { user: t, currentUser: n, channel: U } = e,
+        k = __OVERLAY__,
+        w = (0, E.ZP)(t.id),
+        B = (0, c.ZP)(),
+        H = (0, g.Z)({
             user: t,
             currentUser: n,
-            location: y.Sbl.PROFILE_PANEL
+            location: O.Sbl.PROFILE_PANEL
         }),
-        V = (0, m.ZB)({
-            layout: G ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
+        G = (0, m.ZB)({
+            layout: H ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
-            channelId: k.id
+            channelId: U.id
         }),
-        { analyticsLocations: F } = (0, d.ZP)(u.Z.PROFILE_PANEL),
-        { recentActivityEnabled: W } = (0, f.I)({ location: 'UserProfilePanel' }),
-        { recentActivityStatusEnabled: z } = (0, E.U)({ location: 'UserProfilePanel' }),
-        Y = s.useRef(null),
-        K = (0, o.Z)(Y),
-        q = (0, I.$m)(),
-        X = (0, r.useSpring)({
-            opacity: null != q.interactionType ? 1 : 0,
+        { analyticsLocations: V } = (0, d.ZP)(u.Z.PROFILE_PANEL),
+        { recentActivitySectionEnabled: F } = (0, f.P)({ location: 'UserProfilePanel' }),
+        W = s.useRef(null),
+        z = (0, o.Z)(W),
+        Y = (0, C.$m)(),
+        K = (0, r.useSpring)({
+            opacity: null != Y.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        J = (e) => {
-            (0, R.openUserProfileModal)({
-                sourceAnalyticsLocations: F,
-                ...V,
+        q = (e) => {
+            (0, b.openUserProfileModal)({
+                sourceAnalyticsLocations: V,
+                ...G,
                 ...e
             });
         };
     return (0, i.jsx)(d.Gt, {
-        value: F,
+        value: V,
         children: (0, i.jsx)(m.Mt, {
-            value: V,
-            children: (0, i.jsx)(I.NJ, {
-                value: q,
-                children: (0, i.jsxs)(N.Z, {
-                    ref: Y,
+            value: G,
+            children: (0, i.jsx)(C.NJ, {
+                value: Y,
+                children: (0, i.jsxs)(S.Z, {
+                    ref: W,
                     user: t,
-                    displayProfile: B,
-                    profileType: O.y0.PANEL,
-                    themeOverride: H,
-                    className: U.container,
+                    displayProfile: w,
+                    profileType: j.y0.PANEL,
+                    themeOverride: B,
+                    className: D.container,
                     children: [
-                        null != q.interactionType &&
+                        null != Y.interactionType &&
                             (0, i.jsx)(a.animated.div, {
-                                style: X,
-                                className: U.backdrop
+                                style: K,
+                                className: D.backdrop
                             }),
                         (0, i.jsxs)(l.u2, {
                             children: [
-                                (0, i.jsxs)(Z.Z, {
-                                    profileType: O.y0.PANEL,
+                                (0, i.jsxs)(A.Z, {
+                                    profileType: j.y0.PANEL,
                                     children: [
-                                        (0, i.jsx)(M.Z, {
+                                        (0, i.jsx)(Z.Z, {
                                             user: t,
-                                            profileType: O.y0.PANEL
+                                            profileType: j.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(A.Z, { user: t }) : (0, i.jsx)(b.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(N.Z, { user: t }) : (0, i.jsx)(M.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: U.header,
+                                    className: D.header,
                                     children: [
-                                        (0, i.jsx)(x.Z, {
-                                            user: t,
-                                            displayProfile: B,
-                                            profileType: O.y0.PANEL,
-                                            animateOnHover: !K,
-                                            className: U.banner
-                                        }),
-                                        (0, i.jsx)(S.Z, {
-                                            userId: t.id,
-                                            className: U.toast
-                                        }),
                                         (0, i.jsx)(T.Z, {
-                                            location: 'UserProfilePanel',
                                             user: t,
-                                            displayProfile: B,
-                                            channelId: k.id,
-                                            profileType: O.y0.PANEL,
-                                            onOpenProfile: w ? void 0 : J
+                                            displayProfile: w,
+                                            profileType: j.y0.PANEL,
+                                            animateOnHover: !z,
+                                            className: D.banner
                                         }),
                                         (0, i.jsx)(v.Z, {
+                                            userId: t.id,
+                                            className: D.toast
+                                        }),
+                                        (0, i.jsx)(I.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
-                                            channelId: k.id,
-                                            profileType: O.y0.PANEL
+                                            displayProfile: w,
+                                            channelId: U.id,
+                                            profileType: j.y0.PANEL,
+                                            onOpenProfile: k ? void 0 : q
                                         }),
-                                        t.isClyde() && (0, i.jsx)(h.Z, { className: U.headerTag })
+                                        (0, i.jsx)(x.Z, {
+                                            location: 'UserProfilePanel',
+                                            user: t,
+                                            channelId: U.id,
+                                            profileType: j.y0.PANEL
+                                        }),
+                                        t.isClyde() && (0, i.jsx)(h.Z, { className: D.headerTag })
                                     ]
                                 }),
-                                (0, i.jsx)(L.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: B,
-                                    channel: k,
-                                    isHovering: null == q.interactionType && K,
-                                    onOpenProfile: w ? void 0 : J,
-                                    recentActivityEnabled: W || z
+                                    displayProfile: w,
+                                    channel: U,
+                                    isHovering: null == Y.interactionType && z,
+                                    onOpenProfile: k ? void 0 : q,
+                                    recentActivitySectionEnabled: F
                                 }),
-                                (W || z) && (0, i.jsx)(j.Z, { user: t }),
-                                (0, i.jsx)(P.Z, { user: t })
+                                F && (0, i.jsx)(P.Z, { user: t }),
+                                (0, i.jsx)(L.Z, { user: t })
                             ]
                         }),
-                        !w &&
+                        !k &&
                             (0, i.jsx)('footer', {
-                                className: U.footer,
+                                className: D.footer,
                                 children: (0, i.jsx)(r.Button, {
                                     fullWidth: !0,
                                     size: r.Button.Sizes.LARGE,
                                     look: r.Button.Looks.BLANK,
-                                    color: U.footerButtonColor,
+                                    color: D.footerButtonColor,
                                     onClick: () => {
-                                        J(),
+                                        q(),
                                             (0, _.pQ)({
                                                 action: 'PRESS_VIEW_PROFILE',
-                                                analyticsLocations: F,
-                                                ...V
+                                                analyticsLocations: V,
+                                                ...G
                                             });
                                     },
-                                    children: D.Z.Messages.VIEW_FULL_PROFILE
+                                    children: y.Z.Messages.VIEW_FULL_PROFILE
                                 })
                             }),
-                        (null == B ? void 0 : B.profileEffectId) != null &&
+                        (null == w ? void 0 : w.profileEffectId) != null &&
                             (0, i.jsx)(p.Z, {
-                                profileEffectId: null == B ? void 0 : B.profileEffectId,
-                                isHovering: K
+                                profileEffectId: null == w ? void 0 : w.profileEffectId,
+                                isHovering: z
                             })
                     ]
                 })

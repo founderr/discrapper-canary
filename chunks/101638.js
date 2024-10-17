@@ -1,50 +1,37 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return d;
     }
 });
-var i = n(735250),
-    s = n(470079),
-    a = n(259443),
-    l = n(911284),
-    r = n(785717),
-    o = n(369566),
-    c = n(502762),
-    u = n(527790),
-    d = n(551498),
-    h = n(689938),
-    p = n(869426);
-let m = new a.Y('UserProfilePanelRecentActivity'),
-    _ = async (e) => {
-        try {
-            await (0, l.Z)(e);
-        } catch (t) {
-            m.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
-        }
-    };
-function f(e) {
+var i = n(735250);
+n(470079);
+var s = n(785717),
+    a = n(369566),
+    l = n(502762),
+    r = n(527790),
+    o = n(551498),
+    c = n(689938),
+    u = n(869426);
+function d(e) {
     let { user: t } = e,
-        { trackUserProfileAction: n } = (0, r.KZ)(),
-        { recent: a } = (0, o.Z)(t.id);
-    return (s.useEffect(() => {
-        _(t.id);
-    }, [t.id]),
-    0 === a.length)
+        { trackUserProfileAction: n } = (0, s.KZ)(),
+        { recent: d } = (0, a.Z)(t.id);
+    return 0 === d.length
         ? null
-        : (0, i.jsx)(c.Z.Overlay, {
-              className: p.overlay,
-              children: (0, i.jsx)(d.Z, {
-                  header: h.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        : (0, i.jsx)(l.Z.Overlay, {
+              className: u.overlay,
+              children: (0, i.jsx)(o.Z, {
+                  header: c.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
                   startExpanded: !0,
-                  listClassName: p.list,
+                  listClassName: u.list,
                   onExpand: () =>
                       n({
                           action: 'PRESS_SECTION',
                           section: 'ACTIVITY'
                       }),
-                  children: a.map((e) =>
+                  children: d.map((e) =>
                       (0, i.jsx)(
-                          u.Z,
+                          r.Z,
                           {
                               user: t,
                               entry: e,
