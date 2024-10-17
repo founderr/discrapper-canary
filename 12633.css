@@ -11998,11 +11998,10 @@ div.modalHeader_c5e09c {
 .buttonGroupContainer_c22357 {
     margin: 12px;
     margin-top: 0;
-    margin-bottom: 12px
-}
-
-.buttonContainer_c22357 {
-    padding-bottom: 8px
+    margin-bottom: 12px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column
 }
 
 div.cardContainer_c22357 {
