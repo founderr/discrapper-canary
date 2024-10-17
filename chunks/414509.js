@@ -1,4 +1,9 @@
-n(47120);
+n.d(t, {
+    M: function () {
+        return I;
+    }
+}),
+    n(47120);
 var r = n(147913),
     i = n(592125),
     a = n(699516),
@@ -29,12 +34,15 @@ function h(e) {
 function p(e) {
     let { voiceStates: t } = e,
         n = s.Z.getVoiceChannelId();
-    if (!o.Z.isInChannel(n) || null == n || (0, c.Iu)(n) > Date.now() - f) return;
+    if (!o.Z.isInChannel(n) || null == n || I(n)) return;
     let r = a.Z.getBlockedIDs(),
         i = t.find((e) => r.includes(e.userId) && e.channelId === n);
     null != i && (0, d.w)({ location: 'warning_manager' }) && ((0, E.H)(n, i.userId), d.r.trackExposure({ location: 'warning_manager' }));
 }
-class I extends r.Z {
+function I(e) {
+    return (0, c.Iu)(e) > Date.now() - f;
+}
+class m extends r.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
@@ -54,4 +62,4 @@ class I extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new I();
+t.Z = new m();
