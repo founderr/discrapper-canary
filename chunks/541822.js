@@ -6,12 +6,12 @@ t.d(n, {
     t(47120);
 var l = t(735250),
     i = t(470079),
-    a = t(557533),
-    s = t.n(a),
-    r = t(349361),
-    o = t(698117);
+    s = t(557533),
+    a = t.n(s),
+    o = t(349361),
+    r = t(698117);
 function u(e) {
-    let { children: n, gradientClassName: t, ...a } = e,
+    let { children: n, gradientClassName: t, ...s } = e,
         u = i.useRef(null),
         [c, d] = i.useState(!0),
         p = () => {
@@ -20,9 +20,9 @@ function u(e) {
         };
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(r.h2, {
+            (0, l.jsx)(o.h2, {
                 fade: !0,
-                ...a,
+                ...s,
                 ref: (e) => {
                     null != e && ((u.current = e), p());
                 },
@@ -30,7 +30,7 @@ function u(e) {
                 children: n
             }),
             (0, l.jsx)('div', {
-                className: s()(o.containerScrollGradient, t),
+                className: a()(r.containerScrollGradient, t),
                 'data-shown': c
             })
         ]

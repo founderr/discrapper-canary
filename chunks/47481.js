@@ -54,20 +54,20 @@ function d(e) {
                 (t = b));
             let R = g[g.length - 1],
                 L = null,
-                j = (0, o.DQ)(e);
-            C = C || j;
-            let P = (function (e, t, n) {
+                P = (0, o.DQ)(e);
+            C = C || P;
+            let j = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
-            })(h, e, j && _);
-            if (null !== P) {
+            })(h, e, P && _);
+            if (null !== j) {
                 let t, n;
                 [L, R] =
                     ((x = g),
                     (v = e),
-                    (S = P),
+                    (S = j),
                     (n = N = R),
                     null == N || N.type !== S
                         ? ((t = {

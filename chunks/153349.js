@@ -52,7 +52,7 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    j = l.memo(function (e) {
+    P = l.memo(function (e) {
         let { channel: t, participant: i, tempDisableOnInit: s = !1 } = e,
             [r, c] = l.useState(s);
         l.useEffect(() => {
@@ -73,10 +73,10 @@ let L = l.memo(function (e) {
         function L() {
             (0, x.DT)(t, i.user.id, !1);
         }
-        function j() {
+        function P() {
             (0, x.DT)(t, i.user.id, !0);
         }
-        let P = (e) => {
+        let j = (e) => {
             (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -111,7 +111,7 @@ let L = l.memo(function (e) {
                         var t;
                         return (0, a.jsxs)(h.Clickable, {
                             className: R.participantMemberContainer,
-                            onContextMenu: P,
+                            onContextMenu: j,
                             ...e,
                             children: [
                                 (0, a.jsx)(m.Z, {
@@ -164,7 +164,7 @@ let L = l.memo(function (e) {
                             innerClassName: o()(R.buttonContainer, R.buttonMargin),
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
-                            onClick: j,
+                            onClick: P,
                             children: (0, a.jsx)(h.XSmallIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -174,7 +174,7 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    P = l.memo(function (e) {
+    j = l.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, A.h)(t.id);
         return (0, a.jsx)(h.FormSwitch, {
@@ -236,12 +236,12 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, a.jsx)(P, { channel: t }, 'rts-toggle');
+                            return (0, a.jsx)(j, { channel: t }, 'rts-toggle');
                         case 1: {
                             if (0 === s.length) return (0, a.jsx)(O, {}, 'participants-empty');
                             let e = s[i];
                             return (0, a.jsx)(
-                                j,
+                                P,
                                 {
                                     channel: t,
                                     participant: e,

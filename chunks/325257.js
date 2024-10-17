@@ -19,8 +19,8 @@ var i = n(735250),
     E = n(727258),
     N = n(276952),
     S = n(249792),
-    v = n(40153),
-    x = n(593618),
+    x = n(40153),
+    v = n(593618),
     T = n(252686),
     Z = n(682662),
     b = n(674552),
@@ -34,7 +34,7 @@ let L = {
         object: A.qAy.CHANNEL
     }
 };
-function y(e, t) {
+function P(e, t) {
     (0, p.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('18146'), n.e('44156'), n.e('35994'), n.e('85552'), n.e('58227'), n.e('36897'), n.e('36362'), n.e('33213'), n.e('18339')]).then(n.bind(n, 545135));
         return (n) =>
@@ -45,13 +45,13 @@ function y(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, p, P;
-    let { guildNode: O, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = y, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    var t, n, r, p, y;
+    let { guildNode: O, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = P, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = O,
         $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, b.Ny)() : null != V ? (0, b.Or)(V) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, b.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, b.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
-    let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : { width: (0, d.getBadgeWidthForValue)(W) },
+    let et = null !== (y = e.lowerBadgeSize) && void 0 !== y ? y : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, s.c)({
             type: E.eD.GUILD,
             item: () => (
@@ -155,7 +155,7 @@ t.Z = l.memo(function (e) {
                       role: 'treeitem'
                   }),
         eN = en
-            ? (0, i.jsx)(v.OG, { children: (0, i.jsx)(T.Z, {}) })
+            ? (0, i.jsx)(x.OG, { children: (0, i.jsx)(T.Z, {}) })
             : (0, i.jsx)('div', {
                   ref: Y ? ei : void 0,
                   'data-dnd-name': G.toString(),
@@ -181,14 +181,14 @@ t.Z = l.memo(function (e) {
                 unread: !en && H,
                 className: R.pill
             }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(v.Z, {
                 guild: G,
                 disabled: K,
                 isDragging: en,
                 children: eN
             }),
             Y
-                ? (0, i.jsx)(v.ZP, {
+                ? (0, i.jsx)(x.ZP, {
                       name: G.name,
                       targetNode: O,
                       onDragOverChanged: eC

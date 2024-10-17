@@ -99,7 +99,7 @@ class y extends o.Z {
             I = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
         if (null != I && h) {
             let e = I.transport.inboundBitrateEstimate;
-            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((f = i().mean(this._bandwidthSamples)) > 1500000 ? (p = 'HQ') : f < 1000000 && (p = 'LQ')));
+            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((f = i().mean(this._bandwidthSamples)) > 1500000 ? (p = 'HQ') : f < 1500000 && (p = 'LQ')));
         }
         let m = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
         if (('HQ' === p && m ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(f)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1)) : 'LQ' === p && !m && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(f)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0)), h)) {

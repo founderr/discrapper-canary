@@ -19,10 +19,10 @@ var i = t(442837),
 function f(e) {
     let { user: n, context: f, label: _, joinCallVideo: I, id: g, onCall: A } = e,
         N = (0, o.Aq)(),
-        m = (0, i.e7)([d.default], () => d.default.getId() === n.id),
-        C = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
+        C = (0, i.e7)([d.default], () => d.default.getId() === n.id),
+        m = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
         T = (0, i.e7)([Z.Z, r.Z], () => Z.Z.getVoiceChannelId() === r.Z.getDMFromUserId(n.id));
-    if (m || f === E.IlC.POPOUT || T || n.bot || n.isProvisional) return null;
+    if (C || f === E.IlC.POPOUT || T || n.bot || n.isProvisional) return null;
     let v = () => {
             null == A || A(), s.Z.openPrivateChannel(n.id, !0, I), N.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
         },
@@ -42,6 +42,6 @@ function f(e) {
                   });
               }
             : v,
-        disabled: C
+        disabled: m
     });
 }

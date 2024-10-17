@@ -3,15 +3,15 @@ t.d(n, {
         return i;
     },
     X: function () {
-        return r;
+        return o;
     }
 });
 var l,
     i,
-    a = t(626135),
-    s = t(981631);
-function r(e, n, t) {
-    a.default.track(s.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+    s = t(626135),
+    a = t(981631);
+function o(e, n, t) {
+    s.default.track(a.rMx.STOREFRONT_COPY_LINK_CLICKED, {
         application_id: e,
         area: n,
         sku_id: t

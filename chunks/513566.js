@@ -48,7 +48,7 @@ class N extends c.Z {
                     p.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, f.Z)(() => l.Z.setVideoEnabled(!0), S.IlC.APP);
                 },
                 [T.tS.MUTE]: () => l.Z.toggleSelfMute({ location: 'Thumbar' }),
-                [T.tS.DEAFEN]: () => l.Z.toggleSelfDeaf(),
+                [T.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
                 [T.tS.DISCONNECT]: () => u.default.disconnect()
             }),
             A(this, 'isSupported', (0, m.isMac)() || (0, m.isWindows)()),

@@ -9,19 +9,19 @@ t.d(n, {
 var l = t(735250);
 t(470079);
 var i = t(557533),
-    a = t.n(i),
-    s = t(789978),
-    r = t(368072),
-    o = t(777207),
+    s = t.n(i),
+    a = t(789978),
+    o = t(368072),
+    r = t(777207),
     u = t(692547),
     c = t(330711),
     d = t(56273),
     p = t(103077);
 function m(e) {
     let { description: n, imgSrc: t, renderPurchaseButton: i, onPurchase: m, title: v, onDetails: f, benefitItems: h, benefitsSummary: I } = e;
-    return (0, l.jsx)(s.tE, {
+    return (0, l.jsx)(a.tE, {
         children: (0, l.jsxs)('div', {
-            className: a()(d.container, p.hoverCard),
+            className: s()(d.container, p.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != f ? f() : null != m && m();
@@ -32,7 +32,7 @@ function m(e) {
                     children: (0, l.jsxs)('div', {
                         className: d.body,
                         children: [
-                            (0, l.jsx)(o.x, {
+                            (0, l.jsx)(r.x, {
                                 tag: 'div',
                                 variant: 'heading-lg/semibold',
                                 children: v
@@ -45,7 +45,7 @@ function m(e) {
                                               src: t.toString(),
                                               alt: ''
                                           })
-                                        : (0, l.jsx)(r.V, {
+                                        : (0, l.jsx)(o.V, {
                                               color: u.Z.colors.ICON_PRIMARY,
                                               size: 'custom',
                                               height: 48,
@@ -62,7 +62,7 @@ function m(e) {
                                 : null,
                             null != n &&
                                 '' !== n &&
-                                (0, l.jsx)(o.x, {
+                                (0, l.jsx)(r.x, {
                                     className: d.description,
                                     color: 'text-normal',
                                     variant: 'text-sm/medium',
@@ -74,7 +74,7 @@ function m(e) {
                 null != I &&
                     (0, l.jsx)('div', {
                         className: d.benefitsSummary,
-                        children: (0, l.jsx)(o.x, {
+                        children: (0, l.jsx)(r.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
                             children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: I })
@@ -89,7 +89,7 @@ function m(e) {
                             children: (0, l.jsxs)('div', {
                                 className: d.benefitsList,
                                 children: [
-                                    (0, l.jsx)(o.x, {
+                                    (0, l.jsx)(r.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
@@ -98,7 +98,7 @@ function m(e) {
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   h.slice(0, 3),
-                                                  (0, l.jsx)(o.x, {
+                                                  (0, l.jsx)(r.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
                                                       children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: h.length - 3 })
@@ -125,12 +125,12 @@ function v(e) {
             }),
             (0, l.jsxs)('div', {
                 children: [
-                    (0, l.jsx)(o.x, {
+                    (0, l.jsx)(r.x, {
                         variant: 'text-sm/semibold',
                         children: t
                     }),
                     null != i &&
-                        (0, l.jsx)(o.x, {
+                        (0, l.jsx)(r.x, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
                             children: i

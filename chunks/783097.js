@@ -146,7 +146,7 @@ function v(e) {
           };
 }
 function C(e) {
-    return !!m(e) && (e instanceof u.Z ? e.isMonetized : e.is_monetized);
+    return !!m(e) && (e instanceof u.Z, e.storefront_available);
 }
 function L(e) {
     let t = R(e);

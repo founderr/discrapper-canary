@@ -1,61 +1,61 @@
-n.d(e, {
+t.d(l, {
     _: function () {
-        return I;
+        return h;
     }
 }),
-    n(47120);
-var i = n(735250);
-n(470079);
-var s = n(374470),
-    o = n(481060),
-    r = n(254109),
-    l = n(52824),
-    a = n(626135),
-    c = n(981631),
-    u = n(701865),
-    d = n(268108);
-function I(t, e, I) {
-    let S = {};
-    for (let [_, p] of t.entries())
-        S[
-            (0, l.q)({
-                proxyURL: p.proxyUrl,
-                url: p.url
+    t(47120);
+var n = t(735250);
+t(470079);
+var i = t(374470),
+    r = t(481060),
+    a = t(254109),
+    s = t(52824),
+    o = t(626135),
+    d = t(981631),
+    u = t(701865),
+    m = t(268108);
+function h(e, l, h) {
+    let c = {};
+    for (let [p, b] of e.entries())
+        c[
+            (0, s.q)({
+                proxyURL: b.proxyUrl,
+                url: b.url
             })
-        ] = (l) =>
-            (function (t, e, l) {
-                let I = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    S = arguments.length > 4 ? arguments[4] : void 0;
-                t.preventDefault(),
-                    (0, s.k)(t.currentTarget) && t.currentTarget.blur(),
-                    null != S &&
-                        (a.default.track(
-                            c.rMx.OPEN_MODAL,
+        ] = (s) =>
+            (function (e, l, s) {
+                let h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    c = arguments.length > 4 ? arguments[4] : void 0;
+                e.preventDefault(),
+                    (0, i.k)(e.currentTarget) && e.currentTarget.blur(),
+                    null != c &&
+                        (o.default.track(
+                            d.rMx.OPEN_MODAL,
                             {
-                                type: c.jXE.MEDIA_VIEWER,
-                                ...S
+                                type: d.jXE.MEDIA_VIEWER,
+                                ...c
                             },
                             { throttlePercent: 0.01 }
                         ),
-                        (0, r.fS)(S.guild_id, S.channel_id, S.channel_type, e.length)),
-                    (0, o.openModalLazy)(
+                        (0, a.fS)(c.guild_id, c.channel_id, c.channel_type, l.length)),
+                    (0, r.openModalLazy)(
                         async () => {
-                            let { default: t } = await Promise.resolve().then(n.bind(n, 950120));
-                            return (n) =>
-                                (0, i.jsx)(t, {
-                                    ...n,
-                                    ...I,
-                                    className: d.forcedTransparency,
-                                    onIndexChange: null != S ? r.f0 : void 0,
-                                    items: e,
-                                    startingIndex: l
+                            let { default: e } = await Promise.resolve().then(t.bind(t, 950120));
+                            return (t) =>
+                                (0, n.jsx)(e, {
+                                    ...t,
+                                    ...h,
+                                    className: m.forcedTransparency,
+                                    onIndexChange: null != c ? a.f0 : void 0,
+                                    items: l,
+                                    startingIndex: s
                                 });
                         },
                         {
-                            onCloseCallback: null != S ? r.VO : void 0,
+                            onCloseCallback: null != c ? a.VO : void 0,
                             modalKey: u.U
                         }
                     );
-            })(l, t, _, e, I);
-    return S;
+            })(s, e, p, l, h);
+    return c;
 }

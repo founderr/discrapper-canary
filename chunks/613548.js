@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(616286),
     R = n(961048),
     L = n(179424),
-    j = n(786915),
-    P = n(975146),
+    P = n(786915),
+    j = n(975146),
     O = n(991617),
     y = n(597998),
     D = n(606304),
@@ -113,7 +113,7 @@ function Y(e) {
             t = (null == D ? void 0 : D.type) === G.fO.ACTIVITY ? D.id : void 0;
         ei.push(
             (0, i.jsx)(
-                j.Z,
+                P.Z,
                 {
                     className: W.button,
                     channel: n,
@@ -181,7 +181,7 @@ function Y(e) {
                         renderPopout: () => (0, i.jsx)(M.Z, { children: (0, i.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, s.createElement)(P.Z, {
+                            return (0, s.createElement)(j.Z, {
                                 ...e,
                                 isActive: n,
                                 count: F,

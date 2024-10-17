@@ -29,7 +29,7 @@ function _(e) {
     if (t.id !== (null == f ? void 0 : f.id) || 'live' === o || null == i) return null;
     let h = () => {
         (0, s.openModalLazy)(async () => {
-            let { default: e } = await n.e('26545').then(n.bind(n, 81596));
+            let { default: e } = await Promise.all([n.e('51526'), n.e('27421')]).then(n.bind(n, 81596));
             return (n) =>
                 (0, r.jsx)(e, {
                     entry: i,

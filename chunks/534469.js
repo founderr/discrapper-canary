@@ -35,8 +35,8 @@ var i = n(735250),
     b = n(492593),
     R = n(453687),
     L = n(348238),
-    j = n(62072),
-    P = n(38267),
+    P = n(62072),
+    j = n(38267),
     O = n(25015),
     y = n(689674),
     D = n(438075),
@@ -66,7 +66,7 @@ function q(e) {
     o()(s.type === W.uaV.THREAD_STARTER_MESSAGE, 'Message must be a thread starter message');
     let { ...h } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         p = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(a)),
-        { popouts: m, setPopout: _ } = (0, P.Z)(s.id, F.d$),
+        { popouts: m, setPopout: _ } = (0, j.Z)(s.id, F.d$),
         f = (0, Z.ZP)(s),
         g = (0, R.iG)(s),
         C = (0, R.Gx)(s);
@@ -116,7 +116,7 @@ function X(e) {
         N = r.type === W.uaV.REPLY ? r.messageReference : void 0,
         { onFocus: M, ...y } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         { isFocused: U, handleFocus: k, handleBlur: H } = (0, L.bb)(M),
-        { popouts: K, selected: q, setPopout: X } = (0, P.Z)(r.id, F.d$),
+        { popouts: K, selected: q, setPopout: X } = (0, j.Z)(r.id, F.d$),
         J = C.RS.useSetting(),
         Q = C.NA.useSetting(),
         $ = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(N)),
@@ -135,7 +135,7 @@ function X(e) {
             previewLinkTarget: !0,
             viewingChannelId: v
         }),
-        ec = (0, j.Z)(o, p, es),
+        ec = (0, P.Z)(o, p, es),
         eu = (0, Z.ZP)(r),
         ed = (0, R.iG)(r, x),
         eh = (0, R.Gx)(r),
@@ -231,7 +231,7 @@ t.ZP = s.memo(function (e) {
         es = C.RS.useSetting(),
         ea = C.NA.useSetting(),
         el = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(et)),
-        { popouts: er, selected: eo, setPopout: ec } = (0, P.Z)(g.id, F.d$),
+        { popouts: er, selected: eo, setPopout: ec } = (0, j.Z)(g.id, F.d$),
         eu = (0, L.qo)(g, K, ec),
         ed = (0, L.Go)(g, K),
         { handleMouseEnter: eh, handleMouseLeave: ep, hasHovered: em, isHovered: e_ } = (0, L.tn)($, g.author.id, eo),
@@ -254,10 +254,10 @@ t.ZP = s.memo(function (e) {
             allowDevLinks: eZ,
             previewLinkTarget: !0
         }),
-        eR = (0, j.Z)(N, q, eT),
+        eR = (0, P.Z)(N, q, eT),
         eL = (0, Z.ZP)(g),
-        ej = (0, u.e7)([f.Z], () => f.Z.getPendingReply(q)),
-        eP = (function (e) {
+        eP = (0, u.e7)([f.Z], () => f.Z.getPendingReply(q)),
+        ej = (function (e) {
             let t = s.useRef(e);
             return s.useEffect(() => void (t.current = null != e ? e : t.current)), null != e ? e : t.current;
         })(Q),
@@ -306,7 +306,7 @@ t.ZP = s.memo(function (e) {
                         [Y.systemMessage]: (0, A.Z)(g),
                         [Y.groupStart]: !ee && (eB || g.type === W.uaV.REPLY),
                         [Y.selected]: ex,
-                        [Y.replying]: (null == ej ? void 0 : ej.message.id) === g.id,
+                        [Y.replying]: (null == eP ? void 0 : eP.message.id) === g.id,
                         [Y.interactionSending]: g.isCommandType() && g.state === W.yb.SENDING,
                         [Y.automodMessage]: ew
                     }),
@@ -362,11 +362,11 @@ t.ZP = s.memo(function (e) {
                 })
             })
         });
-    return null != eP
+    return null != ej
         ? (0, i.jsx)(
               M.Z,
               {
-                  flashKey: eP,
+                  flashKey: ej,
                   className: l()({
                       [Y.backgroundFlash]: !0,
                       [Y.groupStart]: !X && g.id === $

@@ -48,13 +48,13 @@ function N(e) {
         [M, b] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
-        j = L.filter((e) => e.twoWayLink),
-        [P, O] = s.useState(!1);
+        P = L.filter((e) => e.twoWayLink),
+        [j, O] = s.useState(!1);
     if (null == N && 0 === L.length) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
     return (
-        j.length > 0 && D.push(l.z.DONUT_DESKTOP_NUX),
+        P.length > 0 && D.push(l.z.DONUT_DESKTOP_NUX),
         (0, i.jsx)(c.ZP, {
             contentTypes: D,
             children: (e) => {
@@ -68,7 +68,7 @@ function N(e) {
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
                             onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !Z && !R,
+                            shouldShow: (o || j) && !Z && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -79,7 +79,7 @@ function N(e) {
                                               onAccept: () => {
                                                   a(T.L.UNKNOWN), O(!0);
                                               },
-                                              gameConsoleAccounts: j
+                                              gameConsoleAccounts: P
                                           })
                                         : (0, i.jsx)(S, {
                                               onClose: () => {

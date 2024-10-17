@@ -34,6 +34,6 @@ function r() {
         onSearchTextChange: c,
         onClearSearch: d,
         onSearchSubmit: u,
-        isSearchVisible: l
+        hasSearchView: l
     };
 }

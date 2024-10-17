@@ -25,13 +25,13 @@ function f(e) {
         g = (0, i.e7)([u.Z], () => (null != f ? u.Z.getVoiceStateForChannel(f, e.id) : null), [f, e.id]),
         A = (null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
         N = (0, Z.Z)(),
-        m = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, f), [f, e.id]),
-        C = (0, r.B)(f);
-    if (null == t || null == I || null == g || m.speaker) return null;
+        C = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, f), [f, e.id]),
+        m = (0, r.B)(f);
+    if (null == t || null == I || null == g || C.speaker) return null;
     let T = () => {
         A ? (0, d.RK)(t, !1) : (0, d._0)(t, e.id);
     };
-    return C
+    return m
         ? (0, l.jsx)(a.MenuItem, {
               id: 'invite-speaker',
               label: A ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,

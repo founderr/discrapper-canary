@@ -42,7 +42,7 @@ function N(e) {
         R = (0, r.Z)(p.Z);
     if (null == t || null != Z) return null;
     let L = (0, h.Z)(t),
-        j = _.BT({
+        P = _.BT({
             permission: v.Plq.ADD_REACTIONS,
             user: N,
             context: t
@@ -55,7 +55,7 @@ function N(e) {
                     channel: t,
                     themeable: s
                 }),
-            j && (0, i.jsx)(C.Z, { channel: t }),
+            P && (0, i.jsx)(C.Z, { channel: t }),
             b && R && (0, i.jsx)(f.Z, { channel: t }),
             A && (0, i.jsx)(I.Z, { channel: t }),
             M && n && (0, i.jsx)(E.Z, {}),

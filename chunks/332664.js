@@ -25,23 +25,23 @@ var n = o(735250),
     C = o(871364),
     A = o(531578),
     p = o(981631),
-    f = o(689938),
-    g = o(214859);
+    g = o(689938),
+    f = o(214859);
 let L = [
     {
-        className: g.emojiSad,
+        className: f.emojiSad,
         rating: A.aZ.BAD,
-        classNameSelected: g.selected
+        classNameSelected: f.selected
     },
     {
-        className: g.emojiNeutral,
+        className: f.emojiNeutral,
         rating: A.aZ.NEUTRAL,
-        classNameSelected: g.selected
+        classNameSelected: f.selected
     },
     {
-        className: g.emojiHappy,
+        className: f.emojiHappy,
         rating: A.aZ.GOOD,
-        classNameSelected: g.selected
+        classNameSelected: f.selected
     }
 ];
 function N(e) {
@@ -49,7 +49,7 @@ function N(e) {
     return (0, n.jsx)(d.Z, {
         justify: d.Z.Justify.BETWEEN,
         align: d.Z.Align.CENTER,
-        className: l()(g.ratingsSelector, t),
+        className: l()(f.ratingsSelector, t),
         children: (null != a ? a : L).map((e) => {
             let { rating: t, className: a, classNameSelected: i } = e;
             return (0, n.jsx)(
@@ -66,10 +66,10 @@ function N(e) {
 }
 function v() {
     return (0, n.jsx)(u.Text, {
-        className: g.helpdeskLink,
+        className: f.helpdeskLink,
         variant: 'text-xs/normal',
         color: 'text-muted',
-        children: f.Z.Messages.FEEDBACK_NEED_MORE_HELP.format({ helpdeskURL: h.Z.getSubmitRequestURL() })
+        children: g.Z.Messages.FEEDBACK_NEED_MORE_HELP.format({ helpdeskURL: h.Z.getSubmitRequestURL() })
     });
 }
 function I(e) {
@@ -111,12 +111,12 @@ function I(e) {
         ),
         (0, n.jsxs)(u.ModalRoot, {
             transitionState: L,
-            className: g.__invalid_modalRoot,
+            className: f.__invalid_modalRoot,
             'aria-labelledby': V,
             children: [
                 (0, n.jsxs)(u.ModalHeader, {
                     separator: !1,
-                    className: g.headerContainer,
+                    className: f.headerContainer,
                     children: [
                         (0, n.jsx)(u.Heading, {
                             id: V,
@@ -127,13 +127,13 @@ function I(e) {
                         (0, n.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             color: 'none',
-                            className: g.ratingBody,
+                            className: f.ratingBody,
                             children: s
                         }),
                         Q
                             ? null
                             : (0, n.jsx)(N, {
-                                  className: l()(g.emojis, x),
+                                  className: l()(f.emojis, x),
                                   selectedRating: y,
                                   onChangeRating: function (e) {
                                       K(e), e === A.aZ.GOOD && T();
@@ -143,13 +143,13 @@ function I(e) {
                     ]
                 }),
                 (0, n.jsxs)(u.ModalContent, {
-                    className: g.__invalid_content,
+                    className: f.__invalid_content,
                     children: [
                         null == y || y === A.aZ.GOOD || Q
                             ? null
                             : (0, n.jsx)(u.FormItem, {
                                   title: i,
-                                  className: g.problemInfo,
+                                  className: f.problemInfo,
                                   children: (0, n.jsx)(m.Z, {
                                       options: U,
                                       onClick: function (e) {
@@ -164,8 +164,8 @@ function I(e) {
                               }),
                         Q
                             ? (0, n.jsxs)(u.FormItem, {
-                                  title: f.Z.Messages.FEEDBACK_DESCRIBE_ISSUE,
-                                  className: g.problemInfo,
+                                  title: g.Z.Messages.FEEDBACK_DESCRIBE_ISSUE,
+                                  className: f.problemInfo,
                                   children: [
                                       (0, n.jsx)(u.TextArea, {
                                           value: w,
@@ -180,7 +180,7 @@ function I(e) {
                 }),
                 (Q || !B) &&
                     (0, n.jsx)(u.ModalFooter, {
-                        className: g.footer,
+                        className: f.footer,
                         direction: d.Z.Direction.HORIZONTAL,
                         children: Q
                             ? (0, n.jsxs)(n.Fragment, {
@@ -192,12 +192,12 @@ function I(e) {
                                           onClick: () => {
                                               H(null), G('');
                                           },
-                                          children: f.Z.Messages.BACK
+                                          children: g.Z.Messages.BACK
                                       }),
                                       (0, n.jsx)(u.Button, {
                                           size: u.Button.Sizes.SMALL,
                                           onClick: T,
-                                          children: f.Z.Messages.SUBMIT
+                                          children: g.Z.Messages.SUBMIT
                                       })
                                   ]
                               })
@@ -210,7 +210,7 @@ function I(e) {
                                           onChange: () => R(!k),
                                           children: (0, n.jsx)(u.Text, {
                                               variant: 'text-sm/normal',
-                                              children: f.Z.Messages.DONT_SHOW_AGAIN
+                                              children: g.Z.Messages.DONT_SHOW_AGAIN
                                           })
                                       }),
                                       X &&
@@ -220,7 +220,7 @@ function I(e) {
                                               type: 'submit',
                                               size: u.Button.Sizes.SMALL,
                                               onClick: T,
-                                              children: f.Z.Messages.SKIP
+                                              children: g.Z.Messages.SKIP
                                           })
                                   ]
                               })

@@ -15,4 +15,4 @@ n.d(t, {
 let i = 'featured',
     a = '',
     s = 100,
-    r = 7;
+    r = 48;

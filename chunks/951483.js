@@ -1,9 +1,9 @@
 n.d(t, {
     Sr: function () {
-        return v;
+        return x;
     },
     Xq: function () {
-        return x;
+        return v;
     },
     Zg: function () {
         return T;
@@ -32,12 +32,12 @@ var i = n(186070),
 function S() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = v[e];
+        let t = x[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let v = {
+let x = {
         [E.EkH.SERVER_NEXT]: p.nq,
         [E.EkH.SERVER_PREV]: p.X3,
         [E.EkH.CHANNEL_NEXT]: l.tQ,
@@ -67,7 +67,7 @@ let v = {
         [E.EkH.CALL_START]: i.FI,
         [E.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    x = { [E.EkH.QUICKSWITCHER_SHOW]: c.$ };
+    v = { [E.EkH.QUICKSWITCHER_SHOW]: c.$ };
 function T() {
     return [
         {

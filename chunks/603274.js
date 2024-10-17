@@ -27,16 +27,16 @@ var l = n(120356),
     E = n(853856),
     N = n(981631),
     S = n(689938),
-    v = n(516126),
-    x = n(64056);
+    x = n(516126),
+    v = n(64056);
 function T(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: v.row,
+              className: x.row,
               children: [
                   (0, i.jsx)(e, {
-                      className: v.activityIcon,
+                      className: x.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)(d.Z, {
@@ -69,7 +69,7 @@ function Z() {
                 ),
             [r]
         ),
-        x = (0, o.Wu)([h.Z], () =>
+        v = (0, o.Wu)([h.Z], () =>
             s().flatMap(a, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
@@ -111,18 +111,18 @@ function Z() {
             c.VoiceNormalIcon,
             S.filter((e) => !b.includes(e.id) && !A.includes(e.id))
         );
-    let y =
-            ((e = x),
+    let P =
+            ((e = v),
             (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: v.row,
+                      className: x.row,
                       children: [
                           (0, i.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: v.activityIcon
+                              className: x.activityIcon
                           }),
                           (0, i.jsx)(d.Z, {
                               guildId: void 0,
@@ -130,14 +130,14 @@ function Z() {
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
-                              className: v.stageListenerPill,
+                              className: x.stageListenerPill,
                               children: [
                                   (0, i.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      className: v.stageListenerCount,
+                                      className: x.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: t
@@ -146,22 +146,22 @@ function Z() {
                           })
                       ]
                   })),
-        P = T(
+        y = T(
             c.ScreenArrowIcon,
             R.filter((e) => null != e && !A.includes(e.id))
         ),
         O = T(c.ActivitiesIcon, M);
     return (0, i.jsxs)(i.Fragment, {
-        children: [y, L, P, O]
+        children: [P, L, y, O]
     });
 }
 function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(v.row, v.rowGuildName),
+                className: r()(x.row, x.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(v.guildNameText, v.guildNameTextLimitedSize),
+                    className: r()(x.guildNameText, x.guildNameTextLimitedSize),
                     children: S.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),
@@ -177,7 +177,7 @@ function A(e) {
         position: 'right',
         text: (0, i.jsx)(b, {}),
         'aria-label': t,
-        tooltipClassName: x.listItemTooltip,
+        tooltipClassName: v.listItemTooltip,
         onTooltipShow: n,
         children: (e) =>
             (0, i.jsx)('div', {

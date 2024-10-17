@@ -356,7 +356,7 @@ class ex extends a.PureComponent {
             }),
             eZ(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, x.Z)(e);
+                (0, x.Z)(e, eC.jXE.ACCOUNT_PANEL);
             }),
             eZ(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();

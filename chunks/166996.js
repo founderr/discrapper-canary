@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return p;
     }
 }),
     n(47120),
@@ -21,9 +21,9 @@ var a = n(735250),
     g = n(132871),
     m = n(981631),
     f = n(37381);
-function C(e) {
-    let { currentCategoryId: t, className: n, countsByCategory: l, onView: C } = e,
-        p = (0, g.useApplicationDirectoryHistory)((e) => e.guildId),
+function p(e) {
+    let { currentCategoryId: t, className: n, countsByCategory: l, onView: p } = e,
+        C = (0, g.useApplicationDirectoryHistory)((e) => e.guildId),
         h = (0, s.e7)([u.Z], () => u.Z.getCategories()),
         x = i.useMemo(() => [(0, _.KQ)(), ...h], [h]),
         I = (0, g.getCurrentView)();
@@ -38,9 +38,9 @@ function C(e) {
                 category: n.name,
                 category_id: n.id,
                 current_page: null == I ? void 0 : I.type,
-                guild_id: p
+                guild_id: C
             }),
-                C(n);
+                p(n);
         },
         orientation: 'vertical',
         children: x.map((e) => {

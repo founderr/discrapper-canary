@@ -31,13 +31,13 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
     Z = s.forwardRef(function (e, t) {
         let { channel: n, isHovered: a, closePopout: r, onMouseEnter: Z, onMouseLeave: M, onClick: b, className: R } = e,
             L = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
-            { id: j, guild_id: P } = n;
+            { id: P, guild_id: j } = n;
         s.useEffect(() => {
             E.default.track(v.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-                channel_id: j,
-                guild_id: P
+                channel_id: P,
+                guild_id: j
             });
-        }, [j, P]),
+        }, [P, j]),
             s.useEffect(() => {
                 !a && r();
             }, [r, a]);

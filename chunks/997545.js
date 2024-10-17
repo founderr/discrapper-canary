@@ -497,7 +497,7 @@ class C extends E.Z {
             }
             return;
         }
-        if ((this.videoQualityManager.configGoliveSimulcast(this.experimentFlags), (this.goLiveSourceIdentifier = i), null != this.conn.setDesktopSource)) {
+        if (((this.goLiveSourceIdentifier = i), null != this.conn.setDesktopSource)) {
             if (null != e.desktopDescription) {
                 let { id: t, soundshareId: n, useLoopback: r, useVideoHook: i, useGraphicsCapture: a, useQuartzCapturer: s, allowScreenCaptureKit: o, videoHookStaleFrameTimeoutMs: l, graphicsCaptureStaleFrameTimeoutMs: u, hdrCaptureMode: c } = e.desktopDescription;
                 this.setSoundshareSource(n, r);

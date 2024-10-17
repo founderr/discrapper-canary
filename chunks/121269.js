@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     content: 'content_fa13a8',
     card: 'card_fa13a8',
     footer: 'footer_fa13a8',

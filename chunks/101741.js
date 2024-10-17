@@ -18,8 +18,8 @@ var i = n(209173),
     g = n(781627),
     m = n(981631),
     f = n(689938),
-    C = n(40694);
-let p = new Map([['890343617762304070', { imageSrc: n(336662) }]]),
+    p = n(40694);
+let C = new Map([['890343617762304070', { imageSrc: n(336662) }]]),
     h = new Map(),
     x = new Map([[m.ABu.SPOTIFY, { imageSrc: n(655130) }]]);
 function I(e) {
@@ -27,7 +27,7 @@ function I(e) {
     let { result: i } = e,
         l = i.data,
         r = (0, d.Z)({ application: l }),
-        c = p.get(i.data.id);
+        c = C.get(i.data.id);
     if (null == c) return null;
     let u =
             r.length > 0
@@ -97,11 +97,11 @@ function T(e) {
 function b(e) {
     let { results: t, guildId: n } = e;
     return (0, a.jsxs)('div', {
-        className: C.container,
+        className: p.container,
         children: [
             (0, a.jsx)(u.Z, {}),
             (0, a.jsx)('div', {
-                className: C.list,
+                className: p.list,
                 children: t.map((e, t) => {
                     let l = ''.concat(t).concat(e.type);
                     if (e.type === i.s.APPLICATION) return (0, a.jsx)(I, { result: e }, l);

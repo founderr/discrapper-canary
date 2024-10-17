@@ -19,8 +19,8 @@ var i = n(735250),
     E = n(513202),
     N = n(835473),
     S = n(933557),
-    v = n(194082),
-    x = n(311352),
+    x = n(194082),
+    v = n(311352),
     T = n(436774),
     Z = n(594190),
     b = n(925329),
@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(168524),
     R = n(382182),
     L = n(74299),
-    y = n(914923),
-    P = n(165393),
+    P = n(914923),
+    y = n(165393),
     O = n(989941),
     j = n(803647),
     D = n(690221),
@@ -188,15 +188,15 @@ class ec extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, y.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, P.Z)(t);
         return (0, i.jsxs)('div', {
             className: ea.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(P.Z, { title: r })
-                    : (0, i.jsx)(v.ZP, {
-                          look: v.ZP.Looks.GRAY,
-                          size: v.ZP.Sizes.SMALL,
+                    ? (0, i.jsx)(y.Z, { title: r })
+                    : (0, i.jsx)(x.ZP, {
+                          look: x.ZP.Looks.GRAY,
+                          size: x.ZP.Sizes.SMALL,
                           className: ea.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -318,7 +318,7 @@ class ec extends l.PureComponent {
             }),
             es(this, 'renderClipsButton', () => {
                 let { stream: e } = this.props;
-                return null == e ? null : (0, i.jsx)(x.Z, {});
+                return null == e ? null : (0, i.jsx)(v.Z, {});
             }),
             es(this, 'handleApplicationLinkClick', () => {
                 var e;
@@ -368,21 +368,21 @@ t.Z = (0, _.Z)(function (e) {
                 : ''
         ]),
         E = (0, c.e7)([W.Z], () => (0, L.Z)(W.Z) && (0, $.isWindows)()),
-        v = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
-        x = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
+        x = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
+        v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
         T = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, S.F6)(u, Q.default, K.Z) : void 0)),
         b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
         canGoLive: E,
-        activity: v,
+        activity: x,
         embeddedActivity: _,
         userId: r,
         runningGame: a,
         application: I,
         useReducedMotion: f,
-        isStreaming: x,
+        isStreaming: v,
         channel: u,
         canStream: g,
         stream: h,

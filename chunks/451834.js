@@ -62,7 +62,7 @@ let I = (e) => {
         });
 t.Z = (e) => {
     let { userId: t, onClose: n, className: i } = e,
-        { interactionTypeSent: u, interactionToastShown: d } = (0, _.Xo)(),
+        { interactionTypeSent: u, showInteractionToast: d } = (0, _.Xo)(),
         p = u === E.P.REPLY ? f.Z.Messages.USER_PROFILE_REPLY_SENT : f.Z.Messages.USER_PROFILE_REACTION_SENT,
         T = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         S = (0, l.useTransition)(

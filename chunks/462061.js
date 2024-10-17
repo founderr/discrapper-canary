@@ -50,7 +50,7 @@ function R(e) {
         : null;
 }
 function L(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: j, blocked: P, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
+    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: P, blocked: j, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
         D = I.Z.getVideoComponent(),
         U = (0, r.e7)([g.default], () => g.default.getId()),
         { user: k, streamId: w, speaking: B } = t,
@@ -77,7 +77,7 @@ function L(e) {
         ? (0, i.jsx)(
               m.Z,
               {
-                  onResize: j,
+                  onResize: P,
                   wrapperClassName: Z.videoWrapper,
                   className: Z.content,
                   mirror: H,
@@ -91,7 +91,7 @@ function L(e) {
               w
           )
         : (0, i.jsx)('div', {
-              className: l()(Z.content, { [Z.blockedAvatar]: P }),
+              className: l()(Z.content, { [Z.blockedAvatar]: j }),
               children: (0, i.jsx)(p.Z, {
                   'aria-label': Y,
                   src: X,

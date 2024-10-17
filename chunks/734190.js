@@ -18,8 +18,8 @@ var i = n(735250),
     E = n(135724),
     N = n(25601),
     S = n(207055),
-    v = n(981631),
-    x = n(124368),
+    x = n(981631),
+    v = n(124368),
     T = n(689938),
     Z = n(872356),
     b = n(206197),
@@ -42,8 +42,8 @@ function M(e) {
 }
 t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: R, withGuildIcon: L } = e,
-        y = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
-        P = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)),
+        P = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
+        y = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)),
         { unread: O, mentionCount: j } = (0, o.cj)([m.ZP], () => ({
             unread: m.ZP.hasUnread(t.id),
             mentionCount: m.ZP.getMentionCount(t.id)
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
         D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)),
         w = l.useCallback(
             (e) => {
-                (0, f.ok)(t, !e.shiftKey, x.on.CHANNEL_LIST);
+                (0, f.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        k = null == y ? 0 : y.length,
+        k = null == P ? 0 : P.length,
         { role: B, ...H } = (0, s.JA)(t.id),
         V = l.useRef(null),
         F =
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                                             k > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(E.Z, {
                                                       userCount: k,
-                                                      video: P,
+                                                      video: y,
                                                       channel: t
                                                   })
                                                 : null,
@@ -153,8 +153,8 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !A,
                 collapsedMax: 6,
-                voiceStates: y,
-                location: v.Sbl.GUILD_CHANNEL_LIST
+                voiceStates: P,
+                location: x.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

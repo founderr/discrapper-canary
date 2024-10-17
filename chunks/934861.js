@@ -1,38 +1,38 @@
 t.d(n, {
     c: function () {
-        return c;
+        return r;
     },
     v: function () {
         return a;
     }
 });
-var s = t(735250);
+var o = t(735250);
 t(470079);
 var i = t(481060),
-    o = t(493683),
+    s = t(493683),
     l = t(475413),
-    r = t(689938);
-function c(e) {
-    let { userId: n, onClose: t, ...c } = e;
-    return (0, s.jsx)(l.tG, {
+    c = t(689938);
+function r(e) {
+    let { userId: n, onClose: t, ...r } = e;
+    return (0, o.jsx)(l.tG, {
         action: 'SEND_MESSAGE',
         icon: i.ChatIcon,
-        text: r.Z.Messages.USER_PROFILE_MESSAGE,
+        text: c.Z.Messages.USER_PROFILE_MESSAGE,
         onClick: () => {
-            o.Z.openPrivateChannel(n), null == t || t();
+            s.Z.openPrivateChannel(n), null == t || t();
         },
-        ...c
+        ...r
     });
 }
 function a(e) {
-    let { userId: n, onClose: t, ...c } = e;
-    return (0, s.jsx)(l.ef, {
+    let { userId: n, onClose: t, ...r } = e;
+    return (0, o.jsx)(l.ef, {
         action: 'SEND_MESSAGE',
         icon: i.ChatIcon,
-        tooltipText: r.Z.Messages.USER_PROFILE_MESSAGE,
+        tooltipText: c.Z.Messages.USER_PROFILE_MESSAGE,
         onClick: () => {
-            o.Z.openPrivateChannel(n), null == t || t();
+            s.Z.openPrivateChannel(n), null == t || t();
         },
-        ...c
+        ...r
     });
 }

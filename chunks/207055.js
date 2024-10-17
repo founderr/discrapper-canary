@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(51144),
     R = n(649739),
     L = n(262317),
-    j = n(981631),
-    P = n(524484),
+    P = n(981631),
+    j = n(524484),
     O = n(373372);
 let y = s.memo((e) => {
     var t;
@@ -54,7 +54,7 @@ let y = s.memo((e) => {
         ),
         G = (0, h.Z)(null != H ? [H.applicationId] : []),
         V = (0, R.Hr)('voice_users_eligibility_check', !1),
-        F = (0, r.e7)([S.Z, N.Z], () => (O ? N.Z.getActivities() : S.Z.getActivities(v, l.guild_id))).find((e) => null != e.application_id && e.type === j.IIU.PLAYING),
+        F = (0, r.e7)([S.Z, N.Z], () => (O ? N.Z.getActivities() : S.Z.getActivities(v, l.guild_id))).find((e) => null != e.application_id && e.type === P.IIU.PLAYING),
         W = (0, r.e7)([d.Z], () => ((null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0));
     null != W && R.ZP.trackExposure({ location: 'voice_users' });
     let [z, Y] = (0, r.Wu)([C.Z], () => [C.Z.getStreamForUser(v, l.getGuildId()), C.Z.getActiveStreamForUser(v, l.getGuildId())], [l, v]),
@@ -67,10 +67,10 @@ let y = s.memo((e) => {
         }),
         Q = (0, p.Z)(l, !0, a),
         $ = (0, r.e7)([_.Z], () => (O ? _.Z.getHangStatusActivity() : null), [O]),
-        ee = (0, r.e7)([S.Z], () => S.Z.findActivity(v, (e) => e.type === j.IIU.HANG_STATUS), [v]),
+        ee = (0, r.e7)([S.Z], () => S.Z.findActivity(v, (e) => e.type === P.IIU.HANG_STATUS), [v]),
         et = (0, E.Eu)(l.id, v);
     return (0, i.jsx)(f.Z, {
-        shakeLocation: P.oZ.VOICE_USER,
+        shakeLocation: j.oZ.VOICE_USER,
         isShaking: w,
         children: (0, i.jsx)(L.ZP, {
             ...e,
@@ -87,7 +87,7 @@ let y = s.memo((e) => {
             priority: k,
             embeddedApplication: G[0],
             isStreaming: null != z && z.channelId === l.id,
-            isWatching: null != Y && Y.state !== j.jm8.ENDED,
+            isWatching: null != Y && Y.state !== P.jm8.ENDED,
             isGuest: B,
             showHangStatus: Q && J && (I.default.getId() === a.id || null != ee),
             hangStatusActivity: O ? $ : ee,
@@ -109,20 +109,20 @@ t.Z = function (e) {
                 N(M.current), (M.current = null);
             })
         ),
-        P = s.useRef(
+        j = s.useRef(
             new o.sW(175, () => {
                 N(null);
             })
         ),
         U = s.useCallback(
             (e) => {
-                t && (Z(!0), P.current.cancel(), (M.current = e), R.current.delay());
+                t && (Z(!0), j.current.cancel(), (M.current = e), R.current.delay());
             },
             [t]
         ),
         k = s.useCallback(
             (e) => {
-                t && (R.current.cancel(), x === e && (Z(!1), P.current.delay()));
+                t && (R.current.cancel(), x === e && (Z(!1), j.current.delay()));
             },
             [t, x]
         ),
@@ -160,7 +160,7 @@ t.Z = function (e) {
                     sessionId: null !== (t = r.sessionId) && void 0 !== t ? t : '',
                     channel: a,
                     collapsed: u,
-                    canDrag: n && v.Z.can(j.Plq.MOVE_MEMBERS, a),
+                    canDrag: n && v.Z.can(P.Plq.MOVE_MEMBERS, a),
                     showPreview: U,
                     hidePreview: k,
                     previewIsOpen: A,

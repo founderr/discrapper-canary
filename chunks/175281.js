@@ -25,8 +25,8 @@ var i,
     E = n(607070),
     N = n(585483),
     S = n(557177),
-    v = n(264549),
-    x = n(981631),
+    x = n(264549),
+    v = n(981631),
     T = n(689938),
     Z = n(126332);
 function b(e, t, n) {
@@ -51,13 +51,13 @@ let A = {
 };
 function M(e) {
     switch (e.keyCode) {
-        case x.yXg.ARROW_UP:
+        case v.yXg.ARROW_UP:
             return 'UP';
-        case x.yXg.ARROW_DOWN:
+        case v.yXg.ARROW_DOWN:
             return 'DOWN';
-        case x.yXg.ARROW_LEFT:
+        case v.yXg.ARROW_LEFT:
             return 'LEFT';
-        case x.yXg.ARROW_RIGHT:
+        case v.yXg.ARROW_RIGHT:
             return 'RIGHT';
         default:
             return null;
@@ -68,7 +68,7 @@ function L(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(Z.backdrop, { [Z.show]: t }) });
 }
-function y() {
+function P() {
     let e = a.useMemo(
         () =>
             h()((0, g.Rv)())
@@ -146,12 +146,12 @@ function y() {
         })
     });
 }
-class P extends a.PureComponent {
+class y extends a.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), N.S.subscribe(x.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        N.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        N.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -205,7 +205,7 @@ class P extends a.PureComponent {
                 (0, r.jsx)(m.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(y, {}) })
+                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(P, {}) })
                 })
             ]
         });
@@ -277,7 +277,7 @@ class P extends a.PureComponent {
                 ]
             })),
             b(this, 'handleKeyDown', (e) => {
-                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === x.yXg.H && this.lastInputedKeys[1] === x.yXg.H && this.lastInputedKeys[2] === x.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === x.yXg.N && this.lastInputedKeys[4] === x.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
+                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === v.yXg.H && this.lastInputedKeys[1] === v.yXg.H && this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === v.yXg.N && this.lastInputedKeys[4] === v.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
                 let t = M(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
@@ -332,7 +332,7 @@ function j(e) {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
-                              v.Z,
+                              x.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);
@@ -341,7 +341,7 @@ function j(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              P,
+                              y,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

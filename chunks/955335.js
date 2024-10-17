@@ -6,8 +6,8 @@ i.d(e, {
 var l = i(735250);
 i(470079);
 var s = i(481060),
-    t = i(630388),
-    r = i(981631),
+    r = i(630388),
+    t = i(981631),
     a = i(689938),
     d = i(132313);
 let o = {
@@ -16,7 +16,7 @@ let o = {
 };
 function u(n) {
     let { subscriptions: e } = n,
-        i = e.some((n) => (0, t.yE)(n.skuFlags, r.l4R.APPLICATION_GUILD_SUBSCRIPTION));
+        i = e.some((n) => (0, r.yE)(n.skuFlags, t.l4R.APPLICATION_GUILD_SUBSCRIPTION));
     return (0, l.jsx)(s.Heading, {
         variant: 'heading-lg/semibold',
         className: d.heading,

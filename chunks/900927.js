@@ -1,76 +1,76 @@
-n.d(t, {
+a.d(s, {
     Z: function () {
-        return m;
+        return j;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(399606),
-    a = n(481060),
-    l = n(275759),
-    r = n(565138),
-    o = n(706454),
-    c = n(271383),
-    u = n(430824),
-    d = n(709054),
-    h = n(689938),
-    p = n(45844);
-function m(e) {
-    let { userId: t, guildId: n, textClassName: m, tooltipDelay: _ } = e,
-        f = (0, s.e7)([o.default], () => o.default.locale),
-        E = (0, s.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        g = (0, s.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        C = (0, l.FI)(d.default.extractTimestamp(t), f),
-        I = (0, l.FI)(null == g ? void 0 : g.joinedAt, f);
-    return null == E || null == g
-        ? (0, i.jsx)(a.Text, {
+var t = a(735250);
+a(470079);
+var i = a(399606),
+    l = a(481060),
+    n = a(275759),
+    r = a(565138),
+    c = a(706454),
+    d = a(271383),
+    o = a(430824),
+    x = a(709054),
+    u = a(689938),
+    m = a(45844);
+function j(e) {
+    let { userId: s, guildId: a, textClassName: j, tooltipDelay: v } = e,
+        h = (0, i.e7)([c.default], () => c.default.locale),
+        N = (0, i.e7)([o.Z], () => (null != a ? o.Z.getGuild(a) : null)),
+        Z = (0, i.e7)([d.ZP], () => (null != a ? d.ZP.getMember(a, s) : null)),
+        E = (0, n.FI)(x.default.extractTimestamp(s), h),
+        I = (0, n.FI)(null == Z ? void 0 : Z.joinedAt, h);
+    return null == N || null == Z
+        ? (0, t.jsx)(l.Text, {
               variant: 'text-sm/normal',
-              className: m,
-              children: C
+              className: j,
+              children: E
           })
-        : (0, i.jsxs)('div', {
-              className: p.memberSinceWrapper,
+        : (0, t.jsxs)('div', {
+              className: m.memberSinceWrapper,
               children: [
-                  (0, i.jsxs)('div', {
-                      className: p.memberSince,
+                  (0, t.jsxs)('div', {
+                      className: m.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
-                              text: h.Z.Messages.DISCORD_NAME,
-                              delay: _,
+                          (0, t.jsx)(l.Tooltip, {
+                              text: u.Z.Messages.DISCORD_NAME,
+                              delay: v,
                               children: (e) =>
-                                  (0, i.jsx)(a.ClydeIcon, {
+                                  (0, t.jsx)(l.ClydeIcon, {
                                       size: 'custom',
                                       width: 28,
                                       height: 28,
                                       color: 'currentColor',
                                       ...e,
-                                      className: p.discordIcon
+                                      className: m.discordIcon
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, t.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              className: m,
-                              children: C
+                              className: j,
+                              children: E
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', { className: p.divider }),
-                  (0, i.jsxs)('div', {
-                      className: p.memberSince,
+                  (0, t.jsx)('div', { className: m.divider }),
+                  (0, t.jsxs)('div', {
+                      className: m.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
-                              text: E.name,
-                              delay: _,
+                          (0, t.jsx)(l.Tooltip, {
+                              text: N.name,
+                              delay: v,
                               children: (e) =>
-                                  (0, i.jsx)(r.Z, {
+                                  (0, t.jsx)(r.Z, {
                                       ...e,
-                                      guild: E,
+                                      guild: N,
                                       size: r.Z.Sizes.SMOL
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, t.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              className: m,
+                              className: j,
                               children: I
                           })
                       ]

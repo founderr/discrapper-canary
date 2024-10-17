@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(375954),
     R = n(496675),
     L = n(117530),
-    j = n(459273),
-    P = n(838440),
+    P = n(459273),
+    j = n(838440),
     O = n(127654),
     y = n(241309),
     D = n(928477),
@@ -54,7 +54,7 @@ function W(e) {
         ? null
         : (0, i.jsx)(_.Gt, {
               value: l,
-              children: (0, i.jsx)(j.I3, {
+              children: (0, i.jsx)(P.I3, {
                   children: (0, i.jsxs)('section', {
                       'aria-label': H.Z.Messages.CREATE_THREAD,
                       className: G.container,
@@ -92,7 +92,7 @@ function z(e) {
     let { parentChannel: t, parentMessageId: n, location: a } = e,
         u = (0, r.e7)([p.Z], () => p.Z.messageGroupSpacing),
         h = (function () {
-            let e = s.useContext(j.oo);
+            let e = s.useContext(P.oo);
             return s.useCallback(() => {
                 e.bumpDispatchPriority();
             }, [e]);
@@ -189,7 +189,7 @@ function z(e) {
                                 }
                             );
                         if (null == n) {
-                            let { valid: n } = await (0, P.v)({
+                            let { valid: n } = await (0, j.v)({
                                 content: e,
                                 stickers: s,
                                 uploads: a,
@@ -407,11 +407,11 @@ function q(e) {
             },
             [d]
         );
-    (0, j.yp)({
+    (0, P.yp)({
         event: B.CkL.TEXTAREA_FOCUS,
         handler: _
     }),
-        (0, j.yp)({
+        (0, P.yp)({
             event: B.CkL.TEXTAREA_BLUR,
             handler: f
         });

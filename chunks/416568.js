@@ -19,8 +19,8 @@ var i = n(735250),
     E = n(358221),
     N = n(963202),
     S = n(706590),
-    v = n(940777),
-    x = n(41776),
+    x = n(940777),
+    v = n(41776),
     T = n(905423),
     Z = n(802718),
     b = n(796974),
@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(430824),
     R = n(771845),
     L = n(358085),
-    y = n(709054),
-    P = n(727258),
+    P = n(709054),
+    y = n(727258),
     O = n(605951),
     j = n(474109),
     D = n(741616),
@@ -170,9 +170,9 @@ function er(e) {
             let e = R.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        d = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
+        d = (0, h.e7)([v.Z], () => v.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        m = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        m = (0, h.Wu)([M.Z, A.ZP], () => P.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         g = p.concat(m),
         $ = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
         ee = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
@@ -233,15 +233,15 @@ function er(e) {
                 n !== t && ((t = n), eC.scrollToGuild(t, !1));
             });
         }, [o, eC]);
-    let ev = l.useCallback(() => {
+    let ex = l.useCallback(() => {
         eC.scrollTo({
             to: 0,
             animate: !1
         });
     }, [eC]);
-    function ex(e) {
+    function ev(e) {
         switch (e.type) {
-            case P.eD.FOLDER:
+            case y.eD.FOLDER:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -251,11 +251,11 @@ function er(e) {
                         sorting: et,
                         onDragStart: ei,
                         onDragEnd: er,
-                        renderChildNode: ex
+                        renderChildNode: ev
                     },
                     e.id
                 );
-            case P.eD.GUILD:
+            case y.eD.GUILD:
                 return (0, i.jsx)(
                     Y.Z,
                     {
@@ -330,16 +330,16 @@ function er(e) {
                                 onScroll: eC.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(v.Z, {}) : null,
+                                    eZ ? (0, i.jsx)(x.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eS }),
                                     (0, i.jsx)(D.Z, {}),
                                     eb,
                                     g.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
-                                    (0, i.jsx)(K.Z, { onActivate: ev }),
+                                    (0, i.jsx)(K.Z, { onActivate: ex }),
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': X.Z.Messages.SERVERS,
-                                        children: eT.map(ex)
+                                        children: eT.map(ev)
                                     }),
                                     eM,
                                     n

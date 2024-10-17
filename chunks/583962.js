@@ -27,8 +27,8 @@ var i = n(735250),
     E = n(624138),
     N = n(667815),
     S = n(531572),
-    v = n(26323),
-    x = n(30513),
+    x = n(26323),
+    v = n(30513),
     T = n(981631),
     Z = n(689938),
     b = n(402723);
@@ -57,7 +57,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     R = 57,
     L = 57 + A,
-    y = {
+    P = {
         tension: 180,
         friction: 80
     };
@@ -69,20 +69,20 @@ t.ZP = (e) => {
         A = (0, I.FZ)(E, t.id),
         R = null == A,
         L = null != A ? A : E,
-        P = (0, c.e7)([S.Z], () => {
+        y = (0, c.e7)([S.Z], () => {
             var e;
             return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
         O = (0, c.e7)([g.Z], () => g.Z.can(T.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, N.v)(m, u);
-    }, [m, P, u]);
+        y !== u && (0, N.v)(m, u);
+    }, [m, y, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[L]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
-            from: { width: P === u ? D : '0%' },
+            from: { width: y === u ? D : '0%' },
             to: { width: j },
-            config: y
+            config: P
         },
         [U, G] = (0, d.useSpring)(() => w),
         k = () => {
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: m,
                 location_stack: r
             }),
-                (0, v.Z)({
+                (0, x.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: T.ZY5.GUILD_CHANNEL,
@@ -99,7 +99,7 @@ t.ZP = (e) => {
                         object: T.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, x.VF)(),
+                    perks: (0, v.VF)(),
                     perkIntro: Z.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
                 });
         },

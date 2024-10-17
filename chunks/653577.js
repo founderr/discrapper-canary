@@ -21,21 +21,21 @@ var i = n(735250),
 function C(e) {
     let { channel: t, connected: n, hovered: r, subtitle: C, onClick: I, enableHangStatus: E, allowChannelTopic: N } = e,
         S = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        v = null != S && S.length > 0,
-        x = (0, c.Z)(t, !0),
-        T = (!E || !!N) && x,
+        x = null != S && S.length > 0,
+        v = (0, c.Z)(t, !0),
+        T = (!E || !!N) && v,
         Z = null != C && C.length > 0;
     l.useEffect(() => {
-        v &&
+        x &&
             p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
-    }, [t.id, v, t.guild_id]);
+    }, [t.id, x, t.guild_id]);
     let b = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
     let A = a()(m.statusDiv, n && T ? m.hoverable : null);
-    if (v)
+    if (x)
         return (0, i.jsx)(o.Clickable, {
             className: A,
             onClick: T ? I : void 0,

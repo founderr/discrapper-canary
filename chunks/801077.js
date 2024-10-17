@@ -19,8 +19,8 @@ var i,
     E = n(710845),
     N = n(38618),
     S = n(656063),
-    v = n(761282),
-    x = n(814443),
+    x = n(761282),
+    v = n(814443),
     T = n(789407),
     Z = n(974543),
     b = n(250889),
@@ -28,8 +28,8 @@ var i,
     M = n(592125),
     R = n(480294),
     L = n(831506),
-    y = n(731290),
-    P = n(430824),
+    P = n(731290),
+    y = n(430824),
     O = n(496675),
     j = n(158776),
     D = n(699516),
@@ -47,7 +47,7 @@ let B = !1,
     K = new Set();
 function q() {
     let e = D.Z.getFriendIDs();
-    return R.Z.hasConsented(k.pjP.PERSONALIZATION) ? new Set([...x.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
+    return R.Z.hasConsented(k.pjP.PERSONALIZATION) ? new Set([...v.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
 }
 function Q(e) {
     return j.Z.findActivity(e, (e) => e.type !== k.IIU.CUSTOM_STATUS);
@@ -96,13 +96,13 @@ function ei(e, t, n) {
         g = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
-        x = new Set(),
+        v = new Set(),
         R = !1,
         D = [];
     for (let e of t) {
         let n = A.Z.getAnyStreamForUser(e.id),
             i = M.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !y.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !P.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let s = Q(e.id);
         if (
             (null != n &&
@@ -135,12 +135,12 @@ function ei(e, t, n) {
                     ChannelStore: M.Z,
                     VoiceStateStore: U.Z,
                     PermissionStore: O.Z,
-                    GuildStore: P.Z
+                    GuildStore: y.Z
                 }) !== h.Fw.CAN_JOIN
             )
                 continue;
         } else if (null == m) continue;
-        if (!v.JE(s) || null == u || x.has(u.id)) continue;
+        if (!x.JE(s) || null == u || v.has(u.id)) continue;
         let g = null != s ? ee(s) : null;
         (null == g || g.id !== u.id) && (s = null);
         let j = [];
@@ -156,7 +156,7 @@ function ei(e, t, n) {
                       return null != n && n.id === u.id;
                   })),
             (j = o().orderBy(j, [en], ['desc'])).length !== t.length && (I = !0),
-            x.add(u.id),
+            v.add(u.id),
             N.push({
                 game: u,
                 activity: s,
@@ -173,7 +173,7 @@ function ei(e, t, n) {
         let n = et(e.id),
             i = M.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
-            r = P.Z.getGuild(l);
+            r = y.Z.getGuild(l);
         if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
             let e = U.Z.getVoiceStatesForChannel(i.id),
@@ -294,7 +294,7 @@ function ea() {
 }
 class es extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, L.Z, U.Z, A.Z, D.Z, R.Z, x.Z], ea), this.waitFor(N.Z, P.Z, C.Z, w.default, x.Z);
+        this.syncWith([w.default, C.Z, j.Z, L.Z, U.Z, A.Z, D.Z, R.Z, v.Z], ea), this.waitFor(N.Z, y.Z, C.Z, w.default, v.Z);
     }
     get currentActivityParties() {
         return V;

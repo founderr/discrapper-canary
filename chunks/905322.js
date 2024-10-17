@@ -5,8 +5,8 @@ i.d(e, {
 });
 var l = i(735250),
     s = i(470079),
-    t = i(777207),
-    r = i(529079);
+    r = i(777207),
+    t = i(529079);
 function a(n) {
     let { title: e, subtitle: i, iconSrc: a, backgroundSrc: d, animatedBackgroundSrc: o, prefersReducedMotion: u = !0 } = n,
         c = s.useMemo(() => {
@@ -19,18 +19,18 @@ function a(n) {
             return !u && null != o && (n['--custom-background-animated'] = 'url('.concat(o.toString(), ')')), n;
         }, [o, d, u]);
     return (0, l.jsxs)('div', {
-        className: r.wrapper,
+        className: t.wrapper,
         children: [
             (0, l.jsx)('div', {
-                className: r.background,
+                className: t.background,
                 style: c
             }),
             (0, l.jsxs)('div', {
-                className: r.content,
+                className: t.content,
                 children: [
                     null != a &&
                         (0, l.jsx)('div', {
-                            className: r.icon,
+                            className: t.icon,
                             children: (0, l.jsx)('img', {
                                 src: a.toString(),
                                 alt: ''
@@ -38,13 +38,13 @@ function a(n) {
                         }),
                     (0, l.jsxs)('div', {
                         children: [
-                            (0, l.jsx)(t.x, {
+                            (0, l.jsx)(r.x, {
                                 variant: 'heading-xl/bold',
                                 tag: 'div',
                                 children: e
                             }),
                             null != i &&
-                                (0, l.jsxs)(t.x, {
+                                (0, l.jsxs)(r.x, {
                                     variant: 'text-sm/normal',
                                     children: ['\u201C', i, '\u201D']
                                 })
@@ -54,7 +54,7 @@ function a(n) {
             }),
             null != d
                 ? (0, l.jsx)('div', {
-                      className: r.image,
+                      className: t.image,
                       style: m
                   })
                 : null

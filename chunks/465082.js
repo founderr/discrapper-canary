@@ -17,16 +17,16 @@ var a = n(735250),
     m = n(734888);
 function f(e) {
     var t, n, l, f;
-    let { application: C, className: p, childrenClassName: h, showAdd: x, showMutualGuilds: I, showPrimaryCategory: R, children: T, onView: b, guildCountPosition: A = 'top', subheaderTextVariant: v = 'text-sm/normal', mutualGuildShownMax: E, guildIconSize: P, source: N } = e,
-        S = (0, s.JA)(C.id),
+    let { application: p, className: C, childrenClassName: h, showAdd: x, showMutualGuilds: I, showPrimaryCategory: R, children: T, onView: b, guildCountPosition: A = 'top', subheaderTextVariant: v = 'text-sm/normal', mutualGuildShownMax: E, guildIconSize: P, source: N } = e,
+        S = (0, s.JA)(p.id),
         j = o.ZP.getApplicationIconURL({
-            id: C.id,
-            icon: C.icon,
+            id: p.id,
+            icon: p.icon,
             size: 48
         }),
-        { canInstall: y, install: O } = (0, d.P)(C),
+        { canInstall: y, install: O } = (0, d.P)(p),
         M = (0, _.Z)({
-            application: C,
+            application: p,
             showMutualGuilds: I
         }),
         D = i.useCallback(
@@ -35,10 +35,10 @@ function f(e) {
             },
             [O, N]
         ),
-        Z = null === (t = C.categories) || void 0 === t ? void 0 : t[0],
-        L = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || M.length > 0,
+        Z = null === (t = p.categories) || void 0 === t ? void 0 : t[0],
+        L = (null !== (l = null === (n = p.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || M.length > 0,
         Y = (0, a.jsx)(u.Z, {
-            application: C,
+            application: p,
             textVariant: v,
             mutualGuilds: M,
             mutualGuildShownMax: E,
@@ -48,7 +48,7 @@ function f(e) {
         k = R && null != Z,
         H = L && 'top' === A,
         U = L && 'bottom' === A,
-        B = null !== (f = C.storefront_available) && void 0 !== f && f,
+        B = null !== (f = p.storefront_available) && void 0 !== f && f,
         w = (0, a.jsxs)('article', {
             children: [
                 (0, a.jsxs)('div', {
@@ -67,7 +67,7 @@ function f(e) {
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: 'heading-md/medium',
-                                    children: C.name
+                                    children: p.name
                                 }),
                                 (k || H) &&
                                     (0, a.jsxs)('div', {
@@ -146,13 +146,13 @@ function f(e) {
         ? (0, a.jsx)(c.Clickable, {
               tag: 'li',
               onClick: () => b({ mutualGuilds: M }),
-              className: r()(p, m.listing, m.clickable),
+              className: r()(C, m.listing, m.clickable),
               ...S,
               children: w
           })
         : (0, a.jsx)(c.FocusRing, {
               children: (0, a.jsx)('li', {
-                  className: r()(p, m.listing),
+                  className: r()(C, m.listing),
                   ...S,
                   children: w
               })

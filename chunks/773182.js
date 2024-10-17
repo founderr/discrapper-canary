@@ -31,8 +31,8 @@ var i = n(735250),
     E = n(353647),
     N = n(243778),
     S = n(669764),
-    v = n(859921),
-    x = n(863249),
+    x = n(859921),
+    v = n(863249),
     T = n(937111),
     Z = n(667105),
     b = n(369566),
@@ -40,8 +40,8 @@ var i = n(735250),
     M = n(480294),
     R = n(564334),
     L = n(302221),
-    y = n(956664),
-    P = n(602147),
+    P = n(956664),
+    y = n(602147),
     O = n(981631),
     j = n(308083),
     D = n(921944),
@@ -115,7 +115,7 @@ let V = R.Z.parseString('#E93446'),
             {
                 games: r,
                 treatment: f,
-                hasFetchedGames: x
+                hasFetchedGames: v
             } = (function () {
                 let e = (0, c.e7)([A.default], () => A.default.getId()),
                     t = (0, _.ZP)(),
@@ -166,7 +166,7 @@ let V = R.Z.parseString('#E93446'),
                                           color: new R.Z(0, 255, 0, 1),
                                           gameId: n
                                       })
-                                    : (0, y.OF)(i)
+                                    : (0, P.OF)(i)
                                           .then((e) => {
                                               let [i, l, r] = e[0],
                                                   a = new R.Z(i, l, r, 1),
@@ -249,8 +249,8 @@ let V = R.Z.parseString('#E93446'),
                         treatment: f,
                         gameApplicationIds: $
                     }),
-                    (0, v.jY)({ selectedTab: U.vf.GUILDS }),
-                    (0, P.o)(w.F$.SERVERS);
+                    (0, x.jY)({ selectedTab: U.vf.GUILDS }),
+                    (0, y.o)(w.F$.SERVERS);
             }, [F, f, $, W]),
             et = l.useCallback(
                 (e) => {
@@ -267,7 +267,7 @@ let V = R.Z.parseString('#E93446'),
             }),
             ei = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
             el = l.useMemo(() => t({ onClick: ee }), [t, ee]);
-        return f !== j.O7.GAME_SPECIFIC || x
+        return f !== j.O7.GAME_SPECIFIC || v
             ? (0, i.jsxs)('div', {
                   className: B.container,
                   children: [
@@ -343,7 +343,7 @@ function W(e) {
     let { onActivate: t, children: n } = e,
         r = (0, c.e7)([T.Z], () => T.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            x.ZP.clearCoachmark();
+            v.ZP.clearCoachmark();
         }, []),
         s = (0, f.Z)(r),
         o = l.useRef(null);

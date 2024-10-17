@@ -1,10 +1,10 @@
-n.d(t, {
+t.d(n, {
     h: function () {
-        return a;
+        return o;
     }
 });
-var i = n(442837),
-    s = n(359119);
-function a(e) {
-    return (0, i.e7)([s.ZP], () => s.ZP.getChannelSafetyWarnings(e), [e]).filter((e) => e.type === s.pj.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === s.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
+var i = t(442837),
+    r = t(359119);
+function o(e) {
+    return (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarnings(e), [e]).filter((e) => e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
 }

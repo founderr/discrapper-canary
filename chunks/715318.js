@@ -1,54 +1,54 @@
-a.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var t = a(735250);
-a(470079);
-var r = a(481060),
-    s = a(239091),
-    i = a(299206),
-    o = a(858042),
-    l = a(689938);
+var a = n(735250);
+n(470079);
+var r = n(481060),
+    s = n(239091),
+    i = n(299206),
+    o = n(858042),
+    l = n(689938);
 function c(e) {
-    let { applicationId: n, className: a, viewId: c } = e,
+    let { applicationId: t, className: n, viewId: c } = e,
         d = (0, i.Z)({
-            id: n,
+            id: t,
             label: l.Z.Messages.COPY_ID_APPLICATION
         }),
         u = (0, o.M)({
-            applicationId: n,
+            applicationId: t,
             viewId: c
         });
     return null == d && null == u
         ? null
-        : (0, t.jsx)(r.Popout, {
+        : (0, a.jsx)(r.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: n } = e;
-                  return (0, t.jsx)(r.Menu, {
+                  let { closePopout: t } = e;
+                  return (0, a.jsx)(r.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, s.Zy)(), n();
+                          (0, s.Zy)(), t();
                       },
                       'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
-                      children: (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(r.MenuGroup, { children: d }), (0, t.jsx)(r.MenuGroup, { children: u })]
+                      children: (0, a.jsxs)(a.Fragment, {
+                          children: [(0, a.jsx)(r.MenuGroup, { children: d }), (0, a.jsx)(r.MenuGroup, { children: u })]
                       })
                   });
               },
               children: (e) =>
-                  (0, t.jsx)(r.Tooltip, {
+                  (0, a.jsx)(r.Tooltip, {
                       text: l.Z.Messages.MORE,
-                      children: (n) =>
-                          (0, t.jsx)(r.Clickable, {
-                              className: a,
-                              ...n,
+                      children: (t) =>
+                          (0, a.jsx)(r.Clickable, {
+                              className: n,
+                              ...t,
                               ...e,
-                              children: (0, t.jsx)(r.MoreHorizontalIcon, {
+                              children: (0, a.jsx)(r.MoreHorizontalIcon, {
                                   size: 'xs',
                                   color: r.tokens.colors.WHITE
                               })

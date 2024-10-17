@@ -19,8 +19,8 @@ var i,
     E = n(594174),
     N = n(451478),
     S = n(276952),
-    v = n(682662),
-    x = n(662146),
+    x = n(682662),
+    v = n(662146),
     T = n(674552),
     Z = n(981631),
     b = n(673193);
@@ -120,7 +120,7 @@ class L extends (i = r.PureComponent) {
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, l.jsxs)(v.H, {
+            children: (0, l.jsxs)(x.H, {
                 children: [
                     (0, l.jsx)(S.Z, {
                         hovered: !m && f,
@@ -128,7 +128,7 @@ class L extends (i = r.PureComponent) {
                         unread: !m && h,
                         className: b.pill
                     }),
-                    (0, l.jsx)(x.Z, {
+                    (0, l.jsx)(v.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {

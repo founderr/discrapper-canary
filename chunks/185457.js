@@ -20,10 +20,10 @@ function f(e) {
         { id: I } = n,
         { loading: g, note: A } = (0, o.Z)(I),
         N = !g && null != A && A.length > 0,
-        m = _ === Z.IlC.POPOUT,
-        C = i.useContext(c.AnalyticsContext),
+        C = _ === Z.IlC.POPOUT,
+        m = i.useContext(c.AnalyticsContext),
         { analyticsLocations: T } = (0, s.ZP)();
-    return I === d.default.getId() || r.Z.hidePersonalInformation || m
+    return I === d.default.getId() || r.Z.hidePersonalInformation || C
         ? null
         : (0, l.jsx)(a.MenuItem, {
               id: 'note',
@@ -36,7 +36,7 @@ function f(e) {
                       guildId: t,
                       channelId: f,
                       sourceAnalyticsLocations: T,
-                      analyticsLocation: C.location
+                      analyticsLocation: m.location
                   });
               }
           });

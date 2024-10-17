@@ -25,7 +25,7 @@ var i = n(735250),
     E = n(710111),
     N = n(601539);
 function S(e) {
-    let { guildId: t, channel: n, width: S, height: v, keepOpen: x, interactive: T = !0, analyticsSource: Z, onClose: b } = e,
+    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: b } = e,
         A = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
@@ -43,8 +43,8 @@ function S(e) {
         })((0, g.h)(n, !0)),
         M = (0, m.j)(),
         R = l.useRef(null),
-        [L, y] = l.useState(void 0),
-        P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        [L, P] = l.useState(void 0),
+        y = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: O } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
@@ -61,9 +61,9 @@ function S(e) {
         l.useEffect(
             () => () => {
                 let e = R.current;
-                !x && null != e && j(e);
+                !v && null != e && j(e);
             },
-            [x, j]
+            [v, j]
         ),
         (0, c.Z)(
             {
@@ -72,13 +72,13 @@ function S(e) {
                 properties: {
                     source: Z,
                     guild_id: t,
-                    media_session_id: P
+                    media_session_id: y
                 }
             },
             { disableTrack: !T }
         );
     let D = l.useCallback((e) => {
-            (R.current = e), y(null == e ? void 0 : e.soundId);
+            (R.current = e), P(null == e ? void 0 : e.soundId);
         }, []),
         w = l.useCallback(
             (e) => {
@@ -122,10 +122,10 @@ function S(e) {
               value: O,
               children: (0, i.jsx)(C.Z, {
                   wheelWidth: S,
-                  wheelHeight: v,
+                  wheelHeight: x,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !x,
+                  showDeadZoneIndicator: !v,
                   activeItem: L,
                   onItemSelect: w,
                   onItemAction: U,

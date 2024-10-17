@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return x;
+        return v;
     }
 });
 var i = n(735250),
@@ -23,9 +23,9 @@ var i = n(735250),
     E = n(176505),
     N = n(490897),
     S = n(689938),
-    v = n(718317);
-function x(e) {
-    let { guild: t, selected: x } = e,
+    x = n(718317);
+function v(e) {
+    let { guild: t, selected: v } = e,
         T = (0, h.Z)(t),
         Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
@@ -41,7 +41,7 @@ function x(e) {
         L = l.useCallback(() => {
             (0, f.uL)(I.Z5c.CHANNEL(t.id, T ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
         }, [t.id, T]),
-        y = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('8926').then(n.bind(n, 156673));
@@ -54,15 +54,15 @@ function x(e) {
             },
             [t]
         ),
-        P = null;
+        y = null;
     return (
         (!Z || A || M) &&
-            !x &&
+            !v &&
             !R &&
-            (P = (0, i.jsx)(o.TextBadge, {
+            (y = (0, i.jsx)(o.TextBadge, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: S.Z.Messages.NEW,
-                className: v.newChannel
+                className: x.newChannel
             })),
         (0, i.jsx)(C.m, {
             id: 'channels-'.concat(t.id),
@@ -73,10 +73,10 @@ function x(e) {
                     className: e
                 }),
             text: T ? S.Z.Messages.CHANNELS_AND_ROLES : S.Z.Messages.CHANNEL_BROWSER_TITLE,
-            selected: x,
+            selected: v,
             onClick: L,
-            onContextMenu: y,
-            trailing: P
+            onContextMenu: P,
+            trailing: y
         })
     );
 }

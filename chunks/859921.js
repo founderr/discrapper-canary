@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     QQ: function () {
-        return u;
+        return c;
     },
     jY: function () {
         return _;
@@ -12,24 +12,24 @@ n.d(t, {
         return d;
     }
 });
-var i = n(470079),
-    a = n(652874);
-if (12633 == n.j) var s = n(143927);
-var r = n(731965);
-let l = Object.freeze({
+var r = n(470079),
+    i = n(652874),
+    a = n(143927),
+    s = n(731965);
+let o = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1
     }),
-    o = (0, a.Z)(() => l);
-function c(e) {
+    l = (0, i.Z)(() => o);
+function u(e) {
     var t;
-    return o(i.useRef(((t = e), (e) => e[t])).current, s.Z);
+    return l(r.useRef(((t = e), (e) => e[t])).current, a.Z);
 }
-let u = () => c('isSearchVisible'),
-    d = () => c('selectedTab'),
+let c = () => u('isSearchVisible'),
+    d = () => u('selectedTab'),
     _ = (e) => {
-        (0, r.j)(() => o.setState(e));
+        (0, s.j)(() => l.setState(e));
     };
 function E() {
-    _(l);
+    _(o);
 }

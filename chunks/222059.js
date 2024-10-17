@@ -24,8 +24,8 @@ var i = n(735250),
     E = n(941128),
     N = n(780570),
     S = n(557177),
-    v = n(278464),
-    x = n(276952),
+    x = n(278464),
+    v = n(276952),
     T = n(682662),
     Z = n(662146),
     b = n(674552),
@@ -33,8 +33,8 @@ var i = n(735250),
     M = n(474936),
     R = n(871465),
     L = n(689938),
-    y = n(342824);
-let P = {
+    P = n(342824);
+let y = {
     origin: {
         x: -16,
         y: 0
@@ -51,11 +51,11 @@ function O(e) {
         m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
-        [N, v] = l.useState(null),
+        [N, x] = l.useState(null),
         [M, O] = l.useState(0),
         j = (0, r.Ie)('home'),
         D = () => {
-            v(null), O(0), clearTimeout(N);
+            x(null), O(0), clearTimeout(N);
         };
     if (null == n) return null;
     let w = L.Z.Messages.DIRECT_MESSAGES;
@@ -64,7 +64,7 @@ function O(e) {
     !t &&
         _ &&
         (U = (0, i.jsx)(c.Z, {
-            className: y.downloadProgress,
+            className: P.downloadProgress,
             determineOwnVisibility: !1
         }));
     let G = t || g || m,
@@ -77,7 +77,7 @@ function O(e) {
                 onMouseEnter: () => C(!0),
                 onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != N && clearTimeout(N), v(setTimeout(D, 500)), O(M + 1), 15 === M)) {
+                    if (!__OVERLAY__ && (null != N && clearTimeout(N), x(setTimeout(D, 500)), O(M + 1), 15 === M)) {
                         D();
                         let e = !s.K.get(A.wli);
                         s.K.set(A.wli, e),
@@ -106,17 +106,17 @@ function O(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: y.tutorialContainer,
+        className: P.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: P,
+            inlineSpecs: y,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(T.H, {
                 children: [
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
-                        className: y.pill
+                        className: P.pill
                     }),
                     (0, i.jsx)(Z.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
@@ -131,7 +131,7 @@ function O(e) {
     });
 }
 function j() {
-    let e = (0, v.n)(),
+    let e = (0, x.n)(),
         t = (0, a.e7)([E.Z, I.Z], () => {
             let e = (0, c.E)(E.Z.activeItems, I.Z),
                 { total: t, progress: n } = N.lK(e),
@@ -149,15 +149,15 @@ function j() {
         d = (0, h.q)(),
         p = n + o + d,
         S = p === o && o > 0 && n + d === 0,
-        x = C.Z.getHomeLink();
+        v = C.Z.getHomeLink();
     return (
-        S && (x = A.Z5c.APPLICATION_STORE),
+        S && (v = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(O, {
             selected: e,
             user: u,
             selectedChannelId: _.Z.getChannelId(A.ME),
             badge: p,
-            link: x,
+            link: v,
             showProgressBadge: t
         })
     );

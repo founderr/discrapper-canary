@@ -18,7 +18,7 @@ function c(e) {
         ? null
         : null == t || '' === t
           ? (0, r.jsx)('div', {
-                className: a()(u.headerContextMenu, u.absolute, { [u.panel]: c === l.y0.PANEL }),
+                className: a()(u.headerContextMenu, u.absolute),
                 children: i
             })
           : (0, r.jsxs)('header', {

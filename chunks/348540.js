@@ -27,10 +27,10 @@ var s = n(442837),
     v = n(689938),
     S = n(299336);
 function N(e) {
-    let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M, recentActivitySectionEnabled: b = !1 } = e,
+    let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M, recentActivityEnabled: b = !1 } = e,
         R = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
         L = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
-        j = (0, s.e7)([c.Z], () => {
+        P = (0, s.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
@@ -89,10 +89,10 @@ function N(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
+                    (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(u.Z, {
-                            applicationId: j.id,
-                            commandIds: j.popularApplicationCommandIds,
+                            applicationId: P.id,
+                            commandIds: P.popularApplicationCommandIds,
                             channel: A
                         }),
                     (0, i.jsx)(E.Z, {

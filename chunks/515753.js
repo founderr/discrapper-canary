@@ -27,8 +27,8 @@ var i = n(735250),
     E = n(201895),
     N = n(43267),
     S = n(933557),
-    v = n(979264),
-    x = n(322614),
+    x = n(979264),
+    v = n(322614),
     T = n(961556),
     Z = n(163889),
     b = n(111028),
@@ -36,8 +36,8 @@ var i = n(735250),
     M = n(93687),
     R = n(785232),
     L = n(878857),
-    y = n(110581),
-    P = n(518950),
+    P = n(249978),
+    y = n(518950),
     O = n(199902),
     j = n(158776),
     D = n(306680),
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function X(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: x, applicationStream: M, entry: y, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: v, applicationStream: M, entry: P, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
         [B, Q] = l.useState(!1),
         X = l.useRef(null),
         J = l.useRef(null),
@@ -133,7 +133,7 @@ function X(e) {
             avatarSrc: $,
             avatarDecorationSrc: ee,
             eventHandlers: et
-        } = (0, P.Z)({
+        } = (0, y.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(s || B)
@@ -222,19 +222,19 @@ function X(e) {
                         className: W.subtext,
                         children: F.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
                     })
-                  : j !== V.Skl.OFFLINE && j !== V.Skl.INVISIBLE && null != x && x.length > 0
+                  : j !== V.Skl.OFFLINE && j !== V.Skl.INVISIBLE && null != v && v.length > 0
                     ? (0, i.jsx)(H.ZP, {
                           ...e,
-                          activities: x,
+                          activities: v,
                           applicationStream: M,
                           animate: B,
                           hideTooltip: !0,
                           user: d
                       })
-                    : null != y
+                    : null != P
                       ? (0, i.jsx)(T.Z, {
                             ...e,
-                            entry: y
+                            entry: P
                         })
                       : null;
         },
@@ -260,7 +260,7 @@ function X(e) {
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, m.Z)(x) ? V.Skl.STREAMING : j),
+                !d.isSystemUser() && (n = (0, m.Z)(v) ? V.Skl.STREAMING : j),
                 (0, i.jsx)(z, {
                     ...et,
                     size: p.AvatarSizes.SIZE_32,
@@ -283,7 +283,7 @@ function X(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           el,
-                          (0, i.jsx)(v.ZP, {
+                          (0, i.jsx)(x.ZP, {
                               clan: null == d ? void 0 : d.clan,
                               userId: null == d ? void 0 : d.id,
                               inline: !0,
@@ -401,8 +401,8 @@ t.ZP = (e) => {
             },
             [t, r, s]
         ),
-        { recentActivityStatusEnabled: p } = (0, y.P)({ location: 'PrivateChannel' }),
-        f = (0, x.Z)(null == r ? void 0 : r.id);
+        { recentActivityStatusEnabled: p } = (0, P.U)({ location: 'PrivateChannel' }),
+        f = (0, v.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)(X, {
               channel: t,

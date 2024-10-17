@@ -100,12 +100,12 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: v, 'aria-expanded': x, 'aria-controls': T, guild: Z, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
-        P = Z.hasFeature(f.oNc.ANIMATED_BANNER),
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: S, disableBannerAnimation: x, 'aria-expanded': v, 'aria-controls': T, guild: Z, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: P } = e,
+        y = Z.hasFeature(f.oNc.ANIMATED_BANNER),
         O = (0, u.Z)(Z),
         j = !O && Z.hasCommunityInfoSubheader(),
         D = !O && L,
-        w = (0, h.xR)(b) && P && !v,
+        w = (0, h.xR)(b) && y && !x,
         [U, G] = l.useState(!1),
         k = l.useRef(),
         B = l.useRef(null),
@@ -141,11 +141,11 @@ t.ZP = l.memo(function (e) {
                         className: a()(r, {
                             [g.container]: !0,
                             [g.clickable]: null != s,
-                            [g.selected]: null != s && x,
+                            [g.selected]: null != s && v,
                             [g.hasBanner]: F(),
                             [g.bannerVisible]: t,
                             [e]: t,
-                            [g.communityInfoVisible]: D || (y && j)
+                            [g.communityInfoVisible]: D || (P && j)
                         }),
                         onMouseDown: S,
                         onContextMenu: N,
@@ -172,7 +172,7 @@ t.ZP = l.memo(function (e) {
                                                 (0, i.jsx)(c.Clickable, {
                                                     className: g.headerButton,
                                                     'aria-controls': T,
-                                                    'aria-expanded': x,
+                                                    'aria-expanded': v,
                                                     focusProps: {
                                                         ringTarget: B,
                                                         offset: 4
@@ -192,7 +192,7 @@ t.ZP = l.memo(function (e) {
                                             guild: Z,
                                             controller: n,
                                             hasBanner: null != b,
-                                            hasSubheader: null != y && y
+                                            hasSubheader: null != P && P
                                         })
                                 ]
                             }),

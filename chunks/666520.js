@@ -1,15 +1,15 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return Z;
     }
 }),
     t(47120);
-var s,
+var o,
     i = t(735250),
-    o = t(470079),
+    s = t(470079),
     l = t(699581),
-    r = t(442837),
-    c = t(481060),
+    c = t(442837),
+    r = t(481060),
     a = t(34854),
     d = t(531301),
     u = t(246946),
@@ -29,7 +29,7 @@ function f(e, n, t) {
         e
     );
 }
-class m extends (s = o.PureComponent) {
+class p extends (o = s.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,12 +37,12 @@ class m extends (s = o.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: t, hideNote: s } = this.props;
-        return s
+        let { className: e, loading: n, note: t, hideNote: o } = this.props;
+        return o
             ? null
             : (0, i.jsx)('div', {
                   className: e,
-                  children: (0, i.jsx)(c.TextAreaAutosize, {
+                  children: (0, i.jsx)(r.TextAreaAutosize, {
                       ref: this.noteRef,
                       className: E.textarea,
                       disabled: n,
@@ -57,11 +57,11 @@ class m extends (s = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'noteRef', o.createRef()),
+            f(this, 'noteRef', s.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: t, userId: s, onUpdate: i } = this.props;
-                if ((null != t ? t : '') !== n) null == i || i(), a.Z.updateNote(s, n);
+                    { note: t, userId: o, onUpdate: i } = this.props;
+                if ((null != t ? t : '') !== n) null == i || i(), a.Z.updateNote(o, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -73,13 +73,13 @@ class m extends (s = o.PureComponent) {
             });
     }
 }
-function x(e) {
-    let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
+function Z(e) {
+    let n = (0, c.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(p, {
         ...e,
         ...t,
         hideNote: n
     });
 }
-f(m, 'defaultProps', { autoFocus: !1 });
+f(p, 'defaultProps', { autoFocus: !1 });

@@ -65,16 +65,16 @@ function R(e) {
             contentPlaceholder: b,
             renderedContent: R,
             trailingIcon: L,
-            leadingIcon: j
+            leadingIcon: P
         } = (0, g.f)(n, A, a, M.messageContent, {
             trailingIconClass: M.messageContentTrailingIcon,
             leadingIconClass: M.messageContentLeadingIcon,
             iconSize: Z.WW
         }),
-        P = (0, C.cv)(n),
+        j = (0, C.cv)(n),
         O =
-            P.length > 0
-                ? P.map((e) =>
+            j.length > 0
+                ? j.map((e) =>
                       (0, i.jsx)(
                           I.ZP,
                           {
@@ -99,7 +99,7 @@ function R(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: l()(M.messageContentWrapper, { [M.mentioned]: n.mentioned }),
-                children: [null != O ? null : j, null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: b }), null != O ? null : L]
+                children: [null != O ? null : P, null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: b }), null != O ? null : L]
             }),
             (0, i.jsx)('img', {
                 alt: '',

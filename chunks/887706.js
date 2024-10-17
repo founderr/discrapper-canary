@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var l = t(399606),
     i = t(314897);
-function a() {
+function s() {
     return (0, l.e7)([i.default], () => i.default.isAuthenticated());
 }

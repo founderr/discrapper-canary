@@ -24,8 +24,8 @@ var l = n(120356),
     E = n(430824),
     N = n(626135),
     S = n(434479),
-    v = n(981631),
-    x = n(176505),
+    x = n(981631),
+    v = n(176505),
     T = n(629481),
     Z = n(689938),
     b = n(316512);
@@ -33,7 +33,7 @@ function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
-        x = (null == _ ? void 0 : _.hasFeature(v.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        v = (null == _ ? void 0 : _.hasFeature(x.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         A = 'false' === o.K.get(T.tM, 'false'),
         M = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(S.m, {
@@ -73,14 +73,14 @@ function A(e) {
                             if (
                                 (e.stopPropagation(),
                                 (0, g.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                N.default.track(v.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+                                N.default.track(x.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
                                     action_taken: T.mz.DISMISS_CHANNEL_ROW
                                 }),
-                                !u || !x)
+                                !u || !v)
                             ) {
                                 var n;
-                                (0, C.dL)(v.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
+                                (0, C.dL)(x.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
                         'aria-label': Z.Z.Messages.CLOSE,
@@ -97,7 +97,7 @@ function M(e) {
     let { guild: t, selected: l } = e,
         r = (0, _.g)(t, 'guild_shop_channel_row'),
         a = () => {
-            o.K.set(T.tM, 'true'), (0, C.uL)(v.Z5c.CHANNEL(t.id, x.oC.GUILD_SHOP));
+            o.K.set(T.tM, 'true'), (0, C.uL)(x.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(A, {

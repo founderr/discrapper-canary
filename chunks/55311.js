@@ -9,7 +9,7 @@ var a = n(481060),
     s = n(846027),
     r = n(468026),
     l = n(689938);
-function o(e) {
+function o(e, t) {
     if (e) {
         (0, a.openModal)((e) =>
             (0, i.jsx)(r.default, {
@@ -20,5 +20,5 @@ function o(e) {
         );
         return;
     }
-    s.Z.toggleSelfDeaf();
+    s.Z.toggleSelfDeaf({ location: t });
 }

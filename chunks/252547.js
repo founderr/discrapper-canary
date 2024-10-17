@@ -1,51 +1,51 @@
-a.d(n, {
+n.d(t, {
     Z: function () {
         return E;
     }
 }),
-    a(47120);
-var t = a(735250),
-    r = a(470079),
-    s = a(120356),
-    i = a.n(s),
-    o = a(793030),
-    l = a(481060),
-    c = a(383895),
-    d = a(689938),
-    u = a(51527),
-    _ = a(268236);
+    n(47120);
+var a = n(735250),
+    r = n(470079),
+    s = n(120356),
+    i = n.n(s),
+    o = n(793030),
+    l = n(481060),
+    c = n(383895),
+    d = n(689938),
+    u = n(51527),
+    _ = n(268236);
 function E(e) {
-    let { entries: n, viewId: a, officialGuildId: s, onClose: E } = e,
-        m = n.length > 7,
+    let { entries: t, viewId: n, officialGuildId: s, onClose: E } = e,
+        m = t.length > 7,
         [I, A] = r.useState(!1),
-        p = r.useMemo(() => n.slice(0, m && !I ? 6 : void 0), [n, m, I]);
-    return (0, t.jsxs)('div', {
+        p = r.useMemo(() => t.slice(0, m && !I ? 6 : void 0), [t, m, I]);
+    return (0, a.jsxs)('div', {
         children: [
-            (0, t.jsx)(o.X6, {
+            (0, a.jsx)(o.X6, {
                 className: u.sectionHeader,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 children: d.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
             }),
-            0 === n.length
-                ? (0, t.jsx)(o.xv, {
+            0 === t.length
+                ? (0, a.jsx)(o.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
                       className: _.emptyState,
                       children: d.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
                   })
-                : (0, t.jsxs)(t.Fragment, {
+                : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, t.jsx)('div', {
+                          (0, a.jsx)('div', {
                               className: i()(_.friends, { [_.fadedEntries]: m && !I }),
-                              children: (0, t.jsx)('div', {
+                              children: (0, a.jsx)('div', {
                                   className: u.column,
                                   children: p.map((e) =>
-                                      (0, t.jsx)(
+                                      (0, a.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
-                                              viewId: a,
+                                              viewId: n,
                                               onClose: E,
                                               officialGuildId: s
                                           },
@@ -56,16 +56,16 @@ function E(e) {
                           }),
                           m &&
                               !I &&
-                              (0, t.jsxs)(l.Clickable, {
+                              (0, a.jsxs)(l.Clickable, {
                                   className: _.expandEntriesButton,
                                   onClick: () => A(!0),
                                   children: [
-                                      (0, t.jsx)(o.xv, {
+                                      (0, a.jsx)(o.xv, {
                                           variant: 'text-xs/semibold',
                                           color: 'interactive-normal',
                                           children: d.Z.Messages.GAME_PROFILE_SEE_ALL_ENTRIES
                                       }),
-                                      (0, t.jsx)(l.ChevronSmallDownIcon, { size: 'xs' })
+                                      (0, a.jsx)(l.ChevronSmallDownIcon, { size: 'xs' })
                                   ]
                               })
                       ]

@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(555573),
     R = n(213459),
     L = n(456007),
-    j = n(10718),
-    P = n(998698),
+    P = n(10718),
+    j = n(998698),
     O = n(895924),
     y = n(581364),
     D = n(667204),
@@ -82,8 +82,8 @@ var i = n(735250),
     eb = n(228488),
     eR = n(127654),
     eL = n(979956),
-    ej = n(655687),
-    eP = n(165540),
+    eP = n(655687),
+    ej = n(165540),
     eO = n(583027),
     ey = n(25007),
     eD = n(685006),
@@ -147,7 +147,7 @@ class eY extends s.PureComponent {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
             { commandKey: n, interactionOptions: i } = (0, y.XA)(e.interactionData),
-            { command: s, application: a } = j.Xq(t, n);
+            { command: s, application: a } = P.Xq(t, n);
         if (null != s) {
             var l, r;
             let e =
@@ -330,7 +330,7 @@ class eY extends s.PureComponent {
                                 shouldRefocus: !0
                             })
                         );
-                    let e = P.Z.getCommandOrigin(o.id);
+                    let e = j.Z.getCommandOrigin(o.id);
                     if (e === O.bB.APPLICATION_LAUNCHER || e === O.bB.IMAGE_RECS_MENU || e === O.bB.IMAGE_RECS_SUBMENU) {
                         var h;
                         let { location: t, sectionName: n } = null !== (h = (0, eO._U)(s)) && void 0 !== h ? h : {},
@@ -531,7 +531,7 @@ class eK extends s.PureComponent {
                         })
                     }),
                     (0, i.jsx)(eq, {
-                        children: (0, i.jsx)(eP.Z, {
+                        children: (0, i.jsx)(ej.Z, {
                             channel: n,
                             type: o,
                             animateRef: this.appIconAnimateRef,
@@ -548,7 +548,7 @@ class eK extends s.PureComponent {
                 ]
             }),
             L = x && v,
-            j = L && v ? b : R;
+            P = L && v ? b : R;
         return (0, i.jsx)(
             g.Z,
             {
@@ -621,11 +621,11 @@ class eK extends s.PureComponent {
                                                             n.isPrivate()
                                                                 ? (0, i.jsx)(ek.Z, {
                                                                       channel: n,
-                                                                      children: j
+                                                                      children: P
                                                                   })
                                                                 : (0, i.jsx)(ew.Z, {
                                                                       channel: n,
-                                                                      children: j
+                                                                      children: P
                                                                   }),
                                                             (0, i.jsx)(E.Z, {
                                                                 channel: n,
@@ -732,7 +732,7 @@ function eq(e) {
 }
 t.Z = s.memo(function (e) {
     let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: l } = e,
-        { placeholder: r, accessibilityLabel: o } = (0, ej.Z)(t),
+        { placeholder: r, accessibilityLabel: o } = (0, eP.Z)(t),
         c = (0, eo.S)(ex.default.getCurrentUser(), t),
         [h] = (0, q.AB)(null == n ? void 0 : n.id),
         p = (0, z.Ux)(null == n ? void 0 : n.id),
@@ -745,7 +745,7 @@ t.Z = s.memo(function (e) {
         E = (0, er.Z)(t.id),
         g = (0, J.Z)(t.id),
         C = (0, U.h9)(t.id, 'ChannelChatMemo'),
-        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: j } = (0, v.Z)({ channel: t });
+        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: P } = (0, v.Z)({ channel: t });
     (0, S.Z)({
         isProfileFetching: N,
         wasProfileFetching: Z,
@@ -753,9 +753,9 @@ t.Z = s.memo(function (e) {
         channelId: b,
         isFetchingApplicationIndex: R,
         wasFetchingApplicationIndex: L,
-        commands: j
+        commands: P
     });
-    let P = s.useRef(null),
+    let j = s.useRef(null),
         O = (0, u.e7)([A.Z], () => A.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eK, {
         channel: t,
@@ -777,7 +777,7 @@ t.Z = s.memo(function (e) {
         showAppDMsUI: C,
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != x,
-        entryPointCommandButtonRef: P,
+        entryPointCommandButtonRef: j,
         isFailedAppDMLoad: O
     });
 });

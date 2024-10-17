@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return P;
     }
 }),
     n(47120),
@@ -26,8 +26,8 @@ var i = n(735250),
     E = n(944486),
     N = n(979651),
     S = n(709054),
-    v = n(853856),
-    x = n(593214),
+    x = n(853856),
+    v = n(593214),
     T = n(919755),
     Z = n(110977),
     b = n(603274),
@@ -41,13 +41,13 @@ let L = {
         object: A.qAy.CHANNEL
     }
 };
-function y() {
+function P() {
     let e = (0, s.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, x.up)(),
-        [y, P] = l.useState(!1),
-        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([v.Z], () => ({
-            favoriteChannels: v.Z.getFavoriteChannels(),
-            favoriteServerMuted: v.Z.favoriteServerMuted
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
+        [P, y] = l.useState(!1),
+        { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([x.Z], () => ({
+            favoriteChannels: x.Z.getFavoriteChannels(),
+            favoriteServerMuted: x.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
@@ -95,7 +95,7 @@ function y() {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: U,
-                hovered: y,
+                hovered: P,
                 unread: k && !O,
                 className: R.pill
             }),
@@ -103,7 +103,7 @@ function y() {
                 onShow: V,
                 children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || y,
+                        selected: U || P,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
@@ -116,9 +116,9 @@ function y() {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: L
                             },
-                            selected: U || y,
-                            onMouseEnter: () => P(!0),
-                            onMouseLeave: () => P(!1),
+                            selected: U || P,
+                            onMouseEnter: () => y(!0),
+                            onMouseLeave: () => y(!1),
                             onMouseDown: function () {
                                 if (null != w) u.Z.preload(w.guild_id, w.id);
                             },
