@@ -65,7 +65,8 @@ t.Z = i.memo(function (e) {
             });
     }, [B, J, k]);
     let et = i.useCallback(() => {
-            (0, g.hM)(B, g.UE.DISCOVERY),
+            (0, s.closeAllModals)(),
+                (0, g.hM)(B, g.UE.DISCOVERY),
                 (0, d.transitionToGlobalDiscovery)({
                     tab: b.F$.SERVERS,
                     selectedServersTab: M.vf.GUILDS
