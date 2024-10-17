@@ -38,7 +38,8 @@ function A(e) {
         C = v && E.Z.can(g.Plq.CONNECT, O),
         L = (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && C ? O : null,
         y = (0, p.F)({ location: 'UserProfileActivityCardWrapper' }),
-        D = (0, a.e7)([_.Z, f.Z, d.Z], () => {
+        D = t.id === n.id,
+        b = (0, a.e7)([_.Z, f.Z, d.Z], () => {
             if ((0, s.Z)(A)) {
                 var e, n;
                 let r = null === (e = f.Z.getVoiceStateForSession(t.id, null == A ? void 0 : A.session_id)) || void 0 === e ? void 0 : e.channelId;
@@ -47,7 +48,7 @@ function A(e) {
             return null != L ? _.Z.getGuild(L.getGuildId()) : null;
         });
     (0, u.q)(null == A ? void 0 : A.application_id);
-    let b = (0, a.e7)([l.Z], () => ((null == A ? void 0 : A.application_id) != null ? l.Z.getApplication(A.application_id) : (null == A ? void 0 : A.name) != null ? l.Z.getApplicationByName(A.name) : null));
+    let M = (0, a.e7)([l.Z], () => ((null == A ? void 0 : A.application_id) != null ? l.Z.getApplication(A.application_id) : (null == A ? void 0 : A.name) != null ? l.Z.getApplicationByName(A.name) : null));
     if (
         (i.useEffect(() => {
             (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS &&
@@ -62,12 +63,12 @@ function A(e) {
     )
         return null;
     if ((0, o.Z)(A))
-        return y
+        return y && !D
             ? (0, r.jsx)(S.Z, {
                   user: t,
                   currentUser: n,
                   activity: A,
-                  guild: D,
+                  guild: b,
                   channel: O,
                   className: N,
                   onClose: R
@@ -76,18 +77,18 @@ function A(e) {
                   user: t,
                   currentUser: n,
                   activity: A,
-                  guild: D,
+                  guild: b,
                   channel: O,
                   className: N,
                   onClose: R
               });
-    return y
+    return y && !D
         ? (0, r.jsx)(m.Z, {
               user: t,
               currentUser: n,
               activity: A,
-              application: b,
-              guild: D,
+              application: M,
+              guild: b,
               channel: O,
               className: N,
               onClose: R
@@ -96,8 +97,8 @@ function A(e) {
               user: t,
               currentUser: n,
               activity: A,
-              application: b,
-              guild: D,
+              application: M,
+              guild: b,
               channel: O,
               className: N,
               onClose: R
