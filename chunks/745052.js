@@ -38,8 +38,8 @@ var i = n(735250),
     w = n(610697),
     k = n(26373),
     B = n(486622),
-    V = n(922409),
-    H = n(899740),
+    H = n(922409),
+    V = n(899740),
     F = n(177033),
     Y = n(355350),
     z = n(307947),
@@ -54,7 +54,7 @@ var i = n(735250),
     et = n(784237);
 function en() {
     let e = a.useRef(null),
-        t = (0, H.q)(),
+        t = (0, V.q)(),
         n = (0, F.Z)(),
         s = (0, k.K)(),
         c = (0, m.N)(),
@@ -63,7 +63,7 @@ function en() {
         }, []),
         { rejectAll: _ } = (0, B.m)({ onError: d }),
         E = (0, p.Z)('message-requests-list'),
-        { channelId: h } = (0, V._)(),
+        { channelId: h } = (0, H._)(),
         I = a.useCallback(() => {
             _(n.map((e) => e.channel.id));
         }, [n, _]),
@@ -239,7 +239,7 @@ function er(e) {
 }
 let el = (0, h.Z)(function (e) {
     let { width: t } = e,
-        n = (0, H.q)();
+        n = (0, V.q)();
     a.useEffect(() => {
         _.Y(Q.Z5c.MESSAGE_REQUESTS), (0, O.e)('message-requests'), j.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), v.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);

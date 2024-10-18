@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(590415),
     L = n(911560),
     Z = n(488131),
-    b = n(814820),
-    P = n(314897),
+    P = n(814820),
+    b = n(314897),
     D = n(523746),
     j = n(592125),
     U = n(430824),
@@ -207,7 +207,7 @@ let eL = Object.freeze({
     [eA.uaV.CALL]: function (e) {
         let { message: t, compact: n, channel: r } = e,
             { id: l, author: o } = t,
-            u = P.default.getId(),
+            u = b.default.getId(),
             d = t.getChannelId(),
             _ = (0, s.e7)([D.Z], () => D.Z.isCallActive(d, l), [d, l]),
             E = (0, s.e7)([F.Z], () => F.Z.getVoiceState(eA.ME, u)),
@@ -304,7 +304,7 @@ let eL = Object.freeze({
                     compact: n,
                     usernameHook: l
                 }),
-                (0, i.jsx)(b.f, {
+                (0, i.jsx)(P.f, {
                     channel: a,
                     message: t
                 })

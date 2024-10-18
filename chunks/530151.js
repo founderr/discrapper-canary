@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, x.BU)(e, { useKibibytes: !0 });
     }
 }
-let V = {
+let H = {
     [D.vxO.INSTALLING]: {
         [A.J6.NONE]: (e, t, n, i) =>
             y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
@@ -175,8 +175,8 @@ let V = {
             })
     }
 };
-function H(e, t, n, i, a) {
-    let s = V[t],
+function V(e, t, n, i, a) {
+    let s = H[t],
         r = null != s ? Object.keys(s) : [],
         { unit: l, time: o } = (0, A.CI)(null != e ? e / 60 : null, r);
     if (null != s && null != l) {
@@ -202,7 +202,7 @@ function F(e) {
         case D.f07.ALLOCATING_DISK:
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({ percent: i });
         case D.f07.PATCHING:
-            return H(r, t, i, o, l);
+            return V(r, t, i, o, l);
         case D.f07.FINALIZING:
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({ percent: i });
         case D.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: l
             });
         case D.f07.REPAIRING:
-            if (t === D.vxO.REPAIRING) return H(r, t, i, o, l);
+            if (t === D.vxO.REPAIRING) return V(r, t, i, o, l);
             return y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
                 percent: i,
                 progress: o,

@@ -13,13 +13,13 @@ var r = t(481060),
     E = t(737013),
     T = t(607783),
     _ = t(299206),
-    N = t(819403),
-    p = t(777658),
+    p = t(819403),
+    N = t(777658),
     S = t(858488),
     Z = t(185457),
     O = t(570870),
-    A = t(389052),
-    f = t(24311),
+    f = t(389052),
+    A = t(24311),
     h = t(915193),
     m = t(332576),
     M = t(710631),
@@ -45,7 +45,7 @@ n.default = (0, o.Z)(
                 k = (0, g.Z)(t, null, o),
                 W = (0, R.Z)(t, s.id),
                 B = (0, G.Z)(t.id, o),
-                w = (0, f.Z)({
+                w = (0, A.Z)({
                     user: t,
                     context: o
                 }),
@@ -67,8 +67,8 @@ n.default = (0, o.Z)(
                 J = (0, m.Z)(t.id, s.id),
                 Q = (0, M.Z)({ user: t }),
                 $ = (0, l.Z)(null, t),
-                ee = (0, p.Z)(t),
-                en = (0, A.Z)({ user: t }),
+                ee = (0, N.Z)(t),
+                en = (0, f.Z)({ user: t }),
                 et = (0, _.Z)({
                     id: t.id,
                     label: b.Z.Messages.COPY_ID_USER
@@ -76,7 +76,7 @@ n.default = (0, o.Z)(
                 ei = (0, P.Z)(t.id),
                 er = (0, I.Z)(t.id),
                 ea = (0, c.Z)(s.id),
-                es = (0, N.Z)(t),
+                es = (0, p.Z)(t),
                 eo = (0, E.Z)(t.id),
                 ed = (0, O.Z)({
                     commandType: d.yU.USER,

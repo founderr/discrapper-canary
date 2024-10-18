@@ -38,12 +38,12 @@ class g extends a.PureComponent {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: p, channel: C, className: g, forceAddReactions: S, reactionClassName: A, useChatFontScaling: x, forceHideReactionCreates: R, remainingReactions: O, combinedReactions: v, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: L } = this.state,
             Z = x ? h : f,
-            b = M > 0;
-        if (!b && !S) return null;
-        let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            P = M > 0;
+        if (!P && !S) return null;
+        let { enabled: b } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             { canShowImprovedReactionButton: D } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            j = P && b,
-            U = (S && !b) || j,
+            j = b && P,
+            U = (S && !P) || j,
             y = D && !p;
         return (0, i.jsxs)(l.W, {
             component: 'div',

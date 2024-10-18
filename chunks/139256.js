@@ -1,6 +1,6 @@
 n.d(t, {
     $e: function () {
-        return b;
+        return P;
     },
     $w: function () {
         return y;
@@ -97,7 +97,7 @@ function Z(e) {
         children: i
     });
 }
-function b(e) {
+function P(e) {
     let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: i, canTapAnswers: a, hasSelectedAnyAnswer: r, className: l, answerClassName: u, renderAnswerContent: d } = e,
         { ContainerComponent: _, answerElementType: E } = (0, c.EQ)({
             canTapAnswers: a,
@@ -129,7 +129,7 @@ function b(e) {
         className: l,
         children: t.map((e, t) =>
             (0, s.jsx)(
-                P,
+                b,
                 {
                     className: o()(R.__invalid_answer, u),
                     answer: e,
@@ -144,7 +144,7 @@ function b(e) {
         )
     });
 }
-function P(e) {
+function b(e) {
     let { className: t, answer: n, children: i, hasSelectedAnyAnswer: a, isFirstAnswer: l, elementType: c } = e,
         { channelId: u, messageId: d } = (0, g.pE)(),
         _ = (0, g.$B)(n.style),

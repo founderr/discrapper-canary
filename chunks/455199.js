@@ -28,12 +28,12 @@ let O = 'recentMentionFilterSettings',
     M = {},
     L = !1,
     Z = !0,
-    b = u.K.get(O, {
+    P = u.K.get(O, {
         guildFilter: R.NgX.ALL_SERVERS,
         everyoneFilter: !0,
         roleFilter: !0
     }),
-    P = !1,
+    b = !1,
     D = 0,
     j = !1,
     U = !1;
@@ -47,12 +47,12 @@ function B(e) {
     if ((0, m.Z)(e) && !R.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
     let n = N.Z.getChannel(t);
-    if (null == n || n.type === R.d4z.DM || (b.guildFilter === R.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
+    if (null == n || n.type === R.d4z.DM || (P.guildFilter === R.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
     let i = h.default.getId();
     if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
     e = y(e);
-    let a = !b.everyoneFilter,
-        s = !b.roleFilter;
+    let a = !P.everyoneFilter,
+        s = !P.roleFilter;
     return (0, I.ZP)({
         message: e,
         userId: i,
@@ -84,9 +84,9 @@ function G(e) {
     return k(t);
 }
 function F(e) {
-    let t = { ...b };
-    (b = o().defaults(o().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), b)), u.K.set(O, b);
-    let n = (e, n) => t[e] !== b[e] && b[e] === n,
+    let t = { ...P };
+    (P = o().defaults(o().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), P)), u.K.set(O, P);
+    let n = (e, n) => t[e] !== P[e] && P[e] === n,
         i = n('guildFilter', R.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
     M = {};
     let a = [];
@@ -95,10 +95,10 @@ function F(e) {
             let t = B(e);
             null != t && (a.push(t), (M[t.id] = !0));
         }),
-        0 === (v = a).length && (P = !1);
+        0 === (v = a).length && (b = !1);
 }
 function w() {
-    (v = []), (M = {}), (P = !1), (U = !1);
+    (v = []), (M = {}), (b = !1), (U = !1);
 }
 function V() {
     v = v.filter((e) => !g.Z.isBlockedForMessage(e));
@@ -115,13 +115,13 @@ class Y extends (i = c.ZP.Store) {
         return j;
     }
     get hasLoadedEver() {
-        return P;
+        return b;
     }
     get lastLoaded() {
         return D;
     }
     getMentions() {
-        return P || v.length > 0 ? v : null;
+        return b || v.length > 0 ? v : null;
     }
     hasMention(e) {
         return M[e];
@@ -133,13 +133,13 @@ class Y extends (i = c.ZP.Store) {
         return Z;
     }
     get guildFilter() {
-        return b.guildFilter;
+        return P.guildFilter;
     }
     get everyoneFilter() {
-        return b.everyoneFilter;
+        return P.everyoneFilter;
     }
     get roleFilter() {
-        return b.roleFilter;
+        return P.roleFilter;
     }
     get mentionsAreStale() {
         return U;
@@ -157,7 +157,7 @@ class Y extends (i = c.ZP.Store) {
     (t.Z = new Y(_.Z, {
         LOAD_RECENT_MENTIONS: function (e) {
             let { guildId: t } = e;
-            (L = !0), null == t && b.guildFilter === R.NgX.THIS_SERVER && F({ guildFilter: R.NgX.ALL_SERVERS });
+            (L = !0), null == t && P.guildFilter === R.NgX.THIS_SERVER && F({ guildFilter: R.NgX.ALL_SERVERS });
         },
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { hasMoreAfter: t, messages: n, isAfter: i } = e,
@@ -169,7 +169,7 @@ class Y extends (i = c.ZP.Store) {
                 (L = !1),
                 (Z = t),
                 (D = (0, d.zO)()),
-                (P = !0);
+                (b = !0);
         },
         LOAD_RECENT_MENTIONS_FAILURE: function () {
             L = !1;
@@ -185,8 +185,8 @@ class Y extends (i = c.ZP.Store) {
             n > (v = v.slice(0, t)).length && (Z = !0);
         },
         CHANNEL_SELECT: function () {
-            if (b.guildFilter !== R.NgX.THIS_SERVER) return !1;
-            P = !1;
+            if (P.guildFilter !== R.NgX.THIS_SERVER) return !1;
+            b = !1;
         },
         CONNECTION_OPEN: w,
         GUILD_DELETE: function (e) {

@@ -15,7 +15,7 @@ n.d(t, {
         return M;
     },
     R9: function () {
-        return b;
+        return P;
     },
     RN: function () {
         return y;
@@ -36,7 +36,7 @@ n.d(t, {
         return j;
     },
     rY: function () {
-        return P;
+        return b;
     },
     sR: function () {
         return B;
@@ -121,10 +121,10 @@ function Z(e) {
         [e]
     );
 }
-function b(e, t) {
+function P(e, t) {
     return Z(x('avatarProfile', e, t));
 }
-function P(e, t) {
+function b(e, t) {
     return Z(x('referencedAvatarProfile', e, t));
 }
 function D(e, t) {

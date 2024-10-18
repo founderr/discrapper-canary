@@ -37,10 +37,10 @@ t.Z = (0, a.memo)(function (e) {
             month: 'numeric',
             day: 'numeric'
         }),
-        V = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
-        H = L.config.rewards[V],
-        F = (null == H ? void 0 : H.type) === l.w.COLLECTIBLE,
-        { product: Y } = (0, h.T)(F && null != H ? H.skuId : null),
+        H = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
+        V = L.config.rewards[H],
+        F = (null == V ? void 0 : V.type) === l.w.COLLECTIBLE,
+        { product: Y } = (0, h.T)(F && null != V ? V.skuId : null),
         z = null == Y ? void 0 : null === (s = Y.items) || void 0 === s ? void 0 : s[0];
     (0, u.P)(D, (e) => {
         let { height: t } = e;
@@ -70,7 +70,7 @@ t.Z = (0, a.memo)(function (e) {
                     quest_id: L.id
                 });
         };
-    return null == H || M
+    return null == V || M
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
@@ -143,7 +143,7 @@ t.Z = (0, a.memo)(function (e) {
                                   color: W ? 'text-muted' : 'always-white',
                                   style: { opacity: W ? 1 : 0.75 },
                                   children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
-                                      reward: H.name,
+                                      reward: V.name,
                                       claimedDate: B
                                   })
                               })

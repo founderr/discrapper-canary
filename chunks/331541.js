@@ -42,8 +42,8 @@ var i = n(735250),
     w = n(695346),
     k = n(158776),
     B = n(246946),
-    V = n(572004),
-    H = n(70956),
+    H = n(572004),
+    V = n(70956),
     F = n(5192),
     Y = n(51144),
     z = n(246133),
@@ -57,23 +57,23 @@ var i = n(735250),
     ee = n(451563);
 let et = [
     {
-        duration: 30 * H.Z.Millis.MINUTE,
+        duration: 30 * V.Z.Millis.MINUTE,
         label: () => J.Z.Messages.MUTE_DURATION_30_MINUTES
     },
     {
-        duration: H.Z.Millis.HOUR,
+        duration: V.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_1_HOUR
     },
     {
-        duration: 3 * H.Z.Millis.HOUR,
+        duration: 3 * V.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_3_HOURS
     },
     {
-        duration: 8 * H.Z.Millis.HOUR,
+        duration: 8 * V.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_8_HOURS
     },
     {
-        duration: H.Z.Millis.DAY,
+        duration: V.Z.Millis.DAY,
         label: () => J.Z.Messages.MUTE_DURATION_24_HOURS
     },
     {
@@ -163,21 +163,21 @@ function ei(e, t, n) {
 }
 function ea(e) {
     var t;
-    let { currentUser: H, onClose: z, setPopoutRef: ea } = e,
+    let { currentUser: V, onClose: z, setPopoutRef: ea } = e,
         es = __OVERLAY__,
-        er = (0, v.ZP)(H.id),
+        er = (0, v.ZP)(V.id),
         el = (0, u.O)(),
         { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         ec = (0, C.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
-            userId: H.id
+            userId: V.id
         }),
         { ref: ed } = (0, _.Z)(),
         eu = (0, E.Z)(ed);
     a.useEffect(() => {
         null == ea || ea(ed.current);
     }, [ed, ea]);
-    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(H.id)),
+    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(V.id)),
         eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
         eh = (0, g.p)(),
         em = w.Sb.useSetting(),
@@ -323,10 +323,10 @@ function ea(e) {
             value: ec,
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
-                'aria-label': H.username,
+                'aria-label': V.username,
                 children: (0, i.jsxs)(M.Z, {
                     className: $.themeContainer,
-                    user: H,
+                    user: V,
                     displayProfile: er,
                     profileType: X.y0.BITE_SIZE,
                     children: [
@@ -334,7 +334,7 @@ function ea(e) {
                             (0, i.jsx)(D.Z, {
                                 profileType: X.y0.BITE_SIZE,
                                 children: (0, i.jsx)(j.Z, {
-                                    userId: H.id,
+                                    userId: V.id,
                                     onClose: z
                                 })
                             }),
@@ -342,18 +342,18 @@ function ea(e) {
                             className: ee.header,
                             children: [
                                 (0, i.jsx)(R.Z, {
-                                    user: H,
+                                    user: V,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE
                                 }),
                                 (0, i.jsx)(Z.Z, {
-                                    user: H,
+                                    user: V,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
                                     onOpenProfile: es ? void 0 : ef
                                 }),
                                 (0, i.jsx)(O.Z, {
-                                    user: H,
+                                    user: V,
                                     profileType: X.y0.BITE_SIZE,
                                     onCloseProfile: z
                                 })
@@ -368,10 +368,10 @@ function ea(e) {
                             className: $.body,
                             children: [
                                 (0, i.jsx)(P.Z, {
-                                    user: H,
+                                    user: V,
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
-                                    nickname: F.ZP.getName(null, null, H),
+                                    nickname: F.ZP.getName(null, null, V),
                                     onOpenProfile: es ? void 0 : ef,
                                     pronouns: null == er ? void 0 : er.pronouns,
                                     tags: (0, i.jsx)(L.Z, {
@@ -381,23 +381,23 @@ function ea(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(b.Z, { userId: H.id }),
+                                            (0, i.jsx)(b.Z, { userId: V.id }),
                                             (0, i.jsx)(y.Z, {
-                                                user: H,
+                                                user: V,
                                                 isHovering: eu
                                             })
                                         ]
                                     })
                                 }),
                                 (0, i.jsx)(G.Z, {
-                                    user: H,
+                                    user: V,
                                     bio: null == er ? void 0 : er.bio,
                                     hidePersonalInformation: eE,
                                     onClose: z
                                 }),
                                 (0, i.jsx)(x.Z, {
-                                    user: H,
-                                    currentUser: H,
+                                    user: V,
+                                    currentUser: V,
                                     onClose: z
                                 }),
                                 (0, i.jsxs)('div', {
@@ -406,7 +406,7 @@ function ea(e) {
                                         (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
-                                                id: 'profile-'.concat(H.id),
+                                                id: 'profile-'.concat(V.id),
                                                 children: [
                                                     eS &&
                                                         (0, i.jsxs)(i.Fragment, {
@@ -529,7 +529,7 @@ function ea(e) {
                                         (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
-                                                id: 'account-'.concat(H.id),
+                                                id: 'account-'.concat(V.id),
                                                 children: [
                                                     (0, i.jsx)(K.Mv, {
                                                         id: 'switch-accounts',
@@ -550,7 +550,7 @@ function ea(e) {
                                                         }
                                                     }),
                                                     !__OVERLAY__ &&
-                                                        V.wS &&
+                                                        H.wS &&
                                                         em &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
@@ -561,7 +561,7 @@ function ea(e) {
                                                                     icon: c.IdIcon,
                                                                     label: J.Z.Messages.COPY_ID_USER,
                                                                     onClick: () => {
-                                                                        (0, l.J)(H.id), z();
+                                                                        (0, l.J)(V.id), z();
                                                                     }
                                                                 })
                                                             ]

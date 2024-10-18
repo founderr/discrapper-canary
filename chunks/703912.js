@@ -92,9 +92,9 @@ async function A(e, t, n) {
             throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
     null == n || n(c.application, P, U);
-    let V = T.Hn;
+    let H = T.Hn;
     try {
-        V = r.vB(null != b ? b : 0);
+        H = r.vB(null != b ? b : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(a.Y).includes(c.integration_type) && (l = new Map()).set(c.integration_type, c),
@@ -102,7 +102,7 @@ async function A(e, t, n) {
             clientId: N,
             authorizations: l,
             scopes: w,
-            parsedPermissions: V,
+            parsedPermissions: H,
             responseType: A,
             redirectUri: v,
             codeChallenge: Z,

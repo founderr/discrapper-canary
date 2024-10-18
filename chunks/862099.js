@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     },
     gt: function () {
-        return V;
+        return H;
     }
 }),
     n(47120);
@@ -49,7 +49,7 @@ var i,
     w = n(981631),
     k = n(689938),
     B = n(257956);
-let V = r.memo(function (e) {
+let H = r.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: a, detailsIcon: r, topic: l, onClickCloseIcon: c, onClickTopicText: u, children: _ } = e,
         E = (0, s.jsx)(d.Text, {
             color: 'header-primary',
@@ -125,7 +125,7 @@ let V = r.memo(function (e) {
         ]
     });
 });
-function H(e) {
+function V(e) {
     let { guildEvent: t, channel: n } = e,
         i = (0, c.Wu)(
             [N.ZP],
@@ -137,7 +137,7 @@ function H(e) {
             [n]
         ),
         a = (0, _.KS)(n);
-    return (0, s.jsx)(V, {
+    return (0, s.jsx)(H, {
         onClickCloseIcon: () => (0, R.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
         topic: t.name,
@@ -304,7 +304,7 @@ function z(e) {
         n = (0, y.cS)(t);
     return null == n
         ? null
-        : (0, s.jsx)(V, {
+        : (0, s.jsx)(H, {
               onClickCloseIcon: () => (0, R.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: k.Z.Messages.HAPPENING_NOW,
               topic: t.name,
@@ -351,7 +351,7 @@ function q(e) {
         i = (0, c.Wu)([p.Z], () => [...new Set(p.Z.getMutableParticipants(n.id, g.pV.SPEAKER).map((e) => e.user))], [n.id]),
         a = (0, c.e7)([p.Z], () => p.Z.getParticipantCount(n.id, g.pV.AUDIENCE), [n.id]),
         r = k.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(a) });
-    return (0, s.jsx)(V, {
+    return (0, s.jsx)(H, {
         onClickCloseIcon: () => (0, R.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
         location: n.name,
@@ -466,7 +466,7 @@ function Q(e) {
                 ? (u = (0, s.jsx)(z, { guildEvent: a }))
                 : a.entity_type === G.WX.VOICE &&
                   null != i &&
-                  (u = (0, s.jsx)(H, {
+                  (u = (0, s.jsx)(V, {
                       guildEvent: a,
                       channel: i
                   }));

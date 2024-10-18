@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     V: function () {
         return d;
     },
@@ -9,17 +9,17 @@ t.d(e, {
 var l = t(735250);
 t(470079);
 var i = t(628028),
-    o = t(220427),
-    r = t(777207),
+    r = t(220427),
+    o = t(777207),
     a = t(692547),
     s = t(330711),
     u = t(350727);
-function c(n) {
-    let { type: e } = n;
+function c(e) {
+    let { type: n } = e;
     return (0, l.jsx)(d, {
         icon:
-            'user' === e
-                ? (0, l.jsx)(o.t, {
+            'user' === n
+                ? (0, l.jsx)(r.t, {
                       size: 'xxs',
                       color: a.Z.colors.INTERACTIVE_NORMAL
                   })
@@ -27,16 +27,16 @@ function c(n) {
                       size: 'xxs',
                       color: a.Z.colors.INTERACTIVE_NORMAL
                   }),
-        text: 'user' === e ? s.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : s.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+        text: 'user' === n ? s.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : s.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
     });
 }
-function d(n) {
-    let { icon: e, text: t } = n;
+function d(e) {
+    let { icon: n, text: t } = e;
     return (0, l.jsxs)('div', {
         className: u.container,
         children: [
-            e,
-            (0, l.jsx)(r.x, {
+            n,
+            (0, l.jsx)(o.x, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
                 children: t

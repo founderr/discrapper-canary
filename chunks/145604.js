@@ -44,8 +44,8 @@ var i = n(735250),
     w = n(808506),
     k = n(626135),
     B = n(630388),
-    V = n(823379),
-    H = n(998502),
+    H = n(823379),
+    V = n(998502),
     F = n(981631),
     Y = n(987650);
 class z extends a.PureComponent {
@@ -112,7 +112,7 @@ class z extends a.PureComponent {
             if (
                 (setTimeout(() => {
                     var t;
-                    let n = H.ZP.GetWindowFullscreenTypeByPid(L.pid, L.name, L.fullscreenType),
+                    let n = V.ZP.GetWindowFullscreenTypeByPid(L.pid, L.name, L.fullscreenType),
                         { gameName: i, gameId: r, exe: _, distributor: E } = (0, I.G8)(L);
                     k.default.track(F.rMx.LAUNCH_GAME, {
                         game: i,
@@ -150,7 +150,7 @@ class z extends a.PureComponent {
         }
         if ((e.videoEnabled !== T || e.isScreenSharing !== C) && null != a) {
             let e = 'none',
-                t = [C ? 'screen' : null, T ? 'camera' : null].filter(V.lm),
+                t = [C ? 'screen' : null, T ? 'camera' : null].filter(H.lm),
                 n = null;
             C ? ((e = 'screen'), (n = (0, E.t)())) : T && (e = 'camera'),
                 k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {

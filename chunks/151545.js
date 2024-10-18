@@ -63,8 +63,8 @@ function A(e) {
     )
         return null;
     if ((0, o.Z)(A))
-        return D && !y
-            ? (0, r.jsx)(S.Z, {
+        return !D || y || t.bot
+            ? (0, r.jsx)(T.Z, {
                   user: t,
                   currentUser: n,
                   activity: A,
@@ -73,7 +73,7 @@ function A(e) {
                   className: N,
                   onClose: R
               })
-            : (0, r.jsx)(T.Z, {
+            : (0, r.jsx)(S.Z, {
                   user: t,
                   currentUser: n,
                   activity: A,
@@ -82,8 +82,8 @@ function A(e) {
                   className: N,
                   onClose: R
               });
-    return D && !y
-        ? (0, r.jsx)(m.Z, {
+    return !D || y || t.bot
+        ? (0, r.jsx)(I.Z, {
               user: t,
               currentUser: n,
               activity: A,
@@ -93,7 +93,7 @@ function A(e) {
               className: N,
               onClose: R
           })
-        : (0, r.jsx)(I.Z, {
+        : (0, r.jsx)(m.Z, {
               user: t,
               currentUser: n,
               activity: A,

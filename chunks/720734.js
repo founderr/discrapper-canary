@@ -44,8 +44,8 @@ var i = n(735250),
     w = n(258609),
     k = n(443669),
     B = n(332473),
-    V = n(240504),
-    H = n(637906),
+    H = n(240504),
+    V = n(637906),
     F = n(39370),
     Y = n(19199),
     z = n(111653),
@@ -523,9 +523,9 @@ function eb() {
     let q = (0, l.e7)([Q.Z], () => Q.Z.hasHadOtherUserPlaySoundInSession()),
         X = (function () {
             let e = (0, U.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-                [t, n] = (0, l.Wu)([V.Z], () => [V.Z.hasFetchedRelevance, V.Z.profileThemesRelevanceExceeded]),
+                [t, n] = (0, l.Wu)([H.Z], () => [H.Z.hasFetchedRelevance, H.Z.profileThemesRelevanceExceeded]),
                 [i, s] = (0, l.Wu)([ed.ZP], () => [ed.ZP.hasFetchedMostRecentPremiumTypeSubscription(), ed.ZP.getMostRecentPremiumTypeSubscription()]),
-                { enabled: r } = H.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
+                { enabled: r } = V.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
                     return null != s && (s.status === eC.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eR);

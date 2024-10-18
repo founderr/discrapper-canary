@@ -9,10 +9,10 @@ n.d(t, {
         return L;
     },
     c2: function () {
-        return b;
+        return P;
     },
     kN: function () {
-        return P;
+        return b;
     }
 }),
     n(47120),
@@ -180,7 +180,7 @@ function Z(e) {
         hasError: h
     };
 }
-function b() {
+function P() {
     let { search: e } = (0, l.TH)(),
         t = (0, m.iN)('GlobalDiscovery'),
         { game: n } = t ? r.parse(e.slice(1)) : {},
@@ -214,7 +214,7 @@ function b() {
                     : (A.GN.getState().setSelectedGames([n]), A.GN.setState({ entrypointGameId: n }));
         }, [a, n, t]);
 }
-function P(e, t) {
+function b(e, t) {
     var n;
     let { data: a, isLoading: s } = (0, E.IX)(e),
         r = (0, u.e7)([T.Z], () => (null != e ? T.Z.getGame(e) : null)),

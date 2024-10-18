@@ -106,15 +106,15 @@ function v(e) {
             )),
         { isTruncated: v, ExpandableTextContainer: M } = (0, p.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [Z, b] = a.useState(1),
-        P = (0, c.Z)('(max-width: 1439px)'),
+        [Z, P] = a.useState(1),
+        b = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: D, isPhantomPreview: j } = (0, C.m)(),
         U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(M, {
-                          lineClamp: P || 2 === Z ? 2 : 3,
+                          lineClamp: b || 2 === Z ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -153,7 +153,7 @@ function v(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && b(2);
+                                    null != e && e.clientHeight > 30 && P(2);
                                 },
                                 children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',

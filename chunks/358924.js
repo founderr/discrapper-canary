@@ -38,8 +38,8 @@ var i,
     w = n(823379),
     k = n(51144),
     B = n(599706),
-    V = n(981631),
-    H = n(689938),
+    H = n(981631),
+    V = n(689938),
     F = n(534255);
 let Y = {
         SMALL: 64,
@@ -131,7 +131,7 @@ class X extends r.Component {
                               })
                           }),
                     (0, s.jsxs)('div', {
-                        children: [W(null != a && '' !== a ? a : H.Z.Messages.USER_ACTIVITY_HEADER_PLAYING), null != r ? K(r) : null, this.renderTimePlayed()]
+                        children: [W(null != a && '' !== a ? a : V.Z.Messages.USER_ACTIVITY_HEADER_PLAYING), null != r ? K(r) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -315,7 +315,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, s.jsxs)('div', {
-                        children: [W(n), K(H.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))]
+                        children: [W(n), K(V.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))]
                     }),
                     (0, s.jsx)(B.Z, {
                         partySize: i,
@@ -335,7 +335,7 @@ let ee = (e) => {
                     (0, s.jsx)(U.Z, { className: F.xboxSectionIcon }),
                     (0, s.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [W(t), K(H.Z.Messages.GAME_FEED_ACTIVITY_PLAYING_XBOX)]
+                        children: [W(t), K(V.Z.Messages.GAME_FEED_ACTIVITY_PLAYING_XBOX)]
                     })
                 ]
             })
@@ -422,7 +422,7 @@ let ee = (e) => {
                     children: [
                         (0, s.jsx)('img', {
                             alt: '',
-                            src: h.Z.get(V.ABu.TWITCH).icon.lightSVG,
+                            src: h.Z.get(H.ABu.TWITCH).icon.lightSVG,
                             className: F.twitchSectionIcon
                         }),
                         (0, s.jsxs)('div', {
@@ -463,7 +463,7 @@ let ee = (e) => {
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(Q, {
             children: [
                 (0, s.jsxs)('div', {
@@ -568,7 +568,7 @@ let ee = (e) => {
                                                     analyticsLocations: I
                                                 });
                                         },
-                                        children: H.Z.Messages.JOIN
+                                        children: V.Z.Messages.JOIN
                                     })
                                 })
                             ]

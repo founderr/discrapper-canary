@@ -33,8 +33,8 @@ var i = n(735250),
     M = n(900849),
     L = n(506071),
     Z = n(495114),
-    b = n(170140),
-    P = n(981631),
+    P = n(170140),
+    b = n(981631),
     D = n(959517),
     j = n(689938),
     U = n(519644),
@@ -42,7 +42,7 @@ var i = n(735250),
 function B(e) {
     var t, n, s;
     let { embedUrl: l, message: B, channel: k } = e,
-        G = (0, b.J)(l, B),
+        G = (0, P.J)(l, B),
         { setPopout: F } = (0, g.Z)(B.id, D.d$),
         w = (0, C.qo)(B, k, F, !0),
         V = x.QK.useSetting(),
@@ -74,13 +74,13 @@ function B(e) {
         }, [W]),
         er = a.useCallback(async () => {
             null != G &&
-                ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                ((0, m.yw)(b.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: G.threadId,
                     channel_id: k.id,
                     can_access: G.canAccess,
                     is_member: Q
                 }),
-                G.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await M.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+                G.canAccess ? (0, N.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await M.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
         }, [G, k, Q]),
         el = a.useCallback(
             () => (

@@ -240,7 +240,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        V = (0, c.useSpring)(
+        H = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
@@ -249,7 +249,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        H = (0, c.useSpring)(
+        V = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
@@ -336,7 +336,7 @@ t.Z = a.memo(function (e) {
                     (0, i.jsx)(l.animated.div, {
                         className: L.clanCardInnerContainer,
                         style: {
-                            ...V,
+                            ...H,
                             ...k
                         },
                         children: (0, i.jsx)(f.xV, {
@@ -366,7 +366,7 @@ t.Z = a.memo(function (e) {
                     (0, i.jsx)(l.animated.div, {
                         className: L.clanCardInnerContainer,
                         style: {
-                            ...H,
+                            ...V,
                             ...k
                         },
                         children: (0, i.jsx)(f.xV, {

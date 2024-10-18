@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return b;
     }
 }),
     n(47120),
@@ -35,10 +35,10 @@ var a = n(613828),
     M = n(981631),
     L = n(689938),
     Z = n(896219);
-let b = (0, p.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function P(e) {
+let P = (0, p.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function b(e) {
     var t, n, r, p;
-    let { applicationId: P, message: D } = e,
+    let { applicationId: b, message: D } = e,
         { analyticsLocations: j } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
         y = D.channel_id,
@@ -46,15 +46,15 @@ function P(e) {
         k = null == B ? void 0 : B.guild_id,
         G = null != B && (B.isGuildVoice() || B.isPrivate()),
         F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == F ? void 0 : F.applicationId) === P,
-        [V] = (0, E.Z)([P, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        w = (null == F ? void 0 : F.applicationId) === b,
+        [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
-        [Y] = (0, s.Wu)([C.ZP], () => (G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === P) : []), [P, y, G]),
+        [Y] = (0, s.Wu)([C.ZP], () => (G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
         W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
         z = (0, s.Wu)([f.default], () => W.map((e) => f.default.getUser(e)).filter(N.lm), [W]),
         K = (0, x.Z)({
-            applicationId: P,
-            size: b,
+            applicationId: b,
+            size: P,
             names: ['embedded_cover']
         }),
         X = I.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT),
@@ -72,7 +72,7 @@ function P(e) {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
                             await (0, S.Z)({
-                                targetApplicationId: P,
+                                targetApplicationId: b,
                                 channelId: y,
                                 analyticsLocations: j,
                                 commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
@@ -92,7 +92,7 @@ function P(e) {
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: X,
-                    initialSelectedApplicationId: P,
+                    initialSelectedApplicationId: b,
                     initialSlide: v.ag.SELECT_CHANNEL,
                     analyticsLocations: j
                 });
@@ -128,7 +128,7 @@ function P(e) {
                                   className: Z.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(a.rU, {
-                                      to: M.Z5c.ACTIVITY_DETAILS(P),
+                                      to: M.Z5c.ACTIVITY_DETAILS(b),
                                       children: L.Z.Messages.LEARN_MORE
                                   })
                               }),

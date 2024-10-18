@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     u: function () {
         return u;
     }
@@ -6,16 +6,16 @@ t.d(e, {
 var l = t(735250);
 t(470079);
 var i = t(409794),
-    o = t(777207),
-    r = t(541822),
+    r = t(777207),
+    o = t(541822),
     a = t(330711),
     s = t(770561);
-function u(n) {
-    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = n,
-        v = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
+function u(e) {
+    let { benefits: n, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = e,
+        m = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
     return (0, l.jsx)('div', {
         className: s.container,
-        children: (0, l.jsx)(r.Z, {
+        children: (0, l.jsx)(o.Z, {
             className: s.scroller,
             children: (0, l.jsxs)('div', {
                 className: s.scrollContent,
@@ -25,7 +25,7 @@ function u(n) {
                         children: [
                             (0, l.jsx)('div', {
                                 className: s.headerBackground,
-                                style: v
+                                style: m
                             }),
                             (0, l.jsx)('div', {
                                 className: s.headerImage,
@@ -58,7 +58,7 @@ function u(n) {
                                     }),
                                     null != t &&
                                         '' !== t &&
-                                        (0, l.jsx)(o.x, {
+                                        (0, l.jsx)(r.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
                                             className: s.description,
@@ -66,16 +66,16 @@ function u(n) {
                                         })
                                 ]
                             }),
-                            null != e &&
+                            null != n &&
                                 (0, l.jsxs)('div', {
                                     className: s.benefits,
                                     children: [
-                                        (0, l.jsx)(o.x, {
+                                        (0, l.jsx)(r.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
                                             children: a.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                         }),
-                                        e
+                                        n
                                     ]
                                 })
                         ]

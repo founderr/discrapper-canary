@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return P;
     }
 }),
     n(411104),
@@ -207,7 +207,7 @@ class Z extends (a = l.Component) {
             });
     }
 }
-function b(e) {
+function P(e) {
     let { libraryApplication: t } = e,
         n = (0, _.O)(),
         [i, a] = (0, o.Wu)([h.Z, N.Z], () => [(0, T.i)(t, h.Z, N.Z), h.Z.getState(t.id, t.branchId)], [t]),

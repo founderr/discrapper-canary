@@ -68,7 +68,7 @@ function Z(e) {
         })
     });
 }
-function b(e) {
+function P(e) {
     let { item: t } = e,
         n = M,
         a = R.Z.Messages.NOTIFICATION_CENTER_TODO;
@@ -92,7 +92,7 @@ function b(e) {
         })
     );
 }
-let P = a.memo(function (e) {
+let b = a.memo(function (e) {
         var t;
         let { item: r, ackedBeforeId: d } = e,
             { analyticsLocations: _ } = (0, l.ZP)(),
@@ -138,14 +138,14 @@ let P = a.memo(function (e) {
             v = null;
         r.type === h.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (v = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
         let M = null != r.local_id,
-            P = (0, p.Z)(r);
+            b = (0, p.Z)(r);
         return (0, i.jsxs)('div', {
             className: O.row,
             children: [
                 (0, i.jsxs)(s.ClickableContainer, {
                     className: O.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': P,
+                    'aria-label': b,
                     onClick: R,
                     children: [
                         E ? null : (0, i.jsx)('div', { className: O.unread }),
@@ -153,11 +153,11 @@ let P = a.memo(function (e) {
                         (0, i.jsxs)('div', {
                             className: O.body,
                             children: [
-                                'lifecycle_item' === r.type && null != r.item_enum && (0, i.jsx)(b, { item: r }),
+                                'lifecycle_item' === r.type && null != r.item_enum && (0, i.jsx)(P, { item: r }),
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: E ? 'text-muted' : 'text-normal',
-                                    children: 'string' != typeof P ? P : c.Z.parse(P)
+                                    children: 'string' != typeof b ? b : c.Z.parse(b)
                                 }),
                                 (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, { item: r }) : null,
                                 null != r.callout ? (0, i.jsx)(Z, { item: r }) : null,
@@ -181,7 +181,7 @@ let P = a.memo(function (e) {
         return (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(
-                    P,
+                    b,
                     {
                         item: e,
                         ackedBeforeId: n

@@ -34,9 +34,9 @@ function R(e) {
         M = (0, l.O)(),
         L = (0, s.e7)([h.Z], () => h.Z.getChannel(R)),
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : R,
-        b = (0, s.e7)([f.default], () => f.default.getId()),
+        P = (0, s.e7)([f.default], () => f.default.getId()),
         {
-            embeddedActivity: P,
+            embeddedActivity: b,
             currentEmbeddedActivity: D,
             activityLaunchState: j
         } = (0, s.cj)([o.ZP], () => ({
@@ -46,13 +46,13 @@ function R(e) {
         })),
         U = (0, s.Wu)([p.default], () => {
             var e;
-            return Array.from(null !== (e = null == P ? void 0 : P.userIds) && void 0 !== e ? e : [])
+            return Array.from(null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e ? e : [])
                 .map((e) => p.default.getUser(e))
                 .filter(C.lm);
         }),
         y = (0, s.e7)([N.Z], () => {
             var e;
-            let t = null == P ? void 0 : P.userIds.values().next().value;
+            let t = null == b ? void 0 : b.userIds.values().next().value;
             return null == t ? null : null === (e = N.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = a.useMemo(() => {
@@ -60,13 +60,13 @@ function R(e) {
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = S.wT), e;
         }, [n]),
         k = (0, d.s5)({
-            userId: b,
+            userId: P,
             channelId: R,
             application: B
         }),
-        G = null == P,
+        G = null == b,
         F = (0, g.NL)({
-            embeddedActivity: P,
+            embeddedActivity: b,
             joinability: k,
             currentEmbeddedActivity: D,
             channel: L
@@ -84,7 +84,7 @@ function R(e) {
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
-                      applicationId: P.applicationId,
+                      applicationId: b.applicationId,
                       activityChannelId: R,
                       locationObject: M.location,
                       analyticsLocations: v,

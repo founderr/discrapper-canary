@@ -48,7 +48,7 @@ function A() {
             },
             [D, M, L]
         ),
-        V = a.useMemo(
+        H = a.useMemo(
             () =>
                 D
                     ? v.filter((e) => {
@@ -58,14 +58,14 @@ function A() {
                     : v,
             [v, D]
         ),
-        H = a.useRef(new E.Z(R)),
+        V = a.useRef(new E.Z(R)),
         { onGuildCardSeen: F, onGuildCardClick: Y } = (0, m.H)({
-            guildDiscoveryCardSeenManager: H.current,
+            guildDiscoveryCardSeenManager: V.current,
             loadId: e.current
         });
     return (
         a.useEffect(() => {
-            H.current.flushSeenGuilds(e.current);
+            V.current.flushSeenGuilds(e.current);
         }, [R]),
         a.useEffect(() => {
             A();
@@ -87,7 +87,7 @@ function A() {
                         !D &&
                             (0, i.jsx)(d.Z, {
                                 className: w,
-                                tabs: V,
+                                tabs: H,
                                 selectedTab: D ? null : Z,
                                 onTabSelect: B,
                                 onAvailableWidthChange: j

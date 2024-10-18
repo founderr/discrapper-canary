@@ -38,8 +38,8 @@ var i = n(735250),
     w = n(408026),
     k = n(763916),
     B = n(306721),
-    V = n(531551),
-    H = n(38618),
+    H = n(531551),
+    V = n(38618),
     F = n(972830),
     Y = n(981283),
     z = n(584233),
@@ -92,8 +92,8 @@ var i = n(735250),
     ew = n(819640),
     ek = n(283595),
     eB = n(944486),
-    eV = n(914010),
-    eH = n(695103),
+    eH = n(914010),
+    eV = n(695103),
     eF = n(241890),
     eY = n(897607),
     ez = n(417363),
@@ -137,8 +137,8 @@ let e1 = !1;
                 }
             });
         }));
-let e4 = l.ZP.connectStores([H.Z, eU.Z, eD.default], () => ({
-        isConnected: H.Z.isConnected(),
+let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
+        isConnected: V.Z.isConnected(),
         defaultRoute: eU.Z.defaultRoute,
         defaultRouteFallback: eU.Z.fallbackRoute,
         token: eD.default.getToken()
@@ -228,7 +228,7 @@ let e9 = [
                                 break;
                             }
                             case 'test-mode':
-                                eH.Z.whenInitialized(() => E.Wt(n));
+                                eV.Z.whenInitialized(() => E.Wt(n));
                                 break;
                             case 'uninstall': {
                                 let e = ek.Z.getActiveLibraryApplication(n);
@@ -375,7 +375,7 @@ function e6(e) {
 }
 function e8(e) {
     let { channelId: t, guildId: n, pathname: i } = e;
-    if (!H.Z.isConnected()) return;
+    if (!V.Z.isConnected()) return;
     let { location: a } = (0, eI.s1)();
     if (a.pathname === i) null == ej.Z.getChannel(t) ? (0, eI.dL)(eX.Z5c.CHANNEL(n)) : (0, eI.dL)(i);
 }
@@ -391,7 +391,7 @@ class te extends a.PureComponent {
             eu.Z.initialize(),
             $.Z.initialize(),
             I.Z.init(),
-            V.Z.init(),
+            H.Z.init(),
             B.Z.init(),
             ea.Z.initialize(),
             f.Z.initialize(),
@@ -446,7 +446,7 @@ class te extends a.PureComponent {
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
         !(function (e) {
-            if (H.Z.isConnected() || H.Z.isTryingToConnect()) return;
+            if (V.Z.isConnected() || V.Z.isTryingToConnect()) return;
             let t = eD.default.getToken();
             if (null != t)
                 null !=
@@ -466,7 +466,7 @@ class te extends a.PureComponent {
                     c = (0, em.Ss)(i),
                     d = (0, em.cq)(a),
                     E = (0, em.cq)(o),
-                    h = eV.Z.getGuildId(),
+                    h = eH.Z.getGuildId(),
                     m = h !== i;
                 if ((c && m && u.Z.selectGuild(i), c && d)) {
                     let n = eB.Z.getChannelId(h),
@@ -519,7 +519,7 @@ class te extends a.PureComponent {
             })(t, n);
     }
     ensureChannelMatchesGuild(e) {
-        if (!H.Z.isConnected()) return null;
+        if (!V.Z.isConnected()) return null;
         let { pathname: t } = e,
             n = e6(t);
         if (null == n) return null;

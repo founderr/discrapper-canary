@@ -58,13 +58,13 @@ function x(e) {
         [U, G] = a.useState(!0),
         w = a.useRef(U),
         [k, B] = a.useState(3),
-        V = a.useRef(k),
-        H = a.useRef(null),
+        H = a.useRef(k),
+        V = a.useRef(null),
         F = a.useCallback(
             (e) => {
                 var t;
                 if (M) return;
-                let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
+                let n = null === (t = V.current) || void 0 === t ? void 0 : t.getScrollerState();
                 null != n && null != e && n.scrollHeight < e.height && x();
             },
             [M, x]
@@ -76,7 +76,7 @@ function x(e) {
             n < 1024 && w.current ? ((w.current = !1), G(!1)) : n > 1024 && !w.current && ((w.current = !0), G(!0));
             let i = 1;
             for (n -= U ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
-            i !== V.current && ((V.current = i), B(i)), F(t);
+            i !== H.current && ((H.current = i), B(i)), F(t);
         });
     a.useLayoutEffect(() => {
         var e;
@@ -167,7 +167,7 @@ function x(e) {
             async (e, t, n, i) => {
                 var a, r;
                 await s(e, t, n, i);
-                let l = null === (r = H.current) || void 0 === r ? void 0 : null === (a = r.getScrollerState()) || void 0 === a ? void 0 : a.scrollTop;
+                let l = null === (r = V.current) || void 0 === r ? void 0 : null === (a = r.getScrollerState()) || void 0 === a ? void 0 : a.scrollTop;
                 null != l && (0, p.LD)({ scrollPosition: l });
             },
             [s]
@@ -194,7 +194,7 @@ function x(e) {
             [o, J, z, b]
         );
     a.useEffect(() => {
-        let e = H.current;
+        let e = V.current;
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
@@ -206,7 +206,7 @@ function x(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null === (t = H.current) ||
+                    null === (t = V.current) ||
                         void 0 === t ||
                         t.scrollTo({
                             to: e,
@@ -222,7 +222,7 @@ function x(e) {
                 return (0, l.debounce)(
                     () => {
                         var e;
-                        let t = null === (e = H.current) || void 0 === e ? void 0 : e.getScrollerState();
+                        let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
                         t.scrollHeight - n < 300 && x();
@@ -241,7 +241,7 @@ function x(e) {
                 query: A
             }),
             (0, i.jsx)(c.MasonryList, {
-                ref: H,
+                ref: V,
                 className: v.masonryList,
                 sections: W,
                 columns: k,

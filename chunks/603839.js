@@ -79,7 +79,7 @@ function v(e) {
             leave: { opacity: 0 },
             config: A
         }),
-        V = a.useCallback(
+        H = a.useCallback(
             (e) => {
                 if (e === R.length) D(0), (0, h.Lp)(t, 'signature');
                 else if (0 === P) D(1);
@@ -100,7 +100,7 @@ function v(e) {
             let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [P, y]);
-    let H = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
+    let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
         F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, f.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
@@ -187,7 +187,7 @@ function v(e) {
                                     children: (0, i.jsx)(g.Z, {
                                         steps: R,
                                         progress: v,
-                                        updateCurrentStep: V,
+                                        updateCurrentStep: H,
                                         animationStyle: G,
                                         animationClassName: r()({ [N.hidden]: !y })
                                     })
@@ -233,7 +233,7 @@ function v(e) {
                                     (0, i.jsx)(p.Z, {
                                         ...e,
                                         themeColor: v.brandPrimaryColor,
-                                        disabled: !O || H,
+                                        disabled: !O || V,
                                         submitting: L,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

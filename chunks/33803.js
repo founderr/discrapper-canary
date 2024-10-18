@@ -32,8 +32,8 @@ var i = n(735250),
     M = n(779125),
     L = n(890410),
     Z = n(464891),
-    b = n(507418),
-    P = n(348238),
+    P = n(507418),
+    b = n(348238),
     D = n(38267),
     j = n(83561),
     U = n(834129),
@@ -46,10 +46,10 @@ var i = n(735250),
 function V(e, t) {
     let { popouts: n, selected: i, setPopout: s } = (0, D.Z)(e.id, y.d$),
         { usernameProfile: r, avatarProfile: l } = n,
-        o = (0, P.wq)(e.author.id, t.id),
-        c = (0, P.RN)(e.author.id, t.id, e.id),
-        u = (0, P.XO)(e, t, r, s),
-        d = (0, P.R9)(l, s);
+        o = (0, b.wq)(e.author.id, t.id),
+        c = (0, b.RN)(e.author.id, t.id, e.id),
+        u = (0, b.XO)(e, t, r, s),
+        d = (0, b.R9)(l, s);
     return {
         selected: i,
         onContextMenu: o,
@@ -65,7 +65,7 @@ function V(e, t) {
                 }),
             [s]
         ),
-        renderPopout: b.Z,
+        renderPopout: P.Z,
         showAvatarPopout: l,
         showUsernamePopout: r
     };
@@ -249,7 +249,7 @@ function J(e) {
             eventHandlers: { onMouseEnter: A, onMouseLeave: x }
         } = (0, j.m)(!0),
         { onFocus: R, ...v } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: M, handleFocus: b, handleBlur: D } = (0, P.bb)(R),
+        { isFocused: M, handleFocus: P, handleBlur: D } = (0, b.bb)(R),
         y = (0, d.e7)([I.Z], () => I.Z.keyboardModeEnabled),
         H = (0, d.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
         { ruleName: z, embedChannel: K, decisionId: J, keywordMatchedContent: q, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, f.ZP)(l),
@@ -406,7 +406,7 @@ function J(e) {
                             }),
                             popoutProps: ec,
                             zalgo: !0,
-                            onFocus: b,
+                            onFocus: P,
                             onBlur: D,
                             onClick: ed
                         })

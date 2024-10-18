@@ -42,8 +42,8 @@ var i,
     M = n(703751),
     L = n(761538),
     Z = n(674611),
-    b = n(346610),
-    P = n(868643),
+    P = n(346610),
+    b = n(868643),
     D = n(294734),
     j = n(426275),
     U = n(947849),
@@ -96,8 +96,8 @@ var i,
     eM = n(432376),
     eL = n(384203),
     eZ = n(633957),
-    eb = n(530472),
-    eP = n(29909),
+    eP = n(530472),
+    eb = n(29909),
     eD = n(782658),
     ej = n(219797),
     eU = n(453687),
@@ -151,7 +151,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
         let i = null != t ? t : n;
         if (null == i) return null;
         let { url: s, proxyURL: r, width: l, height: o } = i;
-        return (0, a.jsx)(eP.Z, {
+        return (0, a.jsx)(eb.Z, {
             width: l,
             height: o,
             src: null != r && '' !== r ? r : s,
@@ -163,7 +163,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
     e7 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: s } = e;
         return null != i && null != s && Q.uo.test(n)
-            ? (0, a.jsx)(eP.Z, {
+            ? (0, a.jsx)(eb.Z, {
                   width: i,
                   height: s,
                   src: n,
@@ -509,7 +509,7 @@ class e3 extends (i = s.Component) {
     }
     renderEphemeralAccessories(e) {
         return (0, ex.Pv)(e)
-            ? (0, a.jsx)(eb.Z, {
+            ? (0, a.jsx)(eP.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       E.Z.dismissAutomatedMessage(e);
@@ -842,8 +842,8 @@ function e2(e) {
         D = (0, ee.Z)(i),
         j = (0, v.V)(n.id, i.author.id),
         U = (0, M.r)(i.id),
-        { hasInlineForwardButton: k } = (0, b.yk)({ location: 'MessageAccessories' }),
-        G = (0, P.a)(i) && k;
+        { hasInlineForwardButton: k } = (0, P.yk)({ location: 'MessageAccessories' }),
+        G = (0, b.a)(i) && k;
     return (0, a.jsx)(e3, {
         canSuppressEmbeds: S,
         canDeleteAttachments: A,

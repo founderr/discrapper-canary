@@ -59,14 +59,14 @@ function v(e) {
         })),
         M = (0, u.Z)(C),
         Z = (0, u.Z)(R),
-        P = (0, u.Z)(v);
+        b = (0, u.Z)(v);
     a.useEffect(() => {
         if (!f.Z.hasLoadedEver) {
             O(E, !0);
             return;
         }
-        ((null != M && C !== M) || (null != Z && R !== Z) || (null != P && v !== P)) && O(E, !0);
-    }, [M, C, Z, R, P, v, E, !0]);
+        ((null != M && C !== M) || (null != Z && R !== Z) || (null != b && v !== b)) && O(E, !0);
+    }, [M, C, Z, R, b, v, E, !0]);
     a.useEffect(() => {
         (null == m ? void 0 : m.some(d.k5)) && (o.Z.clearMentions(), O(E, !0));
     }, []),
@@ -106,7 +106,7 @@ function v(e) {
             },
             canCloseAllMessages: !0,
             renderHeader: D,
-            renderEmptyState: b,
+            renderEmptyState: P,
             renderMessage: L,
             'aria-label': A.Z.Messages.RECENT_MENTIONS,
             listName: 'recents'
@@ -191,7 +191,7 @@ function Z(e) {
         ]
     });
 }
-function b(e) {
+function P(e) {
     return (0, i.jsx)(C.Z, {
         Icon: l.AtIcon,
         header: A.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

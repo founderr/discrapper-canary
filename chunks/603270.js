@@ -34,7 +34,7 @@ var i = n(735250),
     R = n(272242),
     O = n(689938),
     v = n(738571);
-let M = b(function (e) {
+let M = P(function (e) {
         let { appId: t, message: o } = e,
             d = (0, S.R)(t),
             [_, I, T, f, N, g, A] = (0, s.Wu)(
@@ -53,7 +53,7 @@ let M = b(function (e) {
         }, [_, t, T, I, N]);
         let M = f.subscriptions.length,
             L = f.otps.length,
-            b = a.useMemo(
+            P = a.useMemo(
                 () =>
                     M > 0 && L > 0
                         ? O.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
@@ -68,7 +68,7 @@ let M = b(function (e) {
                 [L, M]
             );
         if (!d || null == _) return null;
-        let P = () => {
+        let b = () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -83,14 +83,14 @@ let M = b(function (e) {
         return (0, i.jsx)(Z, {
             appName: _.name,
             title: O.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
-            description: b,
+            description: P,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, R.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, C.X)(t, C.B.STORE_EMBED);
             },
             iconSrc: A,
             onIconClick: () => {
-                P(),
+                b(),
                     h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
@@ -98,7 +98,7 @@ let M = b(function (e) {
             },
             children: (0, i.jsx)(r.Button, {
                 onClick: () => {
-                    P(),
+                    b(),
                         h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
@@ -109,10 +109,10 @@ let M = b(function (e) {
             })
         });
     }),
-    L = b(function (e) {
+    L = P(function (e) {
         var t, l;
         let { skuId: u, message: m } = e,
-            [N, g, M, L, b, P, D, j] = (0, s.Wu)(
+            [N, g, M, L, P, b, D, j] = (0, s.Wu)(
                 [T.Z, f.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -128,8 +128,8 @@ let M = b(function (e) {
             ),
             U = (0, S.R)(null !== (l = null == g ? void 0 : g.id) && void 0 !== l ? l : '');
         a.useEffect(() => {
-            null == N && !L && !b && (0, o.km)(u);
-        }, [b, L, N, u]),
+            null == N && !L && !P && (0, o.km)(u);
+        }, [P, L, N, u]),
             a.useEffect(() => {
                 if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
             }, [null == g ? void 0 : g.id]);
@@ -254,7 +254,7 @@ let M = b(function (e) {
                         children: O.Z.Messages.STOREFRONT_DETAILS
                     }),
                     G
-                        ? null != P
+                        ? null != b
                             ? (0, i.jsx)(A.p, {
                                   onClick: B,
                                   appId: g.id,
@@ -265,7 +265,7 @@ let M = b(function (e) {
                                       color: 'currentcolor'
                                   }),
                                   onHasClicked: Y,
-                                  subscriptionPlan: P,
+                                  subscriptionPlan: b,
                                   cannotOpenReason: k
                               })
                             : (0, i.jsx)(r.Button, {
@@ -360,7 +360,7 @@ function Z(e) {
         ]
     });
 }
-function b(e) {
+function P(e) {
     return (t) => {
         let { enabled: n } = g.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;

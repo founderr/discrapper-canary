@@ -84,7 +84,7 @@ function v(e) {
         M = !1,
         L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'),
         Z = null !== (n = null === (t = N.default.getUser(f.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
-        b = [];
+        P = [];
     if (!a.collapsed) {
         let e = null,
             t = null,
@@ -93,7 +93,7 @@ function v(e) {
             if (!(0, d.Z)(n, R)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, p.vc)(n.timestamp, 'LL');
-                    b.push(
+                    P.push(
                         (0, i.jsx)(
                             I.Z,
                             {
@@ -108,7 +108,7 @@ function v(e) {
                 let a = null == t || (0, _.Z)(s, t, n);
                 (t = n),
                     (M = M || (0, E.DQ)(n)),
-                    b.push(
+                    P.push(
                         (0, i.jsx)(
                             O,
                             {
@@ -125,7 +125,7 @@ function v(e) {
             }
         }),
             a.messages.length >= g.hC &&
-                b.push(
+                P.push(
                     (0, i.jsxs)(
                         c.Button,
                         {
@@ -137,13 +137,13 @@ function v(e) {
                         'view-all'
                     )
                 ),
-            0 === b.length && (b = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
+            0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
         M && v && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: x.messages,
-            children: b
+            children: P
         })
     );
 }

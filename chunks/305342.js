@@ -33,7 +33,7 @@ var i = n(735250),
     M = n(981631),
     L = n(689938),
     Z = n(367993);
-let b = (e) => {
+let P = (e) => {
         let { benefits: t, header: n, guildId: s } = e,
             [r, l] = a.useState(!1),
             c = r ? t : t.slice(0, 5),
@@ -83,7 +83,7 @@ let b = (e) => {
                   ]
               });
     },
-    P = (e) => {
+    b = (e) => {
         let { guildId: t, listingId: n } = e,
             a = (0, N.Z)(t),
             [s] = T.XZ(n, t),
@@ -164,17 +164,17 @@ let b = (e) => {
                                   })
                               ]
                           }),
-                      (0, i.jsx)(b, {
+                      (0, i.jsx)(P, {
                           header: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
                           benefits: c,
                           guildId: n
                       }),
-                      (0, i.jsx)(b, {
+                      (0, i.jsx)(P, {
                           header: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
                           benefits: u,
                           guildId: n
                       }),
-                      (0, i.jsx)(P, {
+                      (0, i.jsx)(b, {
                           guildId: n,
                           listingId: t
                       })
@@ -221,10 +221,10 @@ t.Z = (e) => {
     let { listingId: n, guildId: s, groupListingId: u, analyticsLocation: E } = e,
         N = (0, m.jO)(n),
         { openModal: p, canOpenModal: C, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, O.Z)(N, s, u, E),
-        b = (0, l.e7)([_.Z], () => _.Z.isSyncing),
-        { activeSubscription: P, activeSubscriptionListing: U } = (0, f.Z)(u),
+        P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
+        { activeSubscription: b, activeSubscriptionListing: U } = (0, f.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
-        B = (null == P ? void 0 : P.status) === M.O0b.CANCELED,
+        B = (null == b ? void 0 : b.status) === M.O0b.CANCELED,
         [k, G] = a.useState(!1),
         [F, w] = a.useState(!1),
         V = a.useCallback((e) => {
@@ -236,7 +236,7 @@ t.Z = (e) => {
         [W] = T.TT(n),
         [z] = T.F2(n),
         K = (0, h.Z)(s, n),
-        X = null != W && null == P && K,
+        X = null != W && null == b && K,
         Q = (0, c.Z)(v.iP),
         [J, q] = a.useState(!1),
         $ = J || !Q,
@@ -308,7 +308,7 @@ t.Z = (e) => {
                                                             (0, i.jsx)(g.Z, {
                                                                 ...e,
                                                                 fullWidth: !0,
-                                                                disabled: !C || b,
+                                                                disabled: !C || P,
                                                                 submitting: A,
                                                                 onClick: p,
                                                                 onlyShineOnHover: !0,

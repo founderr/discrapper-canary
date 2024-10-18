@@ -27,8 +27,8 @@ var i = n(735250),
     S = n(556709);
 function A(e) {
     let { onClose: t, onComplete: n, onStepChange: s, transitionState: A, loadId: x, skuId: R, isGift: O = !1, giftRecipient: v, giftMessage: M, analyticsLocations: L, returnRef: Z } = e,
-        { analyticsLocations: b } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        P = a.useRef(new l.qA()),
+        { analyticsLocations: P } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        b = a.useRef(new l.qA()),
         [D, j] = a.useState(null),
         [U, y] = a.useState(!1),
         B = a.useMemo(() => (0, C.UY)(R), [R]),
@@ -54,7 +54,7 @@ function A(e) {
                         (0, i.jsx)(f.x, {
                             ...e,
                             confettiCanvas: D,
-                            analyticsLocations: b,
+                            analyticsLocations: P,
                             hideConfetti: null != B
                         }),
                     options: {
@@ -63,15 +63,15 @@ function A(e) {
                     }
                 }
             ],
-            [b, D, B]
+            [P, D, B]
         );
     return (0, i.jsxs)(c.Gt, {
-        value: b,
+        value: P,
         children: [
             (0, i.jsx)(l.O_, {
                 ref: j,
                 className: S.confettiCanvas,
-                environment: P.current
+                environment: b.current
             }),
             null != B &&
                 (0, i.jsx)('img', {
@@ -99,7 +99,7 @@ function A(e) {
                         applicationId: p.XAJ,
                         skuId: R,
                         initialPlanId: null,
-                        analyticsLocations: b,
+                        analyticsLocations: P,
                         transitionState: A,
                         renderHeader: (e, t, n) =>
                             O

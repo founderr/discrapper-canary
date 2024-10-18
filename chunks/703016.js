@@ -104,7 +104,7 @@ function B(e) {
         u = null !== (i = I.ZP.getNick(c, a.author.id)) && void 0 !== i ? i : A.ZP.getName(a.author);
     return G(y(a.content, u, c, o), !0, s.id, a.id), !0;
 }
-function V(e) {
+function H(e) {
     var t, n, i, a, s, r;
     let { channelId: l, message: o, optimistic: c } = e;
     if (c || g.Z.isSelfDeaf()) return !1;
@@ -128,7 +128,7 @@ function V(e) {
     }
     return !1;
 }
-function H(e) {
+function V(e) {
     let { id: t, channelId: n } = e,
         i = Z.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, v.NB)(), !0);
@@ -138,6 +138,6 @@ function F() {
 }
 t.Z = {
     init() {
-        s.Z.subscribe('SPEAK_TEXT', w), s.Z.subscribe('SPEAK_MESSAGE', B), s.Z.subscribe('STOP_SPEAKING', k), s.Z.subscribe('MESSAGE_CREATE', V), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', j), (0, r.Ql)(j);
+        s.Z.subscribe('SPEAK_TEXT', w), s.Z.subscribe('SPEAK_MESSAGE', B), s.Z.subscribe('STOP_SPEAKING', k), s.Z.subscribe('MESSAGE_CREATE', H), s.Z.subscribe('MESSAGE_DELETE', V), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', j), (0, r.Ql)(j);
     }
 };

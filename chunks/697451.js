@@ -32,8 +32,8 @@ var i,
     M = n(421399),
     L = n(310423),
     Z = n(223021),
-    b = n(981631),
-    P = n(689938),
+    P = n(981631),
+    b = n(689938),
     D = n(825193);
 function j(e) {
     let { width: t = 6, height: n = 10, color: i = 'currentColor', className: a, foreground: r } = e;
@@ -176,7 +176,7 @@ function k(e) {
         );
     };
     if ((null == i ? void 0 : i.activityInstance) === null || (0, g.g)(i))
-        (n = P.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+        (n = b.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: H,
             commandHook: () => {
                 let t = (function (e, t) {
@@ -192,7 +192,7 @@ function k(e) {
                         positionKey: null != i.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
-                            if (i.type === b.uaV.CHAT_INPUT_COMMAND || i.type === b.uaV.INTERACTION_PREMIUM_UPSELL)
+                            if (i.type === P.uaV.CHAT_INPUT_COMMAND || i.type === P.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, s.jsx)(E.Clickable, {
                                     ...n,
                                     tag: 'span',
@@ -222,7 +222,7 @@ function k(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        R.S.dispatchToLastSubscribed(b.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
+                                        R.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, s.jsxs)('div', {
                                         className: o()(D.appLauncherOnboardingCommandName, D.clickable),
@@ -274,10 +274,10 @@ function k(e) {
                 channel: a,
                 guildId: a.guild_id,
                 locationObject: {
-                    page: a.isPrivate() ? b.ZY5.DM_CHANNEL : b.ZY5.GUILD_CHANNEL,
-                    section: b.jXE.CHANNEL_TEXT_AREA,
-                    object: b.qAy.APP_COMMAND,
-                    objectType: b.Qqv.ACTIVITY
+                    page: a.isPrivate() ? P.ZY5.DM_CHANNEL : P.ZY5.GUILD_CHANNEL,
+                    section: P.jXE.CHANNEL_TEXT_AREA,
+                    object: P.qAy.APP_COMMAND,
+                    objectType: P.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -286,7 +286,7 @@ function k(e) {
                 (0, T.w1)({ guildId: a.guild_id });
         };
         n = w
-            ? P.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+            ? b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
                   userHook: H,
                   activityHook: () =>
                       (0, s.jsx)(E.Clickable, {
@@ -294,11 +294,11 @@ function k(e) {
                           onClick: e,
                           children: (0, s.jsx)('div', {
                               className: o()(D.commandName, D.clickable),
-                              children: P.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+                              children: b.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
                           })
                       })
               })
-            : P.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
+            : b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
     }
     return (0, s.jsx)(N.Gt, {
         value: l,

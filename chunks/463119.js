@@ -132,7 +132,7 @@ let O = (e) => {
             B = a.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            V = Z.title();
+            H = Z.title();
         return (0, i.jsx)(d.Tooltip, {
             text: (0, i.jsx)(M, {
                 displayOptions: Z,
@@ -144,7 +144,7 @@ let O = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof V ? V : L.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
+            'aria-label': 'string' == typeof H ? H : L.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
             children: (e) =>
                 (0, i.jsxs)(x, {
                     className: null != Z.entryPointClassName ? (0, S.l)(R, Z.entryPointClassName) : void 0,

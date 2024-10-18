@@ -34,8 +34,8 @@ function A(e) {
             var e;
             return null !== (e = E.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        b = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        [P, D] = a.useState(!1),
+        P = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        [b, D] = a.useState(!1),
         j = a.useCallback((e) => {
             e && D(!0);
         }, []),
@@ -44,7 +44,7 @@ function A(e) {
         (0, f.gZ)(x);
     }, [x]),
         a.useEffect(() => {
-            P &&
+            b &&
                 M === h.M.FETCHED &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: x,
@@ -53,9 +53,9 @@ function A(e) {
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [P, x, null == b ? void 0 : b.id, R.channel_id, Z, R.author.id, M]),
+        }, [b, x, null == P ? void 0 : P.id, R.channel_id, Z, R.author.id, M]),
         a.useEffect(() => {
-            P &&
+            b &&
                 v &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
@@ -63,7 +63,7 @@ function A(e) {
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [P, Z, v, R.author.id, R.channel_id]);
+        }, [b, Z, v, R.author.id, R.channel_id]);
     let y = (e) => {
         m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: x,

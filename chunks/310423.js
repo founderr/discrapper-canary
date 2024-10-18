@@ -38,8 +38,8 @@ t.Z = a.memo(function (e) {
     var t, n, s, r, R, O;
     let v,
         { channel: M, messageId: L, interactionData: Z } = e,
-        { analyticsLocations: b } = (0, u.ZP)(),
-        { onCopy: P, copyRef: D } = (0, d.Z)(M, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
+        { analyticsLocations: P } = (0, u.ZP)(),
+        { onCopy: b, copyRef: D } = (0, d.Z)(M, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
         j = (0, l.e7)([T.Z], () => T.Z.getGuild(M.guild_id), [M.guild_id]);
     if (
         (a.useEffect(() => {
@@ -59,8 +59,8 @@ t.Z = a.memo(function (e) {
                 (function e(t) {
                     var n, s, r, l, u, d, _;
                     let g,
-                        { option: R, channel: O, guild: v, messageId: M, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: b } = t,
-                        P = null != L ? L + ' ' + R.name : R.name;
+                        { option: R, channel: O, guild: v, messageId: M, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
+                        b = null != L ? L + ' ' + R.name : R.name;
                     if (R.type === c.jw.SUB_COMMAND || R.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
@@ -74,7 +74,7 @@ t.Z = a.memo(function (e) {
                                             })
                                         ]
                                     },
-                                    P
+                                    b
                                 )
                             ],
                             c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
@@ -85,9 +85,9 @@ t.Z = a.memo(function (e) {
                                     channel: O,
                                     guild: v,
                                     messageId: M,
-                                    parentOptionKey: P,
+                                    parentOptionKey: b,
                                     commandOptionSpec: c[n.name],
-                                    sourceAnalyticsLocations: b
+                                    sourceAnalyticsLocations: P
                                 })
                             );
                         return t;
@@ -108,7 +108,7 @@ t.Z = a.memo(function (e) {
                                                 guildId: O.guild_id,
                                                 channelId: O.id,
                                                 messageId: M,
-                                                sourceAnalyticsLocations: b,
+                                                sourceAnalyticsLocations: P,
                                                 analyticsLocation: { section: N.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
                                         children: [p.ME, e.nick]
@@ -183,7 +183,7 @@ t.Z = a.memo(function (e) {
                                         g
                                     ]
                                 },
-                                P
+                                b
                             )
                         ]
                     );
@@ -194,7 +194,7 @@ t.Z = a.memo(function (e) {
                     messageId: L,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: b
+                    sourceAnalyticsLocations: P
                 })
             );
         v = (0, i.jsxs)(i.Fragment, {
@@ -212,7 +212,7 @@ t.Z = a.memo(function (e) {
         onCopy: (e) => {
             var t, n, i;
             let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-            a.startsWith('/') && a.endsWith('\n') && P(e, Z);
+            a.startsWith('/') && a.endsWith('\n') && b(e, Z);
         },
         children: [
             (0, i.jsx)('div', {

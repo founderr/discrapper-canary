@@ -16,8 +16,8 @@ var i = t(735250),
     E = t(175006),
     M = t(742989),
     g = t(898150),
-    m = t(70956),
-    f = t(689938);
+    f = t(70956),
+    m = t(689938);
 function I(e) {
     let { enabled: n } = o.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: t } = M.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
@@ -26,7 +26,7 @@ function I(e) {
             let { message: n, savedMessage: t } = e,
                 [s, r] = a.useState(new Date());
             a.useEffect(() => {
-                let e = setInterval(() => r(new Date()), m.Z.Millis.MINUTE);
+                let e = setInterval(() => r(new Date()), f.Z.Millis.MINUTE);
                 return () => {
                     clearInterval(e);
                 };
@@ -49,7 +49,7 @@ function I(e) {
                 });
             return (null == t ? void 0 : t.saveData.dueAt) == null
                 ? (0, i.jsx)(l.MenuGroup, {
-                      label: f.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
+                      label: m.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
                       children: c
                   })
                 : (0, i.jsxs)(l.MenuGroup, {
@@ -57,7 +57,7 @@ function I(e) {
                       children: [
                           (0, i.jsx)(l.MenuItem, {
                               id: 'mark-complete',
-                              label: f.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+                              label: m.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                               icon: l.CheckmarkSmallIcon,
                               action: () =>
                                   (0, u.z)({
@@ -68,7 +68,7 @@ function I(e) {
                           }),
                           (0, i.jsx)(l.MenuItem, {
                               id: 'edit-reminder',
-                              label: f.Z.Messages.MESSAGE_REMINDERS_EDIT,
+                              label: m.Z.Messages.MESSAGE_REMINDERS_EDIT,
                               children: c
                           })
                       ]
@@ -81,7 +81,7 @@ function I(e) {
         ? null != I || (0, E.Z)()
             ? (0, i.jsxs)(l.MenuItem, {
                   id: 'save-for-later',
-                  label: f.Z.Messages.FOR_LATER_SAVE,
+                  label: m.Z.Messages.FOR_LATER_SAVE,
                   action: () =>
                       null == I
                           ? (0, u.z)({
@@ -99,7 +99,7 @@ function I(e) {
                       null != I
                           ? (0, i.jsx)(l.MenuItem, {
                                 id: 'remove-from-for-later',
-                                label: f.Z.Messages.FOR_LATER_REMOVE,
+                                label: m.Z.Messages.FOR_LATER_REMOVE,
                                 icon: l.BookmarkIcon,
                                 action: () =>
                                     (0, u.x)({
@@ -111,7 +111,7 @@ function I(e) {
                             })
                           : (0, i.jsx)(l.MenuItem, {
                                 id: 'create-bookmark',
-                                label: f.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
+                                label: m.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
                                 icon: l.BookmarkOutlineIcon,
                                 action: () =>
                                     (0, u.z)({
@@ -126,7 +126,7 @@ function I(e) {
               })
             : (0, i.jsx)(l.MenuItem, {
                   id: 'save-for-later-upsell',
-                  label: f.Z.Messages.FOR_LATER_SAVE,
+                  label: m.Z.Messages.FOR_LATER_SAVE,
                   icon: l.NitroWheelIcon,
                   iconProps: { color: r.JX.PREMIUM_TIER_2 },
                   action: () =>

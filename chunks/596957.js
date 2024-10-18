@@ -60,12 +60,12 @@ t.Z = function (e) {
             });
         }, [j, t]),
         B = (0, I.A)({ location: 'people_list' }) && t === R.pJs.PENDING && M.filter(R.pJs.SPAM).length > 0,
-        V = M.filter(t, j[t]);
+        H = M.filter(t, j[t]);
     if (
         (a.useEffect(() => {
             t === R.pJs.ALL && (0, m.d$)();
         }, [t]),
-        0 === V.length && '' === j[t])
+        0 === H.length && '' === j[t])
     )
         return (0, i.jsx)('div', {
             className: x.emptyStateContainer,
@@ -84,9 +84,9 @@ t.Z = function (e) {
                 P
             )
         });
-    let H = [V],
-        F = 0 === V.length && '' !== j[t],
-        Y = V.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
+    let V = [H],
+        F = 0 === H.length && '' !== j[t],
+        Y = H.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
         z = t === R.pJs.PENDING && Y > 0 && Y >= L.yf;
     return (0, i.jsx)(h.Gt, {
         value: b,
@@ -118,7 +118,7 @@ t.Z = function (e) {
                                     default:
                                         return O.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
                                 }
-                            })(t, V.length)
+                            })(t, H.length)
                         }),
                         z &&
                             (0, i.jsx)(o.Button, {
@@ -141,7 +141,7 @@ t.Z = function (e) {
                       })
                     : (0, i.jsx)(A.Z, {
                           relationshipCount: y,
-                          statusSections: H,
+                          statusSections: V,
                           renderRow: function (e) {
                               switch (t) {
                                   case R.pJs.BLOCKED:

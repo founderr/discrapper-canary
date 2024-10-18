@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(474936),
     L = n(689938),
     Z = n(174461),
-    b = n(507444);
-let P = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
+    P = n(507444);
+let b = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
     D = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return a.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
@@ -53,10 +53,10 @@ function U(e) {
             (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 justify: d.Z.Justify.CENTER,
-                className: b.truncatingText,
+                className: P.truncatingText,
                 children: [
                     (0, i.jsx)(o.Text, {
-                        className: b.__invalid_emojiName,
+                        className: P.__invalid_emojiName,
                         variant: 'text-md/semibold',
                         children: (0, i.jsx)(_.Z, { children: t.name })
                     }),
@@ -101,7 +101,7 @@ let y = (e) => {
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
-                          children: P(c, _)
+                          children: b(c, _)
                       }),
                       (0, i.jsx)('ul', {
                           className: Z.stickersList,
@@ -146,8 +146,8 @@ let y = (e) => {
             { sticker: n, channel: s, closePopout: _, refreshPositionKey: f } = e,
             [S, A] = a.useState(null),
             [x, O] = a.useState(!1),
-            P = p.default.getCurrentUser(),
-            D = g.ZP.canUseCustomStickersEverywhere(P),
+            b = p.default.getCurrentUser(),
+            D = g.ZP.canUseCustomStickersEverywhere(b),
             y = (0, l.e7)([N.Z], () => N.Z.getGuild(n.guild_id)),
             B = null != y,
             [k, G] = a.useState(!1),
@@ -196,7 +196,7 @@ let y = (e) => {
         }, []),
         x)
             ? (0, i.jsxs)(T.W_, {
-                  className: b.popoutContent,
+                  className: P.popoutContent,
                   children: [
                       (() => {
                           let e = async () => {
@@ -208,7 +208,7 @@ let y = (e) => {
                               } catch {}
                           };
                           return (0, i.jsxs)('div', {
-                              className: b.emojiSection,
+                              className: P.emojiSection,
                               children: [
                                   (0, i.jsx)(U, {
                                       description: t,
@@ -216,7 +216,7 @@ let y = (e) => {
                                   }),
                                   z &&
                                       (0, i.jsx)(h.Z, {
-                                          className: b.ctaButton,
+                                          className: P.ctaButton,
                                           subscriptionTier: M.Si.TIER_2,
                                           size: o.Button.Sizes.SMALL,
                                           fullWidth: !0,
@@ -228,7 +228,7 @@ let y = (e) => {
                                   X &&
                                       (0, i.jsx)(o.Button, {
                                           size: o.Button.Sizes.SMALL,
-                                          className: b.ctaButton,
+                                          className: P.ctaButton,
                                           fullWidth: !0,
                                           onClick: e,
                                           children: L.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
@@ -246,10 +246,10 @@ let y = (e) => {
                                       .slice(0, 12),
                                   a = null != S ? E.JO.createFromDiscoverableGuild(S) : E.JO.createFromGuildRecord(y);
                               return (0, i.jsxs)('div', {
-                                  className: b.guildSection,
+                                  className: P.guildSection,
                                   children: [
                                       (0, i.jsx)(o.FormTitle, {
-                                          className: b.guildTitle,
+                                          className: P.guildTitle,
                                           children: B ? L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                                       }),
                                       (0, i.jsx)(m.Oe, {
@@ -264,11 +264,11 @@ let y = (e) => {
                                                       onClick: () => {
                                                           f(), G(!k);
                                                       },
-                                                      className: b.showMoreEmojis,
+                                                      className: P.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
                                                           children: [
                                                               (0, i.jsx)(o.Text, {
-                                                                  className: b.__invalid_showMoreEmojisLabel,
+                                                                  className: P.__invalid_showMoreEmojisLabel,
                                                                   variant: 'text-xs/normal',
                                                                   color: 'none',
                                                                   children: L.Z.Messages.STICKER_POPOUT_SHOW_MORE_STICKERS
@@ -276,7 +276,7 @@ let y = (e) => {
                                                               (0, i.jsx)(o.ChevronSmallDownIcon, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: r()(b.showMoreEmojisArrow, { [b.showMoreEmojisArrowCollapsed]: !k })
+                                                                  className: r()(P.showMoreEmojisArrow, { [P.showMoreEmojisArrowCollapsed]: !k })
                                                               })
                                                           ]
                                                       })
@@ -286,7 +286,7 @@ let y = (e) => {
                                                           wrap: d.Z.Wrap.WRAP,
                                                           align: d.Z.Align.START,
                                                           justify: d.Z.Justify.START,
-                                                          className: b.otherEmojisContainer,
+                                                          className: P.otherEmojisContainer,
                                                           children: t.map((e) =>
                                                               (0, i.jsx)(
                                                                   o.Tooltip,
@@ -298,7 +298,7 @@ let y = (e) => {
                                                                           return (0, i.jsx)(
                                                                               'div',
                                                                               {
-                                                                                  className: r()(b.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
+                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
                                                                                   onMouseEnter: () => {
                                                                                       null == n || n(), w(e.id);
                                                                                   },

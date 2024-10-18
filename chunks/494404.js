@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     },
     nH: function () {
-        return b;
+        return P;
     }
 }),
     n(47120),
@@ -75,7 +75,7 @@ let Z = (e) => {
             ]
         });
     },
-    b = (e) => {
+    P = (e) => {
         let { msg: t, image: n } = e;
         return (0, i.jsxs)('div', {
             className: v.emptyPlaceholder,
@@ -91,7 +91,7 @@ let Z = (e) => {
             ]
         });
     };
-class P extends a.PureComponent {
+class b extends a.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, i.jsxs)(d.Clickable, {
@@ -145,12 +145,12 @@ class P extends a.PureComponent {
 let D = u.ZP.connectStores([C.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && C.Z.can(R.Plq.MANAGE_MESSAGES, t) };
-})(P);
+})(b);
 function j(e) {
     let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: f, getProTip: N, scrollerClassName: p, className: C, listName: M } = e,
         Z = a.useRef(null),
-        b = (0, I.Z)(M, Z),
-        P = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
+        P = (0, I.Z)(M, Z),
+        b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
         D = (0, u.e7)([S.Z], () => S.Z.windowSize());
     a.useEffect(() => {
         A.default.track(R.rMx.OPEN_POPOUT, { type: t });
@@ -241,7 +241,7 @@ function j(e) {
                   })
                 : null,
         F = { maxHeight: D.height - 43 - 25 };
-    P && (F.maxHeight -= 40);
+    b && (F.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
         className: r()(C, v.messagesPopoutWrap),
@@ -258,7 +258,7 @@ function j(e) {
                     ref: Z,
                     children: [
                         (0, i.jsx)(c.bG, {
-                            navigator: b,
+                            navigator: P,
                             children: (0, i.jsx)(c.SJ, {
                                 children: (e) => {
                                     let { ref: t, ...n } = e;
@@ -300,7 +300,7 @@ function U(e) {
     a.useEffect(() => {
         n(s);
     }, [s, n]);
-    let b = a.useMemo(
+    let P = a.useMemo(
         () =>
             null == r
                 ? void 0
@@ -313,7 +313,7 @@ function U(e) {
     return (0, i.jsx)(j, {
         className: A,
         scrollerClassName: S,
-        items: b,
+        items: P,
         loading: o,
         analyticsName: t,
         renderEmptyState: h,

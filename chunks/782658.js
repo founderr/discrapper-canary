@@ -48,8 +48,8 @@ function O(e) {
                       code: ''
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
-        b = (0, s.e7)([m.Z], () => ((null == v ? void 0 : v.guild) != null ? m.Z.getGuild(v.guild.id) : null), [v]),
-        P = (0, s.e7)([I.default], () => I.default.getId()),
+        P = (0, s.e7)([m.Z], () => ((null == v ? void 0 : v.guild) != null ? m.Z.getGuild(v.guild.id) : null), [v]),
+        b = (0, s.e7)([I.default], () => I.default.getId()),
         D = (0, s.e7)(
             [c.ZP],
             () => {
@@ -79,8 +79,8 @@ function O(e) {
         y = (0, i.jsx)(C.Z, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: U,
-            currentUserId: P,
-            guild: b,
+            currentUserId: b,
+            guild: P,
             invite: L,
             author: n
         });
@@ -107,7 +107,7 @@ function O(e) {
                     y = (0, i.jsx)(p.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
-                        currentUserId: P,
+                        currentUserId: b,
                         invite: L,
                         author: n
                     });
@@ -124,8 +124,8 @@ function O(e) {
                         y = (0, i.jsx)(x.Z, {
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U,
-                            currentUserId: P,
-                            guild: b,
+                            currentUserId: b,
+                            guild: P,
                             invite: L
                         });
                         break;
@@ -135,7 +135,7 @@ function O(e) {
                             guildScheduledEvent: D,
                             guild: L.guild,
                             channel: L.channel,
-                            isMember: null != b,
+                            isMember: null != P,
                             onAcceptInstantInvite: U,
                             onTransitionToInviteChannel: j
                         });
@@ -145,7 +145,7 @@ function O(e) {
                         y = (0, i.jsx)(A.Z, {
                             stageInstance: L.stage_instance,
                             guild: L.guild,
-                            isMember: null != b,
+                            isMember: null != P,
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U
                         });

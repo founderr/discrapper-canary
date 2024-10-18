@@ -28,8 +28,8 @@ var i = n(735250),
     M = n(199480),
     L = n(626135),
     Z = n(669079),
-    b = n(74538),
-    P = n(296848),
+    P = n(74538),
+    b = n(296848),
     D = n(51144),
     j = n(626799),
     U = n(981631),
@@ -149,7 +149,7 @@ class V extends a.Component {
                 onClick: this.handleAccept,
                 color: u.Button.Colors.BRAND
             },
-            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, b.I5)(n));
+            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n));
         return (
             (e.redeemed || r || e.isClaimed || !n.verified) && ((s.color = u.Button.Colors.BRAND), (s.disabled = !0)),
             (0, i.jsx)(u.Button, {
@@ -359,7 +359,7 @@ t.Z = c.ZP.connectStores([A.Z, v.Z, R.default, x.Z, O.Z, S.default, m.Z], (e) =>
         giftCode: a,
         gifter: r,
         currentUser: i,
-        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, P.oE)(a.subscriptionPlanId) : null,
+        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
         isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
         resolved: A.Z.getIsResolved(t),
         libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, x.Z) : null,

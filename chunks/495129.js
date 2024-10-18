@@ -27,7 +27,7 @@ var a = n(120356),
 function S(e) {
     var t, n, a, S, A, x, R, O, v, M;
     let { message: L, channel: Z } = e,
-        b =
+        P =
             null === (a = L.embeds[0]) || void 0 === a
                 ? void 0
                 : null === (n = a.fields) || void 0 === n
@@ -39,7 +39,7 @@ function S(e) {
                           })) || void 0 === t
                     ? void 0
                     : t.rawValue,
-        P =
+        b =
             null === (x = L.embeds[0]) || void 0 === x
                 ? void 0
                 : null === (A = x.fields) || void 0 === A
@@ -51,8 +51,8 @@ function S(e) {
                           })) || void 0 === S
                     ? void 0
                     : S.rawValue,
-        D = (0, r.e7)([T.Z], () => T.Z.getGuild(b)),
-        j = (0, r.e7)([m.Z], () => m.Z.getChannel(P)),
+        D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
+        j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)),
         U = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
         y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
         B = null === (R = Z.recipients) || void 0 === R ? void 0 : R.find((e) => e !== L.author.id),
@@ -99,7 +99,7 @@ function S(e) {
                         ? (0, i.jsx)('div', {
                               className: g.participants,
                               children: (0, i.jsx)(E.Z, {
-                                  guildId: b,
+                                  guildId: P,
                                   partySize: {
                                       knownSize: w.length,
                                       unknownSize: 0,
@@ -112,7 +112,7 @@ function S(e) {
                         : (0, i.jsx)('div', {
                               className: s()(g.participants, g.disabled),
                               children: (0, i.jsx)(E.Z, {
-                                  guildId: b,
+                                  guildId: P,
                                   partySize: {
                                       knownSize: W.length,
                                       unknownSize: Y.length - W.length,
@@ -130,7 +130,7 @@ function S(e) {
                     (0, i.jsxs)(l.Button, {
                         color: l.Button.Colors.BRAND,
                         onClick: () => {
-                            null != P && null != b && ((0, I.uL)(p.Z5c.CHANNEL(b, P)), c.default.selectVoiceChannel(P));
+                            null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,

@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return H;
+        return V;
     }
 }),
     n(47120);
@@ -44,13 +44,13 @@ var r = n(91192),
     w = n(689938),
     k = n(618226);
 let B = 'NitroTabButton',
-    V = 1209600000;
+    H = 1209600000;
 ((a = i || (i = {}))[(a.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (a[(a.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (a[(a.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (a[(a.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (a[(a.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (a[(a.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (a[(a.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD');
-let H = (e) => {
+let V = (e) => {
     let t,
         n,
         i,
-        { selected: a, route: H, locationState: F, ...Y } = e,
+        { selected: a, route: V, locationState: F, ...Y } = e,
         z = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         W = (0, l.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
         K = (0, T.Qo)(z, W),
@@ -75,7 +75,7 @@ let H = (e) => {
         { enabled: e_ } = C._.useExperiment({ location: B }, { autoTrackExposure: !1 }),
         eE = e_ && (null == Q ? void 0 : Q.trial_id) === j.a7,
         [eh, em] = (0, E.US)(J ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-    if (!(eu = eu || (null != z && null != ed && Date.now() - ed.getTime() > V))) return null;
+    if (!(eu = eu || (null != z && null != ed && Date.now() - ed.getTime() > H))) return null;
     er
         ? ((t = k.referralIncentive), (i = 7))
         : el
@@ -116,7 +116,7 @@ let H = (e) => {
                           (i = 4));
     let eI = (0, s.jsx)(d.Qj, {
         selected: a,
-        route: H,
+        route: V,
         icon: c.NitroWheelIcon,
         text: w.Z.Messages.PREMIUM,
         locationState: F,

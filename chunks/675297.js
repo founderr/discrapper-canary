@@ -29,10 +29,10 @@ function N(e) {
         }),
         L = (0, s.U)(t, 600),
         Z = (0, I.C)(t),
-        b = (0, u.SO)(v),
-        { shouldHideGuildPurchaseEntryPoints: P } = (0, l.uP)(n),
+        P = (0, u.SO)(v),
+        { shouldHideGuildPurchaseEntryPoints: b } = (0, l.uP)(n),
         D = (0, I.k)(t);
-    if (null == v || P) return null;
+    if (null == v || b) return null;
     let j = () =>
             (0, T.e)({
                 guildId: n,
@@ -42,13 +42,13 @@ function N(e) {
         U = (0, i.jsx)(m.m, {
             product: t,
             guildId: n,
-            showEditProduct: b,
+            showEditProduct: P,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: b
+            onEditProduct: P
                 ? () => {
                       _.h(v.id, t.id);
                   }

@@ -36,8 +36,8 @@ var i = n(735250),
     M = n(686478),
     L = n(664559),
     Z = n(767893),
-    b = n(206697),
-    P = n(74551),
+    P = n(206697),
+    b = n(74551),
     D = n(981631),
     j = n(689938),
     U = n(982138);
@@ -79,7 +79,7 @@ function k(e) {
         [n.length]
     ),
     0 === n.length)
-        ? (0, i.jsx)(b.w, {})
+        ? (0, i.jsx)(P.w, {})
         : (0, i.jsx)(F, {
               savedMessageKeys: n,
               closePopout: t
@@ -183,7 +183,7 @@ function w(e) {
                       'aria-label': j.Z.Messages.JUMP_TO_MESSAGE
                   }),
                   null != t.saveData.dueAt
-                      ? (0, i.jsx)(P.Z, {
+                      ? (0, i.jsx)(b.Z, {
                             reminder: t,
                             throttledNow: s
                         })

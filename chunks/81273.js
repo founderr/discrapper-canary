@@ -29,8 +29,8 @@ var i = n(735250),
     Z = n(689938);
 t.Z = (e, t, n, s) => {
     let l;
-    let b = (0, c.e7)([h.Z], () => h.Z.isLurking(t)),
-        P = (0, f.J)(t),
+    let P = (0, c.e7)([h.Z], () => h.Z.isLurking(t)),
+        b = (0, f.J)(t),
         D = (0, c.e7)([T.Z], () => (null != t ? T.Z.getRequest(t) : null)),
         j = (null == D ? void 0 : D.applicationStatus) === m.wB.SUBMITTED,
         U = null == e ? void 0 : e.subscription_plans[0],
@@ -48,7 +48,7 @@ t.Z = (e, t, n, s) => {
         Q = (0, S.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: J } = (0, E.ZP)(),
         q = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
-    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : b && !P ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : z ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : q && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !b ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : z ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : q && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let $ = (0, _.Z)(M.iP);
     a.useEffect(() => {
         B &&
@@ -114,8 +114,8 @@ t.Z = (e, t, n, s) => {
             (0, I.hk)(t);
         }, [t]);
     return {
-        openModal: P ? et : ee,
-        canOpenModal: !b && null != G && V && !j && !W && !z && !q,
+        openModal: b ? et : ee,
+        canOpenModal: !P && null != G && V && !j && !W && !z && !q,
         cannotOpenReason: l,
         isCheckingTrialEligibility: K
     };

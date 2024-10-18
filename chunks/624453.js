@@ -11,8 +11,8 @@ var i,
     E = t(786761),
     M = t(706454),
     g = t(592125),
-    m = t(271383),
-    f = t(430824),
+    f = t(271383),
+    m = t(430824),
     I = t(375954),
     _ = t(699516),
     Z = t(594174);
@@ -42,7 +42,7 @@ function N() {
 }
 class v extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, f.Z, m.ZP, I.Z, Z.default, M.default);
+        this.waitFor(g.Z, m.Z, f.ZP, I.Z, Z.default, M.default);
     }
     getPinnedMessages(e) {
         var n;

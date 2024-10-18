@@ -78,15 +78,15 @@ t.ZP = o.memo(function (e) {
         }, [D]),
         { loaded: j, clans: U, searchResult: G, searchCriteria: w, hasError: k } = (0, N.ML)(y, 'saved_guilds' === R),
         B = (0, v.GN)((e) => e.selectedTraits, u.Z),
-        V = (0, v.GN)((e) => e.selectedGames, u.Z),
-        H = (0, h.Z)(G),
+        H = (0, v.GN)((e) => e.selectedGames, u.Z),
+        V = (0, h.Z)(G),
         { currentPage: F, updatePage: Y, totalItems: z, pageSize: W } = (0, A.a)(),
         K = (0, _.e7)([p.default], () => p.default.getCurrentUser()),
         { treatment: q } = (0, I.I7)();
     o.useEffect(() => {
-        if (null != G && !!(0, L.Pw)(G)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= G.loadedAt)) && (0, m.Oe)('top_picks', w, q);
-    }, [w, G, H, q]);
-    let Q = V.length > 0 || B.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != K ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(K) }) : '';
+        if (null != G && !!(0, L.Pw)(G)) (!(null != V && (0, L.Pw)(V)) || !(V.loadedAt >= G.loadedAt)) && (0, m.Oe)('top_picks', w, q);
+    }, [w, G, V, q]);
+    let Q = H.length > 0 || B.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != K ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(K) }) : '';
     let X =
             ((t = U),
             (n = y),

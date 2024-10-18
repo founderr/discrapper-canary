@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return b;
     }
 }),
     n(47120);
@@ -33,10 +33,10 @@ var i = n(735250),
     M = n(981631),
     L = n(474936),
     Z = n(689938),
-    b = n(524254);
-function P(e) {
+    P = n(524254);
+function b(e) {
     let { giftCode: t, application: n, sku: s, subscriptionPlan: l, selectedGiftStyle: o, onClose: d, hasSentMessage: _, giftRecipient: m, giftMessageError: h, isSendingMessage: N, halloweenDecoPurchase: C } = e,
-        [S, P] = a.useState(u.CopyInput.Modes.DEFAULT),
+        [S, b] = a.useState(u.CopyInput.Modes.DEFAULT),
         j = (0, c.e7)([g.Z], () => g.Z.enabled),
         U = _ || (null != o && null != m),
         y = (null == s ? void 0 : s.productLine) === M.POd.COLLECTIBLES,
@@ -70,12 +70,12 @@ function P(e) {
                     s
                 );
             try {
-                (0, A.JG)(e), P(u.CopyInput.Modes.SUCCESS);
+                (0, A.JG)(e), b(u.CopyInput.Modes.SUCCESS);
             } catch (e) {
-                P(u.CopyInput.Modes.ERROR);
+                b(u.CopyInput.Modes.ERROR);
             }
             setTimeout(() => {
-                P(u.CopyInput.Modes.DEFAULT);
+                b(u.CopyInput.Modes.DEFAULT);
             }, 1500);
         },
         V = () => {
@@ -92,7 +92,7 @@ function P(e) {
                     e = Z.Z.Messages.COPY;
             }
             return (0, i.jsxs)('div', {
-                className: b.giftCodeSection,
+                className: P.giftCodeSection,
                 children: [
                     (0, i.jsx)(u.FormTitle, { children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK }),
                     null != t &&
@@ -103,12 +103,12 @@ function P(e) {
                             text: e,
                             onCopy: (e) => w(e, t),
                             supportsCopy: A.wS,
-                            className: b.__invalid_copyInput,
+                            className: P.__invalid_copyInput,
                             buttonColor: u.ButtonColors.LINK,
                             buttonLook: u.ButtonLooks.LINK
                         }),
                     (0, i.jsx)('div', {
-                        className: b.subtext,
+                        className: P.subtext,
                         children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRMATION_SUBTEXT_NO_FORMAT
                     })
                 ]
@@ -116,12 +116,12 @@ function P(e) {
         };
     return N
         ? (0, i.jsxs)('div', {
-              className: b.confirmation,
+              className: P.confirmation,
               children: [
                   null != n
                       ? (0, i.jsx)(I.Z, {
                             game: n,
-                            className: b.__invalid_icon,
+                            className: P.__invalid_icon,
                             size: I.Z.Sizes.LARGE,
                             skuId: G()
                         })
@@ -130,12 +130,12 @@ function P(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: b.confirmation,
+              className: P.confirmation,
               children: [
                   null != n
                       ? (0, i.jsx)(I.Z, {
                             game: n,
-                            className: b.__invalid_icon,
+                            className: P.__invalid_icon,
                             size: I.Z.Sizes.LARGE,
                             skuId: G()
                         })
@@ -143,8 +143,8 @@ function P(e) {
                   (0, i.jsx)(u.Heading, {
                       variant: 'heading-lg/semibold',
                       className: r()({
-                          [b.header]: null == o && !y,
-                          [b.headerCustomGifting]: null != o && !y
+                          [P.header]: null == o && !y,
+                          [P.headerCustomGifting]: null != o && !y
                       }),
                       children: null != m || (_ && null == h) ? Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != h ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
                   }),
@@ -153,20 +153,20 @@ function P(e) {
                             children: [
                                 (0, i.jsx)(E.Z, {
                                     user: m,
-                                    className: b.giftRecipient,
+                                    className: P.giftRecipient,
                                     size: u.AvatarSizes.SIZE_80
                                 }),
                                 (0, i.jsx)(u.Heading, {
-                                    className: b.giftRecipientName,
+                                    className: P.giftRecipientName,
                                     variant: 'heading-md/semibold',
                                     children: O.ZP.getName(m)
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: b.giftRecipientTag,
+                                    className: P.giftRecipientTag,
                                     children: [' ', O.ZP.getUserTag(m)]
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: b.giftSentMessage,
+                                    className: P.giftSentMessage,
                                     children: F()
                                 })
                             ]
@@ -183,7 +183,7 @@ function P(e) {
                             return (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: b.blurb,
+                                        className: P.blurb,
                                         children: F()
                                     }),
                                     !n &&
@@ -192,7 +192,7 @@ function P(e) {
                                             giftCode: t,
                                             onClose: d
                                         }),
-                                    (0, i.jsx)('div', { className: b.divider }),
+                                    (0, i.jsx)('div', { className: P.divider }),
                                     V()
                                 ]
                             });
@@ -220,16 +220,16 @@ let D = (e) => {
     if (null == M || 0 === M.length) return null;
     let L = o().sortBy(M, (e) => v.indexOf(e.id));
     return (0, i.jsxs)('div', {
-        className: b.giftRecipientSection,
+        className: P.giftRecipientSection,
         children: [
             (0, i.jsx)(u.FormTitle, { children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SECTION_LABEL }),
             (0, i.jsxs)('div', {
-                className: b.giftRecipient,
+                className: P.giftRecipient,
                 children: [
                     (0, i.jsx)(u.SearchableSelect, {
                         placeholder: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SELECT_PLACEHOLDER,
-                        wrapperClassName: b.giftRecipientInputWrapper,
-                        className: l ? b.giftRecipientInputError : void 0,
+                        wrapperClassName: P.giftRecipientInputWrapper,
+                        className: l ? P.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
@@ -250,7 +250,7 @@ let D = (e) => {
                     (0, i.jsx)(u.Button, {
                         disabled: null == s,
                         submitting: T,
-                        className: b.sendToRecipientButton,
+                        className: P.sendToRecipientButton,
                         onClick: () => {
                             f(!0),
                                 (0, m.YD)(s, t)
@@ -266,7 +266,7 @@ let D = (e) => {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: l ? b.subtextError : b.subtext,
+                className: l ? P.subtextError : P.subtext,
                 children: l ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
             })
         ]

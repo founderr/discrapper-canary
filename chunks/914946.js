@@ -33,7 +33,7 @@ n.d(t, {
         return W;
     },
     s9: function () {
-        return V;
+        return H;
     },
     t9: function () {
         return z;
@@ -45,7 +45,7 @@ n.d(t, {
         return K;
     },
     zM: function () {
-        return H;
+        return V;
     },
     zy: function () {
         return F;
@@ -199,7 +199,7 @@ function B(e, t, n, i) {
         isSpamRequest: n
     };
 }
-function V(e) {
+function H(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -211,7 +211,7 @@ function V(e) {
     }
     return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(M.test(e) && M.test(n)) || !1));
 }
-function H(e, t, n) {
+function V(e, t, n) {
     let i = p.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(s.x.MESSAGES_READ) > -1;
 }

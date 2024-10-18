@@ -55,8 +55,8 @@ function w(e) {
             [l, a]
         ),
         B = null == i ? void 0 : i.id,
-        V = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
+        H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, i)),
         Y = (0, O.Z)(null == i ? void 0 : i.id),
         z = null == a ? void 0 : a.creator_id,
@@ -280,13 +280,13 @@ function w(e) {
                 canConnect: F,
                 myRole: Y,
                 eventCreator: W,
-                speakers: V,
-                listenerCount: H,
+                speakers: H,
+                listenerCount: V,
                 isEventNoticeHidden: k,
                 isStageNoticeHidden: w,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, W, V, H, k, w, n]
+        [a, l, i, F, Y, W, H, V, k, w, n]
     );
     return null == K
         ? null

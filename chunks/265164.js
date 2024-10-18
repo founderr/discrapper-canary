@@ -50,8 +50,8 @@ let b = 1 * N.Z.Millis.DAY,
     w = [],
     k = {},
     B = {},
-    V = {},
     H = {},
+    V = {},
     F = {},
     Y = {},
     z = 0,
@@ -91,8 +91,8 @@ function er() {
                     if ((0, u.BQ)(i, 2 * N.Z.Seconds.DAY) || (0, u.xt)(i)) {
                         var n;
                         if (
-                            (null == V[i.id] &&
-                                (V[i.id] = {
+                            (null == H[i.id] &&
+                                (H[i.id] = {
                                     id: i.id,
                                     type: v.Rr.GUILD_EVENT,
                                     score: 10,
@@ -143,8 +143,8 @@ function er() {
                         if ((null == i[e.content.author_id] && (i[e.content.author_id] = new Set()), i[e.content.author_id].has(e.content.extra.application_id))) return;
                         i[e.content.author_id].add(e.content.extra.application_id);
                     }
-                    null == V[e.content.id] &&
-                        (V[e.content.id] = {
+                    null == H[e.content.id] &&
+                        (H[e.content.id] = {
                             id: e.content.id,
                             type: v.Rr.ACTIVITY,
                             score: 15,
@@ -178,7 +178,7 @@ function el() {
         type: v.Rr.RECOMMENDED_GUILDS,
         score: 50
     };
-    if (((V[i.id] = i), (B[i.id] = i), 0 === $.length)) ee = [i, ...ee];
+    if (((H[i.id] = i), (B[i.id] = i), 0 === $.length)) ee = [i, ...ee];
     else if ((!t && $.length < 5) || (t && $.length < 10)) $ = [...$, i];
     else if (t) {
         let e = Math.round(2 * Math.random()) + 3 - 1;
@@ -238,7 +238,7 @@ function eh(e, t) {
 }
 function em(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
-        r = V[n];
+        r = H[n];
     if (null == r || r.type !== v.Rr.MESSAGE) return !1;
     let l = h.default.getId() === i;
     'MESSAGE_REACTION_ADD' === t ? (r.message = r.message.addReaction(a, l, e.colors, s)) : (r.message = r.message.removeReaction(a, l, s));
@@ -284,14 +284,14 @@ class ep extends (i = s.ZP.PersistedStore) {
     }
     getHydratedItem(e) {
         var t;
-        return null !== (t = V[e]) && void 0 !== t ? t : null;
+        return null !== (t = H[e]) && void 0 !== t ? t : null;
     }
     getMessage(e) {
-        let t = V[e];
+        let t = H[e];
         return null == t || t.type !== v.Rr.MESSAGE ? null : t.message;
     }
     getHydratedItems() {
-        return V;
+        return H;
     }
     getUnreadDisplayItems() {
         return $;
@@ -306,7 +306,7 @@ class ep extends (i = s.ZP.PersistedStore) {
         return et;
     }
     getMissingItems() {
-        return H;
+        return V;
     }
     getCustomChannelScore(e, t) {
         return null == Y[e] || null == Y[e][t] ? L.aL.UNKNOWN : (0, L.jv)(Y[e][t]);
@@ -378,7 +378,7 @@ x(ep, 'displayName', 'GravityStore'),
             };
             if (
                 ((B[t.message.id] = n),
-                (V[t.message.id] = {
+                (H[t.message.id] = {
                     ...n,
                     message: (0, _.e5)(t.message)
                 }),
@@ -397,7 +397,7 @@ x(ep, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         j.forEach((e) => {
-                            (B[e.id] = e), e.type === v.Rr.CUSTOM_STATUS && (S.Z.isBlocked(e.data.user_id) ? (H[e.id] = !0) : (V[e.id] = (0, L.mV)(e)));
+                            (B[e.id] = e), e.type === v.Rr.CUSTOM_STATUS && (S.Z.isBlocked(e.data.user_id) ? (V[e.id] = !0) : (H[e.id] = (0, L.mV)(e)));
                         });
                 })(),
                 (k = {
@@ -419,27 +419,27 @@ x(ep, 'displayName', 'GravityStore'),
         },
         LOAD_GRAVITY_HYDRATED: function (e) {
             let { messageItems: t, summaryItems: n, activityItems: i, requestMessageItems: a, requestSummaryItems: s, requestActivityItems: r, startingIndex: l, endingIndex: o } = e;
-            V = { ...V };
+            H = { ...H };
             let c = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
                 d = n.reduce((e, t) => ((e[t.id] = t), e), {}),
                 u = i.reduce((e, t) => ((e[t.id] = t), e), {});
             a.forEach((e) => {
                 let t = c[e.message_id];
                 if (null == t) {
-                    H[e.message_id] = !0;
+                    V[e.message_id] = !0;
                     return;
                 }
                 let n = B[e.message_id];
                 if (null == n) {
-                    H[e.message_id] = !0;
+                    V[e.message_id] = !0;
                     return;
                 }
                 null != g.Z.getMessage(t.channel_id, t.message.id)
-                    ? (V[t.message.id] = {
+                    ? (H[t.message.id] = {
                           ...n,
                           message: g.Z.getMessage(t.channel_id, t.message.id)
                       })
-                    : (V[t.message.id] = {
+                    : (H[t.message.id] = {
                           ...n,
                           message: (0, _.e5)(t.message)
                       });
@@ -447,15 +447,15 @@ x(ep, 'displayName', 'GravityStore'),
                 s.forEach((e) => {
                     let t = d[e.summary_id];
                     if (null == t) {
-                        H[e.summary_id] = !0;
+                        V[e.summary_id] = !0;
                         return;
                     }
                     let n = B[e.summary_id];
                     if (null == n || n.type !== v.Rr.SUMMARY || t.messages.length < 3) {
-                        H[e.summary_id] = !0;
+                        V[e.summary_id] = !0;
                         return;
                     }
-                    V[t.id] = {
+                    H[t.id] = {
                         ...n,
                         summary: (0, L.wV)(t, n.data.guild_id)
                     };
@@ -463,15 +463,15 @@ x(ep, 'displayName', 'GravityStore'),
                 r.forEach((e) => {
                     let t = u[e.content_id];
                     if (null == t) {
-                        H[e.content_id] = !0;
+                        V[e.content_id] = !0;
                         return;
                     }
                     let n = B[e.content_id];
                     if (null == n) {
-                        H[e.content_id] = !0;
+                        V[e.content_id] = !0;
                         return;
                     }
-                    V[t.id] = {
+                    H[t.id] = {
                         ...n,
                         activity: t
                     };
@@ -511,7 +511,7 @@ x(ep, 'displayName', 'GravityStore'),
                 Q = null;
                 return;
             }
-            let t = V[e.summaryId];
+            let t = H[e.summaryId];
             if (null == t || t.type !== v.Rr.SUMMARY) {
                 Q = null;
                 return;
@@ -524,7 +524,7 @@ x(ep, 'displayName', 'GravityStore'),
         MESSAGE_REACTION_ADD: em,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { messageId: t, reactions: n } = e,
-                i = V[t];
+                i = H[t];
             if (null == i || i.type !== v.Rr.MESSAGE) return !1;
             let a = h.default.getId();
             i.message = i.message.addReactionBatch(n, a);
@@ -532,13 +532,13 @@ x(ep, 'displayName', 'GravityStore'),
         MESSAGE_REACTION_REMOVE: em,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { messageId: t } = e,
-                n = V[t];
+                n = H[t];
             if (null == n || n.type !== v.Rr.MESSAGE) return !1;
             n.message = n.message.set('reactions', []);
         },
         MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
             let { messageId: t, emoji: n } = e,
-                i = V[t];
+                i = H[t];
             if (null == i || i.type !== v.Rr.MESSAGE) return !1;
             i.message = i.message.removeReactionsForEmoji(n);
         },

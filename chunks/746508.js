@@ -38,8 +38,8 @@ var i = n(735250),
     w = n(935261),
     k = n(74299),
     B = n(803647),
-    V = n(142497),
-    H = n(810788),
+    H = n(142497),
+    V = n(810788),
     F = n(160404),
     Y = n(703656),
     z = n(917405),
@@ -347,7 +347,7 @@ function eB(e) {
           })
         : null;
 }
-function eV(e) {
+function eH(e) {
     let t,
         { channel: n, canGoLive: s, enableActivities: l, disabled: o } = e,
         c = (0, d.e7)([ef.default], () => ef.default.getCurrentUser()),
@@ -425,7 +425,7 @@ function eV(e) {
         }
     });
 }
-class eH extends a.PureComponent {
+class eV extends a.PureComponent {
     renderConnectionStatus() {
         let e;
         let { channel: t, guild: n, rtcConnectionQuality: a, rtcConnectionState: s, rtcConnectionLastPing: r, hasVideo: l } = this.props;
@@ -522,7 +522,7 @@ class eH extends a.PureComponent {
                     enableActivities: d,
                     disabled: !_ && u
                 }),
-                (0, i.jsx)(eV, {
+                (0, i.jsx)(eH, {
                     channel: e,
                     canGoLive: t,
                     enableActivities: d,
@@ -620,7 +620,7 @@ class eH extends a.PureComponent {
                 });
             }),
             ej(this, 'handleCloseVoicePanelIntroduction', () => {
-                V.Kw(eM.v.VOICE_PANEL_INTRODUCTION);
+                H.Kw(eM.v.VOICE_PANEL_INTRODUCTION);
             }),
             ej(this, 'renderVoicePanelIntroduction', () =>
                 (0, i.jsxs)('div', {
@@ -695,7 +695,7 @@ t.Z = (0, f.Z)(function (e) {
             noiseCancellationError: ep.Z.isNoiseCancellationError(),
             canGoLive: (0, k.Z)(ep.Z)
         })),
-        E = (0, d.e7)([ep.Z, H.Z], () => H.Z.hasHotspot(eM.v.VOICE_PANEL_INTRODUCTION) && (0, eZ.EO)(s) && !ep.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
+        E = (0, d.e7)([ep.Z, V.Z], () => V.Z.hasHotspot(eM.v.VOICE_PANEL_INTRODUCTION) && (0, eZ.EO)(s) && !ep.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
         h = (0, d.e7)([eC.Z], () => null != r && eC.Z.hasVideo(r), [r]),
         m = (0, d.e7)([e_.Z], () => e_.Z.getCurrentUserActiveStream()),
         p = (0, d.e7)([eI.Z], () => eI.Z.hasLayers()),
@@ -742,7 +742,7 @@ t.Z = (0, f.Z)(function (e) {
                           awaitingRemoteSessionInfo: n
                       })
                     : null,
-                (0, i.jsx)(eH, {
+                (0, i.jsx)(eV, {
                     ...e,
                     ..._,
                     ...l,

@@ -34,7 +34,7 @@ var i,
     v = n(689938),
     M = n(17500);
 function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: b, glow: P, showSecondaryCta: D } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
         j = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: U } = (0, m.ZP)(),
         y = (0, u.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(i.id));
@@ -63,13 +63,13 @@ function L(e) {
         W = k ? M.buttonTextPrimaryCoachmark : M.buttonTextPrimary;
     return (0, s.jsx)('div', {
         className: o()(M.content, {
-            [M.outerGlow]: P,
+            [M.outerGlow]: b,
             [M.contentCoachmark]: k
         }),
         onMouseEnter: a,
         onMouseLeave: l,
         children: (0, s.jsxs)('div', {
-            className: o()(G, { [M.innerGlow]: P }),
+            className: o()(G, { [M.innerGlow]: b }),
             children: [
                 (0, s.jsxs)('div', {
                     className: M.subContent,
@@ -152,7 +152,7 @@ function L(e) {
                                     analyticsLocations: U,
                                     analyticsObject: {
                                         page: Z,
-                                        section: b,
+                                        section: P,
                                         object: R.qAy.BUTTON_CTA,
                                         objectType: R.Qqv.GIFT
                                     },

@@ -42,8 +42,8 @@ var i = n(735250),
     w = n(309494),
     k = n(969205),
     B = n(171368),
-    V = n(420654),
-    H = n(695346),
+    H = n(420654),
+    V = n(695346),
     F = n(158776),
     Y = n(246946),
     z = n(572004),
@@ -185,14 +185,14 @@ function ec(e) {
     let ep = (0, o.e7)([F.Z], () => F.Z.getStatus(W.id)),
         eg = (0, o.e7)([Y.Z], () => Y.Z.hidePersonalInformation),
         eT = (0, S.p)(),
-        eS = H.Sb.useSetting(),
+        eS = V.Sb.useSetting(),
         ef = (0, g.a)(),
         eC = (function (e) {
             let t = T.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
-                n = H.Cr.useSetting(),
+                n = V.Cr.useSetting(),
                 a = (0, S.p)(),
                 r = f.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
-                l = H.fv.useSetting(),
+                l = V.fv.useSetting(),
                 o = e === et.Skl.DND,
                 d = (t) => {
                     let i =
@@ -398,7 +398,7 @@ function ec(e) {
                                         ]
                                     })
                                 }),
-                                (0, i.jsx)(V.Z, {
+                                (0, i.jsx)(H.Z, {
                                     user: W,
                                     bio: null == eu ? void 0 : eu.bio,
                                     hidePersonalInformation: eg,
@@ -564,7 +564,7 @@ function ec(e) {
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: eE
                                                                                       }),
-                                                                                      H.Ok.updateSetting(void 0);
+                                                                                      V.Ok.updateSetting(void 0);
                                                                               },
                                                                               children: (0, i.jsx)(c.CircleXIcon, {
                                                                                   size: 'sm',

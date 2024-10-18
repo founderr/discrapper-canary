@@ -118,10 +118,10 @@ function M(e, t) {
         M = !N && O,
         L = M || m || p,
         Z = E && A && (!O || N || L),
-        b = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
-        P = null != b ? d.ZP.getSelfMember(b) : null,
-        D = (0, o.EY)(P),
-        j = (0, c.b)(P);
+        P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
+        b = null != P ? d.ZP.getSelfMember(P) : null,
+        D = (0, o.EY)(b),
+        j = (0, c.b)(b);
     return {
         poll: l,
         canTapAnswers: Z,
@@ -155,9 +155,9 @@ function L(e, t) {
         v = (0, p.E)(g, x),
         L = f.answers,
         Z = f.layout_type,
-        b = M(e, t, { formattedExpirationLabel: _ });
-    if (null == b) return;
-    let { canTapAnswers: P, canRemoveVote: D, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: z } = b,
+        P = M(e, t, { formattedExpirationLabel: _ });
+    if (null == P) return;
+    let { canTapAnswers: b, canRemoveVote: D, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: z } = P,
         K = (0, h.cZ)(V),
         X = A.Z.Messages.POLL_VOTES_COUNT.format({ count: K.toLocaleString() }),
         Q = Math.max(
@@ -323,7 +323,7 @@ function L(e, t) {
         answers: J,
         answersInteraction: (0, i.EQ)({
             tapShouldOpenVotersModal: W,
-            canTapAnswers: P,
+            canTapAnswers: b,
             canSelectMultipleAnswers: en
         })
             .with({ tapShouldOpenVotersModal: !0 }, () => N.Y7.LIST)
@@ -340,7 +340,7 @@ function L(e, t) {
         containerStyle: 'normal',
         primaryAction: q,
         isInteractive: w,
-        canTapAnswers: P,
+        canTapAnswers: b,
         canSelectMultipleAnswers: en,
         hasSelectedAnswer: B,
         canShowVoteCounts: j,

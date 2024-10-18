@@ -25,8 +25,8 @@ let T = a.memo(function (e) {
             M = (0, E.y4)(h, N, R),
             L = (0, d.v)(v && null != C ? C : []),
             Z = a ? m : I,
-            b = v ? p : f,
-            P = (0, u.y)(b, E.aO),
+            P = v ? p : f,
+            b = (0, u.y)(P, E.aO),
             D = {};
         if (v && null != L) {
             var j;
@@ -35,7 +35,7 @@ let T = a.memo(function (e) {
             M && (D.borderColor = i), (D.background = s), (t = e), (n = e);
         }
         let U = {
-            minWidth: P,
+            minWidth: b,
             color: t,
             borderColor: n
         };
@@ -56,7 +56,7 @@ let T = a.memo(function (e) {
                 (0, i.jsx)('div', {
                     className: Z.reactionCount,
                     style: U,
-                    children: b
+                    children: P
                 })
             ]
         });

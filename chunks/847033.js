@@ -44,9 +44,9 @@ function R(e) {
         M = (null == x ? void 0 : x.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         L = (0, _.mY)(null == x ? void 0 : x.id),
         Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order,
-        b = [],
-        P = p.y.GUILD_SHOP_FULL_PREVIEW;
-    R || (M && L) ? (b.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), b.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (P = b[0])) : M && !L ? (b.push(p.y.GUILD_PRODUCTS), (P = p.y.GUILD_PRODUCTS)) : !M && L && (b.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (P = p.y.GUILD_ROLE_SUBSCRIPTIONS), O && b.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : P);
+        P = [],
+        b = p.y.GUILD_SHOP_FULL_PREVIEW;
+    R || (M && L) ? (P.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (b = P[0])) : M && !L ? (P.push(p.y.GUILD_PRODUCTS), (b = p.y.GUILD_PRODUCTS)) : !M && L && (P.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (b = p.y.GUILD_ROLE_SUBSCRIPTIONS), O && P.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : b);
     let [D, j] = a.useState(s),
         U = (O && !(L && v)) || D === p.y.GUILD_PRODUCTS_PREVIEW;
     return (
@@ -57,7 +57,7 @@ function R(e) {
             value: {
                 selectedTab: D,
                 setSelectedTab: j,
-                categoryTabs: b,
+                categoryTabs: P,
                 isPhantomPreview: U,
                 handlePreviewDismiss: (e) => {
                     (0, u.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW);

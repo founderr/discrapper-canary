@@ -38,8 +38,8 @@ var i = n(735250),
     w = n(626135),
     k = n(572004),
     B = n(630388),
-    V = n(937615),
-    H = n(73346),
+    H = n(937615),
+    V = n(73346),
     F = n(3570),
     Y = n(689796),
     z = n(15470),
@@ -181,14 +181,14 @@ class ec extends a.PureComponent {
                 return t.mimeType.startsWith('video/')
                     ? {
                           type: ea.s9s.VIDEO,
-                          thumbnailSrc: (0, H._W)(e.id, t, 1024, 'webp'),
-                          src: (0, H._W)(e.id, t),
+                          thumbnailSrc: (0, V._W)(e.id, t, 1024, 'webp'),
+                          src: (0, V._W)(e.id, t),
                           height: i,
                           width: n
                       }
                     : {
                           type: ea.s9s.IMG,
-                          src: (0, H._W)(e.id, t, 1024),
+                          src: (0, V._W)(e.id, t, 1024),
                           height: i,
                           width: n
                       };
@@ -212,11 +212,11 @@ class ec extends a.PureComponent {
                   children: [
                       (0, i.jsx)('div', {
                           className: el.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, H._W)(e.id, s, 1024, 'png'), ')') }
+                          style: { backgroundImage: 'url('.concat((0, V._W)(e.id, s, 1024, 'png'), ')') }
                       }),
                       (0, i.jsx)('img', {
                           className: el.headerLogo,
-                          src: (0, H._W)(e.id, r, 1024, 'png'),
+                          src: (0, V._W)(e.id, r, 1024, 'png'),
                           alt: n.name
                       })
                   ]
@@ -289,7 +289,7 @@ class ec extends a.PureComponent {
         if (null == e || null == t || null == n) return null;
         let a = [],
             s = n.getSplashURL(1024);
-        null != s && a.push(s), null != t.headerLogoLightTheme && a.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+        null != s && a.push(s), null != t.headerLogoLightTheme && a.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
         let r = N.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
@@ -301,7 +301,7 @@ class ec extends a.PureComponent {
             let { amount: e, currency: t } = l;
             r.offers = N.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, V.T4)(e, t, { style: 'decimal' })
+                price: (0, H.T4)(e, t, { style: 'decimal' })
             });
         }
         let o = N.Z.ItemPage({ mainEntity: r });

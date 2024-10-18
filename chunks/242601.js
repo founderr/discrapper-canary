@@ -44,8 +44,8 @@ var i = n(735250),
     w = n(344185),
     k = n(155409),
     B = n(10401),
-    V = n(970731),
-    H = n(210887),
+    H = n(970731),
+    V = n(210887),
     F = n(592125),
     Y = n(796974),
     z = n(486472),
@@ -150,7 +150,7 @@ class eT extends a.PureComponent {
                       renderPopout: () =>
                           (0, i.jsx)('div', {
                               onClick: (e) => e.stopPropagation(),
-                              children: (0, i.jsx)(V.ZP, {
+                              children: (0, i.jsx)(H.ZP, {
                                   header: eE.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_HEADER_SUBSCRIBE_TOOLTIP_HEADER,
                                   content: eE.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_HEADER_SUBSCRIBE_TOOLTIP_TEXT,
                                   buttonCTA: eE.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_HEADER_SUBSCRIBE_TOOLTIP_CLOSE,
@@ -426,8 +426,8 @@ function eS(e) {
         [f, Z, M] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
         y = (0, o.e7)([z.Z], () => z.Z.isUnavailable(n)),
         G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
-        k = (0, o.e7)([H.Z], () => (H.Z.darkSidebar ? ec.BRd.DARK : H.Z.theme)),
-        { enableStudyGroup: V } = (0, D.s)(d),
+        k = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
+        { enableStudyGroup: H } = (0, D.s)(d),
         W = (0, A.ZP)((e) => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [ei, ea] = a.useState(!W),
         es = (0, I.Z)(n),
@@ -465,7 +465,7 @@ function eS(e) {
         ew = (0, x.Z)(n),
         ek = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
         eB = (0, o.e7)([J.Z], () => J.Z.desyncedVoiceStatesCount),
-        eV = U.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
+        eH = U.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
     return (0, i.jsx)(eT, {
         guildId: n,
         hideSelectedChannel: s,
@@ -497,7 +497,7 @@ function eS(e) {
         showMediaChannelUpsell: eG,
         showTierTemplatesUpsell: ew,
         isHeaderPopoutOpen: eb,
-        enableStudyGroup: V,
+        enableStudyGroup: H,
         isGuildHeaderDismissibleTooltipShown: e_,
         canShowCoachMarkAtBottom: ei,
         headerAnalyticsLocations: er,
@@ -505,6 +505,6 @@ function eS(e) {
         shouldRenderClipsEducation: ej,
         isTutorialHighlightDismissed: eU,
         shouldRenderBurstCoachmark: ey,
-        shouldRenderCustomNotificationSoundsCoachmark: eV
+        shouldRenderCustomNotificationSoundsCoachmark: eH
     });
 }

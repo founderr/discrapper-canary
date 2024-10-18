@@ -32,8 +32,8 @@ var i = n(735250),
     M = n(348238),
     L = n(83561),
     Z = n(834129),
-    b = n(981631),
-    P = n(674563),
+    P = n(981631),
+    b = n(674563),
     D = n(689938),
     j = n(38814);
 function U() {
@@ -387,7 +387,7 @@ function w(e) {
                 (0, i.jsx)(U, {}),
                 (0, i.jsx)(I.Button, {
                     onClick: function () {
-                        null != r && g.Z.open(r, b.pNK.GUILD_AUTOMOD, void 0, b.KsC.AUTOMOD_MENTION_SPAM);
+                        null != r && g.Z.open(r, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: I.Button.Colors.LINK,
                     look: I.Button.Looks.LINK,
@@ -475,7 +475,7 @@ function H(e) {
                                     children: D.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
                                 (0, i.jsx)(T.Z, {
-                                    type: P.Hb.SYSTEM_DM,
+                                    type: b.Hb.SYSTEM_DM,
                                     className: j.systemTag
                                 }),
                                 _ &&

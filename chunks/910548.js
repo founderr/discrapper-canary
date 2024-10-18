@@ -62,7 +62,7 @@ let M = ['TOP_LEFT', 'TOP_RIGHT'],
         },
         leafRotationDirection: 1
     },
-    b = Object.freeze({
+    P = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
                 x: e - 11,
@@ -116,7 +116,7 @@ let M = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         }
     }),
-    P = 'falling-leaf',
+    b = 'falling-leaf',
     D = ['#61D5B2'],
     j = n(303893),
     U = n(313226),
@@ -183,7 +183,7 @@ function k(e) {
     return (
         o.useEffect(() => {
             if ('confetti' === c) {
-                let { confettiVelocityDirection: e } = b[I],
+                let { confettiVelocityDirection: e } = P[I],
                     t = (function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L,
                             i = null == e ? void 0 : e.getBoundingClientRect();
@@ -192,7 +192,7 @@ function k(e) {
                                 x: 0,
                                 y: 0
                             };
-                        let a = b[t].getConfettiPosition(n);
+                        let a = P[t].getConfettiPosition(n);
                         return {
                             x: i.left + a.x,
                             y: i.top + a.y
@@ -215,10 +215,10 @@ function k(e) {
         }, [T, I, c, s]),
         o.useEffect(() => {
             if (S && 'leaf_fall' === c) {
-                let e = b[I].leafRotationDirection;
+                let e = P[I].leafRotationDirection;
                 C.createConfetti(
                     {
-                        id: ''.concat(P, '-').concat((0, _.Z)()),
+                        id: ''.concat(b, '-').concat((0, _.Z)()),
                         position: {
                             type: 'static',
                             value: (function (e, t) {
@@ -228,7 +228,7 @@ function k(e) {
                                         x: 0,
                                         y: 0
                                     };
-                                let i = b[t];
+                                let i = P[t];
                                 return {
                                     x: n.left + i.leafPosition.x,
                                     y: n.top + i.leafPosition.y
@@ -320,30 +320,30 @@ function G(e) {
         { reducedMotion: M } = o.useContext(m.AccessibilityPreferencesContext),
         L = (0, S.ZH)(n),
         Z = L.nick,
-        b = s(L);
+        P = s(L);
     t =
         null == c || null == a
             ? u > 1
                 ? R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
                       username: Z,
-                      usernameHook: b,
+                      usernameHook: P,
                       numSubscriptions: u
                   })
                 : R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
                       username: Z,
-                      usernameHook: b
+                      usernameHook: P
                   })
             : u > 1
               ? R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
                     username: Z,
-                    usernameHook: b,
+                    usernameHook: P,
                     numSubscriptions: u,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
                 })
               : R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
                     username: Z,
-                    usernameHook: b,
+                    usernameHook: P,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
                 });
@@ -364,7 +364,7 @@ function G(e) {
         }, []),
         y = o.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(P)) && U();
+                (null == t ? void 0 : t.id.startsWith(b)) && U();
             },
             [U]
         );

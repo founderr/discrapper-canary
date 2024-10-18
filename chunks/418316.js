@@ -36,11 +36,11 @@ function _(e) {
             let Z = s.Z.getRelationshipType(x) === u.OGo.PENDING_OUTGOING;
             return null !== (C = e.body) && void 0 !== C ? C : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let b = e.guild_scheduled_event_id,
-                P = null != b ? i.ZP.getGuildScheduledEvent(b) : null,
-                D = null == P ? void 0 : P.name,
-                j = null === (g = a.Z.getGuild(null == P ? void 0 : P.guild_id)) || void 0 === g ? void 0 : g.name,
-                U = (0, i.Z2)(null != P ? P : void 0);
+            let P = e.guild_scheduled_event_id,
+                b = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
+                D = null == b ? void 0 : b.name,
+                j = null === (g = a.Z.getGuild(null == b ? void 0 : b.guild_id)) || void 0 === g ? void 0 : g.name,
+                U = (0, i.Z2)(null != b ? b : void 0);
             return (0, l.Ew)(j) || (0, l.Ew)(D) || !U
                 ? null !== (S = e.body) && void 0 !== S
                     ? S

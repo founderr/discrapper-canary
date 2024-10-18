@@ -102,7 +102,7 @@ function b(e) {
         ),
         { canSeeInAppReportingButtons: B } = m.N.getCurrentConfig({ location: 'de1ef6_3' }, { autoTrackExposure: !1 });
     m.N.trackExposure({ location: 'GlobalDiscoveryServersCard' });
-    let V = C.Sb.getSetting();
+    let H = C.Sb.getSetting();
     return (0, i.jsxs)('div', {
         className: L.container,
         children: [
@@ -136,7 +136,7 @@ function b(e) {
                                         onLoad: () => P(!0)
                                     })
                                 }),
-                                (V || B) &&
+                                (H || B) &&
                                     (0, i.jsx)(I.Z, {
                                         guild: t,
                                         className: L.contextMenu

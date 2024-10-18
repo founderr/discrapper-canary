@@ -34,8 +34,8 @@ var a = n(442837),
     L = n(569252);
 let Z = (e) => {
     let { dismissibleContent: t, noticeType: Z } = e,
-        b = (0, a.e7)([C.Z], () => C.Z.getNotice()),
-        P = (0, a.e7)([p.default], () => p.default.locale);
+        P = (0, a.e7)([C.Z], () => C.Z.getNotice()),
+        b = (0, a.e7)([p.default], () => p.default.locale);
     return (0, i.jsx)(A.ZP, {
         contentTypes: [t],
         groupName: x.R.NOTICE_BAR,
@@ -188,7 +188,7 @@ let Z = (e) => {
                     });
                 case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, i.jsx)(f.Z, {
-                        notice: b,
+                        notice: P,
                         noticeType: Z,
                         dismissCurrentNotice: () => a(x.L.UNKNOWN)
                     });
@@ -253,7 +253,7 @@ let Z = (e) => {
                                 onClick: () => a(x.L.UNKNOWN),
                                 noticeType: Z
                             }),
-                            M.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, I.IE)(P) }),
+                            M.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, I.IE)(b) }),
                             (0, i.jsx)(r.PrimaryCTANoticeButton, {
                                 onClick: () => (0, m.Z)(O.Kq.NOTICE),
                                 noticeType: Z,

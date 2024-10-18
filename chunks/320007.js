@@ -40,7 +40,7 @@ function h(e) {
         v = (0, I.n)((e) => e.setClipsButtonRef),
         M = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
-    function b() {
+    function P() {
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
@@ -61,7 +61,7 @@ function h(e) {
                       (0, i.jsx)(m.Z, {
                           clipIconRef: O,
                           lastClipsSession: S,
-                          onOpenClipsGallery: b
+                          onOpenClipsGallery: P
                       }),
                   (0, i.jsx)('div', {
                       ref: v,
@@ -70,7 +70,7 @@ function h(e) {
                           icon: r.ClipsIcon,
                           showBadge: g,
                           tooltip: f.Z.Messages.CLIPS_GALLERY_TOOLTIP,
-                          onClick: b
+                          onClick: P
                       })
                   })
               ]

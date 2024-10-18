@@ -82,7 +82,7 @@ function A(e, t) {
             cursorScope: d,
             autocompletes: _
         })),
-        b.emitChange();
+        P.emitChange();
 }
 function x(e, t, n) {
     let i,
@@ -242,7 +242,7 @@ class Z extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = r);
-let b = new Z(o.Z, {
+let P = new Z(o.Z, {
     SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
         var t;
         let n,
@@ -287,4 +287,4 @@ let b = new Z(o.Z, {
         Object.keys(C).forEach(M);
     }
 });
-t.Z = b;
+t.Z = P;
