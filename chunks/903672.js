@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 });
 var i = n(735250),
@@ -32,14 +32,14 @@ let R = {
         right: -12
     }
 };
-function O(e, t, n) {
+function v(e, t, n) {
     let i = t ? f.Z.guildFilter : null,
         a = t ? f.Z.roleFilter : null,
         s = t ? f.Z.everyoneFilter : null,
         r = null;
     null != e && null != i && (r = i === S.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, S.DJj, r, a, s);
 }
-function v(e) {
+function O(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: _ } = e,
         E = (0, s.e7)([I.Z, T.Z], () => I.Z.getChannel(T.Z.getChannelId())),
         {
@@ -48,7 +48,7 @@ function v(e) {
             loading: p,
             guildFilter: C,
             roleFilter: R,
-            everyoneFilter: v
+            everyoneFilter: O
         } = (0, s.cj)([f.Z], () => ({
             messages: f.Z.getMentions(),
             hasMore: f.Z.hasMore,
@@ -59,16 +59,16 @@ function v(e) {
         })),
         M = (0, u.Z)(C),
         Z = (0, u.Z)(R),
-        b = (0, u.Z)(v);
+        P = (0, u.Z)(O);
     a.useEffect(() => {
         if (!f.Z.hasLoadedEver) {
-            O(E, !0);
+            v(E, !0);
             return;
         }
-        ((null != M && C !== M) || (null != Z && R !== Z) || (null != b && v !== b)) && O(E, !0);
-    }, [M, C, Z, R, b, v, E, !0]);
+        ((null != M && C !== M) || (null != Z && R !== Z) || (null != P && O !== P)) && v(E, !0);
+    }, [M, C, Z, R, P, O, E, !0]);
     a.useEffect(() => {
-        (null == m ? void 0 : m.some(d.k5)) && (o.Z.clearMentions(), O(E, !0));
+        (null == m ? void 0 : m.some(d.k5)) && (o.Z.clearMentions(), v(E, !0));
     }, []),
         a.useEffect(
             () => () => {
@@ -102,11 +102,11 @@ function v(e) {
             hasMore: h,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
-                O(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
+                v(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
             },
             canCloseAllMessages: !0,
             renderHeader: D,
-            renderEmptyState: P,
+            renderEmptyState: b,
             renderMessage: L,
             'aria-label': A.Z.Messages.RECENT_MENTIONS,
             listName: 'recents'
@@ -191,7 +191,7 @@ function Z(e) {
         ]
     });
 }
-function P(e) {
+function b(e) {
     return (0, i.jsx)(C.Z, {
         Icon: l.AtIcon,
         header: A.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

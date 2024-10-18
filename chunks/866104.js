@@ -1,9 +1,9 @@
 n.d(t, {
     C: function () {
-        return v;
+        return O;
     },
     Z: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -52,7 +52,7 @@ function R(e) {
         ]
     });
 }
-function O(e) {
+function v(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         a = I.QK.useSetting(),
         s = (0, N.n)() && a,
@@ -84,7 +84,7 @@ function O(e) {
                   })
     });
 }
-function v(e) {
+function O(e) {
     var t, n, s;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
@@ -104,24 +104,24 @@ function v(e) {
                 },
                 [s]
             )),
-        { isTruncated: v, ExpandableTextContainer: M } = (0, p.s)(),
+        { isTruncated: O, ExpandableTextContainer: M } = (0, p.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [Z, P] = a.useState(1),
-        b = (0, c.Z)('(max-width: 1439px)'),
+        [Z, b] = a.useState(1),
+        P = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: D, isPhantomPreview: j } = (0, C.m)(),
         U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(M, {
-                          lineClamp: b || 2 === Z ? 2 : 3,
+                          lineClamp: P || 2 === Z ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
                               children: null == E ? void 0 : E.description
                           })
                       }),
-                      v &&
+                      O &&
                           (0, i.jsxs)(i.Fragment, {
                               children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(R, { onClick: () => (0, S.Z)({ guildId: I }) })]
                           })
@@ -153,7 +153,7 @@ function v(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && P(2);
+                                    null != e && e.clientHeight > 30 && b(2);
                                 },
                                 children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',
@@ -190,7 +190,7 @@ function v(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(O, {
+            (0, i.jsx)(v, {
                 coverImageAsset: null == E ? void 0 : E.cover_image_asset,
                 isPreview: j
             })

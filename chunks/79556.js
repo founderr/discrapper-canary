@@ -17,8 +17,8 @@ var l = n(120356),
     h = n(619915),
     p = n(201895),
     f = n(873696),
-    m = n(66999),
-    _ = n(22082),
+    _ = n(66999),
+    m = n(22082),
     g = n(665906),
     C = n(592125),
     I = n(430824),
@@ -64,7 +64,7 @@ class P extends Z.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: m, canReorderChannel: _, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: x, withGuildIcon: S, enableActivities: v } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: _, canReorderChannel: m, isSubscriptionGated: g, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: x, withGuildIcon: S, enableActivities: v } = this.props,
             Z = v && null != N && N.length > 0,
             T = (0, f.D)(I),
             A = (0, i.jsx)('li', {
@@ -95,7 +95,7 @@ class P extends Z.ZP {
                             subtitleColor: null == T ? void 0 : T.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
-                            connectDragPreview: _ ? m : null,
+                            connectDragPreview: m ? _ : null,
                             isFavoriteSuggestion: C,
                             channelTypeOverride: E ? M.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: x,
@@ -110,7 +110,7 @@ class P extends Z.ZP {
                         })
                 })
             });
-        return _ ? d(h(A)) : A;
+        return m ? d(h(A)) : A;
     }
     constructor(...e) {
         super(...e),
@@ -221,8 +221,8 @@ function j(e) {
                 canReorderChannel: !0 !== l && (n.id === R._ || (null != e ? E.Z.can(M.Plq.MANAGE_CHANNELS, e) : E.Z.can(M.Plq.MANAGE_CHANNELS, n)))
             };
         }),
-        v = (0, a.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: Z, isSubscriptionGated: b } = (0, m.Z)(t.id),
+        v = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)),
+        { needSubscriptionToAccess: Z, isSubscriptionGated: b } = (0, _.Z)(t.id),
         A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
         L = (0, a.e7)(
             [S.default],

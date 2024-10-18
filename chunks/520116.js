@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 }),
     n(653041);
@@ -31,7 +31,7 @@ let R = {
     left: 4,
     right: -12
 };
-function O(e) {
+function v(e) {
     var t;
     let { channel: n, message: s, compact: r, isGroupStart: o, treatSpam: u, gotoChannel: d } = e,
         _ = (0, l.JA)(null !== (t = s.id) && void 0 !== t ? t : ''),
@@ -74,17 +74,17 @@ function O(e) {
         )
     });
 }
-function v(e) {
+function O(e) {
     var t, n;
     let { channel: a, channelRecord: s, gotoChannel: l } = e,
         { enabled: m } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         C = T.jU.useSetting(),
         R = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)),
-        v = (0, E.P1)(s),
+        O = (0, E.P1)(s),
         M = !1,
         L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'),
         Z = null !== (n = null === (t = N.default.getUser(f.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
-        P = [];
+        b = [];
     if (!a.collapsed) {
         let e = null,
             t = null,
@@ -93,7 +93,7 @@ function v(e) {
             if (!(0, d.Z)(n, R)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, p.vc)(n.timestamp, 'LL');
-                    P.push(
+                    b.push(
                         (0, i.jsx)(
                             I.Z,
                             {
@@ -108,15 +108,15 @@ function v(e) {
                 let a = null == t || (0, _.Z)(s, t, n);
                 (t = n),
                     (M = M || (0, E.DQ)(n)),
-                    P.push(
+                    b.push(
                         (0, i.jsx)(
-                            O,
+                            v,
                             {
                                 channel: s,
                                 message: n,
                                 compact: C,
                                 isGroupStart: a,
-                                treatSpam: !Z && m && (0, E.DQ)(n) && v,
+                                treatSpam: !Z && m && (0, E.DQ)(n) && O,
                                 gotoChannel: l
                             },
                             n.id
@@ -125,7 +125,7 @@ function v(e) {
             }
         }),
             a.messages.length >= g.hC &&
-                P.push(
+                b.push(
                     (0, i.jsxs)(
                         c.Button,
                         {
@@ -137,13 +137,13 @@ function v(e) {
                         'view-all'
                     )
                 ),
-            0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
+            0 === b.length && (b = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        M && v && u.Z.trackExposure({ location: '20e3b0_2' }),
+        M && O && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: x.messages,
-            children: P
+            children: b
         })
     );
 }

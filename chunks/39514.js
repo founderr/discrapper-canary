@@ -8,27 +8,27 @@ var s,
     c = n(442837),
     u = n(570140),
     d = n(893776),
-    h = n(533307),
-    _ = n(978085),
+    _ = n(533307),
+    h = n(978085),
     E = n(232567),
     g = n(388905),
     p = n(362762),
-    f = n(108427),
-    m = n(314897),
+    m = n(108427),
+    f = n(314897),
     I = n(896797),
     N = n(82142),
     T = n(283595),
     A = n(55563),
     x = n(669079),
     C = n(63063),
-    S = n(51144),
-    O = n(481153),
-    R = n(781428),
-    v = n(423527),
-    Z = n(981631),
+    R = n(51144),
+    S = n(481153),
+    O = n(781428),
+    Z = n(423527),
+    v = n(981631),
     b = n(689938),
-    D = n(113207);
-function L(e, t, n) {
+    L = n(113207);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ c.ZP.initialize(), ((r = s || (s = {})).REGISTER = 'register'), (r.LOGIN = 'logi
 class M extends a.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, f.e)('gift_code');
+        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, m.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
@@ -58,7 +58,7 @@ class M extends a.PureComponent {
     }
     handleAuthenticated() {
         let { currentUser: e } = this.state;
-        _.b8(), null == e && this.refreshUser();
+        h.b8(), null == e && this.refreshUser();
     }
     get requiresVerification() {
         let { currentUser: e } = this.state;
@@ -76,7 +76,7 @@ class M extends a.PureComponent {
         let { libraryApplication: t, sku: n } = this.props,
             { error: s } = this.state,
             r = null != s ? s.code : null;
-        return r === Z.evJ.INVALID_GIFT_SELF_REDEMPTION ? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : r === Z.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === Z.POd.COLLECTIBLES ? b.Z.Messages.GIFT_ERROR_OWNED : null != t || r === Z.evJ.INVALID_GIFT_REDEMPTION_OWNED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({ libraryLink: Z.Z5c.APPLICATION_LIBRARY }) : e.isClaimed || r === Z.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : r === Z.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0;
+        return r === v.evJ.INVALID_GIFT_SELF_REDEMPTION ? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : r === v.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === v.POd.COLLECTIBLES ? b.Z.Messages.GIFT_ERROR_OWNED : null != t || r === v.evJ.INVALID_GIFT_REDEMPTION_OWNED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({ libraryLink: v.Z5c.APPLICATION_LIBRARY }) : e.isClaimed || r === v.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : r === v.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0;
     }
     renderSpinner(e) {
         return (0, i.jsxs)(g.ZP, {
@@ -89,20 +89,20 @@ class M extends a.PureComponent {
             children: [
                 (0, i.jsx)(g.Ee, {
                     src: n(167969),
-                    className: D.marginBottom8
+                    className: L.marginBottom8
                 }),
                 (0, i.jsx)(g.Dx, {
-                    className: o()(D.marginTop8, D.marginBottom8),
+                    className: o()(L.marginTop8, L.marginBottom8),
                     children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_TITLE
                 }),
                 (0, i.jsx)(g.DK, { children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_BODY }),
                 (0, i.jsx)(g.zx, {
-                    className: o()(D.marginTop40, D.marginBottom8),
+                    className: o()(L.marginTop40, L.marginBottom8),
                     onClick: () => t(e),
                     children: b.Z.Messages.CONTINUE_TO_WEBAPP
                 }),
                 (0, i.jsx)(g.zx, {
-                    onClick: () => window.open(C.Z.getArticleURL(Z.BhN.GIFTING), '_blank'),
+                    onClick: () => window.open(C.Z.getArticleURL(v.BhN.GIFTING), '_blank'),
                     look: g.zx.Looks.LINK,
                     color: g.zx.Colors.LINK,
                     children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_TIP
@@ -114,12 +114,12 @@ class M extends a.PureComponent {
         return (0, i.jsxs)(g.ZP, {
             children: [
                 (0, i.jsx)(g.Dx, {
-                    className: D.marginBottom8,
+                    className: L.marginBottom8,
                     children: b.Z.Messages.APP_OPENED_TITLE
                 }),
                 (0, i.jsx)(g.DK, { children: b.Z.Messages.APP_OPENED_BODY }),
                 (0, i.jsx)(g.zx, {
-                    className: D.marginTop40,
+                    className: L.marginTop40,
                     onClick: () => this.setState({ continueOnWeb: !0 }),
                     children: b.Z.Messages.GIFT_CODE_AUTH_CONTINUE_IN_BROWSER
                 })
@@ -132,16 +132,16 @@ class M extends a.PureComponent {
             children: [
                 (0, i.jsx)(g.Ee, {
                     src: n(892235),
-                    className: D.marginBottom8
+                    className: L.marginBottom8
                 }),
                 (0, i.jsx)(g.Dx, { children: b.Z.Messages.GIFT_CODE_AUTH_VERIFICATION_TITLE.format({ username: e.username }) }),
                 (0, i.jsx)(g.DK, {
-                    className: D.marginTop20,
+                    className: L.marginTop20,
                     children: b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_VERIFICATION_REQUIRED
                 }),
                 (0, i.jsx)(g.zx, {
                     disabled: t,
-                    className: D.marginTop40,
+                    className: L.marginTop40,
                     onClick: this.handleResendVerification,
                     children: t ? b.Z.Messages.GIFT_CODE_AUTH_VERIFICATION_SENT : b.Z.Messages.RESEND_VERIFICATION_EMAIL
                 }),
@@ -149,7 +149,7 @@ class M extends a.PureComponent {
                     look: g.zx.Looks.LINK,
                     color: g.zx.Colors.LINK,
                     onClick: this.refreshUser,
-                    className: D.marginTop8,
+                    className: L.marginTop8,
                     children: b.Z.Messages.GIFT_CODE_AUTH_CHECK_VERIFICATION_AGAIN
                 })
             ]
@@ -159,22 +159,22 @@ class M extends a.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(O.Z, { giftCode: e }),
+                (0, i.jsx)(S.Z, { giftCode: e }),
                 (0, i.jsx)(g.zx, {
                     disabled: null != n,
-                    className: D.marginTop40,
+                    className: L.marginTop40,
                     onClick: this.handleAccept,
                     children: b.Z.Messages.GIFT_CODE_AUTH_ACCEPT
                 }),
                 null != n
                     ? (0, i.jsx)(g.DK, {
-                          className: D.marginTop20,
+                          className: L.marginTop20,
                           children: n
                       })
                     : (0, i.jsx)(g.i_, {
-                          className: D.marginTop20,
+                          className: L.marginTop20,
                           children: b.Z.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-                              userTag: S.ZP.getUserTag(t),
+                              userTag: R.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
                           })
                       })
@@ -184,8 +184,8 @@ class M extends a.PureComponent {
     render() {
         let { nativeAppState: e, sku: t, authenticated: n, giftCode: s, isResolved: r, isAccepting: a, transitionTo: l, location: o } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
-        if (e === Z.kEZ.OPEN && !u) return this.renderAppOpened();
-        if (e === Z.kEZ.OPENING) return this.renderSpinner(b.Z.Messages.APP_OPENING);
+        if (e === v.kEZ.OPEN && !u) return this.renderAppOpened();
+        if (e === v.kEZ.OPENING) return this.renderSpinner(b.Z.Messages.APP_OPENING);
         if (a) return this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_ACCEPTING);
         if (null == s) return r ? this.renderExpiredInvite() : this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_RESOLVING);
         if (r) {
@@ -194,13 +194,13 @@ class M extends a.PureComponent {
                 return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
             }
             return 'login' === this.getMode()
-                ? (0, i.jsx)(R.Z, {
+                ? (0, i.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: s,
                       transitionTo: l,
                       location: o
                   })
-                : (0, i.jsx)(v.Z, {
+                : (0, i.jsx)(Z.Z, {
                       giftCodeSKU: t,
                       giftCode: s,
                       transitionTo: l,
@@ -211,14 +211,14 @@ class M extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'state', {
+            D(this, 'state', {
                 error: null,
                 continueOnWeb: !1,
                 currentUser: null,
                 sentVerification: !1,
                 fetchingUser: !1
             }),
-            L(this, 'refreshUser', () => {
+            D(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
                     E.k({ withAnalyticsToken: !0 })
                         .then((e) =>
@@ -229,33 +229,33 @@ class M extends a.PureComponent {
                         )
                         .catch(() => this.setState({ fetchingUser: !1 }));
             }),
-            L(this, 'handleLogout', () => {
+            D(this, 'handleLogout', () => {
                 let e = this.props.match.params.giftCode;
-                d.Z.logout(Z.Z5c.GIFT_CODE_LOGIN(e));
+                d.Z.logout(v.Z5c.GIFT_CODE_LOGIN(e));
             }),
-            L(this, 'handleResendVerification', () => {
+            D(this, 'handleResendVerification', () => {
                 d.Z.verifyResend(), this.setState({ sentVerification: !0 });
             }),
-            L(this, 'handleAccept', async () => {
+            D(this, 'handleAccept', async () => {
                 let { transitionTo: e, giftCode: t } = this.props;
                 if (null == t) throw Error('Trying to accept gift before resolve');
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await h.Z.redeemGiftCode({ code: n }), e(Z.Z5c.APP);
+                    this.setState({ error: null }), await _.Z.redeemGiftCode({ code: n }), e(v.Z5c.APP);
                 } catch (e) {
                     this.setState({ error: e });
                 }
             }),
-            L(this, 'resolveGiftCode', () => {
+            D(this, 'resolveGiftCode', () => {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
-                h.Z.resolveGiftCode(t, !0, !0).then((n) => {
-                    null != n && null != n.giftCode.promotion && e(Z.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+                _.Z.resolveGiftCode(t, !0, !0).then((n) => {
+                    null != n && null != n.giftCode.promotion && e(v.Z5c.BILLING_PROMOTION_REDEMPTION(t));
                 });
             });
     }
 }
-t.Z = c.ZP.connectStores([N.Z, T.Z, m.default, A.Z, I.Z, p.Z], (e) => {
+t.Z = c.ZP.connectStores([N.Z, T.Z, f.default, A.Z, I.Z, p.Z], (e) => {
     let t = e.match.params.giftCode,
         n = N.Z.get(t),
         s = null != n ? A.Z.get(n.skuId) : null;
@@ -263,7 +263,7 @@ t.Z = c.ZP.connectStores([N.Z, T.Z, m.default, A.Z, I.Z, p.Z], (e) => {
         giftCode: n,
         sku: s,
         libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? x.z2(n.entitlementBranches, s, T.Z) : null,
-        authenticated: m.default.isAuthenticated(),
+        authenticated: f.default.isAuthenticated(),
         defaultRoute: I.Z.defaultRoute,
         isResolved: N.Z.getIsResolved(t),
         isAccepting: N.Z.getIsAccepting(t),

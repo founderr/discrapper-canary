@@ -27,8 +27,8 @@ var i,
     h = n(481060),
     p = n(787014),
     f = n(924301),
-    m = n(159300),
-    _ = n(152376),
+    _ = n(159300),
+    m = n(152376),
     g = n(427679),
     C = n(155409),
     I = n(131704),
@@ -78,8 +78,8 @@ function L(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: o = !1 } = e,
         c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
-        _ = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        I = (0, d.e7)([x.Z], () => (0, m.b)(x.Z, c, t, p)),
+        m = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
+        I = (0, d.e7)([x.Z], () => (0, _.b)(x.Z, c, t, p)),
         S = (0, d.e7)([x.Z], () => (x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER));
     if (l || !I) return null;
     function v() {
@@ -94,7 +94,7 @@ function L(e) {
                         channel: t,
                         streamUserId: 1 === e.length ? e[0].ownerId : null,
                         source: Z.t4x.GUILD_CHANNELS,
-                        guildScheduledEvent: _
+                        guildScheduledEvent: m
                     });
             });
         }
@@ -128,7 +128,7 @@ function L(e) {
 function y(e) {
     let { channel: t } = e,
         n = () => {
-            (0, _._U)(t.guild_id, t.id);
+            (0, m._U)(t.guild_id, t.id);
         };
     return (0, s.jsx)(h.Tooltip, {
         text: T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
@@ -149,7 +149,7 @@ function y(e) {
 function P(e) {
     let { channel: t } = e,
         n = () => {
-            (0, _.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
+            (0, m.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
         };
     return (0, s.jsx)(h.Tooltip, {
         text: T.Z.Messages.ADD_FAVORITE,

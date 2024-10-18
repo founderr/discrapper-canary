@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(70956),
     Z = n(960048),
     v = n(145597),
-    C = n(692546),
-    S = n(518084),
+    S = n(692546),
+    C = n(518084),
     x = n(987650),
     T = n(981631),
     N = n(689938),
@@ -68,7 +68,7 @@ class L extends s.PureComponent {
             { notificationTimer: s } = this;
         return null == s
             ? null
-            : (0, i.jsx)(C.Z, {
+            : (0, i.jsx)(S.Z, {
                   observe: !1,
                   children: (0, i.jsx)(h.ThemeProvider, {
                       theme: T.BRd.DARK,
@@ -92,11 +92,11 @@ class L extends s.PureComponent {
                                       onDismissClick: this.hideNotification
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(S.ZP, {
+                                      ? (0, i.jsxs)(C.ZP, {
                                             className: O.stackTrace,
                                             children: [
-                                                (0, i.jsx)(S.ZP.Bar, { children: 'Error Details' }),
-                                                (0, i.jsx)(S.ZP.Content, {
+                                                (0, i.jsx)(C.ZP.Bar, { children: 'Error Details' }),
+                                                (0, i.jsx)(C.ZP.Content, {
                                                     className: O.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
                                                         className: O.code,

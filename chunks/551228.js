@@ -3,7 +3,7 @@ l.d(n, {
         return x;
     },
     te: function () {
-        return h;
+        return m;
     }
 }),
     l(47120);
@@ -16,8 +16,8 @@ var t = l(735250),
     u = l(442550),
     c = l(297781),
     o = l(443487),
-    m = l(494399);
-let h = [c.XF];
+    h = l(494399);
+let m = [c.XF];
 function x(e) {
     var n, l, t, i;
     let s = (0, r.e7)([d.Z], () => d.Z.getMatchingActivity(e)),
@@ -25,12 +25,12 @@ function x(e) {
     if (null == s || null == u) return {};
     let c = e.extra.entries[0],
         o = null !== (t = null !== (l = s.state) && void 0 !== l ? l : null === (n = c.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== t ? t : c.media.title,
-        m = null !== (i = s.details) && void 0 !== i ? i : c.media.title;
+        h = null !== (i = s.details) && void 0 !== i ? i : c.media.title;
     return {
         activity: s,
         artist: o,
         currentEntry: c,
-        title: m,
+        title: h,
         user: u
     };
 }
@@ -53,14 +53,14 @@ n.ZP = i.memo(function (e) {
                           (0, t.jsx)(o.ll, { children: a }),
                           (0, t.jsx)(c.Gk, {
                               location: c.Gt.CARD,
-                              children: h.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
+                              children: m.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
                           })
                       ]
                   }),
                   (0, t.jsx)(u.f, {
                       src: null == d ? void 0 : d.src,
                       size: 48,
-                      className: m.thumbnail
+                      className: h.thumbnail
                   })
               ]
           });

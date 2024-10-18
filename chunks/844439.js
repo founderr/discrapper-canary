@@ -1,112 +1,112 @@
-t.d(n, {
+n.d(e, {
     M: function () {
-        return c;
+        return i;
     }
 });
-var i,
-    a,
-    l,
+var a,
     o,
+    r,
     c,
-    d,
-    r = t(442837),
-    u = t(570140);
-((i = c || (c = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
-let s = {},
-    m = {},
-    E = {};
-function _(e) {
-    let { location: n, channelId: t, withCommands: i } = e;
-    return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(i);
+    i,
+    u,
+    l = n(442837),
+    s = n(570140);
+((a = i || (i = {}))[(a.FETCHING = 0)] = 'FETCHING'), (a[(a.FETCHED = 1)] = 'FETCHED'), (a[(a.ERROR = 2)] = 'ERROR');
+let E = {},
+    d = {},
+    C = {};
+function T(t) {
+    let { location: e, channelId: n, withCommands: a } = t;
+    return 'location:'.concat(e, ' channelId:').concat('0', ' withCommands:').concat(a);
 }
-let p = Object.freeze([]);
-class M extends (d = r.ZP.Store) {
-    getLastFetchTimeMs(e) {
-        let { location: n, channelId: t, withCommands: i } = e;
-        return E[
-            _({
-                location: n,
-                channelId: t,
-                withCommands: i
+let _ = Object.freeze([]);
+class f extends (u = l.ZP.Store) {
+    getLastFetchTimeMs(t) {
+        let { location: e, channelId: n, withCommands: a } = t;
+        return C[
+            T({
+                location: e,
+                channelId: n,
+                withCommands: a
             })
         ];
     }
-    getFetchState(e) {
-        let { location: n, channelId: t, withCommands: i } = e;
-        return m[
-            _({
-                location: n,
-                channelId: t,
-                withCommands: i
+    getFetchState(t) {
+        let { location: e, channelId: n, withCommands: a } = t;
+        return d[
+            T({
+                location: e,
+                channelId: n,
+                withCommands: a
             })
         ];
     }
-    getRecommendations(e) {
-        var n;
-        let { location: t, channelId: i, withCommands: a } = e;
+    getRecommendations(t) {
+        var e;
+        let { location: n, channelId: a, withCommands: o } = t;
         return null !==
-            (n =
-                s[
-                    _({
-                        location: t,
-                        channelId: i,
-                        withCommands: a
+            (e =
+                E[
+                    T({
+                        location: n,
+                        channelId: a,
+                        withCommands: o
                     })
-                ]) && void 0 !== n
-            ? n
-            : p;
+                ]) && void 0 !== e
+            ? e
+            : _;
     }
 }
-(o = void 0),
-    (l = 'displayName') in (a = M)
-        ? Object.defineProperty(a, l, {
-              value: o,
+(c = void 0),
+    (r = 'displayName') in (o = f)
+        ? Object.defineProperty(o, r, {
+              value: c,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[l] = o),
-    (n.ZP = new M(u.Z, {
-        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
-            let { location: n, channelId: t, withCommands: i } = e;
-            m = {
-                ...m,
-                [_({
-                    location: n,
-                    channelId: t,
-                    withCommands: i
+        : (o[r] = c),
+    (e.ZP = new f(s.Z, {
+        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (t) {
+            let { location: e, channelId: n, withCommands: a } = t;
+            d = {
+                ...d,
+                [T({
+                    location: e,
+                    channelId: n,
+                    withCommands: a
                 })]: 0
             };
         },
-        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (e) {
-            let { recommendations: n, location: t, channelId: i, withCommands: a } = e,
-                l = _({
-                    location: t,
-                    channelId: i,
-                    withCommands: a
+        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (t) {
+            let { recommendations: e, location: n, channelId: a, withCommands: o } = t,
+                r = T({
+                    location: n,
+                    channelId: a,
+                    withCommands: o
                 });
-            (s = {
-                ...s,
-                [l]: n
-            }),
-                (m = {
-                    ...m,
-                    [l]: 1
-                });
-            let o = Date.now();
-            E = {
+            (E = {
                 ...E,
-                [l]: o
+                [r]: e
+            }),
+                (d = {
+                    ...d,
+                    [r]: 1
+                });
+            let c = Date.now();
+            C = {
+                ...C,
+                [r]: c
             };
         },
-        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {
-            let { location: n, channelId: t, withCommands: i } = e;
-            m = {
-                ...m,
-                [_({
-                    location: n,
-                    channelId: t,
-                    withCommands: i
+        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (t) {
+            let { location: e, channelId: n, withCommands: a } = t;
+            d = {
+                ...d,
+                [T({
+                    location: e,
+                    channelId: n,
+                    withCommands: a
                 })]: 2
             };
         }

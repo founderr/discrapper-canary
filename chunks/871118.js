@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 });
 var l = n(735250),
@@ -36,23 +36,23 @@ function E(e) {
               })
     });
 }
-function v(e) {
+function _(e) {
     let { stream: t, className: n, noText: i = !1 } = e,
         r = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
         o = (0, s.e7)([d.Z], () => null != r && d.Z.canBasicChannel(h.S7T.CONNECT, r)),
-        { url: v, isLoading: _ } = (0, s.cj)([u.Z], () => ({
+        { url: _, isLoading: v } = (0, s.cj)([u.Z], () => ({
             url: o ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
             isLoading: o && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        C = a.useRef(_ ? null : v);
+        C = a.useRef(v ? null : _);
     a.useEffect(() => {
-        !_ && (C.current = v);
-    }, [v, _]);
-    let p = null == v || _ ? C.current : v;
+        !v && (C.current = _);
+    }, [_, v]);
+    let p = null == _ || v ? C.current : _;
     return null == p
         ? (0, l.jsx)(E, {
               className: n,
-              isLoading: _,
+              isLoading: v,
               noText: i,
               previewText: o ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })

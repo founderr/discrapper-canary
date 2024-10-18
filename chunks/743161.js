@@ -1,30 +1,30 @@
-s.r(o);
-var t = s(735250),
-    n = s(470079),
-    a = s(442837),
-    l = s(481060),
-    r = s(541099),
-    c = s(827498),
-    i = s(421591),
-    u = s(314734),
-    d = s(689938),
-    h = s(574455);
-o.default = n.memo(function (e) {
-    let { channel: o, ...s } = e,
-        p = (0, a.e7)([r.Z], () => r.Z.shouldShowModal());
+n.r(e);
+var a = n(735250),
+    o = n(470079),
+    r = n(442837),
+    c = n(481060),
+    i = n(541099),
+    u = n(827498),
+    l = n(421591),
+    s = n(314734),
+    E = n(689938),
+    d = n(574455);
+e.default = o.memo(function (t) {
+    let { channel: e, ...n } = t,
+        C = (0, r.e7)([i.Z], () => i.Z.shouldShowModal());
     return (
-        n.useEffect(() => {
-            !p && (0, l.closeModalInAllContexts)(u.e9);
+        o.useEffect(() => {
+            !C && (0, c.closeModalInAllContexts)(s.e9);
         }),
-        (0, t.jsx)('span', {
-            style: u.u$,
-            children: (0, t.jsx)(l.ModalRoot, {
-                className: h.root,
-                'aria-label': d.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
-                ...s,
-                children: (0, t.jsx)(i.Z, {
-                    channel: o,
-                    entrypoint: c._b.VOICE
+        (0, a.jsx)('span', {
+            style: s.u$,
+            children: (0, a.jsx)(c.ModalRoot, {
+                className: d.root,
+                'aria-label': E.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
+                ...n,
+                children: (0, a.jsx)(l.Z, {
+                    channel: e,
+                    entrypoint: u._b.VOICE
                 })
             })
         })

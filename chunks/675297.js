@@ -21,18 +21,18 @@ var a = n(399606),
     f = n(226060),
     h = n(981631);
 function N(e) {
-    let { guildProductListing: t, guildId: n, location: N, shouldShowFullDescriptionButton: p = !0, hideRoleTag: C = !1, lineClamp: g = 1, cardWidth: S, cardHeight: A, thumbnailHeight: x, descriptionTextVariant: R = 'text-sm/normal', showOpaqueBackground: O = !1 } = e,
-        v = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
+    let { guildProductListing: t, guildId: n, location: N, shouldShowFullDescriptionButton: p = !0, hideRoleTag: C = !1, lineClamp: g = 1, cardWidth: S, cardHeight: A, thumbnailHeight: x, descriptionTextVariant: R = 'text-sm/normal', showOpaqueBackground: v = !1 } = e,
+        O = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
         M = (0, a.e7)([o.Z], () => {
             var e;
             return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.lds);
         }),
         L = (0, s.U)(t, 600),
         Z = (0, I.C)(t),
-        P = (0, u.SO)(v),
-        { shouldHideGuildPurchaseEntryPoints: b } = (0, l.uP)(n),
+        b = (0, u.SO)(O),
+        { shouldHideGuildPurchaseEntryPoints: P } = (0, l.uP)(n),
         D = (0, I.k)(t);
-    if (null == v || b) return null;
+    if (null == O || P) return null;
     let j = () =>
             (0, T.e)({
                 guildId: n,
@@ -42,15 +42,15 @@ function N(e) {
         U = (0, i.jsx)(m.m, {
             product: t,
             guildId: n,
-            showEditProduct: P,
+            showEditProduct: b,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: P
+            onEditProduct: b
                 ? () => {
-                      _.h(v.id, t.id);
+                      _.h(O.id, t.id);
                   }
                 : () => {},
             onUnpublishProduct: () => {},
@@ -81,7 +81,7 @@ function N(e) {
             onShowFullDescription: j,
             onTapCard: j,
             actionMenu: U,
-            showOpaqueBackground: O,
+            showOpaqueBackground: v,
             hideRoleTag: C,
             lineClamp: g,
             cardWidth: S,

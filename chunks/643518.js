@@ -4,48 +4,48 @@ t.d(n, {
     }
 }),
     t(653041);
-var o = t(697927),
-    i = t(200634),
-    s = t(369566),
+var i = t(697927),
+    s = t(200634),
+    o = t(369566),
     l = t(326094),
-    c = t(708108),
-    r = t(146078),
+    r = t(708108),
+    c = t(146078),
     a = t(228168),
     d = t(981631),
     u = t(689938);
 function _(e) {
     var n, t;
     let { user: _, currentUser: I } = e,
-        { live: E, recent: f, stream: p } = (0, s.Z)(_.id),
-        Z = null === (n = (0, o.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        h = null === (t = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
-        x = (0, l.Z)({
+        { live: E, recent: f, stream: m } = (0, o.Z)(_.id),
+        x = null === (n = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        p = null === (t = (0, s.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
+        Z = (0, l.Z)({
             user: _,
             currentUser: I,
             location: d.Sbl.PROFILE_MODAL_TABS
         }),
-        m = [
+        h = [
             {
                 section: a.oh.USER_INFO,
                 text: u.Z.Messages.USER_PROFILE_ABOUT_ME
             }
         ];
     return (
-        (E.length > 0 || f.length > 0 || null != p) &&
-            m.push({
+        (E.length > 0 || f.length > 0 || null != m) &&
+            h.push({
                 section: a.oh.ACTIVITY,
                 text: u.Z.Messages.USER_PROFILE_ACTIVITY
             }),
         _.id !== (null == I ? void 0 : I.id) &&
-            x &&
-            (m.push({
+            Z &&
+            (h.push({
                 section: a.oh.MUTUAL_FRIENDS,
-                text: (0, c.Z)(Z)
+                text: (0, r.Z)(x)
             }),
-            m.push({
+            h.push({
                 section: a.oh.MUTUAL_GUILDS,
-                text: (0, r.Z)(h)
+                text: (0, c.Z)(p)
             })),
-        m
+        h
     );
 }

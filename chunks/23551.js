@@ -14,9 +14,9 @@ var a = t(120356),
 s.Z = (e) => {
     let { disabled: s = !1, type: t, className: a, innerClassName: S, onConnect: I } = e,
         N = (0, l.ZP)(),
-        A = c.Z.get((0, d.rR)(t));
+        m = c.Z.get((0, d.rR)(t));
     return (0, n.jsx)(o.Tooltip, {
-        text: A.name,
+        text: m.name,
         children: (e) => {
             let { onMouseEnter: l, onMouseLeave: d } = e;
             return (0, n.jsx)('div', {
@@ -28,7 +28,7 @@ s.Z = (e) => {
                         className: i()(T.inner, S),
                         type: 'button',
                         disabled: s,
-                        style: { backgroundImage: "url('".concat((0, r.wj)(N) ? A.icon.darkSVG : A.icon.lightSVG, "')") },
+                        style: { backgroundImage: "url('".concat((0, r.wj)(N) ? m.icon.darkSVG : m.icon.lightSVG, "')") },
                         onClick:
                             null != I
                                 ? I
@@ -45,7 +45,7 @@ s.Z = (e) => {
                                                   platform_type: s.type
                                               });
                                       })(t),
-                        'aria-label': A.name
+                        'aria-label': m.name
                     })
                 })
             });

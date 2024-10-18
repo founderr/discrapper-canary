@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(757692),
     T = n(933843),
     x = n(141321),
-    S = n(2818),
-    v = n(954551),
+    v = n(2818),
+    S = n(954551),
     N = n(44136),
     A = n(651183),
     Z = n(618158),
@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(616286),
     R = n(961048),
     L = n(179424),
-    P = n(786915),
-    j = n(975146),
+    j = n(786915),
+    P = n(975146),
     O = n(991617),
     y = n(597998),
     D = n(606304),
@@ -104,7 +104,7 @@ function Y(e) {
         q = (0, T.So)(c.q.STREAM_HIGH_QUALITY),
         X = (0, I.o)(D, Y),
         J = (0, C.lL)('CallHeader', !0, Y, X),
-        { enabled: Q, inInbox: $ } = S.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        { enabled: Q, inInbox: $ } = v.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         ee = (0, _.Q)('ChannelCallHeaderToolbar'),
         { preventIdle: et, allowIdle: en } = (0, Z.Y)('popup'),
         ei = [];
@@ -113,7 +113,7 @@ function Y(e) {
             t = (null == D ? void 0 : D.type) === G.fO.ACTIVITY ? D.id : void 0;
         ei.push(
             (0, i.jsx)(
-                P.Z,
+                j.Z,
                 {
                     className: W.button,
                     channel: n,
@@ -181,7 +181,7 @@ function Y(e) {
                         renderPopout: () => (0, i.jsx)(M.Z, { children: (0, i.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, s.createElement)(j.Z, {
+                            return (0, s.createElement)(P.Z, {
                                 ...e,
                                 isActive: n,
                                 count: F,
@@ -227,7 +227,7 @@ function Y(e) {
                     'recents'
                 )
             ),
-        Q && !$ && ei.push((0, i.jsx)(v.Z, { className: W.button }, 'for-later')),
+        Q && !$ && ei.push((0, i.jsx)(S.Z, { className: W.button }, 'for-later')),
         ei.push(
             (0, i.jsx)(
                 d.Popout,

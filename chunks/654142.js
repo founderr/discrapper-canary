@@ -11,9 +11,9 @@ var i = n(735250),
     h = n(823379),
     p = n(179809),
     f = n(652376),
-    m = n(981631);
+    _ = n(981631);
 t.Z = l.memo(function (e) {
-    let { folderNode: t, ..._ } = e,
+    let { folderNode: t, ...m } = e,
         { id: g, name: C, color: I, children: E } = t,
         N = E.map((e) => e.id),
         x = (0, o.Z)((e) => e.guildId),
@@ -26,7 +26,7 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * m.dYL,
+                n = 2 * _.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
@@ -56,7 +56,7 @@ t.Z = l.memo(function (e) {
             [g, C, I, b, T]
         );
     return (0, i.jsx)(p.Z, {
-        ..._,
+        ...m,
         folderNode: t,
         expanded: S,
         selected: null != x && N.includes(x),

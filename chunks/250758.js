@@ -73,7 +73,7 @@ function A(e, t) {
         })(n, l));
     let { query: o, mode: c, tokens: u, cursorScope: d } = a,
         { autocompletes: _ } = a;
-    (_ = O(e, c)),
+    (_ = v(e, c)),
         (C[e] = S({
             searchId: e,
             query: o,
@@ -82,7 +82,7 @@ function A(e, t) {
             cursorScope: d,
             autocompletes: _
         })),
-        P.emitChange();
+        b.emitChange();
 }
 function x(e, t, n) {
     let i,
@@ -135,7 +135,7 @@ function R(e) {
         results: i
     };
 }
-function O(e, t) {
+function v(e, t) {
     let n = [];
     return (
         t.type === p.Sap.FILTER
@@ -195,7 +195,7 @@ function O(e, t) {
         n
     );
 }
-function v() {
+function O() {
     (0, I.WU)();
 }
 function M(e) {
@@ -221,7 +221,7 @@ function L() {
         mode: n,
         tokens: i,
         cursorScope: a,
-        autocompletes: O(e, n)
+        autocompletes: v(e, n)
     });
 }
 class Z extends (i = l.ZP.Store) {
@@ -242,7 +242,7 @@ class Z extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = r);
-let P = new Z(o.Z, {
+let b = new Z(o.Z, {
     SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
         var t;
         let n,
@@ -253,10 +253,10 @@ let P = new Z(o.Z, {
             c = g[i],
             u = !0;
         if (r === o.query && (null == o.mode || o.mode.filter === l.filter)) (n = o.autocompletes), (u = !1);
-        else if (l.type === p.Sap.EMPTY || (l.type === p.Sap.FILTER && l.filter !== p.dCx.FILTER_FROM && l.filter !== p.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = O(i, l));
+        else if (l.type === p.Sap.EMPTY || (l.type === p.Sap.FILTER && l.filter !== p.dCx.FILTER_FROM && l.filter !== p.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = v(i, l));
         else if (null != c) {
             let { token: e } = l;
-            null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = O(i, l)));
+            null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = v(i, l)));
         }
         return (
             (C[i] = S({
@@ -275,8 +275,8 @@ let P = new Z(o.Z, {
             n = g[t];
         null != n && (n.context.destroy(), (n.results = []), delete g[t]), delete C[t];
     },
-    CHANNEL_CREATE: v,
-    CHANNEL_DELETE: v,
+    CHANNEL_CREATE: O,
+    CHANNEL_DELETE: O,
     STREAMER_MODE_UPDATE: L,
     SEARCH_SCREEN_OPEN: L,
     SEARCH_CLEAR_HISTORY: function (e) {
@@ -287,4 +287,4 @@ let P = new Z(o.Z, {
         Object.keys(C).forEach(M);
     }
 });
-t.Z = P;
+t.Z = b;

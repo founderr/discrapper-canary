@@ -16,8 +16,8 @@ var i,
     h = n(570140),
     p = n(220444),
     f = n(565799),
-    m = n(501655),
-    _ = n(569471),
+    _ = n(501655),
+    m = n(569471),
     g = n(592125),
     C = n(430824),
     I = n(306680),
@@ -41,7 +41,7 @@ let T = {
     M = {};
 function R(e) {
     let t = g.Z.getChannel(e);
-    return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? _.Z.isMuted(t.id) : N.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, p.d)(t);
+    return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? m.Z.isMuted(t.id) : N.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, p.d)(t);
 }
 function L(e) {
     let t = g.Z.getChannel(e);
@@ -53,7 +53,7 @@ function L(e) {
     return (!i || !l) && I.ZP.getMentionCount(e) > 0;
 }
 function y(e) {
-    return !N.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, m.pV.SPEAKER).length > 0 : x.ZP.getVoiceStatesForChannel(e).length > 0);
+    return !N.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, _.pV.SPEAKER).length > 0 : x.ZP.getVoiceStatesForChannel(e).length > 0);
 }
 function P(e) {
     var t, n, i;
@@ -68,19 +68,19 @@ function P(e) {
         h = !0,
         p = !1,
         f = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
-        m = null !== (n = null == f ? void 0 : f.getShownChannelIds()) && void 0 !== n ? n : [],
-        [_, g, C] = l.getSlicedChannels(r);
+        _ = null !== (n = null == f ? void 0 : f.getShownChannelIds()) && void 0 !== n ? n : [],
+        [m, g, C] = l.getSlicedChannels(r);
     for (let e = 0; e < g.length; e++) {
         let t = g[e];
-        if (((R(t.id) || u().some(t.threadIds, R)) && (h = !1), (L(t.id) || u().some(t.threadIds, L)) && (d = !1), m.includes(t.id) && (p = !0), !h && !d && p)) break;
+        if (((R(t.id) || u().some(t.threadIds, R)) && (h = !1), (L(t.id) || u().some(t.threadIds, L)) && (d = !1), _.includes(t.id) && (p = !0), !h && !d && p)) break;
     }
     let E = 0,
         N = !1,
         x = 0,
         S = !1;
     if (h || d)
-        for (let e = _.length - 1; e >= 0; e--) {
-            let t = _[e];
+        for (let e = m.length - 1; e >= 0; e--) {
+            let t = m[e];
             (R(t.id) || u().some(t.threadIds, R)) && (null == s && (s = t.id), (N = !0)), (L(t.id) || u().some(t.threadIds, L)) && (null == a && (a = t.id), (E += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
         }
     if (h || d)
@@ -167,7 +167,7 @@ function G(e) {
 }
 class k extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, I.ZP, N.ZP, _.Z, x.ZP, E.Z, C.Z);
+        this.waitFor(v.Z, I.ZP, N.ZP, m.Z, x.ZP, E.Z, C.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;

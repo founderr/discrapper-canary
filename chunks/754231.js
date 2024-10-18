@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(528144),
     p = n(424678),
     f = n(594174),
-    m = n(81063),
-    _ = n(768581),
+    _ = n(81063),
+    m = n(768581),
     g = n(823379),
     C = n(51144),
     I = n(216749);
@@ -30,7 +30,7 @@ function N(e) {
     if (null == r || null == d || (null == d.large_image && null == d.small_image))
         return null != s
             ? (function (e) {
-                  let t = _.ZP.getApplicationIconURL({
+                  let t = m.ZP.getApplicationIconURL({
                           id: e.application.id,
                           icon: e.application.icon
                       }),
@@ -54,7 +54,7 @@ function N(e) {
             null != p
                 ? (0, i.jsx)('img', {
                       alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
-                      src: (0, m.getAssetImage)(h, p, [128, 128]),
+                      src: (0, _.getAssetImage)(h, p, [128, 128]),
                       className: g
                   })
                 : null;
@@ -153,10 +153,10 @@ function Z(e) {
     });
 }
 function T(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
-        _ = [];
-    null != n ? (_ = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (_ = u.map((e) => e.user.id));
-    let T = (0, s.Wu)([f.default], () => _.map((e) => f.default.getUser(e)).filter(g.lm)),
+    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
+        m = [];
+    null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
+    let T = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
         b = null != n || (0, c.Z)(t),
         A = l.useMemo(() => {
             let e = new Map();
@@ -181,7 +181,7 @@ function T(e) {
                               activity: t,
                               user: r,
                               embeddedApp: n,
-                              onOpenSpotifyAlbum: m
+                              onOpenSpotifyAlbum: _
                           }),
                           (0, i.jsxs)('div', {
                               className: I.detailsAndAvatarsContainer,
@@ -197,7 +197,7 @@ function T(e) {
                                       onOpenSpotifyArtist: p
                                   }),
                                   (0, i.jsx)(v, { activity: t }),
-                                  _.length > 0 &&
+                                  m.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: I.usersSummary,
                                           guildId: a.guild_id,

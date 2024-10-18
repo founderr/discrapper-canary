@@ -30,7 +30,7 @@ function _(e) {
         x = s.useCallback(() => {
             null == f || f(), t();
         }, [f, t]),
-        S = s.useRef(null);
+        v = s.useRef(null);
     return (
         s.useEffect(() => {
             let e;
@@ -41,9 +41,9 @@ function _(e) {
                     (async () => {
                         let [{ default: s }, a] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, l.wj)(t) ? I.dark() : I.light()]);
                         !i &&
-                            null != S.current &&
+                            null != v.current &&
                             (e = s.loadAnimation({
-                                container: S.current,
+                                container: v.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
@@ -67,7 +67,7 @@ function _(e) {
                             null != I &&
                                 (0, i.jsx)('div', {
                                     className: p.animation,
-                                    ref: S
+                                    ref: v
                                 }),
                             (0, i.jsxs)('div', {
                                 className: p.content,

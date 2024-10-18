@@ -22,7 +22,7 @@ function I() {
     var e;
     let s = null === (e = (0, l.Z)()) || void 0 === e || e,
         { explicitContentGuilds: t, explicitContentFriendDm: I, explicitContentNonFriendDm: N } = (0, o.B)(),
-        A = [
+        m = [
             {
                 value: a.Q4.BLUR,
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
@@ -32,18 +32,18 @@ function I() {
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
             }
         ],
-        C = [
+        A = [
             {
                 value: a.Q4.BLUR,
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             }
         ],
-        m = {
+        C = {
             value: a.Q4.SHOW,
             label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
         };
     return (
-        s && (A.unshift(m), C.unshift(m)),
+        s && (m.unshift(C), A.unshift(C)),
         (0, n.jsxs)(d.U, {
             setting: u.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2,
@@ -57,7 +57,7 @@ function I() {
                     title: T.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
-                        options: A,
+                        options: m,
                         value: I,
                         onChange: (e) => (0, r.zj)({ explicitContentFriendDm: e })
                     })
@@ -67,7 +67,7 @@ function I() {
                     title: T.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
-                        options: A,
+                        options: m,
                         value: N,
                         onChange: (e) => (0, r.zj)({ explicitContentNonFriendDm: e })
                     })
@@ -78,7 +78,7 @@ function I() {
                         title: T.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
                         titleClassName: S.selectItemTitle,
                         children: (0, n.jsx)(i.SingleSelect, {
-                            options: C,
+                            options: A,
                             value: t,
                             onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
                         })

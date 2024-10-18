@@ -1,9 +1,9 @@
-var o = t(544891),
-    i = t(981631);
+var i = t(544891),
+    s = t(981631);
 n.Z = {
     updateNote(e, n) {
-        o.tn.put({
-            url: i.ANM.NOTE(e),
+        i.tn.put({
+            url: s.ANM.NOTE(e),
             body: { note: n },
             oldFormErrors: !0
         });

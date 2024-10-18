@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return b;
     }
 });
 var s = n(735250);
@@ -19,54 +19,54 @@ var i = n(120356),
     f = n(924540),
     S = n(351402),
     N = n(170671),
-    b = n(474936),
-    x = n(655580);
-function v(e) {
+    _ = n(474936),
+    T = n(655580);
+function b(e) {
     let t,
-        { decoration: n, label: i, isSelected: v } = e,
-        { fractionalState: _, endsAt: T } = (0, o.Z)({ forceFetch: !0 }),
-        g = (0, d.N)(),
-        C = (0, u.Ng)(),
-        j = (0, p.Vi)(),
-        E = (0, l.e7)([S.Z], () => S.Z.isLocalizedPromoEnabled) && null == g && null == n,
-        { enabled: I } = a._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        R = I && (null == g ? void 0 : g.trial_id) === b.a7;
+        { decoration: n, label: i, isSelected: b } = e,
+        { fractionalState: x, endsAt: R } = (0, o.Z)({ forceFetch: !0 }),
+        I = (0, d.N)(),
+        v = (0, u.Ng)(),
+        g = (0, p.Vi)(),
+        E = (0, l.e7)([S.Z], () => S.Z.isLocalizedPromoEnabled) && null == I && null == n,
+        { enabled: C } = a._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        j = C && (null == I ? void 0 : I.trial_id) === _.a7;
     return (
         (t =
-            _ !== b.a$.NONE
+            x !== _.a$.NONE
                 ? (0, s.jsx)(c.Z, {
                       className: '',
-                      endsAt: T
+                      endsAt: R
                   })
-                : j
+                : g
                   ? (0, s.jsx)(h.Z, {})
-                  : null != C
+                  : null != v
                     ? (0, s.jsx)(f.GN, {
-                          isTabSelected: v,
-                          userDiscount: C,
+                          isTabSelected: b,
+                          userDiscount: v,
                           includesAmountOff: !1
                       })
-                    : null == g || R
+                    : null == I || j
                       ? null != n
                           ? n
                           : E
                             ? (0, s.jsx)(m.k, { entryPoint: m.U.SettingsMenu })
-                            : (0, s.jsx)(N.Z, { isSelected: v })
+                            : (0, s.jsx)(N.Z, { isSelected: b })
                       : (0, s.jsx)(f.$H, {
-                            isTabSelected: v,
-                            trialOffer: g
+                            isTabSelected: b,
+                            trialOffer: I
                         })),
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)('div', {
-                    className: r()(x.premiumLabel, { [x.selected]: (v || E) && !j }),
+                    className: r()(T.premiumLabel, { [T.selected]: (b || E) && !g }),
                     children: [i, t]
                 }),
                 (0, s.jsx)('div', {
-                    className: r()(x.background, {
-                        [x.auPromo]: E && !v,
-                        [x.auPromoSelected]: E && v,
-                        [x.selectedBackground]: !E && !j && v
+                    className: r()(T.background, {
+                        [T.auPromo]: E && !b,
+                        [T.auPromoSelected]: E && b,
+                        [T.selectedBackground]: !E && !g && b
                     })
                 })
             ]

@@ -19,7 +19,7 @@ var n,
     S = t(13140),
     I = t(689938),
     N = t(98256);
-function A(e, s, t) {
+function m(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -33,11 +33,11 @@ function A(e, s, t) {
     );
 }
 ((a = n || (n = {})).DEFAULT = 'DEFAULT'), (a.RECORDING = 'RECORDING');
-let C = {
+let A = {
     DEFAULT: N.__invalid_default,
     RECORDING: N.recording
 };
-class m extends r.PureComponent {
+class C extends r.PureComponent {
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -63,7 +63,7 @@ class m extends r.PureComponent {
                 onClick: this.handleClick,
                 onMouseDown: this.handleMouseDown,
                 ref: this._containerRef,
-                className: l()(N.recorderContainer, C[s], {
+                className: l()(N.recorderContainer, A[s], {
                     [N.hasValue]: r,
                     [N.containerDisabled]: n
                 }),
@@ -110,24 +110,24 @@ class m extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, '_inputId', u().uniqueId('key-recorder-')),
-            A(this, '_unregisterNativeRecorder', null),
-            A(this, '_mousedownMode', null),
-            A(this, '_inputRef', r.createRef()),
-            A(this, '_containerRef', r.createRef()),
-            A(this, 'setInputRef', (e) => {
+            m(this, '_inputId', u().uniqueId('key-recorder-')),
+            m(this, '_unregisterNativeRecorder', null),
+            m(this, '_mousedownMode', null),
+            m(this, '_inputRef', r.createRef()),
+            m(this, '_containerRef', r.createRef()),
+            m(this, 'setInputRef', (e) => {
                 var s;
                 let { registerNativeRecorder: t, onChange: n } = this.props;
                 (this._inputRef.current = e), null === (s = this._unregisterNativeRecorder) || void 0 === s || s.call(this), null != e && (null != t && null != n ? (this._unregisterNativeRecorder = t(e.id, n)) : null != n && (new (d())(e).handleKey = n));
             }),
-            A(this, 'handleClick', (e) => {
+            m(this, 'handleClick', (e) => {
                 e.stopPropagation(), e.preventDefault();
                 let { onClick: s, disableOnClickWhileRecording: t } = this.props;
                 if (!t || 'RECORDING' !== this._mousedownMode) s();
             }),
-            A(this, 'handleMouseDown', () => {
+            m(this, 'handleMouseDown', () => {
                 this._mousedownMode = this.props.mode;
             });
     }
 }
-s.Z = m;
+s.Z = C;

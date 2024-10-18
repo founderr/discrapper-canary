@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(131951),
     p = n(626135),
     f = n(572004),
-    m = n(63063),
-    _ = n(476221),
+    _ = n(63063),
+    m = n(476221),
     g = n(981631),
     C = n(65154),
     I = n(689938),
@@ -66,7 +66,7 @@ t.Z = function (e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: E.popoutText,
-                                    children: (0, i.jsx)('strong', { children: _.Z.getShortHostname(t) })
+                                    children: (0, i.jsx)('strong', { children: m.Z.getShortHostname(t) })
                                 })
                             ]
                         }),
@@ -109,10 +109,10 @@ t.Z = function (e) {
             [g.hes.AUTHENTICATING]: I.Z.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
             [g.hes.DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
             [g.hes.RTC_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-            [g.hes.ICE_CHECKING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({ url: m.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
-            [g.hes.DTLS_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({ url: m.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
+            [g.hes.ICE_CHECKING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({ url: _.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
+            [g.hes.DTLS_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({ url: _.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
             [g.hes.RTC_CONNECTED]: n,
-            [g.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({ url: m.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
+            [g.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({ url: _.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
             [g.hes.RTC_DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED
         }[r];
     return (0, i.jsxs)(i.Fragment, {
@@ -174,7 +174,7 @@ t.Z = function (e) {
                         !__OVERLAY__ &&
                         (0, i.jsx)(o.Anchor, {
                             className: E.debugButton,
-                            href: m.Z.getArticleURL(g.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+                            href: _.Z.getArticleURL(g.BhN.VOICE_VIDEO_TROUBLESHOOTING),
                             children: I.Z.Messages.LEARN_MORE
                         })
                 ]

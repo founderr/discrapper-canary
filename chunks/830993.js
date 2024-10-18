@@ -17,8 +17,8 @@ var i = n(735250),
     h = n(430824),
     p = n(496675),
     f = n(158776),
-    m = n(979651),
-    _ = n(823379),
+    _ = n(979651),
+    m = n(823379),
     g = n(355363),
     C = n(737592),
     I = n(561788),
@@ -29,7 +29,7 @@ var i = n(735250),
     v = n(289223);
 function Z(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: m, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
+    let { channel: h, guild: p, onAction: _, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -50,7 +50,7 @@ function Z(e) {
     })(h, g);
     let N = (0, o.ZP)(h),
         Z = Array.from((0, o.uF)(N).values()),
-        b = null !== (t = null == g ? void 0 : g.filter(_.lm)) && void 0 !== t ? t : [],
+        b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
         A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
         M = (0, r.e7)(
             [f.Z],
@@ -97,7 +97,7 @@ function Z(e) {
                               embeddedApp: e,
                               presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
                               channel: h,
-                              onAction: m
+                              onAction: _
                           },
                           t
                       );
@@ -110,7 +110,7 @@ function Z(e) {
                               presenceActivity: l,
                               channel: h,
                               members: n,
-                              onAction: m
+                              onAction: _
                           },
                           t
                       );
@@ -146,7 +146,7 @@ function Z(e) {
 function T(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
-        s = (0, r.e7)([m.Z], () => m.Z.hasVideo(t.id)),
+        s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         o = (0, g.ZP)({
             channel: t,
             locked: a,

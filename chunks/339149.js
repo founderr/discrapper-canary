@@ -18,8 +18,8 @@ var i,
     h = n(481060),
     p = n(812206),
     f = n(707409),
-    m = n(703656),
-    _ = n(417363),
+    _ = n(703656),
+    m = n(417363),
     g = n(941128),
     C = n(780570),
     I = n(353042),
@@ -102,7 +102,7 @@ class Z extends r.PureComponent {
             if (t) return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
             if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
                 return (0, l.jsx)(I.Z, {
-                    getHistoricalTotalBytes: _.Z.getHistoricalTotalBytesWritten,
+                    getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
                 });
@@ -189,7 +189,7 @@ class T extends (i = r.PureComponent) {
             S(this, 'state', { animationScale: new o.Z.Value(0) }),
             S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(E.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
@@ -201,9 +201,9 @@ function b(e, t) {
         return null != r && e.push(r), e;
     }, []);
 }
-t.Z = c.ZP.connectStores([g.Z, _.Z, p.Z], () => {
+t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     let e = g.Z.activeItems,
-        t = b(e, _.Z),
+        t = b(e, m.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),

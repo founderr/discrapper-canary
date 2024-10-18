@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 }),
     n(47120);
@@ -71,7 +71,7 @@ function T(e) {
         ]
     });
 }
-class S extends a.PureComponent {
+class f extends a.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -145,11 +145,11 @@ class S extends a.PureComponent {
                 : (t[n] = i);
     }
 }
-function f() {
+function S() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, s.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
     };
-    return (0, i.jsx)(S, { ...e });
+    return (0, i.jsx)(f, { ...e });
 }

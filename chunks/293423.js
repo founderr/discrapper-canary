@@ -24,15 +24,15 @@ t.Z = (e) => {
         relevantSubscriptionListingIds: null == g ? void 0 : g.subscription_listings_ids
     });
     let { activeSubscription: T } = (0, l.Z)(null == g ? void 0 : g.id),
-        S = (0, s.YB)(p.id),
-        f = null == S ? void 0 : S.description,
+        f = (0, s.YB)(p.id),
+        S = null == f ? void 0 : f.description,
         { editStateIds: C } = r.B7(null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null, p.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(E.Z, {
                 title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({ serverName: p.toString() }),
-                description: null != f ? f : null,
-                coverImageAsset: null !== (n = null == S ? void 0 : S.cover_image_asset) && void 0 !== n ? n : null,
+                description: null != S ? S : null,
+                coverImageAsset: null !== (n = null == f ? void 0 : f.cover_image_asset) && void 0 !== n ? n : null,
                 guild: p,
                 children: [
                     null != g

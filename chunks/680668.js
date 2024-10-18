@@ -25,14 +25,14 @@ function f(e) {
         N,
         p,
         { onTransitionToInviteChannel: C, onAcceptInstantInvite: g, guild: S, invite: A, author: x, currentUserId: R } = e,
-        O = R === x.id,
-        { channel: v, approximate_member_count: M, approximate_presence_count: L } = A,
+        v = R === x.id,
+        { channel: O, approximate_member_count: M, approximate_presence_count: L } = A,
         Z = A.state === I.r2o.ACCEPTING,
-        P = null != v ? (0, o.jD)(v) : null,
-        b = null != S,
-        D = null != P,
-        j = null != P && P.isGuildVocal(),
-        U = null != P && P.isGuildStageVoice(),
+        b = null != O ? (0, o.jD)(O) : null,
+        P = null != S,
+        D = null != b,
+        j = null != b && b.isGuildVocal(),
+        U = null != b && b.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
         B = null !== (f = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== f && f;
     if (null == S) {
@@ -41,10 +41,10 @@ function f(e) {
         let e = (0, u.rF)(A.guild.premium_subscription_count, A.guild.id);
         S.premiumTier = e;
     }
-    let k = b ? C : g,
+    let k = P ? C : g,
         G = (0, _.e)({
             isVoiceChannel: j,
-            isOwnInvite: O,
+            isOwnInvite: v,
             isGuest: y,
             isHubGuild: B,
             isStage: U,
@@ -76,7 +76,7 @@ function f(e) {
                 })
             })),
         j
-            ? ((N = (0, i.jsx)(l.Z.Channel, { channel: P })),
+            ? ((N = (0, i.jsx)(l.Z.Channel, { channel: b })),
               (h = (0, i.jsxs)('span', {
                   className: T.infoTitle,
                   children: [
@@ -97,7 +97,7 @@ function f(e) {
                 }))
               : D &&
                 (h = (0, i.jsx)(l.Z.Channel, {
-                    channel: P,
+                    channel: b,
                     guild: S
                 })),
         (0, i.jsxs)(l.Z, {
@@ -115,7 +115,7 @@ function f(e) {
                                 (0, i.jsx)(l.Z.Icon, { guild: S }),
                                 (0, i.jsx)(l.Z.Info, {
                                     title: N,
-                                    onClick: b ? k : null,
+                                    onClick: P ? k : null,
                                     children: h
                                 })
                             ]
@@ -124,7 +124,7 @@ function f(e) {
                             onClick: k,
                             submitting: Z,
                             color: l.Z.Button.Colors.GREEN,
-                            children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : b ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
+                            children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : P ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
                         })
                     ]
                 }),

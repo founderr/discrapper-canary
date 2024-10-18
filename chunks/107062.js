@@ -12,8 +12,8 @@ var l = n(735250),
     m = n(706454),
     x = n(823379),
     E = n(5192),
-    v = n(379357),
-    _ = n(192918),
+    _ = n(379357),
+    v = n(192918),
     C = n(561308),
     p = n(907152),
     f = n(206295),
@@ -49,15 +49,15 @@ let P = (e, t) =>
     };
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: S } = e,
-        { largeImage: A } = (0, v.rv)({ entry: n }),
+        { largeImage: A } = (0, _.rv)({ entry: n }),
         { user: R, details: y, activity: O, embeddedActivity: j } = (0, I.n)(n),
         { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: U, participant1: H, participant2: B, numOtherParticipants: k } = (0, _.Z)(n, 3),
+        { displayParticipants: U, participant1: H, participant2: B, numOtherParticipants: k } = (0, v.Z)(n, 3),
         V = () => {
             c.__(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
-        G = a.useCallback(
+        F = a.useCallback(
             (e) => {
                 if ((null == A ? void 0 : A.src) == null || null == t || null == R) return;
                 let l =
@@ -82,7 +82,7 @@ t.ZP = (e) => {
             [null == A ? void 0 : A.src, t, U, n, D, k, H, B, w, b, R]
         );
     if (null == R) return null;
-    let F = (0, l.jsx)(T.PZ, {
+    let G = (0, l.jsx)(T.PZ, {
             location: T.Gt.POPOUT,
             entry: n
         }),
@@ -91,7 +91,7 @@ t.ZP = (e) => {
             userDescription: (0, C.kr)(n) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
             title: n.extra.activity_name,
             subtitle: y,
-            badges: F,
+            badges: G,
             entry: n,
             onClickTitle: V,
             onClickSubtitle: V,
@@ -126,7 +126,7 @@ t.ZP = (e) => {
                     onVoiceChannelPreview: S,
                     user: R,
                     channel: t,
-                    generateReactionImage: G,
+                    generateReactionImage: F,
                     reactionImageAltText: P(n, R),
                     entry: n,
                     buttons: J

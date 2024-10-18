@@ -16,8 +16,8 @@ var i = n(470079),
     h = n(470883),
     p = n(750881),
     f = n(554747),
-    m = n(146085),
-    _ = n(427679),
+    _ = n(146085),
+    m = n(427679),
     g = n(131704),
     C = n(199902),
     I = n(314897),
@@ -117,7 +117,7 @@ function O(e) {
         ),
         G = I.default.getId();
     return (0, s.cj)(
-        [Z.Z, E.Z, d.ZP, _.Z, C.Z, S.Z],
+        [Z.Z, E.Z, d.ZP, m.Z, C.Z, S.Z],
         () => {
             var t, i, r;
             let s = Z.Z.getVoiceChannelId(),
@@ -139,9 +139,9 @@ function O(e) {
                     gaming: a,
                     isCurrentUserConnected: !1
                 };
-            let x = A.default.keys(_.Z.getStageInstancesByGuild(e)).some((e) => {
+            let x = A.default.keys(m.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = E.Z.getChannel(e);
-                    return null != t && S.Z.can(m.gl, t);
+                    return null != t && S.Z.can(_.gl, t);
                 }),
                 v = o && null !== (r = null === (i = E.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
                 T = !!o && null != C.Z.getActiveStreamForUser(G, e),

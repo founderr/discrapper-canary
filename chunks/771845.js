@@ -243,4 +243,4 @@ class B extends I.Z {
             });
     }
 }
-S(B, 'displayName', 'SortedGuildStore'), S(B, 'LATEST_SNAPSHOT_VERSION', 1), (t.ZP = new B());
+S(B, 'displayName', 'SortedGuildStore'), S(B, 'LATEST_SNAPSHOT_VERSION', 2), (t.ZP = new B());

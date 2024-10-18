@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(607070),
     g = n(213609),
     T = n(143757),
-    S = n(463119),
-    f = n(377171),
+    f = n(463119),
+    S = n(377171),
     C = n(243778),
     N = n(922409),
     A = n(899740),
@@ -194,7 +194,7 @@ let $ = (e) => {
                         return t === _.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: X.Z.Messages.NEW,
-                                  color: f.Z.BG_BRAND
+                                  color: S.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -271,7 +271,7 @@ let el = (e) => {
                     ),
                     (0, i.jsx)(en, { selected: null == c ? null != a && a.startsWith(K.Z5c.MESSAGE_REQUESTS) : c === K.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        S.i,
+                        f.i,
                         {
                             selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {

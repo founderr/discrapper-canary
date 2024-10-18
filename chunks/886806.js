@@ -8,13 +8,13 @@ var s,
     c = n(893776),
     u = n(129293),
     d = n(388905),
-    h = n(17894),
-    _ = n(108427),
+    _ = n(17894),
+    h = n(108427),
     E = n(314897),
     g = n(626135),
     p = n(981631),
-    f = n(689938),
-    m = n(237810),
+    m = n(689938),
+    f = n(237810),
     I = n(113207);
 function N(e, t, n) {
     return (
@@ -32,26 +32,26 @@ function N(e, t, n) {
 o.ZP.initialize();
 class T extends (s = i.PureComponent) {
     componentDidMount() {
-        this.handleVerify(), (0, _.e)('verify_email');
+        this.handleVerify(), (0, h.e)('verify_email');
     }
     renderVerifyFailed() {
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: l()(m.image, I.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
-                    children: f.Z.Messages.VERFICATION_EXPIRED
+                    children: m.Z.Messages.VERFICATION_EXPIRED
                 }),
                 (0, r.jsx)(d.DK, {
                     className: I.marginBottom40,
-                    children: f.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+                    children: m.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleLogin,
-                    children: f.Z.Messages._LOGIN
+                    children: m.Z.Messages._LOGIN
                 })
             ]
         });
@@ -61,15 +61,15 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: l()(m.image, I.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom40,
-                    children: f.Z.Messages.VERIFICATION_VERIFIED
+                    children: m.Z.Messages.VERIFICATION_VERIFIED
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: f.Z.Messages.VERIFICATION_OPEN_DISCORD
+                    children: m.Z.Messages.VERIFICATION_OPEN_DISCORD
                 })
             ]
         });
@@ -79,15 +79,15 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: l()(m.image, I.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: I.marginBottom8,
-                    children: f.Z.Messages.VERIFICATION_VERIFYING
+                    children: m.Z.Messages.VERIFICATION_VERIFYING
                 }),
                 (0, r.jsx)(d.DK, {
                     className: I.marginBottom40,
-                    children: f.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
+                    children: m.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
                 }),
                 (0, r.jsx)(d.zx, {
                     submitting: !0,
@@ -112,7 +112,7 @@ class T extends (s = i.PureComponent) {
             }),
             N(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                g.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
+                g.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, _.Z)('verify_email');
             });
     }
 }

@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(689938),
     I = t(109469);
 function N(e) {
-    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: A, label: C, colorPickerMiddle: m, colorPickerFooter: g, showEyeDropper: h } = e,
+    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: A, colorPickerMiddle: C, colorPickerFooter: g, showEyeDropper: h } = e,
         O = a.useRef(null),
         p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         R = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -27,13 +27,13 @@ function N(e) {
         M = (0, l.Rf)(i),
         f = M === p ? R : M,
         D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        L = (0, _.Z)(m),
+        L = (0, _.Z)(C),
         P = (0, _.Z)(g),
         [b, Z] = a.useState((0, o.Z)());
     return (
         a.useEffect(() => {
-            (L !== m || P !== g) && Z((0, o.Z)());
-        }, [g, m, P, L]),
+            (L !== C || P !== g) && Z((0, o.Z)());
+        }, [g, C, P, L]),
         (0, n.jsx)(d.Popout, {
             positionKey: b,
             renderPopout: (e) =>
@@ -42,7 +42,7 @@ function N(e) {
                     value: i,
                     onChange: s,
                     suggestedColors: N,
-                    middle: m,
+                    middle: C,
                     footer: g,
                     showEyeDropper: h
                 }),
@@ -51,12 +51,12 @@ function N(e) {
                 let { onClick: s, ...t } = e;
                 return (0, n.jsxs)('div', {
                     ref: O,
-                    className: r()(I.colorSwatch, { [I.disabled]: A }),
+                    className: r()(I.colorSwatch, { [I.disabled]: m }),
                     children: [
                         (0, n.jsx)(d.Clickable, {
                             ...t,
-                            tabIndex: A ? -1 : 0,
-                            onClick: A ? T.dG4 : s,
+                            tabIndex: m ? -1 : 0,
+                            onClick: m ? T.dG4 : s,
                             style: {
                                 backgroundColor: M,
                                 borderColor: f
@@ -72,7 +72,7 @@ function N(e) {
                                 color: D
                             })
                         }),
-                        C
+                        A
                     ]
                 });
             }

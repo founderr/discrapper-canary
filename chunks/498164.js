@@ -17,8 +17,8 @@ var r = n(756647),
     p = n(314897),
     g = n(553795),
     T = n(594174),
-    S = n(626135),
-    f = n(585483),
+    f = n(626135),
+    S = n(585483),
     C = n(591759),
     N = n(998502),
     A = n(996106),
@@ -26,7 +26,7 @@ var r = n(756647),
     Z = n(981631);
 function L(e, t) {
     if (null != e)
-        S.default.track(Z.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        f.default.track(Z.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -106,7 +106,7 @@ function L(e, t) {
                             .then((i) => {
                                 let { giftCode: a } = i;
                                 N.ZP.focus(),
-                                    S.default.track(Z.rMx.OPEN_MODAL, {
+                                    f.default.track(Z.rMx.OPEN_MODAL, {
                                         type: 'gift_accept',
                                         location: Z.SaU
                                     }),
@@ -216,7 +216,7 @@ function L(e, t) {
                     );
                 } catch (e) {
                     if ((null == e ? void 0 : e.status) === 400) throw new A.Z({ errorCode: Z.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                    throw (f.S.dispatch(Z.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw (S.S.dispatch(Z.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },

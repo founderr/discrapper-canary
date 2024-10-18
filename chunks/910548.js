@@ -28,9 +28,9 @@ var i,
     A = n(834129),
     x = n(981631),
     R = n(689938),
-    O = n(172421);
+    v = n(172421);
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.LEAF_PEEL = 'leaf_peel'), (s.LEAF_FALL = 'leaf_fall'), (s.EXIT = 'exit');
-let v = {
+let O = {
     enter: {
         BEG: 0,
         END: 22
@@ -62,7 +62,7 @@ let M = ['TOP_LEFT', 'TOP_RIGHT'],
         },
         leafRotationDirection: 1
     },
-    P = Object.freeze({
+    b = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
                 x: e - 11,
@@ -116,7 +116,7 @@ let M = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         }
     }),
-    b = 'falling-leaf',
+    P = 'falling-leaf',
     D = ['#61D5B2'],
     j = n(303893),
     U = n(313226),
@@ -183,7 +183,7 @@ function k(e) {
     return (
         o.useEffect(() => {
             if ('confetti' === c) {
-                let { confettiVelocityDirection: e } = P[I],
+                let { confettiVelocityDirection: e } = b[I],
                     t = (function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L,
                             i = null == e ? void 0 : e.getBoundingClientRect();
@@ -192,7 +192,7 @@ function k(e) {
                                 x: 0,
                                 y: 0
                             };
-                        let a = P[t].getConfettiPosition(n);
+                        let a = b[t].getConfettiPosition(n);
                         return {
                             x: i.left + a.x,
                             y: i.top + a.y
@@ -215,10 +215,10 @@ function k(e) {
         }, [T, I, c, s]),
         o.useEffect(() => {
             if (S && 'leaf_fall' === c) {
-                let e = P[I].leafRotationDirection;
+                let e = b[I].leafRotationDirection;
                 C.createConfetti(
                     {
-                        id: ''.concat(b, '-').concat((0, _.Z)()),
+                        id: ''.concat(P, '-').concat((0, _.Z)()),
                         position: {
                             type: 'static',
                             value: (function (e, t) {
@@ -228,7 +228,7 @@ function k(e) {
                                         x: 0,
                                         y: 0
                                     };
-                                let i = P[t];
+                                let i = b[t];
                                 return {
                                     x: n.left + i.leafPosition.x,
                                     y: n.top + i.leafPosition.y
@@ -278,17 +278,17 @@ function k(e) {
                 }),
                 (0, l.jsx)(m.Clickable, {
                     onClick: n,
-                    className: u()(O.easterEggAnimationClickTarget, {
-                        [O.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === I,
-                        [O.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === I,
-                        [O.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === I,
-                        [O.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === I
+                    className: u()(v.easterEggAnimationClickTarget, {
+                        [v.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === I,
+                        [v.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === I,
+                        [v.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === I,
+                        [v.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === I
                     }),
                     children: (0, l.jsx)(m.SequencedLottieAnimation, {
                         animationRef: Z,
-                        className: u()(O.easterEggAnimation, { [O.easterEggAnimationHideLeaf]: A }),
+                        className: u()(v.easterEggAnimation, { [v.easterEggAnimationHideLeaf]: A }),
                         nextScene: g,
-                        sceneSegments: v,
+                        sceneSegments: O,
                         onScenePlay: x,
                         onSceneComplete: R,
                         importData: B,
@@ -316,34 +316,34 @@ function G(e) {
         u = (0, p.Z)(n),
         { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(f.h),
         [E, I] = o.useState(!1),
-        v = o.useRef(null),
+        O = o.useRef(null),
         { reducedMotion: M } = o.useContext(m.AccessibilityPreferencesContext),
         L = (0, S.ZH)(n),
         Z = L.nick,
-        P = s(L);
+        b = s(L);
     t =
         null == c || null == a
             ? u > 1
                 ? R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
                       username: Z,
-                      usernameHook: P,
+                      usernameHook: b,
                       numSubscriptions: u
                   })
                 : R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
                       username: Z,
-                      usernameHook: P
+                      usernameHook: b
                   })
             : u > 1
               ? R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
                     username: Z,
-                    usernameHook: P,
+                    usernameHook: b,
                     numSubscriptions: u,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
                 })
               : R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
                     username: Z,
-                    usernameHook: P,
+                    usernameHook: b,
                     guildName: a.name,
                     newTierName: (0, g.nW)(c)
                 });
@@ -351,7 +351,7 @@ function G(e) {
             if (!M.enabled)
                 if (E || 0 !== Math.floor(50 * Math.random())) {
                     var e;
-                    let t = null === (e = v.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+                    let t = null === (e = O.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else I(!0);
@@ -364,17 +364,17 @@ function G(e) {
         }, []),
         y = o.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(b)) && U();
+                (null == t ? void 0 : t.id.startsWith(P)) && U();
             },
             [U]
         );
     o.useEffect(() => _(y));
     let B = (0, l.jsx)(m.Clickable, {
-        className: O.iconWrapper,
-        innerRef: v,
+        className: v.iconWrapper,
+        innerRef: O,
         onClick: r,
         children: (0, l.jsx)(C.Z, {
-            className: O.icon,
+            className: v.icon,
             onMouseEnter: D
         })
     });
@@ -385,13 +385,13 @@ function G(e) {
         children: [
             (0, l.jsx)('div', {
                 onClick: r,
-                className: O.message,
+                className: v.message,
                 children: t
             }),
             E
                 ? (0, l.jsx)(h.ZP, {
                       children: (0, l.jsx)('div', {
-                          className: O.cannonWrapper,
+                          className: v.cannonWrapper,
                           children: (0, l.jsx)(k, {
                               onAnimationComplete: j,
                               onClick: U

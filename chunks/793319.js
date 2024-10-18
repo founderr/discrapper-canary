@@ -1,6 +1,6 @@
 n.d(t, {
     NZ: function () {
-        return eS;
+        return ev;
     },
     r: function () {
         return ex;
@@ -27,8 +27,8 @@ var i,
     I = n(40851),
     T = n(317381),
     x = n(596040),
-    S = n(100527),
-    v = n(906732),
+    v = n(100527),
+    S = n(906732),
     N = n(358221),
     A = n(887012),
     Z = n(659580),
@@ -36,8 +36,8 @@ var i,
     b = n(575175),
     R = n(243778),
     L = n(258609),
-    P = n(446226),
-    j = n(569545),
+    j = n(446226),
+    P = n(569545),
     O = n(74299),
     y = n(803647),
     D = n(554747),
@@ -85,7 +85,7 @@ function ex(e, t) {
     let n = () => f.Z.setVideoEnabled(e);
     e ? (0, eE.Z)(n, t) : n();
 }
-function eS(e) {
+function ev(e) {
     let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: s, hasPermission: r, disabled: o } = e,
         c = (0, I.bp)(),
         u = (0, p.Wu)([$.Z], () => $.Z.getAllActiveStreams()),
@@ -98,8 +98,8 @@ function eS(e) {
             if ((null == i || i(), !s)) return (0, e_.Z)();
             (0, ef.Z)(T, t.id, eg.ZY5.GUILD_CHANNEL);
         }, [T, t.id, s, i]),
-        S = (0, p.e7)([es.ZP], () => es.ZP.inReverseTrial()),
-        v = () => {
+        v = (0, p.e7)([es.ZP], () => es.ZP.inReverseTrial()),
+        S = () => {
             if (s) {
                 x();
                 return;
@@ -138,12 +138,12 @@ function eS(e) {
                 shouldShowTooltip: !t,
                 premiumGlow: g && E.hqStreamingIsEnabled,
                 buttonRef: C,
-                onClick: null != d ? N : v
+                onClick: null != d ? N : S
             });
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            S && 0 === u.length
+            v && 0 === u.length
                 ? (0, a.jsx)(R.ZP, {
                       contentTypes: [m.z.REVERSE_TRIAL_STREAM_POPOUT],
                       bypassAutoDismiss: !0,
@@ -197,7 +197,7 @@ function eS(e) {
         ]
     });
 }
-function ev(e) {
+function eS(e) {
     let { channel: t, idle: n } = e,
         i = t.getGuildId();
     return (0, x.Z)(i, t.id)
@@ -232,8 +232,8 @@ let eN = l.memo(function (e) {
             if (null != I) return 'EVENT';
             return 'CALL';
         }, [r, t, f, I]),
-        [x, S] = l.useState(T()),
-        v = (0, _.useSpring)(
+        [x, v] = l.useState(T()),
+        S = (0, _.useSpring)(
             {
                 opacity: c ? 0.2 : 1,
                 transform: c && !o.enabled ? 'scale(0.7)' : 'scale(1)',
@@ -245,7 +245,7 @@ let eN = l.memo(function (e) {
                     clamp: c
                 },
                 onRest: () => {
-                    S(T()), u(!1);
+                    v(T()), u(!1);
                 }
             },
             'animate-always'
@@ -254,8 +254,8 @@ let eN = l.memo(function (e) {
         T() !== x && u(!0);
     }, [x, T]);
     let A = l.useCallback(() => {
-            if (null != m) (0, g.g)((0, j.V9)(m));
-            else for (let e of C) (0, g.g)((0, j.V9)(e));
+            if (null != m) (0, g.g)((0, P.V9)(m));
+            else for (let e of C) (0, g.g)((0, P.V9)(e));
         }, [C, m]),
         Z = (e, t) => {
             let l = {
@@ -318,7 +318,7 @@ let eN = l.memo(function (e) {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, a.jsx)(d.animated.div, {
-                style: v,
+                style: S,
                 children: Z(i, n)
             });
         }
@@ -382,10 +382,10 @@ t.ZP = function (e) {
         m = (0, ec.Z)(n),
         { suppress: f, selfMute: E, mute: g } = (0, eu.Z)(n),
         { canGoLive: I } = (0, p.cj)([et.Z], () => ({ canGoLive: (0, O.Z)(et.Z) })),
-        x = (0, P.Z)(),
+        x = (0, j.Z)(),
         N = (0, p.e7)([L.Z], () => null != L.Z.getAwaitingRemoteSessionInfo()),
         R = null != x,
-        j = (0, p.e7)([en.Z], () => {
+        P = (0, p.e7)([en.Z], () => {
             var e;
             return (null !== (e = null == x ? void 0 : x.channelId) && void 0 !== e ? e : en.Z.getVoiceChannelId()) === n.id;
         }),
@@ -395,9 +395,9 @@ t.ZP = function (e) {
             return null != e ? e.applicationId : null;
         }),
         { reachedLimit: U, limit: w } = (0, eo.Z)(n),
-        { analyticsLocations: B } = (0, v.ZP)(S.Z.VOICE_CONTROL_TRAY);
-    if (!j)
-        return (0, a.jsx)(v.Gt, {
+        { analyticsLocations: B } = (0, S.ZP)(v.Z.VOICE_CONTROL_TRAY);
+    if (!P)
+        return (0, a.jsx)(S.Gt, {
             value: B,
             children: (0, a.jsx)(eA, {
                 channel: n,
@@ -414,7 +414,7 @@ t.ZP = function (e) {
         }) &&
         !n.isPrivate() &&
         !y;
-    return (0, a.jsx)(v.Gt, {
+    return (0, a.jsx)(S.Gt, {
         value: B,
         children: (0, a.jsxs)(C.Z, {
             section: eg.jXE.VOICE_CONTROL_TRAY,
@@ -454,12 +454,12 @@ t.ZP = function (e) {
                                 }
                             }),
                         !R &&
-                            (0, a.jsx)(ev, {
+                            (0, a.jsx)(eS, {
                                 channel: n,
                                 idle: null === (t = null == r ? void 0 : r.idle) || void 0 === t || t
                             }),
                         !R &&
-                            (0, a.jsx)(eS, {
+                            (0, a.jsx)(ev, {
                                 channel: n,
                                 currentUser: c,
                                 exitFullScreen: l,

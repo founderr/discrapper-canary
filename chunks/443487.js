@@ -3,10 +3,10 @@ l.d(n, {
         return _;
     },
     Zb: function () {
-        return j;
+        return f;
     },
     cA: function () {
-        return f;
+        return j;
     },
     e$: function () {
         return g;
@@ -25,17 +25,17 @@ var i = l(120356),
     u = l(271383),
     c = l(430824),
     o = l(594174),
-    m = l(5192),
-    h = l(192918),
+    h = l(5192),
+    m = l(192918),
     x = l(689938),
     v = l(494399);
-function f() {
+function j() {
     return (0, t.jsx)('div', {
         className: v.container,
         'aria-hidden': !0
     });
 }
-function j(e) {
+function f(e) {
     let { children: n, selected: l } = e;
     return (0, t.jsx)('div', {
         className: r()(v.container, v.openOnHover, { [v.selected]: l }),
@@ -86,8 +86,8 @@ function N(e) {
 function _(e) {
     let { guildId: n, channelId: l, entry: i, maxAvatars: r = 3 } = e,
         d = i.author_id,
-        f = (0, a.e7)([o.default], () => o.default.getUser(d)),
-        { displayParticipants: j, participant1: g, participant2: _, numOtherParticipants: E } = (0, h.Z)(i, r),
+        j = (0, a.e7)([o.default], () => o.default.getUser(d)),
+        { displayParticipants: f, participant1: g, participant2: _, numOtherParticipants: E } = (0, m.Z)(i, r),
         p = (0, a.e7)([u.ZP], () => u.ZP.getMember(n, d)),
         Z = (0, a.e7)(
             [c.Z],
@@ -97,21 +97,21 @@ function _(e) {
             },
             [n, p]
         );
-    if (null == f) return null;
-    let A = null == p ? void 0 : p.colorString,
-        I = m.ZP.getName(n, l, f);
+    if (null == j) return null;
+    let I = null == p ? void 0 : p.colorString,
+        A = h.ZP.getName(n, l, j);
     return (0, t.jsxs)('div', {
         className: v.userSection,
         children: [
             (0, t.jsx)(N, {
-                users: j,
+                users: f,
                 guildId: n,
                 'aria-hidden': !0
             }),
             (0, t.jsx)(s.NameWithRole, {
-                color: null != A ? A : void 0,
+                color: null != I ? I : void 0,
                 roleName: Z,
-                name: I,
+                name: A,
                 className: v.userName,
                 'aria-hidden': !0
             }),
@@ -129,8 +129,8 @@ function _(e) {
                 : null,
             (0, t.jsx)(s.HiddenVisually, {
                 children: x.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: m.ZP.getName(n, l, g),
-                    user1: m.ZP.getName(n, l, _),
+                    user0: h.ZP.getName(n, l, g),
+                    user1: h.ZP.getName(n, l, _),
                     countOthers: E,
                     name0Hook: (e, n) => (0, t.jsx)('span', { children: e }, n),
                     name1Hook: (e, n) => (0, t.jsx)('span', { children: e }, n),

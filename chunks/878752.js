@@ -24,8 +24,8 @@ var s = n(512722),
     I = n(361057),
     T = n(997614),
     x = n(159909),
-    S = n(981631),
-    v = n(307410);
+    v = n(981631),
+    S = n(307410);
 function N(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
         N = (0, l.e7)([m.default], () => {
@@ -42,20 +42,20 @@ function N(e) {
         R = (0, r.Z)(p.Z);
     if (null == t || null != Z) return null;
     let L = (0, h.Z)(t),
-        P = _.BT({
-            permission: S.Plq.ADD_REACTIONS,
+        j = _.BT({
+            permission: v.Plq.ADD_REACTIONS,
             user: N,
             context: t
         });
     return (0, i.jsxs)('div', {
-        className: v.voiceEffectsActionBar,
+        className: S.voiceEffectsActionBar,
         children: [
             L &&
                 (0, i.jsx)(T.Z, {
                     channel: t,
                     themeable: s
                 }),
-            P && (0, i.jsx)(C.Z, { channel: t }),
+            j && (0, i.jsx)(C.Z, { channel: t }),
             b && R && (0, i.jsx)(f.Z, { channel: t }),
             A && (0, i.jsx)(I.Z, { channel: t }),
             M && n && (0, i.jsx)(E.Z, {}),

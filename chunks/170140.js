@@ -37,7 +37,7 @@ function h(e, t) {
             parentChannel: A,
             user: x,
             selectedGuildId: R,
-            canAccess: O
+            canAccess: v
         } = (0, a.cj)(
             [m.Z, u.Z, o.Z, _.default, d.Z],
             () => {
@@ -59,14 +59,14 @@ function h(e, t) {
             },
             [h]
         ),
-        v = i.useMemo(() => {
+        O = i.useMemo(() => {
             let e = (0, T.ku)({
                 mediaPostEmbedData: g,
                 guild: S,
                 parentChannel: A,
                 user: x,
                 selectedGuildId: R,
-                canAccess: O
+                canAccess: v
             });
             return null == e
                 ? null
@@ -74,7 +74,7 @@ function h(e, t) {
                       ...e,
                       user: x
                   };
-        }, [g, S, A, x, R, O]);
+        }, [g, S, A, x, R, v]);
     return (
         i.useEffect(() => {
             if ((null == h ? void 0 : h.threadId) != null) {
@@ -82,6 +82,6 @@ function h(e, t) {
                 !0 === n && e === m.M.NOT_FETCHED && (!N || !1 !== p) && (N || !C) && (0, E.xP)(null == h ? void 0 : h.threadId);
             }
         }, [h, n, N, p, C]),
-        v
+        O
     );
 }

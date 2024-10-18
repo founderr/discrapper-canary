@@ -1,6 +1,6 @@
 l.d(n, {
     Hs: function () {
-        return m;
+        return h;
     },
     qy: function () {
         return x;
@@ -15,16 +15,16 @@ var t = l(735250),
     u = l(297781),
     c = l(443487),
     o = l(494399);
-let m = [u.E6],
-    h = [r._.WEEK];
+let h = [u.E6],
+    m = [r._.WEEK];
 function x(e) {
-    return null != e && h.includes(e);
+    return null != e && m.includes(e);
 }
 n.ZP = i.memo((e) => {
     let { entry: n, channel: l, selected: i } = e,
         { largeImage: r } = (0, a.rv)({ entry: n }),
-        h = (0, d.Nq)(n);
-    return null != h && x(h)
+        m = (0, d.Nq)(n);
+    return null != m && x(m)
         ? (0, t.jsxs)(c.Zb, {
               selected: i,
               children: [
@@ -38,7 +38,7 @@ n.ZP = i.memo((e) => {
                           (0, t.jsx)(c.ll, { children: n.extra.game_name }),
                           (0, t.jsx)(u.Gk, {
                               location: u.Gt.CARD,
-                              children: m.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
+                              children: h.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
                           })
                       ]
                   }),

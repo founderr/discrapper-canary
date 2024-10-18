@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(749681),
     p = n(667105),
     f = n(603592),
-    m = n(921944),
-    _ = n(49898),
+    _ = n(921944),
+    m = n(49898),
     g = n(46140),
     C = n(689938),
     I = n(55869);
@@ -20,21 +20,21 @@ let E = l.forwardRef(function (e, t) {
     let { selected: n, className: E, onClick: N } = e,
         x = (0, o.Z)('discovery_button'),
         S = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
-        [v, Z] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], m.R.SIDEBAR, !0),
+        [v, Z] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], _.R.SIDEBAR, !0),
         T = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL && x && S,
         b = l.useCallback(() => {
             null == N || N(),
-                (0, u.k5)({ source: _.JU.GUILDS_BAR_ICON }),
+                (0, u.k5)({ source: m.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
-                    if (e === _.F$.QUESTS)
+                    if (e === m.F$.QUESTS)
                         return (0, h.transitionToGlobalDiscovery)({
-                            tab: _.F$.QUESTS,
+                            tab: m.F$.QUESTS,
                             location: g.dr.DISCOVERY_COMPASS,
                             questContent: r.j.DISCOVERY_COMPASS
                         });
                     (0, h.transitionToGlobalDiscovery)({ tab: e });
                 })((0, d.qe)()),
-                T && Z(m.L.DISMISS);
+                T && Z(_.L.DISMISS);
         }, [N, Z, T]),
         A = l.useMemo(
             () => ({

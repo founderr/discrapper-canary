@@ -17,8 +17,8 @@ var i,
     h = n(134616),
     p = n(714338),
     f = n(212819),
-    m = n(14429),
-    _ = n(951844),
+    _ = n(14429),
+    m = n(951844),
     g = n(313201),
     C = n(592125),
     I = n(888369),
@@ -203,9 +203,9 @@ class V extends r.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, l.jsx)(_.Z, {
+        return (0, l.jsx)(m.Z, {
             className: s()(y.protip, { [y.hasContent]: this.state.query.length > 0 }),
-            type: _.Z.Types.INLINE,
+            type: m.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
                 textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
@@ -403,7 +403,7 @@ class V extends r.PureComponent {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
-                    { showScores: r } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
+                    { showScores: r } = _.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case f.h8.HEADER:
                         return (0, l.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));

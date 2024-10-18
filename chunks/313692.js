@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 }),
     n(47120);
@@ -24,20 +24,20 @@ var i = n(735250),
     I = n(370595),
     T = n(50493),
     x = n(194898),
-    S = n(752910);
-function v(e) {
+    v = n(752910);
+function S(e) {
     var t, n;
-    let { userId: a, guildId: v, location: N, className: A, onNavigate: Z } = e,
+    let { userId: a, guildId: S, location: N, className: A, onNavigate: Z } = e,
         M = s.useRef(null),
-        b = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(v), [v]),
+        b = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(S), [S]),
         R = s.useRef(0),
-        [L, P] = s.useState(null !== (t = null == b ? void 0 : b.details.additionalSearchQuery) && void 0 !== t ? t : {}),
-        j = (0, C.z0)(a, v, {
+        [L, j] = s.useState(null !== (t = null == b ? void 0 : b.details.additionalSearchQuery) && void 0 !== t ? t : {}),
+        P = (0, C.z0)(a, S, {
             addtionalQuery: L,
             shouldDispatch: !0
         }),
         O = (0, o.e7)([E.default], () => E.default.getUser(a), [a]),
-        y = (0, o.e7)([f.ZP], () => f.ZP.getMember(v, a), [v, a]);
+        y = (0, o.e7)([f.ZP], () => f.ZP.getMember(S, a), [S, a]);
     s.useLayoutEffect(() => {
         let e = null == b ? void 0 : b.details.scrollOffset;
         if (null != e) {
@@ -55,13 +55,13 @@ function v(e) {
                 if (null == b) return;
                 let t = e.target.scrollTop;
                 (R.current = t),
-                    (0, g.r)(v, a, b.baseChannelId, {
+                    (0, g.r)(S, a, b.baseChannelId, {
                         modViewPanel: T.k.MESSAGE_HISTORY,
                         additionalSearchQuery: L,
                         scrollOffset: R.current
                     });
             },
-            [v, a, b, L]
+            [S, a, b, L]
         ),
         U = (0, r.throttle)(D, 300),
         k = s.useCallback(
@@ -71,21 +71,21 @@ function v(e) {
                     ...L,
                     offset: 25 * e
                 };
-                P(t),
-                    (0, g.r)(v, a, b.baseChannelId, {
+                j(t),
+                    (0, g.r)(S, a, b.baseChannelId, {
                         modViewPanel: T.k.MESSAGE_HISTORY,
                         additionalSearchQuery: t,
                         scrollOffset: R.current
                     });
             },
-            [v, a, b, L]
+            [S, a, b, L]
         ),
         w = null !== (n = null == L ? void 0 : L.offset) && void 0 !== n ? n : 0,
         B = (0, o.e7)(
             [d.Z],
             () => {
-                if (null == j.result) return [];
-                let e = j.result.messages,
+                if (null == P.result) return [];
+                let e = P.result.messages,
                     t = (0, u.nC)('');
                 return e.map((e) =>
                     e.map((e) => {
@@ -111,11 +111,11 @@ function v(e) {
                     })
                 );
             },
-            [j.result]
+            [P.result]
         ),
         H = s.useMemo(() => {
             var e, t, n, i;
-            return null == j.result
+            return null == P.result
                 ? {
                       documentsIndexed: 0,
                       isSearching: !0,
@@ -128,29 +128,29 @@ function v(e) {
                       showNoResultsAlt: !1
                   }
                 : {
-                      documentsIndexed: null !== (e = j.result.documents_indexed) && void 0 !== e ? e : 0,
+                      documentsIndexed: null !== (e = P.result.documents_indexed) && void 0 !== e ? e : 0,
                       isSearching: !1,
-                      isIndexing: null !== (t = j.result.doing_deep_historical_index) && void 0 !== t && t,
-                      isHistoricalIndexing: null !== (n = j.result.doing_deep_historical_index) && void 0 !== n && n,
+                      isIndexing: null !== (t = P.result.doing_deep_historical_index) && void 0 !== t && t,
+                      isHistoricalIndexing: null !== (n = P.result.doing_deep_historical_index) && void 0 !== n && n,
                       offset: w,
-                      totalResults: null !== (i = j.result.total_results) && void 0 !== i ? i : 0,
+                      totalResults: null !== (i = P.result.total_results) && void 0 !== i ? i : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   };
-        }, [j.result, w]);
+        }, [P.result, w]);
     return null == O || null == y || null == H
         ? null
         : (0, i.jsxs)('div', {
               className: l()(x.container, A),
               children: [
                   (0, i.jsx)(I.Z, {
-                      guildId: v,
+                      guildId: S,
                       userId: a,
                       onNavigate: Z
                   }),
                   (0, i.jsx)(c.AdvancedScroller, {
-                      className: S.innerContainer,
+                      className: v.innerContainer,
                       ref: M,
                       onScroll: U,
                       children: (0, i.jsx)(m.Z, {

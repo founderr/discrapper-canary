@@ -24,7 +24,7 @@ function d(e) {
         T = null;
     return (
         p.forEach((e) => {
-            var s, x, S, v, N, A, Z, M;
+            var s, x, v, S, N, A, Z, M;
             if (null != f && f.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == f ? void 0 : f.length)), s; e++) {
@@ -54,26 +54,26 @@ function d(e) {
                 (t = b));
             let R = g[g.length - 1],
                 L = null,
-                P = (0, o.DQ)(e);
-            C = C || P;
-            let j = (function (e, t, n) {
+                j = (0, o.DQ)(e);
+            C = C || j;
+            let P = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
-            })(h, e, P && _);
-            if (null !== j) {
+            })(h, e, j && _);
+            if (null !== P) {
                 let t, n;
                 [L, R] =
                     ((x = g),
-                    (S = e),
-                    (v = j),
+                    (v = e),
+                    (S = P),
                     (n = N = R),
-                    null == N || N.type !== v
+                    null == N || N.type !== S
                         ? ((t = {
-                              type: v,
+                              type: S,
                               content: [],
-                              key: S.id
+                              key: v.id
                           }),
                           x.push(t))
                         : (n = (t = N).content[t.content.length - 1]),

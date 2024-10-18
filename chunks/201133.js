@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return v;
+        return _;
     },
     a: function () {
         return E;
@@ -59,7 +59,7 @@ let m = (e) => {
             await (0, r.rU)(u, c.id, e);
         }
     },
-    v = (e) => {
+    _ = (e) => {
         let { file: t, reply: n, channel: l, altText: a, requireConfirmation: r = !1 } = e,
             s = i.ZP.parse(l, n);
         return x(t, l.id, r, a, s);

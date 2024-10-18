@@ -1,15 +1,15 @@
 t.d(n, {
     Z: function () {
-        return Z;
+        return x;
     }
 }),
     t(47120);
-var o,
-    i = t(735250),
-    s = t(470079),
+var i,
+    s = t(735250),
+    o = t(470079),
     l = t(699581),
-    c = t(442837),
-    r = t(481060),
+    r = t(442837),
+    c = t(481060),
     a = t(34854),
     d = t(531301),
     u = t(246946),
@@ -29,7 +29,7 @@ function f(e, n, t) {
         e
     );
 }
-class p extends (o = s.PureComponent) {
+class m extends (i = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,12 +37,12 @@ class p extends (o = s.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: t, hideNote: o } = this.props;
-        return o
+        let { className: e, loading: n, note: t, hideNote: i } = this.props;
+        return i
             ? null
-            : (0, i.jsx)('div', {
+            : (0, s.jsx)('div', {
                   className: e,
-                  children: (0, i.jsx)(r.TextAreaAutosize, {
+                  children: (0, s.jsx)(c.TextAreaAutosize, {
                       ref: this.noteRef,
                       className: E.textarea,
                       disabled: n,
@@ -57,11 +57,11 @@ class p extends (o = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'noteRef', s.createRef()),
+            f(this, 'noteRef', o.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: t, userId: o, onUpdate: i } = this.props;
-                if ((null != t ? t : '') !== n) null == i || i(), a.Z.updateNote(o, n);
+                    { note: t, userId: i, onUpdate: s } = this.props;
+                if ((null != t ? t : '') !== n) null == s || s(), a.Z.updateNote(i, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -73,13 +73,13 @@ class p extends (o = s.PureComponent) {
             });
     }
 }
-function Z(e) {
-    let n = (0, c.e7)([u.Z], () => u.Z.hidePersonalInformation),
+function x(e) {
+    let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
-    return (0, i.jsx)(p, {
+    return (0, s.jsx)(m, {
         ...e,
         ...t,
         hideNote: n
     });
 }
-f(p, 'defaultProps', { autoFocus: !1 });
+f(m, 'defaultProps', { autoFocus: !1 });

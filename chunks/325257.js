@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(493683),
     p = n(239091),
     f = n(153867),
-    m = n(35225),
-    _ = n(703656),
+    _ = n(35225),
+    m = n(703656),
     g = n(769654),
     C = n(271383),
     I = n(771845),
@@ -77,22 +77,22 @@ t.Z = l.memo(function (e) {
     l.useEffect(() => () => eh.cancel(), [eh]);
     let ep = l.useCallback(() => {
             if (null != U) {
-                (0, _.uL)(U, { state: L });
+                (0, m.uL)(U, { state: L });
                 return;
             }
             (0, g.X)(X, { state: L });
         }, [X, U]),
         ef = l.useCallback(() => {
             if (null != U || null == G || F || !q) return;
-            let e = (0, m.V)(G.id);
+            let e = (0, _.V)(G.id);
             if (null != e) h.Z.preload(G.id, e);
         }, [U, G, F, q]),
-        em = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
-        e_ = l.useCallback(
+        e_ = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
+        em = l.useCallback(
             (e) => {
-                null != G && !em && z(e, G);
+                null != G && !e_ && z(e, G);
             },
-            [G, z, em]
+            [G, z, e_]
         ),
         eg = l.useCallback(
             (e) => {
@@ -147,7 +147,7 @@ t.Z = l.memo(function (e) {
                           K || ea(!1);
                       },
                       onMouseDown: ef,
-                      onContextMenu: e_,
+                      onContextMenu: em,
                       onKeyDown: eg,
                       icon: G.getIconURL(96, es && k),
                       selected: B || es,

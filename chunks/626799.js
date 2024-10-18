@@ -41,7 +41,7 @@ function R(e, t, n) {
         e
     );
 }
-class O extends (i = s.Component) {
+class v extends (i = s.Component) {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
@@ -169,8 +169,8 @@ class O extends (i = s.Component) {
             });
     }
 }
-R(O, 'defaultProps', { renderFallback: S.dG4 });
-let v = [p.Z, N.Z, h.Z, C.Z];
+R(v, 'defaultProps', { renderFallback: S.dG4 });
+let O = [p.Z, N.Z, h.Z, C.Z];
 function M(e) {
     let { skuId: t } = e,
         n = p.Z.get(t),
@@ -184,6 +184,6 @@ function M(e) {
         libraryApplication: null != n ? h.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, T.Z)((0, m.Z)(O));
-t.Z = l.ZP.connectStores(v, M)(L);
-let Z = (0, m.Z)(l.ZP.connectStores(v, M)(O));
+let L = (0, T.Z)((0, m.Z)(v));
+t.Z = l.ZP.connectStores(O, M)(L);
+let Z = (0, m.Z)(l.ZP.connectStores(O, M)(v));

@@ -28,13 +28,13 @@ t.Z = () => {
     let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         x = null,
         R = null,
-        O = null,
-        v = [h.notice, N.notice];
+        v = null,
+        O = [h.notice, N.notice];
     switch (A) {
         case E.wB.SUBMITTED:
             (x = f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
                 (R = f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
-                (O = () => {
+                (v = () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
                             header: f.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
@@ -54,7 +54,7 @@ t.Z = () => {
         case E.wB.REJECTED:
             (x = f.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
                 (R = f.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
-                (O = () => {
+                (v = () => {
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
@@ -64,17 +64,17 @@ t.Z = () => {
                             });
                     });
                 }),
-                v.push(h.error);
+                O.push(h.error);
             break;
         default:
             (x = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
                 (R = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
-                (O = () => {
+                (v = () => {
                     (0, _.hk)(p.id);
                 });
     }
     return (0, i.jsxs)('div', {
-        className: s()(...v),
+        className: s()(...O),
         children: [
             (0, i.jsx)(o.Text, {
                 className: h.header,
@@ -86,7 +86,7 @@ t.Z = () => {
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,
-                onClick: O,
+                onClick: v,
                 children: R
             })
         ]

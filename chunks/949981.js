@@ -51,12 +51,12 @@ function T(e) {
         x = I.Z.Messages.JOIN_GUILD,
         R = l.Z.Button.Colors.GREEN;
     g && ((x = I.Z.Messages.JOINED_GUILD), (R = l.Z.Button.Colors.PRIMARY));
-    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+    let v = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return (
-        N && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
+        N && (v = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
         (0, i.jsxs)(l.Z, {
             children: [
-                (0, i.jsx)(l.Z.Header, { text: O }),
+                (0, i.jsx)(l.Z.Header, { text: v }),
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {

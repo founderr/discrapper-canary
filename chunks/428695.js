@@ -11,13 +11,13 @@ var i = n(735250),
     p = n(599293);
 let f = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: r, image: s, type: m, imageStyles: _, imageMarginX: g, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: x, cta: S, ctaColor: v, centerText: Z, className: T } = e;
+    let { guild: t, title: n, message: r, image: s, type: _, imageStyles: m, imageMarginX: g, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: x, cta: S, ctaColor: v, centerText: Z, className: T } = e;
     l.useEffect(() => {
         f(d.rMx.CHANNEL_NOTICE_VIEWED, {
-            notice_type: m,
+            notice_type: _,
             guild_id: t.id
         });
-    }, [t.id, m]);
+    }, [t.id, _]);
     let b = null;
     'function' == typeof S
         ? (b = S())
@@ -26,11 +26,11 @@ t.Z = function (e) {
               className: p.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
-                  null != m &&
+                  null != _ &&
                       u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                           source: I,
                           guild_id: t.id,
-                          notice_type: m
+                          notice_type: _
                       }),
                       null == x || x();
               },
@@ -66,7 +66,7 @@ t.Z = function (e) {
                 ? null
                 : (0, i.jsx)(o.Clickable, {
                       onClick: () => {
-                          c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == N || N();
+                          c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: _ }), null == N || N();
                       },
                       className: p.close,
                       'aria-label': h.Z.Messages.DISMISS,
@@ -86,7 +86,7 @@ t.Z = function (e) {
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
-                        style: _,
+                        style: m,
                         src: s,
                         alt: ''
                     })

@@ -19,22 +19,22 @@ var a = t(921801),
     S = t(864239),
     I = t(190014),
     N = t(301812),
-    A = t(988043),
-    C = t(919539),
-    m = t(726985),
+    m = t(988043),
+    A = t(919539),
+    C = t(726985),
     g = t(689938);
 let h = () =>
         (0, n.jsx)(T.Z, {
             title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_SOCIAL_PERMISSIONS,
-            webSetting: m.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            webSetting: C.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: (0, n.jsxs)(E.Z, {
                 children: [
                     (0, n.jsx)(a.F, {
-                        setting: m.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        setting: C.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, n.jsx)(u.Z, {})
                     }),
+                    (0, n.jsx)(m.Z, {}),
                     (0, n.jsx)(A.Z, {}),
-                    (0, n.jsx)(C.Z, {}),
                     (0, n.jsx)(N.Z, {}),
                     (0, n.jsx)(I.Z, {})
                 ]
@@ -43,13 +43,13 @@ let h = () =>
     O = () =>
         (0, n.jsxs)(T.Z, {
             title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
-            webSetting: m.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            webSetting: C.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [(0, n.jsx)(c.P, {}), (0, n.jsx)(l.Z, {}), (0, n.jsx)(_.Z, {}), (0, n.jsx)(o.Z, {}), (0, n.jsx)(r.Z, {}), (0, n.jsx)(S.Z, {})]
         }),
     p = () =>
         (0, n.jsx)(T.Z, {
             title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_FRIEND_REQUESTS,
-            webSetting: m.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            webSetting: C.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: (0, n.jsx)(d.Z, {})
         });
 function R() {

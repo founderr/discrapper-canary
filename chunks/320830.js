@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(477690),
     u = n(481060),
     d = n(624138),
-    h = n(954757);
-function _(e, t, n) {
+    _ = n(954757);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -80,7 +80,7 @@ t.Z = function (e) {
         }
         render() {
             return (0, s.jsx)('div', {
-                className: h.wrapper,
+                className: _.wrapper,
                 children: (0, s.jsx)(u.AccessibilityPreferencesContext.Consumer, {
                     children: (t) => {
                         let { reducedMotion: n } = t;
@@ -94,14 +94,14 @@ t.Z = function (e) {
         }
         constructor(...e) {
             super(...e),
-                _(this, 'timeout', void 0),
-                _(this, 'anim', new l.Z.Value(g.START)),
-                _(this, 'state', { shouldAnimate: !o.tq }),
-                _(this, 'handleResize', () => {
+                h(this, 'timeout', void 0),
+                h(this, 'anim', new l.Z.Value(g.START)),
+                h(this, 'state', { shouldAnimate: !o.tq }),
+                h(this, 'handleResize', () => {
                     let e = window.innerWidth > E;
                     !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({ shouldAnimate: e });
                 }),
-                _(this, 'handleResizeDebounced', a()(this.handleResize, 60));
+                h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
         }
     };
 };

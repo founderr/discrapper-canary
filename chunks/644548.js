@@ -12,8 +12,8 @@ var l = n(735250),
     m = n(555672),
     x = n(297781),
     E = n(591853),
-    v = n(410441),
-    _ = n(797342),
+    _ = n(410441),
+    v = n(797342),
     C = n(689938);
 let p = (e, t, n, l) => {
         let a = (function (e) {
@@ -36,7 +36,7 @@ let p = (e, t, n, l) => {
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: T } = e,
         { largeImage: g } = (0, o.rv)({ entry: n }),
-        { user: I, details: N, appName: Z } = (0, _.n)(n),
+        { user: I, details: N, appName: Z } = (0, v.n)(n),
         { primaryColor: P, secondaryColor: M } = (0, d.Z)(null == g ? void 0 : g.src),
         L = (0, u.yA)(n),
         S = (0, u.Nq)(n),
@@ -64,7 +64,7 @@ t.Z = (e) => {
                 headerIcons:
                     null == R
                         ? null
-                        : (0, l.jsx)(v.Z, {
+                        : (0, l.jsx)(_.Z, {
                               Icon: R,
                               'aria-label': C.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),

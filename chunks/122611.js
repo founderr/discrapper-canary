@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(819792),
     g = n(919285),
     T = n(118470),
-    S = n(413307),
-    f = n(849688),
+    f = n(413307),
+    S = n(849688),
     C = n(374023),
     N = n(661599),
     A = n(617899),
@@ -42,7 +42,7 @@ function M(e) {
             location: 'ChannelNoticesGuard',
             includeConverted: !1
         }),
-        S = (0, s.Wu)(R.HG, () =>
+        f = (0, s.Wu)(R.HG, () =>
             R.XN.filter((e) => {
                 let { type: t, store: i } = e;
                 if (t === O.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(O.oNc.CLAN) && T;
@@ -50,7 +50,7 @@ function M(e) {
             }).map((e) => e.dismissibleContentType)
         );
     return (0, i.jsx)(u.ZP, {
-        contentTypes: S,
+        contentTypes: f,
         groupName: x.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: a } = e,
@@ -112,7 +112,7 @@ t.Z = (e) => {
     let { guild: t } = e;
     switch ((0, L.Z)(t)) {
         case L.R.ENABLE_PUBLIC_GUILD:
-            return (0, i.jsx)(S.Z, { guild: t });
+            return (0, i.jsx)(f.Z, { guild: t });
         case L.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(_.Z, { guild: t });
         case L.R.MAX_MEMBER_COUNT:
@@ -128,7 +128,7 @@ t.Z = (e) => {
         case L.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(p.Z, { guild: t });
         case L.R.SIGNUP:
-            return (0, i.jsx)(f.Z, { guild: t });
+            return (0, i.jsx)(S.Z, { guild: t });
     }
     return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
 };

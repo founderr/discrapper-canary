@@ -39,10 +39,10 @@ function R(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, i.jsx)(O, { application: n })
+        ? (0, i.jsx)(v, { application: n })
         : null;
 }
-function O(e) {
+function v(e) {
     let { application: t } = e,
         n = (0, r.e7)([T.Z], () => {
             var e;
@@ -65,7 +65,7 @@ function O(e) {
         R = a.useCallback((e) => {
             e && p(!0);
         }, []),
-        O = (0, o.O)(R);
+        v = (0, o.O)(R);
     return (
         a.useEffect(() => {
             N &&
@@ -76,10 +76,10 @@ function O(e) {
                 });
         }, [N, t]),
         (0, i.jsxs)('div', {
-            ref: O,
+            ref: v,
             className: S.embedContainer,
             children: [
-                (0, i.jsx)(v, {
+                (0, i.jsx)(O, {
                     application: t,
                     iconUrl: c
                 }),
@@ -133,7 +133,7 @@ function O(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { application: t, iconUrl: n } = e,
         a = (0, c.Z)({
             applicationId: t.id,

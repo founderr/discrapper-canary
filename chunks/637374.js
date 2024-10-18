@@ -23,13 +23,13 @@ var i = n(735250),
     A = n(82142),
     x = n(283595),
     R = n(594174),
-    O = n(509545),
-    v = n(55563),
+    v = n(509545),
+    O = n(55563),
     M = n(199480),
     L = n(626135),
     Z = n(669079),
-    P = n(74538),
-    b = n(296848),
+    b = n(74538),
+    P = n(296848),
     D = n(51144),
     j = n(626799),
     U = n(981631),
@@ -149,7 +149,7 @@ class V extends a.Component {
                 onClick: this.handleAccept,
                 color: u.Button.Colors.BRAND
             },
-            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n));
+            r = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && a) || (e.isExistingPremiumSubscriptionDisallowed && (0, b.I5)(n));
         return (
             (e.redeemed || r || e.isClaimed || !n.verified) && ((s.color = u.Button.Colors.BRAND), (s.disabled = !0)),
             (0, i.jsx)(u.Button, {
@@ -348,10 +348,10 @@ class V extends a.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([A.Z, v.Z, R.default, x.Z, O.Z, S.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([A.Z, O.Z, R.default, x.Z, v.Z, S.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
         a = A.Z.get(t),
-        s = null != a ? v.Z.get(a.skuId) : null,
+        s = null != a ? O.Z.get(a.skuId) : null,
         r = null != a && null != a.userId ? R.default.getUser(a.userId) : null,
         l = m.Z.useReducedMotion;
     return {
@@ -359,7 +359,7 @@ t.Z = c.ZP.connectStores([A.Z, v.Z, R.default, x.Z, O.Z, S.default, m.Z], (e) =>
         giftCode: a,
         gifter: r,
         currentUser: i,
-        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
+        subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, P.oE)(a.subscriptionPlanId) : null,
         isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
         resolved: A.Z.getIsResolved(t),
         libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, x.Z) : null,

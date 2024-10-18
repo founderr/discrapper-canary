@@ -48,7 +48,7 @@ function A(e) {
                     channel: t,
                     gotoChannel: a
                 }),
-                (0, i.jsx)(v, {
+                (0, i.jsx)(O, {
                     channel: t,
                     gotoChannel: a,
                     mentionCount: s
@@ -65,7 +65,7 @@ function x(e) {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(O, {
+        : (0, i.jsx)(v, {
               channel: t,
               gotoChannel: n
           });
@@ -85,7 +85,7 @@ function R(e) {
         })
     });
 }
-function O(e) {
+function v(e) {
     let { channel: t, gotoChannel: n } = e,
         a = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null == a
@@ -100,7 +100,7 @@ function O(e) {
               tabIndex: -1
           });
 }
-function v(e) {
+function O(e) {
     let { channel: t, gotoChannel: n, mentionCount: a } = e,
         r = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
         c = (0, l.e7)([f.Z], () => f.Z.getChannel(t.parent_id)),

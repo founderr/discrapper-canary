@@ -19,7 +19,7 @@ function h() {
         h = d.QA[e],
         p = e !== c.aH.DEFAULT && (n || t),
         f = (0, r.useRedesignIconContext)().enabled,
-        m = (0, i.jsx)(r.ClydeIcon, {
+        _ = (0, i.jsx)(r.ClydeIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 30,
@@ -30,5 +30,5 @@ function h() {
               id: e,
               width: 48
           })
-        : m;
+        : _;
 }

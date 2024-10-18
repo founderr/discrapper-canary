@@ -28,14 +28,14 @@ var i = n(735250),
 function A(e) {
     var t, n, A;
     let { code: x, message: R } = e,
-        [O, v, M] = (0, l.Wu)([h.Z], () => [h.Z.getApplication(x), h.Z.isInvalidApplication(x), h.Z.getApplicationFetchState(x)], [x]),
+        [v, O, M] = (0, l.Wu)([h.Z], () => [h.Z.getApplication(x), h.Z.isInvalidApplication(x), h.Z.getApplicationFetchState(x)], [x]),
         L = (0, l.e7)([d.default], () => d.default.locale),
         Z = (0, l.e7)([E.Z], () => {
             var e;
             return null !== (e = E.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        P = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        [b, D] = a.useState(!1),
+        b = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        [P, D] = a.useState(!1),
         j = a.useCallback((e) => {
             e && D(!0);
         }, []),
@@ -44,7 +44,7 @@ function A(e) {
         (0, f.gZ)(x);
     }, [x]),
         a.useEffect(() => {
-            b &&
+            P &&
                 M === h.M.FETCHED &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: x,
@@ -53,17 +53,17 @@ function A(e) {
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [b, x, null == P ? void 0 : P.id, R.channel_id, Z, R.author.id, M]),
+        }, [P, x, null == b ? void 0 : b.id, R.channel_id, Z, R.author.id, M]),
         a.useEffect(() => {
-            b &&
-                v &&
+            P &&
+                O &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: R.author.id,
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [b, Z, v, R.author.id, R.channel_id]);
+        }, [P, Z, O, R.author.id, R.channel_id]);
     let y = (e) => {
         m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: x,
@@ -79,7 +79,7 @@ function A(e) {
                 entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
-    if (v)
+    if (O)
         return (0, i.jsxs)(u.Z, {
             containerRef: U,
             children: [
@@ -99,7 +99,7 @@ function A(e) {
                 })
             ]
         });
-    if (null == O || M === h.M.FETCHING)
+    if (null == v || M === h.M.FETCHING)
         return (0, i.jsxs)(u.Z, {
             containerRef: U,
             children: [(0, i.jsx)(u.Z.Header, { text: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
@@ -108,13 +108,13 @@ function A(e) {
             notation: 'compact',
             compactDisplay: 'short'
         }),
-        k = null !== (n = null === (t = O.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
+        k = null !== (n = null === (t = v.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
         G = (0, T.Eb)({
-            customInstallUrl: O.custom_install_url,
-            installParams: O.install_params,
-            integrationTypesConfig: O.integration_types_config
+            customInstallUrl: v.custom_install_url,
+            installParams: v.install_params,
+            integrationTypesConfig: v.integration_types_config
         }),
-        F = r.Y.GUILD_INSTALL in (null !== (A = O.integration_types_config) && void 0 !== A ? A : {}) && G;
+        F = r.Y.GUILD_INSTALL in (null !== (A = v.integration_types_config) && void 0 !== A ? A : {}) && G;
     return (0, i.jsxs)(u.Z, {
         containerRef: U,
         children: [
@@ -125,14 +125,14 @@ function A(e) {
                         className: S.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(u.Z.Icon, {
-                                application: _.Z.createFromServer(O),
+                                application: _.Z.createFromServer(v),
                                 className: S.applicationIcon,
                                 onClick: () => y('application_icon')
                             }),
                             (0, i.jsx)(u.Z.Info, {
                                 title: (0, i.jsx)(o.Clickable, {
                                     onClick: () => y('application_name'),
-                                    children: O.name
+                                    children: v.name
                                 }),
                                 children:
                                     k > 0 &&
@@ -157,12 +157,12 @@ function A(e) {
                     G &&
                         (0, i.jsx)(u.Z.Button, {
                             onClick: () => {
-                                if (null != O)
+                                if (null != v)
                                     (0, T.LO)({
                                         applicationId: x,
-                                        customInstallUrl: O.custom_install_url,
-                                        installParams: O.install_params,
-                                        integrationTypesConfig: O.integration_types_config,
+                                        customInstallUrl: v.custom_install_url,
+                                        installParams: v.install_params,
+                                        integrationTypesConfig: v.integration_types_config,
                                         guildId: Z,
                                         source: 'app_directory_profile_embed'
                                     });

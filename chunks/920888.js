@@ -35,15 +35,15 @@ class g extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: p, channel: C, className: g, forceAddReactions: S, reactionClassName: A, useChatFontScaling: x, forceHideReactionCreates: R, remainingReactions: O, combinedReactions: v, visibleReactionsCount: M } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: p, channel: C, className: g, forceAddReactions: S, reactionClassName: A, useChatFontScaling: x, forceHideReactionCreates: R, remainingReactions: v, combinedReactions: O, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: L } = this.state,
             Z = x ? h : f,
-            P = M > 0;
-        if (!P && !S) return null;
-        let { enabled: b } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            b = M > 0;
+        if (!b && !S) return null;
+        let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             { canShowImprovedReactionButton: D } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            j = b && P,
-            U = (S && !P) || j,
+            j = P && b,
+            U = (S && !b) || j,
             y = D && !p;
         return (0, i.jsxs)(l.W, {
             component: 'div',
@@ -56,7 +56,7 @@ class g extends a.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(I.l, {
-                    reactions: v,
+                    reactions: O,
                     message: e,
                     readOnly: n,
                     isLurking: a,
@@ -67,7 +67,7 @@ class g extends a.PureComponent {
                     className: A,
                     emojiSize: y ? 'reactionLarge' : 'reaction'
                 }),
-                O > 0 &&
+                v > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, m.op)(C, e);
@@ -77,7 +77,7 @@ class g extends a.PureComponent {
                         children: (0, i.jsxs)(o.Text, {
                             className: Z.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', O]
+                            children: ['+', v]
                         })
                     }),
                 !t &&

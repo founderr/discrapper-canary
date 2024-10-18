@@ -19,9 +19,9 @@ var n,
     S = t(232567),
     I = t(809206),
     N = t(497321),
-    A = t(634894),
-    C = t(100527),
-    m = t(906732),
+    m = t(634894),
+    A = t(100527),
+    C = t(906732),
     g = t(475977),
     h = t(957730),
     O = t(31590),
@@ -54,14 +54,14 @@ function y() {
         a = (0, _.e7)([L.Z], () => L.Z.showNotice()),
         o = v.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         c = Z.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: y } = (0, m.ZP)(C.Z.PROFILE);
+        { analyticsLocations: y } = (0, C.ZP)(A.Z.PROFILE);
     r.useEffect(() => () => T.Z.wait(I.W3), []);
     let V = 'UserSettingsProfileCustomization';
-    (0, A.j)({
+    (0, m.j)({
         location: V + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, A.j)({
+        (0, m.j)({
             location: V + ' auto off',
             autoTrackExposure: !1
         });
@@ -102,7 +102,7 @@ function y() {
         }, []);
     return s
         ? (0, i.jsx)(N.Z, {})
-        : (0, i.jsxs)(m.Gt, {
+        : (0, i.jsxs)(C.Gt, {
               value: y,
               children: [
                   (0, i.jsx)(g.Z, {}),

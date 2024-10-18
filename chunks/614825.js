@@ -28,8 +28,8 @@ var i = n(735250),
     A = n(474936),
     x = n(981631),
     R = n(689938),
-    O = n(526387);
-class v extends a.Component {
+    v = n(526387);
+class O extends a.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,
             a = T.default.getUser(i.user_id),
@@ -60,7 +60,7 @@ class v extends a.Component {
         return (
             (l.disabled = o),
             (0, i.jsxs)('div', {
-                className: O.buttonContainer,
+                className: v.buttonContainer,
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.Button, {
@@ -79,7 +79,7 @@ class v extends a.Component {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: O.metadata,
+                        className: v.metadata,
                         children: c
                     })
                 ]
@@ -104,8 +104,8 @@ class v extends a.Component {
     renderMedia(e) {
         return (0, i.jsx)('div', {
             className: r()({
-                [O.referral]: !e,
-                [O.birthdayReferral]: e
+                [v.referral]: !e,
+                [v.birthdayReferral]: e
             })
         });
     }
@@ -114,25 +114,25 @@ class v extends a.Component {
             s = (0, S.B)(e),
             l = t.id === e.referrer_id;
         return (0, i.jsxs)('div', {
-            className: r()(O.tile, O.container),
+            className: r()(v.tile, v.container),
             children: [
                 (0, i.jsx)('div', {
-                    className: O.media,
+                    className: v.media,
                     children: this.renderMedia(a)
                 }),
                 (0, i.jsxs)('div', {
-                    className: O.description,
+                    className: v.description,
                     children: [
                         (0, i.jsx)(d.H, {
-                            className: O.title,
+                            className: v.title,
                             children: this.renderTitle(n, s, l)
                         }),
                         (0, i.jsx)('div', {
-                            className: O.tagline,
+                            className: v.tagline,
                             children: this.renderBody(n, s, l)
                         }),
                         (0, i.jsx)('div', {
-                            className: O.actions,
+                            className: v.actions,
                             children: this.renderActions(n, s, l)
                         })
                     ]
@@ -184,7 +184,7 @@ function M(e) {
     return s
         ? (0, i.jsx)(_.OR, { isHorizontal: !c.tq })
         : n && null != a && void 0 !== r
-          ? (0, i.jsx)(v, {
+          ? (0, i.jsx)(O, {
                 trialOffer: a,
                 currentUser: r,
                 recipientHasNitro: l,
@@ -194,7 +194,7 @@ function M(e) {
                 ...e
             })
           : (0, i.jsx)('div', {
-                className: O.invalidWrapper,
-                children: (0, i.jsx)('div', { className: O.invalid })
+                className: v.invalidWrapper,
+                children: (0, i.jsx)('div', { className: v.invalid })
             });
 }

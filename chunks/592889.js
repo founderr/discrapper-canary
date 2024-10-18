@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(600164),
     I = t(210887),
     N = t(301766),
-    A = t(509545),
-    C = t(74538),
-    m = t(937615),
+    m = t(509545),
+    A = t(74538),
+    C = t(937615),
     g = t(689938),
     h = t(569884);
 function O(e) {
@@ -31,13 +31,13 @@ function O(e) {
     async function p() {
         await (0, u.dP)(s, s.planId, O, r), i();
     }
-    let R = A.Z.get(s.planId);
+    let R = m.Z.get(s.planId);
     l()(null != R, 'Missing subscriptionPlan');
-    let x = (0, C.aS)(s.planId, !1, !1, {
+    let x = (0, A.aS)(s.planId, !1, !1, {
             paymentSourceId: s.paymentSourceId,
             currency: s.currency
         }),
-        M = (0, m.og)((0, m.T4)(x.amount, x.currency), R.interval, R.intervalCount);
+        M = (0, C.og)((0, C.T4)(x.amount, x.currency), R.interval, R.intervalCount);
     return (0, n.jsxs)(_.ModalRoot, {
         transitionState: a,
         'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -57,12 +57,12 @@ function O(e) {
                 className: h.modalBody,
                 children: (0, N.Q0)(s.planId)
                     ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
-                          downgradedPlan: C.ZP.getDisplayName(t.planId),
+                          downgradedPlan: A.ZP.getDisplayName(t.planId),
                           existingRate: M
                       })
                     : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
-                          existingPlan: C.ZP.getDisplayName(s.planId),
-                          downgradedPlan: C.ZP.getDisplayName(t.planId),
+                          existingPlan: A.ZP.getDisplayName(s.planId),
+                          downgradedPlan: A.ZP.getDisplayName(t.planId),
                           existingRate: M
                       })
             }),
@@ -99,7 +99,7 @@ function p(e) {
             (0, n.jsx)('div', {
                 className: h.text,
                 children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
-                    planName: s.hasExternalPlanChange ? (0, C.zL)(t) : C.ZP.getDisplayName(t.planId),
+                    planName: s.hasExternalPlanChange ? (0, A.zL)(t) : A.ZP.getDisplayName(t.planId),
                     date: s.currentPeriodEnd
                 })
             }),

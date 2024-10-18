@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -33,7 +33,7 @@ let R = {
         right: -12
     }
 };
-function O(e) {
+function v(e) {
     let { setTab: t, closePopout: n } = e,
         s = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()),
         [r, l] = a.useState(!1),
@@ -64,11 +64,11 @@ function O(e) {
                     })
                 ]
             }),
-            0 === _.length ? (0, i.jsx)(M, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(v, { messageReminder: e }, e.saveData.messageId)) })
+            0 === _.length ? (0, i.jsx)(M, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(O, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function v(e) {
+function O(e) {
     let t,
         { messageReminder: a } = e,
         s = a.saveData,

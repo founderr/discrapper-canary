@@ -14,9 +14,9 @@ var n,
     S = t(351402),
     I = t(823379),
     N = t(464179),
-    A = t(211667),
-    C = t(244526),
-    m = t(689938),
+    m = t(211667),
+    A = t(244526),
+    C = t(689938),
     g = t(635994);
 function h(e, s, t) {
     return (
@@ -62,7 +62,7 @@ class p extends (n = i.PureComponent) {
                 (0, a.jsx)(d.Text, {
                     className: g.sectionHeader,
                     variant: 'text-sm/normal',
-                    children: m.Z.Messages.BILLING_ADDRESS
+                    children: C.Z.Messages.BILLING_ADDRESS
                 }),
                 (0, a.jsx)(N.ZP, {
                     ...e,
@@ -84,9 +84,9 @@ class p extends (n = i.PureComponent) {
                 (0, a.jsx)(d.Text, {
                     className: g.sectionHeader,
                     variant: 'text-sm/normal',
-                    children: m.Z.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
+                    children: C.Z.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
                 }),
-                (0, a.jsx)(A.Z, {
+                (0, a.jsx)(m.Z, {
                     expirationDate: t,
                     onCardInfoChange: this.handleExpirationDateUpdate,
                     error: this.props.updateError
@@ -107,7 +107,7 @@ class p extends (n = i.PureComponent) {
                         children: [
                             t
                                 ? (0, a.jsx)(d.Tooltip, {
-                                      text: m.Z.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
+                                      text: C.Z.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
                                       children: (e) =>
                                           (0, a.jsx)('div', {
                                               'aria-hidden': !0,
@@ -124,7 +124,7 @@ class p extends (n = i.PureComponent) {
                                 look: d.Button.Looks.OUTLINED,
                                 color: d.Button.Colors.RED,
                                 size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-                                children: l.tq ? m.Z.Messages.DELETE : m.Z.Messages.PAYMENT_SOURCE_DELETE
+                                children: l.tq ? C.Z.Messages.DELETE : C.Z.Messages.PAYMENT_SOURCE_DELETE
                             })
                         ]
                     })
@@ -139,7 +139,7 @@ class p extends (n = i.PureComponent) {
                             look: d.Button.Looks.LINK,
                             color: d.Button.Colors.PRIMARY,
                             size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-                            children: m.Z.Messages.CANCEL
+                            children: C.Z.Messages.CANCEL
                         }),
                         (0, a.jsx)(d.Button, {
                             submitting: e,
@@ -147,7 +147,7 @@ class p extends (n = i.PureComponent) {
                             type: 'submit',
                             color: d.Button.Colors.GREEN,
                             size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-                            children: m.Z.Messages.SAVE
+                            children: C.Z.Messages.SAVE
                         })
                     ]
                 })
@@ -169,7 +169,7 @@ class p extends (n = i.PureComponent) {
                     (0, a.jsxs)('div', {
                         className: g.__invalid_paymentSection,
                         children: [
-                            (0, a.jsx)(C.Z, {
+                            (0, a.jsx)(A.Z, {
                                 paymentSource: e,
                                 isDefault: s,
                                 isForSubscription: i,
@@ -180,12 +180,12 @@ class p extends (n = i.PureComponent) {
                             e.invalid
                                 ? (0, a.jsx)('div', {
                                       className: g.errorSubText,
-                                      children: m.Z.Messages.PAYMENT_SOURCE_INVALID_HELP
+                                      children: C.Z.Messages.PAYMENT_SOURCE_INVALID_HELP
                                   })
                                 : null,
                             (0, a.jsx)('div', {
                                 className: g.subText,
-                                children: l ? m.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({ paypalURL: 'https://www.paypal.com' }) : m.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
+                                children: l ? C.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({ paypalURL: 'https://www.paypal.com' }) : C.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
                             })
                         ]
                     }),
@@ -200,7 +200,7 @@ class p extends (n = i.PureComponent) {
                         children: (0, a.jsx)(d.Text, {
                             className: g.defaultCheckboxLabel,
                             variant: 'text-sm/normal',
-                            children: m.Z.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
+                            children: C.Z.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
                         })
                     }),
                     (0, a.jsx)(d.FormDivider, {}),

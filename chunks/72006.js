@@ -12,16 +12,16 @@ n.d(t, {
         return U;
     },
     Sq: function () {
-        return v;
+        return O;
     },
     Wg: function () {
         return y;
     },
     Zn: function () {
-        return O;
+        return v;
     },
     c2: function () {
-        return P;
+        return b;
     },
     eE: function () {
         return j;
@@ -30,7 +30,7 @@ n.d(t, {
         return k;
     },
     iK: function () {
-        return b;
+        return P;
     },
     lv: function () {
         return M;
@@ -122,7 +122,7 @@ function R(e, t) {
             return t;
     }
 }
-function O(e, t) {
+function v(e, t) {
     switch (e) {
         case 'transpose-characters':
             return S()(t);
@@ -134,7 +134,7 @@ function O(e, t) {
             return t;
     }
 }
-function v(e) {
+function O(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
 function M(e, t) {
@@ -186,32 +186,32 @@ function Z(e) {
         n = e.getSelection();
     return null != n && n.hasFocus && (t = i.EditorState.moveFocusToEnd(t)), t;
 }
-function P(e, t) {
-    let n = v(t);
+function b(e, t) {
+    let n = O(t);
     return x(e, t, 0, n.length);
 }
-function b(e, t) {
+function P(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), i.EditorState.forceSelection(t, n);
 }
 function D(e) {
-    return b(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return P(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function j(e) {
-    return b(0, e);
+    return P(0, e);
 }
 function U(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), i.EditorState.forceSelection(e, t);
 }
 function y(e) {
-    let t = v(e),
+    let t = O(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), i.EditorState.forceSelection(e, n);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        n = v(e);
+        n = O(e);
     if (n.length > t) {
         let a = e.getSelection();
         (e = x('', e, t, n.length)), a.getAnchorOffset() > t && (a = a.set('anchorOffset', t)), a.getFocusOffset() > t && (a = a.set('focusOffset', t)), (e = i.EditorState.forceSelection(e, a));
@@ -239,5 +239,5 @@ function k(e) {
     s < e.scrollLeft ? (e.scrollLeft = s - 10) : s > e.scrollLeft + e.offsetWidth && (e.scrollLeft = s - e.offsetWidth + 3);
 }
 function G(e) {
-    return 0 === v(e).length;
+    return 0 === O(e).length;
 }

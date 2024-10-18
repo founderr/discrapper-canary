@@ -10,8 +10,8 @@ var i = n(735250),
     h = n(430824),
     p = n(451478),
     f = n(61634),
-    m = n(325257),
-    _ = n(941823);
+    _ = n(325257),
+    m = n(941823);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         g = t.id,
@@ -32,11 +32,11 @@ t.Z = l.memo(function (e) {
                     ? n
                     : T
                       ? (0, i.jsx)('div', {
-                            className: _.pauseBackground,
+                            className: m.pauseBackground,
                             children: (0, i.jsx)(a.PauseIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: _.pause,
+                                className: m.pause,
                                 width: 10,
                                 height: 10
                             })
@@ -44,7 +44,7 @@ t.Z = l.memo(function (e) {
                       : null,
             [n, T]
         );
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(_.Z, {
         ...e,
         guild: C,
         unavailable: N,

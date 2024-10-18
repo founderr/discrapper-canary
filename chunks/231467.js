@@ -518,7 +518,7 @@ t.ZP = function (e) {
                               color: o.Button.Colors.PRIMARY,
                               size: o.Button.Sizes.SMALL,
                               fullWidth: !0,
-                              children: U.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                              children: L ? U.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA : U.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                           })
                       })
                     : null

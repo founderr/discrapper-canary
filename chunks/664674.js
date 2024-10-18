@@ -21,8 +21,8 @@ let o = Object.values(i.E),
     l = {
         guild_id: '1266851512559210577',
         leaderboard_id: '1280436307230720000',
-        interval_start: '1288198265241600000',
-        interval_end: '1290734980300800000',
+        interval_start: '1295808410419200000',
+        interval_end: '1298345125478400000',
         guild_settings: {
             sort_by_statistic_id: i.E.LOL_TOTAL_KILLS,
             sort_desc: !0,

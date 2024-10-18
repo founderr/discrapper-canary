@@ -20,12 +20,12 @@ var l = n(735250),
     m = n(931651),
     x = n(131704),
     E = n(142550),
-    v = n(981631),
-    _ = n(689938),
+    _ = n(981631),
+    v = n(689938),
     C = n(793834);
 let p = (0, x.kt)({
         id: '1',
-        type: v.d4z.DM
+        type: _.d4z.DM
     }),
     f = a.forwardRef(function (e, t) {
         let { placeholder: n, headerText: a, onEnter: i, showPopout: u, children: c, body: d, hide: h } = e,
@@ -49,14 +49,14 @@ let p = (0, x.kt)({
                                         (0, l.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
                                             className: C.replyHeader,
-                                            children: null != a ? a : _.Z.Messages.CHAT
+                                            children: null != a ? a : v.Z.Messages.CHAT
                                         }),
                                         d,
                                         (0, l.jsx)(T, {
                                             onEnter: (e) => {
                                                 i(e), h();
                                             },
-                                            placeholder: null != n ? n : _.Z.Messages.CHAT
+                                            placeholder: null != n ? n : v.Z.Messages.CHAT
                                         })
                                     ]
                                 })
@@ -67,8 +67,8 @@ let p = (0, x.kt)({
         });
     });
 function T(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: v } = e,
-        [_, f] = a.useState(''),
+    let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: _ } = e,
+        [v, f] = a.useState(''),
         [T, g] = a.useState((0, c.JM)('')),
         I = () => {
             f(''), g((0, c.JM)(''));
@@ -78,8 +78,8 @@ function T(e) {
     return (0, l.jsx)(d.Z, {
         ref: Z,
         placeholder: t,
-        editorClassName: v,
-        className: r()(C.replyInput, v),
+        editorClassName: _,
+        className: r()(C.replyInput, _),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: E.z,
@@ -93,7 +93,7 @@ function T(e) {
                   emojis: { button: !0 }
               }
             : N,
-        textValue: _,
+        textValue: v,
         richValue: T,
         onSubmit: (e) => {
             let { value: t } = e;
@@ -162,7 +162,7 @@ let g = (e, t) => {
                                 className: e,
                                 ref: c,
                                 children: (0, l.jsx)(m.$, {
-                                    messageId: v.lds,
+                                    messageId: _.lds,
                                     channel: p,
                                     closePopout: () => {
                                         u(!1);
@@ -175,7 +175,7 @@ let g = (e, t) => {
                     }),
                 children: () =>
                     (0, l.jsx)(s.Tooltip, {
-                        text: _.Z.Messages.ADD_REACTION,
+                        text: v.Z.Messages.ADD_REACTION,
                         children: (e) =>
                             (0, l.jsx)('div', {
                                 ...e,
@@ -238,7 +238,7 @@ t.ZP = (e) => {
                                 });
                             },
                             children: (0, l.jsx)(s.Tooltip, {
-                                text: _.Z.Messages.MESSAGE_ACTION_REPLY,
+                                text: v.Z.Messages.MESSAGE_ACTION_REPLY,
                                 children: (e) =>
                                     (0, l.jsx)('button', {
                                         ...e,

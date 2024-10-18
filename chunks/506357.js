@@ -28,11 +28,11 @@ function C(e) {
         A = (0, s.e7)([d.Z], () => (null != S ? d.Z.getChannelId(S) : null), [S]),
         x = null != S ? S : null,
         R = (0, s.e7)([u.Z], () => (null != x ? u.Z.getGuild(x) : null), [x]),
-        { shouldShowIncidentActions: O, incidentData: v, isUnderLockdown: M } = (0, I.mI)(x),
+        { shouldShowIncidentActions: v, incidentData: O, isUnderLockdown: M } = (0, I.mI)(x),
         L = (0, o.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : f.lds),
         Z = a.useCallback(() => null != R && (0, c._X)(R.id), [R]);
-    if (null == R || null == v || !O) return null;
-    let P = (e) => {
+    if (null == R || null == O || !v) return null;
+    let b = (e) => {
             if (e && L && A !== h.oC.MEMBER_SAFETY && Z()) {
                 E.default.track(f.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: f.kVF.GUILD_RAID_NOTIFICATION,
@@ -43,7 +43,7 @@ function C(e) {
             (0, r.openModalLazy)(async () => {
                 let e = {
                         source: m.Zu.NAGBAR,
-                        alertType: (0, T.T1)(v)
+                        alertType: (0, T.T1)(O)
                     },
                     { default: t } = await n.e('58175').then(n.bind(n, 664452));
                 return (n) =>
@@ -54,13 +54,13 @@ function C(e) {
                     });
             });
         },
-        b = (0, i.jsx)(l.Z, {
+        P = (0, i.jsx)(l.Z, {
             className: p.guildIcon,
             guild: R,
             size: l.Z.Sizes.MINI
         }),
-        D = (0, T.OY)(v, R.name);
-    if (null != (null !== (C = v.dmsDisabledUntil) && void 0 !== C ? C : v.invitesDisabledUntil) && M)
+        D = (0, T.OY)(O, R.name);
+    if (null != (null !== (C = O.dmsDisabledUntil) && void 0 !== C ? C : O.invitesDisabledUntil) && M)
         return (0, i.jsxs)(r.Notice, {
             className: p.notice,
             color: r.NoticeColors.NEUTRAL,
@@ -69,11 +69,11 @@ function C(e) {
                     onClick: g,
                     noticeType: f.kVF.GUILD_RAID_NOTIFICATION
                 }),
-                b,
+                P,
                 D,
                 (0, i.jsx)(r.NoticeButton, {
                     className: p.actionButton,
-                    onClick: () => P(!1),
+                    onClick: () => b(!1),
                     children: (0, i.jsxs)('div', {
                         className: p.actionButtonInner,
                         children: [
@@ -87,7 +87,7 @@ function C(e) {
                 })
             ]
         });
-    let j = (0, T.CG)(v) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : (0, T.kk)(v) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : N.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: R.name }),
+    let j = (0, T.CG)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : (0, T.kk)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : N.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: R.name }),
         U = L && A === h.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(r.Notice, {
         className: p.notice,
@@ -97,12 +97,12 @@ function C(e) {
                 onClick: g,
                 noticeType: f.kVF.GUILD_RAID_NOTIFICATION
             }),
-            b,
+            P,
             j,
             !U &&
                 (0, i.jsx)(r.NoticeButton, {
                     className: p.actionButton,
-                    onClick: () => P(!0),
+                    onClick: () => b(!0),
                     children: (0, i.jsx)('div', {
                         className: p.actionButtonInner,
                         children: (0, i.jsx)('span', { children: N.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW })

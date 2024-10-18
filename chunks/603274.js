@@ -19,8 +19,8 @@ var l = n(120356),
     h = n(565799),
     p = n(501655),
     f = n(199902),
-    m = n(592125),
-    _ = n(594174),
+    _ = n(592125),
+    m = n(594174),
     g = n(938475),
     C = n(823379),
     I = n(709054),
@@ -49,10 +49,10 @@ function Z(e, t) {
 }
 function T() {
     var e, t;
-    let n = (0, o.Wu)([E.Z, m.Z], () =>
+    let n = (0, o.Wu)([E.Z, _.Z], () =>
             I.default
                 .keys(E.Z.getFavoriteChannels())
-                .map((e) => m.Z.getChannel(e))
+                .map((e) => _.Z.getChannel(e))
                 .filter(C.lm)
         ),
         l = n.map((e) => e.id),
@@ -105,8 +105,8 @@ function T() {
             },
             [l]
         ),
-        M = (0, o.Wu)([_.default], () => A.map((e) => _.default.getUser(e)), [A]),
-        R = (0, o.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
+        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
+        R = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
         L = Z(
             c.VoiceNormalIcon,
             x.filter((e) => !b.includes(e.id) && !A.includes(e.id))

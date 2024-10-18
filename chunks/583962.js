@@ -19,8 +19,8 @@ var i = n(735250),
     h = n(239091),
     p = n(100527),
     f = n(367907),
-    m = n(906732),
-    _ = n(434404),
+    _ = n(906732),
+    m = n(434404),
     g = n(496675),
     C = n(259580),
     I = n(267642),
@@ -39,7 +39,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             [s, o] = l.useState(!1),
             u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!u) o(!0), await _.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
+                if (!!u) o(!0), await m.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -63,20 +63,20 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     };
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
-        { analyticsLocations: r } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
-        { premiumSubscriberCount: u, id: _ } = t,
-        E = (0, I.rF)(u, _),
+        { analyticsLocations: r } = (0, _.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { premiumSubscriberCount: u, id: m } = t,
+        E = (0, I.rF)(u, m),
         A = (0, I.FZ)(E, t.id),
         R = null == A,
         L = null != A ? A : E,
         P = (0, c.e7)([x.Z], () => {
             var e;
-            return null !== (e = x.Z.getCountForGuild(_)) && void 0 !== e ? e : 0;
+            return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
         O = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, N.v)(_, u);
-    }, [_, P, u]);
+        P !== u && (0, N.v)(m, u);
+    }, [m, P, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[L]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
@@ -88,7 +88,7 @@ t.ZP = (e) => {
         k = () => {
             (0, f.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
-                guild_id: _,
+                guild_id: m,
                 location_stack: r
             }),
                 (0, S.Z)({

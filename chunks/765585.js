@@ -11,7 +11,7 @@ var i = n(735250),
     h = n(689938),
     p = n(138592);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: f, headerClassName: m, contentClassName: _, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [U, G] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
@@ -31,7 +31,7 @@ t.Z = l.forwardRef(function (e, t) {
             className: N,
             ref: t,
             children: (0, i.jsxs)('div', {
-                className: a()(p.content, _, {
+                className: a()(p.content, m, {
                     [p.contentNoArt]: null == f || x,
                     [p.contentPremium]: S || R
                 }),
@@ -50,7 +50,7 @@ t.Z = l.forwardRef(function (e, t) {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(s.Heading, {
-                                className: a()(S ? p.headerWithPremiumIcon : p.header, m),
+                                className: a()(S ? p.headerWithPremiumIcon : p.header, _),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [

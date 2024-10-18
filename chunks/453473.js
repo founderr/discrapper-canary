@@ -31,13 +31,13 @@ var i = n(735250),
     A = n(585483),
     x = n(70956),
     R = n(324701),
-    O = n(575016),
-    v = n(768943),
+    v = n(575016),
+    O = n(768943),
     M = n(686478),
     L = n(664559),
     Z = n(767893),
-    P = n(206697),
-    b = n(74551),
+    b = n(206697),
+    P = n(74551),
     D = n(981631),
     j = n(689938),
     U = n(982138);
@@ -72,14 +72,14 @@ function k(e) {
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: v.Z.getOverdueMessageReminderCount()
+                overdue_count: O.Z.getOverdueMessageReminderCount()
             }
         },
         {},
         [n.length]
     ),
     0 === n.length)
-        ? (0, i.jsx)(P.w, {})
+        ? (0, i.jsx)(b.w, {})
         : (0, i.jsx)(F, {
               savedMessageKeys: n,
               closePopout: t
@@ -95,7 +95,7 @@ function G(e) {
             c(!o), o ? null == n || n() : null == t || t();
         }, [n, t, o]);
     a.useEffect(() => (A.S.subscribe(D.CkL.TOGGLE_FOR_LATER, d), () => void A.S.unsubscribe(D.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let _ = (0, E.e7)([v.Z], () => v.Z.hasOverdueReminder(), []);
+    let _ = (0, E.e7)([O.Z], () => O.Z.hasOverdueReminder(), []);
     return (0, i.jsx)(I.Popout, {
         animation: I.Popout.Animation.NONE,
         position: r,
@@ -156,11 +156,11 @@ function F(e) {
 }
 function w(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
-        l = (0, O.gr)(t),
+        l = (0, v.gr)(t),
         o = a.useCallback(
             async (e) => {
                 var i;
-                await (0, O.fC)(t, l),
+                await (0, v.fC)(t, l),
                     !e.shiftKey && n(),
                     S.default.track(D.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
@@ -183,7 +183,7 @@ function w(e) {
                       'aria-label': j.Z.Messages.JUMP_TO_MESSAGE
                   }),
                   null != t.saveData.dueAt
-                      ? (0, i.jsx)(b.Z, {
+                      ? (0, i.jsx)(P.Z, {
                             reminder: t,
                             throttledNow: s
                         })
@@ -244,7 +244,7 @@ function w(e) {
 }
 function V(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: a } = e,
-        s = (0, E.e7)([v.Z], () => v.Z.getSavedMessage(t.channelId, t.messageId));
+        s = (0, E.e7)([O.Z], () => O.Z.getSavedMessage(t.channelId, t.messageId));
     return null == s
         ? null
         : (0, i.jsx)(w, {

@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(888369),
     Z = n(430824),
     v = n(496675),
-    C = n(878884),
-    S = n(19780),
+    S = n(878884),
+    C = n(19780),
     x = n(944486),
     T = n(9156),
     N = n(938475),
@@ -194,8 +194,8 @@ function j(e) {
         D = (0, l.QN)(null == s ? void 0 : s.id),
         j = (0, c.gM)(null == s ? void 0 : s.id),
         k = null !== (t = null == s ? void 0 : s.hasFeature(R.oNc.COMMUNITY)) && void 0 !== t && t,
-        V = (0, a.e7)([S.Z], () => S.Z.getChannelId()),
-        U = (0, a.e7)([C.Z], () => C.Z.desyncedVoiceStatesCount);
+        V = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
+        U = (0, a.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(w, {
         guildId: n,
         guild: s,

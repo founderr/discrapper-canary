@@ -20,9 +20,9 @@ var r = t(120356),
     S = t(463395),
     I = t(131951),
     N = t(626135),
-    A = t(63063),
-    C = t(210887),
-    m = t(726985),
+    m = t(63063),
+    A = t(210887),
+    C = t(726985),
     g = t(981631),
     h = t(689938),
     O = t(113207);
@@ -46,7 +46,7 @@ function f(e) {
     });
 }
 function D() {
-    let e = (0, l.e7)([C.Z], () => C.Z.theme),
+    let e = (0, l.e7)([A.Z], () => A.Z.theme),
         {
             noiseCancellation: s,
             noiseSuppression: t,
@@ -107,7 +107,7 @@ function D() {
                         },
                         align: u.Z.Align.CENTER,
                         body: (0, i.jsx)(d.Anchor, {
-                            href: A.Z.getArticleURL(g.BhN.NOISE_SUPPRESSION),
+                            href: m.Z.getArticleURL(g.BhN.NOISE_SUPPRESSION),
                             onClick: f,
                             children: h.Z.Messages.LEARN_MORE
                         })
@@ -147,7 +147,7 @@ function L() {
             [s]
         ),
         N = c || u || E,
-        A = e === g.pM4.VOICE_ACTIVITY && a;
+        m = e === g.pM4.VOICE_ACTIVITY && a;
     return (0, i.jsxs)(d.FormSection, {
         className: O.marginBottom20,
         title: h.Z.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -159,7 +159,7 @@ function L() {
                     children: h.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
                 }),
             (0, i.jsx)(T.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: o()(O.marginTop8, O.marginBottom20),
                     value: t,
@@ -173,21 +173,21 @@ function L() {
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                 children: (0, i.jsx)(D, {})
             }),
             (0, i.jsx)(T.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: r,
                     onChange: (s) => _.Z.setMode(e, { vadUseKrisp: s }),
                     note: h.Z.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
-                    disabled: !A,
+                    disabled: !m,
                     children: h.Z.Messages.ADVANCED_VOICE_ACTIVITY
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: '',
                     value: n,

@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(952306),
     I = t(299206),
     N = t(295474),
-    A = t(144114),
-    C = t(918505),
-    m = t(332473),
+    m = t(144114),
+    A = t(918505),
+    C = t(332473),
     g = t(921801),
     h = t(485341),
     O = t(687158),
@@ -46,13 +46,13 @@ function V(e) {
     var s, i;
     let { className: o, user: l } = e,
         c = a.useRef(null),
-        u = (0, C.o9)(),
-        E = (0, m.b)(),
+        u = (0, A.o9)(),
+        E = (0, C.b)(),
         T = (0, N.gS)(),
         S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
-        [I, A] = a.useState(!1);
+        [I, m] = a.useState(!1);
     a.useEffect(() => {
-        A(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        m(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [l.username]);
     let g = !l.isClaimed(),
         h = (u && !l.isPomelo() && !l.hasVerifiedEmailOrPhone()) || g,
@@ -366,7 +366,7 @@ function H(e) {
                                               title: G.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
                                               children: i.hasFlag(j.xW$.MFA_SMS) ? G.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
                                               actionText: G.Z.Messages.REMOVE,
-                                              handleSubmit: (e) => A.Z.removePhone(e, A.L.USER_SETTINGS_UPDATE)
+                                              handleSubmit: (e) => m.Z.removePhone(e, m.L.USER_SETTINGS_UPDATE)
                                           })
                                       );
                                   },
@@ -384,7 +384,7 @@ function H(e) {
                                         let { default: e } = await Promise.resolve().then(t.bind(t, 607018));
                                         return (s) =>
                                             (0, n.jsx)(e, {
-                                                reason: A.L.USER_SETTINGS_UPDATE,
+                                                reason: m.L.USER_SETTINGS_UPDATE,
                                                 ...s
                                             });
                                     },

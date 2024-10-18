@@ -1,26 +1,26 @@
 n.d(t, {
     U: function () {
-        return r;
+        return o;
     }
 });
-var i = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(481060),
+var i = n(481060),
     l = n(542094),
     s = n(689938),
-    o = n(87694);
-function r(e) {
+    r = n(87694);
+function o(e) {
     let { action: t, onClick: n } = e,
-        r = t === l.JS.JOIN ? s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
-        c = t === l.JS.JOIN ? a.Button.Colors.PRIMARY : a.Button.Colors.RED;
-    return (0, i.jsx)('div', {
-        className: o.activityOverlay,
-        children: (0, i.jsx)(a.Button, {
-            className: o.actionButton,
+        o = t === l.JS.JOIN ? s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
+        c = t === l.JS.JOIN ? i.Button.Colors.PRIMARY : i.Button.Colors.RED;
+    return (0, a.jsx)('div', {
+        className: r.activityOverlay,
+        children: (0, a.jsx)(i.Button, {
+            className: r.actionButton,
             onClick: n,
-            size: a.Button.Sizes.MEDIUM,
+            size: i.Button.Sizes.MEDIUM,
             color: c,
-            children: r
+            children: o
         })
     });
 }

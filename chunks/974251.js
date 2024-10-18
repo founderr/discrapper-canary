@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(536442),
     T = n(79390),
     x = n(665906),
-    S = n(706454),
-    v = n(695346),
+    v = n(706454),
+    S = n(695346),
     N = n(433355),
     A = n(819640),
     Z = n(375954),
@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(885110),
     R = n(627553),
     L = n(38761),
-    P = n(585483),
-    j = n(358085),
+    j = n(585483),
+    P = n(358085),
     O = n(127654),
     y = n(316595),
     D = n(193910),
@@ -60,7 +60,7 @@ t.Z = s.memo(function (e) {
         ed = (0, f.Go)() && ($ || eo),
         eh = W.isPrivate(),
         ep = (0, r.e7)([M.Z], () => eh || (M.Z.can(k.Plq.ATTACH_FILES, W) && M.Z.can(k.Plq.SEND_MESSAGES, W))),
-        em = (0, r.e7)([S.default], () => S.default.locale),
+        em = (0, r.e7)([v.default], () => v.default.locale),
         e_ = ['en-US', 'en-GB'].includes(em) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
         ef = (0, d.Z)(ee);
     (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !el && !ei && !er && eu('recentClips');
@@ -71,7 +71,7 @@ t.Z = s.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                P.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                j.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         eg = (0, r.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
     function eC() {
@@ -94,17 +94,17 @@ t.Z = s.memo(function (e) {
             return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         };
         return (
-            P.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            j.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                P.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                j.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });
     let eI = (0, x.NE)(W),
         eT = (0, x.Xu)(W),
-        ex = !v.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
-        eS = (0, T.UI)(null != W ? W : void 0),
-        ev = (0, c.useRedesignIconContext)().enabled,
+        ex = !S.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
+        ev = (0, T.UI)(null != W ? W : void 0),
+        eS = (0, c.useRedesignIconContext)().enabled,
         eN = (0, p.qB)(W.id, 'ChannelAttachButton'),
         eA = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
         eZ = (0, U.Z)({
@@ -116,14 +116,14 @@ t.Z = s.memo(function (e) {
             channel: W,
             activities: Q,
             newClipsCount: eA,
-            canPostPolls: eS,
+            canPostPolls: ev,
             canLaunchActivities: eN,
             appContext: X
         });
     if (0 === eZ.length) return null;
     let eM = Q.some((e) => (0, m.Z)(e, k.xjy.SYNC)),
         eb = Q.some((e) => (0, m.Z)(e, k.xjy.JOIN) && !(0, m.Z)(e, k.xjy.EMBEDDED)) || eM;
-    V = ev
+    V = eS
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
               colorClass: G.attachButtonPlus

@@ -37,13 +37,13 @@ var i,
     A = n(960904),
     x = n(161314),
     R = n(119392),
-    O = n(163268),
-    v = n(25610),
+    v = n(163268),
+    O = n(25610),
     M = n(703751),
     L = n(761538),
     Z = n(674611),
-    P = n(346610),
-    b = n(868643),
+    b = n(346610),
+    P = n(868643),
     D = n(294734),
     j = n(426275),
     U = n(947849),
@@ -61,8 +61,8 @@ var i,
     K = n(454585),
     X = n(768494),
     Q = n(124347),
-    J = n(976853),
-    q = n(346013),
+    q = n(976853),
+    J = n(346013),
     $ = n(94396),
     ee = n(977683),
     et = n(128435),
@@ -91,13 +91,13 @@ var i,
     eA = n(169525),
     ex = n(786761),
     eR = n(161010),
-    eO = n(461157),
-    ev = n(901461),
+    ev = n(461157),
+    eO = n(901461),
     eM = n(432376),
     eL = n(384203),
     eZ = n(633957),
-    eP = n(530472),
-    eb = n(29909),
+    eb = n(530472),
+    eP = n(29909),
     eD = n(782658),
     ej = n(219797),
     eU = n(453687),
@@ -115,7 +115,7 @@ var i,
     eK = n(916315),
     eX = n(287847),
     eQ = n(680674);
-function eJ(e, t, n) {
+function eq(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -128,7 +128,7 @@ function eJ(e, t, n) {
         e
     );
 }
-function eq() {
+function eJ() {
     return (0, a.jsxs)('div', {
         className: eX.nitroFileSizeUpsell,
         children: [
@@ -151,7 +151,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
         let i = null != t ? t : n;
         if (null == i) return null;
         let { url: s, proxyURL: r, width: l, height: o } = i;
-        return (0, a.jsx)(eb.Z, {
+        return (0, a.jsx)(eP.Z, {
             width: l,
             height: o,
             src: null != r && '' !== r ? r : s,
@@ -163,7 +163,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
     e7 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: s } = e;
         return null != i && null != s && Q.uo.test(n)
-            ? (0, a.jsx)(eb.Z, {
+            ? (0, a.jsx)(eP.Z, {
                   width: i,
                   height: s,
                   src: n,
@@ -218,7 +218,7 @@ class e3 extends (i = s.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eW.Lw);
-        return (0, eR.M)('attachment') && t ? (0, a.jsx)(eq, {}) : null;
+        return (0, eR.M)('attachment') && t ? (0, a.jsx)(eJ, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -509,7 +509,7 @@ class e3 extends (i = s.Component) {
     }
     renderEphemeralAccessories(e) {
         return (0, ex.Pv)(e)
-            ? (0, a.jsx)(eP.Z, {
+            ? (0, a.jsx)(eb.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       E.Z.dismissAutomatedMessage(e);
@@ -633,7 +633,7 @@ class e3 extends (i = s.Component) {
             t.type !== eY.hBH.POST_PREVIEW || null == t.url
                 ? []
                 : (0, a.jsx)(
-                      q.Z,
+                      J.Z,
                       {
                           embedUrl: t.url,
                           message: e,
@@ -658,7 +658,7 @@ class e3 extends (i = s.Component) {
     }
     renderMediaObscureNotice(e) {
         if (0 === e.attachments.length && 0 === e.embeds.length) return null;
-        let { obscuredAttachments: t, obscuredEmbeds: n } = (0, O.Tw)(e);
+        let { obscuredAttachments: t, obscuredEmbeds: n } = (0, v.Tw)(e);
         return 0 === t.length && 0 === n.length ? null : (0, a.jsx)(L.Z, { message: e });
     }
     renderPoll(e, t) {
@@ -694,27 +694,27 @@ class e3 extends (i = s.Component) {
             A = this.renderInteractionPremiumUpsell(t),
             x = this.renderMediaPostEmbeds(t),
             R = this.renderSafetyPolicyNotice(t),
-            O = this.renderSafetySystemNotification(t),
-            v = this.renderVoiceChannelInvite(t, n),
+            v = this.renderSafetySystemNotification(t),
+            O = this.renderVoiceChannelInvite(t, n),
             M = this.renderMediaObscureNotice(t),
             L = this.renderPoll(t, i),
             Z = this.renderForwardedMessage(t);
-        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == f && null == h && null == N && null == p && null == C && null == S && null == g && null == x && null == R && null != A && null == L && null == v && null == Z
+        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == f && null == h && null == N && null == p && null == C && null == S && null == g && null == x && null == R && null != A && null == L && null == O && null == Z
             ? null
             : (0, a.jsxs)('div', {
                   id: (0, eU.bX)(t),
                   className: l()(e, eX.container),
-                  children: [Z, g, L, o, c, u, x, d, _, I, M, m, N, C, S, A, E, T, f, h, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), p, R, O, v]
+                  children: [Z, g, L, o, c, u, x, d, _, I, M, m, N, C, S, A, E, T, f, h, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), p, R, v, O]
               });
     }
     constructor(...e) {
         super(...e),
-            eJ(this, 'state', {
+            eq(this, 'state', {
                 showSuppressModal: !1,
                 showRemoveAttachmentModal: !1,
                 attachmentToDelete: null
             }),
-            eJ(this, 'getAcceptInviteContext', (e) => {
+            eq(this, 'getAcceptInviteContext', (e) => {
                 let { channel: t, message: n } = this.props;
                 return {
                     location: e,
@@ -724,7 +724,7 @@ class e3 extends (i = s.Component) {
                     location_message_id: n.id
                 };
             }),
-            eJ(this, 'renderEmbed', (e, t, n, i) => {
+            eq(this, 'renderEmbed', (e, t, n, i) => {
                 let { gifAutoPlay: s, inlineEmbedMedia: r, canSuppressEmbeds: l, hasSpoilerEmbeds: o, shouldRedactExplicitContent: c, hasInlineForwardButton: u, isSearchResult: d } = this.props,
                     _ = i.channel_id,
                     E = i.id,
@@ -768,8 +768,8 @@ class e3 extends (i = s.Component) {
                       })
                     : m;
             }),
-            eJ(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? K.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
-            eJ(this, 'renderEmbedDescription', (e, t, n) =>
+            eq(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? K.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
+            eq(this, 'renderEmbedDescription', (e, t, n) =>
                 e.type === eY.hBH.RICH
                     ? K.Z.parse(t, !0, {
                           channelId: this.props.channel.id,
@@ -781,11 +781,11 @@ class e3 extends (i = s.Component) {
                       })
                     : t
             ),
-            eJ(this, 'handleEmbedSuppressed', (e) => {
+            eq(this, 'handleEmbedSuppressed', (e) => {
                 let { channel: t, message: n } = this.props;
                 e.shiftKey ? E.Z.suppressEmbeds(t.id, n.id) : this.setState({ showSuppressModal: !0 });
             }),
-            eJ(this, 'handleRemoveAttachment', (e) => {
+            eq(this, 'handleRemoveAttachment', (e) => {
                 let t = e.originalItem;
                 this.setState({
                     showRemoveAttachmentModal: !0,
@@ -800,7 +800,7 @@ function e2(e) {
         l = (0, c.e7)([e_.default], () => e_.default.getId()),
         o = ed.x4.useSetting(),
         u = ed.RS.useSetting(),
-        d = ed.NA.useSetting() && !(0, ev.Z)(e.message),
+        d = ed.NA.useSetting() && !(0, eO.Z)(e.message),
         _ = ed.nc.useSetting(),
         E = ed.QK.useSetting(),
         I = (0, c.e7)([eI.Z], () => null == n.guild_id || eI.Z.canChatInGuild(n.guild_id), [n]),
@@ -822,11 +822,11 @@ function e2(e) {
         p = (0, y.ux)(n.guild_id),
         [, C] = (0, B.AB)(n.guild_id),
         g = (0, ec.$R)(n),
-        S = (l === i.author.id || N) && i.author.id !== eY.LAt && !1 !== s && !(0, eC.yE)(i.flags, eY.iLy.EPHEMERAL) && g && 1 === (0, eO.Z)(i),
+        S = (l === i.author.id || N) && i.author.id !== eY.LAt && !1 !== s && !(0, eC.yE)(i.flags, eY.iLy.EPHEMERAL) && g && 1 === (0, ev.Z)(i),
         A = l === i.author.id && g && !r,
         x = i.author.id === l,
         R = i.isFirstMessageInForumPost(n),
-        O = (0, eM.Z)({
+        v = (0, eM.Z)({
             channel: n,
             canChat: I,
             renderReactions: _,
@@ -838,17 +838,17 @@ function e2(e) {
             isAutomodQuarantined: p
         }),
         L = (0, z.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
-        Z = (0, J.Z)(null == n ? void 0 : n.id),
+        Z = (0, q.Z)(null == n ? void 0 : n.id),
         D = (0, ee.Z)(i),
-        j = (0, v.V)(n.id, i.author.id),
+        j = (0, O.V)(n.id, i.author.id),
         U = (0, M.r)(i.id),
-        { hasInlineForwardButton: k } = (0, P.yk)({ location: 'MessageAccessories' }),
-        G = (0, b.a)(i) && k;
+        { hasInlineForwardButton: k } = (0, b.yk)({ location: 'MessageAccessories' }),
+        G = (0, P.a)(i) && k;
     return (0, a.jsx)(e3, {
         canSuppressEmbeds: S,
         canDeleteAttachments: A,
-        ...O,
-        disableReactionReads: !!R || O.disableReactionReads,
+        ...v,
+        disableReactionReads: !!R || v.disableReactionReads,
         ...e,
         isLurking: m && I,
         isGuest: T && I,
@@ -868,7 +868,7 @@ function e2(e) {
         hasInlineForwardButton: G
     });
 }
-eJ(e3, 'defaultProps', {
+eq(e3, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
@@ -880,8 +880,8 @@ let e4 = (e) => {
         I = ed.NA.useSetting(),
         m = ed.QK.useSetting(),
         T = (0, z.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        f = (0, J.Z)(null == i ? void 0 : i.id),
-        h = (0, v.V)(i.id, n.author.id),
+        f = (0, q.Z)(null == i ? void 0 : i.id),
+        h = (0, O.V)(i.id, n.author.id),
         N = (0, M.r)(n.id),
         p = (0, ee.Z)(n);
     return (0, a.jsx)(e3, {

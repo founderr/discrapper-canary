@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(652874),
-    u = n(731965);
+    s = n(731965);
 let a = (0, i.Z)((e) => ({
     canCloseModal: !0,
     onUpdateCanCloseModal(t) {
-        (0, u.j)(() => e({ canCloseModal: t }));
+        (0, s.j)(() => e({ canCloseModal: t }));
     }
 }));

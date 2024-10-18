@@ -24,15 +24,15 @@ var i = n(735250),
     I = n(594174),
     T = n(189357),
     x = n(718617),
-    S = n(327250),
-    v = n(7340);
+    v = n(327250),
+    S = n(7340);
 function N(e) {
     let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: A, style: Z } = e,
         M = (0, T.ms)(n),
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
         R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
-        [L, P] = s.useState(null == b || null == R),
-        j = (0, u.Z)(R),
+        [L, j] = s.useState(null == b || null == R),
+        P = (0, u.Z)(R),
         O = s.useRef(null),
         { analyticsLocations: y } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, f.ZP)(t, n),
@@ -41,10 +41,10 @@ function N(e) {
         !M && a();
     }, [M, a]),
     s.useEffect(() => {
-        null != j && null == R && !L && a();
-    }, [L, R, a, j]),
+        null != P && null == R && !L && a();
+    }, [L, R, a, P]),
     s.useEffect(() => {
-        null != b && null != R && P(!1);
+        null != b && null != R && j(!1);
     }, [b, R]),
     s.useEffect(() => {
         let e = null == R;
@@ -66,13 +66,13 @@ function N(e) {
                     dispatchWait: !0
                 })
             ];
-            await Promise.all(e), P(!1);
+            await Promise.all(e), j(!1);
         })();
     }, [n, t]),
     M)
         ? L || null == b || null == R
             ? (0, i.jsx)('div', {
-                  className: l()(v.sidebarContainer, v.loadingContainer, N),
+                  className: l()(S.sidebarContainer, S.loadingContainer, N),
                   style: Z,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function N(e) {
             : (0, i.jsx)(m.Gt, {
                   value: y,
                   children: (0, i.jsx)('div', {
-                      className: l()(v.sidebarContainer, N),
+                      className: l()(S.sidebarContainer, N),
                       style: Z,
                       children: (0, i.jsx)(g.Z, {
                           user: b,
@@ -90,11 +90,11 @@ function N(e) {
                           profileType: null,
                           themeOverride: U,
                           forceShowPremium: !0,
-                          className: v.profileThemedContainer,
+                          className: S.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: v.innerContainer,
+                              className: S.innerContainer,
                               children: [
-                                  (0, i.jsx)(S.Z, {
+                                  (0, i.jsx)(v.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: a

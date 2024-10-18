@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     h: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -31,10 +31,10 @@ var i = n(735250),
     A = n(689938),
     x = n(129640);
 function R(e) {
-    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: R, badgeState: v } = e,
+    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: R, badgeState: O } = e,
         M = a.useRef(null),
         [L, Z] = (0, g.ZP)(M),
-        { loadState: P, channels: b } = L,
+        { loadState: b, channels: P } = L,
         { maybeLoadMore: D, markAllRead: j } = Z;
     (function (e, t, n) {
         a.useLayoutEffect(() => {
@@ -79,7 +79,7 @@ function R(e) {
         );
     let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
         y = (0, m.Z)('unreads', M);
-    if (0 === b.length) {
+    if (0 === P.length) {
         var B;
         return (0, i.jsxs)('div', {
             className: x.container,
@@ -87,7 +87,7 @@ function R(e) {
                 (0, i.jsx)(p.Z, {
                     tab: d.X.UNREADS,
                     setTab: t,
-                    badgeState: v,
+                    badgeState: O,
                     closePopout: R
                 }),
                 (0, i.jsx)(N.Z, {
@@ -105,7 +105,7 @@ function R(e) {
             (0, i.jsx)(p.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
-                badgeState: v,
+                badgeState: O,
                 closePopout: R,
                 children: (0, i.jsx)(h.Z, {
                     type: 'top-header',
@@ -123,9 +123,9 @@ function R(e) {
                                 (M.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...a,
-                            onScroll: P === g.jd.Done ? void 0 : D,
+                            onScroll: b === g.jd.Done ? void 0 : D,
                             className: x.scroller,
-                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, C.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: x.spinner })]
+                            children: [s ? (0, i.jsx)(v, { setSeenTutorial: l }) : null, (0, C.Z)(P, Z, n), b === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: x.spinner })]
                         });
                     }
                 })
@@ -133,7 +133,7 @@ function R(e) {
         ]
     });
 }
-function O(e) {
+function v(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)('div', {
         className: x.tutorial,
@@ -168,7 +168,7 @@ function O(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { setTab: t, badgeState: n, closePopout: a } = e;
     return (0, i.jsxs)('div', {
         className: x.container,

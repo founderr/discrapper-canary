@@ -22,13 +22,13 @@ var i = n(735250),
     A = n(492593),
     x = n(938353),
     R = n(25015),
-    O = n(689674),
-    v = n(963550),
+    v = n(689674),
+    O = n(963550),
     M = n(845080),
     L = n(295790),
     Z = n(145807),
-    P = n(56744),
-    b = n(834129),
+    b = n(56744),
+    P = n(834129),
     D = n(981631),
     j = n(689938),
     U = n(590008),
@@ -39,7 +39,7 @@ function B(e) {
         className: t,
         compact: a,
         role: 'group',
-        childrenMessageContent: (0, i.jsx)(b.Z, {
+        childrenMessageContent: (0, i.jsx)(P.Z, {
             compact: a,
             className: U.blockedSystemMessage,
             iconNode: (0, i.jsx)(o.XSmallIcon, {
@@ -57,7 +57,7 @@ function B(e) {
 t.Z = a.memo(function e(t) {
     var n;
     let a;
-    let { channel: s, message: o, compact: b = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
+    let { channel: s, message: o, compact: P = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
         H = D.OBS.has(o.type) ? o.messageReference : void 0,
         Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)),
         W = (0, l.e7)([T.Z], () => (o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
@@ -65,13 +65,13 @@ t.Z = a.memo(function e(t) {
         K = m.RS.useSetting(),
         X = m.NA.useSetting(),
         Q = m.QK.useSetting(),
-        J = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()),
-        q = (0, _.Z)(null == s ? void 0 : s.id),
+        q = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()),
+        J = (0, _.Z)(null == s ? void 0 : s.id),
         { disableReactionCreates: $ } = (0, S.Z)(s),
         { content: ee, hasSpoilerEmbeds: et } = (0, R.Z)(o, {
             hideSimpleEmbedContent: K && X,
-            allowList: J,
-            allowHeading: J,
+            allowList: q,
+            allowHeading: q,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
@@ -79,7 +79,7 @@ t.Z = a.memo(function e(t) {
         ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(h.default.castMessageIdAsChannelId(o.id))),
         ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         es = !ea && void 0 === a,
-        er = (0, O.Z)({
+        er = (0, v.Z)({
             message: o,
             channel: s,
             enabled: es
@@ -97,18 +97,18 @@ t.Z = a.memo(function e(t) {
         : (f.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, p.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
           ? (0, i.jsx)(B, {
                 className: U,
-                compact: b,
+                compact: P,
                 count: 1,
                 collapsedReason: a
             })
           : (0, i.jsx)(A.Z, {
-                compact: b,
+                compact: P,
                 className: r()(U, {
                     [y.ephemeral]: (0, N.Pv)(o),
                     [y.disableInteraction]: F,
                     [y.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, P.Z)(o, s, H, Y, b),
+                childrenRepliedMessage: (0, b.Z)(o, s, H, Y, P),
                 childrenHeader: (0, M.Z)({
                     ...t,
                     author: en,
@@ -118,7 +118,7 @@ t.Z = a.memo(function e(t) {
                     channel: s,
                     message: o,
                     hasSpoilerEmbeds: et,
-                    compact: b,
+                    compact: P,
                     canSuppressEmbeds: !1,
                     canDeleteAttachments: !1,
                     disableReactionReads: !1,
@@ -131,15 +131,15 @@ t.Z = a.memo(function e(t) {
                     renderEmbeds: X,
                     gifAutoPlay: Q,
                     poll: ec,
-                    showListsAndHeaders: J,
-                    showMaskedLinks: J,
-                    shouldHideMediaOptions: q,
+                    showListsAndHeaders: q,
+                    showMaskedLinks: q,
+                    shouldHideMediaOptions: J,
                     shouldRedactExplicitContent: el,
                     shouldRenderCtaButton: eo,
                     hasInlineForwardButton: !1
                 }),
-                childrenExecutedCommand: (0, Z.Z)(o, s, b),
-                childrenMessageContent: (0, v.Z)(t, ee),
+                childrenExecutedCommand: (0, Z.Z)(o, s, P),
+                childrenMessageContent: (0, O.Z)(t, ee),
                 childrenSystemMessage: (0, L.Z)(t),
                 onContextMenu: k,
                 onClick: G,

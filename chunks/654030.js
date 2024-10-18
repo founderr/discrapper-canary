@@ -23,13 +23,13 @@ var i,
     A = n(757266),
     x = n(831506),
     R = n(271383),
-    O = n(283595),
-    v = n(293273),
+    v = n(283595),
+    O = n(293273),
     M = n(594174),
     L = n(181106),
     Z = n(417363),
-    P = n(768581),
-    b = n(358085),
+    b = n(768581),
+    P = n(358085),
     D = n(804739),
     j = n(410575),
     U = n(981631),
@@ -57,7 +57,7 @@ class G extends (i = s.PureComponent) {
         }
         return null == n || n instanceof g.ZP
             ? null
-            : P.ZP.getApplicationIconURL({
+            : b.ZP.getApplicationIconURL({
                   id: n.id,
                   icon: null != t ? t.coverImage : n.coverImage,
                   size: y.cc
@@ -74,7 +74,7 @@ class G extends (i = s.PureComponent) {
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
-        return null != t && null != t.primarySkuId && !e && b.isPlatformEmbedded;
+        return null != t && null != t.primarySkuId && !e && P.isPlatformEmbedded;
     }
     render() {
         return (0, a.jsx)(j.Z, {
@@ -190,7 +190,7 @@ class G extends (i = s.PureComponent) {
                     isGameLaunchable: f,
                     isLoading: o || this.state.sending,
                     activityActionType: u,
-                    isInBrowser: !b.isPlatformEmbedded,
+                    isInBrowser: !P.isPlatformEmbedded,
                     isSyncable: T,
                     isSender: c,
                     channelId: _,
@@ -212,11 +212,11 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([N.Z, x.Z, v.Z, O.Z, f.Z, Z.Z, A.Z, L.Z, M.default, R.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([N.Z, x.Z, O.Z, v.Z, f.Z, Z.Z, A.Z, L.Z, M.default, R.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? x.Z.getParty(t.party.id) : null,
-            c = null != l ? v.Z.getApplicationActivity(l) : v.Z.findActivity((e) => e.type === U.IIU.LISTENING),
+            c = null != l ? O.Z.getApplicationActivity(l) : O.Z.findActivity((e) => e.type === U.IIU.LISTENING),
             u = !1;
         null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
         let d = Array.from(null != o ? o : []).map((e) => {
@@ -246,7 +246,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
             isLaunchable:
                 null != l &&
                 (0, D.t)({
-                    LibraryApplicationStore: O.Z,
+                    LibraryApplicationStore: v.Z,
                     LaunchableGameStore: f.Z,
                     DispatchApplicationStore: Z.Z,
                     ConnectedAppsStore: A.Z,

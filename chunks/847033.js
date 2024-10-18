@@ -39,16 +39,16 @@ function R(e) {
     let { children: n, initialTab: s, guildId: r } = e,
         x = (0, l.e7)([T.Z], () => T.Z.getGuild(r)),
         R = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)),
-        O = (0, N.g)(x, 'guild_shop_page'),
-        v = (0, h.RF)(r, 'guild_shop_page'),
+        v = (0, N.g)(x, 'guild_shop_page'),
+        O = (0, h.RF)(r, 'guild_shop_page'),
         M = (null == x ? void 0 : x.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         L = (0, _.mY)(null == x ? void 0 : x.id),
         Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order,
-        P = [],
-        b = p.y.GUILD_SHOP_FULL_PREVIEW;
-    R || (M && L) ? (P.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (b = P[0])) : M && !L ? (P.push(p.y.GUILD_PRODUCTS), (b = p.y.GUILD_PRODUCTS)) : !M && L && (P.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (b = p.y.GUILD_ROLE_SUBSCRIPTIONS), O && P.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : b);
+        b = [],
+        P = p.y.GUILD_SHOP_FULL_PREVIEW;
+    R || (M && L) ? (b.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_PRODUCTS : p.y.GUILD_ROLE_SUBSCRIPTIONS), b.push(Z === C.a3.PRODUCTS_FIRST ? p.y.GUILD_ROLE_SUBSCRIPTIONS : p.y.GUILD_PRODUCTS), (P = b[0])) : M && !L ? (b.push(p.y.GUILD_PRODUCTS), (P = p.y.GUILD_PRODUCTS)) : !M && L && (b.push(p.y.GUILD_ROLE_SUBSCRIPTIONS), (P = p.y.GUILD_ROLE_SUBSCRIPTIONS), v && b.push(p.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : P);
     let [D, j] = a.useState(s),
-        U = (O && !(L && v)) || D === p.y.GUILD_PRODUCTS_PREVIEW;
+        U = (v && !(L && O)) || D === p.y.GUILD_PRODUCTS_PREVIEW;
     return (
         a.useEffect(() => {
             j(s);
@@ -57,7 +57,7 @@ function R(e) {
             value: {
                 selectedTab: D,
                 setSelectedTab: j,
-                categoryTabs: P,
+                categoryTabs: b,
                 isPhantomPreview: U,
                 handlePreviewDismiss: (e) => {
                     (0, u.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW);

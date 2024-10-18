@@ -23,7 +23,7 @@ var i,
     I = n(689938),
     Z = n(635958),
     v = n(113207);
-function C(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function C(e, t, n) {
     );
 }
 ((s = i || (i = {})).GENERAL = 'GENERAL'), (s.VOICE = 'VOICE'), (s.DEVELOPER = 'DEVELOPER');
-let S = () => [
+let C = () => [
         {
             value: m.ipw.LARGE,
             name: I.Z.Messages.AVATAR_SIZE_OPTION_LARGE
@@ -223,7 +223,7 @@ class O extends a.PureComponent {
                     className: v.marginBottom20,
                     children: (0, r.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
-                        options: S(),
+                        options: C(),
                         value: e,
                         size: l.RadioGroup.Sizes.SMALL
                     })
@@ -298,11 +298,11 @@ class O extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', { selectedSection: 'GENERAL' }),
-            C(this, 'handleSelectSection', (e) => {
+            S(this, 'state', { selectedSection: 'GENERAL' }),
+            S(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
-            C(this, 'handleToggleTextChatNotifications', () => {
+            S(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = m.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
                 c.Z.setTextChatNotificationMode(n), N();

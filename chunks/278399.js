@@ -1,6 +1,6 @@
 l.d(n, {
     Ho: function () {
-        return h;
+        return m;
     },
     y9: function () {
         return x;
@@ -15,8 +15,8 @@ var t = l(735250),
     u = l(561308),
     c = l(297781),
     o = l(443487),
-    m = l(494399);
-let h = [c.An],
+    h = l(494399);
+let m = [c.An],
     x = [r._.WEEK];
 n.ZP = i.memo((e) => {
     let { entry: n, channel: l, selected: i } = e,
@@ -36,14 +36,14 @@ n.ZP = i.memo((e) => {
                           (0, t.jsx)(o.ll, { children: n.extra.artist.name }),
                           (0, t.jsx)(c.Gk, {
                               location: c.Gt.CARD,
-                              children: h.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
+                              children: m.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
                           })
                       ]
                   }),
                   (0, t.jsx)(d.f, {
                       src: null == r ? void 0 : r.src,
                       size: 48,
-                      className: m.thumbnail
+                      className: h.thumbnail
                   })
               ]
           })

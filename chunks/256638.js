@@ -30,13 +30,13 @@ var i = n(735250),
     A = n(726542),
     x = n(100527),
     R = n(906732),
-    O = n(812206),
-    v = n(391650),
+    v = n(812206),
+    O = n(391650),
     M = n(600164),
     L = n(605236),
     Z = n(749277),
-    P = n(492435),
-    b = n(353926),
+    b = n(492435),
+    P = n(353926),
     D = n(506357),
     j = n(36459),
     U = n(236069),
@@ -54,8 +54,8 @@ var i = n(735250),
     K = n(272008),
     X = n(523255),
     Q = n(852923),
-    J = n(592125),
-    q = n(430824),
+    q = n(592125),
+    J = n(430824),
     $ = n(131951),
     ee = n(19780),
     et = n(914010),
@@ -118,7 +118,7 @@ let ep =
               let m = (0, o.e7)([en.default], () => en.default.getCurrentUser()),
                   x = (0, o.e7)([et.Z], () => et.Z.getGuildId()),
                   eu = (0, o.e7)([es.Z], () => es.Z.getNotice()),
-                  ep = (0, o.e7)([q.Z], () => q.Z.getGuild(x)),
+                  ep = (0, o.e7)([J.Z], () => J.Z.getGuild(x)),
                   { analyticsLocations: eC } = (0, R.ZP)(),
                   eg = null == eu ? void 0 : eu.type,
                   eS = (0, B.J)(x);
@@ -132,8 +132,8 @@ let ep =
                   a.useEffect(() => {
                       if (null != eu && eu.type === ed.kVF.SURVEY && null != eu.metadata) {
                           let { metadata: e } = eu,
-                              t = b.Z.getUserExperimentDescriptor(e.id);
-                          null != t && (0, P.W9)(e.id, t),
+                              t = P.Z.getUserExperimentDescriptor(e.id);
+                          null != t && (0, b.W9)(e.id, t),
                               (async () => {
                                   var e, t;
                                   (null === (e = eu.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, C.g8)(null === (t = eu.metadata) || void 0 === t ? void 0 : t.id));
@@ -162,24 +162,24 @@ let ep =
                       let { dismissUntil: eR } = eu.metadata;
                       return (0, i.jsx)(D.Z, { onDismiss: () => eN(eR) });
                   case ed.kVF.WIN32_DEPRECATED_MESSAGE:
-                      let { dismissUntil: eO } = eu.metadata;
-                      return (0, i.jsxs)(c.Notice, {
-                          color: c.NoticeColors.WARNING,
-                          children: [
-                              (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => eN(eO),
-                                  noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
-                              }),
-                              em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
-                          ]
-                      });
-                  case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
                       let { dismissUntil: ev } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => eN(ev),
+                                  noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
+                              }),
+                              em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
+                          ]
+                      });
+                  case ed.kVF.WIN7_8_DEPRECATED_MESSAGE:
+                      let { dismissUntil: eO } = eu.metadata;
+                      return (0, i.jsxs)(c.Notice, {
+                          color: c.NoticeColors.WARNING,
+                          children: [
+                              (0, i.jsx)(c.NoticeCloseButton, {
+                                  onClick: () => eN(eO),
                                   noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
                               }),
                               em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE) })
@@ -247,7 +247,7 @@ let ep =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && f.default.selectVoiceChannel(e);
+                                      null != e && null != q.Z.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_DISABLED,
                                   children: em.Z.Messages.RECONNECT
@@ -268,7 +268,7 @@ let ep =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && f.default.selectVoiceChannel(e);
+                                      null != e && null != q.Z.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION,
                                   children: em.Z.Messages.RECONNECT
@@ -310,7 +310,7 @@ let ep =
                               em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
-                                  onClick: () => (eS && null != x ? (0, y.hk)(x) : v.j()),
+                                  onClick: () => (eS && null != x ? (0, y.hk)(x) : O.j()),
                                   children: em.Z.Messages.CLAIM_ACCOUNT
                               })
                           ]
@@ -328,7 +328,7 @@ let ep =
                                               title: em.Z.Messages.VERIFICATION_EMAIL_TITLE,
                                               body: em.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null == m ? void 0 : m.email }),
                                               secondaryConfirmText: em.Z.Messages.CHANGE_EMAIL,
-                                              onConfirmSecondary: v.j
+                                              onConfirmSecondary: O.j
                                           });
                                   },
                                   children: em.Z.Messages.RESEND_EMAIL_SHORT
@@ -356,13 +356,13 @@ let ep =
                       return (0, i.jsx)(eh, {});
                   case ed.kVF.HARDWARE_MUTE:
                       if (null == eu.metadata) return null;
-                      let { vendor: eZ, model: eP } = eu.metadata;
+                      let { vendor: eZ, model: eb } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               em.Z.Messages.NOTICE_HARDWARE_MUTE.format({
                                   vendorName: eZ.name,
-                                  modelName: eP.name
+                                  modelName: eb.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
@@ -370,7 +370,7 @@ let ep =
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
-                                  href: eP.url,
+                                  href: eb.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
                                   children: em.Z.Messages.SUPPORT
@@ -413,9 +413,9 @@ let ep =
                       });
                   case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == eu.metadata) return null;
-                      let { skuId: eb, applicationId: eD } = eu.metadata,
-                          ej = ei.Z.get(eb),
-                          eU = O.Z.getApplication(eD);
+                      let { skuId: eP, applicationId: eD } = eu.metadata,
+                          ej = ei.Z.get(eP),
+                          eU = v.Z.getApplication(eD);
                       if (null == ej || null == eU) return null;
                       let ey = { page: ed.ZY5.IN_APP };
                       return (0, i.jsxs)(c.Notice, {
@@ -460,7 +460,7 @@ let ep =
                       if (null == eu.metadata) return null;
                       let { skuId: e, applicationId: t } = eu.metadata,
                           n = ei.Z.get(e),
-                          a = O.Z.getApplication(t);
+                          a = v.Z.getApplication(t);
                       if (null == n || null == a) return null;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.PREMIUM_TIER_1,

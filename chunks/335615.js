@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(100527),
     T = n(367907),
     x = n(906732),
-    S = n(493324),
-    v = n(611064),
+    v = n(493324),
+    S = n(611064),
     N = n(677432),
     A = n(178762),
     Z = n(868671),
@@ -34,8 +34,8 @@ var i = n(735250),
     b = n(91218),
     R = n(313201),
     L = n(623624),
-    P = n(518738),
-    j = n(155409),
+    j = n(518738),
+    P = n(155409),
     O = n(184301),
     y = n(347475),
     D = n(439170),
@@ -193,7 +193,7 @@ let Q = s.memo((e) => {
     }),
     $ = s.memo(function (e) {
         let { id: t, title: n, count: s, guildId: a } = e,
-            l = (0, P.p9)({
+            l = (0, j.p9)({
                 roleId: t,
                 guildId: a,
                 size: 16
@@ -239,7 +239,7 @@ class et extends s.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, S.$)('ChannelMembers'));
+        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers'));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -335,14 +335,14 @@ class et extends s.Component {
                 let { section: t } = e,
                     { groups: n, channel: a } = this.props,
                     l = n[t];
-                return (0, v.R)(l)
-                    ? (0, s.createElement)(v.Z, {
+                return (0, S.R)(l)
+                    ? (0, s.createElement)(S.Z, {
                           ...l,
                           key: 'section-'.concat(t)
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            j.Z,
+                            P.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',
@@ -428,7 +428,7 @@ class et extends s.Component {
             ),
             Y(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[Z.T];
-                if ((0, v.R)(e)) return e;
+                if ((0, S.R)(e)) return e;
             }),
             Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             Y(this, 'getRowHeightComputer', () => {
@@ -545,7 +545,7 @@ function en(e) {
                 }),
             []
         ),
-        S = (0, u.ZP)({
+        v = (0, u.ZP)({
             id: 'members-'.concat(t.id),
             setFocus: E,
             isEnabled: r,
@@ -557,7 +557,7 @@ function en(e) {
         children: (0, i.jsx)('div', {
             className: l()(z.container, n),
             children: (0, i.jsx)(c.bG, {
-                navigator: S,
+                navigator: v,
                 children: (0, i.jsx)(et, {
                     ...e,
                     ...o,

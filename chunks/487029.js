@@ -17,8 +17,8 @@ var i = n(735250),
     h = n(709054),
     p = n(208049),
     f = n(763296),
-    m = n(242291),
-    _ = n(174470),
+    _ = n(242291),
+    m = n(174470),
     g = n(549771),
     C = n(964398),
     I = n(409673),
@@ -41,14 +41,14 @@ function x(e) {
                 return l.forEach((e) => r(e, !0)), l.forEach((e) => r(e, !1)), i;
             }, [t, n, e]);
         })((0, g.h)(n, !0)),
-        M = (0, _.j)(),
+        M = (0, m.j)(),
         R = l.useRef(null),
         [L, y] = l.useState(void 0),
         P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: O } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
-                (0, m.GN)(e, n.id, O), b();
+                (0, _.GN)(e, n.id, O), b();
             },
             [O, n.id, b]
         );

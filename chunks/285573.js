@@ -10,8 +10,8 @@ var i = n(735250),
     h = n(496675),
     p = n(98597),
     f = n(473403),
-    m = n(981631),
-    _ = n(490897),
+    _ = n(981631),
+    m = n(490897),
     g = n(872356);
 let C = (0, c.B)(function (e) {
     let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: x, connectChannelDropTarget: S, tabIndex: v } = e,
@@ -21,7 +21,7 @@ let C = (0, c.B)(function (e) {
         }),
         T = (0, s.e7)([u.Z], () => u.Z.getChannel(null == Z ? void 0 : Z.parent_id)),
         b = r === (null == Z ? void 0 : Z.id),
-        A = (0, s.e7)([h.Z], () => (null != T ? h.Z.can(m.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(m.Plq.MANAGE_CHANNELS, t))),
+        A = (0, s.e7)([h.Z], () => (null != T ? h.Z.can(_.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(_.Plq.MANAGE_CHANNELS, t))),
         M = l.useCallback(
             (e) => {
                 null != Z &&
@@ -52,7 +52,7 @@ let C = (0, c.B)(function (e) {
                 selected: b,
                 onContextMenu: M,
                 forceInteractable: !0,
-                resolvedUnreadSetting: _.i.ONLY_MENTIONS,
+                resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
                     (0, i.jsx)(p.eP, {
                         channel: Z,

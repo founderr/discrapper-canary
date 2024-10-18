@@ -36,11 +36,11 @@ function h(e) {
             hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
         })),
         R = null != S && S.newClipIds.length > 0,
-        O = (0, I.n)((e) => e.clipsButtonRef),
-        v = (0, I.n)((e) => e.setClipsButtonRef),
+        v = (0, I.n)((e) => e.clipsButtonRef),
+        O = (0, I.n)((e) => e.setClipsButtonRef),
         M = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
-    function P() {
+    function b() {
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
@@ -52,25 +52,25 @@ function h(e) {
     return (a.useEffect(() => (x ? L() : Z(), () => Z()), [x, L, Z]), p && N && C)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != O &&
+                  null != v &&
                       t &&
                       A &&
                       R &&
                       !(0, r.hasAnyModalOpen)() &&
                       !M &&
                       (0, i.jsx)(m.Z, {
-                          clipIconRef: O,
+                          clipIconRef: v,
                           lastClipsSession: S,
-                          onOpenClipsGallery: P
+                          onOpenClipsGallery: b
                       }),
                   (0, i.jsx)('div', {
-                      ref: v,
+                      ref: O,
                       children: (0, i.jsx)(l.JO, {
                           className: h,
                           icon: r.ClipsIcon,
                           showBadge: g,
                           tooltip: f.Z.Messages.CLIPS_GALLERY_TOOLTIP,
-                          onClick: P
+                          onClick: b
                       })
                   })
               ]

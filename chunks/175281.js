@@ -17,8 +17,8 @@ var i,
     h = n.n(d),
     p = n(748780),
     f = n(442837),
-    m = n(215569),
-    _ = n(481060),
+    _ = n(215569),
+    m = n(481060),
     g = n(612226),
     C = n(951483),
     I = n(714338),
@@ -89,12 +89,12 @@ function y() {
                     children: [
                         (0, r.jsxs)('div', {
                             children: [
-                                (0, r.jsx)(_.Heading, {
+                                (0, r.jsx)(m.Heading, {
                                     variant: 'heading-lg/semibold',
                                     children: i
                                 }),
                                 null != l &&
-                                    (0, r.jsx)(_.Text, {
+                                    (0, r.jsx)(m.Text, {
                                         className: T.keybindGroupDescription,
                                         variant: 'text-sm/normal',
                                         children: l
@@ -114,7 +114,7 @@ function y() {
                                               {
                                                   className: o()(T.keybindGroup),
                                                   children: [
-                                                      (0, r.jsx)(_.Text, {
+                                                      (0, r.jsx)(m.Text, {
                                                           variant: 'text-sm/normal',
                                                           children: e.description
                                                       }),
@@ -122,7 +122,7 @@ function y() {
                                                           className: 'keybind-shortcuts',
                                                           children: e.binds.map((e) =>
                                                               (0, r.jsx)(
-                                                                  _.KeyCombo,
+                                                                  m.KeyCombo,
                                                                   {
                                                                       className: T.keybindKey,
                                                                       shortcut: e
@@ -159,14 +159,14 @@ class P extends a.PureComponent {
             className: T.keyboardShortcutsModal,
             style: this.getStyles(),
             children: [
-                (0, r.jsxs)(_.H, {
+                (0, r.jsxs)(m.H, {
                     className: T.modalTitle,
                     children: [
                         (0, r.jsx)('div', {
                             className: T.content,
                             children: Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
                         }),
-                        (0, r.jsx)(_.KeyCombo, { shortcut: 'mod+/' })
+                        (0, r.jsx)(m.KeyCombo, { shortcut: 'mod+/' })
                     ]
                 }),
                 (0, r.jsx)('div', {
@@ -202,10 +202,10 @@ class P extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, r.jsx)(_.AdvancedScrollerAuto, {
+                (0, r.jsx)(m.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(_.HeadingLevel, { children: (0, r.jsx)(y, {}) })
+                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(y, {}) })
                 })
             ]
         });
@@ -304,7 +304,7 @@ function O(e) {
                 return () => clearTimeout(e);
             }
         }, [s]),
-        (0, r.jsx)(_.Clickable, {
+        (0, r.jsx)(m.Clickable, {
             onClick: u,
             className: o()(T.arrow, i, { [T.active]: t || s }),
             children: l
@@ -323,12 +323,12 @@ function j(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(L, { showBackdrop: s }),
-            (0, r.jsx)(_.ModalRoot, {
+            (0, r.jsx)(m.ModalRoot, {
                 className: o()(T.noBackground, { [T.noShadow]: i }),
-                size: _.ModalSize.DYNAMIC,
+                size: m.ModalSize.DYNAMIC,
                 'aria-label': Z.Z.Messages.KEYBINDS,
                 transitionState: t,
-                children: (0, r.jsx)(m.W, {
+                children: (0, r.jsx)(_.W, {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(

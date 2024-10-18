@@ -20,22 +20,22 @@ var i = n(735250),
 let T = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: f, me: h, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: O } = e,
-            v = R === _.O.BURST,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: f, me: h, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: v } = e,
+            O = R === _.O.BURST,
             M = (0, E.y4)(h, N, R),
-            L = (0, d.v)(v && null != C ? C : []),
+            L = (0, d.v)(O && null != C ? C : []),
             Z = a ? m : I,
-            P = v ? p : f,
-            b = (0, u.y)(P, E.aO),
+            b = O ? p : f,
+            P = (0, u.y)(b, E.aO),
             D = {};
-        if (v && null != L) {
+        if (O && null != L) {
             var j;
             let { accentColor: e, backgroundColor: i, opacity: a } = L,
                 s = null !== (j = (0, l.wK)(null != i ? i : '', a)) && void 0 !== j ? j : '';
             M && (D.borderColor = i), (D.background = s), (t = e), (n = e);
         }
         let U = {
-            minWidth: b,
+            minWidth: P,
             color: t,
             borderColor: n
         };
@@ -50,13 +50,13 @@ let T = a.memo(function (e) {
                     className: r()({ [Z.hideEmoji]: s }),
                     emojiId: c.id,
                     emojiName: c.name,
-                    size: O,
-                    animated: v && c.animated
+                    size: v,
+                    animated: O && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: Z.reactionCount,
                     style: U,
-                    children: P
+                    children: b
                 })
             ]
         });

@@ -28,13 +28,13 @@ var i = n(735250),
     A = n(347475),
     x = n(695346),
     R = n(271383),
-    O = n(594174),
-    v = n(768581),
+    v = n(594174),
+    O = n(768581),
     M = n(900849),
     L = n(506071),
     Z = n(495114),
-    P = n(170140),
-    b = n(981631),
+    b = n(170140),
+    P = n(981631),
     D = n(959517),
     j = n(689938),
     U = n(519644),
@@ -42,7 +42,7 @@ var i = n(735250),
 function B(e) {
     var t, n, s;
     let { embedUrl: l, message: B, channel: k } = e,
-        G = (0, P.J)(l, B),
+        G = (0, b.J)(l, B),
         { setPopout: F } = (0, g.Z)(B.id, D.d$),
         w = (0, C.qo)(B, k, F, !0),
         V = x.QK.useSetting(),
@@ -51,19 +51,19 @@ function B(e) {
         [z, K] = a.useState((null == G ? void 0 : G.coverImage) == null),
         X = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         Q = (0, d.e7)(
-            [R.ZP, O.default],
+            [R.ZP, v.default],
             () => {
                 var e;
-                return R.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return R.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             },
             [G]
         ),
-        J = (0, d.e7)([R.ZP], () => ((null == G ? void 0 : G.authorId) != null ? R.ZP.getMember(G.guildId, G.authorId) : null)),
-        q = (0, T.Z)((null == J ? void 0 : J.avatarDecoration) != null ? (null == J ? void 0 : J.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
+        q = (0, d.e7)([R.ZP], () => ((null == G ? void 0 : G.authorId) != null ? R.ZP.getMember(G.guildId, G.authorId) : null)),
+        J = (0, T.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = a.useMemo(() => {
             var e;
-            return [null !== (e = null == J ? void 0 : J.colorString) && void 0 !== e ? e : 'inherit', null == J ? void 0 : J.colorRoleId];
-        }, [J]),
+            return [null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit', null == q ? void 0 : q.colorRoleId];
+        }, [q]),
         { reducedMotion: et } = a.useContext(_.AccessibilityPreferencesContext),
         [en, ei] = a.useState(!1),
         ea = a.useCallback(() => {
@@ -74,13 +74,13 @@ function B(e) {
         }, [W]),
         er = a.useCallback(async () => {
             null != G &&
-                ((0, m.yw)(b.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: G.threadId,
                     channel_id: k.id,
                     can_access: G.canAccess,
                     is_member: Q
                 }),
-                G.canAccess ? (0, N.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await M.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+                G.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await M.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
         }, [G, k, Q]),
         el = a.useCallback(
             () => (
@@ -105,8 +105,8 @@ function B(e) {
                 newAnalyticsLocations: t
             })
         ),
-        ec = (0, v.NZ)({
-            avatarDecoration: q,
+        ec = (0, O.NZ)({
+            avatarDecoration: J,
             size: (0, f.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),

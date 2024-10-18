@@ -11,8 +11,8 @@ var i,
     h = n(527805),
     p = n(841784),
     f = n(503438),
-    m = n(802856),
-    _ = n(420660),
+    _ = n(802856),
+    m = n(420660),
     g = n(728345),
     C = n(812206),
     I = n(750881),
@@ -78,7 +78,7 @@ function $(e) {
 function ee(e) {
     if ((0, f.Z)(e)) return Z.r9;
     let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-    return null != t ? t : (0, m.Z)(e) ? X(e.name) : (0, _.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
+    return null != t ? t : (0, _.Z)(e) ? X(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
 }
 function et(e) {
     let t = U.Z.getVoiceStateForUser(e);
@@ -91,8 +91,8 @@ function ei(e, t, n) {
     var i, l, r, a, s, c;
     let u;
     let f = w.default.getCurrentUser(),
-        m = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
-        _ = t.map((e) => e.id),
+        _ = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
+        m = t.map((e) => e.id),
         g = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
@@ -102,7 +102,7 @@ function ei(e, t, n) {
     for (let e of t) {
         let n = A.Z.getAnyStreamForUser(e.id),
             i = M.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!m || !y.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!_ || !y.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let s = Q(e.id);
         if (
             (null != n &&
@@ -121,7 +121,7 @@ function ei(e, t, n) {
                 let t = C.Z.getApplication(e);
                 return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === Z.XB ? Z.r9 : e.startsWith(b.H) ? X(e.slice(b.H.length)) : e.startsWith(T._) ? J(e.slice(T._.length)) : ($(e), null);
             })(c),
-            _ = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
+            m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
         if ((0, p.Z)(s)) {
             let t = (0, d.a)();
             if (
@@ -139,7 +139,7 @@ function ei(e, t, n) {
                 }) !== h.Fw.CAN_JOIN
             )
                 continue;
-        } else if (null == _) continue;
+        } else if (null == m) continue;
         if (!S.JE(s) || null == u || v.has(u.id)) continue;
         let g = null != s ? ee(s) : null;
         (null == g || g.id !== u.id) && (s = null);
@@ -161,7 +161,7 @@ function ei(e, t, n) {
                 game: u,
                 activity: s,
                 activityUser: e,
-                startedPlayingTime: _,
+                startedPlayingTime: m,
                 playingMembers: j
             });
     }
@@ -185,7 +185,7 @@ function ei(e, t, n) {
                     .filter(G.lm)
                     .orderBy([en], ['desc'])
                     .value();
-            a.filter((e) => !_.includes(e.id)).forEach((e) => t.push(e)),
+            a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
                 k ? !V.has(l) && (u = null) : ((u = r), (k = !0)),
                 V.add(l),
                 H.add(n),

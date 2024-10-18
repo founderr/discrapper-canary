@@ -25,9 +25,9 @@ var a = n(120356),
     C = n(689938),
     g = n(64182);
 function S(e) {
-    var t, n, a, S, A, x, R, O, v, M;
+    var t, n, a, S, A, x, R, v, O, M;
     let { message: L, channel: Z } = e,
-        P =
+        b =
             null === (a = L.embeds[0]) || void 0 === a
                 ? void 0
                 : null === (n = a.fields) || void 0 === n
@@ -39,7 +39,7 @@ function S(e) {
                           })) || void 0 === t
                     ? void 0
                     : t.rawValue,
-        b =
+        P =
             null === (x = L.embeds[0]) || void 0 === x
                 ? void 0
                 : null === (A = x.fields) || void 0 === A
@@ -51,8 +51,8 @@ function S(e) {
                           })) || void 0 === S
                     ? void 0
                     : S.rawValue,
-        D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
-        j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)),
+        D = (0, r.e7)([T.Z], () => T.Z.getGuild(b)),
+        j = (0, r.e7)([m.Z], () => m.Z.getChannel(P)),
         U = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
         y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
         B = null === (R = Z.recipients) || void 0 === R ? void 0 : R.find((e) => e !== L.author.id),
@@ -64,15 +64,15 @@ function S(e) {
         H =
             null === (M = L.embeds[0]) || void 0 === M
                 ? void 0
-                : null === (v = M.fields) || void 0 === v
+                : null === (O = M.fields) || void 0 === O
                   ? void 0
                   : null ===
-                          (O = v.find((e) => {
+                          (v = O.find((e) => {
                               let { rawName: t } = e;
                               return 'voice_user_ids' === t;
-                          })) || void 0 === O
+                          })) || void 0 === v
                     ? void 0
-                    : O.rawValue,
+                    : v.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, r.Wu)([f.default], () => Y.map((e) => f.default.getUser(e)).filter(Boolean)),
         z = y && null != k ? C.Z.Messages.WAVED_AT_USER.format({ username: F }) : C.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
@@ -99,7 +99,7 @@ function S(e) {
                         ? (0, i.jsx)('div', {
                               className: g.participants,
                               children: (0, i.jsx)(E.Z, {
-                                  guildId: P,
+                                  guildId: b,
                                   partySize: {
                                       knownSize: w.length,
                                       unknownSize: 0,
@@ -112,7 +112,7 @@ function S(e) {
                         : (0, i.jsx)('div', {
                               className: s()(g.participants, g.disabled),
                               children: (0, i.jsx)(E.Z, {
-                                  guildId: P,
+                                  guildId: b,
                                   partySize: {
                                       knownSize: W.length,
                                       unknownSize: Y.length - W.length,
@@ -130,7 +130,7 @@ function S(e) {
                     (0, i.jsxs)(l.Button, {
                         color: l.Button.Colors.BRAND,
                         onClick: () => {
-                            null != b && null != P && ((0, I.uL)(p.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+                            null != P && null != b && ((0, I.uL)(p.Z5c.CHANNEL(b, P)), c.default.selectVoiceChannel(P));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,

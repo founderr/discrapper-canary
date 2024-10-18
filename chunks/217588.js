@@ -23,21 +23,21 @@ var i = n(735250),
     A = n(926491),
     x = n(378233),
     R = n(419922),
-    O = n(688179),
-    v = n(981631),
+    v = n(688179),
+    O = n(981631),
     M = n(474936),
     L = n(689938),
     Z = n(174461),
-    P = n(507444);
-let b = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
+    b = n(507444);
+let P = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
     D = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return a.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
 function j(e) {
-    C.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, {
-        location_page: null != e.guild_id ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
-        location_section: v.jXE.STICKER_POPOUT
+    C.default.track(O.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_page: null != e.guild_id ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
+        location_section: O.jXE.STICKER_POPOUT
     }),
         (0, f.z)();
 }
@@ -53,10 +53,10 @@ function U(e) {
             (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 justify: d.Z.Justify.CENTER,
-                className: P.truncatingText,
+                className: b.truncatingText,
                 children: [
                     (0, i.jsx)(o.Text, {
-                        className: P.__invalid_emojiName,
+                        className: b.__invalid_emojiName,
                         variant: 'text-md/semibold',
                         children: (0, i.jsx)(_.Z, { children: t.name })
                     }),
@@ -83,8 +83,8 @@ let y = (e) => {
             r();
         }, [d]),
         a.useEffect(() => {
-            C.default.track(v.rMx.OPEN_POPOUT, {
-                type: v.jXE.STICKER_POPOUT,
+            C.default.track(O.rMx.OPEN_POPOUT, {
+                type: O.jXE.STICKER_POPOUT,
                 guild_id: s.getGuildId(),
                 sticker_pack_id: n.pack_id,
                 ...(0, u.v_)(s)
@@ -101,7 +101,7 @@ let y = (e) => {
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
-                          children: b(c, _)
+                          children: P(c, _)
                       }),
                       (0, i.jsx)('ul', {
                           className: Z.stickersList,
@@ -127,7 +127,7 @@ let y = (e) => {
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           _ &&
-                                              (0, O.m)({
+                                              (0, v.m)({
                                                   stickerPack: c,
                                                   stickerPickerCategories: I
                                               }),
@@ -145,17 +145,17 @@ let y = (e) => {
         let t,
             { sticker: n, channel: s, closePopout: _, refreshPositionKey: f } = e,
             [S, A] = a.useState(null),
-            [x, O] = a.useState(!1),
-            b = p.default.getCurrentUser(),
-            D = g.ZP.canUseCustomStickersEverywhere(b),
+            [x, v] = a.useState(!1),
+            P = p.default.getCurrentUser(),
+            D = g.ZP.canUseCustomStickersEverywhere(P),
             y = (0, l.e7)([N.Z], () => N.Z.getGuild(n.guild_id)),
             B = null != y,
             [k, G] = a.useState(!1),
             [F, w] = a.useState(null),
             V = a.useMemo(
                 () => ({
-                    page: null != s.guild_id ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
-                    section: v.jXE.STICKER_POPOUT
+                    page: null != s.guild_id ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
+                    section: O.jXE.STICKER_POPOUT
                 }),
                 [s.guild_id]
             ),
@@ -165,7 +165,7 @@ let y = (e) => {
             });
         a.useEffect(() => {
             (async () => {
-                (null == y || y.hasFeature(v.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), O(!0);
+                (null == y || y.hasFeature(O.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), v(!0);
             })();
         }, [n.id, B]);
         let Y = n.guild_id === s.getGuildId(),
@@ -189,14 +189,14 @@ let y = (e) => {
             f();
         }, [x, S]),
         a.useEffect(() => {
-            C.default.track(v.rMx.OPEN_POPOUT, {
+            C.default.track(O.rMx.OPEN_POPOUT, {
                 type: K,
                 ...H
             });
         }, []),
         x)
             ? (0, i.jsxs)(T.W_, {
-                  className: P.popoutContent,
+                  className: b.popoutContent,
                   children: [
                       (() => {
                           let e = async () => {
@@ -208,7 +208,7 @@ let y = (e) => {
                               } catch {}
                           };
                           return (0, i.jsxs)('div', {
-                              className: P.emojiSection,
+                              className: b.emojiSection,
                               children: [
                                   (0, i.jsx)(U, {
                                       description: t,
@@ -216,7 +216,7 @@ let y = (e) => {
                                   }),
                                   z &&
                                       (0, i.jsx)(h.Z, {
-                                          className: P.ctaButton,
+                                          className: b.ctaButton,
                                           subscriptionTier: M.Si.TIER_2,
                                           size: o.Button.Sizes.SMALL,
                                           fullWidth: !0,
@@ -228,7 +228,7 @@ let y = (e) => {
                                   X &&
                                       (0, i.jsx)(o.Button, {
                                           size: o.Button.Sizes.SMALL,
-                                          className: P.ctaButton,
+                                          className: b.ctaButton,
                                           fullWidth: !0,
                                           onClick: e,
                                           children: L.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
@@ -246,10 +246,10 @@ let y = (e) => {
                                       .slice(0, 12),
                                   a = null != S ? E.JO.createFromDiscoverableGuild(S) : E.JO.createFromGuildRecord(y);
                               return (0, i.jsxs)('div', {
-                                  className: P.guildSection,
+                                  className: b.guildSection,
                                   children: [
                                       (0, i.jsx)(o.FormTitle, {
-                                          className: P.guildTitle,
+                                          className: b.guildTitle,
                                           children: B ? L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                                       }),
                                       (0, i.jsx)(m.Oe, {
@@ -264,11 +264,11 @@ let y = (e) => {
                                                       onClick: () => {
                                                           f(), G(!k);
                                                       },
-                                                      className: P.showMoreEmojis,
+                                                      className: b.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
                                                           children: [
                                                               (0, i.jsx)(o.Text, {
-                                                                  className: P.__invalid_showMoreEmojisLabel,
+                                                                  className: b.__invalid_showMoreEmojisLabel,
                                                                   variant: 'text-xs/normal',
                                                                   color: 'none',
                                                                   children: L.Z.Messages.STICKER_POPOUT_SHOW_MORE_STICKERS
@@ -276,7 +276,7 @@ let y = (e) => {
                                                               (0, i.jsx)(o.ChevronSmallDownIcon, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: r()(P.showMoreEmojisArrow, { [P.showMoreEmojisArrowCollapsed]: !k })
+                                                                  className: r()(b.showMoreEmojisArrow, { [b.showMoreEmojisArrowCollapsed]: !k })
                                                               })
                                                           ]
                                                       })
@@ -286,7 +286,7 @@ let y = (e) => {
                                                           wrap: d.Z.Wrap.WRAP,
                                                           align: d.Z.Align.START,
                                                           justify: d.Z.Justify.START,
-                                                          className: P.otherEmojisContainer,
+                                                          className: b.otherEmojisContainer,
                                                           children: t.map((e) =>
                                                               (0, i.jsx)(
                                                                   o.Tooltip,
@@ -298,7 +298,7 @@ let y = (e) => {
                                                                           return (0, i.jsx)(
                                                                               'div',
                                                                               {
-                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
+                                                                                  className: r()(b.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
                                                                                   onMouseEnter: () => {
                                                                                       null == n || n(), w(e.id);
                                                                                   },

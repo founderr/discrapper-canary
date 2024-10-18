@@ -18,7 +18,7 @@ var r,
     i,
     a = n(433517),
     s = n(689938);
-((i = r || (r = {})).CLASSIC = 'classic'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo');
+((i = r || (r = {})).CLASSIC = 'classic'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo'), (i.HALLOWEEN = 'halloween');
 let o = 'custom_notification_sounds_asmr',
     l = 'custom_notification_sounds_discodo';
 function u() {

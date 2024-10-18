@@ -27,13 +27,13 @@ var i = n(735250),
     A = n(347475),
     x = n(592125),
     R = n(271383),
-    O = n(594174),
-    v = n(464891),
+    v = n(594174),
+    O = n(464891),
     M = n(348238),
     L = n(83561),
     Z = n(834129),
-    P = n(981631),
-    b = n(674563),
+    b = n(981631),
+    P = n(674563),
     D = n(689938),
     j = n(38814);
 function U() {
@@ -116,7 +116,7 @@ function k(e) {
 function G(e) {
     var t;
     let { message: n, compact: s } = e,
-        r = O.default.getUser((0, N.Sw)(n)),
+        r = v.default.getUser((0, N.Sw)(n)),
         l = null === (t = x.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
         c = null != l && null != r ? R.ZP.getMember(l, r.id) : null,
         {
@@ -223,20 +223,20 @@ function F(e) {
             let e = null == C ? void 0 : C.guild_id;
             null != e && (0, p.kW)(n.id, e);
         }, [n.id, C]),
-        O = m === d.$.DM_RAID,
-        v = O ? I.CircleWarningIcon : I.ChatWarningIcon;
+        v = m === d.$.DM_RAID,
+        O = v ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
         compact: s,
         header: (0, i.jsxs)(a.Fragment, {
             children: [
-                (0, i.jsx)(v, {
+                (0, i.jsx)(O, {
                     size: 'xs',
                     color: E.Z.colors.TEXT_DANGER.css
                 }),
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: O ? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+                    children: v ? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
                 })
             ]
         }),
@@ -387,7 +387,7 @@ function w(e) {
                 (0, i.jsx)(U, {}),
                 (0, i.jsx)(I.Button, {
                     onClick: function () {
-                        null != r && g.Z.open(r, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
+                        null != r && g.Z.open(r, b.pNK.GUILD_AUTOMOD, void 0, b.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: I.Button.Colors.LINK,
                     look: I.Button.Looks.LINK,
@@ -460,7 +460,7 @@ function H(e) {
             children: (0, i.jsxs)('div', {
                 className: r()(j.content, { [j.compact]: n }),
                 children: [
-                    (0, i.jsx)(v.nD, {
+                    (0, i.jsx)(O.nD, {
                         message: a,
                         messageClassname: j.spanCorrection,
                         className: r()(j.usernameContainer, j.spanCorrection, { [j.compact]: n }),
@@ -475,7 +475,7 @@ function H(e) {
                                     children: D.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
                                 (0, i.jsx)(T.Z, {
-                                    type: b.Hb.SYSTEM_DM,
+                                    type: P.Hb.SYSTEM_DM,
                                     className: j.systemTag
                                 }),
                                 _ &&

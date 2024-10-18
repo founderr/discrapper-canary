@@ -12,8 +12,8 @@ var l = n(392711),
     h = n(963249),
     p = n(93127),
     f = n(361291),
-    m = n(592125),
-    _ = n(430824),
+    _ = n(592125),
+    m = n(430824),
     g = n(594174),
     C = n(295226),
     I = n(626135),
@@ -113,7 +113,7 @@ class q extends c.Z {
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
         let { enabled: t } = D.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== F.hes.DISCONNECTED || e.willReconnect) return;
-        let n = m.Z.getChannel(e.channelId);
+        let n = _.Z.getChannel(e.channelId);
         if (null == n) return;
         let i = R.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
@@ -186,7 +186,7 @@ class q extends c.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, M.o)(r, n),
                         { sendNitroMessage: s } = (0, b.TD)(a),
-                        c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
+                        c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
                     if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     T.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({

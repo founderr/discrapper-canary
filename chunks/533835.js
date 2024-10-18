@@ -1,16 +1,16 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return Z;
+            return x;
         }
     }),
     t(47120);
-var o = t(735250),
-    i = t(470079),
-    s = t(512722),
-    l = t.n(s),
-    c = t(442837),
-    r = t(100527),
+var i = t(735250),
+    s = t(470079),
+    o = t(512722),
+    l = t.n(o),
+    r = t(442837),
+    c = t(100527),
     a = t(699516),
     d = t(594174),
     u = t(971393),
@@ -18,43 +18,43 @@ var o = t(735250),
     I = t(752342),
     E = t(886794),
     f = t(910364);
-let p = [r.Z.BITE_SIZE_PROFILE_POPOUT, r.Z.PROFILE_PANEL];
-function Z(e) {
+let m = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
+function x(e) {
     let { user: n, ...t } = e,
-        s = (0, c.e7)([d.default], () => d.default.getCurrentUser());
-    l()(null != s, 'UserProfileModalWrapper: currentUser cannot be undefined');
-    let r = (0, c.e7)([a.Z], () => a.Z.isBlocked(n.id)),
-        [Z, h] = i.useState(r),
-        x = (0, u.sS)({ location: 'UserProfileModalWrapper' });
-    i.useEffect(() => {
-        h(r);
-    }, [r]);
-    let m = !p.some((e) => {
+        o = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+    l()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
+    let c = (0, r.e7)([a.Z], () => a.Z.isBlocked(n.id)),
+        [x, p] = s.useState(c),
+        Z = (0, u.sS)({ location: 'UserProfileModalWrapper' });
+    s.useEffect(() => {
+        p(c);
+    }, [c]);
+    let h = !m.some((e) => {
         var n;
         return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
     });
-    return Z && x && m
-        ? (0, o.jsx)(_.Z, {
+    return x && Z && h
+        ? (0, i.jsx)(_.Z, {
               user: n,
-              currentUser: s,
-              onViewBlockedProfileClick: () => h(!1),
+              currentUser: o,
+              onViewBlockedProfileClick: () => p(!1),
               ...t
           })
         : n.isNonUserBot()
-          ? (0, o.jsx)(E.Z, {
+          ? (0, i.jsx)(E.Z, {
                 ...t,
                 user: n,
-                currentUser: s
+                currentUser: o
             })
           : n.bot
-            ? (0, o.jsx)(I.Z, {
+            ? (0, i.jsx)(I.Z, {
                   ...t,
                   user: n,
-                  currentUser: s
+                  currentUser: o
               })
-            : (0, o.jsx)(f.Z, {
+            : (0, i.jsx)(f.Z, {
                   ...t,
                   user: n,
-                  currentUser: s
+                  currentUser: o
               });
 }

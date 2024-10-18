@@ -18,8 +18,8 @@ var l = n(120356),
     h = n(888651),
     p = n(619915),
     f = n(339340),
-    m = n(201895),
-    _ = n(718589),
+    _ = n(201895),
+    m = n(718589),
     g = n(933557),
     C = n(557135),
     I = n(873696),
@@ -160,7 +160,7 @@ class q extends U.ZP {
                                             },
                                             connectDragPreview: g,
                                             isFavoriteSuggestion: v,
-                                            'aria-label': (0, m.ZP)({
+                                            'aria-label': (0, _.ZP)({
                                                 channel: e,
                                                 unread: l,
                                                 mentionCount: s,
@@ -168,7 +168,7 @@ class q extends U.ZP {
                                                 embeddedActivitiesCount: x.length,
                                                 isSubscriptionGated: S
                                             }),
-                                            'aria-describedby': (0, _.Z)({
+                                            'aria-describedby': (0, m.Z)({
                                                 channel: e,
                                                 embeddedApps: x
                                             }),
@@ -345,8 +345,8 @@ function X(e) {
             };
         }),
         f = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)),
-        m = (0, p.ZP)(n),
-        _ = (0, g.ZP)(n),
+        _ = (0, p.ZP)(n),
+        m = (0, g.ZP)(n),
         C = (0, v.qY)(n.id),
         { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, S.Z)(n.id),
         x = (0, E.Z)(),
@@ -371,8 +371,8 @@ function X(e) {
         }),
         w = b && null == L;
     return (0, i.jsx)(Q, {
-        channelName: _,
-        embeddedApps: m,
+        channelName: m,
+        embeddedApps: _,
         embeddedActivityType: F.IIU.PLAYING,
         video: f,
         hasActiveEvent: null != C,

@@ -13,8 +13,8 @@ var t = l(735250),
 let c = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ];
 n.Z = i.memo((e) => {
     var n;
-    let { entry: l, channel: i, selected: o, hovered: m } = e,
-        { largeImage: h } = (0, r.rv)({
+    let { entry: l, channel: i, selected: o, hovered: h } = e,
+        { largeImage: m } = (0, r.rv)({
             entry: l,
             showCoverImage: !1
         });
@@ -36,7 +36,7 @@ n.Z = i.memo((e) => {
                                 e,
                                 {
                                     entry: l,
-                                    hovered: m
+                                    hovered: h
                                 },
                                 n
                             )
@@ -45,11 +45,11 @@ n.Z = i.memo((e) => {
                 ]
             }),
             (0, t.jsx)(a.f, {
-                alt: null !== (n = null == h ? void 0 : h.text) && void 0 !== n ? n : null == h ? void 0 : h.alt,
-                src: null == h ? void 0 : h.src,
+                alt: null !== (n = null == m ? void 0 : m.text) && void 0 !== n ? n : null == m ? void 0 : m.alt,
+                src: null == m ? void 0 : m.src,
                 size: 48,
                 className: u.thumbnail,
-                showTooltip: (null == h ? void 0 : h.text) != null
+                showTooltip: (null == m ? void 0 : m.text) != null
             })
         ]
     });

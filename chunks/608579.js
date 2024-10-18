@@ -26,9 +26,9 @@ var i = n(735250),
     g = n(231338),
     S = n(556709);
 function A(e) {
-    let { onClose: t, onComplete: n, onStepChange: s, transitionState: A, loadId: x, skuId: R, isGift: O = !1, giftRecipient: v, giftMessage: M, analyticsLocations: L, returnRef: Z } = e,
-        { analyticsLocations: P } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        b = a.useRef(new l.qA()),
+    let { onClose: t, onComplete: n, onStepChange: s, transitionState: A, loadId: x, skuId: R, isGift: v = !1, giftRecipient: O, giftMessage: M, analyticsLocations: L, returnRef: Z } = e,
+        { analyticsLocations: b } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        P = a.useRef(new l.qA()),
         [D, j] = a.useState(null),
         [U, y] = a.useState(!1),
         B = a.useMemo(() => (0, C.UY)(R), [R]),
@@ -54,7 +54,7 @@ function A(e) {
                         (0, i.jsx)(f.x, {
                             ...e,
                             confettiCanvas: D,
-                            analyticsLocations: P,
+                            analyticsLocations: b,
                             hideConfetti: null != B
                         }),
                     options: {
@@ -63,15 +63,15 @@ function A(e) {
                     }
                 }
             ],
-            [P, D, B]
+            [b, D, B]
         );
     return (0, i.jsxs)(c.Gt, {
-        value: P,
+        value: b,
         children: [
             (0, i.jsx)(l.O_, {
                 ref: j,
                 className: S.confettiCanvas,
-                environment: b.current
+                environment: P.current
             }),
             null != B &&
                 (0, i.jsx)('img', {
@@ -86,12 +86,12 @@ function A(e) {
                 stepConfigs: F,
                 applicationId: p.XAJ,
                 skuIDs: [R],
-                isGift: O,
+                isGift: v,
                 activeSubscription: null,
                 purchaseType: g.GZ.ONE_TIME,
                 children: (0, i.jsx)(u.KB, {
-                    isGift: O,
-                    giftRecipient: v,
+                    isGift: v,
+                    giftRecipient: O,
                     giftMessage: M,
                     children: (0, i.jsx)(E.PaymentModal, {
                         onClose: G,
@@ -99,10 +99,10 @@ function A(e) {
                         applicationId: p.XAJ,
                         skuId: R,
                         initialPlanId: null,
-                        analyticsLocations: P,
+                        analyticsLocations: b,
                         transitionState: A,
                         renderHeader: (e, t, n) =>
-                            O
+                            v
                                 ? (0, i.jsx)(m.Z, {
                                       step: n,
                                       onClose: () => t(!1)

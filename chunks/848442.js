@@ -16,8 +16,8 @@ var l = n(120356),
     h = n(367907),
     p = n(357352),
     f = n(652515),
-    m = n(550951),
-    _ = n(886176),
+    _ = n(550951),
+    m = n(886176),
     g = n(605236),
     C = n(703656),
     I = n(984933),
@@ -32,8 +32,8 @@ var l = n(120356),
 function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
-        m = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
-        v = (null == m ? void 0 : m.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
+        v = (null == _ ? void 0 : _.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         A = 'false' === o.K.get(Z.tM, 'false'),
         M = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(x.m, {
@@ -44,7 +44,7 @@ function A(e) {
         }),
         innerClassName: b.previewChannelRowContent,
         renderIcon: (e) =>
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(m.Z, {
                 width: 20,
                 height: 20,
                 className: r()([e, b.shopIcon])
@@ -95,7 +95,7 @@ function A(e) {
 }
 function M(e) {
     let { guild: t, selected: l } = e,
-        r = (0, m.g)(t, 'guild_shop_channel_row'),
+        r = (0, _.g)(t, 'guild_shop_channel_row'),
         a = () => {
             o.K.set(Z.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
@@ -108,7 +108,7 @@ function M(e) {
         : (0, i.jsx)(x.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
-                  (0, i.jsx)(_.Z, {
+                  (0, i.jsx)(m.Z, {
                       width: 20,
                       height: 20,
                       className: e

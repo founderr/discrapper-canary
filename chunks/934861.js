@@ -1,38 +1,38 @@
 t.d(n, {
     c: function () {
-        return r;
+        return c;
     },
     v: function () {
         return a;
     }
 });
-var o = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(481060),
-    s = t(493683),
+var s = t(481060),
+    o = t(493683),
     l = t(475413),
-    c = t(689938);
-function r(e) {
-    let { userId: n, onClose: t, ...r } = e;
-    return (0, o.jsx)(l.tG, {
+    r = t(689938);
+function c(e) {
+    let { userId: n, onClose: t, ...c } = e;
+    return (0, i.jsx)(l.tG, {
         action: 'SEND_MESSAGE',
-        icon: i.ChatIcon,
-        text: c.Z.Messages.USER_PROFILE_MESSAGE,
+        icon: s.ChatIcon,
+        text: r.Z.Messages.USER_PROFILE_MESSAGE,
         onClick: () => {
-            s.Z.openPrivateChannel(n), null == t || t();
+            o.Z.openPrivateChannel(n), null == t || t();
         },
-        ...r
+        ...c
     });
 }
 function a(e) {
-    let { userId: n, onClose: t, ...r } = e;
-    return (0, o.jsx)(l.ef, {
+    let { userId: n, onClose: t, ...c } = e;
+    return (0, i.jsx)(l.ef, {
         action: 'SEND_MESSAGE',
-        icon: i.ChatIcon,
-        tooltipText: c.Z.Messages.USER_PROFILE_MESSAGE,
+        icon: s.ChatIcon,
+        tooltipText: r.Z.Messages.USER_PROFILE_MESSAGE,
         onClick: () => {
-            s.Z.openPrivateChannel(n), null == t || t();
+            o.Z.openPrivateChannel(n), null == t || t();
         },
-        ...r
+        ...c
     });
 }

@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(899740),
     p = n(155409),
     f = n(699516),
-    m = n(944486),
-    _ = n(594174),
+    _ = n(944486),
+    m = n(594174),
     g = n(295226),
     C = n(774343),
     I = n(417363),
@@ -47,8 +47,8 @@ let P = {
     }
 };
 function O(e) {
-    let { selected: t, user: n, badge: h, link: f, showProgressBadge: m } = e,
-        _ = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
+    let { selected: t, user: n, badge: h, link: f, showProgressBadge: _ } = e,
+        m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
         [N, S] = l.useState(null),
@@ -62,12 +62,12 @@ function O(e) {
     I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
     let U = null;
     !t &&
-        m &&
+        _ &&
         (U = (0, i.jsx)(c.Z, {
             className: y.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let G = t || g || _,
+    let G = t || g || m,
         k = (0, i.jsx)(o.BlobMask, {
             selected: G,
             lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
@@ -145,7 +145,7 @@ function j() {
             unviewedDiscountCount: g.Z.getUnacknowledgedDiscountOffers().length
         })),
         o = r + s,
-        u = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        u = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + o + d,
         x = p === o && o > 0 && n + d === 0,
@@ -155,7 +155,7 @@ function j() {
         (0, i.jsx)(O, {
             selected: e,
             user: u,
-            selectedChannelId: m.Z.getChannelId(A.ME),
+            selectedChannelId: _.Z.getChannelId(A.ME),
             badge: p,
             link: v,
             showProgressBadge: t

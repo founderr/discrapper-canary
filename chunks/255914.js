@@ -127,10 +127,10 @@ class N {
               u);
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, R, O;
-        let v = new N();
+        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, R, O, v, C, L;
+        let D = new N();
         return null == e
-            ? v
+            ? D
             : {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,
@@ -149,30 +149,30 @@ class N {
                   nackCount: e.nackCount,
                   pliCount: e.pliCount,
                   qpSum: e.qpSum,
-                  freezeCount: 0,
+                  freezeCount: null !== (i = e.freezeCount) && void 0 !== i ? i : 0,
                   pauseCount: 0,
-                  totalFreezesDuration: 0,
+                  totalFreezesDuration: null !== (a = e.totalFreezesDuration) && void 0 !== a ? a : 0,
                   totalPausesDuration: 0,
-                  totalFramesDuration: 0,
-                  outboundSinkWant: null !== (i = e.sinkWantAsInt) && void 0 !== i ? i : null,
-                  vmafScore: null !== (a = e.encoderQualityVmaf) && void 0 !== a ? a : null,
-                  qualityDecodeErrors: null !== (s = e.qualityDecodeErrors) && void 0 !== s ? s : 0,
-                  qualityDecoderReboots: null !== (o = e.qualityDecoderReboots) && void 0 !== o ? o : 0,
-                  qualityScoreErrors: null !== (l = e.qualityScoreErrors) && void 0 !== l ? l : 0,
-                  qualityFrameDrops: null !== (u = e.qualityFrameDrops) && void 0 !== u ? u : 0,
-                  qualitySizeMismatches: null !== (c = e.qualitySizeMismatches) && void 0 !== c ? c : 0,
-                  psnrDb: null !== (d = e.encoderQualityPsnr) && void 0 !== d ? d : null,
-                  keyframes: null !== (_ = e.keyFramesEncoded) && void 0 !== _ ? _ : null,
-                  framesDroppedRateLimiter: null !== (E = e.framesDroppedRateLimiter) && void 0 !== E ? E : null,
-                  framesDroppedEncoderQueue: null !== (f = e.framesDroppedEncoderQueue) && void 0 !== f ? f : null,
-                  framesDroppedCongestionWindow: null !== (h = e.framesDroppedCongestionWindow) && void 0 !== h ? h : null,
-                  framesDroppedEncoder: null !== (p = e.framesDroppedEncoder) && void 0 !== p ? p : null,
-                  passthroughCount: null !== (I = e.passthroughCount) && void 0 !== I ? I : 0,
-                  cryptorSuccessCount: null !== (m = e.encryptSuccessCount) && void 0 !== m ? m : 0,
-                  cryptorFailureCount: null !== (T = e.encryptFailureCount) && void 0 !== T ? T : 0,
-                  cryptorDuration: null !== (S = e.encryptDuration) && void 0 !== S ? S : 0,
-                  cryptorAttempts: null !== (R = e.encryptAttempts) && void 0 !== R ? R : 0,
-                  cryptorMaxAttempts: null !== (O = e.encryptMaxAttempts) && void 0 !== O ? O : 0
+                  totalFramesDuration: null !== (s = e.totalFramesDuration) && void 0 !== s ? s : 0,
+                  outboundSinkWant: null !== (o = e.sinkWantAsInt) && void 0 !== o ? o : null,
+                  vmafScore: null !== (l = e.encoderQualityVmaf) && void 0 !== l ? l : null,
+                  qualityDecodeErrors: null !== (u = e.qualityDecodeErrors) && void 0 !== u ? u : 0,
+                  qualityDecoderReboots: null !== (c = e.qualityDecoderReboots) && void 0 !== c ? c : 0,
+                  qualityScoreErrors: null !== (d = e.qualityScoreErrors) && void 0 !== d ? d : 0,
+                  qualityFrameDrops: null !== (_ = e.qualityFrameDrops) && void 0 !== _ ? _ : 0,
+                  qualitySizeMismatches: null !== (E = e.qualitySizeMismatches) && void 0 !== E ? E : 0,
+                  psnrDb: null !== (f = e.encoderQualityPsnr) && void 0 !== f ? f : null,
+                  keyframes: null !== (h = e.keyFramesEncoded) && void 0 !== h ? h : null,
+                  framesDroppedRateLimiter: null !== (p = e.framesDroppedRateLimiter) && void 0 !== p ? p : null,
+                  framesDroppedEncoderQueue: null !== (I = e.framesDroppedEncoderQueue) && void 0 !== I ? I : null,
+                  framesDroppedCongestionWindow: null !== (m = e.framesDroppedCongestionWindow) && void 0 !== m ? m : null,
+                  framesDroppedEncoder: null !== (T = e.framesDroppedEncoder) && void 0 !== T ? T : null,
+                  passthroughCount: null !== (S = e.passthroughCount) && void 0 !== S ? S : 0,
+                  cryptorSuccessCount: null !== (R = e.encryptSuccessCount) && void 0 !== R ? R : 0,
+                  cryptorFailureCount: null !== (O = e.encryptFailureCount) && void 0 !== O ? O : 0,
+                  cryptorDuration: null !== (v = e.encryptDuration) && void 0 !== v ? v : 0,
+                  cryptorAttempts: null !== (C = e.encryptAttempts) && void 0 !== C ? C : 0,
+                  cryptorMaxAttempts: null !== (L = e.encryptMaxAttempts) && void 0 !== L ? L : 0
               };
     }
     constructor() {

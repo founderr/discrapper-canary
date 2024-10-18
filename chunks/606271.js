@@ -21,8 +21,8 @@ var i = n(392711),
     p = n(594174),
     g = n(979651),
     T = n(626135),
-    S = n(823379),
-    f = n(358085),
+    f = n(823379),
+    S = n(358085),
     C = n(914946),
     N = n(238679),
     A = n(863141),
@@ -44,7 +44,7 @@ function R(e, t, n) {
 }
 class O {
     loadServer() {
-        for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+        for (let e of (S.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
     }
@@ -89,7 +89,7 @@ class O {
                 (t = v.zMe.MESSAGE_DELETE), (n = e.channelId), (i = { id: e.id }), (a = ''.concat(t).concat(e.id));
                 break;
             default:
-                return (0, S.vE)(e);
+                return (0, f.vE)(e);
         }
         null != n &&
             this.rpcServer.dispatchToSubscriptions(

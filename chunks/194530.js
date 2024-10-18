@@ -18,7 +18,7 @@ var n = t(735250),
     E = t(787895);
 function T(e) {
     var s, t, T, S;
-    let { transitionState: I, onSuccess: N, onClose: A, requirementsUpdated: C, noSkip: m = !1 } = e,
+    let { transitionState: I, onSuccess: N, onClose: m, requirementsUpdated: A, noSkip: C = !1 } = e,
         [g, h] = a.useState(''),
         [O, p] = a.useState(''),
         [R, x] = a.useState(''),
@@ -65,11 +65,11 @@ function T(e) {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: E.subtitle,
-                            children: C ? u.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : u.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+                            children: A ? u.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : u.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
                         }),
-                        !0 !== m &&
+                        !0 !== C &&
                             (0, n.jsx)(r.ModalCloseButton, {
-                                onClick: A,
+                                onClick: m,
                                 className: E.modalCloseButton
                             })
                     ]
@@ -121,12 +121,12 @@ function T(e) {
                                     submitting: b === _.QZA.SUBMITTING,
                                     children: u.Z.Messages.DONE
                                 }),
-                                !0 !== m &&
+                                !0 !== C &&
                                     (0, n.jsx)(r.Button, {
                                         className: E.cancel,
                                         look: r.Button.Looks.LINK,
                                         color: r.Button.Colors.PRIMARY,
-                                        onClick: A,
+                                        onClick: m,
                                         children: u.Z.Messages.CANCEL
                                     })
                             ]

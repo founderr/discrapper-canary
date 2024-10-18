@@ -28,12 +28,12 @@ var i = n(735250),
     A = n(838940),
     x = n(882101),
     R = n(11705),
-    O = n(81273),
-    v = n(293810),
+    v = n(81273),
+    O = n(293810),
     M = n(981631),
     L = n(689938),
     Z = n(367993);
-let P = (e) => {
+let b = (e) => {
         let { benefits: t, header: n, guildId: s } = e,
             [r, l] = a.useState(!1),
             c = r ? t : t.slice(0, 5),
@@ -83,7 +83,7 @@ let P = (e) => {
                   ]
               });
     },
-    b = (e) => {
+    P = (e) => {
         let { guildId: t, listingId: n } = e,
             a = (0, N.Z)(t),
             [s] = T.XZ(n, t),
@@ -164,17 +164,17 @@ let P = (e) => {
                                   })
                               ]
                           }),
-                      (0, i.jsx)(P, {
+                      (0, i.jsx)(b, {
                           header: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
                           benefits: c,
                           guildId: n
                       }),
-                      (0, i.jsx)(P, {
+                      (0, i.jsx)(b, {
                           header: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
                           benefits: u,
                           guildId: n
                       }),
-                      (0, i.jsx)(b, {
+                      (0, i.jsx)(P, {
                           guildId: n,
                           listingId: t
                       })
@@ -220,11 +220,11 @@ t.Z = (e) => {
     var t;
     let { listingId: n, guildId: s, groupListingId: u, analyticsLocation: E } = e,
         N = (0, m.jO)(n),
-        { openModal: p, canOpenModal: C, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, O.Z)(N, s, u, E),
-        P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
-        { activeSubscription: b, activeSubscriptionListing: U } = (0, f.Z)(u),
+        { openModal: p, canOpenModal: C, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, v.Z)(N, s, u, E),
+        b = (0, l.e7)([_.Z], () => _.Z.isSyncing),
+        { activeSubscription: P, activeSubscriptionListing: U } = (0, f.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
-        B = (null == b ? void 0 : b.status) === M.O0b.CANCELED,
+        B = (null == P ? void 0 : P.status) === M.O0b.CANCELED,
         [k, G] = a.useState(!1),
         [F, w] = a.useState(!1),
         V = a.useCallback((e) => {
@@ -236,10 +236,10 @@ t.Z = (e) => {
         [W] = T.TT(n),
         [z] = T.F2(n),
         K = (0, h.Z)(s, n),
-        X = null != W && null == b && K,
-        Q = (0, c.Z)(v.iP),
-        [J, q] = a.useState(!1),
-        $ = J || !Q,
+        X = null != W && null == P && K,
+        Q = (0, c.Z)(O.iP),
+        [q, J] = a.useState(!1),
+        $ = q || !Q,
         ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)),
         et = (null == N ? void 0 : N.published) === !0,
         en = (null == N ? void 0 : N.soft_deleted) === !0,
@@ -283,7 +283,7 @@ t.Z = (e) => {
                                             listingId: n,
                                             isListingPublished: et,
                                             expanded: $,
-                                            onToggleExpanded: () => q((e) => !e)
+                                            onToggleExpanded: () => J((e) => !e)
                                         })
                                       : (0, i.jsx)(x.xv, {
                                             listingId: n,
@@ -308,7 +308,7 @@ t.Z = (e) => {
                                                             (0, i.jsx)(g.Z, {
                                                                 ...e,
                                                                 fullWidth: !0,
-                                                                disabled: !C || P,
+                                                                disabled: !C || b,
                                                                 submitting: A,
                                                                 onClick: p,
                                                                 onlyShineOnHover: !0,

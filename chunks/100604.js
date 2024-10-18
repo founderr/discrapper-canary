@@ -62,12 +62,12 @@ class f {
                 snapshotIndex: g,
                 useOldIcon: x
             };
-        let O = (0, d.Xf)(A.message.timestamp),
-            v = m.getChannel(this.parentMessage.channel_id);
-        if (null != v && v.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+        let v = (0, d.Xf)(A.message.timestamp),
+            O = m.getChannel(this.parentMessage.channel_id);
+        if (null != O && O.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = m.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
             if (null == e) {
-                let e = p.getGuild(v.guild_id);
+                let e = p.getGuild(O.guild_id);
                 return null == e
                     ? {
                           snapshotIndex: g,
@@ -75,7 +75,7 @@ class f {
                       }
                     : {
                           snapshotIndex: g,
-                          footerInfo: T(e, O),
+                          footerInfo: T(e, v),
                           useOldIcon: x
                       };
             }
@@ -89,10 +89,10 @@ class f {
                 snapshotIndex: g,
                 footerInfo: {
                     originLabel: t,
-                    timestampLabel: O,
+                    timestampLabel: v,
                     accessibilityLabel: I.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
                         origin: t,
-                        timestamp: O
+                        timestamp: v
                     })
                 },
                 useOldIcon: x
@@ -112,7 +112,7 @@ class f {
               }
             : {
                   snapshotIndex: g,
-                  footerInfo: T(L, O),
+                  footerInfo: T(L, v),
                   useOldIcon: x
               };
     }

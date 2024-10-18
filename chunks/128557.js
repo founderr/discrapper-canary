@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return j;
     },
     i: function () {
         return L;
@@ -28,8 +28,8 @@ var i = n(735250),
     I = n(594174),
     T = n(259580),
     x = n(585483),
-    S = n(63063),
-    v = n(358085),
+    v = n(63063),
+    S = n(358085),
     N = n(709054),
     A = n(967128),
     Z = n(981631),
@@ -74,12 +74,12 @@ function L(e) {
         })
     );
 }
-function P(e) {
+function j(e) {
     let { channel: t } = e,
         a = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != a && N.default.extractTimestamp(a.id) < Date.now() - Z._8R,
         T = (0, c.e7)([g.default], () => (null == a ? void 0 : a.ownerId) === g.default.getId(), [a]),
-        { canInvite: P, canManageGuild: j, canMessage: O } = (0, _.TE)(t, a),
+        { canInvite: j, canManageGuild: P, canMessage: O } = (0, _.TE)(t, a),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
@@ -236,7 +236,7 @@ function P(e) {
         return null;
     let K = [];
     !h &&
-        (P &&
+        (j &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -253,7 +253,7 @@ function P(e) {
                     'invite'
                 )
             ),
-        j &&
+        P &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -287,7 +287,7 @@ function P(e) {
                     'message'
                 )
             ),
-        (0, v.isWeb)() &&
+        (0, S.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -322,7 +322,7 @@ function P(e) {
         ));
     let q = T ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(S.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let X = ''.concat(v.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(A.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {

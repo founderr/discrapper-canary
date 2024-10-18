@@ -19,8 +19,8 @@ var i,
     I = n(100527),
     T = n(906732),
     x = n(168551),
-    S = n(597952),
-    v = n(628123),
+    v = n(597952),
+    S = n(628123),
     N = n(686546),
     A = n(80006),
     Z = n(151851),
@@ -28,8 +28,8 @@ var i,
     b = n(392358),
     R = n(314910),
     L = n(892254),
-    P = n(706454),
-    j = n(210887),
+    j = n(706454),
+    P = n(210887),
     O = n(740492),
     y = n(451478),
     D = n(358085),
@@ -132,11 +132,11 @@ class F extends (i = a.Component) {
                                 children: (0, s.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: r()(e, (0, S.Z)(), x, g, I),
+                                    className: r()(e, (0, v.Z)(), x, g, I),
                                     children: (0, s.jsx)(p.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, s.jsx)(E.Z, {
-                                            children: (0, s.jsxs)(v.Z, {
+                                            children: (0, s.jsxs)(S.Z, {
                                                 children: [
                                                     (0, s.jsx)(N.Co, {}),
                                                     (0, s.jsx)(_.Wu, {
@@ -208,9 +208,9 @@ let W = a.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let a = (0, h.e7)([y.Z], () => y.Z.isFocused()),
-        { locale: l, theme: r } = (0, h.cj)([j.Z, P.default], () => ({
-            locale: P.default.locale,
-            theme: j.Z.theme
+        { locale: l, theme: r } = (0, h.cj)([P.Z, j.default], () => ({
+            locale: j.default.locale,
+            theme: P.Z.theme
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),
@@ -218,7 +218,7 @@ let W = a.forwardRef(function (e, t) {
     (0, M.Z)(n, !1);
     let _ = (0, b.Z)(n, i),
         { analyticsLocations: E } = (0, T.ZP)(I.Z.POPOUT_WINDOW),
-        { clientThemesClassName: C, clientThemesCSS: S } = (0, x.ZP)();
+        { clientThemesClassName: C, clientThemesCSS: v } = (0, x.ZP)();
     return null == n
         ? null
         : (0, s.jsx)(p.DnDProvider, {
@@ -244,7 +244,7 @@ let W = a.forwardRef(function (e, t) {
                       saturation: u.saturation,
                       alwaysShowLinkDecorations: u.alwaysShowLinkDecorations,
                       clientThemesClassName: C,
-                      clientThemesCSS: S,
+                      clientThemesCSS: v,
                       appWrapperClassName: d
                   })
               })

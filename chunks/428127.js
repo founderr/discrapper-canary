@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(237583),
     p = n(451478),
     f = n(934415),
-    m = n(968847),
-    _ = n(689938),
+    _ = n(968847),
+    m = n(689938),
     g = n(624113);
 let C = {
     friction: 30,
@@ -33,9 +33,9 @@ function I(e) {
             },
             [r]
         ),
-        m = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [],
+        _ = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [],
         C = (0, f.c4)({
-            channels: m,
+            channels: _,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: o
@@ -55,7 +55,7 @@ function I(e) {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
                 className: g.barText,
-                children: _.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({ count: C.length })
+                children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({ count: C.length })
             }),
             (0, i.jsx)(h.Z, {
                 guildId: n.id,
@@ -70,10 +70,10 @@ function I(e) {
 }
 function E(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: f } = (0, o.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : f,
-        v = N === m.x.HIDDEN,
+        v = N === _.x.HIDDEN,
         Z = (0, u.useSpring)(
             {
                 to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
@@ -97,9 +97,9 @@ function E(e) {
             style: Z,
             'aria-hidden': v,
             children:
-                N === m.x.HIDDEN
+                N === _.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(g.bar, g.emptyBar) })
-                    : N === m.x.UNREAD
+                    : N === _.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: g.bar,
                             onClick: T,
@@ -123,11 +123,11 @@ function E(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
                                     className: g.barText,
-                                    children: _.Z.Messages.NEW_UNREADS
+                                    children: m.Z.Messages.NEW_UNREADS
                                 })
                             ]
                         })
-                      : N === m.x.MENTIONS
+                      : N === _.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(g.bar, g.mentionsBar),
                               onClick: T,
@@ -135,10 +135,10 @@ function E(e) {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: g.barText,
-                                  children: _.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
+                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
                               })
                           })
-                        : N === m.x.VOICE_CHANNELS
+                        : N === _.x.VOICE_CHANNELS
                           ? (0, i.jsx)(I, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,

@@ -42,7 +42,7 @@ let g = f.t_t.DEFAULT,
             }
         });
     };
-class C extends (i = l.PureComponent) {
+class S extends (i = l.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, o.jsx)(Z.Consumer, {
@@ -67,7 +67,7 @@ class C extends (i = l.PureComponent) {
     }
 }
 (a = { disableScroll: !1 }),
-    (r = 'defaultProps') in (s = C)
+    (r = 'defaultProps') in (s = S)
         ? Object.defineProperty(s, r, {
               value: a,
               enumerable: !0,
@@ -75,7 +75,7 @@ class C extends (i = l.PureComponent) {
               writable: !0
           })
         : (s[r] = a);
-let S = (e) => {
+let C = (e) => {
         let { type: t = g, width: n, height: i, children: s, className: r, opacity: a = m, onClick: l } = e;
         return (0, o.jsx)(I.Provider, {
             value: {
@@ -104,10 +104,10 @@ let S = (e) => {
                 })
         });
     };
-(S.Background = (e) => {
+(C.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [v, C, x];
+    let i = [v, S, x];
     return (0, o.jsx)(I.Consumer, {
         children: (e) => {
             let { opacity: s } = e,
@@ -125,9 +125,9 @@ let S = (e) => {
         }
     });
 }),
-    (S.Body = C),
-    (S.Content = x),
-    (S.Icon = (e) => {
+    (C.Body = S),
+    (C.Content = x),
+    (C.Icon = (e) => {
         let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: r = 'top', size: a = 20, isTutorial: l = !1 } = e;
         return (0, o.jsx)(p.Tooltip, {
             text: l
@@ -162,5 +162,5 @@ let S = (e) => {
             }
         });
     }),
-    (S.Bar = v),
-    (t.ZP = S);
+    (C.Bar = v),
+    (t.ZP = C);

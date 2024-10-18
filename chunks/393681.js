@@ -14,9 +14,9 @@ var n = t(735250),
     S = t(279837),
     I = t(952306),
     N = t(600164),
-    A = t(690221),
-    C = t(346585),
-    m = t(347649),
+    m = t(690221),
+    A = t(346585),
+    C = t(347649),
     g = t(332473),
     h = t(303172),
     O = t(518560),
@@ -114,10 +114,10 @@ class K extends a.PureComponent {
                   className: H.accountWarningBodyText,
                   messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? w.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, C.IE)(this.props.locale) }) : w.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? w.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, A.IE)(this.props.locale) }) : w.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
-                      (0, n.jsx)(A.Z, {
+                      (0, n.jsx)(m.Z, {
                           className: H.noticeTextButton,
                           onClick: () => (0, h.Z)(k.Kq.USER_SETTINGS),
                           children: w.Z.Messages.GET_STARTED
@@ -381,7 +381,7 @@ s.Z = () => {
         t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
         a = (0, c.e7)([Z.Z], () => Z.Z.theme),
         i = (0, g.b)(),
-        r = (0, m.CC)(),
+        r = (0, C.CC)(),
         o = (0, c.e7)([P.default], () => P.default.locale),
         d = (0, b._p)({ location: 'UserSettingsAccount' });
     return (0, n.jsx)(K, {

@@ -11,8 +11,8 @@ var i,
     h = n(43267),
     p = n(933557),
     f = n(93687),
-    m = n(266076),
-    _ = n(199902),
+    _ = n(266076),
+    m = n(199902),
     g = n(19780),
     C = n(306680),
     I = n(944486),
@@ -116,16 +116,16 @@ class L extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: f, animating: _ } = this.state,
+            { hovered: f, animating: m } = this.state,
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(x.Z, {
-                        hovered: !_ && f,
-                        selected: !_ && n,
-                        unread: !_ && h,
+                        hovered: !m && f,
+                        selected: !m && n,
+                        unread: !m && h,
                         className: b.pill
                     }),
                     (0, l.jsx)(v.Z, {
@@ -154,7 +154,7 @@ class L extends (i = r.PureComponent) {
                                         icon: g ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: g ? 'on-hover' : 'always',
                                         children: g
-                                            ? (0, l.jsx)(m.Z, {
+                                            ? (0, l.jsx)(_.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -219,15 +219,15 @@ A(L, 'defaultProps', {
             i = (0, p.ZP)(e.channel),
             r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
             a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : T.WtW.VOICE), [r]),
-            s = (0, o.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
+            s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
             u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            m = r === n,
+            _ = r === n,
             E = !1,
             N = !1;
         return (
-            m && ((E = a === T.WtW.VOICE), (N = a === T.WtW.VIDEO)),
+            _ && ((E = a === T.WtW.VOICE), (N = a === T.WtW.VIDEO)),
             (0, l.jsx)(L, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ A(L, 'defaultProps', {
                 audio: E,
                 video: N,
                 stream: s,
-                isCurrentUserInThisDMCall: m,
+                isCurrentUserInThisDMCall: _,
                 isGDMFacepileEnabled: h
             })
         );

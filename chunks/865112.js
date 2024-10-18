@@ -6,10 +6,10 @@ n.d(t, {
         return S;
     },
     Vi: function () {
-        return O;
+        return v;
     },
     Vu: function () {
-        return v;
+        return O;
     },
     q7: function () {
         return x;
@@ -87,7 +87,7 @@ let S = {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
-    O = (e) => {
+    v = (e) => {
         switch (e) {
             case o.DY.GO_LIVE_PUSH:
                 return {
@@ -120,7 +120,7 @@ let S = {
                 return null;
         }
     },
-    v = (e) => {
+    O = (e) => {
         switch (e.item_enum) {
             case o.AM.UPDATE_PROFILE:
                 return c.Y9;

@@ -27,18 +27,18 @@ var i = n(735250),
     A = n(39154),
     x = n(245216),
     R = n(689938),
-    O = n(85961);
-function v() {
+    v = n(85961);
+function O() {
     return (0, i.jsxs)('div', {
-        className: O.headerContainer,
+        className: v.headerContainer,
         children: [
             (0, i.jsx)(x.Z, {
                 size: 'xs',
-                className: O.headerIcon,
+                className: v.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
             }),
             (0, i.jsx)(s.xv, {
-                className: O.headerText,
+                className: v.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
                 children: R.Z.Messages.MESSAGE_FORWARDED
@@ -56,18 +56,18 @@ function M(e) {
     return null == E
         ? null
         : (0, i.jsxs)(c.Clickable, {
-              className: O.footerContainer,
+              className: v.footerContainer,
               onClick: I,
               children: [
                   null != E.originIconUrl
                       ? (0, i.jsx)('img', {
-                            className: O.originIcon,
+                            className: v.originIcon,
                             src: E.originIconUrl,
                             alt: ''
                         })
                       : null,
                   (0, i.jsx)(s.xv, {
-                      className: O.footerText,
+                      className: v.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
                       children: ''.concat(E.originLabel, '  \u2022  ').concat(E.timestampLabel)
@@ -104,13 +104,13 @@ function L(e) {
         : (0, i.jsxs)(
               'div',
               {
-                  className: O.container,
+                  className: v.container,
                   children: [
-                      (0, i.jsx)('div', { className: O.quote }),
+                      (0, i.jsx)('div', { className: v.quote }),
                       (0, i.jsxs)('div', {
-                          className: O.content,
+                          className: v.content,
                           children: [
-                              (0, i.jsx)(v, {}),
+                              (0, i.jsx)(O, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
                                   content: p

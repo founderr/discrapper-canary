@@ -18,8 +18,8 @@ var i,
     I = n(158979),
     Z = n(181912),
     v = n(791288),
-    C = n(194295),
-    S = n(998033),
+    S = n(194295),
+    C = n(998033),
     x = n(181364),
     T = n(435064),
     N = n(668761),
@@ -192,7 +192,7 @@ class es extends (r = f.ZP.Store) {
                                       break;
                                   case Y.mFx.JOIN_REQUEST:
                                       if (null == (i = D.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      s = (0, C.Z)(e, n, r, i);
+                                      s = (0, S.Z)(e, n, r, i);
                               }
                               if (null == s) return !1;
                               let a = en(s, {
@@ -206,7 +206,7 @@ class es extends (r = f.ZP.Store) {
                       }
                       if (((!V.Z.isInstanceUILocked() || V.Z.isPinned(Y.Odu.TEXT)) && s === P.Z.getChannelId()) || V.Z.getTextChatNotificationMode() === Y.Ypu.DISABLED || w.Z.disableNotifications || !(0, B.eF)(r, s)) return !1;
                       let l = !M.Z.isSoundDisabled(k.Ay);
-                      en((0, S.Z)(a, r, o, l), {
+                      en((0, C.Z)(a, r, o, l), {
                           type: 1,
                           channelId: a.id,
                           messageType: r.type

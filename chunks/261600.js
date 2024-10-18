@@ -17,18 +17,18 @@ function h(e) {
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
         f = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
-        m = l.useRef(null),
-        _ = l.useCallback(() => {
+        _ = l.useRef(null),
+        m = l.useCallback(() => {
             let e = s.Z.getChannel(p);
             null != e && o.Cq(e);
         }, [p]),
         g = null !== (n = null == f ? void 0 : f.topic) && void 0 !== n ? n : h.name,
         C = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({ channel: g });
     return (0, i.jsx)('div', {
-        ref: m,
+        ref: _,
         children: (0, i.jsx)(a.Clickable, {
-            onClick: _,
-            focusProps: { ringTarget: m },
+            onClick: m,
+            focusProps: { ringTarget: _ },
             children: (0, i.jsx)(a.Heading, {
                 variant: 'heading-sm/semibold',
                 children: C

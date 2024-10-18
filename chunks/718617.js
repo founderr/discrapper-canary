@@ -30,7 +30,7 @@ function C(e, t) {
 }
 function I(e) {
     var t, n;
-    let { userId: I, guildId: T, onClose: x, analyticsLocation: S, className: v } = e,
+    let { userId: I, guildId: T, onClose: x, analyticsLocation: v, className: S } = e,
         N = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(T), [T]),
         A = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
         Z = (0, c.Z)(I);
@@ -43,7 +43,7 @@ function I(e) {
             },
             [N, T, I]
         ),
-        P = s.useMemo(
+        j = s.useMemo(
             () => ({
                 [g.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
@@ -56,8 +56,8 @@ function I(e) {
             }),
             [x, A, L]
         );
-    s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(P), () => u.Z.disableTemp()), [P]);
-    let j = (0, o.useTransition)(
+    s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
+    let P = (0, o.useTransition)(
         A,
         {
             value: 0,
@@ -74,7 +74,7 @@ function I(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: j((e, t, n) => {
+        children: P((e, t, n) => {
             var s, l, r;
             let { key: o } = n;
             return (0, i.jsx)(
@@ -101,21 +101,21 @@ function I(e) {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: L,
-                                    className: v
+                                    className: S
                                 });
                             case E.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(_.Z, {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             case E.k.PERMISSIONS:
                                 return (0, i.jsx)(f.Z, {
                                     userId: I,
                                     guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             default:
                                 return null;

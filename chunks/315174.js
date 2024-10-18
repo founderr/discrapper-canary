@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(768581),
     p = n(358555),
     f = n(981631),
-    m = n(647086),
-    _ = n(689938),
+    _ = n(647086),
+    m = n(689938),
     g = n(501223);
 function C(e) {
     var t;
@@ -56,7 +56,7 @@ function I(e) {
             children:
                 u &&
                 (0, i.jsx)(c.Tooltip, {
-                    text: _.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
+                    text: m.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
                     position: 'right',
                     children: (e) =>
                         (0, i.jsxs)('div', {
@@ -73,7 +73,7 @@ function I(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'none',
-                                    children: _.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC
+                                    children: m.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC
                                 })
                             ]
                         })
@@ -161,7 +161,7 @@ t.ZP = l.memo(function (e) {
                                                 guild: T,
                                                 isBannerVisible: t
                                             }),
-                                            T.id === m._ && (0, i.jsx)(E, {}),
+                                            T.id === _._ && (0, i.jsx)(E, {}),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
@@ -179,7 +179,7 @@ t.ZP = l.memo(function (e) {
                                                     },
                                                     onClick: s,
                                                     onContextMenu: N,
-                                                    'aria-label': _.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (l = null == T ? void 0 : T.toString()) && void 0 !== l ? l : '' })
+                                                    'aria-label': m.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (l = null == T ? void 0 : T.toString()) && void 0 !== l ? l : '' })
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: g.headerChildren,

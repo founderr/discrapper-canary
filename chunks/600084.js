@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(496675),
     T = n(594174),
     x = n(51144),
-    S = n(7782),
-    v = n(967128),
+    v = n(7782),
+    S = n(967128),
     N = n(320781),
     A = n(269203),
     Z = n(86863),
@@ -32,8 +32,8 @@ var i = n(735250),
     b = n(753898),
     R = n(734386),
     L = n(184279),
-    P = n(438306),
-    j = n(544142),
+    j = n(438306),
+    P = n(544142),
     O = n(128557),
     y = n(981631),
     D = n(176505),
@@ -46,10 +46,10 @@ function B(e) {
         l = (0, a.e7)([C.ZP], () => null != n.guild_id && n === C.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(N.Z, { channel: n });
-    if (E.Ec.has(n.type)) return (0, i.jsx)(j.Z, { channel: n });
+    if (E.Ec.has(n.type)) return (0, i.jsx)(P.Z, { channel: n });
     else if (l) return (0, i.jsx)(O.Z, { channel: n });
     else if (s) return (0, i.jsx)(R.Z, { channel: n });
-    return (0, i.jsx)(P.Z, { channel: n });
+    return (0, i.jsx)(j.Z, { channel: n });
 }
 function H(e) {
     var t, n;
@@ -58,7 +58,7 @@ function H(e) {
         { type: C } = d,
         N = (0, a.e7)([T.default], () => (d.isPrivate() ? T.default.getUser(d.getRecipientId()) : null)),
         R = x.ZP.useUserTag(N),
-        { canManageRoles: P, canReadMessageHistory: j } = (0, a.cj)([I.Z], () => ({
+        { canManageRoles: j, canReadMessageHistory: P } = (0, a.cj)([I.Z], () => ({
             canManageRoles: I.Z.can(y.Plq.MANAGE_ROLES, d),
             canReadMessageHistory: I.Z.can(y.Plq.READ_MESSAGE_HISTORY, d)
         })),
@@ -108,7 +108,7 @@ function H(e) {
                           })
                       ]
                   }))
-                : (e = (0, i.jsx)(S.Z, {
+                : (e = (0, i.jsx)(v.Z, {
                       userId: d.getRecipientId(),
                       channel: d,
                       showingBanner: h
@@ -132,9 +132,9 @@ function H(e) {
     }
     if (d.isMultiUserDM())
         return d.isManaged()
-            ? (0, i.jsxs)(v.ZP, {
+            ? (0, i.jsxs)(S.ZP, {
                   channelId: d.id,
-                  children: [(0, i.jsx)(v.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
+                  children: [(0, i.jsx)(S.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
               })
             : d.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(A.Z, { channel: d })
@@ -142,13 +142,13 @@ function H(e) {
                     channel: d,
                     children: U.Z.Messages.BEGINNING_GROUP_DM.format({ name: E })
                 });
-    return j
+    return P
         ? (0, i.jsx)(B, {
               channel: d,
-              canManageRoles: P
+              canManageRoles: j
           })
-        : (0, i.jsx)(v.ZP, {
+        : (0, i.jsx)(S.ZP, {
               channelId: d.id,
-              children: (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
+              children: (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
           });
 }

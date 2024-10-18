@@ -16,7 +16,7 @@ let u = !1,
         viewNonce: '',
         regenerateNonce: ''
     };
-class A extends (r = d.ZP.Store) {
+class m extends (r = d.ZP.Store) {
     getVerificationKey() {
         return T;
     }
@@ -37,7 +37,7 @@ class A extends (r = d.ZP.Store) {
     }
 }
 (i = 'MFAStore'),
-    (a = 'displayName') in (n = A)
+    (a = 'displayName') in (n = m)
         ? Object.defineProperty(n, a, {
               value: i,
               enumerable: !0,
@@ -45,7 +45,7 @@ class A extends (r = d.ZP.Store) {
               writable: !0
           })
         : (n[a] = i),
-    (s.Z = new A(_.Z, {
+    (s.Z = new m(_.Z, {
         MFA_ENABLE_SUCCESS: function (e) {
             let { token: s, codes: t } = e;
             void 0 !== s && c.setToken(s), (E = t);

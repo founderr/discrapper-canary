@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return v;
     }
 });
 var i = n(735250),
@@ -27,9 +27,9 @@ var i = n(735250),
     A = n(563917),
     x = n(135845),
     R = n(981631);
-function O(e) {
-    let { code: t, author: n, getAcceptInviteContext: O } = e,
-        { invite: v, inviteError: M } = (0, s.cj)(
+function v(e) {
+    let { code: t, author: n, getAcceptInviteContext: v } = e,
+        { invite: O, inviteError: M } = (0, s.cj)(
             [T.Z],
             () => ({
                 invite: T.Z.getInvite(t),
@@ -38,18 +38,18 @@ function O(e) {
             [t]
         );
     a.useEffect(() => {
-        null == v && r.Z.resolveInvite(t);
+        null == O && r.Z.resolveInvite(t);
     }, [t]);
     let L =
-            null != v
-                ? v
+            null != O
+                ? O
                 : {
                       state: R.r2o.RESOLVING,
                       code: ''
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
-        P = (0, s.e7)([m.Z], () => ((null == v ? void 0 : v.guild) != null ? m.Z.getGuild(v.guild.id) : null), [v]),
-        b = (0, s.e7)([I.default], () => I.default.getId()),
+        b = (0, s.e7)([m.Z], () => ((null == O ? void 0 : O.guild) != null ? m.Z.getGuild(O.guild.id) : null), [O]),
+        P = (0, s.e7)([I.default], () => I.default.getId()),
         D = (0, s.e7)(
             [c.ZP],
             () => {
@@ -73,14 +73,14 @@ function O(e) {
                   })
                 : r.Z.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
-                      context: O('Invite Button Embed')
+                      context: v('Invite Button Embed')
                   });
         },
         y = (0, i.jsx)(C.Z, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: U,
-            currentUserId: b,
-            guild: P,
+            currentUserId: P,
+            guild: b,
             invite: L,
             author: n
         });
@@ -107,7 +107,7 @@ function O(e) {
                     y = (0, i.jsx)(p.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
-                        currentUserId: b,
+                        currentUserId: P,
                         invite: L,
                         author: n
                     });
@@ -116,7 +116,7 @@ function O(e) {
                     y = (0, i.jsx)(N.Z, {
                         invite: L,
                         author: n,
-                        getAcceptInviteContext: O
+                        getAcceptInviteContext: v
                     });
                     break;
                 default:
@@ -124,8 +124,8 @@ function O(e) {
                         y = (0, i.jsx)(x.Z, {
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U,
-                            currentUserId: b,
-                            guild: P,
+                            currentUserId: P,
+                            guild: b,
                             invite: L
                         });
                         break;
@@ -135,7 +135,7 @@ function O(e) {
                             guildScheduledEvent: D,
                             guild: L.guild,
                             channel: L.channel,
-                            isMember: null != P,
+                            isMember: null != b,
                             onAcceptInstantInvite: U,
                             onTransitionToInviteChannel: j
                         });
@@ -145,7 +145,7 @@ function O(e) {
                         y = (0, i.jsx)(A.Z, {
                             stageInstance: L.stage_instance,
                             guild: L.guild,
-                            isMember: null != P,
+                            isMember: null != b,
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U
                         });
@@ -154,7 +154,7 @@ function O(e) {
                     (0, d.P1)(L) &&
                         (y = (0, i.jsx)(f.Z, {
                             invite: L,
-                            getAcceptInviteContext: O
+                            getAcceptInviteContext: v
                         }));
             }
     }

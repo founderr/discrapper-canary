@@ -46,13 +46,13 @@ var c = n(731965),
     A = n(314897),
     x = n(480294),
     R = n(564334),
-    O = n(302221),
-    v = n(823379),
+    v = n(302221),
+    O = n(823379),
     M = n(956664),
     L = n(229893),
     Z = n(229765),
-    P = n(286083),
-    b = n(207796),
+    b = n(286083),
+    P = n(207796),
     D = n(976757),
     j = n(981631),
     U = n(308083),
@@ -61,13 +61,13 @@ function B() {
     var e;
     let { search: t } = (0, l.TH)(),
         { game: n } = r.parse(t.slice(1)),
-        i = (0, b.GN)(b.t1, s());
+        i = (0, P.GN)(P.t1, s());
     return null != n && (null === (e = i.games) || void 0 === e ? void 0 : e.length) === 0 && (i.games = [n]), i;
 }
 function k() {
-    let e = (0, b.GN)((e) => e.setGame, o.Z),
-        t = (0, b.GN)((e) => e.setSelectedGames, o.Z),
-        n = (0, b.GN)((e) => e.selectedGames, o.Z),
+    let e = (0, P.GN)((e) => e.setGame, o.Z),
+        t = (0, P.GN)((e) => e.setSelectedGames, o.Z),
+        n = (0, P.GN)((e) => e.selectedGames, o.Z),
         a = B(),
         s = (0, T.An)({ location: 'clan_discovery' }),
         r = (0, T.iN)('clan_discovery'),
@@ -86,7 +86,7 @@ function k() {
         E = (0, u.e7)([L.Z], () => L.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !r && (c === U.nJ ? (e(b.hz.VALORANT), t([c])) : c === U.xn ? (e(b.hz.GENSHIN), t([c])) : null == c && (e(b.hz.NONE), t([])));
+            !(n.length > 0) && !r && (c === U.nJ ? (e(P.hz.VALORANT), t([c])) : c === U.xn ? (e(P.hz.GENSHIN), t([c])) : null == c && (e(P.hz.NONE), t([])));
         }, [e, t, c, n, r]),
         i.useEffect(() => {
             if (r) (0, Z.Cg)(a);
@@ -111,7 +111,7 @@ function G() {
         })),
         r = (0, T.iN)('clan_discovery'),
         l = (0, u.e7)([L.Z], () => L.Z.getSearchResult(n), [n]),
-        o = (0, u.Wu)([L.Z], () => (t && null != a ? a.map((e) => L.Z.getGuildProfile(e)).filter(v.lm) : []), [t, a]),
+        o = (0, u.Wu)([L.Z], () => (t && null != a ? a.map((e) => L.Z.getGuildProfile(e)).filter(O.lm) : []), [t, a]),
         c = i.useMemo(() => {
             if ((0, D.Pw)(l)) {
                 let t = l.items;
@@ -140,9 +140,9 @@ function G() {
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: a, pageSize: r, chunkedPages: l, currentPage: c, fetchableGuildIds: d } = (0, P.a)(),
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: r, chunkedPages: l, currentPage: c, fetchableGuildIds: d } = (0, b.a)(),
         E = c - 1,
-        I = (0, b.GN)((e) => e.loadingGameApplication, o.Z),
+        I = (0, P.GN)((e) => e.loadingGameApplication, o.Z),
         m = (0, u.e7)([L.Z], () => L.Z.getSavedGuildIds()),
         T = B(),
         { searchResult: f, hasError: h } = (0, u.cj)(
@@ -154,7 +154,7 @@ function F(e) {
             [T]
         );
     i.useEffect(() => {
-        n(e, P.$, { pageMemoryEnabled: !0 });
+        n(e, b.$, { pageMemoryEnabled: !0 });
     }, [e, n, f]),
         !(function (e) {
             let [t, n] = i.useState(!1),
@@ -183,7 +183,7 @@ function F(e) {
             var e;
             return null !== (e = t ? m : l[E]) && void 0 !== e ? e : [];
         }, [m, l, E, t]),
-        p = (0, u.Wu)([L.Z], () => N.map((e) => L.Z.getGuildProfile(e)).filter(v.lm), [N]),
+        p = (0, u.Wu)([L.Z], () => N.map((e) => L.Z.getGuildProfile(e)).filter(O.lm), [N]),
         C = N.length === p.length || t,
         g = p.length === r || C,
         S = (0, D.Pw)(f);
@@ -205,28 +205,28 @@ function w() {
     }, [n]),
         i.useEffect(() => {
             if (null == n || !t) {
-                b.GN.setState({ entrypointGameId: null });
+                P.GN.setState({ entrypointGameId: null });
                 return;
             }
             (0, c.j)(() => {
-                b.GN.setState({ mode: b.v0.DISCOVERY }), (0, g.jY)({ selectedTab: y.vf.GUILDS });
+                P.GN.setState({ mode: P.v0.DISCOVERY }), (0, g.jY)({ selectedTab: y.vf.GUILDS });
             }),
                 null == a
                     ? ((0, c.j)(() => {
-                          b.GN.setState({ loadingGameApplication: !0 });
+                          P.GN.setState({ loadingGameApplication: !0 });
                       }),
                       I.ZP.fetchApplication(n)
                           .then(() => {
                               (0, c.j)(() => {
-                                  b.GN.setState({ entrypointGameId: n });
+                                  P.GN.setState({ entrypointGameId: n });
                               });
                           })
                           .finally(() => {
                               (0, c.j)(() => {
-                                  b.GN.setState({ loadingGameApplication: !1 });
+                                  P.GN.setState({ loadingGameApplication: !1 });
                               });
                           }))
-                    : (b.GN.getState().setSelectedGames([n]), b.GN.setState({ entrypointGameId: n }));
+                    : (P.GN.getState().setSelectedGames([n]), P.GN.setState({ entrypointGameId: n }));
         }, [a, n, t]);
 }
 function V(e, t) {
@@ -314,7 +314,7 @@ function Y() {
                                   let [n, i, s] = e[0],
                                       r = new R.Z(n, i, s, 1),
                                       l = 'light' === a ? new R.Z(255, 255, 255, 1) : new R.Z(0, 0, 0, 1),
-                                      o = (0, O.k8)({
+                                      o = (0, v.k8)({
                                           colors: [r, l],
                                           ratio: 5,
                                           saturationFactor: 1

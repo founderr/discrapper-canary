@@ -38,8 +38,8 @@ function x(e) {
         n = m.ZP.getVoiceStatesForChannel(t).slice(0, 6),
         I = (0, a.e7)([u.Z], () => u.Z.getFetching(f.FX)),
         x = (0, a.e7)([u.Z], () => u.Z.getPrice(f.FX)),
-        S = (0, a.e7)([u.Z], () => u.Z.getErrored(f.FX)),
-        { analyticsLocations: v } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
+        v = (0, a.e7)([u.Z], () => u.Z.getErrored(f.FX)),
+        { analyticsLocations: S } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
         N = (0, a.e7)([u.Z], () => u.Z.getEntitlement());
     s.useEffect(() => {
         null != N && N.sku_id === f.FX && !1 === N.consumed && (0, c.Zu)(t.id);
@@ -51,8 +51,8 @@ function x(e) {
             []
         ),
         s.useEffect(() => {
-            !I && null == x && !S && (0, c.Gq)(f.FX);
-        }, [I, x, S]);
+            !I && null == x && !v && (0, c.Gq)(f.FX);
+        }, [I, x, v]);
     let A = () => {
             (0, l.closeModal)(T);
         },
@@ -68,7 +68,7 @@ function x(e) {
                 s.id
             );
         });
-    return S
+    return v
         ? (0, i.jsx)('div', {
               className: g.anomaly,
               children: (0, i.jsxs)('div', {
@@ -167,7 +167,7 @@ function x(e) {
                                 onClick: () => {
                                     (0, h.Z)({
                                         skuId: f.FX,
-                                        analyticsLocations: v,
+                                        analyticsLocations: S,
                                         onComplete: A
                                     });
                                 },

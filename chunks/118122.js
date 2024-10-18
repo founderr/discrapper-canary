@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(155409),
     p = n(430824),
     f = n(594174),
-    m = n(40153),
-    _ = n(603592),
+    _ = n(40153),
+    m = n(603592),
     g = n(981631),
     C = n(675999),
     I = n(689938),
@@ -48,7 +48,7 @@ function S(e) {
         T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
         { analyticsLocations: b } = (0, o.ZP)(),
         A = (0, a.useRedesignIconContext)().enabled,
-        M = (0, i.jsx)(_.Z, {
+        M = (0, i.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -79,7 +79,7 @@ function S(e) {
                   children: [
                       M,
                       null != n &&
-                          (0, i.jsx)(m.ZP, {
+                          (0, i.jsx)(_.ZP, {
                               name: I.Z.Messages.DND_END_OF_LIST,
                               targetNode: n,
                               below: !0,

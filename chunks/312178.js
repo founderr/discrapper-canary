@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-let C = {
+let S = {
     [Z.Odu.TEXT](e) {
         let { dragging: t, locked: n, pinned: s, dragStart: r } = e;
         return (0, i.jsx)(m.Z, {
@@ -68,7 +68,7 @@ let C = {
         });
     }
 };
-class S extends s.PureComponent {
+class C extends s.PureComponent {
     componentDidUpdate(e) {
         this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.Z.track(Z.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({ lastLayoutUpdate: null }));
     }
@@ -77,7 +77,7 @@ class S extends s.PureComponent {
                 props: { locked: i, isPreviewingInGame: s },
                 state: { dragging: r }
             } = this,
-            a = C[e.type];
+            a = S[e.type];
         if (null == a) throw Error('OverlayLayout: Widget does not exist in WidgetMap');
         return (o) =>
             a({
@@ -103,7 +103,7 @@ class S extends s.PureComponent {
                 isPreviewingInGame: r,
                 pinned: l
             }),
-            C = {
+            S = {
                 minX: 0,
                 minY: 0,
                 maxX: n.width,
@@ -113,7 +113,7 @@ class S extends s.PureComponent {
             id: o,
             size: f,
             anchor: _,
-            container: C,
+            container: S,
             minSize: E,
             hidden: !v,
             resizeX: m,
@@ -184,7 +184,7 @@ let x = r.ZP.connectStores([d.Z, u.Z], (e) => {
         isPreviewingInGame: u.Z.isPreviewingInGame(),
         isActiveRegion: null != n && n.type === Z.Odu.TEXT && i.has(Z.O0n.TEXT_WIDGET)
     };
-})(S);
+})(C);
 function T(e, t) {
     return (0, i.jsx)(
         x,

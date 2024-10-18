@@ -41,12 +41,12 @@ let _ = (e) => {
             i.useEffect(() => {
                 N && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
             }, [t, N]);
-        let O = (0, r.Z)();
+        let v = (0, r.Z)();
         i.useEffect(
             () => () => {
-                _ ? !O() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
+                _ ? !v() && (A || C.length > 100) && (0, o.jF)() : n && C.length > 100 && (0, o.jF)();
             },
-            [n, C, _, O, A]
+            [n, C, _, v, A]
         ),
             i.useEffect(() => {
                 let e = m && t;
@@ -58,7 +58,7 @@ let _ = (e) => {
                         everyone_filter: R
                     });
             }, [N, m, t, E, x, R, I]);
-        let v = i.useCallback(
+        let O = i.useCallback(
             async (e) => {
                 !T.current &&
                     N &&
@@ -88,7 +88,7 @@ let _ = (e) => {
             loading: p,
             items: C,
             hasMore: g,
-            loadMore: v,
+            loadMore: O,
             loadingMore: f,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);

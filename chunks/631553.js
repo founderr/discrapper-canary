@@ -23,8 +23,8 @@ var s = n(735250),
     I = n(425493),
     Z = n(951483),
     v = n(714338),
-    C = n(185666),
-    S = n(100527),
+    S = n(185666),
+    C = n(100527),
     x = n(906732),
     T = n(146282),
     N = n(600164);
@@ -134,7 +134,7 @@ class e_ extends r.Component {
         m.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        m.Z.startSession(), L.Z.initialize(), C.Z.initialize(), M.Z.initialize();
+        m.Z.startSession(), L.Z.initialize(), S.Z.initialize(), M.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -214,7 +214,7 @@ class e_ extends r.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eu, !1), L.Z.terminate(), C.Z.terminate(), M.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eu, !1), L.Z.terminate(), S.Z.terminate(), M.Z.terminate();
     }
     renderInvalidSizeMessage() {
         return (0, s.jsx)(N.Z, {
@@ -329,7 +329,7 @@ function eE() {
         p = (0, f.e7)([T.Z], () => null != T.Z.getLastFeedFetchDate(ea.YN.GAME_PROFILE_FEED)),
         E = (0, f.e7)([j.Z], () => (0, y.Z)(j.Z)),
         g = (0, f.e7)([b.Z], () => null != b.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: m } = (0, x.ZP)(S.Z.OVERLAY),
+        { analyticsLocations: m } = (0, x.ZP)(C.Z.OVERLAY),
         { showKeybindIndicators: I, dismissKeybindNotification: Z } = (0, q.K)();
     return (0, s.jsx)(x.Gt, {
         value: m,

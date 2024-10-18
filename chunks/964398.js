@@ -98,7 +98,7 @@ function f(e, t, n) {
     let i = e * t;
     return e > 0.5 ? i - n : e < 0.5 ? i : i - n / 2;
 }
-let m = (e, t) => {
+let _ = (e, t) => {
     let n = Math.abs(t.x),
         i = (180 / Math.PI) * Math.atan2(Math.abs(t.y), n),
         l = e / 2 - 28.8;
@@ -108,7 +108,7 @@ let m = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: _, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: x = !0, children: S } = e,
+    let { wheelWidth: t, wheelHeight: n, itemWidth: m, itemHeight: g, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: x = !0, children: S } = e,
         v = l.useRef(null),
         Z = l.useRef([]),
         T = l.useRef(!1),
@@ -155,7 +155,7 @@ t.Z = l.memo(function (e) {
                 },
                 l = i.x < 0,
                 r = i.y < 0,
-                a = m(n, i),
+                a = _(n, i),
                 s = l ? Math.max(i.x, -a.x) : Math.min(i.x, a.x);
             L({
                 x: s / 2,
@@ -213,7 +213,7 @@ t.Z = l.memo(function (e) {
                 P[A].map((e, l) => {
                     let r = h[l];
                     if (null == r) throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
-                    let a = f(r.x, t, _),
+                    let a = f(r.x, t, m),
                         s = f(r.y, n, g);
                     return (0, i.jsx)(
                         'div',
@@ -223,7 +223,7 @@ t.Z = l.memo(function (e) {
                             style: {
                                 left: a,
                                 top: s,
-                                width: _,
+                                width: m,
                                 height: g
                             },
                             children: e
@@ -231,7 +231,7 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [P, A, t, _, n, g, S.length, O]
+            [P, A, t, m, n, g, S.length, O]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,

@@ -7,7 +7,7 @@ var s,
 let c = !1,
     u = null,
     d = null;
-class h extends (a = l.ZP.Store) {
+class _ extends (a = l.ZP.Store) {
     getState() {
         return {
             verifySuccess: c,
@@ -17,7 +17,7 @@ class h extends (a = l.ZP.Store) {
     }
 }
 (i = 'HubEmailVerificationStore'),
-    (r = 'displayName') in (s = h)
+    (r = 'displayName') in (s = _)
         ? Object.defineProperty(s, r, {
               value: i,
               enumerable: !0,
@@ -25,7 +25,7 @@ class h extends (a = l.ZP.Store) {
               writable: !0
           })
         : (s[r] = i),
-    (t.Z = new h(o.Z, {
+    (t.Z = new _(o.Z, {
         HUB_VERIFY_EMAIL_SUCCESS: function (e) {
             let { guildId: t } = e;
             (c = !0), (u = null), (d = t);

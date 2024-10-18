@@ -13,8 +13,8 @@ var r = n(481060),
     c = n(230224),
     u = n(258356),
     d = n(981631),
-    h = n(689938),
-    _ = n(39578);
+    _ = n(689938),
+    h = n(39578);
 let E = (e) => {
     let { state: t } = e;
     switch (t) {
@@ -29,8 +29,8 @@ function g(e) {
     let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
     if (null == t) return null;
     let p = null != t.guild ? new l.ZP(t.guild) : null,
-        f = null != t.channel ? (0, a.jD)(t.channel) : null,
-        m = null != t.target_application ? new i.Z(t.target_application) : null,
+        m = null != t.channel ? (0, a.jD)(t.channel) : null,
+        f = null != t.target_application ? new i.Z(t.target_application) : null,
         I = g || null == t.inviter ? null : new o.Z(t.inviter),
         N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         T = E(t),
@@ -38,21 +38,21 @@ function g(e) {
             invite: t,
             user: I,
             guild: p,
-            channel: f,
-            application: m
+            channel: m,
+            application: f
         };
     return (0, c.JI)(t)
         ? (0, s.jsx)(u.Z, {
               invite: t,
-              channel: f,
+              channel: m,
               isSubmitting: T,
               onAcceptInvite: n
           })
         : (0, s.jsxs)('div', {
-              className: _.container,
+              className: h.container,
               children: [
                   (0, s.jsx)(c.GB, {
-                      application: m,
+                      application: f,
                       guild: p,
                       user: N || (0, c.X7)(t) ? I : null
                   }),
@@ -70,8 +70,8 @@ function g(e) {
                   (0, s.jsx)(r.Button, {
                       onClick: n,
                       submitting: T,
-                      className: _.acceptButton,
-                      children: h.Z.Messages.INSTANT_INVITE_ACCEPT
+                      className: h.acceptButton,
+                      children: _.Z.Messages.INSTANT_INVITE_ACCEPT
                   })
               ]
           });

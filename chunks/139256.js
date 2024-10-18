@@ -1,6 +1,6 @@
 n.d(t, {
     $e: function () {
-        return P;
+        return b;
     },
     $w: function () {
         return y;
@@ -43,7 +43,7 @@ var i,
     A = n(981631),
     x = n(689938),
     R = n(142822);
-function O(e) {
+function v(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)('ul', {
         'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
@@ -51,7 +51,7 @@ function O(e) {
         children: n
     });
 }
-function v(e) {
+function O(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)('div', {
         'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
@@ -97,7 +97,7 @@ function Z(e) {
         children: i
     });
 }
-function P(e) {
+function b(e) {
     let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: i, canTapAnswers: a, hasSelectedAnyAnswer: r, className: l, answerClassName: u, renderAnswerContent: d } = e,
         { ContainerComponent: _, answerElementType: E } = (0, c.EQ)({
             canTapAnswers: a,
@@ -108,7 +108,7 @@ function P(e) {
                 answerElementType: 1
             }))
             .with({ answersInteraction: C.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: v,
+                ContainerComponent: O,
                 answerElementType: 2
             }))
             .with(
@@ -117,19 +117,19 @@ function P(e) {
                     answersInteraction: C.Y7.LIST
                 },
                 () => ({
-                    ContainerComponent: O,
+                    ContainerComponent: v,
                     answerElementType: 3
                 })
             )
             .otherwise(() => ({
-                ContainerComponent: O,
+                ContainerComponent: v,
                 answerElementType: 0
             }));
     return (0, s.jsx)(_, {
         className: l,
         children: t.map((e, t) =>
             (0, s.jsx)(
-                b,
+                P,
                 {
                     className: o()(R.__invalid_answer, u),
                     answer: e,
@@ -144,7 +144,7 @@ function P(e) {
         )
     });
 }
-function b(e) {
+function P(e) {
     let { className: t, answer: n, children: i, hasSelectedAnyAnswer: a, isFirstAnswer: l, elementType: c } = e,
         { channelId: u, messageId: d } = (0, g.pE)(),
         _ = (0, g.$B)(n.style),

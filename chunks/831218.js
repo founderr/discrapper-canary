@@ -11,8 +11,8 @@ var i,
     h = n(442837),
     p = n(902704),
     f = n(481060),
-    m = n(925549),
-    _ = n(607070),
+    _ = n(925549),
+    m = n(607070),
     g = n(367907),
     C = n(453542),
     I = n(702321),
@@ -316,7 +316,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && m.Z.updateChannelListScroll(P.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(P.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -400,14 +400,14 @@ t.Z = (e) => {
             []
         );
     (0, S.z)(x.R);
-    let f = (0, h.cj)([_.Z, A.Z, M.Z], () => ({
+    let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
             theme: A.Z.darkSidebar ? P.BRd.DARK : n,
-            keyboardModeEnabled: _.Z.keyboardModeEnabled,
+            keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
         })),
-        m = s.useRef(null),
+        _ = s.useRef(null),
         g = s.useCallback((e) => {
-            let t = m.current,
+            let t = _.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -424,7 +424,7 @@ t.Z = (e) => {
         C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = m.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -433,7 +433,7 @@ t.Z = (e) => {
         I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = m.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -457,7 +457,7 @@ t.Z = (e) => {
         children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
-            listRef: m,
+            listRef: _,
             theme: n,
             version: t,
             ...e,

@@ -107,7 +107,7 @@ function v(e, t) {
             throw Error('getOrientedCoords: Invalid orientation: '.concat(e));
     }
 }
-class C extends (s = o.Component) {
+class S extends (s = o.Component) {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
     }
@@ -153,8 +153,8 @@ class C extends (s = o.Component) {
                     E
                 )
             ),
-            C = d ? (0, u.R)(I) : v('RESIZE_SOUTH_EAST', I);
-        this.setDOMPositions(C), !f && (null != l && l(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
+            S = d ? (0, u.R)(I) : v('RESIZE_SOUTH_EAST', I);
+        this.setDOMPositions(S), !f && (null != l && l(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
     }
     handleResizeMove(e, t) {
         let {
@@ -426,8 +426,8 @@ class C extends (s = o.Component) {
             (this.size = g(e.size, e.minSize.width, e.minSize.height));
     }
 }
-f(C, 'Operations', i),
-    f(C, 'defaultProps', {
+f(S, 'Operations', i),
+    f(S, 'defaultProps', {
         snapOrientation: !0,
         minSize: {
             width: 0,
@@ -445,4 +445,4 @@ f(C, 'Operations', i),
         dragAnywhere: !0,
         active: !0
     }),
-    (t.Z = C);
+    (t.Z = S);

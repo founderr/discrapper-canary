@@ -26,8 +26,8 @@ var i,
     I = n(708690),
     T = n(194359),
     x = n(425493),
-    S = n(461745),
-    v = n(40851),
+    v = n(461745),
+    S = n(40851),
     N = n(367907),
     A = n(43267),
     Z = n(933557),
@@ -35,8 +35,8 @@ var i,
     b = n(313201),
     R = n(366980),
     L = n(703656),
-    P = n(93127),
-    j = n(428598),
+    j = n(93127),
+    P = n(428598),
     O = n(131704),
     y = n(592125),
     D = n(341165),
@@ -266,13 +266,13 @@ class ec extends (i = a.PureComponent) {
             (0, s.jsxs)(M.Z, {
                 className: r()(ee.searchBar, en.marginTop20),
                 children: [
-                    (0, s.jsx)(S.ZP, {
+                    (0, s.jsx)(v.ZP, {
                         ref: this.searchBarRef,
                         className: ee.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? $.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: S.ZP.Sizes.MEDIUM,
+                        size: v.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -485,7 +485,7 @@ class ec extends (i = a.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = j.Z.getUserAffinity(e);
+                let n = P.Z.getUserAffinity(e);
                 return null !== (t = null == n ? void 0 : n.communicationProbability) && void 0 !== t ? t : -1;
             })
         };
@@ -735,7 +735,7 @@ function ed(e) {
     );
     let g = (0, p.e7)([G.default], () => G.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (a.useEffect(() => {
-        (0, P._)();
+        (0, j._)();
     }, []),
     (null !== (t = null == g ? void 0 : g.bot) && void 0 !== t && t) || (null !== (n = null == g ? void 0 : g.isProvisional) && void 0 !== n && n))
         ? null
@@ -777,4 +777,4 @@ function eh(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-ei(ec, 'contextType', v.ZP);
+ei(ec, 'contextType', S.ZP);

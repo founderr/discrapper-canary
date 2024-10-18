@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(91159),
     p = n(488131),
     f = n(496675),
-    m = n(306680),
-    _ = n(594174),
+    _ = n(306680),
+    m = n(594174),
     g = n(768581),
     C = n(709054),
     I = n(981631),
@@ -26,7 +26,7 @@ var i = n(735250),
     x = n(462397);
 function S(e) {
     let { channel: t } = e,
-        r = (0, s.Wu)([d.Z, m.ZP, f.Z], () => {
+        r = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
@@ -34,8 +34,8 @@ function S(e) {
                 .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
                 .filter((t) => !(t.id in e) && f.Z.can(I.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = m.ZP.lastMessageId(e.id),
-                        i = m.ZP.lastMessageId(t.id);
+                    let n = _.ZP.lastMessageId(e.id),
+                        i = _.ZP.lastMessageId(t.id);
                     return C.default.compare(n, i);
                 })
                 .reverse()
@@ -86,7 +86,7 @@ function S(e) {
 }
 function v(e) {
     let { thread: t } = e,
-        n = (0, s.e7)([_.default], () => _.default.getUser(t.ownerId)),
+        n = (0, s.e7)([m.default], () => m.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);
     return (0, i.jsxs)(o.Clickable, {
         className: x.row,

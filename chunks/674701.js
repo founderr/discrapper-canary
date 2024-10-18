@@ -30,11 +30,11 @@ var i,
     A = n(317271),
     x = n(474936),
     R = n(981631),
-    O = n(182294),
-    v = n(689938),
+    v = n(182294),
+    O = n(689938),
     M = n(17500);
 function L(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: P, glow: b, showSecondaryCta: D } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: a, onMouseLeave: l, popoutPosition: L, analyticsPage: Z, analyticsSection: b, glow: P, showSecondaryCta: D } = e,
         j = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: U } = (0, m.ZP)(),
         y = (0, u.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(i.id));
@@ -50,7 +50,7 @@ function L(e) {
         });
     }, [t, n]);
     let B = () => {
-            if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: y });
+            if (t === x.hX.FRIEND_ANNIVERSARY) return O.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: y });
             return (0, g.Ou)(t);
         },
         k = 'coachmark' === n,
@@ -63,13 +63,13 @@ function L(e) {
         W = k ? M.buttonTextPrimaryCoachmark : M.buttonTextPrimary;
     return (0, s.jsx)('div', {
         className: o()(M.content, {
-            [M.outerGlow]: b,
+            [M.outerGlow]: P,
             [M.contentCoachmark]: k
         }),
         onMouseEnter: a,
         onMouseLeave: l,
         children: (0, s.jsxs)('div', {
-            className: o()(G, { [M.innerGlow]: b }),
+            className: o()(G, { [M.innerGlow]: P }),
             children: [
                 (0, s.jsxs)('div', {
                     className: M.subContent,
@@ -81,14 +81,14 @@ function L(e) {
                                     className: F,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: O.EF.SIZE_56
+                                    size: v.EF.SIZE_56
                                 }),
                                 null != j &&
                                     (0, s.jsx)(I.Z, {
                                         className: w,
                                         user: j,
                                         'aria-label': i.username,
-                                        size: O.EF.SIZE_24
+                                        size: v.EF.SIZE_24
                                     })
                             ]
                         }),
@@ -100,7 +100,7 @@ function L(e) {
                                     color: k ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: C.ZP.getName(i) });
+                                        if (t === x.hX.FRIEND_ANNIVERSARY) return O.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: C.ZP.getName(i) });
                                         return (0, g.Ou)(t);
                                     })()
                                 }),
@@ -108,7 +108,7 @@ function L(e) {
                                     className: V,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: y });
+                                        if (t === x.hX.FRIEND_ANNIVERSARY) return O.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: y });
                                         return (0, g.Ou)(t);
                                     })()
                                 })
@@ -134,7 +134,7 @@ function L(e) {
                                         variant: 'text-sm/medium',
                                         className: o()(M.buttonText, M.buttonTextSecondary),
                                         children: (() => {
-                                            if (t === x.hX.FRIEND_ANNIVERSARY) return v.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
+                                            if (t === x.hX.FRIEND_ANNIVERSARY) return O.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
                                         })()
                                     })
                                 })
@@ -152,7 +152,7 @@ function L(e) {
                                     analyticsLocations: U,
                                     analyticsObject: {
                                         page: Z,
-                                        section: P,
+                                        section: b,
                                         object: R.qAy.BUTTON_CTA,
                                         objectType: R.Qqv.GIFT
                                     },
@@ -173,7 +173,7 @@ function L(e) {
                                     (0, s.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
                                         className: o()(M.buttonText, W),
-                                        children: v.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
+                                        children: O.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_PRIMARY_CTA
                                     })
                                 ]
                             })

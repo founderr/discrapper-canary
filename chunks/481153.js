@@ -7,13 +7,13 @@ var s = n(735250),
     c = n(812206),
     u = n(388905),
     d = n(925329),
-    h = n(479446),
-    _ = n(981632),
+    _ = n(479446),
+    h = n(981632),
     E = n(594174),
     g = n(509545),
     p = n(55563),
-    f = n(296848),
-    m = n(981631),
+    m = n(296848),
+    f = n(981631),
     I = n(474936),
     N = n(689938),
     T = n(295242),
@@ -25,7 +25,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
         { subscriptionPlanId: s } = t;
     return {
         sku: n,
-        subscriptionPlan: null != s ? (0, f.oE)(s) : null,
+        subscriptionPlan: null != s ? (0, m.oE)(s) : null,
         application: c.Z.getApplication(n.applicationId),
         gifter: E.default.getUser(t.userId)
     };
@@ -42,8 +42,8 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
         (0, s.jsxs)(r.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, s.jsx)(_.Z, {
-                          defaultAnimationState: h.SR.LOOP,
+                    ? (0, s.jsx)(h.Z, {
+                          defaultAnimationState: _.SR.LOOP,
                           giftStyle: n.giftStyle,
                           className: T.seasonalIcon
                       })
@@ -62,7 +62,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
                               (0, s.jsxs)(u.Dx, {
                                   className: a()(x.marginTop8, A.flexCenter),
                                   children: [
-                                      l.productLine !== m.POd.COLLECTIBLES &&
+                                      l.productLine !== f.POd.COLLECTIBLES &&
                                           (0, s.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: T.applicationIcon,

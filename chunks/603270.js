@@ -32,9 +32,9 @@ var i = n(735250),
     A = n(680005),
     x = n(981631),
     R = n(272242),
-    O = n(689938),
-    v = n(738571);
-let M = P(function (e) {
+    v = n(689938),
+    O = n(738571);
+let M = b(function (e) {
         let { appId: t, message: o } = e,
             d = (0, S.R)(t),
             [_, I, T, f, N, g, A] = (0, s.Wu)(
@@ -53,22 +53,22 @@ let M = P(function (e) {
         }, [_, t, T, I, N]);
         let M = f.subscriptions.length,
             L = f.otps.length,
-            P = a.useMemo(
+            b = a.useMemo(
                 () =>
                     M > 0 && L > 0
-                        ? O.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
+                        ? v.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
                               subCount: M,
                               itemCount: L
                           })
                         : M > 0
-                          ? O.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: M })
+                          ? v.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: M })
                           : L > 0
-                            ? O.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: L })
-                            : O.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
+                            ? v.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: L })
+                            : v.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
                 [L, M]
             );
         if (!d || null == _) return null;
-        let b = () => {
+        let P = () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -82,15 +82,15 @@ let M = P(function (e) {
         };
         return (0, i.jsx)(Z, {
             appName: _.name,
-            title: O.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
-            description: P,
+            title: v.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
+            description: b,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, R.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, C.X)(t, C.B.STORE_EMBED);
             },
             iconSrc: A,
             onIconClick: () => {
-                b(),
+                P(),
                     h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
@@ -98,21 +98,21 @@ let M = P(function (e) {
             },
             children: (0, i.jsx)(r.Button, {
                 onClick: () => {
-                    b(),
+                    P(),
                         h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
                 },
-                className: v.openStoreButton,
-                children: O.Z.Messages.STOREFRONT_OPEN_STORE
+                className: O.openStoreButton,
+                children: v.Z.Messages.STOREFRONT_OPEN_STORE
             })
         });
     }),
-    L = P(function (e) {
+    L = b(function (e) {
         var t, l;
         let { skuId: u, message: m } = e,
-            [N, g, M, L, P, b, D, j] = (0, s.Wu)(
+            [N, g, M, L, b, P, D, j] = (0, s.Wu)(
                 [T.Z, f.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -128,8 +128,8 @@ let M = P(function (e) {
             ),
             U = (0, S.R)(null !== (l = null == g ? void 0 : g.id) && void 0 !== l ? l : '');
         a.useEffect(() => {
-            null == N && !L && !P && (0, o.km)(u);
-        }, [P, L, N, u]),
+            null == N && !L && !b && (0, o.km)(u);
+        }, [b, L, N, u]),
             a.useEffect(() => {
                 if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
             }, [null == g ? void 0 : g.id]);
@@ -193,7 +193,7 @@ let M = P(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              O.Z.Messages.STOREFRONT_USER_SUBSCRIPTION
+                              v.Z.Messages.STOREFRONT_USER_SUBSCRIPTION
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -204,7 +204,7 @@ let M = P(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              O.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+                              v.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
                           ]
                       })
                 : null == M
@@ -238,7 +238,7 @@ let M = P(function (e) {
                     });
             },
             children: (0, i.jsxs)('div', {
-                className: v.skuPurchaseButtons,
+                className: O.skuPurchaseButtons,
                 children: [
                     (0, i.jsx)(r.Button, {
                         color: r.ButtonColors.CUSTOM,
@@ -250,11 +250,11 @@ let M = P(function (e) {
                                     area: 'view_details'
                                 });
                         },
-                        className: v.viewDetailsButton,
-                        children: O.Z.Messages.STOREFRONT_DETAILS
+                        className: O.viewDetailsButton,
+                        children: v.Z.Messages.STOREFRONT_DETAILS
                     }),
                     G
-                        ? null != b
+                        ? null != P
                             ? (0, i.jsx)(A.p, {
                                   onClick: B,
                                   appId: g.id,
@@ -265,12 +265,12 @@ let M = P(function (e) {
                                       color: 'currentcolor'
                                   }),
                                   onHasClicked: Y,
-                                  subscriptionPlan: b,
+                                  subscriptionPlan: P,
                                   cannotOpenReason: k
                               })
                             : (0, i.jsx)(r.Button, {
                                   onClick: V,
-                                  children: O.Z.Messages.STOREFRONT_SUBSCRIBE
+                                  children: v.Z.Messages.STOREFRONT_SUBSCRIBE
                               })
                         : (0, i.jsx)(A.Y, {
                               appId: g.id,
@@ -288,13 +288,13 @@ let M = P(function (e) {
 function Z(e) {
     let { appName: t, title: n, description: a, link: s, iconSrc: l, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, i.jsxs)('div', {
-        className: v.wrapper,
+        className: O.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: v.header,
+                className: O.header,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.headerTitle,
+                        className: O.headerTitle,
                         children: [
                             (0, i.jsx)(r.ShopIcon, { size: 'xxs' }),
                             (0, i.jsx)(r.Text, {
@@ -308,19 +308,19 @@ function Z(e) {
                         (0, i.jsx)(r.Button, {
                             look: r.ButtonLooks.BLANK,
                             size: r.ButtonSizes.ICON,
-                            'aria-label': O.Z.Messages.COPY_LINK,
+                            'aria-label': v.Z.Messages.COPY_LINK,
                             onClick: () => {
-                                (0, N.JG)(s), (0, r.showToast)((0, r.createToast)(O.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
+                                (0, N.JG)(s), (0, r.showToast)((0, r.createToast)(v.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(r.LinkIcon, { size: 'xs' })
                         })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: v.content,
+                className: O.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.contentTextWrapper,
+                        className: O.contentTextWrapper,
                         children: [
                             null != l &&
                                 (0, i.jsx)(r.Button, {
@@ -330,11 +330,11 @@ function Z(e) {
                                     children: (0, i.jsx)('img', {
                                         src: l.href,
                                         alt: '',
-                                        className: v.appIcon
+                                        className: O.appIcon
                                     })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: v.contentText,
+                                className: O.contentText,
                                 style: null == a ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, i.jsx)(r.Text, {
@@ -347,7 +347,7 @@ function Z(e) {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
-                                            className: v.description,
+                                            className: O.description,
                                             children: a
                                         })
                                 ]
@@ -360,7 +360,7 @@ function Z(e) {
         ]
     });
 }
-function P(e) {
+function b(e) {
     return (t) => {
         let { enabled: n } = g.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;

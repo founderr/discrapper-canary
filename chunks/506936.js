@@ -16,18 +16,18 @@ var a = n(442837),
     h = n(607744),
     p = n(594174),
     f = n(981631),
-    m = n(815660),
-    _ = n(689938),
+    _ = n(815660),
+    m = n(689938),
     g = n(816614);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
         { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        v = 0 === t ? _.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
+        v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
         Z = null,
         T = null;
-    return (0 === t && (I ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = _.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = _.Z.Messages.VERIFY_PHONE)) : E ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = _.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (T = _.Z.Messages.OKAY)) : x && ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (T = _.Z.Messages.OKAY))), null == v || null == Z)
+    return (0 === t && (I ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = m.Z.Messages.VERIFY_PHONE)) : E ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (T = m.Z.Messages.OKAY)) : x && ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (T = m.Z.Messages.OKAY))), null == v || null == Z)
         ? null
         : (0, r.jsxs)(s.Dialog, {
               className: g.container,
@@ -69,20 +69,20 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: m.M }
+                                                            { modalKey: _.M }
                                                         )
                                                       : E &&
                                                         (o.Z.verifyResend(),
                                                         (0, s.openModal)((e) => {
                                                             var t;
                                                             return (0, r.jsx)(s.ConfirmModal, {
-                                                                header: _.Z.Messages.VERIFICATION_EMAIL_TITLE,
-                                                                confirmText: _.Z.Messages.OKAY,
+                                                                header: m.Z.Messages.VERIFICATION_EMAIL_TITLE,
+                                                                confirmText: m.Z.Messages.OKAY,
                                                                 confirmButtonColor: s.Button.Colors.BRAND,
                                                                 ...e,
                                                                 children: (0, r.jsx)(s.Text, {
                                                                     variant: 'text-md/normal',
-                                                                    children: _.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
+                                                                    children: m.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
                                                                 })
                                                             });
                                                         })),
@@ -97,7 +97,7 @@ t.Z = (e) => {
                                             onClick: l,
                                             look: s.Button.Looks.BLANK,
                                             className: g.cancel,
-                                            children: _.Z.Messages.NEVERMIND
+                                            children: m.Z.Messages.NEVERMIND
                                         })
                                       : null
                               ]

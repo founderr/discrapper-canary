@@ -40,7 +40,7 @@ function u(e) {
         {
             isFetching: c,
             categories: f,
-            error: _,
+            fetchCategoriesError: _,
             refreshCategories: (0, r.useCallback)(() => {
                 let t = {
                     ...e,

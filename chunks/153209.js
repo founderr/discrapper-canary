@@ -41,15 +41,15 @@ function g(e) {
         A = (0, s.e7)([o.Z], () => o.Z.localItems),
         x = a.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
         R = p.length > 0 ? p[0] : null,
-        O = E.d$.useSetting(),
-        v = a.useMemo(() => {
-            if (null != R && 0 >= m.default.compare(R.id, O)) return !1;
+        v = E.d$.useSetting(),
+        O = a.useMemo(() => {
+            if (null != R && 0 >= m.default.compare(R.id, v)) return !1;
             for (let e of x) {
-                if (0 >= m.default.compare(e.id, O)) break;
-                if (!(0, u.r)(e, O)) return !0;
+                if (0 >= m.default.compare(e.id, v)) break;
+                if (!(0, u.r)(e, v)) return !0;
             }
             return !1;
-        }, [R, O, x]);
+        }, [R, v, x]);
     return (0, i.jsxs)('div', {
         className: N.container,
         children: [
@@ -58,7 +58,7 @@ function g(e) {
                 setTab: t,
                 badgeState: n,
                 closePopout: l,
-                children: v
+                children: O
                     ? (0, i.jsx)(C, {
                           onClick: () => {
                               null != R && (E.d$.updateSetting(R.id), I.default.track(f.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));

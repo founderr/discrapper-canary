@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(319978);
 function N(e) {
     let { cta: s, storeListing: t, className: i } = e,
-        { applicationId: N, benefits: A, description: C } = t,
-        m = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(N, t.thumbnail, 256)), [N, t.thumbnail]),
+        { applicationId: N, benefits: m, description: A } = t,
+        C = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(N, t.thumbnail, 256)), [N, t.thumbnail]),
         { data: g } = (0, d.X)(t.skuId),
         h = a.useMemo(() => {
             if (null == g || 0 === g.length) return null;
@@ -36,9 +36,9 @@ function N(e) {
                       (0, n.jsxs)('div', {
                           className: I.headerTitle,
                           children: [
-                              null != m &&
+                              null != C &&
                                   (0, n.jsx)(c.Image, {
-                                      src: m.href,
+                                      src: C.href,
                                       imageClassName: I.subscriptionImg,
                                       width: 48,
                                       height: 48
@@ -61,19 +61,19 @@ function N(e) {
                   ]
               }),
               children: [
-                  !(0, E.Ew)(C) &&
+                  !(0, E.Ew)(A) &&
                       (0, n.jsx)('div', {
                           className: I.description,
                           children: (0, n.jsx)(S.Z, {
                               variant: 'text-sm/medium',
-                              children: C
+                              children: A
                           })
                       }),
-                  null != A &&
-                      A.length > 0 &&
+                  null != m &&
+                      m.length > 0 &&
                       (0, n.jsx)('div', {
                           className: I.benefits,
-                          children: A.map((e) => {
+                          children: m.map((e) => {
                               let { id: s, name: t, description: a, icon: i } = e;
                               return (0, n.jsx)(
                                   l.G,

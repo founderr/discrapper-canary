@@ -16,8 +16,8 @@ var l = n(735250),
     m = n(706454),
     x = n(374129),
     E = n(639351),
-    v = n(823379),
-    _ = n(379357),
+    _ = n(823379),
+    v = n(379357),
     C = n(192918),
     p = n(22211),
     f = n(561308),
@@ -43,12 +43,12 @@ let R = {
 };
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: y } = e,
-        { largeImage: O } = (0, _.rv)({ entry: n }),
+        { largeImage: O } = (0, v.rv)({ entry: n }),
         { user: j, details: w, appName: b, activity: D } = (0, L.n)(n),
         { primaryColor: U, secondaryColor: H } = (0, I.Z)(null == O ? void 0 : O.src),
         B = (0, r.e7)([m.default], () => m.default.locale),
         { streamPreviewUrl: k, stream: V } = (0, p.Z)(n),
-        { displayParticipants: G, participant1: F, participant2: Y, numOtherParticipants: z } = (0, C.Z)(n, 3),
+        { displayParticipants: F, participant1: G, participant2: Y, numOtherParticipants: z } = (0, C.Z)(n, 3),
         W = a.useCallback(
             (e) => {
                 if ((null == O ? void 0 : O.src) == null || null == t || null == j) return;
@@ -57,21 +57,21 @@ t.Z = (e) => {
                         ? (0, g.VY)({
                               entry: n,
                               channel: t,
-                              users: [F, Y],
+                              users: [G, Y],
                               countOthers: z
                           })
                         : (0, g.HV)(n, t, j);
                 return (0, T.SO)({
                     entry: n,
                     applicationImageSrc: null == O ? void 0 : O.src,
-                    avatarSrcs: G.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                    avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, f.yh)(n, B),
                     colors: [U, H],
                     channelId: e
                 });
             },
-            [null == O ? void 0 : O.src, t, G, n, B, z, F, Y, U, H, j]
+            [null == O ? void 0 : O.src, t, F, n, B, z, G, Y, U, H, j]
         );
     if (null == j) return null;
     let q = null != n.extra.platform ? R[n.extra.platform] : null,
@@ -133,7 +133,7 @@ t.Z = (e) => {
                           })
                   })
                 : null
-        ].filter(v.lm);
+        ].filter(_.lm);
     return (0, l.jsxs)(P.yR, {
         children: [
             K,

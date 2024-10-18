@@ -15,16 +15,16 @@ n.d(t, {
         return M;
     },
     R9: function () {
-        return P;
+        return b;
     },
     RN: function () {
         return y;
     },
     Wl: function () {
-        return v;
+        return O;
     },
     XO: function () {
-        return O;
+        return v;
     },
     Xn: function () {
         return V;
@@ -36,7 +36,7 @@ n.d(t, {
         return j;
     },
     rY: function () {
-        return b;
+        return P;
     },
     sR: function () {
         return B;
@@ -97,11 +97,11 @@ function R(e, t, n) {
         [e, t, n]
     );
 }
-function O(e, t, n, i) {
+function v(e, t, n, i) {
     let a = x('usernameProfile', n, i);
     return R(e.author.id, t.id, a);
 }
-function v(e, t, n, i) {
+function O(e, t, n, i) {
     let a = x('referencedUsernameProfile', n, i);
     return R(null == e ? void 0 : e.author.id, t.id, a);
 }
@@ -121,10 +121,10 @@ function Z(e) {
         [e]
     );
 }
-function P(e, t) {
+function b(e, t) {
     return Z(x('avatarProfile', e, t));
 }
-function b(e, t) {
+function P(e, t) {
     return Z(x('referencedAvatarProfile', e, t));
 }
 function D(e, t) {

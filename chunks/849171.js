@@ -27,8 +27,8 @@ var i,
     I = n(884338),
     T = n(719296),
     x = n(958185),
-    S = n(100527),
-    v = n(906732),
+    v = n(100527),
+    S = n(906732),
     N = n(890280),
     A = n(835473),
     Z = n(522474),
@@ -36,8 +36,8 @@ var i,
     b = n(819640),
     R = n(594174),
     L = n(823379),
-    P = n(5192),
-    j = n(689938),
+    j = n(5192),
+    P = n(689938),
     O = n(456608);
 ((s = i || (i = {}))[(s.SMALL = 0)] = 'SMALL'), (s[(s.MEDIUM = 1)] = 'MEDIUM'), (s[(s.LARGE = 2)] = 'LARGE');
 let y = ['embedded_background'];
@@ -52,7 +52,7 @@ function D(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = P.ZP.getName(n, i, e);
+            let t = j.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -84,9 +84,9 @@ function U(e) {
                 .filter(L.lm)
         ),
         x = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
-        { analyticsLocations: S } = (0, v.ZP)(),
+        { analyticsLocations: v } = (0, S.ZP)(),
         A = (0, d.O)(),
-        Z = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
+        Z = j.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
         b =
             (0, _.s5)({
                 userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -119,11 +119,11 @@ function U(e) {
                 variant: 'text-sm/normal',
                 children:
                     T.length > 1
-                        ? j.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                        ? P.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
                               username: Z,
                               count: T.length - 1
                           })
-                        : j.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
+                        : P.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(O.header, {
@@ -143,7 +143,7 @@ function U(e) {
                                       applicationId: x.applicationId,
                                       activityChannelId: E.id,
                                       locationObject: A.location,
-                                      analyticsLocations: S,
+                                      analyticsLocations: v,
                                       componentId: U
                                   });
                           },
@@ -160,7 +160,7 @@ function U(e) {
                           })(C),
                           className: O.button,
                           color: u.Button.Colors.PRIMARY,
-                          children: j.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+                          children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
                       })
                     : null
             })
@@ -169,7 +169,7 @@ function U(e) {
 }
 function k(e) {
     let { participant: t, width: n, selected: i, interactible: s, channel: r } = e,
-        { analyticsLocations: o } = (0, v.ZP)(S.Z.ACTIVITY_TILE),
+        { analyticsLocations: o } = (0, S.ZP)(v.Z.ACTIVITY_TILE),
         { id: u } = t,
         d = (0, f.Z)(),
         h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u,
@@ -195,7 +195,7 @@ function k(e) {
                 (0, C.jy)(e);
             }
         }, [_, d, M]),
-        (0, a.jsx)(v.Gt, {
+        (0, a.jsx)(S.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
                 className: O.container,

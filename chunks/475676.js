@@ -17,8 +17,8 @@ var l = n(735250),
     m = n(246627),
     x = n(709737),
     E = n(69589),
-    v = n(531501),
-    _ = n(463031),
+    _ = n(531501),
+    v = n(463031),
     C = n(689938),
     p = n(835777);
 function f() {
@@ -35,19 +35,19 @@ function f() {
     });
 }
 function T(e) {
-    var t, n, v, p;
+    var t, n, _, p;
     let T,
         { selected: I, channel: N } = e,
         Z = N.guild_id,
         P = (0, h.Z)({
             guildId: Z,
-            leaderboardId: _._,
+            leaderboardId: v._,
             intervalOffset: 0
         }),
         { rankChanges: M } = (0, m.Z)({
             guildId: Z,
-            leaderboardId: _._,
-            intervalStart: null !== (v = null == P ? void 0 : P.interval_start) && void 0 !== v ? v : ''
+            leaderboardId: v._,
+            intervalStart: null !== (_ = null == P ? void 0 : P.interval_start) && void 0 !== _ ? _ : ''
         }),
         L = (0, i.e7)([u.default], () => u.default.getId()),
         [S, A] = a.useMemo(() => {
@@ -110,7 +110,7 @@ function g(e) {
                     })
                 ]
             }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(_.Z, {
                 color: '#5B5A56',
                 children: (0, l.jsx)('img', {
                     src: 'https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png',

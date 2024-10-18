@@ -19,9 +19,9 @@ var a = t(990547),
     S = t(758182),
     I = t(163379),
     N = t(703288),
-    A = t(574755),
-    C = t(377171),
-    m = t(621628),
+    m = t(574755),
+    A = t(377171),
+    C = t(621628),
     g = t(18438),
     h = t(778825),
     O = t(665166),
@@ -73,9 +73,9 @@ var a = t(990547),
     eS = t(593648),
     eI = t(327885),
     eN = t(595242),
-    eA = t(301121),
-    eC = t(463153),
-    em = t(36192),
+    em = t(301121),
+    eA = t(463153),
+    eC = t(36192),
     eg = t(338345),
     eh = t(400287),
     eO = t(554042),
@@ -98,7 +98,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eL.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
-                element: eC.Z,
+                element: eA.Z,
                 predicate: () => ew
             },
             [eL.s6.ACCOUNT_SECURITY_TAB]: {
@@ -266,7 +266,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: ev.Z.Messages.PRIVACY_AND_SAFETY,
                 searchableTitles: [ev.Z.Messages.PRIVACY_AND_SAFETY],
                 ariaLabel: ev.Z.Messages.PRIVACY_AND_SAFETY,
-                element: eA.Z,
+                element: em.Z,
                 predicate: () => !e1
             },
             [eL.s6.PRIVACY_USER_SETTINGS]: {
@@ -564,7 +564,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: ey,
                 newIndicator: (0, n.jsx)(o.TextBadge, {
                     text: ev.Z.Messages.NEW,
-                    color: C.Z.BG_BRAND
+                    color: A.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -584,7 +584,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ev.Z.Messages.AUTH_SESSIONS],
                 label: ev.Z.Messages.AUTH_SESSIONS,
                 ariaLabel: ev.Z.Messages.AUTH_SESSIONS,
-                element: em.Z,
+                element: eC.Z,
                 newIndicatorDismissibleContentTypes: [i.z.AUTH_SESSIONS_NEW],
                 predicate: () => V.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -610,7 +610,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: ev.Z.Messages.CLIPS,
                 ariaLabel: ev.Z.Messages.CLIPS,
                 icon: eY ? (0, n.jsx)(N.Z, {}) : void 0,
-                element: A.Z,
+                element: m.Z,
                 predicate: () => !ek
             },
             [eL.s6.FRIEND_REQUESTS]: {
@@ -1616,7 +1616,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: m.Z,
+                element: C.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [eL.s6.PAYMENT_FLOW_MODALS]: {

@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return P;
+        return j;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(746599),
     T = n(1163),
     x = n(738672),
-    S = n(981631),
-    v = n(37113),
+    v = n(981631),
+    S = n(37113),
     N = n(689938),
     A = n(351065);
 function Z(e) {
@@ -44,8 +44,8 @@ function Z(e) {
         })
     });
 }
-let M = v.LY.RESOLUTION_1440,
-    b = v.ws.FPS_60;
+let M = S.LY.RESOLUTION_1440,
+    b = S.ws.FPS_60;
 function R(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -59,7 +59,7 @@ function R(e) {
                         if (e) {
                             if (
                                 ((0, I.J1)(!(0, C.mc)(M, b)),
-                                f.default.track(S.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -139,7 +139,7 @@ function L(e) {
         ]
     });
 }
-function P(e) {
+function j(e) {
     let { channel: t, ...n } = e,
         { shouldShowOptInPopout: a } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
         { enabled: l } = T.Z.useExperiment(
@@ -155,7 +155,7 @@ function P(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(S.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY

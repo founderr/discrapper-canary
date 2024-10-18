@@ -21,7 +21,7 @@ var r = n(735250),
     b = n(689938),
     E = n(701491),
     v = n(113207);
-class Z extends a.PureComponent {
+class F extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: n, hostname: a } = this.props;
         if (null == e) return (0, r.jsx)(l.Spinner, { type: l.Spinner.Type.SPINNING_CIRCLE });
@@ -106,4 +106,4 @@ t.Z = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
         mediaSessionId: d.Z.getMediaSessionId(),
         hostname: C.Z.getShortHostname(a)
     };
-})(Z);
+})(F);

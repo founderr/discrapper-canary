@@ -8,13 +8,13 @@ var s,
     c = n(481060),
     u = n(129293),
     d = n(388905),
-    h = n(108427),
-    _ = n(598077),
+    _ = n(108427),
+    h = n(598077),
     E = n(896797),
     g = n(981631),
     p = n(930441),
-    f = n(689938),
-    m = n(113207);
+    m = n(689938),
+    f = n(113207);
 function I(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ class N extends (s = i.PureComponent) {
                     let {
                             body: { user: n }
                         } = e,
-                        s = new _.Z(n);
+                        s = new h.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -63,32 +63,32 @@ class N extends (s = i.PureComponent) {
                         busy: !1
                     })
             ),
-            (0, h.e)('disable_email_notifications');
+            (0, _.e)('disable_email_notifications');
     }
     renderBusy() {
         return (0, r.jsx)(d.ZP, { children: (0, r.jsx)(d.Hh, {}) });
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: s } = this.props,
-            i = f.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({ category: t });
+            i = m.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({ category: t });
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: f.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+                    className: f.marginBottom8,
+                    children: m.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
                 }),
                 (0, r.jsx)(d.DK, { children: i }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop20,
+                    className: f.marginTop20,
                     onClick: () => s(n),
-                    children: f.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop8,
+                    className: f.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
                     onClick: () => s(g.Z5c.SETTINGS('notifications', p.vG)),
-                    children: f.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+                    children: m.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
                 })
             ]
         });
@@ -105,17 +105,17 @@ class N extends (s = i.PureComponent) {
                 (0, r.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: m.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+                    className: f.marginBottom8,
+                    children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
                 }),
-                (0, r.jsx)(d.DK, { children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY }),
+                (0, r.jsx)(d.DK, { children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                    className: f.marginTop40,
                     onClick: () => t(e),
-                    children: f.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 })
             ]
         });
@@ -126,17 +126,17 @@ class N extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(105020),
-                    className: m.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+                    className: f.marginBottom8,
+                    children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
                 }),
-                (0, r.jsx)(d.DK, { children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
+                (0, r.jsx)(d.DK, { children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                    className: f.marginTop40,
                     onClick: () => t(e),
-                    children: f.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 })
             ]
         });

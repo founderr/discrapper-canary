@@ -12,8 +12,8 @@ var l = n(735250),
     m = n(561308),
     x = n(644810),
     E = n(206295),
-    v = n(335326),
-    _ = n(297781),
+    _ = n(335326),
+    v = n(297781),
     C = n(591853),
     p = n(410441),
     f = n(689938);
@@ -80,9 +80,9 @@ t.Z = (e) => {
                           Icon: r.CrunchyrollNeutralIcon,
                           'aria-label': f.Z.Messages.CRUNCHYROLL
                       }),
-                      badges: (0, l.jsx)(_.Gk, {
-                          location: _.Gt.POPOUT,
-                          children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                      badges: (0, l.jsx)(v.Gk, {
+                          location: v.Gt.POPOUT,
+                          children: _.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
                       onClickTitle: R,
                       onClickThumbnail: R

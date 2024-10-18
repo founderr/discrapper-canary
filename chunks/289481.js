@@ -99,7 +99,7 @@ let x = a.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: r,
                 channelState: t,
-                children: [(0, i.jsx)(f.Z, { channel: l }), (0, i.jsx)(R, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
+                children: [(0, i.jsx)(f.Z, { channel: l }), (0, i.jsx)(R, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(v, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -146,7 +146,7 @@ function R(e) {
         }
     });
 }
-function O(e) {
+function v(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: a } = e;
     function s() {
         n(t),

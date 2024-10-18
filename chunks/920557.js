@@ -55,7 +55,7 @@ function C(e) {
                 }
             );
     }, [N, S]);
-    let O = (0, i.jsx)(d.Text, {
+    let v = (0, i.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: p.voteCount,
@@ -89,7 +89,7 @@ function C(e) {
                                       'aria-describedby': g ? o : void 0,
                                       look: d.Button.Looks.BLANK,
                                       size: d.Button.Sizes.NONE,
-                                      children: O
+                                      children: v
                                   })
                           }),
                           g &&
@@ -99,7 +99,7 @@ function C(e) {
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: O }),
+                : (0, i.jsx)(i.Fragment, { children: v }),
             (0, i.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',

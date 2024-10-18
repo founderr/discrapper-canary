@@ -29,8 +29,8 @@ var r = n(735250),
     b = n(499848),
     E = n(724392),
     v = n(442580),
-    Z = n(770800),
-    F = n(981631),
+    F = n(770800),
+    Z = n(981631),
     P = n(65154),
     _ = n(689938),
     T = n(701491);
@@ -83,9 +83,9 @@ function I(e, t, n, r, a) {
         }),
         null != s &&
             i.push({
-                section: (0, C.J$)(e, F._s_.TRANSPORT, n),
+                section: (0, C.J$)(e, Z._s_.TRANSPORT, n),
                 label: _.Z.Messages.RTC_DEBUG_TRANSPORT,
-                element: Z.Z,
+                element: F.Z,
                 elementProps: {
                     context: e,
                     index: n
@@ -93,7 +93,7 @@ function I(e, t, n, r, a) {
             }),
         null != d &&
             i.push({
-                section: (0, C.J$)(e, F._s_.OUTBOUND, n),
+                section: (0, C.J$)(e, Z._s_.OUTBOUND, n),
                 label: _.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
                 element: E.Z,
                 elementProps: {
@@ -103,7 +103,7 @@ function I(e, t, n, r, a) {
             }),
         null != m &&
             i.push({
-                section: (0, C.J$)(e, F._s_.CAMERA, n),
+                section: (0, C.J$)(e, Z._s_.CAMERA, n),
                 label: _.Z.Messages.RTC_DEBUG_CAMERA,
                 element: D.Z,
                 elementProps: {
@@ -160,7 +160,7 @@ function B() {
         m = null === (e = n.concat(i).find((e) => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare,
         g = null === (t = i.find((e) => null != e.clips)) || void 0 === t ? void 0 : t.clips,
         y = (0, s.e7)([p.Z], () => p.Z.theme),
-        S = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? F.BRd.DARK : void 0)),
+        S = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? Z.BRd.DARK : void 0)),
         D = (0, s.e7)([C.ZP], () => C.ZP.getSection()),
         b = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()),
         E = (function (e) {
@@ -173,7 +173,7 @@ function B() {
             null != i &&
                 (p.push(g),
                 p.push({
-                    section: F._s_.SCREENSHARE,
+                    section: Z._s_.SCREENSHARE,
                     label: _.Z.Messages.RTC_DEBUG_SCREENSHARE,
                     element: v.Z,
                     elementProps: { screenshare: i }
@@ -181,7 +181,7 @@ function B() {
                 null != o &&
                     (h.push(g),
                     h.push({
-                        section: F._s_.CLIPS,
+                        section: Z._s_.CLIPS,
                         label: _.Z.Messages.RTC_DEBUG_CLIPS,
                         element: R.Z,
                         elementProps: { clips: o }
@@ -211,7 +211,7 @@ function B() {
                         (0, r.jsx)(l.Heading, {
                             className: T.channelName,
                             variant: 'heading-md/normal',
-                            children: c === F.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
+                            children: c === Z.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
                         })
                 },
                 ...d,

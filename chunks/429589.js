@@ -17,8 +17,8 @@ var l = n(735250),
     m = n(592745),
     x = n(592125),
     E = n(757266),
-    v = n(650774),
-    _ = n(430824),
+    _ = n(650774),
+    v = n(430824),
     C = n(283595),
     p = n(496675),
     f = n(699516),
@@ -42,7 +42,7 @@ var l = n(735250),
     U = n(689938);
 function H(e) {
     var t, n;
-    let { activity: H, embeddedActivity: B, user: k, onAction: V, isEmbedded: G = !1, ButtonComponent: F = w.Z, ...Y } = e,
+    let { activity: H, embeddedActivity: B, user: k, onAction: V, isEmbedded: F = !1, ButtonComponent: G = w.Z, ...Y } = e,
         { analyticsLocations: z } = (0, d.ZP)(),
         [W, q] = a.useState(!1),
         J = (0, i.e7)([g.default], () => g.default.getCurrentUser()),
@@ -56,7 +56,7 @@ function H(e) {
         Q = (0, i.e7)(
             [C.Z, m.Z, Z.Z, E.Z],
             () =>
-                G ||
+                F ||
                 (null != X &&
                     (0, M.t)({
                         LibraryApplicationStore: C.Z,
@@ -80,7 +80,7 @@ function H(e) {
             channelId: $,
             application: en
         }),
-        ea = (0, i.e7)([x.Z, _.Z, v.Z, f.Z, T.Z, I.Z, p.Z], () =>
+        ea = (0, i.e7)([x.Z, v.Z, _.Z, f.Z, T.Z, I.Z, p.Z], () =>
             null != B
                 ? el === y.Fw.CAN_JOIN
                 : null != H
@@ -90,10 +90,10 @@ function H(e) {
                         application: en,
                         channelId: $,
                         currentUser: J,
-                        isEmbedded: G,
+                        isEmbedded: F,
                         ChannelStore: x.Z,
-                        GuildStore: _.Z,
-                        GuildMemberCountStore: v.Z,
+                        GuildStore: v.Z,
+                        GuildMemberCountStore: _.Z,
                         RelationshipStore: f.Z,
                         SelectedChannelStore: T.Z,
                         VoiceStateStore: I.Z,
@@ -104,9 +104,9 @@ function H(e) {
         ei = (0, i.e7)([L.ZP], () => Array.from(L.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == B ? void 0 : B.applicationId) && e.channelId === (null == B ? void 0 : B.channelId))),
         er = (0, c.O)(),
         es = !P.isPlatformEmbedded;
-    if (!((0, O.Z)(H, D.xjy.JOIN) || G) || null == X) return null;
-    let eo = !K || (G && !ei),
-        eu = eo && (es || Q) && !W && !ee && (!G || ea),
+    if (!((0, O.Z)(H, D.xjy.JOIN) || F) || null == X) return null;
+    let eo = !K || (F && !ei),
+        eu = eo && (es || Q) && !W && !ee && (!F || ea),
         ec = null;
     eo ? !es && !Q && null != H && (ec = U.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: H.name })) : (ec = U.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF);
     let ed = null !== (n = null == B ? void 0 : B.launchId) && void 0 !== n ? n : null == H ? void 0 : H.session_id,
@@ -143,7 +143,7 @@ function H(e) {
         },
         em = async () => {
             let e = !1;
-            if (G) {
+            if (F) {
                 if (!ea || null == $ || null == X) return;
                 e = await (0, S.Z)({
                     applicationId: X,
@@ -168,7 +168,7 @@ function H(e) {
         },
         ex = ea ? U.Z.Messages.JOIN : U.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;
     return (
-        G && (ex = U.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY),
+        F && (ex = U.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY),
         ei && (ex = U.Z.Messages.EMBEDDED_ACTIVITIES_JOINED),
         (0, l.jsx)(
             r.Tooltip,
@@ -176,7 +176,7 @@ function H(e) {
                 text: ec,
                 children: (e) => {
                     let { onMouseEnter: t, onMouseLeave: n } = e;
-                    return (0, l.jsx)(F, {
+                    return (0, l.jsx)(G, {
                         onClick: em,
                         onMouseEnter: t,
                         onMouseLeave: n,

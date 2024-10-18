@@ -10,10 +10,10 @@ var i = n(735250),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: m, tooltip: _, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
         b = (0, s.Ie)(n),
         [A, M] = l.useState(!1),
-        R = 'string' == typeof _ && null == x ? _ : x;
+        R = 'string' == typeof m && null == x ? m : x;
     return (0, i.jsxs)(u.H, {
         children: [
             E
@@ -21,16 +21,16 @@ let p = l.forwardRef(function (e, t) {
                       className: h.pill,
                       children: (0, i.jsx)(c.Z, {
                           hovered: A,
-                          selected: m
+                          selected: _
                       })
                   })
                 : null,
             (0, i.jsx)(d.Z, {
-                text: _,
-                selected: m,
+                text: m,
+                selected: _,
                 children: (0, i.jsx)(o.BlobMask, {
                     className: h.__invalid_circleButtonMask,
-                    selected: m || A,
+                    selected: _ || A,
                     upperBadge: g,
                     lowerBadge: C,
                     lowerBadgeSize: I,
@@ -43,7 +43,7 @@ let p = l.forwardRef(function (e, t) {
                             null == Z || Z(), M(!1);
                         },
                         onMouseDown: T,
-                        className: a()(h.circleIconButton, N, { [h.selected]: m || A }),
+                        className: a()(h.circleIconButton, N, { [h.selected]: _ || A }),
                         onClick: r,
                         'aria-label': R,
                         onContextMenu: p,

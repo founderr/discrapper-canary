@@ -29,16 +29,16 @@ function f(e) {
         n = t.id,
         r = (0, l.e7)([s.Z], () => s.Z.getRequest(n)),
         f = (0, l.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]),
-        m = (0, l.e7)([c.Z], () => c.Z.isFocused()),
-        _ = (0, l.e7)([o.Z], () => o.Z.getGuildId());
+        _ = (0, l.e7)([c.Z], () => c.Z.isFocused()),
+        m = (0, l.e7)([o.Z], () => o.Z.getGuildId());
     return null == f
         ? null
         : (0, i.jsx)(u.Z, {
               guildNode: t,
               guild: f,
-              animatable: m,
+              animatable: _,
               draggable: !1,
-              selected: n === _,
+              selected: n === m,
               preloadOnClick: !1,
               contextMenu: p,
               lowerBadge: (null == r ? void 0 : r.applicationStatus) === a.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,

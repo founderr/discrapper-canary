@@ -10,7 +10,7 @@ var i = n(735250),
     s = n(481060),
     o = n(466474);
 function c(e) {
-    let { children: t, text: n, color: r, disableWrapper: c = !1, disabled: u = !1, hideOnClick: d = !0, shouldShow: h, forceOpen: p, selected: f = !1, tooltipClass: m, tooltipContentClass: _ } = e;
+    let { children: t, text: n, color: r, disableWrapper: c = !1, disabled: u = !1, hideOnClick: d = !0, shouldShow: h, forceOpen: p, selected: f = !1, tooltipClass: _, tooltipContentClass: m } = e;
     return (0, i.jsx)(s.Tooltip, {
         shouldShow: h,
         forceOpen: p,
@@ -20,8 +20,8 @@ function c(e) {
         position: 'right',
         color: r,
         'aria-label': !1,
-        tooltipClassName: a()(o.listItemTooltip, m),
-        tooltipContentClassName: _,
+        tooltipClassName: a()(o.listItemTooltip, _),
+        tooltipContentClassName: m,
         children: (e) =>
             c
                 ? l.cloneElement(l.Children.only(t), { ...e })

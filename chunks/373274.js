@@ -20,8 +20,8 @@ var i,
     h = n(925549),
     p = n(260300),
     f = n(410575),
-    m = n(607070),
-    _ = n(100527),
+    _ = n(607070),
+    m = n(100527),
     g = n(906732),
     C = n(313201),
     I = n(362658),
@@ -457,7 +457,7 @@ class eo extends (i = r.PureComponent) {
             }),
             es(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
-                    { guild: i, selectedChannel: a, selectedChannelId: s, selectedVoiceChannel: o, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: f, withGuildIcon: m, isRefreshEnabled: _ } = this.props;
+                    { guild: i, selectedChannel: a, selectedChannelId: s, selectedVoiceChannel: o, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: f, withGuildIcon: _, isRefreshEnabled: m } = this.props;
                 if (t === P.wZ) {
                     let e = u.getGuildActionSection(),
                         t = e.getRow(n);
@@ -492,7 +492,7 @@ class eo extends (i = r.PureComponent) {
                                 et.z.GUILD_HOME
                             );
                         case et.z.GUILD_SCHEDULED_EVENTS:
-                            if (_) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 $.Z,
                                 {
@@ -531,7 +531,7 @@ class eo extends (i = r.PureComponent) {
                         case et.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
                             return (0, l.jsx)(F.T, { guild: i });
                         case et.z.CHANNELS_AND_ROLES:
-                            if (_) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 B.m,
                                 {
@@ -551,7 +551,7 @@ class eo extends (i = r.PureComponent) {
                                 et.z.GUILD_DIRECTORY
                             );
                         case et.z.GUILD_MOD_DASH_MEMBER_SAFETY:
-                            if (_) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 N.Z,
                                 {
@@ -592,11 +592,11 @@ class eo extends (i = r.PureComponent) {
                                         disableManageChannels: h,
                                         canBeNewChannel: f && t === u.recentsSectionNumber,
                                         isFavoriteCategory: S,
-                                        withGuildIcon: m
+                                        withGuildIcon: _
                                     }),
                                     I.threadCount > 0
                                         ? (0, l.jsx)(Y.Z, {
-                                              withGuildIcon: m,
+                                              withGuildIcon: _,
                                               channel: v,
                                               sortedThreadIds: I.threadIds,
                                               selectedChannel: null != a && (a.id === I.id || a.parent_id === v.id) ? a : null,
@@ -640,7 +640,7 @@ class eo extends (i = r.PureComponent) {
                                 disableManageChannels: h,
                                 showTutorial: I.isFirstVoiceChannel,
                                 isFavoriteCategory: S,
-                                withGuildIcon: m
+                                withGuildIcon: _
                             },
                             Z
                         );
@@ -722,8 +722,8 @@ class eo extends (i = r.PureComponent) {
 es(eo, 'contextType', o.qB);
 let ec = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
-        a = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        { analyticsLocations: s } = (0, g.ZP)(_.Z.GUILD_CHANNEL_LIST),
+        a = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        { analyticsLocations: s } = (0, g.ZP)(m.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)),
         h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)),
         p = (0, u.e7)([y.Z], () => y.Z.getGuildId()),

@@ -7,9 +7,9 @@ var r = n(70956),
     i = n(564990),
     a = n(353647);
 let s = r.Z.Millis.MINUTE;
-function o(e) {
-    var t, n;
+function o(e, t) {
+    var n, r;
     if (a.Z.isFetchingUserOutbox(e)) return;
-    let r = null !== (n = null === (t = a.Z.getUserOutbox(e)) || void 0 === t ? void 0 : t.lastFetched) && void 0 !== n ? n : 0;
-    if (!(Date.now() - r < s)) return (0, i.JX)(e);
+    let o = null !== (r = null === (n = a.Z.getUserOutbox(e)) || void 0 === n ? void 0 : n.lastFetched) && void 0 !== r ? r : 0;
+    if (!(Date.now() - o < s)) return (0, i.JX)(e, t);
 }

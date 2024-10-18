@@ -118,7 +118,7 @@ function x(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: S, allEntriesCount: v, isLoading: N } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: v, allEntriesCount: S, isLoading: N } = e,
         A = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != A && A.hasFeature(_.oNc.SHARD)
         ? (0, i.jsx)(x, {
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                       {
                                           className: g.tabBarItem,
                                           id: m.AR.ALL,
-                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(S, ')')
                                       },
                                       m.AR.ALL
                                   ),
@@ -165,7 +165,7 @@ t.Z = (e) => {
                                           {
                                               className: g.tabBarItem,
                                               id: t,
-                                              children: ''.concat(n, ' ').concat(null != S[t] ? '('.concat(S[t], ')') : '')
+                                              children: ''.concat(n, ' ').concat(null != v[t] ? '('.concat(v[t], ')') : '')
                                           },
                                           t
                                       );

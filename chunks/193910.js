@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return j;
     }
 }),
     n(653041),
@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(403182),
     T = n(127654),
     x = n(752305),
-    S = n(951211),
-    v = n(981631),
+    v = n(951211),
+    S = n(981631),
     N = n(921944),
     A = n(489887),
     Z = n(689938),
@@ -74,11 +74,11 @@ function L() {
         })
     );
 }
-function P(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: P, setValue: j, openClips: O } = e,
+function j(e) {
+    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     s.useEffect(() => {
-        g.default.track(v.rMx.OPEN_POPOUT, {
+        g.default.track(S.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -88,7 +88,7 @@ function P(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function U() {
-        g.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), j('/', (0, x.JM)('/'));
+        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, x.JM)('/'));
     }
     function k() {
         O();
@@ -108,7 +108,7 @@ function P(e) {
             );
     }
     function B() {
-        g.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -117,10 +117,10 @@ function P(e) {
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: {
-                    page: t.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-                    section: v.jXE.CHANNEL_TEXT_AREA,
-                    object: v.qAy.CONTEXT_MENU_ITEM,
-                    objectType: v.Qqv.ACTIVITY
+                    page: t.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                    section: S.jXE.CHANNEL_TEXT_AREA,
+                    object: S.qAy.CONTEXT_MENU_ITEM,
+                    objectType: S.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -129,11 +129,11 @@ function P(e) {
             (0, u.w1)({ guildId: t.guild_id });
     }
     function H() {
-        let e = P,
+        let e = j,
             n = 'txt',
             i = '',
-            s = P.match(R);
-        null != s && ((i = s[1]), (n = s[2]), (e = s[3]), (i += s[4])), (0, T.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
+            s = j.match(R);
+        null != s && ((i = s[1]), (n = s[2]), (e = s[3]), (i += s[4])), (0, T.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
@@ -164,7 +164,7 @@ function P(e) {
                 ]
             });
             switch (e.type) {
-                case S.r.UPLOAD_A_FILE:
+                case v.r.UPLOAD_A_FILE:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -174,8 +174,8 @@ function P(e) {
                         },
                         'upload-file'
                     );
-                case S.r.UPLOAD_TEXT_AS_FILE:
-                    if ('' === P) return null;
+                case v.r.UPLOAD_TEXT_AS_FILE:
+                    if ('' === j) return null;
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -185,7 +185,7 @@ function P(e) {
                         },
                         'upload-text-as-file'
                     );
-                case S.r.CLIPS:
+                case v.r.CLIPS:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -195,7 +195,7 @@ function P(e) {
                         },
                         'clips'
                     );
-                case S.r.POLL:
+                case v.r.POLL:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -205,7 +205,7 @@ function P(e) {
                         },
                         'poll'
                     );
-                case S.r.INVITE_TO_PLAY_GAME:
+                case v.r.INVITE_TO_PLAY_GAME:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -215,18 +215,18 @@ function P(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Join Invite',
                                         application_id: n.application_id,
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.JOIN, y))
+                                    b(n, t, S.mFx.JOIN, y))
                                 );
                             }
                         },
                         'play'
                     );
-                case S.r.INVITE_TO_LISTEN:
+                case v.r.INVITE_TO_LISTEN:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -236,17 +236,17 @@ function P(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Listen Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.LISTEN, y))
+                                    b(n, t, S.mFx.LISTEN, y))
                                 );
                             }
                         },
                         'listen'
                     );
-                case S.r.INVITE_TO_WATCH:
+                case v.r.INVITE_TO_WATCH:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -256,17 +256,17 @@ function P(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Watch Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.WATCH, y))
+                                    b(n, t, S.mFx.WATCH, y))
                                 );
                             }
                         },
                         'watch'
                     );
-                case S.r.CREATE_THREAD:
+                case v.r.CREATE_THREAD:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -276,7 +276,7 @@ function P(e) {
                         },
                         'THREAD'
                     );
-                case S.r.SLASH_COMMAND:
+                case v.r.SLASH_COMMAND:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -286,7 +286,7 @@ function P(e) {
                         },
                         'SLASH_COMMAND'
                     );
-                case S.r.ACTIVITY:
+                case v.r.ACTIVITY:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {

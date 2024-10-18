@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return b;
     }
 }),
     n(411104),
@@ -29,8 +29,8 @@ var i,
     A = n(701560),
     x = n(981631),
     R = n(689938),
-    O = n(217437);
-function v(e, t, n) {
+    v = n(217437);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -112,13 +112,13 @@ class Z extends (a = l.Component) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: i, size: a, customDisabledColor: s, tooltipPosition: l } = this.props;
         return (0, r.jsxs)('div', {
-            className: O.disabledButtonWrapper,
+            className: v.disabledButtonWrapper,
             children: [
                 (0, r.jsxs)(u.Button, {
                     className: n,
                     fullWidth: i,
                     size: a,
-                    color: null != s ? s : O.disabledButtonColor,
+                    color: null != s ? s : v.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
@@ -127,7 +127,7 @@ class Z extends (a = l.Component) {
                     position: l,
                     children: (e) =>
                         (0, r.jsx)('div', {
-                            className: O.disabledButtonOverlay,
+                            className: v.disabledButtonOverlay,
                             ...e
                         })
                 })
@@ -145,7 +145,7 @@ class Z extends (a = l.Component) {
             size: u.Progress.Sizes.XSMALL,
             foregroundColor: n.paused ? c.Z.unsafe_rawColors.PRIMARY_500.css : c.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: c.Z.unsafe_rawColors.TRANSPARENT.css,
-            className: O.progress
+            className: v.progress
         });
     }
     renderActionButton(e, t) {
@@ -179,8 +179,8 @@ class Z extends (a = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            v(this, '_uninstallStringIndex', null),
-            v(this, 'handleAddToLibrary', async () => {
+            O(this, '_uninstallStringIndex', null),
+            O(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
                     await d.h(e.id, e.branchId, e.getFlags() & ~x.eHb.HIDDEN), (0, I.uL)(x.Z5c.APPLICATION_LIBRARY);
@@ -188,26 +188,26 @@ class Z extends (a = l.Component) {
                     new E.Z('LibraryApplicationButton').error(e);
                 }
             }),
-            v(this, 'handleInstall', () => {
+            O(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
                 S.installApplication(e.id, e.branchId, t);
             }),
-            v(this, 'handleUpdate', () => {
+            O(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
                 S.updateApplication(e.id, e.branchId);
             }),
-            v(this, 'onClickHandlers', {
+            O(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
                 install: this.handleInstall,
                 update: this.handleUpdate
             }),
-            v(this, 'handleClick', (e, t) => {
+            O(this, 'handleClick', (e, t) => {
                 let { onClick: n } = this.props;
                 null == n || n(e), t(e);
             });
     }
 }
-function P(e) {
+function b(e) {
     let { libraryApplication: t } = e,
         n = (0, _.O)(),
         [i, a] = (0, o.Wu)([h.Z, N.Z], () => [(0, T.i)(t, h.Z, N.Z), h.Z.getState(t.id, t.branchId)], [t]),
@@ -222,11 +222,11 @@ function P(e) {
         hasNoBuild: l
     });
 }
-v(Z, 'defaultProps', {
+O(Z, 'defaultProps', {
     fullWidth: !1,
     size: u.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'
 }),
-    v(Z, 'ButtonStates', i);
+    O(Z, 'ButtonStates', i);

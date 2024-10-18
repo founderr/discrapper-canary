@@ -27,13 +27,13 @@ var i,
     A = n(598077),
     x = n(768581),
     R = n(585483),
-    O = n(55935),
-    v = n(739566),
+    v = n(55935),
+    O = n(739566),
     M = n(421399),
     L = n(310423),
     Z = n(223021),
-    P = n(981631),
-    b = n(689938),
+    b = n(981631),
+    P = n(689938),
     D = n(825193);
 function j(e) {
     let { width: t = 6, height: n = 10, color: i = 'currentColor', className: a, foreground: r } = e;
@@ -158,9 +158,9 @@ function k(e) {
         x = (0, C.t0)(i),
         M = (null == x ? void 0 : x.type) === I.B8.APPLICATION_COMMAND && null != x.target_user ? new A.Z(x.target_user) : null,
         j = (null == x ? void 0 : x.type) === I.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
-        k = (0, v.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, a),
-        G = (0, v.Sw)(M, a),
-        F = r.useMemo(() => (e.compact ? (0, Z.Z)((0, O.vc)(_()(), 'LT')) : null), [e.compact]),
+        k = (0, O.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, a),
+        G = (0, O.Sw)(M, a),
+        F = r.useMemo(() => (e.compact ? (0, Z.Z)((0, v.vc)(_()(), 'LT')) : null), [e.compact]),
         w = (0, m.NX)(a.id),
         V = i.interaction;
     if (null == V || null == k) return null;
@@ -176,7 +176,7 @@ function k(e) {
         );
     };
     if ((null == i ? void 0 : i.activityInstance) === null || (0, g.g)(i))
-        (n = b.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+        (n = P.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: H,
             commandHook: () => {
                 let t = (function (e, t) {
@@ -192,7 +192,7 @@ function k(e) {
                         positionKey: null != i.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
-                            if (i.type === P.uaV.CHAT_INPUT_COMMAND || i.type === P.uaV.INTERACTION_PREMIUM_UPSELL)
+                            if (i.type === b.uaV.CHAT_INPUT_COMMAND || i.type === b.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, s.jsx)(E.Clickable, {
                                     ...n,
                                     tag: 'span',
@@ -222,7 +222,7 @@ function k(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        R.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
+                                        R.S.dispatchToLastSubscribed(b.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, s.jsxs)('div', {
                                         className: o()(D.appLauncherOnboardingCommandName, D.clickable),
@@ -274,10 +274,10 @@ function k(e) {
                 channel: a,
                 guildId: a.guild_id,
                 locationObject: {
-                    page: a.isPrivate() ? P.ZY5.DM_CHANNEL : P.ZY5.GUILD_CHANNEL,
-                    section: P.jXE.CHANNEL_TEXT_AREA,
-                    object: P.qAy.APP_COMMAND,
-                    objectType: P.Qqv.ACTIVITY
+                    page: a.isPrivate() ? b.ZY5.DM_CHANNEL : b.ZY5.GUILD_CHANNEL,
+                    section: b.jXE.CHANNEL_TEXT_AREA,
+                    object: b.qAy.APP_COMMAND,
+                    objectType: b.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -286,7 +286,7 @@ function k(e) {
                 (0, T.w1)({ guildId: a.guild_id });
         };
         n = w
-            ? b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+            ? P.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
                   userHook: H,
                   activityHook: () =>
                       (0, s.jsx)(E.Clickable, {
@@ -294,11 +294,11 @@ function k(e) {
                           onClick: e,
                           children: (0, s.jsx)('div', {
                               className: o()(D.commandName, D.clickable),
-                              children: b.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+                              children: P.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
                           })
                       })
               })
-            : b.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
+            : P.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({ userHook: H });
     }
     return (0, s.jsx)(N.Gt, {
         value: l,

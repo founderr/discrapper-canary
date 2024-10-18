@@ -8,12 +8,12 @@ var s,
     c = n(108427),
     u = n(601964),
     d = n(896797),
-    h = n(129293),
-    _ = n(388905),
+    _ = n(129293),
+    h = n(388905),
     E = n(981631),
     g = n(689938),
     p = n(113207);
-function f(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,9 +27,9 @@ function f(e, t, n) {
     );
 }
 l.ZP.initialize();
-class m extends (s = i.PureComponent) {
+class f extends (s = i.PureComponent) {
     componentDidMount() {
-        let e = (0, h.Z)(this.props.location),
+        let e = (0, _.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
         o.tn
             .post({
@@ -62,27 +62,27 @@ class m extends (s = i.PureComponent) {
             (0, c.e)('disable_server_highlight_notifications');
     }
     renderBusy() {
-        return (0, r.jsx)(_.ZP, { children: (0, r.jsx)(_.Hh, {}) });
+        return (0, r.jsx)(h.ZP, { children: (0, r.jsx)(h.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, r.jsxs)(_.ZP, {
+        return (0, r.jsxs)(h.ZP, {
             children: [
-                (0, r.jsx)(_.Dx, {
+                (0, r.jsx)(h.Dx, {
                     className: p.marginBottom8,
                     children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
                 }),
-                (0, r.jsx)(_.DK, { children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({ guildName: n.name }) }),
-                (0, r.jsx)(_.zx, {
+                (0, r.jsx)(h.DK, { children: g.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({ guildName: n.name }) }),
+                (0, r.jsx)(h.zx, {
                     className: p.marginTop40,
                     onClick: () => t(e),
                     children: g.Z.Messages.CONTINUE_TO_WEBAPP
                 }),
-                (0, r.jsx)(_.zx, {
+                (0, r.jsx)(h.zx, {
                     className: p.marginTop8,
-                    color: _.zx.Colors.LINK,
-                    look: _.zx.Looks.LINK,
+                    color: h.zx.Colors.LINK,
+                    look: h.zx.Looks.LINK,
                     onClick: () => {
                         t(E.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
@@ -93,18 +93,18 @@ class m extends (s = i.PureComponent) {
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(_.ZP, {
+        return (0, r.jsxs)(h.ZP, {
             children: [
-                (0, r.jsx)(_.Ee, {
+                (0, r.jsx)(h.Ee, {
                     src: n(105020),
                     className: p.marginBottom20
                 }),
-                (0, r.jsx)(_.Dx, {
+                (0, r.jsx)(h.Dx, {
                     className: p.marginBottom8,
                     children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
                 }),
-                (0, r.jsx)(_.DK, { children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
-                (0, r.jsx)(_.zx, {
+                (0, r.jsx)(h.DK, { children: g.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
+                (0, r.jsx)(h.zx, {
                     className: p.marginTop40,
                     onClick: () => t(e),
                     children: g.Z.Messages.CONTINUE_TO_WEBAPP
@@ -118,11 +118,11 @@ class m extends (s = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            m(this, 'state', {
                 busy: !0,
                 success: !1,
                 guild: null
             });
     }
 }
-f(m, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(m));
+m(f, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(f));

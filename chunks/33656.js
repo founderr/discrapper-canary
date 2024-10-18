@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 }),
     t(724458);
@@ -19,7 +19,7 @@ var n = t(735250),
     S = t(689938),
     I = t(325582),
     N = t(113207);
-function A(e) {
+function m(e) {
     let { label: s, onChange: t, enabled: a, subLabel: i } = e;
     return (0, n.jsx)(l.FormSwitch, {
         value: !!a,
@@ -28,7 +28,7 @@ function A(e) {
         children: s
     });
 }
-function C() {
+function A() {
     let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
         s = a.createRef(),
         { categories: t, initialized: i } = (0, o.cj)([u.Z], () => u.Z.getEmailSettings());
@@ -39,8 +39,8 @@ function C() {
             null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0);
         }
     }, [i, s, e]);
-    let C = E.M0.reduce((e, s) => e || !!t[s], !1),
-        m = {
+    let A = E.M0.reduce((e, s) => e || !!t[s], !1),
+        C = {
             [E.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [E.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [E.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -59,9 +59,9 @@ function C() {
                       children: [
                           E.Od.map((e) => {
                               let { category: s, label: a, subLabel: i } = e,
-                                  r = m[s],
+                                  r = C[s],
                                   o = (0, n.jsx)(
-                                      A,
+                                      m,
                                       {
                                           label: a(),
                                           subLabel: i(),
@@ -89,7 +89,7 @@ function C() {
                               children: [
                                   (0, n.jsx)(l.Button, {
                                       className: I.marketingUnsubscribeButton,
-                                      disabled: !C,
+                                      disabled: !A,
                                       look: l.ButtonLooks.LINK,
                                       color: l.ButtonColors.LINK,
                                       onClick: _.oc,

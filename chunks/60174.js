@@ -29,8 +29,8 @@ var i = n(735250),
     A = n(474936),
     x = n(689938),
     R = n(96042),
-    O = n(968661);
-function v(e, t, n) {
+    v = n(968661);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,9 +54,9 @@ class M extends a.Component {
             m = (0, N.I5)(I),
             T = E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION;
         !m && E && (T = (0, i.jsx)(_.X, { tooltipText: x.Z.Messages.ADD_BURST_REACTION }));
-        let A = s ? O : R,
-            { canShowImprovedReactionButton: v } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
-            M = v && !this.props.isForumToolbar,
+        let A = s ? v : R,
+            { canShowImprovedReactionButton: O } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
+            M = O && !this.props.isForumToolbar,
             L = {
                 size: 'sm',
                 color: 'currentColor',
@@ -98,16 +98,16 @@ class M extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'state', { isReactionPickerActive: !1 }),
-            v(this, 'onAddReaction', (e, t) => {
+            O(this, 'state', { isReactionPickerActive: !1 }),
+            O(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: i, isForumToolbar: a } = this.props;
                 (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            v(this, 'handleReactionPickerToggle', () => {
+            O(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            v(this, 'handleAddReactionClick', (e) => {
+            O(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let i = f.default.getCurrentUser();
@@ -123,7 +123,7 @@ class M extends a.Component {
                     }),
                     this.handleReactionPickerToggle();
             }),
-            v(this, 'renderReactionPopout', (e) => {
+            O(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
                     { type: n, channel: a, message: s } = this.props,
                     r = {

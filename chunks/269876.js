@@ -19,9 +19,9 @@ var n = t(735250),
     S = t(65154),
     I = t(689938),
     N = t(393752),
-    A = t(752325),
-    C = t(739017),
-    m = t(113207);
+    m = t(752325),
+    A = t(739017),
+    C = t(113207);
 let g = (0, E.hQ)();
 function h() {
     let [e, s] = a.useState(-100),
@@ -66,7 +66,7 @@ function h() {
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': g,
             children: (0, n.jsxs)('div', {
-                className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar, A.bar),
+                className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar, m.bar),
                 children: [
                     (0, n.jsx)('div', {
                         className: r()(N.fill, N.inputSensitivityBarFill),
@@ -88,7 +88,7 @@ function h() {
                     }),
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: m.marginBottom8,
+                        className: C.marginBottom8,
                         children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
@@ -99,7 +99,7 @@ function h() {
                 (0, n.jsx)(_.FormTitle, {
                     id: g,
                     tag: _.FormTitleTags.H5,
-                    className: m.marginBottom8,
+                    className: C.marginBottom8,
                     children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
                 (0, n.jsxs)('div', {
@@ -108,11 +108,11 @@ function h() {
                             (0, n.jsx)(E.FG, {
                                 children: (e) =>
                                     (0, n.jsxs)('div', {
-                                        className: r()(C.horizontal, m.marginBottom4),
+                                        className: r()(A.horizontal, C.marginBottom4),
                                         children: [
                                             (0, n.jsx)(_.FormTitle, {
                                                 tag: _.FormTitleTags.H3,
-                                                className: m.marginReset,
+                                                className: C.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
                                                     children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -132,7 +132,7 @@ function h() {
                 !x &&
                     (0, n.jsx)(_.FormText, {
                         type: _.FormText.Types.DESCRIPTION,
-                        className: r()(N.inputDisabledWarning, m.marginBottom8),
+                        className: r()(N.inputDisabledWarning, C.marginBottom8),
                         children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: () => u.Z.enable(!0) })
                     })
             ]

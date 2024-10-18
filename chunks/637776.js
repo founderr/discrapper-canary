@@ -13,20 +13,20 @@ var s = n(735250),
     c = n(703656),
     u = n(108427),
     d = n(844800),
-    h = n(580497),
-    _ = n(981631),
+    _ = n(580497),
+    h = n(981631),
     E = n(689938),
     g = n(71188);
 function p(e) {
     let { location: t } = e,
-        [p, f] = r.useState(!1),
-        { verifySuccess: m, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
+        [p, m] = r.useState(!1),
+        { verifySuccess: f, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
     r.useEffect(() => {
         let e = (0, l.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let T = () => {
-        (0, h.Z)(N), f(!0);
+        (0, _.Z)(N), m(!0);
     };
     return p
         ? (0, s.jsxs)(o.ZP, {
@@ -41,12 +41,12 @@ function p(e) {
                   }),
                   (0, s.jsx)(o.zx, {
                       className: g.spacedButton,
-                      onClick: () => (0, c.uL)(_.Z5c.CHANNEL(N)),
+                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(N)),
                       children: E.Z.Messages.CONTINUE_TO_WEBAPP
                   })
               ]
           })
-        : m
+        : f
           ? (0, s.jsxs)(o.ZP, {
                 children: [
                     (0, s.jsx)(o.Ee, {

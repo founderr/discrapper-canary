@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(442837),
     p = n(902704),
     f = n(846519),
-    m = n(481060),
-    _ = n(925549),
+    _ = n(481060),
+    m = n(925549),
     g = n(209613),
     C = n(100527),
     I = n(906732),
@@ -150,7 +150,7 @@ class el {
                 let e = this.scrollerRef.current;
                 if (null == e) return;
                 let { scrollTop: t } = e.getScrollerState();
-                _.Z.updateGuildListScrollTo(t), this.onScroll();
+                m.Z.updateGuildListScrollTo(t), this.onScroll();
             }, 200)),
             (this._handleScrollThrottled = o().throttle(() => {
                 let e = this.scrollerRef.current;
@@ -172,8 +172,8 @@ function er(e) {
         }),
         d = (0, h.e7)([v.Z], () => v.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        _ = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
-        g = p.concat(_),
+        m = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        g = p.concat(m),
         $ = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
         ee = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
@@ -186,8 +186,8 @@ function er(e) {
         [eu, ed] = l.useState(!1),
         { clanDiscoveryEnabled: eh } = (0, N.nk)('guilds_bar'),
         { ref: ep, ...ef } = (0, u.OP)(),
-        em = (0, m.useFocusJumpSection)(),
-        [e_, eg] = l.useState(!1),
+        e_ = (0, _.useFocusJumpSection)(),
+        [em, eg] = l.useState(!1),
         eC = l.useMemo(
             () =>
                 new el(
@@ -301,7 +301,7 @@ function er(e) {
         );
     return (0, i.jsx)(I.Gt, {
         value: eI,
-        children: (0, i.jsx)(m.ThemeProvider, {
+        children: (0, i.jsx)(_.ThemeProvider, {
             theme: s,
             children: (e) =>
                 (0, i.jsx)('nav', {
@@ -310,7 +310,7 @@ function er(e) {
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
                         ...ef,
-                        ...em,
+                        ...e_,
                         role: 'tree',
                         className: J.tree,
                         children: [
@@ -321,10 +321,10 @@ function er(e) {
                                 className: J.unreadMentionsIndicatorTop,
                                 barClassName: J.unreadMentionsBar
                             }),
-                            (0, i.jsxs)(m.AdvancedScrollerNone, {
+                            (0, i.jsxs)(_.AdvancedScrollerNone, {
                                 className: a()({
                                     [J.scroller]: !0,
-                                    [J.scrolling]: e_
+                                    [J.scrolling]: em
                                 }),
                                 ref: eC.scrollerRef,
                                 onScroll: eC.handleScroll,
