@@ -344,4 +344,5 @@ var n, r;
     (r.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
     (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
     (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
+    (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
     (t.Z = n);

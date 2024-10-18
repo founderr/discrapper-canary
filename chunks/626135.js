@@ -229,6 +229,10 @@ let A = {
     [f.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
         throttlePeriod: 300000,
         throttleKeys: (e) => [e.location_stack]
+    },
+    [f.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
+        throttlePeriod: 900000,
+        throttleKeys: (e) => [e.channel_id]
     }
 };
 function N(e) {
