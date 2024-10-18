@@ -36,10 +36,17 @@ function a(e, t) {
                 minutes: o.Z.Messages.FRACTIONAL_PREMIUM_DURATION_ENDS_IN_MINUTES
             };
             break;
+        case 3:
+            n = {
+                days: o.Z.Messages.FRACTIONAL_PREMIUM_DURATION_DAYS_SHORT,
+                hours: o.Z.Messages.FRACTIONAL_PREMIUM_DURATION_HOURS_SHORT,
+                minutes: o.Z.Messages.FRACTIONAL_PREMIUM_DURATION_MINUTES_SHORT
+            };
+            break;
         default:
             throw Error('Unknown messageType ('.concat(t, ') when rendering time left'));
     }
     let s = (0, r.Z)(e.toDate(), 60000);
     return (0, l.QX)(s, n);
 }
-((i = s || (s = {}))[(i.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (i[(i.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (i[(i.ENDS_IN = 2)] = 'ENDS_IN');
+((i = s || (s = {}))[(i.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (i[(i.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (i[(i.ENDS_IN = 2)] = 'ENDS_IN'), (i[(i.SHORT_TIME = 3)] = 'SHORT_TIME');

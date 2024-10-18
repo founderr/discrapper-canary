@@ -11,35 +11,38 @@ var n = t(735250),
     E = t(821849),
     T = t(230711),
     S = t(497321),
-    I = t(167354),
-    N = t(15640),
+    I = t(975298),
+    N = t(167354),
+    m = t(15640),
     A = t(600164),
     C = t(925329),
-    m = t(406174),
-    g = t(810762),
-    h = t(681833),
-    O = t(856888),
-    p = t(921801),
-    R = t(246946),
-    x = t(663389),
-    M = t(351402),
-    f = t(853872),
-    D = t(78839),
-    L = t(580130),
-    P = t(626135),
-    b = t(74538),
-    Z = t(639056),
-    v = t(52164),
-    j = t(91430),
-    B = t(474936),
-    U = t(981631),
-    G = t(526761),
-    F = t(726985),
-    y = t(689938),
-    V = t(982241);
-function Y() {
+    g = t(406174),
+    h = t(810762),
+    O = t(681833),
+    p = t(856888),
+    R = t(921801),
+    x = t(246946),
+    M = t(663389),
+    f = t(351402),
+    D = t(853872),
+    L = t(78839),
+    P = t(580130),
+    b = t(626135),
+    Z = t(63063),
+    v = t(74538),
+    j = t(391077),
+    B = t(639056),
+    U = t(52164),
+    G = t(91430),
+    F = t(474936),
+    y = t(981631),
+    V = t(526761),
+    Y = t(726985),
+    k = t(689938),
+    w = t(982241);
+function H() {
     return (0, n.jsx)(l.Card, {
-        className: V.noItemsCard,
+        className: w.noItemsCard,
         type: l.Card.Types.CUSTOM,
         children: (0, n.jsxs)(A.Z, {
             align: A.Z.Align.CENTER,
@@ -47,136 +50,162 @@ function Y() {
                 (0, n.jsx)(C.Z, {
                     game: null,
                     size: C.Z.Sizes.SMALL,
-                    className: V.noItemsIcon
+                    className: w.noItemsIcon
                 }),
                 (0, n.jsx)('span', {
-                    className: V.cardText,
-                    children: y.Z.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
+                    className: w.cardText,
+                    children: k.Z.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
                 })
             ]
         })
     });
 }
-function k() {
-    let e = (0, o.e7)([L.Z], () => L.Z.getForApplication(B.CL));
+function W() {
+    let e = (0, o.e7)([P.Z], () => P.Z.getForApplication(F.CL));
     return (
         a.useEffect(() => {
-            (0, u.yD)(B.CL);
+            (0, u.yD)(F.CL);
         }, []),
         (0, n.jsxs)('section', {
             children: [
                 (0, n.jsx)(l.Heading, {
                     variant: 'heading-md/bold',
-                    className: V.accountCreditTitle,
-                    children: y.Z.Messages.BILLING_SUBSCRIPTION_CREDIT
+                    className: w.accountCreditTitle,
+                    children: k.Z.Messages.BILLING_SUBSCRIPTION_CREDIT
                 }),
                 (0, n.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    className: V.accountCreditDescription,
-                    children: y.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
+                    className: w.accountCreditDescription,
+                    children: k.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
                 }),
-                null != e && b.ZP.hasAccountCredit(e)
-                    ? (0, n.jsx)(Z.Z, {
-                          className: V.accountCredit,
+                null != e && v.ZP.hasAccountCredit(e)
+                    ? (0, n.jsx)(B.Z, {
+                          className: w.accountCredit,
                           entitlements: e
                       })
-                    : (0, n.jsx)(Y, {})
+                    : (0, n.jsx)(H, {})
             ]
         })
     );
 }
-function w() {
-    return (0, n.jsx)('hr', { className: V.hr });
+function K() {
+    return (0, n.jsx)('hr', { className: w.hr });
 }
 s.Z = function () {
-    let e = (0, o.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
-        s = (0, I.Z)({ subscriptionFilter: (e) => j.eS.has(e.status) }),
-        t = s.length > 1,
-        i = (0, o.e7)([f.Z], () => (null != e && null != e.paymentSourceId ? f.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
-        u = (0, o.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
-        A = (0, o.e7)([M.Z], () => M.Z.isBusy),
-        C = (0, N.V)(),
-        L = (0, o.e7)([x.Z], () => x.Z.getSubsection()),
-        b = (0, o.e7)([D.ZP], () => {
+    var e, s;
+    let t = (0, o.e7)([L.ZP], () => L.ZP.getPremiumTypeSubscription()),
+        i = (0, N.Z)({ subscriptionFilter: (e) => G.eS.has(e.status) }),
+        u = i.length > 1,
+        A = (0, o.e7)([D.Z], () => (null != t && null != t.paymentSourceId ? D.Z.getPaymentSource(t.paymentSourceId) : null), [t]),
+        C = (0, o.e7)([L.ZP], () => L.ZP.hasFetchedSubscriptions()),
+        v = (0, o.e7)([f.Z], () => f.Z.isBusy),
+        B = (0, m.V)(),
+        H = (0, o.e7)([M.Z], () => M.Z.getSubsection()),
+        z = (0, o.e7)([L.ZP], () => {
             var e, s;
-            return null !== (s = null === (e = D.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0;
+            return null !== (s = null === (e = L.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0;
         }),
-        Z = (0, o.e7)([D.ZP], () => {
+        Q = (0, o.e7)([L.ZP], () => {
             var e;
-            return Object.values(null !== (e = D.ZP.getSubscriptions()) && void 0 !== e ? e : {})
-                .filter((e) => e.type === U.NYc.GUILD)
-                .filter((e) => e.status !== U.O0b.ENDED).length;
-        });
-    return (a.useEffect(
-        () => (
-            c.Z.wait(() => {
-                (0, E.Y2)(), d.jg(), (0, _.X8)(), d.tZ();
-            }),
-            function () {
-                T.Z.clearSubsection();
-            }
+            return Object.values(null !== (e = L.ZP.getSubscriptions()) && void 0 !== e ? e : {})
+                .filter((e) => e.type === y.NYc.GUILD)
+                .filter((e) => e.status !== y.O0b.ENDED).length;
+        }),
+        { fractionalState: X, endsAt: q } = (0, I.Z)({ forceFetch: !0 }),
+        J = (0, o.e7)([P.Z], () => P.Z.getFractionalPremium(!1));
+    if (
+        (a.useEffect(
+            () => (
+                c.Z.wait(() => {
+                    (0, E.Y2)(), d.jg(), (0, _.X8)(), d.tZ();
+                }),
+                function () {
+                    T.Z.clearSubsection();
+                }
+            ),
+            []
         ),
-        []
-    ),
-    R.Z.enabled)
-        ? (0, n.jsx)(S.Z, {})
-        : u && C
-          ? L === G.cP
-              ? (0, n.jsx)(g.Z, { onGoBack: () => T.Z.clearSubsection() })
-              : L === G.XZ
-                ? (0, n.jsx)(O.Z, { onGoBack: () => T.Z.clearSubsection() })
-                : (0, n.jsx)('div', {
-                      className: V.container,
-                      children: (0, n.jsxs)('div', {
-                          className: V.content,
-                          children: [
-                              t ? (0, n.jsx)(j.Yn, {}) : null,
-                              null != e
-                                  ? (0, n.jsx)(j.ZP, {
-                                        subscription: e,
-                                        paymentSource: i,
-                                        busy: A,
-                                        subscriptions: s
-                                    })
-                                  : (0, n.jsx)(j.MM, {}),
-                              (0, n.jsx)(p.F, {
-                                  setting: F.s6.SUBSCRIPTIONS_CREDITS,
-                                  children: (0, n.jsx)(k, {})
-                              }),
-                              Z > 0 &&
-                                  (0, n.jsxs)(n.Fragment, {
-                                      children: [
-                                          (0, n.jsx)(w, {}),
-                                          (0, n.jsx)(m.Z, {
-                                              count: Z,
-                                              onClickManageSubscription: () => T.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
-                                          })
-                                      ]
-                                  }),
-                              b > 0 &&
-                                  (0, n.jsxs)(n.Fragment, {
-                                      children: [
-                                          (0, n.jsx)(w, {}),
-                                          (0, n.jsx)(h.Z, {
-                                              count: b,
-                                              onClickManageSubscription: () => {
-                                                  T.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), P.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
-                                              }
-                                          })
-                                      ]
-                                  }),
-                              (0, n.jsx)(w, {}),
-                              null != e
-                                  ? (0, n.jsx)(v.Z, {
-                                        subscription: e,
-                                        withOverheadSeparator: !1
-                                    })
-                                  : null
-                          ]
+        x.Z.enabled)
+    )
+        return (0, n.jsx)(S.Z, {});
+    if (!C || !B)
+        return (0, n.jsx)('div', {
+            className: r()(w.container, w.loading),
+            children: (0, n.jsx)(l.Spinner, {})
+        });
+    if (H === V.cP) return (0, n.jsx)(h.Z, { onGoBack: () => T.Z.clearSubsection() });
+    if (H === V.XZ) return (0, n.jsx)(p.Z, { onGoBack: () => T.Z.clearSubsection() });
+    return (0, n.jsx)('div', {
+        className: w.container,
+        children: (0, n.jsxs)('div', {
+            className: w.content,
+            children: [
+                u ? (0, n.jsx)(G.Yn, {}) : null,
+                null != t
+                    ? (0, n.jsx)(G.ZP, {
+                          subscription: t,
+                          paymentSource: A,
+                          busy: v,
+                          subscriptions: i
                       })
-                  })
-          : (0, n.jsx)('div', {
-                className: r()(V.container, V.loading),
-                children: (0, n.jsx)(l.Spinner, {})
-            });
+                    : (0, n.jsx)(G.MM, {}),
+                X === F.a$.FP_ONLY &&
+                    J.length > 0 &&
+                    ((e = J),
+                    (s = q),
+                    (0, n.jsxs)('section', {
+                        children: [
+                            (0, n.jsx)(l.Heading, {
+                                variant: 'heading-md/bold',
+                                className: w.accountCreditTitle,
+                                children: k.Z.Messages.FRACTIONAL_PREMIUM_CREDIT_HEADER
+                            }),
+                            (0, n.jsx)(l.Text, {
+                                variant: 'text-md/normal',
+                                className: w.accountCreditDescription,
+                                children: k.Z.Messages.FRACTIONAL_PREMIUM_CREDIT_DESCRIPTION.format({ helpCenterLink: Z.Z.getArticleURL(y.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                            }),
+                            (0, n.jsx)(j.Z, {
+                                className: w.accountCredit,
+                                entitlements: e,
+                                endsAt: s
+                            })
+                        ]
+                    })),
+                (0, n.jsx)(R.F, {
+                    setting: Y.s6.SUBSCRIPTIONS_CREDITS,
+                    children: (0, n.jsx)(W, {})
+                }),
+                Q > 0 &&
+                    (0, n.jsxs)(n.Fragment, {
+                        children: [
+                            (0, n.jsx)(K, {}),
+                            (0, n.jsx)(g.Z, {
+                                count: Q,
+                                onClickManageSubscription: () => T.Z.setSection(y.oAB.SUBSCRIPTIONS, V.cP)
+                            })
+                        ]
+                    }),
+                z > 0 &&
+                    (0, n.jsxs)(n.Fragment, {
+                        children: [
+                            (0, n.jsx)(K, {}),
+                            (0, n.jsx)(O.Z, {
+                                count: z,
+                                onClickManageSubscription: () => {
+                                    T.Z.setSection(y.oAB.SUBSCRIPTIONS, V.XZ), b.default.track(y.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                }
+                            })
+                        ]
+                    }),
+                (0, n.jsx)(K, {}),
+                null != t
+                    ? (0, n.jsx)(U.Z, {
+                          subscription: t,
+                          withOverheadSeparator: !1
+                      })
+                    : null
+            ]
+        })
+    });
 };
