@@ -1,18 +1,29 @@
-var r = n(774258),
-    i = n(689938),
-    a = n(770676),
-    s = n(483465);
-let o = {
-    experiment: r.Z,
+n.d(t, {
+    O: function () {
+        return r;
+    }
+}),
+    n(47120);
+var r,
+    i,
+    a = n(774258),
+    s = n(689938),
+    o = n(770676),
+    l = n(483465);
+(i = r || (r = {}))[(i.THROW_EMOJI = 0)] = 'THROW_EMOJI';
+let u = {
+    experiment: a.Z,
     startTimeMs: 1730829600000,
     endTimeMs: 1730829600000,
     isDesktopOnly: !0,
     ringtone: 'call_ringing_halloween',
-    getRingtoneSettingsLabel: () => i.Z.Messages.SOUND_INCOMING_RING_HALLOWEEN + ' \uD83C\uDF83',
+    getRingtoneSettingsLabel: () => s.Z.Messages.SOUND_INCOMING_RING_HALLOWEEN + ' \uD83C\uDF83',
     appSpinnerSources: {
-        webmDark: a,
-        webmLight: s
+        webmDark: o,
+        webmLight: l
     },
-    getLoadingTips: () => [i.Z.Messages.HALLOWEEN_LOADING_TEXT_1, i.Z.Messages.HALLOWEEN_LOADING_TEXT_2, i.Z.Messages.HALLOWEEN_LOADING_TEXT_3, i.Z.Messages.HALLOWEEN_LOADING_TEXT_4, i.Z.Messages.HALLOWEEN_LOADING_TEXT_5, i.Z.Messages.HALLOWEEN_LOADING_TEXT_6, i.Z.Messages.HALLOWEEN_LOADING_TEXT_7, i.Z.Messages.HALLOWEEN_LOADING_TEXT_8, i.Z.Messages.HALLOWEEN_LOADING_TEXT_9]
+    getLoadingTips: () => [s.Z.Messages.HALLOWEEN_LOADING_TEXT_1, s.Z.Messages.HALLOWEEN_LOADING_TEXT_2, s.Z.Messages.HALLOWEEN_LOADING_TEXT_3, s.Z.Messages.HALLOWEEN_LOADING_TEXT_4, s.Z.Messages.HALLOWEEN_LOADING_TEXT_5, s.Z.Messages.HALLOWEEN_LOADING_TEXT_6, s.Z.Messages.HALLOWEEN_LOADING_TEXT_7, s.Z.Messages.HALLOWEEN_LOADING_TEXT_8, s.Z.Messages.HALLOWEEN_LOADING_TEXT_9],
+    emojiAnimationType: 0,
+    emojiAnimationTriggers: new Set([':jack_o_lantern:', ':nose:'])
 };
-t.Z = o;
+t.Z = u;

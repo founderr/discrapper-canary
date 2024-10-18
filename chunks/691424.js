@@ -286,14 +286,16 @@ function k(e) {
             let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
             return {
                 react(e, i, a) {
-                    let { key: s } = a;
+                    let { key: s, channelId: o, messageId: l } = a;
                     return e.src
                         ? (0, r.jsx)(
                               S.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
-                                  enableClick: n
+                                  enableClick: n,
+                                  channelId: o,
+                                  messageId: l
                               },
                               s
                           )
@@ -305,22 +307,24 @@ function k(e) {
             let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
             return {
                 react(e, i, a) {
-                    let { key: s, guildId: o, isInteracting: l } = a,
-                        u = E.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
-                    if (null != u) {
-                        let t = u.require_colons;
+                    let { key: s, guildId: o, channelId: l, messageId: u, isInteracting: c } = a,
+                        d = E.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                    if (null != d) {
+                        let t = d.require_colons;
                         e = {
                             ...e,
-                            name: t ? ':'.concat(u.name, ':') : u.name
+                            name: t ? ':'.concat(d.name, ':') : d.name
                         };
                     }
                     return (0, r.jsx)(
                         S.Y,
                         {
-                            isInteracting: l,
+                            isInteracting: c,
                             node: e,
                             tooltipPosition: t,
-                            enableClick: n
+                            enableClick: n,
+                            channelId: l,
+                            messageId: u
                         },
                         s
                     );
