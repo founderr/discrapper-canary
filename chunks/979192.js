@@ -15,6 +15,7 @@ async function o(e, t) {
         },
         i.fy.INFREQUENT_USER_ACTION
     ),
+        await new Promise((e) => setTimeout(e, 300)),
         await s.Z.fetchLeaderboard({
             guildId: e,
             leaderboardId: t,
