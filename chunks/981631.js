@@ -3854,7 +3854,8 @@ let _9 = Object.freeze({
 ((nT = eY || (eY = {}))[(nT.UNPAID = 0)] = 'UNPAID'), (nT[(nT.ACTIVE = 1)] = 'ACTIVE'), (nT[(nT.PAST_DUE = 2)] = 'PAST_DUE'), (nT[(nT.CANCELED = 3)] = 'CANCELED'), (nT[(nT.ENDED = 4)] = 'ENDED'), (nT[(nT.ACCOUNT_HOLD = 6)] = 'ACCOUNT_HOLD'), (nT[(nT.BILLING_RETRY = 7)] = 'BILLING_RETRY'), (nT[(nT.PAUSED = 8)] = 'PAUSED'), (nT[(nT.PAUSE_PENDING = 9)] = 'PAUSE_PENDING');
 let oe = {
     ALL_PAUSE: new Set([9, 8]),
-    ALL_PAUSEABLE: new Set([1, 8])
+    ALL_PAUSEABLE: new Set([1, 8]),
+    INACTIVE: new Set([0, 4, 6, 7])
 };
 ((nd = ex || (ex = {}))[(nd.OPEN = 1)] = 'OPEN'), (nd[(nd.PAID = 2)] = 'PAID'), (nd[(nd.VOID = 3)] = 'VOID'), (nd[(nd.UNCOLLECTIBLE = 4)] = 'UNCOLLECTIBLE'), ((nL = eK || (eK = {})).USER = 'USER'), (nL.GLOBAL = 'GLOBAL'), (nL.ROLE = 'ROLE'), (nL.CHANNEL = 'CHANNEL'), (nL.EMOJI = 'EMOJI'), (nL.EMOJI_PREMIUM_UPSELL = 'EMOJI_PREMIUM_UPSELL'), (nL.SLASH = 'SLASH'), (nL.CHOICE = 'CHOICE'), (nL.STICKER = 'STICKER'), (nL.CHOICE_LOADING = 'CHOICE_LOADING'), (nL.LABEL = 'LABEL');
 let ot = Object.freeze({
