@@ -56,12 +56,11 @@ let T = (function (e) {
             },
             { threshold: 0.7 }
         );
-    function s(e) {
-        let t = o.findDOMNode(e);
+    function s(e, t) {
         if (!!(0, l.k)(t)) n.push([t, e]), a.observe(t);
     }
-    function u(e) {
-        let r = o.findDOMNode(e);
+    function u(e, r) {
+        if (null == r) return;
         a.unobserve(r);
         let i = n.findIndex((t) => {
             let [n, r] = t;
@@ -74,15 +73,16 @@ let T = (function (e) {
             return e.animated && e.autoplay;
         }
         componentDidMount() {
-            this.shouldAutoplay(this.props) && s(this);
+            (this.node = o.findDOMNode(this)), this.shouldAutoplay(this.props) && s(this, this.node);
         }
         componentDidUpdate(e) {
             let t = this.shouldAutoplay(e),
-                n = this.shouldAutoplay(this.props);
-            n !== t && (n ? s(this) : u(this));
+                n = this.shouldAutoplay(this.props),
+                r = o.findDOMNode(this);
+            n !== t ? (n ? (u(this, this.node), s(this, r)) : u(this, this.node), (this.node = r)) : r !== this.node && (u(this, this.node), s(this, r), (this.node = r));
         }
         componentWillUnmount() {
-            this.shouldAutoplay(this.props) && u(this);
+            this.shouldAutoplay(this.props) && null != this.node && u(this, this.node);
         }
         render() {
             let n = t.indexOf(this),
@@ -95,6 +95,20 @@ let T = (function (e) {
                         shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && a
                     })
             });
+        }
+        constructor(...e) {
+            var t, n, r;
+            super(...e),
+                (t = this),
+                (r = void 0),
+                (n = 'node') in t
+                    ? Object.defineProperty(t, n, {
+                          value: r,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0
+                      })
+                    : (t[n] = r);
         }
     };
 })(function (e) {
