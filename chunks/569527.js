@@ -52,6 +52,7 @@ function C(e) {
             let e = E.Z.getSearchResults({
                 query: n,
                 page: 1,
+                pageSize: S.IV,
                 source: r.F.APP_DIRECTORY
             });
             return null != e
