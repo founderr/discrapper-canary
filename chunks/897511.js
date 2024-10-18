@@ -7,6 +7,18 @@ o.r(t),
             return I;
         }
     }),
+    o(642549),
+    o(757143),
+    o(518263),
+    o(970173),
+    o(520712),
+    o(268111),
+    o(941497),
+    o(32026),
+    o(480839),
+    o(744285),
+    o(492257),
+    o(873817),
     o(315314),
     o(610138),
     o(216116),
@@ -15,21 +27,25 @@ o.r(t),
     o(47120);
 var n = o(735250),
     a = o(470079),
-    s = o(544891),
-    r = o(481060),
+    r = o(544891),
+    s = o(481060),
     l = o(464179),
     i = o(479531),
-    d = o(117938),
-    c = o(981631),
+    c = o(117938),
+    d = o(981631),
     u = o(689938),
     _ = o(765819);
 function I(e, t) {
-    let o = URL.createObjectURL(t),
-        n = document.createElement('a');
-    (n.href = o), (n.download = 'receipt_'.concat(e, '.pdf')), document.body.appendChild(n), n.click(), document.body.removeChild(n), URL.revokeObjectURL(o);
+    let o = atob(t.replace(/\s/g, '')),
+        n = new Uint8Array(new ArrayBuffer(o.length));
+    for (let e = 0; e < o.length; e++) n[e] = o.charCodeAt(e);
+    let a = new Blob([n], { type: 'application/pdf' }),
+        r = URL.createObjectURL(a),
+        s = document.createElement('a');
+    (s.href = r), (s.download = 'receipt_'.concat(e, '.pdf')), document.body.appendChild(s), s.click(), document.body.removeChild(s), URL.revokeObjectURL(r);
 }
 async function N(e, t, o) {
-    let n = c.ANM.BILLING_INVOICE_PDF,
+    let n = d.ANM.BILLING_INVOICE_PDF,
         a = t
             ? {
                   name: o.name,
@@ -41,20 +57,19 @@ async function N(e, t, o) {
                   country: o.country
               }
             : null,
-        r = await s.tn.post({
+        s = await r.tn.post({
             url: n,
             body: {
                 payment_id: e,
                 billing_address_override: t ? a : null
             },
-            oldFormErrors: !0,
-            binary: !0
+            oldFormErrors: !0
         });
-    return I(e, r.body), !0;
+    return I(e, s.text), !0;
 }
 function L(e) {
-    let { payment: t, paymentSource: o, ...s } = e,
-        c = {
+    let { payment: t, paymentSource: o, ...r } = e,
+        d = {
             name: '',
             line1: '',
             line2: '',
@@ -63,19 +78,19 @@ function L(e) {
             state: '',
             country: o.country
         },
-        [I, L] = a.useState(c),
-        [E, y] = a.useState(!1),
+        [I, L] = a.useState(d),
+        [y, E] = a.useState(!1),
         [S, O] = a.useState(!1),
-        [T, C] = a.useState(!1),
-        [D, m] = a.useState('');
-    async function h() {
-        C(!0);
+        [T, p] = a.useState(!1),
+        [h, C] = a.useState('');
+    async function D() {
+        p(!0);
         try {
-            await N(M, E, I);
+            await N(m, y, I);
         } catch (o) {
             var e;
             let t = JSON.parse(await o.body.text());
-            m(
+            C(
                 null !==
                     (e = new i.Z({
                         ...o,
@@ -85,62 +100,62 @@ function L(e) {
                     : u.Z.Messages.BILLING_DOWNLOAD_INVOICE_PDF_BUTTON_ERROR
             );
         } finally {
-            C(!1);
+            p(!1);
         }
     }
-    let p = d.C,
-        M = t.id,
-        b = (0, n.jsx)('div', {
-            children: (0, n.jsx)(r.FormSwitch, {
-                value: E,
+    let f = c.C,
+        m = t.id,
+        g = (0, n.jsx)('div', {
+            children: (0, n.jsx)(s.FormSwitch, {
+                value: y,
                 note: u.Z.Messages.BILLING_DOWNLOAD_INVOICE_ADDRESS_OVERRIDE_DESCRIPTION,
-                onChange: y,
+                onChange: E,
                 children: u.Z.Messages.BILLING_DOWNLOAD_INVOICE_ADDRESS_OVERRIDE_TOGGLE
             })
         }),
-        f = E
+        M = y
             ? (0, n.jsx)(l.ZP, {
                   ...I,
                   mode: l.ZP.Modes.CREATE,
-                  layout: p,
+                  layout: f,
                   onBillingAddressChange: function (e, t) {
                       L(e), O(t);
                   },
                   error: null
               })
             : null;
-    return (0, n.jsxs)(r.ModalRoot, {
+    return (0, n.jsxs)(s.ModalRoot, {
         className: _.modal,
-        size: r.ModalSize.DYNAMIC,
-        ...s,
+        size: s.ModalSize.DYNAMIC,
+        ...r,
         children: [
-            (0, n.jsx)(r.ModalHeader, {
+            (0, n.jsx)(s.ModalHeader, {
                 separator: !1,
-                children: (0, n.jsx)(r.Heading, {
+                children: (0, n.jsx)(s.Heading, {
                     variant: 'heading-lg/semibold',
                     children: u.Z.Messages.BILLING_DOWNLOAD_INVOICE
                 })
             }),
-            (0, n.jsxs)(r.ModalContent, {
+            (0, n.jsxs)(s.ModalContent, {
                 className: _.body,
-                children: [b, f]
+                children: [g, M]
             }),
-            (0, n.jsxs)(r.ModalFooter, {
+            (0, n.jsxs)(s.ModalFooter, {
                 children: [
-                    (0, n.jsx)(r.Button, {
+                    (0, n.jsx)(s.Button, {
                         type: 'submit',
-                        color: r.Button.Colors.GREEN,
-                        disabled: E && !S,
-                        onClick: h,
+                        color: s.Button.Colors.GREEN,
+                        disabled: y && !S,
+                        onClick: D,
                         submitting: T,
                         autoFocus: !0,
                         children: u.Z.Messages.BILLING_DOWNLOAD_INVOICE_PDF_BUTTON
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, n.jsx)(s.Text, {
                         color: 'text-danger',
                         className: _.error,
                         variant: 'text-sm/semibold',
-                        children: D
+                        children: h
                     })
                 ]
             })
