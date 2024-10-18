@@ -194,7 +194,7 @@ class J extends i.Component {
                                         render: () => (0, r.jsx)(E.Z, {})
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: $([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK], L.a),
+                                        path: $([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], L.a),
                                         component: F
                                     }),
                                     t
@@ -337,7 +337,11 @@ class J extends i.Component {
                                               path: C.Z5c.APPLICATION_DIRECTORY,
                                               component: q
                                           }),
-                                    (0, r.jsx)(s.AW, { render: Q })
+                                    (0, r.jsx)(s.AW, { render: Q }),
+                                    (0, r.jsx)(s.l_, {
+                                        from: C.Z5c.ACCOUNT_REVERT(''),
+                                        to: C.Z5c.LOGIN
+                                    })
                                 ]
                             })
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: y }) })),

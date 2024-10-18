@@ -7,7 +7,10 @@ n.d(t, {
         return r;
     }
 }),
-    ((a = r || (r = {})).ACTIVITIES = 'impression_activities'),
+    ((a = r || (r = {})).ACCOUNT_REVERT_CHANGE_PASSWORD = 'impression_account_revert_change_password'),
+    (a.ACCOUNT_REVERT_EXPLAINER = 'impression_account_revert_explainer'),
+    (a.ACCOUNT_REVERT_SUCCESS = 'impression_account_revert_success'),
+    (a.ACTIVITIES = 'impression_activities'),
     (a.ACTIVITIES_HAPPENING_NOW = 'impression_activities_happening_now'),
     (a.ACTIVITY_BOOKMARK_SHARE_MODAL = 'impression_activity_bookmark_share_modal'),
     (a.ACTIVITY_BOOSTING_UPSELL = 'impression_activity_boosting_upsell'),
@@ -194,7 +197,8 @@ n.d(t, {
     (a.USER_WELCOME = 'impression_user_welcome'),
     (a.USER_YOU_SCREEN = 'impression_user_you_screen'),
     (a.VIEW_PANEL_DEVTOOLS = 'impression_view_panel_devtools'),
-    ((s = i || (i = {})).APPLE_JWT_TOKEN_CREATE = 'network_action_apple_jwt_token_create'),
+    ((s = i || (i = {})).ACCOUNT_REVERT = 'network_action_account_revert'),
+    (s.APPLE_JWT_TOKEN_CREATE = 'network_action_apple_jwt_token_create'),
     (s.AUTH_SESSIONS_LOGGED_OUT = 'network_action_auth_sessions_logged_out'),
     (s.AUTHORIZE_IP = 'network_action_authorize_ip'),
     (s.AUTHORIZE_PAYMENT = 'network_action_authorize_payment'),
