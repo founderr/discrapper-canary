@@ -15,16 +15,19 @@ var r = n(544891),
     s = n(463031),
     o = n(981631);
 let l = async (e) => {
-        let { guildId: t, leaderboardId: n, intervalOffset: i = 0 } = e;
+        let { guildId: t, leaderboardId: n, intervalOffset: i = 0, force: s = !1 } = e;
         try {
-            var s;
+            var l;
             let e = (
                     await r.tn.get({
                         url: o.ANM.GUILD_LEADERBOARD(t, n),
-                        query: { interval_offset: i }
+                        query: {
+                            interval_offset: i,
+                            cached: !s
+                        }
                     })
                 ).body,
-                a = null !== (s = e.wait_ms_until_next_fetch) && void 0 !== s ? s : 900000;
+                a = null !== (l = e.wait_ms_until_next_fetch) && void 0 !== l ? l : 900000;
             return null != a && (e.expires_at = Date.now() + a), e;
         } catch (e) {
             throw new a.Hx(e);

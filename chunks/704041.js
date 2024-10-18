@@ -27,9 +27,9 @@ function m(e) {
     });
 }
 function T(e) {
-    let { guildId: t } = e,
-        { leaderboardsDisabled: i } = (0, u.O)(t);
-    return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, f.ABu.RIOT_GAMES)) || i
+    let { guildId: t, leaderboardId: i } = e,
+        { leaderboardsDisabled: c } = (0, u.O)(t, i);
+    return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, f.ABu.RIOT_GAMES)) || c
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Z, { className: I.divider }),
@@ -112,7 +112,10 @@ t.Z = (e) => {
                                                 leaderboardId: E._,
                                                 intervalOffset: -1
                                             }),
-                                            (0, r.jsx)(T, { guildId: t })
+                                            (0, r.jsx)(T, {
+                                                guildId: t,
+                                                leaderboardId: E._
+                                            })
                                         ]
                                     })
                           ]

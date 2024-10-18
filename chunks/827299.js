@@ -1,10 +1,11 @@
 n.d(t, {
     K: function () {
-        return d;
+        return E;
     }
 }),
     n(47120),
-    n(653041);
+    n(653041),
+    n(411104);
 var r = n(470079),
     i = n(399606);
 function a(e, t) {
@@ -22,102 +23,149 @@ function s(e, t, n) {
     })(e, t),
         t.set(e, n);
 }
-var o = new WeakMap(),
-    l = new WeakMap();
-class u {
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var l = new WeakMap(),
+    u = new WeakMap();
+class c {
     doesDataNeedValidation(e) {
-        return !0 === a(this.search(e), l).isStale;
+        return !0 === a(this.search(e), u).isStale;
     }
     getOrCreate(e) {
-        return null == a(this, o)[e] && (a(this, o)[e] = new u()), a(this, o)[e];
+        return null == a(this, l)[e] && (a(this, l)[e] = new c()), a(this, l)[e];
     }
     getState(e) {
         var t;
-        return a(this.search(e), l);
+        return a(this.search(e), u);
     }
     loadingDone(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.search(e);
-        (a(n, l).isLoading = !1), t && (a(n, l).isStale = !1);
+        (a(n, u).isLoading = !1), t ? (a(n, u).isStale = !1) : (a(n, u).fetchFailCounter += 1);
     }
     loadingStart(e) {
-        a(this.search(e), l).isLoading = !0;
+        let t = this.search(e);
+        (a(t, u).isLoading = !0), (a(t, u).error = void 0);
     }
     search(e) {
-        if (null == e) return new u();
+        if (null == e) return new c();
         let t = this;
         for (let n of e) t = t.getOrCreate(n);
         return t;
     }
+    setError(e, t) {
+        let n = this.search(e);
+        (a(n, u).error = t), (a(n, u).isStale = !1);
+    }
     subscribe(e, t) {
-        a(this.search(e), l).validateData = t;
+        a(this.search(e), u).validateData = t;
     }
     validate(e) {
         let t = this.search(e),
             n = [];
-        'function' == typeof a(t, l).validateData && n.push(a(t, l).validateData);
-        let r = Object.values(a(t, o));
+        'function' == typeof a(t, u).validateData && n.push(a(t, u).validateData);
+        let r = Object.values(a(t, l));
         for (; r.length > 0; ) {
             let e = r.pop();
-            null != e && ((a(e, l).isStale = !0), r.push(...Object.values(a(e, o))), 'function' == typeof a(e, l).validateData && n.push(a(e, l).validateData));
+            null != e && ((a(e, u).isStale = !0), c.resetErrorState(e), r.push(...Object.values(a(e, l))), 'function' == typeof a(e, u).validateData && n.push(a(e, u).validateData));
         }
-        (a(t, l).isStale = !0), n.forEach((e) => e());
+        (a(t, u).isStale = !0), c.resetErrorState(t), n.forEach((e) => e());
+    }
+    static resetErrorState(e) {
+        (a(e, u).error = void 0), (a(e, u).fetchFailCounter = 0);
     }
     constructor() {
-        s(this, o, {
+        s(this, l, {
             writable: !0,
             value: {}
         }),
-            s(this, l, {
+            s(this, u, {
                 writable: !0,
-                value: {}
+                value: { fetchFailCounter: 0 }
             });
     }
 }
-let c = new u();
-function d(e, t) {
+let d = new c();
+class _ extends Error {
+    setStatus(e) {
+        this.status = e;
+    }
+    constructor(...e) {
+        super(...e), o(this, 'name', 'HTTPResponseError'), o(this, 'status', 0);
+    }
+}
+function E(e, t) {
     let { get: n, load: a, useStateHook: s, queryId: o, dangerousAbortOnCleanup: l = !1 } = t;
     return function () {
-        for (var t = arguments.length, u = Array(t), d = 0; d < t; d++) u[d] = arguments[d];
-        let _ = (0, r.useMemo)(() => o(...u), u),
-            E = s(Array.isArray(e) ? e : [e], () => n(...u), u),
-            [f, h] = (0, r.useState)(),
-            p = !0 === c.getState(_).isLoading,
-            I = (0, r.useRef)(u),
-            m = (0, r.useCallback)(() => {
-                if (null == _ || !0 === p) return;
+        for (var t = arguments.length, u = Array(t), c = 0; c < t; c++) u[c] = arguments[c];
+        let E = (0, r.useMemo)(() => o(...u), u),
+            f = s(Array.isArray(e) ? e : [e], () => n(...u), u),
+            h = d.getState(E),
+            p = h.error,
+            I = !0 === h.isLoading,
+            m = (0, r.useRef)(u),
+            T = (0, r.useCallback)(() => {
+                if (null == E || !0 === I) return;
                 let e = !1;
-                s === i.Wu ? E.length > 0 && (e = !0) : null != E && (e = !0);
-                let t = c.doesDataNeedValidation(_);
-                if (e && !t) return;
-                c.loadingStart(_);
-                let n = new AbortController();
+                s === i.Wu ? f.length > 0 && (e = !0) : null != f && (e = !0);
+                let t = d.doesDataNeedValidation(E),
+                    n = null != p;
+                if ((e || n) && !t) return;
+                d.loadingStart(E);
+                let r = new AbortController();
                 return (
-                    a(n.signal, ...I.current)
-                        .then((e) => (c.loadingDone(_, !0), e))
+                    a(r.signal, ...m.current)
+                        .then((e) => (d.loadingDone(E, !0), e))
                         .catch((e) => {
-                            c.loadingDone(_), !n.signal.aborted && h(e);
+                            let t = (function (e) {
+                                if (e instanceof Error) return e;
+                                if ('object' == typeof e) {
+                                    if ('body' in e && null != e.body && 'message' in e.body) {
+                                        let t = new _(String(e.body.message));
+                                        return t.setStatus(e.status), t;
+                                    }
+                                    let t = new _(
+                                        Object.entries(e)
+                                            .map((e, t) => ''.concat(e, ': [').concat(String(t), ']'))
+                                            .join(',')
+                                    );
+                                    return t.setStatus(e.status), t;
+                                }
+                                return Error(String(e));
+                            })(e);
+                            if ((d.loadingDone(E), !r.signal.aborted && (!!(h.fetchFailCounter >= 5) || !(t instanceof _) || (!(t.status >= 500) && 429 !== t.status)))) d.setError(E, t);
                         }),
                     () => {
-                        l && n.abort();
+                        l && r.abort();
                     }
                 );
-            }, [E, _, p]);
+            }, [f, h.fetchFailCounter, p, E, I]);
         return (
             (0, r.useEffect)(
                 () => (
-                    m(),
-                    c.subscribe(_, m),
+                    T(),
+                    d.subscribe(E, T),
                     () => {
-                        c.subscribe(_, void 0);
+                        d.subscribe(E, void 0);
                     }
                 ),
-                [_, m]
+                [E, T]
             ),
             {
-                data: E,
-                error: f,
-                isLoading: p
+                data: f,
+                error: p,
+                isLoading: I
             }
         );
     };

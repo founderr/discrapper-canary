@@ -1,13 +1,28 @@
 n.d(t, {
     O: function () {
-        return s;
+        return l;
     }
 });
 var r = n(442837),
     i = n(675478),
-    a = n(581883);
-function s(e) {
-    let t = (0, r.e7)(
+    a = n(581883),
+    s = n(434382);
+async function o(e, t) {
+    await (0, i.PS)(
+        e,
+        (e) => {
+            e.leaderboardsDisabled = !e.leaderboardsDisabled;
+        },
+        i.fy.INFREQUENT_USER_ACTION
+    ),
+        await s.Z.fetchLeaderboard({
+            guildId: e,
+            leaderboardId: t,
+            force: !0
+        });
+}
+function l(e, t) {
+    let n = (0, r.e7)(
         [a.Z],
         () => {
             var t, n;
@@ -16,19 +31,7 @@ function s(e) {
         [e]
     );
     return {
-        leaderboardsDisabled: (null == t ? void 0 : t.leaderboardsDisabled) === !0,
-        toggleGuildLeaderboardsDisabled: () => {
-            var t;
-            return (
-                (t = e),
-                void (0, i.PS)(
-                    t,
-                    (e) => {
-                        e.leaderboardsDisabled = !e.leaderboardsDisabled;
-                    },
-                    i.fy.INFREQUENT_USER_ACTION
-                )
-            );
-        }
+        leaderboardsDisabled: (null == n ? void 0 : n.leaderboardsDisabled) === !0,
+        toggleGuildLeaderboardsDisabled: () => o(e, t)
     };
 }

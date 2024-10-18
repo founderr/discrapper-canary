@@ -186,19 +186,16 @@ function B(n) {
         L = s.useMemo(() => (null != c.thumbnail ? (0, k.q)(r, c.thumbnail, 256) : void 0), [r, c.thumbnail]),
         y = s.useCallback(
             (n) =>
-                null == R
-                    ? null
-                    : (0, l.jsx)(E.p, {
-                          ...n,
-                          appId: r,
-                          subscriptionType: m,
-                          skuId: c.skuId,
-                          subscriptionPlan: R,
-                          cannotOpenReason: _
-                      }),
+                (0, l.jsx)(E.p, {
+                    ...n,
+                    appId: r,
+                    subscriptionType: m,
+                    skuId: c.skuId,
+                    subscriptionPlan: R,
+                    cannotOpenReason: _
+                }),
             [r, m, c.skuId, R, _]
         );
-    if (null == R) return null;
     if (N && (null == P ? void 0 : P.subscription.currentPeriodEnd) != null) {
         let n = F.format(null == P ? void 0 : P.subscription.currentPeriodEnd);
         f ? (t = A.Z.Messages.STOREFRONT_CURRENTLY_SUBSCRIBED_UNTIL.format({ date: n })) : b && (t = A.Z.Messages.STOREFRONT_SUBSCRIPTION_STARTS.format({ date: n }));

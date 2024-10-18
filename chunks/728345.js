@@ -1,6 +1,9 @@
 n.d(t, {
     IX: function () {
-        return c;
+        return _;
+    },
+    Rt: function () {
+        return E;
     }
 }),
     n(789020),
@@ -12,10 +15,12 @@ n.d(t, {
 var r = n(442837),
     i = n(544891),
     a = n(570140),
-    s = n(630388),
-    o = n(812206),
-    l = n(981631);
-async function u(e) {
+    s = n(264043),
+    o = n(973616),
+    l = n(630388),
+    u = n(812206),
+    c = n(981631);
+async function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     a.Z.dispatch({
@@ -24,7 +29,7 @@ async function u(e) {
     });
     try {
         let r = await i.tn.get({
-            url: l.ANM.APPLICATION_PUBLIC(e),
+            url: c.ANM.APPLICATION_PUBLIC(e),
             query: { with_guild: t },
             oldFormErrors: !0,
             signal: n
@@ -51,7 +56,7 @@ t.ZP = {
         let { name: t, guildId: n, type: r, teamId: s } = e,
             o = (
                 await i.tn.post({
-                    url: l.ANM.APPLICATIONS,
+                    url: c.ANM.APPLICATIONS,
                     body: {
                         name: t,
                         type: r,
@@ -74,7 +79,7 @@ t.ZP = {
         let { includeTeam: t, ...n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             r = (
                 await i.tn.get({
-                    url: l.ANM.GUILD_APPLICATIONS(e),
+                    url: c.ANM.GUILD_APPLICATIONS(e),
                     query: {
                         ...n,
                         include_team: t
@@ -93,7 +98,7 @@ t.ZP = {
         let { applicationId: t, teamId: n } = e,
             r = (
                 await i.tn.post({
-                    url: l.ANM.APPLICATION_OWNER_TRANSFER(t),
+                    url: c.ANM.APPLICATION_OWNER_TRANSFER(t),
                     body: { team_id: n }
                 })
             ).body;
@@ -112,9 +117,9 @@ t.ZP = {
             (!t &&
                 (n = e.filter((e) => {
                     var t, n;
-                    let r = o.Z.getApplication(e),
-                        i = (0, s.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, l.udG.EMBEDDED) && ((null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null || (null == r ? void 0 : r.bot) == null);
-                    return !(null != r && !i) && !o.Z.isFetchingApplication(e) && !o.Z.didFetchingApplicationFail(e) && e.length > 0;
+                    let r = u.Z.getApplication(e),
+                        i = (0, l.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, c.udG.EMBEDDED) && ((null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null || (null == r ? void 0 : r.bot) == null);
+                    return !(null != r && !i) && !u.Z.isFetchingApplication(e) && !u.Z.didFetchingApplicationFail(e) && e.length > 0;
                 })),
             n.length > 0)
         ) {
@@ -125,7 +130,7 @@ t.ZP = {
             });
             try {
                 e = await i.tn.get({
-                    url: l.ANM.APPLICATIONS_PUBLIC,
+                    url: c.ANM.APPLICATIONS_PUBLIC,
                     query: new URLSearchParams(n.map((e) => ['application_ids', e])).toString(),
                     oldFormErrors: !0
                 });
@@ -144,11 +149,29 @@ t.ZP = {
             });
         }
     },
-    fetchApplication: u
+    fetchApplication: d
 };
-let c = (0, r.Kb)(o.Z, {
+let _ = (0, r.Kb)(u.Z, {
     queryId: (e) => (null != e ? ['applications', e] : null),
-    get: (e) => (null != e ? o.Z.getApplication(e) : null),
-    load: (e, t) => (null != t ? u(t, !1, e).then(l.dG4) : Promise.resolve()),
+    get: (e) => (null != e ? u.Z.getApplication(e) : null),
+    load: (e, t) => (null != t ? d(t, !1, e).then(c.dG4) : Promise.resolve()),
     useStateHook: r.e7
 });
+function E(e) {
+    let { data: t, isLoading: n, error: i } = _(e);
+    return {
+        app: (0, r.e7)(
+            [s.Z],
+            () => {
+                if (null == t) {
+                    let t = s.Z.getApplication(e);
+                    if (null != t) return o.Z.createFromServer(t);
+                }
+                return t;
+            },
+            [e, t]
+        ),
+        isLoading: n,
+        error: i
+    };
+}

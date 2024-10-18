@@ -1,14 +1,43 @@
-t.d(n, {
+t.d(e, {
     H: function () {
         return o;
     }
-});
-var l = t(442837),
-    i = t(821849),
-    r = t(509545);
-let o = (0, l.Kb)(r.Z, {
-    queryId: (e) => (null != e ? ['subscription-plans', e] : null),
-    get: (e) => (null != e ? r.Z.getForSKU(e) : []),
-    load: (e, n) => (null != n ? (0, i.GZ)(n) : Promise.resolve()),
-    useStateHook: l.Wu
-});
+}),
+    t(47120),
+    t(411104);
+var l = t(470079),
+    i = t(442837),
+    r = t(821849),
+    a = t(509545);
+function o(n) {
+    let [e, t] = l.useState(!1),
+        { plans: o, isFetching: s } = (0, i.cj)(
+            [a.Z],
+            () => {
+                let e = a.Z.getForSKU(n);
+                return {
+                    plans: e,
+                    isFetching: a.Z.isFetchingForSKU(n)
+                };
+            },
+            [n]
+        );
+    return (
+        l.useEffect(() => {
+            !s &&
+                (t(!1),
+                (0, r.GZ)(n)
+                    .then(() => {
+                        t(!1);
+                    })
+                    .catch(() => {
+                        t(!0);
+                    }));
+        }, [n]),
+        {
+            data: o,
+            isLoading: s,
+            error: e ? Error('SubscriptionPlans failed to fetch') : void 0
+        }
+    );
+}
