@@ -9,12 +9,13 @@ var i,
     d = n(570140),
     u = n(598077),
     _ = n(594174),
-    E = n(388380);
-let h = {},
-    m = 0,
-    I = !1,
-    p = !1;
-function g(e) {
+    E = n(388380),
+    h = n(72937);
+let m = {},
+    I = 0,
+    p = !1,
+    g = !1;
+function T(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -25,25 +26,25 @@ function g(e) {
         contactNames: n
     };
 }
-class T extends (i = c.ZP.Store) {
+class S extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(_.default);
     }
     getSuggestionCount() {
-        return m;
+        return I;
     }
     getSuggestions() {
-        return Object.entries(h).map((e) => {
+        return Object.entries(m).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return h[e];
+        return m[e];
     }
 }
 (r = 'FriendSuggestionStore'),
-    (s = 'displayName') in (a = T)
+    (s = 'displayName') in (a = S)
         ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
@@ -51,34 +52,34 @@ class T extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = r),
-    (t.Z = new T(d.Z, {
+    (t.Z = new S(d.Z, {
         CONNECTION_OPEN: function (e) {
-            (h = {}), (m = e.friendSuggestionCount) > 0 && ((p = !0), I || !p || ((I = !0), (p = !1), E.Z.fetch()));
+            (m = {}), (I = e.friendSuggestionCount) > 0 && ((g = !0), p || !g || ((p = !0), (g = !1), E.Z.fetch())), (0, h.Z)();
         },
         FRIEND_SUGGESTION_CREATE: function (e) {
-            let t = g(e.suggestion);
-            if (null != h[t.key]) return !1;
-            m++,
-                (h = {
-                    ...h,
+            let t = T(e.suggestion);
+            if (null != m[t.key]) return !1;
+            I++,
+                (m = {
+                    ...m,
                     [t.key]: t
                 });
         },
         FRIEND_SUGGESTION_DELETE: function (e) {
-            (m = Math.max(0, --m)), delete h[e.suggestedUserId];
+            (I = Math.max(0, --I)), delete m[e.suggestedUserId];
         },
         LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
             var t;
-            (I = !1),
+            (p = !1),
                 (t = e.suggestions),
-                (h = o()
+                (m = o()
                     .chain(t)
-                    .map((e) => g(e))
+                    .map((e) => T(e))
                     .keyBy((e) => e.key)
                     .value()),
-                (m = o().keys(h).length);
+                (I = o().keys(m).length);
         },
         LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-            (I = !1), (h = {});
+            (p = !1), (m = {});
         }
     }));
