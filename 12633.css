@@ -11672,6 +11672,15 @@ div.modalHeader_c5e09c {
     transform: translatey(-2px)
 }
 
+.applyToJoinButton_e0fe28 {
+    padding: 12px;
+    padding-top: 0
+}
+
+.applyToJoinContainer_e0fe28 {
+    height: 427px !important
+}
+
 .card_e0fe28 {
     min-width: 240px;
     max-width: 500px;
