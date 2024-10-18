@@ -18,16 +18,17 @@ var i = n(735250),
     T = n(283293),
     f = n(216742),
     S = n(84615),
-    C = n(229893),
-    N = n(931515),
-    A = n(702646),
-    v = n(207796),
-    Z = n(782322),
-    L = n(895068),
-    R = n(308083),
-    O = n(689938),
-    x = n(641388);
-function b(e) {
+    C = n(889711),
+    N = n(229893),
+    A = n(931515),
+    v = n(702646),
+    Z = n(207796),
+    L = n(782322),
+    R = n(895068),
+    O = n(308083),
+    x = n(689938),
+    b = n(641388);
+function M(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n } = e,
         { guilds: s } = (0, _.C3)({
             location: 'ClanDiscoveryContentCtaContent',
@@ -61,7 +62,7 @@ function b(e) {
                             guildId: r
                         });
                     },
-                    { layerKey: R.Pv }
+                    { layerKey: O.Pv }
                 );
         }, [r]),
         p = a.useMemo(
@@ -72,16 +73,16 @@ function b(e) {
                               look: c.ButtonLooks.FILLED,
                               size: c.ButtonSizes.LARGE,
                               color: m ? c.ButtonColors.TRANSPARENT : c.ButtonColors.BRAND,
-                              className: x.heroButton,
-                              innerClassName: x.heroButtonInner,
+                              className: b.heroButton,
+                              innerClassName: b.heroButtonInner,
                               onClick: () => {
-                                  (0, u.GS)({ location: d.Z.GLOBAL_DISCOVERY }), (0, v.fH)(v.v0.GET_STARTED);
+                                  (0, u.GS)({ location: d.Z.GLOBAL_DISCOVERY }), (0, Z.fH)(Z.v0.GET_STARTED);
                               },
                               children: [
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'none',
-                                      children: O.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
+                                      children: x.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
                                   }),
                                   (0, i.jsx)(c.ArrowSmallRightIcon, { color: 'currentColor' })
                               ]
@@ -97,7 +98,7 @@ function b(e) {
                           children: [
                               s.length > 0 &&
                                   (0, i.jsx)(c.SearchableSelect, {
-                                      className: x.upsellSelect,
+                                      className: b.upsellSelect,
                                       value: r,
                                       options: o,
                                       onChange: l
@@ -107,12 +108,12 @@ function b(e) {
                                       look: c.ButtonLooks.FILLED,
                                       size: c.ButtonSizes.MEDIUM,
                                       color: c.ButtonColors.BRAND,
-                                      className: x.heroButton,
+                                      className: b.heroButton,
                                       onClick: I,
                                       children: (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: O.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER
+                                          children: x.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER
                                       })
                                   })
                               })
@@ -122,120 +123,142 @@ function b(e) {
             [n, s.length, o, r, I]
         );
     return (0, i.jsxs)('div', {
-        className: x.contentCtaContainer,
+        className: b.contentCtaContainer,
         children: [g, p]
     });
 }
 t.Z = a.memo(function (e) {
     let t,
-        { width: n, paddingVertical: s = 16, paddingHorizontal: d = 32, variant: u = L.Bj.DEFAULT, onScroll: E, withAdminContent: h = !1 } = e,
-        S = a.useRef(null),
-        R = (0, v.GN)((e) => e.completedNux, l.Z),
-        M = (0, v.GN)((e) => e.entrypointGameId, l.Z),
-        { backgroundImageUrl: P, gameName: D } = (0, N.kN)(M),
-        y = a.useCallback(() => {
-            var e;
-            null === (e = S.current) || void 0 === e || e.scrollToTop();
-        }, []),
-        j = a.useMemo(
+        { width: n, paddingVertical: s = 16, paddingHorizontal: d = 32, variant: u = R.Bj.DEFAULT, onScroll: E, withAdminContent: h = !1 } = e,
+        { enabled: S } = (0, f.I7)(),
+        O = a.useRef(null),
+        P = a.useRef(null),
+        D = (0, Z.GN)((e) => e.completedNux, l.Z),
+        y = (0, Z.GN)((e) => e.entrypointGameId, l.Z),
+        [j, U] = a.useState(null),
+        { backgroundImageUrl: G, gameName: w } = (0, A.kN)(y),
+        k = a.useCallback(() => {
+            var e, t, n;
+            if (!S) return;
+            let i = null === (e = O.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
+                a = null !== (n = null === (t = P.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
+            null != i && j !== i && U(i + a);
+        }, [j, S]);
+    a.useEffect(() => {
+        if (!S) return;
+        let e = (0, C.pP)(k);
+        return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
+    }, [S, k]);
+    let B = a.useCallback(() => {
+            var e, t;
+            S && null != j
+                ? null === (e = P.current) ||
+                  void 0 === e ||
+                  e.scrollTo({
+                      to: j - 64,
+                      animate: !1
+                  })
+                : null === (t = P.current) || void 0 === t || t.scrollToTop();
+        }, [j, S]),
+        H = a.useMemo(
             () =>
-                (0, i.jsx)(b, {
-                    showPickGameButton: !R,
+                (0, i.jsx)(M, {
+                    showPickGameButton: !D,
                     showAdminGuildPicker: h
                 }),
-            [R, h]
+            [D, h]
         ),
-        U = (0, o.e7)([C.Z], () => C.Z.getSavedGuilds().length),
-        G = a.useMemo(
+        V = (0, o.e7)([N.Z], () => N.Z.getSavedGuilds().length),
+        F = a.useMemo(
             () => [
                 {
-                    id: v.v0.DISCOVERY,
-                    label: O.Z.Messages.CLAN_DISCOVERY_ALL_GUILDS
+                    id: Z.v0.DISCOVERY,
+                    label: x.Z.Messages.CLAN_DISCOVERY_ALL_GUILDS
                 },
                 {
-                    id: v.v0.SAVED_GUILDS,
-                    label: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
-                    count: U
+                    id: Z.v0.SAVED_GUILDS,
+                    label: x.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+                    count: V
                 }
             ],
-            [U]
+            [V]
         ),
-        w = (0, v.GN)((e) => e.mode, l.Z),
-        { enableClanCreation: k } = (0, _.C3)({
+        Y = (0, Z.GN)((e) => e.mode, l.Z),
+        { enableClanCreation: z } = (0, _.C3)({
             location: 'ClanDiscoveryContent',
             includeConverted: !0
         }),
-        B = (0, v.GN)((e) => e.dismissedPilotAdminNux),
-        H = a.useMemo(() => !k || B, [B, k]),
-        { enabled: V } = (0, f.I7)();
+        W = (0, Z.GN)((e) => e.dismissedPilotAdminNux),
+        K = a.useMemo(() => !z || W, [W, z]);
     return (
         (t =
-            null != M && null != D
+            null != y && null != w
                 ? (0, i.jsxs)(I.Z, {
                       title: (0, i.jsx)(c.Text, {
-                          className: r()(x.globalDiscoveryTitle, x.customDiscoveryTitle),
+                          className: r()(b.globalDiscoveryTitle, b.customDiscoveryTitle),
                           variant: 'display-lg',
                           color: 'header-primary',
-                          children: O.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_HEADER.format({ gameName: D })
+                          children: x.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_HEADER.format({ gameName: w })
                       }),
-                      description: O.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_SUBHEADER.format({ gameName: D }),
+                      description: x.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_SUBHEADER.format({ gameName: w }),
                       button: (0, i.jsx)(c.Button, {
-                          className: x.heroButton,
-                          innerClassName: x.heroButtonInner,
+                          className: b.heroButton,
+                          innerClassName: b.heroButtonInner,
                           look: c.ButtonLooks.FILLED,
                           size: c.ButtonSizes.MEDIUM,
                           color: c.ButtonColors.WHITE,
-                          onClick: () => (0, v.fH)(v.v0.PREFERENCES),
+                          onClick: () => (0, Z.fH)(Z.v0.PREFERENCES),
                           children: (0, i.jsx)(c.Text, {
                               variant: 'text-md/medium',
                               color: 'none',
-                              children: O.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_CTA
+                              children: x.Z.Messages.DISCOVERY_FIND_GAMING_GUILD_CTA
                           })
                       }),
                       children: [
                           (0, i.jsx)(m.Z, {}),
                           (0, i.jsx)('div', {
-                              className: x.gameArt,
-                              style: { backgroundImage: 'url("'.concat(P, '")') }
+                              className: b.gameArt,
+                              style: { backgroundImage: 'url("'.concat(G, '")') }
                           }),
-                          (0, i.jsx)('div', { className: x.imageBackdrop })
+                          (0, i.jsx)('div', { className: b.imageBackdrop })
                       ]
                   })
-                : V
-                  ? (0, i.jsx)(Z.Z, {})
+                : S
+                  ? (0, i.jsx)(L.Z, {})
                   : (0, i.jsx)(I.Z, {
                         title: (0, i.jsx)(c.Text, {
-                            className: x.globalDiscoveryTitle,
+                            className: b.globalDiscoveryTitle,
                             variant: 'display-lg',
                             color: 'header-primary',
-                            children: O.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
+                            children: x.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
                         }),
-                        description: R ? O.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : O.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
-                        button: j,
+                        description: D ? x.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : x.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+                        button: H,
                         children: (0, i.jsx)(m.Z, {})
                     })),
         (0, i.jsxs)(T.Z, {
-            ref: S,
+            ref: P,
             onScroll: E,
             children: [
                 t,
                 (0, i.jsxs)(p.Z, {
                     children: [
-                        H &&
+                        K &&
                             (0, i.jsxs)('div', {
-                                className: x.contentTabs,
+                                className: b.contentTabs,
+                                ref: O,
                                 children: [
                                     (0, i.jsx)(g.Z, {
-                                        tabs: G,
-                                        onTabSelect: v.fH,
-                                        selectedTab: w
+                                        tabs: F,
+                                        onTabSelect: Z.fH,
+                                        selectedTab: Y
                                     }),
-                                    w !== v.v0.SAVED_GUILDS && (0, i.jsx)(A.C, {})
+                                    Y !== Z.v0.SAVED_GUILDS && (0, i.jsx)(v.C, {})
                                 ]
                             }),
-                        (0, i.jsx)(L.ZP, {
+                        (0, i.jsx)(R.ZP, {
                             width: n,
-                            onUpdatePage: y,
+                            onUpdatePage: B,
                             paddingHorizontal: d,
                             paddingVertical: s,
                             variant: u
