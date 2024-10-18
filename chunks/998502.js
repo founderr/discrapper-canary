@@ -498,6 +498,10 @@ function M(e) {
             let { initializeExitHook: e } = this.getDiscordUtils();
             null != e && e();
         },
+        initializeWERHandler() {
+            let { initializeWERHandler: e } = this.getDiscordUtils();
+            null != e && e();
+        },
         asyncify: (e) =>
             new Promise((t, n) => {
                 e(t);
