@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(593481),
     Z = n(703656),
     v = n(199902),
-    C = n(592125),
-    S = n(158776),
+    S = n(592125),
+    C = n(158776),
     x = n(594174),
     T = n(5192),
     N = n(312839),
@@ -57,26 +57,26 @@ function M(e) {
     });
 }
 function b(e) {
-    let { entry: t, idx: n, onTrackEvent: r } = e,
-        d = (0, o.e7)([x.default], () => x.default.getUser(t.author_id)),
+    let { entry: t, idx: n } = e,
+        r = (0, o.e7)([x.default], () => x.default.getUser(t.author_id)),
         h = (0, m.kr)(t),
         f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
         [I, N] = s.useState('unsent'),
         [A, y] = s.useState(!1),
-        M = (0, o.e7)([v.Z], () => (null != d ? v.Z.getAnyStreamForUser(d.id) : null), [d]),
+        M = (0, o.e7)([v.Z], () => (null != r ? v.Z.getAnyStreamForUser(r.id) : null), [r]),
         { isMobileOnline: b, status: P } = (0, o.cj)(
-            [S.Z],
+            [C.Z],
             () =>
-                null == d
+                null == r
                     ? {
                           isMobileOnline: void 0,
                           status: void 0
                       }
                     : {
-                          isMobileOnline: S.Z.isMobileOnline(d.id),
-                          status: S.Z.getStatus(d.id)
+                          isMobileOnline: C.Z.isMobileOnline(r.id),
+                          status: C.Z.getStatus(r.id)
                       },
-            [d]
+            [r]
         );
     s.useEffect(() => {
         if ('sent' === I) {
@@ -85,13 +85,13 @@ function b(e) {
         }
     }, [I]);
     let D = async (e) => {
-            if (null != d && 'unsent' === I) {
+            if (null != r && 'unsent' === I) {
                 e.stopPropagation();
                 try {
                     var i;
                     N('sending');
-                    let e = await c.Z.getOrEnsurePrivateChannel(d.id),
-                        s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    let e = await c.Z.getOrEnsurePrivateChannel(r.id),
+                        s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != s, 'Send channel must be defined'),
                         (0, Z.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, g.p)({
@@ -100,8 +100,8 @@ function b(e) {
                             entry: t,
                             whenReady: !0
                         }),
-                        r(O.rMx.OVERLAY_GAME_INVITE_SENT, {
-                            target_user_id: d.id,
+                        d.Z.track(O.rMx.OVERLAY_GAME_INVITE_SENT, {
+                            target_user_id: r.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
@@ -113,19 +113,19 @@ function b(e) {
         },
         w = async () => {
             var e;
-            if (null == d) return;
-            let t = await c.Z.getOrEnsurePrivateChannel(d.id),
-                n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
+            if (null == r) return;
+            let t = await c.Z.getOrEnsurePrivateChannel(r.id),
+                n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
             a()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
         };
-    return null == d
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
               className: L.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
                       className: L.avatarContainer,
-                      user: d,
+                      user: r,
                       isMobile: b,
                       status: P
                   }),
@@ -139,7 +139,7 @@ function b(e) {
                                       className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: T.ZP.getName(void 0, void 0, d)
+                                      children: T.ZP.getName(void 0, void 0, r)
                                   }),
                                   null != M && (0, i.jsx)(p.ZP, {})
                               ]
@@ -183,8 +183,8 @@ function b(e) {
           });
 }
 function P(e) {
-    let { entries: t, onTrackEvent: n } = e,
-        s = t.slice(0, 5);
+    let { entries: t } = e,
+        n = t.slice(0, 5);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(I.iz, {}),
@@ -194,13 +194,12 @@ function P(e) {
                 color: 'header-secondary',
                 children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), R.Z.Messages.CONTENT_INVENTORY_OVERLAY_INVITES_HELP]
             }),
-            s.map((e, t) =>
+            n.map((e, t) =>
                 (0, i.jsx)(
                     b,
                     {
                         idx: t,
-                        entry: e,
-                        onTrackEvent: n
+                        entry: e
                     },
                     t
                 )
@@ -209,20 +208,17 @@ function P(e) {
     });
 }
 function D(e, t) {
-    let { trackView: n, trackClick: s, trackEvent: r } = (0, N.R)(y.n0.SendGameInvitesNotification, { notif_type: y.n0.SendGameInvitesNotification });
+    let { trackView: n, trackClick: s } = (0, N.R)(y.n0.SendGameInvitesNotification, { notif_type: y.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
             colorScheme: I.IC.PRIMARY,
             icon: null,
             title: (0, i.jsx)(M, { game: e }),
-            body: (0, i.jsx)(P, {
-                entries: t,
-                onTrackEvent: r
-            }),
+            body: (0, i.jsx)(P, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    r(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    d.Z.track(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });
