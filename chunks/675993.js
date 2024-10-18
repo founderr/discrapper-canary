@@ -261,8 +261,7 @@ function y(e) {
                             children: (0, i.jsx)(I.Z, {
                                 botUserId: u,
                                 applicationId: a.id,
-                                buttonSize: A,
-                                channel: t
+                                buttonSize: A
                             })
                         })
                       : null
