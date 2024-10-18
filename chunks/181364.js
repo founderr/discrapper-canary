@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(13245),
-    a = n(593481),
-    r = n(237997),
+    r = n(593481),
+    a = n(237997),
     o = n(312839),
     l = n(987650),
     c = n(689938);
@@ -16,10 +16,10 @@ let d = () => ({
         title: c.Z.Messages.OVERLAY_LAUNCH_TITLE,
         body: null,
         hint: u,
-        colorScheme: a.IC.PRIMARY,
+        colorScheme: r.IC.PRIMARY,
         notifType: l.n0.WelcomeNudge
     }),
-    u = (e) => (0, a.QR)(e, (0, o.P)(), c.Z.Messages.OVERLAY_LAUNCH_OPEN_TIP);
+    u = (e) => (0, r.QR)(e, (0, o.P)(), c.Z.Messages.OVERLAY_LAUNCH_OPEN_TIP);
 function h(e) {
     let { type: t } = e,
         {
@@ -31,13 +31,13 @@ function h(e) {
             notifType: _
         } = (function (e, t) {
             if (t.type === l.nc.NEWS) {
-                var n, i, s, r, o, c, d, u;
+                var n, i, s, a, o, c, d, u;
                 return {
                     icon: null !== (o = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== o ? o : e.icon,
                     title: null !== (c = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== c ? c : e.title,
                     body: null !== (d = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== d ? d : e.body,
-                    hint: null !== (u = null === (r = t.news) || void 0 === r ? void 0 : r.hint) && void 0 !== u ? u : e.hint,
-                    colorScheme: null != t.news ? a.IC.BRAND : e.colorScheme,
+                    hint: null !== (u = null === (a = t.news) || void 0 === a ? void 0 : a.hint) && void 0 !== u ? u : e.hint,
+                    colorScheme: null != t.news ? r.IC.BRAND : e.colorScheme,
                     notifType: null != t.news ? l.n0.NewsNudge : e.notifType
                 };
             }
@@ -62,7 +62,7 @@ function h(e) {
             E();
         },
         onNotificationClick: (e, n) => {
-            g('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), r.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            g('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), a.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             g('dismiss');

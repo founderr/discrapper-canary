@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(388905),
     p = n(792766),
     f = n(600164),
-    _ = n(436774),
-    m = n(313201),
+    m = n(436774),
+    _ = n(313201),
     g = n(451603),
     C = n(885714),
     I = n(973616),
@@ -26,8 +26,8 @@ var i = n(735250),
     x = n(55543),
     S = n(626135),
     v = n(768581),
-    T = n(358085),
-    Z = n(998502),
+    Z = n(358085),
+    T = n(998502),
     b = n(379164),
     A = n(590965),
     M = n(981631),
@@ -60,7 +60,7 @@ function O() {
                 (0, i.jsx)(o.NitroWheelIcon, {
                     size: 'md',
                     className: y.experimentUpsellIcon,
-                    color: _.JX.PREMIUM_TIER_2
+                    color: m.JX.PREMIUM_TIER_2
                 }),
                 (0, i.jsx)('span', {
                     className: y.experimentUpsellText,
@@ -94,7 +94,7 @@ function j(e) {
 }
 function D(e) {
     let { transitionState: t } = e,
-        n = (0, m.Dt)(),
+        n = (0, _.Dt)(),
         { analyticsLocations: l } = (0, d.ZP)(u.Z.INVITE_MODAL);
     return (0, i.jsx)(d.Gt, {
         value: l,
@@ -135,22 +135,22 @@ function w(e) {
         var e;
         return null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: _, error: C, submitting: N } = (0, s.cj)([A.Z], () => A.Z.getProps());
+    let { invite: m, error: C, submitting: N } = (0, s.cj)([A.Z], () => A.Z.getProps());
     l.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? Z.ZP.minimize() : Z.ZP.restore(), Z.ZP.focus());
+        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
-    let x = (0, m.Dt)(),
+    let x = (0, _.Dt)(),
         { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    if (null == _) return null;
-    if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
-    if (null == _.channel) return null;
+    if (null == m) return null;
+    if (m.state === M.r2o.EXPIRED || m.state === M.r2o.BANNED || m.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
+    if (null == m.channel) return null;
     function R() {
-        null != _ && b.Z.acceptInvite(_);
+        null != m && b.Z.acceptInvite(m);
     }
-    let { guild: j, channel: w, inviter: U, target_application: G } = _,
+    let { guild: j, channel: w, inviter: U, target_application: G } = m,
         k = null != j,
-        B = null != _.stage_instance,
-        H = null == _.guild && null == _.channel && null != _.inviter;
+        B = null != m.stage_instance,
+        H = null == m.guild && null == m.channel && null != m.inviter;
     if (null != G) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
@@ -184,7 +184,7 @@ function w(e) {
                                         id: x,
                                         className: P.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
-                                            invite: _,
+                                            invite: m,
                                             disableUser: k,
                                             error: C
                                         })
@@ -194,7 +194,7 @@ function w(e) {
                                               className: a()(P.marginBottom20, y.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
-                                                  stageInstance: _.stage_instance,
+                                                  stageInstance: m.stage_instance,
                                                   guild: j
                                               })
                                           })

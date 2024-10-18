@@ -49,11 +49,11 @@ let f = (e) => {
         width: 1280,
         height: 720
     },
-    S = {
+    y = {
         width: 640,
         height: 360
     },
-    y = (e) => {
+    S = (e) => {
         let t,
             s,
             n,
@@ -65,7 +65,7 @@ let f = (e) => {
             }),
                 (s = {
                     url: ''.concat((0, x.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
-                    ...S
+                    ...y
                 }),
                 (n = u.pn.YOUTUBE);
         else {
@@ -187,7 +187,7 @@ class E extends (n = i.PureComponent) {
                 switch (e.type) {
                     case x.s9s.YOUTUBE_VIDEO:
                     case x.s9s.VIDEO:
-                        s = (0, a.jsx)(y, {
+                        s = (0, a.jsx)(S, {
                             item: e,
                             onPlay: this.handlePlay,
                             isMuted: n,

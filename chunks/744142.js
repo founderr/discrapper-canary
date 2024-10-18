@@ -7,46 +7,46 @@ var i = t(735250),
     a = t(470079),
     r = t(481060),
     o = t(768581),
-    l = t(924489),
-    s = t(950854),
+    s = t(924489),
+    l = t(950854),
     c = t(491576),
     d = t(169909);
 function u(e) {
     var n, t, u, _, p;
-    let { application: m, className: I, childrenClassName: f, animatesOnHover: h, onClick: g, ...C } = e,
-        v = o.ZP.getApplicationIconURL({
+    let { application: m, className: I, childrenClassName: f, animatesOnHover: g, onClick: h, ...C } = e,
+        b = o.ZP.getApplicationIconURL({
             id: m.id,
             icon: m.icon,
             size: 48
         }),
-        b = (0, c.Z)({ application: m }),
-        E = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
-        x = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || b.length > 0,
-        T = a.useCallback(() => {
-            g({ mutualGuilds: b });
-        }, [g, b]),
-        P = (0, i.jsx)(l.Z, {
+        E = (0, c.Z)({ application: m }),
+        v = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
+        x = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || E.length > 0,
+        P = a.useCallback(() => {
+            h({ mutualGuilds: E });
+        }, [h, E]),
+        T = (0, i.jsx)(s.Z, {
             application: m,
             textVariant: 'text-xs/normal',
-            mutualGuilds: b,
+            mutualGuilds: E,
             mutualGuildShownMax: 3,
-            guildIconSize: l.x.SMALL,
+            guildIconSize: s.x.SMALL,
             compact: !0
         });
-    return (0, i.jsxs)(s.Z, {
+    return (0, i.jsxs)(l.Z, {
         className: I,
-        onClick: T,
-        iconSrc: v,
+        onClick: P,
+        iconSrc: b,
         header: m.name,
         subheader:
-            null != E &&
+            null != v &&
             (0, i.jsx)(r.Text, {
                 tag: 'span',
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                children: E.name
+                children: v.name
             }),
-        animatesOnHover: h,
+        animatesOnHover: g,
         ...C,
         children: [
             (null != m.description || null != f) &&
@@ -62,7 +62,7 @@ function u(e) {
             x &&
                 (0, i.jsx)('div', {
                     className: d.bottomGuildCountContainer,
-                    children: P
+                    children: T
                 })
         ]
     });

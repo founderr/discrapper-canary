@@ -5,38 +5,38 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    l = n.n(a),
-    s = n(481060),
-    o = n(925329),
-    r = n(932355);
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(925329),
+    o = n(932355);
 function c(e) {
-    let { className: t, embeddedApps: n, muted: a } = e;
+    let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;
     if (1 === n.length)
         return (0, i.jsx)('div', {
-            className: l()(r.container, t, a && r.modeMuted),
-            children: (0, i.jsx)(o.Z, {
+            className: r()(o.container, t, l && o.modeMuted),
+            children: (0, i.jsx)(s.Z, {
                 game: n[0].application,
-                className: r.icon20px
+                className: o.icon20px
             })
         });
     {
         let e = n.length - 1;
         return (0, i.jsxs)('div', {
-            className: l()(r.container, t, a && r.modeMuted),
+            className: r()(o.container, t, l && o.modeMuted),
             children: [
-                (0, i.jsx)(o.Z, {
+                (0, i.jsx)(s.Z, {
                     game: n[0].application,
-                    className: r.icon20px
+                    className: o.icon20px
                 }),
                 2 === n.length
-                    ? (0, i.jsx)(o.Z, {
+                    ? (0, i.jsx)(s.Z, {
                           game: n[1].application,
-                          className: r.icon20px
+                          className: o.icon20px
                       })
-                    : (0, i.jsx)(s.Text, {
-                          className: r.overflow,
+                    : (0, i.jsx)(a.Text, {
+                          className: o.overflow,
                           variant: 'text-xs/bold',
                           color: 'interactive-active',
                           children: '+'.concat(e)

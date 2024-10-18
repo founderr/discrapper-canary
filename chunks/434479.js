@@ -15,7 +15,7 @@ var l = n(120356),
     d = n(206197);
 function h(e) {
     var t;
-    let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: _, trailing: m, showUnread: g = !1, ...C } = e,
+    let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: m, trailing: _, showUnread: g = !1, ...C } = e,
         I = (0, a.JA)(n),
         E = null !== (t = (0, s.q)(f)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
@@ -41,7 +41,7 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: _ }, l),
+            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: m }, l),
             children: [
                 g ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
@@ -58,7 +58,7 @@ function h(e) {
                                 'aria-hidden': !0,
                                 children: f
                             }),
-                            m
+                            _
                         ]
                     })
                 })

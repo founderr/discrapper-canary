@@ -11,9 +11,9 @@ var i = n(735250),
     h = n(823379),
     p = n(179809),
     f = n(652376),
-    _ = n(981631);
+    m = n(981631);
 t.Z = l.memo(function (e) {
-    let { folderNode: t, ...m } = e,
+    let { folderNode: t, ..._ } = e,
         { id: g, name: C, color: I, children: E } = t,
         N = E.map((e) => e.id),
         x = (0, o.Z)((e) => e.guildId),
@@ -26,13 +26,13 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * _.dYL,
+                n = 2 * m.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        T = (0, f.Z)(t),
-        { mentionCount: Z, unread: b } = (0, r.cj)([u.default], () => ({
+        Z = (0, f.Z)(t),
+        { mentionCount: T, unread: b } = (0, r.cj)([u.default], () => ({
             mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: N.some((e) => u.default.hasUnread(e))
         })),
@@ -49,20 +49,20 @@ t.Z = l.memo(function (e) {
                             folderId: g,
                             folderName: C,
                             folderColor: I,
-                            unread: b || Z > 0
+                            unread: b || T > 0
                         });
                 });
             },
-            [g, C, I, b, Z]
+            [g, C, I, b, T]
         );
     return (0, i.jsx)(p.Z, {
-        ...m,
+        ..._,
         folderNode: t,
         expanded: S,
         selected: null != x && N.includes(x),
-        mentionCount: Z,
+        mentionCount: T,
         unread: b,
-        mediaState: T,
+        mediaState: Z,
         defaultFolderName: v,
         onExpandCollapse: A,
         onContextMenu: M

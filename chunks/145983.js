@@ -1,9 +1,9 @@
 var i = n(447479),
     s = n(658141),
-    a = n(401427),
-    r = RegExp("['\u2019]", 'g');
+    r = n(401427),
+    a = RegExp("['\u2019]", 'g');
 e.exports = function (e) {
     return function (t) {
-        return i(a(s(t).replace(r, '')), e, '');
+        return i(r(s(t).replace(a, '')), e, '');
     };
 };

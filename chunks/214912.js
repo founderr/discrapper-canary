@@ -8,8 +8,8 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    l = t(410030),
-    s = t(686546),
+    s = t(410030),
+    l = t(686546),
     c = t(565138),
     d = t(372769),
     u = t(134432),
@@ -18,29 +18,29 @@ var a = t(120356),
     m = t(981631),
     I = t(689938),
     f = t(660857),
-    h = t(129512),
-    g = t(330065);
+    g = t(129512),
+    h = t(330065);
 function C(e) {
     let { guild: n, className: t, onClick: a } = e,
-        C = (0, l.ZP)(),
-        v = new _.ZP({
+        C = (0, s.ZP)(),
+        b = new _.ZP({
             name: n.name,
             icon: n.icon
         }),
-        b = p.ZP.getGuildDiscoverySplashURL({
+        E = p.ZP.getGuildDiscoverySplashURL({
             id: n.id,
             splash: n.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
-        E =
-            null != b
-                ? b
+        v =
+            null != E
+                ? E
                 : (function (e) {
                       switch (e) {
                           case m.BRd.DARK:
-                              return h;
-                          case m.BRd.LIGHT:
                               return g;
+                          case m.BRd.LIGHT:
+                              return h;
                       }
                   })(C),
         x = p.ZP.getGuildIconURL({
@@ -57,14 +57,14 @@ function C(e) {
                 className: f.cardHeader,
                 children: [
                     (0, i.jsx)('img', {
-                        src: E,
+                        src: v,
                         alt: '',
                         className: f.splashImage
                     }),
                     (0, i.jsx)('div', {
                         className: f.guildIcon,
-                        children: (0, i.jsx)(s.ZP, {
-                            mask: s.ZP.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(l.ZP, {
+                            mask: l.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)('div', {
@@ -72,7 +72,7 @@ function C(e) {
                                 children: (0, i.jsx)(c.Z, {
                                     className: f.__invalid_icon,
                                     iconSrc: x,
-                                    guild: v,
+                                    guild: b,
                                     size: c.Z.Sizes.LARGE
                                 })
                             })

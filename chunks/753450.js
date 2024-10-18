@@ -30,19 +30,19 @@ var i = t(735250),
     h = t(995648),
     C = t(445986),
     b = t(9807),
-    v = t(330726),
-    E = t(782568),
+    E = t(330726),
+    v = t(782568),
     x = t(581364),
-    T = t(970321),
-    P = t(283836),
+    P = t(970321),
+    T = t(283836),
     S = t(220082),
-    A = t(252618),
-    N = t(299206),
+    N = t(252618),
+    A = t(299206),
     R = t(241209),
     L = t(341176),
     O = t(422559),
-    y = t(703656),
-    j = t(280885),
+    j = t(703656),
+    y = t(280885),
     D = t(706454),
     M = t(314897),
     Z = t(451478),
@@ -84,8 +84,8 @@ let eg = d().parserFor(es.Z),
     eh = d().reactFor(d().ruleOutput(es.Z, 'react')),
     eC = (0, p.Mg)(f.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
     eb = 'redirect_to_support_server',
-    ev = 'start_application_install',
-    eE = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(e));
+    eE = 'start_application_install',
+    ev = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(e));
 function ex(e) {
     var n, r, s, c;
     let d,
@@ -108,7 +108,7 @@ function ex(e) {
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: eP, similarLoadId: eA } = (0, m.cj)([W.Z], () => {
+        { similarApplications: eT, similarLoadId: eN } = (0, m.cj)([W.Z], () => {
             let e = {
                     applicationId: p,
                     guildId: f
@@ -122,10 +122,10 @@ function ex(e) {
                 }
             );
         }),
-        eN = a.useMemo(() => (null == eP ? void 0 : eP.slice(0, 3)), [eP]),
+        eA = a.useMemo(() => (null == eT ? void 0 : eT.slice(0, 3)), [eT]),
         eR = (0, m.e7)([Y.Z], () => Y.Z.getApplicationFetchState(p)),
         [eL, eO] = a.useState(void 0),
-        ey = a.useCallback(
+        ej = a.useCallback(
             (e) => {
                 if (null != p) {
                     if (e === ed.ApplicationDirectoryProfileSections.GENERAL) {
@@ -137,7 +137,7 @@ function ex(e) {
             },
             [p]
         ),
-        ej = (0, m.e7)([Z.Z], () => Z.Z.isFocused()),
+        ey = (0, m.e7)([Z.Z], () => Z.Z.isFocused()),
         eD = (0, m.e7)([D.default], () => D.default.locale),
         eM = a.useRef(p),
         eZ = (0, m.e7)([Y.Z], () => {
@@ -146,7 +146,7 @@ function ex(e) {
         }),
         eB = (0, et.Z)({ application: eZ }),
         ek = (0, m.e7)([M.default], () => M.default.getSessionId());
-    (0, A.Tt)({ location: null == eZ ? void 0 : eZ.name });
+    (0, N.Tt)({ location: null == eZ ? void 0 : eZ.name });
     let eF = a.useCallback(async () => {
         try {
             var e;
@@ -168,7 +168,7 @@ function ex(e) {
         if (S && null != ek && 'true' === e.searchParams.get(eb)) {
             e.searchParams.delete(eb);
             let n = e.pathname + e.search;
-            (0, y.dL)(n), eF();
+            (0, j.dL)(n), eF();
         }
     }, [S, eF, ek, eZ]);
     let eH = a.useCallback(() => {
@@ -209,7 +209,7 @@ function ex(e) {
             icon: null == eZ ? void 0 : eZ.icon,
             size: eC
         }),
-        eU = (0, N.Z)({
+        eU = (0, A.Z)({
             id: null !== (c = null == eZ ? void 0 : eZ.id) && void 0 !== c ? c : '',
             label: em.Z.Messages.COPY_ID_APPLICATION
         }),
@@ -234,7 +234,7 @@ function ex(e) {
         }, [null == eZ ? void 0 : null === (r = eZ.install_params) || void 0 === r ? void 0 : r.permissions]),
         eK = a.useCallback(
             (e) => {
-                ey(e),
+                ej(e),
                     (null == eZ ? void 0 : eZ.id) != null &&
                         B.default.track(eu.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                             application_id: eZ.id,
@@ -242,7 +242,7 @@ function ex(e) {
                             tab_name: e
                         });
             },
-            [null == eZ ? void 0 : eZ.id, f, ey]
+            [null == eZ ? void 0 : eZ.id, f, ej]
         ),
         eq = a.useMemo(() => {
             var e, n, t;
@@ -309,17 +309,17 @@ function ex(e) {
                         current_page: 'product',
                         application_id: eZ.id,
                         suggested_application_id: n.id,
-                        load_id: eA,
+                        load_id: eN,
                         guild_id: f,
                         shown_mutual_guilds_count: t.length
                     }),
                     (0, en.goToApplication)({ applicationId: n.id });
             },
-            [null == eZ ? void 0 : eZ.id, eA, f]
+            [null == eZ ? void 0 : eZ.id, eN, f]
         ),
         e$ = a.useCallback(() => {
             null != eZ &&
-                (0, E.Z)(
+                (0, v.Z)(
                     (0, ea.G)({
                         id: eZ.id,
                         name: eZ.name,
@@ -348,7 +348,7 @@ function ex(e) {
                 }),
             [eU, e$]
         ),
-        [e1, e6] = (0, v.Z)(!1, 1000),
+        [e6, e1] = (0, E.Z)(!1, 1000),
         e5 = a.useCallback(() => {
             if (null != eZ)
                 B.default.track(eu.rMx.APP_SHARE_BUTTON_CLICKED, {
@@ -356,15 +356,15 @@ function ex(e) {
                     application_id: eZ.id,
                     guild_id: f
                 }),
-                    (0, F.JG)(eE(eZ.id)),
-                    e6(!0);
-        }, [eZ, e6, f]);
+                    (0, F.JG)(ev(eZ.id)),
+                    e1(!0);
+        }, [eZ, e1, f]);
     a.useEffect(() => {
         let e = new URL(location.href);
-        if (S && 'true' === e.searchParams.get(ev)) {
-            e.searchParams.delete(ev);
+        if (S && 'true' === e.searchParams.get(eE)) {
+            e.searchParams.delete(eE);
             let n = e.pathname + e.search;
-            (0, y.dL)(n), eW('product_page');
+            (0, j.dL)(n), eW('product_page');
         }
     }, [S, eW]);
     let e3 = a.useCallback(() => {
@@ -390,7 +390,7 @@ function ex(e) {
                           source: 'product_page',
                           device_platform: u.tq ? 'mobile_web' : 'desktop_web'
                       }),
-                      (0, q.rf)({ [ev]: 'true' }));
+                      (0, q.rf)({ [eE]: 'true' }));
             }
         }, [eZ, S, eW, p, f]),
         e8 = (null == eZ ? void 0 : eZ.id) === ep.g,
@@ -402,9 +402,9 @@ function ex(e) {
         },
         ni = null != ez && ez.length > 0,
         na = (null == eZ ? void 0 : eZ.flags) != null,
-        nr = (0, T.R)(null != p ? p : '');
+        nr = (0, P.R)(null != p ? p : '');
     a.useEffect(() => {
-        nr && null != p && (0, P.Z)(p);
+        nr && null != p && (0, T.Z)(p);
     }, [nr, p]);
     let no = a.useMemo(() => {
             let e = [],
@@ -437,7 +437,7 @@ function ex(e) {
                                           })
                                       }),
                                       (e9 || e4) &&
-                                          (0, i.jsx)(eT, {
+                                          (0, i.jsx)(eP, {
                                               isViewAll: e4,
                                               onToggle: () => {
                                                   e7((e) => !e);
@@ -462,7 +462,7 @@ function ex(e) {
                             )
                           : (null == eZ ? void 0 : eZ.description) != null &&
                             e.push(
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(y.Z, {
                                     className: eI.description,
                                     userBio: eZ.description
                                 })
@@ -518,7 +518,7 @@ function ex(e) {
                                 themedPagination: !0,
                                 items: eq,
                                 autoplayInterval: 8000,
-                                paused: !ej,
+                                paused: !ey,
                                 videoAutoPlay: !0,
                                 onCurrentItemClick: eX,
                                 errorComponent: n,
@@ -585,7 +585,7 @@ function ex(e) {
                     )
                 )
             );
-        }, [I, ew, eZ, eL, e4, e9, eq, ej, eX, nr, p, ni, na, ez]),
+        }, [I, ew, eZ, eL, e4, e9, eq, ey, eX, nr, p, ni, na, ez]),
         ns = a.useMemo(() => {
             let e = [
                 {
@@ -705,7 +705,7 @@ function ex(e) {
                                                                   (0, i.jsx)(g.Button, {
                                                                       onClick: e5,
                                                                       color: g.Button.Colors.PRIMARY,
-                                                                      children: e1 ? em.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : em.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
+                                                                      children: e6 ? em.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : em.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                                                   }),
                                                                   (0, i.jsx)(g.Button, {
                                                                       color: g.Button.Colors.BRAND,
@@ -754,7 +754,7 @@ function ex(e) {
                                               className: eI.content,
                                               children: [
                                                   no,
-                                                  null != eN && eN.length > 0
+                                                  null != eA && eA.length > 0
                                                       ? (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 ne && (0, i.jsx)('div', { className: eI.separator }),
@@ -769,7 +769,7 @@ function ex(e) {
                                                                         (0, i.jsx)(Q.Z, {
                                                                             loading: es,
                                                                             children: (0, i.jsx)(X.Z, {
-                                                                                applications: eN,
+                                                                                applications: eA,
                                                                                 onViewOne: eQ
                                                                             })
                                                                         })
@@ -796,7 +796,7 @@ function ex(e) {
         (0, i.jsx)(z.Z, { children: d })
     );
 }
-let eT = (e) => {
+let eP = (e) => {
         let n,
             { onToggle: t, isViewAll: a } = e;
         return (
@@ -829,7 +829,7 @@ let eT = (e) => {
                           })
                       ]
                   })),
-            (0, i.jsx)(eP, {
+            (0, i.jsx)(eT, {
                 children: (0, i.jsx)(g.Button, {
                     look: g.Button.Looks.BLANK,
                     color: g.Button.Colors.TRANSPARENT,
@@ -842,7 +842,7 @@ let eT = (e) => {
             })
         );
     },
-    eP = (e) => {
+    eT = (e) => {
         let { className: n, contentClassName: t, children: a } = e;
         return (0, i.jsxs)('div', {
             className: o()([eI.dividerContainer, n]),

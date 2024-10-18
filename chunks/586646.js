@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return _;
     }
 });
 var i = n(735250),
@@ -15,14 +15,14 @@ var i = n(735250),
     h = n(190054),
     p = n(760373),
     f = n(689938),
-    _ = n(64570);
-function m(e) {
+    m = n(64570);
+function _(e) {
     let { channelId: t } = e,
         n = (0, r.e7)([s.Z], () => {
             var e;
             return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        m = (0, u.W)({
+        _ = (0, u.W)({
             fingerprintBase64: n,
             chunkSize: p.y6,
             desiredLength: p.YP
@@ -31,10 +31,10 @@ function m(e) {
             (0, o.PM)({ channelId: t });
         }, [t]);
     return (0, i.jsxs)('div', {
-        className: _.container,
+        className: m.container,
         children: [
             (0, i.jsxs)('div', {
-                className: _.tag,
+                className: m.tag,
                 children: [
                     (0, i.jsx)(a.LockIcon, {
                         size: 'xxs',
@@ -53,24 +53,24 @@ function m(e) {
                 children: f.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
             }),
             (0, i.jsxs)('div', {
-                className: _.header,
+                className: m.header,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
                         children: f.Z.Messages.E2EE_VOICE_PRIVACY_CODE
                     }),
-                    null != m &&
+                    null != _ &&
                         (0, i.jsx)(h.H, {
-                            chunks: m,
+                            chunks: _,
                             color: a.tokens.colors.INTERACTIVE_NORMAL.css,
                             onCopy: g
                         })
                 ]
             }),
             (0, i.jsx)(d.b, {
-                className: _.code,
-                chunks: m,
+                className: m.code,
+                chunks: _,
                 columns: p.WK
             }),
             (0, i.jsx)(a.Text, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return k;
     }
 }),
     n(47120);
@@ -59,11 +59,11 @@ let w = [
         cellClassName: y.cell,
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(k, { type: t });
+            return (0, r.jsx)(E, { type: t });
         }
     }
 ];
-function k(e) {
+function E(e) {
     var t, n;
     let { type: a } = e,
         l = (0, d.e7)([C.Z], () => C.Z.getFilters()),
@@ -83,7 +83,7 @@ function k(e) {
         }
     });
 }
-function E() {
+function k() {
     var e, t;
     let n = (0, d.e7)([C.Z], () => C.Z.getFeed(N.YN.GLOBAL_FEED)),
         l = (0, d.e7)([C.Z], () => C.Z.getDebugImpressionCappingDisabled()),
@@ -99,18 +99,18 @@ function E() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        k = (0, d.e7)([C.Z], () => {
+        E = (0, d.e7)([C.Z], () => {
             var e;
             return (null === (e = C.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [E, R] = a.useState(''),
+        [k, R] = a.useState(''),
         O = (0, d.e7)(
             [v.Z, x.Z],
             () => {
                 var e, t, n;
-                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
+                return parseInt(k) > 0 ? k : null !== (n = null === (e = v.Z.getGameByName(k)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(k)) || void 0 === t ? void 0 : t.id;
             },
-            [E]
+            [k]
         ),
         A = (0, b.Z)({
             applicationId: O,
@@ -150,7 +150,7 @@ function E() {
                                     feedId: N.YN.GLOBAL_FEED
                                 });
                             },
-                            submitting: k,
+                            submitting: E,
                             children: 'Refresh Now'
                         })
                     ]
@@ -200,9 +200,9 @@ function E() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
                             },
-                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+                            error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
                         (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })

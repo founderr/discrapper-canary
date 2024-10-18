@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-    a = n(13245),
-    r = n(593481),
+    r = n(13245),
+    a = n(593481),
     o = n(312839),
     l = n(981631),
     c = n(987650),
@@ -30,7 +30,7 @@ function p(e) {
             let { game: t, voiceGuild: u } = e,
                 { trackView: p, trackClick: f } = (0, o.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
             return {
-                colorScheme: r.IC.PRIMARY,
+                colorScheme: a.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
@@ -44,8 +44,8 @@ function p(e) {
                 },
                 onNotificationClick: (e, t) => {
                     f('unlock'),
-                        a.Z.updateNotificationStatus(t),
-                        a.Z.setInstanceLocked(!1),
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>
@@ -66,7 +66,7 @@ function p(e) {
             let { game: t } = e,
                 { trackView: u, trackClick: p } = (0, o.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
             return {
-                colorScheme: r.IC.PRIMARY,
+                colorScheme: a.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({ game: t.name }),
@@ -77,8 +77,8 @@ function p(e) {
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'),
-                        a.Z.updateNotificationStatus(t),
-                        a.Z.setInstanceLocked(!1),
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>

@@ -1,220 +1,220 @@
-n.d(t, {
+a.d(t, {
     Z: function () {
-        return Z;
+        return T;
     }
 }),
-    n(47120),
-    n(411104),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    o = n(481060),
-    c = n(607070),
-    d = n(446411),
-    u = n(468846),
-    _ = n(313201),
-    E = n(70097),
-    h = n(605236),
-    m = n(524444),
-    I = n(626135),
-    p = n(960048),
-    g = n(565216),
-    T = n(981631),
-    S = n(921944),
-    f = n(689938),
-    C = n(67037);
-let N = [],
-    A = (e) => {
-        let { tagText: t, className: n } = e;
-        return (0, i.jsx)(o.TextBadge, {
-            className: r()(C.tag, n),
+    a(47120),
+    a(411104),
+    a(315314),
+    a(610138),
+    a(216116),
+    a(78328),
+    a(815648);
+var r = a(735250),
+    s = a(470079),
+    n = a(120356),
+    o = a.n(n),
+    l = a(442837),
+    c = a(481060),
+    d = a(607070),
+    u = a(446411),
+    i = a(468846),
+    _ = a(313201),
+    f = a(70097),
+    h = a(605236),
+    g = a(524444),
+    m = a(626135),
+    N = a(960048),
+    E = a(565216),
+    p = a(981631),
+    C = a(921944),
+    O = a(689938),
+    x = a(67037);
+let A = [],
+    M = (e) => {
+        let { tagText: t, className: a } = e;
+        return (0, r.jsx)(c.TextBadge, {
+            className: o()(x.tag, a),
             text: t
         });
     },
-    v = (e) => {
-        let { header: t, subHeader: n, imageSrc: a, tagText: s, wideStyle: l } = e;
-        return (0, i.jsxs)('div', {
-            className: r()(C.featureCard, { [C.wideStyle]: l }),
+    b = (e) => {
+        let { header: t, subHeader: a, imageSrc: s, tagText: n, wideStyle: l } = e;
+        return (0, r.jsxs)('div', {
+            className: o()(x.featureCard, { [x.wideStyle]: l }),
             children: [
-                null != s
-                    ? (0, i.jsx)(A, {
-                          tagText: s,
-                          className: C.featureCardTag
+                null != n
+                    ? (0, r.jsx)(M, {
+                          tagText: n,
+                          className: x.featureCardTag
                       })
                     : null,
-                (0, i.jsx)('img', {
+                (0, r.jsx)('img', {
                     alt: '',
-                    className: r()(C.featureCardImg, { [C.wideStyle]: l }),
-                    src: a
+                    className: o()(x.featureCardImg, { [x.wideStyle]: l }),
+                    src: s
                 }),
-                (0, i.jsxs)('div', {
-                    className: C.featureCardTextGroup,
+                (0, r.jsxs)('div', {
+                    className: x.featureCardTextGroup,
                     children: [
-                        (0, i.jsx)(o.Heading, {
+                        (0, r.jsx)(c.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: C.featureCardTextHeader,
+                            className: x.featureCardTextHeader,
                             children: t
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: n
+                            children: a
                         })
                     ]
                 })
             ]
         });
     };
-function Z(e) {
-    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: M, changeLogId: P, button: D, body: y } = e,
-        { onClose: j, transitionState: U } = n,
-        G = (0, _.Dt)(),
-        w = M.length % 2 == 0,
-        k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, V] = a.useState(Date.now()),
-        [H, F] = a.useState(0),
-        [Y, z] = a.useState(0),
-        [W, K] = a.useState(!1),
-        [q, Q] = a.useState(!0),
-        X = a.useRef(B),
-        J = a.useRef(H),
-        $ = a.useRef(Y),
-        ee = a.useRef(W),
-        et = a.useRef(q),
-        [en, ei] = a.useState(N),
-        ea = a.useRef(!1);
-    function es() {
+function T(e) {
+    let { className: t, renderModalProps: a, heroArt: n, heroArtClassName: M, modalDismissibleContent: T, modalTopExtra: D, header: y, headerClassName: R, subHeader: v, subHeaderExtra: B, featureCards: L, changeLogId: G, button: S, body: H } = e,
+        { onClose: j, transitionState: w } = a,
+        I = (0, _.Dt)(),
+        U = L.length % 2 == 0,
+        Z = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        [k, P] = s.useState(Date.now()),
+        [V, Y] = s.useState(0),
+        [z, W] = s.useState(0),
+        [F, q] = s.useState(!1),
+        [K, X] = s.useState(!0),
+        Q = s.useRef(k),
+        J = s.useRef(V),
+        $ = s.useRef(z),
+        ee = s.useRef(F),
+        et = s.useRef(K),
+        [ea, er] = s.useState(A),
+        es = s.useRef(!1);
+    function en() {
         let e = Date.now(),
-            t = e - X.current,
-            n = J.current,
-            i = $.current;
-        return ee.current && (F((n += t)), !et.current && z((i += t))), V(e), [n, i];
+            t = e - Q.current,
+            a = J.current,
+            r = $.current;
+        return ee.current && (Y((a += t)), !et.current && W((r += t))), P(e), [a, r];
     }
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e = async () => {
                 try {
                     var e;
-                    if ('video' !== s.type || null == s.subtitles) return;
+                    if ('video' !== n.type || null == n.subtitles) return;
                     let t =
-                        null === (e = s.subtitles) || void 0 === e
+                        null === (e = n.subtitles) || void 0 === e
                             ? void 0
                             : e.map(async (e) => {
                                   let t = await fetch(e.src);
                                   if (!t.ok) throw Error('Failed to fetch the subtitle file '.concat(e.src));
-                                  let n = await t.text(),
-                                      i = new Blob([n], { type: 'text/vtt' }),
-                                      a = URL.createObjectURL(i);
+                                  let a = await t.text(),
+                                      r = new Blob([a], { type: 'text/vtt' }),
+                                      s = URL.createObjectURL(r);
                                   return {
                                       ...e,
-                                      src: a
+                                      src: s
                                   };
                               });
-                    ei(await Promise.all(t));
+                    er(await Promise.all(t));
                 } catch (e) {
-                    p.Z.captureException(e), ei(N);
+                    N.Z.captureException(e), er(A);
                 }
             };
-            !0 !== ea.current && e(), (ea.current = !0);
-        }, [s, en]),
-        a.useEffect(
+            !0 !== es.current && e(), (es.current = !0);
+        }, [n, ea]),
+        s.useEffect(
             () => () => {
-                null != en &&
-                    en.forEach((e) => {
+                null != ea &&
+                    ea.forEach((e) => {
                         URL.revokeObjectURL(e.src);
                     });
             },
-            [en]
+            [ea]
         ),
-        a.useEffect(() => {
-            (X.current = B), (J.current = H), ($.current = Y), (ee.current = W), (et.current = q);
-        }, [B, H, Y, W, q]),
-        a.useEffect(
+        s.useEffect(() => {
+            (Q.current = k), (J.current = V), ($.current = z), (ee.current = F), (et.current = K);
+        }, [k, V, z, F, K]),
+        s.useEffect(
             () => () => {
-                if ('video' === s.type || 'embed' === s.type) {
-                    let [e, t] = es();
-                    I.default.track(T.rMx.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: P,
+                if ('video' === n.type || 'embed' === n.type) {
+                    let [e, t] = en();
+                    m.default.track(p.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                        change_log_id: G,
                         seconds_played: Math.round(e / 1000)
                     }),
-                        I.default.track(T.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: P,
+                        m.default.track(p.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                            change_log_id: G,
                             seconds_unmuted: Math.round(t / 1000)
                         });
                 }
             },
-            [P, s.type]
+            [G, n.type]
         ),
-        a.useEffect(() => {
-            null != Z && (0, h.kk)(Z);
+        s.useEffect(() => {
+            null != T && (0, h.kk)(T);
             let e = Date.now();
             return (
-                I.default.track(T.rMx.CHANGE_LOG_OPENED, { change_log_id: P }),
+                m.default.track(p.rMx.CHANGE_LOG_OPENED, { change_log_id: G }),
                 () => {
-                    I.default.track(T.rMx.CHANGE_LOG_CLOSED, {
-                        change_log_id: P,
+                    m.default.track(p.rMx.CHANGE_LOG_CLOSED, {
+                        change_log_id: G,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != Z && (0, h.EW)(Z, { dismissAction: S.L.DISMISS });
+                        null != T && (0, h.EW)(T, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [Z, P]),
-        (0, i.jsxs)(o.ModalRoot, {
-            className: r()(C.root, t),
-            transitionState: U,
-            'aria-labelledby': G,
+        }, [T, G]),
+        (0, r.jsxs)(c.ModalRoot, {
+            className: o()(x.root, t),
+            transitionState: w,
+            'aria-labelledby': I,
             children: [
-                (0, i.jsx)(o.ModalCloseButton, {
-                    className: C.closeButton,
+                (0, r.jsx)(c.ModalCloseButton, {
+                    className: x.closeButton,
                     onClick: j
                 }),
-                (0, i.jsx)(g.Z, { className: C.splash }),
-                null == L ? void 0 : L(),
-                (0, i.jsxs)(o.ModalContent, {
-                    className: C.content,
+                (0, r.jsx)(E.Z, { className: x.splash }),
+                null == D ? void 0 : D(),
+                (0, r.jsxs)(c.ModalContent, {
+                    className: x.content,
                     children: [
-                        (0, i.jsx)(o.Heading, {
+                        (0, r.jsx)(c.Heading, {
                             variant: 'display-md',
-                            className: r()(C.headerText, O),
-                            children: R
+                            className: o()(x.headerText, R),
+                            children: y
                         }),
-                        'video' === s.type
-                            ? (0, i.jsx)(E.Z, {
-                                  className: r()(C.video, A),
-                                  autoPlay: !k,
+                        'video' === n.type
+                            ? (0, r.jsx)(f.Z, {
+                                  className: o()(x.video, M),
+                                  autoPlay: !Z,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
                                   controlsList: 'nofullscreen nodownload noremoteplayback noplaybackrate',
-                                  src: s.src,
-                                  poster: s.poster,
+                                  src: n.src,
+                                  poster: n.poster,
                                   onPlay: (e) => {
-                                      I.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P }), V(Date.now()), K(!0), Q(e.currentTarget.muted);
+                                      m.default.track(p.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G }), P(Date.now()), q(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      es(), Q(e.currentTarget.muted), K(!1);
+                                      en(), X(e.currentTarget.muted), q(!1);
                                   },
                                   onVolumeChange: (e) => {
-                                      es(), Q(e.currentTarget.muted);
+                                      en(), X(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      es(), Q(e.currentTarget.muted), K(!1);
+                                      en(), X(e.currentTarget.muted), q(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:
-                                      null == en
+                                      null == ea
                                           ? void 0
-                                          : en.map((e) => {
-                                                let t = f.Z.getLanguages().find((t) => t.code === e.locale);
+                                          : ea.map((e) => {
+                                                let t = O.Z.getLanguages().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
-                                                    : (0, i.jsx)(
+                                                    : (0, r.jsx)(
                                                           'track',
                                                           {
                                                               label: t.englishName,
@@ -227,55 +227,55 @@ function Z(e) {
                                                       );
                                             })
                               })
-                            : 'embed' === s.type
-                              ? (0, i.jsx)(d.BC, {
-                                    className: r()(C.video, A),
+                            : 'embed' === n.type
+                              ? (0, r.jsx)(u.BC, {
+                                    className: o()(x.video, M),
                                     allowFullScreen: !1,
-                                    href: s.href,
-                                    thumbnail: s.thumbnail,
-                                    video: s.embed,
-                                    provider: u.pn.YOUTUBE,
-                                    maxWidth: s.embed.width,
-                                    maxHeight: s.embed.height,
-                                    renderVideoComponent: m.lV,
-                                    renderImageComponent: m.Yi,
-                                    renderLinkComponent: m.iT,
+                                    href: n.href,
+                                    thumbnail: n.thumbnail,
+                                    video: n.embed,
+                                    provider: i.pn.YOUTUBE,
+                                    maxWidth: n.embed.width,
+                                    maxHeight: n.embed.height,
+                                    renderVideoComponent: g.lV,
+                                    renderImageComponent: g.Yi,
+                                    renderLinkComponent: g.iT,
                                     onPlay: () => {
-                                        I.default.track(T.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P });
+                                        m.default.track(p.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G });
                                     }
                                 })
-                              : 'image' === s.type
-                                ? (0, i.jsx)('img', {
+                              : 'image' === n.type
+                                ? (0, r.jsx)('img', {
                                       alt: '',
-                                      className: r()(C.video, A),
-                                      src: s.src
+                                      className: o()(x.video, M),
+                                      src: n.src
                                   })
                                 : null,
-                        (0, i.jsxs)(o.Heading, {
+                        (0, r.jsxs)(c.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: C.subHeader,
-                            children: [x, null == b ? void 0 : b()]
+                            className: x.subHeader,
+                            children: [v, null == B ? void 0 : B()]
                         }),
-                        null != y &&
-                            (0, i.jsx)(o.Heading, {
+                        null != H &&
+                            (0, r.jsx)(c.Heading, {
                                 variant: 'heading-md/medium',
-                                className: C.bodyText,
-                                children: y
+                                className: x.bodyText,
+                                children: H
                             }),
-                        (0, i.jsx)('div', {
-                            className: r()(C.featureCardGroup, { [C.wideStyle]: w }),
-                            children: M.map((e, t) =>
-                                (0, i.jsx)(
-                                    v,
+                        (0, r.jsx)('div', {
+                            className: o()(x.featureCardGroup, { [x.wideStyle]: U }),
+                            children: L.map((e, t) =>
+                                (0, r.jsx)(
+                                    b,
                                     {
                                         ...e,
-                                        wideStyle: w
+                                        wideStyle: U
                                     },
                                     ''.concat(e.header, '_').concat(t)
                                 )
                             )
                         }),
-                        D()
+                        S()
                     ]
                 })
             ]

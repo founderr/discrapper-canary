@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(442837),
     p = n(902704),
     f = n(846519),
-    _ = n(481060),
-    m = n(925549),
+    m = n(481060),
+    _ = n(925549),
     g = n(209613),
     C = n(100527),
     I = n(906732),
@@ -21,8 +21,8 @@ var i = n(735250),
     x = n(706590),
     S = n(940777),
     v = n(41776),
-    T = n(905423),
-    Z = n(802718),
+    Z = n(905423),
+    T = n(802718),
     b = n(796974),
     A = n(271383),
     M = n(430824),
@@ -150,7 +150,7 @@ class el {
                 let e = this.scrollerRef.current;
                 if (null == e) return;
                 let { scrollTop: t } = e.getScrollerState();
-                m.Z.updateGuildListScrollTo(t), this.onScroll();
+                _.Z.updateGuildListScrollTo(t), this.onScroll();
             }, 200)),
             (this._handleScrollThrottled = o().throttle(() => {
                 let e = this.scrollerRef.current;
@@ -172,8 +172,8 @@ function er(e) {
         }),
         d = (0, h.e7)([v.Z], () => v.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        m = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
-        g = p.concat(m),
+        _ = (0, h.Wu)([M.Z, A.ZP], () => y.default.keys(M.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        g = p.concat(_),
         $ = (0, h.e7)([E.Z], () => E.Z.isFullscreenInContext()),
         ee = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
@@ -186,8 +186,8 @@ function er(e) {
         [eu, ed] = l.useState(!1),
         { clanDiscoveryEnabled: eh } = (0, N.nk)('guilds_bar'),
         { ref: ep, ...ef } = (0, u.OP)(),
-        e_ = (0, _.useFocusJumpSection)(),
-        [em, eg] = l.useState(!1),
+        em = (0, m.useFocusJumpSection)(),
+        [e_, eg] = l.useState(!1),
         eC = l.useMemo(
             () =>
                 new el(
@@ -225,10 +225,10 @@ function er(e) {
     }, []),
         l.useEffect(() => {
             if ((eC.setGuildsTree(o), ea.current || 0 === o.size)) return;
-            let e = T.Z.getState().guildId;
+            let e = Z.Z.getState().guildId;
             eC.scrollToGuild(e, !1);
             let t = null;
-            return T.Z.subscribe((e) => {
+            return Z.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), eC.scrollToGuild(t, !1));
             });
@@ -273,9 +273,9 @@ function er(e) {
         }
     }
     (0, O.Z)(eC.scrollToGuild);
-    let eT = o.getRoots(),
-        eZ = (0, x.Z)(),
-        eb = (0, Z.U)(),
+    let eZ = o.getRoots(),
+        eT = (0, x.Z)(),
+        eb = (0, T.U)(),
         eA = l.useCallback(
             (e) => {
                 let { onClick: t } = e;
@@ -301,7 +301,7 @@ function er(e) {
         );
     return (0, i.jsx)(I.Gt, {
         value: eI,
-        children: (0, i.jsx)(_.ThemeProvider, {
+        children: (0, i.jsx)(m.ThemeProvider, {
             theme: s,
             children: (e) =>
                 (0, i.jsx)('nav', {
@@ -310,7 +310,7 @@ function er(e) {
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
                         ...ef,
-                        ...e_,
+                        ...em,
                         role: 'tree',
                         className: J.tree,
                         children: [
@@ -321,16 +321,16 @@ function er(e) {
                                 className: J.unreadMentionsIndicatorTop,
                                 barClassName: J.unreadMentionsBar
                             }),
-                            (0, i.jsxs)(_.AdvancedScrollerNone, {
+                            (0, i.jsxs)(m.AdvancedScrollerNone, {
                                 className: a()({
                                     [J.scroller]: !0,
-                                    [J.scrolling]: em
+                                    [J.scrolling]: e_
                                 }),
                                 ref: eC.scrollerRef,
                                 onScroll: eC.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(S.Z, {}) : null,
+                                    eT ? (0, i.jsx)(S.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: ex }),
                                     (0, i.jsx)(D.Z, {}),
                                     eb,
@@ -339,14 +339,14 @@ function er(e) {
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': X.Z.Messages.SERVERS,
-                                        children: eT.map(ev)
+                                        children: eZ.map(ev)
                                     }),
                                     eM,
                                     n
                                         ? null
                                         : (0, i.jsx)(U.Z, {
                                               disableTooltip: p.length > 0,
-                                              lastTargetNode: eT[eT.length - 1]
+                                              lastTargetNode: eZ[eZ.length - 1]
                                           }),
                                     (0, i.jsx)(W.Z, {}),
                                     t

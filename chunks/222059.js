@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(899740),
     p = n(155409),
     f = n(699516),
-    _ = n(944486),
-    m = n(594174),
+    m = n(944486),
+    _ = n(594174),
     g = n(295226),
     C = n(774343),
     I = n(417363),
@@ -26,8 +26,8 @@ var i = n(735250),
     x = n(557177),
     S = n(278464),
     v = n(276952),
-    T = n(682662),
-    Z = n(662146),
+    Z = n(682662),
+    T = n(662146),
     b = n(674552),
     A = n(981631),
     M = n(474936),
@@ -47,8 +47,8 @@ let P = {
     }
 };
 function O(e) {
-    let { selected: t, user: n, badge: h, link: f, showProgressBadge: _ } = e,
-        m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
+    let { selected: t, user: n, badge: h, link: f, showProgressBadge: m } = e,
+        _ = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
         [N, S] = l.useState(null),
@@ -62,12 +62,12 @@ function O(e) {
     I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
     let U = null;
     !t &&
-        _ &&
+        m &&
         (U = (0, i.jsx)(c.Z, {
             className: y.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let G = t || g || m,
+    let G = t || g || _,
         k = (0, i.jsx)(o.BlobMask, {
             selected: G,
             lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
@@ -111,14 +111,14 @@ function O(e) {
             inlineSpecs: P,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(T.H, {
+            children: (0, i.jsxs)(Z.H, {
                 children: [
                     (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
                         className: y.pill
                     }),
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(T.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: w,
@@ -145,7 +145,7 @@ function j() {
             unviewedDiscountCount: g.Z.getUnacknowledgedDiscountOffers().length
         })),
         o = r + s,
-        u = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        u = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + o + d,
         x = p === o && o > 0 && n + d === 0,
@@ -155,7 +155,7 @@ function j() {
         (0, i.jsx)(O, {
             selected: e,
             user: u,
-            selectedChannelId: _.Z.getChannelId(A.ME),
+            selectedChannelId: m.Z.getChannelId(A.ME),
             badge: p,
             link: v,
             showProgressBadge: t

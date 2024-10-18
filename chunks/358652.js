@@ -11,25 +11,25 @@ var i,
     h = n(306680),
     p = n(944486),
     f = n(55589);
-let _ = [];
-function m() {
+let m = [];
+function _() {
     let e = f.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, _) && ((_ = e), !0);
+    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, m) && ((m = e), !0);
 }
 function g() {
-    return m();
+    return _();
 }
 function C(e) {
     let { channelId: t } = e,
         n = d.Z.getChannel(t);
-    return !!(null != n && (0, c.hv)(n.type)) && m();
+    return !!(null != n && (0, c.hv)(n.type)) && _();
 }
 class I extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, d.Z, p.Z, h.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return _;
+        return m;
     }
 }
 (a = 'PrivateChannelReadStateStore'),
@@ -49,25 +49,25 @@ class I extends (i = s.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e,
                 n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && m();
+            return !!(null != n && (0, c.hv)(n.type)) && _();
         },
         CHANNEL_DELETE: function (e) {
             let {
                     channel: { id: t }
                 } = e,
                 n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && m();
+            return !!(null != n && (0, c.hv)(n.type)) && _();
         },
         WINDOW_FOCUS: function () {
             let e = d.Z.getChannel(p.Z.getChannelId());
-            return !!(null != e && (0, c.hv)(e.type)) && m();
+            return !!(null != e && (0, c.hv)(e.type)) && _();
         },
         CHANNEL_CREATE: function (e) {
             let {
                     channel: { id: t }
                 } = e,
                 n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && m();
+            return !!(null != n && (0, c.hv)(n.type)) && _();
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
@@ -76,6 +76,6 @@ class I extends (i = s.ZP.Store) {
                 let t = d.Z.getChannel(e);
                 null != t && (0, c.hv)(t.type) && (n = !0);
             }
-            return !!n && m();
+            return !!n && _();
         }
     }));

@@ -127,8 +127,8 @@ function b(e) {
         }
     );
     let U = (0, d.e7)([S.ZP], () => S.ZP.inReverseTrial()),
-        H = (0, g.So)(c.q.STREAM_HIGH_QUALITY),
-        V = (!y && !B) || H,
+        V = (0, g.So)(c.q.STREAM_HIGH_QUALITY),
+        H = (!y && !B) || V,
         [F, W] = s.useState(!1),
         z = D ? I.z8 : I.WC,
         Y = {
@@ -141,7 +141,7 @@ function b(e) {
                     type: e,
                     selected: e.value === i,
                     needsPremium: !(0, j.Z)(n, e.value, r, P, b),
-                    needsDemo: (H || U) && e.value !== I.LY.RESOLUTION_720,
+                    needsDemo: (V || U) && e.value !== I.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => a(e.value),
                     onClose: t,
@@ -155,7 +155,7 @@ function b(e) {
                     type: e,
                     selected: e.value === r,
                     needsPremium: !(0, j.Z)(n, i, e.value, P, b),
-                    needsDemo: H && e.value === I.ws.FPS_60,
+                    needsDemo: V && e.value === I.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => _(e.value),
                     onClose: t,
@@ -196,7 +196,7 @@ function b(e) {
                                   })
                               })
                           }),
-                          V
+                          H
                               ? (0, l.jsx)(v.Z, {
                                     message: N.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
                                     onClose: t,
@@ -224,7 +224,7 @@ function b(e) {
                                   })
                               ]
                           }),
-                          V
+                          H
                               ? (0, l.jsx)(v.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: O,

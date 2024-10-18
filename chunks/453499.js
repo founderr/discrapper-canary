@@ -32,13 +32,13 @@ function P(e, t, s) {
         e
     );
 }
-let S = {
+let y = {
     JUMP: 'jump',
     NEXT: 'next',
     PREVIOUS: 'previous'
 };
 ((r = n || (n = {})).ARROW = 'arrow'), (r.CARET = 'caret');
-class y extends (a = o.PureComponent) {
+class S extends (a = o.PureComponent) {
     componentDidMount() {
         v.S.subscribe(N.CkL.CAROUSEL_PREV, this.handlePrevious), v.S.subscribe(N.CkL.CAROUSEL_NEXT, this.handleNext);
     }
@@ -106,21 +106,21 @@ class y extends (a = o.PureComponent) {
         super(...e),
             P(this, 'handleDotClick', (e) => {
                 let { onSetItem: t, onIntentionalChange: s, current: n } = this.props;
-                null == s || s(n, e, S.JUMP), t(e);
+                null == s || s(n, e, y.JUMP), t(e);
             }),
             P(this, 'handleNext', () => {
                 let { onIntentionalChange: e, current: t, onChangePage: s } = this.props,
                     n = s(1);
-                null == e || e(t, n, S.NEXT);
+                null == e || e(t, n, y.NEXT);
             }),
             P(this, 'handlePrevious', () => {
                 let { onIntentionalChange: e, current: t, onChangePage: s } = this.props,
                     n = s(-1);
-                null == e || e(t, n, S.PREVIOUS);
+                null == e || e(t, n, y.PREVIOUS);
             });
     }
 }
-P(y, 'defaultProps', { includeHitboxPadding: !0 });
+P(S, 'defaultProps', { includeHitboxPadding: !0 });
 class E extends (i = o.PureComponent) {
     componentDidMount() {
         g.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), !this.props.initialPaused && !this.state.paused && this.startTimer();
@@ -181,7 +181,7 @@ class E extends (i = o.PureComponent) {
                             })
                         }),
                         e.length > 1 &&
-                            (0, l.jsx)(y, {
+                            (0, l.jsx)(S, {
                                 className: d()(r, p ? b.themedPagination : b.pagination),
                                 arrowClassName: o,
                                 includeHitboxPadding: m,

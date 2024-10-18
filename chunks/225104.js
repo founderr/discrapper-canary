@@ -1,31 +1,31 @@
-n.d(t, {
+i.d(l, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var i = n(735250);
-n(470079);
-var a = n(866442),
-    s = n(91218),
-    r = n(518738),
-    l = n(134433),
-    o = n(981631);
-function c(e) {
-    var t;
-    let { guildId: n, role: c, size: d, className: u } = e,
-        _ = (0, r.p9)({
-            guildId: n,
-            roleId: c.id,
-            size: d
+var a = i(735250);
+i(470079);
+var o = i(866442),
+    n = i(91218),
+    r = i(518738),
+    t = i(134433),
+    s = i(981631);
+function d(e) {
+    var l;
+    let { guildId: i, role: d, size: c, className: u } = e,
+        f = (0, r.p9)({
+            guildId: i,
+            roleId: d.id,
+            size: c
         });
-    return null != _
-        ? (0, i.jsx)(s.Z, {
+    return null != f
+        ? (0, a.jsx)(n.Z, {
               className: u,
-              ..._
+              ...f
           })
-        : (0, i.jsx)(l.Z, {
-              color: null !== (t = c.colorString) && void 0 !== t ? t : (0, a.Rf)(o.p6O),
+        : (0, a.jsx)(t.Z, {
+              color: null !== (l = d.colorString) && void 0 !== l ? l : (0, o.Rf)(s.p6O),
               className: u,
-              size: d
+              size: c
           });
 }

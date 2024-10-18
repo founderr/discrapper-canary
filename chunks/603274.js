@@ -19,8 +19,8 @@ var l = n(120356),
     h = n(565799),
     p = n(501655),
     f = n(199902),
-    _ = n(592125),
-    m = n(594174),
+    m = n(592125),
+    _ = n(594174),
     g = n(938475),
     C = n(823379),
     I = n(709054),
@@ -29,7 +29,7 @@ var l = n(120356),
     x = n(689938),
     S = n(516126),
     v = n(64056);
-function T(e, t) {
+function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -47,12 +47,12 @@ function T(e, t) {
               ]
           });
 }
-function Z() {
+function T() {
     var e, t;
-    let n = (0, o.Wu)([E.Z, _.Z], () =>
+    let n = (0, o.Wu)([E.Z, m.Z], () =>
             I.default
                 .keys(E.Z.getFavoriteChannels())
-                .map((e) => _.Z.getChannel(e))
+                .map((e) => m.Z.getChannel(e))
                 .filter(C.lm)
         ),
         l = n.map((e) => e.id),
@@ -79,7 +79,7 @@ function Z() {
                     })
             )
         ),
-        Z = (0, o.e7)([h.Z], () => {
+        T = (0, o.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
@@ -105,15 +105,15 @@ function Z() {
             },
             [l]
         ),
-        M = (0, o.Wu)([m.default], () => A.map((e) => m.default.getUser(e)), [A]),
-        R = (0, o.Wu)([m.default], () => b.map((e) => m.default.getUser(e)), [b]),
-        L = T(
+        M = (0, o.Wu)([_.default], () => A.map((e) => _.default.getUser(e)), [A]),
+        R = (0, o.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
+        L = Z(
             c.VoiceNormalIcon,
             x.filter((e) => !b.includes(e.id) && !A.includes(e.id))
         );
     let y =
             ((e = v),
-            (t = Z),
+            (t = T),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,11 +146,11 @@ function Z() {
                           })
                       ]
                   })),
-        P = T(
+        P = Z(
             c.ScreenArrowIcon,
             R.filter((e) => null != e && !A.includes(e.id))
         ),
-        O = T(c.ActivitiesIcon, M);
+        O = Z(c.ActivitiesIcon, M);
     return (0, i.jsxs)(i.Fragment, {
         children: [y, L, P, O]
     });
@@ -165,7 +165,7 @@ function b() {
                     children: x.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),
-            (0, i.jsx)(Z, {})
+            (0, i.jsx)(T, {})
         ]
     });
 }

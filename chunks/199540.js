@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(565138),
     p = n(430824),
     f = n(624138),
-    _ = n(674552),
-    m = n(981631),
+    m = n(674552),
+    _ = n(981631),
     g = n(689938),
     C = n(115376);
 let I = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
@@ -43,12 +43,12 @@ function x(e) {
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
         { color: u, children: h } = r,
-        p = null != u ? u : m.Wyy,
+        p = null != u ? u : _.Wyy,
         f = h.map((e) => e.id),
-        [_, g] = l.useState(!1),
+        [m, g] = l.useState(!1),
         [x, S] = l.useState(c),
         v = c ? 0 : -E,
-        T = (0, d.useSpring)(
+        Z = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
@@ -61,11 +61,11 @@ function x(e) {
             },
             'animate-always'
         ),
-        Z = _ ? T : void 0;
+        T = m ? Z : void 0;
     return (
-        (_ || x) &&
+        (m || x) &&
             (t = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -73,9 +73,9 @@ function x(e) {
                     style: { color: (0, o.Rf)(p) }
                 })
             })),
-        (_ || !x) &&
+        (m || !x) &&
             (n = (0, i.jsx)(s.animated.div, {
-                style: Z,
+                style: T,
                 className: C.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -108,20 +108,20 @@ function S(e) {
             folderGroupId: h,
             folderIconContent: p,
             onClick: f,
-            onContextMenu: m,
+            onContextMenu: _,
             onHoverChange: I,
             onKeyDown: E,
             treeItemProps: { onFocus: N, ...S }
         } = e,
-        [v, T] = l.useState(!1),
-        Z = l.useCallback(() => {
-            s || T(!0), null == I || I(!0);
+        [v, Z] = l.useState(!1),
+        T = l.useCallback(() => {
+            s || Z(!0), null == I || I(!0);
         }, [s, I]),
         b = l.useCallback(() => {
-            s || T(!1), null == I || I(!1);
+            s || Z(!1), null == I || I(!1);
         }, [s, I]),
-        A = r || null == o ? null : (0, _.Or)(o),
-        M = !r && c > 0 ? (0, _.Ne)(c) : null;
+        A = r || null == o ? null : (0, m.Or)(o),
+        M = !r && c > 0 ? (0, m.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
         upperBadge: A,
@@ -130,8 +130,8 @@ function S(e) {
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: v }),
             onClick: f,
-            onContextMenu: m,
-            onMouseEnter: Z,
+            onContextMenu: _,
+            onMouseEnter: T,
             onMouseLeave: b,
             onKeyDown: E,
             onFocus: N,

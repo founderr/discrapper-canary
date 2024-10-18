@@ -17,8 +17,8 @@ var i,
     h = n(134616),
     p = n(714338),
     f = n(212819),
-    _ = n(14429),
-    m = n(951844),
+    m = n(14429),
+    _ = n(951844),
     g = n(313201),
     C = n(592125),
     I = n(888369),
@@ -27,8 +27,8 @@ var i,
     x = n(944486),
     S = n(938475),
     v = n(585483),
-    T = n(63063),
-    Z = n(51596),
+    Z = n(63063),
+    T = n(51596),
     b = n(823385),
     A = n(415795),
     M = n(670512),
@@ -60,7 +60,7 @@ let O = 10,
                 (0, l.jsx)('div', {
                     className: y.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: T.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: Z.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: L.Z.Messages.QUICKSWITCHER_EMPTY_CTA
                     })
                 })
@@ -143,10 +143,10 @@ class V extends r.PureComponent {
                   });
     }
     close() {
-        (0, Z.Cp)();
+        (0, T.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, Z.yC)(e);
+        this.setState({ query: e }), (0, T.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -203,15 +203,15 @@ class V extends r.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, l.jsx)(m.Z, {
+        return (0, l.jsx)(_.Z, {
             className: s()(y.protip, { [y.hasContent]: this.state.query.length > 0 }),
-            type: m.Z.Types.INLINE,
+            type: _.Z.Types.INLINE,
             children: L.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => H(t, f.xQ.USER, L.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
                 textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
                 voiceChannelSymbolHook: (e, t) => H(t, f.xQ.VOICE_CHANNEL, L.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
                 guildSymbolHook: (e, t) => H(t, f.xQ.GUILD, L.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-                helpdeskArticle: T.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
+                helpdeskArticle: Z.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -252,10 +252,10 @@ class V extends r.PureComponent {
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
             P(this, 'focusResult', (e) => {
-                if (!this.state.mouseFocusDisabled) (0, Z.tF)(this.props.results.indexOf(e));
+                if (!this.state.mouseFocusDisabled) (0, T.tF)(this.props.results.indexOf(e));
             }),
             P(this, 'selectResult', (e) => {
-                (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
+                (0, T.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             P(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -267,7 +267,7 @@ class V extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     guild: t.record,
-                                    onSelect: Z.Cp,
+                                    onSelect: T.Cp,
                                     hideSettings: !0
                                 });
                         });
@@ -288,7 +288,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case R.d4z.GUILD_VOICE:
@@ -300,7 +300,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case R.d4z.ANNOUNCEMENT_THREAD:
@@ -312,7 +312,7 @@ class V extends r.PureComponent {
                                         (0, l.jsx)(e, {
                                             ...t,
                                             channel: i,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case R.d4z.GUILD_STORE:
@@ -323,7 +323,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: T.Cp
                                         });
                                 });
                             case R.d4z.GUILD_DIRECTORY:
@@ -345,7 +345,7 @@ class V extends r.PureComponent {
                                     ...n,
                                     channel: t.record,
                                     selected: x.Z.getChannelId() === t.record.id,
-                                    onSelect: Z.Cp
+                                    onSelect: T.Cp
                                 });
                         });
                     case f.h8.USER:
@@ -355,7 +355,7 @@ class V extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     user: t.record,
-                                    onSelect: Z.Cp
+                                    onSelect: T.Cp
                                 });
                         });
                 }
@@ -368,10 +368,10 @@ class V extends r.PureComponent {
                     { selectedIndex: r } = this.props;
                 switch (l) {
                     case 'escape':
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, Z.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, T.Cp)();
                         return;
                     case 'k':
-                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, Z.Cp)());
+                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, T.Cp)());
                         return;
                     case 'enter': {
                         if (-1 === r) return;
@@ -397,13 +397,13 @@ class V extends r.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, Z.tF)(r);
+                e.preventDefault(), (0, T.tF)(r);
             }),
             P(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
-                    { showScores: r } = _.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
+                    { showScores: r } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case f.h8.HEADER:
                         return (0, l.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));

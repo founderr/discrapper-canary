@@ -1,9 +1,9 @@
 n(47120);
 var i,
     s = n(735250),
-    a = n(470079),
-    r = n(120356),
-    o = n.n(r),
+    r = n(470079),
+    a = n(120356),
+    o = n.n(a),
     l = n(442837),
     c = n(552062),
     d = n(416568),
@@ -32,7 +32,7 @@ function Z(e) {
     let { closePopout: t } = e;
     return (0, s.jsx)(f.Z, { onClose: t });
 }
-class v extends (i = a.PureComponent) {
+class v extends (i = r.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n } = this.props,
             i =
@@ -51,8 +51,8 @@ class v extends (i = a.PureComponent) {
                           onDragStart: this.onDragStart,
                           children: (0, s.jsx)(_.Z, {})
                       }),
-            a = n ? 'div' : h.ZP;
-        return (0, s.jsxs)(a, {
+            r = n ? 'div' : h.ZP;
+        return (0, s.jsxs)(r, {
             className: o()(m.base, { [m.widget]: !n }),
             children: [
                 (0, s.jsx)(d.Z, {

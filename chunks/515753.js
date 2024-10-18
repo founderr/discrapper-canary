@@ -19,8 +19,8 @@ var i = n(735250),
     h = n(442837),
     p = n(481060),
     f = n(493683),
-    _ = n(239091),
-    m = n(420660),
+    m = n(239091),
+    _ = n(420660),
     g = n(385499),
     C = n(570908),
     I = n(702321),
@@ -29,8 +29,8 @@ var i = n(735250),
     x = n(933557),
     S = n(979264),
     v = n(322614),
-    T = n(961556),
-    Z = n(163889),
+    Z = n(961556),
+    T = n(163889),
     b = n(111028),
     A = n(853856),
     M = n(93687),
@@ -84,16 +84,16 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Q extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: f, role: _, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
-        return (0, i.jsx)(Z.Z, {
+        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: f, role: m, 'aria-posinset': _, 'aria-setsize': g, ...I } = this.props;
+        return (0, i.jsx)(T.Z, {
             className: a()(W.channel, { [W.fullWidth]: d.tq }, f),
             onClick: h,
-            role: _,
+            role: m,
             focusProps: {
                 within: !0,
                 ...Y
             },
-            'aria-posinset': m,
+            'aria-posinset': _,
             'aria-setsize': g,
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
@@ -166,7 +166,7 @@ function X(e) {
         },
         eh = (e) => {
             t.isMultiUserDM()
-                ? (0, _.jW)(
+                ? (0, m.jW)(
                       e,
                       async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
@@ -179,7 +179,7 @@ function X(e) {
                       },
                       { noBlurEvent: !0 }
                   )
-                : (0, _.jW)(e, async () => {
+                : (0, m.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
                       return (n) =>
                           (0, i.jsx)(e, {
@@ -232,13 +232,13 @@ function X(e) {
                           user: d
                       })
                     : null != y
-                      ? (0, i.jsx)(T.Z, {
+                      ? (0, i.jsx)(Z.Z, {
                             ...e,
                             entry: y
                         })
                       : null;
         },
-        e_ = () => {
+        em = () => {
             let e = p.AvatarSizes.SIZE_32;
             if (t.isMultiUserDM())
                 return t.recipients.length >= 2 && r && null == t.icon
@@ -260,7 +260,7 @@ function X(e) {
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, m.Z)(v) ? V.Skl.STREAMING : j),
+                !d.isSystemUser() && (n = (0, _.Z)(v) ? V.Skl.STREAMING : j),
                 (0, i.jsx)(z, {
                     ...et,
                     size: p.AvatarSizes.SIZE_32,
@@ -274,11 +274,11 @@ function X(e) {
                 })
             );
         },
-        em = t.isMultiUserDM(),
+        e_ = t.isMultiUserDM(),
         eg = t.isSystemDM(),
         eC = (0, L.Q)(),
         eI =
-            em || eg || t.type !== V.d4z.DM || (null == d ? void 0 : d.clan) == null
+            e_ || eg || t.type !== V.d4z.DM || (null == d ? void 0 : d.clan) == null
                 ? el
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -296,7 +296,7 @@ function X(e) {
         id: t.id,
         children: (e) => {
             let { role: n, ...l } = e;
-            return (0, i.jsx)(Z.Z, {
+            return (0, i.jsx)(T.Z, {
                 className: W.channel,
                 role: n,
                 focusProps: {
@@ -331,7 +331,7 @@ function X(e) {
                             }),
                             ...l,
                             children: (0, i.jsx)(C.Z, {
-                                avatar: e_(),
+                                avatar: em(),
                                 selected: s,
                                 highlighted: ei,
                                 muted: null != en && en,
@@ -351,8 +351,8 @@ function X(e) {
                         }),
                         er ? (0, i.jsx)(q, {}) : null,
                         (0, i.jsx)(K, {
-                            'aria-label': em ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
-                            onClick: em ? ep : eo,
+                            'aria-label': e_ ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
+                            onClick: e_ ? ep : eo,
                             onMouseDown: eu
                         })
                     ]

@@ -8,8 +8,8 @@ t(470079);
 var a = t(481060),
     r = t(463571),
     o = t(744142),
-    l = t(981631),
-    s = t(689938),
+    s = t(981631),
+    l = t(689938),
     c = t(558562);
 function d(e) {
     let { applications: n, className: t, listingClassName: o, title: d, showViewAll: _, onViewOne: p, onViewAll: m } = e;
@@ -29,7 +29,7 @@ function d(e) {
                                     look: a.Button.Looks.LINK,
                                     color: a.Button.Colors.LINK,
                                     onClick: m,
-                                    children: s.Z.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
+                                    children: l.Z.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
                                 })
                               : null
                       ]
@@ -41,7 +41,7 @@ function d(e) {
                     (0, i.jsx)(
                         r.Z,
                         {
-                            href: l.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
+                            href: s.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
                             children: (0, i.jsx)(u, {
                                 className: o,
                                 application: e,

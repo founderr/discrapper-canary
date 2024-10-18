@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(749681),
     p = n(667105),
     f = n(603592),
-    _ = n(921944),
-    m = n(49898),
+    m = n(921944),
+    _ = n(49898),
     g = n(46140),
     C = n(689938),
     I = n(55869);
@@ -20,31 +20,31 @@ let E = l.forwardRef(function (e, t) {
     let { selected: n, className: E, onClick: N } = e,
         x = (0, o.Z)('discovery_button'),
         S = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
-        [v, T] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], _.R.SIDEBAR, !0),
-        Z = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL && x && S,
+        [v, Z] = (0, c.US)([a.z.RAPIDASH_MORE_GUILDS_UPSELL], m.R.SIDEBAR, !0),
+        T = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL && x && S,
         b = l.useCallback(() => {
             null == N || N(),
-                (0, u.k5)({ source: m.JU.GUILDS_BAR_ICON }),
+                (0, u.k5)({ source: _.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
-                    if (e === m.F$.QUESTS)
+                    if (e === _.F$.QUESTS)
                         return (0, h.transitionToGlobalDiscovery)({
-                            tab: m.F$.QUESTS,
+                            tab: _.F$.QUESTS,
                             location: g.dr.DISCOVERY_COMPASS,
                             questContent: r.j.DISCOVERY_COMPASS
                         });
                     (0, h.transitionToGlobalDiscovery)({ tab: e });
                 })((0, d.qe)()),
-                Z && T(_.L.DISMISS);
-        }, [N, T, Z]),
+                T && Z(m.L.DISMISS);
+        }, [N, Z, T]),
         A = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: Z ? (0, i.jsx)('div', { className: I.guildNotif }) : void 0
+                lowerBadge: T ? (0, i.jsx)('div', { className: I.guildNotif }) : void 0
             }),
-            [Z]
+            [T]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
     s = n(470079),
-    a = n(13245),
-    r = n(593481),
+    r = n(13245),
+    a = n(593481),
     o = n(692546),
     l = n(981631),
     c = n(668697);
@@ -23,7 +23,7 @@ class u extends s.Component {
     getStyle() {
         let e, t, n, i;
         let {
-            props: { position: s, zIndex: a }
+            props: { position: s, zIndex: r }
         } = this;
         switch (s) {
             case l._vf.TOP_LEFT:
@@ -46,7 +46,7 @@ class u extends s.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: a
+            zIndex: r
         };
     }
     render() {
@@ -55,17 +55,17 @@ class u extends s.Component {
                     locked: e,
                     index: t,
                     notification: {
-                        props: { onNotificationShow: n, onDismissClick: s, onNotificationClick: a, onConfirmClick: l, onCancelClick: d, ...u }
+                        props: { onNotificationShow: n, onDismissClick: s, onNotificationClick: r, onConfirmClick: l, onCancelClick: d, ...u }
                     }
                 }
             } = this,
             h = (0, i.jsx)('div', {
                 className: c.notificationContainer,
-                children: (0, i.jsx)(r.ZP, {
+                children: (0, i.jsx)(a.ZP, {
                     ...u,
                     onNotificationShow: 0 === t ? this.handleNotificationShow : null,
                     onDismissClick: this.handleDismissClick,
-                    onNotificationClick: null != a ? this.handleNotificationClick : null,
+                    onNotificationClick: null != r ? this.handleNotificationClick : null,
                     onConfirmClick: null != l ? this.handleConfirmClick : null,
                     onCancelClick: null != d ? this.handleCancelClick : null,
                     expand: !e && 0 === t
@@ -92,7 +92,7 @@ class u extends s.Component {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
-                a.Z.updateNotificationStatus(t), null != n && n(e, t);
+                r.Z.updateNotificationStatus(t), null != n && n(e, t);
             }),
             d(this, 'handleNotificationClick', (e) => {
                 let {

@@ -11,8 +11,8 @@ var i,
     h = n(43267),
     p = n(933557),
     f = n(93687),
-    _ = n(266076),
-    m = n(199902),
+    m = n(266076),
+    _ = n(199902),
     g = n(19780),
     C = n(306680),
     I = n(944486),
@@ -21,8 +21,8 @@ var i,
     x = n(276952),
     S = n(682662),
     v = n(662146),
-    T = n(674552),
-    Z = n(981631),
+    Z = n(674552),
+    T = n(981631),
     b = n(673193);
 function A(e, t, n) {
     return (
@@ -111,21 +111,21 @@ class L extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === Z.d4z.DM ? E.default.getUser(e.getRecipientId()) : null;
+            t = e.type === T.d4z.DM ? E.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: f, animating: m } = this.state,
+            { hovered: f, animating: _ } = this.state,
             g = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(x.Z, {
-                        hovered: !m && f,
-                        selected: !m && n,
-                        unread: !m && h,
+                        hovered: !_ && f,
+                        selected: !_ && n,
+                        unread: !_ && h,
                         className: b.pill
                     }),
                     (0, l.jsx)(v.Z, {
@@ -133,8 +133,8 @@ class L extends (i = r.PureComponent) {
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
                             selected: n || f,
-                            lowerBadge: i > 0 ? (0, T.Ne)(i) : null,
-                            upperBadge: (0, T.Or)({
+                            lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
+                            upperBadge: (0, Z.Or)({
                                 audio: r,
                                 video: o,
                                 screenshare: u,
@@ -145,7 +145,7 @@ class L extends (i = r.PureComponent) {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.NavItem, {
-                                        to: Z.Z5c.CHANNEL(Z.ME, e.id),
+                                        to: T.Z5c.CHANNEL(T.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || f,
@@ -154,7 +154,7 @@ class L extends (i = r.PureComponent) {
                                         icon: g ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: g ? 'on-hover' : 'always',
                                         children: g
-                                            ? (0, l.jsx)(_.Z, {
+                                            ? (0, l.jsx)(m.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -185,7 +185,7 @@ class L extends (i = r.PureComponent) {
             }),
             A(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === Z.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === T.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -218,16 +218,16 @@ A(L, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
-            a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : Z.WtW.VOICE), [r]),
-            s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
+            a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : T.WtW.VOICE), [r]),
+            s = (0, o.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
             u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            _ = r === n,
+            m = r === n,
             E = !1,
             N = !1;
         return (
-            _ && ((E = a === Z.WtW.VOICE), (N = a === Z.WtW.VIDEO)),
+            m && ((E = a === T.WtW.VOICE), (N = a === T.WtW.VIDEO)),
             (0, l.jsx)(L, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ A(L, 'defaultProps', {
                 audio: E,
                 video: N,
                 stream: s,
-                isCurrentUserInThisDMCall: _,
+                isCurrentUserInThisDMCall: m,
                 isGDMFacepileEnabled: h
             })
         );

@@ -10,8 +10,8 @@ var i = n(735250),
     h = n(111028),
     p = n(569471),
     f = n(488131),
-    _ = n(592125),
-    m = n(306680),
+    m = n(592125),
+    _ = n(306680),
     g = n(979651),
     C = n(938475),
     I = n(714794),
@@ -20,8 +20,8 @@ var i = n(735250),
     x = n(207055),
     S = n(981631),
     v = n(124368),
-    T = n(689938),
-    Z = n(872356),
+    Z = n(689938),
+    T = n(872356),
     b = n(206197),
     A = n(82915);
 function M(e) {
@@ -44,9 +44,9 @@ t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: R, withGuildIcon: L } = e,
         y = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         P = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)),
-        { unread: O, mentionCount: j } = (0, o.cj)([m.ZP], () => ({
-            unread: m.ZP.hasUnread(t.id),
-            mentionCount: m.ZP.getMentionCount(t.id)
+        { unread: O, mentionCount: j } = (0, o.cj)([_.ZP], () => ({
+            unread: _.ZP.hasUnread(t.id),
+            mentionCount: _.ZP.getMentionCount(t.id)
         })),
         D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)),
         w = l.useCallback(
@@ -60,7 +60,7 @@ t.Z = l.memo(function (e) {
         }, [t.guild_id, t.id]),
         G = l.useCallback(
             (e) => {
-                let l = _.Z.getChannel(t.id);
+                let l = m.Z.getChannel(t.id);
                 null != l &&
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
@@ -78,16 +78,16 @@ t.Z = l.memo(function (e) {
         V = l.useRef(null),
         F =
             j > 0
-                ? T.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+                ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
                       channelName: t.name,
                       mentionCount: j
                   })
                 : O
-                  ? T.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name })
-                  : T.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
+                  ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name })
+                  : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
     return (0, i.jsxs)('li', {
         role: B,
-        className: a()(Z.containerDefault, { [Z.selected]: r }),
+        className: a()(T.containerDefault, { [T.selected]: r }),
         children: [
             (0, i.jsx)(M, { withGuildIcon: L }),
             R
@@ -105,7 +105,7 @@ t.Z = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: a()(Z.iconVisibility, b.wrapper, b.typeThread, {
+                    className: a()(T.iconVisibility, b.wrapper, b.typeThread, {
                         [b.modeSelected]: r,
                         [b.modeMuted]: !r && D,
                         [b.modeUnreadImportant]: !D && !r && O,

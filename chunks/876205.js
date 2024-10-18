@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(120356),
-    a = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    a = n(442837),
     o = n(481060),
     l = n(556296),
     c = n(13140),
@@ -27,7 +27,7 @@ let h = {
 };
 function p(e) {
     let { value: t, action: n, shouldShow: s } = e,
-        d = (0, r.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)),
+        d = (0, a.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)),
         p = (0, o.useRedesignIconContext)().enabled;
     if (null == d || !s) return null;
     let f = c.BB(d.shortcut),
@@ -43,7 +43,7 @@ function p(e) {
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-xxs/semibold',
-                className: a()(u.keybindIndicatorText),
+                className: r()(u.keybindIndicatorText),
                 children: f
             })
         ]

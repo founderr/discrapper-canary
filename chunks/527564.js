@@ -1,6 +1,6 @@
 t.d(n, {
     M: function () {
-        return E;
+        return v;
     }
 }),
     t(789020);
@@ -8,8 +8,8 @@ var i = t(735250),
     a = t(470079),
     r = t(120356),
     o = t.n(r),
-    l = t(442837),
-    s = t(481060),
+    s = t(442837),
+    l = t(481060),
     c = t(765717),
     d = t(283836),
     u = t(507608),
@@ -18,23 +18,23 @@ var i = t(735250),
     m = t(519896),
     I = t(171246),
     f = t(55563),
-    h = t(147890),
-    g = t(272242),
+    g = t(147890),
+    h = t(272242),
     C = t(981631),
-    v = t(689938),
-    b = t(778452);
-function E(e) {
+    b = t(689938),
+    E = t(778452);
+function v(e) {
     let { appId: n } = e,
         { subscriptions: t, otps: a } = (0, d.q)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: b.productSection,
+                    className: E.productSection,
                     children: [
                         (0, i.jsx)(p.r, { subscriptions: t }),
                         (0, i.jsx)('div', {
-                            className: o()(b.productList, b.subList),
+                            className: o()(E.productList, E.subList),
                             children: t.map((e) =>
                                 (0, i.jsx)(
                                     u.zz,
@@ -43,7 +43,7 @@ function E(e) {
                                         listing: e,
                                         subscriptionType: (0, I.KW)(e.skuFlags) ? 'user' : 'guild',
                                         onDetails: () => {
-                                            (0, h.goToApplicationStoreSku)({
+                                            (0, g.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -57,14 +57,14 @@ function E(e) {
                 }),
             a.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: b.productSection,
+                    className: E.productSection,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
+                            children: b.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(b.productList, b.itemList),
+                            className: o()(E.productList, E.itemList),
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -72,7 +72,7 @@ function E(e) {
                                         skuId: e.skuId,
                                         appId: n,
                                         onDetails: () => {
-                                            (0, h.goToApplicationStoreSku)({
+                                            (0, g.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -98,8 +98,8 @@ function x(e) {
                 params: { applicationId: n, skuId: t }
             }
         } = e,
-        r = (0, l.e7)([f.Z], () => f.Z.get(t), [t]),
-        o = (0, l.e7)([f.Z], () => (null != t ? f.Z.getParentSKU(t) : void 0), [t]),
+        r = (0, s.e7)([f.Z], () => f.Z.get(t), [t]),
+        o = (0, s.e7)([f.Z], () => (null != t ? f.Z.getParentSKU(t) : void 0), [t]),
         c = a.useId();
     return (
         a.useLayoutEffect(() => {
@@ -107,7 +107,7 @@ function x(e) {
                 case C.epS.CONSUMABLE:
                 case C.epS.DURABLE:
                     return (function (e, n, t) {
-                        (0, s.openModal)(
+                        (0, l.openModal)(
                             (e) => {
                                 let { onClose: a, transitionState: r } = e;
                                 return (0, i.jsx)(_.ItemDetailsModal, {
@@ -120,10 +120,10 @@ function x(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !T() &&
-                                        (0, h.goToApplicationSection)({
+                                    !P() &&
+                                        (0, g.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
@@ -132,7 +132,7 @@ function x(e) {
                 case C.epS.SUBSCRIPTION:
                     if ((null == o ? void 0 : o.flags) == null) return;
                     return (function (e, n, t, a) {
-                        (0, s.openModal)(
+                        (0, l.openModal)(
                             (e) => {
                                 let { onClose: r, transitionState: o } = e;
                                 return (0, i.jsx)(m.SubscriptionDetailsModal, {
@@ -147,10 +147,10 @@ function x(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !T() &&
-                                        (0, h.goToApplicationSection)({
+                                    !P() &&
+                                        (0, g.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
@@ -160,13 +160,13 @@ function x(e) {
         }, [n, c, null == o ? void 0 : o.flags, null == r ? void 0 : r.type, t]),
         a.useLayoutEffect(
             () => () => {
-                (0, s.closeModal)(c);
+                (0, l.closeModal)(c);
             },
             [c]
         ),
         null
     );
 }
-function T() {
+function P() {
     return window.location.pathname.startsWith('/login');
 }

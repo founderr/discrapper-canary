@@ -1,7 +1,7 @@
 var i = n(735250),
     s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     o = n(442837),
     l = n(261435),
     c = n(237997),
@@ -12,18 +12,18 @@ class p extends s.Component {
     render() {
         let { keybind: e, notifications: t, position: n, locked: s } = this.props;
         if (n === u._vf.DISABLED) return null;
-        let a = -1;
+        let r = -1;
         return (0, i.jsx)('div', {
-            className: r()(h.container, h[n]),
+            className: a()(h.container, h[n]),
             children: t.map((t) =>
                 s && t.status === u._1z.TIMED_OUT
                     ? null
-                    : ((a += 1),
+                    : ((r += 1),
                       (0, i.jsx)(
                           d.Z,
                           {
-                              index: a,
-                              zIndex: 100 - a,
+                              index: r,
+                              zIndex: 100 - r,
                               position: n,
                               notification: t,
                               keybind: e,

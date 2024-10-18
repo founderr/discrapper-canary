@@ -11,7 +11,7 @@ var i,
     h = n(981631),
     p = n(689938),
     f = n(903949);
-function _(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-let m = {
+let _ = {
     friction: 15,
     tension: 100
 };
@@ -44,7 +44,7 @@ class g extends (i = r.PureComponent) {
         !0 !== t.enabled &&
             o.Z.spring(this.state.translateY, {
                 toValue: Math.min(e, 250),
-                ...m
+                ..._
             }).start();
     }
     renderArrowGroup(e) {
@@ -125,13 +125,13 @@ class g extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            m(this, 'state', {
                 shown: !1,
                 translateY: new o.Z.Value(0)
             }),
-            _(this, 'rootRef', r.createRef()),
-            _(this, 'focusTimeout', new c.V7()),
-            _(this, 'handleResultFocus', (e) => {
+            m(this, 'rootRef', r.createRef()),
+            m(this, 'focusTimeout', new c.V7()),
+            m(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -144,4 +144,4 @@ class g extends (i = r.PureComponent) {
             });
     }
 }
-_(g, 'contextType', u.AccessibilityPreferencesContext), (t.Z = g);
+m(g, 'contextType', u.AccessibilityPreferencesContext), (t.Z = g);

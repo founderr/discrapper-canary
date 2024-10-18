@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
     s = n(470079),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     o = n(13245),
     l = n(313201),
     c = n(237997),
@@ -24,15 +24,15 @@ class g extends s.PureComponent {
         return (0, i.jsxs)('div', {
             className: f.container,
             children: [
-                (0, i.jsx)(r.FormTitle, {
+                (0, i.jsx)(a.FormTitle, {
                     id: E,
-                    tag: r.FormTitleTags.H5,
+                    tag: a.FormTitleTags.H5,
                     className: f.title,
                     children: p.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
                 }),
                 (0, i.jsx)('div', {
                     className: f.sliderContainer,
-                    children: (0, i.jsx)(r.Slider, {
+                    children: (0, i.jsx)(a.Slider, {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
@@ -67,4 +67,4 @@ class g extends s.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = a.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(g);
+t.Z = r.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(g);

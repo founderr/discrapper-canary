@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(735250),
     s = n(470079),
-    a = n(512722),
-    r = n.n(a),
+    r = n(512722),
+    a = n.n(r),
     o = n(442837),
     l = n(481060),
     c = n(493683),
@@ -23,31 +23,31 @@ var i = n(735250),
     I = n(593481),
     Z = n(703656),
     v = n(199902),
-    S = n(592125),
-    C = n(158776),
+    C = n(592125),
+    S = n(158776),
     x = n(594174),
-    N = n(5192),
-    T = n(312839),
+    T = n(5192),
+    N = n(312839),
     O = n(981631),
     A = n(701488),
     y = n(987650),
     R = n(689938),
-    M = n(810489);
-function L(e) {
+    L = n(810489);
+function M(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
     let s = n.getIconURL(A.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: M.header,
+            className: L.header,
             children: [
                 (0, i.jsx)(f.f, {
                     src: s,
                     size: 32
                 }),
                 (0, i.jsx)(l.Text, {
-                    className: M.gameInfo,
+                    className: L.gameInfo,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
                     children: n.name
@@ -57,15 +57,15 @@ function L(e) {
     });
 }
 function b(e) {
-    let { entry: t, idx: n, onTrackEvent: a } = e,
+    let { entry: t, idx: n, onTrackEvent: r } = e,
         d = (0, o.e7)([x.default], () => x.default.getUser(t.author_id)),
         h = (0, m.kr)(t),
         f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [I, T] = s.useState('unsent'),
+        [I, N] = s.useState('unsent'),
         [A, y] = s.useState(!1),
-        L = (0, o.e7)([v.Z], () => (null != d ? v.Z.getAnyStreamForUser(d.id) : null), [d]),
+        M = (0, o.e7)([v.Z], () => (null != d ? v.Z.getAnyStreamForUser(d.id) : null), [d]),
         { isMobileOnline: b, status: P } = (0, o.cj)(
-            [C.Z],
+            [S.Z],
             () =>
                 null == d
                     ? {
@@ -73,8 +73,8 @@ function b(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: C.Z.isMobileOnline(d.id),
-                          status: C.Z.getStatus(d.id)
+                          isMobileOnline: S.Z.isMobileOnline(d.id),
+                          status: S.Z.getStatus(d.id)
                       },
             [d]
         );
@@ -89,10 +89,10 @@ function b(e) {
                 e.stopPropagation();
                 try {
                     var i;
-                    T('sending');
+                    N('sending');
                     let e = await c.Z.getOrEnsurePrivateChannel(d.id),
-                        s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
-                    r()(null != s, 'Send channel must be defined'),
+                        s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    a()(null != s, 'Send channel must be defined'),
                         (0, Z.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, g.p)({
                             channel: s,
@@ -100,48 +100,48 @@ function b(e) {
                             entry: t,
                             whenReady: !0
                         }),
-                        a(O.rMx.OVERLAY_GAME_INVITE_SENT, {
+                        r(O.rMx.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: d.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
-                        T('sent');
+                        N('sent');
                 } catch (e) {
-                    T('unsent');
+                    N('unsent');
                 }
             }
         },
-        j = async () => {
+        w = async () => {
             var e;
             if (null == d) return;
             let t = await c.Z.getOrEnsurePrivateChannel(d.id),
-                n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            r()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
+                n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
+            a()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == d
         ? null
         : (0, i.jsxs)('div', {
-              className: M.userRow,
+              className: L.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: M.avatarContainer,
+                      className: L.avatarContainer,
                       user: d,
                       isMobile: b,
                       status: P
                   }),
                   (0, i.jsxs)('div', {
-                      className: M.userInfo,
+                      className: L.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: M.usernameWrapper,
+                              className: L.usernameWrapper,
                               children: [
                                   (0, i.jsx)(l.Text, {
-                                      className: M.username,
+                                      className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: N.ZP.getName(void 0, void 0, d)
+                                      children: T.ZP.getName(void 0, void 0, d)
                                   }),
-                                  null != L && (0, i.jsx)(p.ZP, {})
+                                  null != M && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(_.m7, {
@@ -160,11 +160,11 @@ function b(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: M.inviteButtonWrapper,
+                      className: L.inviteButtonWrapper,
                       children: (0, i.jsx)(l.Button, {
                           submitting: 'sending' === I,
-                          onClick: A ? j : D,
-                          className: M.inviteButton,
+                          onClick: A ? w : D,
+                          className: L.inviteButton,
                           color: l.ButtonColors.PRIMARY,
                           look: 'sent' === I ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
                           size: l.ButtonSizes.MAX,
@@ -189,7 +189,7 @@ function P(e) {
         children: [
             (0, i.jsx)(I.iz, {}),
             (0, i.jsxs)(l.Text, {
-                className: M.helpText,
+                className: L.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), R.Z.Messages.CONTENT_INVENTORY_OVERLAY_INVITES_HELP]
@@ -209,20 +209,20 @@ function P(e) {
     });
 }
 function D(e, t) {
-    let { trackView: n, trackClick: s, trackEvent: a } = (0, T.R)(y.n0.SendGameInvitesNotification, { notif_type: y.n0.SendGameInvitesNotification });
+    let { trackView: n, trackClick: s, trackEvent: r } = (0, N.R)(y.n0.SendGameInvitesNotification, { notif_type: y.n0.SendGameInvitesNotification });
     return (
-        r()(t.length > 0, 'Some entries must be present'),
+        a()(t.length > 0, 'Some entries must be present'),
         {
             colorScheme: I.IC.PRIMARY,
             icon: null,
-            title: (0, i.jsx)(L, { game: e }),
+            title: (0, i.jsx)(M, { game: e }),
             body: (0, i.jsx)(P, {
                 entries: t,
-                onTrackEvent: a
+                onTrackEvent: r
             }),
             onNotificationShow: () => {
                 n(),
-                    a(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    r(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });

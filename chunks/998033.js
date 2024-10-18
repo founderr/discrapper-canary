@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(13245),
-    a = n(593481),
-    r = n(703656),
+    r = n(593481),
+    a = n(703656),
     o = n(974180),
     l = n(237997),
     c = n(150097),
@@ -29,7 +29,7 @@ function _(e, t, n, _) {
             channel_type: e.type
         });
     return {
-        colorScheme: a.IC.PRIMARY,
+        colorScheme: r.IC.PRIMARY,
         icon: g,
         title: m,
         body: I,
@@ -45,7 +45,7 @@ function _(e, t, n, _) {
             _ && (0, d.GN)(o.Ay, o.yk), Z();
         },
         onNotificationClick: () => {
-            (0, r.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), v('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            (0, a.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), v('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             v('dismiss');

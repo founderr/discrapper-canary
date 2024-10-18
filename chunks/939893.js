@@ -1,25 +1,25 @@
-var i = t(735250);
-t(470079);
-var a = t(302454),
-    r = t.n(a),
-    o = t(481060),
-    l = t(447543),
-    s = t(15470),
-    c = t(960904),
-    d = t(830121),
-    u = t(746878),
-    _ = t(241209);
+var n = s(735250);
+s(470079);
+var a = s(302454),
+    i = s.n(a),
+    r = s(481060),
+    l = s(447543),
+    o = s(15470),
+    h = s(960904),
+    d = s(830121),
+    u = s(746878),
+    c = s(241209);
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
-        ..._.Z.rules,
-        heading: { ...s.i.heading },
-        image: { ...r().defaultRules.image },
+        ...c.Z.rules,
+        heading: { ...o.i.heading },
+        image: { ...i().defaultRules.image },
         inviteLink: {
-            order: _.Z.rules.link.order + 1,
-            match: (e, n) => (n.inline ? p.exec(e) : null),
-            parse: (e, n, t) => {
-                let i = (0, d.zO)(e[0]);
-                return null == i || i.type !== c.g.INVITE
+            order: c.Z.rules.link.order + 1,
+            match: (e, t) => (t.inline ? p.exec(e) : null),
+            parse: (e, t, s) => {
+                let n = (0, d.zO)(e[0]);
+                return null == n || n.type !== h.g.INVITE
                     ? {
                           type: 'text',
                           content: e[0]
@@ -35,24 +35,24 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           onClick: () => {
                               var e;
                               l.Z.acceptInviteAndTransitionToInviteChannel({
-                                  inviteKey: i.code,
+                                  inviteKey: n.code,
                                   context: { location: 'Application Directory' }
                               }),
-                                  null === (e = t.closeModal) || void 0 === e || e.call(t);
+                                  null === (e = s.closeModal) || void 0 === e || e.call(s);
                           }
                       };
             },
-            react: (e, n, t) =>
-                (0, i.jsx)(
-                    o.Anchor,
+            react: (e, t, s) =>
+                (0, n.jsx)(
+                    r.Anchor,
                     {
-                        onClick: (n) => {
-                            n.preventDefault(), e.onClick();
+                        onClick: (t) => {
+                            t.preventDefault(), e.onClick();
                         },
-                        children: (0, u.S)(e, n, t)
+                        children: (0, u.S)(e, t, s)
                     },
-                    t.key
+                    s.key
                 )
         }
     };
-n.Z = m;
+t.Z = m;

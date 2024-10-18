@@ -25,9 +25,9 @@ function d(e) {
         fetchNextPage: i.useCallback(
             async (e, i) => {
                 if (l.current) return;
-                let _ = ''.concat(e, '-').concat(i),
-                    m = !1;
-                if ((_ !== p.current && ((p.current = _), (f.current = !1), (m = !0)), f.current)) return;
+                let m = ''.concat(e, '-').concat(i),
+                    _ = !1;
+                if ((m !== p.current && ((p.current = m), (f.current = !1), (_ = !0)), f.current)) return;
                 null != d && h(null);
                 let g = (function (e, t, n, i) {
                     let l = n === c.wB.SUBMITTED;
@@ -43,7 +43,7 @@ function d(e) {
                         let t = e[e.length - 1];
                         return { after: l ? t.joinRequestId : t.actionedAt };
                     }
-                })(n, e, i, m);
+                })(n, e, i, _);
                 try {
                     l.current = !0;
                     let e = await o.Z.fetchGuildJoinRequests({

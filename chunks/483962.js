@@ -1,7 +1,7 @@
 var i = n(735250),
     s = n(470079),
-    a = n(442837),
-    r = n(831218),
+    r = n(442837),
+    a = n(831218),
     o = n(840780),
     l = n(51596),
     c = n(905423),
@@ -12,7 +12,7 @@ var i = n(735250),
     f = n(53800);
 let _ = () => (0, l.$Z)('DM_SEARCH');
 t.Z = s.memo(function () {
-    let e = (0, a.e7)([d.Z], () => (d.Z.isUILocked((0, u.QF)()) ? 'true' : 'false')),
+    let e = (0, r.e7)([d.Z], () => (d.Z.isUILocked((0, u.QF)()) ? 'true' : 'false')),
         t = (0, c.Z)((e) => {
             let { channelId: t } = e;
             return t;
@@ -29,7 +29,7 @@ t.Z = s.memo(function () {
                     children: p.Z.Messages.DM_SEARCH_PLACEHOLDER
                 })
             }),
-            (0, i.jsx)(r.Z, {
+            (0, i.jsx)(a.Z, {
                 padding: 8,
                 theme: h.BRd.DARK,
                 version: e,

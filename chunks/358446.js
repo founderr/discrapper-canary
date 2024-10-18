@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(704215),
-    a = n(481060),
-    r = n(13245),
+    r = n(481060),
+    a = n(13245),
     o = n(312839),
     l = n(706140),
     c = n(593481),
@@ -38,14 +38,14 @@ function E(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: f.iconContainer,
-                    children: (0, i.jsx)(a.MicrophoneIcon, {
+                    children: (0, i.jsx)(r.MicrophoneIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 28,
                         width: 28
                     })
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-sm/normal',
                     children: p.Z.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
                 })
@@ -53,7 +53,7 @@ function E(e) {
         }),
         colorScheme: c.IC.PRIMARY,
         onDismissClick: (e, n) => {
-            s('dismiss'), t(h.L.DISMISS), r.Z.updateNotificationStatus(n);
+            s('dismiss'), t(h.L.DISMISS), a.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(h.L.AUTO_DISMISS), n();

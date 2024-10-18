@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(475179),
     p = n(925549),
     f = n(438139),
-    _ = n(730749),
-    m = n(607070),
+    m = n(730749),
+    _ = n(607070),
     g = n(566620),
     C = n(317381),
     I = n(620662),
@@ -21,8 +21,8 @@ var i = n(735250),
     x = n(933557),
     S = n(194082),
     v = n(311352),
-    T = n(436774),
-    Z = n(594190),
+    Z = n(436774),
+    T = n(594190),
     b = n(925329),
     A = n(810568),
     M = n(168524),
@@ -209,7 +209,7 @@ class ec extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: T.JX.PREMIUM_TIER_2
+                                        color: Z.JX.PREMIUM_TIER_2
                                     }),
                                     (0, i.jsx)(U.Z, {
                                         className: ea.perksDemoText,
@@ -344,25 +344,25 @@ function eu(e) {
         })
     });
 }
-t.Z = (0, _.Z)(function (e) {
+t.Z = (0, m.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([B.default], () => B.default.getId()),
-        a = (0, c.e7)([Z.ZP, X.Z], () => (0, O.Z)(Z.ZP, X.Z)),
+        a = (0, c.e7)([T.ZP, X.Z], () => (0, O.Z)(T.ZP, X.Z)),
         s = (0, c.e7)([q.Z, H.Z], () => H.Z.getChannel(q.Z.getVoiceChannelId())),
         o = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([H.Z], () => H.Z.getChannel(o)),
         d = (0, c.e7)([F.Z], () => F.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([k.Z], () => [k.Z.getCurrentUserActiveStream(), k.Z.getStreamerActiveStreamMetadata()]),
-        f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        _ = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        f = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
+        m = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         g = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? R.JL(s, F.Z, z.Z, !1) : null != n && R.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
         [I] = (0, N.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
                     if (null != a && null != a.id) return a.id;
-                    if (null != _) return _.applicationId;
+                    if (null != m) return m.applicationId;
                 })()) && void 0 !== t
                 ? t
                 : ''
@@ -370,14 +370,14 @@ t.Z = (0, _.Z)(function (e) {
         E = (0, c.e7)([W.Z], () => (0, L.Z)(W.Z) && (0, $.isWindows)()),
         S = (0, c.e7)([Y.Z], () => (null != r ? Y.Z.findActivity(r, (e) => e.type === ei.IIU.PLAYING) : null)),
         v = null != h && h.ownerId === r && h.state !== ei.jm8.ENDED,
-        T = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, x.F6)(u, Q.default, K.Z) : void 0)),
+        Z = (0, c.e7)([Q.default, K.Z], () => (null != u ? (0, x.F6)(u, Q.default, K.Z) : void 0)),
         b = (0, w.Z)();
     return (0, i.jsx)(ec, {
         ...l,
         guildId: n,
         canGoLive: E,
         activity: S,
-        embeddedActivity: _,
+        embeddedActivity: m,
         userId: r,
         runningGame: a,
         application: I,
@@ -387,7 +387,7 @@ t.Z = (0, _.Z)(function (e) {
         canStream: g,
         stream: h,
         streamMetadata: p,
-        channelName: T,
+        channelName: Z,
         guildForConnectedChannel: d,
         streamQualityIndicator: b
     });

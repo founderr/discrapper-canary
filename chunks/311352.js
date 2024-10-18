@@ -11,8 +11,8 @@ var l = n(399606),
     h = n(13140),
     p = n(924557),
     f = n(435064),
-    _ = n(39604),
-    m = n(981631),
+    m = n(39604),
+    _ = n(981631),
     g = n(689938),
     C = n(847744);
 function I(e) {
@@ -22,7 +22,7 @@ function I(e) {
     });
 }
 function E() {
-    (0, _.C1)();
+    (0, m.C1)();
 }
 let N = (e) => {
     let { keybindString: t, children: n } = e,
@@ -86,7 +86,7 @@ t.Z = () => {
             clipsEnabled: f.Z.getSettings().clipsEnabled,
             isAtMaxSavingClipsOperations: f.Z.getIsAtMaxSaveClipOperations()
         })),
-        s = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
+        s = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(_.kg4.SAVE_CLIP));
     if (!(t && n) || null == s || e) return null;
     let o = h.BB(s.shortcut, !0);
     return (0, i.jsx)(N, {

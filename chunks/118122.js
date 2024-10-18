@@ -15,8 +15,8 @@ var i = n(735250),
     h = n(155409),
     p = n(430824),
     f = n(594174),
-    _ = n(40153),
-    m = n(603592),
+    m = n(40153),
+    _ = n(603592),
     g = n(981631),
     C = n(675999),
     I = n(689938),
@@ -44,11 +44,11 @@ function S(e) {
         s = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
         S = l.useMemo(() => Object.values(s), [s]),
         v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        T = l.useMemo(() => S.some((e) => e.isOwner(v)), [S, v]),
-        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
+        Z = l.useMemo(() => S.some((e) => e.isOwner(v)), [S, v]),
+        T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
         { analyticsLocations: b } = (0, o.ZP)(),
         A = (0, a.useRedesignIconContext)().enabled,
-        M = (0, i.jsx)(m.Z, {
+        M = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,7 +63,7 @@ function S(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: Z,
+            selected: T,
             onContextMenu: x,
             tooltip: I.Z.Messages.ADD_A_SERVER,
             icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
@@ -73,13 +73,13 @@ function S(e) {
         : (0, i.jsx)('div', {
               className: E.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: T ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: N,
                   position: 'right',
                   children: [
                       M,
                       null != n &&
-                          (0, i.jsx)(_.ZP, {
+                          (0, i.jsx)(m.ZP, {
                               name: I.Z.Messages.DND_END_OF_LIST,
                               targetNode: n,
                               below: !0,

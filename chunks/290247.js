@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = t(735250);
@@ -8,16 +8,16 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    l = t(769003);
-function s(e) {
+    s = t(769003);
+function l(e) {
     let { supportedLanguages: n } = e;
     return (0, i.jsx)('ul', {
-        className: l.outerContainer,
+        className: s.outerContainer,
         children: n.map((e) =>
             (0, i.jsx)(
                 'li',
                 {
-                    className: r()(l.innerContainer, l.languageItem),
+                    className: r()(s.innerContainer, s.languageItem),
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         children: e

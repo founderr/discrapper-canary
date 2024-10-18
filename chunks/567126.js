@@ -3,7 +3,7 @@ n.d(t, {
         return Y;
     },
     oA: function () {
-        return V;
+        return H;
     },
     se: function () {
         return z;
@@ -134,12 +134,12 @@ async function U() {
         )
     ).filter((e) => null !== e);
 }
-function H(e) {
+function V(e) {
     let t = (0, T.isWindows)() ? (0, O.Z)(C.ZP, Z.Z) : null,
         n = C.ZP.getRunningGames();
     return null != t && (0, M.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, M.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
-function V(e) {
+function H(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: i } = N.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         a = I.Z.supports(y.AN.GO_LIVE_HARDWARE),
@@ -151,7 +151,7 @@ function V(e) {
         [O, w] = s.useState(!1),
         D = s.useRef(null),
         U = s.useRef(new h.Xp()),
-        V = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
+        H = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
         F = (function (e, t, n) {
             let l = (0, j.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
@@ -171,10 +171,10 @@ function V(e) {
             }, [l, e, t, n]);
         })(
             (0, u.e7)([S.Z], () => S.Z.quests),
-            V,
+            H,
             f
         ),
-        W = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : H(t) - H(e)))), [F, f]);
+        W = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : V(t) - V(e)))), [F, f]);
     s.useEffect(() => {
         let e = U.current;
         return (
@@ -493,23 +493,23 @@ function z(e) {
     });
 }
 function Y(e) {
-    let { onSourceSelect: t, onCancel: n } = e,
-        { lastPickerAction: i, lastPickerError: r } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState()),
-        [a, o] = s.useState(!1);
+    let { onSourceSelect: t, onCancel: n, pickerType: i } = e,
+        { lastPickerAction: r, lastPickerError: a } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState()),
+        [o, c] = s.useState(!1);
     return (
-        s.useEffect(() => {
-            (0, R.t)();
-        }, []),
         (0, A.kE)(),
         s.useEffect(() => {
-            a ? (i === A.Uc.Update ? t() : i === A.Uc.Cancel && ((0, R.t)(), n())) : null == i && o(!0);
-        }, [a, i, t, n]),
-        i === A.Uc.Error
+            '' === i ? (0, R.T)(i) : (0, R.t)();
+        }, [i]),
+        s.useEffect(() => {
+            o ? (r === A.Uc.Update ? t() : r === A.Uc.Cancel && ((0, R.t)(), n())) : (null == r || r === A.Uc.Present) && c(!0);
+        }, [o, r, t, n]),
+        r === A.Uc.Error
             ? (0, l.jsx)(m.Text, {
                   className: B.errorMessage,
                   variant: 'text-md/normal',
                   color: 'text-danger',
-                  children: null != r && r.length > 0 ? r : G.Z.Messages.ERROR_ANOTHER_TRY
+                  children: null != a && a.length > 0 ? a : G.Z.Messages.ERROR_ANOTHER_TRY
               })
             : (0, l.jsx)(w.Z, {
                   animated: !0,

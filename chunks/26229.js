@@ -1,6 +1,6 @@
 var i = n(735250),
     s = n(470079);
-class a extends s.PureComponent {
+class r extends s.PureComponent {
     render() {
         let { layout: e, layoutSize: t, className: n, renderWidget: s } = this.props;
         return null != e
@@ -15,4 +15,4 @@ class a extends s.PureComponent {
             : null;
     }
 }
-t.Z = a;
+t.Z = r;

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return j;
     }
 }),
     n(47120);
 var i = n(735250),
     s = n(470079),
-    a = n(212433),
-    r = n(442837),
+    r = n(212433),
+    a = n(442837),
     o = n(481060),
     l = n(619915),
     c = n(554747),
@@ -23,17 +23,17 @@ var i = n(735250),
     I = n(888369),
     Z = n(430824),
     v = n(496675),
-    S = n(878884),
-    C = n(19780),
+    C = n(878884),
+    S = n(19780),
     x = n(944486),
-    N = n(9156),
-    T = n(938475),
+    T = n(9156),
+    N = n(938475),
     O = n(518084),
     A = n(669083),
     y = n(711553),
     R = n(981631),
-    M = n(647086),
-    L = n(689938),
+    L = n(647086),
+    M = n(689938),
     b = n(867144);
 function P(e, t, n) {
     return (
@@ -49,7 +49,7 @@ function P(e, t, n) {
     );
 }
 let D = 54;
-class j extends s.PureComponent {
+class w extends s.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
         return null == t || null == t.banner
@@ -111,14 +111,14 @@ class j extends s.PureComponent {
     render() {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
-            { controller: s, renderBanner: a, bannerVisible: r, communityInfoVisible: l } = this.state,
-            c = n.id === M._ ? d.j : d.E;
+            { controller: s, renderBanner: r, bannerVisible: a, communityInfoVisible: l } = this.state,
+            c = n.id === L._ ? d.j : d.E;
         return (0, i.jsxs)(y.Z, {
             header: (0, i.jsx)(u.ZP, {
                 guild: n,
                 controller: s,
-                renderBanner: a,
-                bannerVisible: r,
+                renderBanner: r,
+                bannerVisible: a,
                 className: b.guildHeader,
                 headerClassName: b.guildHeaderInner,
                 onMouseDown: e,
@@ -130,7 +130,7 @@ class j extends s.PureComponent {
                     children: (e) =>
                         (0, i.jsx)(O.ZP.Icon, {
                             icon: o.SettingsIcon,
-                            label: L.Z.Messages.SETTINGS,
+                            label: M.Z.Messages.SETTINGS,
                             ...e
                         })
                 })
@@ -147,7 +147,7 @@ class j extends s.PureComponent {
                 }),
                 (0, i.jsx)('section', {
                     className: b.panels,
-                    'aria-label': L.Z.Messages.ACCOUNT_A11Y_LABEL,
+                    'aria-label': M.Z.Messages.ACCOUNT_A11Y_LABEL,
                     children: (0, i.jsx)(h.Z, { guildId: n.id })
                 })
             ]
@@ -156,7 +156,7 @@ class j extends s.PureComponent {
     constructor(...e) {
         super(...e),
             P(this, 'state', {
-                controller: new a.Controller({
+                controller: new r.Controller({
                     value: 1,
                     immediate: !0
                 }),
@@ -170,51 +170,51 @@ class j extends s.PureComponent {
             });
     }
 }
-function w(e) {
+function j(e) {
     var t;
     let { guildId: n } = e,
-        s = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        a = (0, r.e7)([m.ZP], () => m.ZP.getChannels(n)),
-        o = (0, r.e7)([g.Z], () => g.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, r.cj)([N.ZP], () => ({
-            mutedChannels: N.ZP.getMutedChannels(n),
-            collapseMuted: N.ZP.isGuildCollapsed(n)
+        s = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n)),
+        r = (0, a.e7)([m.ZP], () => m.ZP.getChannels(n)),
+        o = (0, a.e7)([g.Z], () => g.Z.getCategories(n)),
+        { mutedChannels: d, collapseMuted: u } = (0, a.cj)([T.ZP], () => ({
+            mutedChannels: T.ZP.getMutedChannels(n),
+            collapseMuted: T.ZP.isGuildCollapsed(n)
         })),
-        h = (0, r.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
-        O = (0, r.e7)([_.Z], () => _.Z.getCollapsed()),
-        { scrollTo: A } = (0, r.e7)([E.Z], () => E.Z.getGuildDimensions(n)),
+        h = (0, a.e7)([N.ZP], () => N.ZP.getVoiceStates(n)),
+        O = (0, a.e7)([_.Z], () => _.Z.getCollapsed()),
+        { scrollTo: A } = (0, a.e7)([E.Z], () => E.Z.getGuildDimensions(n)),
         y = (0, p.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
-        M = (0, r.e7)([x.Z], () => x.Z.getVoiceChannelId()),
-        L = (0, r.e7)([v.Z], () => v.Z.getGuildVersion(n)),
-        b = (0, r.e7)([f.Z], () => f.Z.version),
-        P = (0, r.e7)([I.default], () => I.default.getGuildChangeSentinel(n)),
+        L = (0, a.e7)([x.Z], () => x.Z.getVoiceChannelId()),
+        M = (0, a.e7)([v.Z], () => v.Z.getGuildVersion(n)),
+        b = (0, a.e7)([f.Z], () => f.Z.version),
+        P = (0, a.e7)([I.default], () => I.default.getGuildChangeSentinel(n)),
         D = (0, l.QN)(null == s ? void 0 : s.id),
-        w = (0, c.gM)(null == s ? void 0 : s.id),
+        j = (0, c.gM)(null == s ? void 0 : s.id),
         k = null !== (t = null == s ? void 0 : s.hasFeature(R.oNc.COMMUNITY)) && void 0 !== t && t,
-        V = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
-        B = (0, r.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
-    return (0, i.jsx)(j, {
+        V = (0, a.e7)([S.Z], () => S.Z.getChannelId()),
+        U = (0, a.e7)([C.Z], () => C.Z.desyncedVoiceStatesCount);
+    return (0, i.jsx)(w, {
         guildId: n,
         guild: s,
-        channels: a,
+        channels: r,
         categories: o,
         mutedChannels: d,
         scrollToChannel: A,
         selectedChannelId: y,
-        selectedVoiceChannelId: M,
+        selectedVoiceChannelId: L,
         voiceStates: h,
         rtcConnectedChannelId: V,
-        rtcDesyncedVoiceStatesCount: B,
+        rtcDesyncedVoiceStatesCount: U,
         collapsedChannels: O,
         collapseMuted: u,
         guildReadStateSentinel: P,
-        permissionVersion: L,
+        permissionVersion: M,
         categoryCollapseVersion: b,
         embeddedAppsByChannel: D,
-        activeEventsByChannel: w,
+        activeEventsByChannel: j,
         showNewUnreadsBar: k,
         optInEnabled: !1
     });

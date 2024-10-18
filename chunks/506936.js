@@ -16,18 +16,18 @@ var a = n(442837),
     h = n(607744),
     p = n(594174),
     f = n(981631),
-    _ = n(815660),
-    m = n(689938),
+    m = n(815660),
+    _ = n(689938),
     g = n(816614);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
         { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
-        T = null,
-        Z = null;
-    return (0 === t && (I ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (Z = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (Z = m.Z.Messages.VERIFY_PHONE)) : E ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (Z = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (Z = m.Z.Messages.OKAY)) : x && ((T = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (Z = m.Z.Messages.OKAY))), null == v || null == T)
+        v = 0 === t ? _.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
+        Z = null,
+        T = null;
+    return (0 === t && (I ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = _.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = _.Z.Messages.VERIFY_PHONE)) : E ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = _.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (T = _.Z.Messages.OKAY)) : x && ((Z = _.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (T = _.Z.Messages.OKAY))), null == v || null == Z)
         ? null
         : (0, r.jsxs)(s.Dialog, {
               className: g.container,
@@ -49,12 +49,12 @@ t.Z = (e) => {
                           (0, r.jsx)(s.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: T
+                              children: Z
                           }),
                           (0, r.jsxs)('div', {
                               className: g.buttonContainer,
                               children: [
-                                  null != Z
+                                  null != T
                                       ? (0, r.jsx)(s.Button, {
                                             onClick: () => {
                                                 I
@@ -69,27 +69,27 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: _.M }
+                                                            { modalKey: m.M }
                                                         )
                                                       : E &&
                                                         (o.Z.verifyResend(),
                                                         (0, s.openModal)((e) => {
                                                             var t;
                                                             return (0, r.jsx)(s.ConfirmModal, {
-                                                                header: m.Z.Messages.VERIFICATION_EMAIL_TITLE,
-                                                                confirmText: m.Z.Messages.OKAY,
+                                                                header: _.Z.Messages.VERIFICATION_EMAIL_TITLE,
+                                                                confirmText: _.Z.Messages.OKAY,
                                                                 confirmButtonColor: s.Button.Colors.BRAND,
                                                                 ...e,
                                                                 children: (0, r.jsx)(s.Text, {
                                                                     variant: 'text-md/normal',
-                                                                    children: m.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
+                                                                    children: _.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
                                                                 })
                                                             });
                                                         })),
                                                     l();
                                             },
                                             className: g.primaryButton,
-                                            children: Z
+                                            children: T
                                         })
                                       : null,
                                   I || N || E
@@ -97,7 +97,7 @@ t.Z = (e) => {
                                             onClick: l,
                                             look: s.Button.Looks.BLANK,
                                             className: g.cancel,
-                                            children: m.Z.Messages.NEVERMIND
+                                            children: _.Z.Messages.NEVERMIND
                                         })
                                       : null
                               ]

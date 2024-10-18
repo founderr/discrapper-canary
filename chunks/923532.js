@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250),
     s = n(470079),
-    a = n(512722),
-    r = n.n(a),
+    r = n(512722),
+    a = n.n(r),
     o = n(399606),
     l = n(822183),
     c = n(673125),
@@ -15,28 +15,28 @@ var i = n(735250),
     h = n(425423);
 function p(e) {
     let { streamerId: t, channelId: n } = e,
-        a = s.useRef(null),
+        r = s.useRef(null),
         l = (0, o.e7)([u.default], () => u.default.getCurrentUser());
     return (
-        r()(null != l, 'user cannot be null'),
-        (0, d.Z)(a, l, t, n),
+        a()(null != l, 'user cannot be null'),
+        (0, d.Z)(r, l, t, n),
         (0, i.jsx)('canvas', {
             className: h.canvas,
-            ref: a
+            ref: r
         })
     );
 }
 function f(e) {
     let { guildId: t, channelId: n, streamerId: s } = e,
-        { isSharedCanvasEnabled: a } = l.Z.useExperiment(
+        { isSharedCanvasEnabled: r } = l.Z.useExperiment(
             {
                 guildId: t,
                 location: 'f0d1b1_1'
             },
             { autoTrackExposure: !0 }
         ),
-        r = (0, o.e7)([c.Z], () => c.Z.visibleOverlayCanvas);
-    return a && r
+        a = (0, o.e7)([c.Z], () => c.Z.visibleOverlayCanvas);
+    return r && a
         ? (0, i.jsx)(p, {
               guildId: t,
               channelId: n,

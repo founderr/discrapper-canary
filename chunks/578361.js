@@ -7,8 +7,8 @@ var i,
     a,
     r = t(735250),
     o = t(470079),
-    l = t(120356),
-    s = t.n(l),
+    s = t(120356),
+    l = t.n(s),
     c = t(748780),
     d = t(215569),
     u = t(189682);
@@ -79,16 +79,16 @@ class p extends o.PureComponent {
     }
 }
 n.Z = (e) => {
-    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: l = !1 } = e;
+    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: s = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
-        className: s()(u.animator, a),
+        className: l()(u.animator, a),
         children: (0, r.jsx)(
             p,
             {
                 direction: i,
                 springSettings: o,
-                fadeInOut: l,
+                fadeInOut: s,
                 children: n
             },
             t

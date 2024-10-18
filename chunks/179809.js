@@ -16,8 +16,8 @@ var i = n(735250),
     h = n(153867),
     p = n(771845),
     f = n(624138),
-    _ = n(727258),
-    m = n(276952),
+    m = n(727258),
+    _ = n(276952),
     g = n(199540),
     C = n(40153),
     I = n(252686),
@@ -26,8 +26,8 @@ var i = n(735250),
     x = n(689938),
     S = n(115376),
     v = n(767573);
-let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
     let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
@@ -39,11 +39,11 @@ function A(e) {
         P && F(!1);
     }, [P]);
     let [{ dragging: K }, q] = (0, s.c)({
-            type: _.eD.FOLDER,
+            type: m.eD.FOLDER,
             item: () => (
                 null == O || O(),
                 {
-                    type: _.eD.FOLDER,
+                    type: m.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -64,17 +64,17 @@ function A(e) {
         J = null != B && '' !== B ? B : null != R && '' !== R ? R : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = H.length * (Z + b),
+        et = H.length * (T + b),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: T }
+            config: { duration: Z }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
             children: [
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(_.Z, {
                     disabled: K || u,
                     hovered: V,
                     selected: r,

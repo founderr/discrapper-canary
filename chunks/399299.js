@@ -42,8 +42,8 @@ var l = n(735250),
     B = n(70722),
     k = n(981631),
     U = n(526761),
-    H = n(689938),
-    V = n(264954),
+    V = n(689938),
+    H = n(264954),
     F = n(410894);
 function W(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: s, onChangeSource: i } = e,
@@ -62,7 +62,7 @@ function W(e) {
             : c,
         p = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
     return (0, l.jsx)(o.FormItem, {
-        title: H.Z.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
+        title: V.Z.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
         className: F.modalContent,
         titleClassName: F.formItemTitleVerySlim,
         children: (0, l.jsxs)(P.Z, {
@@ -71,20 +71,20 @@ function W(e) {
                     ? (0, l.jsx)(m.Z, {
                           game: g,
                           size: m.Z.Sizes.XSMALL,
-                          className: V.selectedIcon
+                          className: H.selectedIcon
                       })
-                    : (0, l.jsx)(p, { className: V.selectedIcon }),
+                    : (0, l.jsx)(p, { className: H.selectedIcon }),
                 (0, l.jsx)('span', {
-                    className: V.ellipsisText,
+                    className: H.ellipsisText,
                     children: x
                 }),
                 n
                     ? (0, l.jsx)(o.Button, {
-                          className: V.changeButton,
+                          className: H.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: i,
-                          children: H.Z.Messages.CHANGE
+                          children: V.Z.Messages.CHANGE
                       })
                     : null
             ]
@@ -97,7 +97,7 @@ function z(e) {
     return null == s
         ? (t(), null)
         : (0, l.jsx)(o.FormItem, {
-              title: H.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
+              title: V.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
               className: F.modalContent,
               titleClassName: F.formItemTitle,
               children: (0, l.jsxs)(P.Z, {
@@ -105,18 +105,18 @@ function z(e) {
                       (0, l.jsx)(x.Z, {
                           guild: s,
                           size: x.Z.Sizes.SMALLER,
-                          className: V.selectedIcon
+                          className: H.selectedIcon
                       }),
                       (0, l.jsx)('span', {
-                          className: V.ellipsisText,
+                          className: H.ellipsisText,
                           children: s.toString()
                       }),
                       (0, l.jsx)(o.Button, {
-                          className: V.changeButton,
+                          className: H.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: t,
-                          children: H.Z.Messages.CHANGE
+                          children: V.Z.Messages.CHANGE
                       })
                   ]
               })
@@ -126,14 +126,14 @@ function Y(e) {
     let { text: t } = e;
     return (0, l.jsxs)(f.Z, {
         align: f.Z.Align.CENTER,
-        className: V.warning,
+        className: H.warning,
         children: [
             (0, l.jsx)(o.CircleWarningIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: V.warningIcon
+                className: H.warningIcon
             }),
             (0, l.jsx)(o.Text, {
                 color: 'none',
@@ -155,14 +155,14 @@ function K(e) {
         }, []);
     return n >= 2 && n <= B.tB
         ? (0, l.jsx)(o.FormItem, {
-              className: r()(F.modalContent, V.checkboxRow),
+              className: r()(F.modalContent, H.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
                   value: !!i,
                   type: o.Checkbox.Types.INVERTED,
                   onChange: c,
                   children: (0, l.jsx)(o.Text, {
                       variant: 'text-sm/normal',
-                      children: H.Z.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
+                      children: V.Z.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
                   })
               })
           })
@@ -177,14 +177,14 @@ function Q(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: r()(F.modalContent, V.checkboxRow),
+        className: r()(F.modalContent, H.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
             onChange: a,
             children: (0, l.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: i ? H.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : H.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
+                children: i ? V.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : V.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
             })
         })
     });
@@ -198,14 +198,14 @@ function X(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: r()(F.modalContent, V.checkboxRow),
+        className: r()(F.modalContent, H.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
             onChange: i,
             children: (0, l.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: H.Z.Messages.GO_LIVE_MODAL_DISABLE_STREAM_PREVIEWS
+                children: V.Z.Messages.GO_LIVE_MODAL_DISABLE_STREAM_PREVIEWS
             })
         })
     });
@@ -217,7 +217,7 @@ function q(e) {
         $ = (0, a.e7)([A.Z], () => A.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, L.Z)();
-    null != t && t.id.startsWith('screen') && !j.Z.supportsScreenSoundshare() && (et = H.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+    null != t && t.id.startsWith('screen') && !j.Z.supportsScreenSoundshare() && (et = V.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
     let en = !!(null == t ? void 0 : t.id.startsWith('camera')),
         el = null != ee && ee.verified && !ee.bot,
         es = null != q && !(0, u.Yk)(q),
@@ -263,13 +263,13 @@ function q(e) {
                       onChangeSelectedChannelId: R
                   }),
             null != f && el && es ? (0, l.jsx)(K, { guildId: f }) : null,
-            J ? (0, l.jsx)(Y, { text: H.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
-            $ ? (0, l.jsx)(Y, { text: H.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: M.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            J ? (0, l.jsx)(Y, { text: V.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
+            $ ? (0, l.jsx)(Y, { text: V.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: M.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             ei &&
                 (0, l.jsx)(p.Z, {
                     look: p.z.WARNING,
-                    className: V.hardwareWarning,
-                    children: H.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
+                    className: H.hardwareWarning,
+                    children: V.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
                         onClick: () => {
                             E(), c.Z.open(k.oAB.VOICE, null, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
                         }

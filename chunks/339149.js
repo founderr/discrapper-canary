@@ -18,8 +18,8 @@ var i,
     h = n(481060),
     p = n(812206),
     f = n(707409),
-    _ = n(703656),
-    m = n(417363),
+    m = n(703656),
+    _ = n(417363),
     g = n(941128),
     C = n(780570),
     I = n(353042),
@@ -95,14 +95,14 @@ let v = {
             })
     }
 };
-class T extends r.PureComponent {
+class Z extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
             if (t) return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
             if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
                 return (0, l.jsx)(I.Z, {
-                    getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
+                    getHistoricalTotalBytes: _.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
                 });
@@ -132,7 +132,7 @@ class T extends r.PureComponent {
             });
     }
 }
-class Z extends (i = r.PureComponent) {
+class T extends (i = r.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -152,7 +152,7 @@ class Z extends (i = r.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? N.Z.Messages.LIBRARY
-            : (0, l.jsx)(T, {
+            : (0, l.jsx)(Z, {
                   application: e,
                   state: t,
                   isPaused: n
@@ -189,11 +189,11 @@ class Z extends (i = r.PureComponent) {
             S(this, 'state', { animationScale: new o.Z.Value(0) }),
             S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(E.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-S(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+S(T, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function b(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
@@ -201,9 +201,9 @@ function b(e, t) {
         return null != r && e.push(r), e;
     }, []);
 }
-t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
+t.Z = c.ZP.connectStores([g.Z, _.Z, p.Z], () => {
     let e = g.Z.activeItems,
-        t = b(e, m.Z),
+        t = b(e, _.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),
@@ -216,7 +216,7 @@ t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     return t
         ? (0, l.jsx)(d.W, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(Z, { ...n }) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(T, { ...n }) : null
           })
-        : (0, l.jsx)(Z, { ...n });
+        : (0, l.jsx)(T, { ...n });
 });

@@ -23,8 +23,8 @@ var i = n(735250),
     h = n(224706),
     p = n(350810),
     f = n(110924),
-    _ = n(410030),
-    m = n(100527),
+    m = n(410030),
+    _ = n(100527),
     g = n(970606),
     C = n(824991),
     I = n(564990),
@@ -33,8 +33,8 @@ var i = n(735250),
     x = n(669764),
     S = n(749681),
     v = n(863249),
-    T = n(937111),
-    Z = n(667105),
+    Z = n(937111),
+    T = n(667105),
     b = n(369566),
     A = n(314897),
     M = n(480294),
@@ -117,7 +117,7 @@ let H = R.Z.parseString('#E93446'),
                 hasFetchedGames: v
             } = (function () {
                 let e = (0, c.e7)([A.default], () => A.default.getId()),
-                    t = (0, _.ZP)(),
+                    t = (0, m.ZP)(),
                     { recent: n, outbox: i } = (0, b.Z)(e),
                     r = (0, c.e7)([E.Z], () => E.Z.hasInitialized),
                     a = (0, c.e7)([M.Z], () => M.Z.hasConsented(P.pjP.PERSONALIZATION)),
@@ -154,7 +154,7 @@ let H = R.Z.parseString('#E93446'),
                         }
                         return e;
                     }, [d]),
-                    [m, g] = l.useState({});
+                    [_, g] = l.useState({});
                 return (
                     l.useEffect(() => {
                         Promise.all(
@@ -202,7 +202,7 @@ let H = R.Z.parseString('#E93446'),
                                 u.map((e) => {
                                     var t, n, i;
                                     let l = f[e],
-                                        r = null !== (n = m[e]) && void 0 !== n ? n : H,
+                                        r = null !== (n = _[e]) && void 0 !== n ? n : H,
                                         a = null !== (i = null === (t = d.find((t) => (null == t ? void 0 : t.applicationId) === e)) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : '';
                                     return {
                                         id: e,
@@ -211,26 +211,26 @@ let H = R.Z.parseString('#E93446'),
                                         primaryColor: r
                                     };
                                 }),
-                            [u, d, f, m]
+                            [u, d, f, _]
                         ),
                         treatment: o.length > 0 && a ? O.O7.GAME_SPECIFIC : O.O7.GENERIC,
                         hasFetchedGames: !s && !p
                     }
                 );
             })(),
-            [T, V] = (0, N.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
-            F = (0, Z.Ws)({ location: U.dr.CONFLICT_CHECKS }),
-            W = T !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
+            [Z, V] = (0, N.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
+            F = (0, T.Ws)({ location: U.dr.CONFLICT_CHECKS }),
+            W = Z !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
             z = (0, p.Z)(),
             Y = n.pathname === P.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(P.Z5c.GLOBAL_DISCOVERY),
             K = F && !z && !W && !Y,
             [q, Q] = l.useState(0),
-            X = (0, _.ZP)(),
+            X = (0, m.ZP)(),
             J = l.useMemo(() => r.map((e) => e.id), [r]);
         l.useEffect(() => {
             K &&
                 (0, g.tv)({
-                    location: m.Z.GUILDS_LIST,
+                    location: _.Z.GUILDS_LIST,
                     treatment: f,
                     gameApplicationIds: J
                 });
@@ -244,7 +244,7 @@ let H = R.Z.parseString('#E93446'),
         let $ = l.useCallback(() => {
                 F && V(j.L.TAKE_ACTION),
                     (0, g.GS)({
-                        location: m.Z.GUILDS_LIST,
+                        location: _.Z.GUILDS_LIST,
                         treatment: f,
                         gameApplicationIds: J
                     }),
@@ -342,7 +342,7 @@ let H = R.Z.parseString('#E93446'),
     });
 function F(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, c.e7)([T.Z], () => T.Z.hasJoinRequestCoackmark()),
+        r = (0, c.e7)([Z.Z], () => Z.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
             v.ZP.clearCoachmark();
         }, []),

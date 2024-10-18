@@ -1,25 +1,25 @@
-n.d(t, {
+t.d(e, {
     Z: function () {
-        return l;
+        return c;
     }
 }),
-    n(653041),
-    n(47120);
-var i = n(470079),
-    a = n(442837),
-    s = n(430824),
-    r = n(973001);
-function l(e) {
-    let { application: t, showMutualGuilds: n = !0 } = e,
-        l = (0, a.e7)([r.Z], () => r.Z.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]),
-        o = (0, a.e7)([s.Z], () => s.Z.isLoaded());
-    return i.useMemo(() => {
-        let e = [];
-        if (!o || !n || null == l || null == t) return e;
-        for (let t of l) {
-            let n = s.Z.getGuild(t);
-            null != n && e.push(n);
+    t(653041),
+    t(47120);
+var r = t(470079),
+    i = t(442837),
+    o = t(430824),
+    l = t(973001);
+function c(n) {
+    let { application: e, showMutualGuilds: t = !0 } = n,
+        c = (0, i.e7)([l.Z], () => l.Z.getGuildIdsForApplication(null == e ? void 0 : e.id), [e]),
+        u = (0, i.e7)([o.Z], () => o.Z.isLoaded());
+    return r.useMemo(() => {
+        let n = [];
+        if (!u || !t || null == c || null == e) return n;
+        for (let e of c) {
+            let t = o.Z.getGuild(e);
+            null != t && n.push(t);
         }
-        return e;
-    }, [o, l, t, n]);
+        return n;
+    }, [u, c, e, t]);
 }

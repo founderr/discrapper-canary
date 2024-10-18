@@ -17,7 +17,7 @@ var i = t(570140),
     a = t(821849),
     r = t(307643),
     o = t(981631);
-function l(e) {
+function s(e) {
     return {
         id: e.id,
         type: o.epS.SUBSCRIPTION,
@@ -36,11 +36,11 @@ function l(e) {
         restricted: !1
     };
 }
-function s(e) {
+function l(e) {
     var n;
     return {
         id: e.id,
-        sku: l(e),
+        sku: s(e),
         summary: e.description,
         description: e.description,
         benefits: null !== (n = e.store_listing_benefits) && void 0 !== n ? n : [],
@@ -51,11 +51,11 @@ function s(e) {
 function c(e) {
     for (let n of (i.Z.dispatch({
         type: 'SKUS_FETCH_SUCCESS',
-        skus: e.map(l)
+        skus: e.map(s)
     }),
     i.Z.dispatch({
         type: 'STORE_LISTINGS_FETCH_SUCCESS',
-        storeListings: e.map(s)
+        storeListings: e.map(l)
     }),
     e))
         i.Z.dispatch({

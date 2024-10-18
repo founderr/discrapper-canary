@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return S;
     }
 }),
     n(47120);
 var i,
     s = n(470079),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     o = n(699581),
     l = n(374470),
     c = n(902704),
@@ -69,16 +69,16 @@ function v(e, t) {
                   })
               }),
               (function () {
-                  if (!S)
+                  if (!C)
                       f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
                           let i = Z.get(e);
                           null != i && (!m && ((g.x = t), (g.y = n)), i.instance.click());
                       }),
-                          (S = !0);
+                          (C = !0);
               })()));
 }
-let S = !1;
-class C extends (i = s.PureComponent) {
+let C = !1;
+class S extends (i = s.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
@@ -101,7 +101,7 @@ class C extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'zone', r().uniqueId('ClickArea')),
+            E(this, 'zone', a().uniqueId('ClickArea')),
             E(this, 'interval', new d.Xp()),
             E(this, 'updateZone', () => {
                 let e = (0, o.findDOMNode)(this);
@@ -121,7 +121,7 @@ class C extends (i = s.PureComponent) {
             });
     }
 }
-E(C, 'defaultProps', {
+E(S, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

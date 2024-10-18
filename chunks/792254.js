@@ -1,55 +1,55 @@
-n.d(t, {
+a.d(n, {
     Z: function () {
-        return A;
+        return m;
     }
 });
-var i = n(442837),
-    a = n(410030),
-    s = n(607070),
-    r = n(474936),
-    l = n(231338),
-    o = n(955092),
-    c = n(250225),
-    d = n(778441),
-    u = n(238988),
-    _ = n(298233),
-    E = n(304354),
-    h = n(265704),
-    m = n(85010),
-    I = n(954620),
-    p = n(28747),
-    g = n(962658),
-    T = n(29971),
-    S = n(730837),
-    f = n(95897),
-    C = n(171362),
-    N = n(945720);
-function A(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        n = (0, a.ZP)();
-    return t
-        ? (function (e, t) {
+var t = a(442837),
+    s = a(410030),
+    c = a(607070),
+    o = a(474936),
+    i = a(231338),
+    r = a(955092),
+    d = a(250225),
+    l = a(778441),
+    u = a(238988),
+    A = a(298233),
+    f = a(304354),
+    p = a(265704),
+    E = a(85010),
+    _ = a(954620),
+    L = a(28747),
+    I = a(962658),
+    P = a(29971),
+    R = a(730837),
+    b = a(95897),
+    Z = a(171362),
+    N = a(945720);
+function m(e) {
+    let n = (0, t.e7)([c.Z], () => c.Z.useReducedMotion),
+        a = (0, s.ZP)();
+    return n
+        ? (function (e, n) {
               switch (e) {
-                  case r.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-                      return t === l.BR.DARK ? I.Z : S.Z;
-                  case r.cd.ANIMATED_BANNER_MODAL_UPSELL:
-                      return t === l.BR.DARK ? p.Z : f.Z;
-                  case r.cd.PROFILE_EFFECT_MODAL_UPSELL:
-                      return t === l.BR.DARK ? T.Z : N.Z;
-                  case r.cd.AVATAR_DECORATION_MODAL_UPSELL:
-                      return t === l.BR.DARK ? g.Z : C.Z;
+                  case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+                      return n === i.BR.DARK ? _.Z : R.Z;
+                  case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
+                      return n === i.BR.DARK ? L.Z : b.Z;
+                  case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
+                      return n === i.BR.DARK ? P.Z : N.Z;
+                  case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
+                      return n === i.BR.DARK ? I.Z : Z.Z;
               }
-          })(e, n)
-        : (function (e, t) {
+          })(e, a)
+        : (function (e, n) {
               switch (e) {
-                  case r.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-                      return t === l.BR.DARK ? o.Z : _.Z;
-                  case r.cd.ANIMATED_BANNER_MODAL_UPSELL:
-                      return t === l.BR.DARK ? c.Z : E.Z;
-                  case r.cd.PROFILE_EFFECT_MODAL_UPSELL:
-                      return t === l.BR.DARK ? u.Z : m.Z;
-                  case r.cd.AVATAR_DECORATION_MODAL_UPSELL:
-                      return t === l.BR.DARK ? d.Z : h.Z;
+                  case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+                      return n === i.BR.DARK ? r.Z : A.Z;
+                  case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
+                      return n === i.BR.DARK ? d.Z : f.Z;
+                  case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
+                      return n === i.BR.DARK ? u.Z : E.Z;
+                  case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
+                      return n === i.BR.DARK ? l.Z : p.Z;
               }
-          })(e, n);
+          })(e, a);
 }

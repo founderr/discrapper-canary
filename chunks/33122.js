@@ -1,6 +1,6 @@
 s.d(t, {
     r: function () {
-        return S;
+        return y;
     }
 }),
     s(47120);
@@ -46,7 +46,7 @@ function P() {
         s
     );
 }
-let S = {
+let y = {
         SMALL: {
             width: 640,
             height: 360,
@@ -58,7 +58,7 @@ let S = {
             margin: 20
         }
     },
-    y = {
+    S = {
         width: 1920,
         height: 1080
     },
@@ -81,7 +81,7 @@ let S = {
         if (i.type === N.s9s.YOUTUBE_VIDEO)
             (t = {
                 url: (0, N.n8r)(i.youtubeVideoId),
-                ...y
+                ...S
             }),
                 (s = {
                     url: ''.concat((0, N.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
@@ -141,7 +141,7 @@ let S = {
                 renderLinkComponent: C.iT
             })
         });
-class T extends (n = i.PureComponent) {
+class Z extends (n = i.PureComponent) {
     componentDidMount() {
         v.S.subscribe(N.CkL.CAROUSEL_PREV, this.manualPrevious), v.S.subscribe(N.CkL.CAROUSEL_NEXT, this.manualNext);
     }
@@ -242,8 +242,8 @@ class T extends (n = i.PureComponent) {
             }),
             b(this, 'getItemSize', () => {
                 let { width: e } = this.props,
-                    t = S.MEDIUM;
-                return null != e && e < t.width && (t = S.SMALL), t;
+                    t = y.MEDIUM;
+                return null != e && e < t.width && (t = y.SMALL), t;
             }),
             b(this, 'setItem', (e, t) => {
                 let {
@@ -370,8 +370,8 @@ class T extends (n = i.PureComponent) {
             });
     }
 }
-b(T, 'defaultProps', {
+b(Z, 'defaultProps', {
     autoplayInterval: 8000,
     paused: !1
 }),
-    (t.Z = (0, d.Z)(T));
+    (t.Z = (0, d.Z)(Z));

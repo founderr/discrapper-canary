@@ -8,38 +8,38 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    l = t(422559),
-    s = t(594045);
+    s = t(422559),
+    l = t(594045);
 function c(e) {
     let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
     return (0, i.jsxs)('div', {
-        className: r()(s.list, d),
+        className: r()(l.list, d),
         children: [
             null != n && n.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != a
                               ? (0, i.jsx)(o.FormTitle, {
-                                    className: s.permissionHeader,
+                                    className: l.permissionHeader,
                                     children: a
                                 })
                               : null,
                           (0, i.jsx)('div', {
-                              className: s.container,
+                              className: l.container,
                               children: n.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: s.permission,
+                                          className: l.permission,
                                           children: [
                                               (0, i.jsx)(o.CheckmarkLargeIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: s.check
+                                                  className: l.check
                                               }),
                                               (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },
@@ -55,26 +55,26 @@ function c(e) {
                       children: [
                           null != c
                               ? (0, i.jsx)(o.FormTitle, {
-                                    className: s.permissionHeader,
+                                    className: l.permissionHeader,
                                     children: c
                                 })
                               : null,
                           (0, i.jsx)('div', {
-                              className: s.container,
+                              className: l.container,
                               children: t.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: s.permission,
+                                          className: l.permission,
                                           children: [
                                               (0, i.jsx)(o.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: s.cross
+                                                  className: l.cross
                                               }),
                                               (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },

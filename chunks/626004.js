@@ -8,8 +8,8 @@ var i = t(735250),
     a = t(470079),
     r = t(120356),
     o = t.n(r),
-    l = t(481060),
-    s = t(860719),
+    s = t(481060),
+    l = t(860719),
     c = t(63063),
     d = t(49012),
     u = t(981631),
@@ -31,7 +31,7 @@ function I(e) {
                 className: p.intentTextContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(l.Heading, {
+                        children: (0, i.jsx)(s.Heading, {
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: t
@@ -39,7 +39,7 @@ function I(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: p.intentBody,
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: a
@@ -52,7 +52,7 @@ function I(e) {
 }
 function f(e) {
     let { application: n } = e,
-        { hasMessageContent: t, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, s.w)({ flags: null == n ? void 0 : n.flags }),
+        { hasMessageContent: t, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, l.w)({ flags: null == n ? void 0 : n.flags }),
         f = a.useCallback(() => {
             (null == n ? void 0 : n.privacy_policy_url) != null && (0, d.q)({ href: n.privacy_policy_url });
         }, [null == n ? void 0 : n.privacy_policy_url]);
@@ -61,7 +61,7 @@ function f(e) {
             u &&
                 (0, i.jsx)('div', {
                     className: p.intentsListHeading,
-                    children: (0, i.jsx)(l.Text, {
+                    children: (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         children: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_INTENTS_LIST_HEADING
                     })
@@ -75,19 +75,19 @@ function f(e) {
                             children: [
                                 t &&
                                     (0, i.jsx)(I, {
-                                        icon: l.ChatIcon,
+                                        icon: s.ChatIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
                                     }),
                                 r &&
                                     (0, i.jsx)(I, {
-                                        icon: l.UserCircleStatusIcon,
+                                        icon: s.UserCircleStatusIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
                                     }),
                                 c &&
                                     (0, i.jsx)(I, {
-                                        icon: l.GroupIcon,
+                                        icon: s.GroupIcon,
                                         heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
                                         body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
                                     })
@@ -96,13 +96,13 @@ function f(e) {
                     (0, i.jsxs)('div', {
                         className: o()({ [p.hasSeparator]: u }),
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: _.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: m })
                             }),
                             (null == n ? void 0 : n.privacy_policy_url) != null &&
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     className: p.privacyPolicy,

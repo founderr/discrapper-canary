@@ -1,9 +1,9 @@
 n.d(t, {
     EM: function () {
-        return _;
+        return m;
     },
     WW: function () {
-        return m;
+        return _;
     }
 });
 var i = n(735250),
@@ -18,7 +18,7 @@ var i = n(735250),
     h = n(981631),
     p = n(689938),
     f = n(774264);
-function _(e, t, n) {
+function m(e, t, n) {
     if (e === c.wZ) return d.$k;
     if (e === c.wd) return t.hasFeature(h.oNc.HUB) ? 0 : d.$k;
     if (e === n.voiceChannelsSectionNumber) {
@@ -31,7 +31,7 @@ function _(e, t, n) {
     }
     return d.Pw;
 }
-function m(e, t) {
+function _(e, t) {
     switch (e) {
         case c.wZ:
             return 'hoisted-spacer';
@@ -51,15 +51,15 @@ function m(e, t) {
     }
 }
 t.ZP = l.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: _, guildChannelsVersion: m, selectedChannelId: g, disableManageChannels: C } = e,
+    let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: _, selectedChannelId: g, disableManageChannels: C } = e,
         { isFavoritesPerk: I } = (0, a.z)('ChannelListSection'),
         E = l.useCallback(() => {
-            let e = _.getCategoryFromSection(_.recentsSectionNumber);
+            let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 i = e.getShownChannelAndThreadIds();
-            null != g && i.includes(g) && (t = (0, s.KY)(_)), (0, s.Uo)(n.id, i, t);
-        }, [n.id, g, _, m]);
+            null != g && i.includes(g) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, i, t);
+        }, [n.id, g, m, _]);
     switch (t) {
         case c.wZ:
             return (0, i.jsx)('div', { style: { height: d.$k } });
@@ -68,16 +68,16 @@ t.ZP = l.memo(function (e) {
             return (0, i.jsx)('div', { style: { height: d.$k } });
         case c.p2:
             return (0, i.jsx)(u.P, { name: I ? p.Z.Messages.PINNED_CHANNELS : p.Z.Messages.FAVORITES });
-        case _.recentsSectionNumber:
+        case m.recentsSectionNumber:
             return (0, i.jsx)(u.P, {
                 name: p.Z.Messages.RECENTS_CATEGORY_HEADER,
                 onDismiss: E
             });
-        case _.voiceChannelsSectionNumber: {
+        case m.voiceChannelsSectionNumber: {
             var N;
-            let e = _.getCategoryFromSection(_.voiceChannelsSectionNumber);
+            let e = m.getCategoryFromSection(m.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null === (N = _.getChannelFromSectionRow(t, 0)) || void 0 === N ? void 0 : N.channel;
+            let n = null === (N = m.getChannelFromSectionRow(t, 0)) || void 0 === N ? void 0 : N.channel;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     (0, i.jsx)('div', { className: f.sectionDivider }),
@@ -89,7 +89,7 @@ t.ZP = l.memo(function (e) {
             });
         }
         case c.wF: {
-            let e = _.getNamedCategoryFromSection(t);
+            let e = m.getNamedCategoryFromSection(t);
             if (null == e) return null;
             return (0, i.jsx)(u.ZP, {
                 channel: e.record,
@@ -104,7 +104,7 @@ t.ZP = l.memo(function (e) {
             });
         }
         default: {
-            let e = _.getNamedCategoryFromSection(t);
+            let e = m.getNamedCategoryFromSection(t);
             if (null == e) return null;
             return (0, i.jsx)(u.ZP, {
                 channel: e.record,

@@ -6,10 +6,10 @@ n.d(t, {
         return f;
     },
     Or: function () {
-        return _;
+        return m;
     },
     jt: function () {
-        return m;
+        return _;
     }
 }),
     n(47120);
@@ -37,7 +37,7 @@ function f() {
         className: h.unavailableBadge
     });
 }
-function _(e) {
+function m(e) {
     let t,
         { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: s, activeEvent: o, activity: c, gaming: d } = e,
         h = (0, u.vg)('Guild Icon', !1);
@@ -56,7 +56,7 @@ function _(e) {
         isCurrentUserConnected: r
     });
 }
-function m(e) {
+function _(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {

@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060);
-function o(e) {
+var r = n(481060);
+function l(e) {
     let { children: t, ...n } = e;
-    return (0, r.jsx)(i.Anchor, {
+    return (0, i.jsx)(r.Anchor, {
         ...n,
         onClick: (e) => e.preventDefault(),
         useDefaultUnderlineStyles: !1,

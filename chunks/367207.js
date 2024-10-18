@@ -12,8 +12,8 @@ var l = n(392711),
     h = n(963249),
     p = n(93127),
     f = n(361291),
-    _ = n(592125),
-    m = n(430824),
+    m = n(592125),
+    _ = n(430824),
     g = n(594174),
     C = n(295226),
     I = n(626135),
@@ -22,8 +22,8 @@ var l = n(392711),
     x = n(269486),
     S = n(514851),
     v = n(970645),
-    T = n(30684),
-    Z = n(514701),
+    Z = n(30684),
+    T = n(514701),
     b = n(6242),
     A = n(467721),
     M = n(757692),
@@ -113,7 +113,7 @@ class q extends c.Z {
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
         let { enabled: t } = D.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== F.hes.DISCONNECTED || e.willReconnect) return;
-        let n = _.Z.getChannel(e.channelId);
+        let n = m.Z.getChannel(e.channelId);
         if (null == n) return;
         let i = R.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
@@ -142,7 +142,7 @@ class q extends c.Z {
             }),
             K(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, E.I5)(e) && T.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
+                null != e && e.verified && !(0, E.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
             }),
             K(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
@@ -186,9 +186,9 @@ class q extends c.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, M.o)(r, n),
                         { sendNitroMessage: s } = (0, b.TD)(a),
-                        c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
+                        c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
                     if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    Z.I();
+                    T.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
                         nickname: r.userNick,
                         resolution: (0, z.o6)(r.maxResolution.height),

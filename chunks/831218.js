@@ -11,8 +11,8 @@ var i,
     h = n(442837),
     p = n(902704),
     f = n(481060),
-    _ = n(925549),
-    m = n(607070),
+    m = n(925549),
+    _ = n(607070),
     g = n(367907),
     C = n(453542),
     I = n(702321),
@@ -21,8 +21,8 @@ var i,
     x = n(860144),
     S = n(214852),
     v = n(518311),
-    T = n(355298),
-    Z = n(869404),
+    Z = n(355298),
+    T = n(869404),
     b = n(333984),
     A = n(210887),
     M = n(592125),
@@ -316,7 +316,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && _.Z.updateChannelListScroll(P.ME, e.scrollTop);
+                        null != e && m.Z.updateChannelListScroll(P.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -390,24 +390,24 @@ t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
         o = M.Z.getMutablePrivateChannels(),
-        c = (0, Z.k1)(o),
+        c = (0, T.k1)(o),
         p = (0, h.Wu)(
-            [L.Z, T.Z, b.Z],
+            [L.Z, Z.Z, b.Z],
             () => {
                 let e = L.Z.getPrivateChannelIds();
-                return (0, Z.tU)(e, [T.Z, b.Z]);
+                return (0, T.tU)(e, [Z.Z, b.Z]);
             },
             []
         );
     (0, S.z)(x.R);
-    let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
+    let f = (0, h.cj)([_.Z, A.Z, M.Z], () => ({
             theme: A.Z.darkSidebar ? P.BRd.DARK : n,
-            keyboardModeEnabled: m.Z.keyboardModeEnabled,
+            keyboardModeEnabled: _.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
         })),
-        _ = s.useRef(null),
+        m = s.useRef(null),
         g = s.useCallback((e) => {
-            let t = _.current,
+            let t = m.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -424,7 +424,7 @@ t.Z = (e) => {
         C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = m.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -433,7 +433,7 @@ t.Z = (e) => {
         I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = m.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -457,7 +457,7 @@ t.Z = (e) => {
         children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
-            listRef: _,
+            listRef: m,
             theme: n,
             version: t,
             ...e,
