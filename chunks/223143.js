@@ -30,7 +30,7 @@ function u() {
         }, []),
         {
             isClaiming: n,
-            fetchError: l,
+            fetchPurchasesError: l,
             claimError: u,
             isFetching: t,
             purchases: c,
@@ -39,28 +39,29 @@ function u() {
     );
 }
 function c(e) {
-    var t;
-    let n = null == e ? void 0 : e.paymentGateway,
-        r = 'useFetchCollectiblesCategoriesAndPurchases';
+    let t = null == e ? void 0 : e.paymentGateway,
+        n = 'useFetchCollectiblesCategoriesAndPurchases';
     (0, a.j)({
-        location: r + ' auto on',
+        location: n + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
-            location: r + ' auto off',
+            location: n + ' auto off',
             autoTrackExposure: !1
         });
-    let { isFetching: i, categories: s, error: o, refreshCategories: c } = (0, l.Z)({ paymentGateway: n }),
-        { isClaiming: d, fetchError: _, claimError: E, isFetching: f, purchases: h, hasPreviouslyFetched: p } = u();
+    let { isFetching: r, categories: i, fetchCategoriesError: s, refreshCategories: o } = (0, l.Z)({ paymentGateway: t }),
+        { isClaiming: c, fetchPurchasesError: d, claimError: _, isFetching: E, purchases: f, hasPreviouslyFetched: h } = u();
     return {
-        isFetching: i || f,
-        isFetchingCategories: i,
-        isFetchingPurchases: f,
-        isClaiming: d,
-        categories: s,
-        purchases: h,
-        error: null !== (t = null != o ? o : _) && void 0 !== t ? t : E,
-        refreshCategories: c,
-        hasPreviouslyFetched: p
+        isFetching: r || E,
+        isFetchingCategories: r,
+        isFetchingPurchases: E,
+        isClaiming: c,
+        categories: i,
+        purchases: f,
+        fetchCategoriesError: s,
+        fetchPurchasesError: d,
+        claimError: _,
+        refreshCategories: o,
+        hasPreviouslyFetched: h
     };
 }

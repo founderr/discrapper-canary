@@ -1,4 +1,4 @@
-s(47120);
+s(47120), s(653041);
 var a = s(735250),
     r = s(470079),
     n = s(120356),
@@ -29,49 +29,50 @@ var a = s(735250),
     j = s(562292),
     O = s(196315);
 t.Z = (e) => {
-    var t, s, n, Z, y;
-    let { handleTransition: P, numVisibleItems: R } = e,
-        { categories: A, isFetchingCategories: w, error: M, refreshCategories: H } = (0, b.Z)(),
-        D = Array.from(A.values()),
-        F = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        U = r.createRef(),
-        W = (0, g.t)('CollectiblesFeedShop'),
-        V = (0, h.m)('CollectiblesFeedShop'),
-        z = (0, _.b)('Collectibles Shop Button'),
-        G = (0, d.Z)('shop_disable_cache'),
-        K = (0, d.Z)('shop_include_unpublished'),
-        Y = V ? D[0] : C.Z.getCategory(W ? l.T.SPOOKY_NIGHT : l.T.BAND),
-        $ = V ? D[1] : C.Z.getCategory(W ? l.T.BAND : l.T.AUTUMN_EQUINOX),
-        X = C.Z.getCategory(l.T.ANIME_V2),
-        q = V
-            ? (0, p.uV)(null !== (t = null == Y ? void 0 : Y.heroBanner) && void 0 !== t ? t : '', {
+    var t, s, n, Z, y, P;
+    let { handleTransition: R, numVisibleItems: A } = e,
+        { categories: w, isFetchingCategories: M, fetchCategoriesError: H, fetchPurchasesError: D, claimError: F, refreshCategories: U } = (0, b.Z)(),
+        W = null !== (t = null != H ? H : D) && void 0 !== t ? t : F,
+        V = Array.from(w.values()),
+        z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        G = r.createRef(),
+        K = (0, g.t)('CollectiblesFeedShop'),
+        Y = (0, h.m)('CollectiblesFeedShop'),
+        $ = (0, _.b)('Collectibles Shop Button'),
+        X = (0, d.Z)('shop_disable_cache'),
+        q = (0, d.Z)('shop_include_unpublished'),
+        J = Y ? V[0] : C.Z.getCategory(K ? l.T.SPOOKY_NIGHT : l.T.BAND),
+        Q = Y ? V[1] : C.Z.getCategory(K ? l.T.BAND : l.T.AUTUMN_EQUINOX),
+        ee = C.Z.getCategory(l.T.ANIME_V2),
+        et = Y
+            ? (0, p.uV)(null !== (s = null == J ? void 0 : J.heroBanner) && void 0 !== s ? s : '', {
                   size: L.pv,
                   format: 'jpg'
               })
-            : W
+            : K
               ? O
               : B,
-        J = V
-            ? (0, p.uV)(null !== (s = null == $ ? void 0 : $.featuredBlock) && void 0 !== s ? s : '', {
+        es = Y
+            ? (0, p.uV)(null !== (n = null == Q ? void 0 : Q.featuredBlock) && void 0 !== n ? n : '', {
                   size: L.J0,
                   format: 'png'
               })
-            : W
+            : K
               ? k
               : j,
-        Q = V
-            ? (0, p.uV)(null !== (n = null == X ? void 0 : X.featuredBlock) && void 0 !== n ? n : '', {
+        ea = Y
+            ? (0, p.uV)(null !== (Z = null == ee ? void 0 : ee.featuredBlock) && void 0 !== Z ? Z : '', {
                   size: L.J0,
                   format: 'png'
               })
             : N,
-        ee = r.useCallback(() => {
-            H();
-        }, [H]),
-        et = V ? (null !== (Z = null == Y ? void 0 : Y.heroRanking) && void 0 !== Z ? Z : []) : W ? L.Ku : L.WC,
-        es = r.useMemo(
+        er = r.useCallback(() => {
+            U();
+        }, [U]),
+        en = Y ? (null !== (y = null == J ? void 0 : J.heroRanking) && void 0 !== y ? y : []) : K ? L.Ku : L.WC,
+        ei = r.useMemo(
             () =>
-                et
+                en
                     .map((e) => C.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
@@ -85,9 +86,9 @@ t.Z = (e) => {
                         return Number(s) - Number(a);
                     })
                     .slice(0, 4),
-            [w, W]
+            [M, K]
         ),
-        ea = r.useMemo(
+        el = r.useMemo(
             () =>
                 L.yo
                     .map((e) => C.Z.getProduct(e))
@@ -102,25 +103,28 @@ t.Z = (e) => {
                             a = !!f.Z.getPurchase(t.skuId);
                         return Number(s) - Number(a);
                     }),
-            [w]
+            [M]
         );
-    if (null == F) return null;
-    let er = v.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null == Y ? void 0 : Y.name });
-    if (null != M)
+    if (null == z) return null;
+    let eo = v.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null == J ? void 0 : J.name });
+    if (null != W) {
+        let e = [];
         return (
-            m.Z.captureMessage('shop load error: ' + M.message, {
+            null != H ? e.push('shop load fetch categories error: '.concat(W.message)) : null != D ? e.push('shop load fetch purchase error: '.concat(W.message)) : e.push('shop load claim error: '.concat(W.message)),
+            m.Z.captureMessage(e.join('\n'), {
                 tags: {
-                    isStaff: F.isStaff.toString(),
-                    preloadEnabled: z.toString(),
-                    disableCache: G.toString(),
-                    includeUnpublished: K.toString()
+                    isStaff: z.isStaff().toString(),
+                    preloadEnabled: $.toString(),
+                    disableCache: X.toString(),
+                    includeUnpublished: q.toString()
                 }
             }),
             (0, a.jsx)(E.Z, {
-                onRetry: ee,
-                errorMessage: M.message
+                onRetry: er,
+                errorMessage: W.message
             })
         );
+    }
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
             className: S.shop,
@@ -130,7 +134,7 @@ t.Z = (e) => {
                     children: [
                         (0, a.jsx)('div', {
                             className: S.bannerImage,
-                            style: { backgroundImage: 'url('.concat(q, ')') }
+                            style: { backgroundImage: 'url('.concat(et, ')') }
                         }),
                         (0, a.jsx)('div', { className: i()(S.bannerShadow, S.left) }),
                         (0, a.jsx)('div', { className: i()(S.bannerShadow, S.right) })
@@ -142,12 +146,12 @@ t.Z = (e) => {
                         (0, a.jsxs)('div', {
                             className: i()(S.heroHeaderContainer),
                             children: [
-                                w
+                                M
                                     ? (0, a.jsx)('div', { className: i()(S.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
                                           className: i()(S.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null == Y ? void 0 : Y.unpublishedAt) != null &&
+                                              (null == J ? void 0 : J.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
                                                       text: v.Z.Messages.LIMITED_TIME,
@@ -155,37 +159,37 @@ t.Z = (e) => {
                                                   }),
                                               (0, a.jsx)('img', {
                                                   className: S.heroHeaderLogo,
-                                                  src: (0, p.uV)(null !== (y = null == Y ? void 0 : Y.logo) && void 0 !== y ? y : '', { size: x.n }),
-                                                  alt: null == Y ? void 0 : Y.name
+                                                  src: (0, p.uV)(null !== (P = null == J ? void 0 : J.logo) && void 0 !== P ? P : '', { size: x.n }),
+                                                  alt: null == J ? void 0 : J.name
                                               }),
                                               (0, a.jsx)(c.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
                                                   className: S.subHeaderText,
-                                                  children: null == Y ? void 0 : Y.summary
+                                                  children: null == J ? void 0 : J.summary
                                               })
                                           ]
                                       }),
-                                !w &&
+                                !M &&
                                     (0, a.jsx)('div', {
                                         className: S.heroHeaderButtonContainer,
                                         children: (0, a.jsx)(c.Button, {
                                             className: S.heroHeaderButton,
                                             color: c.ButtonColors.WHITE,
-                                            onClick: () => P('shop latest category hero', null == Y ? void 0 : Y.skuId),
-                                            children: er
+                                            onClick: () => R('shop latest category hero', null == J ? void 0 : J.skuId),
+                                            children: eo
                                         })
                                     })
                             ]
                         }),
                         (0, a.jsx)('div', {
                             className: i()(S.row, S.feed, S.feedSingleRow),
-                            children: w
+                            children: M
                                 ? (0, a.jsx)(a.Fragment, {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(I.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: es.map((e) => {
+                                      children: ei.map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...s } = e;
                                           return (0, a.jsx)(
@@ -193,7 +197,7 @@ t.Z = (e) => {
                                               {
                                                   product: s,
                                                   category: t,
-                                                  user: F,
+                                                  user: z,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -203,7 +207,7 @@ t.Z = (e) => {
                         }),
                         (0, a.jsx)('div', {
                             className: i()(S.section, S.col2, S.featuredBlocksContainer),
-                            children: w
+                            children: M
                                 ? (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)('div', {
@@ -220,10 +224,10 @@ t.Z = (e) => {
                                       children: [
                                           (0, a.jsxs)(c.Clickable, {
                                               className: i()(S.featuredBlock),
-                                              style: { backgroundImage: 'url('.concat(J, ')') },
-                                              onClick: () => P('shop marketing tile', null == $ ? void 0 : $.skuId),
+                                              style: { backgroundImage: 'url('.concat(es, ')') },
+                                              onClick: () => R('shop marketing tile', null == Q ? void 0 : Q.skuId),
                                               children: [
-                                                  (null == $ ? void 0 : $.unpublishedAt) != null &&
+                                                  (null == Q ? void 0 : Q.unpublishedAt) != null &&
                                                       (0, a.jsx)(c.TextBadge, {
                                                           disableColor: !0,
                                                           text: v.Z.Messages.LIMITED_TIME,
@@ -239,10 +243,10 @@ t.Z = (e) => {
                                           }),
                                           (0, a.jsx)(c.Clickable, {
                                               className: i()(S.featuredBlock),
-                                              style: { backgroundImage: 'url('.concat(Q, ')') },
-                                              onClick: () => P('shop marketing tile', l.T.ANIME_V2),
+                                              style: { backgroundImage: 'url('.concat(ea, ')') },
+                                              onClick: () => R('shop marketing tile', l.T.ANIME_V2),
                                               children:
-                                                  !w &&
+                                                  !M &&
                                                   (0, a.jsxs)(a.Fragment, {
                                                       children: [
                                                           (0, a.jsx)(c.TextBadge, {
@@ -271,7 +275,7 @@ t.Z = (e) => {
                                 }),
                                 (0, a.jsxs)(c.Clickable, {
                                     className: S.shopAll,
-                                    onClick: () => P('shop all top'),
+                                    onClick: () => R('shop all top'),
                                     children: [
                                         (0, a.jsx)(c.ServerGridIcon, {}),
                                         (0, a.jsx)(c.Text, {
@@ -284,11 +288,11 @@ t.Z = (e) => {
                         }),
                         (0, a.jsx)('div', {
                             className: S.feed,
-                            ref: U,
-                            children: w
+                            ref: G,
+                            children: M
                                 ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(I.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: ea.slice(0, R).map((e) => {
+                                      children: el.slice(0, A).map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...s } = e;
                                           return (0, a.jsx)(
@@ -296,7 +300,7 @@ t.Z = (e) => {
                                               {
                                                   product: s,
                                                   category: t,
-                                                  user: F,
+                                                  user: z,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -304,7 +308,7 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        R >= L.iA &&
+                        A >= L.iA &&
                             (0, a.jsxs)('div', {
                                 className: S.endOfFeed,
                                 children: [
@@ -315,7 +319,7 @@ t.Z = (e) => {
                                     (0, a.jsx)(c.Button, {
                                         className: S.endOfFeedButton,
                                         onClick: () => {
-                                            P('shop all bottom', void 0, !0);
+                                            R('shop all bottom', void 0, !0);
                                         },
                                         children: (0, a.jsx)(c.Text, {
                                             variant: 'text-md/medium',
