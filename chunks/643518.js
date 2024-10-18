@@ -19,33 +19,34 @@ function _(e) {
         { live: E, recent: f, stream: m } = (0, o.Z)(_.id),
         x = null === (n = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
         p = null === (t = (0, s.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
-        Z = (0, l.Z)({
+        Z = _.id === (null == I ? void 0 : I.id),
+        h = (0, l.Z)({
             user: _,
             currentUser: I,
             location: d.Sbl.PROFILE_MODAL_TABS
         }),
-        h = [
+        v = [
             {
                 section: a.oh.USER_INFO,
                 text: u.Z.Messages.USER_PROFILE_ABOUT_ME
             }
         ];
     return (
-        (E.length > 0 || f.length > 0 || null != m) &&
-            h.push({
+        (E.length > 0 || (Z && f.length > 0) || null != m) &&
+            v.push({
                 section: a.oh.ACTIVITY,
                 text: u.Z.Messages.USER_PROFILE_ACTIVITY
             }),
-        _.id !== (null == I ? void 0 : I.id) &&
-            Z &&
-            (h.push({
+        !Z &&
+            h &&
+            (v.push({
                 section: a.oh.MUTUAL_FRIENDS,
                 text: (0, r.Z)(x)
             }),
-            h.push({
+            v.push({
                 section: a.oh.MUTUAL_GUILDS,
                 text: (0, c.Z)(p)
             })),
-        h
+        v
     );
 }

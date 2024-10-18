@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 }),
     n(47120);
@@ -8,52 +8,48 @@ var i = n(735250),
     s = n(470079),
     a = n(120356),
     l = n.n(a),
-    r = n(392711),
-    o = n(259443),
-    c = n(481060),
-    u = n(81897),
-    d = n(911284),
-    h = n(322614),
-    p = n(785717),
-    m = n(369566),
-    _ = n(527790),
-    f = n(689938),
-    E = n(869426);
-let g = new o.Y('UserProfilePanelRecentActivity');
-function C(e) {
+    r = n(259443),
+    o = n(481060),
+    c = n(81897),
+    u = n(911284),
+    d = n(785717),
+    h = n(369566),
+    p = n(527790),
+    m = n(689938),
+    _ = n(869426);
+let f = new r.Y('UserProfilePanelRecentActivity');
+function E(e) {
     let { user: t, cardClassName: n } = e,
-        { trackUserProfileAction: a } = (0, p.KZ)(),
-        o = (0, h.Z)(t.id),
-        { recent: C } = (0, m.Z)(t.id),
-        I = (0, u.Z)();
+        { trackUserProfileAction: a } = (0, d.KZ)(),
+        { recent: r } = (0, h.Z)(t.id),
+        E = (0, c.Z)();
     s.useEffect(() => {
         (async () => {
             try {
-                await (0, d.Z)(t.id, I);
+                await (0, u.Z)(t.id, E);
             } catch (e) {
-                g.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
+                f.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }
         })();
-    }, [t.id, I]);
-    let T = s.useMemo(() => (null == o || 0 === o.length ? C : (0, r.uniqBy)([...o, ...C], (e) => e.id)), [o, C]),
-        [x, v] = s.useState(!0),
-        S = x ? c.ChevronSmallDownIcon : c.ChevronSmallRightIcon;
-    return 0 === T.length
+    }, [t.id, E]);
+    let [g, C] = s.useState(!0),
+        I = g ? o.ChevronSmallDownIcon : o.ChevronSmallRightIcon;
+    return 0 === r.length
         ? null
-        : T.length <= 3
+        : r.length <= 3
           ? (0, i.jsxs)('section', {
                 children: [
-                    (0, i.jsxs)(c.Heading, {
+                    (0, i.jsxs)(o.Heading, {
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
-                        className: E.header,
-                        children: [f.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', C.length]
+                        className: _.header,
+                        children: [m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', r.length]
                     }),
                     (0, i.jsx)('ul', {
-                        className: E.list,
-                        children: T.map((e) =>
+                        className: _.list,
+                        children: r.map((e) =>
                             (0, i.jsx)(
-                                _.Z,
+                                p.Z,
                                 {
                                     user: t,
                                     entry: e,
@@ -68,25 +64,25 @@ function C(e) {
             })
           : (0, i.jsxs)('section', {
                 children: [
-                    (0, i.jsxs)(c.Clickable, {
-                        className: l()(E.header, E.clickable),
+                    (0, i.jsxs)(o.Clickable, {
+                        className: l()(_.header, _.clickable),
                         onClick: () => {
-                            a({ action: x ? 'COLLAPSE_RECENT_ACTIVITY' : 'EXPAND_RECENT_ACTIVITY' }), v(!x);
+                            a({ action: g ? 'COLLAPSE_RECENT_ACTIVITY' : 'EXPAND_RECENT_ACTIVITY' }), C(!g);
                         },
                         children: [
-                            (0, i.jsxs)(c.Heading, {
+                            (0, i.jsxs)(o.Heading, {
                                 variant: 'text-xs/semibold',
                                 color: 'header-primary',
-                                children: [f.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', C.length]
+                                children: [m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', r.length]
                             }),
-                            (0, i.jsx)(S, { size: 'xs' })
+                            (0, i.jsx)(I, { size: 'xs' })
                         ]
                     }),
                     (0, i.jsx)('ul', {
-                        className: E.list,
-                        children: (x ? T : T.slice(0, 3)).map((e) =>
+                        className: _.list,
+                        children: (g ? r : r.slice(0, 3)).map((e) =>
                             (0, i.jsx)(
-                                _.Z,
+                                p.Z,
                                 {
                                     user: t,
                                     entry: e,
