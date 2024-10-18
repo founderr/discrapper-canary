@@ -24,12 +24,14 @@ function E(e) {
         l = (0, a.e7)([u.ZP], () => (null != r ? u.ZP.getUsableCustomEmojiById(r) : null));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.Z, {
-                className: h.emoji,
-                emojiId: r,
-                emojiName: o,
-                animated: !!(null == l ? void 0 : l.animated)
-            }),
+            null != o || null != r
+                ? (0, i.jsx)(s.Z, {
+                      className: h.emoji,
+                      emojiId: r,
+                      emojiName: o,
+                      animated: !!(null == l ? void 0 : l.animated)
+                  })
+                : null,
             t
         ]
     });
