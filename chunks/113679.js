@@ -40,10 +40,12 @@ function I(e) {
                       children: [
                           (0, s.jsx)(r.Heading, {
                               variant: 'heading-lg/semibold',
+                              color: 'always-white',
                               children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
                           }),
                           (0, s.jsx)(r.Text, {
                               variant: 'text-sm/medium',
+                              color: 'always-white',
                               children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
                           })
                       ]
