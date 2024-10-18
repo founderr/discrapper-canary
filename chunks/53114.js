@@ -355,37 +355,35 @@ class p extends s.Z {
                 ...u
             },
             { bytes: d, framesDropped: E, framesCodecError: h, framesCodec: p, framesNetwork: I, packets: m, packetsLost: T, nackCount: S, pliCount: g, qpSum: A, pauseCount: N, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: v, totalFramesDuration: C, keyframes: L, passthroughCount: D, cryptorSuccessCount: y, cryptorFailureCount: b, cryptorDuration: M, cryptorAttempts: P, qualityDecodeErrors: U, qualityDecoderReboots: w, qualityScoreErrors: x, qualityFrameDrops: G, qualitySizeMismatches: k } = e.aggregatedProperties;
-        return {
-            ...c,
-            avg_bitrate: r > 0 ? Math.round(((null != d ? d : 0) * 8) / r) : 0,
-            avg_fps: r > 0 ? Math.round((null != p ? p : 0) / r) : 0,
-            num_bytes: d,
-            num_packets_lost: T,
-            num_packets: m,
-            num_frames: I,
-            num_frames_codec_error: h,
-            time_to_first_frame_ms: e.timeToFirstFrame,
-            num_frames_dropped: E,
-            num_nacks: S,
-            num_plis: g,
-            qp_sum: A,
-            receiver_pause_count: N,
-            receiver_freeze_count: R,
-            receiver_total_pauses_duration: O,
-            receiver_total_freezes_duration: v,
-            receiver_total_frames_duration: C,
-            num_keyframes: L,
-            cryptor_passthrough_count: D,
-            cryptor_success_count: y,
-            cryptor_failure_count: b,
-            cryptor_duration: M,
-            cryptor_attempts: P,
-            encoder_quality_decode_errors: U,
-            encoder_quality_decoder_reboots: w,
-            encoder_quality_score_errors: x,
-            encoder_quality_frame_drops: G,
-            encoder_quality_size_mismatches: k
-        };
+        return (
+            e instanceof _.nt ? ((c.sender_freeze_count = R), (c.sender_total_freezes_duration = v), (c.sender_total_frames_duration = C)) : ((c.receiver_freeze_count = R), (c.receiver_total_freezes_duration = v), (c.receiver_total_frames_duration = C), (c.receiver_pause_count = N), (c.receiver_total_pauses_duration = O)),
+            {
+                ...c,
+                avg_bitrate: r > 0 ? Math.round(((null != d ? d : 0) * 8) / r) : 0,
+                avg_fps: r > 0 ? Math.round((null != p ? p : 0) / r) : 0,
+                num_bytes: d,
+                num_packets_lost: T,
+                num_packets: m,
+                num_frames: I,
+                num_frames_codec_error: h,
+                time_to_first_frame_ms: e.timeToFirstFrame,
+                num_frames_dropped: E,
+                num_nacks: S,
+                num_plis: g,
+                qp_sum: A,
+                num_keyframes: L,
+                cryptor_passthrough_count: D,
+                cryptor_success_count: y,
+                cryptor_failure_count: b,
+                cryptor_duration: M,
+                cryptor_attempts: P,
+                encoder_quality_decode_errors: U,
+                encoder_quality_decoder_reboots: w,
+                encoder_quality_score_errors: x,
+                encoder_quality_frame_drops: G,
+                encoder_quality_size_mismatches: k
+            }
+        );
     }
     receivedStats(e, t, n) {
         var r, i, s, l;
