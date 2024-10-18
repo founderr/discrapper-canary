@@ -1,99 +1,100 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return h;
+            return f;
         }
     }),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    i = t(442837),
-    r = t(481060),
-    l = t(230711),
-    c = t(485267),
-    d = t(564990),
-    o = t(353647),
-    E = t(527790),
-    u = t(540440),
-    x = t(365583),
-    _ = t(689938),
-    m = t(121269);
-function h(e) {
-    let { user: s, entry: t, transitionState: h, onAction: j, onClose: I, onOpenGameSettings: N } = e,
-        [Z, R] = (0, i.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
+    n(47120);
+var i = n(735250),
+    o = n(470079),
+    a = n(442837),
+    r = n(481060),
+    c = n(230711),
+    s = n(485267),
+    l = n(564990),
+    d = n(353647),
+    u = n(527790),
+    _ = n(540440),
+    E = n(365583),
+    T = n(689938),
+    R = n(121269);
+function f(e) {
+    let { user: t, entry: n, transitionState: f, onAction: h, onClose: S, onOpenGameSettings: C } = e,
+        [I, N] = (0, a.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
     return (
-        a.useEffect(() => c.Bt, []),
-        (0, n.jsxs)(r.ModalRoot, {
+        o.useEffect(() => s.Bt, []),
+        (0, i.jsxs)(r.ModalRoot, {
             size: r.ModalSize.SMALL,
-            transitionState: h,
+            transitionState: f,
             children: [
-                (0, n.jsxs)(r.ModalContent, {
-                    className: m.content,
+                (0, i.jsxs)(r.ModalContent, {
+                    className: R.content,
                     children: [
-                        null != R
-                            ? (0, n.jsxs)('div', {
-                                  className: m.error,
+                        null != N
+                            ? (0, i.jsxs)('div', {
+                                  className: R.error,
                                   children: [
-                                      (0, n.jsx)(r.CircleXIcon, { color: r.tokens.colors.STATUS_DANGER }),
-                                      (0, n.jsx)(r.Text, {
+                                      (0, i.jsx)(r.CircleXIcon, { color: r.tokens.colors.STATUS_DANGER }),
+                                      (0, i.jsx)(r.Text, {
                                           variant: 'text-sm/medium',
-                                          children: _.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR
+                                          children: T.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR
                                       })
                                   ]
                               })
                             : null,
-                        (0, n.jsx)(r.Heading, {
+                        (0, i.jsx)(r.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: (0, u.y)(t)
+                            children: (0, _.y)(n)
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
-                            children: _.Z.Messages.USER_ACTIVITY_CLEAR_HISTORY_DISCLAIMER.format({
-                                settingsHook: (e, s) => {
-                                    let a = (0, x.C)({
-                                        entry: t,
-                                        onOpenGameSettings: N
+                            children: T.Z.Messages.USER_ACTIVITY_CLEAR_HISTORY_DISCLAIMER.format({
+                                settingsHook: (e, t) => {
+                                    let o = (0, E.C)({
+                                        entry: n,
+                                        onOpenGameSettings: C
                                     });
-                                    return (0, n.jsx)(
+                                    return (0, i.jsx)(
                                         r.Anchor,
                                         {
                                             onClick: () => {
-                                                null == j || j({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != a ? a() : l.Z.open(), I();
+                                                null == h || h({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != o ? o() : c.Z.open(), S();
                                             },
                                             children: e
                                         },
-                                        s
+                                        t
                                     );
                                 }
                             })
                         }),
-                        (0, n.jsx)(E.Z, {
-                            user: s,
-                            entry: t,
-                            className: m.card,
+                        (0, i.jsx)(u.Z, {
+                            user: t,
+                            entry: n,
+                            className: R.card,
+                            hideHeader: !0,
                             hideContextMenu: !0
                         })
                     ]
                 }),
-                (0, n.jsxs)(r.ModalFooter, {
-                    className: m.footer,
+                (0, i.jsxs)(r.ModalFooter, {
+                    className: R.footer,
                     children: [
-                        (0, n.jsx)(r.Button, {
-                            disabled: Z,
+                        (0, i.jsx)(r.Button, {
+                            disabled: I,
                             color: r.ButtonColors.RED,
                             size: r.ButtonSizes.SMALL,
                             onClick: () => {
-                                null == j || j({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, d.CV)(t, s.id, I);
+                                null == h || h({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, l.CV)(n, t.id, S);
                             },
-                            children: null != R ? _.Z.Messages.RETRY : _.Z.Messages.CLEAR
+                            children: null != N ? T.Z.Messages.RETRY : T.Z.Messages.CLEAR
                         }),
-                        (0, n.jsx)(r.Button, {
-                            onClick: I,
+                        (0, i.jsx)(r.Button, {
+                            onClick: S,
                             size: r.ButtonSizes.SMALL,
                             look: r.ButtonLooks.FILLED,
                             color: r.ButtonColors.TRANSPARENT,
-                            children: _.Z.Messages.CANCEL
+                            children: T.Z.Messages.CANCEL
                         })
                     ]
                 })
