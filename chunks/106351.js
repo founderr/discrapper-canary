@@ -23,6 +23,7 @@ r.d(t, {
     (a[(a.GUILD_FORUM = 15)] = 'GUILD_FORUM'),
     (a[(a.GUILD_MEDIA = 16)] = 'GUILD_MEDIA'),
     (a[(a.LOBBY = 17)] = 'LOBBY'),
+    (a[(a.DM_SDK = 18)] = 'DM_SDK'),
     (a[(a.UNKNOWN = 10000)] = 'UNKNOWN');
 let _ = {
     CALLABLE: new Set([1, 3]),
