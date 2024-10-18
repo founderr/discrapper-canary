@@ -35,12 +35,6 @@ function f(e) {
     return (0, r.jsxs)('div', {
         className: E.container,
         children: [
-            (0, r.jsx)(s.Text, {
-                variant: 'text-xs/semibold',
-                color: 'interactive-active',
-                children: _.Z.Messages.LEADERBOARD_LOL_SUMMONERS_RIFT
-            }),
-            (0, r.jsx)(s.Spacer, { size: 8 }),
             (0, r.jsxs)('div', {
                 className: E.userContainer,
                 children: [

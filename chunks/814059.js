@@ -9,6 +9,10 @@ var r = n(913527),
     s = n(689938);
 let o = (e) => {
     let t = Math.max(0, i()(e).diff(i()(), 's'));
+    if (t < 2 * a.Z.Seconds.HOUR) {
+        let e = Math.round(t / a.Z.Seconds.MINUTE);
+        return s.Z.Messages.LEADERBOARD_INTERVAL_END_MINUTES_LEFT.format({ count: e });
+    }
     if (t < a.Z.Seconds.DAY) {
         let e = Math.round(t / a.Z.Seconds.HOUR);
         return s.Z.Messages.LEADERBOARD_INTERVAL_END_HOURS_LEFT.format({ count: e });
