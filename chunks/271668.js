@@ -55,19 +55,20 @@ t.Z = i.forwardRef(function (e, t) {
             filteredSectionId: W,
             scrollDown: K,
             filterSection: z
-        } = S.wi(
-            n,
-            {
+        } = S.wi({
+            channel: n,
+            filters: {
                 commandTypes: [c.yU.CHAT],
                 builtIns: a ? g.D.ONLY_TEXT : g.D.ALLOW,
                 applicationCommands: !a
             },
-            {
+            options: {
                 placeholderCount: 7,
                 limit: C.tn,
                 includeFrecency: !0
-            }
-        ),
+            },
+            allowFetch: !0
+        }),
         q = (0, I.Qs)({
             activeCategoryIndex: F,
             isScrolling: o,

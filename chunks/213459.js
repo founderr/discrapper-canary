@@ -481,12 +481,15 @@ let Q = new q(d.Z, {
 });
 function X(e, t, n) {
     let [r, i] = s.useState(!0),
-        a = (0, c.cj)([Q], () => Q.getContextState(e));
+        a = (0, c.cj)([Q], () => (null != e ? Q.getContextState(e) : Q.getUserState()));
     return (
         s.useEffect(() => {
-            r &&
-                null != e &&
-                (n &&
+            if (r) {
+                if (null == e) {
+                    n && es(a) && (0, O.j)({ type: 'user' });
+                    return;
+                }
+                n &&
                     t &&
                     ea(e) &&
                     (g.default.track(M.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
@@ -503,7 +506,8 @@ function X(e, t, n) {
                                   type: 'channel',
                                   channelId: e.id
                               }))),
-                i(!1));
+                    i(!1);
+            }
         }, [a, n, e, t, r]),
         a
     );

@@ -228,7 +228,12 @@ function q(e) {
 function J(e) {
     let { channel: n, entrypoint: t, onEmptyState: l } = e,
         o = t === T._b.VOICE,
-        { frecentApps: r, loading: s } = (0, b.f)(n, o),
+        { frecentApps: r, loading: s } = (0, b.f)({
+            channel: n,
+            onlyActivityApps: o,
+            allowCommandFetch: !0,
+            includeAuthorizedAppsAndFetch: !0
+        }),
         c = a.useMemo(() => {
             let e = [];
             for (let n of r) null != n.application && e.push({ application: n.application });
@@ -374,17 +379,18 @@ function X(e) {
     var n;
     let { channel: t, onEmptyState: l } = e,
         r = (0, v.LD)(t.guild_id, !0),
-        { commandsByActiveSection: s, loading: c } = x.wi(
-            t,
-            {
+        { commandsByActiveSection: s, loading: c } = x.wi({
+            channel: t,
+            filters: {
                 commandTypes: [u.yU.CHAT, u.yU.PRIMARY_ENTRY_POINT]
             },
-            {
+            options: {
                 placeholderCount: 0,
                 limit: k.tn,
                 includeFrecency: !0
-            }
-        ),
+            },
+            allowFetch: !0
+        }),
         d = a.useMemo(
             () =>
                 s.reduce((e, n) => {
@@ -485,15 +491,16 @@ function K(e) {
                     withCommands: !1
                 });
             }, [i, t]);
-            let { sectionDescriptors: l } = x.wi(
-                    n,
-                    { commandTypes: [u.yU.CHAT] },
-                    {
+            let { sectionDescriptors: l } = x.wi({
+                    channel: n,
+                    filters: { commandTypes: [u.yU.CHAT] },
+                    options: {
                         placeholderCount: 0,
                         limit: k.tn,
                         includeFrecency: !0
-                    }
-                ),
+                    },
+                    allowFetch: !0
+                }),
                 o = a.useCallback((e) => !(null != l.find((n) => n.id === e.id)), [l]),
                 { fetchState: s, recommendationsSections: d } = (0, c.cj)([E.ZP], () => ({
                     fetchState: E.ZP.getFetchState({
