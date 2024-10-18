@@ -30,7 +30,7 @@ n.d(t, {
         return A;
     },
     vx: function () {
-        return m;
+        return C;
     },
     wG: function () {
         return p;
@@ -80,12 +80,12 @@ let E = '40%',
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    m = (e) => {
-        let t = C(e),
+    C = (e) => {
+        let t = m(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
-    C = (e) => {
+    m = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());

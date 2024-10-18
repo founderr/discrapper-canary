@@ -12,10 +12,10 @@ var a = t(120356),
     l = t(882089);
 function c(e) {
     let { className: n, onClick: t, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: m, animatesOnHover: I, ...f } = e,
-        g = null != a,
-        h = (0, i.jsxs)(i.Fragment, {
+        h = null != a,
+        g = (0, i.jsxs)(i.Fragment, {
             children: [
-                g &&
+                h &&
                     (0, i.jsx)('div', {
                         className: l.imageContainer,
                         children: (0, i.jsx)('img', {
@@ -63,7 +63,7 @@ function c(e) {
                 })
             ]
         }),
-        C = r()(n, l.container, { [l.hasImage]: g });
+        C = r()(n, l.container, { [l.hasImage]: h });
     return null != t
         ? (0, i.jsx)(o.ClickableContainer, {
               tag: 'article',
@@ -71,11 +71,11 @@ function c(e) {
               onClick: t,
               className: r()(C, l.clickable, { [l.animatesOnHoverContainer]: I }),
               focusProps: { offset: 4 },
-              children: h
+              children: g
           })
         : (0, i.jsx)('article', {
               className: C,
               ...f,
-              children: h
+              children: g
           });
 }

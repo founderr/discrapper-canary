@@ -18,11 +18,11 @@ var i = t(735250),
     m = t(519896),
     I = t(171246),
     f = t(55563),
-    g = t(147890),
-    h = t(272242),
+    h = t(147890),
+    g = t(272242),
     C = t(981631),
     b = t(689938),
-    E = t(778452);
+    x = t(778452);
 function v(e) {
     let { appId: n } = e,
         { subscriptions: t, otps: a } = (0, d.q)(n);
@@ -30,11 +30,11 @@ function v(e) {
         children: [
             t.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: E.productSection,
+                    className: x.productSection,
                     children: [
                         (0, i.jsx)(p.r, { subscriptions: t }),
                         (0, i.jsx)('div', {
-                            className: o()(E.productList, E.subList),
+                            className: o()(x.productList, x.subList),
                             children: t.map((e) =>
                                 (0, i.jsx)(
                                     u.zz,
@@ -43,7 +43,7 @@ function v(e) {
                                         listing: e,
                                         subscriptionType: (0, I.KW)(e.skuFlags) ? 'user' : 'guild',
                                         onDetails: () => {
-                                            (0, g.goToApplicationStoreSku)({
+                                            (0, h.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -57,14 +57,14 @@ function v(e) {
                 }),
             a.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: E.productSection,
+                    className: x.productSection,
                     children: [
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-lg/semibold',
                             children: b.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(E.productList, E.itemList),
+                            className: o()(x.productList, x.itemList),
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -72,7 +72,7 @@ function v(e) {
                                         skuId: e.skuId,
                                         appId: n,
                                         onDetails: () => {
-                                            (0, g.goToApplicationStoreSku)({
+                                            (0, h.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -87,12 +87,12 @@ function v(e) {
             (0, i.jsx)(c.Z, {
                 path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(x, { ...e })
+                render: (e) => (0, i.jsx)(E, { ...e })
             })
         ]
     });
 }
-function x(e) {
+function E(e) {
     let {
             match: {
                 params: { applicationId: n, skuId: t }
@@ -121,9 +121,9 @@ function x(e) {
                                 modalKey: e,
                                 onCloseCallback() {
                                     !P() &&
-                                        (0, g.goToApplicationSection)({
+                                        (0, h.goToApplicationSection)({
                                             applicationId: n,
-                                            section: h.ApplicationDirectoryProfileSections.STORE
+                                            section: g.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
@@ -148,9 +148,9 @@ function x(e) {
                                 modalKey: e,
                                 onCloseCallback() {
                                     !P() &&
-                                        (0, g.goToApplicationSection)({
+                                        (0, h.goToApplicationSection)({
                                             applicationId: n,
-                                            section: h.ApplicationDirectoryProfileSections.STORE
+                                            section: g.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }

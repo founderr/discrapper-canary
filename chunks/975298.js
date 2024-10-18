@@ -23,7 +23,7 @@ function I() {
     let { forceFetch: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { forceFetch: !1 },
         t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         n = (0, l.Wu)([_.Z], () => _.Z.getFractionalPremium(!1)),
-        i = (0, l.e7)([d.ZP], () => d.ZP.getMostRecentPremiumTypeSubscription()),
+        i = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
         [s, I] = r.useState({
             fractionalState: p.a$.NONE,
             endsAt: o()(0)
@@ -47,7 +47,7 @@ function I() {
                 throw ((0, E.g9)(t, { extra: { entitlementIds: e } }), Error(t));
             }
             I({
-                fractionalState: null != i ? p.a$.FP_SUB : p.a$.FP_ONLY,
+                fractionalState: null == i || h.JwP.INACTIVE.has(i.status) ? p.a$.FP_ONLY : p.a$.FP_SUB,
                 endsAt: o()(e[0].endsAt)
             });
         }, [t, n, i]),

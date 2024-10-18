@@ -1,30 +1,30 @@
-t.d(n, {
+t.d(e, {
     G: function () {
-        return v;
+        return m;
     },
     U: function () {
-        return m;
+        return f;
     }
 });
 var l = t(735250);
 t(470079);
 var i = t(557533),
     r = t.n(i),
-    o = t(789978),
-    a = t(368072),
+    a = t(789978),
+    o = t(368072),
     s = t(777207),
     u = t(692547),
     c = t(330711),
     d = t(56273),
     p = t(103077);
-function m(e) {
-    let { description: n, imgSrc: t, renderPurchaseButton: i, onPurchase: m, title: v, onDetails: f, benefitItems: I, benefitsSummary: h, subtitle: S } = e;
-    return (0, l.jsx)(o.tE, {
+function f(n) {
+    let { description: e, imgSrc: t, renderPurchaseButton: i, onPurchase: f, title: m, onDetails: v, benefitItems: h, benefitsSummary: I, subtitle: S } = n;
+    return (0, l.jsx)(a.tE, {
         children: (0, l.jsxs)('div', {
             className: r()(d.container, p.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != f ? f() : null != m && m();
+                null != v ? v() : null != f && f();
             },
             children: [
                 (0, l.jsx)('div', {
@@ -35,7 +35,7 @@ function m(e) {
                             (0, l.jsx)(s.x, {
                                 tag: 'div',
                                 variant: 'heading-lg/semibold',
-                                children: v
+                                children: m
                             }),
                             (0, l.jsx)('div', {
                                 className: d.image,
@@ -45,7 +45,7 @@ function m(e) {
                                               src: t.toString(),
                                               alt: ''
                                           })
-                                        : (0, l.jsx)(a.V, {
+                                        : (0, l.jsx)(o.V, {
                                               color: u.Z.colors.ICON_PRIMARY,
                                               size: 'custom',
                                               height: 48,
@@ -55,34 +55,34 @@ function m(e) {
                             null != i
                                 ? i({
                                       className: d.purchaseBtn,
-                                      onClick: (e) => {
-                                          e.stopPropagation(), null == m || m();
+                                      onClick: (n) => {
+                                          n.stopPropagation(), null == f || f();
                                       }
                                   })
                                 : null,
                             S,
-                            null != n &&
-                                '' !== n &&
+                            null != e &&
+                                '' !== e &&
                                 (0, l.jsx)(s.x, {
                                     className: d.description,
                                     color: 'text-normal',
                                     variant: 'text-sm/medium',
-                                    children: n
+                                    children: e
                                 })
                         ]
                     })
                 }),
-                null != h &&
+                null != I &&
                     (0, l.jsx)('div', {
                         className: d.benefitsSummary,
                         children: (0, l.jsx)(s.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: h })
+                            children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: I })
                         })
                     }),
-                null != I &&
-                    I.length > 0 &&
+                null != h &&
+                    h.length > 0 &&
                     (0, l.jsx)('div', {
                         className: d.benefits,
                         children: (0, l.jsx)('div', {
@@ -95,18 +95,18 @@ function m(e) {
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
-                                    I.length > 3
+                                    h.length > 3
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  I.slice(0, 3),
+                                                  h.slice(0, 3),
                                                   (0, l.jsx)(s.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: I.length - 3 })
+                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: h.length - 3 })
                                                   })
                                               ]
                                           })
-                                        : I
+                                        : h
                                 ]
                             })
                         })
@@ -115,14 +115,14 @@ function m(e) {
         })
     });
 }
-function v(e) {
-    let { icon: n, name: t, description: i } = e;
+function m(n) {
+    let { icon: e, name: t, description: i } = n;
     return (0, l.jsxs)('div', {
         className: d.cardBenefit,
         children: [
             (0, l.jsx)('div', {
                 className: d.cardBenefitIcon,
-                children: n
+                children: e
             }),
             (0, l.jsxs)('div', {
                 children: [

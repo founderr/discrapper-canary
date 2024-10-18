@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(479446),
     g = n(522558),
     T = n(441623),
-    f = n(317271),
-    S = n(674701),
+    S = n(317271),
+    f = n(674701),
     C = n(474936),
     N = n(981631),
     A = n(689938),
@@ -64,7 +64,7 @@ function R(e) {
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
-                    analyticsLocation: (0, f.F)(n).actionButton,
+                    analyticsLocation: (0, S.F)(n).actionButton,
                     analyticsLocations: O,
                     analyticsObject: {
                         page: s,
@@ -133,9 +133,9 @@ function R(e) {
             b(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(S.Z, {
+            (0, i.jsx)(f.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: S.U.COACHMARK,
+                premiumGiftIntentCardType: f.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: M,
                 onMouseLeave: P,

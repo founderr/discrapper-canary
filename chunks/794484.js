@@ -15,7 +15,7 @@ var s = n(735250),
     R = n(75077),
     g = n(320319),
     N = n(821912);
-let m = (e) => {
+let C = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: a, headerClassname: r } = e,
         i = (0, s.jsx)(o.Heading, {
             variant: 'heading-xxl/extrabold',
@@ -47,36 +47,36 @@ let m = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: A = !1, showAllPerksButton: f, headerClassname: p, isFullScreen: M = !0 } = e,
+    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: A = !1, showAllPerksButton: f, headerClassname: p, isFullScreen: M = !0 } = e,
         S = a.useRef(null),
         h = (0, d.yQ)(),
-        b = (0, E.Ag)(h),
-        x = (0, c.ZP)('perks-discoverability');
+        x = (0, E.Ag)(h),
+        b = (0, c.ZP)('perks-discoverability');
     (0, E.I2)();
     let O = (0, _.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
         P = r === I.R0.WHATS_NEW,
         v = (0, d.IY)(),
         L = (0, T.x$)();
     a.useEffect(() => {
-        P && !b && (v(), L());
-    }, [v, L, P, b]),
+        P && !x && (v(), L());
+    }, [v, L, P, x]),
         a.useEffect(() => {
             let e = S.current;
-            if (null == e || !b || !P) return;
+            if (null == e || !x || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && v();
             });
             return () => {
                 cancelAnimationFrame(t), P && v();
             };
-        }, [S, b, P, v]);
+        }, [S, x, P, v]);
     let Z = (0, R.Op)(P),
         D = (0, u.Z)(),
         U = (0, R.mN)(),
         B = (0, R.sP)({
             perksCards: D,
             variant: r,
-            shopMarketingVariation: x,
+            shopMarketingVariation: b,
             isFullScreen: M,
             showTenureCard: null == h ? void 0 : h.showCard,
             tileOrderVariant: O,
@@ -104,7 +104,7 @@ t.Z = (e) => {
                     n
                 ),
                 children: [
-                    (0, s.jsx)(m, {
+                    (0, s.jsx)(C, {
                         showAllPerksButton: f,
                         leftAlignHeaders: A,
                         title: Z.title,
@@ -140,7 +140,7 @@ t.Z = (e) => {
                                 {
                                     confettiCanvas: e.name === u.u.FREE_BOOST ? G : void 0,
                                     ...e,
-                                    forceShadow: C
+                                    forceShadow: m
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

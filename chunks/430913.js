@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return E;
     }
 }),
     t(47120),
@@ -23,11 +23,11 @@ var i = t(735250),
     m = t(887706),
     I = t(214912),
     f = t(290247),
-    g = t(981631),
-    h = t(689938),
+    h = t(981631),
+    g = t(689938),
     C = t(319333);
-let b = h.Z.getAvailableLocales();
-function E(e) {
+let b = g.Z.getAvailableLocales();
+function x(e) {
     var n, t, a;
     let { onClick: r, url: o, children: c } = e,
         _ = (0, d.ZP)(),
@@ -80,10 +80,10 @@ function v(e) {
         children: I
     });
 }
-function x(e) {
+function E(e) {
     var n, t, r;
     let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [x, P] = a.useState(null),
+        [E, P] = a.useState(null),
         T = [],
         S = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
@@ -94,7 +94,7 @@ function x(e) {
         }
     }, [s.directory_entry]);
     let N = (e, n) => {
-        _.default.track(g.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
+        _.default.track(h.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
             application_id: s.id,
             guild_id: c,
             type: n,
@@ -110,7 +110,7 @@ function x(e) {
                         (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
                         }),
                         (0, i.jsx)('div', {
                             className: C.categories,
@@ -121,7 +121,7 @@ function x(e) {
                                     (0, i.jsx)(
                                         p.Z,
                                         {
-                                            href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
+                                            href: ''.concat(h.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
                                             children: (0, i.jsx)(l.Clickable, {
                                                 className: C.category,
                                                 onClick: () => u(e),
@@ -140,17 +140,17 @@ function x(e) {
                     ]
                 })
             ),
-        null != x &&
-            x.length > 0 &&
+        null != E &&
+            E.length > 0 &&
             T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(f.Z, { supportedLanguages: x })
+                        (0, i.jsx)(f.Z, { supportedLanguages: E })
                     ]
                 })
             ),
@@ -161,11 +161,11 @@ function x(e) {
                         (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
                         }),
                         S.map((e, n) =>
                             (0, i.jsx)(
-                                E,
+                                x,
                                 {
                                     url: e.url,
                                     onClick: N,
@@ -180,7 +180,7 @@ function x(e) {
                                   onClick: N,
                                   url: s.terms_of_service_url,
                                   type: 'tos',
-                                  children: h.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
+                                  children: g.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                               })
                             : null,
                         null != s.privacy_policy_url
@@ -189,21 +189,21 @@ function x(e) {
                                   onClick: N,
                                   url: s.privacy_policy_url,
                                   type: 'policy',
-                                  children: h.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
+                                  children: g.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
                               })
                             : null
                     ]
                 })
             ),
         null != s.guild &&
-            s.guild.features.includes(g.oNc.DISCOVERABLE) &&
+            s.guild.features.includes(h.oNc.DISCOVERABLE) &&
             T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
                         (0, i.jsx)(I.Z, {
                             guild: s.guild,

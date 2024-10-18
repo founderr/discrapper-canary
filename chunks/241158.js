@@ -15,11 +15,11 @@ var s = n(735250),
     R = n(689938),
     g = n(916548);
 let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: A, onClick: f, index: p } = e,
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: C, shouldLoadVideo: m, isCompact: A, onClick: f, index: p } = e,
         M = (0, d.rO)(),
         S = a.useRef(null),
-        [h, b] = a.useState(0),
-        x = (function (e) {
+        [h, x] = a.useState(0),
+        b = (function (e) {
             let t;
             switch (e) {
                 case u.dm.EMOJIS:
@@ -52,7 +52,7 @@ let N = (e) => {
             null != S.current && ((S.current.currentTime = h), S.current.play());
         },
         v = () => {
-            null != S.current && (b(S.current.currentTime), S.current.pause());
+            null != S.current && (x(S.current.currentTime), S.current.pause());
         },
         L = () =>
             (0, s.jsxs)('div', {
@@ -104,7 +104,7 @@ let N = (e) => {
                 }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: C ? 'auto' : 'none',
+                    preload: m ? 'auto' : 'none',
                     muted: !0,
                     poster: N,
                     loop: !0,
@@ -115,7 +115,7 @@ let N = (e) => {
                     }),
                     ref: S,
                     children: (0, s.jsx)('source', {
-                        src: m,
+                        src: C,
                         type: M ? I.m.MP4 : I.m.WEBM
                     })
                 })
@@ -123,7 +123,7 @@ let N = (e) => {
         };
     return p % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()(x, {
+              className: i()(b, {
                   [g.whatsNewBoxContainer]: !A,
                   [g.compactBoxContainer]: A
               }),
@@ -134,10 +134,10 @@ let N = (e) => {
               children: [(0, s.jsx)(L, {}), (0, s.jsx)(Z, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()(x, {
+              className: i()(b, {
                   [g.whatsNewBoxContainer]: !A,
                   [g.compactBoxContainer]: A,
-                  boxBackgroundColor: x
+                  boxBackgroundColor: b
               }),
               onMouseEnter: P,
               onFocus: P,

@@ -15,10 +15,10 @@ let T = (0, _.uk)('poggermode_applause', r.Z.getSoundpack()),
     R = !1,
     g = [],
     N = null,
-    m = () => {
+    C = () => {
         if (!I) T.loop(), (I = !0);
     },
-    C = () => {
+    m = () => {
         T.stop(), (I = !1);
     },
     A = () => {
@@ -53,10 +53,10 @@ class S extends a.Z {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        i.default.getId() === t && C();
+        i.default.getId() === t && m();
     }
     stopAudio() {
-        C();
+        m();
     }
     startAudio() {
         var e;
@@ -67,7 +67,7 @@ class S extends a.Z {
             s = c.Z.isTyping(t, n),
             a = E.ZP.getUserCombo(n, t),
             r = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
-        s && r >= 7 ? m() : C();
+        s && r >= 7 ? C() : m();
     }
     playAchievementUnlockSound() {
         if (!!A()) M('poggermode_achievement_unlock');

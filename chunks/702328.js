@@ -15,16 +15,16 @@ var s = n(735250),
     R = n(626135),
     g = n(74538),
     N = n(140465),
-    m = n(184508),
-    C = n(67645),
+    C = n(184508),
+    m = n(67645),
     A = n(599659),
     f = n(257944),
     p = n(91802),
     M = n(104494),
     S = n(639119),
     h = n(8647),
-    b = n(568126),
-    x = n(605289),
+    x = n(568126),
+    b = n(605289),
     O = n(248042),
     P = n(218390),
     v = n(823188),
@@ -61,25 +61,25 @@ let q = (e) => {
             I = a.useRef(0),
             g = a.useRef(0),
             N = a.useRef(0),
-            m = a.useRef(0);
+            C = a.useRef(0);
         return (a.useEffect(() => {
             E ? (I.current = Date.now()) : 0 !== I.current && ((g.current = g.current + Date.now() - I.current), (I.current = 0));
         }, [E]),
         a.useEffect(() => {
-            u ? (N.current = Date.now()) : 0 !== N.current && ((m.current = m.current + Date.now() - N.current), (N.current = 0));
+            u ? (N.current = Date.now()) : 0 !== N.current && ((C.current = C.current + Date.now() - N.current), (N.current = 0));
         }, [u]),
         a.useEffect(
             () => () => {
                 0 !== I.current && (g.current = g.current + (Date.now() - I.current)),
-                    0 !== N.current && (m.current = m.current + (Date.now() - N.current)),
+                    0 !== N.current && (C.current = C.current + (Date.now() - N.current)),
                     0 !== g.current &&
                         R.default.track(K.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: g.current,
                             is_v2: l
                         }),
-                    0 !== m.current &&
+                    0 !== C.current &&
                         R.default.track(K.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
-                            view_time: m.current,
+                            view_time: C.current,
                             is_v2: l
                         });
             },
@@ -145,8 +145,8 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: r } = e;
     (0, T.z)(u.X);
     let L = (0, f.z7)('PremiumMarketingHome'),
-        D = (0, C.g)('PremiumMarketingHome'),
-        B = (0, m.tY)('PremiumMarketingHome'),
+        D = (0, m.g)('PremiumMarketingHome'),
+        B = (0, C.tY)('PremiumMarketingHome'),
         j = a.useRef(null),
         [G, V] = a.useState(!1),
         [et, en] = a.useState(!1),
@@ -161,9 +161,9 @@ t.Z = (e) => {
         eI = (0, p.n)(),
         eR = null != eI,
         [eg, eN] = a.useState(!1),
-        em = (0, M.Ng)(),
-        eC = (0, S.N)(),
-        eA = null == eC ? void 0 : null === (t = eC.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        eC = (0, M.Ng)(),
+        em = (0, S.N)(),
+        eA = null == em ? void 0 : null === (t = em.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         ef = (0, N.Nx)(),
         ep = (0, O.Vi)(),
         { analyticsLocations: eM } = (0, E.ZP)(d.Z.PREMIUM_MARKETING),
@@ -180,7 +180,7 @@ t.Z = (e) => {
             e_(!0);
         }, []);
     let { enabled: eh } = A.O.useExperiment({ location: 'PremiumMarketingHome' }, { autoTrackExposure: !1 }),
-        eb = (0, s.jsx)('div', {
+        ex = (0, s.jsx)('div', {
             className: i()({
                 [z.premiumTierCardsContainerSettings]: !n,
                 [z.premiumTierCardsContainerFullscreen]: n
@@ -193,7 +193,7 @@ t.Z = (e) => {
                     variant: B ? (n ? v.NN.TAGLINE_XP_COPY_HOME : v.NN.TAGLINE_XP_COPY_SETTINGS) : v.NN.DEFAULT,
                     showWumpus: !B,
                     tier0CTAButton:
-                        eA === W.Si.TIER_2 || ep || null != em
+                        eA === W.Si.TIER_2 || ep || null != eC
                             ? (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
@@ -232,7 +232,7 @@ t.Z = (e) => {
                 })
             })
         }),
-        ex = eh && r === W.EZ.UserSettings,
+        eb = eh && r === W.EZ.UserSettings,
         eO = (0, s.jsxs)('div', {
             className: i()(z.container, { [z.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
@@ -247,7 +247,7 @@ t.Z = (e) => {
                     inOfferExperience: ef
                 }),
                 !n && eR
-                    ? (0, s.jsx)(x.Z, {
+                    ? (0, s.jsx)(b.Z, {
                           localizedPricingPromo: eI,
                           smallGap: !0
                       })
@@ -271,10 +271,10 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: z.promoBannerContainer,
-                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eR && (0, s.jsx)(b.Z, { localizedPricingPromo: eI })]
+                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eR && (0, s.jsx)(x.Z, { localizedPricingPromo: eI })]
                 }),
-                eb,
-                ex && (0, s.jsx)(P.d, { className: z.nitroweenGiftCard }),
+                ex,
+                eb && (0, s.jsx)(P.d, { className: z.nitroweenGiftCard }),
                 (0, s.jsx)(ee, {
                     isFullscreen: n,
                     inOfferExperience: ef,

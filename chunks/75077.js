@@ -1,6 +1,6 @@
 n.d(t, {
     BS: function () {
-        return C;
+        return m;
     },
     Op: function () {
         return h;
@@ -12,7 +12,7 @@ n.d(t, {
         return N;
     },
     mN: function () {
-        return b;
+        return x;
     },
     sP: function () {
         return S;
@@ -21,7 +21,7 @@ n.d(t, {
         return A;
     },
     vZ: function () {
-        return m;
+        return C;
     }
 }),
     n(653041),
@@ -53,7 +53,7 @@ let N = (e) => {
                 return '';
         }
     },
-    m = (e, t, n) => {
+    C = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
                 return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -66,7 +66,7 @@ let N = (e) => {
                 return;
         }
     },
-    C = (e) => {
+    m = (e) => {
         switch (e) {
             case R.EB.PENDING:
                 return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -106,7 +106,7 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
             { enabled: T } = d.r.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
             { enabled: I } = _.C.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
             R = E && !T && !I,
-            g = x();
+            g = b();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     S = (e) => {
@@ -209,11 +209,11 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
             subtitle: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
         };
     },
-    b = () => {
+    x = () => {
         let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    x = () => {
+    b = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, I.p9.TIER_2);
     };

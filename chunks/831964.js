@@ -22,16 +22,16 @@ var s,
     R = n(612253),
     g = n(832287),
     N = n(860528),
-    m = n(872532),
-    C = n(91342),
+    C = n(872532),
+    m = n(91342),
     A = n(181708),
     f = n(821721),
     p = n(158897),
     M = n(290650),
     S = n(751125),
     h = n(904505),
-    b = n(386014),
-    x = n(845571),
+    x = n(386014),
+    b = n(845571),
     O = n(220046),
     P = n(385874),
     v = n(371000),
@@ -46,7 +46,7 @@ let D = () => {
             title: E.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_EMOJI_TITLE,
             description: E.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
             previewImage: u,
-            videoUrl: e ? C.Z : A.Z,
+            videoUrl: e ? m.Z : A.Z,
             isCompact: !0
         },
         noLimits: {
@@ -73,15 +73,15 @@ t.ZP = (e) => {
                 description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
                 descriptionCta: E.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 previewImage: N,
-                videoUrl: s ? h.Z : b.Z
+                videoUrl: s ? h.Z : x.Z
             },
             serverProfiles: {
                 name: 'serverProfiles',
                 title: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PROFILES_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: E.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
-                previewImage: m,
-                videoUrl: s ? x.Z : O.Z
+                previewImage: C,
+                videoUrl: s ? b.Z : O.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',

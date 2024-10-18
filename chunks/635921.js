@@ -15,8 +15,8 @@ var a = n(120356),
     R = n(248042),
     g = n(422034),
     N = n(206127),
-    m = n(710220),
-    C = n(318747),
+    C = n(710220),
+    m = n(318747),
     A = n(409100),
     f = n(474936),
     p = n(689938),
@@ -33,7 +33,7 @@ let S = (e) => {
                         className: r()(M.button, i),
                         subscriptionTier: a
                     }),
-                    (0, s.jsx)(C.Z, {
+                    (0, s.jsx)(m.Z, {
                         className: r()(M.button, i),
                         forceWhite: !0
                     })
@@ -44,7 +44,7 @@ let S = (e) => {
             n &&
                 (o = (0, s.jsx)('div', {
                     className: M.buttonContainer,
-                    children: (0, s.jsx)(C.Z, {
+                    children: (0, s.jsx)(m.Z, {
                         className: r()(M.button, i),
                         forceWhite: !0
                     })
@@ -60,7 +60,7 @@ let S = (e) => {
             children: [(0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3 }), (0, s.jsx)(_.A, { className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4 })]
         });
     };
-function b(e) {
+function x(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
         a = (0, N.$)();
     return (0, s.jsx)(l.Text, {
@@ -71,7 +71,7 @@ function b(e) {
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: _, hideSparkles: N, hideSubscribeAndGiftButton: A, entrypoint: x } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: _, hideSparkles: N, hideSubscribeAndGiftButton: A, entrypoint: b } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, u._O)(),
         v = (0, E.Nx)(),
@@ -79,7 +79,7 @@ t.Z = (e) => {
         Z = (0, i.e7)([d.Z], () => d.Z.affinities),
         D = (0, I.Z)(),
         { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        B = x === f.EZ.ApplicationStoreHome && null != D && U,
+        B = b === f.EZ.ApplicationStoreHome && null != D && U,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -99,7 +99,7 @@ t.Z = (e) => {
                             children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
                         B
-                            ? (0, s.jsx)(m.Z, { referrer: D })
+                            ? (0, s.jsx)(C.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
                                     className: r()(M.affinityDescription),
@@ -108,11 +108,11 @@ t.Z = (e) => {
                                         smallerText: !t
                                     })
                                 })
-                              : (0, s.jsx)(b, {}),
+                              : (0, s.jsx)(x, {}),
                         L
                             ? (0, s.jsx)('div', {
                                   className: M.buttonContainer,
-                                  children: (0, s.jsx)(C.Z, {
+                                  children: (0, s.jsx)(m.Z, {
                                       className: r()(M.button, a),
                                       forceWhite: !0
                                   })
@@ -127,7 +127,7 @@ t.Z = (e) => {
                                 }),
                         j &&
                             !B &&
-                            (0, s.jsx)(b, {
+                            (0, s.jsx)(x, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })

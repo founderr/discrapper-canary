@@ -15,25 +15,25 @@ var s = n(735250),
     R = n(881100),
     g = n(981631),
     N = n(689938),
-    m = n(212749);
-let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE),
+    C = n(212749);
+let m = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE),
     A = (e) => {
         let { isShowingAll: t, onClick: n } = e;
         return (0, s.jsxs)(o.Clickable, {
             onClick: n,
-            className: m.customButton,
+            className: C.customButton,
             children: [
                 t ? N.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : N.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL,
                 t
                     ? (0, s.jsx)(o.ChevronSmallUpIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: m.arrow
+                          className: C.arrow
                       })
                     : (0, s.jsx)(o.ChevronSmallDownIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: m.arrow
+                          className: C.arrow
                       })
             ]
         });
@@ -44,31 +44,31 @@ let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.
         return (0, s.jsx)(d.Gt, {
             value: R,
             children: (0, s.jsxs)('div', {
-                className: i()(m.perkCard, a),
+                className: i()(C.perkCard, a),
                 children: [
                     T
                         ? (0, s.jsx)(u.Z, {
-                              className: m.perkCardNewBadge,
+                              className: C.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    I ? (0, s.jsx)(E.Z, { className: m.perkCardEarlyAccessBadge }) : null,
+                    I ? (0, s.jsx)(E.Z, { className: C.perkCardEarlyAccessBadge }) : null,
                     (0, s.jsx)('img', {
                         src: r,
                         alt: '',
-                        className: i()(l, m.perksCardArt)
+                        className: i()(l, C.perksCardArt)
                     }),
                     (0, s.jsxs)('div', {
                         children: [
                             (0, s.jsxs)(o.Heading, {
                                 variant: 'heading-lg/extrabold',
-                                className: m.perkCardHeading,
+                                className: C.perkCardHeading,
                                 children: [t, ' ', c]
                             }),
                             (0, s.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
-                                className: m.perkCardDescription,
+                                className: C.perkCardDescription,
                                 children: 'function' == typeof n ? n(R) : n
                             })
                         ]
@@ -80,25 +80,25 @@ let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.
 t.Z = (e) => {
     let { className: t, isSubscriberNitroHome: n = !1 } = e,
         [r, _] = a.useState(!1),
-        E = (0, R.N)({ styles: m }),
+        E = (0, R.N)({ styles: C }),
         u = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: N } = (0, d.ZP)(),
         p = (0, T._f)(),
         M = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, p ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
     return (0, s.jsxs)('div', {
-        className: i()(m.perksContainer, t, {
-            [m.partiallyHidden]: n && !r,
-            [m.subscriberNitroHome]: n,
-            [m.reducedMotion]: u
+        className: i()(C.perksContainer, t, {
+            [C.partiallyHidden]: n && !r,
+            [C.subscriberNitroHome]: n,
+            [C.reducedMotion]: u
         }),
         children: [
             (0, s.jsx)(o.Heading, {
                 variant: 'heading-xxl/extrabold',
-                className: i()(m.perksTitle),
-                children: C(n)
+                className: i()(C.perksTitle),
+                children: m(n)
             }),
             (0, s.jsx)('div', {
-                className: i()(m.perkCardContainer, { [m.perkCardContainerExpanded]: r }),
+                className: i()(C.perkCardContainer, { [C.perkCardContainerExpanded]: r }),
                 children: M.map((e) => null != e && (0, s.jsx)(f, { ...e }, e.title))
             }),
             n &&
@@ -106,8 +106,8 @@ t.Z = (e) => {
                     children: [
                         (0, s.jsx)('div', {
                             className: i()({
-                                [m.sizeGizmo]: !r,
-                                [m.sizeGizmoExpanded]: r
+                                [C.sizeGizmo]: !r,
+                                [C.sizeGizmoExpanded]: r
                             }),
                             children: (0, s.jsx)(A, {
                                 onClick: () => {
@@ -120,7 +120,7 @@ t.Z = (e) => {
                                 isShowingAll: r
                             })
                         }),
-                        (0, s.jsx)('div', { className: i()(m.cover, { [m.hidden]: r }) })
+                        (0, s.jsx)('div', { className: i()(C.cover, { [C.hidden]: r }) })
                     ]
                 })
         ]

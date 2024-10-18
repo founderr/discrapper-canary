@@ -1277,8 +1277,8 @@ t.ZP = Object.freeze({
                             price: s
                         });
     },
-    isSwitchingPlansDisabled: function (e) {
-        return null != e.renewalMutations || null != e.trialEndsAt || e.status === y.O0b.PAST_DUE;
+    isSwitchingPlansDisabled: function (e, t) {
+        return (null != t && t !== M.a$.NONE) || null != e.renewalMutations || null != e.trialEndsAt || e.status === y.O0b.PAST_DUE;
     },
     getSwitchingPlansDisabledMessage: function (e) {
         let t = null;

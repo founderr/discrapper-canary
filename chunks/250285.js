@@ -21,10 +21,10 @@ t.Z = (e) => {
                 analyticsLocation: { section: E.jXE.FAMILY_CENTER }
             });
         }, [t, g]),
-        m = () => {
+        C = () => {
             R(!0);
         },
-        C = () => {
+        m = () => {
             R(!1);
         };
     return (0, s.jsx)(c.mh, {
@@ -41,8 +41,8 @@ t.Z = (e) => {
                         [u.last]: r,
                         [u.active]: I
                     }),
-                    onMouseEnter: m,
-                    onMouseLeave: C,
+                    onMouseEnter: C,
+                    onMouseLeave: m,
                     onClick: N,
                     ...e,
                     children: n(I)

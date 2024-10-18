@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(164991),
     g = n(28494),
     T = n(746728),
-    f = n(140700),
-    S = n(665807),
+    S = n(140700),
+    f = n(665807),
     C = n(188493),
     N = n(294330),
     A = n(981631),
@@ -113,9 +113,9 @@ function x(e) {
                                     !U &&
                                         (0, i.jsxs)('div', {
                                             className: v.headingFilters,
-                                            children: [(0, i.jsx)(f.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(S.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
                                         }),
-                                    (P || M) && (0, i.jsx)(S.Z, { loadId: t })
+                                    (P || M) && (0, i.jsx)(f.Z, { loadId: t })
                                 ]
                             },
                             a

@@ -25,7 +25,7 @@ function T(e) {
         S = (0, a.e7)([l.default], () => l.default.getId()),
         g = (0, a.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.RIOT_GAMES)),
         A = (0, a.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
-        { leaderboardsDisabled: N } = (0, f.O)(t),
+        { leaderboardsDisabled: N } = (0, f.O)(t, T),
         R =
             null != A && null != g
                 ? () => {

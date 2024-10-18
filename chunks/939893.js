@@ -1,7 +1,7 @@
 var n = s(735250);
 s(470079);
-var a = s(302454),
-    i = s.n(a),
+var i = s(302454),
+    a = s.n(i),
     r = s(481060),
     l = s(447543),
     o = s(15470),
@@ -13,7 +13,7 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
         ...c.Z.rules,
         heading: { ...o.i.heading },
-        image: { ...i().defaultRules.image },
+        image: { ...a().defaultRules.image },
         inviteLink: {
             order: c.Z.rules.link.order + 1,
             match: (e, t) => (t.inline ? p.exec(e) : null),

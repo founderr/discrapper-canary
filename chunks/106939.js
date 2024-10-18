@@ -22,16 +22,16 @@ var s = n(735250),
     R = n(252618),
     g = n(313201),
     N = n(605236),
-    m = n(984370),
-    C = n(797614),
+    C = n(984370),
+    m = n(797614),
     A = n(108427),
     f = n(210887),
     p = n(695346),
     M = n(594174),
     S = n(626135),
     h = n(280570),
-    b = n(914788),
-    x = n(841409),
+    x = n(914788),
+    b = n(841409),
     O = n(652262),
     P = n(880257),
     v = n(631885),
@@ -101,22 +101,22 @@ function V(e) {
     return (0, s.jsx)(d.ThemeProvider, {
         theme: t,
         children: (e) =>
-            (0, s.jsxs)(m.Z, {
+            (0, s.jsxs)(C.Z, {
                 className: i()(e, H.sidebarTabBar),
                 scrollable: l.tq,
                 role: 'navigation',
                 'aria-labelledby': r,
                 toolbar: !0,
                 children: [
-                    (0, s.jsx)(m.Z.Icon, {
+                    (0, s.jsx)(C.Z.Icon, {
                         icon: d.GroupIcon,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(m.Z.Title, {
+                    (0, s.jsx)(C.Z.Title, {
                         id: r,
                         children: w.Z.Messages.FAMILY_CENTER_TITLE
                     }),
-                    (0, s.jsx)(m.Z.Divider, {}),
+                    (0, s.jsx)(C.Z.Divider, {}),
                     (0, s.jsxs)(d.TabBar, {
                         'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
                         selectedItem: n,
@@ -153,13 +153,13 @@ function W() {
     let e = (0, P.Z)(),
         t = (0, v.M8)(),
         n = (0, N.wE)(_.z.FAMILY_CENTER_NEW_BADGE),
-        r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
+        r = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
         l = (0, O.M)(),
-        { selectedTab: E, handleTabChange: T } = (0, x.Z)(),
+        { selectedTab: E, handleTabChange: T } = (0, b.Z)(),
         I = (0, g.Dt)(),
-        m = M.default.getCurrentUser(),
+        C = M.default.getCurrentUser(),
         f = null != e,
-        p = r && null != m && !f;
+        p = r && null != C && !f;
     return (a.useEffect(() => {
         (0, A.e)('family-center'),
             h.ZP.initialPageLoad(),
@@ -179,7 +179,7 @@ function W() {
                 initial_page: U.QH[E],
                 source: U._6[U.Mu.SIDENAV]
             }),
-            C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+            m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, f]),
     a.useEffect(() => {
         p && (0, u.mN)(j.L0.FAMILY_CENTER);
@@ -211,10 +211,10 @@ function K() {
         t = (0, P.Z)(),
         n = (0, v.M8)(),
         r = (0, N.wE)(_.z.FAMILY_CENTER_NEW_BADGE),
-        l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
-        m = (0, O.M)(),
+        l = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
+        C = (0, O.M)(),
         L = (0, c.e7)([f.Z], () => f.Z.theme),
-        { selectedTab: Z, handleTabChange: D } = (0, x.Z)(),
+        { selectedTab: Z, handleTabChange: D } = (0, b.Z)(),
         y = (0, g.Dt)(),
         F = M.default.getCurrentUser(),
         W = null != t,
@@ -222,7 +222,7 @@ function K() {
     a.useEffect(() => {
         E.Y(B.Z5c.FAMILY_CENTER),
             (0, A.e)('family-center'),
-            !b.Z.isLoading() && b.Z.canRefetch() && h.ZP.initialPageLoad(),
+            !x.Z.isLoading() && x.Z.canRefetch() && h.ZP.initialPageLoad(),
             !r &&
                 (0, N.EW)(_.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: G.L.AUTO,
@@ -235,11 +235,11 @@ function K() {
                 (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
-                    selected_teen_id: m,
+                    selected_teen_id: C,
                     initial_page: U.QH[Z],
                     source: U._6[U.Mu.SIDENAV]
                 }),
-                C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+                m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, W]),
         a.useEffect(() => {
             let e = p.Ex.getSetting();

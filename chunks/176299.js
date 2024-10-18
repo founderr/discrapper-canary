@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(290297),
     g = n(279240),
     T = n(765717),
-    f = n(358221),
-    S = n(823748),
+    S = n(358221),
+    f = n(823748),
     C = n(626421),
     N = n(118379),
     A = n(652515),
@@ -97,13 +97,13 @@ let eh = 'resizable-sidebar-width',
         name: 'GuildHomePage',
         renderLoader: eI
     }),
-    ef = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => Promise.all([n.e('85552'), n.e('44400')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: eI
     }),
-    eS = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('38359'), n.e('66690')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -158,19 +158,19 @@ let eh = 'resizable-sidebar-width',
                 case eu.oC.GUILD_HOME:
                     return (0, i.jsx)(eT, { guildId: a });
                 case eu.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(ef, {
                         guildId: a,
                         selectedSection: e_.l7.BROWSE
                     });
                 case eu.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eC, { guildId: a });
                 case eu.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(ef, {
                         guildId: a,
                         selectedSection: e_.l7.CUSTOMIZE
                     });
                 case eu.oC.MEMBER_SAFETY:
-                    return (0, i.jsx)(ef, { guildId: a });
+                    return (0, i.jsx)(eS, { guildId: a });
                 default:
                     (0, ee.vE)(s);
             }
@@ -190,7 +190,7 @@ let eh = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(S.Z, {});
+        return (0, i.jsx)(f.Z, {});
     },
     eA = a.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
@@ -284,7 +284,7 @@ function eG(e) {
     (0, m.t)(!0);
     let c = 'app view user trigger debugging';
     h.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: c });
-    let p = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
+    let p = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
         g = (0, Z.Q)('ChannelSidebar'),
         T = (0, ei.useAppSidebarState)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
@@ -311,26 +311,26 @@ function eG(e) {
                 Number.isNaN(t) && (t = 264), eU(t);
             }
         }, [T]);
-    let S = a.useRef(null),
+    let f = a.useRef(null),
         C = a.useCallback((e, t) => {
             var n;
             eU(e);
             let i = t < 80;
             ei.useAppSidebarState.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eE.collapsing) : document.body.classList.remove(eE.collapsing);
             let a = t - e;
-            null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && eU(76);
+            null === (n = f.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && eU(76);
         }, []),
         N = a.useCallback(() => {
             document.body.classList.add(eE.dragging);
         }, []),
         A = a.useCallback((e) => {
             var t;
-            document.body.classList.remove(eE.dragging), document.body.classList.remove(eE.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eh, e);
+            document.body.classList.remove(eE.dragging), document.body.classList.remove(eE.collapsing), null === (t = f.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eh, e);
         }, []),
         v = (0, I.Z)({
             minDimension: 240,
             maxDimension: 416,
-            resizableDomNodeRef: S,
+            resizableDomNodeRef: f,
             onElementResize: C,
             onElementResizeStart: N,
             onElementResizeEnd: A,
@@ -353,7 +353,7 @@ function eG(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: g ? S : void 0,
+                ref: g ? f : void 0,
                 'data-collapsed': T,
                 className: r()(eE.sidebar, e, {
                     [eE.hasNotice]: t,
@@ -431,14 +431,14 @@ function ew() {
         m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         g = a.useCallback(() => k.Z.openSidebar(), []),
-        f = (0, Z.Q)('AppView');
+        S = (0, Z.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eE.container,
             children: [
                 E &&
                     !_ &&
-                    !f &&
+                    !S &&
                     (0, i.jsx)(y.Z, {
                         className: eE.guilds,
                         themeOverride: n
@@ -448,7 +448,7 @@ function ew() {
                     children: (0, i.jsxs)('div', {
                         className: eE.base,
                         children: [
-                            f ? (0, i.jsx)(em, {}) : null,
+                            S ? (0, i.jsx)(em, {}) : null,
                             d.tq ? null : (0, i.jsx)(er.Z, {}),
                             (0, i.jsxs)('div', {
                                 className: eE.content,

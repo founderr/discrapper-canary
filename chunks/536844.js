@@ -15,7 +15,7 @@ t.Z = (e) => {
         { analyticsLocations: R } = (0, l.ZP)(T),
         g = (0, o.rK)(),
         { enabled: N } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: g }),
-        m = N && g;
+        C = N && g;
     return (0, s.jsx)(l.Gt, {
         value: R,
         children: (0, s.jsxs)('div', {
@@ -28,11 +28,11 @@ t.Z = (e) => {
                         (0, s.jsx)(i.Heading, {
                             variant: 'heading-lg/extrabold',
                             className: d.heading,
-                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : _.Z.Messages.GIFT_NITRO
+                            children: C ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : _.Z.Messages.GIFT_NITRO
                         }),
                         (0, s.jsx)(i.Text, {
                             variant: 'text-sm/medium',
-                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                            children: C ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                         }),
                         (0, s.jsx)(c.Z, {
                             isGift: !0,
@@ -46,7 +46,7 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)('img', {
-                    src: m ? u : E,
+                    src: C ? u : E,
                     className: r()(d.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

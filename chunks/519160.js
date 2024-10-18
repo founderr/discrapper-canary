@@ -6,8 +6,8 @@ s.d(t, {
     s(47120),
     s(411104);
 var n,
-    a = s(735250),
-    i = s(470079),
+    i = s(735250),
+    a = s(470079),
     r = s(120356),
     l = s.n(r),
     o = s(748780),
@@ -36,16 +36,16 @@ let c = {
 function g(e, t) {
     return ((e % t) + t) % t;
 }
-class I extends (n = i.Component) {
+class I extends (n = a.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
     componentDidUpdate(e) {
-        let { align: t, animate: s, currentIndex: n, items: a, width: i } = this.props,
-            r = g(n, a.length),
-            l = g(e.currentIndex, a.length);
-        (r !== l || a.length !== e.items.length) && this.updateAnimatedIndex(r, l),
-            i !== e.width
+        let { align: t, animate: s, currentIndex: n, items: i, width: a } = this.props,
+            r = g(n, i.length),
+            l = g(e.currentIndex, i.length);
+        (r !== l || i.length !== e.items.length) && this.updateAnimatedIndex(r, l),
+            a !== e.width
                 ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
                 : s &&
                   (t !== e.align || r !== l) &&
@@ -55,9 +55,9 @@ class I extends (n = i.Component) {
                   }).start();
     }
     getAlignmentOffset(e) {
-        let { width: t, itemSize: s, currentIndex: n, gutter: a, items: i } = this.props,
-            r = a * g(n, i.length) * 2;
-        return e === p ? (t - s.width) / 2 + r : e === m ? t - s.width - a + r : a + r;
+        let { width: t, itemSize: s, currentIndex: n, gutter: i, items: a } = this.props,
+            r = i * g(n, a.length) * 2;
+        return e === p ? (t - s.width) / 2 + r : e === m ? t - s.width - i + r : i + r;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
@@ -65,8 +65,8 @@ class I extends (n = i.Component) {
     }
     animateToIndex(e, t) {
         let { animatedIndex: s } = this,
-            { items: n, edgeItems: a } = this.props;
-        a > 0 && (0 === e && t === n.length - 1 ? s.setValue(-1) : 0 === t && e === n.length - 1 && n.length > 2 && s.setValue(n.length)),
+            { items: n, edgeItems: i } = this.props;
+        i > 0 && (0 === e && t === n.length - 1 ? s.setValue(-1) : 0 === t && e === n.length - 1 && n.length > 2 && s.setValue(n.length)),
             o.Z.spring(s, {
                 ...c,
                 toValue: e
@@ -74,8 +74,8 @@ class I extends (n = i.Component) {
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: s, animatedOpacity: n } = this,
-            { animate: a } = this.props;
-        a
+            { animate: i } = this.props;
+        i
             ? this.animateToIndex(e, t)
             : o.Z.timing(n, {
                   fromValue: 1,
@@ -92,9 +92,9 @@ class I extends (n = i.Component) {
     }
     renderSingleItem() {
         let { renderItem: e, items: t, itemSize: s, className: n } = this.props;
-        return (0, a.jsx)('div', {
+        return (0, i.jsx)('div', {
             className: l()(d.singleItemWrapper, d.viewport, n),
-            children: (0, a.jsx)('div', {
+            children: (0, i.jsx)('div', {
                 className: d.singleItem,
                 style: {
                     width: s.width,
@@ -107,22 +107,22 @@ class I extends (n = i.Component) {
     renderCarouselItems() {
         let e;
         let { animatedIndex: t, animatedAlignmentOffset: s, animatedOpacity: n } = this,
-            { renderItem: i, items: r, itemSize: l, edgeItems: h, gutter: u } = this.props,
+            { renderItem: a, items: r, itemSize: l, edgeItems: h, gutter: u } = this.props,
             { margin: c, width: p } = l,
             m = this.getCarouselTranslate(),
             g = this.getItemStyle(),
             I = (e = h > 0 ? [...r.slice(-h), ...r, ...r.slice(0, h)] : r).map((e, t) =>
-                (0, a.jsx)(
+                (0, i.jsx)(
                     'div',
                     {
                         style: g,
                         className: d.item,
-                        children: i(e, t - h, this.interpolateValueForItem(t - h))
+                        children: a(e, t - h, this.interpolateValueForItem(t - h))
                     },
                     t
                 )
             );
-        return (0, a.jsx)(o.Z.div, {
+        return (0, i.jsx)(o.Z.div, {
             className: d.carousel,
             style: {
                 opacity: n,
@@ -142,7 +142,7 @@ class I extends (n = i.Component) {
         if (e.length <= 0) throw Error('Carousel has no items');
         return 1 === e.length
             ? this.renderSingleItem()
-            : (0, a.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: l()({ [d.viewport]: s }, t),
                   children: this.renderCarouselItems()
               });

@@ -22,7 +22,7 @@ function g(e) {
         r = (0, _.Z)(),
         g = (0, d.VM)(),
         N = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        m = a.useCallback(() => {
+        C = a.useCallback(() => {
             i()(void 0 !== N, 'User must be logged in to accept a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
@@ -34,7 +34,7 @@ function g(e) {
                         });
                 });
         }, [N, t]),
-        C = a.useCallback(() => {
+        m = a.useCallback(() => {
             i()(void 0 !== N, 'User must be logged in to decline a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
@@ -85,13 +85,13 @@ function g(e) {
                                         icon: o.CheckmarkLargeIcon,
                                         className: R.__invalid_actionAccept,
                                         tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-                                        onClick: m
+                                        onClick: C
                                     }),
                               (0, s.jsx)(E.Z, {
                                   icon: o.XSmallIcon,
                                   className: R.__invalid_actionDeny,
                                   tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
-                                  onClick: C
+                                  onClick: m
                               })
                           ]
                       })

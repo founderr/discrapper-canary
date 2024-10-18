@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(536844),
     g = n(342414),
     N = n(938736),
-    m = n(391110),
-    C = n(71363),
+    C = n(391110),
+    m = n(71363),
     A = n(781800),
     f = n(981631),
     p = n(689938),
@@ -28,7 +28,7 @@ t.Z = () => {
     let e = a.useRef(null),
         [t, n] = a.useState(!1),
         { analyticsLocations: r } = (0, _.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [b, x] = a.useState(!1);
+        [x, b] = a.useState(!1);
     (0, T.FM)();
     let O = (0, N.bD)(h),
         P = (0, N.TW)(h);
@@ -44,10 +44,10 @@ t.Z = () => {
                         children: [
                             (0, s.jsx)(g.Z, {
                                 className: M.heroHeading,
-                                location: m.MQ.HOME
+                                location: C.MQ.HOME
                             }),
                             (0, s.jsx)(I.Z, {
-                                variant: m.R0.WHATS_NEW,
+                                variant: C.R0.WHATS_NEW,
                                 className: i()(M.whatsNew, { [M.whatsNewWithOriginalHeroHeading]: !(O || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
@@ -58,7 +58,7 @@ t.Z = () => {
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, s.jsx)(A.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: m.MQ.HOME
+                                    previousComponent: C.MQ.HOME
                                 })
                             }),
                             (0, s.jsx)(R.Z, {
@@ -72,7 +72,7 @@ t.Z = () => {
                             (0, s.jsx)('div', { className: M.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !b && (u.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), x(!0));
+                                    e && !x && (u.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), b(!0));
                                 },
                                 children: (0, s.jsx)('div', { className: M.bottomOfPageVisibilitySensor })
                             }),
@@ -87,10 +87,10 @@ t.Z = () => {
                     })
                 })
             }),
-            (0, s.jsx)(C.Z, {
+            (0, s.jsx)(m.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: m.MQ.HOME
+                previousComponent: C.MQ.HOME
             })
         ]
     });

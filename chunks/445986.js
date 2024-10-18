@@ -6,8 +6,8 @@ s.d(t, {
     s(653041),
     s(47120);
 var n = s(735250),
-    a = s(470079),
-    i = s(481060),
+    i = s(470079),
+    a = s(481060),
     r = s(33122),
     l = s(761705),
     o = s(9807),
@@ -18,14 +18,14 @@ function c(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
 let p = (e) => {
-    let { index: t, items: s, ...a } = e,
-        i = s[t],
+    let { index: t, items: s, ...i } = e,
+        a = s[t],
         r = 0,
         o = [];
     for (let e of s)
         if (e.type === d.s9s.IMG) {
             let { width: t, height: s, src: n } = e;
-            e === i && (r = o.length),
+            e === a && (r = o.length),
                 o.push({
                     src: c(n),
                     width: t,
@@ -33,12 +33,12 @@ let p = (e) => {
                 });
         }
     return (0, n.jsx)(l.Z, {
-        ...a,
+        ...i,
         items: o,
         startWith: r
     });
 };
-class m extends a.Component {
+class m extends i.Component {
     render() {
         let { pageSize: e, ...t } = this.props,
             s = e === h.b.SMALL ? o.Z : r.Z;
@@ -48,16 +48,16 @@ class m extends a.Component {
         });
     }
     constructor(...e) {
-        var t, s, a;
+        var t, s, i;
         super(...e),
             (t = this),
             (s = 'handleCurrentItemClick'),
-            (a = (e, t) => {
+            (i = (e, t) => {
                 e.type === d.s9s.IMG &&
-                    !(0, i.hasAnyModalOpen)() &&
-                    (0, i.openModal)((e) =>
-                        (0, n.jsx)(i.ModalRoot, {
-                            size: i.ModalSize.DYNAMIC,
+                    !(0, a.hasAnyModalOpen)() &&
+                    (0, a.openModal)((e) =>
+                        (0, n.jsx)(a.ModalRoot, {
+                            size: a.ModalSize.DYNAMIC,
                             'aria-label': u.Z.Messages.IMAGE,
                             ...e,
                             children: (0, n.jsx)(p, {
@@ -70,12 +70,12 @@ class m extends a.Component {
             }),
             s in t
                 ? Object.defineProperty(t, s, {
-                      value: a,
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[s] = a);
+                : (t[s] = i);
     }
 }
 t.Z = m;

@@ -20,16 +20,16 @@ var s = n(735250),
     R = n(821849),
     g = n(230711),
     N = n(497321),
-    m = n(634894),
-    C = n(410030),
+    C = n(634894),
+    m = n(410030),
     A = n(100527),
     f = n(906732),
     p = n(211242),
     M = n(15640),
     S = n(89057),
     h = n(406128),
-    b = n(703656),
-    x = n(246946),
+    x = n(703656),
+    b = n(246946),
     O = n(78839),
     P = n(483444),
     v = n(626135),
@@ -58,7 +58,7 @@ function q() {
         t = (0, Z.t7)(),
         n = (0, Z.lr)(),
         a = (0, c.e7)([O.ZP], () => O.ZP.inReverseTrial()),
-        r = (0, C.ZP)();
+        r = (0, m.ZP)();
     if (null == e || null == e.planIdFromItems) return null;
     let l = null != e.trialId,
         _ = e.planIdFromItems === F.Xh.PREMIUM_YEAR_TIER_2,
@@ -128,7 +128,7 @@ function q() {
                                 target: 'premium home page'
                             }),
                                 (0, I.xf)(),
-                                (0, b.uL)(V.Z5c.APPLICATION_STORE);
+                                (0, x.uL)(V.Z5c.APPLICATION_STORE);
                         },
                         children: (0, s.jsx)(E.Text, {
                             className: K.tierCardButtonCTA,
@@ -265,18 +265,18 @@ t.Z = function () {
         [l, o] = a.useState(!0),
         d = (0, U.n)(),
         I = null == d ? void 0 : d.countryCode,
-        g = (0, c.e7)([x.Z], () => x.Z.enabled),
-        C = 'PremiumManagementSettings';
-    (0, m.j)({
-        location: C + ' auto on',
+        g = (0, c.e7)([b.Z], () => b.Z.enabled),
+        m = 'PremiumManagementSettings';
+    (0, C.j)({
+        location: m + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, m.j)({
-            location: C + ' auto off',
+        (0, C.j)({
+            location: m + ' auto off',
             autoTrackExposure: !1
         }),
         (0, B.B)('PremiumManagementSettings');
-    let b = (0, y.bD)('PremiumManagementSettings'),
+    let x = (0, y.bD)('PremiumManagementSettings'),
         P = (0, y.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         u.Z.wait(async () => {
@@ -301,7 +301,7 @@ t.Z = function () {
                     className: K.__invalid_container,
                     children: [
                         (0, s.jsx)(q, {}),
-                        (b || P) && (0, s.jsx)(k.Z, { isInSettings: !0 }),
+                        (x || P) && (0, s.jsx)(k.Z, { isInSettings: !0 }),
                         (0, s.jsx)(ee, {}),
                         (0, s.jsx)(H.Z, {
                             className: K.__invalid_planComparisonTable,

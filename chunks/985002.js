@@ -16,8 +16,8 @@ function o(e) {
         [E, u] = s.useState(!1),
         [T, I] = s.useState(!1),
         [R, g] = s.useState(!1),
-        [N, m] = s.useState(!1),
-        [C, A] = s.useState(!1),
+        [N, C] = s.useState(!1),
+        [m, A] = s.useState(!1),
         [f, p] = s.useState(!1),
         M = o || _ || E || T || N || f,
         S = s.useCallback(
@@ -52,7 +52,7 @@ function o(e) {
             },
             [M, t, n]
         ),
-        b = s.useCallback(
+        x = s.useCallback(
             async (e) => {
                 if (!M) {
                     u(!0);
@@ -68,7 +68,7 @@ function o(e) {
             },
             [M, t, n]
         ),
-        x = s.useCallback(
+        b = s.useCallback(
             async (e) => {
                 if (!M) {
                     I(!0);
@@ -99,7 +99,7 @@ function o(e) {
         }, [R, t, n]),
         P = s.useCallback(
             async (e) => {
-                if (!C) {
+                if (!m) {
                     A(!0);
                     try {
                         await r.ZP.fetchTeenActivity(e), null == n || n();
@@ -111,19 +111,19 @@ function o(e) {
                     }
                 }
             },
-            [C, t, n]
+            [m, t, n]
         ),
         v = s.useCallback(
             async (e, s) => {
                 if (!N) {
-                    m(!0);
+                    C(!0);
                     try {
                         await r.ZP.requestLink(e, s), null == n || n();
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        m(!1);
+                        C(!1);
                     }
                 }
             },
@@ -132,8 +132,8 @@ function o(e) {
     return {
         acceptLinkRequest: S,
         declineLinkRequest: h,
-        disconnectLinkRequest: b,
-        cancelLinkRequest: x,
+        disconnectLinkRequest: x,
+        cancelLinkRequest: b,
         selectTeenUser: P,
         getLinkCode: O,
         requestLink: v,
@@ -162,7 +162,7 @@ function o(e) {
         isDisconnectLoading: E,
         isCancelLoading: T,
         isGetLinkCodeLoading: R,
-        isSelectTeenUserLoading: C,
+        isSelectTeenUserLoading: m,
         isRequestingLink: N,
         isMoreLoading: f
     };

@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
         return u;
     }
@@ -7,30 +7,30 @@ t.d(n, {
 var l = t(735250),
     i = t(470079),
     r = t(557533),
-    o = t.n(r),
-    a = t(349361),
+    a = t.n(r),
+    o = t(349361),
     s = t(698117);
-function u(e) {
-    let { children: n, gradientClassName: t, ...r } = e,
+function u(n) {
+    let { children: e, gradientClassName: t, ...r } = n,
         u = i.useRef(null),
         [c, d] = i.useState(!0),
         p = () => {
-            var e;
-            (null === (e = u.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? d(!1) : d(!0);
+            var n;
+            (null === (n = u.current) || void 0 === n ? void 0 : n.isScrolledToBottom()) === !0 ? d(!1) : d(!0);
         };
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.h2, {
+            (0, l.jsx)(o.h2, {
                 fade: !0,
                 ...r,
-                ref: (e) => {
-                    null != e && ((u.current = e), p());
+                ref: (n) => {
+                    null != n && ((u.current = n), p());
                 },
                 onScroll: p,
-                children: n
+                children: e
             }),
             (0, l.jsx)('div', {
-                className: o()(s.containerScrollGradient, t),
+                className: a()(s.containerScrollGradient, t),
                 'data-shown': c
             })
         ]

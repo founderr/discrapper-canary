@@ -15,16 +15,16 @@ var s = n(735250),
     R = n(626135),
     g = n(314684),
     N = n(715627),
-    m = n(176782),
-    C = n(238108),
+    C = n(176782),
+    m = n(238108),
     A = n(32173),
     f = n(391110),
     p = n(484239),
     M = n(658370),
     S = n(735825),
     h = n(981631),
-    b = n(921944),
-    x = n(689938),
+    x = n(921944),
+    b = n(689938),
     O = n(977341);
 let P = {
         xMin: -80,
@@ -33,7 +33,7 @@ let P = {
         yMax: -20
     },
     v = a.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: m, cardType: p, confettiCanvas: M } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: p, confettiCanvas: M } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
             [U, B] = a.useState(!1),
@@ -60,7 +60,7 @@ let P = {
             a.useEffect(() => {
                 z === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI && y && (0, T.EW)(z);
             }, [z, y]);
-        let { easterEggLevel: J, isEasterEggTriggered: X, onHover: q, onUnhover: $ } = (0, C.Z)(5),
+        let { easterEggLevel: J, isEasterEggTriggered: X, onHover: q, onUnhover: $ } = (0, m.Z)(5),
             ee = (0, l.debounce)(() => {
                 R.default.track(h.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, l.snakeCase)(t),
@@ -88,7 +88,7 @@ let P = {
         };
         let es = z !== r || null == r || j || r === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (a.useEffect(() => {
-            D && U && (G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(b.L.TAKE_ACTION));
+            D && U && (G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
         }, [D, U, r, t, Q]),
         (0, u.Z)(
             {
@@ -112,7 +112,7 @@ let P = {
         n)
             ? t === A.u.UPCOMING_DROP_UNTIMED
                 ? (0, s.jsx)('div', {
-                      className: i()(O.flipCardContainer, { [O.forceShadow]: m }),
+                      className: i()(O.flipCardContainer, { [O.forceShadow]: C }),
                       onMouseEnter: q,
                       onFocus: q,
                       onMouseLeave: $,
@@ -148,7 +148,7 @@ let P = {
                             className: i()({
                                 [O.noFlipCardContainer]: !K,
                                 [O.noFlipCardContainerCarousel]: K,
-                                [O.forceShadow]: m,
+                                [O.forceShadow]: C,
                                 [O.reducedMotion]: D
                             }),
                             children: [
@@ -174,7 +174,7 @@ let P = {
                         })
                     })
                   : (0, s.jsx)('div', {
-                        className: i()(O.flipCardContainer, { [O.forceShadow]: m }),
+                        className: i()(O.flipCardContainer, { [O.forceShadow]: C }),
                         children: (0, s.jsxs)(d.Clickable, {
                             onClick: () => B(!0),
                             className: i()(O.flipCard, O.clickable, {
@@ -183,7 +183,7 @@ let P = {
                                 [O.reducedMotion]: D
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!U && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(b.L.TAKE_ACTION);
+                                if (!!U && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(h.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, s.jsx)('div', {
@@ -209,7 +209,7 @@ let P = {
                                     className: O.flipCardButtonContainer,
                                     children: (0, s.jsx)(d.Button, {
                                         onClick: () => B(!0),
-                                        children: x.Z.Messages.REVEAL
+                                        children: b.Z.Messages.REVEAL
                                     })
                                 })
                             ]
@@ -217,25 +217,25 @@ let P = {
                     })
             : (0, s.jsx)(v, {
                   ...Y.upcomingDropUntimed,
-                  forceShadow: m
+                  forceShadow: C
               });
     });
 v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: _ = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: C, onClick: A, backgroundImage: S, pillText: h, perkImage: b } = e,
-        x = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: _ = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: A, backgroundImage: S, pillText: h, perkImage: x } = e,
+        b = m === f.R0.CARD_CAROUSEL_FIRST_ROW || m === f.R0.CARD_CAROUSEL_SECOND_ROW || m === f.R0.CARD_CAROUSEL_THIRD_ROW,
         P = '' !== c || '' !== _ || ('' !== o && N === f.zW.REWARD),
         v = (0, g.IB)(),
         [L, Z] = a.useState(N !== f.zW.REWARD || v);
     a.useEffect(() => {
         v && Z(!0);
     }, [v]);
-    let D = (0, m._)(N);
+    let D = (0, C._)(N);
     return (0, s.jsxs)(d.Clickable, {
         className: i()(O.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [O.clickable]: null != A,
-            [O.hideOverflow]: x
+            [O.hideOverflow]: b
         }),
         onMouseEnter: T,
         style: { backgroundImage: null != S ? 'url('.concat(S, ')') : void 0 },
@@ -252,8 +252,8 @@ let L = a.forwardRef((e, t) => {
                 title: r,
                 titleClassName: l,
                 subtitle: o,
-                perkImage: b,
-                isCarousel: x,
+                perkImage: x,
+                isCarousel: b,
                 descriptionCta: _,
                 onCtaClick: u,
                 perkComponent: R,

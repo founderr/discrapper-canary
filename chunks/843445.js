@@ -1,13 +1,13 @@
 s.d(t, {
     b: function () {
-        return a;
+        return i;
     },
     x: function () {
         return n;
     }
 });
 let n = 1000,
-    a = Object.freeze({
+    i = Object.freeze({
         SMALL: 'small',
         LARGE: 'large'
     });

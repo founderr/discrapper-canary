@@ -22,8 +22,8 @@ var i,
     p = n(600164),
     g = n(167533),
     T = n(925329),
-    f = n(707409),
-    S = n(490983),
+    S = n(707409),
+    f = n(490983),
     C = n(799777),
     N = n(626135),
     A = n(780570),
@@ -132,9 +132,9 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         : e.isNew
                           ? R.Z.Messages.GAME_LIBRARY_NEW
                           : 0 !== e.lastPlayed
-                            ? (0, a.jsx)(f.ZP, {
+                            ? (0, a.jsx)(S.ZP, {
                                   end: e.lastPlayed,
-                                  location: f.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
+                                  location: S.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
                               })
                             : R.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE),
                     (0, a.jsx)(p.Z, {
@@ -412,10 +412,10 @@ function G(e) {
             applicationViewItems: i,
             filterQuery: r,
             fetched: l
-        } = (0, c.cj)([S.Z], () => ({
-            applicationViewItems: S.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: S.Z.applicationFilterQuery,
-            fetched: S.Z.hasFetchedApplications
+        } = (0, c.cj)([f.Z], () => ({
+            applicationViewItems: f.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: f.Z.applicationFilterQuery,
+            fetched: f.Z.hasFetchedApplications
         })),
         {
             sortKey: d,

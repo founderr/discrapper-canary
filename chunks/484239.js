@@ -15,11 +15,11 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: m, onCtaClick: C, perkComponent: A, subtitle: f = '', descriptionCta: p = '', cardVariant: M, subtitleClassName: S } = e,
+        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: C, onCtaClick: m, perkComponent: A, subtitle: f = '', descriptionCta: p = '', cardVariant: M, subtitleClassName: S } = e,
         h = (0, o._)(M),
-        b = (0, l.yQ)(),
-        x = (null == b ? void 0 : b.nitroTenureStatus) === _.EB.REDEEMABLE;
-    switch (null == b ? void 0 : b.nitroTenureStatus) {
+        x = (0, l.yQ)(),
+        b = (null == x ? void 0 : x.nitroTenureStatus) === _.EB.REDEEMABLE;
+    switch (null == x ? void 0 : x.nitroTenureStatus) {
         case _.EB.REDEEMABLE:
             (n = T), (a = 'unlocked icon');
             break;
@@ -48,8 +48,8 @@ t.Z = (e) => {
                     src: N,
                     alt: '',
                     className: r()({
-                        [d.cardImage]: !m,
-                        [d.carouselCardImage]: m
+                        [d.cardImage]: !C,
+                        [d.carouselCardImage]: C
                     })
                 }),
             null != A &&
@@ -59,12 +59,12 @@ t.Z = (e) => {
                         children: [
                             A,
                             0 !== p.length &&
-                                null != C &&
+                                null != m &&
                                 (0, s.jsx)(i.Button, {
                                     className: g,
-                                    disabled: !x,
+                                    disabled: !b,
                                     fullWidth: !0,
-                                    onClick: C,
+                                    onClick: m,
                                     children: (0, s.jsxs)('div', {
                                         className: null == h ? void 0 : null === (t = h.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [

@@ -32,7 +32,7 @@ class _ extends r.Z {
         let e = a.Z.getSoundpack(),
             t = a.Z.getLastSoundpackExperimentId(),
             n = o.Z.experiment.definition.id;
-        !l.Z.isEligible() && e !== c.YC.CLASSIC && (0, i.c)(c.YC.CLASSIC), null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, i.c)(o.Z.soundpack, n);
+        l.Z.isEligible() || e === c.YC.CLASSIC ? null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, i.c)(o.Z.soundpack, n) : (0, i.c)(c.YC.CLASSIC);
     }
     updateRingtone() {
         if (l.Z.isEligible()) {

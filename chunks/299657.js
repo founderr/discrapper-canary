@@ -15,16 +15,16 @@ var s = n(735250),
     R = n(906732),
     g = n(211242),
     N = n(15640),
-    m = n(89057),
-    C = n(433811),
+    C = n(89057),
+    m = n(433811),
     A = n(214852),
     f = n(621853),
     p = n(246946),
     M = n(594174),
     S = n(78839),
     h = n(626135),
-    b = n(111361),
-    x = n(357355),
+    x = n(111361),
+    b = n(357355),
     O = n(937579),
     P = n(471309),
     v = n(91802),
@@ -37,7 +37,7 @@ var s = n(735250),
     G = n(700199);
 t.Z = function (e) {
     let { entrypoint: t = B.EZ.UserSettings } = e;
-    (0, A.z)(C.X);
+    (0, A.z)(m.X);
     let n = (0, g.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
         H = (0, l.e7)([S.ZP], () => S.ZP.hasFetchedSubscriptions()),
@@ -47,12 +47,12 @@ t.Z = function (e) {
         V = (0, N.V)(),
         [W, K] = a.useState(!0),
         Y = a.useRef(0),
-        z = (0, b.M5)(y, B.p9.TIER_2),
+        z = (0, x.M5)(y, B.p9.TIER_2),
         Q = (0, v.n)(),
         J = null == Q ? void 0 : Q.countryCode,
         { enabled: X } = (0, P.Z)(),
         q = (0, l.e7)([f.Z], () => (null != y ? f.Z.getUserProfile(y.id) : null)),
-        $ = (0, l.e7)([x.Z], () => x.Z.hasFetched);
+        $ = (0, l.e7)([b.Z], () => b.Z.hasFetched);
     if (
         (a.useEffect(() => {
             !$ && _.MH();
@@ -76,7 +76,7 @@ t.Z = function (e) {
         (0, l.e7)([p.Z], () => p.Z.enabled))
     )
         return (0, s.jsx)(T.Z, {});
-    if (n) return (0, s.jsx)(m.c8, {});
+    if (n) return (0, s.jsx)(C.c8, {});
     if (t === B.EZ.ApplicationStoreHome && z)
         return X && null == q
             ? (0, s.jsx)('div', {

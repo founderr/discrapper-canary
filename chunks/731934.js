@@ -15,16 +15,16 @@ var s = n(735250),
     R = n(631885),
     g = n(895328),
     N = n(568671),
-    m = n(419821),
-    C = n(367515),
+    C = n(419821),
+    m = n(367515),
     A = n(250285),
     f = n(292352),
     p = n(134612),
     M = n(689938),
     S = n(776710),
     h = n(113207),
-    b = n(926895);
-function x(e) {
+    x = n(926895);
+function b(e) {
     let { header: t, description: n, stepNumber: a } = e;
     return (0, s.jsxs)('div', {
         className: S.step,
@@ -78,7 +78,7 @@ function O() {
                     }),
                     (0, s.jsx)('img', {
                         className: S.bannerArt,
-                        src: b,
+                        src: x,
                         alt: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
                     })
                 ]
@@ -86,17 +86,17 @@ function O() {
             (0, s.jsxs)('div', {
                 className: S.steps,
                 children: [
-                    (0, s.jsx)(x, {
+                    (0, s.jsx)(b, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
                         stepNumber: 1
                     }),
-                    (0, s.jsx)(x, {
+                    (0, s.jsx)(b, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
                         stepNumber: 2
                     }),
-                    (0, s.jsx)(x, {
+                    (0, s.jsx)(b, {
                         header: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
                         description: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
                         stepNumber: 3
@@ -129,7 +129,7 @@ function P() {
             }),
             (0, s.jsx)('img', {
                 className: S.bannerArt,
-                src: b,
+                src: x,
                 alt: M.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
             })
         ]
@@ -152,7 +152,7 @@ function v(e) {
                           {
                               userId: i.id,
                               isLast: l,
-                              children: () => (t === f.ne.ACTIVE ? (0, s.jsx)(m.u, { user: i }) : (0, s.jsx)(C.B, { user: i }))
+                              children: () => (t === f.ne.ACTIVE ? (0, s.jsx)(C.u, { user: i }) : (0, s.jsx)(m.B, { user: i }))
                           },
                           i.id
                       );

@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(374939),
     g = n(233374),
     T = n(283293),
-    f = n(216742),
-    S = n(84615),
+    S = n(216742),
+    f = n(84615),
     C = n(889711),
     N = n(229893),
     A = n(931515),
@@ -54,7 +54,7 @@ function M(e) {
                 guildId: r,
                 location: d.Z.GLOBAL_DISCOVERY
             }),
-                (0, S.q4)(
+                (0, f.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
                         return (0, i.jsx)(h.Z, {
@@ -130,7 +130,7 @@ function M(e) {
 t.Z = a.memo(function (e) {
     let t,
         { width: n, paddingVertical: s = 16, paddingHorizontal: d = 32, variant: u = R.Bj.DEFAULT, onScroll: E, withAdminContent: h = !1 } = e,
-        { enabled: S } = (0, f.I7)(),
+        { enabled: f } = (0, S.I7)(),
         O = a.useRef(null),
         P = a.useRef(null),
         D = (0, Z.GN)((e) => e.completedNux, l.Z),
@@ -139,19 +139,19 @@ t.Z = a.memo(function (e) {
         { backgroundImageUrl: G, gameName: w } = (0, A.kN)(y),
         k = a.useCallback(() => {
             var e, t, n;
-            if (!S) return;
+            if (!f) return;
             let i = null === (e = O.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
                 a = null !== (n = null === (t = P.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && j !== i && U(i + a);
-        }, [j, S]);
+        }, [j, f]);
     a.useEffect(() => {
-        if (!S) return;
+        if (!f) return;
         let e = (0, C.pP)(k);
         return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-    }, [S, k]);
+    }, [f, k]);
     let B = a.useCallback(() => {
             var e, t;
-            S && null != j
+            f && null != j
                 ? null === (e = P.current) ||
                   void 0 === e ||
                   e.scrollTo({
@@ -159,7 +159,7 @@ t.Z = a.memo(function (e) {
                       animate: !1
                   })
                 : null === (t = P.current) || void 0 === t || t.scrollToTop();
-        }, [j, S]),
+        }, [j, f]),
         H = a.useMemo(
             () =>
                 (0, i.jsx)(M, {
@@ -223,7 +223,7 @@ t.Z = a.memo(function (e) {
                           (0, i.jsx)('div', { className: b.imageBackdrop })
                       ]
                   })
-                : S
+                : f
                   ? (0, i.jsx)(L.Z, {})
                   : (0, i.jsx)(I.Z, {
                         title: (0, i.jsx)(c.Text, {

@@ -3,8 +3,8 @@ n.d(t, {
         return d;
     }
 });
-var s = n(735250),
-    i = n(470079),
+var i = n(735250),
+    s = n(470079),
     r = n(442837),
     l = n(461745),
     o = n(663389),
@@ -14,16 +14,16 @@ var s = n(735250),
 function d(e) {
     let { style: t } = e,
         n = (0, c.Z7)(),
-        d = i.useCallback((e, t) => {
+        d = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        h = i.useCallback(() => {
+        h = s.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        m = i.useRef(null),
+        m = s.useRef(null),
         p = (0, r.e7)([o.Z], () => o.Z.getSection());
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             let e = (e) => {
                 var t;
                 let n = m.current;
@@ -31,9 +31,9 @@ function d(e) {
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [p]),
-        (0, s.jsx)('div', {
+        (0, i.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, s.jsx)(l.ZP, {
+            children: (0, i.jsx)(l.ZP, {
                 ref: m,
                 size: l.ZP.Sizes.MEDIUM,
                 query: n,

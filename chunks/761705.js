@@ -1,13 +1,13 @@
 s.d(t, {
     Z: function () {
-        return P;
+        return b;
     }
 }),
     s(47120),
     s(653041);
 var n,
-    a = s(735250),
-    i = s(470079),
+    i = s(735250),
+    a = s(470079),
     r = s(120356),
     l = s.n(r),
     o = s(299608),
@@ -41,7 +41,7 @@ let N = {
 function f(e, t) {
     return ((e % t) + t) % t;
 }
-class b extends i.Component {
+class E extends a.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: s, opacity: n } = this.state;
@@ -92,7 +92,7 @@ class b extends i.Component {
     render() {
         let { item: e } = this.props,
             { className: t } = this.props;
-        return (0, a.jsx)(d.Z.img, {
+        return (0, i.jsx)(d.Z.img, {
             src: e.src,
             alt: '',
             className: l()(C.slide, t),
@@ -107,7 +107,7 @@ class b extends i.Component {
             });
     }
 }
-class P extends (n = i.Component) {
+class b extends (n = a.Component) {
     componentDidMount() {
         this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(c.P), I.S.subscribe(x.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), I.S.subscribe(x.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
@@ -118,9 +118,9 @@ class P extends (n = i.Component) {
         var e, t;
         let { currentIndex: s } = this.state,
             { items: n } = this.props;
-        let a = (((s + 1) % (e = n.length)) + e) % e;
-        let i = (((s - 1) % (t = n.length)) + t) % t;
-        this.preloadImage(n[a]), this.preloadImage(n[i]);
+        let i = (((s + 1) % (e = n.length)) + e) % e;
+        let a = (((s - 1) % (t = n.length)) + t) % t;
+        this.preloadImage(n[i]), this.preloadImage(n[a]);
     }
     preloadImage(e) {
         (0, m.po)(e.src);
@@ -131,12 +131,12 @@ class P extends (n = i.Component) {
     }
     navigateTo(e) {
         var t, s, n;
-        let { directionHistory: a, currentIndex: i } = this.state;
-        a.push(e - i),
+        let { directionHistory: i, currentIndex: a } = this.state;
+        i.push(e - a),
             (e = ((e % (n = this.props.items.length)) + n) % n),
             this.setState({
                 currentIndex: e,
-                directionHistory: a
+                directionHistory: i
             }),
             null === (t = (s = this.props).onIndexChange) || void 0 === t || t.call(s, e);
     }
@@ -144,32 +144,32 @@ class P extends (n = i.Component) {
         var e;
         let { className: t } = this.props,
             { currentIndex: s, directionHistory: n } = this.state,
-            { modalCarouselItemClassName: i } = this.props,
+            { modalCarouselItemClassName: a } = this.props,
             r = this.props.items[s],
             o = this.props.items;
-        return (0, a.jsxs)(u.W, {
+        return (0, i.jsxs)(u.W, {
             component: 'div',
             className: l()(C.wrapper, t),
             children: [
                 o.length > 1
-                    ? (0, a.jsx)(g.am, {
+                    ? (0, i.jsx)(g.am, {
                           className: C.navPrev,
                           onClick: this.gotoPrev
                       })
                     : null,
                 null !== (e = r.component) && void 0 !== e
                     ? e
-                    : (0, a.jsx)(
-                          b,
+                    : (0, i.jsx)(
+                          E,
                           {
                               item: r,
                               directionHistory: n,
-                              className: i
+                              className: a
                           },
                           r.src
                       ),
                 o.length > 1
-                    ? (0, a.jsx)(g.Pz, {
+                    ? (0, i.jsx)(g.Pz, {
                           className: C.navNext,
                           onClick: this.gotoNext
                       })
@@ -195,4 +195,4 @@ class P extends (n = i.Component) {
             });
     }
 }
-v(P, 'defaultProps', { startWith: 0 });
+v(b, 'defaultProps', { startWith: 0 });

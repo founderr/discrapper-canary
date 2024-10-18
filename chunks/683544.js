@@ -20,12 +20,12 @@ let p = {
 t.Z = function (e) {
     var t;
     let { categoryId: n, onSelectApplication: g } = e,
-        [T, f] = a.useState(1),
-        S = a.useCallback((e) => {
-            f(e);
+        [T, S] = a.useState(1),
+        f = a.useCallback((e) => {
+            S(e);
         }, []);
     a.useEffect(() => {
-        f(1);
+        S(1);
     }, [n]);
     let C = a.useMemo(
             () => ({
@@ -111,7 +111,7 @@ t.Z = function (e) {
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
                       currentPage: T,
-                      onPageChange: S
+                      onPageChange: f
                   })
               ]
           });
