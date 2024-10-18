@@ -34,7 +34,11 @@ let i = {
     [r.YC.DUCKY]: { message1: 'ducky_message1' },
     [r.YC.LOFI]: { message1: 'lofi_message1' },
     [r.YC.ASMR]: { message1: 'asmr_message1' },
-    [r.YC.DISCODO]: { message1: 'discodo' }
+    [r.YC.DISCODO]: { message1: 'discodo' },
+    [r.YC.HALLOWEEN]: {
+        message1: 'halloween_message1',
+        call_ringing: 'call_ringing_halloween'
+    }
 };
 function a(e) {
     return i[e];

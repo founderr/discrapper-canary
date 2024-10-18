@@ -22,6 +22,7 @@ var r = {
     './discodo.mp3': '361510',
     './disconnect.mp3': '554771',
     './ducky_message1.mp3': '514266',
+    './halloween_message1.mp3': '772637',
     './hang_status_select.mp3': '685673',
     './highfive_clap.mp3': '696730',
     './highfive_whistle.mp3': '656602',
