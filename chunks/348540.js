@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return M;
     }
 });
 var i = n(735250);
@@ -11,102 +11,116 @@ var s = n(442837),
     r = n(246946),
     o = n(5192),
     c = n(621853),
-    u = n(172351),
-    d = n(648052),
-    h = n(280885),
-    p = n(483424),
-    m = n(681837),
-    _ = n(91433),
-    f = n(900927),
-    E = n(678738),
-    g = n(502762),
-    C = n(530),
-    I = n(827313),
-    T = n(228168),
-    x = n(981631),
-    S = n(689938),
-    v = n(299336);
-function N(e) {
-    let { user: t, currentUser: n, displayProfile: N, channel: A, isHovering: Z, onOpenProfile: M, recentActivityEnabled: b = !1 } = e,
-        R = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
-        L = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
-        P = (0, s.e7)([c.Z], () => {
+    u = n(719311),
+    d = n(249978),
+    h = n(172351),
+    p = n(648052),
+    m = n(280885),
+    _ = n(483424),
+    f = n(681837),
+    E = n(91433),
+    g = n(900927),
+    C = n(678738),
+    I = n(502762),
+    T = n(530),
+    x = n(827313),
+    v = n(101638),
+    S = n(228168),
+    N = n(981631),
+    A = n(689938),
+    Z = n(299336);
+function M(e) {
+    let { user: t, currentUser: n, displayProfile: M, channel: b, isHovering: R, onOpenProfile: L } = e,
+        j = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
+        P = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
+        O = (0, s.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
-        });
+        }),
+        { recentActivityEnabled: y } = (0, u.I)({ location: 'UserProfilePanelBody' }),
+        { recentActivityStatusEnabled: D } = (0, d.U)({ location: 'UserProfilePanelBody' });
     return (0, i.jsxs)('div', {
-        className: v.body,
+        className: Z.body,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(T.Z, {
                 user: t,
-                profileType: T.y0.PANEL,
-                nickname: o.ZP.getName(null, A.id, t),
-                pronouns: null == N ? void 0 : N.pronouns,
-                onOpenProfile: M,
-                tags: (0, i.jsx)(d.Z, {
-                    displayProfile: N,
-                    profileType: T.y0.PANEL
+                profileType: S.y0.PANEL,
+                nickname: o.ZP.getName(null, b.id, t),
+                pronouns: null == M ? void 0 : M.pronouns,
+                onOpenProfile: L,
+                tags: (0, i.jsx)(p.Z, {
+                    displayProfile: M,
+                    profileType: S.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(m.Z, { userId: t.id }),
-                        !L &&
-                            (0, i.jsx)(I.Z, {
+                        (0, i.jsx)(f.Z, { userId: t.id }),
+                        !P &&
+                            (0, i.jsx)(x.Z, {
                                 userId: t.id,
-                                isHovering: Z,
-                                onOpenProfile: M
+                                isHovering: R,
+                                onOpenProfile: L
                             })
                     ]
                 })
             }),
-            R === x.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(g.Z.Overlay, {
-                    children: (0, i.jsx)(_.Z, {
+            j === N.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(I.Z.Overlay, {
+                    children: (0, i.jsx)(E.Z, {
                         user: t,
-                        channelId: A.id
+                        channelId: b.id
                     })
                 }),
             t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
-            !b &&
-                (0, i.jsx)(p.Z, {
+            !y &&
+                !D &&
+                (0, i.jsx)(_.Z, {
                     user: t,
                     currentUser: n,
-                    className: v.activity
+                    className: Z.activity
                 }),
-            (0, i.jsxs)(g.Z.Overlay, {
-                className: v.overlay,
+            (0, i.jsxs)(I.Z.Overlay, {
+                className: Z.overlay,
                 children: [
-                    !L &&
-                        (null == N ? void 0 : N.bio) != null &&
-                        (null == N ? void 0 : N.bio) !== '' &&
-                        (0, i.jsx)(E.Z, {
-                            heading: S.Z.Messages.USER_POPOUT_ABOUT_ME,
+                    !P &&
+                        (null == M ? void 0 : M.bio) != null &&
+                        (null == M ? void 0 : M.bio) !== '' &&
+                        (0, i.jsx)(C.Z, {
+                            heading: A.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
-                            children: (0, i.jsx)(h.Z, {
-                                userBio: N.bio,
+                            children: (0, i.jsx)(m.Z, {
+                                userBio: M.bio,
                                 animateOnHover: !0,
-                                isHovering: Z,
+                                isHovering: R,
                                 userId: t.id
                             })
                         }),
-                    (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
-                        (0, i.jsx)(u.Z, {
-                            applicationId: P.id,
-                            commandIds: P.popularApplicationCommandIds,
-                            channel: A
+                    (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
+                        (0, i.jsx)(h.Z, {
+                            applicationId: O.id,
+                            commandIds: O.popularApplicationCommandIds,
+                            channel: b
                         }),
-                    (0, i.jsx)(E.Z, {
-                        heading: t.bot ? S.Z.Messages.BOT_PROFILE_CREATED_ON : S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    (0, i.jsx)(C.Z, {
+                        heading: t.bot ? A.Z.Messages.BOT_PROFILE_CREATED_ON : A.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(f.Z, { userId: t.id })
+                        children: (0, i.jsx)(g.Z, { userId: t.id })
                     })
                 ]
             }),
-            b &&
-                (0, i.jsx)(p.Z, {
-                    user: t,
-                    currentUser: n,
-                    className: v.activity
+            (y || D) &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(_.Z, {
+                            user: t,
+                            currentUser: n,
+                            className: Z.activity
+                        }),
+                        (0, i.jsx)(v.Z, {
+                            user: t,
+                            cardClassName: Z.activity
+                        })
+                    ]
                 })
         ]
     });
