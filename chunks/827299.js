@@ -52,7 +52,7 @@ class c {
     loadingDone(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.search(e);
-        (a(n, u).isLoading = !1), t ? (a(n, u).isStale = !1) : (a(n, u).fetchFailCounter += 1);
+        (a(n, u).isLoading = !1), t ? ((a(n, u).fetchFailCounter = 0), (a(n, u).isStale = !1)) : (a(n, u).fetchFailCounter += 1);
     }
     loadingStart(e) {
         let t = this.search(e);
@@ -106,28 +106,29 @@ class _ extends Error {
     }
 }
 function E(e, t) {
-    let { get: n, load: a, useStateHook: s, queryId: o, dangerousAbortOnCleanup: l = !1 } = t;
+    let { dangerousAbortOnCleanup: n = !1, get: a, load: s, maxNumFetchErrors: o = 5, queryId: l, useStateHook: u } = t;
     return function () {
-        for (var t = arguments.length, u = Array(t), c = 0; c < t; c++) u[c] = arguments[c];
-        let E = (0, r.useMemo)(() => o(...u), u),
-            f = s(Array.isArray(e) ? e : [e], () => n(...u), u),
-            h = d.getState(E),
-            p = h.error,
-            I = !0 === h.isLoading,
-            m = (0, r.useRef)(u),
-            T = (0, r.useCallback)(() => {
-                if (null == E || !0 === I) return;
+        for (var t = arguments.length, c = Array(t), E = 0; E < t; E++) c[E] = arguments[E];
+        let f = (0, r.useMemo)(() => l(...c), c),
+            h = u(Array.isArray(e) ? e : [e], () => a(...c), c),
+            p = d.getState(f),
+            I = p.error,
+            m = !0 === p.isLoading,
+            T = (0, r.useRef)(c),
+            S = (0, r.useCallback)(() => {
+                if (null == f || !0 === m) return;
                 let e = !1;
-                s === i.Wu ? f.length > 0 && (e = !0) : null != f && (e = !0);
-                let t = d.doesDataNeedValidation(E),
-                    n = null != p;
-                if ((e || n) && !t) return;
-                d.loadingStart(E);
-                let r = new AbortController();
+                u === i.Wu ? h.length > 0 && (e = !0) : null != h && (e = !0);
+                let t = d.doesDataNeedValidation(f),
+                    r = null != I;
+                if ((e || r) && !t) return;
+                d.loadingStart(f);
+                let a = new AbortController();
                 return (
-                    a(r.signal, ...m.current)
-                        .then((e) => (d.loadingDone(E, !0), e))
+                    s(a.signal, ...T.current)
+                        .then((e) => (d.loadingDone(f, !0), e))
                         .catch((e) => {
+                            if ((d.loadingDone(f), a.signal.aborted)) return;
                             let t = (function (e) {
                                 if (e instanceof Error) return e;
                                 if ('object' == typeof e) {
@@ -144,28 +145,28 @@ function E(e, t) {
                                 }
                                 return Error(String(e));
                             })(e);
-                            if ((d.loadingDone(E), !r.signal.aborted && (!!(h.fetchFailCounter >= 5) || !(t instanceof _) || (!(t.status >= 500) && 429 !== t.status)))) d.setError(E, t);
+                            if (!!(p.fetchFailCounter >= o) || !(t instanceof _) || (!(t.status >= 500) && 429 !== t.status)) d.setError(f, t);
                         }),
                     () => {
-                        l && r.abort();
+                        n && a.abort();
                     }
                 );
-            }, [f, h.fetchFailCounter, p, E, I]);
+            }, [h, p.fetchFailCounter, I, f, m]);
         return (
             (0, r.useEffect)(
                 () => (
-                    T(),
-                    d.subscribe(E, T),
+                    S(),
+                    d.subscribe(f, S),
                     () => {
-                        d.subscribe(E, void 0);
+                        d.subscribe(f, void 0);
                     }
                 ),
-                [E, T]
+                [f, S]
             ),
             {
-                data: f,
-                error: p,
-                isLoading: I
+                data: h,
+                error: I,
+                isLoading: m
             }
         );
     };
