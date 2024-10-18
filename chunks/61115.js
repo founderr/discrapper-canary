@@ -1,153 +1,172 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return S;
         },
         openQuestSurveyModal: function () {
-            return S;
+            return A;
         }
     }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(600164),
-    u = n(626135),
-    c = n(617136),
-    d = n(113434),
-    _ = n(569984),
-    E = n(981631),
-    f = n(689938),
-    h = n(950542),
-    p = n(677486),
-    I = n(288633);
-function m(e) {
-    let { questId: t, survey: n, transitionState: a, onClose: c, onSubmit: _ } = e,
-        f = (0, d.B4)(t),
-        [I, m] = i.useState(null),
-        S = (e) => {
-            m(e),
-                setTimeout(c, 2500),
-                _(),
-                u.default.track(E.rMx.QUEST_SURVEY_SUBMITTED, {
-                    ...g(f, n),
-                    choice: e
-                });
+var r,
+    i,
+    a = n(735250),
+    s = n(470079),
+    o = n(120356),
+    l = n.n(o),
+    u = n(212433),
+    c = n(481060),
+    d = n(600164),
+    _ = n(626135),
+    E = n(617136),
+    f = n(113434),
+    h = n(569984),
+    p = n(981631),
+    I = n(689938),
+    m = n(950542),
+    T = n(677486);
+function S(e) {
+    let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
+        l = (0, f.B4)(t),
+        [E, h] = s.useState(0),
+        [S, A] = (0, c.useSpring)(() => ({
+            from: { width: '0%' },
+            config: { duration: 2500 }
+        })),
+        R = (e) => {
+            o(),
+                h(1),
+                null != l &&
+                    _.default.track(p.rMx.QUEST_SURVEY_SUBMITTED, {
+                        ...N(l, n),
+                        choice: e
+                    });
+        },
+        O = async (e) => {
+            1 === e && (await A({ width: '100%' }), i());
         };
     return (
-        i.useEffect(() => {
-            u.default.track(E.rMx.QUEST_SURVEY_DISPLAYED, g(f, n));
+        s.useEffect(() => {
+            null != l && _.default.track(p.rMx.QUEST_SURVEY_DISPLAYED, N(l, n));
         }, []),
-        null == f && c(),
-        (0, r.jsxs)(o.ModalRoot, {
-            transitionState: a,
-            size: o.ModalSize.DYNAMIC,
-            className: h.modalRoot,
-            children: [
-                (0, r.jsxs)(o.ModalHeader, {
-                    direction: l.Z.Direction.VERTICAL,
-                    separator: !1,
-                    className: h.modalHeader,
-                    children: [
-                        (0, r.jsx)(o.ModalCloseButton, {
-                            className: h.closeBtn,
-                            onClick: c
-                        }),
-                        (0, r.jsx)('img', {
-                            src: p,
-                            alt: '',
-                            className: h.asset
-                        }),
-                        (0, r.jsx)(o.Heading, {
-                            variant: 'heading-lg/semibold',
-                            className: h.title,
-                            children: n.title
-                        }),
-                        (0, r.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            color: 'text-muted',
-                            children: n.subtitle
-                        })
-                    ]
-                }),
-                (0, r.jsx)(o.ModalContent, {
-                    className: h.modalContent,
-                    children: n.choices.map((e) => {
-                        let t = I === e;
-                        return (0, r.jsx)(
-                            T,
-                            {
-                                className: s()({
-                                    [h.selected]: null != I && t,
-                                    [h.notSelected]: null != I && !t
-                                }),
-                                text: e,
-                                selected: t,
-                                onClick: S
-                            },
-                            e
-                        );
+        null == l && i(),
+        (0, a.jsx)(c.ModalRoot, {
+            transitionState: r,
+            size: c.ModalSize.DYNAMIC,
+            className: m.modalRoot,
+            children: (0, a.jsxs)(c.Slides, {
+                activeSlide: E,
+                width: 467,
+                onSlideReady: O,
+                children: [
+                    (0, a.jsxs)(c.Slide, {
+                        id: 0,
+                        children: [
+                            (0, a.jsxs)(c.ModalHeader, {
+                                direction: d.Z.Direction.VERTICAL,
+                                separator: !1,
+                                className: m.modalHeader,
+                                children: [
+                                    (0, a.jsx)(c.ModalCloseButton, {
+                                        className: m.closeBtn,
+                                        onClick: i
+                                    }),
+                                    (0, a.jsx)('img', {
+                                        src: T,
+                                        alt: '',
+                                        className: m.asset
+                                    }),
+                                    (0, a.jsx)(c.Heading, {
+                                        variant: 'heading-lg/semibold',
+                                        children: n.title
+                                    }),
+                                    (0, a.jsx)(c.Text, {
+                                        variant: 'text-md/normal',
+                                        color: 'text-muted',
+                                        children: n.subtitle
+                                    })
+                                ]
+                            }),
+                            (0, a.jsx)(c.ModalContent, {
+                                className: m.modalContent,
+                                children: n.choices.map((e) =>
+                                    (0, a.jsx)(
+                                        g,
+                                        {
+                                            text: e,
+                                            onClick: R
+                                        },
+                                        e
+                                    )
+                                )
+                            })
+                        ]
+                    }),
+                    (0, a.jsxs)(c.Slide, {
+                        id: 1,
+                        children: [
+                            (0, a.jsxs)(c.ModalContent, {
+                                className: m.completedModalContent,
+                                children: [
+                                    (0, a.jsx)('img', {
+                                        src: T,
+                                        alt: '',
+                                        className: m.asset
+                                    }),
+                                    (0, a.jsx)(c.Heading, {
+                                        variant: 'heading-lg/semibold',
+                                        children: I.Z.Messages.STREAM_REPORTED
+                                    }),
+                                    (0, a.jsx)(c.Text, {
+                                        variant: 'text-md/normal',
+                                        color: 'text-muted',
+                                        children: I.Z.Messages.PREMIUM_SURVEY_WE_APPRECIATE_IT
+                                    })
+                                ]
+                            }),
+                            (0, a.jsx)(c.ModalFooter, {
+                                children: (0, a.jsxs)('div', {
+                                    className: m.closeButtonContainer,
+                                    children: [
+                                        (0, a.jsx)(c.Button, {
+                                            onClick: i,
+                                            children: I.Z.Messages.CLOSE
+                                        }),
+                                        (0, a.jsx)(u.animated.div, {
+                                            className: m.progressOverlay,
+                                            style: S
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
                     })
-                })
-            ]
+                ]
+            })
         })
     );
 }
-function T(e) {
-    let { className: t, text: n, selected: i, onClick: a } = e;
-    return (0, r.jsxs)(o.Clickable, {
-        className: s()(h.choiceContainer, t),
-        onClick: () => a(n),
+function g(e) {
+    let { className: t, text: n, onClick: r } = e;
+    return (0, a.jsxs)(c.Clickable, {
+        className: l()(m.choiceContainer, t),
+        onClick: () => r(n),
         children: [
-            (0, r.jsxs)('div', {
-                className: h.choiceTextContainer,
-                children: [
-                    (0, r.jsx)(o.Text, {
-                        variant: 'text-sm/semibold',
-                        children: n
-                    }),
-                    i &&
-                        (0, r.jsxs)('div', {
-                            className: h.choiceSubtitleContainer,
-                            children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'text-muted',
-                                    children: f.Z.Messages.QUESTS_DISMISSAL_SURVEY_THANKS
-                                }),
-                                (0, r.jsx)('img', {
-                                    src: I,
-                                    alt: '',
-                                    className: h.heartWumpusIcon
-                                })
-                            ]
-                        })
-                ]
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/semibold',
+                children: n
             }),
-            (0, r.jsxs)('div', {
-                className: h.chevronContainer,
-                children: [
-                    i &&
-                        (0, r.jsx)(o.CircleCheckIcon, {
-                            className: h.circleIcon,
-                            color: 'currentColor',
-                            size: 'sm'
-                        }),
-                    (0, r.jsx)(o.ChevronSmallRightIcon, {})
-                ]
-            })
+            (0, a.jsx)(c.ChevronSmallRightIcon, {})
         ]
     });
 }
-function S(e) {
+function A(e) {
     let t = !1;
-    (0, o.openModalLazy)(
+    (0, c.openModalLazy)(
         async () => {
-            let { default: i } = await Promise.resolve().then(n.bind(n, 61115));
+            let { default: r } = await Promise.resolve().then(n.bind(n, 61115));
             return (n) =>
-                (0, r.jsx)(i, {
+                (0, a.jsx)(r, {
                     ...n,
                     ...e,
                     onSubmit: () => {
@@ -157,23 +176,24 @@ function S(e) {
         },
         {
             onCloseCallback: () => {
-                let n = _.Z.getQuest(e.questId);
+                let n = h.Z.getQuest(e.questId);
                 null != n &&
-                    u.default.track(E.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...g(n, e.survey),
+                    _.default.track(p.rMx.QUEST_SURVEY_DISMISSED, {
+                        ...N(n, e.survey),
                         submitted: t
                     });
             }
         }
     );
 }
-function g(e, t) {
+function N(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, c.uk)(e),
+        quest_status: (0, E.uk)(e),
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,
         choices: t.choices
     };
 }
+((i = r || (r = {}))[(i.SURVEY = 0)] = 'SURVEY'), (i[(i.COMPLETE = 1)] = 'COMPLETE');
