@@ -55,14 +55,16 @@ async function g(e) {
             let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
-                    intervalOffset: 0
+                    intervalOffset: 0,
+                    force: r
                 }),
-                r = d.Z.get(t, n);
-            if ((null == r ? void 0 : r.interval_start) !== e.leaderboard.interval_start) {
+                s = d.Z.get(t, n);
+            if ((null == s ? void 0 : s.interval_start) !== e.leaderboard.interval_start) {
                 let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
-                    intervalOffset: -1
+                    intervalOffset: -1,
+                    force: r
                 });
                 i.Z.dispatch({
                     type: 'SET_GUILD_LEADERBOARD',
