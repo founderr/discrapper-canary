@@ -105,13 +105,14 @@ function T(e) {
                 children: (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)(s.MenuGroup, {
                         children: [
-                            (0, r.jsx)(s.MenuItem, {
-                                id: 'refresh-my-data',
-                                label: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_MENU_REFRESH_MY_DATA,
-                                action: R,
-                                disabled: L,
-                                subtext: D
-                            }),
+                            null != g &&
+                                (0, r.jsx)(s.MenuItem, {
+                                    id: 'refresh-my-data',
+                                    label: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_MENU_REFRESH_MY_DATA,
+                                    action: R,
+                                    disabled: L,
+                                    subtext: D
+                                }),
                             (0, r.jsx)(s.MenuItem, {
                                 id: 'leaderboard-modal',
                                 label: O,
