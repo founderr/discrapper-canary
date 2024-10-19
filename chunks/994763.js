@@ -46,8 +46,8 @@ var s = n(735250),
     B = n(220685),
     y = n(751189),
     F = n(409059),
-    k = n(810788),
-    w = n(918658),
+    w = n(810788),
+    k = n(918658),
     H = n(84615),
     V = n(163400),
     Y = n(210887),
@@ -100,8 +100,8 @@ var s = n(735250),
     eB = n(804153),
     ey = n(981631),
     eF = n(308083),
-    ek = n(190378),
-    ew = n(135899),
+    ew = n(190378),
+    ek = n(135899),
     eH = n(689938),
     eV = n(9917);
 function eY(e) {
@@ -121,7 +121,7 @@ function eW(e, t) {
 }
 function ez(e) {
     var t;
-    let { guild: a, isGuildAdmin: r, canManageGuild: d, canViewAuditLog: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: x, canUnlinkChannels: O, canManageBans: A, canAccessMembersPage: D, canViewGuildAnalytics: v, isOwner: y, isOwnerWithRequiredMfaLevel: F, showDirtyGuildTemplateIndicator: w, memberCount: V, showAccessRate: Y, onboardingStep: W, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
+    let { guild: a, isGuildAdmin: r, canManageGuild: d, canViewAuditLog: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: x, canUnlinkChannels: O, canManageBans: A, canAccessMembersPage: D, canViewGuildAnalytics: v, isOwner: y, isOwnerWithRequiredMfaLevel: F, showDirtyGuildTemplateIndicator: k, memberCount: V, showAccessRate: Y, onboardingStep: W, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
         ea = er.$.getCurrentConfig({
             guildId: a.id,
             location: 'generateSections'
@@ -415,7 +415,7 @@ function ez(e) {
                               label: eH.Z.Messages.SERVER_INSIGHTS,
                               ariaLabel: eH.Z.Messages.SERVER_INSIGHTS,
                               element: eS.Z,
-                              newIndicator: k.Z.hasHotspot(ek.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+                              newIndicator: w.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
                               newIndicatorDismissibleContentTypes: Y ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
                               predicate: () => p
                           },
@@ -525,7 +525,7 @@ function ez(e) {
                               label: eH.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
                               element: eh.Z,
                               ariaLabel: eH.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-                              newIndicator: null != V && V >= ew.U3 && k.Z.hasHotspot(ek.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                              newIndicator: null != V && V >= ek.U3 && w.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                               notice: {
                                   stores: [ec.Z],
                                   element: eh.X
@@ -553,7 +553,7 @@ function ez(e) {
                           {
                               section: ey.pNK.GUILD_TEMPLATES,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-                              label: (0, s.jsx)(eG.Z, { showDirtyIndicator: w }),
+                              label: (0, s.jsx)(eG.Z, { showDirtyIndicator: k }),
                               ariaLabel: eH.Z.Messages.GUILD_TEMPLATES,
                               element: eU.ZP,
                               notice: {
@@ -665,7 +665,7 @@ function ez(e) {
         {
             section: ey.pNK.GUILD_TEMPLATES,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-            label: (0, s.jsx)(eG.Z, { showDirtyIndicator: w }),
+            label: (0, s.jsx)(eG.Z, { showDirtyIndicator: k }),
             ariaLabel: eH.Z.Messages.GUILD_TEMPLATES,
             element: eU.ZP,
             notice: {
@@ -807,7 +807,7 @@ function ez(e) {
             label: a.hasFeature(ey.oNc.COMMUNITY) ? eH.Z.Messages.OVERVIEW : eH.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
             element: eh.Z,
             ariaLabel: a.hasFeature(ey.oNc.COMMUNITY) ? eH.Z.Messages.OVERVIEW : eH.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-            newIndicator: !a.hasFeature(ey.oNc.COMMUNITY) && null != V && V >= ew.U3 && k.Z.hasHotspot(ek.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+            newIndicator: !a.hasFeature(ey.oNc.COMMUNITY) && null != V && V >= ek.U3 && w.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
             notice: {
                 stores: [ec.Z],
                 element: eh.X
@@ -833,7 +833,7 @@ function ez(e) {
             label: eH.Z.Messages.SERVER_INSIGHTS,
             ariaLabel: eH.Z.Messages.SERVER_INSIGHTS,
             element: eS.Z,
-            newIndicator: k.Z.hasHotspot(ek.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+            newIndicator: w.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
             newIndicatorDismissibleContentTypes: Y ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
             predicate: () => v && a.hasFeature(ey.oNc.COMMUNITY)
         },
@@ -1045,7 +1045,7 @@ class eQ extends a.PureComponent {
                     title: eY(r),
                     sections: D
                 }),
-                (0, s.jsx)(w.d, { guildId: r.id })
+                (0, s.jsx)(k.d, { guildId: r.id })
             ]
         });
     }

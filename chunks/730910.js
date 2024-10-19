@@ -59,8 +59,8 @@ function G(e) {
             return null != e && !L.Z.isEducationUpsellDismissed(e);
         }),
         F = (0, I.ZP)(),
-        k = a.useRef(null),
-        [{ spring: w }, H] = (0, _.useSpring)(() => ({ spring: 0 }), 'animate-always');
+        w = a.useRef(null),
+        [{ spring: k }, H] = (0, _.useSpring)(() => ({ spring: 0 }), 'animate-always');
     a.useEffect(() => {
         function e() {
             H({
@@ -83,11 +83,11 @@ function G(e) {
     let V = (0, _.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
         Y = (0, _.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
         W = (0, u.wj)(F) ? V : Y,
-        z = w.to({
+        z = k.to({
             range: [0, 1],
             output: [(0, _.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, _.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
-        K = w.to({
+        K = k.to({
             range: [0, 1],
             output: [W, (0, _.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
@@ -179,7 +179,7 @@ function G(e) {
                 style: { backgroundColor: K },
                 children: (0, s.jsxs)('div', {
                     className: b.flexContainer,
-                    ref: k,
+                    ref: w,
                     children: [
                         y
                             ? (0, s.jsxs)('div', {
@@ -198,7 +198,7 @@ function G(e) {
                               })
                             : null,
                         (0, s.jsx)(_.FocusRingScope, {
-                            containerRef: k,
+                            containerRef: w,
                             children: (0, s.jsxs)('div', {
                                 className: b.actions,
                                 children: [

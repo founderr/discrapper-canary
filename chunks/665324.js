@@ -46,7 +46,7 @@ function P() {
         : (0, s.jsx)(u.FormSection, {
               tag: u.FormTitleTags.H1,
               title: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-              children: (0, s.jsx)(w, { guild: e })
+              children: (0, s.jsx)(k, { guild: e })
           });
 }
 function B(e) {
@@ -124,7 +124,7 @@ let F = (e) => {
             children: (e) => n(e)
         });
     },
-    k = () =>
+    w = () =>
         (0, s.jsx)(F, {
             renderPopoutBody: () =>
                 (0, s.jsx)(u.Text, {
@@ -139,7 +139,7 @@ let F = (e) => {
                     children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
                 })
         });
-function w(e) {
+function k(e) {
     let { guild: t } = e,
         [i, r] = (0, c.Wu)([S.Z], () => {
             var e;
@@ -184,7 +184,7 @@ function w(e) {
               disabled: I <= 0 || !l,
               children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
           })
-        : (0, s.jsx)(k, {});
+        : (0, s.jsx)(w, {});
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsxs)('div', {

@@ -19,16 +19,16 @@ var i = n(120356),
     _ = n(689938),
     E = n(3910);
 function f(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconComponent: h, themeable: p = !1, disabled: I = !1, isActive: m = !1, tooltipPosition: T = 'top', shouldShowTooltip: S = !0, forceTooltipOpen: g = !1, buttonRef: A, grow: N, 'aria-label': R } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconColor: h = 'currentColor', iconComponent: p, themeable: I = !1, disabled: m = !1, isActive: T = !1, tooltipPosition: S = 'top', shouldShowTooltip: g = !0, forceTooltipOpen: A = !1, buttonRef: N, grow: R, 'aria-label': O } = e;
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Tooltip, {
-            position: T,
+            position: S,
             text: t,
-            'aria-label': R,
-            shouldShow: S,
-            forceOpen: g,
+            'aria-label': O,
+            shouldShow: g,
+            forceOpen: A,
             children: (e) => {
-                let { onClick: t, onContextMenu: c, onMouseEnter: T, onMouseLeave: S, ...g } = e;
+                let { onClick: t, onContextMenu: c, onMouseEnter: S, onMouseLeave: g, ...A } = e;
                 return (0, r.jsx)(s.Button, {
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.NONE,
@@ -39,34 +39,34 @@ function f(e) {
                         null == t || t(), null == n || n(e);
                     },
                     onMouseEnter: (e) => {
-                        null == T || T(), null == o || o(e);
+                        null == S || S(), null == o || o(e);
                     },
                     onMouseLeave: (e) => {
-                        null == S || S(), null == l || l(e);
+                        null == g || g(), null == l || l(e);
                     },
                     onContextMenu: (e) => {
                         null == c || c(), null == u || u(e);
                     },
                     onFocus: (e) => {
-                        null == T || T(), null == o || o(e);
+                        null == S || S(), null == o || o(e);
                     },
                     onBlur: (e) => {
-                        null == S || S(), null == l || l(e);
+                        null == g || g(), null == l || l(e);
                     },
-                    disabled: I,
+                    disabled: m,
                     innerClassName: E.lineHeightReset,
-                    className: a()({ [E.active]: m }, d),
+                    className: a()({ [E.active]: T }, d),
                     wrapperClassName: _,
-                    buttonRef: A,
-                    grow: N,
-                    'aria-label': R,
-                    ...g,
-                    children: (0, r.jsx)(h, {
+                    buttonRef: N,
+                    grow: R,
+                    'aria-label': O,
+                    ...A,
+                    children: (0, r.jsx)(p, {
                         className: a()(E.controlIcon, f, {
-                            [E.themeable]: p,
-                            [E.active]: m
+                            [E.themeable]: I,
+                            [E.active]: T
                         }),
-                        color: 'currentColor'
+                        color: h
                     })
                 });
             }

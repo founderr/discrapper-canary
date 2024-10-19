@@ -58,34 +58,34 @@ function p(e) {
                         )
                     ]
                 }),
-                (0, i.jsx)(d.Z, {
-                    heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-                    subheading: S
-                        ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
-                              learnMoreHook: (e, n) =>
-                                  (0, i.jsx)(
-                                      l.Anchor,
-                                      {
-                                          href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
-                                          children: e
-                                      },
-                                      n
-                                  )
-                          })
-                        : null,
-                    children: h.map((e) =>
-                        (0, i.jsx)(
-                            _.Z,
-                            {
-                                user: n,
-                                entry: e,
-                                onClose: p,
-                                hideHeader: !0
-                            },
-                            e.id
+                S &&
+                    h.length > 0 &&
+                    (0, i.jsx)(d.Z, {
+                        heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+                        subheading: m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
+                            learnMoreHook: (e, n) =>
+                                (0, i.jsx)(
+                                    l.Anchor,
+                                    {
+                                        href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                        children: e
+                                    },
+                                    n
+                                )
+                        }),
+                        children: h.map((e) =>
+                            (0, i.jsx)(
+                                _.Z,
+                                {
+                                    user: n,
+                                    entry: e,
+                                    onClose: p,
+                                    hideHeader: !0
+                                },
+                                e.id
+                            )
                         )
-                    )
-                })
+                    })
             ]
         })
     );

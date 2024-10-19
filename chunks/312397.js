@@ -46,8 +46,8 @@ var s = n(735250),
     B = n(592125),
     y = n(324067),
     F = n(650774),
-    k = n(496675),
-    w = n(699516),
+    w = n(496675),
+    k = n(699516),
     H = n(594174),
     V = n(709586),
     Y = n(768581),
@@ -92,7 +92,7 @@ function eT(e) {
     if (null == e) return;
     let { label: t, channel: n, category: a } = e,
         i = (0, p.KS)(n),
-        r = null != a ? (0, x.F6)(a, H.default, w.Z) : null;
+        r = null != a ? (0, x.F6)(a, H.default, k.Z) : null;
     return (0, s.jsx)(E.IconSelectOption, {
         title: t,
         icon: i,
@@ -102,7 +102,7 @@ function eT(e) {
 function em(e) {
     return {
         value: e.id,
-        label: (0, x.F6)(e, H.default, w.Z),
+        label: (0, x.F6)(e, H.default, k.Z),
         channel: e,
         category: B.Z.getChannel(e.parent_id)
     };
@@ -973,9 +973,9 @@ function eg() {
     }, []);
     let d = (0, u.e7)([y.Z], () => y.Z.getCategories(null == t ? void 0 : t.id)),
         _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]),
-        { canManageGuild: I, isGuildAdmin: E } = (0, u.cj)([k.Z], () => ({
-            canManageGuild: k.Z.can(J.Plq.MANAGE_GUILD, t),
-            isGuildAdmin: k.Z.can(J.Plq.ADMINISTRATOR, t)
+        { canManageGuild: I, isGuildAdmin: E } = (0, u.cj)([w.Z], () => ({
+            canManageGuild: w.Z.can(J.Plq.MANAGE_GUILD, t),
+            isGuildAdmin: w.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         T = (0, u.e7)([F.Z], () => F.Z.getMemberCount(null == t ? void 0 : t.id)),
         m = (0, L.E)(t),

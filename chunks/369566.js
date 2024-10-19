@@ -35,7 +35,7 @@ function p(e) {
                 live: 0 === e.length ? f : e,
                 recent: null == r || 0 === r.length ? h : r
             };
-        }, [t, n]);
+        }, [t, null == n ? void 0 : n.entries]);
     return {
         live: m,
         recent: T,

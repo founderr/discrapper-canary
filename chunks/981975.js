@@ -108,7 +108,7 @@ function D(e) {
             locked: i
         });
     else if (G.length > 0) {
-        var k, w;
+        var w, k;
         let e = null;
         G.length < 10 &&
             (e = (0, s.jsx)(d.Button, {
@@ -131,8 +131,8 @@ function D(e) {
             })),
             (F = (0, s.jsxs)(s.Fragment, {
                 children: [
-                    ((k = () => (0, m.d_)(n.id, [])),
-                    (w = i),
+                    ((w = () => (0, m.d_)(n.id, [])),
+                    (k = i),
                     (0, s.jsxs)(s.Fragment, {
                         children: [
                             (0, s.jsxs)('div', {
@@ -150,8 +150,8 @@ function D(e) {
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
-                                        onClick: k,
-                                        disabled: w,
+                                        onClick: w,
+                                        disabled: k,
                                         children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
                                     })
                                 ]

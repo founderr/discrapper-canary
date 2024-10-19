@@ -58,8 +58,8 @@ let O = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 ...(0, S.hH)(i.id)
                             }));
             },
-            k = R.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(B),
-            w = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url),
+            w = R.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(B),
+            k = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, g.gX)(i.id),
             V = H || !U;
         return (0, s.jsxs)('div', {
@@ -90,11 +90,11 @@ let O = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     disabled: H,
                     children: [
                         (0, s.jsx)(T.Z, {
-                            value: k,
+                            value: w,
                             className: r()({ [f.disabled]: H })
                         }),
                         (0, s.jsx)(E.Button, {
-                            onClick: () => (0, N.Z)(k),
+                            onClick: () => (0, N.Z)(w),
                             className: f.openPageButton,
                             disabled: H,
                             children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_GO_TO_PAGE
@@ -153,11 +153,11 @@ let O = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             className: f.trailerInputWrapper,
                             inputClassName: r()(f.trailerInput, {
                                 [f.error]: !U,
-                                [f.trailerInputWithCheckmark]: w || !U
+                                [f.trailerInputWithCheckmark]: k || !U
                             }),
                             prefixElement:
                                 U &&
-                                w &&
+                                k &&
                                 (0, s.jsx)(E.CircleCheckIcon, {
                                     size: 'md',
                                     color: _.Z.unsafe_rawColors.BRAND_500.css,

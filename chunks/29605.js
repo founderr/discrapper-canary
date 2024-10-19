@@ -48,7 +48,7 @@ let y = d().throttle(T.OQ, 1000),
         let { currentTarget: t, which: n } = e;
         13 === n && t.blur();
     },
-    k = (e) => {
+    w = (e) => {
         let { guildId: t, emoji: n, onEdit: i, editingDisabled: l = !1 } = e,
             [o, c] = a.useState(n.name),
             d = O.ZP.getEmojiURL({
@@ -146,7 +146,7 @@ let y = d().throttle(T.OQ, 1000),
             ]
         });
     },
-    w = (e) => {
+    k = (e) => {
         let { isLoading: t, staticEmojis: a, animatedEmojis: i, theme: r, guild: l } = e;
         return t
             ? (0, s.jsx)(I.Spinner, {
@@ -241,7 +241,7 @@ let y = d().throttle(T.OQ, 1000),
                       }),
                       l.map((e) =>
                           (0, s.jsx)(
-                              k,
+                              w,
                               {
                                   guildId: n.id,
                                   emoji: e,
@@ -307,7 +307,7 @@ t.ZP = () => {
             return [n, s];
         }, [E, e.id]),
         F = e.getMaxEmojiSlots(),
-        k = Math.max(F - D.length, F - B.length),
+        w = Math.max(F - D.length, F - B.length),
         H = (n, s, a) =>
             (0, h.G)({
                 data: n,
@@ -343,7 +343,7 @@ t.ZP = () => {
     return (0, s.jsxs)('div', {
         className: P.emojiSettings,
         children: [
-            0 === k
+            0 === w
                 ? null
                 : (0, s.jsx)(N.Z, {
                       className: P.emojiUploadContainer,
@@ -419,14 +419,14 @@ t.ZP = () => {
                                             upload_id: t
                                         });
                                 },
-                                disabled: O || 0 === k || !l,
+                                disabled: O || 0 === w || !l,
                                 submitting: O,
                                 focusProps: { within: !0 },
                                 children: [
                                     G.Z.Messages.UPLOAD_EMOJI,
-                                    k > 0
+                                    w > 0
                                         ? (0, s.jsx)(p.Z, {
-                                              disabled: O || 0 === k || !l,
+                                              disabled: O || 0 === w || !l,
                                               tabIndex: 0,
                                               onChange: H,
                                               setLoading: A,
@@ -437,7 +437,7 @@ t.ZP = () => {
                             })
                         ]
                     }),
-                    (0, s.jsx)(w, {
+                    (0, s.jsx)(k, {
                         isLoading: null == E,
                         staticEmojis: D,
                         animatedEmojis: B,

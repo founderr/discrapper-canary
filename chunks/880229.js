@@ -3,7 +3,7 @@ n.d(t, {
         return W;
     },
     K: function () {
-        return k;
+        return w;
     }
 }),
     n(47120),
@@ -162,7 +162,7 @@ function F(e) {
           })
         : null;
 }
-function k(e) {
+function w(e) {
     let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: s, existingIntangibleBenefits: a, onSubmit: l, onClose: o } = e,
         c = n.role_benefits.benefits,
         [d, u] = r.useState(() => new Set(c)),
@@ -245,7 +245,7 @@ function k(e) {
         })
     });
 }
-function w(e) {
+function k(e) {
     var t;
     let { guildId: n, role: s, channelCount: a, onSelect: r } = e,
         l = (0, x.p9)({
@@ -332,7 +332,7 @@ function H(e) {
               className: b.list,
               children: o.map((e) =>
                   (0, i.jsx)(
-                      w,
+                      k,
                       {
                           guildId: t.id,
                           role: e.role,

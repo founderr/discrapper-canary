@@ -131,8 +131,8 @@ function U(e) {
             }),
             [d, C, x, p, U, P]
         ),
-        [{ isDragging: F }, k] = (0, l.c)(y),
-        w = a.useMemo(
+        [{ isDragging: F }, w] = (0, l.c)(y),
+        k = a.useMemo(
             () => ({
                 accept: j,
                 canDrop: () => !U,
@@ -144,7 +144,7 @@ function U(e) {
             }),
             [U, d]
         ),
-        [{ dragSourcePosition: H }, V] = (0, o.L)(w),
+        [{ dragSourcePosition: H }, V] = (0, o.L)(k),
         Y = a.useCallback(
             (e) => {
                 (0, _.jW)(e, async () => {
@@ -162,7 +162,7 @@ function U(e) {
         W = (0, N.useHasGuildRoleItems)(I, d);
     if (F)
         return (0, s.jsx)('div', {
-            ref: k,
+            ref: w,
             className: r()(D.roleRow, D.roleRowDragging)
         });
     function z() {
@@ -179,7 +179,7 @@ function U(e) {
         }),
         onClick: z,
         onContextMenu: Y,
-        innerRef: (e) => k(V(e)),
+        innerRef: (e) => w(V(e)),
         'data-dnd-name': d.name,
         'aria-label': M.Z.Messages.ROLE_ROW_DESCRIPTION.format({
             name: d.name,

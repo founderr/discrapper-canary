@@ -386,17 +386,17 @@ function B() {
             },
             [p]
         ),
-        k = a.useMemo(() => o().chunk(M, B.pageSize), [B.pageSize, M]),
-        w = a.useCallback(
+        w = a.useMemo(() => o().chunk(M, B.pageSize), [B.pageSize, M]),
+        k = a.useCallback(
             (e) => {
                 var t, n, s;
-                if ((null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && ((H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null), F(H.current)), null != k[e - 1] || !!b))
+                if ((null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && ((H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null), F(H.current)), null != w[e - 1] || !!b))
                     y((t) => ({
                         ...t,
                         currentPage: e
                     }));
             },
-            [B.pageSize, M, b, k, F, I]
+            [B.pageSize, M, b, w, F, I]
         ),
         H = a.useRef(null);
     a.useEffect(() => {
@@ -404,8 +404,8 @@ function B() {
     }, [F]);
     let V = a.useMemo(() => {
         var e;
-        return null !== (e = k[B.currentPage - 1]) && void 0 !== e ? e : [];
-    }, [k, B.currentPage]);
+        return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : [];
+    }, [w, B.currentPage]);
     return null == i
         ? null
         : (0, s.jsxs)('div', {
@@ -453,7 +453,7 @@ function B() {
                           totalCount: M.length + (b ? B.pageSize : 0),
                           pageSize: B.pageSize,
                           currentPage: B.currentPage,
-                          onPageChange: w,
+                          onPageChange: k,
                           maxVisiblePages: 9
                       })
                   })

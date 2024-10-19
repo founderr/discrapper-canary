@@ -37,7 +37,7 @@ var s = n(735250),
     B = n(280632),
     y = n(44234),
     F = n(117428);
-let k = function (e, t, n) {
+let w = function (e, t, n) {
         let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             a = null;
         return (
@@ -50,7 +50,7 @@ let k = function (e, t, n) {
             }
         );
     },
-    w = function (e) {
+    k = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return t || e === O.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, s.jsx)(u.FormErrorBlock, {
@@ -386,21 +386,21 @@ t.Z = () => {
                           (0, s.jsx)(I.Z, {
                               title: D.Z.Messages.WEEKLY_VISITORS,
                               tooltipText: D.Z.Messages.VISITORS_INFO,
-                              ...k(r.visitors, r.visitorsChange, i)
+                              ...w(r.visitors, r.visitorsChange, i)
                           }),
                           (0, s.jsx)(I.Z, {
                               title: D.Z.Messages.WEEKLY_COMMUNICATORS,
                               tooltipText: D.Z.Messages.COMMUNICATORS_INFO,
-                              ...k(r.communicators, r.communicatorsChange, i)
+                              ...w(r.communicators, r.communicatorsChange, i)
                           }),
                           (0, s.jsx)(I.Z, {
                               title: D.Z.Messages.WEEKLY_NEW_MEMBERS,
-                              ...k(r.newMembers, r.newMembersChange, i)
+                              ...w(r.newMembers, r.newMembersChange, i)
                           }),
                           (0, s.jsx)(I.Z, {
                               title: D.Z.Messages.WEEKLY_NEW_MEMBER_RETENTION,
                               tooltipText: D.Z.Messages.NEW_MEMBER_RETENTION_INFO,
-                              ...k(r.pctRetained, r.pctRetainedChange, i, !0)
+                              ...w(r.pctRetained, r.pctRetainedChange, i, !0)
                           })
                       ]
                   })
@@ -414,7 +414,7 @@ t.Z = () => {
                 type: u.FormTextTypes.DESCRIPTION,
                 children: D.Z.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
             }),
-            w(o, d),
+            k(o, d),
             null != e ? (0, s.jsx)(Y, { guildId: e }) : null,
             (0, s.jsxs)('div', {
                 className: v.developerPortalCtaWrapper,
