@@ -142,6 +142,7 @@ function R(e) {
                 popoutPosition: e.position,
                 analyticsPage: s,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                giftIntentSecondaryAction: C.X2.SEND_MESSAGE,
                 glow: !0
             }),
         children: () => w()
