@@ -197,6 +197,7 @@ n.d(t, {
     (a.USER_WELCOME = 'impression_user_welcome'),
     (a.USER_YOU_SCREEN = 'impression_user_you_screen'),
     (a.VIEW_PANEL_DEVTOOLS = 'impression_view_panel_devtools'),
+    (a.VOICE_CHANNEL_BLOCKED_USER_WARNING = 'impression_voice_channel_blocked_user_warning'),
     ((s = i || (i = {})).ACCOUNT_REVERT = 'network_action_account_revert'),
     (s.APPLE_JWT_TOKEN_CREATE = 'network_action_apple_jwt_token_create'),
     (s.AUTH_SESSIONS_LOGGED_OUT = 'network_action_auth_sessions_logged_out'),
