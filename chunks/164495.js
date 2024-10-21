@@ -1,104 +1,96 @@
 n.d(t, {
     y: function () {
-        return f;
+        return g;
     }
 });
 var o = n(735250);
 n(470079);
 var s = n(481060),
-    r = n(782568),
-    a = n(617136),
-    l = n(497505),
-    i = n(918701),
-    c = n(796111),
-    d = n(667105),
-    u = n(46140),
-    p = n(689938),
-    m = n(128220);
-let x = (e) => {
+    r = n(617136),
+    a = n(497505),
+    l = n(918701),
+    i = n(796111),
+    c = n(667105),
+    d = n(46140),
+    u = n(689938),
+    p = n(128220);
+let m = (e) => {
         let { quest: t } = e;
-        return (0, i.KM)(t)
-            ? (0, o.jsx)(s.Button, {
-                  className: m.cta,
-                  size: s.Button.Sizes.SMALL,
-                  onClick: () => (0, r.Z)('https://support.discord.com/hc/en-us/articles/4422142836759-Activities-on-Discord'),
-                  children: p.Z.Messages.QUESTS_LEARN_MORE_V2
-              })
-            : (0, o.jsx)(s.Button, {
-                  className: m.cta,
-                  size: s.Button.Sizes.SMALL,
-                  onClick: () =>
-                      (0, i.FE)(t, {
-                          content: l.jn.QUEST_BAR_V2,
-                          ctaContent: a.jZ.OPEN_GAME_LINK
-                      }),
-                  children: p.Z.Messages.QUESTS_GET_THIS_GAME
-              });
+        return (0, o.jsx)(s.Button, {
+            className: p.cta,
+            size: s.Button.Sizes.SMALL,
+            onClick: () =>
+                (0, l.FE)(t, {
+                    content: a.jn.QUEST_BAR_V2,
+                    ctaContent: r.jZ.OPEN_GAME_LINK
+                }),
+            children: u.Z.Messages.QUESTS_GET_THIS_GAME
+        });
     },
-    _ = (e) => {
+    x = (e) => {
         let { quest: t } = e;
         return (0, o.jsx)(s.Button, {
             fullWidth: !0,
-            className: m.cta,
+            className: p.cta,
             onClick: () =>
-                (0, i.gI)(
+                (0, l.gI)(
                     { quest: t },
                     {
-                        content: l.jn.QUEST_BAR_V2,
-                        ctaContent: a.jZ.CONNECT_CONSOLE
+                        content: a.jn.QUEST_BAR_V2,
+                        ctaContent: r.jZ.CONNECT_CONSOLE
                     }
                 ),
             size: s.Button.Sizes.SMALL,
-            children: p.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+            children: u.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
         });
     },
-    C = (e) => {
+    _ = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: r } = e,
-            a = (0, d.hf)({
+            l = (0, c.hf)({
                 quest: t,
-                location: l.jn.QUEST_BAR_V2
+                location: a.jn.QUEST_BAR_V2
             });
         return (0, o.jsx)(s.ShinyButton, {
             fullWidth: !0,
             size: s.Button.Sizes.SMALL,
-            onClick: a,
+            onClick: l,
             pauseAnimation: n || !r,
-            className: m.cta,
-            buttonShineClassName: m.shine,
-            children: p.Z.Messages.QUESTS_CLAIM_REWARD
+            className: p.cta,
+            buttonShineClassName: p.shine,
+            children: u.Z.Messages.QUESTS_CLAIM_REWARD
         });
     },
-    g = (e) => {
+    C = (e) => {
         var t;
-        let { quest: n, useReducedMotion: s, isExpanded: r, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: d, activeScreen: p } = e,
-            m = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-            g = (0, c.P)({ location: u.dr.QUESTS_BAR });
-        if (m)
-            return (0, o.jsx)(C, {
+        let { quest: n, useReducedMotion: s, isExpanded: r, awaitingConsoleConnections: l, hasMadeProgress: c, isProgressing: u, activeScreen: p } = e,
+            C = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+            g = (0, i.P)({ location: d.dr.QUESTS_BAR });
+        if (C)
+            return (0, o.jsx)(_, {
                 quest: n,
                 useReducedMotion: s,
                 isExpanded: r
             });
-        if (p === l.LI.CONSOLE && a && !g) return (0, o.jsx)(_, { quest: n });
-        if (p !== l.LI.SELECT && !i && !d) return (0, o.jsx)(x, { quest: n });
+        if (p === a.LI.CONSOLE && l && !g) return (0, o.jsx)(x, { quest: n });
+        if (p !== a.LI.SELECT && !c && !u) return (0, o.jsx)(m, { quest: n });
         return null;
     };
-function f(e) {
+function g(e) {
     return (0, o.jsxs)('div', {
-        className: m.ctaButtons,
+        className: p.ctaButtons,
         children: [
             e.showBackButton &&
                 (0, o.jsx)(s.Button, {
-                    className: m.backButton,
-                    innerClassName: m.backButtonInner,
+                    className: p.backButton,
+                    innerClassName: p.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, o.jsx)(s.ChevronSmallLeftIcon, { className: m.backIcon })
+                    children: (0, o.jsx)(s.ChevronSmallLeftIcon, { className: p.backIcon })
                 }),
-            (0, o.jsx)(g, { ...e })
+            (0, o.jsx)(C, { ...e })
         ]
     });
 }

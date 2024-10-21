@@ -12,9 +12,9 @@ var s = n(735250),
     m = n(607070),
     C = n(70097),
     x = n(210887),
-    S = n(572004),
+    _ = n(572004),
     T = n(617136),
-    _ = n(113434),
+    S = n(113434),
     h = n(497505),
     g = n(918701),
     p = n(475595),
@@ -33,16 +33,12 @@ let Z = (0, r.animated)(c.ChevronSmallDownIcon),
         let { quest: t, location: n, questContentPosition: i, ...l } = e,
             [r, o] = a.useState(!1),
             u = a.useRef(new d.V7());
-        if (
-            (a.useEffect(() => {
-                let e = u.current;
-                return function () {
-                    e.stop();
-                };
-            }, []),
-            (0, g.zK)(t, R.S7.FRACTIONS_QUEST))
-        )
-            return null;
+        a.useEffect(() => {
+            let e = u.current;
+            return function () {
+                e.stop();
+            };
+        }, []);
         let E = () => {
             (0, T._3)({
                 questId: t.id,
@@ -50,7 +46,7 @@ let Z = (0, r.animated)(c.ChevronSmallDownIcon),
                 questContentCTA: T.jZ.COPY_QUEST_URL,
                 questContentPosition: i
             }),
-                (0, S.JG)((0, g.Rs)(t.id)),
+                (0, _.JG)((0, g.Rs)(t.id)),
                 o(!0),
                 u.current.start(1000, () => o(!1));
         };
@@ -72,23 +68,23 @@ let Z = (0, r.animated)(c.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: i, isQuestExpired: d, quest: C, location: S, size: g, expansionSpring: b, isAnimating: D, isExpanded: O, isInConcurrentQuestExperiment: Q, contentPosition: B, toggleExpanded: y } = e,
+    let { isFocused: i, isQuestExpired: d, quest: C, location: _, size: g, expansionSpring: b, isAnimating: D, isExpanded: O, isInConcurrentQuestExperiment: Q, contentPosition: B, toggleExpanded: y } = e,
         { ref: P, height: w } = (0, E.Z)(),
         { ref: H, width: k, scrollWidth: W } = (0, E.Z)(),
         G = (0, u.e7)([x.Z], () => x.Z.getState().theme),
         z = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
         V = a.useMemo(() => (0, p.fh)(C, p.Bd.HERO), [C]),
         F = a.useRef(null),
-        Y = (0, M.uq)(S),
-        X = S === h.jn.QUESTS_EMBED,
-        K = (0, _.t5)(C, R.dr.QUESTS_CARD, S),
+        Y = (0, M.uq)(_),
+        X = _ === h.jn.QUESTS_EMBED,
+        K = (0, S.t5)(C, R.dr.QUESTS_CARD, _),
         J = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        $ = (0, _.B6)(C.config.expiresAt, {
+        $ = (0, S.B6)(C.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        ee = (0, _.B6)(j.r.build(C.config).rewardsExpireAt, {
+        ee = (0, S.B6)(j.r.build(C.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -99,7 +95,7 @@ t.Z = (e) => {
                 y(),
                 (0, T._3)({
                     questId: C.id,
-                    questContent: S,
+                    questContent: _,
                     questContentCTA: O ? T.jZ.COLLAPSE : T.jZ.EXPAND,
                     questContentPosition: B
                 });
@@ -175,7 +171,7 @@ t.Z = (e) => {
                                                     className: q.headerCollapsedContentRewardWrapper,
                                                     children: (0, s.jsx)(v.Z, {
                                                         quest: C,
-                                                        questContent: S,
+                                                        questContent: _,
                                                         className: q.headerCollapsedRewardTile,
                                                         location: R.dr.QUESTS_CARD
                                                     })
@@ -263,7 +259,7 @@ t.Z = (e) => {
                                             Y &&
                                             (0, s.jsx)(L, {
                                                 quest: C,
-                                                location: S,
+                                                location: _,
                                                 questContentPosition: B
                                             })
                                     ]
@@ -282,7 +278,7 @@ t.Z = (e) => {
                             },
                             children: [
                                 (0, s.jsx)(A.r, {
-                                    questContent: S,
+                                    questContent: _,
                                     quest: C,
                                     questContentPosition: B,
                                     shouldShowDisclosure: !0,
@@ -307,7 +303,7 @@ t.Z = (e) => {
                                         })
                                 }),
                                 Q &&
-                                    !(0, M.W_)(S) &&
+                                    !(0, M.W_)(_) &&
                                     (0, s.jsx)(c.Clickable, {
                                         onClick: et,
                                         className: q.iconWrapper,

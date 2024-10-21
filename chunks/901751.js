@@ -57,27 +57,7 @@ function y(e) {
 }
 ((i = r || (r = {})).BEAT = 'BEAT'), (i.STOP = 'STOP'), (i.BEAT_TERMINAL = 'BEAT_TERMINAL');
 function b(e) {
-    let t = (function (e) {
-        let t, n;
-        for (let [e, n] of p.Z.quests)
-            if ((0, I.KM)(n)) {
-                t = n;
-                break;
-            }
-        if (null == t) return;
-        for (let t of o.ZP.getSelfEmbeddedActivities().values())
-            if (null == e || t.channelId === e) {
-                n = t;
-                break;
-            }
-        if (null != n)
-            return {
-                quest: t,
-                activity: n
-            };
-    })(e);
-    if (null != t) return t;
-    let n = {
+    let t = {
         quest: null,
         activity: null
     };
@@ -87,22 +67,22 @@ function b(e) {
             autoTrackExposure: !1
         })
     )
-        return n;
-    for (let t of o.ZP.getSelfEmbeddedActivities().values()) {
-        var r;
-        if (null != e && t.channelId !== e) continue;
-        let i = null !== (r = (0, I.lQ)(p.Z.quests, t.applicationId)) && void 0 !== r ? r : null;
+        return t;
+    for (let r of o.ZP.getSelfEmbeddedActivities().values()) {
+        var n;
+        if (null != e && r.channelId !== e) continue;
+        let i = null !== (n = (0, I.lQ)(p.Z.quests, r.applicationId)) && void 0 !== n ? n : null;
         if (null != i && y(i))
             return {
                 quest: i,
-                activity: t
+                activity: r
             };
-        n = {
+        t = {
             quest: null,
-            activity: t
+            activity: r
         };
     }
-    return n;
+    return t;
 }
 class M extends s.Z {
     constructor(...e) {

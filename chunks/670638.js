@@ -16,33 +16,32 @@ var s = n(735250),
     m = n(569984),
     C = n(497505),
     x = n(918701),
-    S = n(341907),
+    _ = n(341907),
     T = n(46140),
-    _ = n(231338),
+    S = n(231338),
     h = n(689938);
 function g(e) {
     var t;
     let n = (0, i.e7)([m.Z], () => m.Z.questDeliveryOverride, []),
         u = (0, x.GN)(e.questContent),
         g = (0, x.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
-        p = (0, x.KM)(e.quest),
-        j = [C.jn.QUEST_BAR_V2, C.jn.QUEST_BAR].includes(e.questContent),
-        N = (0, x.zK)(e.quest, T.S7.DISMISSAL_SURVEY),
-        { handleComplete: f, handleProgress: v, handleResetDismissibilityClick: A, handleResetStatusClick: M, handleOverrideDeliveryClick: R } = (0, E.kJ)(e.quest.id),
-        I = a.useCallback(() => {
+        p = [C.jn.QUEST_BAR_V2, C.jn.QUEST_BAR].includes(e.questContent),
+        j = (0, x.zK)(e.quest, T.S7.DISMISSAL_SURVEY),
+        { handleComplete: N, handleProgress: f, handleResetDismissibilityClick: v, handleResetStatusClick: A, handleOverrideDeliveryClick: M } = (0, E.kJ)(e.quest.id),
+        R = a.useCallback(() => {
             (0, x.FE)(e.quest, {
                 content: e.questContent,
                 ctaContent: d.jZ.CONTEXT_MENU_OPEN_GAME_LINK
             });
         }, [e.quest, e.questContent]),
-        q = a.useCallback(() => {
+        I = a.useCallback(() => {
             (0, x.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
                 ctaContent: d.jZ.CONTEXT_MENU_COPY_LINK
             });
         }, [e.quest, e.questContent, e.questContentPosition]),
-        Z = (e) => (0, l.showToast)((0, l.createToast)(new o.Z(e, e.status).message, l.ToastType.FAILURE));
+        q = (e) => (0, l.showToast)((0, l.createToast)(new o.Z(e, e.status).message, l.ToastType.FAILURE));
     return (0, s.jsxs)(l.Menu, {
         variant: 'fixed',
         onSelect: () => {
@@ -50,31 +49,30 @@ function g(e) {
         },
         navId: 'quests-entry',
         'aria-label': h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : _.dG,
+        onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : S.dG,
         children: [
-            !1 === p &&
-                (0, s.jsxs)(
-                    l.MenuGroup,
-                    {
-                        children: [
-                            !1 === g &&
-                                (0, s.jsx)(l.MenuItem, {
-                                    id: 'play-game',
-                                    label: h.Z.Messages.QUESTS_GET_THIS_GAME,
-                                    action: I,
-                                    icon: l.LinkExternalMediumIcon
-                                }),
-                            !0 === e.showShareLink &&
-                                (0, s.jsx)(l.MenuItem, {
-                                    id: 'share-link',
-                                    label: h.Z.Messages.COPY_LINK,
-                                    action: q,
-                                    icon: l.CopyIcon
-                                })
-                        ]
-                    },
-                    'major-actions'
-                ),
+            (0, s.jsxs)(
+                l.MenuGroup,
+                {
+                    children: [
+                        !1 === g &&
+                            (0, s.jsx)(l.MenuItem, {
+                                id: 'play-game',
+                                label: h.Z.Messages.QUESTS_GET_THIS_GAME,
+                                action: R,
+                                icon: l.LinkExternalMediumIcon
+                            }),
+                        !0 === e.showShareLink &&
+                            (0, s.jsx)(l.MenuItem, {
+                                id: 'share-link',
+                                label: h.Z.Messages.COPY_LINK,
+                                action: I,
+                                icon: l.CopyIcon
+                            })
+                    ]
+                },
+                'major-actions'
+            ),
             (0, s.jsxs)(
                 l.MenuGroup,
                 {
@@ -90,7 +88,7 @@ function g(e) {
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: d.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
-                                        (0, S.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
+                                        (0, _.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
                                 }
                             }),
                         e.shouldShowDisclosure &&
@@ -98,7 +96,7 @@ function g(e) {
                                 id: 'display-disclosure',
                                 label: h.Z.Messages.QUESTS_DISCLOSURE_LABEL,
                                 action: () => {
-                                    (0, S.openDisclosureModal)(e.quest, {
+                                    (0, _.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
                                         position: e.questContentPosition,
                                         ctaContent: d.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
@@ -119,7 +117,7 @@ function g(e) {
                                         }),
                                         !!(0, x.GN)(e.questContent))
                                     )
-                                        (0, c.gl)(e.quest.id, e.questContent), N && j && (0, S.maybeShowSurveyForQuest)(e.quest);
+                                        (0, c.gl)(e.quest.id, e.questContent), j && p && (0, _.maybeShowSurveyForQuest)(e.quest);
                                 },
                                 subtext: h.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME
                             })
@@ -137,29 +135,29 @@ function g(e) {
                                 id: 'delivery',
                                 label: 'Show in Quest Bar',
                                 checked: (null == n ? void 0 : n.id) === e.quest.id,
-                                action: R
+                                action: M
                             }),
                             (0, s.jsx)(l.MenuItem, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
-                                action: A
+                                action: v
                             }),
                             (0, s.jsx)(l.MenuItem, {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
-                                action: M
+                                action: A
                             }),
                             (0, s.jsx)(l.MenuItem, {
                                 id: 'progress',
                                 label: 'Set Random Quest Progress',
                                 action: () => {
-                                    v(0.9 * Math.random() + 0.03);
+                                    f(0.9 * Math.random() + 0.03);
                                 }
                             }),
                             (0, s.jsx)(l.MenuItem, {
                                 id: 'complete',
                                 label: 'Complete Quest',
-                                action: f
+                                action: N
                             }),
                             (0, x.$J)(e.quest) &&
                                 (0, s.jsxs)(l.MenuItem, {
@@ -174,12 +172,12 @@ function g(e) {
                                         (0, s.jsx)(l.MenuItem, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, c.CS)(e.quest.id, !0).catch(Z)
+                                            action: () => (0, c.CS)(e.quest.id, !0).catch(q)
                                         }),
                                         (0, s.jsx)(l.MenuItem, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: () => (0, c.is)(e.quest.id).catch(Z)
+                                            action: () => (0, c.is)(e.quest.id).catch(q)
                                         })
                                     ]
                                 })
