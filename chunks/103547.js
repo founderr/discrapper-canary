@@ -31,8 +31,9 @@ class _ extends r.Z {
     updateSoundpack() {
         let e = a.Z.getSoundpack(),
             t = a.Z.getLastSoundpackExperimentId(),
-            n = o.Z.experiment.definition.id;
-        l.Z.isEligible() || null == t ? null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, i.c)(o.Z.soundpack, n) : (0, i.c)(c.YC.CLASSIC, null);
+            n = o.Z.experiment.definition.id,
+            r = l.Z.isEligible();
+        r || (null == t && e === c.YC.CLASSIC) ? r && null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, i.c)(o.Z.soundpack, n) : (0, i.c)(c.YC.CLASSIC, null);
     }
     updateRingtone() {
         if (l.Z.isEligible()) {
