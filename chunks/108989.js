@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var i = n(735250),
     l = n(470079),
-    a = n(887024);
+    a = n(682963);
 let r = [n(123353)],
     s = ['#FFFFFF'],
     o = 1000 / 60,
@@ -52,10 +52,7 @@ let r = [n(123353)],
         },
         dragCoefficient: {
             type: 'static',
-            value: {
-                x: 0.05,
-                y: 0.05
-            }
+            value: 830
         },
         opacity: {
             type: 'static',

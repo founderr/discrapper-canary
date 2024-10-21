@@ -21,24 +21,21 @@ function o(e, t) {
         r = e.y;
     return n > t.x && n < t.x + t.width && r > t.y && r < t.y + t.height;
 }
-function l(e, t) {
-    return e * t * t * (t > 0 ? -1 : 1);
+function l(e, t, n, r) {
+    var i = Math.abs(t);
+    return 0.5 * e * r * n * i * i * (t > 0 ? -1 : 1);
 }
 var u = (function () {
         function e(e) {
-            (this.id = e.id), (this.position = e.position), (this.velocity = e.velocity), (this.rotation = e.rotation), (this.dragCoefficient = e.dragCoefficient), (this.size = e.size), (this.opacity = e.opacity), (this.spriteX = e.spriteX), (this.spriteY = e.spriteY), (this.spriteWidth = e.spriteWidth), (this.spriteHeight = e.spriteHeight), (this._lastUpdatedAt = Date.now());
+            (this.id = e.id), (this.position = e.position), (this.velocity = e.velocity), (this.rotation = e.rotation), (this.dragCoefficient = e.dragCoefficient), (this.airResistanceArea = e.airResistanceArea), (this.size = e.size), (this.opacity = e.opacity), (this.spriteX = e.spriteX), (this.spriteY = e.spriteY), (this.spriteWidth = e.spriteWidth), (this.spriteHeight = e.spriteHeight), (this._lastUpdatedAt = Date.now());
         }
         return (
             (e.prototype.getNewForces = function (e, t) {
-                var n,
-                    r,
-                    i,
-                    a,
-                    s = e.wind * t,
-                    o = -e.gravity * t;
+                var n = e.wind * t,
+                    r = -e.gravity * t;
                 return {
-                    x: s + ((n = this.dragCoefficient.x), n * (r = this.velocity.x) * r * (r > 0 ? -1 : 1)),
-                    y: o + ((i = this.dragCoefficient.y), i * (a = this.velocity.y) * a * (a > 0 ? -1 : 1))
+                    x: n + l(this.dragCoefficient.x, this.velocity.x, this.airResistanceArea.x, e.density),
+                    y: r + l(this.dragCoefficient.y, this.velocity.y, this.airResistanceArea.y, e.density)
                 };
             }),
             (e.prototype.update = function (e) {
@@ -97,6 +94,10 @@ var u = (function () {
         },
         dragCoefficient: {
             type: 'static',
+            value: 1.66
+        },
+        airResistanceArea: {
+            type: 'static',
             value: 0.001
         },
         opacity: {
@@ -107,8 +108,9 @@ var u = (function () {
     d = function (e) {
         var t = void 0 === e ? {} : e,
             n = t.gravity,
-            r = t.wind;
-        (this.gravity = -9.8), (this.wind = 0), (this.gravity = null != n ? n : this.gravity), (this.wind = null != r ? r : this.wind);
+            r = t.wind,
+            i = t.density;
+        (this.gravity = -9.8), (this.wind = 0), (this.density = 1.2041), (this.gravity = null != n ? n : this.gravity), (this.wind = null != r ? r : this.wind), (this.density = null != i ? i : this.density);
     },
     _ = function (e, t) {
         return (_ =
@@ -500,6 +502,7 @@ var C = r.forwardRef(function (e, t) {
                                             return new S(g(e.minValue, e.maxValue), g(e.minStart, e.maxStart), g(e.minFinal, e.maxFinal), g(e.minDuration, e.maxDuration), N(e.minDirection, e.maxDirection), A(e.easingFunctions)[0]);
                                     }
                                 })(f(f({}, b), { valueType: 'number' }))),
+                            airResistanceArea: v(h.airResistanceArea),
                             spriteX: D * l.spriteWidth + 2 * D,
                             spriteY: L * l.spriteHeight + 2 * L,
                             spriteWidth: l.spriteWidth,
