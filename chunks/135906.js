@@ -36,8 +36,16 @@ let i = {
     [r.YC.ASMR]: { message1: 'asmr_message1' },
     [r.YC.DISCODO]: { message1: 'discodo' },
     [r.YC.HALLOWEEN]: {
+        call_calling: 'halloween_call_calling',
+        call_ringing: 'halloween_call_ringing',
         message1: 'halloween_message1',
-        call_ringing: 'call_ringing_halloween'
+        deafen: 'halloween_deafen',
+        undeafen: 'halloween_undeafen',
+        mute: 'halloween_mute',
+        unmute: 'halloween_unmute',
+        disconnect: 'halloween_disconnect',
+        user_join: 'halloween_user_join',
+        user_leave: 'halloween_user_leave'
     }
 };
 function a(e) {
