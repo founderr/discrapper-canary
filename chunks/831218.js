@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    a = n(735250),
-    s = n(470079),
+    a = n(200651),
+    s = n(192379),
     o = n(299608),
     c = n.n(o),
     u = n(91192),
@@ -16,23 +16,25 @@ var i,
     g = n(367907),
     C = n(453542),
     I = n(702321),
-    E = n(82295),
-    N = n(313201),
-    x = n(860144),
-    S = n(214852),
-    v = n(518311),
-    Z = n(355298),
-    T = n(869404),
-    b = n(333984),
-    A = n(210887),
-    M = n(592125),
-    R = n(158776),
-    L = n(55589),
-    y = n(515753),
-    P = n(981631),
-    O = n(689938),
-    j = n(156762);
-function D(e, t, n) {
+    E = n(485267),
+    N = n(82295),
+    x = n(313201),
+    S = n(860144),
+    v = n(214852),
+    Z = n(518311),
+    T = n(355298),
+    b = n(869404),
+    A = n(333984),
+    M = n(249978),
+    R = n(210887),
+    L = n(592125),
+    y = n(158776),
+    P = n(55589),
+    O = n(515753),
+    j = n(981631),
+    D = n(689938),
+    w = n(156762);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,12 +48,12 @@ function D(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let w = s.memo(function () {
+let G = s.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
         viewBox: '0 0 184 428',
-        className: j.empty,
+        className: w.empty,
         children: [
             (0, a.jsx)('rect', {
                 x: 40,
@@ -194,7 +196,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class U extends (l = s.Component) {
+class k extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -249,14 +251,14 @@ class U extends (l = s.Component) {
                         (0, a.jsx)(f.List, {
                             fade: !0,
                             innerRole: r,
-                            innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
+                            innerAriaLabel: D.Z.Messages.DIRECT_MESSAGES,
                             innerTag: 'ul',
                             ref: (e) => {
                                 var t;
                                 (this._list = e), (this.props.listRef.current = e), (l.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                             },
                             onScroll: this.handleScroll,
-                            className: j.scroller,
+                            className: w.scroller,
                             sectionHeight: this.getSectionHeight,
                             paddingTop: t,
                             paddingBottom: 8,
@@ -273,15 +275,15 @@ class U extends (l = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            D(this, 'state', {
+            U(this, 'state', {
                 initialized: !1,
                 preRenderedChildren: 0,
                 totalRowCount: 0,
                 nonNullChildren: []
             }),
-            D(this, '_list', null),
-            D(this, 'hasReportedAnalytics', !1),
-            D(this, 'reportAnalytics', () => {
+            U(this, '_list', null),
+            U(this, 'hasReportedAnalytics', !1),
+            U(this, 'reportAnalytics', () => {
                 var e;
                 if (this.hasReportedAnalytics) return;
                 let t = null === (e = this._list) || void 0 === e ? void 0 : e.getScrollerState();
@@ -296,38 +298,38 @@ class U extends (l = s.Component) {
                     c = n.some((e) => (0, I.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && R.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && y.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    g.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(j.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         visible_user_ids: o.filter((e) => null != e),
                         changelog_dm_visible: c
                     });
             }),
-            D(this, 'getSectionHeight', (e) => {
+            U(this, 'getSectionHeight', (e) => {
                 let { showDMHeader: t } = this.props;
                 return 0 === e ? 0 : t ? 40 : 0;
             }),
-            D(
+            U(
                 this,
                 'handleScroll',
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && _.Z.updateChannelListScroll(P.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(j.ME, e.scrollTop);
                     }
                 }, 100)
             ),
-            D(this, 'renderDM', (e, t) => {
+            U(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: i, selectedChannelId: l } = this.props,
                     { totalRowCount: r, preRenderedChildren: s } = this.state,
                     o = i[n[t]];
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          y.ZP,
+                          O.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -337,7 +339,7 @@ class U extends (l = s.Component) {
                           o.id
                       );
             }),
-            D(this, 'renderChild', (e) => {
+            U(this, 'renderChild', (e) => {
                 let { nonNullChildren: t, totalRowCount: n } = this.state,
                     i = t[e];
                 return s.isValidElement(i)
@@ -347,29 +349,29 @@ class U extends (l = s.Component) {
                       })
                     : i;
             }),
-            D(this, 'renderRow', (e) => {
+            U(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(w, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
-            D(this, 'renderSection', (e) => {
+            U(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, a.jsxs)(
-                          E.Z,
+                          N.Z,
                           {
-                              className: j.privateChannelsHeaderContainer,
+                              className: w.privateChannelsHeaderContainer,
                               children: [
                                   (0, a.jsx)('span', {
-                                      className: j.headerText,
-                                      children: O.Z.Messages.DIRECT_MESSAGES
+                                      className: w.headerText,
+                                      children: D.Z.Messages.DIRECT_MESSAGES
                                   }),
-                                  (0, a.jsx)(v.Z, {
-                                      tooltip: O.Z.Messages.CREATE_DM,
+                                  (0, a.jsx)(Z.Z, {
+                                      tooltip: D.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
-                                      iconClassName: j.privateChannelRecipientsInviteButtonIcon,
+                                      iconClassName: w.privateChannelRecipientsInviteButtonIcon,
                                       icon: f.PlusSmallIcon,
                                       subscribeToGlobalHotkey: !0
                                   })
@@ -379,35 +381,39 @@ class U extends (l = s.Component) {
                       )
                     : null;
             }),
-            D(this, 'getRowHeight', (e, t) => {
+            U(this, 'getRowHeight', (e, t) => {
                 let { privateChannelIds: n } = this.props;
                 return 1 === e && 0 === t && 0 === n.length ? 428 : 44;
             });
     }
 }
-D(U, 'defaultProps', { padding: 8 });
+U(k, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
-        o = M.Z.getMutablePrivateChannels(),
-        c = (0, T.k1)(o),
+        o = L.Z.getMutablePrivateChannels(),
+        c = (0, b.k1)(o),
         p = (0, h.Wu)(
-            [L.Z, Z.Z, b.Z],
+            [P.Z, T.Z, A.Z],
             () => {
-                let e = L.Z.getPrivateChannelIds();
-                return (0, T.tU)(e, [Z.Z, b.Z]);
+                let e = P.Z.getPrivateChannelIds();
+                return (0, b.tU)(e, [T.Z, A.Z]);
             },
             []
         );
-    (0, S.z)(x.R);
-    let f = (0, h.cj)([m.Z, A.Z, M.Z], () => ({
-            theme: A.Z.darkSidebar ? P.BRd.DARK : n,
+    (0, v.z)(S.R);
+    let { recentActivityStatusEnabled: f } = (0, M.U)({ location: 'PrivateChannelsList' });
+    s.useEffect(() => {
+        f && (0, E.Jn)();
+    }, [f]);
+    let _ = (0, h.cj)([m.Z, R.Z, L.Z], () => ({
+            theme: R.Z.darkSidebar ? j.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
+            version: null != t ? ''.concat(t, ':').concat(L.Z.getPrivateChannelsVersion()) : L.Z.getPrivateChannelsVersion()
         })),
-        _ = s.useRef(null),
-        g = s.useCallback((e) => {
-            let t = _.current,
+        g = s.useRef(null),
+        C = s.useCallback((e) => {
+            let t = g.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -421,19 +427,19 @@ t.Z = (e) => {
                     }
                 });
         }, []),
-        C = s.useCallback(
+        I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = g.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        I = s.useCallback(
+        N = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = g.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -443,26 +449,26 @@ t.Z = (e) => {
                 }),
             []
         ),
-        E = (0, N.Dt)(),
-        v = (0, d.ZP)({
-            id: 'private-channels-'.concat(E),
-            isEnabled: f.keyboardModeEnabled,
-            scrollToStart: C,
-            scrollToEnd: I,
+        Z = (0, x.Dt)(),
+        y = (0, d.ZP)({
+            id: 'private-channels-'.concat(Z),
+            isEnabled: _.keyboardModeEnabled,
+            scrollToStart: I,
+            scrollToEnd: N,
             defaultFocused: (r + (l ? 1 : 0)).toString(),
-            setFocus: g
+            setFocus: C
         });
     return (0, a.jsx)(u.bG, {
-        navigator: v,
-        children: (0, a.jsx)(U, {
+        navigator: y,
+        children: (0, a.jsx)(k, {
             channels: c,
             privateChannelIds: p,
-            listRef: _,
+            listRef: g,
             theme: n,
             version: t,
             ...e,
             children: i,
-            ...f
+            ..._
         })
     });
 };
