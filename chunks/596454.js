@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 }),
     n(47120),
@@ -223,4 +223,7 @@ function S(e) {
         ...n,
         isFocused: i
     });
+}
+function g(e) {
+    return null == e.emojiId && null == e.emojiName && null == e.src ? null : (0, r.jsx)(S, { ...e });
 }
