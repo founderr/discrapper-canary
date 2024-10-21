@@ -199,7 +199,8 @@ var n,
     (J.AUTHORIZED_APPS = 'authorized-apps'),
     (J.DAVE_PROTOCOL_VERIFICATION = 'dave-protocol-verification'),
     (J.ICYMI = 'icymi'),
-    (J.QUESTS = 'quests');
+    (J.QUESTS = 'quests'),
+    (J.GIFT = 'gift');
 let eE = 'CacheStoreLazy',
     ei = 'CacheStoreChannelsLazy',
     ec = 'CacheStore';

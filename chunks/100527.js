@@ -345,4 +345,5 @@ var n, r;
     (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
     (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
     (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
+    (r.DEEPLINK = 'deeplink'),
     (t.Z = n);
