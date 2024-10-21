@@ -4985,6 +4985,7 @@ let ot = Object.freeze({
     (nO.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
     (nO.APP_DMS_QUICK_LAUNCHER_IMPRESSION = 'app_dms_quick_launcher_impression'),
     (nO.APP_DMS_QUICK_LAUNCHER_CLICKED = 'app_dms_quick_launcher_clicked'),
+    (nO.MY_ACCOUNT_PAGE_TAB_NAVIGATE = 'my_account_page_tab_navigate'),
     ((np = eF || (eF = {})).CANARY = 'canary'),
     (np.PTB = 'ptb'),
     (np.STABLE = 'stable'),
