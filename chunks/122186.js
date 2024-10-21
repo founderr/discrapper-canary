@@ -25,8 +25,8 @@ var l = n(200651),
     C = n(981631),
     S = n(474936),
     E = n(689938),
-    j = n(742769);
-function v(e) {
+    v = n(742769);
+function j(e) {
     let { location: t, ...n } = e,
         i = (0, _.N)(),
         a = null != i,
@@ -45,8 +45,8 @@ function v(e) {
             return E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA;
         }, [o, i]);
     return (0, l.jsx)(g.Z, {
-        className: r()(j.enhancedCTA, j.ctaGradientBackground),
-        iconClassName: j.premiumIcon,
+        className: r()(v.enhancedCTA, v.ctaGradientBackground),
+        iconClassName: v.premiumIcon,
         subscriptionTier: S.Si.TIER_2,
         buttonText: d(),
         size: c.Button.Sizes.TINY,
@@ -57,17 +57,17 @@ function v(e) {
 function I() {
     let e = (0, m.Z)();
     return (0, l.jsxs)('div', {
-        className: j.extendedDemoContainer,
+        className: v.extendedDemoContainer,
         children: [
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: j.extendedDemoContainer,
+                        className: v.extendedDemoContainer,
                         children: [
                             (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'status-warning',
-                                className: j.extendedDemoDurationText,
+                                className: v.extendedDemoDurationText,
                                 children: e.toUpperCase()
                             }),
                             (0, l.jsx)(c.Text, {
@@ -83,8 +83,8 @@ function I() {
                 ]
             }),
             (0, l.jsx)('div', {
-                className: j.extendedDemoButton,
-                children: (0, l.jsx)(v, { size: c.Button.Sizes.SMALL })
+                className: v.extendedDemoButton,
+                children: (0, l.jsx)(j, { size: c.Button.Sizes.SMALL })
             })
         ]
     });
@@ -92,10 +92,10 @@ function I() {
 function Z() {
     let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
-        className: r()(j.reverseTrialEducationBannerContainer, { [j.reducedMotion]: e }),
+        className: r()(v.reverseTrialEducationBannerContainer, { [v.reducedMotion]: e }),
         children: [
             (0, l.jsx)(c.LottieAnimation, {
-                className: r()(j.unlockAnimation, { [j.reducedMotion]: e }),
+                className: r()(v.unlockAnimation, { [v.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
@@ -103,7 +103,7 @@ function Z() {
             }),
             (0, l.jsx)(c.Text, {
                 variant: 'text-xs/medium',
-                className: j.reverseTrialEducationText,
+                className: v.reverseTrialEducationText,
                 children: E.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
             })
         ]
@@ -119,14 +119,14 @@ function T(e) {
         d = (0, f.So)(a.q.STREAM_HIGH_QUALITY),
         m = h.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: r()(j.upsellBanner, j.enhancedBanner, { [j.gradientGlow]: i }),
+        className: r()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: i }),
         children:
             d && m
                 ? (0, l.jsx)(I, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {
-                              className: j.iconTextContainer,
+                              className: v.iconTextContainer,
                               children: [
                                   (0, l.jsx)(c.NitroWheelIcon, {
                                       size: 'md',
@@ -134,7 +134,7 @@ function T(e) {
                                   }),
                                   (0, l.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
-                                      className: r()(j.upsellText, j.enhancedUpsellText),
+                                      className: r()(v.upsellText, v.enhancedUpsellText),
                                       children:
                                           null != t
                                               ? t
@@ -163,8 +163,8 @@ function T(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: j.enhancedCTAs,
-                              children: (0, l.jsx)(v, { location: o })
+                              className: v.enhancedCTAs,
+                              children: (0, l.jsx)(j, { location: o })
                           })
                       ]
                   })

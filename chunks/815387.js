@@ -664,7 +664,7 @@ let eZ = Object.freeze({
                   giftIntentType: a.giftIntentType,
                   recipientUser: r,
                   channel: n,
-                  showSecondaryCta: a.showSecondaryCta
+                  giftIntentSecondaryAction: a.giftIntentSecondaryAction
               });
     },
     [ex.uaV.IN_GAME_MESSAGE_NUX]: function (e) {

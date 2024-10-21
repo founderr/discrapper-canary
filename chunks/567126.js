@@ -43,8 +43,8 @@ var l = n(200651),
     C = n(594190),
     S = n(569984),
     E = n(918701),
-    j = n(977156),
-    v = n(28798),
+    v = n(977156),
+    j = n(28798),
     I = n(131951),
     Z = n(449224),
     T = n(358085),
@@ -153,7 +153,7 @@ function H(e) {
         U = s.useRef(new h.Xp()),
         H = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
         F = (function (e, t, n) {
-            let l = (0, j.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
+            let l = (0, v.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
@@ -294,7 +294,7 @@ function H(e) {
                       className: B.sourceScroller,
                       onScroll: Q,
                       children: [
-                          R === d.vA.WINDOW && null != F && (0, l.jsx)(v.Z, { quest: F.quest }),
+                          R === d.vA.WINDOW && null != F && (0, l.jsx)(j.Z, { quest: F.quest }),
                           (0, l.jsx)(p.Z, {
                               layout: p.Z.Layout.WRAP,
                               columns: 2,

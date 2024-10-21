@@ -12,7 +12,7 @@ var a = n(481060),
     o = n(981631),
     c = n(163809);
 function u(e) {
-    let { giftIntentType: t, recipientUser: n, showSecondaryCta: u, channel: d } = e;
+    let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: u, channel: d } = e;
     return (0, i.jsx)(l.Z, {
         contentClassName: c.messageContentContainer,
         iconContainerClassName: c.iconContainer,
@@ -23,7 +23,7 @@ function u(e) {
             recipientUser: n,
             analyticsPage: (0, r.mE)(d),
             analyticsSection: o.jXE.CHANNEL,
-            showSecondaryCta: u
+            giftIntentSecondaryAction: u
         })
     });
 }

@@ -22,8 +22,8 @@ var l = n(200651),
     C = n(592125),
     S = n(650774),
     E = n(430824),
-    j = n(131951),
-    v = n(944486),
+    v = n(131951),
+    j = n(944486),
     I = n(594174),
     Z = n(449224),
     T = n(626135),
@@ -212,16 +212,16 @@ function X(e) {
 }
 function q(e) {
     let { selectedSource: t, selectedFPS: n, selectedChannelId: i, selectedPreset: r, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: g, previewDisabled: S, onClose: E, onChangeSelectedFPS: Z, onChangeSelectedResolution: T, onChangeSelectedPreset: N, onChangeSelectedChannelId: R, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: G, onChangeSound: B, onChangePreviewDisabled: F } = e,
-        q = (0, a.e7)([v.Z, C.Z], () => C.Z.getChannel(v.Z.getVoiceChannelId())),
+        q = (0, a.e7)([j.Z, C.Z], () => C.Z.getChannel(j.Z.getVoiceChannelId())),
         J = (0, a.e7)([A.Z], () => A.Z.GPUDriversOutdated),
         $ = (0, a.e7)([A.Z], () => A.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, L.Z)();
-    null != t && t.id.startsWith('screen') && !j.Z.supportsScreenSoundshare() && (et = V.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+    null != t && t.id.startsWith('screen') && !v.Z.supportsScreenSoundshare() && (et = V.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
     let en = !!(null == t ? void 0 : t.id.startsWith('camera')),
         el = null != ee && ee.verified && !ee.bot,
         es = null != q && !(0, u.Yk)(q),
-        ei = !(0, a.e7)([j.Z], () => j.Z.getHardwareEncoding()),
+        ei = !(0, a.e7)([v.Z], () => v.Z.getHardwareEncoding()),
         { enabled: er } = (0, _.S)({ location: 'GoLiveModal_Confirm' });
     return (0, l.jsxs)(s.Fragment, {
         children: [

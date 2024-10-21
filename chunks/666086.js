@@ -41,7 +41,7 @@ class A extends s.Z {
                 (a.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
-                    showSecondaryCta: i
+                    giftIntentSecondaryAction: i
                 }),
                 (0, m.PV)(n));
         }, 1000)();
@@ -55,7 +55,7 @@ class A extends s.Z {
                 a = T.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (r && a.length > 0) {
                 let e = a[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, S.hX.FRIEND_ANNIVERSARY, e, a.length > 1);
+                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, S.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? S.X2.VIEW_ALL : S.X2.SEND_MESSAGE);
             }
             n &&
                 h.default.track(g.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
