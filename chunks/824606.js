@@ -1,77 +1,25 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Swatch = void 0);
-var r =
-        Object.assign ||
-        function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-            }
-            return e;
-        },
-    i = l(n(470079)),
-    a = l(n(844303)),
-    s = n(207545),
-    o = l(n(263081));
-function l(e) {
-    return e && e.__esModule ? e : { default: e };
+t.d(e, {
+    Z: function () {
+        return c;
+    }
+}),
+    t(653041),
+    t(47120);
+var r = t(192379),
+    i = t(442837),
+    o = t(430824),
+    l = t(973001);
+function c(n) {
+    let { application: e, showMutualGuilds: t = !0 } = n,
+        c = (0, i.e7)([l.Z], () => l.Z.getGuildIdsForApplication(null == e ? void 0 : e.id), [e]),
+        u = (0, i.e7)([o.Z], () => o.Z.isLoaded());
+    return r.useMemo(() => {
+        let n = [];
+        if (!u || !t || null == c || null == e) return n;
+        for (let e of c) {
+            let t = o.Z.getGuild(e);
+            null != t && n.push(t);
+        }
+        return n;
+    }, [u, c, e, t]);
 }
-var u = (t.Swatch = function (e) {
-    var t = e.color,
-        n = e.style,
-        s = e.onClick,
-        l = void 0 === s ? function () {} : s,
-        u = e.onHover,
-        c = e.title,
-        d = void 0 === c ? t : c,
-        _ = e.children,
-        E = e.focus,
-        f = e.focusStyle,
-        h = 'transparent' === t,
-        p = (0, a.default)({
-            default: {
-                swatch: r(
-                    {
-                        background: t,
-                        height: '100%',
-                        width: '100%',
-                        cursor: 'pointer',
-                        position: 'relative',
-                        outline: 'none'
-                    },
-                    n,
-                    E ? (void 0 === f ? {} : f) : {}
-                )
-            }
-        }),
-        I = {};
-    return (
-        u &&
-            (I.onMouseOver = function (e) {
-                return u(t, e);
-            }),
-        i.default.createElement(
-            'div',
-            r(
-                {
-                    style: p.swatch,
-                    onClick: function (e) {
-                        return l(t, e);
-                    },
-                    title: d,
-                    tabIndex: 0,
-                    onKeyDown: function (e) {
-                        return 13 === e.keyCode && l(t, e);
-                    }
-                },
-                I
-            ),
-            _,
-            h &&
-                i.default.createElement(o.default, {
-                    borderRadius: p.swatch.borderRadius,
-                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-                })
-        )
-    );
-});
-t.default = (0, s.handleFocus)(u);
