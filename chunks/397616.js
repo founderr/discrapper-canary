@@ -12,9 +12,10 @@ var r = t(442837),
     d = t(594174),
     l = t(689938);
 function u(e, n) {
-    let t = (0, r.e7)([d.default], () => d.default.getCurrentUser(), []),
-        u = (0, r.e7)([o.Z], () => o.Z.getChannel(n), [n]);
-    return null == u || u.isOwner(e) || null == t || !u.isOwner(t.id)
+    var t;
+    let u = (0, r.e7)([d.default], () => d.default.getCurrentUser(), []),
+        c = (0, r.e7)([o.Z], () => o.Z.getChannel(n), [n]);
+    return null == c || c.isOwner(e) || null == u || !c.isOwner(u.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(e))
         ? null
         : (0, i.jsx)(a.MenuItem, {
               id: 'remove',
