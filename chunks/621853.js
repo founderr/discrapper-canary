@@ -156,7 +156,8 @@ function w(e) {
                           integrationTypesConfig: z.integration_types_config,
                           flags: z.flags,
                           popularApplicationCommandIds: z.popular_application_command_ids,
-                          storefront_available: z.storefront_available
+                          storefront_available: z.storefront_available,
+                          name: z.name
                       }
                     : null,
             badges:
