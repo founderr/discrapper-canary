@@ -7,20 +7,23 @@ var a = t(120356),
     l = t(528084),
     c = t(746943);
 s.Z = (e) => {
-    let { tabs: s, settingsSection: t, parentSetting: a, panelClassName: d } = e,
-        { viewableTabs: _, selectedTab: u } = (0, l.a)(s, a);
+    var s;
+    let { tabs: t, settingsSection: a, parentSetting: d, panelClassName: _, defaultTabIndex: u } = e,
+        { viewableTabs: E, filteredTab: T } = (0, l.a)(t, d),
+        S = null != u ? t[u] : null,
+        I = null !== (s = null != S ? S : T) && void 0 !== s ? s : E[0];
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(r.TabBar, {
                 className: c.tabBar,
-                selectedItem: u.setting,
+                selectedItem: I.setting,
                 onItemSelect: (e) => {
-                    o.Z.setSection(t, e);
+                    o.Z.setSection(a, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: _.map((e) =>
+                children: E.map((e) =>
                     (0, n.jsx)(
                         r.TabBar.Item,
                         {
@@ -34,13 +37,13 @@ s.Z = (e) => {
                 )
             }),
             (0, n.jsx)(r.TabBar.Panel, {
-                id: u.setting,
-                'aria-labelledby': u.title,
-                className: i()(c.tabBarPanel, d),
+                id: I.setting,
+                'aria-labelledby': I.title,
+                className: i()(c.tabBarPanel, _),
                 children: ((e) => {
                     let s = e.component;
                     return 'function' == typeof s ? (0, n.jsx)(s, {}) : s;
-                })(u)
+                })(I)
             })
         ]
     });

@@ -835,10 +835,11 @@ class eC extends r.PureComponent {
         });
     }
     render() {
-        let { isSecureFramesEnabled: e } = this.props;
+        let { isSecureFramesEnabled: e, subsection: s } = this.props;
         return (0, i.jsx)(J.Z, {
             parentSetting: ea.s6.PRIVACY_AND_SAFETY,
             settingsSection: ei.oAB.PRIVACY_AND_SAFETY,
+            defaultTabIndex: 'ACCOUNT_STANDING' === s ? 2 : void 0,
             tabs: [
                 {
                     title: eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
