@@ -21,8 +21,8 @@ t.Z = (e) => {
         g = null,
         N = T[T.length - 1];
     if (null == n.icon && null != I) {
-        var C;
-        N = null !== (C = T[(g = (0, i.Zg)(I)).length - 1]) && void 0 !== C ? C : T[T.length - 1];
+        var m;
+        N = null !== (m = T[(g = (0, i.Zg)(I)).length - 1]) && void 0 !== m ? m : T[T.length - 1];
     }
     return (0, s.jsxs)('div', {
         className: u.container,

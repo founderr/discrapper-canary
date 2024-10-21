@@ -10,7 +10,7 @@ var r,
     s,
     o = n(735250),
     l = n(470079),
-    u = n(887024),
+    u = n(682963),
     c = n(481060),
     d = n(745510),
     _ = n(633302),
@@ -81,12 +81,12 @@ let R = l.forwardRef(function (e, t) {
                             velocity: {
                                 type: 'static-random',
                                 minValue: {
-                                    x: -20,
-                                    y: -80
+                                    x: -5,
+                                    y: -40
                                 },
                                 maxValue: {
-                                    x: -80,
-                                    y: -180
+                                    x: -40,
+                                    y: -100
                                 }
                             },
                             size: {
@@ -96,7 +96,7 @@ let R = l.forwardRef(function (e, t) {
                             },
                             dragCoefficient: {
                                 type: 'static',
-                                value: 0.0001
+                                value: 0.01
                             }
                         },
                         20

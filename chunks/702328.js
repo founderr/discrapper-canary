@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(626135),
     g = n(74538),
     N = n(140465),
-    C = n(184508),
-    m = n(67645),
+    m = n(184508),
+    C = n(67645),
     A = n(599659),
     f = n(257944),
     p = n(91802),
@@ -61,25 +61,25 @@ let q = (e) => {
             I = a.useRef(0),
             g = a.useRef(0),
             N = a.useRef(0),
-            C = a.useRef(0);
+            m = a.useRef(0);
         return (a.useEffect(() => {
             E ? (I.current = Date.now()) : 0 !== I.current && ((g.current = g.current + Date.now() - I.current), (I.current = 0));
         }, [E]),
         a.useEffect(() => {
-            u ? (N.current = Date.now()) : 0 !== N.current && ((C.current = C.current + Date.now() - N.current), (N.current = 0));
+            u ? (N.current = Date.now()) : 0 !== N.current && ((m.current = m.current + Date.now() - N.current), (N.current = 0));
         }, [u]),
         a.useEffect(
             () => () => {
                 0 !== I.current && (g.current = g.current + (Date.now() - I.current)),
-                    0 !== N.current && (C.current = C.current + (Date.now() - N.current)),
+                    0 !== N.current && (m.current = m.current + (Date.now() - N.current)),
                     0 !== g.current &&
                         R.default.track(K.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: g.current,
                             is_v2: l
                         }),
-                    0 !== C.current &&
+                    0 !== m.current &&
                         R.default.track(K.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
-                            view_time: C.current,
+                            view_time: m.current,
                             is_v2: l
                         });
             },
@@ -145,8 +145,8 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: r } = e;
     (0, T.z)(u.X);
     let L = (0, f.z7)('PremiumMarketingHome'),
-        D = (0, m.g)('PremiumMarketingHome'),
-        B = (0, C.tY)('PremiumMarketingHome'),
+        D = (0, C.g)('PremiumMarketingHome'),
+        B = (0, m.tY)('PremiumMarketingHome'),
         j = a.useRef(null),
         [G, V] = a.useState(!1),
         [et, en] = a.useState(!1),
@@ -161,9 +161,9 @@ t.Z = (e) => {
         eI = (0, p.n)(),
         eR = null != eI,
         [eg, eN] = a.useState(!1),
-        eC = (0, M.Ng)(),
-        em = (0, S.N)(),
-        eA = null == em ? void 0 : null === (t = em.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        em = (0, M.Ng)(),
+        eC = (0, S.N)(),
+        eA = null == eC ? void 0 : null === (t = eC.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         ef = (0, N.Nx)(),
         ep = (0, O.Vi)(),
         { analyticsLocations: eM } = (0, E.ZP)(d.Z.PREMIUM_MARKETING),
@@ -193,7 +193,7 @@ t.Z = (e) => {
                     variant: B ? (n ? v.NN.TAGLINE_XP_COPY_HOME : v.NN.TAGLINE_XP_COPY_SETTINGS) : v.NN.DEFAULT,
                     showWumpus: !B,
                     tier0CTAButton:
-                        eA === W.Si.TIER_2 || ep || null != eC
+                        eA === W.Si.TIER_2 || ep || null != em
                             ? (0, s.jsx)(y.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,

@@ -38,8 +38,8 @@ let h = (e) => {
 t.Z = function (e) {
     var t;
     let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: T, shouldShowPrice: A, plan: g, renderAnimation: R, onClose: I, isGift: M, upgradeToPremiumType: v, headerTheme: x = S.nL.DEFAULT, className: P, showTrialBadge: O = !1, showDiscountBadge: y = !1 } = e,
-        Z = v === S.p9.TIER_2;
+    let { hideCloseButton: l = !1, hideCloseOnFullScreen: T, shouldShowPrice: A, plan: g, renderAnimation: R, onClose: I, isGift: M, upgradeToPremiumType: v, headerTheme: x = S.nL.DEFAULT, className: P, showTrialBadge: O = !1, showDiscountBadge: Z = !1 } = e,
+        y = v === S.p9.TIER_2;
     n = v === S.p9.TIER_0 ? d.Z : v === S.p9.TIER_1 ? _.Z : c.Z;
     let b = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         F = (0, m.Ng)(),
@@ -48,8 +48,8 @@ t.Z = function (e) {
         'aria-hidden': !0,
         className: a()(
             {
-                [N.headerBackground]: !Z,
-                [x === S.nL.WINTER ? N.tier2HeaderBackgroundWinterTheme : N.tier2HeaderBackground]: Z
+                [N.headerBackground]: !y,
+                [x === S.nL.WINTER ? N.tier2HeaderBackgroundWinterTheme : N.tier2HeaderBackground]: y
             },
             P
         ),
@@ -60,7 +60,7 @@ t.Z = function (e) {
                       className: N.snow,
                       wind: 5
                   }),
-            (O || y) && (0, i.jsx)(f.Z, { className: N.trialBadgeSparkles }),
+            (O || Z) && (0, i.jsx)(f.Z, { className: N.trialBadgeSparkles }),
             R(),
             (0, i.jsxs)(u.Z, {
                 align: u.Z.Align.START,
@@ -69,11 +69,11 @@ t.Z = function (e) {
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(n, { className: a()(N.headerIcon, { [N.nonTier2]: !Z }) }),
-                            (O || y) &&
+                            (0, i.jsx)(n, { className: a()(N.headerIcon, { [N.nonTier2]: !y }) }),
+                            (O || Z) &&
                                 (0, i.jsx)(h, {
                                     isTier0: v === S.p9.TIER_0,
-                                    discountAmount: y ? D : void 0
+                                    discountAmount: Z ? D : void 0
                                 })
                         ]
                     }),

@@ -3,7 +3,7 @@ var o = n(735250),
     s = n(470079),
     r = n(120356),
     a = n.n(r),
-    l = n(887024),
+    l = n(682963),
     i = n(699581),
     c = n(212433),
     d = n(442837),
@@ -78,7 +78,7 @@ t.Z = (e) => {
                         },
                         dragCoefficient: {
                             type: 'static',
-                            value: 0.0001
+                            value: 0.166
                         },
                         size: {
                             type: 'static-random',

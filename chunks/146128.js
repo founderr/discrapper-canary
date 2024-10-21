@@ -49,14 +49,14 @@ function h(e) {
 }
 function p(e) {
     let { emojiRef: t, channelId: n, messageId: r, emojiName: s } = e,
-        l = (0, a.e7)([o.Z], () => o.Z.getMessage(n, r)),
-        { triggerAnimation: u } = i.useContext(E);
+        u = (0, a.e7)([o.Z], () => o.Z.getMessage(n, r)),
+        { triggerAnimation: d } = i.useContext(E);
     return (
         i.useEffect(() => {
-            if ((null == l ? void 0 : l.state) !== _.yb.SENT || (0, c.JL)(r)) return;
+            if (!l.Z.triggerEmojiAnimationFromSentMessage || (null == u ? void 0 : u.state) !== _.yb.SENT || (0, c.JL)(r)) return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
-            if (!!(e >= 0 && n <= window.innerHeight)) u(s), (0, c.i9)(r);
-        }, [s, t, null == l ? void 0 : l.state, r, u]),
+            if (!!(e >= 0 && n <= window.innerHeight)) d(s), (0, c.i9)(r);
+        }, [s, t, null == u ? void 0 : u.state, r, d]),
         null
     );
 }

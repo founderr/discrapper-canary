@@ -1,6 +1,6 @@
 n.d(t, {
     BS: function () {
-        return m;
+        return C;
     },
     Op: function () {
         return h;
@@ -21,7 +21,7 @@ n.d(t, {
         return A;
     },
     vZ: function () {
-        return C;
+        return m;
     }
 }),
     n(653041),
@@ -53,7 +53,7 @@ let N = (e) => {
                 return '';
         }
     },
-    C = (e, t, n) => {
+    m = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
                 return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -66,7 +66,7 @@ let N = (e) => {
                 return;
         }
     },
-    m = (e) => {
+    C = (e) => {
         switch (e) {
             case R.EB.PENDING:
                 return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;

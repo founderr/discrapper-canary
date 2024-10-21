@@ -14,8 +14,8 @@ var s = n(735250),
     R = n(63063),
     g = n(281494),
     N = n(276444),
-    C = n(520540),
-    m = n(197115),
+    m = n(520540),
+    C = n(197115),
     A = n(119269),
     f = n(938736),
     p = n(981631),
@@ -126,9 +126,9 @@ t.Z = (e) => {
         L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new u.Z(e)), [L]),
         D = (0, l.e7)([N.Z], () => N.Z.getRefreshAt()),
-        { subscriberHomeVariant: U } = C.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        { subscriberHomeVariant: U } = m.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         B = P === p.g2L.UNAPPLIED || P === p.g2L.QUALIFIED,
-        j = U === C.p.VARIANT_2;
+        j = U === m.p.VARIANT_2;
     a.useEffect(() => {
         x.forEach((e) => {
             (0, c.PR)(e);
@@ -208,7 +208,7 @@ t.Z = (e) => {
                             children: [
                                 !E &&
                                     !j &&
-                                    (0, s.jsx)(m.Z, {
+                                    (0, s.jsx)(C.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: M.Z.Messages.GIFT_NITRO,
                                         className: i()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !E }),

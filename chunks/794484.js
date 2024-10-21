@@ -3,7 +3,7 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(887024),
+    l = n(682963),
     o = n(481060),
     c = n(410154),
     _ = n(915296),
@@ -15,7 +15,7 @@ var s = n(735250),
     R = n(75077),
     g = n(320319),
     N = n(821912);
-let C = (e) => {
+let m = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: a, headerClassname: r } = e,
         i = (0, s.jsx)(o.Heading, {
             variant: 'heading-xxl/extrabold',
@@ -47,7 +47,7 @@ let C = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: A = !1, showAllPerksButton: f, headerClassname: p, isFullScreen: M = !0 } = e,
+    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: A = !1, showAllPerksButton: f, headerClassname: p, isFullScreen: M = !0 } = e,
         S = a.useRef(null),
         h = (0, d.yQ)(),
         x = (0, E.Ag)(h),
@@ -104,7 +104,7 @@ t.Z = (e) => {
                     n
                 ),
                 children: [
-                    (0, s.jsx)(C, {
+                    (0, s.jsx)(m, {
                         showAllPerksButton: f,
                         leftAlignHeaders: A,
                         title: Z.title,
@@ -140,7 +140,7 @@ t.Z = (e) => {
                                 {
                                     confettiCanvas: e.name === u.u.FREE_BOOST ? G : void 0,
                                     ...e,
-                                    forceShadow: m
+                                    forceShadow: C
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

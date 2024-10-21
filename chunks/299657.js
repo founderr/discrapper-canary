@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(906732),
     g = n(211242),
     N = n(15640),
-    C = n(89057),
-    m = n(433811),
+    m = n(89057),
+    C = n(433811),
     A = n(214852),
     f = n(621853),
     p = n(246946),
@@ -37,7 +37,7 @@ var s = n(735250),
     G = n(700199);
 t.Z = function (e) {
     let { entrypoint: t = B.EZ.UserSettings } = e;
-    (0, A.z)(m.X);
+    (0, A.z)(C.X);
     let n = (0, g.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
         H = (0, l.e7)([S.ZP], () => S.ZP.hasFetchedSubscriptions()),
@@ -76,7 +76,7 @@ t.Z = function (e) {
         (0, l.e7)([p.Z], () => p.Z.enabled))
     )
         return (0, s.jsx)(T.Z, {});
-    if (n) return (0, s.jsx)(C.c8, {});
+    if (n) return (0, s.jsx)(m.c8, {});
     if (t === B.EZ.ApplicationStoreHome && z)
         return X && null == q
             ? (0, s.jsx)('div', {

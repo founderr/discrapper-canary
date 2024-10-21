@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(858719),
     g = n(780985),
     N = n(880257),
-    C = n(631885),
-    m = n(240351),
+    m = n(631885),
+    C = n(240351),
     A = n(792258),
     f = n(657825),
     p = n(198952),
@@ -55,10 +55,10 @@ function v(e) {
         c = (0, R.C7)(t),
         { loadMore: d, isMoreLoading: T } = (0, I.G)({ onError: n }),
         g = h.tx.get(t),
-        [C, m] = a.useState(h.iB),
+        [m, C] = a.useState(h.iB),
         p = (0, u.Xi)({ location: 'family_center_activity_section_web' }),
         M = a.useCallback(() => {
-            m((e) => e + h.iB), d(t);
+            C((e) => e + h.iB), d(t);
         }, [t, d]);
     i()(g, 'No text for action type');
     let S = g.sectionHeader(c),
@@ -105,7 +105,7 @@ function v(e) {
             [S, g, r, p]
         );
     if (0 === l.length) return null;
-    let v = l.slice(0, C);
+    let v = l.slice(0, m);
     return (0, s.jsxs)('div', {
         className: O.actionSection,
         children: [
@@ -137,10 +137,10 @@ function v(e) {
 }
 let L = () => {
         let e = (0, N.Z)(),
-            t = (0, C.mq)(h.ne.ACTIVE),
+            t = (0, m.mq)(h.ne.ACTIVE),
             n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
             a = (0, E.Qr)(!!e),
-            r = (0, C.Rd)(a);
+            r = (0, m.Rd)(a);
         return e && t.length > 1
             ? (0, s.jsx)(o.Text, {
                   variant: 'eyebrow',
@@ -191,7 +191,7 @@ let L = () => {
               });
     },
     D = () => {
-        let e = (0, C.mq)(h.ne.ACTIVE),
+        let e = (0, m.mq)(h.ne.ACTIVE),
             t = (0, l.e7)([d.Z], () => d.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, I.G)({}),
             r = e.map((e) => ({
@@ -224,9 +224,9 @@ let L = () => {
     U = (e) => {
         let { userId: t } = e,
             n = (0, N.Z)(),
-            a = (0, C.mq)(h.ne.ACTIVE),
+            a = (0, m.mq)(h.ne.ACTIVE),
             r = (0, E.Qr)(!!n),
-            i = (0, C.Rd)(r);
+            i = (0, m.Rd)(r);
         return n && 1 !== a.length
             ? (0, s.jsx)(D, {})
             : (0, s.jsx)(Z, {
@@ -239,7 +239,7 @@ t.Z = (e) => {
         n = Array.from(h.tx.entries()),
         a = (0, R.kE)(),
         r = (0, E.t3)(),
-        i = (0, C.Rd)(r);
+        i = (0, m.Rd)(r);
     return (0, s.jsxs)('div', {
         className: O.container,
         children: [
@@ -262,7 +262,7 @@ t.Z = (e) => {
                                 children: n.map((e) => {
                                     let [t, n] = e;
                                     return (0, s.jsx)(
-                                        m.Z,
+                                        C.Z,
                                         {
                                             displayType: t,
                                             header: n.tooltipHeader()

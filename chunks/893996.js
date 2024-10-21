@@ -17,7 +17,7 @@ function o(e) {
             children: [
                 (0, n.jsx)(a.Heading, {
                     variant: 'heading-lg/semibold',
-                    color: 'text-normal',
+                    color: 'header-primary',
                     className: r.categoryHeader,
                     children: t
                 }),

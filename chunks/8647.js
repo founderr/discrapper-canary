@@ -15,8 +15,8 @@ var a = n(120356),
     R = n(725727),
     g = n(474936),
     N = n(981631),
-    C = n(689938),
-    m = n(44085);
+    m = n(689938),
+    C = n(44085);
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: a } = e,
         { promotion: A } = (0, R.mq)(),
@@ -26,54 +26,54 @@ t.Z = function (e) {
     return (0, s.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, s.jsxs)('div', {
-            className: r()(m.banner, { [m.bannerFullScreen]: t }),
+            className: r()(C.banner, { [C.bannerFullScreen]: t }),
             children: [
                 (0, s.jsx)('div', {
-                    className: m.bannerLeftImageContainer,
+                    className: C.bannerLeftImageContainer,
                     children: (0, s.jsx)('img', {
                         alt: '',
                         src: t ? n(277698) : n(144823),
-                        className: m.image
+                        className: C.image
                     })
                 }),
                 (0, s.jsxs)('div', {
-                    className: m.bannerContent,
+                    className: C.bannerContent,
                     children: [
                         (0, s.jsxs)('div', {
                             children: [
                                 (0, s.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == f || null == (0, E.he)(f) ? C.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : C.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+                                    children: null == f || null == (0, E.he)(f) ? m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
                                 }),
                                 (0, s.jsx)(l.Text, {
-                                    className: m.countdown,
+                                    className: C.countdown,
                                     variant: 'text-sm/bold',
                                     children: (0, s.jsx)(u.Z, { endDate: p })
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: C.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({ helpCenterLink: d.Z.getArticleURL(N.BhN.SUMMER_BOGO_2024) })
+                                    children: m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({ helpCenterLink: d.Z.getArticleURL(N.BhN.SUMMER_BOGO_2024) })
                                 })
                             ]
                         }),
                         (0, s.jsx)(I.Z, {
-                            buttonText: C.Z.Messages.BOGO_CLAIM_OFFER,
-                            buttonTextClassName: m.subscribeButtonText,
+                            buttonText: m.Z.Messages.BOGO_CLAIM_OFFER,
+                            buttonTextClassName: C.subscribeButtonText,
                             subscriptionTier: g.Si.TIER_2,
                             showIcon: !1,
-                            className: null != a ? a : m.subscribeButton,
+                            className: null != a ? a : C.subscribeButton,
                             forceInverted: !0
                         })
                     ]
                 }),
                 (0, s.jsx)('div', {
-                    className: m.bannerRightImageContainer,
+                    className: C.bannerRightImageContainer,
                     children: (0, s.jsx)('img', {
                         alt: '',
                         src: t ? n(10501) : n(485978),
-                        className: m.image
+                        className: C.image
                     })
                 })
             ]

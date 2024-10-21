@@ -22,8 +22,8 @@ var s = n(735250),
     R = n(252618),
     g = n(313201),
     N = n(605236),
-    C = n(984370),
-    m = n(797614),
+    m = n(984370),
+    C = n(797614),
     A = n(108427),
     f = n(210887),
     p = n(695346),
@@ -101,22 +101,22 @@ function V(e) {
     return (0, s.jsx)(d.ThemeProvider, {
         theme: t,
         children: (e) =>
-            (0, s.jsxs)(C.Z, {
+            (0, s.jsxs)(m.Z, {
                 className: i()(e, H.sidebarTabBar),
                 scrollable: l.tq,
                 role: 'navigation',
                 'aria-labelledby': r,
                 toolbar: !0,
                 children: [
-                    (0, s.jsx)(C.Z.Icon, {
+                    (0, s.jsx)(m.Z.Icon, {
                         icon: d.GroupIcon,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(C.Z.Title, {
+                    (0, s.jsx)(m.Z.Title, {
                         id: r,
                         children: w.Z.Messages.FAMILY_CENTER_TITLE
                     }),
-                    (0, s.jsx)(C.Z.Divider, {}),
+                    (0, s.jsx)(m.Z.Divider, {}),
                     (0, s.jsxs)(d.TabBar, {
                         'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
                         selectedItem: n,
@@ -157,9 +157,9 @@ function W() {
         l = (0, O.M)(),
         { selectedTab: E, handleTabChange: T } = (0, b.Z)(),
         I = (0, g.Dt)(),
-        C = M.default.getCurrentUser(),
+        m = M.default.getCurrentUser(),
         f = null != e,
-        p = r && null != C && !f;
+        p = r && null != m && !f;
     return (a.useEffect(() => {
         (0, A.e)('family-center'),
             h.ZP.initialPageLoad(),
@@ -179,7 +179,7 @@ function W() {
                 initial_page: U.QH[E],
                 source: U._6[U.Mu.SIDENAV]
             }),
-            m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+            C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, f]),
     a.useEffect(() => {
         p && (0, u.mN)(j.L0.FAMILY_CENTER);
@@ -212,7 +212,7 @@ function K() {
         n = (0, v.M8)(),
         r = (0, N.wE)(_.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
-        C = (0, O.M)(),
+        m = (0, O.M)(),
         L = (0, c.e7)([f.Z], () => f.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, b.Z)(),
         y = (0, g.Dt)(),
@@ -235,11 +235,11 @@ function K() {
                 (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
-                    selected_teen_id: C,
+                    selected_teen_id: m,
                     initial_page: U.QH[Z],
                     source: U._6[U.Mu.SIDENAV]
                 }),
-                m.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+                C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, W]),
         a.useEffect(() => {
             let e = p.Ex.getSetting();

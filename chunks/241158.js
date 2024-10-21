@@ -15,7 +15,7 @@ var s = n(735250),
     R = n(689938),
     g = n(916548);
 let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: C, shouldLoadVideo: m, isCompact: A, onClick: f, index: p } = e,
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: A, onClick: f, index: p } = e,
         M = (0, d.rO)(),
         S = a.useRef(null),
         [h, x] = a.useState(0),
@@ -104,7 +104,7 @@ let N = (e) => {
                 }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: m ? 'auto' : 'none',
+                    preload: C ? 'auto' : 'none',
                     muted: !0,
                     poster: N,
                     loop: !0,
@@ -115,7 +115,7 @@ let N = (e) => {
                     }),
                     ref: S,
                     children: (0, s.jsx)('source', {
-                        src: C,
+                        src: m,
                         type: M ? I.m.MP4 : I.m.WEBM
                     })
                 })

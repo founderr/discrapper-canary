@@ -31,24 +31,24 @@ let p = (e) => {
         size: a.ButtonSizes.SMALL,
         color: a.Button.Colors.PRIMARY,
         onClick: () =>
-            (function (e, t, n, s) {
-                let l = h.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: t });
+            (function (e, t, n) {
+                let s = h.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: e.name });
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(r.default, {
                         title: h.Z.Messages.DEAUTHORIZE_APP,
-                        body: l,
+                        body: s,
                         confirmText: h.Z.Messages.DEAUTHORIZE,
                         cancelText: h.Z.Messages.CANCEL,
-                        onConfirm: n,
+                        onConfirm: t,
                         ...e
                     })
                 ),
                     u.default.track(d.rMx.APP_MANAGE_CTA_CLICKED, {
                         application_id: e.id,
-                        channel_id: s.id,
-                        channel_type: s.type
+                        channel_id: n.id,
+                        channel_type: n.type
                     });
-            })(m, p.username, E, n),
+            })(m, E, n),
         children: h.Z.Messages.MANAGE_APP
     });
 };

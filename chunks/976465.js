@@ -39,8 +39,8 @@ var s = n(470079),
     R = n(474936),
     g = n(689938),
     N = n(888300),
-    C = n(665321),
-    m = n(256017),
+    m = n(665321),
+    C = n(256017),
     A = n(126807),
     f = n(432119),
     p = n(205119),
@@ -86,9 +86,9 @@ let h = () => {
             case R.VU.PREMIUM_TENURE_12_MONTH:
                 return p;
             case R.VU.PREMIUM_TENURE_24_MONTH:
-                return C;
-            case R.VU.PREMIUM_TENURE_36_MONTH:
                 return m;
+            case R.VU.PREMIUM_TENURE_36_MONTH:
+                return C;
             case R.VU.PREMIUM_TENURE_60_MONTH:
                 return M;
             case R.VU.PREMIUM_TENURE_72_MONTH:

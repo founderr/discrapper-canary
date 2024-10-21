@@ -20,8 +20,8 @@ var i = n(399606),
     R = n(547972),
     g = n(131951),
     N = n(78839),
-    C = n(626135),
-    m = n(424218),
+    m = n(626135),
+    C = n(424218),
     A = n(63063),
     f = n(74538),
     p = n(860489),
@@ -73,17 +73,17 @@ var i = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, E.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, _.ZP)(),
-        s = (0, m.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
+        s = (0, C.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
         a = (0, i.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
         eT = null != a ? f.ZP.getPremiumPlanItem(a) : null,
         eI = null != eT ? f.ZP.getSkuIdForPlan(eT.planId) : null,
         eR = eI === Z.Si.TIER_2,
         eg = eI === Z.Si.TIER_0,
         { flipped: eN } = (0, S.JP)(),
-        { flipped: eC } = (0, S.as)(),
-        em = (0, h.nY)({ showAnimations: !0 }),
-        eA = null != em ? em.initialPercentage : void 0,
-        ef = null != em ? em.percentage : void 0,
+        { flipped: em } = (0, S.as)(),
+        eC = (0, h.nY)({ showAnimations: !0 }),
+        eA = null != eC ? eC.initialPercentage : void 0,
+        ef = null != eC ? eC.percentage : void 0,
         ep = (0, u.Z)(g.Z),
         eM = (0, x.Z)(),
         eS = (0, T.Z)({
@@ -244,7 +244,7 @@ t.Z = () => {
                       onCtaClick: ex,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eC,
+                      canReveal: em,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   }
                 : {
@@ -254,7 +254,7 @@ t.Z = () => {
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eC,
+                      canReveal: em,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   },
             profiles: {
@@ -492,7 +492,7 @@ t.Z = () => {
     let eP = (0, L.kG)(),
         { enabled: ev } = (0, M.Z)(),
         eL = () => {
-            C.default.track(D.rMx.OPEN_MODAL, {
+            m.default.track(D.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
                 location_stack: e,
                 location: d.Z.PREMIUM_MARKETING_PERK_CARD,

@@ -22,8 +22,8 @@ var s,
     R = n(612253),
     g = n(832287),
     N = n(860528),
-    C = n(872532),
-    m = n(91342),
+    m = n(872532),
+    C = n(91342),
     A = n(181708),
     f = n(821721),
     p = n(158897),
@@ -46,7 +46,7 @@ let D = () => {
             title: E.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_EMOJI_TITLE,
             description: E.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
             previewImage: u,
-            videoUrl: e ? m.Z : A.Z,
+            videoUrl: e ? C.Z : A.Z,
             isCompact: !0
         },
         noLimits: {
@@ -80,7 +80,7 @@ t.ZP = (e) => {
                 title: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PROFILES_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: E.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
-                previewImage: C,
+                previewImage: m,
                 videoUrl: s ? b.Z : O.Z
             },
             newAppStyles: {

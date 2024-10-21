@@ -1,7 +1,7 @@
 n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(887024),
+    a = n(682963),
     s = n(675654);
 t.Z = function (e) {
     let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: o, sprites: l, colors: u } = e,
@@ -48,7 +48,7 @@ t.Z = function (e) {
                                         },
                                         dragCoefficient: {
                                             type: 'static',
-                                            value: 0.0001
+                                            value: 0.166
                                         }
                                     }),
                                     50

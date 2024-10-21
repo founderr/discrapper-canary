@@ -1,7 +1,7 @@
 i(47120);
 var o = i(735250),
     n = i(470079),
-    a = i(887024),
+    a = i(682963),
     l = i(745510),
     u = i(675654);
 let c = {
@@ -12,7 +12,7 @@ let c = {
     },
     r = (t, e, i) => (null == i ? e : (t * i) / 100),
     s = n.memo(function (t) {
-        let { confettiTarget: e, colors: i, emojiURL: s, numBursts: f, particlesPerBurst: d, offsetXPercentageMax: m, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: x, customConfettiCanvas: _, speedValues: y = c, dragCoefficientValue: g = 0.001, onAnimationEnd: v } = t,
+        let { confettiTarget: e, colors: i, emojiURL: s, numBursts: f, particlesPerBurst: d, offsetXPercentageMax: m, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: x, customConfettiCanvas: _, speedValues: y = c, dragCoefficientValue: g = 1.66, onAnimationEnd: v } = t,
             [C, b] = n.useState(null),
             { confettiCanvas: w } = n.useContext(l.h),
             G = (0, a.uR)(null != _ ? _ : w, C),
@@ -39,7 +39,7 @@ let c = {
                             G.createMultipleConfetti(
                                 (function (t, e, i, o, n) {
                                     let a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : c,
-                                        l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0.001,
+                                        l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
                                         s = r(t.width, 100, i),
                                         f = r(t.height, 75, n),
                                         d = r(t.width, 350, e),

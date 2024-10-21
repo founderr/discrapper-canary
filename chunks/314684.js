@@ -44,8 +44,8 @@ var s = n(470079),
     R = n(626135),
     g = n(823379),
     N = n(111361),
-    C = n(595878),
-    m = n(944880),
+    m = n(595878),
+    C = n(944880),
     A = n(513785),
     f = n(106255),
     p = n(474936),
@@ -150,7 +150,7 @@ let P = (e) => {
     v = () => {
         let e = h(),
             [t, n] = s.useState(P(e)),
-            a = (0, C.cG)({ location: 'Home' });
+            a = (0, m.cG)({ location: 'Home' });
         s.useEffect(() => {
             if (!1 !== a) n(P(e));
         }, [e, a]);
@@ -160,7 +160,7 @@ let P = (e) => {
     L = () => {
         var e;
         let t = null === (e = h()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            n = (0, C.cG)({ location: 'Home' }) && null != t && t === M.EB.REDEEMABLE,
+            n = (0, m.cG)({ location: 'Home' }) && null != t && t === M.EB.REDEEMABLE,
             [s] = (0, E.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
@@ -205,6 +205,6 @@ function U() {
     let t = h(),
         n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
     s.useEffect(() => {
-        n && m.Z.forceRefreshIfOutdated();
+        n && C.Z.forceRefreshIfOutdated();
     }, [n]);
 }
