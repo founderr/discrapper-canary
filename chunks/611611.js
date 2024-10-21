@@ -5,8 +5,8 @@ n.r(a),
         }
     }),
     n(47120);
-var t = n(735250),
-    r = n(470079),
+var t = n(200651),
+    r = n(192379),
     l = n(120356),
     s = n.n(l),
     o = n(525769),
@@ -164,10 +164,13 @@ function P(e) {
                 ee(!1);
             }
         }, [Q, w, $, ee, v, g]);
-    let es = (0, _.Z)({
-        disabled: X,
-        onSubmit: q
-    });
+    let es = () => {
+            n === c.ModalTransitionState.ENTERED && q();
+        },
+        eo = (0, _.Z)({
+            disabled: X,
+            onSubmit: es
+        });
     return (0, t.jsxs)(c.ModalRoot, {
         size: c.ModalSize.MEDIUM,
         className: p.container,
@@ -190,7 +193,7 @@ function P(e) {
             }),
             (0, t.jsxs)(c.ModalContent, {
                 className: p.content,
-                onKeyDown: es,
+                onKeyDown: eo,
                 children: [
                     null != J &&
                         (0, t.jsx)(c.FormErrorBlock, {
@@ -230,7 +233,7 @@ function P(e) {
                                         onAnswerTextChange: H,
                                         onRemoveAnswer: V,
                                         addAnswer: K,
-                                        submitPoll: q,
+                                        submitPoll: es,
                                         answerTextInputRefs: v,
                                         error: null == Q ? void 0 : Q['answer-'.concat(e.localCreationAnswerId)],
                                         canRemoveAnswer: z,
@@ -291,7 +294,7 @@ function P(e) {
                         look: c.ButtonLooks.FILLED,
                         size: c.Button.Sizes.MEDIUM,
                         className: p.postButton,
-                        onClick: q,
+                        onClick: es,
                         submitting: X,
                         children: (0, t.jsx)(c.Text, {
                             variant: 'text-md/semibold',
