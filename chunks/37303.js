@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return _;
     }
 }),
     n(47120);
@@ -19,9 +19,9 @@ var o = n(497505),
     m = n(266843),
     C = n(46140),
     x = n(271074);
-function S(e) {
-    let { quest: t, location: n, initiallyExpanded: S, contentPosition: T } = e,
-        [_, h] = a.useState(!1),
+function _(e) {
+    let { quest: t, location: n, initiallyExpanded: _, contentPosition: T } = e,
+        [S, h] = a.useState(!1),
         g = a.useCallback(() => h(!0), []),
         p = a.useCallback(() => h(!1), []),
         j = (0, r.tP)(t),
@@ -35,7 +35,7 @@ function S(e) {
         } = (0, m.O)({
             initiallyExpanded:
                 !A ||
-                S ||
+                _ ||
                 (0, d.iM)({
                     location: n,
                     quest: t
@@ -70,7 +70,7 @@ function S(e) {
                         },
                         children: [
                             (0, s.jsx)(E.Z, {
-                                isFocused: _,
+                                isFocused: S,
                                 isQuestExpired: j,
                                 location: n,
                                 quest: t,
@@ -87,7 +87,7 @@ function S(e) {
                                 isQuestExpired: j,
                                 location: n,
                                 size: f,
-                                isFocused: _,
+                                isFocused: S,
                                 isExpanded: I,
                                 isAnimating: R,
                                 contentPosition: T

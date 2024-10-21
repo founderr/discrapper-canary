@@ -20,7 +20,7 @@ var l = n(120356),
 t.Z = function (e) {
     let { className: t, gameTileSize: n = 24, quest: s, theme: a = m.BRd.DARK, withGameTile: l = !0 } = e,
         x = (0, o.wj)(a) ? m.BRd.DARK : m.BRd.LIGHT,
-        S = (0, u.vI)(s, E.dr.QUESTS_BAR);
+        _ = (0, u.vI)(s, E.dr.QUESTS_BAR);
     return (0, i.jsxs)('div', {
         className: r()(C.partnerBranding, t),
         children: [
@@ -52,7 +52,7 @@ t.Z = function (e) {
                 children: (e) =>
                     (0, i.jsx)('img', {
                         ref: e,
-                        className: r()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: S }),
+                        className: r()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: _ }),
                         alt: s.config.messages.gameTitle,
                         src: (0, d.fh)(s, d.Bd.LOGO_TYPE, x).url
                     })

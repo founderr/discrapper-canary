@@ -18,15 +18,15 @@ var s = t(442837),
     E = t(280885),
     f = t(819602),
     m = t(900927),
-    x = t(678738),
-    p = t(652853),
+    p = t(678738),
+    x = t(652853),
     Z = t(179828),
     h = t(228168),
     v = t(689938),
     S = t(11633);
 function T(e) {
     let { user: n, currentUser: t, displayProfile: T, subsection: g, onClose: A } = e,
-        { theme: N } = (0, p.z)(),
+        { theme: N } = (0, x.z)(),
         { trackUserProfileAction: j } = (0, u.KZ)(),
         b = null == T ? void 0 : T.guildId,
         L = (0, s.e7)([a.Z], () => (null != b ? a.Z.getGuild(b) : null)),
@@ -52,7 +52,7 @@ function T(e) {
                     scrollIntoView: g === h.Tb.ROLES
                 }),
             n.isProvisional && (0, i.jsx)(r.Z, { look: 'profile_modal' }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(p.Z, {
                 heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                 children: (0, i.jsx)(m.Z, {
                     userId: n.id,
@@ -61,7 +61,7 @@ function T(e) {
                 })
             }),
             R.length > 0 &&
-                (0, i.jsx)(x.Z, {
+                (0, i.jsx)(p.Z, {
                     heading: v.Z.Messages.CONNECTIONS,
                     scrollIntoView: g === h.Tb.CONNECTIONS,
                     children: (0, i.jsx)(f.OA, {
@@ -73,7 +73,7 @@ function T(e) {
                     })
                 }),
             C.length > 0 &&
-                (0, i.jsx)(x.Z, {
+                (0, i.jsx)(p.Z, {
                     heading: v.Z.Messages.APPS,
                     children: C.map((e) =>
                         (0, i.jsx)(
@@ -91,7 +91,7 @@ function T(e) {
                         )
                     )
                 }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(p.Z, {
                 heading: v.Z.Messages.NOTE,
                 scrollIntoView: g === h.Tb.NOTE,
                 children: (0, i.jsx)(l.Z, {

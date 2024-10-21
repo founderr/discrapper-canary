@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return p;
     }
 });
 var i = t(735250);
@@ -18,13 +18,13 @@ var s = t(442837),
     E = t(228168),
     f = t(981631),
     m = t(272216);
-function x(e) {
+function p(e) {
     var n;
-    let { user: t, currentUser: x, channelId: p, displayProfile: Z, initialSection: h, initialSubsection: v, friendToken: S, onClose: T } = e,
+    let { user: t, currentUser: p, channelId: x, displayProfile: Z, initialSection: h, initialSubsection: v, friendToken: S, onClose: T } = e,
         g = (0, s.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         A = (0, I.Z)({
             user: t,
-            currentUser: x
+            currentUser: p
         });
     return (0, i.jsxs)('div', {
         className: m.body,
@@ -32,7 +32,7 @@ function x(e) {
             (0, i.jsx)(u.Z, {
                 user: t,
                 profileType: E.y0.FULL_SIZE,
-                nickname: l.ZP.getName(null == Z ? void 0 : Z.guildId, p, t),
+                nickname: l.ZP.getName(null == Z ? void 0 : Z.guildId, x, t),
                 pronouns: null == Z ? void 0 : Z.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, i.jsx)(c.Z, { userId: t.id }),
@@ -48,7 +48,7 @@ function x(e) {
                     children: (0, i.jsx)(a.Z, {
                         user: t,
                         guildId: null !== (n = null == Z ? void 0 : Z.guildId) && void 0 !== n ? n : void 0,
-                        channelId: p,
+                        channelId: x,
                         friendToken: S,
                         className: m.friendRequestBanner
                     })
@@ -57,7 +57,7 @@ function x(e) {
                 className: m.overlay,
                 children: (0, i.jsx)(_.Z, {
                     user: t,
-                    currentUser: x,
+                    currentUser: p,
                     displayProfile: Z,
                     items: A,
                     initialSection: h,

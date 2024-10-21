@@ -38,8 +38,8 @@ function T(e) {
                 clamp: !0
             }
         }),
-        k = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        U = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        k = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         { completedRatio: Z, completedRatioDisplay: q } = (0, p.I)(T),
         P = (0, p.Bd)(T),
         Q = s.useCallback(
@@ -53,7 +53,7 @@ function T(e) {
                 }),
             []
         ),
-        D = s.useMemo(() => (U ? Q(B) : E.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => Q(I) })), [B, I, U, Q]),
+        D = s.useMemo(() => (k ? Q(B) : E.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => Q(I) })), [B, I, k, Q]),
         W = s.useMemo(() => {
             if (null != P)
                 return (0, o.jsx)(c.Text, {
@@ -76,12 +76,12 @@ function T(e) {
                     (0, o.jsxs)('div', {
                         className: h.assetWrapper,
                         children: [
-                            !U && k && (0, o.jsx)('div', { className: h.completionAnimation }),
-                            M && !U
+                            !k && U && (0, o.jsx)('div', { className: h.completionAnimation }),
+                            M && !k
                                 ? (0, o.jsxs)('div', {
                                       className: h.progressWrapper,
                                       children: [
-                                          k &&
+                                          U &&
                                               (0, o.jsx)(c.LottieAnimation, {
                                                   importData: S,
                                                   className: h.confetti,

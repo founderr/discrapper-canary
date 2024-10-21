@@ -119,20 +119,20 @@ function B(e) {
         y = (0, g.tP)(n),
         L = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         w = a.useRef(o),
-        k = a.useRef(null),
-        U = (0, g.B6)(n.config.expiresAt, {
+        U = a.useRef(null),
+        k = (0, g.B6)(n.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         });
     return (
         a.useEffect(() => {
-            if (S.isAnimated && null != k.current)
+            if (S.isAnimated && null != U.current)
                 return (
-                    w.current !== o && (o && !M ? k.current.play() : (k.current.pause(), (k.current.currentTime = 0))),
+                    w.current !== o && (o && !M ? U.current.play() : (U.current.pause(), (U.current.currentTime = 0))),
                     (w.current = o),
                     () => {
                         var e;
-                        null === (e = k.current) || void 0 === e || e.pause();
+                        null === (e = U.current) || void 0 === e || e.pause();
                     }
                 );
         }, [o, S, M]),
@@ -147,7 +147,7 @@ function B(e) {
                               children: (e) => {
                                   var t;
                                   return (
-                                      null != e.current && (k.current = e.current),
+                                      null != e.current && (U.current = e.current),
                                       (0, r.jsx)(C.Z, {
                                           ref: e,
                                           autoPlay: !M && o,
@@ -248,7 +248,7 @@ function B(e) {
                                             : (0, r.jsx)(p.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: I ? 'text-muted' : 'always-white',
-                                                  children: A.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
+                                                  children: A.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: k })
                                               })
                                     ]
                                 })

@@ -54,7 +54,7 @@ class S extends (i = c.ZP.Store) {
         : (a[s] = r),
     (t.Z = new S(d.Z, {
         CONNECTION_OPEN: function (e) {
-            (m = {}), (I = e.friendSuggestionCount) > 0 && ((g = !0), p || !g || ((p = !0), (g = !1), E.Z.fetch())), (0, h.Z)();
+            (m = {}), (I = e.friendSuggestionCount) > 0 ? ((g = !0), p || !g || ((p = !0), (g = !1), E.Z.fetch())) : (0, h.Z)();
         },
         FRIEND_SUGGESTION_CREATE: function (e) {
             let t = T(e.suggestion);

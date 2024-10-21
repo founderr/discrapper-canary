@@ -18,8 +18,8 @@ var s = t(442837),
     E = t(900927),
     f = t(678738),
     m = t(179828),
-    x = t(228168),
-    p = t(689938),
+    p = t(228168),
+    x = t(689938),
     Z = t(11633);
 function h(e) {
     var n;
@@ -55,23 +55,23 @@ function h(e) {
                     user: t,
                     currentUser: h,
                     guild: A,
-                    scrollIntoView: S === x.Tb.ROLES
+                    scrollIntoView: S === p.Tb.ROLES
                 }),
             (0, i.jsx)(f.Z, {
-                heading: p.Z.Messages.BOT_PROFILE_CREATED_ON,
+                heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
                 children: (0, i.jsx)(E.Z, {
                     userId: t.id,
                     guildId: null == v ? void 0 : v.guildId,
-                    tooltipDelay: x.vB
+                    tooltipDelay: p.vB
                 })
             }),
             (0, i.jsx)(f.Z, {
-                heading: p.Z.Messages.NOTE,
-                scrollIntoView: S === x.Tb.NOTE,
+                heading: x.Z.Messages.NOTE,
+                scrollIntoView: S === p.Tb.NOTE,
                 children: (0, i.jsx)(l.Z, {
                     userId: t.id,
                     className: Z.note,
-                    autoFocus: S === x.Tb.NOTE,
+                    autoFocus: S === p.Tb.NOTE,
                     onUpdate: () => g({ action: 'SET_NOTE' })
                 })
             })

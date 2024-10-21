@@ -46,10 +46,10 @@ function R(e) {
         y = (0, d.Z)(O),
         L = (null === (n = r.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         w = (0, d.Z)(L),
-        { hasError: k, isLoading: U } = (0, E.d7)(),
-        Z = s.useContext(N.T) || (b && B && !U),
+        { hasError: U, isLoading: k } = (0, E.d7)(),
+        Z = s.useContext(N.T) || (b && B && !k),
         q = s.useRef(Z),
-        P = (0, T.B)(r, Z && !k),
+        P = (0, T.B)(r, Z && !U),
         Q = (0, _.vI)(r, v.dr.QUESTS_BAR) ? _.WV : P.collapsedHeight,
         D = s.useRef(-1),
         W = s.useRef(!1),
@@ -153,7 +153,7 @@ function R(e) {
         L && !w && P.canCollapseOnBlur && en();
     }, [L, eo, P.canCollapseOnBlur, en, w]),
     s.useEffect(() => {
-        k &&
+        U &&
             (0, m.dA)({
                 questId: r.id,
                 event: j.rMx.QUEST_CONTENT_RENDERING_FAILURE,
@@ -171,8 +171,8 @@ function R(e) {
                         reason: 'not_eligible_for_quest'
                     }
                 });
-    }, [k, b, r.id]),
-    b && (Z || !Y || U) && !k)
+    }, [U, b, r.id]),
+    b && (Z || !Y || k) && !U)
         ? (0, o.jsx)(f.A, {
               questOrQuests: r,
               questContent: P.trackingCtx.content,
@@ -228,7 +228,7 @@ function R(e) {
                   });
               }
           })
-        : (k ? R.log('Not rendered due to asset error') : !b && R.log('Not rendered due to ineligibility'), null);
+        : (U ? R.log('Not rendered due to asset error') : !b && R.log('Not rendered due to ineligibility'), null);
 }
 t.Z =
     12633 == n.j

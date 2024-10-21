@@ -18,8 +18,8 @@ var i = t(735250),
     E = t(475413),
     f = t(228168),
     m = t(981631),
-    x = t(689938),
-    p = t(226691),
+    p = t(689938),
+    x = t(226691),
     Z = t(161068);
 function h(e) {
     let { user: n, guildId: t, channelId: h, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: A = !0, sourceAnalyticsLocations: N = [] } = e,
@@ -37,11 +37,11 @@ function h(e) {
         M = [
             {
                 icon: o.BellSlashIcon,
-                description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
+                description: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
             },
             {
                 icon: o.DenyIcon,
-                description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
+                description: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
             }
         ],
         O = (0, u.ZP)(n.id, A ? j : void 0),
@@ -52,25 +52,25 @@ function h(e) {
             value: L,
             children: (0, i.jsx)(o.ModalRoot, {
                 transitionState: T,
-                className: p.root,
+                className: x.root,
                 hideShadow: !0,
-                'aria-label': x.Z.Messages.USER_PROFILE_MODAL,
+                'aria-label': p.Z.Messages.USER_PROFILE_MODAL,
                 children: (0, i.jsx)(I.Z, {
                     user: n,
                     displayProfile: O,
                     profileType: f.y0.FULL_SIZE,
                     ref: R,
                     children: (0, i.jsxs)('div', {
-                        className: p.container,
+                        className: x.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
                                 src: Z,
-                                className: p.previewForCollected,
+                                className: x.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: p.body,
+                                className: x.body,
                                 children: [
                                     (0, i.jsx)(_.Z, {
                                         user: n,
@@ -78,19 +78,19 @@ function h(e) {
                                     }),
                                     (0, i.jsx)(o.Heading, {
                                         variant: 'heading-xl/bold',
-                                        className: p.header,
-                                        children: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+                                        className: x.header,
+                                        children: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-md/medium',
-                                        children: x.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: n.username })
+                                        children: p.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: n.username })
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-md/medium',
-                                        children: x.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
+                                        children: p.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: p.safetyTable,
+                                        className: x.safetyTable,
                                         children: M.map((e, n) => {
                                             let { icon: t, description: s } = e;
                                             return (0, i.jsx)(
@@ -105,9 +105,9 @@ function h(e) {
                                         })
                                     }),
                                     (0, i.jsx)(E.tG, {
-                                        className: p.centeredButton,
+                                        className: x.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
-                                        text: x.Z.Messages.VIEW_PROFILE,
+                                        text: p.Z.Messages.VIEW_PROFILE,
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {

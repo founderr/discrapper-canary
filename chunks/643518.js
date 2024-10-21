@@ -17,8 +17,8 @@ function _(e) {
     var n, t;
     let { user: _, currentUser: I } = e,
         { live: E, recent: f, stream: m } = (0, o.Z)(_.id),
-        x = null === (n = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        p = null === (t = (0, s.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
+        p = null === (n = (0, i.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        x = null === (t = (0, s.Z)(_.id, _.id !== (null == I ? void 0 : I.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
         Z = _.id === (null == I ? void 0 : I.id),
         h = (0, l.Z)({
             user: _,
@@ -41,11 +41,11 @@ function _(e) {
             h &&
             (v.push({
                 section: a.oh.MUTUAL_FRIENDS,
-                text: (0, r.Z)(x)
+                text: (0, r.Z)(p)
             }),
             v.push({
                 section: a.oh.MUTUAL_GUILDS,
-                text: (0, c.Z)(p)
+                text: (0, c.Z)(x)
             })),
         v
     );

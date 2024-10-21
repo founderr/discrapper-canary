@@ -34,7 +34,7 @@ t.Z = (e) => {
             })
         ),
         w = (0, l.uR)(I, O),
-        k = s.useCallback(() => {
+        U = s.useCallback(() => {
             if (A) return;
             let e = h.current,
                 t = R.current;
@@ -90,21 +90,21 @@ t.Z = (e) => {
                 );
             }
         }, [h, R, w, A]),
-        U = (0, u.Z)(S);
+        k = (0, u.Z)(S);
     return (s.useEffect(() => {
-        v && S && !U && (N(), k());
-    }, [S, v, N, k, U]),
+        v && S && !k && (N(), U());
+    }, [S, v, N, U, k]),
     s.useEffect(() => {
         v &&
             !b &&
             B &&
             setTimeout(() => {
-                N(), k();
+                N(), U();
             }, 200);
-    }, [v, B, b, N, k]),
+    }, [v, B, b, N, U]),
     s.useEffect(() => {
-        if (!!w.isReady) !j.current && v && (N(), k()), (j.current = v);
-    }, [v, j, k, N, w]),
+        if (!!w.isReady) !j.current && v && (N(), U()), (j.current = v);
+    }, [v, j, U, N, w]),
     A)
         ? null
         : (0, o.jsxs)('div', {

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return p;
     }
 }),
     t(47120);
@@ -73,7 +73,7 @@ class m extends (i = o.PureComponent) {
             });
     }
 }
-function x(e) {
+function p(e) {
     let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
     return (0, s.jsx)(m, {

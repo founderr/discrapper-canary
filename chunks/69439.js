@@ -70,8 +70,8 @@ function T(e) {
             isEnrolling: p.Z.isEnrolling(N.id)
         })),
         w = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        k = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = k && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        U = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        k = U && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
         Z = (0, x.iQ)(N),
         q = !(0, x.zi)(N),
         P = (0, u._Q)(N),
@@ -116,7 +116,7 @@ function T(e) {
         }),
         et = (null === (T = N.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null,
         en = null;
-    return (Z && U
+    return (Z && k
         ? (en = (0, o.jsx)(i.Button, {
               color: i.ButtonColors.BRAND,
               submitting: y,
@@ -124,7 +124,7 @@ function T(e) {
               className: E.button,
               children: X
           }))
-        : k
+        : U
           ? (en = (0, o.jsx)(i.Button, {
                 color: i.ButtonColors.BRAND,
                 className: E.button,
@@ -132,7 +132,7 @@ function T(e) {
                 children: X
             }))
           : q
-            ? q && U
+            ? q && k
                 ? (en = (0, o.jsx)(i.Button, {
                       color: i.ButtonColors.BRAND,
                       submitting: y,

@@ -18,8 +18,8 @@ var i = t(735250),
     E = t(648052),
     f = t(867176),
     m = t(280885),
-    x = t(900927),
-    p = t(678738),
+    p = t(900927),
+    x = t(678738),
     Z = t(502762),
     h = t(530),
     v = t(679332),
@@ -133,9 +133,9 @@ function L(e) {
                                                             userBio: null == D ? void 0 : D.bio,
                                                             setLineClamp: !1
                                                         }),
-                                                        (0, i.jsx)(p.Z, {
+                                                        (0, i.jsx)(x.Z, {
                                                             heading: A.Z.Messages.BOT_PROFILE_CREATED_ON,
-                                                            children: (0, i.jsx)(x.Z, {
+                                                            children: (0, i.jsx)(p.Z, {
                                                                 userId: n.id,
                                                                 guildId: U,
                                                                 tooltipDelay: T.vB

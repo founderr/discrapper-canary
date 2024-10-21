@@ -19,8 +19,8 @@ var s = t(481060),
     E = t(681837),
     f = t(502762),
     m = t(530),
-    x = t(871604),
-    p = t(952124),
+    p = t(871604),
+    x = t(952124),
     Z = t(53558),
     h = t(544989),
     v = t(934861),
@@ -61,7 +61,7 @@ function b(e) {
                     children: [
                         (0, i.jsx)(h.Z, {
                             profileType: g.y0.FULL_SIZE,
-                            children: (0, i.jsx)(p.Z, {
+                            children: (0, i.jsx)(x.Z, {
                                 user: n,
                                 guildId: B
                             })
@@ -106,7 +106,7 @@ function b(e) {
                                                     user: n,
                                                     guildId: B
                                                 }),
-                                                (0, i.jsx)(x.Z, { user: n })
+                                                (0, i.jsx)(p.Z, { user: n })
                                             ]
                                         })
                                     ]

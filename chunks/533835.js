@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return x;
+            return p;
         }
     }),
     t(47120);
@@ -19,25 +19,25 @@ var i = t(735250),
     E = t(886794),
     f = t(910364);
 let m = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
-function x(e) {
+function p(e) {
     let { user: n, ...t } = e,
         o = (0, r.e7)([d.default], () => d.default.getCurrentUser());
     l()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
     let c = (0, r.e7)([a.Z], () => a.Z.isBlocked(n.id)),
-        [x, p] = s.useState(c),
+        [p, x] = s.useState(c),
         Z = (0, u.sS)({ location: 'UserProfileModalWrapper' });
     s.useEffect(() => {
-        p(c);
+        x(c);
     }, [c]);
     let h = !m.some((e) => {
         var n;
         return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
     });
-    return x && Z && h
+    return p && Z && h
         ? (0, i.jsx)(_.Z, {
               user: n,
               currentUser: o,
-              onViewBlockedProfileClick: () => p(!1),
+              onViewBlockedProfileClick: () => x(!1),
               ...t
           })
         : n.isNonUserBot()

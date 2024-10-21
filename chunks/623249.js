@@ -43,7 +43,7 @@ function N(e) {
         O = (0, C.Bz)(j),
         y = (0, l.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, i.wj)(y) ? E.BRd.DARK : E.BRd.LIGHT,
-        { startConsoleQuest: w, startingConsoleQuest: k } = (0, x.GI)({
+        { startConsoleQuest: w, startingConsoleQuest: U } = (0, x.GI)({
             questId: j.id,
             beforeRequest: () => {
                 I.startAnimation(),
@@ -108,7 +108,7 @@ function N(e) {
                                 children: h.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, o.jsxs)(c.Clickable, {
-                                className: a()(S.refreshWrapper, { [S.disabled]: k }),
+                                className: a()(S.refreshWrapper, { [S.disabled]: U }),
                                 onClick: w,
                                 children: [
                                     I.render(),

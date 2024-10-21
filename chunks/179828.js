@@ -18,14 +18,14 @@ var i = t(735250),
     E = t(700785),
     f = t(785717),
     m = t(256226),
-    x = t(678738),
-    p = t(314172),
+    p = t(678738),
+    x = t(314172),
     Z = t(981631),
     h = t(689938),
     v = t(726769);
 function S(e) {
     let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: _, onAddRole: I, onRemoveRole: f } = e,
-        x = _ && null != a,
+        p = _ && null != a,
         S = s.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
         T = (0, l.ZP)({
             id: S,
@@ -62,8 +62,8 @@ function S(e) {
                     ...t,
                     children: [
                         N,
-                        x &&
-                            (0, i.jsx)(p.Z, {
+                        p &&
+                            (0, i.jsx)(x.Z, {
                                 guild: c,
                                 guildMember: a,
                                 numRoles: g,
@@ -80,13 +80,13 @@ function T(e) {
     let { user: n, currentUser: t, guild: o, scrollIntoView: l } = e,
         { trackUserProfileAction: r } = (0, f.KZ)(),
         m = (0, c.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
-        p = (0, c.e7)([_.Z], () => _.Z.getRoles(o.id)),
+        x = (0, c.e7)([_.Z], () => _.Z.getRoles(o.id)),
         v = null == m ? void 0 : m.roles,
         T = s.useMemo(
             () =>
                 null == v || 0 === v.length
                     ? []
-                    : Object.values(p)
+                    : Object.values(x)
                           .filter((e) => v.includes(e.id))
                           .sort((e, n) => {
                               var t, i;
@@ -94,7 +94,7 @@ function T(e) {
                                   o = (null === (i = n.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                               return s && !o ? 1 : !s && o ? -1 : 0;
                           }),
-            [p, v]
+            [x, v]
         ),
         g = E.e9(o, t.id),
         [A] = (0, c.Wu)([I.Z], () => [I.Z.can(Z.Plq.MANAGE_ROLES, o), null != o ? I.Z.getGuildVersion(o.id) : null]),
@@ -117,7 +117,7 @@ function T(e) {
         ),
         b = A && null != m;
     return 0 !== T.length || b
-        ? (0, i.jsx)(x.Z, {
+        ? (0, i.jsx)(p.Z, {
               heading: h.Z.Messages.ROLES,
               scrollIntoView: l,
               children: (0, i.jsx)(S, {

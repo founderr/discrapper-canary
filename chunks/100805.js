@@ -31,9 +31,9 @@ var o = n(735250),
     y = n(701488),
     L = n(689938),
     w = n(609706);
-let k = s.forwardRef(function (e, t) {
+let U = s.forwardRef(function (e, t) {
     var n, r;
-    let { children: S, className: k, collapsedHeight: Z, expansionSpring: q, isExpanded: P, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: W, onCtxMenuSelect: H, quest: V, useReducedMotion: z } = e,
+    let { children: S, className: U, collapsedHeight: Z, expansionSpring: q, isExpanded: P, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: W, onCtxMenuSelect: H, quest: V, useReducedMotion: z } = e,
         G = (0, i.e7)([f.Z], () => f.Z.isEnrolling(V.id), [V]),
         F = (0, g.B6)(V.config.expiresAt),
         K = v.r.build(V.config),
@@ -87,7 +87,7 @@ let k = s.forwardRef(function (e, t) {
             };
         }, [V.config.colors.primary]);
     return (0, o.jsxs)(l.animated.div, {
-        className: a()(k, w.contentExpanded, { [w.contentInteractable]: eu }),
+        className: a()(U, w.contentExpanded, { [w.contentInteractable]: eu }),
         style: {
             backgroundColor: V.config.colors.secondary,
             transform: ec
@@ -188,7 +188,7 @@ let k = s.forwardRef(function (e, t) {
                                         children: ep
                                     }),
                               (0, o.jsx)(j.Z, { quest: V }),
-                              !em && !el && !J && es && (0, o.jsx)(U, { onClick: eu ? eo : void 0 })
+                              !em && !el && !J && es && (0, o.jsx)(k, { onClick: eu ? eo : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {
@@ -299,7 +299,7 @@ let k = s.forwardRef(function (e, t) {
         ]
     });
 });
-function U(e) {
+function k(e) {
     let { style: t, onClick: n } = e;
     return (0, S.O)({
         location: M.dr.QUESTS_BAR,
@@ -316,4 +316,4 @@ function U(e) {
           })
         : null;
 }
-t.Z = k;
+t.Z = U;

@@ -18,8 +18,8 @@ var i = t(735250),
     E = t(5192),
     f = t(785717),
     m = t(221292),
-    x = t(687158),
-    p = t(326094),
+    p = t(687158),
+    x = t(326094),
     Z = t(510659),
     h = t(113557),
     v = t(867176),
@@ -42,7 +42,7 @@ function D(e) {
     let { user: n, currentUser: t, guildId: D, channelId: B, messageId: F, roleId: G, sessionId: w, friendToken: k, initialSection: V, initialSubsection: W, transitionState: Y, onClose: K, showGuildProfile: H = !0, sourceAnalyticsLocations: z = [] } = e,
         q = D === P.ME ? void 0 : D,
         { analyticsLocations: Q } = (0, u.ZP)([...z, d.Z.SIMPLIFIED_PROFILE_MODAL]),
-        X = (0, p.Z)({
+        X = (0, x.Z)({
             user: n,
             currentUser: t,
             location: P.Sbl.SIMPLIFIED_USER_PROFILE
@@ -62,8 +62,8 @@ function D(e) {
             opacity: null != $.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        en = (0, x.ZP)(n.id, H ? q : void 0),
-        et = (0, x.ZP)(n.id, q),
+        en = (0, p.ZP)(n.id, H ? q : void 0),
+        et = (0, p.ZP)(n.id, q),
         ei = (0, l.e7)([I.Z], () => I.Z.getRelationshipType(n.id)),
         es = s.useMemo(() => (null != q ? { [q]: [n.id] } : {}), [q, n.id]);
     (0, a.$)(es);

@@ -12,9 +12,9 @@ var s = n(735250),
     m = n(210887),
     C = n(937995),
     x = n(158776),
-    S = n(594174),
+    _ = n(594174),
     T = n(617136),
-    _ = n(272008),
+    S = n(272008),
     h = n(113434),
     g = n(569984),
     p = n(497505),
@@ -42,7 +42,7 @@ t.Z = function (e) {
         W = a.useCallback(() => k(!0), []),
         G = a.useCallback(() => k(!1), []),
         z = a.useContext(C.h9),
-        V = (0, r.e7)([S.default], () => S.default.getCurrentUser()),
+        V = (0, r.e7)([_.default], () => _.default.getCurrentUser()),
         F = (0, r.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, o.wj)(F) ? D.BRd.DARK : D.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: X, quest: K } = (0, r.cj)(
@@ -109,7 +109,7 @@ t.Z = function (e) {
         ei = (0, h.B6)(null == J ? void 0 : J.rewardsExpireAt),
         el = a.useCallback(() => {
             null != K &&
-                (0, _.AH)(K.id, {
+                (0, S.AH)(K.id, {
                     questContent: p.jn.QUEST_LIVE_STREAM,
                     questContentCTA: T.jZ.ACCEPT_QUEST
                 });
@@ -150,16 +150,16 @@ t.Z = function (e) {
         em = (null === (n = K.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         eC = null != K.userStatus && (0, j.zE)(K.userStatus, p.jn.QUEST_LIVE_STREAM),
         ex = null != K.userStatus && (0, j.zE)(K.userStatus, p.jn.QUEST_BAR),
-        eS = (0, j.Mi)(K, p.jn.QUEST_BAR) && !ex;
+        e_ = (0, j.Mi)(K, p.jn.QUEST_BAR) && !ex;
     ed.info({
         isQuestCallHeaderDismissed: eC,
         isQuestExpired: ec,
-        isQuestBarShowing: eS,
+        isQuestBarShowing: e_,
         isCurrentUserCallParticipant: es
     });
     let eT = null != P && (null === (i = K.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null;
-    if ((!eT && (eC || ec || eS)) || (!eT && !es)) return null;
-    let e_ = (0, j.il)(K),
+    if ((!eT && (eC || ec || e_)) || (!eT && !es)) return null;
+    let eS = (0, j.il)(K),
         eh = (0, s.jsx)(I.Z, {
             className: B.rewardTile,
             autoplay: H,
@@ -216,7 +216,7 @@ t.Z = function (e) {
                                                         children: et
                                                             ? (0, j.AV)({
                                                                   quest: K,
-                                                                  taskDetails: e_
+                                                                  taskDetails: eS
                                                               })
                                                             : Q.Z.Messages.QUESTS_TITLE.format({ questName: K.config.messages.questName })
                                                     }),
@@ -255,7 +255,7 @@ t.Z = function (e) {
                                     autoplay: H,
                                     quest: K,
                                     questContent: p.jn.QUEST_LIVE_STREAM,
-                                    taskDetails: e_,
+                                    taskDetails: eS,
                                     location: b.dr.QUEST_CHANNEL_CALL_HEADER
                                 }),
                             (0, s.jsxs)('div', {
