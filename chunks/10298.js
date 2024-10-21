@@ -14,6 +14,7 @@ let r = (e) => {
             (0, n.jsx)(a.HeadingLevel, {
                 children: (0, n.jsx)(a.Heading, {
                     variant: 'heading-xl/semibold',
+                    color: 'header-primary',
                     children: t
                 })
             }),
