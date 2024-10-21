@@ -4206,6 +4206,7 @@ let ot = Object.freeze({
     (nO.QUEST_SURVEY_DISMISSED = 'quest_survey_dismissed'),
     (nO.QUEST_SURVEY_DISPLAYED = 'quest_survey_displayed'),
     (nO.QUEST_SURVEY_SUBMITTED = 'quest_survey_submitted'),
+    (nO.QUEST_BAR_MODE_CHANGED = 'quest_bar_mode_changed'),
     (nO.USER_SETTINGS_KEYBIND_UPDATED = 'user_settings_keybind_updated'),
     (nO.USER_ATTRIBUTION_RECEIVED = 'user_attribution_received'),
     (nO.USER_AVATAR_UPDATED = 'user_avatar_updated'),
