@@ -25,8 +25,8 @@ var l,
     C = n(579806),
     S = n(812206),
     E = n(600164),
-    j = n(313201),
-    v = n(243778),
+    v = n(313201),
+    j = n(243778),
     I = n(594190),
     Z = n(998594),
     T = n(751571),
@@ -95,17 +95,17 @@ function el(e) {
         { lastPickerAction: eS } = (0, f.e7)([H.ZP], () => H.ZP.getPickerState()),
         eE = L.Z.getUseSystemScreensharePicker();
     (0, H.UB)();
-    let ej = eE && (0, G.isMac)() && u().satisfies(null === C.Z || void 0 === C.Z ? void 0 : C.Z.os.release, Q.jR),
-        ev = [];
-    eo === m.ModalTransitionState.ENTERED && eE && (0, G.isMac)() && ev.push(h.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eI, eZ] = (0, v.US)(ev, void 0, !0);
+    let ev = eE && (0, G.isMac)() && u().satisfies(null === C.Z || void 0 === C.Z ? void 0 : C.Z.os.release, Q.jR),
+        ej = [];
+    eo === m.ModalTransitionState.ENTERED && eE && (0, G.isMac)() && ej.push(h.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
+    let [eI, eZ] = (0, j.US)(ej, void 0, !0);
     ec !== X.tI.PRESET_CUSTOM && ((ed = ep), (eu = eC)), !(0, k.Z)(ec, ed, eu, ex, eg) && ((ed = ep), (eu = eC));
-    let eT = (0, j.Dt)();
-    let [eN, eM] = r.useState(((N = el), (y = es && !ej), N ? 0 : y ? 2 : 3)),
-        [eR, eA] = r.useState(ej),
+    let eT = (0, v.Dt)();
+    let [eN, eM] = r.useState(((N = el), (y = es && !ev), N ? 0 : y ? 2 : 3)),
+        [eR, eA] = r.useState(ev),
         [eO, eL] = r.useState(null),
         [ew, eb] = r.useState(
-            ej
+            ev
                 ? {
                       id: 'prepicked:',
                       name: ee.Z.Messages.GO_LIVE_MODAL_ANY,
@@ -145,7 +145,7 @@ function el(e) {
             let i = ey,
                 r = eB,
                 a = eU;
-            !(0, k.Z)(i, r, a, ex, eg) && ((i = X.tI.PRESET_VIDEO), (r = X.LY.RESOLUTION_720), (a = X.ws.FPS_30)),
+            !(0, k.Z)(i, r, a, ex, eg, l) && ((i = X.tI.PRESET_VIDEO), (r = X.LY.RESOLUTION_720), (a = X.ws.FPS_30)),
                 (0, g.Rc)({
                     preset: i,
                     resolution: r,
@@ -176,17 +176,22 @@ function el(e) {
     }
     let eq = r.useCallback(
             (e, t, n) => {
-                let l = (0, U.Z)(e, ex, eg),
-                    [s, i] = null != l ? l : [t, n];
-                if ((e !== ey && ((t = s), (n = i)), !(0, k.Z)(e, t, n, ex, eg))) {
+                var l;
+                let s = (0, U.Z)(e, ex, eg),
+                    [i, r] = null != s ? s : [t, n];
+                e !== ey && ((t = i), (n = r));
+                let a = null !== (l = null == eh ? void 0 : eh.id) && void 0 !== l ? l : eO;
+                o()(null != a, 'Received null target channel ID');
+                let c = A.Z.getChannel(a);
+                if (!(0, k.Z)(e, t, n, ex, eg, c)) {
                     let [e, l] = (0, U.Z)(X.tI.PRESET_VIDEO, ex, eg);
                     (t = e), (n = l);
                 }
-                n !== eU && eV(n), t !== eB && ek(t), s !== t || i !== n ? eG(X.tI.PRESET_CUSTOM) : e !== ey && eG(e);
+                n !== eU && eV(n), t !== eB && ek(t), i !== t || r !== n ? eG(X.tI.PRESET_CUSTOM) : e !== ey && eG(e);
             },
-            [ex, eg, eU, eB, ey]
+            [eh, eO, ex, eg, eU, eB, ey]
         ),
-        [eJ, e$] = r.useState(ej ? '' : void 0),
+        [eJ, e$] = r.useState(ev ? '' : void 0),
         e1 = r.useCallback(
             (e) => {
                 (0, V.t)(), (0, V.T)(null != e ? e : eJ);
@@ -358,7 +363,7 @@ function el(e) {
                 })
             ]
         }),
-        tn = 1 === eN || (ej && 3 === eN) ? ee.Z.Messages.GO_LIVE_MODAL_NATIVE_SELECT_CTA : eE && (3 !== eN || null != eJ) ? ee.Z.Messages.NEXT : ee.Z.Messages.GO_LIVE_MODAL_CTA,
+        tn = 1 === eN || (ev && 3 === eN) ? ee.Z.Messages.GO_LIVE_MODAL_NATIVE_SELECT_CTA : eE && (3 !== eN || null != eJ) ? ee.Z.Messages.NEXT : ee.Z.Messages.GO_LIVE_MODAL_CTA,
         tl = (0, i.jsxs)(m.ModalFooter, {
             justify: null == e8 ? E.Z.Justify.START : E.Z.Justify.BETWEEN,
             children: [

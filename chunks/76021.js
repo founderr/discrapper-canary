@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 });
 var r = n(200651);
@@ -13,38 +13,40 @@ var i = n(481060),
     u = n(120522),
     c = n(933843),
     d = n(614011),
-    _ = n(430824),
-    E = n(131951),
-    f = n(594174),
-    h = n(358085),
-    p = n(981631),
-    I = n(37113);
-function m(e, t, m) {
-    let T = l.Z.getWindowOpen(p.KJ3.CHANNEL_CALL_POPOUT) ? p.KJ3.CHANNEL_CALL_POPOUT : null;
-    if (((0, o.Z)(T), h.isPlatformEmbedded))
+    _ = n(592125),
+    E = n(430824),
+    f = n(131951),
+    h = n(594174),
+    p = n(358085),
+    I = n(981631),
+    m = n(37113);
+function T(e, t, T) {
+    let S = l.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? I.KJ3.CHANNEL_CALL_POPOUT : null;
+    if (((0, o.Z)(S), p.isPlatformEmbedded))
         (0, i.openModalLazy)(async () => {
             let { default: t } = await Promise.all([n.e('46746'), n.e('88904')]).then(n.bind(n, 60594));
             return (n) =>
                 (0, r.jsx)(t, {
                     ...n,
                     guildId: e,
-                    analyticsLocation: m
+                    analyticsLocation: T
                 });
         }),
             (0, c.F4)() && ((0, u.z)(), (0, d.O)());
     else {
-        var S;
-        let n = (0, s.Z)(I.tI.PRESET_CUSTOM, I.LY.RESOLUTION_1080, I.ws.FPS_30, f.default.getCurrentUser(), null === (S = _.Z.getGuild(e)) || void 0 === S ? void 0 : S.premiumTier)
-            ? {
-                  width: 1920,
-                  height: 1080
-              }
-            : {
-                  width: 1280,
-                  height: 720
-              };
-        E.Z.getMediaEngine()
-            .getDesktopSource(n, !0)
+        var g;
+        let n = _.Z.getChannel(t),
+            r = (0, s.Z)(m.tI.PRESET_CUSTOM, m.LY.RESOLUTION_1080, m.ws.FPS_30, h.default.getCurrentUser(), null === (g = E.Z.getGuild(e)) || void 0 === g ? void 0 : g.premiumTier, n)
+                ? {
+                      width: 1920,
+                      height: 1080
+                  }
+                : {
+                      width: 1280,
+                      height: 720
+                  };
+        f.Z.getMediaEngine()
+            .getDesktopSource(r, !0)
             .then((n) => {
                 (0, a.WH)(e, t, {
                     pid: null,
