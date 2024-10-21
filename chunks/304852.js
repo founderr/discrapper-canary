@@ -6,7 +6,7 @@ n.d(t, {
         return s;
     }
 });
-var r = n(470079),
+var r = n(192379),
     i = n(149203);
 function a(e) {
     let { topEmojis: t, newlyAddedEmojis: n, rowSize: r = i.N6 } = e,

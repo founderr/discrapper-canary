@@ -4,7 +4,7 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(40851),
     a = n(981631);
 let s = ['Shift', 'Alt', 'Meta', 'Control'];

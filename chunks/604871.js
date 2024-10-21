@@ -3,7 +3,7 @@ var i = n(375288),
     a = n(457763),
     r = n(334906),
     o = n(99887),
-    d = n(354382),
+    d = n(324933),
     u = {
         code: 'hi',
         formatDistance: i.Z,

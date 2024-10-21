@@ -3,7 +3,7 @@ i.d(t, {
         return l;
     }
 });
-var n = i(470079),
+var n = i(192379),
     s = i(328456);
 let l = (e) => {
     let { firstProfileEffect: t, firstAvatarDecoration: i } = n.useMemo(() => {

@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(735250);
+var r = n(200651);
 function i(e) {
     let { size: t, horizontal: n = !1 } = e,
         i = n ? t : 1,
@@ -18,4 +18,4 @@ function i(e) {
         }
     });
 }
-n(470079), (t.Z = i);
+n(192379), (t.Z = i);

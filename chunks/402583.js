@@ -3,8 +3,8 @@ t.d(s, {
         return S;
     }
 });
-var n = t(735250),
-    a = t(470079),
+var n = t(200651),
+    a = t(192379),
     i = t(442837),
     r = t(409700),
     o = t(480294),
@@ -32,7 +32,7 @@ function S() {
         setting: u.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
         children: (0, n.jsx)(d.Z, {
             title: T.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE,
-            note: T.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: l.Z.getArticleURL(E.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
+            note: T.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE_V2.format({ helpdeskArticle: l.Z.getArticleURL(E.BhN.DATA_PRIVACY_CONTROLS) }),
             value: e,
             onChange: s
         })

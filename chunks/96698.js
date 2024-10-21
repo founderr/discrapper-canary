@@ -3,13 +3,13 @@ l.d(n, {
         return d;
     }
 });
-var s = l(735250);
-l(470079);
+var s = l(200651);
+l(192379);
 var a = l(120356),
     t = l.n(a),
     i = l(481060),
     r = l(112831),
-    o = l(985992);
+    o = l(243351);
 function d(e) {
     let { steps: n, stepIndex: l, onClick: a } = e;
     return (0, s.jsx)('div', {

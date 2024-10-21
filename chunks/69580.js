@@ -28,11 +28,11 @@ n.r(t),
     n(411104);
 var r,
     i,
-    a = n(735250),
-    s = n(470079),
+    a = n(200651),
+    s = n(192379),
     o = n(120356),
     l = n.n(o),
-    u = n(266067),
+    u = n(512969),
     c = n(729594),
     d = n(873546),
     _ = n(373793),
@@ -181,18 +181,18 @@ function ed(e) {
                 accountScopes: n
             };
         }, [null == e2 ? void 0 : e2.scopes, eh, eJ]),
-        e5 = s.useMemo(() => {
+        e6 = s.useMemo(() => {
             var e;
             let t = eJ ? f.vB(null !== (e = null == e2 ? void 0 : e2.permissions) && void 0 !== e ? e : 0) : ep;
             return null != t ? t : F.Hn;
         }, [null == e2 ? void 0 : e2.permissions, ep, eJ]),
-        e6 = s.useRef(!1),
+        e5 = s.useRef(!1),
         [e7, e8] = s.useState(null != eL ? eL : []),
         [e9, te] = s.useState(null != eL && eL.length > 0);
     s.useEffect(() => {
-        if (e6.current) return;
+        if (e5.current) return;
         let e = async () => {
-            e6.current = !0;
+            e5.current = !0;
             try {
                 let { disclosures: e, allAcked: t } = await (0, y.de)(P);
                 te(!t), e8(e);
@@ -204,7 +204,7 @@ function ed(e) {
                 }
                 eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
             } finally {
-                e6.current = !1;
+                e5.current = !1;
             }
         };
         if (null == eL) {
@@ -247,7 +247,7 @@ function ed(e) {
                         state: ed,
                         nonce: e_,
                         integrationType: eX,
-                        permissions: f.Od(e5, eK),
+                        permissions: f.Od(e6, eK),
                         guildId: eX === _.Y.GUILD_INSTALL && null != eZ ? eZ : void 0,
                         channelId: eX === _.Y.GUILD_INSTALL && null != ej ? ej : void 0
                     });
@@ -274,7 +274,7 @@ function ed(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eG(Error(e.message)) : eG(e), ew('AUTHORIZE_SCOPES'), eB(!1);
                 }
             },
-            [ev, eA, eO, null == eM ? void 0 : eM.application, eQ, eC, P, e3, k, et, eu, ec, ed, e_, e5, eK, eZ, eX, ej, e7]
+            [ev, eA, eO, null == eM ? void 0 : eM.application, eQ, eC, P, e3, k, et, eu, ec, ed, e_, e6, eK, eZ, eX, ej, e7]
         ),
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
@@ -282,7 +282,7 @@ function ed(e) {
                 (0, Z.c$)(ey);
                 return;
             }
-            if (!e6.current) {
+            if (!e5.current) {
                 if (!tn.current) {
                     tn.current = !0;
                     try {
@@ -337,9 +337,9 @@ function ed(e) {
                 application_id: P,
                 integration_type: eX,
                 scopes: e3,
-                permissions: e5.toString()
+                permissions: e6.toString()
             }));
-    }, [P, eX, e5, e3, eU]),
+    }, [P, eX, e6, e3, eU]),
         s.useEffect(() => {
             if (null == eU && (!eJ || null != e0) && !!eb)
                 if (null != eD) {
@@ -351,8 +351,8 @@ function ed(e) {
             if (null == eX || null != eM || null != ex) return;
             eX === _.Y.USER_INSTALL && (eY(null), eW(null));
             let e = e3.filter((e) => !W.ak.includes(e));
-            0 === e3.length ? eG(Error('No scopes were provided.')) : e.length > 0 ? eG(Error('Invalid scope: '.concat(e[0]))) : (0, j._$)(e5) ? eG(Error('Invalid permission(s) provided.')) : tr();
-        }, [e9, tr, e3, e5, eX, eM, ex]);
+            0 === e3.length ? eG(Error('No scopes were provided.')) : e.length > 0 ? eG(Error('Invalid scope: '.concat(e[0]))) : (0, j._$)(e6) ? eG(Error('Invalid permission(s) provided.')) : tr();
+        }, [e9, tr, e3, e6, eX, eM, ex]);
     let ts = s.useCallback((e) => {
             e && eV(!0);
         }, []),
@@ -421,7 +421,7 @@ function ed(e) {
                         : null
                 ]
             })),
-                e3.includes(E.x.BOT) && !f.fS(e5, F.Hn) && (T = 'AUTHORIZE_BOT_PERMISSIONS'),
+                e3.includes(E.x.BOT) && !f.fS(e6, F.Hn) && (T = 'AUTHORIZE_BOT_PERMISSIONS'),
                 ti.length > 1 && (m = 'SELECT_INSTALL_TYPE'),
                 (tu = (tI && null == eQ) || (tp && null == ej)),
                 (tl = !0);
@@ -430,7 +430,7 @@ function ed(e) {
             if (null == eM) return { body: (0, a.jsx)(S.$, { className: eo.spinner }) };
             (d = (0, a.jsx)(X.Z, {
                 application: eM.application,
-                permissions: e5,
+                permissions: e6,
                 deniedPermissions: eK,
                 onPermissionsChange: (e, t) => {
                     ez((n) => (e ? f.Od(n, t) : f.IH(n, t)));

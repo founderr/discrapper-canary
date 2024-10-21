@@ -1,9 +1,9 @@
 a(47120);
-var t = a(735250),
-    n = a(470079),
+var t = a(200651),
+    n = a(192379),
     i = a(120356),
     l = a.n(i),
-    r = a(699581),
+    r = a(995295),
     c = a(481060),
     d = a(689938),
     o = a(987671),
@@ -140,7 +140,7 @@ s.Z = n.forwardRef(function (e, s) {
                                     (0, t.jsx)('div', {
                                         className: 'after' === i ? o.guild : o.unreadGuild,
                                         children: (0, t.jsx)('img', {
-                                            src: a(17840),
+                                            src: a(536411),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'

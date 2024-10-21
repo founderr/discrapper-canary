@@ -1,8 +1,8 @@
 n.r(t), n(47120);
-var i = n(735250),
-    a = n(470079),
+var i = n(200651),
+    a = n(192379),
     s = n(593473),
-    r = n(266067),
+    r = n(512969),
     l = n(442837),
     o = n(481060),
     c = n(893776),
@@ -137,7 +137,7 @@ let e1 = !1;
                 }
             });
         }));
-let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
+let e2 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
         isConnected: V.Z.isConnected(),
         defaultRoute: eU.Z.defaultRoute,
         defaultRouteFallback: eU.Z.fallbackRoute,
@@ -152,17 +152,17 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: a } = this.props;
                 if (null == n) return (0, i.jsx)(r.l_, { to: eX.Z5c.DEFAULT_LOGGED_OUT });
                 if (e) {
-                    let e = e6(t);
+                    let e = e7(t);
                     return null == e || ((e.params.guildId === eX.ME || null != eG.Z.getGuild(e.params.guildId)) && null != ej.Z.getChannel(e.params.channelId)) ? (0, i.jsx)(r.l_, { to: t }) : (0, i.jsx)(r.l_, { to: a });
                 }
                 return null;
             }
         }
     ),
-    e7 = (0, v.e)(L.Z, null, { passProps: !1 }),
-    e5 = (0, v.e)(A.default, null, { passProps: !1 }),
+    e4 = (0, v.e)(L.Z, null, { passProps: !1 }),
+    e9 = (0, v.e)(A.default, null, { passProps: !1 }),
     e3 = [eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(em.Hw.guildId(), e))];
-function e2(e) {
+function e6(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
         guildId: null != t ? t : eX.ME,
@@ -171,18 +171,18 @@ function e2(e) {
         threadId: a
     };
 }
-let e9 = [
+let e5 = [
     {
         path: [eX.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(':inviteCode')],
         render(e) {
             let { match: t } = e;
-            return (0, i.jsx)(e4, { match: t });
+            return (0, i.jsx)(e2, { match: t });
         },
         isSessionRequired: !0
     },
     {
         path: [eX.Z5c.APP],
-        render: () => (0, i.jsx)(e4, {}),
+        render: () => (0, i.jsx)(e2, {}),
         isSessionRequired: !0
     },
     {
@@ -355,18 +355,18 @@ let e9 = [
     },
     {
         path: [eX.Z5c.CHANNEL_THREAD_VIEW(em.Hw.guildId(), em.Hw.channelId(), ':threadId', ':messageId?'), eX.Z5c.CHANNEL(em.Hw.guildId(), em.Hw.channelId({ optional: !0 }), ':messageId?'), eX.Z5c.ACTIVITY, eX.Z5c.ACTIVITIES, eX.Z5c.ACTIVITIES_HAPPENING_NOW, eX.Z5c.ACTIVITY_DETAILS(':applicationId'), eX.Z5c.APPLICATION_LIBRARY, eX.Z5c.APPLICATION_STORE, eX.Z5c.MESSAGE_REQUESTS, eX.Z5c.COLLECTIBLES_SHOP, eX.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eX.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eX.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'), eX.Z5c.GUILD_DISCOVERY, eX.Z5c.QUEST_HOME, eX.Z5c.GLOBAL_DISCOVERY, eX.Z5c.GUILD_MEMBER_VERIFICATION(em.Hw.guildId(), ':inviteCode?'), eX.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(em.Hw.guildId(), ':inviteCode?'), eX.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), eX.Z5c.FEATURE(':feature'), eX.Z5c.FAMILY_CENTER],
-        render: e7,
+        render: e4,
         isSessionRequired: !0,
         isChatRoute: !0
     },
     {
         path: [eX.Z5c.APPLICATION_DIRECTORY],
-        render: e5,
+        render: e9,
         isSessionRequired: !0
     }
 ];
-function e6(e) {
-    for (let { path: t, isChatRoute: n } of e9) {
+function e7(e) {
+    for (let { path: t, isChatRoute: n } of e5) {
         if (!n) continue;
         let i = (0, r.LX)(e, { path: t });
         if (null != i) return i;
@@ -451,7 +451,7 @@ class te extends a.PureComponent {
             if (null != t)
                 null !=
                     (function (e) {
-                        for (let { path: t, isSessionRequired: n } of e9) {
+                        for (let { path: t, isSessionRequired: n } of e5) {
                             if (!n) continue;
                             let i = (0, r.LX)(e, { path: t });
                             if (null != i) return i;
@@ -460,9 +460,9 @@ class te extends a.PureComponent {
                     })(e) && c.Z.startSession(t);
         })(t),
             !(function (e, t) {
-                let n = e6(e);
+                let n = e7(e);
                 if (null == n) return;
-                let { guildId: i, channelId: a, messageId: l, threadId: o } = e2(n),
+                let { guildId: i, channelId: a, messageId: l, threadId: o } = e6(n),
                     c = (0, em.Ss)(i),
                     d = (0, em.cq)(a),
                     E = (0, em.cq)(o),
@@ -521,9 +521,9 @@ class te extends a.PureComponent {
     ensureChannelMatchesGuild(e) {
         if (!V.Z.isConnected()) return null;
         let { pathname: t } = e,
-            n = e6(t);
+            n = e7(t);
         if (null == n) return null;
-        let { guildId: i, channelId: a, threadId: s } = e2(n),
+        let { guildId: i, channelId: a, threadId: s } = e6(n),
             r = (0, em.Ss)(i) && i !== eX.ME && i !== eX.I_8;
         if (null != a && (0, em.cq)(a) && !(0, eJ.AB)(a) && r) {
             let n = ej.Z.getChannel(a);
@@ -573,7 +573,7 @@ class te extends a.PureComponent {
                             from: '/channels',
                             to: '/'
                         }),
-                        e9.map((e) => {
+                        e5.map((e) => {
                             let { path: t, render: n } = e;
                             return (0, i.jsx)(
                                 r.AW,

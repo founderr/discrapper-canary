@@ -3,8 +3,8 @@ n.d(t, {
         return a;
     }
 });
-var r = n(735250),
-    i = n(470079);
+var r = n(200651),
+    i = n(192379);
 function a(e) {
     let { paddingFix: t = !0, orientation: n = 'vertical', dir: a, className: s, scrollerRef: o, specs: l } = e,
         u = (0, i.useRef)(null);

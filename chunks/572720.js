@@ -3,7 +3,7 @@ a.d(t, {
         return s;
     }
 });
-var l = a(470079),
+var l = a(192379),
     n = a(579806);
 function s(e) {
     return (0, l.useMemo)(() => (null == n.Z.clips.getClipProtocolURLFromPath ? null : n.Z.clips.getClipProtocolURLFromPath(e.filepath)), [e.filepath]);

@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     }
 });
-var i = n(735250);
+var i = n(200651);
 function a(e) {
     let { color: t = 'currentColor', ...n } = e;
     return (0, i.jsx)('svg', {
@@ -21,4 +21,4 @@ function a(e) {
         })
     });
 }
-n(470079);
+n(192379);

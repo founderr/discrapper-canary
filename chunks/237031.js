@@ -6,8 +6,8 @@ s.d(t, {
         return l;
     }
 });
-var a = s(735250);
-s(470079);
+var a = s(200651);
+s(192379);
 var r = s(481060);
 let n = 'collectibles shop product details modal',
     i = (e) => {

@@ -1,13 +1,13 @@
 n(47120), n(653041);
-var i = n(735250),
-    s = n(470079),
+var i = n(200651),
+    s = n(192379),
     a = n(120356),
     l = n.n(a),
     r = n(512722),
     o = n.n(r),
     c = n(392711),
     u = n.n(c),
-    d = n(266067),
+    d = n(512969),
     h = n(848246),
     p = n(442837),
     m = n(704215),
@@ -107,12 +107,12 @@ var i = n(735250),
     e0 = n(176505),
     e1 = n(981631),
     e2 = n(918559),
-    e7 = n(354459),
+    e3 = n(354459),
     e4 = n(921944),
-    e3 = n(440493),
-    e5 = n(157925),
-    e6 = n(689938),
-    e9 = n(784237);
+    e7 = n(440493),
+    e6 = n(157925),
+    e9 = n(689938),
+    e5 = n(784237);
 function e8(e, t, n) {
     return (
         t in e
@@ -131,7 +131,7 @@ let te = (0, O.Un)({
     webpackId: 434878,
     renderLoader: () =>
         (0, i.jsx)('div', {
-            className: e9.loader,
+            className: e5.loader,
             children: (0, i.jsx)(f.Spinner, {})
         }),
     name: 'ForumChannel'
@@ -319,7 +319,7 @@ class tt extends s.PureComponent {
                               });
                       },
                       {
-                          onCloseCallback: () => G.Z.viewPrompt(e3.r.REAL_NAME_PROMPT, t),
+                          onCloseCallback: () => G.Z.viewPrompt(e7.r.REAL_NAME_PROMPT, t),
                           modalKey: 'Guild Hub Real Name Modal'
                       }
                   ),
@@ -370,7 +370,7 @@ class tt extends s.PureComponent {
                 let { guildId: e, userId: t } = a.details;
                 return (0, i.jsx)('div', {
                     style: { width: e1.$Y6 },
-                    className: e9.guildSidebar,
+                    className: e5.guildSidebar,
                     children: (0, i.jsx)(V.Z, {
                         guildId: e,
                         userId: t,
@@ -407,15 +407,15 @@ class tt extends s.PureComponent {
                     subsection: null != n ? n : void 0
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(e9.chat, {
-                        [e9.threadSidebarOpen]: m || _,
-                        [e9.threadSidebarFloating]: m && h
+                    className: l()(e5.chat, {
+                        [e5.threadSidebarOpen]: m || _,
+                        [e5.threadSidebarFloating]: m && h
                     }),
                     children: [
                         f
                             ? (0, i.jsx)(T.Z, {
                                   style: { right: m ? d : void 0 },
-                                  className: e9.uploadArea,
+                                  className: e5.uploadArea,
                                   channel: e,
                                   draftType: eD.d.ChannelMessage
                               })
@@ -424,7 +424,7 @@ class tt extends s.PureComponent {
                         this.renderCall(),
                         this.renderEmbeddedActivityPanel(),
                         (0, i.jsxs)('div', {
-                            className: l()(e9.content, { [e9.noChat]: a === e1.AEg.NO_CHAT }),
+                            className: l()(e5.content, { [e5.noChat]: a === e1.AEg.NO_CHAT }),
                             children: [this.renderChat(), this.renderSidebar()]
                         })
                     ]
@@ -500,7 +500,7 @@ class tt extends s.PureComponent {
             }),
             e8(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e7.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e3.fO.STREAM
                     ? null
                     : (0, i.jsx)(
                           H.Z,
@@ -532,7 +532,7 @@ class tt extends s.PureComponent {
                                     es.Z,
                                     {
                                         channel: e,
-                                        tooltip: e6.Z.Messages.GROUP_DM_ADD_FRIENDS
+                                        tooltip: e9.Z.Messages.GROUP_DM_ADD_FRIENDS
                                     },
                                     'invite'
                                 )
@@ -551,7 +551,7 @@ class tt extends s.PureComponent {
                         break;
                     case e1.d4z.GROUP_DM:
                         if ((l.push(this.renderJoinRequestInterviewButtons()), l.push(this.renderClipsEnabledIndicatorToolbarItem()), l.push(this.renderStreamQualityLiveIndicatorToolbarItem()), l.push((0, i.jsx)(ei.Z, { channel: e }, 'calls')), l.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isManaged())) {
-                            let t = e6.Z.Messages.GROUP_DM_ADD_FRIENDS;
+                            let t = e9.Z.Messages.GROUP_DM_ADD_FRIENDS;
                             l.push(
                                 (0, i.jsx)(
                                     es.Z,
@@ -616,7 +616,7 @@ class tt extends s.PureComponent {
                     ? (0, i.jsx)(f.Button, {
                           size: f.Button.Sizes.MIN,
                           color: f.Button.Colors.PRIMARY,
-                          className: e9.followButton,
+                          className: e5.followButton,
                           onClick: () =>
                               (0, f.openModalLazy)(async () => {
                                   let { default: e } = await n.e('54642').then(n.bind(n, 720589));
@@ -626,7 +626,7 @@ class tt extends s.PureComponent {
                                           ...n
                                       });
                               }),
-                          children: e6.Z.Messages.FOLLOW
+                          children: e9.Z.Messages.FOLLOW
                       })
                     : null;
             }),
@@ -636,7 +636,7 @@ class tt extends s.PureComponent {
                 let p = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
                     m = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
                 return (0, i.jsxs)('div', {
-                    className: e9.subtitleContainer,
+                    className: e5.subtitleContainer,
                     children: [
                         (0, i.jsx)(f.ThemeProvider, {
                             theme: u && r ? e1.BRd.DARK : void 0,
@@ -651,9 +651,9 @@ class tt extends s.PureComponent {
                                         showDivider: h && !(0, eE.X)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: l()(e9.title, o),
+                                        className: l()(e5.title, o),
                                         transparent: r || c,
-                                        'aria-label': e6.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+                                        'aria-label': e9.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                                         children: [
                                             'left' === d &&
                                                 (0, i.jsx)(en.TS, {
@@ -764,7 +764,7 @@ t.Z = s.memo(function (e) {
         s.useEffect(() => {
             var e, t, n;
             let i = (0, e_.s1)();
-            if ((null == i ? void 0 : null === (e = i.location) || void 0 === e ? void 0 : e.state) === e5.Df) {
+            if ((null == i ? void 0 : null === (e = i.location) || void 0 === e ? void 0 : e.state) === e6.Df) {
                 let { channelId: e } = null !== (n = (0, ec.Qj)(null == i ? void 0 : null === (t = i.location) || void 0 === t ? void 0 : t.pathname)) && void 0 !== n ? n : {};
                 null != e && l(e);
             }

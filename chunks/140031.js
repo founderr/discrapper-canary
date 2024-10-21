@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     }
 });
-var s = n(735250);
+var s = n(200651);
 function a(e) {
     let { width: t = 69, height: n = 62 } = e;
     return (0, s.jsxs)('svg', {
@@ -246,4 +246,4 @@ function a(e) {
         ]
     });
 }
-n(470079);
+n(192379);

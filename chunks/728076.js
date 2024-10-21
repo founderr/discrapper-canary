@@ -9,7 +9,7 @@ n.d(a, {
     n(216116),
     n(78328),
     n(815648);
-var t = n(470079),
+var t = n(192379),
     r = n(263568),
     l = n(935369),
     s = n(398805),
@@ -178,8 +178,8 @@ function m(e, a, n) {
             });
         }, [L, j, x, O, w, e, R, a]),
         q = t.useCallback(() => {
-            V() && J();
-        }, [J, V]);
+            !b && V() && J();
+        }, [J, b, V]);
     return {
         answers: f,
         question: L,

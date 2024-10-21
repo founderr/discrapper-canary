@@ -3,8 +3,8 @@ l.d(s, {
         return r;
     }
 });
-var n = l(735250);
-l(470079);
+var n = l(200651);
+l(192379);
 var t = l(325767);
 function r(e) {
     let { width: s = 24, height: l = 24, color: r = 'currentColor', ...a } = e;

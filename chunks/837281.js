@@ -2012,7 +2012,7 @@ var t, r;
                     );
                 };
             },
-            e5 = function (e) {
+            e9 = function (e) {
                 return function (r, n) {
                     var o = r.map(function (e) {
                         return t(
@@ -2035,7 +2035,7 @@ var t, r;
                     );
                 };
             },
-            e9 = function (e) {
+            e5 = function (e) {
                 return function (r, n) {
                     return e2(e)(
                         r.map(function (e) {
@@ -2481,11 +2481,11 @@ var t, r;
                             },
                             getRecommendations: e2,
                             getFrequentlyBoughtTogether: e4,
-                            getLookingSimilar: e9,
+                            getLookingSimilar: e5,
                             getRecommendedForYou: e7,
                             getRelatedProducts: e6,
                             getTrendingFacets: e3,
-                            getTrendingItems: e5
+                            getTrendingItems: e9
                         }
                     }
                 )).appId),

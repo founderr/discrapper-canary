@@ -787,7 +787,7 @@ var r, i;
                 ['GGGG[W]WW', /\d{4}W\d{2}/, !1],
                 ['YYYYDDD', /\d{7}/]
             ],
-            e5 = [
+            e6 = [
                 ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
                 ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
                 ['HH:mm:ss', /\d\d:\d\d:\d\d/],
@@ -798,7 +798,7 @@ var r, i;
                 ['HHmm', /\d\d\d\d/],
                 ['HH', /\d\d/]
             ],
-            e6 = /^\/?Date\((\-?\d+)/i;
+            e5 = /^\/?Date\((\-?\d+)/i;
         function e7(e) {
             var t,
                 n,
@@ -819,9 +819,9 @@ var r, i;
                     return;
                 }
                 if (l[3]) {
-                    for (t = 0, n = e5.length; t < n; t++)
-                        if (e5[t][1].exec(l[3])) {
-                            a = (l[2] || ' ') + e5[t][0];
+                    for (t = 0, n = e6.length; t < n; t++)
+                        if (e6[t][1].exec(l[3])) {
+                            a = (l[2] || ' ') + e6[t][0];
                             break;
                         }
                     if (null == a) {
@@ -1002,7 +1002,7 @@ var r, i;
                                         ? (e._d = new Date(n.valueOf()))
                                         : 'string' == typeof n
                                           ? !(function (e) {
-                                                var n = e6.exec(e._i);
+                                                var n = e5.exec(e._i);
                                                 if (null !== n) {
                                                     e._d = new Date(+n[1]);
                                                     return;
@@ -1876,18 +1876,18 @@ var r, i;
             t2 = tQ('w'),
             t3 = tQ('M'),
             t4 = tQ('y');
-        function t5(e) {
+        function t6(e) {
             return function () {
                 return this.isValid() ? this._data[e] : NaN;
             };
         }
-        var t6 = t5('milliseconds'),
-            t7 = t5('seconds'),
-            t8 = t5('minutes'),
-            t9 = t5('hours'),
-            ne = t5('days'),
-            nt = t5('months'),
-            nn = t5('years'),
+        var t5 = t6('milliseconds'),
+            t7 = t6('seconds'),
+            t8 = t6('minutes'),
+            t9 = t6('hours'),
+            ne = t6('days'),
+            nt = t6('months'),
+            nn = t6('years'),
             nr = Math.round,
             ni = {
                 ss: 44,
@@ -1991,7 +1991,7 @@ var r, i;
             (nu.get = function (e) {
                 return (e = k(e)), this.isValid() ? this[e + 's']() : NaN;
             }),
-            (nu.milliseconds = t6),
+            (nu.milliseconds = t5),
             (nu.seconds = t7),
             (nu.minutes = t8),
             (nu.hours = t9),

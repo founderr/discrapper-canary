@@ -1,12 +1,12 @@
 n.d(t, {
     $p: function () {
-        return e4;
+        return e6;
     },
     BB: function () {
-        return e3;
+        return e9;
     },
     ZP: function () {
-        return e2;
+        return e3;
     }
 }),
     n(47120),
@@ -14,8 +14,8 @@ n.d(t, {
     n(411104),
     n(390547);
 var i,
-    a = n(735250),
-    s = n(470079),
+    a = n(200651),
+    s = n(192379),
     r = n(120356),
     l = n.n(r),
     o = n(275726),
@@ -160,7 +160,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
             className: eX.gifFavoriteButton
         });
     },
-    e7 = (e) => () => {
+    e2 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: s } = e;
         return null != i && null != s && Q.uo.test(n)
             ? (0, a.jsx)(eP.Z, {
@@ -173,7 +173,7 @@ let e$ = 15 * eN.Z.Millis.MINUTE,
               })
             : null;
     };
-class e3 extends (i = s.Component) {
+class e9 extends (i = s.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
         return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e0.has(e));
@@ -422,7 +422,7 @@ class e3 extends (i = s.Component) {
                                 duration: a
                             });
                         },
-                        gifFavoriteButton: e7(a),
+                        gifFavoriteButton: e2(a),
                         isSearchResult: this.props.isSearchResult
                     },
                     c = (0, ef.q)({
@@ -478,7 +478,7 @@ class e3 extends (i = s.Component) {
         let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: i, onMediaItemContextMenu: s } = this.props;
         return (0, a.jsx)(ey.F, {
             gifAutoPlay: t,
-            getGifFavButton: e7,
+            getGifFavButton: e2,
             getOnMediaItemContextMenu:
                 null == s
                     ? void 0
@@ -794,7 +794,7 @@ class e3 extends (i = s.Component) {
             });
     }
 }
-function e2(e) {
+function e3(e) {
     var t;
     let { channel: n, message: i, renderSuppressEmbeds: s, isMessageSnapshot: r } = e,
         l = (0, c.e7)([e_.default], () => e_.default.getId()),
@@ -844,7 +844,7 @@ function e2(e) {
         U = (0, M.r)(i.id),
         { hasInlineForwardButton: k } = (0, b.yk)({ location: 'MessageAccessories' }),
         G = (0, P.a)(i) && k;
-    return (0, a.jsx)(e3, {
+    return (0, a.jsx)(e9, {
         canSuppressEmbeds: S,
         canDeleteAttachments: A,
         ...v,
@@ -868,11 +868,11 @@ function e2(e) {
         hasInlineForwardButton: G
     });
 }
-eq(e3, 'defaultProps', {
+eq(e9, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
-let e4 = (e) => {
+let e6 = (e) => {
     var t;
     let { message: n, channel: i, disableReactionReads: s = !1, renderComponentAccessory: r = !1, renderThreadAccessory: l = !1, disableReactionCreates: o = !0, disableReactionUpdates: c = !0, isSearchResult: u = !1, ...d } = e,
         _ = ed.x4.useSetting(),
@@ -884,7 +884,7 @@ let e4 = (e) => {
         h = (0, O.V)(i.id, n.author.id),
         N = (0, M.r)(n.id),
         p = (0, ee.Z)(n);
-    return (0, a.jsx)(e3, {
+    return (0, a.jsx)(e9, {
         ...d,
         message: n,
         channel: i,

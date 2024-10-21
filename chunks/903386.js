@@ -3,7 +3,7 @@ s.d(t, {
         return l;
     }
 });
-var n = s(735250);
+var n = s(200651);
 function l(e) {
     let { width: t = 18, height: s = 18, color: l = 'currentColor', foreground: i, background: a, className: r } = e;
     return (0, n.jsx)('svg', {
@@ -34,4 +34,4 @@ function l(e) {
         })
     });
 }
-s(470079);
+s(192379);

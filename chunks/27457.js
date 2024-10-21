@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(735250),
-    s = n(470079),
+var i = n(200651),
+    s = n(192379),
     a = n(120356),
     l = n.n(a),
     r = n(848246),
@@ -134,7 +134,7 @@ let eo = s.memo((e) => {
         }),
         { showGameIcon: e0 } = g.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
         e1 = e0 || e$,
-        { hangStatusActivity: e2, gameActivity: e7 } = (0, o.cj)(
+        { hangStatusActivity: e2, gameActivity: e3 } = (0, o.cj)(
             [V.Z],
             () => ({
                 hangStatusActivity: e$ && null != eO ? V.Z.findActivity(eO, (e) => e.type === en.IIU.HANG_STATUS) : null,
@@ -142,19 +142,19 @@ let eo = s.memo((e) => {
             }),
             [e$, eO, e1]
         ),
-        e4 = (0, o.e7)([H.Z], () => ((null == e7 ? void 0 : e7.application_id) != null ? H.Z.getDetectableGame(e7.application_id) : null)),
-        e3 = (0, o.e7)([p.Z], () => (null != e4 && (null == e7 ? void 0 : e7.application_id) != null ? p.Z.getApplication(null == e7 ? void 0 : e7.application_id) : void 0)),
-        e5 = (0, O.wV)({
+        e4 = (0, o.e7)([H.Z], () => ((null == e3 ? void 0 : e3.application_id) != null ? H.Z.getDetectableGame(e3.application_id) : null)),
+        e7 = (0, o.e7)([p.Z], () => (null != e4 && (null == e3 ? void 0 : e3.application_id) != null ? p.Z.getApplication(null == e3 ? void 0 : e3.application_id) : void 0)),
+        e6 = (0, O.wV)({
             userId: eO,
             channelId: eh.id,
             location: 'CallTile'
         }),
-        e6 = (0, O.zU)({
+        e9 = (0, O.zU)({
             streamKey: I.type === ei.fO.STREAM ? I.id : null,
             channelId: eh.id,
             location: 'CallTile'
         }),
-        e9 = s.useMemo(() => (I.type === ei.fO.STREAM ? null != e6 && e6 : I.type === ei.fO.USER && null != e5 && e5), [e6, e5, I.type]);
+        e5 = s.useMemo(() => (I.type === ei.fO.STREAM ? null != e9 && e9 : I.type === ei.fO.USER && null != e6 && e6), [e9, e6, I.type]);
     s.useEffect(() => {
         eZ(eI);
     }, [eI]);
@@ -351,9 +351,9 @@ let eo = s.memo((e) => {
                                           onToggleMute: e8,
                                           participantUserId: eO,
                                           hangStatusActivity: e2,
-                                          application: e3,
+                                          application: e7,
                                           speaking: eB,
-                                          secureFramesVerified: e9
+                                          secureFramesVerified: e5
                                       })
                                     : null,
                                 I.type === ei.fO.USER && eD

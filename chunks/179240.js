@@ -5,8 +5,8 @@ n.d(t, {
     }
 });
 var i,
-    a = n(735250),
-    s = n(470079),
+    a = n(200651),
+    s = n(192379),
     o = n(120356),
     l = n.n(o),
     u = n(58654),
@@ -93,18 +93,18 @@ class f extends (i = s.PureComponent) {
         return null !== (t = null === (e = this._textArea) || void 0 === e ? void 0 : e.value) && void 0 !== t ? t : '';
     }
     render() {
-        let { style: e, className: t, ...n } = this.props;
-        delete n.fontWidthEstimate, delete n.onResize;
-        let r = {
+        let { style: e, className: t, onResize: n, ...r } = this.props;
+        delete r.fontWidthEstimate;
+        let i = {
             ...this.state,
             ...e
         };
         return (0, a.jsx)(c.t, {
             children: (0, a.jsx)('textarea', {
-                ...n,
+                ...r,
                 className: l()(t, d.scrollbarGhostHairline),
                 ref: this.handleSetRef,
-                style: r,
+                style: i,
                 onChange: this.handleChange
             })
         });

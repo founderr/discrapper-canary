@@ -12,8 +12,8 @@ t.r(n),
     t(815648),
     t(789020),
     t(653041);
-var i = t(735250),
-    a = t(470079),
+var i = t(200651),
+    a = t(192379),
     r = t(120356),
     o = t.n(r),
     s = t(525654),
@@ -65,7 +65,7 @@ var i = t(735250),
     $ = t(409425),
     ee = t(132871),
     en = t(147890),
-    et = t(491576),
+    et = t(824606),
     ei = t(527564),
     ea = t(326135),
     er = t(940064),
@@ -348,8 +348,8 @@ function eE(e) {
                 }),
             [eU, e$]
         ),
-        [e6, e1] = (0, x.Z)(!1, 1000),
-        e5 = a.useCallback(() => {
+        [e1, e6] = (0, x.Z)(!1, 1000),
+        e3 = a.useCallback(() => {
             if (null != eM)
                 B.default.track(eu.rMx.APP_SHARE_BUTTON_CLICKED, {
                     source: 'product_page',
@@ -357,8 +357,8 @@ function eE(e) {
                     guild_id: f
                 }),
                     (0, F.JG)(ev(eM.id)),
-                    e1(!0);
-        }, [eM, e1, f]);
+                    e6(!0);
+        }, [eM, e6, f]);
     a.useEffect(() => {
         let e = new URL(location.href);
         if (S && 'true' === e.searchParams.get(ex)) {
@@ -367,7 +367,7 @@ function eE(e) {
             (0, j.dL)(n), eV('product_page');
         }
     }, [S, eV]);
-    let e3 = a.useCallback(() => {
+    let e8 = a.useCallback(() => {
             if (null != eM) {
                 if ((u.tq || u.Em) && null == eM.custom_install_url) {
                     let e = (0, G.Er)({
@@ -393,8 +393,8 @@ function eE(e) {
                       (0, q.rf)({ [ex]: 'true' }));
             }
         }, [eM, S, eV, p, f]),
-        e8 = (null == eM ? void 0 : eM.id) === ep.g,
-        [e9, e2] = a.useState(!1),
+        e9 = (null == eM ? void 0 : eM.id) === ep.g,
+        [e5, e2] = a.useState(!1),
         [e4, e7] = a.useState(!1),
         [ne, nn] = a.useState(!0),
         nt = (e) => {
@@ -436,7 +436,7 @@ function eE(e) {
                                               children: r
                                           })
                                       }),
-                                      (e9 || e4) &&
+                                      (e5 || e4) &&
                                           (0, i.jsx)(eP, {
                                               isViewAll: e4,
                                               onToggle: () => {
@@ -585,7 +585,7 @@ function eE(e) {
                     )
                 )
             );
-        }, [I, ew, eM, eL, e4, e9, eq, ey, eX, nr, p, ni, na, ez]),
+        }, [I, ew, eM, eL, e4, e5, eq, ey, eX, nr, p, ni, na, ez]),
         ns = a.useMemo(() => {
             let e = [
                 {
@@ -696,20 +696,20 @@ function eE(e) {
                                                                                   src: t(744050)
                                                                               })
                                                                       }),
-                                                                  e8 && (0, i.jsx)($.Z, { className: eI.partnerBadge })
+                                                                  e9 && (0, i.jsx)($.Z, { className: eI.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
                                                               className: eI.buttons,
                                                               children: [
                                                                   (0, i.jsx)(h.Button, {
-                                                                      onClick: e5,
+                                                                      onClick: e3,
                                                                       color: h.Button.Colors.PRIMARY,
-                                                                      children: e6 ? em.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : em.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
+                                                                      children: e1 ? em.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : em.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                                                   }),
                                                                   (0, i.jsx)(h.Button, {
                                                                       color: h.Button.Colors.BRAND,
-                                                                      onClick: e3,
+                                                                      onClick: e8,
                                                                       disabled: !eY,
                                                                       children: em.Z.Messages.APPLICATION_ADD_BUTTON
                                                                   }),

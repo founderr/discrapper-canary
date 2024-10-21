@@ -1,10 +1,10 @@
 n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(470716),
-    l = n(266067),
+    o = n(765053),
+    l = n(512969),
     u = n(873546),
     c = n(442837),
     d = n(316792),
@@ -91,7 +91,7 @@ t.Z = i.memo(function (e) {
                                     href: e,
                                     as: 'font',
                                     type: 'font/woff2',
-                                    crossOrigin: 'true'
+                                    crossOrigin: 'anonymous'
                                 },
                                 t
                             )

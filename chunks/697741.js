@@ -1,9 +1,9 @@
-l.d(t, {
+r.d(e, {
     $: function () {
-        return v;
+        return E;
     }
 });
-let i = {
+let n = {
         ational: 'ate',
         tional: 'tion',
         enci: 'ence',
@@ -26,7 +26,7 @@ let i = {
         biliti: 'ble',
         logi: 'log'
     },
-    n = {
+    i = {
         icate: 'ic',
         ative: '',
         alize: 'al',
@@ -35,31 +35,31 @@ let i = {
         ful: '',
         ness: ''
     },
-    s = '[aeiouy]',
+    o = '[aeiouy]',
     a = '([^aeiou][^aeiouy]*)',
-    o = '(' + s + '[aeiou]*)',
-    r = RegExp('^' + a + '?' + o + a),
-    d = RegExp('^' + a + '?' + o + a + o + '?$'),
-    u = RegExp('^' + a + '?(' + o + a + '){2,}'),
-    c = RegExp('^' + a + '?' + s),
-    _ = RegExp('^' + a + s + '[^aeiouwxy]$'),
-    m = /ll$/,
-    f = /^(.+?)e$/,
+    u = '(' + o + '[aeiou]*)',
+    s = RegExp('^' + a + '?' + u + a),
+    c = RegExp('^' + a + '?' + u + a + u + '?$'),
+    l = RegExp('^' + a + '?(' + u + a + '){2,}'),
+    f = RegExp('^' + a + '?' + o),
+    p = RegExp('^' + a + o + '[^aeiouwxy]$'),
+    h = /ll$/,
+    d = /^(.+?)e$/,
     g = /^(.+?)y$/,
-    h = /^(.+?(s|t))(ion)$/,
-    E = /^(.+?)(ed|ing)$/,
-    A = /(at|bl|iz)$/,
-    p = /^(.+?)eed$/,
-    M = /^.+?[^s]s$/,
-    x = /^.+?(ss|i)es$/,
-    I = /([^aeiouylsz])\1$/,
-    T = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
-    O = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-    R = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
-function v(e) {
-    let t,
-        l = String(e).toLowerCase();
-    if (l.length < 3) return l;
-    let s = !1;
-    return 121 === l.codePointAt(0) && ((s = !0), (l = 'Y' + l.slice(1))), x.test(l) ? (l = l.slice(0, -2)) : M.test(l) && (l = l.slice(0, -1)), (t = p.exec(l)) ? r.test(t[1]) && (l = l.slice(0, -1)) : (t = E.exec(l)) && c.test(t[1]) && ((l = t[1]), A.test(l) ? (l += 'e') : I.test(l) ? (l = l.slice(0, -1)) : _.test(l) && (l += 'e')), (t = g.exec(l)) && c.test(t[1]) && (l = t[1] + 'i'), (t = T.exec(l)) && r.test(t[1]) && (l = t[1] + i[t[2]]), (t = O.exec(l)) && r.test(t[1]) && (l = t[1] + n[t[2]]), (t = R.exec(l)) ? u.test(t[1]) && (l = t[1]) : (t = h.exec(l)) && u.test(t[1]) && (l = t[1]), (t = f.exec(l)) && (u.test(t[1]) || (d.test(t[1]) && !_.test(t[1]))) && (l = t[1]), m.test(l) && u.test(l) && (l = l.slice(0, -1)), s && (l = 'y' + l.slice(1)), l;
+    y = /^(.+?(s|t))(ion)$/,
+    v = /^(.+?)(ed|ing)$/,
+    m = /(at|bl|iz)$/,
+    _ = /^(.+?)eed$/,
+    b = /^.+?[^s]s$/,
+    S = /^.+?(ss|i)es$/,
+    w = /([^aeiouylsz])\1$/,
+    k = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
+    x = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+    C = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+function E(t) {
+    let e,
+        r = String(t).toLowerCase();
+    if (r.length < 3) return r;
+    let o = !1;
+    return 121 === r.codePointAt(0) && ((o = !0), (r = 'Y' + r.slice(1))), S.test(r) ? (r = r.slice(0, -2)) : b.test(r) && (r = r.slice(0, -1)), (e = _.exec(r)) ? s.test(e[1]) && (r = r.slice(0, -1)) : (e = v.exec(r)) && f.test(e[1]) && ((r = e[1]), m.test(r) ? (r += 'e') : w.test(r) ? (r = r.slice(0, -1)) : p.test(r) && (r += 'e')), (e = g.exec(r)) && f.test(e[1]) && (r = e[1] + 'i'), (e = k.exec(r)) && s.test(e[1]) && (r = e[1] + n[e[2]]), (e = x.exec(r)) && s.test(e[1]) && (r = e[1] + i[e[2]]), (e = C.exec(r)) ? l.test(e[1]) && (r = e[1]) : (e = y.exec(r)) && l.test(e[1]) && (r = e[1]), (e = d.exec(r)) && (l.test(e[1]) || (c.test(e[1]) && !p.test(e[1]))) && (r = e[1]), h.test(r) && l.test(r) && (r = r.slice(0, -1)), o && (r = 'y' + r.slice(1)), r;
 }

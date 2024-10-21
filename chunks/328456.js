@@ -9,7 +9,7 @@ n.d(t, {
     n(724458),
     n(653041),
     n(47120);
-var a = n(470079),
+var a = n(192379),
     r = n(979554);
 class s {
     get firstAvatarDecoration() {

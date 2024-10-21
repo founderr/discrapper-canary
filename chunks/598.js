@@ -15,10 +15,10 @@ n.r(t),
     }),
     n(47120),
     n(789020);
-var E = n(735250),
-    r = n(470079),
-    u = n(160612),
-    i = n(77866),
+var E = n(200651),
+    r = n(192379),
+    u = n(734530),
+    i = n(75124),
     S = n(772848),
     _ = n(442837),
     o = n(115130),
@@ -136,22 +136,22 @@ function w(e) {
             return null == e ? null : e[null != ee ? ee : R.c];
         }, [eO, eq, ee]),
         { data: e1 } = (0, a.IX)(X),
-        e7 = I.Sb.useSetting(),
-        e4 = (0, _.e7)([o.Z], () => o.Z.getFetchState());
+        e2 = I.Sb.useSetting(),
+        e7 = (0, _.e7)([o.Z], () => o.Z.getFetchState());
     r.useEffect(() => {
-        null != e1 && (0, s.yE)(e1.flags, H.udG.EMBEDDED) && e7 && null == e4 && (0, A.$h)();
-    }, [e1, e7, e4]);
-    let e2 = (0, s.yE)(null !== (t = null == e1 ? void 0 : e1.flags) && void 0 !== t ? t : 0, H.udG.EMBEDDED) && (0, s.yE)(null !== (n = null == e1 ? void 0 : e1.flags) && void 0 !== n ? n : 0, H.udG.EMBEDDED_IAP),
-        e5 = (0, _.e7)([l.ZP], () =>
+        null != e1 && (0, s.yE)(e1.flags, H.udG.EMBEDDED) && e2 && null == e7 && (0, A.$h)();
+    }, [e1, e2, e7]);
+    let e4 = (0, s.yE)(null !== (t = null == e1 ? void 0 : e1.flags) && void 0 !== t ? t : 0, H.udG.EMBEDDED) && (0, s.yE)(null !== (n = null == e1 ? void 0 : e1.flags) && void 0 !== n ? n : 0, H.udG.EMBEDDED_IAP),
+        e9 = (0, _.e7)([l.ZP], () =>
             Array.from(l.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
                 return t === X;
             })
         ),
-        e8 = null == e5 ? void 0 : e5.compositeInstanceId,
-        e9 = (0, _.e7)([C.Z], () => (null != eO ? C.Z.getForSKU(eO) : null), [eO]),
-        e6 = ex[null != eO ? eO : ''],
-        [e3, te] = r.useState(null),
+        e5 = null == e9 ? void 0 : e9.compositeInstanceId,
+        e8 = (0, _.e7)([C.Z], () => (null != eO ? C.Z.getForSKU(eO) : null), [eO]),
+        e3 = ex[null != eO ? eO : ''],
+        [e6, te] = r.useState(null),
         tt = null !== (N = null == Y ? void 0 : Y.inReverseTrial) && void 0 !== N && N && !V;
     return (0, E.jsx)(m.Provider, {
         value: {
@@ -202,8 +202,8 @@ function w(e) {
             modalOverlayNode: eh,
             setModalOverlayNode: eY,
             selectedSkuId: eO,
-            selectedSku: e6,
-            selectedStoreListing: e9,
+            selectedSku: e3,
+            selectedStoreListing: e8,
             selectedPlan: eL,
             setSelectedSkuId: ep,
             setSelectedPlanId: eG,
@@ -219,13 +219,13 @@ function w(e) {
             selectedSkuPricePreview: e0,
             application: e1,
             purchaseType: k,
-            isEmbeddedIAP: e2,
-            activitySessionId: e8,
-            devShelfFetchState: e4,
+            isEmbeddedIAP: e4,
+            activitySessionId: e5,
+            devShelfFetchState: e7,
             entitlementsGranted: ek,
             setEntitlementsGranted: eX,
             referralCode: J,
-            invoicePreview: e3,
+            invoicePreview: e6,
             setInvoicePreview: te,
             repeatPurchase: Q,
             inReverseTrial: tt

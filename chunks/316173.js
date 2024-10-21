@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-    a = n(470079),
+var i = n(200651),
+    a = n(192379),
     s = n(120356),
     r = n.n(s),
     l = n(442837),
@@ -42,7 +42,7 @@ t.Z = () => {
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
                 className: r()(h.devBanner, h.staging),
-                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '337190' }), (0, i.jsx)(p, {})]
+                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '337364' }), (0, i.jsx)(p, {})]
             })
           : null;
 };

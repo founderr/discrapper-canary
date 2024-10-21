@@ -1,5 +1,5 @@
-var i = n(735250),
-    s = n(470079);
+var i = n(200651),
+    s = n(192379);
 class r extends s.PureComponent {
     render() {
         let { layout: e, layoutSize: t, className: n, renderWidget: s } = this.props;

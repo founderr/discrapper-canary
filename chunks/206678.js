@@ -4,7 +4,7 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(470079);
+var r = n(192379);
 function i(e, t) {
     let n = e.getBoundingClientRect();
     return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));

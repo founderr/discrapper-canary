@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(735250);
+var r = n(200651);
 function i(e) {
     let { width: t = 24, height: n = 24, boxColor: i, ribbonColor: a, style: s } = e;
     return (0, r.jsxs)('svg', {
@@ -58,4 +58,4 @@ function i(e) {
         ]
     });
 }
-n(470079);
+n(192379);

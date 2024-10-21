@@ -1,5 +1,5 @@
-var t = n(735250);
-n(470079);
+var t = n(200651);
+n(192379);
 s.Z = (e) => {
     let { className: s, width: n = 83, height: l = 45 } = e;
     return (0, t.jsxs)('svg', {

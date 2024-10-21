@@ -4,7 +4,7 @@ n.d(e, {
     }
 }),
     n(47120);
-var a = n(470079),
+var a = n(192379),
     o = n(81063);
 let r = ['embedded_cover', 'embedded_background'];
 function c(t) {

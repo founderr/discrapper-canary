@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     }
 });
-var i = n(735250);
+var i = n(200651);
 function l(e) {
     let { className: t } = e;
     return (0, i.jsxs)('svg', {
@@ -33,4 +33,4 @@ function l(e) {
         ]
     });
 }
-n(470079);
+n(192379);

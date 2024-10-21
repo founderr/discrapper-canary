@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var r,
     i,
-    a = n(735250),
-    s = n(470079),
+    a = n(200651),
+    s = n(192379),
     o = n(120356),
     l = n.n(o),
     u = n(954955),
@@ -199,7 +199,7 @@ t.Z = s.memo(
             [eG, ek] = s.useState(!1),
             eB = w.default.getCurrentUser(),
             eF = (0, G.I5)(eB);
-        s.useImperativeHandle(t, () => ({ onPickerOpen: e6 }));
+        s.useImperativeHandle(t, () => ({ onPickerOpen: e5 }));
         let { location: eV } = (0, m.O)(),
             { page: eH, section: eZ, object: eY, openPopoutType: ej } = ep,
             eW = s.useMemo(
@@ -239,21 +239,21 @@ t.Z = s.memo(
                 emojiPaddingHorizontal: en,
                 emojiSpriteSize: f
             }),
-            { newlyAddedEmojis: e5 } = (0, V.Z)(ex, o);
+            { newlyAddedEmojis: e6 } = (0, V.Z)(ex, o);
         (0, F.b)({
             intention: o,
             isBurstReaction: eG,
             analyticsObject: eY
         });
-        let e6 = s.useCallback(() => {
-                let e = e5.length > 0 ? e5[0].id : null;
+        let e5 = s.useCallback(() => {
+                let e = e6.length > 0 ? e6[0].id : null;
                 (0, R.pr)(ex, e),
                     (0, F.Z)({
                         intention: o,
                         isBurstReaction: eG,
                         analyticsObject: eY
                     });
-            }, [e5, ex, o, eG, eY]),
+            }, [e6, ex, o, eG, eY]),
             e7 = (0, W.rf)({
                 pickerIntention: o,
                 selectedChannel: u,

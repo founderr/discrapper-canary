@@ -3,8 +3,8 @@ t.d(n, {
         return S;
     }
 });
-var l = t(735250);
-t(470079);
+var l = t(200651);
+t(192379);
 var i = t(399606),
     u = t(481060),
     r = t(231757),
@@ -36,7 +36,7 @@ function S(e) {
         }
         n.type === N.ABu.XBOX
             ? (0, u.openModalLazy)(async () => {
-                  let { default: n } = await Promise.all([t.e('17139'), t.e('522')]).then(t.bind(t, 200623));
+                  let { default: n } = await Promise.all([t.e('15812'), t.e('522')]).then(t.bind(t, 200623));
                   return (t) =>
                       (0, l.jsx)(n, {
                           ...t,

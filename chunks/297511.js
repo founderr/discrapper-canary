@@ -4,8 +4,8 @@ n.r(t),
             return A;
         }
     });
-var a = n(735250),
-    r = n(470079),
+var a = n(200651),
+    r = n(192379),
     s = n(593473),
     i = n(442837),
     o = n(893776),
@@ -17,8 +17,8 @@ var a = n(735250),
     p = n(571457),
     _ = n(703656),
     x = n(314897),
-    g = n(626135),
-    b = n(963202),
+    b = n(626135),
+    g = n(963202),
     E = n(569234),
     f = n(981631),
     h = n(186901),
@@ -28,32 +28,32 @@ function A(e) {
     let { match: t, location: n } = e,
         A = (0, i.e7)([u.Z], () => u.Z.getState('discovery')),
         L = (0, i.e7)([x.default], () => x.default.isAuthenticated()),
-        v = (0, b.iN)('game_discovery_entry_point'),
-        j = t.params.gameId,
-        D = (0, b.io)('landing page'),
+        v = (0, g.iN)('game_discovery_entry_point'),
+        D = t.params.gameId,
+        j = (0, g.io)('landing page'),
         O = (0, i.e7)([m.Z], () => m.Z.hasLoadedExperiments);
     if (
         (r.useEffect(() => {
             let { utm_source: e } = s.parse(n.search);
-            (0, g.setUTMContext)({ utmSource: e }), (n.search = ''), (0, _.dL)(n);
+            (0, b.setUTMContext)({ utmSource: e }), (n.search = ''), (0, _.dL)(n);
         }, []),
         r.useEffect(() => {
-            O && D && (0, p.HV)({ gameId: j });
-        }, [j, O, D]),
+            O && j && (0, p.HV)({ gameId: D });
+        }, [D, O, j]),
         r.useEffect(() => {
             !O && o.Z.getExperiments();
         }, [O]),
         r.useEffect(() => {
             if (O) {
-                if (!D) {
+                if (!j) {
                     (0, _.dL)({ pathname: f.Z5c.GLOBAL_DISCOVERY });
                     return;
                 }
                 if (null == A)
-                    (0, p.zY)({ gameId: j }),
+                    (0, p.zY)({ gameId: D }),
                         d.Z.openNativeAppModal('discovery', f.Etm.DEEP_LINK, {
                             type: h.jE.DISCOVERY_GAME_RESULTS,
-                            params: { gameId: j }
+                            params: { gameId: D }
                         });
                 else if (A === f.kEZ.OPEN_FAIL) {
                     if (!L) return;
@@ -63,14 +63,14 @@ function A(e) {
                     }
                     (0, _.dL)({
                         pathname: f.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                        search: '?game='.concat(j)
+                        search: '?game='.concat(D)
                     });
                 }
             }
-        }, [j, O, L, v, A, D]),
+        }, [D, O, L, v, A, j]),
         A === f.kEZ.OPEN_FAIL && !L)
     )
-        return (0, a.jsx)(E.Z, { gameId: j });
+        return (0, a.jsx)(E.Z, { gameId: D });
     let S = null == A || A === f.kEZ.OPENING;
     return (0, a.jsxs)(a.Fragment, {
         children: [

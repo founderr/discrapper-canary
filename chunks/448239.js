@@ -3,8 +3,8 @@ n.d(t, {
         return a;
     }
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(325767);
 function a(e) {
     let { width: t = 24, height: n = 24, color: a = 'currentColor', className: s, foreground: o, ...l } = e;

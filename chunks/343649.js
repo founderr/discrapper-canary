@@ -9,12 +9,12 @@ t.r(n),
     }),
     t(47120);
 var o,
-    r = t(735250),
-    l = t(470079),
+    r = t(200651),
+    l = t(192379),
     i = t(512722),
     a = t.n(i),
-    s = t(77866),
-    c = t(792986),
+    s = t(75124),
+    c = t(252759),
     u = t(772848),
     d = t(442837),
     p = t(780384),
@@ -195,15 +195,15 @@ function et(e) {
     }, [eH, eJ, e0, eb, eu, ef, eW]),
         (0, R.bp)(eH, eb, eJ, eX),
         (0, b.dZ)(eH, eK, eX);
-    let e8 = l.useRef(null),
-        [e7, e1] = (0, E.Z)(!1, 500),
-        [e2, e4] = l.useState(null),
-        [e9, e5] = l.useState([]),
-        [e3, e6] = l.useState(!1);
+    let e1 = l.useRef(null),
+        [e8, e2] = (0, E.Z)(!1, 500),
+        [e7, e9] = l.useState(null),
+        [e4, e5] = l.useState([]),
+        [e6, e3] = l.useState(!1);
     l.useEffect(() => {
         let e;
-        if (!!eB) null != B.Z.get(X.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, G.DE)(X.Xh.PREMIUM_MONTH_GUILD, eM, !1))), null == eM && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
-    }, [eM, eu, eB, JSON.stringify(e9)]);
+        if (!!eB) null != B.Z.get(X.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, G.DE)(X.Xh.PREMIUM_MONTH_GUILD, eM, !1))), null == eM && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
+    }, [eM, eu, eB, JSON.stringify(e4)]);
     let ne = (0, A.vP)({
         paymentModalArgs: eI,
         initialStep: b.h8.PAYMENT_TYPE,
@@ -231,7 +231,7 @@ function et(e) {
         }
     });
     if (ed) n = (0, r.jsx)(T.Vq, { onClose: eQ });
-    else if (ep && em && eB && null != e2 && '' !== e2) {
+    else if (ep && em && eB && null != e7 && '' !== e7) {
         if (null == eu ? void 0 : eu.isPausedOrPausePending)
             n = (0, r.jsx)(f.ModalContent, {
                 children: (0, r.jsx)('p', {
@@ -247,14 +247,14 @@ function et(e) {
                 })
             });
         else if (eH === b.h8.PREMIUM_UPSELL) {
-            a()(null != eS, 'Missing nextPremiumSubscriptionPlan'), a()(e2, 'Currency not defined');
+            a()(null != eS, 'Missing nextPremiumSubscriptionPlan'), a()(e7, 'Currency not defined');
             let e =
                 null != eM
                     ? {
                           paymentSourceId: eM,
-                          currency: e2
+                          currency: e7
                       }
-                    : { currency: e2 };
+                    : { currency: e7 };
             n = (0, r.jsx)(V.Z, {
                 premiumSubscriptionPlan: eS,
                 analyticsLocation: et,
@@ -267,14 +267,14 @@ function et(e) {
             });
         } else {
             let e, t, o, l;
-            a()(e2, 'Currency not defined');
+            a()(e7, 'Currency not defined');
             let s =
                 null != eM
                     ? {
                           paymentSourceId: eM,
-                          currency: e2
+                          currency: e7
                       }
-                    : { currency: e2 };
+                    : { currency: e7 };
             switch (eH) {
                 case b.h8.PLAN_SELECT:
                     a()(null != er, 'Missing guildId'),
@@ -346,8 +346,8 @@ function et(e) {
                                 eJ(b.h8.ADD_PAYMENT_STEPS), ex(null);
                             },
                             onPurchaseTermsChange: eU,
-                            legalTermsNodeRef: e8,
-                            hasLegalTermsFlash: e7
+                            legalTermsNodeRef: e1,
+                            hasLegalTermsFlash: e8
                         })),
                         (t = b.h8.PLAN_SELECT),
                         (l = eO
@@ -370,7 +370,7 @@ function et(e) {
                                                   guild_id: er,
                                                   application_id: ec
                                               }),
-                                              e3)
+                                              e6)
                                           )
                                               return;
                                           if (null == eu || null == e_) {
@@ -381,7 +381,7 @@ function et(e) {
                                                   currency: s.currency
                                               });
                                               if (n.redirectConfirmation) {
-                                                  e6(null != n.redirectURL);
+                                                  e3(null != n.redirectURL);
                                                   return;
                                               }
                                           } else {
@@ -389,7 +389,7 @@ function et(e) {
                                               (n.currency = eu.currency), null == n.currency && (n.currency = s.currency), (n.paymentSource = null != ef ? eT[ef] : void 0), null == n.paymentSource && (a()(null != e, 'Missing paymentSource'), (n.paymentSource = e), (n.currency = s.currency));
                                               let t = await (0, _.Mg)(eu, n, eF);
                                               if (t.redirectConfirmation) {
-                                                  e6(null != t.redirectURL);
+                                                  e3(null != t.redirectURL);
                                                   return;
                                               }
                                           }
@@ -405,7 +405,7 @@ function et(e) {
                                                   duration_ms: Date.now() - ew
                                               });
                                       } finally {
-                                          !e3 && eC(!1);
+                                          !e6 && eC(!1);
                                       }
                                   },
                                   children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -417,7 +417,7 @@ function et(e) {
                                           ...e,
                                           color: f.Button.Colors.GREEN,
                                           onClick: () => {
-                                              null != e8.current && (e8.current.scrollIntoView({ behavior: 'smooth' }), e1(!0));
+                                              null != e1.current && (e1.current.scrollIntoView({ behavior: 'smooth' }), e2(!0));
                                           },
                                           type: 'submit',
                                           children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -445,7 +445,7 @@ function et(e) {
                           currentStep: eH,
                           paymentError: u,
                           purchaseErrorBlockRef: eA,
-                          hasCurrencies: e9.length > 1,
+                          hasCurrencies: e4.length > 1,
                           body: e,
                           footer:
                               eH !== b.h8.CONFIRM

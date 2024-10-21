@@ -4,7 +4,7 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(470079);
+var i = n(192379);
 function s() {
     let [e, t] = i.useState(window.innerWidth < 1132);
     return (

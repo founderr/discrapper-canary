@@ -707,11 +707,11 @@ var e, r;
                 });
             }),
             (tP.prototype.mergeDeep = function () {
-                return t2(this, t8, arguments);
+                return t2(this, t5, arguments);
             }),
             (tP.prototype.mergeDeepWith = function (t) {
                 var e = l.call(arguments, 1);
-                return t2(this, t5(t), e);
+                return t2(this, t8(t), e);
             }),
             (tP.prototype.mergeDeepIn = function (t) {
                 var e = l.call(arguments, 1);
@@ -852,7 +852,7 @@ var e, r;
                 void 0 === e && (e = tO(r));
                 var i = 1 << ((0 === t ? e : e >>> t) & D),
                     o = this.bitmap;
-                return (o & i) == 0 ? n : this.nodes[t9(o & (i - 1))].get(t + 5, e, r, n);
+                return (o & i) == 0 ? n : this.nodes[t7(o & (i - 1))].get(t + 5, e, r, n);
             }),
             (tW.prototype.update = function (t, e, r, n, i, o, a) {
                 void 0 === r && (r = tO(n));
@@ -861,7 +861,7 @@ var e, r;
                     c = this.bitmap,
                     l = (c & s) != 0;
                 if (!l && i === O) return this;
-                var f = t9(c & (s - 1)),
+                var f = t7(c & (s - 1)),
                     p = this.nodes,
                     h = l ? p[f] : void 0,
                     d = t1(h, t, e + 5, r, n, i, o, a);
@@ -998,19 +998,19 @@ var e, r;
                     })),
                     n.push(a);
             }
-            return t7(t, e, n);
+            return t9(t, e, n);
         }
-        function t8(t, e, r) {
+        function t5(t, e, r) {
             return t && t.mergeDeep && y(e) ? t.mergeDeep(e) : tv(t, e) ? t : e;
         }
-        function t5(t) {
+        function t8(t) {
             return function (e, r, n) {
                 if (e && e.mergeDeepWith && y(r)) return e.mergeDeepWith(t, r);
                 var i = t(e, r, n);
                 return tv(e, i) ? e : i;
             };
         }
-        function t7(t, e, r) {
+        function t9(t, e, r) {
             return 0 ===
                 (r = r.filter(function (t) {
                     return 0 !== t.size;
@@ -1036,7 +1036,7 @@ var e, r;
                     })
                   : t.constructor(r[0]);
         }
-        function t9(t) {
+        function t7(t) {
             return (t -= (t >> 1) & 1431655765), (t = ((t = (858993459 & t) + ((t >> 2) & 858993459)) + (t >> 4)) & 252645135), (t += t >> 8), 127 & (t += t >> 16);
         }
         function t4(t, e, r, n) {
@@ -1132,11 +1132,11 @@ var e, r;
                 return ey(this, t, e);
             }),
             (en.prototype.mergeDeep = function () {
-                return ey(this, t8, arguments);
+                return ey(this, t5, arguments);
             }),
             (en.prototype.mergeDeepWith = function (t) {
                 var e = l.call(arguments, 1);
-                return ey(this, t5(t), e);
+                return ey(this, t8(t), e);
             }),
             (en.prototype.setSize = function (t) {
                 return eg(this, 0, t);
@@ -1324,7 +1324,7 @@ var e, r;
                         })),
                     n.push(u);
             }
-            return i > t.size && (t = t.setSize(i)), t7(t, e, n);
+            return i > t.size && (t = t.setSize(i)), t9(t, e, n);
         }
         function ev(t) {
             return t < E ? 0 : ((t - 1) >>> 5) << 5;
@@ -2178,10 +2178,10 @@ var e, r;
         }
         function e2(t) {
             return null == t
-                ? e9()
-                : e8(t)
+                ? e7()
+                : e5(t)
                   ? t
-                  : e9().withMutations(function (e) {
+                  : e7().withMutations(function (e) {
                         var r = g(t);
                         tz(r.size),
                             r.forEach(function (t) {
@@ -2189,7 +2189,7 @@ var e, r;
                             });
                     });
         }
-        function e8(t) {
+        function e5(t) {
             return eZ(t) && b(t);
         }
         (e0[eQ] = !0),
@@ -2211,14 +2211,14 @@ var e, r;
             (e2.prototype.toString = function () {
                 return this.__toString('OrderedSet {', '}');
             }),
-            (e2.isOrderedSet = e8);
-        var e5 = e2.prototype;
-        function e7(t, e) {
-            var r = Object.create(e5);
+            (e2.isOrderedSet = e5);
+        var e8 = e2.prototype;
+        function e9(t, e) {
+            var r = Object.create(e8);
             return (r.size = t ? t.size : 0), (r._map = t), (r.__ownerID = e), r;
         }
-        function e9() {
-            return s || (s = e7(eS()));
+        function e7() {
+            return s || (s = e9(eS()));
         }
         function e4(t) {
             return null == t ? ri() : rt(t) ? t : ri().unshiftAll(t);
@@ -2226,9 +2226,9 @@ var e, r;
         function rt(t) {
             return !!(t && t[re]);
         }
-        (e5[x] = !0),
-            (e5.__empty = e9),
-            (e5.__make = e7),
+        (e8[x] = !0),
+            (e8.__empty = e7),
+            (e8.__make = e9),
             f(e4, tx),
             (e4.of = function () {
                 return this(arguments);

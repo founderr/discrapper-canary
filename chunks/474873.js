@@ -40,7 +40,7 @@ o(u, 'displayName', 'SoundpackStore'),
             let { soundpack: t, forExperimentId: n } = e;
             l = {
                 soundpack: t,
-                lastSoundpackExperimentId: null != n ? n : l.lastSoundpackExperimentId
+                lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId
             };
         }
     }));

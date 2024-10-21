@@ -7,13 +7,13 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(735250),
-    l = n(470079),
+var i = n(200651),
+    l = n(192379),
     r = n(120356),
     a = n.n(r),
     s = n(512722),
     o = n.n(s),
-    c = n(613828),
+    c = n(568611),
     u = n(91192),
     d = n(873546),
     h = n(442837),
@@ -416,7 +416,7 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               user: r,
-              entry: p ? (null == f ? void 0 : f[0]) : void 0,
+              entry: p ? f[0] : void 0,
               isTyping: d,
               ...l,
               ...u

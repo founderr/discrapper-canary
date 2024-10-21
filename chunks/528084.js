@@ -24,7 +24,7 @@ function l(e, s) {
             if (null != e)
                 return {
                     viewableTabs: _,
-                    selectedTab: e
+                    filteredTab: e
                 };
         }
     }

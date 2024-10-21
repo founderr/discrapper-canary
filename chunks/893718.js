@@ -1,12 +1,12 @@
 n(47120), n(411104);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(836560),
     l = n(512722),
     u = n.n(l),
-    c = n(143927),
+    c = n(782690),
     d = n(873546),
     _ = n(149765),
     E = n(442837),
@@ -61,9 +61,9 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em, eT, eS;
-        let { textValue: eg, richValue: eA, className: eN, innerClassName: eR, editorClassName: eO, id: ev, required: eC, disabled: eL, placeholder: eD, accessibilityLabel: ey, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e5 } = e;
+        let { textValue: eg, richValue: eA, className: eN, innerClassName: eR, editorClassName: eO, id: ev, required: eC, disabled: eL, placeholder: eD, accessibilityLabel: ey, channel: eb, type: eM, focused: eP, renderAttachButton: eU, renderApplicationCommandIcon: ew, pendingReply: ex, onChange: eG, onResize: ek, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eH, promptToUpload: eZ, highlighted: eY, canMentionRoles: ej, canMentionChannels: eW, maxCharacterCount: eK, showRemainingCharsAfterCount: ez, allowNewLines: eq = !0, characterCountClassName: eQ, 'aria-describedby': eX, 'aria-labelledby': e$, setEditorRef: eJ, autoCompletePosition: e0, children: e1, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e3, parentModalKey: e4, onCommandSentinelTyped: e6 } = e;
         u()(null != eM, 'chat input type must be set');
-        let { analyticsLocations: e6 } = (0, T.ZP)(m.Z.CHANNEL_TEXT_AREA),
+        let { analyticsLocations: e5 } = (0, T.ZP)(m.Z.CHANNEL_TEXT_AREA),
             e7 = (function (e) {
                 let t = i.useRef(null);
                 if (null != e && 'function' == typeof e) throw Error('Only Ref objects are supported');
@@ -142,9 +142,9 @@ t.Z = i.memo(
         let tg = i.useCallback(
             (e, t, n) => {
                 var r;
-                t === ea.GI && '' === tS.current && (null === (r = eM.commands) || void 0 === r ? void 0 : r.enabled) && (null == e5 || e5()), null == eG || eG(e, t, n);
+                t === ea.GI && '' === tS.current && (null === (r = eM.commands) || void 0 === r ? void 0 : r.enabled) && (null == e6 || e6()), null == eG || eG(e, t, n);
             },
-            [eG, e5, null === (l = eM.commands) || void 0 === l ? void 0 : l.enabled]
+            [eG, e6, null === (l = eM.commands) || void 0 === l ? void 0 : l.enabled]
         );
         !(function (e, t) {
             let n = i.useCallback(() => {
@@ -201,7 +201,7 @@ t.Z = i.memo(
                             if (null == c && !_ && !E && (0, D.CB)(S, s)) {
                                 l(!1),
                                     (0, f.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e('23755'), n.e('90508'), n.e('18895'), n.e('53289')]).then(n.bind(n, 273602));
+                                        let { default: e } = await Promise.all([n.e('23755'), n.e('90508'), n.e('18895'), n.e('32525')]).then(n.bind(n, 273602));
                                         return (t) =>
                                             (0, r.jsx)(e, {
                                                 ...t,
@@ -418,7 +418,7 @@ t.Z = i.memo(
         return (0, r.jsx)(O.f6, {
             value: tA,
             children: (0, r.jsxs)(T.Gt, {
-                value: e6,
+                value: e5,
                 children: [
                     tz && tE
                         ? (0, r.jsx)(er.Z, {

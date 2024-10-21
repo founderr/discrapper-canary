@@ -12,8 +12,8 @@ n.d(t, {
 }),
     n(653041),
     n(47120);
-var i = n(196095),
-    a = n(652874),
+var i = n(450961),
+    a = n(903797),
     s = n(388032),
     o = n(424395),
     l = n(689938);
@@ -75,7 +75,7 @@ async function _(e) {
     if (null == t) return;
     let r = await t().default;
     {
-        let { registerLocale: t } = n(578807);
+        let { registerLocale: t } = n(674091);
         t(e, r);
     }
 }

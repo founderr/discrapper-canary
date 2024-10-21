@@ -1,4 +1,4 @@
-let { createLoader: n } = t(196095),
+let { createLoader: n } = t(450961),
     a = n(
         { swfLzc: 'INTL_TEST_SECOND_FILE' },
         {

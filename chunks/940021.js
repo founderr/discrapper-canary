@@ -3,8 +3,8 @@ t.d(s, {
         return _;
     }
 });
-var n = t(735250);
-t(470079);
+var n = t(200651);
+t(192379);
 var a = t(63063),
     i = t(695346),
     r = t(838436),
@@ -18,7 +18,7 @@ function _() {
         setting: l.s6.PRIVACY_DATA_QUESTS_V2,
         children: (0, n.jsx)(o.Z, {
             title: d.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT,
-            note: d.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: a.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
+            note: d.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED_V2.format({ helpdeskArticle: a.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
             onChange: (e) => i.bh.updateSetting(!e)
         })

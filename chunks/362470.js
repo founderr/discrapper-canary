@@ -3,8 +3,8 @@ t.d(n, {
         return s;
     }
 });
-var o = t(735250);
-t(470079);
+var o = t(200651);
+t(192379);
 var i = t(325767);
 function s(e) {
     let { width: n = 24, height: t = 24, color: s = 'currentColor', foreground: r, ...l } = e;
