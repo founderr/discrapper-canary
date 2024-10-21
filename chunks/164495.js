@@ -1,96 +1,120 @@
 n.d(t, {
     y: function () {
-        return g;
+        return T;
     }
 });
 var o = n(735250);
 n(470079);
-var s = n(481060),
-    r = n(617136),
-    a = n(497505),
-    l = n(918701),
-    i = n(796111),
-    c = n(667105),
-    d = n(46140),
-    u = n(689938),
-    p = n(128220);
-let m = (e) => {
+var s = n(120356),
+    r = n.n(s),
+    a = n(481060),
+    l = n(617136),
+    i = n(497505),
+    c = n(918701),
+    d = n(796111),
+    u = n(667105),
+    p = n(341907),
+    m = n(957119),
+    x = n(46140),
+    _ = n(689938),
+    C = n(128220);
+function g(e) {
+    let { quest: t, taskDetails: n } = e;
+    return (0, o.jsx)(a.Button, {
+        className: C.cta,
+        color: a.Button.Colors.BRAND,
+        fullWidth: !0,
+        onClick: () => {
+            (0, p.openVideoQuestModal)(t);
+        },
+        size: a.Button.Sizes.SMALL,
+        children: (0, m.F)(n)
+    });
+}
+let f = (e) => {
         let { quest: t } = e;
-        return (0, o.jsx)(s.Button, {
-            className: p.cta,
-            size: s.Button.Sizes.SMALL,
+        return (0, o.jsx)(a.Button, {
+            className: C.cta,
+            size: a.Button.Sizes.SMALL,
             onClick: () =>
-                (0, l.FE)(t, {
-                    content: a.jn.QUEST_BAR_V2,
-                    ctaContent: r.jZ.OPEN_GAME_LINK
+                (0, c.FE)(t, {
+                    content: i.jn.QUEST_BAR_V2,
+                    ctaContent: l.jZ.OPEN_GAME_LINK
                 }),
-            children: u.Z.Messages.QUESTS_GET_THIS_GAME
+            children: _.Z.Messages.QUESTS_GET_THIS_GAME
         });
     },
-    x = (e) => {
+    E = (e) => {
         let { quest: t } = e;
-        return (0, o.jsx)(s.Button, {
+        return (0, o.jsx)(a.Button, {
             fullWidth: !0,
-            className: p.cta,
+            className: C.cta,
             onClick: () =>
-                (0, l.gI)(
+                (0, c.gI)(
                     { quest: t },
                     {
-                        content: a.jn.QUEST_BAR_V2,
-                        ctaContent: r.jZ.CONNECT_CONSOLE
+                        content: i.jn.QUEST_BAR_V2,
+                        ctaContent: l.jZ.CONNECT_CONSOLE
                     }
                 ),
-            size: s.Button.Sizes.SMALL,
-            children: u.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+            size: a.Button.Sizes.SMALL,
+            children: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
         });
     },
-    _ = (e) => {
-        let { quest: t, useReducedMotion: n, isExpanded: r } = e,
-            l = (0, c.hf)({
+    h = (e) => {
+        let { quest: t, useReducedMotion: n, isExpanded: s, className: l, ctaLabel: c, ...d } = e,
+            p = (0, u.hf)({
                 quest: t,
-                location: a.jn.QUEST_BAR_V2
+                location: i.jn.QUEST_BAR_V2
             });
-        return (0, o.jsx)(s.ShinyButton, {
+        return (0, o.jsx)(a.ShinyButton, {
             fullWidth: !0,
-            size: s.Button.Sizes.SMALL,
-            onClick: l,
-            pauseAnimation: n || !r,
-            className: p.cta,
-            buttonShineClassName: p.shine,
-            children: u.Z.Messages.QUESTS_CLAIM_REWARD
+            size: a.Button.Sizes.SMALL,
+            onClick: p,
+            pauseAnimation: n || !s,
+            className: r()(C.cta, l),
+            buttonShineClassName: C.shine,
+            ...d,
+            children: null != c ? c : _.Z.Messages.QUESTS_CLAIM_REWARD
         });
     },
-    C = (e) => {
+    S = (e) => {
         var t;
-        let { quest: n, useReducedMotion: s, isExpanded: r, awaitingConsoleConnections: l, hasMadeProgress: c, isProgressing: u, activeScreen: p } = e,
-            C = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-            g = (0, i.P)({ location: d.dr.QUESTS_BAR });
-        if (C)
-            return (0, o.jsx)(_, {
+        let { quest: n, useReducedMotion: s, isExpanded: r, awaitingConsoleConnections: a, hasMadeProgress: l, isProgressing: u, activeScreen: p, taskDetails: m } = e,
+            _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+            C = (0, d.P)({ location: x.dr.QUESTS_BAR }),
+            S = (0, c.cr)(n);
+        if (_)
+            return (0, o.jsx)(h, {
                 quest: n,
                 useReducedMotion: s,
                 isExpanded: r
             });
-        if (p === a.LI.CONSOLE && l && !g) return (0, o.jsx)(x, { quest: n });
-        if (p !== a.LI.SELECT && !c && !u) return (0, o.jsx)(m, { quest: n });
+        if (S)
+            return (0, o.jsx)(g, {
+                quest: n,
+                taskDetails: m
+            });
+        if (p === i.LI.CONSOLE && a && !C) return (0, o.jsx)(E, { quest: n });
+        else if (p !== i.LI.SELECT && !l && !u) return (0, o.jsx)(f, { quest: n });
         return null;
     };
-function g(e) {
+function T(e) {
     return (0, o.jsxs)('div', {
-        className: p.ctaButtons,
+        className: C.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, o.jsx)(s.Button, {
-                    className: p.backButton,
-                    innerClassName: p.backButtonInner,
+                (0, o.jsx)(a.Button, {
+                    className: C.backButton,
+                    innerClassName: C.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, o.jsx)(s.ChevronSmallLeftIcon, { className: p.backIcon })
+                    children: (0, o.jsx)(a.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
-            (0, o.jsx)(C, { ...e })
+            (0, o.jsx)(S, { ...e })
         ]
     });
 }

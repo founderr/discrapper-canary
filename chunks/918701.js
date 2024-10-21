@@ -89,6 +89,9 @@ n.d(t, {
     b7: function () {
         return ev;
     },
+    cr: function () {
+        return eD;
+    },
     dl: function () {
         return eE;
     },
@@ -121,6 +124,9 @@ n.d(t, {
     },
     q6: function () {
         return B;
+    },
+    si: function () {
+        return eH;
     },
     t2: function () {
         return X;
@@ -585,43 +591,34 @@ let eI = (e, t) => {
             includeTaskTypes: i
         });
     },
-    eO = (e, t) => {
-        if (e.config.taskConfig.type !== u.L.FIRST_PARTY)
-            return {
-                progressSeconds: 0,
-                targetSeconds: 1,
-                targetMinutes: 1,
-                percentComplete: 0,
-                taskType: s.X.STREAM_ON_DESKTOP
-            };
-        if (eL(e))
-            return eR({
-                quest: e,
-                includeTaskTypes: null != t ? t : eM(e) ? s.T.CONSOLE : s.T.ALL
-            });
-        if (eD(e)) {
-            var n, r, i, a, o;
-            let t = null !== (a = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === n ? void 0 : n.value) && void 0 !== a ? a : 0,
-                l = null !== (o = null === (i = e.config.taskConfig.tasks[s.X.PLAY_ON_DESKTOP_V2]) || void 0 === i ? void 0 : i.target) && void 0 !== o ? o : 1000,
-                u = l / 1000;
-            return {
-                taskType: s.X.PLAY_ON_DESKTOP_V2,
-                progressSeconds: Math.floor(t / 1000),
-                targetSeconds: u,
-                targetMinutes: Math.round(u / 60),
-                percentComplete: em(l, t)
-            };
-        }
-        return ed(e)
-            ? eA({
-                  quest: e,
-                  taskType: s.X.PLAY_ON_DESKTOP
-              })
-            : eA({
-                  quest: e,
+    eO = (e, t) =>
+        e.config.taskConfig.type !== u.L.FIRST_PARTY
+            ? {
+                  progressSeconds: 0,
+                  targetSeconds: 1,
+                  targetMinutes: 1,
+                  percentComplete: 0,
                   taskType: s.X.STREAM_ON_DESKTOP
-              });
-    };
+              }
+            : eL(e)
+              ? eR({
+                    quest: e,
+                    includeTaskTypes: null != t ? t : eM(e) ? s.T.CONSOLE : s.T.ALL
+                })
+              : eD(e)
+                ? eA({
+                      quest: e,
+                      taskType: s.X.PLAY_ON_DESKTOP_V2
+                  })
+                : ed(e)
+                  ? eA({
+                        quest: e,
+                        taskType: s.X.PLAY_ON_DESKTOP
+                    })
+                  : eA({
+                        quest: e,
+                        taskType: s.X.STREAM_ON_DESKTOP
+                    });
 function ev(e) {
     var t, n, r, i;
     if (e.config.taskConfig.type !== u.L.THIRD_PARTY || 0 === Object.keys(e.config.taskConfig.tasks).length) return null;
@@ -747,4 +744,11 @@ function eV(e) {
         n = eL(e),
         r = [];
     return t && r.push(O.cd.DESKTOP), n && r.push(O.cd.CONSOLE), r;
+}
+function eH(e) {
+    let t = Math.max(e.targetSeconds - e.progressSeconds, 0);
+    return {
+        minutes: Math.floor(t / 60),
+        seconds: Math.floor(t % 60)
+    };
 }
