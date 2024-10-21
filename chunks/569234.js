@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return g;
     }
 });
 var a = n(735250),
@@ -16,8 +16,8 @@ var a = n(735250),
     p = n(970047);
 let _ = n(575703),
     x = n(2984),
-    g = s.tq || s.Em;
-function b(e) {
+    b = s.tq || s.Em;
+function g(e) {
     let { gameId: t } = e,
         n = (0, u.n)(),
         s = r.useMemo(() => n.slice(0, 4), [n]);
@@ -59,14 +59,9 @@ function b(e) {
                     }),
                     (0, a.jsx)(c.Z, {
                         className: p.banner,
-                        title: (0, a.jsx)(i.Heading, {
-                            className: p.title,
-                            variant: 'display-lg',
-                            color: 'header-primary',
-                            children: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_HEADER
-                        }),
+                        title: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_HEADER,
                         description: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_SUBHEADER,
-                        button: g
+                        button: b
                             ? (0, a.jsx)(i.Text, {
                                   variant: 'text-md/medium',
                                   color: 'text-muted',

@@ -23,7 +23,6 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)(o.Z, {
                 title: g,
-                description: '',
                 children: (0, i.jsx)(l.Z, {})
             }),
             (0, i.jsx)(c.Z, {

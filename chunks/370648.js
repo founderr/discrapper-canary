@@ -1,23 +1,22 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(322665),
-    r = n(17845),
-    l = n(374939),
-    o = n(283293),
-    c = n(499692),
-    d = n(689938);
+var i = n(735250);
+n(470079);
+var a = n(322665),
+    s = n(17845),
+    r = n(374939),
+    l = n(283293),
+    o = n(499692),
+    c = n(689938);
 t.Z = function (e) {
-    let { onScroll: t, onSelectApplication: n } = e,
-        u = a.useMemo(() => [d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_ONE, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_TWO, d.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE_PART_THREE], []);
-    return (0, i.jsxs)(o.Z, {
+    let { onScroll: t, onSelectApplication: n } = e;
+    return (0, i.jsxs)(l.Z, {
         onScroll: t,
         children: [
-            (0, i.jsx)(r.Z, {
-                title: u,
-                description: '',
-                children: (0, i.jsx)(s.Z, {})
+            (0, i.jsx)(s.Z, {
+                title: c.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_TITLE.format({}),
+                description: c.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_DESCRIPTION,
+                children: (0, i.jsx)(a.Z, {})
             }),
-            (0, i.jsx)(l.Z, { children: (0, i.jsx)(c.Z, { onSelectApplication: n }) })
+            (0, i.jsx)(r.Z, { children: (0, i.jsx)(o.Z, { onSelectApplication: n }) })
         ]
     });
 };

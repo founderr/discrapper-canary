@@ -24,7 +24,7 @@ function _(e) {
     let { title: t, description: n, button: s, className: _, children: E } = e,
         h = (0, c.ZP)(),
         m = (0, l.wj)(h),
-        I = a.useMemo(() => ('string' == typeof t ? (0, i.jsx)(u, { title: t }) : Array.isArray(t) && t.every((e) => 'string' == typeof e) ? t.map((e) => (0, i.jsx)(u, { title: e }, e)) : t), [t]);
+        I = a.useMemo(() => (Array.isArray(t) ? t.map((e) => (0, i.jsx)(u, { title: e }, e)) : (0, i.jsx)(u, { title: t })), [t]);
     return (0, i.jsxs)('div', {
         className: r()(d.container, _),
         children: [
@@ -34,12 +34,13 @@ function _(e) {
                     className: d.textContainer,
                     children: [
                         I,
-                        (0, i.jsx)(o.Text, {
-                            className: d.description,
-                            variant: 'text-md/medium',
-                            color: m ? 'text-muted' : 'header-primary',
-                            children: n
-                        }),
+                        null != n &&
+                            (0, i.jsx)(o.Text, {
+                                className: d.description,
+                                variant: 'text-md/medium',
+                                color: m ? 'text-muted' : 'header-primary',
+                                children: n
+                            }),
                         null != s &&
                             (0, i.jsx)('div', {
                                 className: d.buttonContainer,
