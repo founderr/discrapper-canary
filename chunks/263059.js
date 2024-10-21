@@ -34,30 +34,30 @@ var r = n(735250),
     b = n(228168),
     M = n(676411);
 function P(e) {
-    let { user: t, currentUser: n, activity: a, guild: P, channel: U, className: w, onClose: x } = e,
-        { profileType: G } = (0, A.z)(),
-        k = { [M.fullSize]: G === b.y0.FULL_SIZE },
-        { interactionType: B } = (0, m.Xo)(),
-        F = (0, E.Bq)({
+    let { user: t, currentUser: n, activity: a, guild: P, channel: U, className: w, onClose: x, profileGuildId: G } = e,
+        { profileType: k } = (0, A.z)(),
+        B = { [M.fullSize]: k === b.y0.FULL_SIZE },
+        { interactionType: F } = (0, m.Xo)(),
+        V = (0, E.Bq)({
             activity: a,
             user: t
         }),
-        V = (0, I.Z)(a),
-        { largeImage: H } = (0, d.FO)(a),
-        { analyticsLocations: Z } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Y = (0, h.Z)({
+        H = (0, I.Z)(a),
+        { largeImage: Z } = (0, d.FO)(a),
+        { analyticsLocations: Y } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        j = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
-            entry: F,
-            analyticsLocations: Z
+            entry: V,
+            analyticsLocations: Y
         }),
-        j = (0, p.Z)({
+        W = (0, p.Z)({
             userId: t.id,
-            onAction: Y
+            onAction: j
         });
     if (!(0, l.Z)(a)) return null;
-    let W = () => {
+    let K = () => {
             var e, n;
             let l = null !== (n = null === (e = a.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
             return 0 === l.length
@@ -77,7 +77,7 @@ function P(e) {
                                         (0, r.jsx)(o.Clickable, {
                                             className: s()(M.clickable, M.inline),
                                             onClick: () => {
-                                                Y({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, f.d$)(a, t.id, n);
+                                                j({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, f.d$)(a, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -89,7 +89,7 @@ function P(e) {
                         )
                     });
         },
-        K = () => {
+        z = () => {
             let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
@@ -100,7 +100,7 @@ function P(e) {
                       end: n
                   });
         },
-        z = () =>
+        q = () =>
             null == P || null == U
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -110,24 +110,24 @@ function P(e) {
                               user: t,
                               guild: P,
                               channel: U,
-                              onAction: Y,
+                              onAction: j,
                               onClose: x
                           })
                       ]
                   }),
-        q = () =>
+        Q = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(M.actions, k),
+                      className: s()(M.actions, B),
                       children: (0, r.jsx)(D.Z, {
                           user: t,
                           activity: a,
-                          onAction: Y
+                          onAction: j
                       })
                   });
     return (0, r.jsx)(c.Gt, {
-        value: Z,
+        value: Y,
         children: (0, r.jsx)(C.Z, {
             user: t,
             onClose: x,
@@ -135,25 +135,26 @@ function P(e) {
                 let { onAutoDismiss: n } = e;
                 return (0, r.jsx)(T.Z, {
                     user: t,
-                    profileType: null === G || G === b.y0.CARD ? b.y0.BITE_SIZE : G,
+                    guildId: G,
+                    profileType: null === k || k === b.y0.CARD ? b.y0.BITE_SIZE : k,
                     sourceType: b.n_.ACTIVITY,
                     children: () =>
                         (0, r.jsx)(g.Z.Overlay, {
-                            className: s()(M.card, w, { [M.disabled]: null !== B }),
-                            ref: j,
+                            className: s()(M.card, w, { [M.disabled]: null !== F }),
+                            ref: W,
                             children: (0, r.jsxs)(S.Z, {
                                 user: t,
                                 className: M.body,
                                 sourceType: b.n_.ACTIVITY,
                                 children: [
                                     (0, r.jsx)(R.Z, {
-                                        text: V.text,
-                                        icon: V.icon,
+                                        text: H.text,
+                                        icon: H.icon,
                                         contextMenu: (0, r.jsx)(y.Z, {
                                             display: 'live',
                                             user: t,
                                             activity: a,
-                                            entry: F,
+                                            entry: V,
                                             onClose: x,
                                             onRequestOpen: n
                                         })
@@ -162,12 +163,12 @@ function P(e) {
                                         className: M.body,
                                         children: [
                                             (0, r.jsxs)('div', {
-                                                className: s()(M.content, k),
+                                                className: s()(M.content, B),
                                                 children: [
                                                     (0, r.jsx)(_.E, {
-                                                        image: H,
+                                                        image: Z,
                                                         onClick: () => {
-                                                            Y({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
+                                                            j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
                                                         },
                                                         size: _.J.SIZE_60
                                                     }),
@@ -180,10 +181,10 @@ function P(e) {
                                                                         variant: 'heading-sm/semibold',
                                                                         text: a.details,
                                                                         onClick: () => {
-                                                                            Y({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
+                                                                            j({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
                                                                         }
                                                                     }),
-                                                                    W()
+                                                                    K()
                                                                 ]
                                                             }),
                                                             (0, r.jsx)(N.Z, {
@@ -191,16 +192,16 @@ function P(e) {
                                                                 activity: a,
                                                                 className: M.badges
                                                             }),
-                                                            K()
+                                                            z()
                                                         ]
                                                     }),
-                                                    G === b.y0.FULL_SIZE && q()
+                                                    k === b.y0.FULL_SIZE && Q()
                                                 ]
                                             }),
-                                            z()
+                                            q()
                                         ]
                                     }),
-                                    G !== b.y0.FULL_SIZE && q()
+                                    k !== b.y0.FULL_SIZE && Q()
                                 ]
                             })
                         })

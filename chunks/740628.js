@@ -18,13 +18,14 @@ var i = t(735250),
     E = t(389190),
     f = t(428927),
     m = t(228168),
-    x = t(689938),
-    p = t(519294),
+    p = t(689938),
+    x = t(519294),
     Z = t(722849);
 function h(e) {
     let { section: n, subsection: t, user: s, currentUser: o, displayProfile: l, onClose: r } = e;
     return n === m.oh.ACTIVITY
         ? (0, i.jsx)(_.Z, {
+              profileGuildId: null == l ? void 0 : l.guildId,
               user: s,
               currentUser: o,
               onClose: r
@@ -103,12 +104,12 @@ function v(e) {
         ? (0, i.jsx)('div', {
               className: Z.container,
               children: (0, i.jsxs)('div', {
-                  className: p.empty,
+                  className: x.empty,
                   children: [
-                      (0, i.jsx)('div', { className: p.emptyIconStreamerMode }),
+                      (0, i.jsx)('div', { className: x.emptyIconStreamerMode }),
                       (0, i.jsx)('div', {
-                          className: p.emptyText,
-                          children: x.Z.Messages.STREAMER_MODE_ENABLED
+                          className: x.emptyText,
+                          children: p.Z.Messages.STREAMER_MODE_ENABLED
                       })
                   ]
               })

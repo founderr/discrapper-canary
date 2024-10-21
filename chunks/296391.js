@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return x;
     }
 });
 var i = t(735250),
@@ -17,49 +17,50 @@ var i = t(735250),
     E = t(981631),
     f = t(921944),
     m = t(689938),
-    x = t(505865);
-function p(e) {
-    let { user: n, currentUser: t, onClose: p } = e,
-        { live: Z, recent: h, stream: v } = (0, a.Z)(n.id),
-        S = n.id === t.id,
-        T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+    p = t(505865);
+function x(e) {
+    let { user: n, currentUser: t, onClose: x, profileGuildId: Z } = e,
+        { live: h, recent: v, stream: S } = (0, a.Z)(n.id),
+        T = n.id === t.id,
+        g = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         s.useEffect(() => {
-            if (!!S && !T)
+            if (!!T && !g)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [S, T]),
+        }, [T, g]),
         (0, i.jsxs)(l.ScrollerThin, {
-            className: x.scroller,
+            className: p.scroller,
             fade: !0,
             children: [
                 (0, i.jsxs)(d.Z, {
                     children: [
-                        null != v &&
+                        null != S &&
                             (0, i.jsx)(I.Z, {
                                 user: n,
                                 currentUser: t,
-                                stream: v,
-                                onClose: p
+                                stream: S,
+                                onClose: x
                             }),
-                        Z.map((e, s) =>
+                        h.map((e, s) =>
                             (0, i.jsx)(
                                 u.Z,
                                 {
                                     user: n,
                                     currentUser: t,
                                     activity: e,
-                                    onClose: p
+                                    onClose: x,
+                                    profileGuildId: Z
                                 },
                                 'live-'.concat(s)
                             )
                         )
                     ]
                 }),
-                S &&
-                    h.length > 0 &&
+                T &&
+                    v.length > 0 &&
                     (0, i.jsx)(d.Z, {
                         heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
                         subheading: m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
@@ -73,13 +74,13 @@ function p(e) {
                                     n
                                 )
                         }),
-                        children: h.map((e) =>
+                        children: v.map((e) =>
                             (0, i.jsx)(
                                 _.Z,
                                 {
                                     user: n,
                                     entry: e,
-                                    onClose: p,
+                                    onClose: x,
                                     hideHeader: !0
                                 },
                                 e.id
