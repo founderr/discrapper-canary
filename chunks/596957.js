@@ -162,10 +162,15 @@ t.Z = function (e) {
                                   case R.pJs.ONLINE:
                                   case R.pJs.ALL:
                                   default:
-                                      return (0, i.jsx)(f.Z, {
-                                          ...e,
-                                          isFocused: D
-                                      });
+                                      let { key: n, ...a } = e;
+                                      return (0, i.jsx)(
+                                          f.Z,
+                                          {
+                                              ...a,
+                                              isFocused: D
+                                          },
+                                          n
+                                      );
                               }
                           },
                           sectionFilter: t,

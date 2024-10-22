@@ -153,7 +153,6 @@ let T = (function (e) {
             let e = null != u && '' !== u ? { 'data-id': u } : { 'data-name': c };
             return {
                 ...L,
-                key: b,
                 className: s()('emoji', l, {
                     jumboable: 'jumbo' === T,
                     reactionLarge: 'reactionLarge' === T
@@ -164,7 +163,7 @@ let T = (function (e) {
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, u, c, B, F, b, k, L, T]);
+        }, [l, u, c, B, F, k, L, T]);
     return (i.useEffect(() => {
         k();
     }, [k]),
@@ -190,24 +189,32 @@ let T = (function (e) {
                       emojiRef: w.current
                   }),
                   O
-                      ? (0, r.jsx)('img', {
-                            ...V,
-                            ref: w,
-                            src: G,
-                            alt: null !== (t = null != o ? o : c) && void 0 !== t ? t : void 0,
-                            draggable: !1
-                        })
-                      : (0, r.jsx)('div', {
-                            ...V,
-                            ref: w,
-                            role: 'img',
-                            'aria-label': null !== (n = null != o ? o : c) && void 0 !== n ? n : void 0,
-                            style: {
-                                backgroundImage: 'url('.concat(G, ')'),
-                                backgroundSize: 'contain',
-                                backgroundRepeat: 'no-repeat'
-                            }
-                        })
+                      ? (0, r.jsx)(
+                            'img',
+                            {
+                                ...V,
+                                ref: w,
+                                src: G,
+                                alt: null !== (t = null != o ? o : c) && void 0 !== t ? t : void 0,
+                                draggable: !1
+                            },
+                            b
+                        )
+                      : (0, r.jsx)(
+                            'div',
+                            {
+                                ...V,
+                                ref: w,
+                                role: 'img',
+                                'aria-label': null !== (n = null != o ? o : c) && void 0 !== n ? n : void 0,
+                                style: {
+                                    backgroundImage: 'url('.concat(G, ')'),
+                                    backgroundSize: 'contain',
+                                    backgroundRepeat: 'no-repeat'
+                                }
+                            },
+                            b
+                        )
               ]
           });
 });
