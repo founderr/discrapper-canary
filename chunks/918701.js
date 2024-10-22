@@ -131,6 +131,9 @@ n.d(t, {
     t2: function () {
         return X;
     },
+    u7: function () {
+        return eZ;
+    },
     vQ: function () {
         return ei;
     },
@@ -751,4 +754,7 @@ function eH(e) {
         minutes: Math.floor(t / 60),
         seconds: Math.floor(t % 60)
     };
+}
+function eZ(e) {
+    return 'VIDEO-QUEST-'.concat(e);
 }
