@@ -136,6 +136,7 @@ var r,
     (r.EVENT_TICKET = 'svg-mask-event-ticket'),
     (r.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR = 'svg-mask-content-inventory-card-face-pile-avatar'),
     (r.CLAN_ICON = 'svg-mask-clan-icon'),
+    (r.BADGED_GUILD_ICON = 'svg-mask-badged-guild-icon'),
     (r.FORWARD_ATTACHMENT_PILE_OVERFLOW = 'svg-mask-forward-attachment-pile-overflow'),
     (r.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon'),
     (r.CONTENT_IMAGE_60 = 'svg-mask-content-image-60'),
@@ -532,7 +533,7 @@ function y(e) {
 (y.Masks = i), (t.ZP = y);
 let b = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, y, b, M, P, U, w, x;
+        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, y, b, M, P, U, w, x, G;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -1054,9 +1055,30 @@ let b = s.memo(
                         height: 1
                     })
                 })),
-                ((x = 'svg-mask-forward-attachment-pile-overflow'),
-                (0, a.jsx)('mask', {
+                ((x = 'svg-mask-badged-guild-icon'),
+                (0, a.jsxs)('mask', {
                     id: x,
+                    maskContentUnits: 'objectBoundingBox',
+                    viewBox: '0 0 1 1',
+                    children: [
+                        (0, a.jsx)('rect', {
+                            x: 0,
+                            y: 0,
+                            width: 1,
+                            height: 1,
+                            fill: 'white'
+                        }),
+                        (0, a.jsx)('circle', {
+                            cx: 0.85,
+                            cy: 0.15,
+                            r: 0.25,
+                            fill: 'black'
+                        })
+                    ]
+                })),
+                ((G = 'svg-mask-forward-attachment-pile-overflow'),
+                (0, a.jsx)('mask', {
+                    id: G,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {
