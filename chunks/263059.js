@@ -37,7 +37,7 @@ function P(e) {
     let { user: t, currentUser: n, activity: a, guild: P, channel: U, className: w, onClose: x, profileGuildId: G } = e,
         { profileType: k } = (0, A.z)(),
         B = { [M.fullSize]: k === b.y0.FULL_SIZE },
-        { interactionType: F } = (0, m.Xo)(),
+        { interactionSource: F } = (0, m.Xo)(),
         V = (0, E.Bq)({
             activity: a,
             user: t
@@ -126,87 +126,89 @@ function P(e) {
                           onAction: j
                       })
                   });
-    return (0, r.jsx)(c.Gt, {
-        value: Y,
-        children: (0, r.jsx)(C.Z, {
-            user: t,
-            onClose: x,
-            children: (e) => {
-                let { onAutoDismiss: n } = e;
-                return (0, r.jsx)(T.Z, {
-                    user: t,
-                    guildId: G,
-                    profileType: null === k || k === b.y0.CARD ? b.y0.BITE_SIZE : k,
-                    sourceType: b.n_.ACTIVITY,
-                    children: () =>
-                        (0, r.jsx)(g.Z.Overlay, {
-                            className: s()(M.card, w, { [M.disabled]: null !== F }),
-                            ref: W,
-                            children: (0, r.jsxs)(S.Z, {
-                                user: t,
-                                className: M.body,
-                                sourceType: b.n_.ACTIVITY,
-                                children: [
-                                    (0, r.jsx)(R.Z, {
-                                        text: H.text,
-                                        icon: H.icon,
-                                        contextMenu: (0, r.jsx)(y.Z, {
-                                            display: 'live',
-                                            user: t,
-                                            activity: a,
-                                            entry: V,
-                                            onClose: x,
-                                            onRequestOpen: n
-                                        })
-                                    }),
-                                    (0, r.jsxs)('div', {
-                                        className: M.body,
-                                        children: [
-                                            (0, r.jsxs)('div', {
-                                                className: s()(M.content, B),
-                                                children: [
-                                                    (0, r.jsx)(_.E, {
-                                                        image: Z,
-                                                        onClick: () => {
-                                                            j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
-                                                        },
-                                                        size: _.J.SIZE_60
-                                                    }),
-                                                    (0, r.jsxs)('div', {
-                                                        className: M.details,
-                                                        children: [
-                                                            (0, r.jsxs)('div', {
-                                                                children: [
-                                                                    (0, r.jsx)(O.Z, {
-                                                                        variant: 'heading-sm/semibold',
-                                                                        text: a.details,
-                                                                        onClick: () => {
-                                                                            j({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
-                                                                        }
-                                                                    }),
-                                                                    K()
-                                                                ]
-                                                            }),
-                                                            (0, r.jsx)(N.Z, {
-                                                                user: t,
-                                                                activity: a,
-                                                                className: M.badges
-                                                            }),
-                                                            z()
-                                                        ]
-                                                    }),
-                                                    k === b.y0.FULL_SIZE && Q()
-                                                ]
-                                            }),
-                                            q()
-                                        ]
-                                    }),
-                                    k !== b.y0.FULL_SIZE && Q()
-                                ]
-                            })
-                        })
-                });
-            }
-        })
-    });
+    return null === k || k === b.y0.CARD
+        ? null
+        : (0, r.jsx)(c.Gt, {
+              value: Y,
+              children: (0, r.jsx)(C.Z, {
+                  user: t,
+                  onClose: x,
+                  children: (e) => {
+                      let { onAutoDismiss: n } = e;
+                      return (0, r.jsx)(T.Z, {
+                          user: t,
+                          guildId: G,
+                          profileType: k,
+                          sourceType: b.n_.ACTIVITY,
+                          children: () =>
+                              (0, r.jsx)(g.Z.Overlay, {
+                                  className: s()(M.card, w, { [M.hoisted]: F === b.n_.ACTIVITY }),
+                                  ref: W,
+                                  children: (0, r.jsxs)(S.Z, {
+                                      user: t,
+                                      className: M.body,
+                                      sourceType: b.n_.ACTIVITY,
+                                      children: [
+                                          (0, r.jsx)(R.Z, {
+                                              text: H.text,
+                                              icon: H.icon,
+                                              contextMenu: (0, r.jsx)(y.Z, {
+                                                  display: 'live',
+                                                  user: t,
+                                                  activity: a,
+                                                  entry: V,
+                                                  onClose: x,
+                                                  onRequestOpen: n
+                                              })
+                                          }),
+                                          (0, r.jsxs)('div', {
+                                              className: M.body,
+                                              children: [
+                                                  (0, r.jsxs)('div', {
+                                                      className: s()(M.content, B),
+                                                      children: [
+                                                          (0, r.jsx)(_.E, {
+                                                              image: Z,
+                                                              onClick: () => {
+                                                                  j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
+                                                              },
+                                                              size: _.J.SIZE_60
+                                                          }),
+                                                          (0, r.jsxs)('div', {
+                                                              className: M.details,
+                                                              children: [
+                                                                  (0, r.jsxs)('div', {
+                                                                      children: [
+                                                                          (0, r.jsx)(O.Z, {
+                                                                              variant: 'heading-sm/semibold',
+                                                                              text: a.details,
+                                                                              onClick: () => {
+                                                                                  j({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
+                                                                              }
+                                                                          }),
+                                                                          K()
+                                                                      ]
+                                                                  }),
+                                                                  (0, r.jsx)(N.Z, {
+                                                                      user: t,
+                                                                      activity: a,
+                                                                      className: M.badges
+                                                                  }),
+                                                                  z()
+                                                              ]
+                                                          }),
+                                                          k === b.y0.FULL_SIZE && Q()
+                                                      ]
+                                                  }),
+                                                  q()
+                                              ]
+                                          }),
+                                          k !== b.y0.FULL_SIZE && Q()
+                                      ]
+                                  })
+                              })
+                      });
+                  }
+              })
+          });
 }
