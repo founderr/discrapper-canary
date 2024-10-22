@@ -1,15 +1,18 @@
 n.d(t, {
     GE: function () {
-        return D;
+        return y;
     },
     GL: function () {
         return T;
     },
     Jd: function () {
-        return M;
+        return P;
+    },
+    Jg: function () {
+        return O;
     },
     Nq: function () {
-        return v;
+        return C;
     },
     Ol: function () {
         return N;
@@ -21,19 +24,19 @@ n.d(t, {
         return I;
     },
     V5: function () {
-        return C;
-    },
-    ap: function () {
-        return y;
-    },
-    bT: function () {
-        return b;
-    },
-    dw: function () {
         return L;
     },
+    ap: function () {
+        return b;
+    },
+    bT: function () {
+        return M;
+    },
+    dw: function () {
+        return D;
+    },
     ig: function () {
-        return x;
+        return G;
     },
     kr: function () {
         return A;
@@ -42,22 +45,22 @@ n.d(t, {
         return R;
     },
     q_: function () {
-        return U;
+        return w;
     },
     qy: function () {
-        return G;
+        return k;
     },
     vU: function () {
-        return P;
+        return U;
     },
     yA: function () {
-        return O;
+        return v;
     },
     yh: function () {
         return S;
     },
     zo: function () {
-        return w;
+        return x;
     }
 }),
     n(47120);
@@ -155,22 +158,25 @@ function R(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function O(e) {
-    var t;
-    return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
+    return A(e) && !R(e);
 }
 function v(e) {
     var t;
-    return null === (t = g(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function C(e) {
     var t;
-    return null === (t = g(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null === (t = g(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function L(e) {
+    var t;
+    return null === (t = g(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+}
+function D(e) {
     let t = g(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function D(e) {
+function y(e) {
     let {
         months: t = 0,
         weeks: n = 0,
@@ -185,7 +191,7 @@ function D(e) {
         days: t > 0 || n > 0 ? 0 : i
     });
 }
-function y(e) {
+function b(e) {
     if (null == e || '' === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
@@ -195,7 +201,7 @@ function y(e) {
               episodeNum: t[2]
           });
 }
-function b(e, t) {
+function M(e, t) {
     var n, r, i, a;
     let s = null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : void 0,
         o = null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a ? a : void 0,
@@ -208,21 +214,21 @@ function b(e, t) {
                 : void 0;
     return null != l && null != e ? ''.concat(e, ' (').concat(l, ')') : null != e ? e : l;
 }
-function M(e) {
+function P(e) {
     return e.content_type === l.s.TOP_GAME;
 }
-function P(e) {
+function U(e) {
     var t;
     return null === (t = g(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
 }
-function U(e) {
-    let t = P(e);
+function w(e) {
+    let t = U(e);
     if (null == t || t < 3) return !1;
     let n = _.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * d.Z.Millis.HOUR) && !0;
 }
-function w(e) {
-    let t = O(e);
+function x(e) {
+    let t = v(e);
     if (null == t)
         return {
             text: null,
@@ -239,11 +245,11 @@ function w(e) {
               tooltipText: f.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({ hours: n })
           };
 }
-function x(e) {
+function G(e) {
     var t;
     return null === (t = g(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
-function G(e) {
+function k(e) {
     let t = (0, o.e7)([E.Z], () => E.Z.getMatchingActivity(e)),
         [n, r] = (0, c.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
         i = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id));

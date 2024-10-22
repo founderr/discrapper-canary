@@ -10,20 +10,20 @@ var i = n(442837),
     s = n(230711),
     o = n(726542),
     l = n(394821),
-    u = n(180335),
-    c = n(553795),
-    d = n(594174),
-    _ = n(358085),
+    u = n(740605),
+    c = n(180335),
+    d = n(553795),
+    _ = n(594174),
     E = n(981631),
     f = n(689938);
 function h(e) {
     let { user: t, activity: n, entry: h, display: p, onAction: I, onClose: m } = e,
-        T = (0, i.e7)([d.default], () => {
+        T = (0, i.e7)([_.default], () => {
             var e;
-            return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
         }),
-        S = (0, i.e7)([c.Z], () => null != c.Z.getAccount(null, E.ABu.CRUNCHYROLL));
-    if (!(0, l.Z)(n) && !(0, u.gr)(h)) return null;
+        S = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, E.ABu.CRUNCHYROLL));
+    if (!(0, l.Z)(n) && !(0, c.gr)(h)) return null;
     if (!S)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-crunchyroll',
@@ -32,7 +32,7 @@ function h(e) {
                 null == I || I({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(E.oAB.CONNECTIONS), null == m || m();
             }
         });
-    if (T || 'live' === p || !(0, u.gr)(h)) return null;
+    if (T || 'live' === p || !(0, c.gr)(h)) return null;
     let g = h.extra.url;
     return null == g || '' === g
         ? null
@@ -40,9 +40,7 @@ function h(e) {
               id: 'watch-on-crunchyroll',
               label: f.Z.Messages.WATCH_ON_CRUNCHYROLL,
               action: () => {
-                  null == I || I({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' });
-                  let e = null;
-                  !(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? (e.location.href = g) : window.open(g);
+                  null == I || I({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(g);
               }
           });
 }
