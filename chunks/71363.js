@@ -9,129 +9,134 @@ var s = n(200651),
     _ = n(607070),
     d = n(100527),
     E = n(906732),
-    u = n(410154),
-    T = n(626135),
-    I = n(915296),
-    R = n(103433),
-    g = n(166021),
-    N = n(32173),
-    m = n(391110),
-    C = n(75077),
-    A = n(981631),
-    f = n(689938),
-    p = n(170367),
-    M = n(865215);
+    u = n(975298),
+    T = n(410154),
+    I = n(626135),
+    R = n(915296),
+    g = n(103433),
+    N = n(166021),
+    m = n(32173),
+    C = n(391110),
+    A = n(75077),
+    f = n(981631),
+    p = n(689938),
+    M = n(170367),
+    S = n(865215);
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: S, previousComponent: h, isFullScreen: x } = e,
-        b = a.useRef(null),
-        O = Object.entries((0, N.Z)()).reduce((e, t) => {
+        { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: x, isFullScreen: b } = e,
+        O = a.useRef(null),
+        P = Object.entries((0, m.Z)()).reduce((e, t) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
-        P = (0, I.HI)({ location: m.MQ.SEE_ALL }),
-        { analyticsLocations: v } = (0, E.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [L, Z] = a.useState(!1),
-        D = (0, u.ZP)('perks-discoverability'),
-        U = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        B = (0, C.mN)();
+        v = (0, R.HI)({ location: C.MQ.SEE_ALL }),
+        { analyticsLocations: L } = (0, E.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [Z, D] = a.useState(!1),
+        U = (0, T.ZP)('perks-discoverability'),
+        B = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        j = (0, A.mN)(),
+        { fractionalState: G } = (0, u.Z)({ forceFetch: !0 });
     return (
-        P === I.mJ.DEFAULT ? ((t = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
+        v === R.mJ.DEFAULT ? ((t = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
-            className: i()(p.allPerksScroller, {
-                [p.open]: r,
-                [p.openCloseReduceMotion]: U
+            className: i()(M.allPerksScroller, {
+                [M.open]: r,
+                [M.openCloseReduceMotion]: B
             }),
-            ref: b,
+            ref: O,
             children: (0, s.jsx)('div', {
-                className: p.container,
+                className: M.container,
                 children: (0, s.jsxs)(E.Gt, {
-                    value: v,
+                    value: L,
                     children: [
-                        (0, s.jsx)(R.Z, {
-                            className: p.heroHeading,
+                        (0, s.jsx)(g.Z, {
+                            className: M.heroHeading,
                             onBackClick: () => {
-                                S(!1),
-                                    T.default.track(A.rMx.NITRO_HOME_NAVIGATION, {
-                                        current_component: m.MQ.SEE_ALL,
-                                        next_component: h,
+                                h(!1),
+                                    I.default.track(f.rMx.NITRO_HOME_NAVIGATION, {
+                                        current_component: C.MQ.SEE_ALL,
+                                        next_component: x,
                                         interaction_component: 'Back Button'
                                     });
                             }
                         }),
                         (0, s.jsxs)('div', {
-                            className: p.column,
+                            className: M.column,
                             children: [
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: p.heading,
+                                    className: M.heading,
                                     children: t
                                 }),
-                                (0, s.jsx)(g.Z, {
-                                    className: p.cardCarousel,
-                                    cards: (0, C.sP)({
-                                        perksCards: O,
-                                        variant: m.R0.CARD_CAROUSEL_FIRST_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: B,
-                                        isFullScreen: x
+                                (0, s.jsx)(N.Z, {
+                                    className: M.cardCarousel,
+                                    cards: (0, A.sP)({
+                                        perksCards: P,
+                                        variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
+                                        shopMarketingVariation: U,
+                                        tileOrderVariant: v,
+                                        isPremiumSubscriber: j,
+                                        isFullScreen: b,
+                                        fractionalState: G
                                     }),
-                                    cardType: m.R0.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: p.heading,
+                                    className: M.heading,
                                     children: n
                                 }),
-                                (0, s.jsx)(g.Z, {
-                                    className: p.cardCarousel,
-                                    cards: (0, C.sP)({
-                                        perksCards: O,
-                                        variant: m.R0.CARD_CAROUSEL_SECOND_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: B,
-                                        isFullScreen: x
+                                (0, s.jsx)(N.Z, {
+                                    className: M.cardCarousel,
+                                    cards: (0, A.sP)({
+                                        perksCards: P,
+                                        variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
+                                        shopMarketingVariation: U,
+                                        tileOrderVariant: v,
+                                        isPremiumSubscriber: j,
+                                        isFullScreen: b,
+                                        fractionalState: G
                                     }),
-                                    cardType: m.R0.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: p.heading,
-                                    children: f.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+                                    className: M.heading,
+                                    children: p.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
                                 }),
-                                (0, s.jsx)(g.Z, {
-                                    className: p.cardCarousel,
-                                    cards: (0, C.sP)({
-                                        perksCards: O,
-                                        variant: m.R0.CARD_CAROUSEL_THIRD_ROW,
-                                        shopMarketingVariation: D,
-                                        tileOrderVariant: P,
-                                        isPremiumSubscriber: B,
-                                        isFullScreen: x
+                                (0, s.jsx)(N.Z, {
+                                    className: M.cardCarousel,
+                                    cards: (0, A.sP)({
+                                        perksCards: P,
+                                        variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
+                                        shopMarketingVariation: U,
+                                        tileOrderVariant: v,
+                                        isPremiumSubscriber: j,
+                                        isFullScreen: b,
+                                        fractionalState: G
                                     }),
-                                    cardType: m.R0.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),
-                        (0, s.jsx)('div', { className: p.footerSpacing }),
+                        (0, s.jsx)('div', { className: M.footerSpacing }),
                         (0, s.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !L && (T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
+                                e && !Z && (I.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: L }), D(!0));
                             },
-                            children: (0, s.jsx)('div', { className: p.bottomOfPageVisibilitySensor })
+                            children: (0, s.jsx)('div', { className: M.bottomOfPageVisibilitySensor })
                         }),
                         (0, s.jsx)('img', {
-                            src: M,
-                            className: p.bottomIllustration,
+                            src: S,
+                            className: M.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: f.Z.Messages.IMAGE
+                            alt: p.Z.Messages.IMAGE
                         })
                     ]
                 })

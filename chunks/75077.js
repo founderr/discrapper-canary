@@ -110,13 +110,15 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     S = (e) => {
-        let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
-            c = [];
+        let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o, fractionalState: c } = e,
+            _ = [],
+            d = I.a$.FP_ONLY;
         switch (n) {
             case T.R0.PERKS_DISCOVERABILITY:
-                c = (0, s.EQ)({
+                _ = (0, s.EQ)({
                     tileOrderVariant: l,
-                    isPremiumSubscriber: o
+                    isPremiumSubscriber: o,
+                    fractionalState: c
                 })
                     .with(
                         {
@@ -132,11 +134,12 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                         },
                         () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
                     )
+                    .with({ fractionalState: I.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case T.R0.WHATS_NEW:
-                c = M({
-                    cards: c,
+                _ = M({
+                    cards: _,
                     perksCards: t,
                     isFullScreen: r,
                     showTenureCard: i,
@@ -144,7 +147,7 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 });
                 break;
             case T.R0.CARD_CAROUSEL_FIRST_ROW:
-                c = (0, s.EQ)({
+                _ = (0, s.EQ)({
                     tileOrderVariant: l,
                     isPremiumSubscriber: o
                 })
@@ -165,9 +168,10 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
             case T.R0.CARD_CAROUSEL_SECOND_ROW:
-                c = (0, s.EQ)({
+                _ = (0, s.EQ)({
                     tileOrderVariant: l,
-                    isPremiumSubscriber: o
+                    isPremiumSubscriber: o,
+                    fractionPremiumState: d
                 })
                     .with(
                         {
@@ -183,12 +187,13 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                         },
                         () => [t.customSoundsEverywhere, t.specialStickerAccess]
                     )
+                    .with({ fractionPremiumState: I.a$.FP_ONLY }, () => [t.serverBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
             case T.R0.CARD_CAROUSEL_THIRD_ROW:
-                c = [t.entranceSoundsSeeAllVariation, t.badge];
+                _ = [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return !r && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
+        return !r && (_ = _.filter((e) => !e.hideOnNarrowScreen)), _;
     },
     h = (e) => {
         let t = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),

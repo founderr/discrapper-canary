@@ -5,142 +5,145 @@ var s = n(200651),
     i = n.n(r),
     l = n(703533),
     o = n(481060),
-    c = n(410154),
-    _ = n(915296),
-    d = n(314684),
-    E = n(565626),
-    u = n(32173),
-    T = n(976465),
-    I = n(391110),
-    R = n(75077),
-    g = n(320319),
-    N = n(821912);
-let m = (e) => {
+    c = n(975298),
+    _ = n(410154),
+    d = n(915296),
+    E = n(314684),
+    u = n(565626),
+    T = n(32173),
+    I = n(976465),
+    R = n(391110),
+    g = n(75077),
+    N = n(320319),
+    m = n(821912);
+let C = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: a, headerClassname: r } = e,
         i = (0, s.jsx)(o.Heading, {
             variant: 'heading-xxl/extrabold',
             color: 'header-primary',
-            className: null != r ? r : N.heading,
+            className: null != r ? r : m.heading,
             children: a
         });
     return null == t
         ? i
         : n
           ? (0, s.jsxs)('div', {
-                className: N.sectionHeader,
+                className: m.sectionHeader,
                 children: [
                     i,
                     null != t &&
                         (0, s.jsx)('div', {
-                            className: N.showAllPerksButton,
+                            className: m.showAllPerksButton,
                             children: t
                         })
                 ]
             })
           : (0, s.jsx)('div', {
-                className: N.container,
+                className: m.container,
                 children: (0, s.jsx)('div', {
-                    className: N.sectionHeaderSeeAll,
+                    className: m.sectionHeaderSeeAll,
                     children: i
                 })
             });
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: A = !1, showAllPerksButton: f, headerClassname: p, isFullScreen: M = !0 } = e,
-        S = a.useRef(null),
-        h = (0, d.yQ)(),
-        x = (0, E.Ag)(h),
-        b = (0, c.ZP)('perks-discoverability');
-    (0, E.I2)();
-    let O = (0, _.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
-        P = r === I.R0.WHATS_NEW,
-        v = (0, d.IY)(),
-        L = (0, T.x$)();
+    let { className: n, variant: r = R.R0.PERKS_DISCOVERABILITY, noBackground: A = !1, leftAlignHeaders: f = !1, showAllPerksButton: p, headerClassname: M, isFullScreen: S = !0 } = e,
+        h = a.useRef(null),
+        x = (0, E.yQ)(),
+        b = (0, u.Ag)(x),
+        O = (0, _.ZP)('perks-discoverability');
+    (0, u.I2)();
+    let P = (0, d.HI)({ location: R.R0.PERKS_DISCOVERABILITY }),
+        v = r === R.R0.WHATS_NEW,
+        L = (0, E.IY)(),
+        Z = (0, I.x$)();
     a.useEffect(() => {
-        P && !x && (v(), L());
-    }, [v, L, P, x]),
+        v && !b && (L(), Z());
+    }, [L, Z, v, b]),
         a.useEffect(() => {
-            let e = S.current;
-            if (null == e || !x || !P) return;
+            let e = h.current;
+            if (null == e || !b || !v) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), P && v();
+                e.scrollIntoView({ behavior: 'smooth' }), v && L();
             });
             return () => {
-                cancelAnimationFrame(t), P && v();
+                cancelAnimationFrame(t), v && L();
             };
-        }, [S, x, P, v]);
-    let Z = (0, R.Op)(P),
-        D = (0, u.Z)(),
-        U = (0, R.mN)(),
-        B = (0, R.sP)({
-            perksCards: D,
+        }, [h, b, v, L]);
+    let D = (0, g.Op)(v),
+        U = (0, T.Z)(),
+        B = (0, g.mN)(),
+        { fractionalState: j } = (0, c.Z)(),
+        G = (0, g.sP)({
+            perksCards: U,
             variant: r,
-            shopMarketingVariation: b,
-            isFullScreen: M,
-            showTenureCard: null == h ? void 0 : h.showCard,
-            tileOrderVariant: O,
-            isPremiumSubscriber: U
+            shopMarketingVariation: O,
+            isFullScreen: S,
+            showTenureCard: null == x ? void 0 : x.showCard,
+            tileOrderVariant: P,
+            isPremiumSubscriber: B,
+            fractionalState: j
         }),
-        j = B.some((e) => null != e.pillText),
-        [G, w] = a.useState(null),
-        H = a.useRef(new l.qA());
+        w = G.some((e) => null != e.pillText),
+        [H, y] = a.useState(null),
+        k = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === u.u.FREE_BOOST &&
+            (null == U ? void 0 : null === (t = U.freeBoost) || void 0 === t ? void 0 : t.name) === T.u.FREE_BOOST &&
                 (0, s.jsx)(l.O_, {
-                    ref: w,
-                    className: N.confettiCanvas,
-                    environment: H.current
+                    ref: y,
+                    className: m.confettiCanvas,
+                    environment: k.current
                 }),
             (0, s.jsxs)('div', {
-                ref: S,
+                ref: h,
                 className: i()(
-                    N.section,
+                    m.section,
                     {
-                        [N.centerAlignSection]: !A,
-                        [N.leftAlignSection]: A
+                        [m.centerAlignSection]: !f,
+                        [m.leftAlignSection]: f
                     },
                     n
                 ),
                 children: [
-                    (0, s.jsx)(m, {
-                        showAllPerksButton: f,
-                        leftAlignHeaders: A,
-                        title: Z.title,
-                        headerClassname: p
+                    (0, s.jsx)(C, {
+                        showAllPerksButton: p,
+                        leftAlignHeaders: f,
+                        title: D.title,
+                        headerClassname: M
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
-                        className: i()(N.subtitle, {
-                            [N.subtitle]: null == f || A,
-                            [N.subtitleWithButton]: null != f && !A,
-                            [N.fullWidth]: P || A,
-                            [N.moreSubtitleMargin]: j,
-                            [N.leftAlignSubtitle]: A,
-                            [N.centerAlignSubtitle]: !A
+                        className: i()(m.subtitle, {
+                            [m.subtitle]: null == p || f,
+                            [m.subtitleWithButton]: null != p && !f,
+                            [m.fullWidth]: v || f,
+                            [m.moreSubtitleMargin]: w,
+                            [m.leftAlignSubtitle]: f,
+                            [m.centerAlignSubtitle]: !f
                         }),
-                        children: Z.subtitle
+                        children: D.subtitle
                     }),
-                    !A &&
-                        null != f &&
+                    !f &&
+                        null != p &&
                         (0, s.jsx)('div', {
-                            className: i()(N.showAllPerksButtonCenter),
-                            children: f
+                            className: i()(m.showAllPerksButtonCenter),
+                            children: p
                         }),
                     (0, s.jsx)('div', {
                         className: i()({
-                            [N.cardContainer]: M,
-                            [N.cardContainerNarrowWidth]: !M
+                            [m.cardContainer]: S,
+                            [m.cardContainerNarrowWidth]: !S
                         }),
-                        children: B.map((e, t) =>
+                        children: G.map((e, t) =>
                             (0, s.jsx)(
-                                g.Z,
+                                N.Z,
                                 {
-                                    confettiCanvas: e.name === u.u.FREE_BOOST ? G : void 0,
+                                    confettiCanvas: e.name === T.u.FREE_BOOST ? H : void 0,
                                     ...e,
-                                    forceShadow: C
+                                    forceShadow: A
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

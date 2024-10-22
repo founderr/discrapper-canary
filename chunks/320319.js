@@ -223,19 +223,19 @@ let P = {
 v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: _ = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: C, onClick: A, backgroundImage: S, pillText: h, perkImage: x } = e,
-        b = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
-        P = '' !== c || '' !== _ || ('' !== o && N === f.zW.REWARD),
-        v = (0, g.IB)(),
-        [L, Z] = a.useState(N !== f.zW.REWARD || v);
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: _ = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: C, onClick: A, backgroundImage: S, pillText: h, perkImage: x, imageOverlayText: b } = e,
+        P = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
+        v = '' !== c || '' !== _ || ('' !== o && N === f.zW.REWARD),
+        L = (0, g.IB)(),
+        [Z, D] = a.useState(N !== f.zW.REWARD || L);
     a.useEffect(() => {
-        v && Z(!0);
-    }, [v]);
-    let D = (0, m._)(N);
+        L && D(!0);
+    }, [L]);
+    let U = (0, m._)(N);
     return (0, s.jsxs)(d.Clickable, {
-        className: i()(O.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
+        className: i()(O.card, I, !0 === Z ? (null === (n = U.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [O.clickable]: null != A,
-            [O.hideOverflow]: b
+            [O.hideOverflow]: P
         }),
         onMouseEnter: T,
         style: { backgroundImage: null != S ? 'url('.concat(S, ')') : void 0 },
@@ -253,14 +253,15 @@ let L = a.forwardRef((e, t) => {
                 titleClassName: l,
                 subtitle: o,
                 perkImage: x,
-                isCarousel: b,
+                isCarousel: P,
                 descriptionCta: _,
                 onCtaClick: u,
                 perkComponent: R,
                 subtitleClassName: O.cardSubtitle,
-                cardVariant: N
+                cardVariant: N,
+                imageOverlayText: b
             }),
-            P &&
+            v &&
                 (0, s.jsx)(M.Z, {
                     title: r,
                     titleClassName: l,
