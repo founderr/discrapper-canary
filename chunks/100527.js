@@ -346,4 +346,5 @@ var n, r;
     (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
     (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
     (r.DEEPLINK = 'deeplink'),
+    (r.HOLIDAY_COACHMARK = 'holiday coachmark'),
     (t.Z = n);
