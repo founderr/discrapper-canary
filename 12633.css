@@ -16703,7 +16703,8 @@ span.clanTag_a31c43 {
     position: absolute;
     opacity: 0;
     display: inline-block;
-    font-style: normal
+    font-style: normal;
+    z-index: -1
 }
 
 .messageEditorCompact_f9f2ca {
