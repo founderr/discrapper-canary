@@ -116,6 +116,10 @@ function c(e) {
         case s.cd.CLIENT_THEMES_UPSELL:
         case s.cd.APP_ICON_UPSELL:
             return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case s.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case s.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case s.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case s.cd.AVATAR_DECORATION_MODAL_UPSELL:
         case s.cd.FOR_LATER_MODAL_UPSELL:
             return !0;
         default:
