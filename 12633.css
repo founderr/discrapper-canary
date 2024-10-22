@@ -19652,7 +19652,9 @@ h3.improved_f017d0:after {
     border: none
 }
 
-.card_ae1fa2.disabled_ae1fa2 {
+.card_ae1fa2.hoisted_ae1fa2 {
+    background: var(--profile-body-background-color) !important;
+    z-index: 4;
     pointer-events: none
 }
 
@@ -29426,7 +29428,6 @@ div.popoutCloseButton_d523a2:hover {
 }
 
 .body_b8cc6d {
-    z-index: 1;
     padding: 4px 16px 8px;
     display: flex;
     flex-direction: column;
@@ -29434,7 +29435,6 @@ div.popoutCloseButton_d523a2:hover {
 }
 
 .footer_b8cc6d {
-    z-index: 1;
     padding: 0 16px 12px;
     display: flex;
     flex-direction: column
