@@ -19,8 +19,10 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != a
-                              ? (0, i.jsx)(o.FormTitle, {
-                                    className: l.permissionHeader,
+                              ? (0, i.jsx)(o.Heading, {
+                                    variant: 'heading-sm/semibold',
+                                    color: 'header-primary',
+                                    className: l.header,
                                     children: a
                                 })
                               : null,
@@ -54,8 +56,10 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, i.jsx)(o.FormTitle, {
-                                    className: l.permissionHeader,
+                              ? (0, i.jsx)(o.Heading, {
+                                    variant: 'heading-sm/semibold',
+                                    color: 'header-primary',
+                                    className: l.header,
                                     children: c
                                 })
                               : null,
