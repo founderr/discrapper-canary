@@ -15,7 +15,7 @@ function u(e) {
         t = (0, a.q)(n.extra.application_id),
         u = null == t ? void 0 : t.getIconURL(s.Si.LARGE),
         d = n.extra.activity_name,
-        m = (0, o.kr)(n) && !(0, o.n2)(n) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+        m = (0, o.Jg)(n) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
         _ = {
             onClick: () => {
                 l.__(i._b.TEXT, r.I.NORMAL, { applicationId: n.extra.application_id });

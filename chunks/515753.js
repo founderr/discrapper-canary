@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(512722),
     o = n.n(s),
     c = n(568611),
@@ -84,9 +84,9 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Q extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: a, text: s, children: o, locationState: u, onClick: h, className: f, role: _, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: f, role: _, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
         return (0, i.jsx)(T.Z, {
-            className: r()(W.channel, { [W.fullWidth]: d.tq }, f),
+            className: a()(W.channel, { [W.fullWidth]: d.tq }, f),
             onClick: h,
             role: _,
             focusProps: {
@@ -98,7 +98,7 @@ class Q extends l.Component {
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
-                className: r()(a, W.interactive, W.linkButton, { [W.interactiveSelected]: t }),
+                className: a()(r, W.interactive, W.linkButton, { [W.interactiveSelected]: t }),
                 children: (0, i.jsxs)(c.rU, {
                     to: {
                         pathname: e,
@@ -111,7 +111,7 @@ class Q extends l.Component {
                             selected: t,
                             muted: !1,
                             avatar: (0, i.jsx)(n, {
-                                className: r()(W.linkButtonIcon, l),
+                                className: a()(W.linkButtonIcon, l),
                                 color: 'currentColor'
                             }),
                             name: s,
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function X(e) {
-    let { channel: t, isGDMFacepileEnabled: a, selected: s = !1, user: d, activities: v, applicationStream: M, entry: y, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: v, applicationStream: M, entry: y, isTyping: O, status: j, isMobile: w, 'aria-posinset': G, 'aria-setsize': k } = e,
         [B, Q] = l.useState(!1),
         X = l.useRef(null),
         J = l.useRef(null),
@@ -141,8 +141,8 @@ function X(e) {
         en = (0, h.e7)([U.ZP], () => U.ZP.isChannelMuted(t.getGuildId(), t.id)),
         ei = (0, h.e7)([D.ZP], () => D.ZP.getMentionCount(t.id) > 0),
         el = (0, x.ZP)(t),
-        ea = (0, h.e7)([A.Z], () => A.Z.isFavorite(t.id)),
-        er = () => {
+        er = (0, h.e7)([A.Z], () => A.Z.isFavorite(t.id)),
+        ea = () => {
             Q(!0);
         },
         es = () => {
@@ -193,14 +193,14 @@ function X(e) {
         ep = (e) => {
             e.preventDefault(), e.stopPropagation();
             let l = F.Z.Messages.LEAVE_GROUP_DM_TITLE.format({ name: el }),
-                a = F.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: el });
-            t.isManaged() && ((l = F.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: el })), (a = F.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: el }))),
+                r = F.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: el });
+            t.isManaged() && ((l = F.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: el })), (r = F.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: el }))),
                 (0, p.openModalLazy)(async () => {
                     let { default: e } = await n.e('14604').then(n.bind(n, 960670));
                     return (t) =>
                         (0, i.jsx)(e, {
                             header: l,
-                            body: a,
+                            body: r,
                             onSubmit: eo,
                             ...t
                         });
@@ -241,7 +241,7 @@ function X(e) {
         e_ = () => {
             let e = p.AvatarSizes.SIZE_32;
             if (t.isMultiUserDM())
-                return t.recipients.length >= 2 && a && null == t.icon
+                return t.recipients.length >= 2 && r && null == t.icon
                     ? (0, i.jsx)(R.Z, {
                           'aria-hidden': !0,
                           recipients: t.recipients,
@@ -305,14 +305,14 @@ function X(e) {
                     ringTarget: J
                 },
                 ref: J,
-                onMouseEnter: er,
+                onMouseEnter: ea,
                 onMouseLeave: es,
                 onMouseDown: ec,
                 onContextMenu: eh,
                 'aria-setsize': k,
                 'aria-posinset': G,
                 children: (0, i.jsxs)(p.Interactive, {
-                    className: r()(W.interactive, {
+                    className: a()(W.interactive, {
                         [W.interactiveSystemDM]: eC && eg,
                         [W.interactiveSelected]: s
                     }),
@@ -349,7 +349,7 @@ function X(e) {
                                     : null
                             })
                         }),
-                        ea ? (0, i.jsx)(q, {}) : null,
+                        er ? (0, i.jsx)(q, {}) : null,
                         (0, i.jsx)(K, {
                             'aria-label': em ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
                             onClick: em ? ep : eo,
@@ -363,15 +363,15 @@ function X(e) {
 }
 t.ZP = (e) => {
     let { channel: t, selected: n, ...l } = e,
-        a = (0, h.e7)([G.default], () => G.default.getUser(t.getRecipientId())),
-        { isStatusIndicatorEnabled: r, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = M.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
-        c = null == a ? void 0 : a.id,
+        r = (0, h.e7)([G.default], () => G.default.getUser(t.getRecipientId())),
+        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = M.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+        c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
             [j.Z, O.Z],
             () => {
                 let e;
                 if (t.isMultiUserDM()) {
-                    if (r) {
+                    if (a) {
                         let n = j.Z.getState().statuses;
                         t.recipients.some((e) => n[e] === V.Skl.ONLINE) && (e = V.Skl.ONLINE);
                     }
@@ -383,7 +383,7 @@ t.ZP = (e) => {
                     isMobile: null != c && j.Z.isMobileOnline(c)
                 };
             },
-            [t, c, r]
+            [t, c, a]
         ),
         d = (0, h.e7)(
             [G.default, w.Z],
@@ -396,13 +396,13 @@ t.ZP = (e) => {
                             return e !== (null === (t = G.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })
                     );
-                if (null != a) return w.Z.isTyping(t.id, t.getRecipientId());
+                if (null != r) return w.Z.isTyping(t.id, t.getRecipientId());
                 return !1;
             },
-            [t, a, s]
+            [t, r, s]
         ),
         { recentActivityStatusEnabled: p } = (0, y.U)({ location: 'PrivateChannel' }),
-        f = (0, v.Z)(null == a ? void 0 : a.id);
+        f = (0, v.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)(X, {
               channel: t,
@@ -415,7 +415,7 @@ t.ZP = (e) => {
         : (0, i.jsx)(X, {
               channel: t,
               selected: n,
-              user: a,
+              user: r,
               entry: p ? f[0] : void 0,
               isTyping: d,
               ...l,

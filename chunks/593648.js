@@ -21,8 +21,8 @@ var n = t(200651),
     I = t(818083),
     N = t(688465),
     m = t(487419),
-    A = t(197344),
-    C = t(476756),
+    C = t(197344),
+    A = t(476756),
     g = t(734934),
     h = t(223683),
     O = t(312400),
@@ -198,7 +198,7 @@ function W(e) {
                 sound: 'reconnect'
             }
         ],
-        T = null != A.Z.useHolidaySoundpack();
+        T = null != C.Z.useHolidaySoundpack();
     return (0, n.jsx)(f.F, {
         setting: G.s6.NOTIFICATIONS_SOUNDS,
         children: (0, n.jsxs)(_.FormSection, {
@@ -210,7 +210,7 @@ function W(e) {
                                   className: k.marginBottom20,
                                   children: V.Z.Messages.HOLIDAY_SOUNDPACK_LABEL
                               }),
-                              (0, n.jsx)(C.Z, {})
+                              (0, n.jsx)(A.Z, {})
                           ]
                       })
                     : null,

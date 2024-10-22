@@ -22,8 +22,8 @@ function E(e) {
         { name: E, description: T, hideDescriptionUntilUnlock: S, onAction: I } = a,
         N = S && !r,
         m = r ? 'header-primary' : 'text-muted',
-        A = r ? 'header-secondary' : 'text-muted',
-        C = o()(t),
+        C = r ? 'header-secondary' : 'text-muted',
+        A = o()(t),
         g = null != I && r,
         h = g ? l.Clickable : 'div';
     return (0, n.jsxs)(h, {
@@ -48,7 +48,7 @@ function E(e) {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
                             className: u.unlocked,
-                            children: (0, c.Y4)(C)
+                            children: (0, c.Y4)(A)
                         }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-md/medium',
@@ -57,7 +57,7 @@ function E(e) {
                     }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-xs/normal',
-                        color: A,
+                        color: C,
                         children: N ? '?????' : T()
                     })
                 ]

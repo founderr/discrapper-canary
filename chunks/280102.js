@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    a = n(481060),
     s = n(929324);
 function o(e) {
     let { total: t, users: n, videoLimit: l } = e;
@@ -15,13 +15,13 @@ function o(e) {
         className: s.wrapper,
         children: [
             (0, i.jsxs)('span', {
-                className: a()(s.users, {
+                className: r()(s.users, {
                     [s.video]: l,
                     [s.extraLong]: n >= 100
                 }),
                 children: [
                     l
-                        ? (0, i.jsx)(r.VideoIcon, {
+                        ? (0, i.jsx)(a.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
                               className: s.videoIcon
@@ -31,7 +31,7 @@ function o(e) {
                 ]
             }),
             (0, i.jsx)('span', {
-                className: a()(s.total, { [s.extraLong]: t >= 100 }),
+                className: r()(s.total, { [s.extraLong]: t >= 100 }),
                 children: t.toString().padStart(2, '0')
             })
         ]

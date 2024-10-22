@@ -19,7 +19,7 @@ function _() {
         children: [
             (0, n.jsx)(o.H, {
                 header: c.Z.Messages.E2EE_VERIFIED_DEVICES,
-                description: c.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: (0, a.pL)() })
+                description: c.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION_V2.format({ helpArticle: (0, a.pL)() })
             }),
             e.map((e) =>
                 (0, n.jsx)(

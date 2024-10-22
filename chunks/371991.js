@@ -63,7 +63,7 @@ let I = (e) => {
 };
 t.ZP = (e) => {
     let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        l = (0, f.kr)(t),
+        l = (0, f.Jg)(t),
         c = (0, o.e7)([d.default], () => d.default.locale);
     return l
         ? (0, r.jsx)(I, {

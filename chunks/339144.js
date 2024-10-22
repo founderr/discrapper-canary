@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(512722),
-    r = n.n(a),
+    r = n(512722),
+    a = n.n(r),
     s = n(704215),
     o = n(481060),
     c = n(988298),
@@ -63,16 +63,16 @@ function R(e) {
 }
 let L = l.memo(function (e) {
     let t,
-        a,
+        r,
         u,
         h,
         { stream: f, canGoLive: L, guildId: y, isStreaming: P, channel: O, canStream: j, runningGame: D, embeddedActivity: w, activity: U, application: G, analyticsContext: k } = e,
         B = M(G, U, w),
         { enabled: H } = (0, C.I7)(),
-        [V, F] = (0, m.US)([s.z.RAPIDASH_RTC_BROWSE_GUILDS], void 0, !0),
-        W = V === s.z.RAPIDASH_RTC_BROWSE_GUILDS && H,
+        [V, F] = (0, m.US)(H ? [s.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
+        W = V === s.z.RAPIDASH_RTC_BROWSE_GUILDS,
         z = l.useCallback(() => {
-            r()(null != U, 'Received null activity'),
+            a()(null != U, 'Received null activity'),
                 N.default.track(S.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: U.application_id,
@@ -117,13 +117,13 @@ let L = l.memo(function (e) {
         }, [D, F]);
     let X =
             (null != D || null == w) && (P || (L && null != D))
-                ? (P ? ((t = !1), (a = K), (u = o.ScreenXIcon), (h = b.Z.Messages.STOP_STREAMING)) : j ? ((t = !1), (a = q), (u = o.ScreenArrowIcon), (h = null != D ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: D.name }) : b.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((t = !0), (a = null), (u = o.ScreenArrowIcon), (h = null != O && (0, E.vd)(O.type) ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != y ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
+                ? (P ? ((t = !1), (r = K), (u = o.ScreenXIcon), (h = b.Z.Messages.STOP_STREAMING)) : j ? ((t = !1), (r = q), (u = o.ScreenArrowIcon), (h = null != D ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: D.name }) : b.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (h = null != O && (0, E.vd)(O.type) ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != y ? b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : b.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
                   (0, i.jsx)('div', {
                       className: A.panelButtonContainer,
                       children: (0, i.jsx)(x.Z, {
                           tooltipText: h,
                           disabled: t,
-                          onClick: a,
+                          onClick: r,
                           icon: u
                       })
                   }))

@@ -48,7 +48,7 @@ function H(e) {
         { analyticsLocations: z } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: q } = (0, C.z)(),
         Q = { [V.fullSize]: q === G.y0.FULL_SIZE },
-        { interactionType: X } = (0, N.Xo)(),
+        { interactionSource: X } = (0, N.Xo)(),
         $ = (0, f.Bq)({
             activity: i,
             user: t
@@ -274,7 +274,7 @@ function H(e) {
                           sourceType: G.n_.ACTIVITY,
                           children: () =>
                               (0, r.jsx)(v.Z.Overlay, {
-                                  className: a()(V.card, j, { [V.disabled]: null !== X }),
+                                  className: a()(V.card, j, { [V.hoisted]: X === G.n_.ACTIVITY }),
                                   ref: et,
                                   children: (0, r.jsxs)(O.Z, {
                                       user: t,

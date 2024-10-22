@@ -140,7 +140,7 @@ function I(e) {
             y(e), L(e);
         }
     }, [a, x, v]);
-    let k = i.useCallback(() => {
+    let A = i.useCallback(() => {
         if (R !== Z)
             T({
                 type: c.re.STRING_SELECT,
@@ -148,14 +148,14 @@ function I(e) {
             }) && L(Z);
     }, [Z, R, L, T]);
     i.useEffect(() => {
-        if (!(j || (Z.size === R.size && Array.from(R).every((e) => Z.has(e))))) k();
-    }, [j, Z, R, k]);
-    let A = o.singleSelect;
-    S ? (A = o.multiSelect) : 0 === I && (A = o.toggleSelect);
+        if (!(j || (Z.size === R.size && Array.from(R).every((e) => Z.has(e))))) A();
+    }, [j, Z, R, A]);
+    let k = o.singleSelect;
+    S ? (k = o.multiSelect) : 0 === I && (k = o.toggleSelect);
     let U = (0, o.useVariableSelect)({
         value: Z,
         onChange: (e) => y(e),
-        onSelectInteraction: A
+        onSelectInteraction: k
     });
     return (0, l.jsxs)(i.Fragment, {
         children: [

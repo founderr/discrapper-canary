@@ -37,7 +37,7 @@ function p(e) {
     if (!o.Z.isInChannel(n) || null == n || I(n)) return;
     let r = a.Z.getBlockedIDs(),
         i = t.find((e) => r.includes(e.userId) && e.channelId === n);
-    null != i && (0, d.w)({ location: 'warning_manager' }) && ((0, E.H)(n, i.userId), d.r.trackExposure({ location: 'warning_manager' }));
+    null != i && (0, d.wC)({ location: 'warning_manager' }) && ((0, E.H)(n, i.userId), d.rn.trackExposure({ location: 'warning_manager' }));
 }
 function I(e) {
     return (0, c.Iu)(e) > Date.now() - f;

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(636977),
-    r = n(704215),
+    r = n(636977),
+    a = n(704215),
     s = n(481060),
     o = n(169559),
     c = n(243778),
@@ -20,8 +20,8 @@ let E = l.forwardRef(function (e, t) {
     let { selected: n, className: E, onClick: N } = e,
         x = (0, o.Z)('discovery_button'),
         S = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
-        [v, Z] = (0, c.US)([r.z.RAPIDASH_MORE_GUILDS_UPSELL], _.R.SIDEBAR, !0),
-        T = v === r.z.RAPIDASH_MORE_GUILDS_UPSELL && x && S,
+        [v, Z] = (0, c.US)(x && S ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], _.R.SIDEBAR, !0),
+        T = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
         b = l.useCallback(() => {
             null == N || N(),
                 (0, u.k5)({ source: m.JU.GUILDS_BAR_ICON }),
@@ -30,7 +30,7 @@ let E = l.forwardRef(function (e, t) {
                         return (0, h.transitionToGlobalDiscovery)({
                             tab: m.F$.QUESTS,
                             location: g.dr.DISCOVERY_COMPASS,
-                            questContent: a.j.DISCOVERY_COMPASS
+                            questContent: r.j.DISCOVERY_COMPASS
                         });
                     (0, h.transitionToGlobalDiscovery)({ tab: e });
                 })((0, d.qe)()),

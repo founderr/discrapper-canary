@@ -20,7 +20,7 @@ function d() {
             value: !!t && s,
             onChange: a.xM.updateSetting,
             title: c.Z.Messages.NSFW_DM_COMMANDS_HEADER,
-            note: c.Z.Messages.NSFW_DM_COMMANDS_CAPTION,
+            note: c.Z.Messages.NSFW_DM_COMMANDS_CAPTION_V2,
             disabled: !t
         })
     });

@@ -32,29 +32,29 @@ function I() {
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
             }
         ],
-        A = [
+        C = [
             {
                 value: a.Q4.BLUR,
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             }
         ],
-        C = {
+        A = {
             value: a.Q4.SHOW,
             label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
         };
     return (
-        s && (m.unshift(C), A.unshift(C)),
+        s && (m.unshift(A), C.unshift(A)),
         (0, n.jsxs)(d.U, {
             setting: u.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
                 (0, n.jsx)(d.H, {
                     header: T.Z.Messages.USER_SETTINGS_SENSITIVE_MEDIA_TITLE,
-                    description: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(E.BhN.EXPLICIT_MEDIA_REDACTION) })
+                    description: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC_V2.format({ learnMoreLink: c.Z.getArticleURL(E.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, n.jsx)(i.FormItem, {
                     tag: i.FormTitleTags.H3,
-                    title: T.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
+                    title: T.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS_V2,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
                         options: m,
@@ -64,7 +64,7 @@ function I() {
                 }),
                 (0, n.jsx)(i.FormItem, {
                     tag: i.FormTitleTags.H3,
-                    title: T.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
+                    title: T.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS_V2,
                     titleClassName: S.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
                         options: m,
@@ -75,10 +75,10 @@ function I() {
                 s &&
                     (0, n.jsx)(i.FormItem, {
                         tag: i.FormTitleTags.H3,
-                        title: T.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
+                        title: T.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS_V2,
                         titleClassName: S.selectItemTitle,
                         children: (0, n.jsx)(i.SingleSelect, {
-                            options: A,
+                            options: C,
                             value: t,
                             onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
                         })

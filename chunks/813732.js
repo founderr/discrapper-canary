@@ -14,8 +14,8 @@ var n = t(200651),
     I = t(975298),
     N = t(167354),
     m = t(15640),
-    A = t(600164),
-    C = t(925329),
+    C = t(600164),
+    A = t(925329),
     g = t(406174),
     h = t(810762),
     O = t(681833),
@@ -44,12 +44,12 @@ function H() {
     return (0, n.jsx)(l.Card, {
         className: w.noItemsCard,
         type: l.Card.Types.CUSTOM,
-        children: (0, n.jsxs)(A.Z, {
-            align: A.Z.Align.CENTER,
+        children: (0, n.jsxs)(C.Z, {
+            align: C.Z.Align.CENTER,
             children: [
-                (0, n.jsx)(C.Z, {
+                (0, n.jsx)(A.Z, {
                     game: null,
-                    size: C.Z.Sizes.SMALL,
+                    size: A.Z.Sizes.SMALL,
                     className: w.noItemsIcon
                 }),
                 (0, n.jsx)('span', {
@@ -96,8 +96,8 @@ s.Z = function () {
     let t = (0, o.e7)([L.ZP], () => L.ZP.getPremiumTypeSubscription()),
         i = (0, N.Z)({ subscriptionFilter: (e) => G.eS.has(e.status) }),
         u = i.length > 1,
-        A = (0, o.e7)([D.Z], () => (null != t && null != t.paymentSourceId ? D.Z.getPaymentSource(t.paymentSourceId) : null), [t]),
-        C = (0, o.e7)([L.ZP], () => L.ZP.hasFetchedSubscriptions()),
+        C = (0, o.e7)([D.Z], () => (null != t && null != t.paymentSourceId ? D.Z.getPaymentSource(t.paymentSourceId) : null), [t]),
+        A = (0, o.e7)([L.ZP], () => L.ZP.hasFetchedSubscriptions()),
         v = (0, o.e7)([f.Z], () => f.Z.isBusy),
         B = (0, m.V)(),
         H = (0, o.e7)([M.Z], () => M.Z.getSubsection()),
@@ -128,7 +128,7 @@ s.Z = function () {
         x.Z.enabled)
     )
         return (0, n.jsx)(S.Z, {});
-    if (!C || !B)
+    if (!A || !B)
         return (0, n.jsx)('div', {
             className: r()(w.container, w.loading),
             children: (0, n.jsx)(l.Spinner, {})
@@ -144,7 +144,7 @@ s.Z = function () {
                 null != t
                     ? (0, n.jsx)(G.ZP, {
                           subscription: t,
-                          paymentSource: A,
+                          paymentSource: C,
                           busy: v,
                           subscriptions: i
                       })

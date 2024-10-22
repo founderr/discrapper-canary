@@ -31,10 +31,10 @@ function S() {
         : (0, n.jsx)(c.U, {
               setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
               children: (0, n.jsx)(d.Z, {
-                  title: T.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS,
+                  title: T.Z.Messages.USER_SETTINGS_ACTIVITY_STATUS_TITLE,
                   value: !s,
                   onChange: t,
-                  note: T.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: i.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) })
+                  note: T.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC_V3.format({ helpdeskArticle: i.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }

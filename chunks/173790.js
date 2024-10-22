@@ -29,8 +29,8 @@ function I(e) {
     let { channel: t, application: s, sectionName: c } = e,
         I = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
         g = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        L = (0, _.ye)(g) ? P : A.Z,
-        T = a.useRef(null),
+        T = (0, _.ye)(g) ? P : A.Z,
+        L = a.useRef(null),
         [b, S] = a.useState(!1),
         { iconURL: R, name: M } = a.useMemo(
             () =>
@@ -40,9 +40,9 @@ function I(e) {
                 }),
             [g]
         ),
-        y = (0, d.PL)(!0, !0),
-        j = (0, d.LD)(t.guild_id, !0),
-        O = a.useMemo(() => (0, d.If)(t, g.id), [y, j, t, g.id]),
+        j = (0, d.PL)(!0, !0),
+        y = (0, d.LD)(t.guild_id, !0),
+        O = a.useMemo(() => (0, d.If)(t, g.id), [j, y, t, g.id]),
         Z = !O.isGuildInstalled && !O.isUserInstalled;
     return (
         a.useEffect(() => {
@@ -51,7 +51,7 @@ function I(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: v.container,
             fade: !0,
-            ref: T,
+            ref: L,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: M }),
             children: [
@@ -59,7 +59,7 @@ function I(e) {
                     application: g,
                     name: M,
                     iconURL: R,
-                    scrollerRef: T,
+                    scrollerRef: L,
                     sectionName: c
                 }),
                 null != R &&
@@ -68,7 +68,7 @@ function I(e) {
                         className: v.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(T, {
                     channel: t,
                     application: g,
                     sectionName: c,

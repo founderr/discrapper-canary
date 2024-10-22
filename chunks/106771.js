@@ -40,7 +40,7 @@ function h(e) {
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : P;
             return null == n ? null : (0, u.ae)(n, void 0);
         }, [P, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: L } = (0, p.Z)({
+        { trackSearchResultsItemImpressionRef: T } = (0, p.Z)({
             applicationId: h.id,
             commandId: null == t ? void 0 : t.id,
             query: A,
@@ -48,7 +48,7 @@ function h(e) {
         });
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
-        innerRef: (e) => (L.current = e),
+        innerRef: (e) => (T.current = e),
         onClick: f,
         onContextMenu: v,
         children: (0, i.jsxs)(l.FocusBlock, {

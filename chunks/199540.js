@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(100621),
     o = n(866442),
     c = n(442837),
@@ -41,8 +41,8 @@ function N(e) {
 function x(e) {
     let t,
         n,
-        { folderNode: a, hovered: r, expanded: c } = e,
-        { color: u, children: h } = a,
+        { folderNode: r, hovered: a, expanded: c } = e,
+        { color: u, children: h } = r,
         p = null != u ? u : m.Wyy,
         f = h.map((e) => e.id),
         [_, g] = l.useState(!1),
@@ -82,7 +82,7 @@ function x(e) {
                         N,
                         {
                             guildId: e,
-                            animate: r
+                            animate: a
                         },
                         e
                     )
@@ -100,7 +100,7 @@ function S(e) {
     let {
             folderNode: t,
             forceCircular: n,
-            expanded: a,
+            expanded: r,
             sorting: s,
             mediaState: o,
             mentionCount: c = 0,
@@ -120,15 +120,15 @@ function S(e) {
         b = l.useCallback(() => {
             s || Z(!1), null == I || I(!1);
         }, [s, I]),
-        A = a || null == o ? null : (0, _.Or)(o),
-        M = !a && c > 0 ? (0, _.Ne)(c) : null;
+        A = r || null == o ? null : (0, _.Or)(o),
+        M = !r && c > 0 ? (0, _.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
         upperBadge: A,
         lowerBadge: M,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: r()(C.folder, { [C.hover]: v }),
+            className: a()(C.folder, { [C.hover]: v }),
             onClick: f,
             onContextMenu: m,
             onMouseEnter: T,
@@ -139,7 +139,7 @@ function S(e) {
                 folderName: u,
                 mentions: c
             }),
-            'aria-expanded': a,
+            'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
             ...S,
@@ -153,7 +153,7 @@ function S(e) {
                     : (0, i.jsx)(x, {
                           folderNode: t,
                           hovered: v,
-                          expanded: a
+                          expanded: r
                       })
         })
     });

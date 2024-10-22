@@ -60,7 +60,7 @@ function m(e) {
                 }),
                 (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
             ),
-            r = null == n ? void 0 : n.entries.filter((t) => ((0, l.y0)(t) ? !e.some((e) => null != e && (0, u.RL)(t, e)) : (0, l.LP)(t) && !(0, c.kr)(t)));
+            r = null == n ? void 0 : n.entries.filter((t) => !(0, c.Jg)(t) && ((0, l.dU)(t) ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, u.pB)(t, e)) : (0, l.y0)(t) ? !e.some((e) => null != e && (0, u.RL)(t, e)) : (0, l.LP)(t)));
         return {
             live: 0 === e.length ? p : e,
             recent: null == r || 0 === r.length ? I : r

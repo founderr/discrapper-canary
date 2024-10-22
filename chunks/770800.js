@@ -15,9 +15,9 @@ var r = n(200651),
     f = n(5192),
     C = n(476221),
     y = n(481250),
-    S = n(206314),
+    R = n(206314),
     D = n(513547),
-    R = n(65154),
+    S = n(65154),
     b = n(689938),
     E = n(701491),
     v = n(113207);
@@ -78,7 +78,7 @@ class F extends a.PureComponent {
                             ]
                         });
                     return (0, r.jsx)(
-                        S.Z,
+                        R.Z,
                         {
                             label: e,
                             valueRendered: [a, i],
@@ -99,7 +99,7 @@ class F extends a.PureComponent {
 t.Z = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     let { context: t, index: n } = e,
         r = u.ZP.getAllStats(t)[n],
-        a = t === R.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
+        a = t === S.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
     return {
         hidePersonalInformation: h.Z.hidePersonalInformation,
         transport: null != r ? r.transport : null,

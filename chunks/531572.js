@@ -1,7 +1,7 @@
 var i,
     l = n(442837),
-    a = n(570140);
-function r(e, t, n) {
+    r = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,9 +26,9 @@ class o extends (i = l.ZP.PersistedStore) {
         return s[e];
     }
 }
-r(o, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
-    r(o, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
-    (t.Z = new o(a.Z, {
+a(o, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
+    a(o, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
+    (t.Z = new o(r.Z, {
         APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
             let { guildId: t, premiumCount: n } = e;
             s = {

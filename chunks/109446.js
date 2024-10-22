@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(99690),
@@ -26,12 +26,12 @@ var i = n(200651),
     x = n(462397);
 function S(e) {
     let { channel: t } = e,
-        a = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
+        r = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-            return r()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
+            return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
-                .concat(r().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
+                .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
                 .filter((t) => !(t.id in e) && f.Z.can(I.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = _.ZP.lastMessageId(e.id),
@@ -55,8 +55,8 @@ function S(e) {
                     color: 'header-secondary',
                     children: t.isForumLikeChannel() ? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
                 }),
-                a
-                    .slice(0, t.isForumLikeChannel() ? a.length : c)
+                r
+                    .slice(0, t.isForumLikeChannel() ? r.length : c)
                     .map((e) => (0, i.jsx)(v, { thread: e }, e.id))
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),

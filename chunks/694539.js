@@ -15,8 +15,8 @@ var n = t(200651),
     I = t(329156),
     N = t(661065),
     m = t(346537),
-    A = t(830318);
-let C = (e) => {
+    C = t(830318);
+let A = (e) => {
     let [s, t] = e.split(','),
         n = atob(t),
         a = s.split(';')[0],
@@ -41,7 +41,7 @@ s.Z = (e) => {
         e.length > 0 &&
             b(
                 [...e].map((e) => {
-                    let s = C(e.base64),
+                    let s = A(e.base64),
                         t = URL.createObjectURL(s);
                     return (e.src = t), e;
                 })
@@ -73,7 +73,7 @@ s.Z = (e) => {
                               className: r()(N.col, N.preview),
                               children: [
                                   (0, n.jsx)('img', {
-                                      src: R ? m : A,
+                                      src: R ? m : C,
                                       alt: '',
                                       width: 450
                                   }),

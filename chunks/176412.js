@@ -1,9 +1,9 @@
 t.d(n, {
     Bm: function () {
-        return T;
+        return L;
     },
     P7: function () {
-        return L;
+        return T;
     },
     ae: function () {
         return g;
@@ -45,7 +45,7 @@ let I = {
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
     g = r.w4(P);
-function L(e) {
+function T(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1, fetchesApplication: h = !0 } = e,
         I = (0, c.O)(),
         P = (0, d.Qv)({
@@ -54,8 +54,8 @@ function L(e) {
             fetchesApplication: h
         }),
         g = (0, N.Q)(P),
-        L = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
-        T = (0, d.w1)({
+        T = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
+        L = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
@@ -68,13 +68,13 @@ function L(e) {
                         application_id: n,
                         section_name: a,
                         action: g,
-                        source: L
+                        source: T
                     });
             },
             launchingComponentId: _,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: L,
+            source: T,
             fetchesApplication: h
         }),
         b = s.ButtonColors.BRAND,
@@ -82,14 +82,14 @@ function L(e) {
     return (
         g === d.JS.JOIN ? ((b = s.ButtonColors.GREEN), (S = x.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((b = s.ButtonColors.RED), (S = x.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: T,
+            onActivityItemSelected: L,
             activityAction: g,
             buttonColor: b,
             buttonText: S
         }
     );
 }
-function T(e, n) {
+function L(e, n) {
     let t = A.Z.entrypoint(),
         l = i.useMemo(
             () =>

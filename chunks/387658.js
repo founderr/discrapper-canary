@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return B;
     }
 }),
     t(47120);
@@ -27,14 +27,14 @@ var i = t(200651),
     I = t(676161),
     P = t(660090),
     g = t(783097),
-    L = t(845936),
-    T = t(176412),
+    T = t(845936),
+    L = t(176412),
     b = t(870205),
     S = t(981631),
     R = t(689079),
     M = t(689938),
-    y = t(32950),
-    j = t(818931);
+    j = t(32950),
+    y = t(818931);
 let O = 'placeholder',
     Z = [, , , , ,].fill(O);
 function H(e) {
@@ -60,11 +60,11 @@ function H(e) {
                 A.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, T.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, L.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: j.commandTextContainer,
+                    className: y.commandTextContainer,
                     children: [
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/semibold',
@@ -82,11 +82,11 @@ function H(e) {
             [o.displayName, _]
         );
     return (0, i.jsxs)(d.Clickable, {
-        className: j.command,
+        className: y.command,
         onClick: u,
         children: [
             (0, i.jsx)(d.FocusBlock, {
-                className: j.commandFocusBlock,
+                className: y.commandFocusBlock,
                 children: C
             }),
             m
@@ -117,13 +117,13 @@ function U() {
         l = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: j.commandTextContainerPlaceholder,
+                    className: y.commandTextContainerPlaceholder,
                     children: [
                         (0, i.jsx)('div', {
-                            className: y.textPlaceholder,
+                            className: j.textPlaceholder,
                             style: n,
                             children: (0, i.jsx)(d.Text, {
-                                className: y.hidden,
+                                className: j.hidden,
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
                                 lineClamp: 1,
@@ -131,10 +131,10 @@ function U() {
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: y.textPlaceholder,
+                            className: j.textPlaceholder,
                             style: t,
                             children: (0, i.jsx)(d.Text, {
-                                className: y.hidden,
+                                className: j.hidden,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 lineClamp: 1,
@@ -146,7 +146,7 @@ function U() {
             [n, t]
         );
     return (0, i.jsx)('div', {
-        className: o()(j.command, y.loadingAnimation, { [y.noAnimation]: e }),
+        className: o()(y.command, j.loadingAnimation, { [j.noAnimation]: e }),
         children: l
     });
 }
@@ -161,7 +161,7 @@ function D(e) {
                 e.stopPropagation();
                 let n = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, L.L)({
+                    (await (0, T.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
@@ -190,8 +190,8 @@ function D(e) {
         disabled: u,
         size: d.ButtonSizes.ICON,
         color: d.Button.Colors.PRIMARY,
-        className: j.commandSentCTAButton,
-        innerClassName: j.commandSentCTAButtonInner,
+        className: y.commandSentCTAButton,
+        innerClassName: y.commandSentCTAButtonInner,
         'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.untranslatedName }),
         children: [
             (0, i.jsx)(d.Text, {
@@ -206,14 +206,14 @@ function D(e) {
         ]
     });
 }
-function B(e) {
+function k(e) {
     let { channel: n, commands: t, section: a, headerName: l, sectionName: o, children: r } = e;
     return 0 === t.length
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: j.commandListHeader,
+                      className: y.commandListHeader,
                       children: [
                           (0, i.jsx)(d.Heading, {
                               variant: 'heading-sm/semibold',
@@ -223,7 +223,7 @@ function B(e) {
                       ]
                   }),
                   (0, i.jsx)('ul', {
-                      className: j.commandContainer,
+                      className: y.commandContainer,
                       'aria-label': l,
                       children: t.map((e, t) =>
                           e === O
@@ -243,7 +243,7 @@ function B(e) {
               ]
           });
 }
-function k(e) {
+function B(e) {
     var n;
     let { channel: t, application: l, sectionName: o, installOnDemand: r, setHasCommands: s } = e,
         {
@@ -287,16 +287,16 @@ function k(e) {
     }, [s, A]),
     p.current || 0 !== A.length)
         ? (0, i.jsxs)('ul', {
-              className: j.contentContainer,
+              className: y.contentContainer,
               children: [
-                  (0, i.jsx)(B, {
+                  (0, i.jsx)(k, {
                       channel: t,
                       section: _,
                       commands: N,
                       headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                       sectionName: o
                   }),
-                  (0, i.jsx)(B, {
+                  (0, i.jsx)(k, {
                       channel: t,
                       section: _,
                       commands: p.current ? Z : A,

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    a = n(481060),
     s = n(686546),
     o = n(904297);
 function c(e) {
@@ -22,7 +22,7 @@ function c(e) {
                       color: 'currentColor'
                   })
                 : d;
-    return (0, i.jsx)(r.Tooltip, {
+    return (0, i.jsx)(a.Tooltip, {
         tooltipClassName: f,
         text: t,
         'aria-label': g,
@@ -31,14 +31,14 @@ function c(e) {
         forceOpen: N,
         children: (e) => {
             let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...f } = e;
-            return (0, i.jsxs)(r.Button, {
+            return (0, i.jsxs)(a.Button, {
                 ...f,
-                look: r.Button.Looks.BLANK,
-                size: r.Button.Sizes.NONE,
+                look: a.Button.Looks.BLANK,
+                size: a.Button.Sizes.NONE,
                 disabled: u,
                 innerClassName: p,
                 wrapperClassName: o.button,
-                className: a()(o.button, {
+                className: r()(o.button, {
                     [o.disabled]: u,
                     [o.enabled]: !u
                 }),

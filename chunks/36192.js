@@ -20,8 +20,8 @@ var n = t(200651),
     I = t(246946),
     N = t(594174),
     m = t(460562),
-    A = t(823379),
-    C = t(981631),
+    C = t(823379),
+    A = t(981631),
     g = t(921944),
     h = t(689938),
     O = t(722177);
@@ -38,8 +38,8 @@ function p() {
             clearTimeout(e), (0, E.$Z)();
         };
     }, []);
-    let A = () => {
-            l.tn.post({ url: C.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
+    let C = () => {
+            l.tn.post({ url: A.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
         [p, M] = a.useState(new Set());
     return i
@@ -152,7 +152,7 @@ function p() {
                                         return (0, n.jsx)(d.Button, {
                                             size: d.Button.Sizes.SMALL,
                                             color: d.Button.Colors.PRIMARY,
-                                            onClick: A,
+                                            onClick: C,
                                             onMouseEnter: s,
                                             onMouseLeave: t,
                                             children: 'Trigger Suspicious Sessions Notification'
@@ -171,7 +171,7 @@ function R(e) {
     let { session: l, current: c, setChecked: _, checked: u, useChecks: S } = e,
         I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
         N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
-        { text: m, icon: C } = (function (e) {
+        { text: m, icon: A } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
@@ -194,8 +194,8 @@ function R(e) {
             }
         })(null === (i = l.client_info) || void 0 === i ? void 0 : i.os),
         g = c ? null : (0, T.p)(l.approx_last_used_time),
-        p = [m, N].filter(A.lm),
-        R = [I, g].filter(A.lm);
+        p = [m, N].filter(C.lm),
+        R = [I, g].filter(C.lm);
     return (0, n.jsxs)(
         'div',
         {
@@ -203,7 +203,7 @@ function R(e) {
             children: [
                 (0, n.jsx)('div', {
                     className: O.sessionIcon,
-                    children: (0, n.jsx)(C, {
+                    children: (0, n.jsx)(A, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -287,7 +287,7 @@ function x() {
                         variant: 'text-sm/medium',
                         className: O.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(C.oAB.ACCOUNT) }) })
+                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(A.oAB.ACCOUNT) }) })
                     })
                 ]
             })

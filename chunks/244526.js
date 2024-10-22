@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 });
 var n,
@@ -19,8 +19,8 @@ var n,
     I = t(122289),
     N = t(624138),
     m = t(689938),
-    A = t(146466);
-class C extends (r = l.PureComponent) {
+    C = t(146466);
+class A extends (r = l.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof S.qo) return T.ZP.Types.PAYPAL;
@@ -85,7 +85,7 @@ class C extends (r = l.PureComponent) {
     renderDescription() {
         let { paymentSource: e, descriptionClassName: s } = this.props;
         return (0, o.jsx)(_.Text, {
-            className: d()(A.description, s),
+            className: d()(C.description, s),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
         });
@@ -119,7 +119,7 @@ class C extends (r = l.PureComponent) {
                 a && (0, o.jsx)(T.ZP, { type: this.typeString }),
                 (0, o.jsxs)(E.Z, {
                     direction: E.Z.Direction.VERTICAL,
-                    className: A.descriptionWrapper,
+                    className: C.descriptionWrapper,
                     children: [
                         (0, o.jsxs)(E.Z, {
                             align: E.Z.Align.CENTER,
@@ -127,19 +127,19 @@ class C extends (r = l.PureComponent) {
                                 this.renderDescription(),
                                 i && e
                                     ? (0, o.jsx)('div', {
-                                          className: A.defaultIndicator,
+                                          className: C.defaultIndicator,
                                           children: m.Z.Messages.DEFAULT
                                       })
                                     : null,
                                 n
                                     ? (0, o.jsx)('div', {
-                                          className: A.premiumIndicator,
+                                          className: C.premiumIndicator,
                                           children: m.Z.Messages.PAYMENT_SOURCE_SUBSCRIPTION
                                       })
                                     : null,
                                 i && s.invalid
                                     ? (0, o.jsx)('div', {
-                                          className: A.invalidIndicator,
+                                          className: C.invalidIndicator,
                                           children: m.Z.Messages.PAYMENT_SOURCE_INVALID
                                       })
                                     : null
@@ -147,7 +147,7 @@ class C extends (r = l.PureComponent) {
                         }),
                         t && null != r
                             ? (0, o.jsx)('div', {
-                                  className: A.subText,
+                                  className: C.subText,
                                   children: r
                               })
                             : null
@@ -164,7 +164,7 @@ class C extends (r = l.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (a = 'defaultProps') in (n = C)
+    (a = 'defaultProps') in (n = A)
         ? Object.defineProperty(n, a, {
               value: i,
               enumerable: !0,

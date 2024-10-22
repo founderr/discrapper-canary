@@ -1,12 +1,12 @@
 n.d(t, {
     N: function () {
-        return a;
+        return r;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060);
-function a(e) {
+function r(e) {
     return (0, i.jsx)(l.NumberBadge, { count: e });
 }
 n(460562), n(64056);

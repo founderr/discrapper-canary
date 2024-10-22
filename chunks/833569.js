@@ -25,8 +25,8 @@ var n,
     I = t(410030),
     N = t(100527),
     m = t(906732),
-    A = t(211242),
-    C = t(600164),
+    C = t(211242),
+    A = t(600164),
     g = t(509545),
     h = t(626135),
     O = t(122289),
@@ -68,7 +68,7 @@ async function w(e) {
 function H(e) {
     var s;
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
-        d = (0, A.Q)(),
+        d = (0, C.Q)(),
         [_, u] = r.useState(!1),
         [S, N] = r.useState(!1),
         g = (0, I.ZP)(),
@@ -177,7 +177,7 @@ function H(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                justify: C.Z.Justify.START,
+                justify: A.Z.Justify.START,
                 children: [M, f]
             })
         ]
@@ -253,8 +253,8 @@ function K(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                align: C.Z.Align.CENTER,
-                justify: C.Z.Justify.BETWEEN,
+                align: A.Z.Align.CENTER,
+                justify: A.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(T.Button, {
                         color: T.Button.Colors.RED,
@@ -301,7 +301,7 @@ function X(e) {
     let t,
         { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: u } = e,
         S = r.useRef(new c.qA()),
-        [A, C] = r.useState(null),
+        [C, A] = r.useState(null),
         g = (0, D.yQ)(),
         p = (null == g ? void 0 : g.showCard) === !0,
         x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
@@ -477,7 +477,7 @@ function X(e) {
                 premiumSubscription: n,
                 premiumType: M,
                 onClose: () => $(U),
-                confettiCanvas: A,
+                confettiCanvas: C,
                 userDiscountOffer: es
             });
             break;
@@ -488,7 +488,7 @@ function X(e) {
         value: B,
         children: [
             (0, i.jsx)(c.O_, {
-                ref: C,
+                ref: A,
                 className: k.confettiCanvas,
                 environment: S.current
             }),

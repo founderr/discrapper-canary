@@ -19,7 +19,7 @@ var a = n(990547),
     l = n(689938);
 function u(e) {
     let { channelId: s, blockedUserIds: n, transitionState: u, onClose: C, onJoin: I } = e;
-    if (!(0, c.w)({ location: 'warning_modal' })) return null;
+    if (!(0, c.KR)({ location: 'warning_modal' })) return null;
     let m = n.size > 1,
         x = [
             {

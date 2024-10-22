@@ -87,7 +87,7 @@ t.Z = () => {
         ep = null != eA ? eA.percentage : void 0,
         eM = (0, T.Z)(N.Z),
         eS = (0, b.Z)(),
-        { fractionalState: eh } = (0, u.Z)({ forceFetch: !0 }),
+        { fractionalState: eh } = (0, u.Z)(),
         ex = eh === D.a$.FP_ONLY,
         eb = (0, I.Z)({
             scrollPosition: B.Y_.TRY_IT_OUT,

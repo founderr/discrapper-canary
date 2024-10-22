@@ -1,14 +1,14 @@
 n.d(t, {
     bb: function () {
-        return a;
+        return r;
     },
     lN: function () {
-        return r;
+        return a;
     }
 });
 var i = n(818083),
     l = n(987338);
-let a = (0, i.B)({
+let r = (0, i.B)({
     kind: 'user',
     id: '2024-09_browsechannelbuttonoptin',
     label: "Don't show guild Browse Channels when all channels are already visible",
@@ -22,7 +22,7 @@ let a = (0, i.B)({
         }
     ]
 });
-function r(e) {
-    let { alwaysShowDirectory: t } = a.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
+function a(e) {
+    let { alwaysShowDirectory: t } = r.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
     return t || !e;
 }

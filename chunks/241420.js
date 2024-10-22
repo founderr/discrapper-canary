@@ -1,7 +1,7 @@
 t.r(s),
     t.d(s, {
         ConnectedPrivacySettings: function () {
-            return C;
+            return A;
         },
         PrivacySettingSurfaces: function () {
             return n;
@@ -10,7 +10,7 @@ t.r(s),
             return m;
         },
         default: function () {
-            return A;
+            return C;
         }
     }),
     t(47120);
@@ -110,7 +110,7 @@ function m(e) {
         ]
     });
 }
-function A(e) {
+function C(e) {
     let { guild: s, transitionState: t, onClose: n } = e,
         a = ''.concat(I.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
     return (0, i.jsxs)(o.ModalRoot, {
@@ -126,7 +126,7 @@ function A(e) {
             }),
             (0, i.jsx)(o.ModalContent, {
                 className: N.content,
-                children: (0, i.jsx)(C, {
+                children: (0, i.jsx)(A, {
                     guild: s,
                     ingress: 'server_privacy_modal'
                 })
@@ -140,7 +140,7 @@ function A(e) {
         ]
     });
 }
-function C(e) {
+function A(e) {
     let { guild: s, ingress: t = 'server_privacy_modal' } = e,
         n = s.id,
         a = c.h2.useSetting().includes(n),
@@ -186,7 +186,7 @@ function C(e) {
             },
             [n, t]
         ),
-        A = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 let s = new Set((0, u.gl)());
                 e ? s.delete(n) : s.add(n),
@@ -207,7 +207,7 @@ function C(e) {
         isGuildActivityJoiningRestricted: _,
         handleActivityJoiningRestrictedGuildChange: N,
         isGuildMessageRequestRestricted: o,
-        handleMessageRequestRestrictedGuildChange: A,
+        handleMessageRequestRestrictedGuildChange: C,
         guild: s
     });
 }

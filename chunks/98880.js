@@ -37,21 +37,21 @@ var i,
     I = t(70097),
     P = t(695346),
     g = t(973616),
-    L = t(695103),
-    T = t(880448),
+    T = t(695103),
+    L = t(880448),
     b = t(768581),
     S = t(541099),
     R = t(783097),
     M = t(695676),
-    y = t(176412),
-    j = t(226026),
+    j = t(176412),
+    y = t(226026),
     O = t(753972),
     Z = t(981631),
     H = t(217702),
     U = t(689938),
     D = t(127935),
-    B = t(413097),
-    k = t(969728);
+    k = t(413097),
+    B = t(969728);
 function w(e) {
     var n;
     let { application: t, look: i = 'large_banner', onClick: a, imageStyle: o, enableVideoBanner: r = !0, children: s, sectionName: c, resultsPosition: d, sectionOverallPosition: u, tracksImpression: p = !0, disabled: _ = !1 } = e,
@@ -99,8 +99,8 @@ function V(e) {
             },
             [n, h]
         ),
-        { name: A, description: E } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]),
-        { trackItemImpressionRef: v } = (0, j.Z)({
+        { name: A, description: E } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: k }), [n]),
+        { trackItemImpressionRef: v } = (0, y.Z)({
             applicationId: n.id,
             sectionName: a,
             sectionPosition: r,
@@ -138,7 +138,7 @@ function V(e) {
 }
 function W(e) {
     let { application: n, imageStyle: t, children: i } = e,
-        { name: a, iconURL: r } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]);
+        { name: a, iconURL: r } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: k }), [n]);
     return (0, l.jsx)(d.Tooltip, {
         tooltipContentClassName: D.tooltipContent,
         text: a,
@@ -162,8 +162,8 @@ function W(e) {
 }
 function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
-        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: B }), [n]),
-        h = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
+        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, R.sl)(n, { fakeAppIconURL: k }), [n]),
+        h = o.useMemo(() => (null == C ? null : (0, j.ae)(C)), [C]),
         f = (0, x.ZP)(m, ''),
         [A, E] = o.useState(!1),
         N = o.useCallback(() => {
@@ -172,7 +172,7 @@ function F(e) {
         v = (0, R.lf)(n),
         I = 'large_banner' === t || 'medium_banner' === t,
         P = o.useCallback(() => E(!1), []),
-        g = (0, c.e7)([_.Z, L.Z], () => _.Z.inDevModeForApplication(n.id) || L.Z.inTestModeForApplication(n.id), [n.id]);
+        g = (0, c.e7)([_.Z, T.Z], () => _.Z.inDevModeForApplication(n.id) || T.Z.inTestModeForApplication(n.id), [n.id]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)('div', {
@@ -278,7 +278,7 @@ function Y() {
             (0, l.jsx)('div', {
                 className: D.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(T.Z, { className: D.devShelfIcon })
+                children: (0, l.jsx)(L.Z, { className: D.devShelfIcon })
             })
     });
 }
@@ -295,7 +295,7 @@ function G(e) {
                   (0, l.jsx)('img', {
                       className: D.staffBadge,
                       alt: i,
-                      src: k,
+                      src: B,
                       ...e
                   })
           });
@@ -433,7 +433,7 @@ function $(e) {
             activityAction: E,
             buttonColor: N,
             buttonText: v
-        } = (0, y.P7)({
+        } = (0, j.P7)({
             channel: n,
             application: t,
             location: i,

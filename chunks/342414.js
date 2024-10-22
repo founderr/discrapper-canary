@@ -156,7 +156,7 @@ t.Z = (e) => {
         C = (0, s.jsx)(h, { className: t }),
         M = f.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE,
         S = !1,
-        { fractionalState: P, endsAt: L } = (0, d.Z)({ forceFetch: !0 }),
+        { fractionalState: P, endsAt: L } = (0, d.Z)(),
         Z = (0, _.Z)(L, _.a.ENDS_IN);
     l ? ((M = f.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE), (C = (0, s.jsx)(b, {}))) : (R || N) && ((I = f.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED), (M = f.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE), (C = (0, s.jsx)(x, { location: n })));
     let D = null;

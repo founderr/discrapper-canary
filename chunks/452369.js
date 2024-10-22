@@ -30,7 +30,7 @@ class f extends r.ZP.Store {
     }
     getBlockedUsersForVoiceChannel(e) {
         var t;
-        return (0, o.w)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = u[e]) && void 0 !== t ? t : c) : c;
+        return (0, o.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = u[e]) && void 0 !== t ? t : c) : c;
     }
 }
 t.Z = new f(i.Z, {

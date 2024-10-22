@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return L;
     }
 }),
     t(47120);
@@ -27,8 +27,8 @@ var i = t(200651),
     I = t(783685),
     P = t(689938),
     g = t(131242),
-    L = t(554034);
-function T(e) {
+    T = t(554034);
+function L(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = a.useMemo(() => {
             var e;
@@ -75,7 +75,7 @@ function T(e) {
                             children: [
                                 (0, i.jsx)(S, { application: t }),
                                 (0, i.jsx)(R, { application: t }),
-                                p.length > 0 ? (0, i.jsx)(j, { description: p }) : null,
+                                p.length > 0 ? (0, i.jsx)(y, { description: p }) : null,
                                 _
                                     ? (0, i.jsx)('div', {
                                           className: g.developerShelfControlsContainer,
@@ -85,7 +85,7 @@ function T(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(y, {
+                                (0, i.jsx)(j, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -220,7 +220,7 @@ function M(e) {
         ]
     });
 }
-function y(e) {
+function j(e) {
     var n;
     let { channel: t, application: a, sectionName: l, hasCommands: o, isDeveloperOfThisApp: r } = e,
         c = (0, p.Fs)(t, a.id),
@@ -268,7 +268,7 @@ function y(e) {
               ]
           });
 }
-function j(e) {
+function y(e) {
     let { description: n } = e,
         [t, l] = a.useState(!0);
     a.useLayoutEffect(() => l(!1), []);
@@ -322,7 +322,7 @@ function j(e) {
                 onTransitionEnd: _,
                 children: (0, i.jsx)(s.Text, {
                     ref: r,
-                    className: L.markup,
+                    className: T.markup,
                     variant: 'text-sm/medium',
                     lineClamp: C ? void 0 : 1,
                     style: { maxHeight: C ? void 0 : u.minHeightOverride },

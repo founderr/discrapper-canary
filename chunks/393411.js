@@ -21,8 +21,8 @@ var a = t(120356),
     I = t(301766),
     N = t(509545),
     m = t(78839),
-    A = t(931331),
-    C = t(754347),
+    C = t(931331),
+    A = t(754347),
     g = t(122289),
     h = t(74538),
     O = t(212895),
@@ -127,7 +127,7 @@ function y() {
     return (0, n.jsxs)('div', {
         className: v.wordMark,
         children: [
-            (0, n.jsx)(C.Z, {
+            (0, n.jsx)(A.Z, {
                 className: v.discordWordmark,
                 'aria-label': Z.Z.Messages.PREMIUM_TIER_1
             }),
@@ -260,7 +260,7 @@ s.Z = function (e) {
             ec = (0, n.jsxs)('div', {
                 className: v.wordMark,
                 children: [
-                    (0, n.jsx)(C.Z, {
+                    (0, n.jsx)(A.Z, {
                         className: v.discordWordmark,
                         'aria-label': Z.Z.Messages.PREMIUM_TIER_0
                     }),
@@ -272,7 +272,7 @@ s.Z = function (e) {
             ec = (0, n.jsx)(y, {});
             break;
         case P.p9.TIER_2:
-            ec = (0, n.jsx)(A.Z, {
+            ec = (0, n.jsx)(C.Z, {
                 className: v.planName,
                 'aria-label': Z.Z.Messages.PREMIUM_TITLE
             });

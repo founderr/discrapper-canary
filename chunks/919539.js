@@ -20,8 +20,8 @@ var n = t(200651),
     I = t(526761),
     N = t(726985),
     m = t(736530),
-    A = t(981631),
-    C = t(689938);
+    C = t(981631),
+    A = t(689938);
 function g() {
     let e = (0, u.is)(),
         s = (0, u.c_)(),
@@ -37,7 +37,7 @@ function g() {
             [e]
         );
     function R(e, s) {
-        o.default.track(A.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        o.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
@@ -48,17 +48,17 @@ function g() {
         children:
             e === m.T
                 ? (0, n.jsx)(T.Z, {
-                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
+                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
                       value: !t && !h,
                       onChange: () => {
                           var e;
                           return (
                               (e = !h),
                               void (0, S.V)({
-                                  header: C.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-                                  body: C.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-                                  confirmText: C.Z.Messages.NO_TEXT,
-                                  cancelText: C.Z.Messages.YES_TEXT,
+                                  header: A.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
+                                  body: A.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
+                                  confirmText: A.Z.Messages.NO_TEXT,
+                                  cancelText: A.Z.Messages.YES_TEXT,
                                   confirmButtonColor: i.Button.Colors.BRAND,
                                   onConfirm: () => {
                                       _.mX.updateSetting(e), R(e, !1);
@@ -70,14 +70,14 @@ function g() {
                           );
                       },
                       disabled: t,
-                      note: C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) })
+                      note: A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, n.jsx)(T.Z, {
-                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
+                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
                       value: !O,
                       onChange: p,
                       disabled: g,
-                      note: s ? C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) }) : C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(A.BhN.MESSAGE_REQUESTS) })
+                      note: s ? A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

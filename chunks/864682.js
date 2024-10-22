@@ -7,19 +7,19 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(594174),
+    r = n(481060),
+    a = n(594174),
     s = n(74538),
     o = n(327943),
     c = n(997945),
     u = n(630117),
     d = n(441319);
 function h() {
-    let [e, t, n] = (0, l.Wu)([r.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, s.ZP.isPremium(r.default.getCurrentUser())]),
+    let [e, t, n] = (0, l.Wu)([a.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
         h = d.QA[e],
         p = e !== c.aH.DEFAULT && (n || t),
-        f = (0, a.useRedesignIconContext)().enabled,
-        _ = (0, i.jsx)(a.ClydeIcon, {
+        f = (0, r.useRedesignIconContext)().enabled,
+        _ = (0, i.jsx)(r.ClydeIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 30,

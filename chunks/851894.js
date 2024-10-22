@@ -19,8 +19,8 @@ var n = t(200651),
     I = t(621853),
     N = t(246946),
     m = t(594174),
-    A = t(63063),
-    C = t(74538),
+    C = t(63063),
+    A = t(74538),
     g = t(18438),
     h = t(778825),
     O = t(856607),
@@ -71,7 +71,7 @@ function D(e) {
                 children: [
                     (0, n.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: A.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
+                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
                     }),
                     null != s
                         ? (0, n.jsxs)(n.Fragment, {
@@ -87,7 +87,7 @@ function D(e) {
                                       profilePreview: (0, n.jsx)(S.Z, {
                                           user: i,
                                           guild: s,
-                                          canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(i),
+                                          canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
                                           onUpsellClick: f,
                                           ...b
                                       }),

@@ -21,8 +21,8 @@ var i = t(200651),
     E = t(147890),
     T = t(835473),
     h = t(231757),
-    p = t(600164),
-    g = t(685929),
+    g = t(600164),
+    p = t(685929),
     f = t(163400),
     x = t(553795),
     C = t(496675),
@@ -84,7 +84,7 @@ function H(e) {
             }),
             [F, V]
         ),
-        ed = (0, g.Y)(V),
+        ed = (0, p.Y)(V),
         eu = (0, T.q)(null == V ? void 0 : null === (n = V.linkedLobby) || void 0 === n ? void 0 : n.application_id),
         eI = (0, f.F)(null == F ? void 0 : F.id),
         {
@@ -115,23 +115,23 @@ function H(e) {
                 showYoutubeCard: e_ > 0 || (!t && e)
             };
         }, [el, ec, F, er, em, e_]),
-        ep = Object.values(K).length,
-        eg = a.useMemo(() => {
-            let e = ep > 100 ? G : o();
+        eg = Object.values(K).length,
+        ep = a.useMemo(() => {
+            let e = eg > 100 ? G : o();
             return Object.values(K).filter((n) => {
                 var t, i, a;
                 let { application: s } = n;
                 return (t = s), (i = ea), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
             });
-        }, [K, ep, ea]),
+        }, [K, eg, ea]),
         ef = (0, c.e7)(
             [M.Z],
             () => {
-                if (null != F) return eg.find((e) => M.Z.canShowOverviewTooltip(F.id, e.integration.id));
+                if (null != F) return ep.find((e) => M.Z.canShowOverviewTooltip(F.id, e.integration.id));
             },
-            [eg, F]
+            [ep, F]
         ),
-        ex = a.useMemo(() => (void 0 !== ef ? [ef, ...eg.filter((e) => e.integration.id !== ef.integration.id)] : eg), [eg, ef]),
+        ex = a.useMemo(() => (void 0 !== ef ? [ef, ...ep.filter((e) => e.integration.id !== ef.integration.id)] : ep), [ep, ef]),
         eC = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
         [eO, eS] = a.useState(!1),
         eA = a.useRef(0),
@@ -193,9 +193,9 @@ function H(e) {
         ec &&
         ((eb = (function (e, n, t) {
             let a = (0, d.wj)(e) ? B : y,
-                s = (0, i.jsxs)(p.Z, {
-                    direction: p.Z.Direction.VERTICAL,
-                    align: p.Z.Align.CENTER,
+                s = (0, i.jsxs)(g.Z, {
+                    direction: g.Z.Direction.VERTICAL,
+                    align: g.Z.Align.CENTER,
                     className: D.emptyStateWrapper,
                     children: [
                         (0, i.jsx)('img', {
@@ -247,7 +247,7 @@ function H(e) {
                     })
                 });
             return n > 0 ? s : l;
-        })(ei, ep, null == F ? void 0 : F.id)),
+        })(ei, eg, null == F ? void 0 : F.id)),
         (eZ = null));
     let ev = A.Z.getArticleURL(L.BhN.INTEGRATIONS),
         eM = null != V ? j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
@@ -428,7 +428,7 @@ function H(e) {
                                             className: D.sectionHeader,
                                             children: j.Z.Messages.INTEGRATIONS_APPLICATION_SECTION
                                         }),
-                                        ep > 4
+                                        eg > 4
                                             ? (0, i.jsx)(k, {
                                                   query: ea,
                                                   setQuery: es

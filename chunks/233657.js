@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(704215),
-    r = n(481060),
+    r = n(704215),
+    a = n(481060),
     s = n(239091),
     o = n(605236),
     c = n(554747),
@@ -29,7 +29,7 @@ function m(e) {
         ),
         I = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function E() {
-        await (0, r.openModalLazy)(async () => {
+        await (0, a.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('7029')]).then(n.bind(n, 17671));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -37,14 +37,14 @@ function m(e) {
                     guildId: t.id
                 });
         }),
-            (0, o.EW)(a.z.GUILD_HEADER_EVENT_UPSELL);
+            (0, o.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let N = (0, c.ZP)(t.id),
         x = N.length > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: N.length }) : f.Z.Messages.GUILD_EVENTS;
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(r.CalendarIcon, {
+            (0, i.jsx)(a.CalendarIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
@@ -65,7 +65,7 @@ function m(e) {
         showUnread: g && !I,
         trailing:
             !I && C > 0
-                ? (0, i.jsx)(r.NumberBadge, {
+                ? (0, i.jsx)(a.NumberBadge, {
                       className: _.numberBadge,
                       disableColor: !0,
                       count: C

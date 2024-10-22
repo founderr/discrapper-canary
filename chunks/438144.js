@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return a;
+        return r;
     },
     s: function () {
         return l;
@@ -14,7 +14,7 @@ function l(e) {
         expand: !0
     });
 }
-function a(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'VOICE_CATEGORY_COLLAPSE',
         guildId: e,

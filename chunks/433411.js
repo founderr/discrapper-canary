@@ -18,7 +18,7 @@ var n = t(200651),
     S = t(689938),
     I = t(406926);
 function N(e) {
-    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: A = !1, isTryItOutFlow: C = !1 } = e,
+    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: A = !1 } = e,
         { analyticsLocations: g } = (0, l.ZP)(),
         h = null != t,
         { userAvatarDecoration: O, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, E.$U)(s, t),
@@ -27,13 +27,13 @@ function N(e) {
             () =>
                 (0, d.ps)({
                     analyticsLocations: g,
-                    isTryItOutFlow: C,
+                    isTryItOutFlow: A,
                     guild: t
                 }),
-            [g, C, t]
+            [g, A, t]
         ),
-        D = C || void 0 !== R ? null != R : (h ? p : O) != null,
-        L = A ? o.ShinyButton : o.Button;
+        D = A || void 0 !== R ? null != R : (h ? p : O) != null,
+        L = C ? o.ShinyButton : o.Button;
     return (0, n.jsxs)(T.Z, {
         className: i,
         forcedDivider: N,
@@ -47,7 +47,7 @@ function N(e) {
                     (0, n.jsx)(L, {
                         size: o.Button.Sizes.SMALL,
                         onClick: f,
-                        className: r()({ [I.buttonHighlighted]: A }),
+                        className: r()({ [I.buttonHighlighted]: C }),
                         children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     D &&

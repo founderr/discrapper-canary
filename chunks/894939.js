@@ -20,8 +20,8 @@ var n = t(200651),
     I = t(331642),
     N = t(63063),
     m = t(581883),
-    A = t(918257),
-    C = t(726985),
+    C = t(918257),
+    A = t(726985),
     g = t(981631),
     h = t(710111),
     O = t(689938),
@@ -59,11 +59,11 @@ function M() {
         title: O.Z.Messages.SOUNDBOARD,
         children: [
             (0, n.jsx)(_.F, {
-                setting: C.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, n.jsx)(A.Z, {})
+                setting: A.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: (0, n.jsx)(C.Z, {})
             }),
             (0, n.jsxs)(_.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                setting: A.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, n.jsx)(r.FormDivider, { className: p.callSoundsDivider }),
                     (0, n.jsx)(r.Heading, {

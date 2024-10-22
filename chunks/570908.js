@@ -6,29 +6,29 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(609415);
+    r = n.n(l),
+    a = n(609415);
 function s(e) {
     let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: s = !1, avatar: o, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
     return (0, i.jsxs)('div', {
-        className: a()(p, r.layout, {
-            [r.muted]: !t && n,
-            [r.highlighted]: l,
-            [r.wrappedLayout]: s
+        className: r()(p, a.layout, {
+            [a.muted]: !t && n,
+            [a.highlighted]: l,
+            [a.wrappedLayout]: s
         }),
         children: [
             (0, i.jsx)('div', {
-                className: a()(r.avatar, h),
+                className: r()(a.avatar, h),
                 children: o
             }),
             (0, i.jsxs)('div', {
-                className: r.content,
+                className: a.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: r.nameAndDecorators,
+                        className: a.nameAndDecorators,
                         children: [
                             (0, i.jsx)('div', {
-                                className: a()(r.name, { [r.wrappedName]: s }),
+                                className: r()(a.name, { [a.wrappedName]: s }),
                                 children: u
                             }),
                             c
@@ -36,7 +36,7 @@ function s(e) {
                     }),
                     null != d
                         ? (0, i.jsx)('div', {
-                              className: r.subText,
+                              className: a.subText,
                               children: d
                           })
                         : null

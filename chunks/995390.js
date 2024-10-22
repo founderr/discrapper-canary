@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return p;
     }
 }),
     t(653041),
@@ -21,8 +21,8 @@ var i = t(192379),
     E = t(823379),
     T = t(905753),
     h = t(399860),
-    p = t(981631);
-function g(e, n, t) {
+    g = t(981631);
+function p(e, n, t) {
     let a = (0, o.e7)([T.Z], () => T.Z.getApplicationPermissions()),
         l = i.useMemo(
             () =>
@@ -49,7 +49,7 @@ function g(e, n, t) {
                 })(e, null != a ? a : {}),
             [a, e]
         ),
-        g = (0, o.e7)(
+        p = (0, o.e7)(
             [T.Z],
             () => {
                 var e;
@@ -68,7 +68,7 @@ function g(e, n, t) {
             [t]
         ),
         x = null != t ? t : n,
-        C = null != t ? g : l,
+        C = null != t ? p : l,
         O = i.useMemo(() => (null != f ? f : { ...(null != C ? C : {}) }), [f, C]),
         S = i.useMemo(() => Object.keys(O).length, [O]),
         A = i.useMemo(() => (null == C || null == O ? null : !r().isEqual(C, O)), [C, O]);
@@ -78,7 +78,7 @@ function g(e, n, t) {
         }, [n, A, x]),
         {
             originalApplicationPermissions: l,
-            originalCommandPermissions: g,
+            originalCommandPermissions: p,
             editedTargetPermissions: (function (e, n) {
                 let t = (0, o.e7)([m.Z], () => m.Z.getGuild(e), [e]);
                 s()(null != t, 'guild must be present to be editing its integration settings');
@@ -104,7 +104,7 @@ function g(e, n, t) {
                             userIds: i
                         };
                     }, [n]),
-                    g = (0, o.cj)(
+                    p = (0, o.cj)(
                         [I.Z],
                         () =>
                             Object.fromEntries(
@@ -145,15 +145,15 @@ function g(e, n, t) {
                             c = !1;
                         if (o.type === d.Kw.CHANNEL) {
                             let e = o.id === i,
-                                t = g[o.id];
-                            (n = e || _.Z.can(p.Plq.VIEW_CHANNEL, t)), (c = !0);
+                                t = p[o.id];
+                            (n = e || _.Z.can(g.Plq.VIEW_CHANNEL, t)), (c = !0);
                         } else if (o.type === d.Kw.ROLE) {
                             let i = o.id === e,
                                 s = f[o.id];
                             (n = i || null != s), (c = r || i || _.Z.isRoleHigher(t, a, s));
                         } else if (o.type === d.Kw.USER) {
                             let e = x[o.id];
-                            (n = null != e), (c = null != e && (r || _.Z.canManageUser(p.Plq.USE_APPLICATION_COMMANDS, e, t)));
+                            (n = null != e), (c = null != e && (r || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t)));
                         }
                         s[l] = {
                             ...o,
@@ -162,7 +162,7 @@ function g(e, n, t) {
                         };
                     }
                     return s;
-                }, [g, t, a, r, n, f, x]);
+                }, [p, t, a, r, n, f, x]);
             })(e, O),
             hasChanges: A,
             selectedPermissionCount: S

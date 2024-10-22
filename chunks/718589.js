@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(981631),
     l = n(689938);
-function a(e) {
+function r(e) {
     let { channel: t, embeddedApps: n } = e;
     if (t.type === i.d4z.GUILD_VOICE) {
         if (null == n || !(n.length > 0)) return;

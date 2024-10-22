@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(91192),
-    r = n(481060),
+    r = n(91192),
+    a = n(481060),
     s = n(442837),
     o = n(239091),
     c = n(410030),
@@ -19,9 +19,9 @@ var i = n(200651),
     m = n(293992);
 function g(e) {
     let { target: t } = e,
-        s = (0, a.Ie)('fakedoor'),
+        s = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
-            (0, r.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('18137')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -51,11 +51,11 @@ function g(e) {
                     className: m.tooltipBackground,
                     style: { background: C }
                 }),
-                (0, i.jsx)(r.Heading, {
+                (0, i.jsx)(a.Heading, {
                     variant: 'heading-sm/medium',
                     children: t.tooltipHeader
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
                     children: _.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
                 })
@@ -64,24 +64,24 @@ function g(e) {
         E = (0, c.Fg)();
     return (0, i.jsxs)(d.H, {
         children: [
-            (0, i.jsx)(r.ThemeContextProvider, {
+            (0, i.jsx)(a.ThemeContextProvider, {
                 theme: f.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: I,
                     tooltipClass: m.tooltip,
                     tooltipContentClass: m.tooltipContent,
-                    children: (0, i.jsx)(r.ThemeContextProvider, {
+                    children: (0, i.jsx)(a.ThemeContextProvider, {
                         theme: E,
-                        children: (0, i.jsx)(r.BlobMask, {
-                            lowerBadge: (0, i.jsx)(r.NumberBadge, {
+                        children: (0, i.jsx)(a.BlobMask, {
+                            lowerBadge: (0, i.jsx)(a.NumberBadge, {
                                 count: 1,
                                 color: u.Z.BG_BRAND
                             }),
-                            children: (0, i.jsx)(r.NavItem, {
+                            children: (0, i.jsx)(a.NavItem, {
                                 ...s,
                                 onClick: p,
                                 onContextMenu: g,
-                                children: (0, i.jsx)(r.BellIcon, { color: u.Z.TEXT_NORMAL })
+                                children: (0, i.jsx)(a.BellIcon, { color: u.Z.TEXT_NORMAL })
                             })
                         })
                     })

@@ -32,8 +32,8 @@ var n,
     C = t(52824),
     E = t(626135),
     S = t(585483),
-    M = t(55935),
-    T = t(408433),
+    T = t(55935),
+    M = t(408433),
     A = t(956664),
     j = t(468846),
     N = t(401419),
@@ -60,7 +60,7 @@ function W(e, l, t) {
 }
 function O(e) {
     var l, t;
-    let { className: n, iframeWrapperClassName: a, maxWidth: o, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: y, volume: _, onPlay: w, onPause: E, onEnded: M, onControlsHide: T, onControlsShow: N, onVolumeChange: k, onMute: H, href: L, placeholder: B, placeholderVersion: P, sourceMetadata: R } = e,
+    let { className: n, iframeWrapperClassName: a, maxWidth: o, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: y, volume: _, onPlay: w, onPause: E, onEnded: T, onControlsHide: M, onControlsShow: N, onVolumeChange: k, onMute: H, href: L, placeholder: B, placeholderVersion: P, sourceMetadata: R } = e,
         [W, O] = r.useState(I),
         D = null != m && null == m.proxyURL,
         G = r.useCallback(() => O(!1), [O]),
@@ -95,7 +95,7 @@ function O(e) {
                 height: q,
                 responsive: p,
                 autoPlay: I,
-                onEnded: M,
+                onEnded: T,
                 naturalWidth: m.width,
                 naturalHeight: m.height,
                 onVolumeChange: k,
@@ -105,7 +105,7 @@ function O(e) {
                 onPlay: w,
                 onPause: E,
                 onMute: H,
-                onControlsHide: T,
+                onControlsHide: M,
                 onControlsShow: N,
                 sourceMetadata: R
             })
@@ -516,19 +516,19 @@ class G extends (n = r.PureComponent) {
                 srcIsAnimated: o.srcIsAnimated
             };
         _ in w && (S.onClick = w[_]);
-        let M = null !== (n = null === (e = o.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
-        'jpg' === M && (M = 'jpeg');
-        let T = null != o && !v.uo.test(null == o ? void 0 : o.url) && !(o.srcIsAnimated && v.YG.test(null == o ? void 0 : o.url)),
+        let T = null !== (n = null === (e = o.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
+        'jpg' === T && (T = 'jpeg');
+        let M = null != o && !v.uo.test(null == o ? void 0 : o.url) && !(o.srcIsAnimated && v.YG.test(null == o ? void 0 : o.url)),
             A =
                 !0 !== this.props.isSearchResult &&
                 a &&
                 (null === (l = this.props.message) || void 0 === l ? void 0 : l.channel_id) != null &&
                 (null === (t = this.props.message) || void 0 === t ? void 0 : t.channel_id) !== void 0 &&
-                T &&
+                M &&
                 !(function (e) {
                     return null != e && (e.width <= H.OF || e.height <= H.OF);
                 })(o) &&
-                null != M;
+                null != T;
         return (0, i.jsx)(c.h.Consumer, {
             children: (e) =>
                 (0, i.jsx)(
@@ -546,7 +546,7 @@ class G extends (n = r.PureComponent) {
                                     var e, l;
                                     return !0 === this.props.showImageRecs && A
                                         ? this.renderImageHoverButtons({
-                                              mimeType: ['image', M],
+                                              mimeType: ['image', T],
                                               downloadURL: null !== (l = o.proxyURL) && void 0 !== l ? l : o.url,
                                               isVisualMediaType: null != o,
                                               channelId: null === (e = this.props.message) || void 0 === e ? void 0 : e.channel_id
@@ -648,7 +648,7 @@ class G extends (n = r.PureComponent) {
                                       children: '\u2022'
                                   })
                                 : null,
-                            null != l ? (0, M.Y4)(l) : null
+                            null != l ? (0, T.Y4)(l) : null
                         ]
                     })
                 ]
@@ -659,7 +659,7 @@ class G extends (n = r.PureComponent) {
                 className: s()(V.embedFooter, V.embedMargin),
                 children: (0, i.jsx)('span', {
                     className: V.embedFooterText,
-                    children: (0, M.Y4)(l)
+                    children: (0, T.Y4)(l)
                 })
             });
     }
@@ -746,8 +746,8 @@ class G extends (n = r.PureComponent) {
         if (i === F.hBH.GIFV) {
             var u, m, h, c;
             let { width: e } = (0, A.Tj)({
-                width: Math.max(null !== (u = null == r ? void 0 : r.width) && void 0 !== u ? u : 0, null !== (m = null == n ? void 0 : n.width) && void 0 !== m ? m : 0),
-                height: Math.max(null !== (h = null == r ? void 0 : r.height) && void 0 !== h ? h : 0, null !== (c = null == n ? void 0 : n.height) && void 0 !== c ? c : 0),
+                width: null !== (m = null !== (u = null == n ? void 0 : n.width) && void 0 !== u ? u : null == r ? void 0 : r.width) && void 0 !== m ? m : 0,
+                height: null !== (c = null !== (h = null == n ? void 0 : n.height) && void 0 !== h ? h : null == r ? void 0 : r.height) && void 0 !== c ? c : 0,
                 maxWidth: a,
                 maxHeight: s
             });
@@ -756,7 +756,7 @@ class G extends (n = r.PureComponent) {
     }
     isInline() {
         let { hideMedia: e, embed: l } = this.props;
-        return !e && (0, T.dY)(l);
+        return !e && (0, M.dY)(l);
     }
     renderSuppressButton(e) {
         return (0, i.jsx)(d.Clickable, {
@@ -861,7 +861,7 @@ class G extends (n = r.PureComponent) {
                         embedIndex: this.props.embedIndex
                     }
                 },
-                ...(0, T.vP)(this.props.embed)
+                ...(0, M.vP)(this.props.embed)
             }),
             W(this, 'onReveal', () => {
                 this.setState({ isVisible: !0 });

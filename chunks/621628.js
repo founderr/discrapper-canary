@@ -31,8 +31,8 @@ var n = t(200651),
     I = t(68985),
     N = t(211644),
     m = t(804501),
-    A = t(957436),
-    C = t(113207);
+    C = t(957436),
+    A = t(113207);
 function g(e) {
     let { contents: s, content: t, onChange: a } = e,
         i = l.z[t],
@@ -45,7 +45,7 @@ function g(e) {
             },
             children: (0, n.jsx)(d.FormText, {
                 size: u.Z.Sizes.SIZE_16,
-                className: C.marginTop4,
+                className: A.marginTop4,
                 children: ''.concat(t.toLowerCase(), ' (').concat(l.z[t], ')')
             })
         })
@@ -117,11 +117,11 @@ function O() {
             (0, n.jsxs)(d.FormSection, {
                 title: 'Dismissible Content Fatigue',
                 tag: d.FormTitleTags.H1,
-                className: C.marginBottom60,
+                className: A.marginBottom60,
                 children: [
                     (0, n.jsx)(d.FormItem, {
                         children: (0, n.jsxs)(d.FormText, {
-                            className: C.marginBottom4,
+                            className: A.marginBottom4,
                             children: ['Daily Cap Reached: ', t ? 'Yes' : 'No']
                         })
                     }),
@@ -137,7 +137,7 @@ function O() {
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, n.jsx)(d.FormText, {
-                                className: C.marginTop4,
+                                className: A.marginTop4,
                                 children: 'This will reset the daily cap and content seen during session'
                             })
                         ]
@@ -149,14 +149,14 @@ function O() {
                 tag: d.FormTitleTags.H1,
                 children: [
                     (0, n.jsx)(d.SearchBar, {
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
                         query: u,
                         onChange: m,
                         onClear: () => m('')
                     }),
                     (0, n.jsxs)(d.FormItem, {
-                        className: A.buttonsContainer,
+                        className: C.buttonsContainer,
                         children: [
                             (0, n.jsx)(d.Button, {
                                 onClick: E.sr,
@@ -170,10 +170,10 @@ function O() {
                     }),
                     s.length > 0
                         ? (0, n.jsxs)('div', {
-                              className: C.marginBottom20,
+                              className: A.marginBottom20,
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: C.marginBottom20,
+                                      className: A.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, n.jsx)(h, {
@@ -188,7 +188,7 @@ function O() {
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: C.marginBottom20,
+                                      className: A.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, n.jsx)(h, {
@@ -200,7 +200,7 @@ function O() {
                           })
                         : null,
                     (0, n.jsx)(_.Z, {
-                        className: r()(C.marginBottom20, C.marginTop20),
+                        className: r()(A.marginBottom20, A.marginTop20),
                         children: (0, n.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, n.jsx)(h, {

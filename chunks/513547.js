@@ -1,6 +1,6 @@
 n.d(t, {
     al: function () {
-        return S;
+        return R;
     },
     ck: function () {
         return E;
@@ -162,7 +162,7 @@ function y(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let S = {
+let R = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -245,7 +245,7 @@ let S = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    R = (e) => e,
+    S = (e) => e,
     b = (e) => {
         let [t] = a.useState([]);
         return (
@@ -264,7 +264,7 @@ let S = {
 function E(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = D[o]) && void 0 !== n ? n : R;
+        p = null !== (n = D[o]) && void 0 !== n ? n : S;
     let h =
             s.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value

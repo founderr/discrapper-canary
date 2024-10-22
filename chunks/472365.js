@@ -6,8 +6,8 @@ n.d(t, {
     n(411104);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(399606),
     o = n(481060),
     c = n(588705),
@@ -78,7 +78,7 @@ function j(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
-        className: r()(y.iconContainer, t),
+        className: a()(y.iconContainer, t),
         children: [
             (0, i.jsx)(N.Z, { className: y.iconSparklePlus }),
             (0, i.jsx)(o.LinkIcon, {
@@ -130,7 +130,7 @@ function D(e) {
 function w(e) {
     let t,
         n,
-        { transitionState: a } = e;
+        { transitionState: r } = e;
     (0, s.e7)([E.default], () => {
         var e;
         return null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
@@ -142,7 +142,7 @@ function w(e) {
     let x = (0, m.Dt)(),
         { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == _) return null;
-    if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: a });
+    if (_.state === M.r2o.EXPIRED || _.state === M.r2o.BANNED || _.state === M.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == _.channel) return null;
     function R() {
         null != _ && b.Z.acceptInvite(_);
@@ -168,7 +168,7 @@ function w(e) {
             children: (0, i.jsxs)(o.ModalRoot, {
                 size: o.ModalSize.DYNAMIC,
                 'aria-labelledby': x,
-                transitionState: a,
+                transitionState: r,
                 className: y.container,
                 children: [
                     (0, i.jsx)('div', {
@@ -191,7 +191,7 @@ function w(e) {
                                     }),
                                     B && null != j
                                         ? (0, i.jsx)('div', {
-                                              className: r()(P.marginBottom20, y.stage),
+                                              className: a()(P.marginBottom20, y.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: _.stage_instance,

@@ -37,7 +37,7 @@ t.Z = (e) => {
         U = (0, T.ZP)('perks-discoverability'),
         B = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         j = (0, A.mN)(),
-        { fractionalState: G } = (0, u.Z)({ forceFetch: !0 });
+        { fractionalState: G } = (0, u.Z)();
     return (
         v === R.mJ.DEFAULT ? ((t = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {

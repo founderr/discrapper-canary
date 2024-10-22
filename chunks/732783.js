@@ -16,11 +16,11 @@ var n = t(200651),
     u = t(403893);
 function E(e) {
     let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: S, guildIcon: I, guildIconSize: N, memberCount: m } = e,
-        A = a.useRef(null),
-        [C, g] = a.useState(!1);
+        C = a.useRef(null),
+        [A, g] = a.useState(!1);
     return (
         a.useEffect(() => {
-            let e = A.current;
+            let e = C.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && g(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, n.jsxs)('div', {
@@ -43,10 +43,10 @@ function E(e) {
                                 (0, n.jsx)(o.Tooltip, {
                                     text: S,
                                     color: o.Tooltip.Colors.PRIMARY,
-                                    shouldShow: C,
+                                    shouldShow: A,
                                     children: (e) =>
                                         (0, n.jsx)('span', {
-                                            ref: A,
+                                            ref: C,
                                             ...e,
                                             className: u.guildName,
                                             children: S

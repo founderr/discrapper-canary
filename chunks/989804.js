@@ -21,14 +21,14 @@ var o = n(200651),
     N = n(295545),
     R = n(839469),
     k = n(981631),
-    p = n(689938);
-let Z = a.forwardRef(function () {
+    Z = n(689938);
+let p = a.forwardRef(function () {
     g.Z.trackExposure({ location: 'cd25e4_1' }), b.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), b.Z.trackExposure({ location: 'user_setting_manual' });
     let e = (0, c.e7)([E.Z], () => E.Z.theme),
         t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? k.BRd.DARK : void 0)),
         {
             section: n,
-            subsection: Z,
+            subsection: p,
             analyticsLocation: B,
             analyticsLocations: G
         } = (0, c.cj)([T.Z], () => {
@@ -43,11 +43,11 @@ let Z = a.forwardRef(function () {
             };
         }),
         h = (0, u.Z)(n),
-        A = (0, u.Z)(Z),
+        A = (0, u.Z)(p),
         P = (0, I.Z7)(),
         { analyticsLocations: M } = (0, S.ZP)(d.Z.USER_SETTINGS);
     a.useEffect(() => {
-        if (!!(null != n && (n !== h || Z !== A)))
+        if (!!(null != n && (n !== h || p !== A)))
             !(function (e) {
                 let { destinationPane: t, originPane: n = null, source: o = null, subsection: a = null, locationStack: c = null, searchQuery: i = null } = e;
                 _.ZP.trackWithMetadata(k.rMx.SETTINGS_PANE_VIEWED, {
@@ -63,14 +63,14 @@ let Z = a.forwardRef(function () {
                 destinationPane: n,
                 originPane: null != h ? h : null,
                 source: B,
-                subsection: Z,
+                subsection: p,
                 locationStack: G,
                 searchQuery: '' !== P ? P : null
             });
-    }, [n, h, Z, A, B, G, P]);
-    let x = (0, N.eA)({ location: 'user_settings' }),
-        { hasSearchResults: U, searchResults: O } = (0, R.E)(),
-        D = a.useMemo(() => x && U, [x, U]),
+    }, [n, h, p, A, B, G, P]);
+    let U = (0, N.eA)({ location: 'user_settings' }),
+        { hasSearchResults: x, searchResults: O } = (0, R.E)(),
+        D = a.useMemo(() => U && x, [U, x]),
         W = (0, C.VO)(),
         v = (0, C.q8)(O),
         H = a.useMemo(() => (D ? v : W), [D, v, W]),
@@ -86,7 +86,7 @@ let Z = a.forwardRef(function () {
             page: k.ZY5.USER_SETTINGS,
             children: (0, o.jsx)(s.ZP, {
                 theme: e,
-                title: p.Z.Messages.USER_SETTINGS,
+                title: Z.Z.Messages.USER_SETTINGS,
                 sidebarTheme: t,
                 section: n,
                 onSetSection: L,
@@ -94,7 +94,7 @@ let Z = a.forwardRef(function () {
                 sections: H,
                 isEligibleForPomelo: w,
                 questsForBadge: y,
-                isUserSettingsSearchEnabled: x
+                isUserSettingsSearchEnabled: U
             })
         })
     });
@@ -104,6 +104,6 @@ t.default = a.forwardRef(function () {
         { analyticsLocations: t } = (0, S.ZP)(e);
     return (0, o.jsx)(S.Gt, {
         value: t,
-        children: (0, o.jsx)(Z, {})
+        children: (0, o.jsx)(p, {})
     });
 });

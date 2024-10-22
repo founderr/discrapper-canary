@@ -20,7 +20,7 @@ function u() {
             value: e,
             onChange: i.Z.updatePersistentCodesEnabled,
             title: _.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES,
-            note: _.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: (0, o.aZ)() })
+            note: _.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION_V2.format({ helpArticle: (0, o.aZ)() })
         })
     });
 }

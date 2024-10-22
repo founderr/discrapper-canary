@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -20,12 +20,12 @@ var n = t(200651),
     I = t(736530),
     N = t(981631),
     m = t(689938);
-function A() {
+function C() {
     let e = (0, _.is)(),
         s = (0, _.c_)(),
         t = d.h2.useSetting().includes(e),
-        A = d.iG.useSetting(),
-        C = a.useCallback(
+        C = d.iG.useSetting(),
+        A = a.useCallback(
             (s) => {
                 let t = new Set((0, c.YK)());
                 s ? t.delete(e) : t.add(e), d.h2.updateSetting(Array.from(t));
@@ -60,16 +60,16 @@ function A() {
                 ? (0, n.jsx)(E.Z, {
                       title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
                       note: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
-                      value: !A,
+                      value: !C,
                       onChange: (e) => {
                           h(!e);
                       }
                   })
                 : (0, n.jsx)(E.Z, {
                       title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
-                      note: s ? m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                      note: s ? m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB_V2 : m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_V2,
                       value: !t,
-                      onChange: C
+                      onChange: A
                   })
     });
 }

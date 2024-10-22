@@ -12,9 +12,9 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(261600),
-    a = n(157925),
-    r = n(534255);
-let s = { [a.gD]: new l.U() };
+    r = n(157925),
+    a = n(534255);
+let s = { [r.gD]: new l.U() };
 function o(e) {
     var t;
     let n = e.application_id;
@@ -32,7 +32,7 @@ function c(e) {
         return (0, i.jsx)(
             'section',
             {
-                className: r.section,
+                className: a.section,
                 children: (0, i.jsx)(t, { activity: e })
             },
             'delegate-'.concat(n)

@@ -20,15 +20,15 @@ var n = t(200651),
     N = t(820350);
 function m(e) {
     let { user: s, showOverlay: t, children: m } = e,
-        A = (0, r.ZP)(),
-        { analyticsLocations: C } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
+        C = (0, r.ZP)(),
+        { analyticsLocations: A } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
     return (a.useEffect(() => {
         t &&
             d.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: C,
+                location_stack: A,
                 type: E.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
             });
-    }, [t, C]),
+    }, [t, A]),
     t)
         ? (0, n.jsxs)('div', {
               className: S.upsellOverlayContainer,
@@ -47,7 +47,7 @@ function m(e) {
                                       case u.BRd.LIGHT:
                                           return N;
                                   }
-                              })(A)
+                              })(C)
                           }),
                           (0, n.jsxs)('div', {
                               className: S.upsellTextContainer,

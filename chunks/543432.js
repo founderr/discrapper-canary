@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(649576);
-function r(e) {
+    r = n(649576);
+function a(e) {
     let { userCount: t } = e;
     return (0, i.jsxs)('div', {
-        className: a.container,
+        className: r.container,
         children: [
             (0, i.jsx)(l.GroupIcon, {
                 size: 'xxs',
                 color: 'currentColor',
-                className: a.peopleIcon
+                className: r.peopleIcon
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: a.userCountText,
+                className: r.userCountText,
                 children: t
             })
         ]

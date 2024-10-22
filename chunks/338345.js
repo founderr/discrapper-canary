@@ -20,7 +20,7 @@ var a = t(120356),
     I = t(414068),
     N = t(113207);
 function m() {
-    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: m, disableSounds: A, disableNotifications: C, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
+    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: m, disableSounds: C, disableNotifications: A, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
         h = (e, s) => {
             l.Z.update({ [e]: s });
         };
@@ -96,7 +96,7 @@ function m() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: A,
+                            value: C,
                             onChange: (e) => h('disableSounds', e),
                             note: S.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
                             children: S.Z.Messages.DISABLE_SOUNDS_LABEL
@@ -105,7 +105,7 @@ function m() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: C,
+                            value: A,
                             onChange: (e) => h('disableNotifications', e),
                             note: S.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
                             children: S.Z.Messages.DISABLE_NOTIFICATIONS_LABEL

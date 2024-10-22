@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(592125),
     c = n(938475),
@@ -10,8 +10,8 @@ var i = n(200651),
     h = n(689938),
     p = n(82915);
 t.Z = l.memo(function (e) {
-    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: a, withGuildIcon: f } = e,
-        _ = (0, s.Wu)([o.Z], () => a.map((e) => o.Z.getChannel(e)).filter(u.lm), [a]),
+    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: f } = e,
+        _ = (0, s.Wu)([o.Z], () => r.map((e) => o.Z.getChannel(e)).filter(u.lm), [r]),
         m = (0, s.e7)([c.ZP], () => {
             let e = _[_.length - 1];
             if (null == e) return 0;
@@ -25,7 +25,7 @@ t.Z = l.memo(function (e) {
             'aria-label': h.Z.Messages.THREAD_GROUP_A11Y_LABEL.format({ channelName: t.name }),
             children: [
                 (0, i.jsx)('div', {
-                    className: r()(p.spineBorder, { [p.spineBorderWithGuildIcon]: f }),
+                    className: a()(p.spineBorder, { [p.spineBorderWithGuildIcon]: f }),
                     style: { bottom: 24 + m }
                 }),
                 _.map((e, t) =>

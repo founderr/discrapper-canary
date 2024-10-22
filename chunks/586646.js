@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(19780),
     o = n(571826),
     c = n(630759),
@@ -18,7 +18,7 @@ var i = n(200651),
     _ = n(64570);
 function m(e) {
     let { channelId: t } = e,
-        n = (0, a.e7)([s.Z], () => {
+        n = (0, r.e7)([s.Z], () => {
             var e;
             return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
@@ -36,18 +36,18 @@ function m(e) {
             (0, i.jsxs)('div', {
                 className: _.tag,
                 children: [
-                    (0, i.jsx)(r.LockIcon, {
+                    (0, i.jsx)(a.LockIcon, {
                         size: 'xxs',
-                        color: r.tokens.colors.TEXT_POSITIVE
+                        color: a.tokens.colors.TEXT_POSITIVE
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
                         children: f.Z.Messages.E2EE_END_TO_END_ENCRYPTED
                     })
                 ]
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 children: f.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
@@ -55,7 +55,7 @@ function m(e) {
             (0, i.jsxs)('div', {
                 className: _.header,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
                         children: f.Z.Messages.E2EE_VOICE_PRIVACY_CODE
@@ -63,7 +63,7 @@ function m(e) {
                     null != m &&
                         (0, i.jsx)(h.H, {
                             chunks: m,
-                            color: r.tokens.colors.INTERACTIVE_NORMAL.css,
+                            color: a.tokens.colors.INTERACTIVE_NORMAL.css,
                             onCopy: g
                         })
                 ]
@@ -73,7 +73,7 @@ function m(e) {
                 chunks: m,
                 columns: p.WK
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 children: f.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({ helpArticle: (0, c.uV)() })

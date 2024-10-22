@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    a,
     r,
+    a,
     s = n(442837),
     o = n(570140),
     c = n(445507);
@@ -30,15 +30,15 @@ class _ extends (i = s.ZP.Store) {
         return p.has(e);
     }
 }
-(r = 'SignUpStore'),
-    (a = 'displayName') in (l = _)
-        ? Object.defineProperty(l, a, {
-              value: r,
+(a = 'SignUpStore'),
+    (r = 'displayName') in (l = _)
+        ? Object.defineProperty(l, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = r),
+        : (l[r] = a),
     (t.Z = new _(o.Z, {
         ENABLE_USER_SIGN_UP: function (e) {
             let { key: t } = e,

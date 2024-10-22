@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    l = n(461745),
+    l = n(442837),
+    r = n(461745),
     o = n(663389),
     a = n(5967),
     c = n(996733),
@@ -21,7 +21,7 @@ function d(e) {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
         m = s.useRef(null),
-        p = (0, r.e7)([o.Z], () => o.Z.getSection());
+        p = (0, l.e7)([o.Z], () => o.Z.getSection());
     return (
         s.useEffect(() => {
             let e = (e) => {
@@ -33,9 +33,9 @@ function d(e) {
         }, [p]),
         (0, i.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, i.jsx)(l.ZP, {
+            children: (0, i.jsx)(r.ZP, {
                 ref: m,
-                size: l.ZP.Sizes.MEDIUM,
+                size: r.ZP.Sizes.MEDIUM,
                 query: n,
                 onClear: h,
                 onQueryChange: c.yN,

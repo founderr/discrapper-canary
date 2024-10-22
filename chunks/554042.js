@@ -20,8 +20,8 @@ var n = t(200651),
     I = t(358085),
     N = t(210887),
     m = t(981631),
-    A = t(689938),
-    C = t(937416);
+    C = t(689938),
+    A = t(937416);
 let g = [
     {
         label: 'Latin alphabet',
@@ -91,7 +91,7 @@ function h() {
             [D, P]
         );
     return (0, n.jsx)('div', {
-        className: C.fullscreen,
+        className: A.fullscreen,
         style: {
             '--playground-font-family': 'mono' === h ? 'gg mono' : 'gg sans',
             '--playground-font-style': 'italic' === h ? 'italic' : 'normal'
@@ -100,7 +100,7 @@ function h() {
             tag: l.FormTitleTags.H1,
             children: [
                 (0, n.jsxs)('div', {
-                    className: C.toolbar,
+                    className: A.toolbar,
                     children: [
                         (0, n.jsxs)('div', {
                             children: [
@@ -126,7 +126,7 @@ function h() {
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.SingleSelect, {
-                                className: C.select,
+                                className: A.select,
                                 options: g,
                                 onChange: (e) => b(e),
                                 value: L
@@ -134,7 +134,7 @@ function h() {
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)('div', {
-                                className: C.input,
+                                className: A.input,
                                 children: (0, n.jsx)(l.TextInput, {
                                     placeholder: 'Enter custom input...',
                                     value: null != f ? f : '',
@@ -145,15 +145,15 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: C.theme,
+                                className: A.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: A.Z.Messages.THEME_DARK,
+                                        name: C.Z.Messages.THEME_DARK,
                                         value: m.BRd.DARK
                                     },
                                     {
-                                        name: A.Z.Messages.THEME_LIGHT,
+                                        name: C.Z.Messages.THEME_LIGHT,
                                         value: m.BRd.LIGHT
                                     }
                                 ],
@@ -166,7 +166,7 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: C.theme,
+                                className: A.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -195,14 +195,14 @@ function h() {
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: C.textGrid,
+                    className: A.textGrid,
                     children: [
                         (0, n.jsx)('div', {}),
                         p.map((e) =>
                             (0, n.jsx)(
                                 'div',
                                 {
-                                    className: C.columnHeading,
+                                    className: A.columnHeading,
                                     children: (0, n.jsx)(l.Heading, {
                                         variant: 'eyebrow',
                                         children: e
@@ -219,7 +219,7 @@ function h() {
                                         (0, n.jsxs)(
                                             'div',
                                             {
-                                                className: C.fontSize,
+                                                className: A.fontSize,
                                                 children: [
                                                     (0, n.jsxs)(l.Heading, {
                                                         variant: 'eyebrow',
@@ -242,10 +242,10 @@ function h() {
                                             return (0, n.jsx)(
                                                 'div',
                                                 {
-                                                    className: C.textSample,
+                                                    className: A.textSample,
                                                     children: (0, n.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(s),
-                                                        className: r()(C.text, { [C.breakAnywhere]: !a.includes(' ') }),
+                                                        className: r()(A.text, { [A.breakAnywhere]: !a.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: R.get(s)

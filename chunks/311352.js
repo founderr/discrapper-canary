@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(704215),
-    r = n(481060),
+    r = n(704215),
+    a = n(481060),
     s = n(239091),
     o = n(765585),
     c = n(870569),
@@ -29,14 +29,14 @@ let N = (e) => {
         l = (e, t) => {
             e.stopPropagation(), e.preventDefault(), null == t || t();
         };
-    return (0, i.jsx)(r.Popout, {
+    return (0, i.jsx)(a.Popout, {
         shouldShow: !1,
         position: 'top',
         align: 'center',
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(o.Z, {
-                dismissibleContent: a.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
+                dismissibleContent: r.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                 shouldUseHorizontalButtons: !0,
                 inlineArt: !0,
                 artClassName: C.clipsEducationArt,
@@ -48,7 +48,7 @@ let N = (e) => {
                         keybindHook: () =>
                             (0, i.jsx)('span', {
                                 className: C.keybindHintKeys,
-                                children: (0, i.jsx)(r.KeyCombo, {
+                                children: (0, i.jsx)(a.KeyCombo, {
                                     className: C.keybindShortcut,
                                     shortcut: t
                                 })
@@ -57,7 +57,7 @@ let N = (e) => {
                 }),
                 headerClassName: C.clipsEducationHeader,
                 body: (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(r.Text, {
+                    children: (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'always-white',
                         className: C.bodyText,
@@ -82,7 +82,7 @@ let N = (e) => {
 t.Z = () => {
     let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, p.Go)(),
-        { clipsEnabled: n, isAtMaxSavingClipsOperations: a } = (0, l.cj)([f.Z], () => ({
+        { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([f.Z], () => ({
             clipsEnabled: f.Z.getSettings().clipsEnabled,
             isAtMaxSavingClipsOperations: f.Z.getIsAtMaxSaveClipOperations()
         })),
@@ -92,11 +92,11 @@ t.Z = () => {
     return (0, i.jsx)(N, {
         keybindString: o,
         children: (0, i.jsx)(c.Z, {
-            disabled: a,
+            disabled: r,
             tooltipText: null != s ? g.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({ hotkey: h.BB(null == s ? void 0 : s.shortcut, !0) }) : g.Z.Messages.CLIPS_EDIT_SAVE_CLIP,
             onClick: E,
             onContextMenu: I,
-            icon: r.ClipsIcon
+            icon: a.ClipsIcon
         })
     });
 };

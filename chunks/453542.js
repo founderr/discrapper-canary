@@ -1,19 +1,19 @@
 n.d(t, {
     X: function () {
-        return r;
+        return a;
     }
 }),
     n(724458),
     n(442837);
 var i = n(868854),
     l = n(801077),
-    a = n(674563);
-function r() {
+    r = n(674563);
+function a() {
     let e = (0, i.a)();
     return (function (e, t) {
         let n = e.reduce((e, t) => {
             var n;
-            let i = null !== (n = t.party.currentActivities.filter((e) => null != e.game.name && e.game.type === a.wW.GAME).map((e) => e.game.name)) && void 0 !== n ? n : [];
+            let i = null !== (n = t.party.currentActivities.filter((e) => null != e.game.name && e.game.type === r.wW.GAME).map((e) => e.game.name)) && void 0 !== n ? n : [];
             return e.concat(i);
         }, []);
         return {

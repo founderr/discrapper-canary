@@ -1,94 +1,94 @@
-n(47120);
-var a,
-    o,
+t(47120);
+var n,
+    a,
     r,
-    i,
-    c = n(442837),
-    l = n(570140);
-let d = {},
-    _ = null,
-    s = [],
-    p = !1,
-    f = !1,
+    o,
+    i = t(442837),
+    c = t(570140);
+let l = {},
     u = null,
-    m = null;
-function g() {
-    f = !0;
+    d = [],
+    f = !1,
+    p = !1,
+    _ = null,
+    g = null;
+function T() {
+    p = !0;
 }
-class S extends (a = c.ZP.Store) {
+class x extends (n = i.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
-        return null != d[e] ? d[e].subscriptions : null;
+        return null != l[e] ? l[e].subscriptions : null;
     }
     getLastFetchedAtForGuild(e) {
-        return null != d[e] ? d[e].lastFetchedAt : null;
+        return null != l[e] ? l[e].lastFetchedAt : null;
     }
     getCurrentUserAppliedBoosts() {
-        return s;
+        return d;
     }
     getAppliedGuildBoost(e) {
-        return s.find((t) => t.id === e);
+        return d.find((s) => s.id === e);
     }
     get isModifyingAppliedBoost() {
-        return f;
-    }
-    get applyBoostError() {
-        return u;
-    }
-    get unapplyBoostError() {
-        return m;
-    }
-    get cooldownEndsAt() {
-        return _;
-    }
-    get isFetchingCurrentUserAppliedBoosts() {
         return p;
     }
+    get applyBoostError() {
+        return _;
+    }
+    get unapplyBoostError() {
+        return g;
+    }
+    get cooldownEndsAt() {
+        return u;
+    }
+    get isFetchingCurrentUserAppliedBoosts() {
+        return f;
+    }
 }
-(i = 'AppliedGuildBoostStore'),
-    (r = 'displayName') in (o = S)
-        ? Object.defineProperty(o, r, {
-              value: i,
+(o = 'AppliedGuildBoostStore'),
+    (r = 'displayName') in (a = x)
+        ? Object.defineProperty(a, r, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[r] = i),
-    (t.Z = new S(l.Z, {
+        : (a[r] = o),
+    (s.Z = new x(c.Z, {
         GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, appliedBoosts: n } = e;
-            d[t] = {
-                subscriptions: n,
+            let { guildId: s, appliedBoosts: t } = e;
+            l[s] = {
+                subscriptions: t,
                 lastFetchedAt: Date.now()
             };
         },
         USER_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
-            let { appliedGuildBoosts: t } = e;
-            (p = !1), (s = t);
+            let { appliedGuildBoosts: s } = e;
+            (f = !1), (d = s);
         },
         APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: function (e) {
-            let { endsAt: t } = e;
-            _ = t;
+            let { endsAt: s } = e;
+            u = s;
         },
-        GUILD_UNAPPLY_BOOST_START: g,
-        GUILD_APPLY_BOOST_START: g,
+        GUILD_UNAPPLY_BOOST_START: T,
+        GUILD_APPLY_BOOST_START: T,
         GUILD_APPLY_BOOST_SUCCESS: function (e) {
-            let { appliedGuildBoost: t } = e,
-                n = new Set(t.map((e) => e.id));
-            (s = [...t, ...s.filter((e) => !n.has(e.id))]), (u = null), (f = !1);
+            let { appliedGuildBoost: s } = e,
+                t = new Set(s.map((e) => e.id));
+            (d = [...s, ...d.filter((e) => !t.has(e.id))]), (_ = null), (p = !1);
         },
         GUILD_APPLY_BOOST_FAIL: function (e) {
-            let { error: t } = e;
-            (f = !1), (u = t);
+            let { error: s } = e;
+            (p = !1), (_ = s);
         },
         GUILD_UNAPPLY_BOOST_SUCCESS: function (e) {
-            let { boostId: t } = e;
-            (s = s.filter((e) => e.id !== t)), (f = !1);
+            let { boostId: s } = e;
+            (d = d.filter((e) => e.id !== s)), (p = !1);
         },
         GUILD_UNAPPLY_BOOST_FAIL: function (e) {
-            let { error: t } = e;
-            (f = !1), (m = t);
+            let { error: s } = e;
+            (p = !1), (g = s);
         },
         USER_APPLIED_BOOSTS_FETCH_START: function () {
-            p = !0;
+            f = !0;
         }
     }));

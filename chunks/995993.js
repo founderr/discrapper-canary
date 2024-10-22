@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(399606),
-    r = n(704215),
+    r = n(399606),
+    a = n(704215),
     s = n(692547),
     o = n(481060),
     c = n(239091),
@@ -27,11 +27,11 @@ var i = n(200651),
 function v(e) {
     let { guild: t, selected: v } = e,
         Z = (0, h.Z)(t),
-        T = (0, u.wE)(r.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        b = (0, a.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        A = (0, a.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
+        T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        b = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        A = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
         M = b.length > g.Cb,
-        R = (0, a.e7)([d.Z, _.ZP], () => {
+        R = (0, r.e7)([d.Z, _.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = _.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;

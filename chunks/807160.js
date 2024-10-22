@@ -22,8 +22,8 @@ var n,
     I = t(37234),
     N = t(782568),
     m = t(812206),
-    A = t(593061),
-    C = t(600164),
+    C = t(593061),
+    A = t(600164),
     g = t(925329),
     h = t(267101),
     O = t(240864),
@@ -78,8 +78,8 @@ let et = [z.PyE.FAILED, z.PyE.REVERSED, z.PyE.CANCELED],
         let { description: s, cost: t } = e;
         return (0, r.jsx)('li', {
             className: J.paymentDetail,
-            children: (0, r.jsxs)(C.Z, {
-                justify: C.Z.Justify.BETWEEN,
+            children: (0, r.jsxs)(A.Z, {
+                justify: A.Z.Justify.BETWEEN,
                 children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
             })
         });
@@ -117,8 +117,8 @@ let er = (e) => {
     let { description: s, detail: t } = e;
     return (0, r.jsx)('li', {
         className: J.guildProductDetail,
-        children: (0, r.jsxs)(C.Z, {
-            justify: C.Z.Justify.BETWEEN,
+        children: (0, r.jsxs)(A.Z, {
+            justify: A.Z.Justify.BETWEEN,
             children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
         })
     });
@@ -362,7 +362,7 @@ class ec extends (a = o.PureComponent) {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, r.jsx)(A.Z, { payment: e });
+        return (0, r.jsx)(C.Z, { payment: e });
     }
     renderRefundDetails() {
         let e;
@@ -662,9 +662,9 @@ class ec extends (a = o.PureComponent) {
                     focusProps: { offset: 4 },
                     ...e,
                     children: [
-                        (0, r.jsxs)(C.Z, {
+                        (0, r.jsxs)(A.Z, {
                             className: J.summaryInfo,
-                            align: C.Z.Align.CENTER,
+                            align: A.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 (0, r.jsxs)('div', {
@@ -780,14 +780,14 @@ function ed(e) {
     o.useEffect(() => {
         u && null != _ && (0, P.UM)(_);
     }, [_, u]);
-    let A = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
-        C = c ? S : void 0,
+    let C = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
+        A = c ? S : void 0,
         g = n.subscription,
         h = (0, T.e7)([U.Z], () => (null != g && g.type !== z.NYc.PREMIUM ? U.Z.get(g.items[0].planId) : null));
     return (0, r.jsx)(ec, {
         applicationStatistics: E,
-        application: u ? N : C,
-        guild: A,
+        application: u ? N : A,
+        guild: C,
         stickerPack: null,
         paymentSources: I,
         locale: a,

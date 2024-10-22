@@ -22,7 +22,7 @@ function d() {
             value: t,
             onChange: a.DC.updateSetting,
             disabled: !s,
-            note: c.Z.Messages.NSFW_GUILDS_TOGGLE_CAPTION
+            note: c.Z.Messages.NSFW_GUILDS_TOGGLE_CAPTION_V2
         })
     });
 }

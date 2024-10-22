@@ -15,8 +15,8 @@ var n = t(200651),
     I = t(474936),
     N = t(981631),
     m = t(689938),
-    A = t(864678),
-    C = t(982404),
+    C = t(864678),
+    A = t(982404),
     g = t(299156);
 s.Z = function (e) {
     let { premiumSubscription: s, premiumType: t, onClose: i, onConfirm: h, userDiscountOffer: O } = e,
@@ -37,7 +37,7 @@ s.Z = function (e) {
             M(!1);
         },
         D = (0, d.ZP)(),
-        L = (0, l.wj)(D) ? C : g,
+        L = (0, l.wj)(D) ? A : g,
         P = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
         b = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: s.currency,
@@ -53,21 +53,21 @@ s.Z = function (e) {
                       onClose: i
                   }),
                   (0, n.jsx)(c.ModalContent, {
-                      className: A.body,
+                      className: C.body,
                       children: (0, n.jsxs)('div', {
-                          className: A.confirmDiscountContent,
+                          className: C.confirmDiscountContent,
                           children: [
                               (0, n.jsx)(c.Heading, {
                                   variant: 'heading-xl/bold',
                                   children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({ percent: O.discount.amount })
                               }),
                               (0, n.jsxs)('div', {
-                                  className: A.confirmDiscountDescription,
+                                  className: C.confirmDiscountDescription,
                                   children: [
                                       (0, n.jsx)('img', {
                                           alt: '',
                                           src: L,
-                                          className: A.confirmDiscountIcon
+                                          className: C.confirmDiscountIcon
                                       }),
                                       (0, n.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
@@ -80,10 +80,10 @@ s.Z = function (e) {
                                   ]
                               }),
                               (0, n.jsx)('div', {
-                                  className: A.confirmDiscountLegalese,
+                                  className: C.confirmDiscountLegalese,
                                   children: (0, n.jsx)(c.Text, {
                                       variant: 'text-xs/semibold',
-                                      className: A.confirmDiscountLegaleseText,
+                                      className: C.confirmDiscountLegaleseText,
                                       children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
                                           discountedPrice: P,
                                           billingPeriod: (0, u.JP)(O.discount.user_usage_limit_interval),
@@ -95,17 +95,17 @@ s.Z = function (e) {
                               }),
                               p &&
                                   (0, n.jsx)('div', {
-                                      className: A.redemptionFailedMessage,
+                                      className: C.redemptionFailedMessage,
                                       children: (0, n.jsx)(c.Text, {
                                           variant: 'text-xs/semibold',
-                                          className: A.redemptionFailedMessageCopy,
+                                          className: C.redemptionFailedMessageCopy,
                                           children: m.Z.Messages.CHURN_DISCOUNT_REDEMPTION_ERROR
                                       })
                                   }),
                               (0, n.jsxs)('div', {
-                                  className: r()(A.confirmDiscountButtons, {
-                                      [A.confrimDiscountsButtonsError]: p,
-                                      [A.confrimDiscountsButtonsNoError]: !p
+                                  className: r()(C.confirmDiscountButtons, {
+                                      [C.confrimDiscountsButtonsError]: p,
+                                      [C.confrimDiscountsButtonsNoError]: !p
                                   }),
                                   children: [
                                       (0, n.jsx)(c.Button, {

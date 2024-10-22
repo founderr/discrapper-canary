@@ -17,8 +17,8 @@ n.d(t, {
 });
 var i,
     l,
-    a,
     r,
+    a,
     s = n(200651),
     o = n(192379),
     c = n(120356),
@@ -47,9 +47,9 @@ function M(e, t) {
     return null == t ? b.containerDefault : e > t ? b.containerDragAfter : b.containerDragBefore;
 }
 function R(e) {
-    let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: a = !1 } = e;
+    let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
     if ((0, d.e7)([x.Z, S.Z], () => n || S.Z.getGuildId() === Z.I_8 || (!x.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !x.Z.can(Z.Plq.MANAGE_ROLES, t) && !x.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !x.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !x.Z.can(Z.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
-    function r() {
+    function a() {
         p.ZP.open(t.id);
     }
     return (0, s.jsx)(h.Tooltip, {
@@ -57,8 +57,8 @@ function R(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: o, onBlur: c } = e;
             return (0, s.jsx)(h.Clickable, {
-                className: u()(b.iconItem, l ? b.alwaysShown : void 0, a ? b.iconWithChannelInfo : b.iconNoChannelInfo),
-                onClick: r,
+                className: u()(b.iconItem, l ? b.alwaysShown : void 0, r ? b.iconWithChannelInfo : b.iconNoChannelInfo),
+                onClick: a,
                 tabIndex: i,
                 'aria-label': T.Z.Messages.EDIT_CHANNEL,
                 onMouseEnter: t,
@@ -75,7 +75,7 @@ function R(e) {
     });
 }
 function L(e) {
-    let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: a, forceShowButtons: r, hasChannelInfo: o = !1 } = e,
+    let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: o = !1 } = e,
         c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         m = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
@@ -115,10 +115,10 @@ function L(e) {
             text: S,
             children: (e) =>
                 (0, s.jsx)(h.Clickable, {
-                    className: u()(b.iconItem, r ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
+                    className: u()(b.iconItem, a ? b.alwaysShown : void 0, o ? b.iconWithChannelInfo : b.iconNoChannelInfo),
                     ...e,
                     onClick: v,
-                    tabIndex: a,
+                    tabIndex: r,
                     'aria-label': S,
                     children: A
                 })
@@ -167,7 +167,7 @@ function P(e) {
             })
     });
 }
-class O extends (r = o.PureComponent) {
+class O extends (a = o.PureComponent) {
     renderEditButton() {
         return (0, s.jsx)(R, { ...this.props });
     }
@@ -189,12 +189,12 @@ class O extends (r = o.PureComponent) {
         return A(e, t, n);
     }
 }
-(a = { isDefaultChannel: !1 }),
+(r = { isDefaultChannel: !1 }),
     (l = 'defaultProps') in (i = O)
         ? Object.defineProperty(i, l, {
-              value: a,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = a);
+        : (i[l] = r);

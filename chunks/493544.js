@@ -1,12 +1,12 @@
 n.d(t, {
     ID: function () {
-        return C;
+        return j;
     },
     NM: function () {
-        return T;
+        return E;
     },
     Xi: function () {
-        return E;
+        return T;
     },
     bT: function () {
         return a;
@@ -14,8 +14,8 @@ n.d(t, {
 });
 var i,
     s,
-    r,
     l,
+    r,
     o,
     a,
     c = n(200651),
@@ -25,66 +25,66 @@ var i,
     m = n(100621),
     p = n(608863),
     f = n(873546),
-    x = n(215569),
-    b = n(481060),
+    b = n(215569),
+    S = n(481060),
     v = n(110924),
-    S = n(358085),
-    j = n(425493),
-    g = n(156725);
-let C = {
+    x = n(358085),
+    g = n(425493),
+    N = n(156725);
+let j = {
         HEADER: 'HEADER',
         DIVIDER: 'DIVIDER',
         CUSTOM: 'CUSTOM'
     },
-    N = u.createContext(null);
-class E extends (o = u.PureComponent) {
+    C = u.createContext(null);
+class T extends (o = u.PureComponent) {
     renderContent() {
         let { scrollerRef: e, ...t } = this.props;
         return (0, c.jsx)('div', {
-            className: g.customContainer,
-            children: (0, c.jsx)(b.ListAuto, {
+            className: N.customContainer,
+            children: (0, c.jsx)(S.ListAuto, {
                 ...t,
-                className: h()(g.customScroller, g.contentRegionScroller),
+                className: h()(N.customScroller, N.contentRegionScroller),
                 ref: e
             })
         });
     }
     render() {
         return (0, c.jsx)('div', {
-            className: g.customColumn,
+            className: N.customColumn,
             children: this.renderContent()
         });
     }
 }
-function T(e) {
+function E(e) {
     let { children: t } = e;
     return (0, c.jsx)('div', {
-        className: g.customColumn,
+        className: N.customColumn,
         children: (0, c.jsx)('div', {
-            className: g.customContainer,
-            children: (0, c.jsx)(b.ScrollerAuto, {
-                className: h()(g.customScroller, g.contentRegionScroller),
+            className: N.customContainer,
+            children: (0, c.jsx)(S.ScrollerAuto, {
+                className: h()(N.customScroller, N.contentRegionScroller),
                 children: t
             })
         })
     });
 }
-(r = {
+(l = {
     paddingTop: 60,
     paddingBottom: 60
 }),
-    (s = 'defaultProps') in (i = E)
+    (s = 'defaultProps') in (i = T)
         ? Object.defineProperty(i, s, {
-              value: r,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = r),
-    ((l = a || (a = {})).MINIMAL = 'minimal'),
-    (l.CUSTOM = 'custom'),
-    (l.DEFAULT = 'default'),
-    (l.WIDE = 'wide');
+        : (i[s] = l),
+    ((r = a || (a = {})).MINIMAL = 'minimal'),
+    (r.CUSTOM = 'custom'),
+    (r.DEFAULT = 'default'),
+    (r.WIDE = 'wide');
 let y = Object.freeze({
     minimal: 'contentColumnMinimal',
     custom: 'contentColumnCustom',
@@ -97,19 +97,19 @@ function P(e) {
     return null == i
         ? null
         : (0, c.jsx)('div', {
-              className: h()(g.toolsContainer, {
-                  [g.mobileToolsContainer]: t,
-                  [g.mobileSidebarTools]: t,
-                  [g.closeIconOnly]: !n,
-                  [g.isMobileAndroid]: !n && !0 === (0, S.isAndroidWeb)()
+              className: h()(N.toolsContainer, {
+                  [N.mobileToolsContainer]: t,
+                  [N.mobileSidebarTools]: t,
+                  [N.closeIconOnly]: !n,
+                  [N.isMobileAndroid]: !n && !0 === (0, x.isAndroidWeb)()
               }),
               ref: s,
-              children: (0, c.jsx)(b.FocusRingScope, {
+              children: (0, c.jsx)(S.FocusRingScope, {
                   containerRef: s,
                   children: (0, c.jsx)('div', {
-                      className: g.tools,
-                      children: (0, c.jsx)(j.Z, {
-                          className: h()({ [g.mobileToolsCloseIcon]: t }),
+                      className: N.tools,
+                      children: (0, c.jsx)(g.Z, {
+                          className: h()({ [N.mobileToolsCloseIcon]: t }),
                           closeAction: i,
                           keybind: 'ESC'
                       })
@@ -118,44 +118,44 @@ function P(e) {
           });
 }
 t.ZP = function (e) {
-    let { sidebar: t, content: n, notice: i, section: s, closeAction: r, sidebarTheme: l, contentType: o, scrollerRef: a, mobileSidebarOpen: d, toggleSidebar: S, hideSidebar: j = !1 } = e,
-        C = u.useRef(null),
-        E = u.useRef(null),
-        T = (0, v.Z)(s),
-        R = (0, b.useTransition)(
-            j,
+    let { sidebar: t, content: n, notice: i, section: s, closeAction: l, sidebarTheme: r, contentType: o, scrollerRef: a, mobileSidebarOpen: d, toggleSidebar: x, hideSidebar: g = !1 } = e,
+        j = u.useRef(null),
+        T = u.useRef(null),
+        E = (0, v.Z)(s),
+        R = (0, S.useTransition)(
+            g,
             {
                 from: {
                     position: 'absolute',
                     opacity: 0
                 },
                 enter: { opacity: 1 },
-                reverse: j,
+                reverse: g,
                 config: m.config.stiff
             },
             'animate-always'
         ),
         I = u.useCallback(
             (e) => {
-                (C.current = e), null != a && (a.current = e);
+                (j.current = e), null != a && (a.current = e);
             },
             [a]
         );
     u.useLayoutEffect(() => {
-        null != C.current && T !== s && C.current.scrollTo({ to: 0 });
-    }, [s, T, C]);
+        null != j.current && E !== s && j.current.scrollTo({ to: 0 });
+    }, [s, E, j]);
     let A = (0, c.jsx)(P, {
         isMobile: f.tq,
         mobileSidebarOpen: d,
-        closeAction: r
+        closeAction: l
     });
-    function _() {
+    function Z() {
         return null == i
             ? null
             : (0, c.jsx)(
-                  b.SlideIn,
+                  S.SlideIn,
                   {
-                      className: h()(g.noticeRegion, { [g.noticeRegionHiddenSidebar]: j }),
+                      className: h()(N.noticeRegion, { [N.noticeRegionHiddenSidebar]: g }),
                       children: i
                   },
                   s
@@ -165,28 +165,28 @@ t.ZP = function (e) {
         children: R((e, i) =>
             (0, c.jsxs)(m.animated.div, {
                 style: e,
-                className: g.standardSidebarView,
+                className: N.standardSidebarView,
                 children: [
                     !i &&
                         (null == t
                             ? null
-                            : (0, c.jsx)(b.ThemeProvider, {
-                                  theme: l,
+                            : (0, c.jsx)(S.ThemeProvider, {
+                                  theme: r,
                                   children: (e) =>
                                       (0, c.jsx)('div', {
-                                          className: h()(g.sidebarRegion, e, {
-                                              [g.flexFullWidth]: f.tq,
-                                              [g.hidden]: f.tq && !1 === d
+                                          className: h()(N.sidebarRegion, e, {
+                                              [N.flexFullWidth]: f.tq,
+                                              [N.hidden]: f.tq && !1 === d
                                           }),
-                                          children: (0, c.jsx)(b.AdvancedScrollerThin, {
-                                              className: g.sidebarRegionScroller,
+                                          children: (0, c.jsx)(S.AdvancedScrollerThin, {
+                                              className: N.sidebarRegionScroller,
                                               fade: !0,
                                               children: (0, c.jsxs)('nav', {
-                                                  className: h()(g.sidebar, { [g.mobileSidebar]: f.tq }),
+                                                  className: h()(N.sidebar, { [N.mobileSidebar]: f.tq }),
                                                   children: [
                                                       f.tq &&
                                                           (0, c.jsx)('div', {
-                                                              className: g.mobileSidebarHeader,
+                                                              className: N.mobileSidebarHeader,
                                                               children: A
                                                           }),
                                                       t
@@ -196,43 +196,43 @@ t.ZP = function (e) {
                                       })
                               })),
                     (function () {
-                        let e = null != S && null != r && d,
+                        let e = null != x && null != l && d,
                             t =
                                 f.tq &&
                                 (0, c.jsxs)('div', {
-                                    className: h()(g.mobileContentHeader, { [g.hideHamburger]: !e }),
-                                    children: [e && (0, c.jsx)(p.r, { onClick: S }), A]
+                                    className: h()(N.mobileContentHeader, { [N.hideHamburger]: !e }),
+                                    children: [e && (0, c.jsx)(p.r, { onClick: x }), A]
                                 });
                         if ('custom' === o)
-                            return (0, c.jsxs)(x.W, {
+                            return (0, c.jsxs)(b.W, {
                                 component: 'div',
-                                className: g.contentRegion,
-                                children: [t, n, !f.tq && A, _()]
+                                className: N.contentRegion,
+                                children: [t, n, !f.tq && A, Z()]
                             });
                         let i = y[null != o ? o : 'default'];
-                        return (0, c.jsxs)(x.W, {
+                        return (0, c.jsxs)(b.W, {
                             component: 'div',
-                            className: h()(g.contentRegion, { [g.hidden]: f.tq && !0 === d }),
+                            className: h()(N.contentRegion, { [N.hidden]: f.tq && !0 === d }),
                             children: [
                                 (0, c.jsxs)('div', {
-                                    className: g.contentTransitionWrap,
+                                    className: N.contentTransitionWrap,
                                     children: [
                                         t,
-                                        (0, c.jsxs)(b.AdvancedScrollerAuto, {
-                                            className: h()(g.contentRegionScroller, j ? g.contentRegionHiddenSidebar : g.contentRegionShownSidebar),
+                                        (0, c.jsxs)(S.AdvancedScrollerAuto, {
+                                            className: h()(N.contentRegionScroller, g ? N.contentRegionHiddenSidebar : N.contentRegionShownSidebar),
                                             ref: I,
                                             children: [
-                                                (0, c.jsx)(N.Provider, {
-                                                    value: C.current,
-                                                    children: (0, c.jsx)(b.TabBar.Panel, {
+                                                (0, c.jsx)(C.Provider, {
+                                                    value: j.current,
+                                                    children: (0, c.jsx)(S.TabBar.Panel, {
                                                         id: s,
-                                                        className: h()(g.contentColumn, g[i], { [g.mobileContent]: f.tq }),
-                                                        ref: E,
+                                                        className: h()(N.contentColumn, N[i], { [N.mobileContent]: f.tq }),
+                                                        ref: T,
                                                         style: f.tq ? { maxWidth: window.innerWidth } : void 0,
-                                                        children: j
+                                                        children: g
                                                             ? n
-                                                            : (0, c.jsx)(b.FocusRingScope, {
-                                                                  containerRef: E,
+                                                            : (0, c.jsx)(S.FocusRingScope, {
+                                                                  containerRef: T,
                                                                   children: n
                                                               })
                                                     })
@@ -242,7 +242,7 @@ t.ZP = function (e) {
                                         })
                                     ]
                                 }),
-                                _()
+                                Z()
                             ]
                         });
                     })()

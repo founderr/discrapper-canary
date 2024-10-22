@@ -59,21 +59,21 @@ function y(e) {
         );
     return t;
 }
-let S = {
+let R = {
     ssrc: 1,
     codec: 2
 };
 function D(e, t, n, a, D) {
-    return e.map((R, b) => {
+    return e.map((S, b) => {
         var E, v;
         let F = [];
-        for (let e of Object.keys(R).sort((e, t) => {
-            let n = S[e],
-                r = S[t];
+        for (let e of Object.keys(S).sort((e, t) => {
+            let n = R[e],
+                r = R[t];
             if (n !== r) return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
             return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = R[e];
+            let t = S[e];
             if (!p.al[e] && void 0 !== t)
                 F.push(
                     (0, r.jsx)(
@@ -91,10 +91,10 @@ function D(e, t, n, a, D) {
             o.FormSection,
             {
                 className: f.marginBottom40,
-                title: R.type,
+                title: S.type,
                 titleClassName: g.sectionHeader,
                 children: [
-                    'video' === R.type &&
+                    'video' === S.type &&
                         null != n &&
                         null != a &&
                         null != D &&
@@ -112,9 +112,9 @@ function D(e, t, n, a, D) {
                                       })
                                   })
                                 : null;
-                        })(R, n, a, D),
+                        })(S, n, a, D),
                     y(F),
-                    'video' === R.type &&
+                    'video' === S.type &&
                         b === e.length - 1 &&
                         null != n &&
                         null != a &&
@@ -146,7 +146,7 @@ function D(e, t, n, a, D) {
                         }))
                 ]
             },
-            ''.concat(R.type, ' + ').concat(R.ssrc)
+            ''.concat(S.type, ' + ').concat(S.ssrc)
         );
     });
 }

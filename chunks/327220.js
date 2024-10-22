@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 }),
     n(47120);
-var r = n(192379),
+var l = n(192379),
     a = n(442837),
-    l = n(592125),
-    i = n(9156);
-function o(e) {
-    let t = (0, a.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
-        n = (0, a.e7)([l.Z], () => l.Z.getMutableDMsByUserIds(), [t]),
-        o = (0, a.e7)([i.ZP], () => i.ZP.getMutedChannels(null)),
-        s = r.useMemo(() => {
+    i = n(592125),
+    r = n(9156);
+function s(e) {
+    let t = (0, a.e7)([i.Z], () => i.Z.getPrivateChannelsVersion()),
+        n = (0, a.e7)([i.Z], () => i.Z.getMutableDMsByUserIds(), [t]),
+        s = (0, a.e7)([r.ZP], () => r.ZP.getMutedChannels(null)),
+        o = l.useMemo(() => {
             let e = new Set();
             for (let t in n) {
-                let r = n[t];
-                null != r && o.has(r) && e.add(t);
+                let l = n[t];
+                null != l && s.has(l) && e.add(t);
             }
             return e;
-        }, [n, o]);
-    return r.useMemo(
+        }, [n, s]);
+    return l.useMemo(
         () =>
             null == e
                 ? void 0
                 : e.filter((e) => {
-                      for (let t of e.participants) if (s.has(t)) return !1;
+                      for (let t of e.participants) if (o.has(t)) return !1;
                       return !0;
                   }),
-        [e, s]
+        [e, o]
     );
 }

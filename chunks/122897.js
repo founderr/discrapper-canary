@@ -25,8 +25,8 @@ function S() {
         setting: _.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, n.jsx)(c.H, {
-                header: E.Z.Messages.USER_DM_SPAM_FILTER,
-                description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: r.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING) })
+                header: E.Z.Messages.USER_DM_SPAM_FILTER_V2,
+                description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP_V2.format({ appealLink: r.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, n.jsx)(i.RadioGroup, {
                 className: T.radioGroup,

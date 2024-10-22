@@ -17,7 +17,7 @@ let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
     u = Object.keys(l.Button.Sizes).filter((e) => 'NONE' !== e);
 function E() {
     return (0, n.jsxs)('div', {
-        children: [(0, n.jsx)(T, {}), (0, n.jsx)(C, {}), (0, n.jsx)(g, {}), (0, n.jsx)(m, {}), (0, n.jsx)(N, {}), (0, n.jsx)(I, {}), (0, n.jsx)(S, {})]
+        children: [(0, n.jsx)(T, {}), (0, n.jsx)(A, {}), (0, n.jsx)(g, {}), (0, n.jsx)(m, {}), (0, n.jsx)(N, {}), (0, n.jsx)(I, {}), (0, n.jsx)(S, {})]
     });
 }
 function T() {
@@ -138,7 +138,7 @@ function T() {
                     children: 'Large'
                 })
             }),
-            (0, n.jsx)(A, {})
+            (0, n.jsx)(C, {})
         ]
     });
 }
@@ -556,7 +556,7 @@ function m() {
         ]
     });
 }
-function A() {
+function C() {
     return (0, n.jsxs)('div', {
         className: c.shinyButtonExamples,
         children: [
@@ -576,7 +576,7 @@ function A() {
         ]
     });
 }
-function C() {
+function A() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),

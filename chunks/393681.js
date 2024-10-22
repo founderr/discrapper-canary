@@ -15,8 +15,8 @@ var n = t(200651),
     I = t(952306),
     N = t(600164),
     m = t(690221),
-    A = t(346585),
-    C = t(347649),
+    C = t(346585),
+    A = t(347649),
     g = t(332473),
     h = t(303172),
     O = t(518560),
@@ -116,7 +116,7 @@ class Q extends a.PureComponent {
                   className: K.accountWarningBodyText,
                   messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? W.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, A.IE)(this.props.locale) }) : W.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? W.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, C.IE)(this.props.locale) }) : W.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
                       (0, n.jsx)(m.Z, {
@@ -388,7 +388,7 @@ s.Z = () => {
         t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
         a = (0, c.e7)([j.Z], () => j.Z.theme),
         i = (0, g.b)(),
-        r = (0, C.CC)(),
+        r = (0, A.CC)(),
         o = (0, c.e7)([Z.default], () => Z.default.locale),
         d = (0, v._p)({ location: 'UserSettingsAccount' }),
         _ = (0, c.e7)([D.Z], () => D.Z.getSubsection());

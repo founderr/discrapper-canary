@@ -20,8 +20,8 @@ var n,
     I = t(821849),
     N = t(724757),
     m = t(600164),
-    A = t(239827),
-    C = t(818035),
+    C = t(239827),
+    A = t(818035),
     g = t(509545),
     h = t(78839),
     O = t(74538),
@@ -62,13 +62,13 @@ function P(e) {
             },
             [s, r, E]
         ),
-        C = (0, N.Z)('billing-history', l);
+        A = (0, N.Z)('billing-history', l);
     return (0, a.jsx)(d.bG, {
-        navigator: C,
+        navigator: A,
         children: (0, a.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: s, ...i } = e;
-                return (0, a.jsx)(A.Z, {
+                return (0, a.jsx)(C.Z, {
                     className: o()(f.verticalFit, f.paginator),
                     currentPageIndex: c,
                     onChangePage: m,
@@ -185,7 +185,7 @@ function Z(e) {
     return !(null == t || null == n || Object.values(R.Si).includes(t) || (0, O.PV)(n));
 }
 function v(e) {
-    let s = (0, _.e7)([C.Z], () => C.Z.getPayments()),
+    let s = (0, _.e7)([A.Z], () => A.Z.getPayments()),
         t = (0, _.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
         n = i.useMemo(
             () =>

@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var i,
     l = n(200651),
-    a = n(192379),
-    r = n(120356),
-    s = n.n(r),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(954955),
     c = n.n(o),
     u = n(748780),
@@ -27,7 +27,7 @@ let _ = {
     friction: 10,
     tension: 300
 };
-class m extends a.Component {
+class m extends r.Component {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
     }
@@ -103,7 +103,7 @@ class m extends a.Component {
             });
     }
 }
-class g extends (i = a.PureComponent) {
+class g extends (i = r.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -115,15 +115,15 @@ class g extends (i = a.PureComponent) {
     }
     render() {
         let { unread: e, mention: t } = this.state,
-            { textMention: n, textUnread: i, reverse: a, className: r, barClassName: o, hide: c, animate: u } = this.props,
+            { textMention: n, textUnread: i, reverse: r, className: a, barClassName: o, hide: c, animate: u } = this.props,
             { reducedMotion: d } = this.context;
         return (0, l.jsx)('div', {
-            className: null != r ? r : void 0,
+            className: null != a ? a : void 0,
             children: (0, l.jsx)(m, {
                 hide: !0 === c || (null == e && null == t),
                 className: s()(o, null != t ? p.mention : p.unread),
                 text: null != t ? n : i,
-                reverse: a,
+                reverse: r,
                 animate: u && !d.enabled,
                 onClick: this.handleClick
             })
@@ -139,7 +139,7 @@ class g extends (i = a.PureComponent) {
                 this,
                 'calculateState',
                 c()(() => {
-                    let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: a, onCalculate: r } = this.props,
+                    let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: a } = this.props,
                         s = null,
                         o = null,
                         c = [];
@@ -147,18 +147,18 @@ class g extends (i = a.PureComponent) {
                         'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            null == s && l(e, a, c) && (s = e), null == o && i(e, a, c) && (o = e);
+                            null == s && l(e, r, c) && (s = e), null == o && i(e, r, c) && (o = e);
                         },
-                        d = a ? c.length - 1 : 0,
+                        d = r ? c.length - 1 : 0,
                         h = c[d];
                     for (; null != h; ) {
                         if ('string' == typeof h) {
-                            if (n(h, a, c)) break;
+                            if (n(h, r, c)) break;
                             u(h);
                         } else {
                             let e = !1;
                             for (let t of h) {
-                                if (n(t, a, c)) {
+                                if (n(t, r, c)) {
                                     e = !0;
                                     break;
                                 }
@@ -166,9 +166,9 @@ class g extends (i = a.PureComponent) {
                             }
                             if (e) break;
                         }
-                        (d += a ? -1 : 1), (h = c[d]);
+                        (d += r ? -1 : 1), (h = c[d]);
                     }
-                    null != r && r(s, o, a),
+                    null != a && a(s, o, r),
                         this.setState({
                             mention: s,
                             unread: o

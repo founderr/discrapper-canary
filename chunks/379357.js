@@ -42,7 +42,7 @@ function I(e) {
         { coverImageUrl: S } = (0, l.$)(null === (t = null != E ? E : o) || void 0 === t ? void 0 : t.id);
     let g =
         ((n = r),
-        (0, d.dU)(n)
+        (0, d.dU)(n) && n.extra.entries.length > 0
             ? { src: n.extra.entries[0].media.image_url }
             : (0, d.y0)(n)
               ? {

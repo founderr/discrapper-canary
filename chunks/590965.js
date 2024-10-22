@@ -1,8 +1,8 @@
 let i;
 n(47120), n(653041);
 var l,
-    a,
     r,
+    a,
     s,
     o = n(442837),
     c = n(570140),
@@ -42,14 +42,14 @@ class b extends (l = o.ZP.Store) {
     }
 }
 (s = 'InviteModalStore'),
-    (r = 'displayName') in (a = b)
-        ? Object.defineProperty(a, r, {
+    (a = 'displayName') in (r = b)
+        ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = s),
+        : (r[a] = s),
     (t.Z = new b(c.Z, {
         OVERLAY_INITIALIZE: T,
         CONNECTION_OPEN: T,
@@ -89,14 +89,14 @@ class b extends (l = o.ZP.Store) {
                 return !1;
             (x = e.context), (v = !1);
             let n = (function (e) {
-                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: a, target_user: r, target_application: s, stage_instance: o, type: c, channel: u, guild: d } = e,
+                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: a, target_application: s, stage_instance: o, type: c, channel: u, guild: d } = e,
                     h = {
                         code: i,
                         state: l,
                         approximate_member_count: t,
                         approximate_presence_count: n,
-                        target_type: a,
-                        target_user: r,
+                        target_type: r,
+                        target_user: a,
                         target_application: s,
                         stage_instance: o,
                         type: c

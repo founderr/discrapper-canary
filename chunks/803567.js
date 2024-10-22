@@ -21,8 +21,8 @@ var r = t(120356),
     I = t(131951),
     N = t(626135),
     m = t(63063),
-    A = t(210887),
-    C = t(726985),
+    C = t(210887),
+    A = t(726985),
     g = t(981631),
     h = t(689938),
     O = t(113207);
@@ -46,7 +46,7 @@ function f(e) {
     });
 }
 function D() {
-    let e = (0, l.e7)([A.Z], () => A.Z.theme),
+    let e = (0, l.e7)([C.Z], () => C.Z.theme),
         {
             noiseCancellation: s,
             noiseSuppression: t,
@@ -159,7 +159,7 @@ function L() {
                     children: h.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
                 }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: o()(O.marginTop8, O.marginBottom20),
                     value: t,
@@ -173,11 +173,11 @@ function L() {
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                 children: (0, i.jsx)(D, {})
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: r,
                     onChange: (s) => _.Z.setMode(e, { vadUseKrisp: s }),
@@ -187,7 +187,7 @@ function L() {
                 })
             }),
             (0, i.jsx)(T.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: '',
                     value: n,

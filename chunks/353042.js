@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i,
     l = n(192379),
-    a = n(846519);
-function r(e, t, n) {
+    r = n(846519);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,20 +25,20 @@ class s extends (i = l.Component) {
     calculateInitialDeltaBytes(e) {
         let { numUpdatesToShow: t, updateInterval: n, pointsToSmooth: i } = this.props,
             l = Date.now(),
-            a = 0,
             r = 0,
+            a = 0,
             s = [],
             o = null != e[0] ? e[0].bytes : 0;
-        for (; a < t + i; a++) {
+        for (; r < t + i; r++) {
             let t;
-            let i = l - (a + 1) * n;
-            for (; r < e.length; )
-                if ((t = e[r]).timestamp > i) r++;
+            let i = l - (r + 1) * n;
+            for (; a < e.length; )
+                if ((t = e[a]).timestamp > i) a++;
                 else break;
-            if (r === e.length) break;
+            if (a === e.length) break;
             null != t && (s.push(o - t.bytes), (o = t.bytes));
         }
-        for (; a < t + i; a++) s.push(0);
+        for (; r < t + i; r++) s.push(0);
         return s.reverse(), s;
     }
     smoothDeltaBytes(e) {
@@ -57,17 +57,17 @@ class s extends (i = l.Component) {
     }
     constructor(e) {
         super(e),
-            r(this, '_interval', new a.Xp()),
-            r(this, 'update', () => {
+            a(this, '_interval', new r.Xp()),
+            a(this, 'update', () => {
                 let { onUpdate: e, numUpdatesToShow: t, pointsToSmooth: n, updateInterval: i } = this.props,
                     l = this.props.getHistoricalTotalBytes(),
-                    a = null != l[0] ? l[0].bytes : 0,
-                    r = [...this.state.deltaBytes.slice(1, t + n), a - this.state.lastTotalBytes];
+                    r = null != l[0] ? l[0].bytes : 0,
+                    a = [...this.state.deltaBytes.slice(1, t + n), r - this.state.lastTotalBytes];
                 this.setState(
                     {
-                        deltaBytes: r,
-                        smoothedDeltaBytes: this.smoothDeltaBytes(r),
-                        lastTotalBytes: a
+                        deltaBytes: a,
+                        smoothedDeltaBytes: this.smoothDeltaBytes(a),
+                        lastTotalBytes: r
                     },
                     () => null != e && e(i)
                 );
@@ -81,7 +81,7 @@ class s extends (i = l.Component) {
         };
     }
 }
-r(s, 'defaultProps', {
+a(s, 'defaultProps', {
     numUpdatesToShow: 30,
     updateInterval: 500,
     pointsToSmooth: 10

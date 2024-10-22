@@ -30,13 +30,13 @@ function N(e) {
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
     if (null == m) return null;
-    let A = a ? I.finePrintWithOverheadSeparator : I.finePrint,
-        C = m.invoiceItems.find((e) => {
+    let C = a ? I.finePrintWithOverheadSeparator : I.finePrint,
+        A = m.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
         });
-    if (null == C) return null;
-    let g = C.subscriptionPlanId,
+    if (null == A) return null;
+    let g = A.subscriptionPlanId,
         h = c.Z.get(g);
     i()(null != h, 'Missing plan');
     let O = (0, _.T4)(m.total, m.currency);
@@ -66,7 +66,7 @@ function N(e) {
                         })),
         (0, n.jsx)(r.Text, {
             color: 'text-muted',
-            className: A,
+            className: C,
             variant: 'text-xs/normal',
             children: s
         })

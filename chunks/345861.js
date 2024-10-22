@@ -10,13 +10,13 @@ var o = n(120356),
     l = n(481060),
     r = n(813197);
 function i(e) {
-    let { buttonCTA: s, onChange: n, 'aria-label': o, multiple: i = !1, disabled: E = !1, submitting: c = !1, ...u } = e;
+    let { buttonCTA: s, onChange: n, 'aria-label': o, multiple: i = !1, disabled: E = !1, submitting: c = !1, ..._ } = e;
     return (0, t.jsx)(l.FocusRing, {
         within: !0,
         children: (0, t.jsxs)('div', {
             className: a()(
                 (0, l.getButtonStyle)({
-                    ...u,
+                    ..._,
                     submitting: c,
                     disabled: E
                 })

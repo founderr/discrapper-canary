@@ -22,12 +22,12 @@ var n,
     I = t(600164),
     N = t(431369),
     m = t(210887),
-    A = t(78839),
-    C = t(74538),
+    C = t(78839),
+    A = t(74538),
     g = t(689938),
     h = t(946839);
 async function O(e, s, t, n) {
-    await (0, E.bG)(t), await (0, u.Mg)(e, { items: (0, C.MY)(e, s) }, n);
+    await (0, E.bG)(t), await (0, u.Mg)(e, { items: (0, A.MY)(e, s) }, n);
 }
 function p(e) {
     let { premiumSubscription: s, guildBoostSlotId: t, onNext: n, onClose: a } = e,
@@ -58,7 +58,7 @@ function p(e) {
                             try {
                                 u(!0);
                                 let e = (0, N.g)(s, 1);
-                                l()((0, C.uV)(e) <= (0, C.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(s, e, t, T), n();
+                                l()((0, A.uV)(e) <= (0, A.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(s, e, t, T), n();
                             } catch (e) {
                                 u(!1);
                             }
@@ -110,9 +110,9 @@ function x(e) {
         { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
         { analyticsLocations: o } = (0, S.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     r.useEffect(() => {
-        !A.ZP.hasFetchedSubscriptions() && (0, u.jg)();
+        !C.ZP.hasFetchedSubscriptions() && (0, u.jg)();
     }, []);
-    let l = (0, c.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()),
+    let l = (0, c.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
         [d, E] = r.useState(1);
     if (null == l) s = (0, i.jsx)(_.ModalContent, { children: (0, i.jsx)(_.Spinner, {}) });
     else

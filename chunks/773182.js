@@ -12,8 +12,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(512969),
     o = n(100621),
     c = n(442837),
@@ -101,7 +101,7 @@ function P(e) {
 let O = l.memo(function (e) {
     let { children: t } = e,
         n = (0, s.TH)(),
-        { games: a, treatment: p, hasFetchedGames: N } = (0, C.I9)(),
+        { games: r, treatment: p, hasFetchedGames: N } = (0, C.I9)(),
         [x, O] = (0, I.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], b.R.SIDEBAR, !0),
         j = (0, S.Ws)({ location: R.dr.CONFLICT_CHECKS }),
         D = x !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
@@ -110,7 +110,7 @@ let O = l.memo(function (e) {
         G = j && !w && !D && !U,
         [k, B] = l.useState(0),
         H = (0, f.ZP)(),
-        V = l.useMemo(() => a.map((e) => e.id), [a]),
+        V = l.useMemo(() => r.map((e) => e.id), [r]),
         F = (0, c.e7)([v.Z], () => v.Z.isFocused());
     l.useEffect(() => {
         G &&
@@ -163,20 +163,20 @@ let O = l.memo(function (e) {
                       renderPopout: (e) => {
                           let { closePopout: t } = e;
                           return (0, i.jsxs)('div', {
-                              className: r()(y.popoutContainer),
+                              className: a()(y.popoutContainer),
                               children: [
                                   (0, i.jsx)('div', {
                                       className: y.animatedBgContainer,
                                       children: Y((e, t) => {
-                                          if (null == a[t]) return null;
-                                          let { backgroundImageUrl: n, primaryColor: l } = a[t],
-                                              r = 'light' === H ? 'none' : 'linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%), rgba('.concat(l.red, ', ').concat(l.green, ', ').concat(l.blue, ', 1)');
+                                          if (null == r[t]) return null;
+                                          let { backgroundImageUrl: n, primaryColor: l } = r[t],
+                                              a = 'light' === H ? 'none' : 'linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%), rgba('.concat(l.red, ', ').concat(l.green, ', ').concat(l.blue, ', 1)');
                                           return (0, i.jsxs)(
                                               o.animated.div,
                                               {
                                                   style: {
                                                       ...e,
-                                                      background: r
+                                                      background: a
                                                   },
                                                   className: y.animatedHeroContainer,
                                                   children: [
@@ -188,10 +188,10 @@ let O = l.memo(function (e) {
                                                           className: y.radialGradient,
                                                           style: { background: l.toHexString() }
                                                       }),
-                                                      (0, i.jsx)(P, { color: l.toHexString() }, a[t].id)
+                                                      (0, i.jsx)(P, { color: l.toHexString() }, r[t].id)
                                                   ]
                                               },
-                                              a[t].id
+                                              r[t].id
                                           );
                                       })
                                   }),
@@ -204,7 +204,7 @@ let O = l.memo(function (e) {
                                       })
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: r()(y.popoutContent),
+                                      className: a()(y.popoutContent),
                                       children: [(0, i.jsx)(g.aF, { title: L.Z.Messages.RAPIDASH_CHANNEL_LIST_USER_UPSELL_2_TITLE }), (0, i.jsx)(g.To, { message: L.Z.Messages.RAPIDASH_CHANNEL_LIST_USER_UPSELL_2_MESSAGE }), (0, i.jsx)(g.Xu, { onClick: W })]
                                   }),
                                   (0, i.jsx)('div', { className: y.popoutCaret })
@@ -228,25 +228,25 @@ let O = l.memo(function (e) {
 });
 function j(e) {
     let { onActivate: t, children: n } = e,
-        a = (0, c.e7)([x.Z], () => x.Z.hasJoinRequestCoackmark()),
-        r = l.useCallback(() => {
+        r = (0, c.e7)([x.Z], () => x.Z.hasJoinRequestCoackmark()),
+        a = l.useCallback(() => {
             N.ZP.clearCoachmark();
         }, []),
-        s = (0, p.Z)(a),
+        s = (0, p.Z)(r),
         o = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (a && a !== s) {
-                var e, n, i, l, r;
-                t(), null === (r = o.current) || void 0 === r || null === (l = r.ref) || void 0 === l || null === (i = l.current) || void 0 === i || null === (n = i.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
+            if (r && r !== s) {
+                var e, n, i, l, a;
+                t(), null === (a = o.current) || void 0 === a || null === (l = a.ref) || void 0 === l || null === (i = l.current) || void 0 === i || null === (n = i.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
             }
-        }, [o, a, s, t]),
+        }, [o, r, s, t]),
         (0, i.jsxs)('div', {
             className: y.container,
             children: [
                 (0, i.jsx)(d.Popout, {
                     ref: o,
-                    shouldShow: a,
+                    shouldShow: r,
                     renderPopout: () =>
                         (0, i.jsxs)('div', {
                             className: y.popoutContainer,
@@ -272,7 +272,7 @@ function j(e) {
                                             fullWidth: !0,
                                             size: d.ButtonSizes.SMALL,
                                             color: d.ButtonColors.BRAND,
-                                            onClick: r,
+                                            onClick: a,
                                             children: L.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
                                         })
                                     ]
@@ -299,6 +299,6 @@ function D(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {
         className: y.footer,
-        children: [(0, i.jsx)('div', { className: r()(y.gradient, { [y.gradientHidden]: t }) }), n]
+        children: [(0, i.jsx)('div', { className: a()(y.gradient, { [y.gradientHidden]: t }) }), n]
     });
 }

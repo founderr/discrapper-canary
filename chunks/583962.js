@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(100621),
     o = n(91192),
     c = n(442837),
@@ -35,11 +35,11 @@ var i = n(200651),
 let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     M = (e) => {
         let { guild: t, onSelect: n } = e,
-            [a, r] = l.useState(t.premiumProgressBarEnabled),
+            [r, a] = l.useState(t.premiumProgressBarEnabled),
             [s, o] = l.useState(!1),
             u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!u) o(!0), await m.Z.saveGuild(t.id, { premiumProgressBarEnabled: !a }), r(!a), o(!1);
+                if (!!u) o(!0), await m.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -49,7 +49,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             children: (0, i.jsx)(d.MenuCheckboxItem, {
                 id: 'progress-bar-enabled',
                 label: T.Z.Messages.GUILD_ENABLE_PROGRESS_BAR,
-                checked: a,
+                checked: r,
                 disabled: s,
                 action: p
             })
@@ -63,7 +63,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     };
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
-        { analyticsLocations: a } = (0, _.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { analyticsLocations: r } = (0, _.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: u, id: m } = t,
         E = (0, I.rF)(u, m),
         A = (0, I.FZ)(E, t.id),
@@ -89,10 +89,10 @@ t.ZP = (e) => {
             (0, f.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: m,
-                location_stack: a
+                location_stack: r
             }),
                 (0, S.Z)({
-                    analyticsLocations: a,
+                    analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,
                         section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR,
@@ -134,7 +134,7 @@ t.ZP = (e) => {
                         var t;
                         null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(w);
                     },
-                    className: r()(b.container, { [b.containerWithMargin]: n }),
+                    className: a()(b.container, { [b.containerWithMargin]: n }),
                     onContextMenu: (e) => {
                         O &&
                             (0, h.vq)(e, (e) =>
@@ -177,7 +177,7 @@ t.ZP = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: r()(b.progressBarContainer, { [b.progressBarContainerComplete]: R }),
+                            className: a()(b.progressBarContainer, { [b.progressBarContainerComplete]: R }),
                             children: [
                                 (0, i.jsx)(s.animated.div, {
                                     className: b.progressBar,

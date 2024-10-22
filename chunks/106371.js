@@ -1,5 +1,5 @@
-var n = t(818083);
-let a = (0, n.B)({
+var o = t(818083);
+let i = (0, o.B)({
     kind: 'user',
     id: '2024-08_reaction_push_notifications_user',
     label: 'In App Notifications for Reactions',
@@ -34,7 +34,7 @@ let a = (0, n.B)({
         }
     ]
 });
-(0, n.B)({
+(0, o.B)({
     kind: 'guild',
     id: '2024-08_reaction_push_notifications_guild',
     label: 'In App Notifications for Reactions (Guild)',
@@ -47,4 +47,4 @@ let a = (0, n.B)({
         }
     ]
 }),
-    (s.Z = a);
+    (n.Z = i);

@@ -19,7 +19,7 @@ function d(e) {
         f = (0, a.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
         p = t.extra.media_title,
         C = t.extra.media_subtitle,
-        h = (0, o.kr)(t) && !(0, o.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+        h = (0, o.Jg)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
         I = { type: s.kG.CRUNCHYROLL },
         E = l.useMemo(() => {
             if (null == t.extra.url) return;

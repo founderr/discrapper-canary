@@ -15,8 +15,8 @@ var n = t(200651),
     I = t(497321),
     N = t(468026),
     m = t(317381),
-    A = t(513202),
-    C = t(979200),
+    C = t(513202),
+    A = t(979200),
     g = t(600164),
     h = t(713938),
     O = t(881998),
@@ -256,7 +256,7 @@ let y = (e) => {
                                         null == i
                                             ? void 0
                                             : i.map((s, t) => {
-                                                  let a = (0, C.PM)(s);
+                                                  let a = (0, A.PM)(s);
                                                   return null != a
                                                       ? (0, n.jsxs)(
                                                             'li',
@@ -290,7 +290,7 @@ s.Z = () => {
             T.Z.delete(s), x.S.safeDispatch(v.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
             let n = r.get(t.id);
             null != n &&
-                A.Z.leaveActivity({
+                C.Z.leaveActivity({
                     channelId: n.channelId,
                     applicationId: t.id,
                     showFeedback: !1
@@ -315,7 +315,7 @@ s.Z = () => {
                     'aria-label': j.Z.Messages.INTEGRATIONS_SEARCH
                 })
             }),
-        C = (e, s) =>
+        A = (e, s) =>
             (0, n.jsxs)(G, {
                 className: B.__invalid_marginTop20,
                 children: [
@@ -354,10 +354,10 @@ s.Z = () => {
                                 type: E.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === s.length
-                            ? C(j.Z.Messages.NO_AUTHORIZED_APPS_NOTE, j.Z.Messages.NO_AUTHORIZED_APPS)
+                            ? A(j.Z.Messages.NO_AUTHORIZED_APPS_NOTE, j.Z.Messages.NO_AUTHORIZED_APPS)
                             : 0 === g.length
                               ? (0, n.jsxs)(n.Fragment, {
-                                    children: [N(), C(null, j.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+                                    children: [N(), A(null, j.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [

@@ -20,8 +20,8 @@ var a = t(512722),
     I = t(532432),
     N = t(349177),
     m = t(872736),
-    A = t(134795),
-    C = t(610966),
+    C = t(134795),
+    A = t(610966),
     g = t(513901),
     h = t(451392),
     O = t(906364),
@@ -128,7 +128,7 @@ function b() {
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(
-                              A.Z,
+                              C.Z,
                               {
                                   showRemoveBannerButton: Q,
                                   errors: H.banner,
@@ -147,7 +147,7 @@ function b() {
                       ]
                   })
                 : (0, n.jsx)(
-                      C.Z,
+                      A.Z,
                       {
                           user: B,
                           savedUserColor: null == U ? void 0 : U.accentColor,

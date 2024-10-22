@@ -21,8 +21,8 @@ var i = t(200651),
     E = t(997787),
     T = t(970731),
     h = t(314897),
-    p = t(430824),
-    g = t(594174),
+    g = t(430824),
+    p = t(594174),
     f = t(626135),
     x = t(5192),
     C = t(709054),
@@ -36,9 +36,9 @@ var i = t(200651),
     M = t(408795);
 function L(e) {
     let { commandId: n, editPermissions: t, guildId: s, noneSelectedText: r, overwrites: I, hasAccessToMutatePermissions: N } = e,
-        T = (0, c.e7)([p.Z], () => p.Z.getGuild(s));
+        T = (0, c.e7)([g.Z], () => g.Z.getGuild(s));
     l()(null != T, '');
-    let h = (0, c.e7)([p.Z], () => p.Z.getRoles(s)),
+    let h = (0, c.e7)([g.Z], () => g.Z.getRoles(s)),
         [f, R] = a.useState(new Set()),
         b = a.useMemo(() => {
             var e;
@@ -58,8 +58,8 @@ function L(e) {
                             return (function (e, n, t) {
                                 let i = Number(e.canWrite) - Number(n.canWrite);
                                 if (0 !== i) return i;
-                                let a = g.default.getUser(e.id),
-                                    s = g.default.getUser(n.id);
+                                let a = p.default.getUser(e.id),
+                                    s = p.default.getUser(n.id);
                                 if (null != a && null != s) {
                                     let e = x.ZP.getName(t, void 0, a),
                                         n = x.ZP.getName(t, void 0, s);
@@ -155,23 +155,23 @@ function L(e) {
 function j(e) {
     var n, t, s;
     let l,
-        { guild: r, commandId: o, onChange: c, onRemove: u, overwrite: E, integration: p, canShowMigrationTooltip: g, hasAccessToMutatePermissions: x } = e,
+        { guild: r, commandId: o, onChange: c, onRemove: u, overwrite: E, integration: g, canShowMigrationTooltip: p, hasAccessToMutatePermissions: x } = e,
         C = E.id === r.id || E.id === (0, _.bD)(r.id),
-        O = null == p ? void 0 : null === (t = p.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
+        O = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
         S = !E.canWrite || !x,
         A = h.default.getId();
     x ? !E.canWrite && (E.type === m.Kw.USER ? (l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER) : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : (l = null != o ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION);
-    let L = g && null != p && E.id === r.id && void 0 !== O && !E.permission;
+    let L = p && null != g && E.id === r.id && void 0 !== O && !E.permission;
     a.useEffect(() => {
         if (L) {
             var e;
             f.default.track(Z.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
                 ...(0, I.hH)(r.id),
-                application_id: null == p ? void 0 : null === (e = p.application) || void 0 === e ? void 0 : e.id,
+                application_id: null == g ? void 0 : null === (e = g.application) || void 0 === e ? void 0 : e.id,
                 location: 'toggle'
             });
         }
-    }, [r.id, null == p ? void 0 : null === (s = p.application) || void 0 === s ? void 0 : s.id, L]);
+    }, [r.id, null == g ? void 0 : null === (s = g.application) || void 0 === s ? void 0 : s.id, L]);
     let j = (0, i.jsx)(d.Tooltip, {
             tooltipClassName: M.tooltip,
             text: l,
@@ -186,7 +186,7 @@ function j(e) {
                         currentValue: E.permission,
                         onChange: L
                             ? (e) => {
-                                  N.Z.dismissToggleTooltip(r.id, p), c(e);
+                                  N.Z.dismissToggleTooltip(r.id, g), c(e);
                               }
                             : c
                     })
@@ -196,7 +196,7 @@ function j(e) {
             renderPopout: () =>
                 (0, i.jsx)(d.Clickable, {
                     onClick: (e) => {
-                        e.stopPropagation(), N.Z.dismissToggleTooltip(r.id, p);
+                        e.stopPropagation(), N.Z.dismissToggleTooltip(r.id, g);
                     },
                     children: (0, i.jsx)(T.ZP, {
                         className: M.tooltip,
@@ -210,7 +210,7 @@ function j(e) {
             position: 'bottom',
             align: 'center',
             animation: d.Popout.Animation.TRANSLATE,
-            onRequestClose: () => N.Z.dismissToggleTooltip(r.id, p),
+            onRequestClose: () => N.Z.dismissToggleTooltip(r.id, g),
             shouldShow: L,
             closeOnScroll: !0,
             children: () => j

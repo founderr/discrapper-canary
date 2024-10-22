@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(91192),
     o = n(442837),
     c = n(481060),
@@ -27,7 +27,7 @@ var i = n(200651),
 function M(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
-        className: r()(A.spine, { [A.spineWithGuildIcon]: n }),
+        className: a()(A.spine, { [A.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -41,7 +41,7 @@ function M(e) {
     });
 }
 t.Z = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: a, isSelectedVoice: A, isLast: R, withGuildIcon: L } = e,
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: R, withGuildIcon: L } = e,
         y = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         P = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)),
         { unread: O, mentionCount: j } = (0, o.cj)([m.ZP], () => ({
@@ -87,7 +87,7 @@ t.Z = l.memo(function (e) {
                   : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
     return (0, i.jsxs)('li', {
         role: B,
-        className: r()(T.containerDefault, { [T.selected]: a }),
+        className: a()(T.containerDefault, { [T.selected]: r }),
         children: [
             (0, i.jsx)(M, { withGuildIcon: L }),
             R
@@ -105,16 +105,16 @@ t.Z = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: r()(T.iconVisibility, b.wrapper, b.typeThread, {
-                        [b.modeSelected]: a,
-                        [b.modeMuted]: !a && D,
-                        [b.modeUnreadImportant]: !D && !a && O,
+                    className: a()(T.iconVisibility, b.wrapper, b.typeThread, {
+                        [b.modeSelected]: r,
+                        [b.modeMuted]: !r && D,
+                        [b.modeUnreadImportant]: !D && !r && O,
                         [b.withGuildIcon]: L
                     }),
                     onMouseDown: U,
                     onContextMenu: G,
                     children: [
-                        !O || D || a ? null : (0, i.jsx)('div', { className: r()(b.unread, b.unreadImportant) }),
+                        !O || D || r ? null : (0, i.jsx)('div', { className: a()(b.unread, b.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
                             ...H,
                             innerRef: V,
@@ -123,7 +123,7 @@ t.Z = l.memo(function (e) {
                             'aria-label': F,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)('div', {
-                                className: r()(b.linkTop, b.__invalid_threadMainContent),
+                                className: a()(b.linkTop, b.__invalid_threadMainContent),
                                 children: [
                                     (0, i.jsx)(h.Z, {
                                         className: b.name,

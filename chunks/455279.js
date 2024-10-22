@@ -33,11 +33,11 @@ function m(e, s, t) {
     );
 }
 ((a = n || (n = {})).DEFAULT = 'DEFAULT'), (a.RECORDING = 'RECORDING');
-let A = {
+let C = {
     DEFAULT: N.__invalid_default,
     RECORDING: N.recording
 };
-class C extends r.PureComponent {
+class A extends r.PureComponent {
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -63,7 +63,7 @@ class C extends r.PureComponent {
                 onClick: this.handleClick,
                 onMouseDown: this.handleMouseDown,
                 ref: this._containerRef,
-                className: l()(N.recorderContainer, A[s], {
+                className: l()(N.recorderContainer, C[s], {
                     [N.hasValue]: r,
                     [N.containerDisabled]: n
                 }),
@@ -130,4 +130,4 @@ class C extends r.PureComponent {
             });
     }
 }
-s.Z = C;
+s.Z = A;

@@ -20,8 +20,8 @@ var n = t(200651),
     I = t(374649),
     N = t(908951),
     m = t(255078),
-    A = t(430824),
-    C = t(509545),
+    C = t(430824),
+    A = t(509545),
     g = t(55563),
     h = t(551428),
     O = t(937615),
@@ -44,16 +44,16 @@ function L(e) {
             subscriptionForGuild: y,
             sku: V
         } = (0, o.cj)(
-            [C.Z, g.Z, h.Z, A.Z],
+            [A.Z, g.Z, h.Z, C.Z],
             () => {
                 let e = m.planId,
-                    s = C.Z.get(e),
+                    s = A.Z.get(e),
                     t = null != s ? g.Z.get(s.skuId) : null,
                     n = null == t ? void 0 : t.applicationId,
                     a = null != s ? h.Z.getForSKU(s.skuId) : null,
                     i = null != s ? (0, O.og)((0, O.T4)(s.price, s.currency), s.interval, s.intervalCount) : null,
                     r = null != a && (0, p.KK)(a.skuFlags),
-                    o = r && null != x ? A.Z.getGuild(x) : void 0;
+                    o = r && null != x ? C.Z.getGuild(x) : void 0;
                 return {
                     appId: n,
                     isGuildSubscription: r,
@@ -242,14 +242,14 @@ function v(e) {
     let { app: s, storeListing: i, sku: r, subscription: d, isCancelled: u, guild: T, navigateToSwitchPlan: S } = e,
         I = (0, p.OL)(r),
         { analyticsLocations: N } = (0, _.ZP)(),
-        [A, C] = a.useState(!1),
+        [C, A] = a.useState(!1),
         h = (0, E.q)(s.id),
         O = (0, o.e7)([g.Z], () => g.Z.getParentSKU(i.skuId), [i.skuId]),
         R = a.useMemo(() => (null == O ? [] : (0, x.$)(i.id, O, h.subscriptions)), [i.id, h, O]),
         M = 0 !== R.length,
         L = async () => {
             try {
-                C(!0);
+                A(!0);
                 let { subscription: e } = await (0, c.pl)(d, N);
                 if (null == e) return;
                 (0, l.openModalLazy)(async () => {
@@ -262,7 +262,7 @@ function v(e) {
                         });
                 });
             } finally {
-                C(!1);
+                A(!1);
             }
         };
     return (0, n.jsxs)('div', {
@@ -275,7 +275,7 @@ function v(e) {
                         color: l.Button.Colors.PRIMARY,
                         size: l.Button.Sizes.SMALL,
                         onClick: L,
-                        submitting: A,
+                        submitting: C,
                         children: f.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RESUME_PLAN
                     })
                   : (0, n.jsx)(l.Button, {

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(46973),
     o = n(481060),
     c = n(304680),
@@ -49,7 +49,7 @@ t.Z = function (e) {
             null != t && t(), c.bA();
         }, [e]),
         n = (0, l.useCallback)(() => {
-            let { hostname: t, averagePing: n, lastPing: a, outboundLossRate: s } = e,
+            let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: s } = e,
                 o = d.Sb.getSetting();
             return (0, i.jsxs)(l.Fragment, {
                 children: [
@@ -74,10 +74,10 @@ t.Z = function (e) {
                         className: E.popoutText,
                         children: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_AVERAGE_PING.format({ averagePing: n.toFixed(0) })
                     }),
-                    null != a
+                    null != r
                         ? (0, i.jsx)('div', {
                               className: E.popoutText,
-                              children: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LAST_PING.format({ lastPing: a.toFixed(0) })
+                              children: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LAST_PING.format({ lastPing: r.toFixed(0) })
                           })
                         : null,
                     null != s
@@ -87,7 +87,7 @@ t.Z = function (e) {
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        className: r()(E.popoutText, E.popoutTextDetails),
+                        className: a()(E.popoutText, E.popoutTextDetails),
                         children: [
                             null == s ? I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS.format({ badPing: 250 }) : null,
                             null != s
@@ -101,7 +101,7 @@ t.Z = function (e) {
                 ]
             });
         }, [e]),
-        { connectionState: a, connectionTypeText: s } = e,
+        { connectionState: r, connectionTypeText: s } = e,
         f = d.Sb.getSetting(),
         x = {
             [g.hes.AWAITING_ENDPOINT]: I.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({ url: g.yXt.STATUS }),
@@ -114,13 +114,13 @@ t.Z = function (e) {
             [g.hes.RTC_CONNECTED]: n,
             [g.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({ url: _.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS) }),
             [g.hes.RTC_DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED
-        }[a];
+        }[r];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             'function' == typeof x
                 ? x()
                 : (0, i.jsx)('p', {
-                      className: r()(E.popoutText, E.popoutTextDetails),
+                      className: a()(E.popoutText, E.popoutTextDetails),
                       children: x
                   }),
             (0, i.jsx)('hr', { className: E.separator }),
@@ -128,7 +128,7 @@ t.Z = function (e) {
                 className: E.popoutBottom,
                 children: [
                     (0, i.jsxs)('span', {
-                        className: r()(E.secured, E.textWithIcon),
+                        className: a()(E.secured, E.textWithIcon),
                         children: [
                             (0, i.jsx)(o.LockIcon, {
                                 size: 'xxs',
@@ -144,7 +144,7 @@ t.Z = function (e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(o.Anchor, {
-                                    className: r()(E.debugButton, E.textWithIcon),
+                                    className: a()(E.debugButton, E.textWithIcon),
                                     onClick: t,
                                     children: [
                                         I.Z.Messages.DEBUG,
@@ -156,7 +156,7 @@ t.Z = function (e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(o.Anchor, {
-                                    className: r()(E.copyStatsButton, E.textWithIcon),
+                                    className: a()(E.copyStatsButton, E.textWithIcon),
                                     onClick: N,
                                     title: 'Copy to clipboard',
                                     children: [

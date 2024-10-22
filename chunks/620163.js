@@ -20,8 +20,8 @@ var a = t(990547),
     I = t(163379),
     N = t(703288),
     m = t(574755),
-    A = t(377171),
-    C = t(621628),
+    C = t(377171),
+    A = t(621628),
     g = t(18438),
     h = t(778825),
     O = t(665166),
@@ -74,8 +74,8 @@ var a = t(990547),
     eI = t(327885),
     eN = t(595242),
     em = t(301121),
-    eA = t(463153),
-    eC = t(36192),
+    eC = t(463153),
+    eA = t(36192),
     eg = t(338345),
     eh = t(400287),
     eO = t(554042),
@@ -98,7 +98,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eL.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
-                element: eA.Z,
+                element: eC.Z,
                 predicate: () => ew
             },
             [eL.s6.ACCOUNT_SECURITY_TAB]: {
@@ -564,7 +564,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: ey,
                 newIndicator: (0, n.jsx)(o.TextBadge, {
                     text: ev.Z.Messages.NEW,
-                    color: A.Z.BG_BRAND
+                    color: C.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -584,7 +584,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ev.Z.Messages.AUTH_SESSIONS],
                 label: ev.Z.Messages.AUTH_SESSIONS,
                 ariaLabel: ev.Z.Messages.AUTH_SESSIONS,
-                element: eC.Z,
+                element: eA.Z,
                 newIndicatorDismissibleContentTypes: [i.z.AUTH_SESSIONS_NEW],
                 predicate: () => V.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -1616,7 +1616,7 @@ let eB = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: C.Z,
+                element: A.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [eL.s6.PAYMENT_FLOW_MODALS]: {

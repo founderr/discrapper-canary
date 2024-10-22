@@ -25,7 +25,7 @@ function u() {
                     sexualContent: e
                 }),
             title: _.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE_V2,
-            note: _.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: i.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
+            note: _.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V3.format({ learnMoreLink: i.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
         })
     });
 }

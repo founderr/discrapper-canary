@@ -25,8 +25,8 @@ var i = t(200651),
     E = t(598077),
     T = t(430824),
     h = t(246946),
-    p = t(259580),
-    g = t(531087),
+    g = t(259580),
+    p = t(531087),
     f = t(768581),
     x = t(709054),
     C = t(486199),
@@ -166,7 +166,7 @@ function b(e) {
                     ? (0, i.jsx)(m.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(p.Z, {
+                          children: (0, i.jsx)(g.Z, {
                               className: A.expandIcon,
                               expanded: b && !j,
                               'aria-hidden': !0
@@ -181,7 +181,7 @@ function b(e) {
                               onClick: B,
                               disabled: j,
                               children: j
-                                  ? (0, i.jsx)(g.Z, {
+                                  ? (0, i.jsx)(p.Z, {
                                         width: 24,
                                         height: 24
                                     })
@@ -251,7 +251,7 @@ function b(e) {
                                                     disabled: n.syncing || n.revoked,
                                                     onClick: r,
                                                     children: n.syncing
-                                                        ? (0, i.jsx)(g.Z, {
+                                                        ? (0, i.jsx)(p.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
