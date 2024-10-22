@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return R;
     }
 });
 var r = n(200651),
@@ -12,80 +12,86 @@ var r = n(200651),
     u = n(827498),
     c = n(311819),
     d = n(541716),
-    _ = n(592125),
-    E = n(944486),
-    f = n(626135),
-    h = n(572004),
-    p = n(591759),
-    I = n(135431),
-    m = n(621853),
-    T = n(429974),
-    S = n(475413),
-    g = n(981631),
-    A = n(689938);
-function N(e) {
-    let { user: t, closePopout: n, ...N } = e,
-        R = (0, a.e7)([m.Z], () => {
+    _ = n(433355),
+    E = n(592125),
+    f = n(944486),
+    h = n(626135),
+    p = n(572004),
+    I = n(591759),
+    m = n(135431),
+    T = n(621853),
+    S = n(429974),
+    g = n(475413),
+    A = n(981631),
+    N = n(689938);
+function R(e) {
+    let { user: t, closePopout: n, ...R } = e,
+        O = (0, a.e7)([T.Z], () => {
             var e;
-            return null === (e = m.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = T.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        O = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
-        v = (0, a.e7)([_.Z], () => {
+        v = (0, a.e7)([f.Z], () => f.Z.getChannelId()),
+        C = (0, a.e7)([E.Z], () => {
             var e;
-            return null === (e = _.Z.getChannel(O)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = E.Z.getChannel(v)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        C = (0, o.Z)({ channelId: null != O ? O : void 0 }),
-        L = t.id,
-        D = i.useCallback(() => {
-            null != R &&
-                (C
-                    ? (l.__(u._b.TEXT, d.I.NORMAL, { applicationId: R.id }), (0, s.closeModal)((0, T.z)(L, v)), null == n || n(), f.default.track(g.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id }))
-                    : (0, I.LO)({
-                          applicationId: R.id,
-                          ...R
-                      }));
-        }, [C, R, L, v, n]),
-        y = C ? A.Z.Messages.APP_LAUNCHER_OPEN_APP : A.Z.Messages.APPLICATION_ADD_BUTTON;
-    if (null == R || !(0, I.Eb)(R)) return null;
-    let { customInstallUrl: b } = R,
-        M = null == b || p.Z.isDiscordUrl(b) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
-        P = C ? void 0 : M;
-    return h.wS
+        L = (0, o.Z)({ channelId: null != v ? v : void 0 }),
+        D = t.id,
+        y = i.useCallback(() => {
+            if (null != O) {
+                if (L) {
+                    let e = f.Z.getCurrentlySelectedChannelId(),
+                        t = E.Z.getChannel(e),
+                        r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.I.SIDEBAR : d.I.NORMAL;
+                    l.__(u._b.TEXT, r, { applicationId: O.id }), (0, s.closeModal)((0, S.z)(D, C)), null == n || n(), h.default.track(A.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: O.id });
+                } else
+                    (0, m.LO)({
+                        applicationId: O.id,
+                        ...O
+                    });
+            }
+        }, [L, O, D, C, n]),
+        b = L ? N.Z.Messages.APP_LAUNCHER_OPEN_APP : N.Z.Messages.APPLICATION_ADD_BUTTON;
+    if (null == O || !(0, m.Eb)(O)) return null;
+    let { customInstallUrl: M } = O,
+        P = null == M || I.Z.isDiscordUrl(M) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
+        U = L ? void 0 : P;
+    return p.wS
         ? (0, r.jsx)(s.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(s.Menu, {
                       navId: 'user-bot-profile-add-app',
                       onClose: t,
-                      'aria-label': A.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
+                      'aria-label': N.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
                       onSelect: void 0,
                       children: (0, r.jsx)(s.MenuGroup, {
                           children: (0, r.jsx)(s.MenuItem, {
                               id: 'copy',
-                              label: A.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-                              action: () => (0, h.JG)((0, c.J)(R))
+                              label: N.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
+                              action: () => (0, p.JG)((0, c.J)(O))
                           })
                       })
                   });
               },
               children: (e) => {
                   let { onClick: t, ...n } = e;
-                  return (0, r.jsx)(S.tG, {
+                  return (0, r.jsx)(g.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: y,
-                      icon: P,
+                      text: b,
+                      icon: U,
                       onContextMenu: t,
-                      onClick: D,
+                      onClick: y,
                       ...n,
-                      ...N
+                      ...R
                   });
               }
           })
-        : (0, r.jsx)(S.tG, {
+        : (0, r.jsx)(g.tG, {
               action: 'PRESS_ADD_APP',
-              text: y,
-              icon: P,
-              onClick: D,
-              ...N
+              text: b,
+              icon: U,
+              onClick: y,
+              ...R
           });
 }
