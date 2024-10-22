@@ -34,64 +34,72 @@ function E(e) {
             id: n.id,
             label: f.Z.Messages.COPY_ID_APP
         });
-    return (0, i.jsx)(o.Popout, {
-        renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return (0, i.jsxs)(o.Menu, {
-                className: C.NN,
-                navId: 'app-details-more-menu',
-                onClose: t,
-                'aria-label': f.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                onSelect: void 0,
-                children: [
-                    (0, i.jsxs)(o.MenuGroup, {
-                        children: [
-                            N
-                                ? (0, i.jsx)(o.MenuItem, {
-                                      id: 'add-app',
-                                      label: f.Z.Messages.APPLICATION_ADD_BUTTON,
-                                      action: () => {
-                                          null == E.customInstallUrl && (0, r.yw)(h.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, v),
-                                              (0, m.LO)({
-                                                  ...E,
-                                                  oauth2Callback: (e) => {
-                                                      let { location: n } = e;
-                                                      null != n && (0, r.yw)(h.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, v);
-                                                  },
-                                                  source: 'app_launcher_app_details'
-                                              });
-                                      }
-                                  })
-                                : null,
-                            (0, i.jsx)(o.MenuItem, {
-                                id: 'copy',
-                                label: f.Z.Messages.COPY_LINK,
-                                action: () => {
-                                    (0, u.JG)(
-                                        (0, c.J)({
-                                            id: n.id,
-                                            ...E
-                                        })
-                                    );
-                                }
-                            })
-                        ]
-                    }),
-                    (0, i.jsx)(o.MenuGroup, { children: x })
-                ]
-            });
-        },
-        align: 'right',
-        position: 'bottom',
-        children: (e) =>
+    return (0, i.jsxs)('div', {
+        className: A.container,
+        children: [
             (0, i.jsx)(o.Clickable, {
-                onClick: e.onClick,
+                onClick: () => {
+                    (0, u.JG)(
+                        (0, c.J)({
+                            id: n.id,
+                            ...E
+                        })
+                    ),
+                        (0, o.showToast)((0, o.createToast)(f.Z.Messages.COPIED_LINK, o.ToastType.SUCCESS));
+                },
                 className: l()(A.clickable, t),
-                'aria-label': f.Z.Messages.MORE,
-                children: (0, i.jsx)(o.MoreHorizontalIcon, {
+                'aria-label': f.Z.Messages.COPY_LINK,
+                children: (0, i.jsx)(o.LinkIcon, {
                     size: 'sm',
                     color: o.tokens.colors.INTERACTIVE_ACTIVE
                 })
+            }),
+            (0, i.jsx)(o.Popout, {
+                renderPopout: (e) => {
+                    let { closePopout: n } = e;
+                    return (0, i.jsxs)(o.Menu, {
+                        className: C.NN,
+                        navId: 'app-details-more-menu',
+                        onClose: n,
+                        'aria-label': f.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
+                        onSelect: void 0,
+                        children: [
+                            (0, i.jsx)(o.MenuGroup, {
+                                children: N
+                                    ? (0, i.jsx)(o.MenuItem, {
+                                          id: 'add-app',
+                                          label: f.Z.Messages.APPLICATION_ADD_BUTTON,
+                                          action: () => {
+                                              null == E.customInstallUrl && (0, r.yw)(h.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, v),
+                                                  (0, m.LO)({
+                                                      ...E,
+                                                      oauth2Callback: (e) => {
+                                                          let { location: n } = e;
+                                                          null != n && (0, r.yw)(h.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, v);
+                                                      },
+                                                      source: 'app_launcher_app_details'
+                                                  });
+                                          }
+                                      })
+                                    : null
+                            }),
+                            (0, i.jsx)(o.MenuGroup, { children: x })
+                        ]
+                    });
+                },
+                align: 'right',
+                position: 'bottom',
+                children: (e) =>
+                    (0, i.jsx)(o.Clickable, {
+                        onClick: e.onClick,
+                        className: l()(A.clickable, t),
+                        'aria-label': f.Z.Messages.MORE,
+                        children: (0, i.jsx)(o.MoreHorizontalIcon, {
+                            size: 'sm',
+                            color: o.tokens.colors.INTERACTIVE_ACTIVE
+                        })
+                    })
             })
+        ]
     });
 }
