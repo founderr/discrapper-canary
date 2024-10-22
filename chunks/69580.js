@@ -251,7 +251,14 @@ function ed(e) {
                         guildId: eX === _.Y.GUILD_INSTALL && null != eZ ? eZ : void 0,
                         channelId: eX === _.Y.GUILD_INSTALL && null != ej ? ej : void 0
                     });
-                    if ((e && (N.Z.fetch(), await (0, y.x9)(P, e7)), null != eO))
+                    if (
+                        (e &&
+                            (await (0, y.x9)(P, e7),
+                            setTimeout(() => {
+                                N.Z.fetch();
+                            }, 100)),
+                        null != eO)
+                    )
                         eO({
                             application: null == eM ? void 0 : eM.application,
                             location: t.location,
