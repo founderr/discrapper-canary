@@ -80,7 +80,7 @@ function O(e) {
             );
     })(e, n);
     let a = (0, R.Z)(e),
-        L = (0, p.aK)('use-guild-media-state'),
+        { enabled: L } = (0, p.bA)('use-guild-media-state'),
         O = (0, s.Wu)([d.ZP, v.Z], () => {
             let t = d.ZP.getEmbeddedActivitiesForGuild(e);
             return L ? t.filter((e) => !(0, h.Wu)([...e.userIds], v.Z.getBlockedIDs())) : t;

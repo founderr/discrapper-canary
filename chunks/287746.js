@@ -261,7 +261,7 @@ class eK extends s.PureComponent {
                         if ((e.preventDefault(), t)) ex.Z.getUploadCount(i.id, ef.d.ChannelMessage) > 0 ? eZ.S.dispatchToLastSubscribed(eH.CkL.FOCUS_ATTACHMENT_AREA) : eZ.S.dispatchToLastSubscribed(eH.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                         else {
                             let { channel: e } = this.props,
-                                t = eC.Z.getLastCommandMessage(e.id),
+                                t = eC.Z.getLastChatCommandMessage(e.id),
                                 n = eC.Z.getLastEditableMessage(e.id);
                             null != t && null != n ? (eM.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t)) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n);
                         }

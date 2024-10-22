@@ -116,7 +116,7 @@ function K(e) {
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
                 s = (0, u.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
                 o = (0, u.Wu)([P.Z], () => P.Z.getBlockedIDs()),
-                c = (0, f.aK)('guild-tooltip'),
+                { enabled: c } = (0, f.bA)('guild-tooltip'),
                 _ = l().flatMap(n, (t) => {
                     var n;
                     if (t === e.afkChannelId) return [];
