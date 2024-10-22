@@ -14908,7 +14908,8 @@ span.clanTag_a31c43 {
 }
 
 :where(.button_f9d37d).textBanner_f9d37d {
-    border-radius: var(--radius-xxl)
+    border-radius: var(--radius-xxl);
+    padding: 2px 12px
 }
 
 :where(.button_f9d37d).hover_f9d37d {
