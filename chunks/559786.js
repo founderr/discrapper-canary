@@ -50,10 +50,7 @@ function d(e) {
                     id: u.n.SUCCESS,
                     impressionProperties: f,
                     impressionName: i.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
-                    children: (0, s.jsx)(c.Z, {
-                        transitionTo: t,
-                        email: p
-                    })
+                    children: (0, s.jsx)(c.Z, { email: p })
                 })
             ]
         })

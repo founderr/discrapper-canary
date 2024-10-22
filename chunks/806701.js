@@ -48,24 +48,19 @@ function g(e) {
                     (0, s.jsx)(a.Text, { variant: 'text-sm/normal' }),
                     (0, s.jsxs)('ul', {
                         className: _.listContainer,
-                        children: [(0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_CHANGE_EMAIL }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REMOVE_PHONE }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_CHANGE_PASS }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REMOVE_MFA }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REVOKE_OTHER_URLS })]
+                        children: [(0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_CHANGE_EMAIL }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_CHANGE_PASS }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REMOVE_PHONE }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REMOVE_MFA }), (0, s.jsx)(o.Z, {}), (0, s.jsx)(E, { children: d.Z.Messages.ACCOUNT_REVERT_EXPLAINER_ITEM_REVOKE_OTHER_URLS })]
                     })
                 ]
-            }),
-            (0, s.jsx)(a.Text, {
-                variant: 'text-md/normal',
-                children: d.Z.Messages.ACCOUNT_REVERT_CONFIRM_CERTAIN_TEXT
             }),
             (0, s.jsxs)('div', {
                 className: _.buttonContainer,
                 children: [
                     (0, s.jsx)(l.zx, {
-                        look: l.zx.Looks.OUTLINED,
                         onClick: () => t(c.n.PASSWORD),
                         children: d.Z.Messages.ACCOUNT_REVERT_CONFIRM_PROCEED
                     }),
                     (0, s.jsx)(l.zx, {
-                        color: l.zx.Colors.RED,
+                        color: l.zx.Colors.PRIMARY,
                         onClick: () => r(u.Z5c.LOGIN),
                         children: d.Z.Messages.ACCOUNT_REVERT_JUST_VISITING
                     })

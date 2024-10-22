@@ -96,8 +96,7 @@ function p(e) {
                 (0, s.jsx)('div', {
                     className: E.buttonContainer,
                     children: (0, s.jsx)(o.zx, {
-                        color: o.zx.Colors.RED,
-                        look: o.zx.Looks.OUTLINED,
+                        color: o.zx.Colors.PRIMARY,
                         onClick: () => {
                             x(''), i(d.n.START);
                         },
