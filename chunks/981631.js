@@ -4854,6 +4854,7 @@ let ot = Object.freeze({
     (nO.COLLECTIBLES_SHOP_VIEWED = 'collectibles_shop_viewed'),
     (nO.COLLECTIBLES_SHOP_SCROLLED = 'collectibles_shop_scrolled'),
     (nO.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
+    (nO.COLLECTIBLES_TILE_IMPRESSION = 'collectibles_tile_impression'),
     (nO.SLIDE_CAROUSEL_ITEM_VIEWED = 'slide_carousel_item_viewed'),
     (nO.SLIDE_CAROUSEL_PAGINATION_CLICKED = 'slide_carousel_pagination_clicked'),
     (nO.SHOP_HEADER_CAROUSEL_CTA_CLICKED = 'shop_header_carousel_cta_clicked'),
