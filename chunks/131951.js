@@ -656,6 +656,15 @@ class tA extends (l = I.ZP.Store) {
                             code: e
                         });
                 }),
+                e.on(m.Sh.SdpError, (e, t, n, r) => {
+                    Q.Z === p.R.CANARY &&
+                        W.default.track(eu.rMx.SDP_ERROR, {
+                            operation: e,
+                            error: t,
+                            type: n,
+                            sdp: r
+                        });
+                }),
                 e.on(m.Sh.VideoState, (t) => {
                     g.Z.dispatch({
                         type: 'MEDIA_ENGINE_VIDEO_STATE_CHANGED',

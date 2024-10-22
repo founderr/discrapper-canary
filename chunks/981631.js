@@ -3971,6 +3971,7 @@ let ot = Object.freeze({
     (nO.VOICE_CHANNEL_TOPIC_VIEWED = 'voice_channel_topic_viewed'),
     (nO.VOICE_QUALITY_PERIODIC_STATS = 'voice_quality_periodic_stats'),
     (nO.AUDIO_DEVICE_MODULE_ERROR = 'audio_device_module_error'),
+    (nO.SDP_ERROR = 'sdp_error'),
     (nO.CHANNEL_SIDEBAR_VIEWED = 'channel_sidebar_viewed'),
     (nO.MEMBER_LIST_VIEWED = 'member_list_viewed'),
     (nO.MEMBER_LIST_TOGGLED = 'member_list_toggled'),

@@ -276,7 +276,12 @@ class p extends l.Z {
     async setRemoteAnswer() {
         let e = this.pc,
             t = this.generateSDPAnswer();
-        await e.setRemoteDescription(t), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
+        try {
+            await e.setRemoteDescription(t);
+        } catch (e) {
+            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(t.type, ', sdp: ').concat(t.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', e.message, t.type, t.sdp);
+        }
+        (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
     setConnected() {
         this.input.reset(), this.setConnectionState(d.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
@@ -290,7 +295,11 @@ class p extends l.Z {
         (this.negotiating = !0), (this.negotiationNeeded = !1);
         let t = this.pc,
             n = await t.createOffer(this.makeOfferAnswerOptions());
-        await t.setLocalDescription(n);
+        try {
+            await t.setLocalDescription(n);
+        } catch (e) {
+            this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(n.type, ', sdp: ').concat(n.sdp)), this.emit(o.Sh.SdpError, 'setLocalDescription', e.message, n.type, n.sdp);
+        }
         let r = this.parseLocalDescription();
         null == this.sdp ? this.emit(o.Sh.Connected, 'webrtc', (0, c.sc)(r)) : this.setRemoteAnswer();
     }
