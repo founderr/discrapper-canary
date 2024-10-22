@@ -1,46 +1,72 @@
-t.r(s),
-    t.d(s, {
+n.r(s),
+    n.d(s, {
         default: function () {
-            return l;
+            return u;
         }
     }),
-    t(47120);
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    o = t(594174),
-    r = t(33194),
-    i = t(807031),
-    c = t(343544),
-    d = t(689938);
-function l(e) {
-    let { channelId: s, blockedUserIds: t, transitionState: l, onClose: _, onJoin: u } = e;
-    if (!(0, i.w)({ location: 'warning_modal' })) return null;
-    let N = t.size > 1,
-        E = [
+    n(47120);
+var t = n(200651);
+n(192379);
+var a = n(990547),
+    r = n(481060),
+    o = n(594174),
+    i = n(626135),
+    _ = n(33194),
+    c = n(807031),
+    N = n(343544),
+    d = n(110223),
+    E = n(981631),
+    l = n(689938);
+function u(e) {
+    let { channelId: s, blockedUserIds: n, transitionState: u, onClose: C, onJoin: I } = e;
+    if (!(0, c.w)({ location: 'warning_modal' })) return null;
+    let m = n.size > 1,
+        x = [
             {
-                icon: N ? (0, n.jsx)(a.GroupIcon, {}) : (0, n.jsx)(a.UserIcon, {}),
-                text: N ? d.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: t.size }) : d.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: o.default.getUser([...t][0]) })
+                icon: m ? (0, t.jsx)(r.GroupIcon, {}) : (0, t.jsx)(r.UserIcon, {}),
+                text: m ? l.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: n.size }) : l.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: o.default.getUser([...n][0]) })
             },
             {
-                icon: (0, n.jsx)(a.MicrophoneIcon, {}),
-                text: d.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WILL_BEAUDIBLE
+                icon: (0, t.jsx)(r.MicrophoneIcon, {}),
+                text: l.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WILL_BEAUDIBLE
             }
         ];
-    return (0, n.jsx)(c.Z, {
-        headerText: d.Z.Messages.VOICE_PANEL_BLOCKED_PEOPLE_WARNING.format({ n: t.size }),
-        secondaryHeaderText: d.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_JOIN_MODAL,
-        descriptionText: d.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DESCRIPTION,
-        infoRows: E,
+    return (0, t.jsx)(N.Z, {
+        headerText: l.Z.Messages.VOICE_PANEL_BLOCKED_PEOPLE_WARNING.format({ n: n.size }),
+        secondaryHeaderText: l.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_JOIN_MODAL,
+        descriptionText: l.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DESCRIPTION,
+        infoRows: x,
         onDismissAndStay: () => {
-            u(), _(), (0, r.g6)(s);
+            I(),
+                C(),
+                (0, _.g6)(s),
+                i.default.track(E.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: d.q.CLICK_TO_JOIN,
+                    channel_id: s,
+                    blocked_user_ids: Array.from(n),
+                    warning_surface: d.fz.PRE_JOIN_MODAL
+                });
         },
         onDismissAndLeave: () => {
-            _();
+            C(),
+                i.default.track(E.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: d.q.CLICK_TO_LEAVE,
+                    channel_id: s,
+                    blocked_user_ids: Array.from(n),
+                    warning_surface: d.fz.PRE_JOIN_MODAL
+                });
         },
-        leaveButtonText: d.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DONT_JOIN,
-        stayButtonText: d.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_JOIN_ANYWAY,
-        transitionState: l,
-        onClose: _
+        leaveButtonText: l.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DONT_JOIN,
+        stayButtonText: l.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_JOIN_ANYWAY,
+        transitionState: u,
+        onClose: C,
+        impression: {
+            impressionName: a.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionProperties: {
+                channel_id: s,
+                blocked_user_ids: Array.from(n),
+                warning_surface: d.fz.PRE_JOIN_MODAL
+            }
+        }
     });
 }

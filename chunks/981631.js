@@ -4963,6 +4963,7 @@ let ot = Object.freeze({
     (nO.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH = 'game_detection_debugging_keyword_match'),
     (nO.GDM_BLOCKED_USER_WARNING_ENGAGEMENT = 'gdm_blocked_user_warning_engagement'),
     (nO.GDM_BLOCKED_USER_WARNING_VIEWED = 'gdm_blocked_user_warning_viewed'),
+    (nO.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT = 'voice_channel_blocked_user_warning_engagement'),
     (nO.CREATE_DM_USER_LIST_CLICKED = 'create_dm_user_list_clicked'),
     (nO.SEARCH_USER_LIST_STARTED = 'search_user_list_started'),
     (nO.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED = 'user_account_email_change_attempted'),
