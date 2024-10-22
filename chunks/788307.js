@@ -1,9 +1,9 @@
 n.d(t, {
     DD: function () {
-        return L;
+        return y;
     },
     Iv: function () {
-        return C;
+        return D;
     }
 }),
     n(47120);
@@ -26,17 +26,19 @@ var r = n(200651),
     T = n(314897),
     S = n(592125),
     g = n(496675),
-    A = n(979651),
-    N = n(6074),
-    R = n(981631),
-    O = n(23952);
-let v = '14px';
-function C(e) {
+    A = n(699516),
+    N = n(979651),
+    R = n(6074),
+    O = n(626135),
+    v = n(981631),
+    C = n(23952);
+let L = '14px';
+function D(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
         c = m.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : f.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
-            className: s()(O.emoji, n),
+            className: s()(C.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -54,7 +56,7 @@ function C(e) {
                   })
           });
 }
-let L = (e) => {
+let y = (e) => {
     let { className: t, text: n } = e,
         a = i.useRef(null),
         o = i.useRef(null),
@@ -79,7 +81,7 @@ let L = (e) => {
                             children: n
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(O.textRuler, t),
+                            className: s()(C.textRuler, t),
                             ref: o,
                             'aria-hidden': !0,
                             children: n
@@ -90,67 +92,81 @@ let L = (e) => {
     );
 };
 t.ZP = (e) => {
-    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: D, hasQuest: y } = e,
-        b = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
-        M = (0, o.e7)([T.default], () => T.default.getId() === (null == D ? void 0 : D.id)),
-        P = (0, o.e7)([p.Z], () => (M ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
-        U = (0, o.e7)([A.Z, S.Z], () => {
+    let { activities: t, applicationStream: n, className: a, textClassName: s, emojiClassName: u, animate: f = !0, hideTooltip: m = !1, hideEmoji: b = !1, user: M, hasQuest: P } = e,
+        U = null != t ? t.find((e) => e.type === v.IIU.CUSTOM_STATUS) : null,
+        w = (0, o.e7)([T.default], () => T.default.getId() === (null == M ? void 0 : M.id)),
+        x = (0, o.e7)([p.Z], () => (w ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === v.IIU.HANG_STATUS) : null)),
+        G = (0, o.e7)([N.Z, S.Z], () => {
             var e;
-            return null != P && null != D ? S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(D.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != x && null != M ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        { enableHangStatus: w } = h.n.useExperiment(
+        { enableHangStatus: k } = h.n.useExperiment(
             {
-                guildId: null == U ? void 0 : U.guild_id,
+                guildId: null == G ? void 0 : G.guild_id,
                 location: 'ActivityStatus'
             },
             { autoTrackExposure: !1 }
         ),
-        x = (0, E.Sl)(R.Ilk.BRAND_345),
-        G = null,
-        k = w && null != P && g.Z.can(R.Plq.CONNECT, U);
-    k
-        ? (G = (0, r.jsx)(I.Z, {
-              className: s,
-              hangStatusActivity: P
+        B = (0, E.Sl)(v.Ilk.BRAND_345),
+        F = null,
+        V = k && null != x && g.Z.can(v.Plq.CONNECT, G);
+    V
+        ? (F = (0, r.jsx)(I.Z, {
+              className: u,
+              hangStatusActivity: x
           }))
-        : null != b &&
-          null != b.emoji &&
-          !m &&
-          (G = (0, r.jsx)(C, {
-              emoji: b.emoji,
-              animate: u,
-              hideTooltip: f,
-              className: s
+        : null != U &&
+          null != U.emoji &&
+          !b &&
+          (F = (0, r.jsx)(D, {
+              emoji: U.emoji,
+              animate: f,
+              hideTooltip: m,
+              className: u
           }));
-    let B = (0, _.aK)('activity-status-web'),
-        F = (0, d.Z)(t, n, void 0, k, B),
-        V = null == F ? void 0 : F.activityText,
-        H = null != V && '' !== V;
-    return null != G || H
-        ? (0, r.jsxs)('div', {
-              className: i,
+    let { blockeeExperimentEnabled: H, blockerExperimentEnabled: Z, analyticsEligible: Y } = (0, _.NR)('activity-status-web'),
+        j = (0, o.e7)([A.Z], () => (null != M ? A.Z.getRelationshipType(M.id) : v.OGo.NONE)),
+        W = (0, d.Z)(t, n, void 0, V, H),
+        K = (0, d.Z)(t, n, void 0, V, !1);
+    i.useEffect(() => {
+        if (null != K && null == K.activity && null != n && Y) {
+            var e;
+            O.default.track(v.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+                activity_user_id: null == M ? void 0 : M.id,
+                discoverable: null === (e = n.discoverable) || void 0 === e || e,
+                surface: 'activity-status-web',
+                relationship_type: j,
+                treatment: (H && !1 === n.discoverable) || (Z && j === v.OGo.BLOCKED) ? _.h9.HIDE : _.h9.SHOW
+            });
+        }
+    }, [H, Z, Y, M, n, K, j]);
+    let z = null == W ? void 0 : W.activityText,
+        q = null != z && '' !== z;
+    return (Z && j === v.OGo.BLOCKED) || (null == F && !q)
+        ? null
+        : (0, r.jsxs)('div', {
+              className: a,
               children: [
-                  G,
-                  (0, r.jsx)(L, {
-                      text: V,
-                      className: a
+                  F,
+                  (0, r.jsx)(y, {
+                      text: z,
+                      className: s
                   }),
-                  y &&
+                  P &&
                       (0, r.jsx)(l.QuestsIcon, {
                           size: 'custom',
-                          className: O.questsIcon,
-                          height: v,
-                          width: v,
-                          color: x.hex
+                          className: C.questsIcon,
+                          height: L,
+                          width: L,
+                          color: B.hex
                       }),
-                  null != t && t.some((e) => (0, c.Z)(e, k))
-                      ? (0, r.jsx)(N.Z, {
+                  null != t && t.some((e) => (0, c.Z)(e, V))
+                      ? (0, r.jsx)(R.Z, {
                             width: 16,
                             height: 16,
-                            className: O.icon
+                            className: C.icon
                         })
                       : null
               ]
-          })
-        : null;
+          });
 };

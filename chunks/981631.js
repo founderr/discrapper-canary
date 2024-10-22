@@ -4986,6 +4986,8 @@ let ot = Object.freeze({
     (nO.APP_DMS_QUICK_LAUNCHER_IMPRESSION = 'app_dms_quick_launcher_impression'),
     (nO.APP_DMS_QUICK_LAUNCHER_CLICKED = 'app_dms_quick_launcher_clicked'),
     (nO.MY_ACCOUNT_PAGE_TAB_NAVIGATE = 'my_account_page_tab_navigate'),
+    (nO.USER_VOICE_ACTIVITY_VIEWED = 'user_voice_activity_viewed'),
+    (nO.PARTY_VOICE_ACTIVITY_VIEWED = 'party_voice_activity_viewed'),
     ((np = eF || (eF = {})).CANARY = 'canary'),
     (np.PTB = 'ptb'),
     (np.STABLE = 'stable'),

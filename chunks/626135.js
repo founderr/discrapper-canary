@@ -233,6 +233,16 @@ let A = {
     [f.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.channel_id]
+    },
+    [f.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.activity_user_id, e.surface],
+        deduplicate: !0
+    },
+    [f.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.voice_channel_id],
+        deduplicate: !0
     }
 };
 function N(e) {
