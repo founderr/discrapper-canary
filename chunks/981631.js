@@ -8,9 +8,6 @@ r.d(t, {
     $Ab: function () {
         return f;
     },
-    $Dd: function () {
-        return aV.$D;
-    },
     $R1: function () {
         return aV.$R;
     },
@@ -1591,7 +1588,6 @@ var ab = r(106351),
     (rl.UU_MIGRATION = 'UU_MIGRATION'),
     (rl.QUESTS_PROGRESS_INTERRUPTION = 'QUESTS_PROGRESS_INTERRUPTION'),
     (rl.CHECKOUT_RECOVERY_NAGBAR = 'CHECKOUT_RECOVERY_NAGBAR'),
-    (rl.CASH_APP_PAY_AWARENESS_NAGBAR = 'CASH_APP_PAY_AWARENESS_NAGBAR'),
     ((ru = S || (S = {})).RESOLVING = 'RESOLVING'),
     (ru.RESOLVED = 'RESOLVED'),
     (ru.EXPIRED = 'EXPIRED'),
@@ -2937,8 +2933,6 @@ let _S = 128,
     (rQ.CLAN_ADOPT_IDENTITY_MODAL = 'clan adopt identity modal'),
     (rQ.CLAN_SETUP_MODAL = 'clan setup modal'),
     (rQ.CHECKOUT_RECOVERY_NAGBAR = 'Checkout Recovery Nagbar'),
-    (rQ.CASH_APP_PAY_AWARENESS_NAGBAR = 'Cash App Pay Awareness Nagbar'),
-    (rQ.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL = 'Cash App Pay Awareness Non Nitro Flow Upsell'),
     (rQ.E2EE_USER_VERIFY_MODAL = 'E2EE User Verify Modal'),
     (rQ.REPEAT_GIFT_PURCHASE_BUTTON = 'Repeat Gift Purchase Button'),
     (rQ.PROFILE_MODAL_TABS = 'Profile Modal Tabs'),

@@ -337,8 +337,6 @@ var n, r;
     (r.GLOBAL_DISCOVERY = 'global discovery'),
     (r.COLLECTIBLES_LIGHTNING_CHECKOUT = 'collectibles lightning checkout'),
     (r.CHECKOUT_RECOVERY_NAGBAR = 'checkout recovery nagbar'),
-    (r.CASH_APP_PAY_AWARENESS_NAGBAR = 'cash_app_pay_awareness_nagbar'),
-    (r.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL = 'cash_app_pay_awareness_non_nitro_flow_upsell'),
     (r.DEV_TOOLS = 'devtools'),
     (r.IN_CASE_YOU_MISSED_IT_TAB = 'ICYMI Tab'),
     (r.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),

@@ -1,7 +1,4 @@
 r.d(t, {
-    $D: function () {
-        return E;
-    },
     $R: function () {
         return eI;
     },
