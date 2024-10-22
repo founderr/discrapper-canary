@@ -1,10 +1,10 @@
 n.d(t, {
     q: function () {
-        return r;
+        return a;
     }
 });
 var i = n(442837),
     l = n(355298);
-function r() {
+function a() {
     return (0, i.e7)([l.Z], () => l.Z.getMessageRequestsCount());
 }

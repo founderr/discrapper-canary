@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return S;
     }
 }),
     t(47120);
@@ -58,12 +58,12 @@ function h(e) {
                       onClose: r
                   });
 }
-function v(e) {
+function S(e) {
     var n, t, d;
-    let { user: u, currentUser: _, displayProfile: I, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: v, onClose: S } = e,
+    let { user: u, currentUser: _, displayProfile: I, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: S, onClose: v } = e,
         { trackUserProfileAction: T } = (0, a.KZ)(),
         g = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: A, subsection: N }, j] = s.useState({
+        [{ section: N, subsection: A }, b] = s.useState({
             section:
                 null !==
                     (d =
@@ -78,27 +78,27 @@ function v(e) {
                     : null === (t = E[0]) || void 0 === t
                       ? void 0
                       : t.section,
-            subsection: v
+            subsection: S
         });
     s.useEffect(() => {
-        if (null == E.find((e) => e.section === A))
-            j({
+        if (null == E.find((e) => e.section === N))
+            b({
                 section: E[0].section,
                 subsection: void 0
             });
-    }, [E, A]);
-    let b = s.useCallback(
+    }, [E, N]);
+    let j = s.useCallback(
         (e) => {
             T({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                j({
+                b({
                     section: e,
                     subsection: void 0
                 });
         },
-        [T, j]
+        [T, b]
     );
     return g
         ? (0, i.jsx)('div', {
@@ -120,8 +120,8 @@ function v(e) {
                   (0, i.jsx)(l.n, {
                       className: Z.tabBar,
                       type: 'top',
-                      selectedItem: A,
-                      onItemSelect: b,
+                      selectedItem: N,
+                      onItemSelect: j,
                       children: E.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, i.jsx)(
@@ -141,12 +141,12 @@ function v(e) {
                   }),
                   (0, i.jsx)(h, {
                       items: E,
-                      section: A,
-                      subsection: N,
+                      section: N,
+                      subsection: A,
                       user: u,
                       currentUser: _,
                       displayProfile: I,
-                      onClose: S
+                      onClose: v
                   })
               ]
           });

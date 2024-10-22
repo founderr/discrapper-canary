@@ -1,18 +1,18 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(570140),
-    a = n(317770),
+    a = n(570140),
+    r = n(317770),
     s = n(51596),
     o = n(823385),
     c = n(900085);
 let u = 'QUICK_SWITCHER_MODAL_KEY';
-class d extends a.Z {
+class d extends r.Z {
     _initialize() {
-        r.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), r.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
+        a.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), a.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
     _terminate() {
-        r.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), r.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide);
+        a.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), a.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
     handleShow() {
         o.Z.isOpen() &&

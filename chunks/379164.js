@@ -1,6 +1,6 @@
 var i = n(570140),
     l = n(447543),
-    r = n(782605);
+    a = n(782605);
 t.Z = {
     acceptInvite(e) {
         let t = l.Z.getInviteContext('Desktop Invite Modal', e);
@@ -15,7 +15,7 @@ t.Z = {
             (e) => {
                 i.Z.dispatch({
                     type: 'INVITE_MODAL_ERROR',
-                    message: (0, r.O)(e.code)
+                    message: (0, a.O)(e.code)
                 });
             }
         );

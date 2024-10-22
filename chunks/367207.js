@@ -2,8 +2,8 @@ n(411104), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(392711),
-    r = n(848246),
-    a = n(481060),
+    a = n(848246),
+    r = n(481060),
     s = n(570140),
     o = n(904245),
     c = n(317770),
@@ -67,7 +67,7 @@ class q extends c.Z {
     }
     handleMessageLengthUpsell(e) {
         let { channel: t, content: l } = e;
-        (0, a.openModalLazy)(async () => {
+        (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('33184').then(n.bind(n, 465836));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -98,9 +98,9 @@ class q extends c.Z {
     openPremiumPaymentModalInOverlay(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: i, analyticsObject: l } = null != e ? e : {};
-        return new Promise((e, r) => {
+        return new Promise((e, a) => {
             (this._premiumPaymentModalCloseResolve = e),
-                (this._premiumPaymentModalCloseReject = r),
+                (this._premiumPaymentModalCloseReject = a),
                 s.Z.dispatch({
                     type: 'PREMIUM_PAYMENT_MODAL_OPEN',
                     initialPlanId: t,
@@ -115,18 +115,18 @@ class q extends c.Z {
         if (!t || e.state !== F.hes.DISCONNECTED || e.willReconnect) return;
         let n = _.Z.getChannel(e.channelId);
         if (null == n) return;
-        let i = R.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
+        let i = R.Z.hasActiveDemo(a.q.STREAM_HIGH_QUALITY);
         if (
             (i &&
                 s.Z.dispatch({
                     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
-                    perkType: r.q.STREAM_HIGH_QUALITY
+                    perkType: a.q.STREAM_HIGH_QUALITY
                 }),
             !i)
         )
             return;
-        let { resolution: l, fps: a } = f.Z.getState();
-        !(0, L.mc)(l, a) && (0, w.Z)(n.guild_id);
+        let { resolution: l, fps: r } = f.Z.getState();
+        !(0, L.mc)(l, r) && (0, w.Z)(n.guild_id);
     }
     constructor(...e) {
         super(...e),
@@ -183,16 +183,16 @@ class q extends c.Z {
                 '_maybeSendViewerUpsellMessage',
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
-                    let r = d.Z.getSelectedParticipant(e),
-                        a = (0, M.o)(r, n),
-                        { sendNitroMessage: s } = (0, b.TD)(a),
+                    let a = d.Z.getSelectedParticipant(e),
+                        r = (0, M.o)(a, n),
+                        { sendNitroMessage: s } = (0, b.TD)(r),
                         c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
-                    if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == a ? void 0 : a.type) !== W.fO.STREAM || (null == a ? void 0 : a.id) === (null == n ? void 0 : n.id) || null == a.maxResolution || null == a.maxFrameRate) return;
                     T.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
-                        nickname: r.userNick,
-                        resolution: (0, z.o6)(r.maxResolution.height),
-                        fps: (0, N.bp)(r.maxFrameRate)
+                        nickname: a.userNick,
+                        resolution: (0, z.o6)(a.maxResolution.height),
+                        fps: (0, N.bp)(a.maxFrameRate)
                     });
                     o.Z.sendNitroSystemMessage(e, u),
                         I.default.track(F.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {

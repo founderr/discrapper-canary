@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(299379),
+    a = n(481060),
+    r = n(299379),
     s = n(486472),
     o = n(430824),
     c = n(682662),
@@ -22,9 +22,9 @@ function f() {
         : (0, i.jsx)(c.H, {
               children: (0, i.jsx)(u.Z, {
                   text: h.Z.Messages.PARTIAL_OUTAGE.format({ count: e }),
-                  color: r.Tooltip.Colors.RED,
-                  children: (0, i.jsx)(r.Anchor, {
-                      href: (0, a.Z)(d.RK.TWITTER),
+                  color: a.Tooltip.Colors.RED,
+                  children: (0, i.jsx)(a.Anchor, {
+                      href: (0, r.Z)(d.RK.TWITTER),
                       target: '_blank',
                       className: p.guildsError,
                       'aria-label': h.Z.Messages.PARTIAL_OUTAGE_A11Y.format({ count: e }),

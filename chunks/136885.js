@@ -1,12 +1,12 @@
 n.d(t, {
     NR: function () {
-        return r;
+        return a;
     },
     Ob: function () {
         return o;
     },
     ZI: function () {
-        return a;
+        return r;
     },
     m1: function () {
         return c;
@@ -17,7 +17,7 @@ n.d(t, {
 });
 var i = n(987170),
     l = n(987338);
-let r = (0, i.Z)({
+let a = (0, i.Z)({
         kind: 'user',
         id: '2024-08_ctp_dmgdm_list_render__vanilla_',
         label: 'CTP DM/GDM List Render - A/A test - Vanilla',
@@ -31,7 +31,7 @@ let r = (0, i.Z)({
             }
         ]
     }),
-    a = (0, i.Z)({
+    r = (0, i.Z)({
         kind: 'user',
         id: '2024-08_ctp_dmgdm_list_render__filters',
         label: 'CTP DM/GDM List Render - A/A test - Filters',

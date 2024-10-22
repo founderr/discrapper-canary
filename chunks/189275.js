@@ -29,7 +29,7 @@ function l(e) {
                 a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: s.q.DISMISS,
                     channel_id: t,
-                    warning_medium: s.X.MODAL,
+                    warning_medium: s.WR.MODAL,
                     blocked_user_ids: l
                 });
             }
@@ -37,7 +37,7 @@ function l(e) {
     ),
         a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
             channel_id: t,
-            warning_medium: s.X.MODAL,
+            warning_medium: s.WR.MODAL,
             blocked_user_ids: l
         });
 }

@@ -6,17 +6,17 @@ n.d(t, {
     n(733860);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(215569),
+    a = n(442837),
+    r = n(215569),
     s = n(592125),
     o = n(358652),
     c = n(19780),
     u = n(919436);
 function d() {
-    (0, r.e7)([s.Z], () => s.Z.getPrivateChannelsVersion());
+    (0, a.e7)([s.Z], () => s.Z.getPrivateChannelsVersion());
     let e = s.Z.getMutablePrivateChannels(),
-        t = (0, r.Wu)([o.Z], () => o.Z.getUnreadPrivateChannelIds()),
-        { selectedVoiceGuildId: n, selectedVoiceChannelId: d } = (0, r.cj)([c.Z], () => ({
+        t = (0, a.Wu)([o.Z], () => o.Z.getUnreadPrivateChannelIds()),
+        { selectedVoiceGuildId: n, selectedVoiceChannelId: d } = (0, a.cj)([c.Z], () => ({
             selectedVoiceGuildId: c.Z.getGuildId(),
             selectedVoiceChannelId: c.Z.getChannelId()
         })),
@@ -27,7 +27,7 @@ function d() {
         p = null == n && null != d ? e[d] : null;
     return (
         null != p && h.unshift((0, i.jsx)(u.Z, { channel: p }, p.id)),
-        (0, i.jsx)(a.W, {
+        (0, i.jsx)(r.W, {
             component: l.Fragment,
             children: h
         })

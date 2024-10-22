@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(91192),
-    a = n(442837),
+    a = n(91192),
+    r = n(442837),
     s = n(481060),
     o = n(44315),
     c = n(563534),
@@ -30,8 +30,8 @@ function g(e, t) {
 }
 let C = l.memo(function (e) {
     let { guild: t } = e,
-        n = (0, a.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
-        C = (0, a.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
+        n = (0, r.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
+        C = (0, r.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
         I = l.useMemo(() => {
             if (null == n || null == C) return 0;
             let e = 0;
@@ -43,7 +43,7 @@ let C = l.memo(function (e) {
             );
         }, [C, n]),
         E = null == n ? 0 : n.length,
-        N = (0, r.JA)('progress-bar-'.concat(t.id));
+        N = (0, a.JA)('progress-bar-'.concat(t.id));
     return (0, i.jsxs)('li', {
         children: [
             (0, i.jsxs)(s.Clickable, {

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(970606),
     o = n(693546),
     c = n(826581),
@@ -21,8 +21,8 @@ var i = n(200651),
     C = n(689938);
 function I(e) {
     let { guild: t, selected: n } = e,
-        I = (0, r.e7)([p.Z], () => p.Z.can(m.Plq.KICK_MEMBERS, t)),
-        E = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        I = (0, a.e7)([p.Z], () => p.Z.can(m.Plq.KICK_MEMBERS, t)),
+        E = (0, a.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         N = I && null != E ? E : 0;
     return (
         l.useEffect(() => {
@@ -51,7 +51,7 @@ function I(e) {
                 }),
                     (0, h.uL)(m.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS));
             },
-            trailing: N > 0 ? (0, i.jsx)(a.NumberBadge, { count: N }) : null
+            trailing: N > 0 ? (0, i.jsx)(r.NumberBadge, { count: N }) : null
         })
     );
 }

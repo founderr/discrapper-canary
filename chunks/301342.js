@@ -14,8 +14,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(91192),
     o = n(442837),
     c = n(481060),
@@ -38,35 +38,35 @@ function v(e) {
 }
 let Z = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: b, children: A } = e,
-        M = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        R = (0, o.e7)([_.Z], () => _.Z.isCollapsed(r.id)),
-        L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
+        { channel: a, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: b, children: A } = e,
+        M = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(a.getGuildId(), a.id)),
+        R = (0, o.e7)([_.Z], () => _.Z.isCollapsed(a.id)),
+        L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, a));
     t = null != T ? (Z > T ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let y = l.useCallback(() => {
-            R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
-        }, [r.id, R]),
+            R ? (0, u.mJ)(a.id) : (0, u.c4)(a.id);
+        }, [a.id, R]),
         P = l.useCallback(
             (e) => {
-                if ('null' !== r.id) {
-                    let t = m.Z.getGuild(r.getGuildId());
+                if ('null' !== a.id) {
+                    let t = m.Z.getGuild(a.getGuildId());
                     null != t &&
                         (0, d.jW)(e, async () => {
                             let { default: e } = await n.e('8965').then(n.bind(n, 139035));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
-                                    channel: r,
+                                    channel: a,
                                     guild: t
                                 });
                         });
                 }
             },
-            [r]
+            [a]
         ),
         O = l.useCallback(() => {
-            let e = r.type === N.d4z.GUILD_CATEGORY ? null : r.type,
-                t = r.getGuildId();
+            let e = a.type === N.d4z.GUILD_CATEGORY ? null : a.type,
+                t = a.getGuildId();
             null != t &&
                 (0, c.openModalLazy)(async () => {
                     let { default: l } = await Promise.all([n.e('45094'), n.e('5324')]).then(n.bind(n, 218613));
@@ -75,16 +75,16 @@ let Z = l.memo(function (e) {
                             ...n,
                             channelType: e,
                             guildId: t,
-                            categoryId: 'null' !== r.id ? r.id : null
+                            categoryId: 'null' !== a.id ? a.id : null
                         });
                 });
-        }, [r]),
-        { role: j, tabIndex: D, ...w } = (0, s.JA)(r.id),
+        }, [a]),
+        { role: j, tabIndex: D, ...w } = (0, s.JA)(a.id),
         U = l.useRef(null),
         G = l.useRef(null),
         k = (0, i.jsxs)('li', {
             className: t,
-            'data-dnd-name': r.name,
+            'data-dnd-name': a.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
                     focusTarget: U,
@@ -95,7 +95,7 @@ let Z = l.memo(function (e) {
                     },
                     children: (0, i.jsxs)('div', {
                         ref: G,
-                        className: a()(S.iconVisibility, S.wrapper, {
+                        className: r()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: R,
                             [S.muted]: M,
                             [S.clickable]: !0
@@ -108,7 +108,7 @@ let Z = l.memo(function (e) {
                                 tabIndex: D,
                                 ...w,
                                 onClick: y,
-                                'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
+                                'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: a.name }),
                                 'aria-expanded': !R,
                                 focusProps: { enabled: !1 },
                                 children: [
@@ -121,7 +121,7 @@ let Z = l.memo(function (e) {
                                           }),
                                     (0, i.jsx)(p.Z, {
                                         className: S.name,
-                                        children: (0, i.jsx)(f.Z, { children: r.name })
+                                        children: (0, i.jsx)(f.Z, { children: a.name })
                                     })
                                 ]
                             }),
@@ -138,7 +138,7 @@ let Z = l.memo(function (e) {
                                                       'aria-label': x.Z.Messages.CREATE_CHANNEL,
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
-                                                      className: a()(S.addButton, S.forceVisible),
+                                                      className: r()(S.addButton, S.forceVisible),
                                                       onClick: O,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
@@ -173,9 +173,9 @@ t.ZP = (0, h.B)(Z);
 let T = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
-            className: a()(l, S.containerDefault),
+            className: r()(l, S.containerDefault),
             children: (0, i.jsxs)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: r()(S.iconVisibility, S.wrapperStatic),
                 children: [
                     (0, i.jsx)('div', {
                         className: S.mainContent,
@@ -206,13 +206,13 @@ let T = l.memo(function (e) {
     b = l.memo(function (e) {
         let { category: t } = e,
             n = (0, o.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id)),
-            r = l.useCallback(() => {
+            a = l.useCallback(() => {
                 n ? (0, E.s)(t.guild.id) : (0, E.M)(t.guild.id);
             }, [t.guild.id, n]);
         return n
             ? (0, i.jsxs)(c.Clickable, {
                   className: S.voiceChannelsButton,
-                  onClick: r,
+                  onClick: a,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
@@ -227,7 +227,7 @@ let T = l.memo(function (e) {
               })
             : (0, i.jsxs)(c.Clickable, {
                   className: S.voiceChannelsButton,
-                  onClick: r,
+                  onClick: a,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
@@ -247,9 +247,9 @@ let T = l.memo(function (e) {
         return l || null == n || n.record.type === N.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
-                      className: a()(S.containerDefault),
+                      className: r()(S.containerDefault),
                       children: (0, i.jsx)('div', {
-                          className: a()(S.iconVisibility, S.wrapperStatic),
+                          className: r()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
                               className: S.name,
                               children: (0, i.jsx)(f.Z, { children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER })
@@ -262,9 +262,9 @@ let T = l.memo(function (e) {
     M = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
-            className: a()(S.containerDefault),
+            className: r()(S.containerDefault),
             children: (0, i.jsx)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: r()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
                     className: S.name,
                     children: (0, i.jsx)(f.Z, { children: t.name })

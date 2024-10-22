@@ -1,9 +1,9 @@
 n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(748780),
     c = n(846519),
     u = n(481060),
@@ -28,7 +28,7 @@ let m = {
     friction: 15,
     tension: 100
 };
-class g extends (i = r.PureComponent) {
+class g extends (i = a.PureComponent) {
     componentDidMount() {
         this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
@@ -129,7 +129,7 @@ class g extends (i = r.PureComponent) {
                 shown: !1,
                 translateY: new o.Z.Value(0)
             }),
-            _(this, 'rootRef', r.createRef()),
+            _(this, 'rootRef', a.createRef()),
             _(this, 'focusTimeout', new c.V7()),
             _(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;

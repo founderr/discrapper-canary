@@ -1,8 +1,8 @@
 n(411104), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(493683),
     c = n(239091),
@@ -37,9 +37,9 @@ function x(e, t) {
 }
 class S extends m.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: s } = this.props,
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: a, canReorderChannel: s } = this.props,
             o = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [E.disabled]: this.isDisabled() }),
+                className: r()(this.getClassName(), { [E.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(g.Z, {
                     className: E.iconVisibility,
@@ -48,7 +48,7 @@ class S extends m.ZP {
                     onClick: this.handleClick,
                     onMouseDown: x,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: s ? r : null,
+                    connectDragPreview: s ? a : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
                     resolvedUnreadSetting: I.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
@@ -92,7 +92,7 @@ class S extends m.ZP {
 let v = (0, u.B)(S);
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, disableSorting: l } = e,
-        r = (0, s.cj)([p.Z, _.Z], () => {
+        a = (0, s.cj)([p.Z, _.Z], () => {
             let e = p.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: _.Z.can(C.Plq.MANAGE_CHANNELS, t),
@@ -100,7 +100,7 @@ t.Z = l.memo(function (e) {
             };
         });
     return (0, i.jsx)(v, {
-        ...r,
+        ...a,
         ...e
     });
 });

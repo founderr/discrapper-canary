@@ -1,8 +1,8 @@
 n(47120), n(653041), n(724458), n(627341);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(392711),
     o = n.n(s),
     c = n(278074),
@@ -89,8 +89,8 @@ function ei(e) {
 function el(e) {
     return w.Z.isFriend(e.id);
 }
-function er(e, t, n) {
-    var i, l, r, a, s, c;
+function ea(e, t, n) {
+    var i, l, a, r, s, c;
     let u;
     let d = U.default.getCurrentUser(),
         _ = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
@@ -131,7 +131,7 @@ function er(e, t, n) {
                     activity: s,
                     userId: e.id,
                     application: u,
-                    channelId: null === (r = G.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+                    channelId: null === (a = G.Z.getVoiceStateForUser(e.id)) || void 0 === a ? void 0 : a.channelId,
                     currentUser: d,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: R.Z,
@@ -148,7 +148,7 @@ function er(e, t, n) {
         let D = [];
         (D =
             null != s && null != s.party && null != s.party.id
-                ? Array.from(null !== (a = y.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
+                ? Array.from(null !== (r = y.Z.getParty(s.party.id)) && void 0 !== r ? r : []).reduce((e, t) => {
                       let n = U.default.getUser(t);
                       return null != n && e.push(n), e;
                   }, [])
@@ -175,11 +175,11 @@ function er(e, t, n) {
         let n = ei(e.id),
             i = R.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
-            r = O.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (w = !0));
+            a = O.Z.getGuild(l);
+        if ((V.has(l) && H.has(n)) || null == i || null == a || i.id === a.afkChannelId) null == i && ((u = null), (w = !0));
         else {
             let e = G.Z.getVoiceStatesForChannel(i.id),
-                a = o()(e)
+                r = o()(e)
                     .map((e) => {
                         let { userId: t } = e;
                         return U.default.getUser(t);
@@ -187,14 +187,14 @@ function er(e, t, n) {
                     .filter(B.lm)
                     .orderBy([el], ['desc'])
                     .value();
-            a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
-                w ? !V.has(l) && (u = null) : ((u = r), (w = !0)),
+            r.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
+                w ? !V.has(l) && (u = null) : ((u = a), (w = !0)),
                 V.add(l),
                 H.add(n),
                 k.push({
                     channel: i,
-                    guild: r,
-                    members: a,
+                    guild: a,
+                    members: r,
                     voiceStates: e
                 });
         }
@@ -219,7 +219,7 @@ function er(e, t, n) {
         applicationStreams: L
     };
 }
-function ea(e) {
+function er(e) {
     return (
         !!(0 !== e.voiceChannels.length && (0, E.$W)('now-playing-view-store')) &&
         e.voiceChannels.length > 0 &&
@@ -252,7 +252,7 @@ let eu = o().throttle(() => {
         q.clear();
         let t = (function (e) {
                 let t = X(),
-                    n = er.bind(null, t);
+                    n = ea.bind(null, t);
                 return o()(e).mapValues(n);
             })(
                 ((e = Array.from(X()).reduce((e, t) => {
@@ -267,7 +267,7 @@ let eu = o().throttle(() => {
                 }))
             )
                 .values()
-                .orderBy([ea, (e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['asc', 'desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
+                .orderBy([er, (e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['asc', 'desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
                 .value(),
             { blockeeExperimentEnabled: n, blockerExperimentEnabled: i, analyticsEligible: l } = (0, E.p7)('now-playing-view-store');
         l &&
@@ -295,7 +295,7 @@ let eu = o().throttle(() => {
                     .with(
                         {
                             blockeeExperimentEnabled: !0,
-                            party: c.P.when(ea)
+                            party: c.P.when(er)
                         },
                         () => E.h9.DERANK
                     )
@@ -303,12 +303,12 @@ let eu = o().throttle(() => {
                 e.voiceChannels.forEach((e) => {
                     let { voiceStates: n, channel: i } = e,
                         l = o().map(n, 'userId'),
-                        r = o().map(n, 'discoverable'),
-                        a = o().map(n, (e) => w.Z.getRelationshipType(e.userId));
+                        a = o().map(n, 'discoverable'),
+                        r = o().map(n, (e) => w.Z.getRelationshipType(e.userId));
                     k.default.track(H.rMx.PARTY_VOICE_ACTIVITY_VIEWED, {
                         activity_user_ids: l,
-                        discoverable: r,
-                        relationship_types: a,
+                        discoverable: a,
+                        relationship_types: r,
                         voice_channel_id: i.id,
                         treatment: t,
                         surface: 'now-playing'
@@ -354,15 +354,15 @@ class eh extends (i = u.ZP.Store) {
         return F;
     }
 }
-(a = 'NowPlayingViewStore'),
-    (r = 'displayName') in (l = eh)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'NowPlayingViewStore'),
+    (a = 'displayName') in (l = eh)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a);
+        : (l[a] = r);
 let ep = new eh(d.Z, {
     LOGOUT: function () {
         (V = !1), (W = []), (z = []), q.clear();

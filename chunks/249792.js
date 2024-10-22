@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(100621),
+    a = n.n(l),
+    r = n(100621),
     s = n(692547),
     o = n(481060),
     c = n(565138),
@@ -36,13 +36,13 @@ function h(e) {
                 (0, i.jsx)(
                     'div',
                     {
-                        className: r()(d.folder, d.hover),
+                        className: a()(d.folder, d.hover),
                         children: (0, i.jsx)('div', {
                             className: d.folderIconWrapper,
                             children: (0, i.jsxs)('div', {
                                 className: d.closedFolderIconWrapper,
                                 children: [
-                                    (0, i.jsx)(a.animated.div, {
+                                    (0, i.jsx)(r.animated.div, {
                                         className: d.folderIconPreview,
                                         style: e,
                                         children: (0, i.jsx)(c.Z, {

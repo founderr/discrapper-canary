@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(393238),
     c = n(605236),
@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(689938),
     p = n(138592);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: a, artClassName: f, headerClassName: _, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: b = 'top', align: A = 'center', art: M, isPremiumEarlyAccess: R = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: P, dismissIconClassName: O, dismissIcon: j, onDismissIconClick: D } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [U, G] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
@@ -31,7 +31,7 @@ t.Z = l.forwardRef(function (e, t) {
             className: N,
             ref: t,
             children: (0, i.jsxs)('div', {
-                className: a()(p.content, m, {
+                className: r()(p.content, m, {
                     [p.contentNoArt]: null == f || x,
                     [p.contentPremium]: S || R
                 }),
@@ -43,14 +43,14 @@ t.Z = l.forwardRef(function (e, t) {
                             children: j
                         }),
                     (0, i.jsxs)('div', {
-                        className: a()(f, x ? p.artInline : p.artAbsolute),
+                        className: r()(f, x ? p.artInline : p.artAbsolute),
                         children: [Z && (0, i.jsx)(u.Z, { className: p.gifTag }), M]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(s.Heading, {
-                                className: a()(S ? p.headerWithPremiumIcon : p.header, _),
+                                className: r()(S ? p.headerWithPremiumIcon : p.header, _),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
@@ -79,7 +79,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               ]
                                           })
                                         : null,
-                                    r
+                                    a
                                 ]
                             }),
                             null == n
@@ -133,7 +133,7 @@ t.Z = l.forwardRef(function (e, t) {
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: a()(p.pointer, P, {
+                        className: r()(p.pointer, P, {
                             [p.bottomPointer]: 'top' === b,
                             [p.centerLeftPointer]: 'right' === b && 'center' === A,
                             [p.topLeftPointer]: 'right' === b && 'top' === A

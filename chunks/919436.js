@@ -1,8 +1,8 @@
 n(411104), n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(100621),
+    a = n(192379),
+    r = n(100621),
     s = n(91192),
     o = n(442837),
     c = n(481060),
@@ -55,7 +55,7 @@ function R(e) {
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
 }
-class L extends (i = r.PureComponent) {
+class L extends (i = a.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
         e(),
@@ -115,10 +115,10 @@ class L extends (i = r.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
+        let { channel: e, channelName: t, selected: n, badge: i, audio: a, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
             { hovered: f, animating: m } = this.state,
             g = e.isMultiUserDM() && null == e.icon && p;
-        return (0, l.jsx)(a.animated.div, {
+        return (0, l.jsx)(r.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
@@ -135,7 +135,7 @@ class L extends (i = r.PureComponent) {
                             selected: n || f,
                             lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
                             upperBadge: (0, Z.Or)({
-                                audio: r,
+                                audio: a,
                                 video: o,
                                 screenshare: u,
                                 isCurrentUserConnected: d
@@ -176,7 +176,7 @@ class L extends (i = r.PureComponent) {
             A(this, 'state', {
                 hovered: !1,
                 animating: !0,
-                controller: new a.Controller({
+                controller: new r.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
@@ -214,20 +214,20 @@ A(L, 'defaultProps', {
     video: !1,
     isCurrentUserInThisDMCall: !1
 }),
-    (t.Z = r.forwardRef(function (e, t) {
+    (t.Z = a.forwardRef(function (e, t) {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
-            r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
-            a = (0, o.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : T.WtW.VOICE), [r]),
+            a = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
+            r = (0, o.e7)([d.Z], () => (null != a ? d.Z.getMode(a) : T.WtW.VOICE), [a]),
             s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
             u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            _ = r === n,
+            _ = a === n,
             E = !1,
             N = !1;
         return (
-            _ && ((E = a === T.WtW.VOICE), (N = a === T.WtW.VIDEO)),
+            _ && ((E = r === T.WtW.VOICE), (N = r === T.WtW.VIDEO)),
             (0, l.jsx)(L, {
                 ...e,
                 ref: t,

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(866442),
     o = n(481060),
     c = n(686546),
@@ -27,14 +27,14 @@ function h(e) {
 }
 function p(e) {
     var t;
-    let { title: n, className: r } = e,
+    let { title: n, className: a } = e,
         [s, d] = l.useState(h(n));
     return (
         l.useEffect(() => {
             d(h(n));
         }, [n]),
         (0, i.jsxs)('div', {
-            className: a()(u.wrapper, r),
+            className: r()(u.wrapper, a),
             children: [
                 (0, i.jsx)(c.ZP, {
                     mask: c.ZP.Masks.STATUS_SCREENSHARE,

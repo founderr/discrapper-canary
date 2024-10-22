@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(100621),
     o = n(873546),
     c = n(481060),
@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(501223);
 function C(e) {
     var t;
-    let { guild: n, controller: l, guildBanner: r, animate: c } = e,
+    let { guild: n, controller: l, guildBanner: a, animate: c } = e,
         { value: u } = l.springs,
         p = d.QK.getSetting();
     return (0, i.jsx)(s.animated.div, {
@@ -26,16 +26,16 @@ function C(e) {
             transform: u.to((e) => 'translateY(-'.concat((1 - e) * 90, 'px)'))
         },
         children: (0, i.jsx)(s.animated.div, {
-            className: a()(g.bannerImage, { [g.bannerImgFullWidth]: o.tq }),
+            className: r()(g.bannerImage, { [g.bannerImgFullWidth]: o.tq }),
             style: { transform: u.to((e) => (p ? 'translateY('.concat((1 - e) * 60, 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * 90, 'px)'))) },
             children: (0, i.jsx)('img', {
-                className: a()(g.bannerImg, { [g.bannerImgFullWidth]: o.tq }),
+                className: r()(g.bannerImg, { [g.bannerImgFullWidth]: o.tq }),
                 src:
                     null !==
                         (t = h.ZP.getGuildBannerURL(
                             {
                                 id: n.id,
-                                banner: r
+                                banner: a
                             },
                             c
                         )) && void 0 !== t
@@ -48,7 +48,7 @@ function C(e) {
     });
 }
 function I(e) {
-    let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
+    let { guild: t, controller: n, hasBanner: l, hasSubheader: a } = e,
         { value: o } = n.springs,
         u = t.hasFeature(f.oNc.DISCOVERABLE),
         d = (0, i.jsx)('div', {
@@ -79,9 +79,9 @@ function I(e) {
                         })
                 })
         });
-    return r
+    return a
         ? (0, i.jsx)('div', {
-              className: a()(g.communityInfoContainer, g.hasSubheader),
+              className: r()(g.communityInfoContainer, g.hasSubheader),
               children: d
           })
         : (0, i.jsx)(s.animated.div, {
@@ -100,7 +100,7 @@ function E() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: N, onMouseDown: x, disableBannerAnimation: S, 'aria-expanded': v, 'aria-controls': Z, guild: T, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
+    let { bannerVisible: t, controller: n, className: a, onClick: s, onContextMenu: N, onMouseDown: x, disableBannerAnimation: S, 'aria-expanded': v, 'aria-controls': Z, guild: T, guildBanner: b, animationOverlayHeight: A, children: M, headerClassName: R, communityInfoVisible: L, hasSubheader: y } = e,
         P = T.hasFeature(f.oNc.ANIMATED_BANNER),
         O = (0, u.Z)(T),
         j = !O && T.hasCommunityInfoSubheader(),
@@ -138,7 +138,7 @@ t.ZP = l.memo(function (e) {
                 children: [
                     (0, i.jsxs)('div', {
                         ref: B,
-                        className: a()(r, {
+                        className: r()(a, {
                             [g.container]: !0,
                             [g.clickable]: null != s,
                             [g.selected]: null != s && v,
@@ -152,10 +152,10 @@ t.ZP = l.memo(function (e) {
                         onClick: s,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(g.header, R, { [g.themedHeaderMobile]: o.tq }),
+                                className: r()(g.header, R, { [g.themedHeaderMobile]: o.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: a()(g.headerContent, g.primaryInfo),
+                                        className: r()(g.headerContent, g.primaryInfo),
                                         children: [
                                             (0, i.jsx)(p.Z, {
                                                 guild: T,

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(239091),
     o = n(906732),
     c = n(560067),
@@ -41,13 +41,13 @@ function x(e) {
 }
 function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        s = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
+        s = (0, a.e7)([p.Z], () => p.Z.getGuilds()),
         S = l.useMemo(() => Object.values(s), [s]),
-        v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        v = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
         Z = l.useMemo(() => S.some((e) => e.isOwner(v)), [S, v]),
-        T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
+        T = (0, r.useModalsStore)((e) => (0, r.hasModalOpenSelector)(e, C.PU)),
         { analyticsLocations: b } = (0, o.ZP)(),
-        A = (0, a.useRedesignIconContext)().enabled,
+        A = (0, r.useRedesignIconContext)().enabled,
         M = (0, i.jsx)(m.Z, {
             showPill: !1,
             id: 'create-join-button',
@@ -66,7 +66,7 @@ function S(e) {
             selected: T,
             onContextMenu: x,
             tooltip: I.Z.Messages.ADD_A_SERVER,
-            icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
+            icon: A ? r.PlusMediumIcon : r.PlusSmallIcon
         });
     return t
         ? M

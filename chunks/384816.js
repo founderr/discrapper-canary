@@ -22,21 +22,21 @@ var s = t(442837),
     x = t(652853),
     Z = t(179828),
     h = t(228168),
-    v = t(689938),
-    S = t(11633);
+    S = t(689938),
+    v = t(11633);
 function T(e) {
-    let { user: n, currentUser: t, displayProfile: T, subsection: g, onClose: A } = e,
-        { theme: N } = (0, x.z)(),
-        { trackUserProfileAction: j } = (0, u.KZ)(),
-        b = null == T ? void 0 : T.guildId,
-        L = (0, s.e7)([a.Z], () => (null != b ? a.Z.getGuild(b) : null)),
+    let { user: n, currentUser: t, displayProfile: T, subsection: g, onClose: N } = e,
+        { theme: A } = (0, x.z)(),
+        { trackUserProfileAction: b } = (0, u.KZ)(),
+        j = null == T ? void 0 : T.guildId,
+        P = (0, s.e7)([a.Z], () => (null != j ? a.Z.getGuild(j) : null)),
         M = (0, s.e7)([d.Z], () => d.Z.getGuildId()),
-        O = (0, s.e7)([c.default], () => c.default.locale),
+        L = (0, s.e7)([c.default], () => c.default.locale),
         R = (0, I.Z)(n.id),
-        C = (0, _.Z)(n.id);
+        O = (0, _.Z)(n.id);
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
-        className: S.scroller,
+        className: v.scroller,
         children: [
             (null == T ? void 0 : T.bio) != null &&
                 (null == T ? void 0 : T.bio) !== '' &&
@@ -44,16 +44,16 @@ function T(e) {
                     userBio: T.bio,
                     setLineClamp: !1
                 }),
-            null != L &&
+            null != P &&
                 (0, i.jsx)(Z.Z, {
                     user: n,
                     currentUser: t,
-                    guild: L,
+                    guild: P,
                     scrollIntoView: g === h.Tb.ROLES
                 }),
             n.isProvisional && (0, i.jsx)(r.Z, { look: 'profile_modal' }),
             (0, i.jsx)(p.Z, {
-                heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                heading: S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                 children: (0, i.jsx)(m.Z, {
                     userId: n.id,
                     guildId: null == T ? void 0 : T.guildId,
@@ -62,28 +62,28 @@ function T(e) {
             }),
             R.length > 0 &&
                 (0, i.jsx)(p.Z, {
-                    heading: v.Z.Messages.CONNECTIONS,
+                    heading: S.Z.Messages.CONNECTIONS,
                     scrollIntoView: g === h.Tb.CONNECTIONS,
                     children: (0, i.jsx)(f.OA, {
                         connectedAccounts: R,
-                        className: S.connections,
+                        className: v.connections,
                         userId: n.id,
-                        theme: N,
-                        locale: O
+                        theme: A,
+                        locale: L
                     })
                 }),
-            C.length > 0 &&
+            O.length > 0 &&
                 (0, i.jsx)(p.Z, {
-                    heading: v.Z.Messages.APPS,
-                    children: C.map((e) =>
+                    heading: S.Z.Messages.APPS,
+                    children: O.map((e) =>
                         (0, i.jsx)(
                             f.tH,
                             {
-                                className: S.appsConnections,
+                                className: v.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: O,
+                                locale: L,
                                 onApplicationClicked: () => {
-                                    j({ action: 'PRESS_APP_CONNECTION' }), A();
+                                    b({ action: 'PRESS_APP_CONNECTION' }), N();
                                 },
                                 selectedGuildId: null != M ? M : void 0
                             },
@@ -92,13 +92,13 @@ function T(e) {
                     )
                 }),
             (0, i.jsx)(p.Z, {
-                heading: v.Z.Messages.NOTE,
+                heading: S.Z.Messages.NOTE,
                 scrollIntoView: g === h.Tb.NOTE,
                 children: (0, i.jsx)(l.Z, {
                     userId: n.id,
-                    className: S.note,
+                    className: v.note,
                     autoFocus: g === h.Tb.NOTE,
-                    onUpdate: () => j({ action: 'SET_NOTE' })
+                    onUpdate: () => b({ action: 'SET_NOTE' })
                 })
             })
         ]

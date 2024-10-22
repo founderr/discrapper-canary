@@ -23,55 +23,55 @@ var s = t(442837),
     Z = t(11633);
 function h(e) {
     var n;
-    let { user: t, currentUser: h, displayProfile: v, subsection: S, onClose: T } = e,
+    let { user: t, currentUser: h, displayProfile: S, subsection: v, onClose: T } = e,
         { trackUserProfileAction: g } = (0, d.KZ)(),
-        A = (0, s.e7)([c.Z], () => ((null == v ? void 0 : v.guildId) != null ? c.Z.getGuild(v.guildId) : null)),
-        N = (0, s.e7)([u.Z], () => {
+        N = (0, s.e7)([c.Z], () => ((null == S ? void 0 : S.guildId) != null ? c.Z.getGuild(S.guildId) : null)),
+        A = (0, s.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        j = (0, s.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
+        b = (0, s.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: Z.scroller,
         children: [
-            (null == v ? void 0 : v.bio) != null &&
-                (null == v ? void 0 : v.bio) !== '' &&
+            (null == S ? void 0 : S.bio) != null &&
+                (null == S ? void 0 : S.bio) !== '' &&
                 (0, i.jsx)(I.Z, {
-                    userBio: v.bio,
+                    userBio: S.bio,
                     setLineClamp: !1
                 }),
-            (null == N ? void 0 : N.popularApplicationCommandIds) != null &&
-                null != j &&
+            (null == A ? void 0 : A.popularApplicationCommandIds) != null &&
+                null != b &&
                 (0, i.jsx)(_.Z, {
-                    applicationId: N.id,
-                    commandIds: N.popularApplicationCommandIds,
-                    channel: j,
-                    guildId: null !== (n = null == v ? void 0 : v.guildId) && void 0 !== n ? n : void 0,
+                    applicationId: A.id,
+                    commandIds: A.popularApplicationCommandIds,
+                    channel: b,
+                    guildId: null !== (n = null == S ? void 0 : S.guildId) && void 0 !== n ? n : void 0,
                     onClick: T
                 }),
-            null != A &&
+            null != N &&
                 (0, i.jsx)(m.Z, {
                     user: t,
                     currentUser: h,
-                    guild: A,
-                    scrollIntoView: S === p.Tb.ROLES
+                    guild: N,
+                    scrollIntoView: v === p.Tb.ROLES
                 }),
             (0, i.jsx)(f.Z, {
                 heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
                 children: (0, i.jsx)(E.Z, {
                     userId: t.id,
-                    guildId: null == v ? void 0 : v.guildId,
+                    guildId: null == S ? void 0 : S.guildId,
                     tooltipDelay: p.vB
                 })
             }),
             (0, i.jsx)(f.Z, {
                 heading: x.Z.Messages.NOTE,
-                scrollIntoView: S === p.Tb.NOTE,
+                scrollIntoView: v === p.Tb.NOTE,
                 children: (0, i.jsx)(l.Z, {
                     userId: t.id,
                     className: Z.note,
-                    autoFocus: S === p.Tb.NOTE,
+                    autoFocus: v === p.Tb.NOTE,
                     onUpdate: () => g({ action: 'SET_NOTE' })
                 })
             })

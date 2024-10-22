@@ -22,17 +22,17 @@ var i = t(200651),
     x = t(226691),
     Z = t(161068);
 function h(e) {
-    let { user: n, guildId: t, channelId: h, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: A = !0, sourceAnalyticsLocations: N = [] } = e,
-        j = t === m.ME ? void 0 : t,
-        { analyticsLocations: b } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
-        L = (0, a.ZB)({
+    let { user: n, guildId: t, channelId: h, messageId: S, roleId: v, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: N = !0, sourceAnalyticsLocations: A = [] } = e,
+        b = t === m.ME ? void 0 : t,
+        { analyticsLocations: j } = (0, r.ZP)([...A, l.Z.BLOCKED_PROFILE_MODAL]),
+        P = (0, a.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
-            guildId: j,
+            guildId: b,
             channelId: h,
-            messageId: v,
-            roleId: S,
-            showGuildProfile: A
+            messageId: S,
+            roleId: v,
+            showGuildProfile: N
         }),
         M = [
             {
@@ -44,12 +44,12 @@ function h(e) {
                 description: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
             }
         ],
-        O = (0, u.ZP)(n.id, A ? j : void 0),
+        L = (0, u.ZP)(n.id, N ? b : void 0),
         R = s.createRef();
     return (0, i.jsx)(r.Gt, {
-        value: b,
+        value: j,
         children: (0, i.jsx)(a.Mt, {
-            value: L,
+            value: P,
             children: (0, i.jsx)(o.ModalRoot, {
                 transitionState: T,
                 className: x.root,
@@ -57,7 +57,7 @@ function h(e) {
                 'aria-label': p.Z.Messages.USER_PROFILE_MODAL,
                 children: (0, i.jsx)(I.Z, {
                     user: n,
-                    displayProfile: O,
+                    displayProfile: L,
                     profileType: f.y0.FULL_SIZE,
                     ref: R,
                     children: (0, i.jsxs)('div', {
@@ -74,7 +74,7 @@ function h(e) {
                                 children: [
                                     (0, i.jsx)(_.Z, {
                                         user: n,
-                                        guildId: j
+                                        guildId: b
                                     }),
                                     (0, i.jsx)(o.Heading, {
                                         variant: 'heading-xl/bold',
@@ -114,8 +114,8 @@ function h(e) {
                                             null == g || g(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: b,
-                                                    ...L
+                                                    analyticsLocations: j,
+                                                    ...P
                                                 });
                                         }
                                     })

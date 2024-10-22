@@ -20,7 +20,7 @@ var i = t(200651),
     p = t(505865);
 function x(e) {
     let { user: n, currentUser: t, onClose: x, profileGuildId: Z } = e,
-        { live: h, recent: v, stream: S } = (0, a.Z)(n.id),
+        { live: h, recent: S, stream: v } = (0, a.Z)(n.id),
         T = n.id === t.id,
         g = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
@@ -37,11 +37,11 @@ function x(e) {
             children: [
                 (0, i.jsxs)(d.Z, {
                     children: [
-                        null != S &&
+                        null != v &&
                             (0, i.jsx)(I.Z, {
                                 user: n,
                                 currentUser: t,
-                                stream: S,
+                                stream: v,
                                 onClose: x
                             }),
                         h.map((e, s) =>
@@ -60,7 +60,7 @@ function x(e) {
                     ]
                 }),
                 T &&
-                    v.length > 0 &&
+                    S.length > 0 &&
                     (0, i.jsx)(d.Z, {
                         heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
                         subheading: m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
@@ -74,7 +74,7 @@ function x(e) {
                                     n
                                 )
                         }),
-                        children: v.map((e) =>
+                        children: S.map((e) =>
                             (0, i.jsx)(
                                 _.Z,
                                 {

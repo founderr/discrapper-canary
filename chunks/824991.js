@@ -14,8 +14,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(100527),
+    a = n(481060),
+    r = n(100527),
     s = n(428695),
     o = n(703656),
     c = n(970606),
@@ -27,7 +27,7 @@ var i = n(200651),
 function _(e) {
     let { title: t } = e;
     return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsx)(r.Heading, {
+        children: (0, i.jsx)(a.Heading, {
             variant: 'heading-md/semibold',
             color: 'header-primary',
             className: f.title,
@@ -37,7 +37,7 @@ function _(e) {
 }
 function m(e) {
     let { message: t } = e;
-    return (0, i.jsx)(r.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: 'text-xs/normal',
         color: 'text-muted',
         className: f.message,
@@ -46,14 +46,14 @@ function m(e) {
 }
 function g(e) {
     let { onClick: t } = e;
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(a.Button, {
         fullWidth: !0,
-        look: r.ButtonLooks.FILLED,
-        size: r.ButtonSizes.SMALL,
-        color: r.ButtonColors.BRAND,
+        look: a.ButtonLooks.FILLED,
+        size: a.ButtonSizes.SMALL,
+        color: a.ButtonColors.BRAND,
         className: f.button,
         onClick: t,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, i.jsx)(a.Text, {
             variant: 'text-sm/semibold',
             color: 'always-white',
             children: p.Z.Messages.CHECK_IT_OUT
@@ -61,20 +61,20 @@ function g(e) {
     });
 }
 function C(e) {
-    let { guild: t, markAsDismissed: n, defaultGameId: r } = e;
+    let { guild: t, markAsDismissed: n, defaultGameId: a } = e;
     l.useEffect(() => {
         (0, c.TE)({
             guildId: t.id,
-            location: a.Z.GUILD_CHANNEL_LIST
+            location: r.Z.GUILD_CHANNEL_LIST
         });
     }, [t.id]);
-    let C = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+    let C = a === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : a === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
         I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
         E = l.useCallback(() => (0, i.jsx)(_, { title: C }), [C]),
         N = l.useCallback(() => {
             (0, c._9)({
                 guildId: t.id,
-                location: a.Z.GUILD_CHANNEL_LIST
+                location: r.Z.GUILD_CHANNEL_LIST
             }),
                 (0, o.uL)(d.Z5c.GUILD_DISCOVERY);
         }, [t.id]),

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(91192),
+    a = n.n(l),
+    r = n(91192),
     s = n(589440),
     o = n(481060),
     c = n(566461),
@@ -16,7 +16,7 @@ var l = n(120356),
 function h(e) {
     var t;
     let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: _, trailing: m, showUnread: g = !1, ...C } = e,
-        I = (0, a.JA)(n),
+        I = (0, r.JA)(n),
         E = null !== (t = (0, s.q)(f)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(o.ClickableContainer, {
@@ -41,11 +41,11 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: _ }, l),
+            className: a()(u.containerDefault, d.wrapper, { [d.modeSelected]: _ }, l),
             children: [
-                g ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
+                g ? (0, i.jsx)('div', { className: a()(d.unread, d.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
-                    className: r()([d.link, d.basicChannelRowLink, h]),
+                    className: a()([d.link, d.basicChannelRowLink, h]),
                     children: (0, i.jsxs)('div', {
                         className: c.content,
                         children: [

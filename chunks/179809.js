@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(999153),
     o = n(100621),
     c = n(91192),
@@ -30,7 +30,7 @@ let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+    let { folderNode: t, setNodeRef: n, selected: a, expanded: u, mediaState: f, mentionCount: A = 0, unread: M = !1, defaultFolderName: R, useCircleMask: L = !1, draggable: y = !1, sorting: P = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
         { id: k, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
@@ -77,18 +77,18 @@ function A(e) {
                 (0, i.jsx)(m.Z, {
                     disabled: K || u,
                     hovered: V,
-                    selected: r,
+                    selected: a,
                     unread: M,
                     className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
                     disabled: P,
-                    selected: r,
+                    selected: a,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: y ? q : void 0,
-                        className: a()({ [v.wobble]: !K && W && !u }),
+                        className: r()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
                             ? (0, i.jsx)(I.Z, {})
@@ -125,7 +125,7 @@ function A(e) {
         children: [
             !K &&
                 (0, i.jsx)('span', {
-                    className: a()(S.expandedFolderBackground, {
+                    className: r()(S.expandedFolderBackground, {
                         [S.collapsed]: !u,
                         [S.hover]: Y
                     })

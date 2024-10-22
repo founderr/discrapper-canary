@@ -1,12 +1,18 @@
 n.d(t, {
     U: function () {
-        return s;
+        return l;
+    },
+    v: function () {
+        return a;
     }
 });
-let i = (0, n(818083).B)({
+var i = n(818083),
+    s = n(987338);
+let a = (0, i.B)({
         kind: 'user',
         id: '2024-10_user_profile_panel_recent_activity_status',
         label: 'User Profile Panel Recent Activity Status',
+        commonTriggerPoint: s.$P.DM_GDM_LIST_RENDER,
         defaultConfig: { recentActivityStatusEnabled: !1 },
         treatments: [
             {
@@ -16,13 +22,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    s = (e) => {
-        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: s = {} } = e;
-        return i.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                trackExposureOptions: s
-            }
-        );
+    l = (e) => {
+        let { location: t } = e;
+        return a.useExperiment({ location: t });
     };

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(593214),
     c = n(981631),
@@ -16,16 +16,16 @@ var i = n(200651),
     p = n(64056);
 function f() {
     return (0, i.jsx)('div', {
-        className: a()(h.row, h.rowGuildName),
+        className: r()(h.row, h.rowGuildName),
         children: (0, i.jsx)('span', {
-            className: a()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
+            className: r()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
             children: u.Z.Messages.FAVORITE_ADDED
         })
     });
 }
 let _ = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
-        r = (function () {
+        a = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, o.up)();
             return (
                 l.useEffect(() => {
@@ -42,7 +42,7 @@ let _ = l.memo(function (e) {
             );
         })();
     return (0, i.jsx)(s.Tooltip, {
-        forceOpen: r,
+        forceOpen: a,
         color: s.TooltipColors.GREEN,
         hideOnClick: !0,
         spacing: 20,

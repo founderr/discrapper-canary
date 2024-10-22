@@ -1,7 +1,7 @@
 var i,
     l = n(442837),
-    r = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,9 +29,9 @@ class o extends (i = l.ZP.PersistedStore) {
         return null != s[e];
     }
 }
-a(o, 'displayName', 'ViewHistoryStore'),
-    a(o, 'persistKey', 'ViewHistoryStore'),
-    (t.Z = new o(r.Z, {
+r(o, 'displayName', 'ViewHistoryStore'),
+    r(o, 'persistKey', 'ViewHistoryStore'),
+    (t.Z = new o(a.Z, {
         VIEW_HISTORY_MARK_VIEW: function (e) {
             let { key: t } = e;
             s[t] = Date.now();

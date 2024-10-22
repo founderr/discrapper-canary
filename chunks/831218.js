@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    r,
-    a = n(200651),
+    a,
+    r = n(200651),
     s = n(192379),
     o = n(299608),
     c = n.n(o),
@@ -47,27 +47,27 @@ function U(e, t, n) {
         e
     );
 }
-((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
+((a = i || (i = {}))[(a.PAGES = 0)] = 'PAGES'), (a[(a.DMS = 1)] = 'DMS');
 let G = s.memo(function () {
-    return (0, a.jsxs)('svg', {
+    return (0, r.jsxs)('svg', {
         width: '184',
         height: '428',
         viewBox: '0 0 184 428',
         className: w.empty,
         children: [
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 6,
                 width: 144,
                 height: 20,
                 rx: 10
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 16,
                 r: 16
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 50,
                 width: 144,
@@ -75,13 +75,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.9
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 60,
                 r: 16,
                 opacity: 0.9
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 94,
                 width: 144,
@@ -89,13 +89,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.8
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 104,
                 r: 16,
                 opacity: 0.8
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 138,
                 width: 144,
@@ -103,13 +103,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.7
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 148,
                 r: 16,
                 opacity: 0.7
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 182,
                 width: 144,
@@ -117,13 +117,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.6
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 192,
                 r: 16,
                 opacity: 0.6
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 226,
                 width: 144,
@@ -131,13 +131,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.5
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 236,
                 r: 16,
                 opacity: 0.5
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 270,
                 width: 144,
@@ -145,13 +145,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.4
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 280,
                 r: 16,
                 opacity: 0.4
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 314,
                 width: 144,
@@ -159,13 +159,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.3
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 324,
                 r: 16,
                 opacity: 0.3
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 358,
                 width: 144,
@@ -173,13 +173,13 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.2
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 368,
                 r: 16,
                 opacity: 0.2
             }),
-            (0, a.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 x: 40,
                 y: 402,
                 width: 144,
@@ -187,7 +187,7 @@ let G = s.memo(function () {
                 rx: 10,
                 opacity: 0.1
             }),
-            (0, a.jsx)('circle', {
+            (0, r.jsx)('circle', {
                 cx: 16,
                 cy: 412,
                 r: 16,
@@ -243,14 +243,14 @@ class k extends (l = s.Component) {
     render() {
         let { privateChannelIds: e, padding: t } = this.props,
             { preRenderedChildren: n } = this.state;
-        return (0, a.jsx)(u.SJ, {
+        return (0, r.jsx)(u.SJ, {
             children: (i) => {
-                let { ref: l, role: r, ...s } = i;
-                return (0, a.jsx)(f.FocusJumpSection, {
+                let { ref: l, role: a, ...s } = i;
+                return (0, r.jsx)(f.FocusJumpSection, {
                     children: (i) =>
-                        (0, a.jsx)(f.List, {
+                        (0, r.jsx)(f.List, {
                             fade: !0,
-                            innerRole: r,
+                            innerRole: a,
                             innerAriaLabel: D.Z.Messages.DIRECT_MESSAGES,
                             innerTag: 'ul',
                             ref: (e) => {
@@ -292,12 +292,12 @@ class k extends (l = s.Component) {
                 if (0 === n.length) return;
                 let l = s.Children.count(this.props.children);
                 if (null == t) return;
-                let r = Math.round((t.offsetHeight - 44 * l) / 44),
-                    a = r > n.length ? n.slice(0, r + 1) : n,
-                    o = a.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
+                let a = Math.round((t.offsetHeight - 44 * l) / 44),
+                    r = a > n.length ? n.slice(0, a + 1) : n,
+                    o = r.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
                     c = n.some((e) => (0, I.Z)(e)),
                     u = {
-                        num_users_visible: a.length,
+                        num_users_visible: r.length,
                         num_users_visible_with_mobile_indicator: o.filter((e) => null != e && y.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
@@ -324,17 +324,17 @@ class k extends (l = s.Component) {
             ),
             U(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: i, selectedChannelId: l } = this.props,
-                    { totalRowCount: r, preRenderedChildren: s } = this.state,
+                    { totalRowCount: a, preRenderedChildren: s } = this.state,
                     o = i[n[t]];
                 return null == o
                     ? null
-                    : (0, a.jsx)(
+                    : (0, r.jsx)(
                           O.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
                               'aria-posinset': s + t + 1,
-                              'aria-setsize': r
+                              'aria-setsize': a
                           },
                           o.id
                       );
@@ -352,22 +352,22 @@ class k extends (l = s.Component) {
             U(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, r.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
             U(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
-                    ? (0, a.jsxs)(
+                    ? (0, r.jsxs)(
                           N.Z,
                           {
                               className: w.privateChannelsHeaderContainer,
                               children: [
-                                  (0, a.jsx)('span', {
+                                  (0, r.jsx)('span', {
                                       className: w.headerText,
                                       children: D.Z.Messages.DIRECT_MESSAGES
                                   }),
-                                  (0, a.jsx)(Z.Z, {
+                                  (0, r.jsx)(Z.Z, {
                                       tooltip: D.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
@@ -390,7 +390,7 @@ class k extends (l = s.Component) {
 U(k, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
-        r = s.Children.count(i),
+        a = s.Children.count(i),
         o = L.Z.getMutablePrivateChannels(),
         c = (0, b.k1)(o),
         p = (0, h.Wu)(
@@ -455,12 +455,12 @@ t.Z = (e) => {
             isEnabled: _.keyboardModeEnabled,
             scrollToStart: I,
             scrollToEnd: N,
-            defaultFocused: (r + (l ? 1 : 0)).toString(),
+            defaultFocused: (a + (l ? 1 : 0)).toString(),
             setFocus: C
         });
-    return (0, a.jsx)(u.bG, {
+    return (0, r.jsx)(u.bG, {
         navigator: y,
-        children: (0, a.jsx)(k, {
+        children: (0, r.jsx)(k, {
             channels: c,
             privateChannelIds: p,
             listRef: g,

@@ -31,7 +31,7 @@ function m(e) {
                         o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                             action: d.q.CLICK_TO_LEAVE,
                             channel_id: t.id,
-                            warning_medium: d.X.BANNER,
+                            warning_medium: d.WR.BANNER,
                             blocked_user_ids: n
                         });
                 },
@@ -45,7 +45,7 @@ function m(e) {
                         o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                             action: d.q.CLICK_TO_STAY,
                             channel_id: t.id,
-                            warning_medium: d.X.BANNER,
+                            warning_medium: d.WR.BANNER,
                             blocked_user_ids: n
                         });
                 },

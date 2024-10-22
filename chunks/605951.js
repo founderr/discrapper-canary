@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var i = n(192379),
     l = n(914010);
-function r(e) {
+function a(e) {
     i.useEffect(() => {
         let t = null;
         function n() {

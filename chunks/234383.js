@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(442837),
     l = n(937111),
-    r = n(430824);
-function a() {
-    return (0, i.Wu)([l.Z, r.Z], () => {
+    a = n(430824);
+function r() {
+    return (0, i.Wu)([l.Z, a.Z], () => {
         let e = l.Z.computeGuildIds(),
-            t = r.Z.getGuilds();
+            t = a.Z.getGuilds();
         return e.filter((e) => null == t[e]);
     });
 }

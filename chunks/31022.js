@@ -7,8 +7,8 @@ n.d(t, {
     n(724458);
 var i = n(442837),
     l = n(853856),
-    r = n(592125),
-    a = n(938475),
+    a = n(592125),
+    r = n(938475),
     s = n(823379),
     o = n(136015),
     c = n(709054),
@@ -17,7 +17,7 @@ var i = n(442837),
     h = n(981631);
 function p(e) {
     let { voiceState: t, userNick: n, user: i } = e,
-        l = (0, a.sQ)(t, n);
+        l = (0, r.sQ)(t, n);
     return {
         user: i,
         voiceState: t,
@@ -27,14 +27,14 @@ function p(e) {
 }
 function f(e) {
     let [t] = (0, i.e7)(
-        [u.Z, r.Z, l.Z],
+        [u.Z, a.Z, l.Z],
         () => {
             let t;
             let n = (t =
                 e === h.I_8
                     ? c.default
                           .keys(l.Z.getFavoriteChannels())
-                          .map((e) => r.Z.getChannel(e))
+                          .map((e) => a.Z.getChannel(e))
                           .filter(s.lm)
                           .filter((e) => e.isGuildStageVoice())
                     : u.Z.getChannels(e)).reduce((e, t) => {

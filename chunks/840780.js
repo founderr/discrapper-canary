@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(512722),
     o = n.n(s),
     c = n(442837),
@@ -82,12 +82,12 @@ class ee extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, T.Z)(t);
+            { title: l, sanitizedTitle: a } = (0, T.Z)(t);
         return (0, i.jsxs)('div', {
             className: J.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(b.Z, { title: r })
+                    ? (0, i.jsx)(b.Z, { title: a })
                     : (0, i.jsx)(E.ZP, {
                           look: E.ZP.Looks.GRAY,
                           size: E.ZP.Sizes.SMALL,
@@ -119,11 +119,11 @@ class ee extends l.PureComponent {
     }
     renderEmbeddedActivity() {
         let e;
-        let { application: t, embeddedActivity: n, channel: l, channelName: r, guildForConnectedChannel: a } = this.props;
+        let { application: t, embeddedActivity: n, channel: l, channelName: a, guildForConnectedChannel: r } = this.props;
         if (null == n || null == l || null == t) return null;
         let s = { start: n.connectedSince },
-            o = r;
-        null != a ? ((e = Q.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name))) : (e = Q.Z5c.CHANNEL(Q.ME, l.id));
+            o = a;
+        null != r ? ((e = Q.Z5c.CHANNEL(r.id, l.id)), (o = ''.concat(o, ' / ').concat(r.name))) : (e = Q.Z5c.CHANNEL(Q.ME, l.id));
         let c = (0, i.jsx)(M.Z, {
             href: e,
             onClick: this.handleApplicationLinkClick,
@@ -158,13 +158,13 @@ class ee extends l.PureComponent {
         });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: s, activity: o, className: c } = this.props;
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: a, application: s, activity: o, className: c } = this.props;
         return l || (((0, K.y)(s, o, t) || e) && (null != n || null != t))
             ? (0, i.jsx)('div', {
-                  className: a()(J.panel, c),
+                  className: r()(J.panel, c),
                   children: (0, i.jsxs)('div', {
                       className: J.body,
-                      children: [(() => (null == n || (l && (null == r ? void 0 : r.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame()))(), this.renderActions()]
+                      children: [(() => (null == n || (l && (null == a ? void 0 : a.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame()))(), this.renderActions()]
                   })
               })
             : null;
@@ -192,8 +192,8 @@ class ee extends l.PureComponent {
 t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
-        r = (0, c.e7)([O.default], () => O.default.getId()),
-        a = (0, c.e7)([x.ZP, F.Z], () => (0, A.Z)(x.ZP, F.Z)),
+        a = (0, c.e7)([O.default], () => O.default.getId()),
+        r = (0, c.e7)([x.ZP, F.Z], () => (0, A.Z)(x.ZP, F.Z)),
         s = (0, c.e7)([H.Z, j.Z], () => j.Z.getChannel(H.Z.getVoiceChannelId())),
         o = (0, c.e7)([g.ZP], () => g.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([j.Z], () => j.Z.getChannel(o)),
@@ -206,15 +206,15 @@ t.Z = (0, f.Z)(function (e) {
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
-                    if (null != a && null != a.id) return a.id;
+                    if (null != r && null != r.id) return r.id;
                     if (null != m) return m.applicationId;
                 })()) && void 0 !== t
                 ? t
                 : ''
         ]),
         S = (0, c.e7)([U.Z], () => (0, Z.Z)(U.Z) && (0, W.isWindows)()),
-        T = (0, c.e7)([k.Z], () => (null != r ? k.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
-        b = null != h && h.ownerId === r && h.state !== Q.jm8.ENDED,
+        T = (0, c.e7)([k.Z], () => (null != a ? k.Z.findActivity(a, (e) => e.type === Q.IIU.PLAYING) : null)),
+        b = null != h && h.ownerId === a && h.state !== Q.jm8.ENDED,
         M = (0, c.e7)([V.default, B.Z], () => (null != u ? (0, I.F6)(u, V.default, B.Z) : void 0)),
         L = (0, R.Z)();
     return (0, i.jsx)(ee, {
@@ -223,8 +223,8 @@ t.Z = (0, f.Z)(function (e) {
         canGoLive: S,
         activity: T,
         embeddedActivity: m,
-        userId: r,
-        runningGame: a,
+        userId: a,
+        runningGame: r,
         application: N,
         useReducedMotion: f,
         isStreaming: b,

@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(997638),
-    a = n(362658),
+    a = n(997638),
+    r = n(362658),
     s = n(216306),
     o = n(155409),
     c = n(540126),
@@ -52,7 +52,7 @@ function m(e, t) {
 }
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: _, guildChannelsVersion: m, selectedChannelId: g, disableManageChannels: C } = e,
-        { isFavoritesPerk: I } = (0, a.z)('ChannelListSection'),
+        { isFavoritesPerk: I } = (0, r.z)('ChannelListSection'),
         E = l.useCallback(() => {
             let e = _.getCategoryFromSection(_.recentsSectionNumber);
             if (null == e) return;
@@ -97,7 +97,7 @@ t.ZP = l.memo(function (e) {
                 disableManageChannels: C,
                 children: (0, i.jsx)(o.Z, {
                     inlineSpecs: d.MF,
-                    arrowAlignment: r.cy.TOP,
+                    arrowAlignment: a.cy.TOP,
                     tutorialId: 'organize-by-topic',
                     position: 'right'
                 })

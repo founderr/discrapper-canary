@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(570140),
     c = n(131704),
@@ -32,15 +32,15 @@ class I extends (i = s.ZP.Store) {
         return _;
     }
 }
-(a = 'PrivateChannelReadStateStore'),
-    (r = 'displayName') in (l = I)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'PrivateChannelReadStateStore'),
+    (a = 'displayName') in (l = I)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new I(o.Z, {
         CONNECTION_OPEN: g,
         OVERLAY_INITIALIZE: g,

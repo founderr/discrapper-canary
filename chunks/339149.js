@@ -8,9 +8,9 @@ n.d(t, {
     n(653041);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(748780),
     c = n(442837),
     u = n(692547),
@@ -95,7 +95,7 @@ let v = {
             })
     }
 };
-class Z extends r.PureComponent {
+class Z extends a.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
@@ -117,10 +117,10 @@ class Z extends r.PureComponent {
         super(...e),
             S(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
-                    { stage: l, progress: r, total: a, type: s } = n;
-                if (null == r || null == a || null == l) return null;
+                    { stage: l, progress: a, total: r, type: s } = n;
+                if (null == a || null == r || null == l) return null;
                 let o = (e[e.length - 1] / t) * 1000,
-                    c = 0 !== o ? Math.max(1, (a - r) / o) : null,
+                    c = 0 !== o ? Math.max(1, (r - a) / o) : null,
                     u = v[s],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
@@ -132,7 +132,7 @@ class Z extends r.PureComponent {
             });
     }
 }
-class T extends (i = r.PureComponent) {
+class T extends (i = a.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -197,8 +197,8 @@ S(T, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function b(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
-            r = t.getState(i, l);
-        return null != r && e.push(r), e;
+            a = t.getState(i, l);
+        return null != a && e.push(a), e;
     }, []);
 }
 t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
@@ -215,7 +215,7 @@ t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
     let { determineOwnVisibility: t = !0, ...n } = e;
     return t
         ? (0, l.jsx)(d.W, {
-              component: r.Fragment,
+              component: a.Fragment,
               children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(T, { ...n }) : null
           })
         : (0, l.jsx)(T, { ...n });

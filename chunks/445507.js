@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     mC: function () {
-        return a;
+        return r;
     },
     mU: function () {
         return s;
@@ -15,7 +15,7 @@ n.d(t, {
         return o;
     },
     u9: function () {
-        return r;
+        return a;
     },
     xQ: function () {
         return c;
@@ -26,10 +26,10 @@ n.d(t, {
 });
 var i = n(704215),
     l = n(689938);
-function r(e) {
+function a(e) {
     return 'user' === e.type;
 }
-function a(e) {
+function r(e) {
     return 'guild' === e.type;
 }
 function s(e) {

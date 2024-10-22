@@ -18,7 +18,7 @@ n.d(t, {
         return u;
     },
     Pw: function () {
-        return r;
+        return a;
     },
     Q0: function () {
         return p;
@@ -27,7 +27,7 @@ n.d(t, {
         return l;
     },
     QP: function () {
-        return a;
+        return r;
     },
     VE: function () {
         return m;
@@ -47,8 +47,8 @@ n.d(t, {
 });
 let i = 8,
     l = 32,
-    r = 40,
-    a = 12,
+    a = 40,
+    r = 12,
     s = 12,
     o = 34,
     c = 41.5,

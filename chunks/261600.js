@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(399606),
-    a = n(481060),
+    a = n(399606),
+    r = n(481060),
     s = n(592125),
     o = n(922482),
     c = n(750154),
@@ -16,7 +16,7 @@ function h(e) {
     var t, n;
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
-        f = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
+        f = (0, a.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
         _ = l.useRef(null),
         m = l.useCallback(() => {
             let e = s.Z.getChannel(p);
@@ -26,10 +26,10 @@ function h(e) {
         C = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({ channel: g });
     return (0, i.jsx)('div', {
         ref: _,
-        children: (0, i.jsx)(a.Clickable, {
+        children: (0, i.jsx)(r.Clickable, {
             onClick: m,
             focusProps: { ringTarget: _ },
-            children: (0, i.jsx)(a.Heading, {
+            children: (0, i.jsx)(r.Heading, {
                 variant: 'heading-sm/semibold',
                 children: C
             })

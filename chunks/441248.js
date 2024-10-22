@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     s = n(925329),
     o = n(810568),
     c = n(168524),
@@ -22,9 +22,9 @@ function p(e) {
             source: o.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
-    return (0, i.jsx)(a.Clickable, {
+    return (0, i.jsx)(r.Clickable, {
         onClick: l,
-        className: r()(null != l && h.clickableGameName),
+        className: a()(null != l && h.clickableGameName),
         children: (0, i.jsx)(u.Z, {
             className: h.gameName,
             children: t
@@ -33,8 +33,8 @@ function p(e) {
 }
 function f(e) {
     var t, n;
-    let { isStreaming: l, application: r, game: o } = e;
-    let c = ((t = r), (n = o), null != t ? t.name : null != n ? n.name : d.Z.Messages.STATUS_UNKNOWN);
+    let { isStreaming: l, application: a, game: o } = e;
+    let c = ((t = a), (n = o), null != t ? t.name : null != n ? n.name : d.Z.Messages.STATUS_UNKNOWN);
     return (0, i.jsxs)('div', {
         className: h.gameWrapper,
         children: [
@@ -43,11 +43,11 @@ function f(e) {
                 children: [
                     (0, i.jsx)(s.Z, {
                         className: h.gameIcon,
-                        game: r,
+                        game: a,
                         pid: null == o ? void 0 : o.pid
                     }),
                     l
-                        ? (0, i.jsx)(a.VideoIcon, {
+                        ? (0, i.jsx)(r.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
                               className: h.liveBadge
@@ -62,7 +62,7 @@ function f(e) {
                         ? (0, i.jsx)(i.Fragment, {
                               children: (0, i.jsx)(p, {
                                   name: c,
-                                  applicationId: null == r ? void 0 : r.id
+                                  applicationId: null == a ? void 0 : a.id
                               })
                           })
                         : null

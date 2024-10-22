@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(692547),
-    a = n(481060),
+    a = n(692547),
+    r = n(481060),
     s = n(619915),
     o = n(456269),
     c = n(921711),
@@ -51,22 +51,22 @@ function b(e) {
     if ((0, C.Z)(w)) return (0, i.jsx)(x.Z, { mentionsCount: w });
     if ((0, c.O)(y)) return (0, i.jsx)(c.Z, { locked: P });
     if (O)
-        return (0, i.jsx)(a.TextBadge, {
+        return (0, i.jsx)(r.TextBadge, {
             text: Z.Z.Messages.NEW,
-            color: r.Z.unsafe_rawColors.BRAND_260.css,
+            color: a.Z.unsafe_rawColors.BRAND_260.css,
             className: T.newChannel
         });
     if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
-        return (0, i.jsx)(a.Text, {
+        return (0, i.jsx)(r.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, a.getBadgeCountString)(V) })
+            children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, r.getBadgeCountString)(V) })
         });
     if (!j && n.isForumLikeChannel() && null != F && F > 0)
-        return (0, i.jsx)(a.Text, {
+        return (0, i.jsx)(r.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, a.getBadgeCountString)(F)
+            children: (0, r.getBadgeCountString)(F)
         });
     let z = null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0;
     return null != R && R && H
@@ -76,9 +76,9 @@ function b(e) {
               channel: n
           })
         : A && (0, m.a)(M) && W
-          ? (0, i.jsx)(a.TextBadge, {
+          ? (0, i.jsx)(r.TextBadge, {
                 text: Z.Z.Messages.LIVE,
-                color: r.Z.unsafe_rawColors.RED_400.css
+                color: a.Z.unsafe_rawColors.RED_400.css
             })
           : null != L && L && (0, g.u)(U)
             ? (0, i.jsx)(E.Z, {

@@ -8,8 +8,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(91192),
     o = n(442837),
     c = n(481060),
@@ -43,7 +43,7 @@ let L = {
 };
 function y() {
     let e = (0, s.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
+        { favoriteAdded: t, clearFavoriteAdded: a } = (0, v.up)(),
         [y, P] = l.useState(!1),
         { favoriteServerMuted: O, favoriteChannels: j } = (0, o.cj)([S.Z], () => ({
             favoriteChannels: S.Z.getFavoriteChannels(),
@@ -62,21 +62,21 @@ function y() {
                     return null != t && null != e[t.channelId];
                 }),
                 l = (0, o.e7)([C.Z], () => C.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                r = (0, o.e7)([N.Z], () => n && null != t && N.Z.hasVideo(t), [n, t]),
-                a = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, o.e7)([N.Z], () => n && null != t && N.Z.hasVideo(t), [n, t]),
+                r = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, o.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { channelId: n } = t;
                         return null != e[n];
                     })
                 ),
-                c = a.length > 0,
+                c = r.length > 0,
                 u = !1,
                 d = !1,
                 p = !1,
                 f = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (f = s)) : ((p = l), (f = c)),
+                n ? ((u = !a), (d = a), (p = i), (f = s)) : ((p = l), (f = c)),
                 (0, _.Or)({
                     audio: u,
                     video: d,
@@ -89,8 +89,8 @@ function y() {
         })(j),
         H = G > 0 ? (0, m.N)(G) : null,
         V = l.useCallback(() => {
-            r();
-        }, [r]);
+            a();
+        }, [a]);
     return (0, i.jsxs)(f.H, {
         children: [
             (0, i.jsx)(p.Z, {
@@ -129,7 +129,7 @@ function y() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(R.ring, { [R.ringActive]: t }),
+                                className: r()(R.ring, { [R.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',

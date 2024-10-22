@@ -9,9 +9,9 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(l),
+    r = n(392711),
+    s = n.n(r),
     o = n(442837),
     c = n(481060),
     u = n(317381),
@@ -56,21 +56,21 @@ function T() {
                 .filter(C.lm)
         ),
         l = n.map((e) => e.id),
-        r = n.filter((e) => e.type === N.d4z.GUILD_VOICE),
-        a = n.filter((e) => e.type === N.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        a = n.filter((e) => e.type === N.d4z.GUILD_VOICE),
+        r = n.filter((e) => e.type === N.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         x = (0, o.Wu)(
             [g.ZP],
             () =>
-                s().flatMap(r, (e) =>
+                s().flatMap(a, (e) =>
                     g.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     })
                 ),
-            [r]
+            [a]
         ),
         v = (0, o.Wu)([h.Z], () =>
-            s().flatMap(a, (e) =>
+            s().flatMap(r, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
                     .map((e) => {
@@ -81,7 +81,7 @@ function T() {
         ),
         T = (0, o.e7)([h.Z], () => {
             let e = 0;
-            for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
+            for (let t of r) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
         }),
         b = (0, o.Wu)(
@@ -97,9 +97,9 @@ function T() {
             () => {
                 let e = u.ZP.getEmbeddedActivitiesByChannel(),
                     t = [];
-                for (let r of l) {
+                for (let a of l) {
                     var n, i;
-                    t.push(...(null !== (i = null === (n = e.get(r)) || void 0 === n ? void 0 : n.flatMap((e) => Array.from(e.userIds))) && void 0 !== i ? i : []));
+                    t.push(...(null !== (i = null === (n = e.get(a)) || void 0 === n ? void 0 : n.flatMap((e) => Array.from(e.userIds))) && void 0 !== i ? i : []));
                 }
                 return t;
             },
@@ -159,9 +159,9 @@ function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(S.row, S.rowGuildName),
+                className: a()(S.row, S.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(S.guildNameText, S.guildNameTextLimitedSize),
+                    className: a()(S.guildNameText, S.guildNameTextLimitedSize),
                     children: x.Z.Messages.FAVORITES_GUILD_NAME
                 })
             }),

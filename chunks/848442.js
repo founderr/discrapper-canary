@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    r = n(399606),
     s = n(704215),
     o = n(433517),
     c = n(481060),
@@ -32,13 +32,13 @@ var l = n(120356),
 function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
-        _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
+        _ = (0, r.e7)([E.Z], () => E.Z.getGuild(t)),
         v = (null == _ ? void 0 : _.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         A = 'false' === o.K.get(Z.tM, 'false'),
-        M = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
+        M = (0, r.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(x.m, {
         id: 'shop-'.concat(t),
-        className: r()(b.previewChannelRow, {
+        className: a()(b.previewChannelRow, {
             [b.selected]: n,
             [b.phantomPreview]: A
         }),
@@ -47,7 +47,7 @@ function A(e) {
             (0, i.jsx)(m.Z, {
                 width: 20,
                 height: 20,
-                className: r()([e, b.shopIcon])
+                className: a()([e, b.shopIcon])
             }),
         text: T.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
         selected: n,
@@ -95,15 +95,15 @@ function A(e) {
 }
 function M(e) {
     let { guild: t, selected: l } = e,
-        r = (0, _.g)(t, 'guild_shop_channel_row'),
-        a = () => {
+        a = (0, _.g)(t, 'guild_shop_channel_row'),
+        r = () => {
             o.K.set(Z.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
         };
-    return r
+    return a
         ? (0, i.jsx)(A, {
               guildId: t.id,
               selected: l,
-              handleClick: a
+              handleClick: r
           })
         : (0, i.jsx)(x.m, {
               id: 'shop-'.concat(t.id),
@@ -115,7 +115,7 @@ function M(e) {
                   }),
               text: T.Z.Messages.GUILD_SHOP_CHANNEL_LABEL,
               selected: l,
-              onClick: a,
+              onClick: r,
               onContextMenu: (e) => {
                   null != t &&
                       (0, u.jW)(e, async () => {

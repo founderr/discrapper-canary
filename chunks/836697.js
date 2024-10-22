@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(110924),
     o = n(693546),
     c = n(863249),
@@ -25,8 +25,8 @@ var i = n(200651),
 function E(e) {
     let { onActivate: t } = e,
         [n, E] = l.useState(!1),
-        N = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        N = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        x = (0, a.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         S = (0, f.Z)(),
         v = (0, s.Z)(N),
         Z = l.useMemo(() => {
@@ -60,7 +60,7 @@ function E(e) {
                   onExpandCollapse: () => {
                       E(!n), c.ZP.clearCoachmark();
                   },
-                  folderIconContent: (0, i.jsx)(a.HourglassIcon, {
+                  folderIconContent: (0, i.jsx)(r.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,

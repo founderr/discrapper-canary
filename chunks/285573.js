@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(239091),
     c = n(146773),
@@ -14,13 +14,13 @@ var i = n(200651),
     m = n(490897),
     g = n(872356);
 let C = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: x, connectChannelDropTarget: S, tabIndex: v } = e,
+    let { guild: t, selectedChannelId: a, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: x, connectChannelDropTarget: S, tabIndex: v } = e,
         Z = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         T = (0, s.e7)([u.Z], () => u.Z.getChannel(null == Z ? void 0 : Z.parent_id)),
-        b = r === (null == Z ? void 0 : Z.id),
+        b = a === (null == Z ? void 0 : Z.id),
         A = (0, s.e7)([h.Z], () => (null != T ? h.Z.can(_.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(_.Plq.MANAGE_CHANNELS, t))),
         M = l.useCallback(
             (e) => {
@@ -40,7 +40,7 @@ let C = (0, c.B)(function (e) {
     let R = (0, p.jo)(c, N),
         L = (0, p.CN)(Z, I, E),
         y = (0, i.jsx)('div', {
-            className: a()(R, {
+            className: r()(R, {
                 [g.disabled]: L,
                 [g.selected]: b
             }),

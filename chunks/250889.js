@@ -1,19 +1,19 @@
 n.d(t, {
     H: function () {
-        return r;
+        return a;
     },
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(726542),
     l = n(973616);
-let r = 'xbox:';
-class a extends l.Z {
+let a = 'xbox:';
+class r extends l.Z {
     getIconURL() {
         return i.Z.get('xbox').icon.lightPNG;
     }
     constructor(e) {
-        super(e), (this.id = ''.concat(r).concat(e.name)), (this.name = e.name);
+        super(e), (this.id = ''.concat(a).concat(e.name)), (this.name = e.name);
     }
 }

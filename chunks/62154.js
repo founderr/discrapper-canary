@@ -20,9 +20,9 @@ var s = t(442837),
     m = t(272216);
 function p(e) {
     var n;
-    let { user: t, currentUser: p, channelId: x, displayProfile: Z, initialSection: h, initialSubsection: v, friendToken: S, onClose: T } = e,
+    let { user: t, currentUser: p, channelId: x, displayProfile: Z, initialSection: h, initialSubsection: S, friendToken: v, onClose: T } = e,
         g = (0, s.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
-        A = (0, I.Z)({
+        N = (0, I.Z)({
             user: t,
             currentUser: p
         });
@@ -49,7 +49,7 @@ function p(e) {
                         user: t,
                         guildId: null !== (n = null == Z ? void 0 : Z.guildId) && void 0 !== n ? n : void 0,
                         channelId: x,
-                        friendToken: S,
+                        friendToken: v,
                         className: m.friendRequestBanner
                     })
                 }),
@@ -59,9 +59,9 @@ function p(e) {
                     user: t,
                     currentUser: p,
                     displayProfile: Z,
-                    items: A,
+                    items: N,
                     initialSection: h,
-                    initialSubsection: v,
+                    initialSubsection: S,
                     onClose: T
                 })
             })

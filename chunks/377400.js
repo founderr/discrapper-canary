@@ -1,16 +1,16 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(570140),
-    a = n(317770),
+    a = n(570140),
+    r = n(317770),
     s = n(175281),
     o = n(285371);
-class c extends a.Z {
+class c extends r.Z {
     _initialize() {
-        r.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), r.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        a.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), a.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
     }
     _terminate() {
-        r.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), r.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        a.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), a.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
     }
     showKeyboardShortcuts() {
         (0, l.openModal)((e) => (0, i.jsx)(s.Z, { ...e }), { modalKey: o.J });

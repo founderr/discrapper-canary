@@ -6,12 +6,12 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(603592),
-    a = n(689938);
+    a = n(603592),
+    r = n(689938);
 let s = 'DOWNLOAD_APPS';
 function o() {
     let e = (0, l.useModalsStore)((e) => (0, l.hasModalOpenSelector)(e, s));
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(a.Z, {
         id: 'app-download-button',
         onClick: () => {
             (0, l.openModalLazy)(
@@ -27,7 +27,7 @@ function o() {
             );
         },
         selected: e,
-        tooltip: a.Z.Messages.DOWNLOAD_APPS,
+        tooltip: r.Z.Messages.DOWNLOAD_APPS,
         icon: l.DownloadIcon
     });
 }

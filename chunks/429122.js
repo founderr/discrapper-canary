@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(884338),
-    a = n(934415),
+    a = n(884338),
+    r = n(934415),
     s = n(540126),
     o = n(700026),
     c = n(301342),
@@ -17,13 +17,13 @@ var i = n(200651),
     d = n(774264);
 let h = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
-        r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-    return null == r ? null : (0, i.jsx)(c.Qo, { category: r });
+        a = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
+    return null == a ? null : (0, i.jsx)(c.Qo, { category: a });
 });
 function p(e) {
-    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: a } = e;
+    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: a, optInEnabled: r } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: c, canHaveVoiceSummary: d } = (0, o.ie)(n, a, t),
+    let { hasDivider: c, canHaveVoiceSummary: d } = (0, o.ie)(n, r, t),
         h = c ? u.QP : 0;
     if (!d || t === s.wZ) return h;
     let p = n.getNamedCategoryFromSection(t);
@@ -32,7 +32,7 @@ function p(e) {
         : (0, o.V5)({
                 category: p,
                 selectedChannelId: l,
-                selectedVoiceChannelId: r,
+                selectedVoiceChannelId: a,
                 voiceStates: i
             })
           ? u.Vf + h
@@ -53,7 +53,7 @@ t.ZP = l.memo(function (e) {
         E = l.useMemo(
             () =>
                 null != I && I.isCollapsed
-                    ? (0, a.c4)({
+                    ? (0, r.c4)({
                           channels: I.getChannelRecords(),
                           selectedChannelId: f,
                           selectedVoiceChannelId: _,
@@ -73,7 +73,7 @@ t.ZP = l.memo(function (e) {
               children: [
                   (0, i.jsx)('div', {
                       className: d.voiceUserSummary,
-                      children: (0, i.jsx)(r.Z, {
+                      children: (0, i.jsx)(a.Z, {
                           renderIcon: !0,
                           users: E,
                           max: 8,

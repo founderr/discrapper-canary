@@ -25,7 +25,7 @@ function _(e) {
             currentUser: I,
             location: d.Sbl.PROFILE_MODAL_TABS
         }),
-        v = [
+        S = [
             {
                 section: a.oh.USER_INFO,
                 text: u.Z.Messages.USER_PROFILE_ABOUT_ME
@@ -33,20 +33,20 @@ function _(e) {
         ];
     return (
         (E.length > 0 || (Z && f.length > 0) || null != m) &&
-            v.push({
+            S.push({
                 section: a.oh.ACTIVITY,
                 text: u.Z.Messages.USER_PROFILE_ACTIVITY
             }),
         !Z &&
             h &&
-            (v.push({
+            (S.push({
                 section: a.oh.MUTUAL_FRIENDS,
                 text: (0, r.Z)(p)
             }),
-            v.push({
+            S.push({
                 section: a.oh.MUTUAL_GUILDS,
                 text: (0, c.Z)(x)
             })),
-        v
+        S
     );
 }

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(503438),
@@ -24,10 +24,10 @@ var i = n(200651),
 let E = d.u.SIZE_24;
 function N(e) {
     var t, n;
-    let { activity: r, user: a, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
-        d = null == r ? void 0 : r.assets,
-        h = null == r ? void 0 : r.application_id;
-    if (null == r || null == d || (null == d.large_image && null == d.small_image))
+    let { activity: a, user: r, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
+        d = null == a ? void 0 : a.assets,
+        h = null == a ? void 0 : a.application_id;
+    if (null == a || null == d || (null == d.large_image && null == d.small_image))
         return null != s
             ? (function (e) {
                   let t = m.ZP.getApplicationIconURL({
@@ -48,7 +48,7 @@ function N(e) {
               })(s)
             : null;
     let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
-        f = (0, c.Z)(r),
+        f = (0, c.Z)(a),
         g = f ? I.spotifyLargeImage : I.applicationLargeImage,
         C =
             null != p
@@ -62,7 +62,7 @@ function N(e) {
         ? ((C = (0, i.jsx)(o.Clickable, {
               className: I.clickable,
               onClick: () => {
-                  u(r, a.id);
+                  u(a, r.id);
               },
               children: C
           })),
@@ -78,32 +78,32 @@ function N(e) {
 }
 function x(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
-        r = null == t ? void 0 : t.details,
-        a = null == t ? void 0 : t.name,
-        s = a;
+        a = null == t ? void 0 : t.details,
+        r = null == t ? void 0 : t.name,
+        s = r;
     if (null != n) s = n.application.name;
     else {
-        if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == r || null == l) return null;
-        (a = r),
+        if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == a || null == l) return null;
+        (r = a),
             (s = (0, i.jsx)(o.Clickable, {
                 className: I.headerLink,
                 onClick: () => {
                     l(t);
                 },
-                children: r
+                children: a
             }));
     }
     return (0, i.jsx)(h.Z, {
-        title: a,
+        title: r,
         className: I.header,
         children: s
     });
 }
 function S(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
-        r = null == t ? void 0 : t.details,
+        a = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
-        o = r;
+        o = a;
     return (null != t &&
         (0, c.Z)(t) &&
         null != s &&
@@ -124,7 +124,7 @@ function S(e) {
     null == o || '' === o)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize),
+              className: r()(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize),
               children: o
           });
 }
@@ -134,7 +134,7 @@ function v(e) {
     return null == n || '' === n || (0, c.Z)(t)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize, I.__invalid_activity),
+              className: r()(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize, I.__invalid_activity),
               children: n
           });
 }
@@ -143,17 +143,17 @@ function Z(e) {
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
     if ((null == n ? void 0 : n.start) == null || (null == n ? void 0 : n.end) == null) return null;
-    let { start: l, end: r } = n;
+    let { start: l, end: a } = n;
     return (0, i.jsx)(u.Z, {
         start: l,
-        end: r,
+        end: a,
         className: I.timeBar,
         themed: !0,
         singleLine: !0
     });
 }
 function T(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
+    let { activity: t, embeddedApp: n, user: a, channel: r, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: _ } = e,
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
     let T = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(g.lm)),
@@ -179,7 +179,7 @@ function T(e) {
                       children: [
                           (0, i.jsx)(N, {
                               activity: t,
-                              user: r,
+                              user: a,
                               embeddedApp: n,
                               onOpenSpotifyAlbum: _
                           }),
@@ -193,14 +193,14 @@ function T(e) {
                                   }),
                                   (0, i.jsx)(S, {
                                       activity: t,
-                                      user: r,
+                                      user: a,
                                       onOpenSpotifyArtist: p
                                   }),
                                   (0, i.jsx)(v, { activity: t }),
                                   m.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: I.usersSummary,
-                                          guildId: a.guild_id,
+                                          guildId: r.guild_id,
                                           users: T,
                                           size: E,
                                           max: 7,
@@ -217,7 +217,7 @@ function T(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, E),
+                                                              src: e.getAvatarURL(r.guild_id, E),
                                                               alt: l,
                                                               className: I.avatar
                                                           },

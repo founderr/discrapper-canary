@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s,
     o,
     c = n(392711),
@@ -27,7 +27,7 @@ var i,
     S = n(823379),
     v = n(734307),
     Z = n(981631);
-((r = i || (i = {})).HIDDEN = 'hidden'), (r.UNREAD = 'unread'), (r.MENTIONS = 'mentions'), (r.VOICE_CHANNELS = 'voice-channels');
+((a = i || (i = {})).HIDDEN = 'hidden'), (a.UNREAD = 'unread'), (a.MENTIONS = 'mentions'), (a.VOICE_CHANNELS = 'voice-channels');
 let T = {
         mode: 'hidden',
         mentionCount: 0,
@@ -58,9 +58,9 @@ function y(e) {
 function P(e) {
     var t, n, i;
     let { guildChannels: l } = v.Z.getGuildWithoutChangingGuildActionRows(e),
-        r = l.getChannels(null !== (t = M[e]) && void 0 !== t ? t : []);
-    if (null == r || 0 === r.length) return !1;
-    let a = null,
+        a = l.getChannels(null !== (t = M[e]) && void 0 !== t ? t : []);
+    if (null == a || 0 === a.length) return !1;
+    let r = null,
         s = null,
         o = null,
         c = null,
@@ -69,7 +69,7 @@ function P(e) {
         p = !1,
         f = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
         _ = null !== (n = null == f ? void 0 : f.getShownChannelIds()) && void 0 !== n ? n : [],
-        [m, g, C] = l.getSlicedChannels(r);
+        [m, g, C] = l.getSlicedChannels(a);
     for (let e = 0; e < g.length; e++) {
         let t = g[e];
         if (((R(t.id) || u().some(t.threadIds, R)) && (h = !1), (L(t.id) || u().some(t.threadIds, L)) && (d = !1), _.includes(t.id) && (p = !0), !h && !d && p)) break;
@@ -81,7 +81,7 @@ function P(e) {
     if (h || d)
         for (let e = m.length - 1; e >= 0; e--) {
             let t = m[e];
-            (R(t.id) || u().some(t.threadIds, R)) && (null == s && (s = t.id), (N = !0)), (L(t.id) || u().some(t.threadIds, L)) && (null == a && (a = t.id), (E += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
+            (R(t.id) || u().some(t.threadIds, R)) && (null == s && (s = t.id), (N = !0)), (L(t.id) || u().some(t.threadIds, L)) && (null == r && (r = t.id), (E += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
         }
     if (h || d)
         for (let e = 0; e < C.length; e++) {
@@ -115,7 +115,7 @@ function P(e) {
             ? (b = {
                   mode: 'mentions',
                   mentionCount: E,
-                  targetChannelId: a
+                  targetChannelId: r
               })
             : h &&
               N &&
@@ -175,14 +175,14 @@ class k extends (l = d.ZP.Store) {
     }
 }
 (o = 'ChannelListUnreadsStore'),
-    (s = 'displayName') in (a = k)
-        ? Object.defineProperty(a, s, {
+    (s = 'displayName') in (r = k)
+        ? Object.defineProperty(r, s, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = o),
+        : (r[s] = o),
     (t.Z = new k(h.Z, {
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, channelIds: n } = e,

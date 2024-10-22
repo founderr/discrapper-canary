@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(72416),
     c = n(476221),
@@ -54,9 +54,9 @@ class g extends l.PureComponent {
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: l, state: r, className: o, children: c } = this.props;
+        let { quality: t, smallPing: n, lastPing: l, state: a, className: o, children: c } = this.props;
         return (
-            r === h.hes.RTC_CONNECTED &&
+            a === h.hes.RTC_CONNECTED &&
                 (e = (0, i.jsx)(s.Tooltip, {
                     text: t !== h.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
                     color: f[t],
@@ -70,7 +70,7 @@ class g extends l.PureComponent {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(p.rtcConnectionStatus, m[t], o),
+                        className: r()(p.rtcConnectionStatus, m[t], o),
                         children: [
                             e,
                             (0, i.jsx)('div', {
@@ -108,7 +108,7 @@ function C(e) {
     let { quality: t, smallPing: n, ...l } = e;
     if (!(0, s.useRedesignIconContext)().enabled)
         return (0, i.jsx)(o.Z, {
-            className: a()(p.ping, { [p.smallPing]: n }),
+            className: r()(p.ping, { [p.smallPing]: n }),
             foreground: p.pingForeground
         });
     {
@@ -119,7 +119,7 @@ function C(e) {
             [h.IE4.UNKNOWN]: s.ConnectionUnknownIcon
         }[t];
         return (0, i.jsx)(e, {
-            className: a()(p.ping, { [p.smallPing]: n }),
+            className: r()(p.ping, { [p.smallPing]: n }),
             ...l
         });
     }

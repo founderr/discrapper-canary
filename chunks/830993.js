@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(58540),
     o = n(619915),
     c = n(620662),
@@ -52,7 +52,7 @@ function Z(e) {
         Z = Array.from((0, o.uF)(N).values()),
         b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
         A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
-        M = (0, r.e7)(
+        M = (0, a.e7)(
             [f.Z],
             () => {
                 let e = {};
@@ -60,11 +60,11 @@ function Z(e) {
                     b.forEach((t) => {
                         let n = f.Z.findActivity(t.user.id, A(t));
                         if (null != n && !(0, u.Z)(n)) {
-                            var i, l, r, a;
-                            let s = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
+                            var i, l, a, r;
+                            let s = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (a = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== a ? a : t.user.id),
                                 o =
-                                    null !== (a = e[s]) && void 0 !== a
-                                        ? a
+                                    null !== (r = e[s]) && void 0 !== r
+                                        ? r
                                         : {
                                               members: [],
                                               activity: n
@@ -76,11 +76,11 @@ function Z(e) {
                 );
             },
             [b],
-            r.pF
+            a.pF
         );
     return M.length + Z.length === 0
         ? null
-        : (0, i.jsxs)(a.Scroller, {
+        : (0, i.jsxs)(r.Scroller, {
               className: v.container,
               children: [
                   (0, i.jsx)(T, {
@@ -121,12 +121,12 @@ function Z(e) {
                               (0, i.jsx)('div', { className: v.headerDivider }),
                               (0, i.jsx)('div', {
                                   className: v.settingNudgeText,
-                                  children: (0, i.jsx)(a.Text, {
+                                  children: (0, i.jsx)(r.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
                                       children: S.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
                                           onClick: () => {
-                                              (0, a.openModalLazy)(async () => {
+                                              (0, r.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('52619'), n.e('8821'), n.e('84811'), n.e('76439'), n.e('37229'), n.e('28044'), n.e('22795'), n.e('83368')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
@@ -145,15 +145,15 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
-        s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)),
+        r = (0, a.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
+        s = (0, a.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         o = (0, g.ZP)({
             channel: t,
-            locked: a,
+            locked: r,
             video: s,
             selected: n
         }),
-        c = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
+        c = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {

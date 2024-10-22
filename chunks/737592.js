@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     s = n(481060),
     o = n(717881),
     c = n(503438),
@@ -18,16 +18,16 @@ var l = n(120356),
     I = n(51299);
 function E(e) {
     let { guildId: t, member: n, className: l } = e,
-        a = null != n.member ? (0, m.CA)(n.member) : null;
+        r = null != n.member ? (0, m.CA)(n.member) : null;
     return (0, i.jsx)(s.Tooltip, {
         text: n.nick,
         position: 'bottom',
         children: (e) => {
             var o;
             return (0, i.jsx)(s.Avatar, {
-                src: null != a ? a : n.user.getAvatarURL(t, 16),
+                src: null != r ? r : n.user.getAvatarURL(t, 16),
                 size: s.AvatarSizes.SIZE_16,
-                className: r()(l, I.partyAvatar),
+                className: a()(l, I.partyAvatar),
                 'aria-label': null !== (o = n.nick) && void 0 !== o ? o : g.ZP.getName(n.user),
                 ...e
             });
@@ -55,7 +55,7 @@ function N(e) {
             (0, i.jsx)(
                 'div',
                 {
-                    className: r()(I.morePartyMembers, t),
+                    className: a()(I.morePartyMembers, t),
                     children: e
                 },
                 n
@@ -63,10 +63,10 @@ function N(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: s } = e,
-        h = null != r,
-        m = h ? Array.from(r.embeddedActivity.userIds) : [],
-        g = (0, a.e7)([_.default, f.default], () => {
+    let { channel: t, presenceActivity: n, members: l, embeddedApp: a, onAction: s } = e,
+        h = null != a,
+        m = h ? Array.from(a.embeddedActivity.userIds) : [],
+        g = (0, r.e7)([_.default, f.default], () => {
             if (h) return _.default.getUser(m[0]);
             if (null != l) {
                 var e, t;
@@ -84,7 +84,7 @@ t.Z = (e) => {
                 children: E
                     ? (0, i.jsx)(C.Z, {
                           activity: n,
-                          embeddedApp: r,
+                          embeddedApp: a,
                           user: g,
                           channel: t,
                           sortedVoiceStates: l,
@@ -114,7 +114,7 @@ t.Z = (e) => {
                 children: (0, i.jsx)(u.Z, {
                     type: o.P.VOICE_CHANNEL,
                     activity: n,
-                    embeddedActivity: null == r ? void 0 : r.embeddedActivity,
+                    embeddedActivity: null == a ? void 0 : a.embeddedActivity,
                     user: g,
                     guildId: t.getGuildId(),
                     channelId: t.id,

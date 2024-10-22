@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(91192),
     o = n(481060),
     c = n(276952),
@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
+    let { id: n, onClick: a, onContextMenu: p, icon: f, selected: _, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
         b = (0, s.Ie)(n),
         [A, M] = l.useState(!1),
         R = 'string' == typeof m && null == x ? m : x;
@@ -43,8 +43,8 @@ let p = l.forwardRef(function (e, t) {
                             null == Z || Z(), M(!1);
                         },
                         onMouseDown: T,
-                        className: a()(h.circleIconButton, N, { [h.selected]: _ || A }),
-                        onClick: r,
+                        className: r()(h.circleIconButton, N, { [h.selected]: _ || A }),
+                        onClick: a,
                         'aria-label': R,
                         onContextMenu: p,
                         focusProps: { enabled: !1 },
