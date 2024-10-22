@@ -1,98 +1,50 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
-}),
-    n(47120);
+});
 var i = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(259443),
-    o = n(481060),
-    c = n(81897),
-    u = n(911284),
-    d = n(785717),
-    h = n(369566),
-    p = n(527790),
-    m = n(689938),
-    _ = n(869426);
-let f = new r.Y('UserProfilePanelRecentActivity');
-function E(e) {
-    let { user: t, cardClassName: n } = e,
-        { trackUserProfileAction: a } = (0, d.KZ)(),
-        { recent: r } = (0, h.Z)(t.id),
-        E = (0, c.Z)();
-    s.useEffect(() => {
+    a = n(259443),
+    l = n(81897),
+    r = n(911284),
+    o = n(369566),
+    c = n(502762),
+    u = n(527790),
+    d = n(638785),
+    h = n(689938);
+let p = new a.Y('UserProfilePanelRecentActivity');
+function m(e) {
+    let { user: t } = e,
+        { recent: n } = (0, o.Z)(t.id),
+        a = (0, l.Z)();
+    return (s.useEffect(() => {
         (async () => {
             try {
-                await (0, u.Z)(t.id, E);
+                await (0, r.Z)(t.id, a);
             } catch (e) {
-                f.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
+                p.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }
         })();
-    }, [t.id, E]);
-    let [g, C] = s.useState(!0),
-        I = g ? o.ChevronSmallDownIcon : o.ChevronSmallRightIcon;
-    return 0 === r.length
+    }, [t.id, a]),
+    0 === n.length)
         ? null
-        : r.length <= 3
-          ? (0, i.jsxs)('section', {
-                children: [
-                    (0, i.jsxs)(o.Heading, {
-                        variant: 'text-xs/semibold',
-                        color: 'header-primary',
-                        className: _.header,
-                        children: [m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', r.length]
-                    }),
-                    (0, i.jsx)('ul', {
-                        className: _.list,
-                        children: r.map((e) =>
-                            (0, i.jsx)(
-                                p.Z,
-                                {
-                                    user: t,
-                                    entry: e,
-                                    className: n,
-                                    hideHeader: !0
-                                },
-                                e.id
-                            )
-                        )
-                    })
-                ]
-            })
-          : (0, i.jsxs)('section', {
-                children: [
-                    (0, i.jsxs)(o.Clickable, {
-                        className: l()(_.header, _.clickable),
-                        onClick: () => {
-                            a({ action: g ? 'COLLAPSE_RECENT_ACTIVITY' : 'EXPAND_RECENT_ACTIVITY' }), C(!g);
-                        },
-                        children: [
-                            (0, i.jsxs)(o.Heading, {
-                                variant: 'text-xs/semibold',
-                                color: 'header-primary',
-                                children: [m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY, ' \u2014 ', r.length]
-                            }),
-                            (0, i.jsx)(I, { size: 'xs' })
-                        ]
-                    }),
-                    (0, i.jsx)('ul', {
-                        className: _.list,
-                        children: (g ? r : r.slice(0, 3)).map((e) =>
-                            (0, i.jsx)(
-                                p.Z,
-                                {
-                                    user: t,
-                                    entry: e,
-                                    className: n,
-                                    hideHeader: !0
-                                },
-                                e.id
-                            )
-                        )
-                    })
-                ]
-            });
+        : (0, i.jsx)(c.Z.Overlay, {
+              children: (0, i.jsx)(d.Z, {
+                  section: 'ACTIVITY',
+                  header: h.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+                  minItems: 3,
+                  items: n.map((e) =>
+                      (0, i.jsx)(
+                          u.Z,
+                          {
+                              user: t,
+                              entry: e,
+                              hideHeader: !0
+                          },
+                          e.id
+                      )
+                  )
+              })
+          });
 }

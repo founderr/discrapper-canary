@@ -116,10 +116,7 @@ function M(e) {
                             currentUser: n,
                             className: Z.activity
                         }),
-                        (0, i.jsx)(v.Z, {
-                            user: t,
-                            cardClassName: Z.activity
-                        })
+                        (0, i.jsx)(v.Z, { user: t })
                     ]
                 })
         ]

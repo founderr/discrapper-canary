@@ -16,35 +16,29 @@ var s = n(410030),
     h = n(171368),
     p = n(389190),
     m = n(428927),
-    _ = n(551498),
+    _ = n(638785),
     f = n(689938),
     E = n(346799);
 function g(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, a.ZP)(),
-        { context: g, trackUserProfileAction: C } = (0, r.KZ)(),
-        I = (0, s.ZP)(),
-        { mutualFriends: T, isFetching: x } = (0, o.Z)(t.id, !t.bot),
-        { mutualGuilds: v, isFetching: S } = (0, c.Z)(t.id, !0),
-        N = !t.bot && null != T && T.length > 0,
-        A = null != v && v.length > 0;
-    return N || A
+        { context: g } = (0, r.KZ)(),
+        C = (0, s.ZP)(),
+        { mutualFriends: I, isFetching: T } = (0, o.Z)(t.id, !t.bot),
+        { mutualGuilds: x, isFetching: v } = (0, c.Z)(t.id, !0),
+        S = !t.bot && null != I && I.length > 0,
+        N = null != x && x.length > 0;
+    return S || N
         ? (0, i.jsxs)(d.Z.Overlay, {
               className: E.overlay,
               children: [
-                  A &&
+                  N &&
                       (0, i.jsx)(_.Z, {
-                          className: E.list,
-                          header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: v.length }),
-                          isLoadingHeader: S,
-                          loadingContentsCount: v.length,
-                          itemType: _.R.MutualGuildList,
-                          onExpand: () =>
-                              C({
-                                  action: 'PRESS_SECTION',
-                                  section: 'MUTUAL_GUILDS'
-                              }),
-                          children: v.map((e) => {
+                          section: 'MUTUAL_GUILDS',
+                          header: f.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER,
+                          isLoading: v,
+                          listClassName: E.list,
+                          items: x.map((e) => {
                               let { guild: n, nick: s } = e;
                               return (0, i.jsx)(
                                   m.D,
@@ -52,27 +46,21 @@ function g(e) {
                                       user: t,
                                       guild: n,
                                       nick: s,
-                                      theme: I,
+                                      theme: C,
                                       onSelect: () => (0, l.X)(n.id)
                                   },
                                   n.id
                               );
                           })
                       }),
-                  A && N && (0, i.jsx)(u.Z, { className: E.divider }),
-                  N &&
+                  N && S && (0, i.jsx)(u.Z, { className: E.divider }),
+                  S &&
                       (0, i.jsx)(_.Z, {
-                          className: E.list,
-                          header: f.Z.Messages.MUTUAL_FRIENDS_COUNT.format({ count: T.length }),
-                          isLoadingHeader: x,
-                          loadingContentsCount: T.length,
-                          itemType: _.R.MutualFriendsList,
-                          onExpand: () =>
-                              C({
-                                  action: 'PRESS_SECTION',
-                                  section: 'MUTUAL_FRIENDS'
-                              }),
-                          children: T.map((e) => {
+                          section: 'MUTUAL_FRIENDS',
+                          header: f.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER,
+                          isLoading: T,
+                          listClassName: E.list,
+                          items: I.map((e) => {
                               let { key: t, user: s, status: a } = e;
                               return (0, i.jsx)(
                                   p.T,
