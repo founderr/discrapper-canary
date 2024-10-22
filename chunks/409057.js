@@ -219,11 +219,12 @@ function B(e) {
                               },
                               children: [et(), en(), er()]
                           }),
-                          (0, r.jsx)(v.Z, {
-                              user: t,
-                              activity: i,
-                              className: k.badges
-                          })
+                          !t.bot &&
+                              (0, r.jsx)(v.Z, {
+                                  user: t,
+                                  activity: i,
+                                  className: k.badges
+                              })
                       ]
                   }),
         eo = () =>
