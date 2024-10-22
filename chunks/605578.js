@@ -8,32 +8,33 @@ var r = n(200651),
     a = n(1561),
     s = n(30215);
 function o(e) {
-    let { tag: t = 'div', children: n, className: o, focusProps: l, onClick: u, onDoubleClick: c, onContextMenu: d, onKeyDown: _, onFocus: E, onBlur: f, onMouseOver: h, onMouseDown: p, onMouseLeave: I, buttonProps: m, 'aria-label': T } = e,
-        S = i.useRef(null);
+    let { tag: t = 'div', children: n, className: o, style: l, focusProps: u, onClick: c, onDoubleClick: d, onContextMenu: _, onKeyDown: E, onFocus: f, onBlur: h, onMouseOver: p, onMouseDown: I, onMouseLeave: m, buttonProps: T, 'aria-label': S } = e,
+        g = i.useRef(null);
     return (0, r.jsxs)(t, {
-        ref: S,
+        ref: g,
         className: o,
-        onClick: u,
-        onMouseOver: h,
-        onMouseLeave: I,
-        onDoubleClick: c,
-        onContextMenu: d,
+        style: l,
+        onClick: c,
+        onMouseOver: p,
+        onMouseLeave: m,
+        onDoubleClick: d,
+        onContextMenu: _,
         children: [
             (0, r.jsx)(a.P, {
-                ...m,
+                ...T,
                 focusProps: {
-                    ringTarget: S,
-                    ...l
+                    ringTarget: g,
+                    ...u
                 },
                 className: s.focusTarget,
-                'aria-label': T,
+                'aria-label': S,
                 onClick: (e) => {
-                    e.stopPropagation(), null == u || u(e);
+                    e.stopPropagation(), null == c || c(e);
                 },
-                onKeyDown: _,
-                onFocus: E,
-                onBlur: f,
-                onMouseDown: p
+                onKeyDown: E,
+                onFocus: f,
+                onBlur: h,
+                onMouseDown: I
             }),
             n
         ]

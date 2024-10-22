@@ -408,6 +408,7 @@ e.exports = Object.freeze({
     CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA: 'Apply To Join',
     CLAN_USER_GO_TO_CLAN_CTA: 'Go to Guild',
     CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA: 'View Application',
+    CLAN_DISCOVERY_CARD_ARIA_LABEL: 'Guild profile for {guildName}',
     RAPIDASH_MORE_GUILDS_CTA: 'More Guilds',
     RAPIDASH_BROWSE_GUILDS_CTA: 'Browse **{gameName}** Guilds',
     RAPIDASH_BROWSE_GUILDS_CTA_ARIA: 'Browse {gameName} Guilds',

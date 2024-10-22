@@ -498,10 +498,11 @@ t.ZP = function (e) {
         );
     return (0, r.jsx)('div', {
         ref: B,
-        children: (0, r.jsx)(o.Clickable, {
+        children: (0, r.jsx)(o.ClickableContainer, {
             onClick: V,
             className: s()(w.clickableCard, b && w.applyToJoinContainer),
             style: t,
+            'aria-label': U.Z.Messages.CLAN_DISCOVERY_CARD_ARIA_LABEL.format({ guildName: p.name }),
             onContextMenu: H,
             children: (0, r.jsx)(F, {
                 ...h,
