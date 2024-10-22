@@ -279,15 +279,14 @@ function eB(e) {
         c = l === eb.IlC.POPOUT,
         E = (0, L.KF)(a.id),
         h = (0, L.g5)(E),
-        [m] = (0, d.e7)([A.ZP], () => (null != a.id && '' !== a.id ? A.ZP.getEmbeddedActivitiesForChannel(a.id) : A.i6)),
-        { userInActivity: p } = (0, d.cj)([A.ZP], () => ({ userInActivity: null != A.ZP.getSelfEmbeddedActivityForChannel(a.id) })),
-        g = (0, C.O)(),
-        T = (0, Z.a)(),
-        S = E !== L.jy.CAN_LAUNCH,
-        { enabled: f } = P.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
-        { Component: v, events: R, play: b } = (0, u.s)(),
-        { Component: D, events: y, play: j } = (0, _.w)();
-    return (f ? ((t = y), (n = j)) : ((t = R), (n = b)), s)
+        { userInActivity: m } = (0, d.cj)([A.ZP], () => ({ userInActivity: null != A.ZP.getSelfEmbeddedActivityForChannel(a.id) })),
+        p = (0, C.O)(),
+        g = (0, Z.a)(),
+        T = E !== L.jy.CAN_LAUNCH,
+        { enabled: S } = P.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
+        { Component: f, events: v, play: R } = (0, u.s)(),
+        { Component: b, events: D, play: y } = (0, _.w)();
+    return (S ? ((t = D), (n = y)) : ((t = v), (n = R)), s)
         ? (0, i.jsx)(I.Tooltip, {
               text: h,
               children: (e) =>
@@ -302,7 +301,7 @@ function eB(e) {
                               (0, x.Z)({
                                   channel: a,
                                   guildId: a.guild_id,
-                                  locationObject: g.location,
+                                  locationObject: p.location,
                                   openInPopout: c,
                                   analyticsLocations: o,
                                   opensAppLauncherModal: !0
@@ -317,27 +316,27 @@ function eB(e) {
                           var n;
                           t.onMouseLeave(), null == e || null === (n = e.onMouseLeave) || void 0 === n || n.call(e);
                       },
-                      disabled: S,
+                      disabled: T,
                       className: r()(eD.button, eD.buttonColor, {
-                          [eD.buttonActive]: p || null != m,
-                          [eD.disabled]: S
+                          [eD.buttonActive]: m,
+                          [eD.disabled]: T
                       }),
                       innerClassName: eD.buttonContents,
                       wrapperClassName: eD.button,
                       children: [
-                          T
+                          g
                               ? (0, i.jsx)(O.r, {
                                     top: -1,
                                     right: -1
                                 })
                               : null,
-                          f
-                              ? (0, i.jsx)(D, {
+                          S
+                              ? (0, i.jsx)(b, {
                                     size: 'sm',
                                     color: 'currentColor',
                                     className: eD.buttonIcon
                                 })
-                              : (0, i.jsx)(v, {
+                              : (0, i.jsx)(f, {
                                     size: 'sm',
                                     color: 'currentColor',
                                     className: eD.buttonIcon
