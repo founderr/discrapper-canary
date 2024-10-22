@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 }),
     n(47120);
@@ -23,25 +23,26 @@ var i = n(200651),
     N = n(126982),
     p = n(981631),
     C = n(302800),
-    g = n(231338),
-    S = n(556709);
-function A(e) {
-    let { onClose: t, onComplete: n, onStepChange: s, transitionState: A, loadId: x, skuId: R, isGift: v = !1, giftRecipient: O, giftMessage: M, analyticsLocations: L, returnRef: Z } = e,
-        { analyticsLocations: b } = (0, c.ZP)([...L, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        P = a.useRef(new l.qA()),
-        [D, j] = a.useState(null),
-        [U, y] = a.useState(!1),
-        B = a.useMemo(() => (0, C.UY)(R), [R]),
-        k = a.useCallback(() => {
-            y(!0), null == n || n();
+    g = n(215023),
+    S = n(231338),
+    A = n(556709);
+function x(e) {
+    let { onClose: t, onComplete: n, onStepChange: s, transitionState: x, loadId: R, skuId: v, isGift: O = !1, giftRecipient: M, giftMessage: L, analyticsLocations: Z, returnRef: b } = e,
+        { analyticsLocations: P } = (0, c.ZP)([...Z, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        D = a.useRef(new l.qA()),
+        [j, U] = a.useState(null),
+        [y, B] = a.useState(!1),
+        k = a.useMemo(() => (0, C.UY)(v), [v]),
+        G = a.useCallback(() => {
+            B(!0), null == n || n();
         }, [n]),
-        G = a.useCallback(
+        F = a.useCallback(
             (e) => {
-                y(!1), t(e);
+                B(!1), t(e);
             },
             [t]
         ),
-        F = a.useMemo(
+        w = a.useMemo(
             () => [
                 I.WA,
                 h.Dd,
@@ -53,56 +54,56 @@ function A(e) {
                     renderStep: (e) =>
                         (0, i.jsx)(f.x, {
                             ...e,
-                            confettiCanvas: D,
-                            analyticsLocations: b,
-                            hideConfetti: null != B
+                            confettiCanvas: j,
+                            analyticsLocations: P,
+                            hideConfetti: null != k
                         }),
                     options: {
-                        bodyClassName: S.modalOverrideBody,
-                        sliderBodyClassName: S.modalOverrideSliderBody
+                        bodyClassName: A.modalOverrideBody,
+                        sliderBodyClassName: A.modalOverrideSliderBody
                     }
                 }
             ],
-            [b, D, B]
+            [P, j, k]
         );
     return (0, i.jsxs)(c.Gt, {
-        value: b,
+        value: P,
         children: [
             (0, i.jsx)(l.O_, {
-                ref: j,
-                className: S.confettiCanvas,
-                environment: P.current
+                ref: U,
+                className: A.confettiCanvas,
+                environment: D.current
             }),
-            null != B &&
+            null != k &&
                 (0, i.jsx)('img', {
-                    src: B.imageSrc,
-                    className: r()(S.customConfetti, { [S.hidden]: !U }),
-                    style: B.style,
+                    src: k.imageSrc,
+                    className: r()(A.customConfetti, { [A.hidden]: !y }),
+                    style: k.style,
                     alt: '',
                     'aria-hidden': !0
                 }),
             (0, i.jsx)(d.PaymentContextProvider, {
-                loadId: x,
-                stepConfigs: F,
+                loadId: R,
+                stepConfigs: w,
                 applicationId: p.XAJ,
-                skuIDs: [R],
-                isGift: v,
+                skuIDs: [v],
+                isGift: O,
                 activeSubscription: null,
-                purchaseType: g.GZ.ONE_TIME,
+                purchaseType: S.GZ.ONE_TIME,
                 children: (0, i.jsx)(u.KB, {
-                    isGift: v,
-                    giftRecipient: O,
-                    giftMessage: M,
+                    isGift: O,
+                    giftRecipient: M,
+                    giftMessage: L,
                     children: (0, i.jsx)(E.PaymentModal, {
-                        onClose: G,
-                        onComplete: k,
+                        onClose: F,
+                        onComplete: G,
                         applicationId: p.XAJ,
-                        skuId: R,
+                        skuId: v,
                         initialPlanId: null,
-                        analyticsLocations: b,
-                        transitionState: A,
+                        analyticsLocations: P,
+                        transitionState: x,
                         renderHeader: (e, t, n) =>
-                            v
+                            O
                                 ? (0, i.jsx)(m.Z, {
                                       step: n,
                                       onClose: () => t(!1)
@@ -111,8 +112,9 @@ function A(e) {
                                       step: n,
                                       onClose: () => t(!1)
                                   }),
-                        returnRef: Z,
+                        returnRef: b,
                         onStepChange: s,
+                        skipConfirm: g.Rm.has(v),
                         hideShadow: !0
                     })
                 })
