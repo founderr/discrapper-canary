@@ -24,8 +24,8 @@ var i,
     p = n(594174),
     g = n(823379),
     T = n(51144),
-    S = n(945124),
-    f = n(231467),
+    f = n(945124),
+    S = n(231467),
     C = n(301544),
     N = n(931515),
     A = n(286083),
@@ -50,10 +50,10 @@ function P(e) {
         },
         className: x.animatedCard,
         children: (0, l.jsx)(
-            f.ZP,
+            S.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, S.y)(n, s),
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, f.y)(n, s),
                 className: d()(x.card, r),
                 source: null != o ? o : R.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
@@ -66,8 +66,8 @@ function P(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: S = 16, paddingHorizontal: f = 32, variant: R = 'default', onUpdatePage: M } = e,
-        D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
+    let { width: c, paddingVertical: f = 16, paddingHorizontal: S = 32, variant: R = 'default', onUpdatePage: M } = e,
+        D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
         y = o.useMemo(() => {
             if (0 === D) return 1;
             let e = D / 256,
@@ -324,11 +324,11 @@ t.ZP = o.memo(function (e) {
           : (0, l.jsx)('div', {
                 className: x.sectionContainer,
                 style: {
-                    paddingTop: S,
-                    paddingLeft: f,
-                    paddingRight: f,
-                    paddingBottom: S,
-                    width: 'calc(100% - '.concat(2 * f, 'px)'),
+                    paddingTop: f,
+                    paddingLeft: S,
+                    paddingRight: S,
+                    paddingBottom: f,
+                    width: 'calc(100% - '.concat(2 * S, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
                 children: er.map((e, t) => {

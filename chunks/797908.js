@@ -12,8 +12,8 @@ var i = n(200651),
 let h = 28;
 t.Z = function (e) {
     var t, n, m, I, p;
-    let { application: g, onSelectApplication: T, showCategory: S = !1 } = e,
-        f = (0, o.Z)({ application: g }),
+    let { application: g, onSelectApplication: T, showCategory: f = !1 } = e,
+        S = (0, o.Z)({ application: g }),
         C = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
         N = (0, r.lf)(g),
         A = a.useCallback(() => {
@@ -28,16 +28,16 @@ t.Z = function (e) {
                 }),
             [g]
         ),
-        Z = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
+        Z = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || S.length > 0,
         L = (0, i.jsx)(l.Z, {
             application: g,
             textVariant: 'text-xs/medium',
-            mutualGuilds: f,
+            mutualGuilds: S,
             mutualGuildShownMax: 3,
             guildIconSize: l.x.SMALL,
             compact: !0
         }),
-        R = S && null != C;
+        R = f && null != C;
     return (0, i.jsx)('div', {
         className: E.container,
         children: (0, i.jsxs)(c.Z, {

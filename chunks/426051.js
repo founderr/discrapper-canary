@@ -23,10 +23,10 @@ function p(e) {
         T = a.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        S = a.useCallback(() => {
+        f = a.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
-        f = a.useCallback(() => {
+        S = a.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ), g && (0, o.Kh)(p.id);
         }, [p.id, g]),
         {
@@ -36,8 +36,8 @@ function p(e) {
             isOptimisticAccepted: v
         } = (0, _.m)({
             user: n,
-            onAcceptSuccess: f,
-            onRejectSuccess: S,
+            onAcceptSuccess: S,
+            onRejectSuccess: f,
             onError: T
         }),
         Z = N || A,

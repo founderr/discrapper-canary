@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(922409),
     g = n(727813),
     T = n(355350),
-    S = n(307947),
-    f = n(125855),
+    f = n(307947),
+    S = n(125855),
     C = n(687683),
     N = n(981631),
     A = n(689938),
@@ -52,7 +52,7 @@ function Z() {
                     c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    f.Z,
+                    S.Z,
                     {
                         index: l,
                         className: r()({
@@ -105,7 +105,7 @@ function Z() {
             [n, b, Z]
         );
     return 0 === t.length
-        ? (0, i.jsx)(S.Z, { section: C.pS.SPAM })
+        ? (0, i.jsx)(f.Z, { section: C.pS.SPAM })
         : (0, i.jsx)(l.bG, {
               navigator: L,
               children: (0, i.jsx)(l.SJ, {

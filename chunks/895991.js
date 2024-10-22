@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(530151),
     g = n(981631),
     T = n(186901),
-    S = n(862830);
-function f(e, t, n) {
+    f = n(862830);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ class C extends a.PureComponent {
                 }),
                 e ? null : t,
                 (0, i.jsxs)(l.AdvancedScrollerAuto, {
-                    className: r()(S.container, S.scroller),
+                    className: r()(f.container, f.scroller),
                     ref: this._scrollerRef,
                     children: [
                         e ? t : null,
@@ -76,14 +76,14 @@ class C extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, '_scrollerRef', a.createRef()),
-            f(this, '_scrollToOnMount', void 0),
-            f(this, '_scrollToPadding', 0),
-            f(this, 'state', { includeUpdatesInScroller: !1 }),
-            f(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
+            S(this, '_scrollerRef', a.createRef()),
+            S(this, '_scrollToOnMount', void 0),
+            S(this, '_scrollToPadding', 0),
+            S(this, 'state', { includeUpdatesInScroller: !1 }),
+            S(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
                 this.setState({ includeUpdatesInScroller: e });
             }),
-            f(this, 'scrollToRow', (e, t) => {
+            S(this, 'scrollToRow', (e, t) => {
                 let n = this._scrollerRef.current;
                 null != n
                     ? (e.focus(),

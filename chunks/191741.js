@@ -24,8 +24,8 @@ var i = n(200651),
     p = n(944486),
     g = n(358085),
     T = n(998502),
-    S = n(981631),
-    f = n(741764),
+    f = n(981631),
+    S = n(741764),
     C = n(350133);
 let N = (0, s.Z)(() => ({ isOpen: !0 }));
 function A(e) {
@@ -38,7 +38,7 @@ function v() {
         s = N((e) => e.isOpen),
         { hasBugReporterAccess: v } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     a.useLayoutEffect(() => {
-        T.ZP.setMinimumSize(f.J, f.N);
+        T.ZP.setMinimumSize(S.J, S.N);
     }, []);
     let L = a.useCallback(() => {
         (0, g.isMac)() && T.ZP.maximize();
@@ -63,7 +63,7 @@ function v() {
                             }),
                             (0, i.jsx)(l.Clickable, {
                                 onClick: () => {
-                                    o.Z.open(S.oAB.ACCOUNT);
+                                    o.Z.open(f.oAB.ACCOUNT);
                                 },
                                 children: (0, i.jsx)(l.SettingsIcon, { size: 'xs' })
                             })

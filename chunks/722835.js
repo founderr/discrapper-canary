@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 });
 var i = n(553813),
@@ -20,8 +20,8 @@ var i = n(553813),
     p = n(74299),
     g = n(299570),
     T = n(989941),
-    S = n(70722);
-function f() {
+    f = n(70722);
+function S() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (!(0, p.Z)(u.Z) || null != o.Z.getCurrentUserActiveStream()) return !1;
     let t = E.Z.getVoiceChannelId(),
@@ -29,7 +29,7 @@ function f() {
     if (null == n) return !1;
     let i = n.getGuildId();
     if (!(0, I.JL)(n, d.Z, _.Z, !1)) return !1;
-    if (u.Z.getUseSystemScreensharePicker()) (0, m.isMac)() && a().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, S.jR) ? (0, g.T)() : (0, g.T)('window');
+    if (u.Z.getUseSystemScreensharePicker()) (0, m.isMac)() && a().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, f.jR) ? (0, g.T)() : (0, g.T)('window');
     else {
         let t = (0, T.Z)(l.ZP, h.Z);
         if (null == t || (t.isLauncher && !e)) return !1;

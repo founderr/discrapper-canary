@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(628123),
     g = n(703656),
     T = n(108427),
-    S = n(911314),
-    f = n(429899),
+    f = n(911314),
+    S = n(429899),
     C = n(843445),
     N = n(981631),
     A = n(689938),
@@ -101,7 +101,7 @@ class O extends a.PureComponent {
                 return (0, i.jsx)(d.Z, {
                     page: N.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(f.Z, {
+                    children: (0, i.jsx)(S.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: a,
@@ -121,7 +121,7 @@ class O extends a.PureComponent {
                                 (0, i.jsx)(d.Z, {
                                     page: N.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
-                                    children: (0, i.jsx)(S.Z, {})
+                                    children: (0, i.jsx)(f.Z, {})
                                 })
                         }),
                         (0, i.jsx)(r.AW, {

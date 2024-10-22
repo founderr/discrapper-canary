@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(370648),
     g = n(569527),
     T = n(979007),
-    S = n(689938),
-    f = n(842221);
+    f = n(689938),
+    S = n(842221);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
         { tabs: C, selectedTab: N, onSelectTab: A } = (0, E.i)();
@@ -46,10 +46,10 @@ t.Z = function () {
             [w, R, A, n]
         );
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: S.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: w ? f.search : void 0,
+                className: w ? S.search : void 0,
                 children: [
                     !w &&
                         (0, i.jsx)(
@@ -68,8 +68,8 @@ t.Z = function () {
                         ? (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
-                              className: f.alternateHeader,
-                              children: G ? S.Z.Messages.BACK : S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
+                              className: S.alternateHeader,
+                              children: G ? f.Z.Messages.BACK : f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
                           })
                         : (0, i.jsx)(d.Z, {
                               tabs: C,
@@ -80,7 +80,7 @@ t.Z = function () {
                     !G &&
                         (0, i.jsx)(u.Z, {
                             query: v,
-                            placeholder: S.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
+                            placeholder: f.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER_V2,
                             onTextChange: L,
                             onClear: R,
                             onSubmit: O,

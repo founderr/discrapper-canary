@@ -26,7 +26,7 @@ function T(e) {
         contactNames: n
     };
 }
-class S extends (i = c.ZP.Store) {
+class f extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(_.default);
     }
@@ -44,7 +44,7 @@ class S extends (i = c.ZP.Store) {
     }
 }
 (r = 'FriendSuggestionStore'),
-    (s = 'displayName') in (a = S)
+    (s = 'displayName') in (a = f)
         ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
@@ -52,7 +52,7 @@ class S extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = r),
-    (t.Z = new S(d.Z, {
+    (t.Z = new f(d.Z, {
         CONNECTION_OPEN: function (e) {
             (m = {}), (I = e.friendSuggestionCount) > 0 ? ((g = !0), p || !g || ((p = !0), (g = !1), E.Z.fetch())) : (0, h.Z)();
         },

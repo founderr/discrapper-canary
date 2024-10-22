@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return f;
     }
 }),
     n(47120);
@@ -30,7 +30,7 @@ else if (g.has(l().layout)) {
         } catch (e) {}
     };
 }
-function S() {
+function f() {
     let e = (0, o.e7)([_.Z], () => _.Z.hasIncomingCalls()),
         t = (0, o.e7)([c.default, u.Z, d.Z], () => {
             let e = c.default.getTotalMentionCount(),
