@@ -14907,6 +14907,10 @@ span.clanTag_a31c43 {
     border-radius: var(--radius-round)
 }
 
+:where(.button_f9d37d).textBanner_f9d37d {
+    border-radius: var(--radius-xxl)
+}
+
 :where(.button_f9d37d).hover_f9d37d {
     width: 16px;
     height: 16px;
