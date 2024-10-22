@@ -108,7 +108,8 @@ async function q(e) {
             channelId: r,
             componentId: c,
             analyticsLocations: o,
-            source: f
+            source: f,
+            commandOrigin: _
         });
         let e = L.default.getCurrentUser();
         if (
