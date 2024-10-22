@@ -59,6 +59,9 @@ n.d(t, {
     me: function () {
         return es;
     },
+    qI: function () {
+        return eu;
+    },
     qb: function () {
         return eo;
     },
@@ -607,4 +610,30 @@ function eo(e) {
 function el(e) {
     var t;
     return null !== (t = (0, f.e7)([R.Z], () => R.Z.quests).get(e)) && void 0 !== t ? t : null;
+}
+function eu(e) {
+    let { mode: t, questContent: n, questId: r } = e,
+        i = u.useRef(null);
+    u.useEffect(() => {
+        null != r &&
+            i.current !== t &&
+            ((0, A.Ic)({
+                mode: t,
+                prevMode: i.current,
+                questContent: n,
+                questId: r
+            }),
+            (i.current = t));
+    }, [r, n, t]),
+        u.useEffect(() => {
+            if (null != r)
+                return () => {
+                    (0, A.Ic)({
+                        mode: null,
+                        prevMode: i.current,
+                        questContent: n,
+                        questId: r
+                    });
+                };
+        }, [r, n]);
 }
