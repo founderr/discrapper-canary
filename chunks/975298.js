@@ -34,10 +34,14 @@ function I() {
         }, []),
         r.useEffect(() => {
             if (null == t || !(0, f.I5)(t) || 0 === n.length) {
-                I({
-                    fractionalState: p.a$.NONE,
-                    endsAt: o()(0)
-                });
+                I((e) =>
+                    e.endsAt.isSame(o()(0)) && e.fractionalState === p.a$.NONE
+                        ? e
+                        : {
+                              fractionalState: p.a$.NONE,
+                              endsAt: o()(0)
+                          }
+                );
                 return;
             }
             let e = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : e.endsAt > t.endsAt ? 1 : 0));
