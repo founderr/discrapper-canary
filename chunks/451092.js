@@ -23,6 +23,7 @@ function l(e, t) {
             };
         },
         {
+            modalKey: 'blocked_user_joined_voice_channel_modal',
             onCloseCallback: () => {
                 a.default.track(o.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: s.q.DISMISS,
