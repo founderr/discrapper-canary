@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var r = n(200651);
@@ -13,34 +13,29 @@ var i = n(442837),
     u = n(740605),
     c = n(180335),
     d = n(553795),
-    _ = n(594174),
-    E = n(981631),
-    f = n(689938);
-function h(e) {
-    let { user: t, activity: n, entry: h, display: p, onAction: I, onClose: m } = e,
-        T = (0, i.e7)([_.default], () => {
-            var e;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
-        }),
-        S = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, E.ABu.CRUNCHYROLL));
-    if (!(0, l.Z)(n) && !(0, c.gr)(h)) return null;
-    if (!S)
+    _ = n(981631),
+    E = n(689938);
+function f(e) {
+    let { activity: t, entry: n, display: f, onAction: h, onClose: p } = e,
+        I = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, _.ABu.CRUNCHYROLL));
+    if (!(0, l.Z)(t) && !(0, c.gr)(n)) return null;
+    if (!I)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-crunchyroll',
-            label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: o.Z.get(E.ABu.CRUNCHYROLL).name }),
+            label: E.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: o.Z.get(_.ABu.CRUNCHYROLL).name }),
             action: () => {
-                null == I || I({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(E.oAB.CONNECTIONS), null == m || m();
+                null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == p || p();
             }
         });
-    if (T || 'live' === p || !(0, c.gr)(h)) return null;
-    let g = h.extra.url;
-    return null == g || '' === g
+    if ('live' === f || !(0, c.gr)(n)) return null;
+    let m = n.extra.url;
+    return null == m || '' === m
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'watch-on-crunchyroll',
-              label: f.Z.Messages.WATCH_ON_CRUNCHYROLL,
+              label: E.Z.Messages.WATCH_ON_CRUNCHYROLL,
               action: () => {
-                  null == I || I({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(g);
+                  null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(m);
               }
           });
 }
