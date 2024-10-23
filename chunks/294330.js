@@ -25,8 +25,8 @@ var i = n(200651),
     g = n(782738),
     T = n(371260),
     f = n(372769),
-    S = n(134432),
-    C = n(695346),
+    C = n(134432),
+    S = n(695346),
     N = n(768581),
     A = n(356164),
     v = n(981631),
@@ -80,7 +80,7 @@ function b(e) {
             let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, S.x_)()
+                size: 300 * (0, C.x_)()
             });
             if (null != e) return e;
             if (G) return x;
@@ -102,7 +102,7 @@ function b(e) {
         ),
         { canSeeInAppReportingButtons: B } = m.N.getCurrentConfig({ location: 'de1ef6_3' }, { autoTrackExposure: !1 });
     m.N.trackExposure({ location: 'GlobalDiscoveryServersCard' });
-    let H = C.Sb.getSetting();
+    let H = S.Sb.getSetting();
     return (0, i.jsxs)('div', {
         className: L.container,
         children: [

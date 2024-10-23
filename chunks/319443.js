@@ -16,10 +16,10 @@ var i = n(200651),
     g = n(569527),
     T = n(979007),
     f = n(689938),
-    S = n(842221);
+    C = n(842221);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, l.M)(),
-        { tabs: C, selectedTab: N, onSelectTab: A } = (0, E.i)();
+        { tabs: S, selectedTab: N, onSelectTab: A } = (0, E.i)();
     a.useEffect(() => {
         r.CP();
     }, []),
@@ -46,10 +46,10 @@ t.Z = function () {
             [w, R, A, n]
         );
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: C.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: w ? S.search : void 0,
+                className: w ? C.search : void 0,
                 children: [
                     !w &&
                         (0, i.jsx)(
@@ -68,11 +68,11 @@ t.Z = function () {
                         ? (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
-                              className: S.alternateHeader,
+                              className: C.alternateHeader,
                               children: G ? f.Z.Messages.BACK : f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: Z })
                           })
                         : (0, i.jsx)(d.Z, {
-                              tabs: C,
+                              tabs: S,
                               selectedTab: N,
                               onTabSelect: k,
                               onAvailableWidthChange: M

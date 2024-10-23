@@ -17,8 +17,8 @@ var i,
     g = n(375954),
     T = n(306680),
     f = n(699516),
-    S = n(9156),
-    C = n(626135),
+    C = n(9156),
+    S = n(626135),
     N = n(70956),
     A = n(900849),
     v = n(761080),
@@ -193,7 +193,7 @@ function eo(e) {
     }
     if ((er(), null != k.load_id && D !== k.load_id)) {
         var t;
-        C.default.track(R.rMx.FEED_LOADED, {
+        S.default.track(R.rMx.FEED_LOADED, {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
@@ -257,7 +257,7 @@ function eI(e) {
 }
 class ep extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, S.ZP, h.default, Z.Z, l.Z), null != e)) {
+        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, C.ZP, h.default, Z.Z, l.Z), null != e)) {
             var t, n, i, a, s, r;
             (P = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;

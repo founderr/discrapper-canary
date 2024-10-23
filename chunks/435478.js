@@ -31,7 +31,7 @@ function _(e) {
                 T(e === t);
             });
     }, [t, p, f]);
-    let S = (e) =>
+    let C = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ...I,
@@ -68,9 +68,9 @@ function _(e) {
               renderPopout: E,
               shouldShow: g,
               onRequestClose: () => T(!1),
-              children: S
+              children: C
           })
-        : S();
+        : C();
 }
 function E(e) {
     let { id: t, children: n } = e,

@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(590771),
     T = n(273596),
     f = n(128449),
-    S = n(49898),
-    C = n(689938),
+    C = n(49898),
+    S = n(689938),
     N = n(636872);
 function A() {
     let e = a.useRef((0, r.P)()),
@@ -97,17 +97,17 @@ function A() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.searchResultsHeader,
-                                children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: k })
+                                children: S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: k })
                             }),
                         O &&
                             (0, i.jsx)(u.Z, {
                                 query: x,
-                                placeholder: C.Z.Messages.SEARCH,
+                                placeholder: S.Z.Messages.SEARCH,
                                 onTextChange: b,
                                 onClear: M,
                                 onSubmit: P,
                                 onCollapsedClick: U,
-                                state: D ? S.WB.DEFAULT : y,
+                                state: D ? C.WB.DEFAULT : y,
                                 onBlur: G
                             })
                     ]

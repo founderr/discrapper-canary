@@ -22,8 +22,8 @@ var i,
     g = n(819640),
     T = n(585483),
     f = n(981631),
-    S = n(736366);
-function C(e, t, n) {
+    C = n(736366);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -147,9 +147,9 @@ class M extends (i = s.PureComponent) {
             c = (0, a.jsx)(o.Z.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.refs.node : void 0),
                 'aria-hidden': t === O,
-                className: l()(S.layer, {
-                    [S.baseLayer]: i,
-                    [S.animating]: e,
+                className: l()(C.layer, {
+                    [C.baseLayer]: i,
+                    [C.animating]: e,
                     'stop-animations': t === O
                 }),
                 style: r,
@@ -172,7 +172,7 @@ class M extends (i = s.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), C(this, 'containerRef', s.createRef());
+        super(e), S(this, 'containerRef', s.createRef());
         let t = 1,
             n = 1;
         e.mode === O && ((t = 0.93), (n = 0)),
@@ -184,7 +184,7 @@ class M extends (i = s.PureComponent) {
             });
     }
 }
-C(M, 'defaultProps', { baseLayer: !1 }), C(M, 'contextType', u.AccessibilityPreferencesContext);
+S(M, 'defaultProps', { baseLayer: !1 }), S(M, 'contextType', u.AccessibilityPreferencesContext);
 class P extends s.PureComponent {
     componentDidMount() {
         T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
@@ -229,7 +229,7 @@ class P extends s.PureComponent {
     renderArtisanalHack() {
         return (0, a.jsx)(u.ThemeProvider, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, a.jsx)('div', { className: l()(S.bg, e) })
+            children: (e) => (0, a.jsx)('div', { className: l()(C.bg, e) })
         });
     }
     render() {
@@ -238,7 +238,7 @@ class P extends s.PureComponent {
                 this.renderArtisanalHack(),
                 (0, a.jsx)(d.W, {
                     component: 'div',
-                    className: l()(S.layers, this.props.className),
+                    className: l()(C.layers, this.props.className),
                     children: this.renderLayers()
                 })
             ]

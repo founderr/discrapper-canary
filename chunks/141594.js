@@ -15,11 +15,11 @@ t.Z = () => {
     let g = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         T = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
         f = (null == T ? void 0 : T.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        S = i.useMemo(() => ((0, d.Fc)(g) && null != T && !f ? [T.dismissibleContent] : []), [g, T, f]),
-        [C, N] = (0, o.US)(S, void 0, !0),
+        C = i.useMemo(() => ((0, d.Fc)(g) && null != T && !f ? [T.dismissibleContent] : []), [g, T, f]),
+        [S, N] = (0, o.US)(C, void 0, !0),
         [A, v] = (0, o.XR)(f && (null == T ? void 0 : T.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == T ? void 0 : T.version) && void 0 !== e ? e : 0, void 0, !0),
         Z = null;
-    if ((null != C || null != A) && null != T && T.type === s.Z.COACHTIP) {
+    if ((null != S || null != A) && null != T && T.type === s.Z.COACHTIP) {
         Z = {
             type: _.k2.COACHTIP,
             title: () => T.title,

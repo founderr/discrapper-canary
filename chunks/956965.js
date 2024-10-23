@@ -129,8 +129,8 @@ t.Z = function (e) {
             d(!0);
         }, []),
         f = a.useCallback(() => d(!1), []),
-        S = (0, u.ye)(t),
-        C = (0, h.u)(s),
+        C = (0, u.ye)(t),
+        S = (0, h.u)(s),
         N = t.bot,
         { botBannerUrl: A, botBannerUrlAnimated: v } = a.useMemo(
             () =>
@@ -157,7 +157,7 @@ t.Z = function (e) {
     return (0, i.jsx)('div', {
         className: m.banner,
         style: {
-            backgroundImage: C,
+            backgroundImage: S,
             aspectRatio: 'card' === n ? I : p
         },
         onMouseEnter: _,
@@ -165,7 +165,7 @@ t.Z = function (e) {
         onMouseLeave: f,
         onBlur: f,
         children:
-            'card' === n && S
+            'card' === n && C
                 ? (0, i.jsx)(g, {
                       application: t,
                       isHovered: c,

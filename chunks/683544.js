@@ -21,13 +21,13 @@ t.Z = function (e) {
     var t;
     let { categoryId: n, onSelectApplication: g } = e,
         [T, f] = a.useState(1),
-        S = a.useCallback((e) => {
+        C = a.useCallback((e) => {
             f(e);
         }, []);
     a.useEffect(() => {
         f(1);
     }, [n]);
-    let C = a.useMemo(
+    let S = a.useMemo(
             () => ({
                 query: m.Mm,
                 page: T,
@@ -46,7 +46,7 @@ t.Z = function (e) {
         ),
         A = (0, r.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(C)) && void 0 !== e ? e : p;
+            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : p;
         }),
         v = null !== (t = (0, o.Z)(A)) && void 0 !== t ? t : p,
         { results: Z, totalPages: L } = a.useMemo(() => (N === d.M.FETCHING ? v : A), [N, v, A]),
@@ -111,7 +111,7 @@ t.Z = function (e) {
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
                       currentPage: T,
-                      onPageChange: S
+                      onPageChange: C
                   })
               ]
           });

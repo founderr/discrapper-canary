@@ -17,8 +17,8 @@ var i,
     g = n(833664),
     T = n(503438),
     f = n(420660),
-    S = n(74433),
-    C = n(906732),
+    C = n(74433),
+    S = n(906732),
     N = n(812206),
     A = n(933557),
     v = n(194082),
@@ -463,7 +463,7 @@ let ee = (e) => {
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, C.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(Q, {
             children: [
                 (0, s.jsxs)('div', {
@@ -502,7 +502,7 @@ let ee = (e) => {
                     .filter(w.lm)
             ),
             h = (0, E.O)(),
-            { analyticsLocations: I } = (0, C.ZP)();
+            { analyticsLocations: I } = (0, S.ZP)();
         if (null == d) return null;
         let p = N.Z.getApplication(d);
         if (null == p) return null;

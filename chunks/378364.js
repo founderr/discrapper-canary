@@ -14,8 +14,8 @@ var r,
 (i = r || (r = {}))[(i.THROW_EMOJI = 0)] = 'THROW_EMOJI';
 let c = {
     experiment: a.Z,
-    startTimeMs: 1730829600000,
-    endTimeMs: 1730829600000,
+    startTimeMs: 1729789200000,
+    endTimeMs: 1730682000000,
     isDesktopOnly: !0,
     soundpack: s.YC.HALLOWEEN,
     appSpinnerSources: {

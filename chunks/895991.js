@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return S;
     }
 }),
     n(47120);
@@ -22,7 +22,7 @@ var i = n(200651),
     g = n(981631),
     T = n(186901),
     f = n(862830);
-function S(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function S(e, t, n) {
         e
     );
 }
-class C extends a.PureComponent {
+class S extends a.PureComponent {
     componentDidMount() {
         c.Y(g.Z5c.APPLICATION_LIBRARY), (0, E.T)(T.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
     }
@@ -76,14 +76,14 @@ class C extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, '_scrollerRef', a.createRef()),
-            S(this, '_scrollToOnMount', void 0),
-            S(this, '_scrollToPadding', 0),
-            S(this, 'state', { includeUpdatesInScroller: !1 }),
-            S(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
+            C(this, '_scrollerRef', a.createRef()),
+            C(this, '_scrollToOnMount', void 0),
+            C(this, '_scrollToPadding', 0),
+            C(this, 'state', { includeUpdatesInScroller: !1 }),
+            C(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
                 this.setState({ includeUpdatesInScroller: e });
             }),
-            S(this, 'scrollToRow', (e, t) => {
+            C(this, 'scrollToRow', (e, t) => {
                 let n = this._scrollerRef.current;
                 null != n
                     ? (e.focus(),

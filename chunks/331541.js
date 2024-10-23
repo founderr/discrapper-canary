@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(734934),
     T = n(158238),
     f = n(300284),
-    S = n(680295),
-    C = n(785717),
+    C = n(680295),
+    S = n(785717),
     N = n(221292),
     A = n(481046),
     v = n(687158),
@@ -168,7 +168,7 @@ function ea(e) {
         er = (0, v.ZP)(V.id),
         el = (0, u.O)(),
         { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
-        ec = (0, C.ZB)({
+        ec = (0, S.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: V.id
         }),
@@ -298,7 +298,7 @@ function ea(e) {
         eg = (0, W.g)(z),
         eT = (0, f.Z)({ analyticsLocations: eo }),
         { customStatusBubbleEditEnabled: ef } = (0, A.K)({ location: 'AccountProfilePopout' }),
-        eS = (e) => {
+        eC = (e) => {
             null == z || z(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eo,
@@ -306,7 +306,7 @@ function ea(e) {
                     ...e
                 });
         },
-        eC = () => {
+        eS = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -319,7 +319,7 @@ function ea(e) {
         };
     return (0, i.jsx)(m.Gt, {
         value: eo,
-        children: (0, i.jsx)(C.Mt, {
+        children: (0, i.jsx)(S.Mt, {
             value: ec,
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
@@ -350,7 +350,7 @@ function ea(e) {
                                     user: V,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
-                                    onOpenProfile: es ? void 0 : eS
+                                    onOpenProfile: es ? void 0 : eC
                                 }),
                                 (0, i.jsx)(O.Z, {
                                     user: V,
@@ -360,7 +360,7 @@ function ea(e) {
                             ]
                         }),
                         (null == er ? void 0 : er.profileEffectId) != null &&
-                            (0, i.jsx)(S.Z, {
+                            (0, i.jsx)(C.Z, {
                                 profileEffectId: null == er ? void 0 : er.profileEffectId,
                                 isHovering: eu
                             }),
@@ -372,7 +372,7 @@ function ea(e) {
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
                                     nickname: F.ZP.getName(null, null, V),
-                                    onOpenProfile: es ? void 0 : eS,
+                                    onOpenProfile: es ? void 0 : eC,
                                     pronouns: null == er ? void 0 : er.pronouns,
                                     tags: (0, i.jsx)(L.Z, {
                                         displayProfile: er,
@@ -486,7 +486,7 @@ function ea(e) {
                                                                           label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
                                                                           icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              z(), eC();
+                                                                              z(), eS();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(K.Mv, {
@@ -518,7 +518,7 @@ function ea(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              z(), eC();
+                                                                              z(), eS();
                                                                           }
                                                                       })
                                                             ]

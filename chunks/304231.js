@@ -41,7 +41,7 @@ function f() {
         playstyle: e
     });
 }
-function S() {
+function C() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
@@ -53,7 +53,7 @@ function S() {
         hidePreview: !0
     });
 }
-function C(e) {
+function S(e) {
     return e.toString();
 }
 t.Z = a.memo(function (e) {
@@ -143,7 +143,7 @@ t.Z = a.memo(function (e) {
                 case 1:
                     return (0, i.jsx)(f, {});
                 case 2:
-                    return (0, i.jsx)(S, {});
+                    return (0, i.jsx)(C, {});
             }
         }, []);
     return (0, i.jsxs)(s.animated.div, {
@@ -157,7 +157,7 @@ t.Z = a.memo(function (e) {
                     currentStep: N,
                     items: j,
                     renderItem: U,
-                    getItemKey: C
+                    getItemKey: S
                 })
             }),
             (0, i.jsxs)(s.animated.div, {

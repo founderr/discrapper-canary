@@ -33,11 +33,11 @@ let m = {},
     g = {},
     T = {},
     f = {},
-    S = {
+    C = {
         id: null,
         justChanged: !1
     },
-    C = {
+    S = {
         id: null,
         justChanged: !1
     },
@@ -79,13 +79,13 @@ class Z extends (i = r.ZP.DeviceSettingsStore) {
         return g;
     }
     get lastInputSystemDevice() {
-        return S;
+        return C;
     }
     get outputDevices() {
         return T;
     }
     get lastOutputSystemDevice() {
-        return C;
+        return S;
     }
 }
 h(Z, 'displayName', 'ConnectedDeviceStore'),
@@ -94,22 +94,22 @@ h(Z, 'displayName', 'ConnectedDeviceStore'),
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
-            (S.justChanged = !1),
+            (C.justChanged = !1),
                 t.forEach((e) => {
                     if (((i[A(e)] = e.id), e.id === E.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== S.id && (S.justChanged = !0), (S.id = n);
+                        n !== C.id && (C.justChanged = !0), (C.id = n);
                     }
                 });
             let a = {};
             if (
-                ((C.justChanged = !1),
+                ((S.justChanged = !1),
                 n.forEach((e) => {
                     if (((a[A(e)] = e.id), e.id === E.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== C.id && (C.justChanged = !0), (C.id = n);
+                        n !== S.id && (S.justChanged = !0), (S.id = n);
                     }
                 }),
                 !p)

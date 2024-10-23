@@ -15,21 +15,21 @@ var r,
     g = n(855674),
     T = n(981631);
 let f = [],
-    S = null,
-    C = !1,
+    C = null,
+    S = !1,
     N = T.QZA.CLOSED,
     A = {},
     v = !1,
     Z = null;
 function L() {
-    if (((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null), (f = null != a && null != i && p.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? g.Z.getWebhooksForChannel(i.id, a.id) : []), null != S)) {
-        let e = O(S.id);
-        null != e && (S = e);
+    if (((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null), (f = null != a && null != i && p.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? g.Z.getWebhooksForChannel(i.id, a.id) : []), null != C)) {
+        let e = O(C.id);
+        null != e && (C = e);
     }
     (N = T.QZA.OPEN), (A = {}), (v = !1);
 }
 let R = u().debounce(() => {
-    v && ((null == S || u().isEqual(S, O(S.id))) && (v = !1), !v && b.emitChange());
+    v && ((null == C || u().isEqual(C, O(C.id))) && (v = !1), !v && b.emitChange());
 }, 500);
 function O(e) {
     return f.find((t) => {
@@ -48,7 +48,7 @@ class x extends (r = _.ZP.Store) {
         return f;
     }
     get editedWebhook() {
-        return S;
+        return C;
     }
     get formState() {
         return N;
@@ -63,11 +63,11 @@ class x extends (r = _.ZP.Store) {
         return {
             submitting: N === T.QZA.SUBMITTING,
             webhooks: f,
-            editedWebhook: S,
+            editedWebhook: C,
             section: s,
             sectionId: Z,
             hasChanges: this.hasChanges(),
-            isFetching: C,
+            isFetching: S,
             errors: A
         };
     }
@@ -94,7 +94,7 @@ let b = new x(
                   if (((s = T.b4C.OVERVIEW), null == i)) {
                       let e = m.Z.getChannel(),
                           t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && (h.Z.fetchForChannel(t, e.id), (C = !0)), L();
+                      null != e && null != t && (h.Z.fetchForChannel(t, e.id), (S = !0)), L();
                   }
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -105,23 +105,23 @@ let b = new x(
                   let { webhookId: t } = e,
                       n = O(t);
                   if (null == n) return !1;
-                  (S = n), (A = {}), (v = !1);
+                  (C = n), (A = {}), (v = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (S = null), (A = {}), (v = !1);
+                  (C = null), (A = {}), (v = !1);
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: t } = e;
-                  if (null == S) return !1;
-                  (S = { ...S }), null != t.name && S.name !== t.name && ((S.name = t.name), (v = !0)), void 0 !== t.avatar && S.avatar !== t.avatar && ((S.avatar = t.avatar), (v = !0)), null != t.channelId && S.channel_id !== t.channelId && ((S.channel_id = t.channelId), (v = !0)), v && R();
+                  if (null == C) return !1;
+                  (C = { ...C }), null != t.name && C.name !== t.name && ((C.name = t.name), (v = !0)), void 0 !== t.avatar && C.avatar !== t.avatar && ((C.avatar = t.avatar), (v = !0)), null != t.channelId && C.channel_id !== t.channelId && ((C.channel_id = t.channelId), (v = !0)), v && R();
               },
               CHANNEL_SETTINGS_CLOSE: function () {
-                  (a = null), (i = null), (f = []), (S = null), (N = T.QZA.CLOSED);
+                  (a = null), (i = null), (f = []), (C = null), (N = T.QZA.CLOSED);
               },
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: t, channelId: n, webhooks: s } = e;
                   if (null == i || t !== i.id || null == a || n !== a.id || null == s || N === T.QZA.SUBMITTING) return !1;
-                  C = !1;
+                  S = !1;
                   for (let e = f.length - 1; e >= 0; e--) {
                       let t = f[e];
                       if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
@@ -134,8 +134,8 @@ let b = new x(
                               ...t,
                               ...i
                           };
-                          (f[e] = n), !v && (null == S ? void 0 : S.id) === n.id && (S = n);
-                      } else (null == S ? void 0 : S.id) === t.id && (S = null), f.splice(e, 1);
+                          (f[e] = n), !v && (null == C ? void 0 : C.id) === n.id && (C = n);
+                      } else (null == C ? void 0 : C.id) === t.id && (C = null), f.splice(e, 1);
                   }
                   for (let e of s)
                       null ==

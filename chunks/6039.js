@@ -17,14 +17,14 @@ var i = n(200651),
     g = n(390500),
     T = n(200305),
     f = n(981631),
-    S = n(898625),
-    C = n(689938),
+    C = n(898625),
+    S = n(689938),
     N = n(250010);
 t.Z = (e) => {
     var t;
     let n, A;
     let { guildId: v, inviteCode: Z } = e,
-        [L, R] = a.useState(S.hO.INITIAL),
+        [L, R] = a.useState(C.hO.INITIAL),
         O = (0, s.e7)([h.Z], () => h.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
@@ -48,17 +48,17 @@ t.Z = (e) => {
             _.Z.resetGuildJoinRequest(v);
         };
     let U =
-            ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == P ? void 0 : P.toString() })),
+            ((n = S.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == P ? void 0 : P.toString() })),
             (A = () => {
-                R(Math.max(L, S.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(f.Z5c.ME);
+                R(Math.max(L, C.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(f.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>
                     (0, i.jsx)(r.ConfirmModal, {
-                        header: C.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-                        cancelText: C.Z.Messages.NEVERMIND,
+                        header: S.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+                        cancelText: S.Z.Messages.NEVERMIND,
                         onConfirm: A,
-                        confirmText: C.Z.Messages.YES_TEXT,
+                        confirmText: S.Z.Messages.YES_TEXT,
                         confirmButtonColor: r.Button.Colors.RED,
                         ...e,
                         children: (0, i.jsx)(r.Text, {
@@ -97,9 +97,9 @@ t.Z = (e) => {
                                 });
                             case m.wB.REJECTED:
                                 return (0, i.jsx)(p.Z, {
-                                    reapplyText: C.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+                                    reapplyText: S.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                     onReapply: j,
-                                    confirmText: C.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+                                    confirmText: S.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                                     onWithdrawApplication: U,
                                     rejectionReason: null == x ? void 0 : x.rejectionReason,
                                     guild: P

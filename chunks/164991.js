@@ -6,10 +6,10 @@ n.d(t, {
         return T;
     },
     BK: function () {
-        return S;
+        return C;
     },
     D1: function () {
-        return C;
+        return S;
     },
     Dm: function () {
         return p;
@@ -76,8 +76,8 @@ let _ = () => d('resultsQuery'),
     g = () => u('languageCode'),
     T = () => d('query'),
     f = () => u('query'),
-    S = () => u('scrollPosition'),
-    C = () => d('resultsInitialCategoryId'),
+    C = () => u('scrollPosition'),
+    S = () => d('resultsInitialCategoryId'),
     N = (e) => {
         (0, r.j)(() => o.setState(e));
     };

@@ -25,8 +25,8 @@ var i,
     T = n(689938),
     f = n(118441);
 ((i = a || (a = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
-let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
+    S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
     N = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
@@ -49,8 +49,8 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
                             learnMore: !0,
                             title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-                            videoPosterUrl: C,
-                            videoUrl: S,
+                            videoPosterUrl: S,
+                            videoUrl: C,
                             ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                             dismissText: T.Z.Messages.DISMISS
                         };
@@ -61,8 +61,8 @@ let S = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
                             learnMore: !0,
                             title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-                            videoPosterUrl: C,
-                            videoUrl: S,
+                            videoPosterUrl: S,
+                            videoUrl: C,
                             ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                             dismissText: T.Z.Messages.DISMISS
                         };

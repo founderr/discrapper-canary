@@ -25,8 +25,8 @@ function I(e) {
     let { tab: t, guildIds: n, loading: E, onScroll: I, onGuildCardClick: p, onGuildCardSeen: g } = e,
         T = (0, u.Mf)(t),
         f = (0, u.a$)(t),
-        S = (0, u.QW)(t),
-        C = (0, u.lg)(t),
+        C = (0, u.QW)(t),
+        S = (0, u.lg)(t),
         N = a.useMemo(() => {
             let e = E ? 30 : n.length,
                 t = [];
@@ -38,15 +38,15 @@ function I(e) {
                         {
                             guildId: null !== (a = n[s]) && void 0 !== a ? a : null,
                             index: s,
-                            onClick: (e) => p(e, s, C, m),
-                            onView: (e) => g(e, C)
+                            onClick: (e) => p(e, s, S, m),
+                            onView: (e) => g(e, S)
                         },
                         n[s]
                     )
                 );
             }
             return t;
-        }, [C, n, E, p, g]);
+        }, [S, n, E, p, g]);
     return (0, i.jsxs)(d.Z, {
         onScroll: I,
         children: [
@@ -65,7 +65,7 @@ function I(e) {
                         className: h.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: S
+                        children: C
                     }),
                     (0, i.jsx)('div', {
                         className: h.content,

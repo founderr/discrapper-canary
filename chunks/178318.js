@@ -35,8 +35,8 @@ try {
         i = _.ZP.requireModule('erlpack');
     } catch (e) {}
 }
-let S = _.ZP.requireModule('discord_rpc').RPCWebSocket,
-    C = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let C = _.ZP.requireModule('discord_rpc').RPCWebSocket,
+    S = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     N = new d.Z('RPCServer:WSS'),
     A = [];
 function v(e) {
@@ -132,7 +132,7 @@ class b extends s.EventEmitter {
                 l = function () {
                     var e;
                     let { protocol: i, host: a } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-                    i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
+                    i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', S), t.writeHead(301), t.end();
                 },
                 c = new x(s ? L.bind(null, e, t) : l, s ? R.bind(null, e, t, 400) : l, Number(n.get('v')), a);
             if (s)
@@ -194,7 +194,7 @@ class b extends s.EventEmitter {
         var e;
         super();
         let t = 0;
-        (a = S.http.createServer()).on('error', (e) => {
+        (a = C.http.createServer()).on('error', (e) => {
             N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
         }),
             a.on('request', this.handleRequest.bind(this)),
@@ -203,7 +203,7 @@ class b extends s.EventEmitter {
             instanceId: null !== (e = a.instanceId) && void 0 !== e ? e : 0,
             server: a
         };
-        new S.ws.Server(n).on('connection', (e) => this.handleConnection(e));
+        new C.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
 t.Z = new b();
