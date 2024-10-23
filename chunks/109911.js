@@ -1,6 +1,9 @@
 n.d(t, {
     Ji: function () {
         return s;
+    },
+    QX: function () {
+        return o;
     }
 }),
     n(873546);
@@ -58,6 +61,19 @@ function s(e) {
         {
             id: 1,
             label: 'allow negative items only',
+            config: { enabled: !0 }
+        }
+    ]
+});
+let o = (0, r.B)({
+    kind: 'user',
+    id: '2024-10_icymi_legacy',
+    label: 'Legacy ICYMI experiment',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'enable legacy ICYMI',
             config: { enabled: !0 }
         }
     ]
