@@ -41,6 +41,10 @@ function g() {
           })()
         : (function (e, t) {
               if (c.Z.isOpen(t)) return !1;
+              if (null != r) {
+                  let e = r;
+                  i.Z.wait(() => a.xv(e));
+              }
               i.Z.wait(() => a.bA(t, m.NYg.EMBED_IFRAME, { channel: e })), (r = t);
           })(n, (0, p.Z)(e, t.applicationId));
 }
