@@ -17,16 +17,16 @@ var a = t(200651),
     N = t(294978),
     p = t(513102),
     Z = t(976192),
-    h = t(887904),
-    A = t(429824),
+    A = t(887904),
+    h = t(429824),
     L = t(466330),
     C = t(191471),
     T = t(162157),
     m = t(623624),
     x = t(894059),
-    b = t(771212),
-    D = t(434404),
-    G = t(41776),
+    D = t(771212),
+    G = t(434404),
+    b = t(41776),
     S = t(837949),
     R = t(11352),
     U = t(703656),
@@ -67,14 +67,14 @@ let z = i.memo(function (e) {
                 return {
                     canAccessSettings: O.Z.canAccessGuildSettings(n),
                     canManageChannels: O.Z.can(V.Plq.MANAGE_CHANNELS, n),
-                    showGuildAnalytics: (0, b.Fv)(n.id) || e
+                    showGuildAnalytics: (0, D.Fv)(n.id) || e
                 };
             },
             [n]
         ),
         X = (0, T.N8)(n),
         J = n.isOwner(z),
-        Q = (0, o.e7)([G.Z], () => G.Z.isLurking(n.id), [n.id]),
+        Q = (0, o.e7)([b.Z], () => b.Z.isLurking(n.id), [n.id]),
         $ = (0, o.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(n.id)),
         ee = (0, x.Z)(n.id, !0),
         en = (0, _.ZP)(n),
@@ -96,8 +96,8 @@ let z = i.memo(function (e) {
         es = (0, S.Z)(n.id),
         eo = (0, N.Z)(n),
         er = (0, p.Z)(n),
-        eu = (0, A.Z)(n, !0),
-        ed = (0, h.Z)(n),
+        eu = (0, h.Z)(n, !0),
+        ed = (0, A.Z)(n),
         { isFavoritesPerk: ec } = (0, M.z)('GuildHeaderPopout'),
         { triggerDeadchat: eE } = I.Z.useExperiment(
             {
@@ -128,7 +128,7 @@ let z = i.memo(function (e) {
                   label: H.Z.Messages.LEAVE_SERVER,
                   icon: u.DoorExitIcon,
                   action: () => {
-                      D.Z.leaveGuild(n.id), !$ && (0, U.uL)(V.Z5c.GUILD_DISCOVERY);
+                      G.Z.leaveGuild(n.id), !$ && (0, U.uL)(V.Z5c.GUILD_DISCOVERY);
                   }
               })
           })
@@ -192,7 +192,7 @@ let z = i.memo(function (e) {
                                         label: H.Z.Messages.SERVER_SETTINGS,
                                         icon: u.SettingsIcon,
                                         action: () => {
-                                            D.Z.open(n.id, V.pNK.OVERVIEW);
+                                            G.Z.open(n.id, V.pNK.OVERVIEW);
                                         }
                                     })
                                   : null,
@@ -276,7 +276,7 @@ let z = i.memo(function (e) {
                                         label: H.Z.Messages.SERVER_SETTINGS,
                                         icon: u.SettingsIcon,
                                         action: () => {
-                                            D.Z.open(n.id, V.pNK.OVERVIEW);
+                                            G.Z.open(n.id, V.pNK.OVERVIEW);
                                         }
                                     })
                                   : null,
@@ -285,7 +285,7 @@ let z = i.memo(function (e) {
                                         id: 'insights',
                                         label: H.Z.Messages.SERVER_INSIGHTS,
                                         icon: u.AnalyticsIcon,
-                                        action: () => D.Z.open(n.id, V.pNK.ANALYTICS)
+                                        action: () => G.Z.open(n.id, V.pNK.ANALYTICS)
                                     })
                                   : null,
                               W

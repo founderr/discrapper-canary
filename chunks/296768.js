@@ -1,53 +1,53 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return R;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
-    o = n(392711),
-    l = n.n(o),
-    c = n(442837),
-    d = n(481060),
-    u = n(224706),
-    _ = n(812206),
-    E = n(669764),
-    m = n(810568),
-    I = n(839392),
-    A = n(774073),
-    p = n(426482),
-    g = n(644941),
-    f = n(689938),
-    T = n(51527),
-    O = n(796805);
+    t(47120);
+var a = t(200651),
+    r = t(192379),
+    s = t(120356),
+    i = t.n(s),
+    o = t(392711),
+    l = t.n(o),
+    c = t(442837),
+    d = t(481060),
+    u = t(224706),
+    _ = t(812206),
+    E = t(669764),
+    m = t(810568),
+    I = t(839392),
+    A = t(774073),
+    p = t(426482),
+    g = t(644941),
+    f = t(689938),
+    T = t(51527),
+    O = t(796805);
 let N = (e) => {
-    let { game: t, onClose: n, trackClick: r } = e,
-        s = (0, c.e7)([_.Z], () => _.Z.getApplication(t.applicationId));
+    let { game: n, onClose: t, trackClick: r } = e,
+        s = (0, c.e7)([_.Z], () => _.Z.getApplication(n.applicationId));
     return (0, a.jsx)(d.Tooltip, {
-        text: t.name,
+        text: n.name,
         children: (e) =>
             (0, a.jsx)(d.Clickable, {
                 ...e,
                 className: O.similarGameImageClickable,
                 onClick: async () => {
-                    r(m.as.ClickSimilarGame, t.applicationId),
+                    r(m.as.ClickSimilarGame, n.applicationId),
                         (0, d.openModalLazy)(() =>
                             Promise.resolve((e) =>
                                 (0, a.jsx)(g.default, {
-                                    applicationId: t.applicationId,
+                                    applicationId: n.applicationId,
                                     source: m.m1.SimilarGames,
                                     ...e
                                 })
                             )
                         ),
                         await new Promise((e) => setTimeout(e, 10)),
-                        n();
+                        t();
                 },
                 children: (0, a.jsx)(p.C, {
-                    game: t,
+                    game: n,
                     application: s,
                     className: O.similarGameImage,
                     size: p.Z.SMALL
@@ -56,11 +56,11 @@ let N = (e) => {
     });
 };
 function R(e) {
-    let { applicationId: t, onClose: n, trackAction: s, similarGames: o, similarGamesError: _ } = e,
+    let { applicationId: n, onClose: t, trackAction: s, similarGames: o, similarGamesError: _ } = e,
         m = (0, c.e7)([I.Z, E.Z], () => {
-            let e = void 0 === I.Z.getSimilarGames(t) && null == I.Z.getSimilarGamesError(t),
-                n = o.some((e) => E.Z.isFetching(e));
-            return e || n;
+            let e = void 0 === I.Z.getSimilarGames(n) && null == I.Z.getSimilarGamesError(n),
+                t = o.some((e) => E.Z.isFetching(e));
+            return e || t;
         }),
         p = (0, c.Wu)([E.Z], () =>
             o
@@ -70,8 +70,8 @@ function R(e) {
                 .slice(0, 5)
         );
     return (r.useEffect(() => {
-        o.length > 0 && u.Z.getDetectableGamesSupplemental([t, ...o]);
-    }, [t, o]),
+        o.length > 0 && u.Z.getDetectableGamesSupplemental([n, ...o]);
+    }, [n, o]),
     m && null == _)
         ? (0, a.jsxs)('div', {
               children: [
@@ -101,7 +101,7 @@ function R(e) {
                                 N,
                                 {
                                     game: e,
-                                    onClose: n,
+                                    onClose: t,
                                     trackClick: s
                                 },
                                 e.applicationId

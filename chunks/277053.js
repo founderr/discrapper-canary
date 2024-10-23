@@ -15,9 +15,9 @@ var s,
     p = n(981631),
     g = n(71080);
 let T = new Set(),
-    S = p.QZA.CLOSED,
-    f = !1,
-    C = null,
+    f = p.QZA.CLOSED,
+    C = !1,
+    S = null,
     N = null,
     A = null,
     v = null,
@@ -32,32 +32,32 @@ function O(e) {
 function x() {
     if (((A = m.Z.getChannel()), (v = m.Z.getCategory()), null == A)) return !1;
     let e = A.getGuildId();
-    (N = C = O(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (S = p.QZA.CLOSED), T.clear();
+    (N = S = O(A)), null == S[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (C = !1), (f = p.QZA.CLOSED), T.clear();
 }
 class b extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, I.Z);
     }
     hasChanges() {
-        return f;
+        return C;
     }
     showNotice() {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == C ? void 0 : C[e];
+        return null == S ? void 0 : S[e];
     }
     get editedPermissionIds() {
         return Array.from(T);
     }
     get permissionOverwrites() {
-        return C;
+        return S;
     }
     get selectedOverwriteId() {
         return Z;
     }
     get formState() {
-        return S;
+        return f;
     }
     get isLockable() {
         return a;
@@ -93,32 +93,32 @@ class b extends (s = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: a } = e,
-                s = null == C ? void 0 : C[t];
+                s = null == S ? void 0 : S[t];
             if (null == s || null == A) return !1;
             (s = {
                 ...s,
                 allow: n,
                 deny: a
             }),
-                (C = {
-                    ...C,
+                (S = {
+                    ...S,
                     [t]: s
                 }),
                 T.add(t),
-                (S = p.QZA.OPEN),
-                (f = !d().isEqual(C, N)),
+                (f = p.QZA.OPEN),
+                (C = !d().isEqual(S, N)),
                 (i = h.o4(A, v));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != C && null != C[t]) Z = t;
+            if (null != S && null != S[t]) Z = t;
             else {
                 if (null == A) return !1;
                 L = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (S = p.QZA.CLOSED), (C = null), (N = null), (A = null), (v = null), (f = !1), T.clear(), (Z = null), (L = null);
+            (f = p.QZA.CLOSED), (S = null), (N = null), (A = null), (v = null), (C = !1), T.clear(), (Z = null), (L = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -135,16 +135,16 @@ class b extends (s = u.ZP.Store) {
                         let n = {};
                         return (
                             T.forEach((e) => {
-                                null != C && (n[e] = C[e]);
+                                null != S && (n[e] = S[e]);
                             }),
                             null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)),
                             null ==
-                            (C = {
+                            (S = {
                                 ...A.permissionOverwrites,
                                 ...n
                             })[Z]
                                 ? (Z = t)
-                                : null != L && null != C[L] && ((Z = L), (L = null)),
+                                : null != L && null != S[L] && ((Z = L), (L = null)),
                             (i = h.o4(A, v)),
                             !0
                         );
@@ -152,11 +152,11 @@ class b extends (s = u.ZP.Store) {
             return n;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-            S = p.QZA.SUBMITTING;
+            f = p.QZA.SUBMITTING;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
             let { silent: t } = e;
-            t ? (S = p.QZA.OPEN) : ((S = p.QZA.CLOSED), x());
+            t ? (f = p.QZA.OPEN) : ((f = p.QZA.CLOSED), x());
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;

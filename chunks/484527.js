@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return f;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
-    o = n(643872),
-    l = n(442837),
-    c = n(481060),
-    d = n(570140),
-    u = n(652898),
-    _ = n(93093),
-    E = n(768581),
-    m = n(810568),
-    I = n(981631),
-    A = n(689938),
-    p = n(51527),
-    g = n(479537);
+    t(47120);
+var a = t(200651),
+    r = t(192379),
+    s = t(120356),
+    i = t.n(s),
+    o = t(643872),
+    l = t(442837),
+    c = t(481060),
+    d = t(570140),
+    u = t(652898),
+    _ = t(93093),
+    E = t(768581),
+    m = t(810568),
+    I = t(981631),
+    A = t(689938),
+    p = t(51527),
+    g = t(479537);
 function f(e) {
-    let { detectedGame: t, trackClick: n, onInviteResolved: s } = e,
+    let { detectedGame: n, trackClick: t, onInviteResolved: s } = e,
         [f, T] = r.useState(),
         O = (0, l.e7)([_.Z], () => {
-            var e, t;
-            return (null == f ? void 0 : null === (e = f.guild) || void 0 === e ? void 0 : e.id) != null && _.Z.isMember(null == f ? void 0 : null === (t = f.guild) || void 0 === t ? void 0 : t.id);
+            var e, n;
+            return (null == f ? void 0 : null === (e = f.guild) || void 0 === e ? void 0 : e.id) != null && _.Z.isMember(null == f ? void 0 : null === (n = f.guild) || void 0 === n ? void 0 : n.id);
         }),
         N = r.useMemo(() => {
             var e;
-            return null === (e = t.websites) || void 0 === e
+            return null === (e = n.websites) || void 0 === e
                 ? void 0
                 : e.find((e) => {
-                      let { category: t } = e;
-                      return t === o.p.DISCORD;
+                      let { category: n } = e;
+                      return n === o.p.DISCORD;
                   });
-        }, [t.websites]);
+        }, [n.websites]);
     if (
         (r.useEffect(() => {
             let e = async (e) => {
-                let t = e.split('/').pop();
-                if (null != t) {
-                    let e = await (0, u.Z)(t);
+                let n = e.split('/').pop();
+                if (null != n) {
+                    let e = await (0, u.Z)(n);
                     !0 !== e.banned && (T(e.invite), null != e.invite && (null == s || s(e.invite)));
                 }
             };
@@ -91,7 +91,7 @@ function f(e) {
             (0, a.jsx)(c.Button, {
                 color: c.ButtonColors.PRIMARY,
                 onClick: () => {
-                    n(m.as.JoinOfficialServer),
+                    t(m.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
                             invite: f,

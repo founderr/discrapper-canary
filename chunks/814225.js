@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     P3: function () {
         return _;
     },
@@ -9,14 +9,14 @@ n.d(t, {
         return m;
     }
 }),
-    n(757143),
-    n(47120);
-var a = n(913527),
-    r = n.n(a);
-if (12633 == n.j) var s = n(512969);
-n(358085), n(73346);
-var i = n(981631),
-    o = n(689938);
+    t(757143),
+    t(47120);
+var a = t(913527),
+    r = t.n(a);
+if (12633 == t.j) var s = t(512969);
+t(358085), t(73346);
+var i = t(981631),
+    o = t(689938);
 let l = {},
     c = {},
     d = Object.freeze({
@@ -24,8 +24,8 @@ let l = {},
         ...i.EKQ
     });
 function u(e) {
-    let t = (0, s.LX)(e, { path: i.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
-    return null != t ? t.params.skuId : null;
+    let n = (0, s.LX)(e, { path: i.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
+    return null != n ? n.params.skuId : null;
 }
 function _(e) {
     switch (e) {
@@ -172,9 +172,9 @@ function _(e) {
     }
 }
 Object.keys(d).forEach((e) => {
-    let t = e.toLowerCase().replace(/_/g, '-'),
-        n = d[e];
-    (l[t] = n), (c[n] = t);
+    let n = e.toLowerCase().replace(/_/g, '-'),
+        t = d[e];
+    (l[n] = t), (c[t] = n);
 });
 let E = [
     ['YYYY-MM-DD', 'MMMM DD, Y'],
@@ -184,13 +184,13 @@ let E = [
     ['YYYY', 'Y']
 ];
 function m(e) {
-    let { preorderReleaseAt: t, preorderApproximateReleaseDate: n } = e;
-    if (null != t) return t.format('MMMM DD');
-    if (null == n) return null;
+    let { preorderReleaseAt: n, preorderApproximateReleaseDate: t } = e;
+    if (null != n) return n.format('MMMM DD');
+    if (null == t) return null;
     for (let e = 0; e < E.length; e++) {
-        let [t, a] = E[e],
-            s = r()(n, t, !0);
+        let [n, a] = E[e],
+            s = r()(t, n, !0);
         if (s.isValid()) return s.format(a);
     }
-    return n;
+    return t;
 }

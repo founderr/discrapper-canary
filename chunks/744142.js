@@ -21,8 +21,8 @@ function u(e) {
         }),
         x = (0, c.Z)({ application: m }),
         v = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
-        E = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || x.length > 0,
-        P = a.useCallback(() => {
+        P = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || x.length > 0,
+        E = a.useCallback(() => {
             g({ mutualGuilds: x });
         }, [g, x]),
         S = (0, i.jsx)(s.Z, {
@@ -35,7 +35,7 @@ function u(e) {
         });
     return (0, i.jsxs)(l.Z, {
         className: I,
-        onClick: P,
+        onClick: E,
         iconSrc: b,
         header: m.name,
         subheader:
@@ -59,7 +59,7 @@ function u(e) {
                         children: null !== (p = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== p ? p : m.description
                     })
                 }),
-            E &&
+            P &&
                 (0, i.jsx)('div', {
                     className: d.bottomGuildCountContainer,
                     children: S

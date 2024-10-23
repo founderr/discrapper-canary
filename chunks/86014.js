@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(283293),
     g = n(216742),
     T = n(84615),
-    S = n(889711),
-    f = n(229893),
-    C = n(931515),
+    f = n(889711),
+    C = n(229893),
+    S = n(931515),
     N = n(702646),
     A = n(207796),
     v = n(782322),
@@ -134,7 +134,7 @@ t.Z = a.memo(function (e) {
         P = (0, A.GN)((e) => e.completedNux, s.Z),
         D = (0, A.GN)((e) => e.entrypointGameId, s.Z),
         [y, j] = a.useState(null),
-        { backgroundImageUrl: U, gameName: G } = (0, C.kN)(D),
+        { backgroundImageUrl: U, gameName: G } = (0, S.kN)(D),
         w = a.useCallback(() => {
             var e, t, n;
             if (!L) return;
@@ -144,8 +144,8 @@ t.Z = a.memo(function (e) {
         }, [y, L]);
     a.useEffect(() => {
         if (!L) return;
-        let e = (0, S.pP)(w);
-        return (0, S.YP)(e, document.body), () => (0, S.UC)(e, document.body);
+        let e = (0, f.pP)(w);
+        return (0, f.YP)(e, document.body), () => (0, f.UC)(e, document.body);
     }, [L, w]);
     let k = a.useCallback(() => {
             var e, t;
@@ -166,7 +166,7 @@ t.Z = a.memo(function (e) {
                 }),
             [P, T]
         ),
-        H = (0, r.e7)([f.Z], () => f.Z.getSavedGuilds().length),
+        H = (0, r.e7)([C.Z], () => C.Z.getSavedGuilds().length),
         V = a.useMemo(
             () => [
                 {

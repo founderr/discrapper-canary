@@ -1,65 +1,65 @@
-n.d(t, {
+t.d(n, {
     s: function () {
-        return p;
+        return m;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(346610),
-    u = n(868643),
-    c = n(912332),
-    d = n(701865),
-    _ = n(689938),
-    E = n(760997);
-function f() {
-    (0, o.closeModal)(d.U);
+var a = t(200651),
+    r = t(192379),
+    i = t(120356),
+    o = t.n(i),
+    l = t(481060),
+    s = t(346610),
+    u = t(868643),
+    c = t(912332),
+    d = t(701865),
+    f = t(689938),
+    h = t(760997);
+function _() {
+    (0, l.closeModal)(d.U);
 }
-function h(e) {
-    let { className: t, message: n, target: a } = e,
-        l = i.useCallback(() => {
-            if ('embed' === a.type) {
+function p(e) {
+    let { className: n, message: t, target: i } = e,
+        s = r.useCallback(() => {
+            if ('embed' === i.type) {
                 (0, c.l8)({
-                    messageId: n.id,
-                    channelId: n.channel_id,
-                    message: n,
+                    messageId: t.id,
+                    channelId: t.channel_id,
+                    message: t,
                     source: 'media-viewer',
-                    forwardOptions: { onlyEmbedIndices: [a.embedIndex] },
-                    onRequestSent: f
+                    forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
+                    onRequestSent: _
                 });
                 return;
             }
             (0, c.l8)({
-                messageId: n.id,
-                channelId: n.channel_id,
-                message: n,
+                messageId: t.id,
+                channelId: t.channel_id,
+                message: t,
                 source: 'media-viewer',
-                forwardOptions: { onlyAttachmentIds: [a.attachmentId] },
-                onRequestSent: f
+                forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
+                onRequestSent: _
             });
-        }, [n, a]);
-    return (0, r.jsx)(o.Clickable, {
-        className: s()(E.container, t),
-        onClick: l,
-        children: (0, r.jsx)(o.Text, {
-            className: E.text,
+        }, [t, i]);
+    return (0, a.jsx)(l.Clickable, {
+        className: o()(h.container, n),
+        onClick: s,
+        children: (0, a.jsx)(l.Text, {
+            className: h.text,
             variant: 'text-sm/medium',
             color: 'always-white',
-            children: _.Z.Messages.MESSAGE_ACTION_FORWARD
+            children: f.Z.Messages.MESSAGE_ACTION_FORWARD
         })
     });
 }
-function p(e, t) {
-    let { canForwardMessages: n } = (0, l.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return n && (0, u.h)(e)
-        ? (n) => {
-              let { className: i } = n;
-              return (0, r.jsx)(h, {
-                  className: i,
+function m(e, n) {
+    let { canForwardMessages: t } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return t && (0, u.h)(e)
+        ? (t) => {
+              let { className: r } = t;
+              return (0, a.jsx)(p, {
+                  className: r,
                   message: e,
-                  target: t
+                  target: n
               });
           }
         : () => null;

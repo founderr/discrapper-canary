@@ -87,12 +87,12 @@ function v(e) {
             (0, i.jsx)(c.Z, {
                 path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(E, { ...e })
+                render: (e) => (0, i.jsx)(P, { ...e })
             })
         ]
     });
 }
-function E(e) {
+function P(e) {
     let {
             match: {
                 params: { applicationId: n, skuId: t }
@@ -120,7 +120,7 @@ function E(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !P() &&
+                                    !E() &&
                                         (0, h.goToApplicationSection)({
                                             applicationId: n,
                                             section: g.ApplicationDirectoryProfileSections.STORE
@@ -147,7 +147,7 @@ function E(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !P() &&
+                                    !E() &&
                                         (0, h.goToApplicationSection)({
                                             applicationId: n,
                                             section: g.ApplicationDirectoryProfileSections.STORE
@@ -167,6 +167,6 @@ function E(e) {
         null
     );
 }
-function P() {
+function E() {
     return window.location.pathname.startsWith('/login');
 }

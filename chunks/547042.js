@@ -23,10 +23,10 @@ var i,
     p = n(981631),
     g = n(921944),
     T = n(689938),
-    S = n(118441);
+    f = n(118441);
 ((i = a || (a = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
-let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
+    S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
     N = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
@@ -49,8 +49,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
                             learnMore: !0,
                             title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-                            videoPosterUrl: C,
-                            videoUrl: f,
+                            videoPosterUrl: S,
+                            videoUrl: C,
                             ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                             dismissText: T.Z.Messages.DISMISS
                         };
@@ -61,8 +61,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
                             learnMore: !0,
                             title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-                            videoPosterUrl: C,
-                            videoUrl: f,
+                            videoPosterUrl: S,
+                            videoUrl: C,
                             ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
                             dismissText: T.Z.Messages.DISMISS
                         };
@@ -113,14 +113,14 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
         return (0, s.jsx)(E.Gt, {
             value: M,
             children: (0, s.jsx)('div', {
-                className: S.wrapper,
+                className: f.wrapper,
                 children: (0, s.jsx)('div', {
-                    className: S.container,
+                    className: f.container,
                     children: (0, s.jsxs)('div', {
-                        className: S.content,
+                        className: f.content,
                         children: [
                             (0, s.jsx)(h.Z, {
-                                className: S.video,
+                                className: f.video,
                                 src: x,
                                 poster: O,
                                 width: 224,
@@ -130,16 +130,16 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 autoPlay: !0
                             }),
                             (0, s.jsx)('div', {
-                                className: S.header,
+                                className: f.header,
                                 children: (0, s.jsx)(o.Heading, {
-                                    className: S.__invalid_headerText,
+                                    className: f.__invalid_headerText,
                                     variant: 'text-sm/bold',
                                     color: 'always-white',
                                     children: R
                                 })
                             }),
                             (0, s.jsxs)(o.Text, {
-                                className: S.subheaderText,
+                                className: f.subheaderText,
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
@@ -149,7 +149,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                               children: [
                                                   ' ',
                                                   (0, s.jsx)(o.Anchor, {
-                                                      className: S.learnMoreLink,
+                                                      className: f.learnMoreLink,
                                                       href: 'https://support.discord.com/hc/articles/4422142836759',
                                                       children: T.Z.Messages.LEARN_MORE
                                                   })
@@ -159,7 +159,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 ]
                             }),
                             (0, s.jsxs)('div', {
-                                className: S.ctaActionWrapper,
+                                className: f.ctaActionWrapper,
                                 children: [
                                     (0, s.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND,

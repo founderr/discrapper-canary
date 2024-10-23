@@ -26,9 +26,9 @@ let g = {
         error: null
     },
     T = (0, u.hQ)(),
-    S = ''.concat(T, '-decription'),
-    f = ''.concat(T, '-error');
-function C(e, t) {
+    f = ''.concat(T, '-decription'),
+    C = ''.concat(T, '-error');
+function S(e, t) {
     switch (t.type) {
         case 'RESET':
             return g;
@@ -54,7 +54,7 @@ function C(e, t) {
 function N() {
     let e = a.createRef(),
         t = a.createRef(),
-        [n, s] = a.useReducer(C, g),
+        [n, s] = a.useReducer(S, g),
         { canSend: l, hint: u, success: N, error: A } = n;
     return (
         a.useEffect(() => {
@@ -94,7 +94,7 @@ function N() {
             autoComplete: 'off',
             children: [
                 (0, i.jsx)(c.FormText, {
-                    id: S,
+                    id: f,
                     type: c.FormText.Types.DESCRIPTION,
                     children: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
                 }),
@@ -150,7 +150,7 @@ function N() {
                                 placeholder: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                                 'aria-label': m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
                                 'aria-invalid': null != A || void 0,
-                                'aria-describedby': null != A ? f : S
+                                'aria-describedby': null != A ? C : f
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -170,7 +170,7 @@ function N() {
                 null != A &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
-                        id: f,
+                        id: C,
                         type: c.FormText.Types.ERROR,
                         className: p.marginTop8,
                         children: A

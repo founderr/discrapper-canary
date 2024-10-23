@@ -1,44 +1,44 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return l;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    s = n(481060);
-function i(e, t, n) {
+    t(47120);
+var a = t(200651),
+    r = t(192379),
+    s = t(481060);
+function i(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
 class o extends r.PureComponent {
     render() {
-        let { text: e, lastItem: t, className: n } = this.props;
+        let { text: e, lastItem: n, className: t } = this.props;
         return (0, a.jsxs)('span', {
             children: [
                 (0, a.jsx)(s.Anchor, {
-                    className: n,
+                    className: t,
                     onClick: this.handleClick,
                     children: e
                 }),
-                t ? '' : ', '
+                n ? '' : ', '
             ]
         });
     }
     constructor(...e) {
         super(...e),
             i(this, 'handleClick', () => {
-                let { onClick: e, index: t } = this.props;
-                null == e || e(t);
+                let { onClick: e, index: n } = this.props;
+                null == e || e(n);
             });
     }
 }
@@ -46,26 +46,26 @@ class l extends r.PureComponent {
     render() {
         let e = this.props.artists.split(';');
         if (!this.props.canOpen) return e.join(', ');
-        let t = e.length - 1;
-        return e.map((e, n) =>
+        let n = e.length - 1;
+        return e.map((e, t) =>
             (0, a.jsx)(
                 o,
                 {
                     text: e,
-                    index: n,
-                    lastItem: n === t,
+                    index: t,
+                    lastItem: t === n,
                     onClick: this.handleOpenSpotifyArtist,
                     className: this.props.linkClassName
                 },
-                'spotify-artist-'.concat(n)
+                'spotify-artist-'.concat(t)
             )
         );
     }
     constructor(...e) {
         super(...e),
             i(this, 'handleOpenSpotifyArtist', (e) => {
-                let { onOpenSpotifyArtist: t } = this.props;
-                null == t || t(e);
+                let { onOpenSpotifyArtist: n } = this.props;
+                null == n || n(e);
             });
     }
 }

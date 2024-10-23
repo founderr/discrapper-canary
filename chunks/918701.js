@@ -611,7 +611,7 @@ let eI = (e, t) => {
               : eD(e)
                 ? eA({
                       quest: e,
-                      taskType: s.X.PLAY_ON_DESKTOP_V2
+                      taskType: s.X.WATCH_VIDEO
                   })
                 : ed(e)
                   ? eA({
@@ -639,7 +639,7 @@ function ev(e) {
 }
 let eC = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
     eL = eC([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
-    eD = eC([s.X.PLAY_ON_DESKTOP_V2]);
+    eD = eC([s.X.WATCH_VIDEO]);
 function ey(e) {
     return eL(e);
 }

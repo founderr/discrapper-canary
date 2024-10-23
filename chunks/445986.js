@@ -1,38 +1,38 @@
-s.d(t, {
+n.d(t, {
     Q: function () {
         return c;
     }
 }),
-    s(653041),
-    s(47120);
-var n = s(200651),
-    i = s(192379),
-    a = s(481060),
-    r = s(33122),
-    l = s(761705),
-    o = s(9807),
-    h = s(843445),
-    d = s(981631),
-    u = s(689938);
+    n(653041),
+    n(47120);
+var s = n(200651),
+    i = n(192379),
+    a = n(481060),
+    r = n(33122),
+    l = n(761705),
+    o = n(9807),
+    h = n(843445),
+    u = n(981631),
+    d = n(689938);
 function c(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
 let p = (e) => {
-    let { index: t, items: s, ...i } = e,
-        a = s[t],
+    let { index: t, items: n, ...i } = e,
+        a = n[t],
         r = 0,
         o = [];
-    for (let e of s)
-        if (e.type === d.s9s.IMG) {
-            let { width: t, height: s, src: n } = e;
+    for (let e of n)
+        if (e.type === u.s9s.IMG) {
+            let { width: t, height: n, src: s } = e;
             e === a && (r = o.length),
                 o.push({
-                    src: c(n),
+                    src: c(s),
                     width: t,
-                    height: s
+                    height: n
                 });
         }
-    return (0, n.jsx)(l.Z, {
+    return (0, s.jsx)(l.Z, {
         ...i,
         items: o,
         startWith: r
@@ -41,26 +41,26 @@ let p = (e) => {
 class m extends i.Component {
     render() {
         let { pageSize: e, ...t } = this.props,
-            s = e === h.b.SMALL ? o.Z : r.Z;
-        return (0, n.jsx)(s, {
+            n = e === h.b.SMALL ? o.Z : r.Z;
+        return (0, s.jsx)(n, {
             ...t,
             onCurrentItemClick: this.handleCurrentItemClick
         });
     }
     constructor(...e) {
-        var t, s, i;
+        var t, n, i;
         super(...e),
             (t = this),
-            (s = 'handleCurrentItemClick'),
+            (n = 'handleCurrentItemClick'),
             (i = (e, t) => {
-                e.type === d.s9s.IMG &&
+                e.type === u.s9s.IMG &&
                     !(0, a.hasAnyModalOpen)() &&
                     (0, a.openModal)((e) =>
-                        (0, n.jsx)(a.ModalRoot, {
+                        (0, s.jsx)(a.ModalRoot, {
                             size: a.ModalSize.DYNAMIC,
-                            'aria-label': u.Z.Messages.IMAGE,
+                            'aria-label': d.Z.Messages.IMAGE,
                             ...e,
-                            children: (0, n.jsx)(p, {
+                            children: (0, s.jsx)(p, {
                                 ...e,
                                 index: t,
                                 items: this.props.items
@@ -68,14 +68,14 @@ class m extends i.Component {
                         })
                     );
             }),
-            s in t
-                ? Object.defineProperty(t, s, {
+            n in t
+                ? Object.defineProperty(t, n, {
                       value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[s] = i);
+                : (t[n] = i);
     }
 }
 t.Z = m;

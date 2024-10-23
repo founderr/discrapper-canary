@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(29086),
     g = n(590771),
     T = n(273596),
-    S = n(128449),
-    f = n(49898),
-    C = n(689938),
+    f = n(128449),
+    C = n(49898),
+    S = n(689938),
     N = n(636872);
 function A() {
     let e = a.useRef((0, r.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: A } = (0, l.M)(),
         { tabs: v, selectedTab: Z, setSelectedTab: L } = (0, p.Y)(),
         R = (0, h.lg)(Z),
-        O = !S.MU.has(Z),
+        O = !f.MU.has(Z),
         { searchQuery: x, onSearchTextChange: b, onClearSearch: M, onSearchSubmit: P, isSearchVisible: D } = (0, I.H)({ loadId: e.current }),
         {
             searchBarState: y,
@@ -53,7 +53,7 @@ function A() {
                 D
                     ? v.filter((e) => {
                           let { id: t } = e;
-                          return !S.MU.has(t);
+                          return !f.MU.has(t);
                       })
                     : v,
             [v, D]
@@ -97,17 +97,17 @@ function A() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.searchResultsHeader,
-                                children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: k })
+                                children: S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: k })
                             }),
                         O &&
                             (0, i.jsx)(u.Z, {
                                 query: x,
-                                placeholder: C.Z.Messages.SEARCH,
+                                placeholder: S.Z.Messages.SEARCH,
                                 onTextChange: b,
                                 onClear: M,
                                 onSubmit: P,
                                 onCollapsedClick: U,
-                                state: D ? f.WB.DEFAULT : y,
+                                state: D ? C.WB.DEFAULT : y,
                                 onBlur: G
                             })
                     ]

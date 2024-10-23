@@ -1,17 +1,17 @@
-n.d(t, {
+t.d(n, {
     $: function () {
         return i;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(907040),
-    s = n(185923);
+var a = t(200651);
+t(192379);
+var r = t(907040),
+    s = t(185923);
 function i(e) {
-    let { channel: t, closePopout: n, analyticsOverride: i, onSelectEmoji: o, messageId: l } = e;
+    let { channel: n, closePopout: t, analyticsOverride: i, onSelectEmoji: o, messageId: l } = e;
     return (0, a.jsx)(r.Z, {
-        closePopout: n,
-        channel: t,
+        closePopout: t,
+        channel: n,
         onSelectEmoji: o,
         pickerIntention: s.Hz.REACTION,
         analyticsOverride: i,

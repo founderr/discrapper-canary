@@ -20,7 +20,7 @@ let p = window.GLOBAL_ENV.ALGOLIA_KEY,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-async function S(e, t, n) {
+async function f(e, t, n) {
     let { categoryId: i, languageCode: a, offset: s, length: r } = t,
         l = E.Z.getAlgoliaSearchIndex();
     if (null == l || E.Z.getIsBlocked(e)) return;
@@ -57,9 +57,9 @@ async function S(e, t, n) {
             total: n
         });
     } catch (o) {
-        var f;
+        var C;
         let s = new c.Hx(o),
-            r = null !== (f = null == n ? void 0 : n.isRetry) && void 0 !== f && f;
+            r = null !== (C = null == n ? void 0 : n.isRetry) && void 0 !== C && C;
         o.body.retry_after > 0 && l === E.Z.getAlgoliaSearchIndex()
             ? (_.m9({
                   categoryId: i,
@@ -67,7 +67,7 @@ async function S(e, t, n) {
                   willRequestRetry: !0,
                   isRequestRetry: r
               }),
-              setTimeout(() => S(e, t, { isRetry: !0 }), o.body.retry_after * u.Z.Millis.SECOND))
+              setTimeout(() => f(e, t, { isRetry: !0 }), o.body.retry_after * u.Z.Millis.SECOND))
             : (_.m9({
                   categoryId: i,
                   error: s,
@@ -83,7 +83,7 @@ async function S(e, t, n) {
               }));
     }
 }
-async function f(e) {
+async function C(e) {
     let { query: t, algoliaFilters: n, onComplete: i } = e,
         a = E.Z.getAlgoliaSearchIndex();
     if (null == a || E.Z.getIsBlocked(t)) return;
@@ -123,7 +123,7 @@ async function f(e) {
         null == i || i();
     }
 }
-async function C(e) {
+async function S(e) {
     let { categoryId: t } = e,
         n = E.Z.getLastFetchTimestamp({ categoryId: t });
     if ((0, h.Ew)(n)) {
@@ -206,8 +206,8 @@ t.Z = {
             algoliaSearchIndex: e
         });
     },
-    fetchAlgoliaSearchResults: S,
-    fetchAlgoliaSearchResultCounts: f,
+    fetchAlgoliaSearchResults: f,
+    fetchAlgoliaSearchResultCounts: C,
     clearAlgoliaSearchResults: function (e) {
         var t;
         d.Z.dispatch({
@@ -216,7 +216,7 @@ t.Z = {
         });
     },
     fetchFeaturedGuilds: N,
-    fetchCategoryFeaturedGuilds: C,
+    fetchCategoryFeaturedGuilds: S,
     resetSearchLayout: function () {
         d.Z.dispatch({ type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET' });
     }

@@ -43,7 +43,7 @@ function C(e) {
                               return g;
                       }
                   })(C),
-        E = p.ZP.getGuildIconURL({
+        P = p.ZP.getGuildIconURL({
             id: n.id,
             icon: n.icon,
             size: 50
@@ -71,7 +71,7 @@ function C(e) {
                                 className: f.iconMask,
                                 children: (0, i.jsx)(c.Z, {
                                     className: f.__invalid_icon,
-                                    iconSrc: E,
+                                    iconSrc: P,
                                     guild: b,
                                     size: c.Z.Sizes.LARGE
                                 })

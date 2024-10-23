@@ -30,7 +30,7 @@ function g(e) {
             e.pause(),
             e.on('readable', () => {
                 try {
-                    S(e);
+                    f(e);
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {
@@ -72,7 +72,7 @@ function T(e, t) {
         s = i.Buffer.alloc(8 + a);
     return s.writeInt32LE(e, 0), s.writeInt32LE(a, 4), s.write(t, 8, a), (n = s).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
-function S(e) {
+function f(e) {
     let t = e.read(8);
     if (null == t) return;
     let n = i.Buffer.from(t),
@@ -99,9 +99,9 @@ function S(e) {
         case m.CLOSE:
             e.end(), e.destroy();
     }
-    S(e);
+    f(e);
 }
-class f extends d.Z {
+class C extends d.Z {
     send(e) {
         h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(m.FRAME, e));
     }
@@ -130,13 +130,13 @@ class f extends d.Z {
             (this.socket = e);
     }
 }
-class C extends a.EventEmitter {
+class S extends a.EventEmitter {
     handleConnection(e) {
         I(e, !1),
             e.pause(),
             e.on('readable', () => {
                 try {
-                    S(e);
+                    f(e);
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {
@@ -152,7 +152,7 @@ class C extends a.EventEmitter {
                 let i = t.client_id,
                     a = +t.v;
                 try {
-                    n = new f(e, a, 'json');
+                    n = new C(e, a, 'json');
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {
@@ -192,4 +192,4 @@ class C extends a.EventEmitter {
             });
     }
 }
-t.Z = new C();
+t.Z = new S();

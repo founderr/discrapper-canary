@@ -32,9 +32,9 @@ var i,
     p = n(227140),
     g = n(981631),
     T = n(921944),
-    S = n(689938),
-    f = n(938923),
-    C = n(203302);
+    f = n(689938),
+    C = n(938923),
+    S = n(203302);
 let N = 'url(#dark-purple-gradient)';
 function A(e) {
     return e.toLocaleString(E.default.locale, {
@@ -45,15 +45,15 @@ function A(e) {
 ((i = a || (a = {})).REFERRAL_PROGRAM = 'referral_program'), (i.TRIAL_FOR_ALL = 'trial_for_all');
 let v = () =>
         (0, s.jsxs)('div', {
-            className: f.coachtipContent,
+            className: C.coachtipContent,
             children: [
                 (0, s.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: S.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
+                    children: f.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
                 }),
                 (0, s.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: S.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
+                    children: f.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
                 })
             ]
         }),
@@ -76,20 +76,20 @@ let v = () =>
             shouldShow: !0,
             renderPopout: () =>
                 (0, s.jsx)(u.Z, {
-                    artClassName: f.coachmarkArt,
-                    dismissIconClassName: f.exitIcon,
+                    artClassName: C.coachmarkArt,
+                    dismissIconClassName: C.exitIcon,
                     onDismissIconClick: L,
                     dismissIcon: (0, s.jsx)(Z, {}),
-                    headerClassName: f.incentiveCoachtipContent,
-                    contentClassName: f.incentiveCoachtipContainer,
-                    pointerClassName: f.incentiveTooltipPointer,
+                    headerClassName: C.incentiveCoachtipContent,
+                    contentClassName: C.incentiveCoachtipContainer,
+                    pointerClassName: C.incentiveTooltipPointer,
                     onTryFeature: () => {
                         (0, _.uL)(g.Z5c.NITRO_HOME), L();
                     },
                     art: (0, s.jsx)(s.Fragment, {
                         children: (0, s.jsx)(m.Z, {
                             staticPercentage: 100,
-                            iconClassName: f.incentiveIcon,
+                            iconClassName: C.incentiveIcon,
                             showAnimations: !1,
                             progressCircleVariation: m.Q.NITRO_LOGO,
                             ellipseOpacity: 1,
@@ -100,10 +100,10 @@ let v = () =>
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: S.Z.Messages.CHECK_IT_OUT,
-                    header: S.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: I.Nq }),
+                    tryItText: f.Z.Messages.CHECK_IT_OUT,
+                    header: f.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: I.Nq }),
                     hideDismissButton: !0,
-                    body: S.Z.Messages.REFERRAL_INCENTIVE_GET_DISCOUNT_OFF_YOUR_NEXT_MONTH.format({ discountRate: I.Nq }),
+                    body: f.Z.Messages.REFERRAL_INCENTIVE_GET_DISCOUNT_OFF_YOUR_NEXT_MONTH.format({ discountRate: I.Nq }),
                     dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
@@ -117,17 +117,17 @@ let v = () =>
         return (
             (t = r
                 ? (0, s.jsxs)('div', {
-                      className: f.coachTipContainer,
+                      className: C.coachTipContainer,
                       children: [
                           (0, s.jsx)('div', {
-                              className: f.iconContainer,
+                              className: C.iconContainer,
                               children: (0, s.jsx)(m.Z, {
                                   staticPercentage: 100,
-                                  iconClassName: f.icon,
+                                  iconClassName: C.icon,
                                   showAnimations: !0,
                                   progressCircleVariation: m.Q.NITRO_LOGO,
                                   ellipseOpacity: 1,
-                                  customAnimationClassName: f.customCircleAnimation,
+                                  customAnimationClassName: C.customCircleAnimation,
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
@@ -135,10 +135,10 @@ let v = () =>
                       ]
                   })
                 : (0, s.jsxs)('div', {
-                      className: f.t4ACoachTipContainer,
+                      className: C.t4ACoachTipContainer,
                       children: [
                           (0, s.jsx)('div', {
-                              className: f.t4ACoachtipArtOuterContainer,
+                              className: C.t4ACoachtipArtOuterContainer,
                               children: (0, s.jsx)(b, {})
                           }),
                           (null == a ? void 0 : a.expires_at) != null && (0, s.jsx)(M, { trialExpiration: Date.parse(a.expires_at) })
@@ -147,10 +147,10 @@ let v = () =>
             (0, s.jsx)(o.Tooltip, {
                 text: t,
                 position: 'right',
-                'aria-label': r ? S.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : S.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
-                tooltipClassName: r ? f.marketingBadgeTooltip : f.t4AMarketingBadgeTooltip,
+                'aria-label': r ? f.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : f.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
+                tooltipClassName: r ? C.marketingBadgeTooltip : C.t4AMarketingBadgeTooltip,
                 allowOverflow: !0,
-                tooltipContentClassName: f.tooltipContent,
+                tooltipContentClassName: C.tooltipContent,
                 children: (e) =>
                     (0, s.jsx)('div', {
                         ...e,
@@ -165,14 +165,14 @@ let v = () =>
             r.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, s.jsx)(p.Z, { copy: S.Z.Messages.NEW })
+            (0, s.jsx)(p.Z, { copy: f.Z.Messages.NEW })
         );
     },
     b = () =>
         (0, s.jsx)('div', {
-            className: f.t4ACoachtipArtInnerContainer,
+            className: C.t4ACoachtipArtInnerContainer,
             children: (0, s.jsx)('img', {
-                src: C,
+                src: S,
                 alt: ''
             })
         }),
@@ -183,14 +183,14 @@ let v = () =>
             children: [
                 (0, s.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: S.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER
+                    children: f.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER
                 }),
                 (0, s.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     children:
                         n.days > 0
-                            ? S.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP_DAYS.format({ days: n.days })
-                            : S.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP.format({
+                            ? f.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP_DAYS.format({ days: n.days })
+                            : f.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP.format({
                                   hours: A(n.hours),
                                   minutes: A(n.minutes),
                                   seconds: A(n.seconds)
@@ -207,9 +207,9 @@ let v = () =>
                 t && !i && (0, d.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: T.L.TAKE_ACTION });
             }, [t, i]),
             (0, s.jsx)(h._y, {
-                className: f.trialBadgeBackground,
+                className: C.trialBadgeBackground,
                 isTabSelected: t,
-                badgeCopy: S.Z.Messages.NITRO_BADGE_TEXT,
+                badgeCopy: f.Z.Messages.NITRO_BADGE_TEXT,
                 offerExpiresAt: i ? n.expires_at : void 0
             })
         );

@@ -15,18 +15,18 @@ var i = n(200651),
     p = n(113434),
     g = n(833435),
     T = n(150560),
-    S = n(558652),
-    f = n(736683),
-    C = n(452081),
+    f = n(558652),
+    C = n(736683),
+    S = n(452081),
     N = n(46140),
     A = n(981631),
     v = n(689938),
     Z = n(431418);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
         { onScroll: L, scrollPosition: R } = (0, c.M)(),
         O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? f.Z : f.j;
+        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? C.Z : C.j;
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
@@ -75,7 +75,7 @@ t.Z = function () {
                                     onTabSelect: n,
                                     className: Z.tabs
                                 }),
-                                t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {})
+                                t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
                             ]
                         })
                     ]

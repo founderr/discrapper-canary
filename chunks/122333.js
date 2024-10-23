@@ -17,9 +17,9 @@ var s = n(481060),
     p = n(914010),
     g = n(594174),
     T = n(823379),
-    S = n(358085),
-    f = n(929809),
-    C = n(179645),
+    f = n(358085),
+    C = n(929809),
+    S = n(179645),
     N = n(701476),
     A = n(785997),
     v = n(981631),
@@ -38,7 +38,7 @@ class O extends l.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            r = C.Z.getType();
+            r = S.Z.getType();
         if (null == r) return;
         switch (r) {
             case N.M5.INVITE_UNCLAIMED:
@@ -56,7 +56,7 @@ class O extends l.Z {
             let e = I.Z.getGuild(R);
             (null == e ? void 0 : e.hasVerificationGate()) && ((l = !0), (0, E.RM)(e.id));
         }
-        let O = () => 0 === m.Z.totalGuilds && !S.isPlatformEmbedded,
+        let O = () => 0 === m.Z.totalGuilds && !f.isPlatformEmbedded,
             x = o.b();
         (e = [
             {
@@ -116,7 +116,7 @@ class O extends l.Z {
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(S.isPlatformEmbedded, e),
+                open: (e) => c.j(f.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return !l && null != g.default.getCurrentUser() && !(null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, u.g)('new_user_manager');
@@ -148,7 +148,7 @@ class O extends l.Z {
             }
         ]),
             (t = () => {
-                f.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
+                C.H(), _.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

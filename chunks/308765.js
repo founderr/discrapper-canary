@@ -378,7 +378,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     SharedSpacesWarningManager: {
-        actions: ['CHANNEL_SELECT', 'VOICE_STATE_UPDATES'],
+        actions: ['CHANNEL_SELECT'],
         inlineRequire: () => n(414509).Z,
         neverLoadBeforeConnectionOpen: !0
     },

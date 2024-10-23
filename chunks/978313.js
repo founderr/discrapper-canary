@@ -1,40 +1,40 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return p;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
-    o = n(657707),
-    l = n(793030),
-    c = n(692547),
-    d = n(481060),
-    u = n(885006),
-    _ = n(810568),
-    E = n(221370),
-    m = n(689938),
-    I = n(51527),
-    A = n(110367);
+    t(47120);
+var a = t(200651),
+    r = t(192379),
+    s = t(120356),
+    i = t.n(s),
+    o = t(657707),
+    l = t(793030),
+    c = t(692547),
+    d = t(481060),
+    u = t(885006),
+    _ = t(810568),
+    E = t(221370),
+    m = t(689938),
+    I = t(51527),
+    A = t(110367);
 function p(e) {
-    let { detectedGame: t, trackAction: n } = e,
-        [s, p] = r.useState((null == t ? void 0 : t.summaryLocalized) != null),
+    let { detectedGame: n, trackAction: t } = e,
+        [s, p] = r.useState((null == n ? void 0 : n.summaryLocalized) != null),
         [g, f] = r.useState(!0),
         [T, O] = r.useState(!1),
         N = r.useRef(null),
-        { width: R, height: P } = (0, u.Z)();
+        { width: R, height: h } = (0, u.Z)();
     return (r.useEffect(() => {
         let e = N.current;
         null != e && O(e.scrollHeight - e.clientHeight > 1 || !g);
-    }, [N, R, P, g]),
-    null == t.summary)
+    }, [N, R, h, g]),
+    null == n.summary)
         ? null
         : (0, a.jsxs)('div', {
               className: i()(I.column, I.gapMd),
               children: [
-                  null != t.summaryLocalized &&
+                  null != n.summaryLocalized &&
                       (0, a.jsxs)('div', {
                           className: i()(I.row, I.gapSm),
                           children: [
@@ -53,13 +53,13 @@ function p(e) {
                       ref: N,
                       lineClamp: g ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: s ? t.summaryLocalized : t.summary
+                      children: s ? n.summaryLocalized : n.summary
                   }),
                   T &&
                       (0, a.jsx)(d.Clickable, {
                           className: I.clickable,
                           onClick: () => {
-                              n(g ? _.as.ShowMore : _.as.ShowLess), f(!g);
+                              t(g ? _.as.ShowMore : _.as.ShowLess), f(!g);
                           },
                           children: (0, a.jsx)(l.xv, {
                               variant: 'text-sm/semibold',
@@ -68,7 +68,7 @@ function p(e) {
                       }),
                   (0, a.jsx)(E.Z, {
                       className: A.platforms,
-                      detectedGame: t
+                      detectedGame: n
                   })
               ]
           });

@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(480222),
     g = n(207796),
     T = n(558831),
-    S = n(304231),
-    f = n(981631),
-    C = n(689938),
+    f = n(304231),
+    C = n(981631),
+    S = n(689938),
     N = n(454042);
 let A = {
         mass: 1,
@@ -42,8 +42,8 @@ let A = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(h.Z, {
-                    title: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-                    description: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+                    title: S.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+                    description: S.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
                     onUpdatePlaystyle: n,
                     playstyle: t
                 })
@@ -64,8 +64,8 @@ let A = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(m.Z, {
-                    title: C.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-                    description: C.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+                    title: S.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+                    description: S.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
                     onUpdateTraits: n,
                     traits: t,
                     hidePreview: !0
@@ -87,8 +87,8 @@ let A = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(E.Z, {
-                    title: C.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-                    description: C.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+                    title: S.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+                    description: S.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
                     onUpdateGames: n,
                     gameApplicationIds: t
                 })
@@ -118,17 +118,17 @@ let A = {
                     [e, t, n]
                 ),
                 m = a.useMemo(() => !o()(E, h), [h, E]),
-                S = a.useCallback(() => {
+                f = a.useCallback(() => {
                     var e;
                     g.GN.getState().setSelectedGames(E.games), g.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), g.GN.getState().setSelectedTraits(E.traits), (0, I.Og)();
                 }, [E.games, E.playstyle, E.traits]),
-                f = a.useCallback(() => {
+                C = a.useCallback(() => {
                     r(new Set(h.games)), c(h.playstyle), _(new Set(h.traits));
                 }, [h.games, h.playstyle, h.traits]);
             return (0, i.jsx)(p.Z, {
                 hasChanges: m,
-                onSave: S,
-                onReset: f,
+                onSave: f,
+                onReset: C,
                 children: (0, i.jsx)(T.Z, {
                     traits: u,
                     gameApplicationIds: s,
@@ -144,7 +144,7 @@ let A = {
                 t = a.useCallback(() => {
                     (0, g.fH)(g.v0.DISCOVERY);
                 }, []),
-                n = a.useMemo(() => (e === f.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight), [e]);
+                n = a.useMemo(() => (e === C.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight), [e]);
             return (0, i.jsx)('div', {
                 className: N.container,
                 children: (0, i.jsx)('div', {
@@ -155,7 +155,7 @@ let A = {
                             (0, i.jsx)('div', { className: N.backgroundImageBlur }),
                             (0, i.jsx)('div', {
                                 className: N.backgroundImageContent,
-                                children: (0, i.jsx)(S.Z, { onDismiss: t })
+                                children: (0, i.jsx)(f.Z, { onDismiss: t })
                             })
                         ]
                     })

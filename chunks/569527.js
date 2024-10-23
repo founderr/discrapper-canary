@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return S;
     }
 }),
     n(47120);
@@ -21,11 +21,11 @@ var i = n(200651),
     p = n(283293),
     g = n(797908),
     T = n(120549),
-    S = n(979007),
-    f = n(463051);
-function C(e) {
+    f = n(979007),
+    C = n(463051);
+function S(e) {
     var t;
-    let { query: n, onSelectApplication: C } = e,
+    let { query: n, onSelectApplication: S } = e,
         [N, A] = a.useState(void 0),
         [v, Z] = a.useState(1),
         [L, R] = a.useState(!0),
@@ -37,14 +37,14 @@ function C(e) {
                 query: n,
                 categoryId: N,
                 page: v,
-                pageSize: S.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             }),
             searchResults: E.Z.getSearchResults({
                 query: n,
                 categoryId: N,
                 page: v,
-                pageSize: S.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             })
         })),
@@ -52,7 +52,7 @@ function C(e) {
             let e = E.Z.getSearchResults({
                 query: n,
                 page: 1,
-                pageSize: S.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             });
             return null != e
@@ -73,7 +73,7 @@ function C(e) {
                     query: n,
                     options: {
                         page: e,
-                        pageSize: S.IV,
+                        pageSize: f.IV,
                         source: r.F.APP_DIRECTORY,
                         categoryId: N
                     }
@@ -116,7 +116,7 @@ function C(e) {
                             children: (0, i.jsx)('div', {
                                 ref: w,
                                 children: (0, i.jsx)('div', {
-                                    className: f.content,
+                                    className: C.content,
                                     style: { paddingRight: L ? x + 32 : void 0 },
                                     children:
                                         null == U
@@ -128,7 +128,7 @@ function C(e) {
                                                           g.Z,
                                                           {
                                                               application: t,
-                                                              onSelectApplication: C
+                                                              onSelectApplication: S
                                                           },
                                                           t.id
                                                       );
@@ -139,9 +139,9 @@ function C(e) {
                             })
                         }),
                         (0, i.jsx)(o.Paginator, {
-                            className: f.paginationInput,
-                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * S.IV, S.Et * S.IV),
-                            pageSize: S.IV,
+                            className: C.paginationInput,
+                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * f.IV, f.Et * f.IV),
+                            pageSize: f.IV,
                             disablePaginationGap: !0,
                             hideMaxPage: !0,
                             currentPage: v,
@@ -152,10 +152,10 @@ function C(e) {
             }),
             L &&
                 (0, i.jsx)('div', {
-                    className: f.sidebar,
+                    className: C.sidebar,
                     ref: M,
                     children: (0, i.jsx)('div', {
-                        className: f.sidebarContent,
+                        className: C.sidebarContent,
                         children: (0, i.jsx)(T.Z, {
                             countsByCategory: y,
                             selectedCategoryId: null != N ? N : h.MU,

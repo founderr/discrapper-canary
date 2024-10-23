@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     A: function () {
         return i;
     },
@@ -6,7 +6,7 @@ n.d(t, {
         return s;
     }
 });
-var a = n(433517);
+var a = t(433517);
 let r = 'GameFollowSurveyModal';
 function s() {
     var e;

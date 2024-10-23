@@ -23,21 +23,21 @@ function p(e) {
         T = a.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        S = a.useCallback(() => {
+        f = a.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
-        f = a.useCallback(() => {
+        C = a.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ), g && (0, o.Kh)(p.id);
         }, [p.id, g]),
         {
-            acceptMessageRequest: C,
+            acceptMessageRequest: S,
             isAcceptLoading: N,
             isUserProfileLoading: A,
             isOptimisticAccepted: v
         } = (0, _.m)({
             user: n,
-            onAcceptSuccess: f,
-            onRejectSuccess: S,
+            onAcceptSuccess: C,
+            onRejectSuccess: f,
             onError: T
         }),
         Z = N || A,
@@ -58,7 +58,7 @@ function p(e) {
                         color: r.ButtonColors.PRIMARY,
                         size: r.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            C(p.id), e.stopPropagation();
+                            S(p.id), e.stopPropagation();
                         },
                         disabled: L,
                         submitting: Z,

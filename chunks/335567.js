@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     wrapper: 'wrapper_bfa0f5',
     productSection: 'productSection_bfa0f5',
     productList: 'productList_bfa0f5',

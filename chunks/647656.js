@@ -86,16 +86,16 @@ t.Z = {
             let p = i.transport === E.He.POST_MESSAGE,
                 g = (0, u.S5)(_, p);
             g > 0 && (_.flags = g), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
-            let { assets: T, party: S, secrets: f, timestamps: C, buttons: N, type: A } = _;
-            if ((null == A && (_.type = h.IIU.PLAYING), null != f)) {
+            let { assets: T, party: f, secrets: C, timestamps: S, buttons: N, type: A } = _;
+            if ((null == A && (_.type = h.IIU.PLAYING), null != C)) {
                 let e = a()
-                    .values(f)
+                    .values(C)
                     .filter((e) => !!e);
-                if (null != S && a().intersection(e, [S.id]).length > 0 && !m.includes(i.application.id)) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                if (null != f && a().intersection(e, [f.id]).length > 0 && !m.includes(i.application.id)) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (a().uniq(e).length < e.length) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                 if (null != N) throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
-            if ((null != N && ((_.metadata = { button_urls: N.map((e) => e.url) }), (_.buttons = N.map((e) => e.label))), null != C)) for (let e of Object.keys(C)) Date.now().toString().length - C[e].toString().length > 2 && (C[e] = Math.floor(C[e] * c.Z.Millis.SECOND));
+            if ((null != N && ((_.metadata = { button_urls: N.map((e) => e.url) }), (_.buttons = N.map((e) => e.label))), null != S)) for (let e of Object.keys(S)) Date.now().toString().length - S[e].toString().length > 2 && (S[e] = Math.floor(S[e] * c.Z.Millis.SECOND));
             if (null == T) n = Promise.resolve([]);
             else {
                 if (null == i.application || null == i.application.id) throw Error();

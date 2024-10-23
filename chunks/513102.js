@@ -13,7 +13,7 @@ function r(e) {
     return (0, a.jsx)(i.MenuItem, {
         id: 'application-directory',
         label: (0, a.jsx)(a.Fragment, { children: o.Z.Messages.APP_DIRECTORY }),
-        icon: i.RobotIcon,
+        icon: i.AppsIcon,
         action: () => {
             (0, s.goToAppDirectory)({
                 guildId: e.id,

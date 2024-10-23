@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(479446),
     g = n(522558),
     T = n(441623),
-    S = n(317271),
-    f = n(674701),
-    C = n(474936),
+    f = n(317271),
+    C = n(674701),
+    S = n(474936),
     N = n(981631),
     A = n(689938),
     v = n(756),
@@ -64,7 +64,7 @@ function R(e) {
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
-                    analyticsLocation: (0, S.F)(n).actionButton,
+                    analyticsLocation: (0, f.F)(n).actionButton,
                     analyticsLocations: O,
                     analyticsObject: {
                         page: s,
@@ -76,11 +76,11 @@ function R(e) {
                 });
         },
         U = () => {
-            if (n === C.hX.FRIEND_ANNIVERSARY) return A.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: T.Z.getFriendAnniversaryYears(t.id) });
+            if (n === S.hX.FRIEND_ANNIVERSARY) return A.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: T.Z.getFriendAnniversaryYears(t.id) });
             return (0, p.Ou)(n);
         },
         G = () => {
-            if (n === C.hX.FRIEND_ANNIVERSARY) return A.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
+            if (n === S.hX.FRIEND_ANNIVERSARY) return A.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
             return (0, p.Ou)(n);
         },
         w = () =>
@@ -133,16 +133,16 @@ function R(e) {
             b(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(C.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: f.U.COACHMARK,
+                premiumGiftIntentCardType: C.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: M,
                 onMouseLeave: P,
                 popoutPosition: e.position,
                 analyticsPage: s,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
-                giftIntentSecondaryAction: C.X2.SEND_MESSAGE,
+                giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
                 glow: !0
             }),
         children: () => w()

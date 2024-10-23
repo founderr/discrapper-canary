@@ -1,28 +1,28 @@
-s.d(t, {
+n.d(t, {
     gN: function () {
         return g;
     }
 }),
-    s(47120),
-    s(411104);
-var n,
-    i = s(200651),
-    a = s(192379),
-    r = s(120356),
-    l = s.n(r),
-    o = s(748780),
-    h = s(112724),
-    d = s(744184);
-function u(e, t, s) {
+    n(47120),
+    n(411104);
+var s,
+    i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(748780),
+    h = n(112724),
+    u = n(744184);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
@@ -36,18 +36,18 @@ let c = {
 function g(e, t) {
     return ((e % t) + t) % t;
 }
-class I extends (n = a.Component) {
+class I extends (s = a.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
     componentDidUpdate(e) {
-        let { align: t, animate: s, currentIndex: n, items: i, width: a } = this.props,
-            r = g(n, i.length),
+        let { align: t, animate: n, currentIndex: s, items: i, width: a } = this.props,
+            r = g(s, i.length),
             l = g(e.currentIndex, i.length);
         (r !== l || i.length !== e.items.length) && this.updateAnimatedIndex(r, l),
             a !== e.width
                 ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
-                : s &&
+                : n &&
                   (t !== e.align || r !== l) &&
                   o.Z.spring(this.animatedAlignmentOffset, {
                       ...c,
@@ -55,35 +55,35 @@ class I extends (n = a.Component) {
                   }).start();
     }
     getAlignmentOffset(e) {
-        let { width: t, itemSize: s, currentIndex: n, gutter: i, items: a } = this.props,
-            r = i * g(n, a.length) * 2;
-        return e === p ? (t - s.width) / 2 + r : e === m ? t - s.width - i + r : i + r;
+        let { width: t, itemSize: n, currentIndex: s, gutter: i, items: a } = this.props,
+            r = i * g(s, a.length) * 2;
+        return e === p ? (t - n.width) / 2 + r : e === m ? t - n.width - i + r : i + r;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
         return t * (e.width + e.margin);
     }
     animateToIndex(e, t) {
-        let { animatedIndex: s } = this,
-            { items: n, edgeItems: i } = this.props;
-        i > 0 && (0 === e && t === n.length - 1 ? s.setValue(-1) : 0 === t && e === n.length - 1 && n.length > 2 && s.setValue(n.length)),
-            o.Z.spring(s, {
+        let { animatedIndex: n } = this,
+            { items: s, edgeItems: i } = this.props;
+        i > 0 && (0 === e && t === s.length - 1 ? n.setValue(-1) : 0 === t && e === s.length - 1 && s.length > 2 && n.setValue(s.length)),
+            o.Z.spring(n, {
                 ...c,
                 toValue: e
             }).start();
     }
     updateAnimatedIndex(e, t) {
-        let { animatedIndex: s, animatedOpacity: n } = this,
+        let { animatedIndex: n, animatedOpacity: s } = this,
             { animate: i } = this.props;
         i
             ? this.animateToIndex(e, t)
-            : o.Z.timing(n, {
+            : o.Z.timing(s, {
                   fromValue: 1,
                   toValue: 0,
                   duration: 100
               }).start(() => {
-                  s.setValue(e),
-                      o.Z.timing(n, {
+                  n.setValue(e),
+                      o.Z.timing(s, {
                           fromValue: 0,
                           toValue: 1,
                           duration: 100
@@ -91,14 +91,14 @@ class I extends (n = a.Component) {
               });
     }
     renderSingleItem() {
-        let { renderItem: e, items: t, itemSize: s, className: n } = this.props;
+        let { renderItem: e, items: t, itemSize: n, className: s } = this.props;
         return (0, i.jsx)('div', {
-            className: l()(d.singleItemWrapper, d.viewport, n),
+            className: l()(u.singleItemWrapper, u.viewport, s),
             children: (0, i.jsx)('div', {
-                className: d.singleItem,
+                className: u.singleItem,
                 style: {
-                    width: s.width,
-                    height: s.height
+                    width: n.width,
+                    height: n.height
                 },
                 children: e(t[0], 0)
             })
@@ -106,8 +106,8 @@ class I extends (n = a.Component) {
     }
     renderCarouselItems() {
         let e;
-        let { animatedIndex: t, animatedAlignmentOffset: s, animatedOpacity: n } = this,
-            { renderItem: a, items: r, itemSize: l, edgeItems: h, gutter: u } = this.props,
+        let { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: s } = this,
+            { renderItem: a, items: r, itemSize: l, edgeItems: h, gutter: d } = this.props,
             { margin: c, width: p } = l,
             m = this.getCarouselTranslate(),
             g = this.getItemStyle(),
@@ -116,55 +116,55 @@ class I extends (n = a.Component) {
                     'div',
                     {
                         style: g,
-                        className: d.item,
+                        className: u.item,
                         children: a(e, t - h, this.interpolateValueForItem(t - h))
                     },
                     t
                 )
             );
         return (0, i.jsx)(o.Z.div, {
-            className: d.carousel,
+            className: u.carousel,
             style: {
-                opacity: n,
+                opacity: s,
                 left: o.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-m, -c - p - m - u * (r.length - 1)]
+                        outputRange: [-m, -c - p - m - d * (r.length - 1)]
                     }),
-                    s
+                    n
                 )
             },
             children: I
         });
     }
     render() {
-        let { items: e, className: t, hideOverflow: s } = this.props;
+        let { items: e, className: t, hideOverflow: n } = this.props;
         if (e.length <= 0) throw Error('Carousel has no items');
         return 1 === e.length
             ? this.renderSingleItem()
             : (0, i.jsx)('div', {
-                  className: l()({ [d.viewport]: s }, t),
+                  className: l()({ [u.viewport]: n }, t),
                   children: this.renderCarouselItems()
               });
     }
     constructor(...e) {
         super(...e),
-            u(this, 'animatedIndex', new o.Z.Value(this.props.currentIndex)),
-            u(this, 'animatedAlignmentOffset', new o.Z.Value(this.getAlignmentOffset(this.props.align))),
-            u(this, 'animatedOpacity', new o.Z.Value(1)),
-            u(this, 'getItemStyle', () => {
+            d(this, 'animatedIndex', new o.Z.Value(this.props.currentIndex)),
+            d(this, 'animatedAlignmentOffset', new o.Z.Value(this.getAlignmentOffset(this.props.align))),
+            d(this, 'animatedOpacity', new o.Z.Value(1)),
+            d(this, 'getItemStyle', () => {
                 let {
-                    itemSize: { width: e, margin: t, height: s }
+                    itemSize: { width: e, margin: t, height: n }
                 } = this.props;
                 return {
                     flexBasis: e,
                     marginRight: t,
-                    height: s,
+                    height: n,
                     width: e,
                     maxWidth: e
                 };
             }),
-            u(this, 'interpolateValueForItem', (e) =>
+            d(this, 'interpolateValueForItem', (e) =>
                 this.animatedIndex.interpolate({
                     inputRange: [e - 1, e, e + 1],
                     outputRange: [0, 1, 0],
@@ -173,7 +173,7 @@ class I extends (n = a.Component) {
             );
     }
 }
-u(I, 'defaultProps', {
+d(I, 'defaultProps', {
     animate: !0,
     edgeItems: 2,
     align: p,

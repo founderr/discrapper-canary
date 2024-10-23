@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return r;
     }
 });
-var a = n(192379);
+var a = t(192379);
 function r(e) {
-    let t = a.useRef();
-    (t.current = e),
+    let n = a.useRef();
+    (n.current = e),
         a.useEffect(
             () => () => {
                 var e;
-                return null === (e = t.current) || void 0 === e ? void 0 : e.call(t);
+                return null === (e = n.current) || void 0 === e ? void 0 : e.call(n);
             },
             []
         );

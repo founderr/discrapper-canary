@@ -1,17 +1,17 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return s;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(325767);
+var a = t(200651);
+t(192379);
+var r = t(325767);
 function s(e) {
-    let { width: t = 20, height: n = 20, color: s = 'currentColor', ...i } = e;
+    let { width: n = 20, height: t = 20, color: s = 'currentColor', ...i } = e;
     return (0, a.jsx)('svg', {
         ...(0, r.Z)(i),
-        width: t,
-        height: n,
+        width: n,
+        height: t,
         viewBox: '0 0 20 20',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',

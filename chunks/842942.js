@@ -16,7 +16,7 @@ function l(e) {
         title: o.Z.Messages.QUESTS_DISMISSAL_SURVEY_VIDEO_TITLE,
         subtitle: o.Z.Messages.QUESTS_DISMISSAL_SURVEY_VIDEO_SUBTITLE,
         choices: [...i()([o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_DONT_PLAY_GAME.format({ gameName: t }), o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_INVALUABLE, o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_TOO_LONG, o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_UNSURE_HOW]), o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_OTHER],
-        taskType: a.X.PLAY_ON_DESKTOP_V2,
+        taskType: a.X.WATCH_VIDEO,
         experiment: s.Y
     };
 }

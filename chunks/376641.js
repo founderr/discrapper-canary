@@ -1,12 +1,12 @@
-n.d(t, {
+t.d(n, {
     P: function () {
-        return a;
+        return i;
     }
 });
-var r = n(817718),
-    i = n(981631);
-let a = {
-    [i.EkH.MODAL_CAROUSEL_NEXT]: r.XM,
-    [i.EkH.MODAL_CAROUSEL_PREV]: r.py,
-    [i.EkH.CLOSE_MODAL]: r.U3
+var a = t(817718),
+    r = t(981631);
+let i = {
+    [r.EkH.MODAL_CAROUSEL_NEXT]: a.XM,
+    [r.EkH.MODAL_CAROUSEL_PREV]: a.py,
+    [r.EkH.CLOSE_MODAL]: a.U3
 };

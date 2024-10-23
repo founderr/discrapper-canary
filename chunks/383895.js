@@ -1,25 +1,25 @@
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
-    o = n(442837),
-    l = n(481060),
-    c = n(178762),
-    d = n(91140),
-    u = n(297781),
-    _ = n(592125),
-    E = n(944486),
-    m = n(594174),
-    I = n(5192),
-    A = n(810568),
-    p = n(689938),
-    g = n(501345),
-    f = n(51527);
-t.Z = (e) => {
-    let { entry: t, viewId: n, officialGuildId: s, onClose: T } = e,
+var a = t(200651),
+    r = t(192379),
+    s = t(120356),
+    i = t.n(s),
+    o = t(442837),
+    l = t(481060),
+    c = t(178762),
+    d = t(91140),
+    u = t(297781),
+    _ = t(592125),
+    E = t(944486),
+    m = t(594174),
+    I = t(5192),
+    A = t(810568),
+    p = t(689938),
+    g = t(501345),
+    f = t(51527);
+n.Z = (e) => {
+    let { entry: n, viewId: t, officialGuildId: s, onClose: T } = e,
         O = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, o.e7)([m.default], () => m.default.getUser(t.author_id)),
-        { nick: R, avatar: P } = r.useMemo(() => {
+        N = (0, o.e7)([m.default], () => m.default.getUser(n.author_id)),
+        { nick: R, avatar: h } = r.useMemo(() => {
             let e = null == N ? void 0 : N.getAvatarURL(null == O ? void 0 : O.guild_id, 48, !1);
             return {
                 nick: I.ZP.getName(null == O ? void 0 : O.guild_id, null == O ? void 0 : O.id, N),
@@ -33,16 +33,16 @@ t.Z = (e) => {
               renderPopout: (e) => {
                   let { closePopout: r, updatePosition: i } = e;
                   return (0, a.jsx)(c.J, {
-                      entry: t,
+                      entry: n,
                       closePopout: r,
                       updatePopoutPosition: i,
                       onReaction: () => {
                           (0, A.UE)({
                               action: A.as.SendMessageUser,
-                              applicationId: t.extra.application_id,
-                              gameName: t.extra.game_name,
-                              recipientUserId: t.author_id,
-                              viewId: n,
+                              applicationId: n.extra.application_id,
+                              gameName: n.extra.game_name,
+                              recipientUserId: n.author_id,
+                              viewId: t,
                               officialGuildId: s
                           }),
                               T(),
@@ -52,14 +52,14 @@ t.Z = (e) => {
                       disableGameProfileLinks: !0
                   });
               },
-              positionKey: 'game-profile-entry-'.concat(t.id),
+              positionKey: 'game-profile-entry-'.concat(n.id),
               onRequestOpen: () => {
                   (0, A.UE)({
                       action: A.as.ClickMessageUser,
-                      applicationId: t.extra.application_id,
-                      gameName: t.extra.game_name,
-                      recipientUserId: t.author_id,
-                      viewId: n,
+                      applicationId: n.extra.application_id,
+                      gameName: n.extra.game_name,
+                      recipientUserId: n.author_id,
+                      viewId: t,
                       officialGuildId: s
                   });
               },
@@ -78,7 +78,7 @@ t.Z = (e) => {
                               children: [
                                   (0, a.jsx)('img', {
                                       className: g.avatar,
-                                      src: P,
+                                      src: h,
                                       alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: R })
                                   }),
                                   (0, a.jsx)('div', {
@@ -94,7 +94,7 @@ t.Z = (e) => {
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
-                                                  children: d.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
+                                                  children: d.W.map((e, t) => (0, a.jsx)(e, { entry: n }, t))
                                               })
                                           ]
                                       })

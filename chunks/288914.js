@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(436774),
     g = n(676035),
     T = n(440051),
-    S = n(734934),
-    f = n(158238),
-    C = n(759198),
+    f = n(734934),
+    C = n(158238),
+    S = n(759198),
     N = n(300284),
     A = n(680295),
     v = n(703656),
@@ -184,14 +184,14 @@ function ec(e) {
     }, [em, ec]);
     let ep = (0, o.e7)([F.Z], () => F.Z.getStatus(W.id)),
         eg = (0, o.e7)([Y.Z], () => Y.Z.hidePersonalInformation),
-        eT = (0, S.p)(),
-        eS = V.Sb.useSetting(),
-        ef = (0, g.a)(),
-        eC = (function (e) {
+        eT = (0, f.p)(),
+        ef = V.Sb.useSetting(),
+        eC = (0, g.a)(),
+        eS = (function (e) {
             let t = T.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
-                a = (0, S.p)(),
-                r = f.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
+                a = (0, f.p)(),
+                r = C.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
                 l = V.fv.useSetting(),
                 o = e === et.Skl.DND,
                 d = (t) => {
@@ -225,7 +225,7 @@ function ec(e) {
                                 id: ''.concat(e, '-').concat(n),
                                 label: a(),
                                 action: () => {
-                                    (0, S.oW)(!0, n);
+                                    (0, f.oW)(!0, n);
                                 },
                                 dontCloseOnAction: !0
                             },
@@ -287,7 +287,7 @@ function ec(e) {
                                                   ]
                                               }),
                                           action: () => {
-                                              (0, S.oW)(!a);
+                                              (0, f.oW)(!a);
                                           },
                                           dontCloseOnAction: !0,
                                           children: u
@@ -458,7 +458,7 @@ function ec(e) {
                                                         : (0, i.jsx)($.Mv, {
                                                               id: 'get-premium',
                                                               action: en.yM.GET_PREMIUM,
-                                                              label: (0, i.jsx)(C.Z, {
+                                                              label: (0, i.jsx)(S.Z, {
                                                                   variant: 'text-sm/medium',
                                                                   children: ei.Z.Messages.USER_PROFILE_ENTRY_POINTS_GET_PREMIUM
                                                               }),
@@ -496,7 +496,7 @@ function ec(e) {
                                                                       className: ea.statusPickerModalMenu,
                                                                       'aria-label': ei.Z.Messages.STATUS_MENU_LABEL,
                                                                       onClose: t,
-                                                                      children: eC
+                                                                      children: eS
                                                                   });
                                                               },
                                                         onClick: r.tq
@@ -520,7 +520,7 @@ function ec(e) {
                                                                                               hideScroller: !0,
                                                                                               onClose: t,
                                                                                               onSelect: void 0,
-                                                                                              children: eC
+                                                                                              children: eS
                                                                                           })
                                                                                       });
                                                                                   })
@@ -533,7 +533,7 @@ function ec(e) {
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: ea.menuDivider }),
-                                                                null == ef
+                                                                null == eC
                                                                     ? (0, i.jsx)($.Mv, {
                                                                           id: 'add-custom-status',
                                                                           action: 'PRESS_ADD_CUSTOM_STATUS',
@@ -548,9 +548,9 @@ function ec(e) {
                                                                           action: 'PRESS_EDIT_CUSTOM_STATUS',
                                                                           label: ei.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                                                                           icon: () =>
-                                                                              null != ef.emoji
+                                                                              null != eC.emoji
                                                                                   ? (0, i.jsx)(d.Iv, {
-                                                                                        emoji: ef.emoji,
+                                                                                        emoji: eC.emoji,
                                                                                         animate: !0,
                                                                                         hideTooltip: !0
                                                                                     })
@@ -601,7 +601,7 @@ function ec(e) {
                                         }),
                                         !__OVERLAY__ &&
                                             z.wS &&
-                                            eS &&
+                                            ef &&
                                             (0, i.jsx)(j.Z.Overlay, {
                                                 className: ea.menuOverlay,
                                                 children: (0, i.jsx)($.PB, {

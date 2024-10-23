@@ -15,8 +15,8 @@ var a = n(481060),
 t.Z = (0, E.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: E, redirectUri: I, codeChallenge: p, codeChallengeMethod: g, state: T, guildId: S, channelId: f, prompt: C, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(f),
+        let { clientId: n, authorizations: c, scopes: d, parsedPermissions: u, responseType: E, redirectUri: I, codeChallenge: p, codeChallengeMethod: g, state: T, guildId: f, channelId: C, prompt: S, disableGuildSelect: N, disclosures: A, integrationType: v, pid: Z } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(f, '_').concat(C),
             R = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
             O = null !== (t = null == R ? void 0 : R.application) && void 0 !== t ? t : l.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -41,9 +41,9 @@ t.Z = (0, E.Z)(
                             codeChallengeMethod: g,
                             state: T,
                             permissions: u.toString(),
-                            guildId: S,
-                            channelId: f,
-                            prompt: C,
+                            guildId: f,
+                            channelId: C,
+                            prompt: S,
                             disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                             integrationType: v
                         }
@@ -65,9 +65,9 @@ t.Z = (0, E.Z)(
                         codeChallengeMethod: g,
                         state: T,
                         permissions: u,
-                        guildId: S,
-                        channelId: f,
-                        prompt: C,
+                        guildId: f,
+                        channelId: C,
+                        prompt: S,
                         disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                         integrationType: v
                     }),
@@ -77,7 +77,7 @@ t.Z = (0, E.Z)(
                         (0, a.closeModal)(L), t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                null != O && (0, r.Z)(O, f) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+                null != O && (0, r.Z)(O, C) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
             );
         });
     },

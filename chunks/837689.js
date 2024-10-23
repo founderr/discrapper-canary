@@ -17,9 +17,9 @@ var a = n(873546),
     p = n(104494),
     g = n(29920),
     T = n(248042),
-    S = n(278945),
-    f = n(727310),
-    C = n(318199),
+    f = n(278945),
+    C = n(727310),
+    S = n(318199),
     N = n(474936);
 function A(e, t, n) {
     return (
@@ -45,7 +45,7 @@ class Z extends o.Z {
     constructor(...e) {
         super(...e),
             A(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let a = (0, C.extractAnnouncementModalContent)({
+                let a = (0, S.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
@@ -90,8 +90,8 @@ class Z extends o.Z {
                     n = (0, c.un)(s.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, r.hasAnyModalOpen)() && !(0, _.I5)(i)) {
-                    let t = await (0, S.r)(e.userTrialOffer);
-                    null != t && (0, f.Z)({ upsellType: t });
+                    let t = await (0, f.r)(e.userTrialOffer);
+                    null != t && (0, C.Z)({ upsellType: t });
                 }
                 if (null == i || !!i.verified) {
                     if (!(0, r.hasAnyModalOpen)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {

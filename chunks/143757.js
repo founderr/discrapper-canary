@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(812236),
     g = n(82295),
     T = n(592125),
-    S = n(626135),
-    f = n(823379),
-    C = n(404295),
+    f = n(626135),
+    C = n(823379),
+    S = n(404295),
     N = n(812206),
     A = n(981631),
     v = n(689938),
@@ -39,7 +39,7 @@ async function R(e, t, n) {
     if (null != i) {
         let a = null == T.Z.getDMFromUserId(i.id),
             s = await c.Z.openPrivateChannel([i.id], !1, !1, _.Z.APP_DMS_QUICK_LAUNCHER);
-        S.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+        f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
             application_id: e.id,
             is_new_dm: a,
             channel_id: s
@@ -124,7 +124,7 @@ function x(e) {
     });
 }
 function b() {
-    let e = (0, C.en)(_.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, S.en)(_.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, h.f)({
             channel: void 0,
             onlyActivityApps: !1,
@@ -139,13 +139,13 @@ function b() {
             () =>
                 t
                     .map((e) => e.application)
-                    .filter(f.lm)
+                    .filter(C.lm)
                     .slice(0, 5),
             [t]
         );
     return (a.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), S.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(g.Z, {

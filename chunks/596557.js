@@ -22,13 +22,13 @@ function m(e) {
         p = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
         g = (0, d.FT)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
         T = m && (I || p) && !g,
-        S = a.useCallback(() => {
+        f = a.useCallback(() => {
             var t;
             (0, d.Qd)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
         }, [e]),
-        f = a.useRef(!1);
+        C = a.useRef(!1);
     a.useEffect(() => {
-        if (T && !f.current) {
+        if (T && !C.current) {
             var t;
             (0, r.openModalLazy)(
                 async () => {
@@ -41,13 +41,13 @@ function m(e) {
                             ...n
                         });
                 },
-                { onCloseCallback: S }
+                { onCloseCallback: f }
             ),
                 o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: s.C[s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
                 }),
-                (f.current = !0);
+                (C.current = !0);
         }
-    }, [I, e, S, p, T]);
+    }, [I, e, f, p, T]);
 }

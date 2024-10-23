@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return P;
     }
 }),
     t(47120),
@@ -80,17 +80,17 @@ function v(e) {
         children: I
     });
 }
-function E(e) {
+function P(e) {
     var n, t, r;
     let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [E, P] = a.useState(null),
+        [P, E] = a.useState(null),
         S = [],
         T = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
         if ((null === (e = s.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(s.directory_entry.supported_locales);
-            P(b.filter((n) => e.has(n.value)).map((e) => e.localizedName));
+            E(b.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
     }, [s.directory_entry]);
     let N = (e, n) => {
@@ -140,8 +140,8 @@ function E(e) {
                     ]
                 })
             ),
-        null != E &&
-            E.length > 0 &&
+        null != P &&
+            P.length > 0 &&
             S.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -150,7 +150,7 @@ function E(e) {
                             variant: 'eyebrow',
                             children: g.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(f.Z, { supportedLanguages: E })
+                        (0, i.jsx)(f.Z, { supportedLanguages: P })
                     ]
                 })
             ),
