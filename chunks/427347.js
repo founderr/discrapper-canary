@@ -43,13 +43,10 @@ function p() {
                               (0, i.jsx)('div', { className: I.backgroundOverlay })
                           ]
                       }),
+                      (0, i.jsx)('div', { className: I.heroImage }),
                       (0, i.jsxs)('div', {
                           className: I.content,
                           children: [
-                              (0, i.jsx)('div', {
-                                  className: I.heroImageWrapper,
-                                  children: (0, i.jsx)('div', { className: I.heroImage })
-                              }),
                               (0, i.jsxs)('div', {
                                   children: [
                                       (0, i.jsx)(s.Heading, {
