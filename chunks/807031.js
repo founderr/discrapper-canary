@@ -2,9 +2,6 @@ n.d(t, {
     KR: function () {
         return i;
     },
-    rn: function () {
-        return r;
-    },
     wC: function () {
         return a;
     }

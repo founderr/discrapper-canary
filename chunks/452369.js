@@ -3,44 +3,45 @@ var r = n(442837),
     i = n(570140),
     a = n(699516),
     s = n(979651),
-    o = n(807031),
-    l = n(981631);
-let u = {},
-    c = new Set();
-function d() {
-    u = {};
+    o = n(414509),
+    l = n(807031),
+    u = n(981631);
+let c = {},
+    d = new Set();
+function _() {
+    c = {};
 }
-function _(e) {
+function E(e) {
     let { relationship: t } = e;
-    if (t.type === l.OGo.BLOCKED) {
+    if (t.type === u.OGo.BLOCKED) {
         let e = s.Z.getVoiceStateForUser(t.id);
-        if (null != e && null != e.channelId) return E(e.channelId, t.id);
+        if (null != e && null != e.channelId) return f(e.channelId, t.id);
     }
     return !1;
 }
-function E(e, t) {
+function f(e, t) {
     let n = !1,
-        r = new Set(u[e]),
+        r = new Set(c[e]),
         i = a.Z.isBlocked(t);
-    return i && !r.has(t) ? (r.add(t), (n = !0)) : !i && (n = r.delete(t)), 0 === r.size && n ? delete u[e] : n && (u[e] = r), n;
+    return i && !r.has(t) ? (r.add(t), o.Z.handleBlockedUserVoiceChannelJoin(e, t), (n = !0)) : !i && (n = r.delete(t)), 0 === r.size && n ? delete c[e] : n && (c[e] = r), n;
 }
-class f extends r.ZP.Store {
+class h extends r.ZP.Store {
     initialize() {
         this.waitFor(a.Z, s.Z);
     }
     getBlockedUsersForVoiceChannel(e) {
         var t;
-        return (0, o.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = u[e]) && void 0 !== t ? t : c) : c;
+        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = c[e]) && void 0 !== t ? t : d) : d;
     }
 }
-t.Z = new f(i.Z, {
-    CONNECTION_OPEN: d,
-    LOGOUT: d,
+t.Z = new h(i.Z, {
+    CONNECTION_OPEN: _,
+    LOGOUT: _,
     OVERLAY_INITIALIZE: function () {
-        d();
+        _();
         let e = s.Z.getAllVoiceStates(),
             t = !1;
-        for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = E(e.channelId, e.userId) || t);
+        for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = f(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -48,15 +49,15 @@ t.Z = new f(i.Z, {
             n = !1;
         return (
             t.forEach((e) => {
-                if (null != e.oldChannelId && null != u[e.oldChannelId]) {
+                if (null != e.oldChannelId && null != c[e.oldChannelId]) {
                     var t;
-                    null === (t = u[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0);
+                    null === (t = c[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0);
                 }
-                null != e.channelId && (n = E(e.channelId, e.userId) || n);
+                null != e.channelId && (n = f(e.channelId, e.userId) || n);
             }),
             n
         );
     },
-    RELATIONSHIP_ADD: _,
-    RELATIONSHIP_REMOVE: _
+    RELATIONSHIP_ADD: E,
+    RELATIONSHIP_REMOVE: E
 });

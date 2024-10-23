@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return I;
+        return p;
     }
 }),
     n(47120);
@@ -32,26 +32,19 @@ function h(e) {
     }
 }
 function p(e) {
-    let { voiceStates: t } = e,
-        n = s.Z.getVoiceChannelId();
-    if (!o.Z.isInChannel(n) || null == n || I(n)) return;
-    let r = a.Z.getBlockedIDs(),
-        i = t.find((e) => r.includes(e.userId) && e.channelId === n);
-    null != i && (0, d.wC)({ location: 'warning_manager' }) && ((0, E.H)(n, i.userId), d.rn.trackExposure({ location: 'warning_manager' }));
-}
-function I(e) {
     return (0, c.Iu)(e) > Date.now() - f;
 }
-class m extends r.Z {
+class I extends r.Z {
+    handleBlockedUserVoiceChannelJoin(e, t) {
+        let n = s.Z.getVoiceChannelId();
+        if (!(e !== n || !o.Z.isInChannel(n) || p(n))) (0, d.wC)({ location: 'warning_manager' }) && (0, E.H)(n, t);
+    }
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
-            (r = {
-                CHANNEL_SELECT: h,
-                VOICE_STATE_UPDATES: p
-            }),
+            (r = { CHANNEL_SELECT: h }),
             n in t
                 ? Object.defineProperty(t, n, {
                       value: r,
@@ -62,4 +55,4 @@ class m extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new m();
+t.Z = new I();
