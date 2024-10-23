@@ -1,4 +1,4 @@
-n(47120);
+n(47120), n(627494), n(757143);
 var r = n(348326),
     i = n(710845),
     a = n(38618),
@@ -75,7 +75,7 @@ t.ZP = new (class e {
     }
     handleLoadMessagesSuccess(e, t) {
         let n = s.Z.getBasicChannel(e.channelId);
-        null != n && (0, c.$)(e.channelId) && this.upsertMany(n.guild_id, e.channelId, e.messages, t);
+        if (null != n && !!(0, c.$)(e.channelId)) e.isAfter || e.isBefore || e.hasMoreAfter || !(e.limit > 5) ? this.upsertMany(n.guild_id, e.channelId, e.messages, t) : this.replaceAll(n.guild_id, e.channelId, e.messages, t);
     }
     handleMessageDelete(e, t) {
         if (null != e.id) this.deleteOne(e.guildId, e.channelId, e.id, t);
@@ -105,6 +105,13 @@ t.ZP = new (class e {
             s = a.Z.lastTimeConnectedChanged();
         for (let r of n) i.put(e, t, l.a.fromMessage(e, t, r, s));
         i.trimChannel(e, t, u.ZP.saveLimit(t));
+    }
+    replaceAll(e, t, n, r) {
+        let i = o.Z.messagesTransaction(r),
+            s = a.Z.lastTimeConnectedChanged(),
+            c = u.ZP.saveLimit(t),
+            d = (n.length > c ? n.slice(n.length - c) : n).map((n) => l.a.fromMessage(e, t, n, s));
+        i.replaceAll(e, t, d), i.trimChannel(e, t, u.ZP.saveLimit(t));
     }
     async updateOne(e, t, n, r) {
         if (null == n.id) {
