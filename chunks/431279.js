@@ -11,7 +11,7 @@ var r,
     o = n(481060),
     l = n(40851),
     u = n(124347),
-    c = n(950120),
+    c = n(312097),
     d = n(626135),
     _ = n(956664),
     E = n(506071),
@@ -55,35 +55,32 @@ class m extends (r = a.PureComponent) {
             I(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: a, src: l, original: u, width: _, height: E, animated: I, srcIsAnimated: m, children: T, shouldHideMediaOptions: S = !1, sourceMetadata: g } = this.props,
-                    A = {
-                        url: l,
-                        width: _,
-                        height: E,
-                        type: 'IMAGE',
-                        alt: a,
-                        zoomThumbnailPlaceholder: n,
-                        animated: I,
-                        srcIsAnimated: m,
-                        children: T,
-                        trigger: r,
-                        sourceMetadata: g,
-                        original: null != u ? u : l
-                    };
+                let { alt: i, src: a, original: o, width: l, height: u, animated: _, srcIsAnimated: E, children: h, shouldHideMediaOptions: I = !1, sourceMetadata: m } = this.props;
                 (0, s.k)(e.currentTarget) && e.currentTarget.blur(),
                     d.default.track(f.rMx.OPEN_MODAL, { type: 'Media Modal' }),
-                    (0, o.openModal)(
-                        (e) =>
-                            (0, i.jsx)(c.default, {
-                                ...e,
-                                className: p.modal,
-                                onClose: this.onCloseImage,
-                                items: [A],
-                                shouldHideMediaOptions: S
-                            }),
-                        { modalKey: h.U },
-                        this.modalContext
-                    );
+                    (0, c.K)({
+                        className: p.modal,
+                        onClose: this.onCloseImage,
+                        items: [
+                            {
+                                url: a,
+                                width: l,
+                                height: u,
+                                type: 'IMAGE',
+                                alt: i,
+                                zoomThumbnailPlaceholder: n,
+                                animated: _,
+                                srcIsAnimated: E,
+                                children: h,
+                                trigger: r,
+                                sourceMetadata: m,
+                                original: null != o ? o : a
+                            }
+                        ],
+                        shouldHideMediaOptions: I,
+                        location: 'LazyImageZoomable',
+                        contextKey: this.modalContext
+                    });
             });
     }
 }
