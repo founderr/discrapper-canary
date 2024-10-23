@@ -1,40 +1,26 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return l;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(657707),
-    s = n(442837),
-    r = n(706454),
-    l = n(689938),
-    o = n(889280);
-function c(e) {
-    var t, n;
-    let { className: c, application: d } = e,
-        u = (0, s.e7)([r.default], () => r.default.locale),
-        _ = null !== (n = null === (t = d.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        E = new Intl.NumberFormat(u, {
-            notation: 'compact',
-            compactDisplay: 'short'
-        });
+var a = n(924489),
+    s = n(824606),
+    r = n(889280);
+function l(e) {
+    let { className: t, application: n } = e,
+        l = (0, s.Z)({ application: n });
     return (0, i.jsx)('div', {
-        className: c,
-        children:
-            _ > 0 &&
-            (0, i.jsxs)('div', {
-                className: o.guildCountContainer,
-                children: [
-                    (0, i.jsx)(a.Jmo, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 16,
-                        height: 16,
-                        className: o.guildCountIcon
-                    }),
-                    l.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({ guildCount: E.format(_) })
-                ]
-            })
+        className: t,
+        children: (0, i.jsx)(a.Z, {
+            application: n,
+            mutualGuilds: l,
+            mutualGuildShownMax: 3,
+            className: r.guildCountContainer,
+            guildIconSize: a.x.SMALL,
+            guildsClassName: r.guildsIconContainer,
+            compact: !0
+        })
     });
 }
