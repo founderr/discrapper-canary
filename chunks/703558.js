@@ -30,7 +30,7 @@ function h(e, t, n) {
     );
 }
 let p = n(981631).en1 + 500;
-((a = r || (r = {}))[(a.ChannelMessage = 0)] = 'ChannelMessage'), (a[(a.ThreadSettings = 1)] = 'ThreadSettings'), (a[(a.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (a[(a.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (a[(a.Poll = 4)] = 'Poll'), (a[(a.SlashCommand = 5)] = 'SlashCommand');
+((a = r || (r = {}))[(a.ChannelMessage = 0)] = 'ChannelMessage'), (a[(a.ThreadSettings = 1)] = 'ThreadSettings'), (a[(a.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (a[(a.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (a[(a.Poll = 4)] = 'Poll'), (a[(a.SlashCommand = 5)] = 'SlashCommand'), (a[(a.ForwardContextMessage = 6)] = 'ForwardContextMessage');
 let I = {};
 function m(e) {
     let t = I[e];

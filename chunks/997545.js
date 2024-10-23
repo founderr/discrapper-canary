@@ -256,7 +256,7 @@ class C extends E.Z {
         let r = this.remoteAudioSSRCs[e],
             i = this.remoteVideoSSRCs[e];
         if (null != r && 0 === t) {
-            this.logger.warn('Attempting to recreate user '.concat(e, ' with 0 audio SSRC'));
+            this.logger.info('Ignoring attempt to recreate user '.concat(e, ' with 0 audio SSRC'));
             return;
         }
         (i = void 0 !== i ? [...i].sort() : []), (n = void 0 === n ? (null != i ? i : []) : [...n].sort());

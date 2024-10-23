@@ -32,7 +32,7 @@ var l = n(200651),
     b = n(463061),
     x = n(621054);
 function Z(e) {
-    let { channelId: t, messageId: Z, message: y, initialSelectedDestinations: M, forwardOptions: P, onClose: R, onRequestSent: O, ...D } = e,
+    let { channelId: t, messageId: Z, message: M, initialSelectedDestinations: y, forwardOptions: P, onClose: R, onRequestSent: O, ...D } = e,
         { hasOneTapSendButton: w, hasMessageInput: G, hasPreview: j } = (0, A.yk)({ location: 'ForwardModal' }),
         U = a.useMemo(() => (0, u.dL)(t), [t]),
         [F, k] = a.useState(!1),
@@ -40,16 +40,16 @@ function Z(e) {
             [_.Z],
             () => {
                 var e;
-                return null !== (e = _.Z.getMessage(t, Z)) && void 0 !== e ? e : y;
+                return null !== (e = _.Z.getMessage(t, Z)) && void 0 !== e ? e : M;
             },
-            [t, Z, y]
+            [t, Z, M]
         ),
         H = (0, i.e7)([h.Z], () => h.Z.getChannel(t), [t]),
         B = (0, S.ZF)(),
         z = (0, S.mh)(),
         Q = a.useRef(0),
         V = a.useRef(0),
-        [K, q] = a.useState(M),
+        [K, q] = a.useState(y),
         Y = K.length,
         X = Y >= v.G,
         [J, $] = a.useState(''),
@@ -123,7 +123,7 @@ function Z(e) {
             async function (e) {
                 var a;
                 let { withMessage: s, transitionToDestination: i, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    f = null !== (a = _.Z.getMessage(t, Z)) && void 0 !== a ? a : y;
+                    f = null !== (a = _.Z.getMessage(t, Z)) && void 0 !== a ? a : M;
                 if (null == f) {
                     (0, r.showToast)((0, r.createToast)(T.Z.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE));
                     return;
@@ -194,7 +194,7 @@ function Z(e) {
                     forwardOptions: P
                 });
             },
-            [t, P, Z, y, O, ei]
+            [t, P, Z, M, O, ei]
         ),
         ec = a.useCallback(
             (e) => {
