@@ -325,6 +325,12 @@ function z(e, t, n) {
             minutes: r,
             onClick: a
         });
+    if ((0, v.$J)(e) && !(0, v.Nj)({ quest: e }))
+        return U.Z.Messages.QUESTS_CONSOLE_ONLY_QUEST_TASK_WITH_LINK.format({
+            minutes: r,
+            onClick: a,
+            gameTitle: b.r.build(e.config).application.name
+        });
     if ((0, v.$J)(e))
         return U.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
             minutes: r,
