@@ -50,6 +50,9 @@ n.d(t, {
     eN: function () {
         return k;
     },
+    eQ: function () {
+        return ec;
+    },
     iO: function () {
         return q;
     },
@@ -73,6 +76,9 @@ n.d(t, {
     },
     uA: function () {
         return K;
+    },
+    vf: function () {
+        return ed;
     },
     z: function () {
         return Y;
@@ -643,4 +649,41 @@ function eu(e) {
                     });
                 };
         }, [r, n]);
+}
+function ec(e) {
+    var t, n;
+    let r = (0, f.e7)([p.default], () => p.default.locale),
+        i = j(e),
+        [a] = es(e, i),
+        s = (0, L.pF)({ location: M.dr.QUESTS_BAR });
+    if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return U.Z.Messages.QUESTS_COMPLETION_COMPLETE;
+    if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && i.percentComplete > 0) {
+        let e = (0, S.T3)(r, i.percentComplete, { roundingMode: 'floor' });
+        return U.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({ percent: e });
+    }
+    return s && a === O.LI.SELECT ? U.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER : (0, v.$J)(e) ? U.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : U.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
+}
+function ed(e, t, n) {
+    var r;
+    let i = V(u.useMemo(() => b.r.build(e.config).rewardsExpireAt, [e.config])),
+        a = j(e),
+        s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
+        o = Y(e),
+        l = (0, y.D)({
+            quest: e,
+            location: M.dr.QUESTS_BAR,
+            questContent: O.jn.QUEST_BAR_V2,
+            taskDetails: a,
+            useV2Variants: !0
+        });
+    if (s) return U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: i });
+    if (t) return n === O.LI.SELECT ? U.Z.Messages.QUEST_MULTIPLATFORM_SELECT_FUN_SUBTITLE : l;
+    if (a.percentComplete > 0)
+        return o
+            ? (0, v.AV)({
+                  quest: e,
+                  taskDetails: a
+              })
+            : U.Z.Messages.QUEST_BAR_TITLE_START_PLAYING;
+    return U.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
 }
