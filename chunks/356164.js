@@ -30,7 +30,7 @@ class m {
         (this.error = null), (this.isFetching = !0);
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1), (this.error = new r.Hx(e));
+        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new r.Hx(e));
     }
     handleSearchSuccess(e) {
         let { total: t, guilds: n } = e;
@@ -74,6 +74,15 @@ class g extends (i = a.ZP.Store) {
     }
     getLastFetchTimestamp(e) {
         return p(e, (e) => e.lastFetchTimestamp);
+    }
+    getError(e) {
+        return p(e, (e) => e.error);
+    }
+    getErrorMessage(e) {
+        return p(e, (e) => {
+            var t;
+            return null === (t = e.error) || void 0 === t ? void 0 : t.getAnyErrorMessage();
+        });
     }
     getAlgoliaSearchIndex() {
         return E;
