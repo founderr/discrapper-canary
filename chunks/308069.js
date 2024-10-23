@@ -10,21 +10,21 @@ var o = n(200651),
     p = n(302245),
     m = n(685613),
     x = n(670638),
-    _ = n(341907),
-    C = n(303385),
-    g = n(788284),
+    C = n(341907),
+    g = n(303385),
+    _ = n(788284),
     f = n(46140),
-    E = n(689938),
-    h = n(404846);
+    h = n(689938),
+    E = n(404846);
 t.Z = (e) => {
     let { quest: t, expansionSpring: r, onCtxMenuSelect: S, onCtxMenuOpen: T, onCtxMenuClose: N, useReducedMotion: v, isExpanded: j, isExpansionAnimationComplete: A } = e,
-        R = s.useCallback(() => {
-            (0, _.openDisclosureModal)(t, {
+        b = s.useCallback(() => {
+            (0, C.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        b = s.useCallback(() => {
+        R = s.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
@@ -32,18 +32,18 @@ t.Z = (e) => {
         }, [t]),
         B = j && A,
         I = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
-        M = (0, o.jsx)(i.Clickable, {
-            onClick: b,
-            className: a()({ [h.logo]: B }),
+        y = (0, o.jsx)(i.Clickable, {
+            onClick: R,
+            className: a()({ [E.logo]: B }),
             children: (0, o.jsx)(m.Z, {
                 quest: t,
                 withGameTile: !1
             })
         });
     return (0, o.jsxs)(l.animated.div, {
-        className: a()(h.wrapper, {
-            [h.interactable]: B,
-            [h.rewardHighlightWrapper]: I
+        className: a()(E.wrapper, {
+            [E.interactable]: B,
+            [E.rewardHighlightWrapper]: I
         }),
         style: {
             transform: (0, l.to)(
@@ -58,7 +58,7 @@ t.Z = (e) => {
         },
         children: [
             (0, o.jsx)(l.animated.div, {
-                className: h.opaqueExpandedBackground,
+                className: E.opaqueExpandedBackground,
                 style: {
                     opacity: r.to({
                         range: [0, 1],
@@ -68,7 +68,7 @@ t.Z = (e) => {
                 }
             }),
             (0, o.jsx)(l.animated.div, {
-                className: h.backgroundWrapper,
+                className: E.backgroundWrapper,
                 style: {
                     opacity: r.to({
                         range: [0, 1],
@@ -83,26 +83,26 @@ t.Z = (e) => {
                         output: [0, 8]
                     })
                 },
-                children: (0, o.jsx)(g.Z, {
-                    className: h.background,
-                    animationClassName: h.backgroundAnimation,
+                children: (0, o.jsx)(_.Z, {
+                    className: E.background,
+                    animationClassName: E.backgroundAnimation,
                     quest: t,
                     useReducedMotion: v
                 })
             }),
             I
-                ? (0, o.jsx)(C.Z, {
+                ? (0, o.jsx)(g.Z, {
                       quest: t,
                       expansionSpring: r,
                       isFullyExpanded: B,
-                      partnerBranding: M,
+                      partnerBranding: y,
                       useReducedMotion: v
                   })
                 : (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(l.animated.img, {
                               alt: '',
-                              className: h.wreathIcon,
+                              className: E.wreathIcon,
                               style: {
                                   opacity: r.to({
                                       range: [0, 1],
@@ -131,10 +131,10 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: M
+                              children: y
                           }),
                           (0, o.jsx)(l.animated.div, {
-                              className: h.questAvailable,
+                              className: E.questAvailable,
                               style: {
                                   opacity: r.to({
                                       range: [0, 1],
@@ -153,14 +153,14 @@ t.Z = (e) => {
                               children: (0, o.jsx)(i.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  className: h.questAvailableText,
-                                  children: E.Z.Messages.QUEST_AVAILABLE
+                                  className: E.questAvailableText,
+                                  children: h.Z.Messages.QUEST_AVAILABLE
                               })
                           })
                       ]
                   }),
             (0, o.jsxs)(l.animated.div, {
-                className: h.promotedBadgeWrapper,
+                className: E.promotedBadgeWrapper,
                 style: {
                     opacity: r.to({
                         range: [0, 1],
@@ -169,17 +169,17 @@ t.Z = (e) => {
                 },
                 children: [
                     (0, o.jsxs)(i.Clickable, {
-                        className: h.promotedBadge,
-                        onClick: R,
+                        className: E.promotedBadge,
+                        onClick: b,
                         children: [
                             (0, o.jsx)(i.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: E.Z.Messages.QUESTS_PROMOTED
+                                children: h.Z.Messages.QUESTS_PROMOTED
                             }),
                             (0, o.jsx)(i.CircleQuestionIcon, {
                                 color: i.tokens.colors.WHITE,
-                                className: h.promotedBadgeIcon
+                                className: E.promotedBadgeIcon
                             })
                         ]
                     }),
@@ -194,12 +194,12 @@ t.Z = (e) => {
                         children: (e) =>
                             (0, o.jsx)(i.Clickable, {
                                 ...e,
-                                className: h.submenuWrapper,
-                                'aria-label': E.Z.Messages.ACTIONS,
+                                className: E.submenuWrapper,
+                                'aria-label': h.Z.Messages.ACTIONS,
                                 children: (0, o.jsx)(i.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()(h.submenuIcon, h.white)
+                                    className: a()(E.submenuIcon, E.white)
                                 })
                             })
                     })

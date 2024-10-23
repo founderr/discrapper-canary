@@ -210,7 +210,7 @@ function G(e) {
                                                     className: F.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(y.Z, {
-                                                            isCurrentUser: !0,
+                                                            isCurrentUser: er,
                                                             user: n,
                                                             relationshipType: el,
                                                             friendToken: K,

@@ -9,7 +9,7 @@ var o = n(200651),
     u = n(203338);
 t.Z = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: _, onCtxMenuClosed: C, onCtxMenuSelection: g, quest: f, useReducedMotion: E, collapsedHeight: h } = e,
+    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: C, onCtxMenuClosed: g, onCtxMenuSelection: _, quest: f, useReducedMotion: h, collapsedHeight: E } = e,
         S = s.useRef(null),
         T = s.useRef(null),
         N = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -26,21 +26,21 @@ t.Z = function (e) {
                 isExpanded: m,
                 isExpansionAnimationComplete: x,
                 quest: f,
-                useReducedMotion: E,
+                useReducedMotion: h,
                 taskDetails: v
             }),
             (0, o.jsx)(c.Z, {
                 expansionSpring: p,
                 className: u.content,
-                collapsedHeight: h,
-                onCtxMenuOpen: _,
-                onCtxMenuClose: C,
-                onCtxMenuSelect: g,
+                collapsedHeight: E,
+                onCtxMenuOpen: C,
+                onCtxMenuClose: g,
+                onCtxMenuSelect: _,
                 overlayRef: T,
                 isExpanded: m,
                 isExpansionAnimationComplete: x,
                 quest: f,
-                useReducedMotion: E,
+                useReducedMotion: h,
                 ref: n,
                 taskDetails: v,
                 children: (0, o.jsxs)(o.Fragment, {
@@ -53,12 +53,12 @@ t.Z = function (e) {
                             (0, o.jsx)(a.Z, {
                                 quest: f,
                                 expansionSpring: p,
-                                useReducedMotion: E,
+                                useReducedMotion: h,
                                 isExpanded: m,
                                 isExpansionAnimationComplete: x,
-                                onCtxMenuOpen: _,
-                                onCtxMenuClose: C,
-                                onCtxMenuSelect: g
+                                onCtxMenuOpen: C,
+                                onCtxMenuClose: g,
+                                onCtxMenuSelect: _
                             })
                     ]
                 })

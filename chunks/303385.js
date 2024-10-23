@@ -10,10 +10,10 @@ var s = n(100621),
     u = n(437567);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
-        { enabled: _, variant: C } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
-    if (!_) return null;
-    let g = null;
-    return (C === l.PW.REWARD_AVAILABLE ? (g = d.Z.Messages.REWARD_AVAILABLE) : C === l.PW.EARN_A_REWARD ? (g = d.Z.Messages.EARN_A_REWARD) : C === l.PW.EARN_A_REWARD_EXCLAMATION && (g = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == g)
+        { enabled: C, variant: g } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
+    if (!C) return null;
+    let _ = null;
+    return (g === l.PW.REWARD_AVAILABLE ? (_ = d.Z.Messages.REWARD_AVAILABLE) : g === l.PW.EARN_A_REWARD ? (_ = d.Z.Messages.EARN_A_REWARD) : g === l.PW.EARN_A_REWARD_EXCLAMATION && (_ = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == _)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
@@ -97,7 +97,7 @@ t.Z = (e) => {
                               children: (0, o.jsx)(r.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  children: g
+                                  children: _
                               })
                           })
                       ]

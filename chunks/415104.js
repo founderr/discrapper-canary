@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -16,10 +16,10 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(968470);
-function _(e) {
-    let { quest: t, className: n, questContent: r, contentPosition: _, rowIndex: C } = e,
-        [g, f] = s.useState(!1),
-        [E, h] = s.useState([]),
+function C(e) {
+    let { quest: t, className: n, questContent: r, contentPosition: C, rowIndex: g } = e,
+        [_, f] = s.useState(!1),
+        [h, E] = s.useState([]),
         S = (0, i.qb)(t),
         T = s.useCallback(() => {
             f(!0),
@@ -35,8 +35,8 @@ function _(e) {
     return (0, o.jsx)(d.A, {
         questOrQuests: t,
         questContent: r,
-        questContentPosition: _,
-        questContentRowIndex: C,
+        questContentPosition: C,
+        questContentRowIndex: g,
         trackGuildAndChannelMetadata: r === c.jn.QUESTS_EMBED,
         children: (e) =>
             (0, o.jsxs)('div', {
@@ -50,17 +50,17 @@ function _(e) {
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,
-                        isHovering: g,
-                        errorHints: E,
+                        isHovering: _,
+                        errorHints: h,
                         warningHints: S
                     }),
                     (0, o.jsx)(p.Z, {
                         quest: t,
                         questContent: r,
-                        isHovering: g,
-                        contentPosition: _,
-                        rowIndex: C,
-                        onReceiveErrorHints: h
+                        isHovering: _,
+                        contentPosition: C,
+                        rowIndex: g,
+                        onReceiveErrorHints: E
                     })
                 ]
             })
