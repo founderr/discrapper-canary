@@ -1,12 +1,12 @@
 n.d(t, {
     AQ: function () {
-        return E;
+        return I;
     },
     DY: function () {
-        return c;
+        return f;
     },
     yQ: function () {
-        return d;
+        return h;
     }
 }),
     n(653041),
@@ -15,11 +15,15 @@ var r,
     i,
     a,
     s,
-    o = n(65154);
-let l = [
+    o,
+    l,
+    u = n(553813),
+    c = n.n(u),
+    d = n(65154);
+let _ = [
     {
         name: 'H265',
-        encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || (null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64',
+        encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64' && c().satisfies(null === (l = window) || void 0 === l ? void 0 : null === (o = l.DiscordNative) || void 0 === o ? void 0 : o.os.release, d.n4)),
         decode: !0
     },
     {
@@ -38,8 +42,8 @@ let l = [
         decode: !0
     }
 ];
-function u(e, t) {
-    let n = t.concat(l),
+function E(e, t) {
+    let n = t.concat(_),
         r = [];
     return (
         n.forEach((t) => {
@@ -54,16 +58,16 @@ function u(e, t) {
         r
     );
 }
-function c(e) {
+function f(e) {
     let t = [];
     return (
-        e.has(o.V8.SIGNAL_AV1_DECODE)
+        e.has(d.V8.SIGNAL_AV1_DECODE)
             ? t.unshift({
                   name: 'AV1',
                   encode: !1,
                   decode: !0
               })
-            : e.has(o.V8.SIGNAL_AV1) &&
+            : e.has(d.V8.SIGNAL_AV1) &&
               t.unshift({
                   name: 'AV1',
                   encode: !0,
@@ -72,28 +76,28 @@ function c(e) {
         t
     );
 }
-function d(e, t) {
+function h(e, t) {
     return 'string' == typeof e
-        ? u(
+        ? E(
               JSON.parse(e).map((e) => ({
-                  codec: _(e.codec),
+                  codec: p(e.codec),
                   encode: e.encode,
                   decode: e.decode
               })),
               t
           )
-        : u(
+        : E(
               e.map((e) => ({
-                  codec: _(e),
+                  codec: p(e),
                   encode: !0,
                   decode: !0
               })),
               t
           );
 }
-function _(e) {
+function p(e) {
     return 'AV1X' === e ? 'AV1' : e;
 }
-function E(e) {
+function I(e) {
     return 'AV1' === e ? 'AV1X' : e;
 }

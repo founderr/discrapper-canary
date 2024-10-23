@@ -104,6 +104,9 @@ n.d(t, {
     mN: function () {
         return $;
     },
+    n4: function () {
+        return ed;
+    },
     pM: function () {
         return N;
     },
@@ -212,7 +215,8 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    ec = 60000;
+    ec = 60000,
+    ed = '>=22.0.0';
 ((c = L || (L = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),
