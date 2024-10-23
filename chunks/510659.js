@@ -27,39 +27,42 @@ function c(e) {
 function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
-        a = i.useCallback((e) => {
-            t(e.interactionType), r(e.interactionSource);
+        [a, s] = i.useState(null),
+        u = i.useCallback((e) => {
+            t(e.interactionType), r(e.interactionSource), s(e.interactionSourceId);
         }, []),
-        s = i.useCallback(() => {
-            a({
+        c = i.useCallback(() => {
+            u({
                 interactionType: null,
-                interactionSource: null
+                interactionSource: null,
+                interactionSourceId: null
             });
-        }, [a]),
-        [u, c] = i.useState(!1),
-        [d, _] = i.useState(null),
-        [E] = i.useState(new o.V7()),
-        f = i.useCallback(
+        }, [u]),
+        [d, _] = i.useState(!1),
+        [E, f] = i.useState(null),
+        [h] = i.useState(new o.V7()),
+        p = i.useCallback(
             (e) => {
-                _(e), c(!0), null === e ? E.stop() : E.start(l._1, () => c(!1));
+                f(e), _(!0), null === e ? h.stop() : h.start(l._1, () => _(!1));
             },
-            [E]
+            [h]
         );
     return (
         i.useEffect(() => {
-            E.stop();
-        }, [E]),
+            h.stop();
+        }, [h]),
         i.useMemo(
             () => ({
                 interactionType: e,
                 interactionSource: n,
-                onInteraction: a,
-                setInteractionToast: f,
-                resetInteraction: s,
-                showInteractionToast: u,
-                interactionTypeSent: d
+                interactionSourceId: a,
+                onInteraction: u,
+                setInteractionToast: p,
+                resetInteraction: c,
+                showInteractionToast: d,
+                interactionTypeSent: E
             }),
-            [a, f, n, u, e, d, s]
+            [u, p, n, a, d, e, E, c]
         )
     );
 }

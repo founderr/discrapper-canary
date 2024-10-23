@@ -8,32 +8,33 @@ var r = n(200651),
     i = n(192379),
     a = n(810097);
 function s(e) {
-    let { user: t, sourceType: n, className: s, children: o } = e,
-        l = i.useRef(null),
-        [u, c] = i.useState(!1),
-        d = () => {
-            c(!0);
-        },
+    let { user: t, sourceType: n, className: s, children: o, interactionSourceId: l } = e,
+        u = i.useRef(null),
+        [c, d] = i.useState(!1),
         _ = () => {
-            c(!1);
+            d(!0);
+        },
+        E = () => {
+            d(!1);
         };
     return (0, r.jsxs)('div', {
         className: s,
-        onMouseOver: d,
-        onMouseLeave: _,
-        onFocus: d,
+        onMouseOver: _,
+        onMouseLeave: E,
+        onFocus: _,
         onBlur: (e) => {
             var t;
-            !(null === (t = l.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && _();
+            !(null === (t = u.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && E();
         },
-        ref: l,
+        ref: u,
         children: [
             o,
             (0, r.jsx)(a.ZP, {
                 user: t,
                 sourceType: n,
-                isVisible: u,
-                isExpandable: !1
+                isVisible: c,
+                isExpandable: !1,
+                interactionSourceId: l
             })
         ]
     });

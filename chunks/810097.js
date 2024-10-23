@@ -80,14 +80,14 @@ let g = 2700,
             )
             .exhaustive();
 function R(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s } = e,
-        { trackUserProfileAction: g } = (0, E.KZ)(),
-        { pressReact: A, pressReply: R } = (0, h.Q)(n),
-        O = (0, o.e7)([_.default], () => _.default.getId() === t.id),
-        v = (0, f.Z)(t.id),
-        { profileType: C } = (0, I.z)(),
-        { onInteraction: L } = (0, p.Xo)();
-    return t.bot || O || !v
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: g } = e,
+        { trackUserProfileAction: A } = (0, E.KZ)(),
+        { pressReact: R, pressReply: O } = (0, h.Q)(n),
+        v = (0, o.e7)([_.default], () => _.default.getId() === t.id),
+        C = (0, f.Z)(t.id),
+        { profileType: L } = (0, I.z)(),
+        { onInteraction: D } = (0, p.Xo)();
+    return t.bot || v || !C
         ? null
         : (0, r.jsxs)(c.ZP, {
               className: a()(S.popover, {
@@ -105,13 +105,14 @@ function R(e) {
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
                           onClick: () => {
-                              g({ action: A }),
-                                  null == L ||
-                                      L({
+                              A({ action: R }),
+                                  null == D ||
+                                      D({
                                           interactionType: m.P.REACT,
-                                          interactionSource: n
+                                          interactionSource: n,
+                                          interactionSourceId: g
                                       }),
-                                  C === m.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                                  L === m.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
                           className: a()(S.button, S.left),
                           'aria-label': N(m.P.REACT, n),
@@ -129,13 +130,14 @@ function R(e) {
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
                           onClick: () => {
-                              g({ action: R }),
-                                  null == L ||
-                                      L({
+                              A({ action: O }),
+                                  null == D ||
+                                      D({
                                           interactionType: m.P.REPLY,
-                                          interactionSource: n
+                                          interactionSource: n,
+                                          interactionSourceId: g
                                       }),
-                                  C === m.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                                  L === m.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
                           className: a()(S.button, S.right),
                           'aria-label': N(m.P.REPLY, n),
