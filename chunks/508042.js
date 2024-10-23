@@ -7,6 +7,7 @@ e.exports = {
     iconContainer: 'iconContainer_e5a9ed',
     itemContainer: 'itemContainer_e5a9ed',
     clickable: 'clickable_e5a9ed',
+    disabledClickable: 'disabledClickable_e5a9ed',
     spinner: 'spinner_e5a9ed',
     spinnerInnerRunning: 'spinnerInnerRunning_e5a9ed'
 };

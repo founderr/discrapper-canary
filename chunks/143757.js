@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(812236),
     g = n(82295),
     T = n(592125),
-    f = n(626135),
-    C = n(823379),
+    C = n(626135),
+    f = n(823379),
     S = n(404295),
     N = n(812206),
     A = n(981631),
@@ -45,7 +45,7 @@ async function R(e, t, n) {
             t(void 0);
         }
         if (
-            (f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (C.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: s,
                 channel_id: a
@@ -73,13 +73,15 @@ async function R(e, t, n) {
     }
 }
 function O(e) {
-    let { application: t, loading: n, setLoadingAppId: a, botUserId: s, analyticsLocations: r } = e,
-        c = (0, l.e7)([T.Z], () => T.Z.getDMFromUserId(s)),
-        u = (0, l.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
-        _ = null != u && u.applicationId === t.id && u.channelId === c;
+    let { application: t, loadingAppId: n, setLoadingAppId: a, botUserId: s, analyticsLocations: c } = e,
+        u = (0, l.e7)([T.Z], () => T.Z.getDMFromUserId(s)),
+        _ = (0, l.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
+        E = null != _ && _.applicationId === t.id && _.channelId === u,
+        h = n === t.id,
+        I = null != n;
     return (0, i.jsx)(o.Clickable, {
-        className: Z.clickable,
-        onClick: () => (_ ? null : R(t, a, r)),
+        className: r()(Z.clickable, { [Z.disabledClickable]: I }),
+        onClick: () => (E || I ? null : R(t, a, c)),
         'aria-label': v.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: t.name,
             applicationDescription: t.description
@@ -88,10 +90,10 @@ function O(e) {
             tooltipContentClassName: Z.tooltipContent,
             text: t.name,
             children: (e) => {
-                let { ...a } = e;
+                let { ...n } = e;
                 return (0, i.jsxs)('div', {
                     className: Z.iconContainer,
-                    ...a,
+                    ...n,
                     children: [
                         (0, i.jsx)(m.Z, {
                             application: t,
@@ -99,11 +101,11 @@ function O(e) {
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
-                        n || _
+                        h || E
                             ? (0, i.jsx)(o.Spinner, {
                                   type: o.Spinner.Type.PULSING_ELLIPSIS,
                                   className: Z.spinner,
-                                  itemClassName: _ ? Z.spinnerInnerRunning : void 0
+                                  itemClassName: E ? Z.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -122,7 +124,7 @@ function x(e) {
                 O,
                 {
                     application: e,
-                    loading: n === e.id,
+                    loadingAppId: n,
                     setLoadingAppId: a,
                     botUserId: null === (t = e.bot) || void 0 === t ? void 0 : t.id,
                     analyticsLocations: s
@@ -148,13 +150,13 @@ function b() {
             () =>
                 t
                     .map((e) => e.application)
-                    .filter(C.lm)
+                    .filter(f.lm)
                     .slice(0, 5),
             [t]
         );
     return (a.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), C.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(g.Z, {
