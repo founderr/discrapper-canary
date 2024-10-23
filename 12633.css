@@ -31563,6 +31563,11 @@ div.popoutCloseButton_d523a2:hover {
     transition: transform.2s ease-out
 }
 
+.xxsmall_c6473a {
+    height: 2px;
+    border-radius: 2px
+}
+
 .xsmall_c6473a {
     height: 4px;
     border-radius: 3px
