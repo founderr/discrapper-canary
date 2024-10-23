@@ -14,6 +14,7 @@ e.exports = {
     fractionalTimeRemainingRow: 'fractionalTimeRemainingRow_b7f69f',
     fractionalTimeRemainingRowDetails: 'fractionalTimeRemainingRowDetails_b7f69f',
     fractionalTimeRemainingRowHeader: 'fractionalTimeRemainingRowHeader_b7f69f',
+    fractionalTimeRemainingPillWrapper: 'fractionalTimeRemainingPillWrapper_b7f69f',
     fractionalTimeRemainingPill: 'fractionalTimeRemainingPill_b7f69f',
     fractionalTimeRemainingPillText: 'fractionalTimeRemainingPillText_b7f69f',
     tier1AccountCreditHeader: 'tier1AccountCreditHeader_b7f69f'
