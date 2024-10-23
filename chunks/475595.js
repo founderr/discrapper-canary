@@ -116,6 +116,10 @@ function d(e) {
             return 'image/gif';
         case 'svg':
             return 'image/svg+xml';
+        case 'txt':
+            return 'text/plain';
+        case 'vtt':
+            return 'text/vtt';
         default:
             return null;
     }

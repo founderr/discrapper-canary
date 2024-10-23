@@ -160,6 +160,22 @@ function E(e) {
                     taskDetails: n,
                     withoutMarkdown: _
                 });
+            else if ((0, i.cr)(t))
+                return (function (e, t) {
+                    var n;
+                    let r = o.r.build(e.config).defaultReward.messages.nameWithArticle,
+                        i = null === (n = e.config.videoMetadata) || void 0 === n ? void 0 : n.messages.videoTitle;
+                    return null == i
+                        ? d(u.Z.Messages.QUESTS_VIDEO_INSTRUCTIONS_TO_WIN_REWARD_GENERIC, { rewardNameWithArticle: r }, t)
+                        : d(
+                              u.Z.Messages.QUESTS_VIDEO_INSTRUCTIONS_TO_WIN_REWARD,
+                              {
+                                  videoTitle: i,
+                                  rewardNameWithArticle: r
+                              },
+                              t
+                          );
+                })(t, _);
             return null != c
                 ? c.description
                 : d(
