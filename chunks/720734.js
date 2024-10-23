@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(941129),
     T = n(634894),
     f = n(586902),
-    C = n(570928),
-    S = n(100527),
+    S = n(570928),
+    C = n(100527),
     N = n(906732),
     A = n(676742),
     v = n(1585),
@@ -77,8 +77,8 @@ var i = n(200651),
     eg = n(51144),
     eT = n(998502),
     ef = n(870569),
-    eC = n(345243),
-    eS = n(115530),
+    eS = n(345243),
+    eC = n(115530),
     eN = n(981631),
     eA = n(215023),
     ev = n(689938),
@@ -189,7 +189,7 @@ class eb extends a.PureComponent {
             c = null != n;
         return (
             (c || (o && s.isPomelo())) &&
-                (e = (0, i.jsx)(C.Z, {
+                (e = (0, i.jsx)(S.Z, {
                     hoverText: a,
                     forceHover: t,
                     children: c
@@ -204,11 +204,11 @@ class eb extends a.PureComponent {
                 children: [
                     (0, i.jsx)('div', {
                         className: eZ.panelTitleContainer,
-                        children: (0, i.jsx)(eS.Z, { children: l })
+                        children: (0, i.jsx)(eC.Z, { children: l })
                     }),
                     (0, i.jsx)('div', {
                         className: eZ.panelSubtextContainer,
-                        children: (0, i.jsx)(eC.Z, { children: null != e ? e : a })
+                        children: (0, i.jsx)(eS.Z, { children: null != e ? e : a })
                     })
                 ]
             })
@@ -500,7 +500,7 @@ function eM() {
             let e = el.Z.getChannelId();
             return null != e ? ea.Z.getChannel(e) : null;
         }),
-        { mute: I, selfMute: p, suppress: C } = (0, en.Z)(m),
+        { mute: I, selfMute: p, suppress: S } = (0, en.Z)(m),
         { selfDeaf: A, deaf: v } = (0, et.Z)(m),
         R = (0, l.e7)([Z.C], () => {
             var e;
@@ -550,7 +550,7 @@ function eM() {
                 !e && !!r && !c && null != n && n
             );
         })(),
-        { analyticsLocations: J } = (0, N.ZP)(S.Z.ACCOUNT),
+        { analyticsLocations: J } = (0, N.ZP)(C.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
@@ -575,7 +575,7 @@ function eM() {
                 speakingWhileMuted: x,
                 status: c,
                 streaming: r,
-                suppress: C,
+                suppress: S,
                 webBuildOverride: R,
                 awaitingRemote: D,
                 isEligibleForPomelo: P
@@ -623,16 +623,16 @@ function eD(e) {
         I = t || s || n,
         { Component: p, play: g, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
         f = n || s ? E.MicrophoneDenyIcon : p,
-        { analyticsLocations: C } = (0, N.ZP)(S.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: S } = (0, N.ZP)(C.Z.AUDIO_INPUT_BUTTON);
     a.useEffect(() => () => g(), [I, g]);
     let A = a.useCallback(
         (e) => {
-            m(e, C);
+            m(e, S);
         },
-        [m, C]
+        [m, S]
     );
     return (0, i.jsx)(N.Gt, {
-        value: C,
+        value: S,
         children: (0, i.jsx)(ef.Z, {
             tooltipText: l,
             tooltipColor: o,
@@ -668,7 +668,7 @@ function ey(e) {
             events: { onMouseEnter: h, onMouseLeave: m }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         I = n ? E.HeadphonesDenyIcon : u,
-        { analyticsLocations: p } = (0, N.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: p } = (0, N.ZP)(C.Z.AUDIO_OUTPUT_BUTTON);
     a.useEffect(() => () => _(), [c, _]);
     let g = a.useCallback(
         (e) => {

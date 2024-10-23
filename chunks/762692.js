@@ -57,9 +57,9 @@ async function f(e, t, n) {
             total: n
         });
     } catch (o) {
-        var C;
+        var S;
         let s = new c.Hx(o),
-            r = null !== (C = null == n ? void 0 : n.isRetry) && void 0 !== C && C;
+            r = null !== (S = null == n ? void 0 : n.isRetry) && void 0 !== S && S;
         o.body.retry_after > 0 && l === E.Z.getAlgoliaSearchIndex()
             ? (_.m9({
                   categoryId: i,
@@ -83,7 +83,7 @@ async function f(e, t, n) {
               }));
     }
 }
-async function C(e) {
+async function S(e) {
     let { query: t, algoliaFilters: n, onComplete: i } = e,
         a = E.Z.getAlgoliaSearchIndex();
     if (null == a || E.Z.getIsBlocked(t)) return;
@@ -123,7 +123,7 @@ async function C(e) {
         null == i || i();
     }
 }
-async function S(e) {
+async function C(e) {
     let { categoryId: t } = e,
         n = E.Z.getLastFetchTimestamp({ categoryId: t });
     if ((0, h.Ew)(n)) {
@@ -207,7 +207,7 @@ t.Z = {
         });
     },
     fetchAlgoliaSearchResults: f,
-    fetchAlgoliaSearchResultCounts: C,
+    fetchAlgoliaSearchResultCounts: S,
     clearAlgoliaSearchResults: function (e) {
         var t;
         d.Z.dispatch({
@@ -216,7 +216,7 @@ t.Z = {
         });
     },
     fetchFeaturedGuilds: N,
-    fetchCategoryFeaturedGuilds: S,
+    fetchCategoryFeaturedGuilds: C,
     resetSearchLayout: function () {
         d.Z.dispatch({ type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET' });
     }

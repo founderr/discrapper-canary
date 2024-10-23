@@ -11,7 +11,7 @@ var r,
     l = n.n(o),
     u = n(692547),
     c = n(351533);
-((r = i || (i = {})).XSMALL = 'xsmall'), (r.SMALL = 'small'), (r.LARGE = 'large');
+((r = i || (i = {})).XXSMALL = 'xxsmall'), (r.XSMALL = 'xsmall'), (r.SMALL = 'small'), (r.LARGE = 'large');
 let d = 'indeterminate';
 function _(e) {
     let t,

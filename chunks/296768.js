@@ -84,7 +84,7 @@ function R(e) {
                   })
               ]
           })
-        : m || 0 !== p.length
+        : (m || 0 !== p.length) && null == _
           ? (0, a.jsxs)('div', {
                 children: [
                     (0, a.jsx)(d.Heading, {

@@ -45,7 +45,7 @@ let T = 70,
             ]
         });
     },
-    C = (e) => {
+    S = (e) => {
         var t;
         let { game: n, index: a, currentIndex: s, gamesCount: r } = e,
             o = a - s,
@@ -103,7 +103,7 @@ t.Z = () => {
                         className: g.cardCarousel,
                         children: t.map((e, a) =>
                             (0, i.jsx)(
-                                C,
+                                S,
                                 {
                                     game: e,
                                     index: a,

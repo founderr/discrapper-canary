@@ -33,8 +33,8 @@ var i,
     g = n(981631),
     T = n(921944),
     f = n(689938),
-    C = n(938923),
-    S = n(203302);
+    S = n(938923),
+    C = n(203302);
 let N = 'url(#dark-purple-gradient)';
 function A(e) {
     return e.toLocaleString(E.default.locale, {
@@ -45,7 +45,7 @@ function A(e) {
 ((i = a || (a = {})).REFERRAL_PROGRAM = 'referral_program'), (i.TRIAL_FOR_ALL = 'trial_for_all');
 let v = () =>
         (0, s.jsxs)('div', {
-            className: C.coachtipContent,
+            className: S.coachtipContent,
             children: [
                 (0, s.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
@@ -76,20 +76,20 @@ let v = () =>
             shouldShow: !0,
             renderPopout: () =>
                 (0, s.jsx)(u.Z, {
-                    artClassName: C.coachmarkArt,
-                    dismissIconClassName: C.exitIcon,
+                    artClassName: S.coachmarkArt,
+                    dismissIconClassName: S.exitIcon,
                     onDismissIconClick: L,
                     dismissIcon: (0, s.jsx)(Z, {}),
-                    headerClassName: C.incentiveCoachtipContent,
-                    contentClassName: C.incentiveCoachtipContainer,
-                    pointerClassName: C.incentiveTooltipPointer,
+                    headerClassName: S.incentiveCoachtipContent,
+                    contentClassName: S.incentiveCoachtipContainer,
+                    pointerClassName: S.incentiveTooltipPointer,
                     onTryFeature: () => {
                         (0, _.uL)(g.Z5c.NITRO_HOME), L();
                     },
                     art: (0, s.jsx)(s.Fragment, {
                         children: (0, s.jsx)(m.Z, {
                             staticPercentage: 100,
-                            iconClassName: C.incentiveIcon,
+                            iconClassName: S.incentiveIcon,
                             showAnimations: !1,
                             progressCircleVariation: m.Q.NITRO_LOGO,
                             ellipseOpacity: 1,
@@ -117,17 +117,17 @@ let v = () =>
         return (
             (t = r
                 ? (0, s.jsxs)('div', {
-                      className: C.coachTipContainer,
+                      className: S.coachTipContainer,
                       children: [
                           (0, s.jsx)('div', {
-                              className: C.iconContainer,
+                              className: S.iconContainer,
                               children: (0, s.jsx)(m.Z, {
                                   staticPercentage: 100,
-                                  iconClassName: C.icon,
+                                  iconClassName: S.icon,
                                   showAnimations: !0,
                                   progressCircleVariation: m.Q.NITRO_LOGO,
                                   ellipseOpacity: 1,
-                                  customAnimationClassName: C.customCircleAnimation,
+                                  customAnimationClassName: S.customCircleAnimation,
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
@@ -135,10 +135,10 @@ let v = () =>
                       ]
                   })
                 : (0, s.jsxs)('div', {
-                      className: C.t4ACoachTipContainer,
+                      className: S.t4ACoachTipContainer,
                       children: [
                           (0, s.jsx)('div', {
-                              className: C.t4ACoachtipArtOuterContainer,
+                              className: S.t4ACoachtipArtOuterContainer,
                               children: (0, s.jsx)(b, {})
                           }),
                           (null == a ? void 0 : a.expires_at) != null && (0, s.jsx)(M, { trialExpiration: Date.parse(a.expires_at) })
@@ -148,9 +148,9 @@ let v = () =>
                 text: t,
                 position: 'right',
                 'aria-label': r ? f.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : f.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
-                tooltipClassName: r ? C.marketingBadgeTooltip : C.t4AMarketingBadgeTooltip,
+                tooltipClassName: r ? S.marketingBadgeTooltip : S.t4AMarketingBadgeTooltip,
                 allowOverflow: !0,
-                tooltipContentClassName: C.tooltipContent,
+                tooltipContentClassName: S.tooltipContent,
                 children: (e) =>
                     (0, s.jsx)('div', {
                         ...e,
@@ -170,9 +170,9 @@ let v = () =>
     },
     b = () =>
         (0, s.jsx)('div', {
-            className: C.t4ACoachtipArtInnerContainer,
+            className: S.t4ACoachtipArtInnerContainer,
             children: (0, s.jsx)('img', {
-                src: S,
+                src: C,
                 alt: ''
             })
         }),
@@ -207,7 +207,7 @@ let v = () =>
                 t && !i && (0, d.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: T.L.TAKE_ACTION });
             }, [t, i]),
             (0, s.jsx)(h._y, {
-                className: C.trialBadgeBackground,
+                className: S.trialBadgeBackground,
                 isTabSelected: t,
                 badgeCopy: f.Z.Messages.NITRO_BADGE_TEXT,
                 offerExpiresAt: i ? n.expires_at : void 0

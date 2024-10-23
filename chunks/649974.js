@@ -91,7 +91,7 @@ function f() {
     }
     return (h = !d.Z.needsRefresh()), e;
 }
-class C extends (r = l.ZP.Store) {
+class S extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z), this.syncWith([d.Z], f);
     }
@@ -112,7 +112,7 @@ class C extends (r = l.ZP.Store) {
     }
 }
 (s = 'NowPlayingStore'),
-    (a = 'displayName') in (i = C)
+    (a = 'displayName') in (i = S)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -120,7 +120,7 @@ class C extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new C(o.Z, {
+    (t.Z = new S(o.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), (I = {});
         },

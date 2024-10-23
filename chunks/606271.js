@@ -22,8 +22,8 @@ var i = n(392711),
     g = n(979651),
     T = n(626135),
     f = n(823379),
-    C = n(358085),
-    S = n(914946),
+    S = n(358085),
+    C = n(914946),
     N = n(238679),
     A = n(863141),
     v = n(981631),
@@ -44,7 +44,7 @@ function R(e, t, n) {
 }
 class O {
     loadServer() {
-        for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+        for (let e of (S.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
     }
@@ -97,7 +97,7 @@ class O {
                 { channel_id: n },
                 {
                     channel_id: n,
-                    message: (0, S.Xb)(i)
+                    message: (0, C.Xb)(i)
                 },
                 a
             );
@@ -143,8 +143,8 @@ class O {
                 {},
                 {
                     channel_id: t,
-                    message: (0, S.Xb)(n),
-                    icon_url: null != i ? (0, S.RE)(i) : null,
+                    message: (0, C.Xb)(n),
+                    icon_url: null != i ? (0, C.RE)(i) : null,
                     title: a,
                     body: s
                 }
@@ -243,13 +243,13 @@ class O {
         let {
             relationship: { id: t, type: n, isSpamRequest: i }
         } = e;
-        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(n, t, i));
+        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t, i));
     }
     handleRelationshipRemove(e) {
         let {
             relationship: { id: t }
         } = e;
-        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(v.OGo.NONE, t));
+        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(v.OGo.NONE, t));
     }
     handlePresenceUpdate(e) {
         let { updates: t } = e;
@@ -261,13 +261,13 @@ class O {
                 } = e;
                 if (null != t) return;
                 let i = m.Z.getRelationshipType(n);
-                i === v.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = v.OGo.IMPLICIT), i !== v.OGo.NONE && this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(i, n));
+                i === v.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = v.OGo.IMPLICIT), i !== v.OGo.NONE && this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
             });
     }
     handlePresencesReplace() {
         if (0 !== this.rpcServer.subscriptions.length)
             a().forEach(m.Z.getRelationships(), (e, t) => {
-                this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(e, t));
+                this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
             });
     }
     handleEntitlementCreate(e) {

@@ -17,8 +17,8 @@ var i = n(200651),
     g = n(112724),
     T = n(812206),
     f = n(44315),
-    C = n(600164),
-    S = n(167533),
+    S = n(600164),
+    C = n(167533),
     N = n(925329),
     A = n(707409),
     v = n(210887),
@@ -243,8 +243,8 @@ class K extends a.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: a, message: s } = e;
-        return (0, i.jsxs)(C.Z, {
-            direction: C.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(S.Z, {
+            direction: S.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.Progress, {
                     percent: t,
@@ -262,12 +262,12 @@ class K extends a.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(C.Z, {
-            direction: C.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(S.Z, {
+            direction: S.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.StackedProgress, {
                     percents: t,
-                    size: _.Progress.Sizes.SMALL,
+                    size: _.StackedProgress.Sizes.SMALL,
                     foregroundColors: w,
                     animate: this.isFocused
                 }),
@@ -447,8 +447,8 @@ let q = () =>
             key: Y,
             cellClassName: j.nameCell,
             render: (e) =>
-                (0, i.jsxs)(C.Z, {
-                    align: C.Z.Align.CENTER,
+                (0, i.jsxs)(S.Z, {
+                    align: S.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)(N.Z, {
                             game: e.application,
@@ -492,8 +492,8 @@ let q = () =>
                         : null != e.state
                           ? e.state.type !== D.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e })), (a = (0, i.jsx)(J, { item: e })))
                           : (a = (0, i.jsx)(J, { item: e })),
-                    (0, i.jsxs)(C.Z, {
-                        justify: C.Z.Justify.END,
+                    (0, i.jsxs)(S.Z, {
+                        justify: S.Z.Justify.END,
                         children: [n, a]
                     })
                 );
@@ -544,7 +544,7 @@ class ee extends a.PureComponent {
                               })
                           ]
                       }),
-                      (0, i.jsx)(S.Z, {
+                      (0, i.jsx)(C.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,

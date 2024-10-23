@@ -47,7 +47,7 @@ function f(e) {
         })
     });
 }
-function C(e) {
+function S(e) {
     let { onScroll: t, withAdminContent: n } = e,
         a = (0, _.GN)((e) => e.mode, s.Z),
         { ref: r, width: o } = (0, l.Z)();
@@ -81,7 +81,7 @@ t.Z = function (e) {
         s = (0, _.GN)((e) => e.dismissedPilotAdminNux),
         r = (0, o.YH)('clan_discovery_admin_upsell');
     return ((0, d.LE)(), (0, d.c2)(), !n || (a && s) || r)
-        ? (0, i.jsx)(C, {
+        ? (0, i.jsx)(S, {
               onScroll: t,
               withAdminContent: n && a
           })

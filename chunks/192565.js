@@ -36,7 +36,7 @@ function f(e) {
         handleClanUpdate: a.useCallback((t) => l._9(e, t), [e])
     };
 }
-let C = {
+let S = {
     [g.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
         a.useEffect(() => {
@@ -126,11 +126,11 @@ let C = {
         });
     }
 };
-function S(e) {
+function C(e) {
     return e.currentStep.toString();
 }
 function N(e) {
-    let t = C[e.currentStep];
+    let t = S[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
 function A(e) {
@@ -153,6 +153,6 @@ function A(e) {
         currentStep: r,
         items: l,
         renderItem: N,
-        getItemKey: S
+        getItemKey: C
     });
 }
