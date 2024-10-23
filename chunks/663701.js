@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(607070),
     g = n(213609),
     T = n(143757),
-    S = n(463119),
-    f = n(377171),
-    C = n(243778),
+    f = n(463119),
+    C = n(377171),
+    S = n(243778),
     N = n(922409),
     A = n(899740),
     v = n(28476),
@@ -105,6 +105,13 @@ let $ = (e) => {
                             opacity: {
                                 type: 'static',
                                 value: 1
+                            },
+                            dragCoefficient: {
+                                type: 'static',
+                                value: {
+                                    x: 100,
+                                    y: 100
+                                }
                             }
                         }
                     })
@@ -187,14 +194,14 @@ let $ = (e) => {
                     className: J.familyCenterPendingBadge,
                     children: (0, i.jsx)(h.NumberBadge, { count: a })
                 })
-              : (0, i.jsx)(C.ZP, {
+              : (0, i.jsx)(S.ZP, {
                     contentTypes: [_.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === _.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: X.Z.Messages.NEW,
-                                  color: f.Z.BG_BRAND
+                                  color: C.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -271,7 +278,7 @@ let el = (e) => {
                     ),
                     (0, i.jsx)(en, { selected: null == c ? null != a && a.startsWith(K.Z5c.MESSAGE_REQUESTS) : c === K.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        S.i,
+                        f.i,
                         {
                             selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
