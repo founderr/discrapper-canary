@@ -48,13 +48,21 @@ function i() {
 function c() {
     return [
         {
-            value: 'placeholder',
-            label: 'Placeholder'
+            value: 'confusion',
+            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_CONFUSION
         },
         {
-            value: 'other',
-            label: r.Z.Messages.MUTE_FEEDBACK_OTHER
+            value: 'does_not_achieve_wants',
+            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_DOES_NOT_ACHIEVE_WANTS
+        },
+        {
+            value: 'hard_to_access',
+            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_HARD_TO_ACCESS
+        },
+        {
+            value: 'something_else',
+            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_SOMETHING_ELSE
         }
     ];
 }
-((a = o || (o = {})).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (a.TEMPORARY_BREAK = 'temporary_break'), (a.ANNOYING = 'annoying'), (a.UNSAFE = 'unsafe'), (a.SPAM = 'spam'), (a.OTHER = 'other'), ((s = l || (l = {})).PLACEHOLDER = 'placeholder'), (s.OTHER = 'other');
+((a = o || (o = {})).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (a.TEMPORARY_BREAK = 'temporary_break'), (a.ANNOYING = 'annoying'), (a.UNSAFE = 'unsafe'), (a.SPAM = 'spam'), (a.OTHER = 'other'), ((s = l || (l = {})).CONFUSION = 'confusion'), (s.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (s.HARD_TO_ACCESS = 'hard_to_access'), (s.SOMETHING_ELSE = 'something_else');
