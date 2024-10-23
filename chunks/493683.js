@@ -38,7 +38,8 @@ t.Z = {
                 url: S.ANM.USER_CHANNELS,
                 body: { recipients: s },
                 context: { location: i },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                retries: 3
             });
             null == a || a();
             let t = this._openPrivateChannel(e.body);

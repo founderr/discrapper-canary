@@ -37,15 +37,24 @@ async function R(e, t, n) {
         i = null === (a = N.Z.getApplication(e.id)) || void 0 === a ? void 0 : a.bot;
     }
     if (null != i) {
-        let a = null == T.Z.getDMFromUserId(i.id),
-            s = await c.Z.openPrivateChannel([i.id], !1, !1, _.Z.APP_DMS_QUICK_LAUNCHER);
-        f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
-            application_id: e.id,
-            is_new_dm: a,
-            channel_id: s
-        });
+        let a,
+            s = null == T.Z.getDMFromUserId(i.id);
         try {
-            await (0, p.ZP)(s, e.id);
+            a = await c.Z.openPrivateChannel([i.id], !1, !1, _.Z.APP_DMS_QUICK_LAUNCHER);
+        } catch (e) {
+            t(void 0);
+        }
+        if (
+            (f.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+                application_id: e.id,
+                is_new_dm: s,
+                channel_id: a
+            }),
+            null == a)
+        )
+            return;
+        try {
+            await (0, p.ZP)(a, e.id);
         } catch (e) {
             if (e.message === p.sV) {
                 t(void 0);
@@ -54,7 +63,7 @@ async function R(e, t, n) {
         }
         await (0, u.Z)({
             targetApplicationId: e.id,
-            channelId: s,
+            channelId: a,
             analyticsLocations: n,
             commandOrigin: I.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
