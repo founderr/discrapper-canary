@@ -748,18 +748,16 @@ t.Z = s.memo(function (e) {
         E = (0, eo.Z)(t.id),
         g = (0, J.Z)(t.id),
         C = (0, U.h9)(t.id, 'ChannelChatMemo'),
-        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, isFetchingApplicationIndex: R, wasFetchingApplicationIndex: L, commands: j } = (0, v.Z)({ channel: t });
+        { isInitialLoading: I, primaryEntryPointCommand: x, isProfileFetching: N, wasProfileFetching: Z, applicationId: M, channelId: b, commands: R } = (0, v.Z)({ channel: t });
     (0, S.Z)({
         isProfileFetching: N,
         wasProfileFetching: Z,
         applicationId: M,
         channelId: b,
-        isFetchingApplicationIndex: R,
-        wasFetchingApplicationIndex: L,
-        commands: j
+        commands: R
     });
-    let P = s.useRef(null),
-        O = (0, u.e7)([A.Z], () => A.Z.appDMChannelsWithFailedLoads().has(t.id));
+    let L = s.useRef(null),
+        j = (0, u.e7)([A.Z], () => A.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eq, {
         channel: t,
         isEditing: null != (0, u.e7)([eE.Z], () => eE.Z.getEditingMessageId(t.id)),
@@ -780,7 +778,7 @@ t.Z = s.memo(function (e) {
         showAppDMsUI: C,
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != x,
-        entryPointCommandButtonRef: P,
-        isFailedAppDMLoad: O
+        entryPointCommandButtonRef: L,
+        isFailedAppDMLoad: j
     });
 });

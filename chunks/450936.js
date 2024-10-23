@@ -61,15 +61,10 @@ function E(e) {
                 allowApplicationState: !0
             }
         ),
-        A = (0, s.e7)([o.ZP], () => {
-            var e, t;
-            return null !== (t = null === (e = o.ZP.getApplicationState(S)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
-        }),
-        Z = (0, r.Z)(A),
-        M = N.commands.filter((e) => e.type === l.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
-        b = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
-        R = N.loading,
-        L =
+        A = N.commands.filter((e) => e.type === l.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
+        Z = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        M = N.loading,
+        b =
             null ===
                 (t = N.descriptors.find((e) => {
                     var t;
@@ -77,20 +72,18 @@ function E(e) {
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        j = i.useMemo(() => (null != L ? m.Z.createFromServer(L) : void 0), [L]),
-        P = (0, d.q)(null == j && g ? S : void 0),
-        O = null !== (n = null != j ? j : P) && void 0 !== n ? n : void 0,
-        y = null == O || (R && 0 === b.length);
+        R = i.useMemo(() => (null != b ? m.Z.createFromServer(b) : void 0), [b]),
+        L = (0, d.q)(null == R && g ? S : void 0),
+        j = null !== (n = null != R ? R : L) && void 0 !== n ? n : void 0,
+        P = null == j || (M && 0 === Z.length);
     return {
-        application: O,
-        isInitialLoading: y,
-        primaryEntryPointCommand: M,
+        application: j,
+        isInitialLoading: P,
+        primaryEntryPointCommand: A,
         isProfileFetching: I,
         wasProfileFetching: T,
         applicationId: S,
         channelId: E.id,
-        isFetchingApplicationIndex: A,
-        wasFetchingApplicationIndex: Z,
-        commands: b
+        commands: Z
     };
 }
