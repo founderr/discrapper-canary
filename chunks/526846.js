@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(2052),
     d = n(40851),
     h = n(607070),
-    p = n(100527),
-    m = n(906732),
+    m = n(100527),
+    p = n(906732),
     _ = n(895924),
     f = n(390322),
     E = n(626135),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(5200),
     T = n(558317),
     x = n(403404),
-    v = n(981631),
-    S = n(689938),
+    S = n(981631),
+    v = n(689938),
     N = n(735338);
 let A = 'vc-activities-'.concat((0, r.Z)()),
     Z = s.forwardRef(function (e, t) {
@@ -33,7 +33,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
             L = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: j, guild_id: P } = n;
         s.useEffect(() => {
-            E.default.track(v.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+            E.default.track(S.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: j,
                 guild_id: P
             });
@@ -42,9 +42,9 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                 !a && r();
             }, [r, a]);
         let O = (0, d.bp)(),
-            { analyticsLocations: y } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: D } = (0, m.ZP)([...y, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            U = O === v.IlC.POPOUT,
+            { analyticsLocations: y } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: D } = (0, p.ZP)([...y, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            U = O === S.IlC.POPOUT,
             k = (0, u.O)(),
             w = (function (e) {
                 return (0, C.Z)({ guildId: e }).slice(0, 5);
@@ -69,14 +69,14 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
             H = s.useCallback(
                 (e) => {
                     Z(),
-                        E.default.track(v.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                        E.default.track(S.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
                 [Z, n]
             );
-        return (0, i.jsx)(m.Gt, {
+        return (0, i.jsx)(p.Gt, {
             value: y,
             children: (0, i.jsx)(f.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
@@ -89,7 +89,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
                                     id: A,
-                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
                         }),
@@ -111,7 +111,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
@@ -121,7 +121,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
@@ -134,7 +134,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(m.Gt, {
+                                (0, i.jsx)(p.Gt, {
                                     value: D,
                                     children: null
                                 }),

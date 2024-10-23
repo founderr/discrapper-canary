@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(706454),
     g = n(215427),
     T = n(820254),
-    f = n(358085),
-    C = n(557177),
+    C = n(358085),
+    f = n(557177),
     S = n(998502),
     N = n(905656),
     A = n(981631),
@@ -39,7 +39,7 @@ function L(e, t, n) {
 class R extends a.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
-            t = (0, C.uk)('discodo', e);
+            t = (0, f.uk)('discodo', e);
         return (t.volume = 1), t;
     }
     componentDidMount() {
@@ -350,7 +350,7 @@ class R extends a.PureComponent {
                 })()
             ),
             L(this, 'handleReady', () => {
-                this.setState({ ready: !0 }), (0, f.isDesktop)() && (S.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), S.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+                this.setState({ ready: !0 }), (0, C.isDesktop)() && (S.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), S.ZP.send('UPDATE_OPEN_ON_STARTUP'));
             }),
             L(this, 'setVideoRef', (e) => {
                 this.videoRef = e;

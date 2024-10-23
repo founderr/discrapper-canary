@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(872810),
     d = n(763520),
     h = n(194082),
-    p = n(710845),
-    m = n(590293),
+    m = n(710845),
+    p = n(590293),
     _ = n(863908),
     f = n(871118),
     E = n(517525),
@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(507675),
     T = n(199902),
     x = n(314897),
-    v = n(592125),
-    S = n(131951),
+    S = n(592125),
+    v = n(131951),
     N = n(451478),
     A = n(685203),
     Z = n(112560),
@@ -43,7 +43,7 @@ var i = n(200651),
     U = n(65154),
     k = n(689938),
     w = n(810190);
-let B = new p.Z('StreamTile');
+let B = new m.Z('StreamTile');
 function H(e) {
     let { participant: t, selected: n, focused: s, idle: a, width: l, premiumIndicator: o } = e,
         c = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
@@ -65,12 +65,12 @@ function H(e) {
     });
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: p, inPopout: E, width: P, focused: O } = e,
-        H = S.Z.getVideoComponent(),
+    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: m, inPopout: E, width: P, focused: O } = e,
+        H = v.Z.getVideoComponent(),
         G = (0, r.e7)([x.default], () => x.default.getId()),
-        V = (0, m.Z)(),
+        V = (0, p.Z)(),
         { stream: F, user: W, streamId: z } = t,
-        Y = (0, r.e7)([v.Z], () => v.Z.getChannel(F.channelId)),
+        Y = (0, r.e7)([S.Z], () => S.Z.getChannel(F.channelId)),
         K = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
         q = (0, r.e7)([T.Z], () => T.Z.getAllActiveStreams().length > 0),
         X = (0, r.e7)([N.Z], () => N.Z.isFocused()),
@@ -88,7 +88,7 @@ function G(e) {
                     .concat(null != K, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != H, ' | MediaEngine: ')
-                    .concat(S.Z.supports(U.AN.VIDEO))
+                    .concat(v.Z.supports(U.AN.VIDEO))
             );
         }, [H, K, n]),
         V)
@@ -117,7 +117,7 @@ function G(e) {
             participant: t,
             width: P
         });
-    else if (null != K && !n && null != H && S.Z.supports(U.AN.VIDEO))
+    else if (null != K && !n && null != H && v.Z.supports(U.AN.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != Y
@@ -138,7 +138,7 @@ function G(e) {
                         className: w.content,
                         streamId: z,
                         videoComponent: H,
-                        fit: p,
+                        fit: m,
                         paused: h || Q,
                         videoSpinnerContext: J ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
                         userId: W.id

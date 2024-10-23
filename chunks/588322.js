@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(541716),
     d = n(665149),
     h = n(910611),
-    p = n(703656),
-    m = n(664342),
+    m = n(703656),
+    p = n(664342),
     _ = n(592125),
     f = n(703558),
     E = n(430824),
@@ -25,17 +25,17 @@ function T(e) {
     let { channelId: t } = e,
         T = (0, a.e7)([_.Z], () => _.Z.getChannel(t)),
         x = (0, a.e7)([_.Z], () => _.Z.getChannel(null == T ? void 0 : T.parent_id)),
-        v = (0, a.e7)([E.Z], () => E.Z.getGuild(null == T ? void 0 : T.getGuildId())),
-        S = (0, o.ZP)(T),
+        S = (0, a.e7)([E.Z], () => E.Z.getGuild(null == T ? void 0 : T.getGuildId())),
+        v = (0, o.ZP)(T),
         N = s.useRef(!1);
     if (
         (s.useEffect(() => {
             null != T && !N.current && ((N.current = !0), (0, g.lN)(T));
         }, [T]),
-        null == T || null == v)
+        null == T || null == S)
     )
         return null;
-    let A = (0, i.jsx)(m.Z, { channel: T });
+    let A = (0, i.jsx)(p.Z, { channel: T });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
@@ -48,8 +48,8 @@ function T(e) {
                 children: (0, h.ud)({
                     channel: T,
                     parentChannel: x,
-                    channelName: S,
-                    guild: v,
+                    channelName: v,
+                    guild: S,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, l.jW)(e, async () => {
@@ -62,7 +62,7 @@ function T(e) {
                         });
                     },
                     handleClick: function () {
-                        null != T && (0, p.XU)(T.guild_id, T.id);
+                        null != T && (0, m.XU)(T.guild_id, T.id);
                     }
                 })
             }),
@@ -72,7 +72,7 @@ function T(e) {
                     c.Z,
                     {
                         channel: T,
-                        guild: v,
+                        guild: S,
                         chatInputType: u.I.SIDEBAR
                     },
                     t

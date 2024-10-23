@@ -13,8 +13,8 @@ var i = n(200651),
     c = n(785717),
     u = n(46560);
 function d(e) {
-    let { section: t, header: n, items: a, minItems: d = 0, isLoading: h, listClassName: p } = e,
-        { trackUserProfileAction: m } = (0, c.KZ)(),
+    let { section: t, header: n, items: a, minItems: d = 0, isLoading: h, listClassName: m } = e,
+        { trackUserProfileAction: p } = (0, c.KZ)(),
         _ = s.useId(),
         [f, E] = s.useState(!1),
         g = f ? r.ChevronSmallDownIcon : r.ChevronSmallRightIcon;
@@ -49,7 +49,7 @@ function d(e) {
                         onClick: () => {
                             E(!f),
                                 !f &&
-                                    m({
+                                    p({
                                         action: 'PRESS_SECTION',
                                         section: t
                                     });
@@ -67,7 +67,7 @@ function d(e) {
                 (0, i.jsx)('ul', {
                     id: _,
                     hidden: !f && d <= 0,
-                    className: l()(u.list, p),
+                    className: l()(u.list, m),
                     children: f || a.length <= d ? a : a.slice(0, d)
                 })
         ]

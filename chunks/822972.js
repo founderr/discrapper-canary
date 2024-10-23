@@ -30,7 +30,7 @@ function u(e) {
                           ...e,
                           children: (0, r.jsx)(a.Text, {
                               variant: 'text-md/normal',
-                              children: l.Z.Messages.REMOVE_FRIEND_BODY.format({ name: t.username })
+                              children: l.Z.Messages.REMOVE_FRIEND_CONFIRMATION.format({ name: t.username })
                           })
                       })
                   );

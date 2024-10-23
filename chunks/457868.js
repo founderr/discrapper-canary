@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(924826),
     d = n(873546),
     h = n(442837),
-    p = n(481060),
-    m = n(239091),
+    m = n(481060),
+    p = n(239091),
     _ = n(144144),
     f = n(607070),
     E = n(100527),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(91218),
     T = n(623624),
     x = n(518738),
-    v = n(965376),
-    S = n(159299),
+    S = n(965376),
+    v = n(159299),
     N = n(184301),
     A = n(347475),
     Z = n(199902),
@@ -65,15 +65,15 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id),
             I = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getStatus() : R.Z.getStatus(l, t.guild_id))),
             x = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
-            v = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
+            S = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
             O = (0, h.e7)([Z.Z], () => Z.Z.getAnyStreamForUser(l)),
             y = (0, c.JA)(l),
-            U = (0, h.e7)([S.Z], () => S.Z.canUserViewChannel(t.id, a, l)),
+            U = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, a, l)),
             w = (null == E ? void 0 : E.id) != null && E.id === r,
             V = s.useCallback(
                 (e) => {
                     null != E &&
-                        (0, m.jW)(e, async () => {
+                        (0, p.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
                             return (n) =>
                                 (0, i.jsx)(e, {
@@ -111,7 +111,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             );
         if (null == E) return null;
         let Y = null == u ? void 0 : u.premiumSince;
-        return (0, i.jsx)(p.Popout, {
+        return (0, i.jsx)(m.Popout, {
             preload: () =>
                 (0, N.Z)(E, {
                     guildId: t.guild_id,
@@ -136,7 +136,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                     currentUser: g,
                     nick: null == u ? void 0 : u.nick,
                     status: I,
-                    activities: v,
+                    activities: S,
                     colorString: null == u ? void 0 : u.colorString,
                     colorRoleName: f,
                     isTyping: o,
@@ -193,12 +193,12 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)('div', { className: V.divider }),
-                      (0, i.jsxs)(p.Text, {
+                      (0, i.jsxs)(m.Text, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
                           className: V.private,
                           children: [
-                              (0, i.jsx)(p.LockIcon, {
+                              (0, i.jsx)(m.LockIcon, {
                                   size: 'xxs',
                                   color: 'currentColor'
                               }),
@@ -206,7 +206,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                               G.Z.Messages.THREAD_BROWSER_PRIVATE
                           ]
                       }),
-                      (0, i.jsx)(p.Text, {
+                      (0, i.jsx)(m.Text, {
                           variant: 'text-sm/normal',
                           color: 'header-secondary',
                           className: V.instructions,
@@ -220,8 +220,8 @@ function X(e) {
     let { channel: t, guild: n } = e,
         a = 'members-'.concat(t.id),
         { analyticsLocations: r } = (0, g.ZP)(E.Z.MEMBER_LIST),
-        d = (0, v.D)(t.id, n),
-        m = d.filter((e) => e.userIds.length > 0).reverse()[0],
+        d = (0, S.D)(t.id, n),
+        p = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: _, listRef: C } = (function (e, t) {
             let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
                 i = s.useRef(null),
@@ -297,12 +297,12 @@ function X(e) {
         value: r,
         children: (0, i.jsx)(c.bG, {
             navigator: _,
-            children: (0, i.jsx)(p.FocusJumpSection, {
+            children: (0, i.jsx)(m.FocusJumpSection, {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         className: l()(F.membersWrap, F.hiddenMembers),
                         children: (0, i.jsx)(
-                            p.List,
+                            m.List,
                             {
                                 ref: C,
                                 className: F.members,
@@ -337,8 +337,8 @@ function X(e) {
                                         a[s]
                                     );
                                 },
-                                footerHeight: (e) => (d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
-                                renderFooter: (e) => (d[e.section] === m ? (0, i.jsx)(q, { channel: t }, 'footer') : null),
+                                footerHeight: (e) => (d[e] === p && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
+                                renderFooter: (e) => (d[e.section] === p ? (0, i.jsx)(q, { channel: t }, 'footer') : null),
                                 innerAriaLabel: G.Z.Messages.MEMBERS,
                                 innerTag: 'ul',
                                 sections: d.map((e) => e.userIds.length),
@@ -358,7 +358,7 @@ function J(e) {
     return (0, i.jsxs)('div', {
         className: l()(F.membersWrap, F.hiddenMembers, F.members, V.emptyState),
         children: [
-            (0, i.jsx)(p.Text, {
+            (0, i.jsx)(m.Text, {
                 className: V.emptyStateHeader,
                 variant: 'text-xs/bold',
                 color: 'interactive-normal',
@@ -369,7 +369,7 @@ function J(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: V.emptyStateIcon,
-                        children: (0, i.jsx)(p.GroupIcon, {
+                        children: (0, i.jsx)(m.GroupIcon, {
                             size: 'lg',
                             color: 'currentColor'
                         })
@@ -377,11 +377,11 @@ function J(e) {
                     (0, i.jsx)(O.Z, { className: V.emptyStateStars })
                 ]
             }),
-            (0, i.jsx)(p.Heading, {
+            (0, i.jsx)(m.Heading, {
                 variant: 'heading-md/semibold',
                 children: t.isForumPost() ? G.Z.Messages.FORUM_POST_MEMBER_LIST_EMPTY_STATE_HEADER : G.Z.Messages.THREAD_MEMBER_LIST_EMPTY_STATE_HEADER
             }),
-            (0, i.jsx)(p.Text, {
+            (0, i.jsx)(m.Text, {
                 className: V.emptyStateSubtext,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',

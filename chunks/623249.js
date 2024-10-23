@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return N;
+            return v;
         },
         openConsoleConnectionErrorsModal: function () {
             return j;
@@ -28,10 +28,10 @@ var o = n(200651),
     E = n(689938),
     S = n(24444),
     T = n(708901);
-function N(e) {
-    let { questId: t, errorHints: n, transitionState: r, onClose: N } = e,
+function v(e) {
+    let { questId: t, errorHints: n, transitionState: r, onClose: v } = e,
         j = (0, x.B4)(t);
-    null == j && N();
+    null == j && v();
     let [A, b] = (0, s.useState)(n),
         R = (0, x.KX)(),
         B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -42,8 +42,8 @@ function N(e) {
         y = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         M = (0, g.Bz)(j),
         O = (0, l.e7)([p.Z], () => p.Z.getState().theme),
-        w = (0, i.wj)(O) ? h.BRd.DARK : h.BRd.LIGHT,
-        { startConsoleQuest: k, startingConsoleQuest: L } = (0, x.GI)({
+        k = (0, i.wj)(O) ? h.BRd.DARK : h.BRd.LIGHT,
+        { startConsoleQuest: w, startingConsoleQuest: L } = (0, x.GI)({
             questId: j.id,
             beforeRequest: () => {
                 I.startAnimation(),
@@ -80,7 +80,7 @@ function N(e) {
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
                                 className: S.closeBtn,
-                                onClick: N
+                                onClick: v
                             })
                         ]
                     }),
@@ -109,7 +109,7 @@ function N(e) {
                             }),
                             (0, o.jsxs)(c.Clickable, {
                                 className: a()(S.refreshWrapper, { [S.disabled]: L }),
-                                onClick: k,
+                                onClick: w,
                                 children: [
                                     I.render(),
                                     (0, o.jsx)(c.Text, {
@@ -125,11 +125,11 @@ function N(e) {
                     (0, o.jsxs)('div', {
                         className: S.accountsWrapper,
                         children: [
-                            (0, o.jsx)(v, {
+                            (0, o.jsx)(N, {
                                 icon: (0, o.jsx)(c.ScreenIcon, { size: 'sm' }),
                                 text: E.Z.Messages.QUESTS_THIS_PC
                             }),
-                            (0, o.jsx)(v, {
+                            (0, o.jsx)(N, {
                                 icon: (0, o.jsx)(c.GameControllerIcon, { size: 'sm' }),
                                 text: E.Z.Messages.QUESTS_CONNECTED_CONSOLES,
                                 errors: M ? void 0 : y.map((e) => e.message),
@@ -156,7 +156,7 @@ function N(e) {
                                                   ...e,
                                                   className: S.gameTile,
                                                   alt: j.config.messages.gameTitle,
-                                                  src: (0, _.fh)(j, _.Bd.GAME_TILE, w).url
+                                                  src: (0, _.fh)(j, _.Bd.GAME_TILE, k).url
                                               })
                                       })
                                     : null
@@ -170,7 +170,7 @@ function N(e) {
                 children: [
                     (0, o.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: N,
+                        onClick: v,
                         className: S.footerCloseButton,
                         children: E.Z.Messages.CLOSE
                     }),
@@ -178,7 +178,7 @@ function N(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            N(),
+                            v(),
                                 (0, g.V$)(
                                     { quest: j },
                                     {
@@ -194,7 +194,7 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function N(e) {
     let { icon: t, text: n, errors: s = [], gameTile: r } = e,
         l = s.length > 0,
         i = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;

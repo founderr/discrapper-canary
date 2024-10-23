@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(988980),
     d = n(157813),
     h = n(314897),
-    p = n(131951),
-    m = n(585483),
+    m = n(131951),
+    p = n(585483),
     _ = n(807705),
     f = n(27457),
     E = n(111248),
@@ -24,15 +24,15 @@ var i = n(200651),
     I = n(981631),
     T = n(354459),
     x = n(396602),
-    v = n(512388);
-let S = 16 / 9,
+    S = n(512388);
+let v = 16 / 9,
     N = 8 + C.cF;
 function A(e) {
     var t;
     let n,
         { onSelectParticipant: a, onContextMenuParticipant: A, onFullscreenParticipant: Z, participants: M, filteredParticipants: b, popoutWindow: R, inCall: L, channel: j, selectedParticipant: P, showParticipants: O = !0, className: y, paused: D, width: U, height: k, layout: w, idle: B } = e,
         H = null != R,
-        G = p.Z.getVideoComponent(),
+        G = m.Z.getVideoComponent(),
         V = h.default.getId(),
         [F, W] = s.useState(null),
         [z, Y] = s.useState(!0),
@@ -49,7 +49,7 @@ function A(e) {
         ea = (null !== (t = (0, c.Z)(P.id)) && void 0 !== t ? t : P.id) !== P.id,
         el = 0;
     (X || ee) && (el += 72), X && !ee && (ei ? (el += 48) : (el += 8)), ee && (el += 0.5 * N + 8);
-    let er = s.useMemo(() => (X && J ? U / (k - 2 * el) : Q && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : S), [Q, F, X, U, k, el, J]),
+    let er = s.useMemo(() => (X && J ? U / (k - 2 * el) : Q && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v), [Q, F, X, U, k, el, J]),
         eo = k - 2 * el,
         ec = X && J ? U : eo * er,
         eu = Math.floor(Math.min(U, ec) / er),
@@ -72,14 +72,14 @@ function A(e) {
                     clamp: !0
                 },
                 onStart: () => q(!0),
-                onChange: () => m.S.dispatch(I.CkL.REMEASURE_TARGET),
+                onChange: () => p.S.dispatch(I.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    q(!1), m.S.dispatch(I.CkL.REMEASURE_TARGET);
+                    q(!1), p.S.dispatch(I.CkL.REMEASURE_TARGET);
                 }
             },
             'animate-always'
         ),
-        ep = (0, o.useSpring)(
+        em = (0, o.useSpring)(
             {
                 value: ee ? 1 : 0,
                 config: {
@@ -89,7 +89,7 @@ function A(e) {
             },
             'animate-always'
         ),
-        em = (0, o.useSpring)(
+        ep = (0, o.useSpring)(
             {
                 value: ec,
                 config: {
@@ -97,7 +97,7 @@ function A(e) {
                     clamp: !0
                 }
             },
-            (et === ee && ep.value.idle && !es) || ea ? 'animate-never' : 'animate-always'
+            (et === ee && em.value.idle && !es) || ea ? 'animate-never' : 'animate-always'
         ),
         e_ = (0, o.useSpring)(
             {
@@ -130,19 +130,19 @@ function A(e) {
         eg = ee || D ? [] : (0, g.n3)(M, P, V),
         { visibleParticipants: eC, participantTileWidth: eI } = (0, C.ZB)(U, b);
     return (0, i.jsxs)('div', {
-        className: l()(v.root, x.flexCenter, y),
+        className: l()(S.root, x.flexCenter, y),
         children: [
             (0, i.jsxs)('div', {
-                className: v.tileWrapper,
+                className: S.tileWrapper,
                 style: { opacity: Q && z ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: v.videoFrame,
-                        style: { top: ep.value.to((e) => (-e * N) / 2) },
+                        className: S.videoFrame,
+                        style: { top: em.value.to((e) => (-e * N) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
-                                style: { width: em.value },
-                                className: v.videoWrapper,
+                                style: { width: ep.value },
+                                className: S.videoWrapper,
                                 children: (0, i.jsx)('div', {
                                     className: l()(x.videoSizer),
                                     style: { aspectRatio: er },
@@ -179,7 +179,7 @@ function A(e) {
                             }),
                             ei
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: l()(v.actionRow, { [v.idle]: B }),
+                                      className: l()(S.actionRow, { [S.idle]: B }),
                                       style: { bottom: e_.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: j.id,
@@ -191,7 +191,7 @@ function A(e) {
                         ]
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: v.participantsWrapperAnimated,
+                        className: S.participantsWrapperAnimated,
                         style: {
                             translateY: eh.value.to((e) => (e * N) / 2),
                             opacity: eh.value,

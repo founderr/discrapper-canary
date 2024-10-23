@@ -24,8 +24,8 @@ var o = n(200651),
     E = n(78826),
     S = n(667105),
     T = n(693900),
-    N = n(617889),
-    v = n(130653),
+    v = n(617889),
+    N = n(130653),
     j = n(46140),
     A = n(981631),
     b = n(604330);
@@ -55,13 +55,13 @@ function B(e) {
         y = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         M = (0, i.e7)([p.Z], () => p.Z.hasLayers()),
         O = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        w = (0, d.Z)(O),
-        k = (null === (n = r.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        L = (0, d.Z)(k),
+        k = (0, d.Z)(O),
+        w = (null === (n = r.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        L = (0, d.Z)(w),
         { hasError: U, isLoading: q } = (0, E.d7)(),
-        Z = s.useContext(v.T) || (B && I && !q),
+        Z = s.useContext(N.T) || (B && I && !q),
         P = s.useRef(Z),
-        Q = (0, N.B)(r, Z && !U),
+        Q = (0, v.B)(r, Z && !U),
         D = (0, g.vI)(r, j.dr.QUESTS_BAR) ? g.WV : Q.collapsedHeight,
         W = s.useRef(-1),
         H = s.useRef(!1),
@@ -85,11 +85,11 @@ function B(e) {
             z(!0);
         }, []),
         ea = s.useCallback(() => {
-            z(!1), !H.current && !k && en(!1);
-        }, [k, en]),
+            z(!1), !H.current && !w && en(!1);
+        }, [w, en]),
         el = s.useCallback(() => {
-            z(!1), !k && en(!1), (H.current = !1);
-        }, [k, en]),
+            z(!1), !w && en(!1), (H.current = !1);
+        }, [w, en]),
         ei = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -118,14 +118,14 @@ function B(e) {
             (H.current = !1), ed();
         }, [ed]);
     s.useLayoutEffect(() => {
-        k && Q.shouldExpandOnQuestComplete && es();
-    }, [es, k, Q.shouldExpandOnQuestComplete]),
+        w && Q.shouldExpandOnQuestComplete && es();
+    }, [es, w, Q.shouldExpandOnQuestComplete]),
         s.useLayoutEffect(() => {
-            O && !w && H.current && es();
-        }, [es, O, w]),
+            O && !k && H.current && es();
+        }, [es, O, k]),
         s.useLayoutEffect(() => {
-            !k && O && !w && !H.current && en(!1);
-        }, [O, k, w, en]),
+            !w && O && !k && !H.current && en(!1);
+        }, [O, w, k, en]),
         s.useLayoutEffect(() => {
             Z !== P.current && J(!1), (P.current = Z);
         }, [Z]);
@@ -162,8 +162,8 @@ function B(e) {
         }
     });
     return (s.useLayoutEffect(() => {
-        k && !L && Q.canCollapseOnBlur && eo();
-    }, [k, es, Q.canCollapseOnBlur, eo, L]),
+        w && !L && Q.canCollapseOnBlur && eo();
+    }, [w, es, Q.canCollapseOnBlur, eo, L]),
     s.useEffect(() => {
         U &&
             (0, m.dA)({

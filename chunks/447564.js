@@ -17,8 +17,8 @@ var i = n(200651),
     u = n(120619),
     d = n(690221),
     h = n(333867),
-    p = n(422034),
-    m = n(938475),
+    m = n(422034),
+    p = n(938475),
     _ = n(937615),
     f = n(215023),
     E = n(689938),
@@ -35,11 +35,11 @@ function I(e) {
 let T = 'HD_STREAMING_POTION_MODAL_KEY';
 function x(e) {
     let { channel: t } = e,
-        n = m.ZP.getVoiceStatesForChannel(t).slice(0, 6),
+        n = p.ZP.getVoiceStatesForChannel(t).slice(0, 6),
         I = (0, a.e7)([u.Z], () => u.Z.getFetching(f.FX)),
         x = (0, a.e7)([u.Z], () => u.Z.getPrice(f.FX)),
-        v = (0, a.e7)([u.Z], () => u.Z.getErrored(f.FX)),
-        { analyticsLocations: S } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
+        S = (0, a.e7)([u.Z], () => u.Z.getErrored(f.FX)),
+        { analyticsLocations: v } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
         N = (0, a.e7)([u.Z], () => u.Z.getEntitlement());
     s.useEffect(() => {
         null != N && N.sku_id === f.FX && !1 === N.consumed && (0, c.Zu)(t.id);
@@ -51,15 +51,15 @@ function x(e) {
             []
         ),
         s.useEffect(() => {
-            !I && null == x && !v && (0, c.Gq)(f.FX);
-        }, [I, x, v]);
+            !I && null == x && !S && (0, c.Gq)(f.FX);
+        }, [I, x, S]);
     let A = () => {
             (0, l.closeModal)(T);
         },
         Z = n.map((e, t) => {
             let { user: s } = e;
             return (0, i.jsx)(
-                p.O,
+                m.O,
                 {
                     affinity: s,
                     applyMask: t !== n.length - 1,
@@ -68,7 +68,7 @@ function x(e) {
                 s.id
             );
         });
-    return v
+    return S
         ? (0, i.jsx)('div', {
               className: g.anomaly,
               children: (0, i.jsxs)('div', {
@@ -167,7 +167,7 @@ function x(e) {
                                 onClick: () => {
                                     (0, h.Z)({
                                         skuId: f.FX,
-                                        analyticsLocations: S,
+                                        analyticsLocations: v,
                                         onComplete: A
                                     });
                                 },

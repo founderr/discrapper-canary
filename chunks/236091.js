@@ -9,20 +9,20 @@ var s = n(120356),
     u = n(594190),
     d = n(199902),
     h = n(924557),
-    p = n(435064),
-    m = n(354459),
+    m = n(435064),
+    p = n(354459),
     _ = n(689938),
     f = n(162910);
 t.Z = (e) => {
     let { className: t, channelId: n } = e,
         s = (0, h.Go)(),
-        E = p.Z.isDecoupledGameClippingEnabled();
-    return (0, l.e7)([d.Z, c.Z, p.Z, u.ZP], () => {
+        E = m.Z.isDecoupledGameClippingEnabled();
+    return (0, l.e7)([d.Z, c.Z, m.Z, u.ZP], () => {
         var e;
         if (null == n) return !1;
         let t = d.Z.getCurrentUserActiveStream(),
             i = null === (e = u.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-        return (null != t && !!p.Z.getSettings().clipsEnabled && !!s) || (null != i && !!p.Z.getSettings().decoupledClipsEnabled && !!E) || c.Z.getParticipants(n).some((e) => e.type === m.fO.USER && p.Z.isClipsEnabledForUser(e.user.id));
+        return (null != t && !!m.Z.getSettings().clipsEnabled && !!s) || (null != i && !!m.Z.getSettings().decoupledClipsEnabled && !!E) || c.Z.getParticipants(n).some((e) => e.type === p.fO.USER && m.Z.isClipsEnabledForUser(e.user.id));
     })
         ? (0, i.jsxs)(o.TooltipContainer, {
               text: _.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,

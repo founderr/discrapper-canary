@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(782959),
     g = n(276645),
     T = n(970731),
-    f = n(626135),
-    C = n(267642),
+    C = n(626135),
+    f = n(267642),
     S = n(981631),
     N = n(921944),
     A = n(30513),
@@ -37,7 +37,7 @@ function D(e, t) {
 }
 function y(e, t) {
     if (null != t)
-        (0, C.f2)(t, S.Eu4.TIER_1)
+        (0, f.f2)(t, S.Eu4.TIER_1)
             ? m.Z.open(t.id, S.pNK.OVERVIEW, { section: S.jXE.PREMIUM_GUILD_INVITE_SPLASH }, S.KsC.INVITE)
             : (0, _.Z)({
                   analyticsLocations: e,
@@ -65,13 +65,13 @@ t.Z = a.memo(function (e) {
     let { contentTypes: t, theme: n, guild: a, renderGuildHeaderDropdownButton: l } = e,
         { analyticsLocations: _ } = (0, o.ZP)(),
         A = () => {
-            f.default.track(S.rMx.TOOLTIP_VIEWED, {
+            C.default.track(S.rMx.TOOLTIP_VIEWED, {
                 type: v.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: S.ZY5.GUILD_CHANNEL }
             });
         },
         U = () => {
-            f.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            C.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.INVITE_SPLASH_UPSELL,
                 location: { page: S.ZY5.GUILD_CHANNEL },
                 location_stack: _
@@ -154,8 +154,8 @@ t.Z = a.memo(function (e) {
                         renderGuildHeaderDropdownButton: l
                     });
                 case s.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, C.f2)(a, S.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, C.KK)(a, S.Eu4.TIER_1) }),
-                        t = (0, C.f2)(a, S.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
+                    let e = (0, f.f2)(a, S.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, f.KK)(a, S.Eu4.TIER_1) }),
+                        t = (0, f.f2)(a, S.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
                             onComponentMount: U,

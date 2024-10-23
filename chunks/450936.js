@@ -13,8 +13,8 @@ var i = n(192379),
     u = n(812206),
     d = n(835473),
     h = n(621853),
-    p = n(484459),
-    m = n(973616),
+    m = n(484459),
+    p = n(973616),
     _ = n(594174),
     f = n(981631);
 function E(e) {
@@ -32,17 +32,17 @@ function E(e) {
         }),
         T = (0, r.Z)(I),
         x = (0, s.e7)([u.Z], () => u.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
-        v = (0, s.e7)([h.Z], () => {
+        S = (0, s.e7)([h.Z], () => {
             var e;
             return null !== C ? (null === (e = h.Z.getUserProfile(null == C ? void 0 : C.id)) || void 0 === e ? void 0 : e.application) : void 0;
         }),
-        S = null != x ? x : null == v ? void 0 : v.id;
+        v = null != x ? x : null == S ? void 0 : S.id;
     i.useEffect(() => {
-        if (null == S && g) {
+        if (null == v && g) {
             var e;
-            (0, p.Z)(null !== (e = null == C ? void 0 : C.id) && void 0 !== e ? e : f.lds);
+            (0, m.Z)(null !== (e = null == C ? void 0 : C.id) && void 0 !== e ? e : f.lds);
         }
-    }, [C, S, g]),
+    }, [C, v, g]),
         i.useEffect(() => {
             (null == C ? void 0 : C.id) != null &&
                 a.Z.dispatch({
@@ -56,24 +56,24 @@ function E(e) {
                 commandTypes: [l.yU.PRIMARY_ENTRY_POINT, l.yU.CHAT, l.yU.MESSAGE, l.yU.USER]
             },
             {
-                applicationId: S,
+                applicationId: v,
                 allowFetch: g && (null == C ? void 0 : C.id) != null,
                 allowApplicationState: !0
             }
         ),
-        A = N.commands.filter((e) => e.type === l.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
+        A = N.commands.filter((e) => e.type === l.yU.PRIMARY_ENTRY_POINT && e.applicationId === v)[0],
         Z = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         M = N.loading,
         b =
             null ===
                 (t = N.descriptors.find((e) => {
                     var t;
-                    return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === S;
+                    return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === v;
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        R = i.useMemo(() => (null != b ? m.Z.createFromServer(b) : void 0), [b]),
-        L = (0, d.q)(null == R && g ? S : void 0),
+        R = i.useMemo(() => (null != b ? p.Z.createFromServer(b) : void 0), [b]),
+        L = (0, d.q)(null == R && g ? v : void 0),
         j = null !== (n = null != R ? R : L) && void 0 !== n ? n : void 0,
         P = null == j || (M && 0 === Z.length);
     return {
@@ -82,7 +82,7 @@ function E(e) {
         primaryEntryPointCommand: A,
         isProfileFetching: I,
         wasProfileFetching: T,
-        applicationId: S,
+        applicationId: v,
         channelId: E.id,
         commands: Z
     };

@@ -14,8 +14,8 @@ var i = n(192379),
     u = n(673125),
     d = n(292793),
     h = n(88315),
-    p = n(262433),
-    m = n(400321),
+    m = n(262433),
+    p = n(400321),
     _ = n(813900);
 let f = 1000 / 60;
 function E(e, t, n, E) {
@@ -24,7 +24,7 @@ function E(e, t, n, E) {
         I = (0, l.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex(),
         T = i.useRef({}),
         x = i.useRef(new s.Xp()),
-        v = i.useCallback(
+        S = i.useCallback(
             (t) => {
                 let n = u.Z.getDrawables(t);
                 (0, h.UN)(e),
@@ -46,7 +46,7 @@ function E(e, t, n, E) {
                                 let { drawable: t, context: n, canvasWidth: i, canvasHeight: s, fallbackColor: a, outlineColorDark: l, outlineColorLight: r, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
                                 switch (t.type) {
                                     case d.W.LINE:
-                                        return (0, m.Z)({
+                                        return (0, p.Z)({
                                             line: t,
                                             context: n,
                                             canvasWidth: i,
@@ -58,7 +58,7 @@ function E(e, t, n, E) {
                                             deadDrawables: u
                                         });
                                     case d.W.EMOJI_HOSE:
-                                        return (0, p.Z)({
+                                        return (0, m.Z)({
                                             emojiHose: t,
                                             context: n,
                                             canvasWidth: i,
@@ -102,24 +102,24 @@ function E(e, t, n, E) {
             let t = e.current;
             if (null == t) return;
             let { width: i, height: s } = t.getBoundingClientRect();
-            (t.width = i * window.devicePixelRatio), (t.height = s * window.devicePixelRatio), v(n);
+            (t.width = i * window.devicePixelRatio), (t.height = s * window.devicePixelRatio), S(n);
         });
         return null != e.current && t.observe(e.current), () => t.disconnect();
-    }, [e, v, n]);
-    let S = i.useCallback(() => {
+    }, [e, S, n]);
+    let v = i.useCallback(() => {
         let t = u.Z.getDrawables(n),
-            i = p.U.getState().particles,
+            i = m.U.getState().particles,
             s = t.length > 0 || Object.keys(i).length > 0;
-        s && null == x.current._ref && (null == x.current._ref ? (v(n), x.current.start(f, () => v(n))) : !s && null != x.current._ref && (x.current.stop(), (0, h.UN)(e)));
-    }, [e, v, n]);
+        s && null == x.current._ref && (null == x.current._ref ? (S(n), x.current.start(f, () => S(n))) : !s && null != x.current._ref && (x.current.stop(), (0, h.UN)(e)));
+    }, [e, S, n]);
     i.useEffect(() => {
         let e = x.current;
         return (
-            u.Z.addChangeListener(S),
-            S(),
+            u.Z.addChangeListener(v),
+            v(),
             (0, r.vM)(t.getAvatarURL(null, _.Ks)),
             () => {
-                u.Z.removeChangeListener(S), e.stop();
+                u.Z.removeChangeListener(v), e.stop();
             }
         );
     });

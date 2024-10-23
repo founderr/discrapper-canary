@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(284019),
     g = n(672775),
     T = n(601463),
-    f = n(192565),
-    C = n(641037),
+    C = n(192565),
+    f = n(641037),
     S = n(689938),
     N = n(837275);
 let A = {
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, C.G)(Z), [Z]),
+        R = a.useMemo(() => (0, f.G)(Z), [Z]),
         [O, x] = a.useState(!1),
         [b, M] = a.useState(window.innerWidth),
         [P, D] = a.useState(1),
@@ -101,7 +101,7 @@ function v(e) {
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [P, y]);
     let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
-        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, C.G)(Z).find((e) => e.hasError) : null), [Z]),
+        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, f.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -109,7 +109,7 @@ function v(e) {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
         W = a.useCallback(() => {
-            (0, C.V)({
+            (0, f.V)({
                 guildId: t,
                 onSuccess: () => {
                     z(), n();
@@ -180,7 +180,7 @@ function v(e) {
                                 (0, i.jsx)(o.animated.div, {
                                     style: G,
                                     className: r()(N.stepsContainer, { [N.hidden]: !y }),
-                                    children: (0, i.jsx)(f.Z, { guildId: t })
+                                    children: (0, i.jsx)(C.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
                                     className: r()(N.navigationContainer, { [N.elevatedNavigationContainer]: !y }),

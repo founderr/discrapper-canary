@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(481060),
     d = n(904245),
     h = n(593472),
-    p = n(393238),
-    m = n(330726),
+    m = n(393238),
+    p = n(330726),
     _ = n(48929),
     f = n(333535),
     E = n(566006),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(216337),
     T = n(920888),
     x = n(287151),
-    v = n(569471),
-    S = n(346479),
+    S = n(569471),
+    v = n(346479),
     N = n(592125),
     A = n(934415),
     Z = n(456269),
@@ -37,13 +37,13 @@ var i = n(200651),
     P = n(96042);
 function O(e) {
     let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
-        { ref: y, width: D } = (0, p.Z)(),
+        { ref: y, width: D } = (0, m.Z)(),
         [U, k] = s.useState(3),
         [w, B] = s.useState(!n),
-        [H, G] = (0, m.Z)(!1, 2000),
+        [H, G] = (0, p.Z)(!1, 2000),
         V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: F } = (0, M.cl)(V),
-        W = (0, o.e7)([v.Z], () => v.Z.hasJoined(t)),
+        W = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
         { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
         J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
         Q = (0, Z.Bs)(J),
@@ -80,7 +80,7 @@ function O(e) {
         return null;
     let ei = F.reactions.length > 0,
         es = () => {
-            W ? S.Z.leaveThread(V, 'Forum Toolbar') : S.Z.joinThread(V, 'Forum Toolbar');
+            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
         },
         ea = () => {
             (0, b.B)({

@@ -20,8 +20,8 @@ var i = n(200651),
     u = n(835473),
     d = n(385499),
     h = n(933557),
-    p = n(471445),
-    m = n(243778),
+    m = n(471445),
+    p = n(243778),
     _ = n(266076),
     f = n(565138),
     E = n(703656),
@@ -30,8 +30,8 @@ var i = n(200651),
     I = n(594174),
     T = n(768581),
     x = n(63063),
-    v = n(946734),
-    S = n(99843),
+    S = n(946734),
+    v = n(99843),
     N = n(372564),
     A = n(984370),
     Z = n(217314),
@@ -43,7 +43,7 @@ function j(e) {
     var t;
     let { channel: n } = e,
         s = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id),
-        [a, l] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
+        [a, l] = (0, p.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == s) return null;
     let r = T.ZP.getApplicationIconURL({
             id: s.id,
@@ -111,8 +111,8 @@ function j(e) {
     );
 }
 function P(e) {
-    let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: m, handleParentContextMenu: f, renderFollowButton: E } = e,
-        C = (0, p.KS)(t, r),
+    let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: f, renderFollowButton: E } = e,
+        C = (0, m.KS)(t, r),
         { prefix: T, level: x } = (function (e, t) {
             var n, i;
             switch (e) {
@@ -155,7 +155,7 @@ function P(e) {
                     };
             }
         })(t.type, r),
-        v = (0, i.jsxs)(i.Fragment, {
+        S = (0, i.jsxs)(i.Fragment, {
             children: [
                 null != T
                     ? (0, i.jsxs)(c.HiddenVisually, {
@@ -175,7 +175,7 @@ function P(e) {
                 handleContextMenu: d
             });
         case M.d4z.GROUP_DM:
-            if (t.isManaged()) return v;
+            if (t.isManaged()) return S;
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     (0, i.jsx)(c.HiddenVisually, { children: R.Z.Messages.GROUP_DM }),
@@ -189,7 +189,7 @@ function P(e) {
                             className: L.avatar
                         })
                     }),
-                    (0, i.jsx)(S.Z, { channel: t }, 'channel-'.concat(t.id))
+                    (0, i.jsx)(v.Z, { channel: t }, 'channel-'.concat(t.id))
                 ]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
@@ -203,7 +203,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     }),
                     null != t.linkedLobby ? (0, i.jsx)(j, { channel: t }) : null,
                     null != E ? E() : null
@@ -217,7 +217,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -229,7 +229,7 @@ function P(e) {
                         level: x,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -238,14 +238,14 @@ function P(e) {
         case M.d4z.PRIVATE_THREAD:
             let N = null;
             if (!o && null != a) {
-                let e = (0, p.KS)(a, r);
+                let e = (0, m.KS)(a, r);
                 N = (0, i.jsxs)(s.Fragment, {
                     children: [
                         D(e, R.Z.Messages.TEXT_CHANNEL),
                         (0, i.jsx)(A.Z.Title, {
                             level: x,
                             onContextMenu: f,
-                            onClick: m,
+                            onClick: p,
                             className: l()(L.parentChannelName, L.cursorPointer),
                             children: (0, h.F6)(a, I.default, g.Z)
                         }),
@@ -266,7 +266,7 @@ function P(e) {
                             [L.cursorPointer]: o,
                             [L.forumPostTitle]: b
                         }),
-                        children: v
+                        children: S
                     })
                 ]
             });
@@ -311,7 +311,7 @@ function y(e, t) {
     switch (e.type) {
         case M.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(v.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(S.Z, { channel: e }, e.id)]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:

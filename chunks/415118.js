@@ -15,16 +15,16 @@ var l = t(481060),
     _ = t(185457),
     f = t(933409),
     N = t(389052),
-    g = t(24311),
-    I = t(710631),
-    m = t(297047),
-    A = t(88966),
-    C = t(712301),
-    D = t(991307),
-    U = t(725119),
-    x = t(931617),
-    b = t(700994),
-    O = t(332031),
+    I = t(24311),
+    g = t(710631),
+    A = t(297047),
+    C = t(88966),
+    m = t(712301),
+    U = t(991307),
+    x = t(725119),
+    D = t(931617),
+    O = t(700994),
+    b = t(332031),
     T = t(981631),
     L = t(689938);
 n.default = (0, o.Z)(
@@ -36,14 +36,14 @@ n.default = (0, o.Z)(
                     section: T.jXE.CHAT_USERNAME,
                     object: T.qAy.CONTEXT_MENU_ITEM
                 },
-                j = (0, U.Z)({
+                j = (0, x.Z)({
                     userId: n.id,
                     guildId: t
                 }),
-                R = (0, m.Z)(n, t, h),
-                p = (0, A.Z)(n.id, h),
-                k = (0, O.Z)(n.id),
-                V = (0, g.Z)({
+                R = (0, A.Z)(n, t, h),
+                p = (0, C.Z)(n.id, h),
+                k = (0, b.Z)(n.id),
+                V = (0, I.Z)({
                     user: n,
                     context: h
                 }),
@@ -53,8 +53,8 @@ n.default = (0, o.Z)(
                     context: h
                 }),
                 P = (0, E.Z)({ user: n }),
-                B = (0, b.Z)(n.id),
-                G = (0, D.Z)(n.id),
+                B = (0, O.Z)(n.id),
+                G = (0, U.Z)(n.id),
                 y = (0, c.Z)({
                     guildId: t,
                     userId: n.id,
@@ -65,7 +65,7 @@ n.default = (0, o.Z)(
                     user: n,
                     guildId: t
                 }),
-                Y = (0, I.Z)({
+                Y = (0, g.Z)({
                     user: n,
                     guildId: t
                 }),
@@ -73,8 +73,8 @@ n.default = (0, o.Z)(
                 H = (0, M.Z)(n),
                 X = (0, N.Z)({ user: n }),
                 q = (0, f.Z)(n, t),
-                z = (0, x.Z)(n.id, t),
-                K = (0, C.Z)(n, t),
+                z = (0, D.Z)(n.id, t),
+                K = (0, m.Z)(n, t),
                 J = (0, r.Z)({
                     id: n.id,
                     label: L.Z.Messages.COPY_ID_USER

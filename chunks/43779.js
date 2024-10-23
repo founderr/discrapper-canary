@@ -24,15 +24,15 @@ var o = n(200651),
 let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function T(e) {
     var t, n, r;
-    let { quest: T, questContent: N, isHovering: v, contentPosition: j, rowIndex: A, onReceiveErrorHints: b } = e,
+    let { quest: T, questContent: v, isHovering: N, contentPosition: j, rowIndex: A, onReceiveErrorHints: b } = e,
         R = m.r.build(T.config),
         B = R.defaultReward.messages.name,
         I = R.defaultReward.messages.nameWithArticle,
         y = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: M, scrollHeight: O } = (0, d.Z)(),
-        w = 104 !== O,
-        { expansionSpring: k } = (0, c.useSpring)({
-            expansionSpring: v ? 1 : 0,
+        k = 104 !== O,
+        { expansionSpring: w } = (0, c.useSpring)({
+            expansionSpring: N ? 1 : 0,
             config: {
                 ...f.Y,
                 clamp: !0
@@ -69,7 +69,7 @@ function T(e) {
         children: [
             (0, o.jsxs)(l.animated.div, {
                 style: {
-                    maxHeight: k.to([0, 1], [104, (null != O ? O : 0) + 12])
+                    maxHeight: w.to([0, 1], [104, (null != O ? O : 0) + 12])
                 },
                 className: a()(E.rewardDescriptionContainer),
                 children: [
@@ -93,12 +93,12 @@ function T(e) {
                                               quest: T,
                                               size: 76,
                                               percentComplete: q,
-                                              percentCompleteText: v ? Z : void 0,
+                                              percentCompleteText: N ? Z : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: E.circularRewardTileWrapper,
                                                   children: (0, o.jsx)(C.Z, {
                                                       quest: T,
-                                                      questContent: N,
+                                                      questContent: v,
                                                       className: E.circularQuestRewardTileAsset,
                                                       location: _.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -108,8 +108,8 @@ function T(e) {
                                   })
                                 : (0, o.jsx)(C.Z, {
                                       quest: T,
-                                      autoplay: v,
-                                      questContent: N,
+                                      autoplay: N,
+                                      questContent: v,
                                       className: E.questRewardTileAsset,
                                       location: _.dr.QUEST_HOME_DESKTOP
                                   })
@@ -117,7 +117,7 @@ function T(e) {
                     }),
                     (0, o.jsxs)('div', {
                         ref: M,
-                        className: a()(E.textContainer, { [E.justifyCenter]: !w }),
+                        className: a()(E.textContainer, { [E.justifyCenter]: !k }),
                         children: [
                             (0, o.jsx)(c.Heading, {
                                 variant: 'eyebrow',
@@ -134,10 +134,10 @@ function T(e) {
                             W
                         ]
                     }),
-                    w &&
+                    k &&
                         (0, o.jsx)(l.animated.div, {
                             style: {
-                                opacity: k.to([0, 1], [1, 0])
+                                opacity: w.to([0, 1], [1, 0])
                             },
                             className: E.textOverflowBlur
                         })
@@ -145,7 +145,7 @@ function T(e) {
             }),
             (0, o.jsx)(g.Z, {
                 quest: T,
-                location: N,
+                location: v,
                 contentPosition: j,
                 rowIndex: A,
                 onReceiveErrorHints: b

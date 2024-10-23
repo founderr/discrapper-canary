@@ -11,7 +11,7 @@ var i = n(200651),
     o = n(743078),
     c = n(871499);
 function u(e) {
-    let { selfMute: t, serverMute: n, suppress: u, centerButton: d = !1, awaitingRemote: h, onMouseEnter: p, onMouseLeave: m, ..._ } = e,
+    let { selfMute: t, serverMute: n, suppress: u, centerButton: d = !1, awaitingRemote: h, onMouseEnter: m, onMouseLeave: p, ..._ } = e,
         { mode: f } = (0, o.Z)({ location: 'MicButton' }),
         E = t || n || u,
         g = d ? c.d : c.Z,
@@ -25,10 +25,10 @@ function u(e) {
             iconColor: E && 'mic-push-to-disable-red' === f ? a.Z.unsafe_rawColors.RED_400.css : void 0,
             label: C,
             onMouseEnter: (e) => {
-                null == p || p(e), x.onMouseEnter();
+                null == m || m(e), x.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == m || m(e), x.onMouseLeave();
+                null == p || p(e), x.onMouseLeave();
             },
             ..._
         })

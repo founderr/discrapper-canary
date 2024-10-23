@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(785717),
     d = n(221292),
     h = n(687158),
-    p = n(471879),
-    m = n(502762),
+    m = n(471879),
+    p = n(502762),
     _ = n(475413),
     f = n(228168),
     E = n(689938),
@@ -24,18 +24,18 @@ function I(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: I } = e,
         T = (0, h.ZP)(t.id),
         x = (0, r.ZP)(),
-        { analyticsLocations: v } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        S = (0, u.ZB)({
+        { analyticsLocations: S } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
+        v = (0, u.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
         N = s.useRef(null);
     return (0, i.jsx)(c.Gt, {
-        value: v,
+        value: S,
         children: (0, i.jsx)(u.Mt, {
-            value: S,
-            children: (0, i.jsx)(m.Z, {
+            value: v,
+            children: (0, i.jsx)(p.Z, {
                 ref: N,
                 user: t,
                 displayProfile: T,
@@ -55,7 +55,7 @@ function I(e) {
                             (0, i.jsxs)('div', {
                                 className: g.body,
                                 children: [
-                                    (0, i.jsx)(p.Z, {
+                                    (0, i.jsx)(m.Z, {
                                         user: t,
                                         guildId: null
                                     }),
@@ -82,8 +82,8 @@ function I(e) {
                                             null == I || I(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: v,
-                                                    ...S
+                                                    analyticsLocations: S,
+                                                    ...v
                                                 });
                                         }
                                     })

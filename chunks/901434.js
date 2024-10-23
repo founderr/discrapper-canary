@@ -8,28 +8,28 @@ var i = n(200651),
     u = n(281956),
     d = n(27457),
     h = n(823379),
-    p = n(5192),
-    m = n(501655),
+    m = n(5192),
+    p = n(501655),
     _ = n(689938),
     f = n(754833);
-let E = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
+let E = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: g, hasConnectPermission: C } = e,
+    let { participants: m, channel: g, hasConnectPermission: C } = e,
         I = (0, u.J)(g.guild_id),
         T = s.useCallback(() => {
             I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
         }, [g.id, g.guild_id, I]),
-        x = p.filter((e) => e.type === m.Ui.VOICE),
-        v = 4 === x.length ? 2 : 3,
-        S = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
+        x = m.filter((e) => e.type === p.Ui.VOICE),
+        S = 4 === x.length ? 2 : 3,
+        v = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
-                style: { maxWidth: 168 * v },
-                children: S.slice(0, 5).map((e) =>
+                style: { maxWidth: 168 * S },
+                children: v.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {

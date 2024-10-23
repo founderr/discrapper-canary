@@ -73,25 +73,25 @@ function v() {
     });
 }
 function I(e) {
-    let { modalType: t, header: o, body: s, problemTitle: i, problems: h, transitionState: L, ratingConfigs: I, feedbackProblems: Z = [], otherKey: D, ratingsSelectorClassName: x, hideDontShowCheckbox: B, startRating: S = null, onSubmit: M, onClose: T } = e,
-        j = (0, c.Z)(h),
-        [k, R] = a.useState(!1),
-        [y, K] = a.useState(S),
-        [F, H] = a.useState(null),
-        [U, P] = a.useState(r().shuffle(h)),
-        [w, G] = a.useState(''),
-        V = (0, _.Dt)(),
-        z = (0, b.Z)(y),
-        Y = (0, b.Z)(k),
-        q = (0, b.Z)(F),
-        J = (0, b.Z)(M),
-        W = (0, b.Z)(w),
-        Q = null != F && Z.includes(F),
-        { renderSkipButton: X } = C.w.useExperiment({ location: 'FeedbackModal' });
+    let { modalType: t, header: o, body: s, problemTitle: i, problems: h, transitionState: L, ratingConfigs: I, feedbackProblems: Z = [], otherKey: D, ratingsSelectorClassName: x, hideDontShowCheckbox: B, startRating: S = null, hideHelpDeskLink: M = !1, onSubmit: T, onClose: j } = e,
+        k = (0, c.Z)(h),
+        [R, y] = a.useState(!1),
+        [K, F] = a.useState(S),
+        [H, U] = a.useState(null),
+        [P, w] = a.useState(r().shuffle(h)),
+        [G, V] = a.useState(''),
+        z = (0, _.Dt)(),
+        Y = (0, b.Z)(K),
+        q = (0, b.Z)(R),
+        J = (0, b.Z)(H),
+        W = (0, b.Z)(T),
+        Q = (0, b.Z)(G),
+        X = null != H && Z.includes(H),
+        { renderSkipButton: $ } = C.w.useExperiment({ location: 'FeedbackModal' });
     return (
         a.useEffect(() => {
-            !r().isEqual(j, h) && P((0, O.B)(h, D));
-        }, [h, j, D]),
+            !r().isEqual(k, h) && w((0, O.B)(h, D));
+        }, [h, k, D]),
         a.useEffect(
             () => (
                 E.default.track(p.rMx.OPEN_MODAL, {
@@ -99,11 +99,11 @@ function I(e) {
                     source: 'Feedback Modal'
                 }),
                 () => {
-                    J.current({
-                        rating: z.current,
-                        problem: q.current,
-                        dontShowAgain: Y.current,
-                        feedback: W.current
+                    W.current({
+                        rating: Y.current,
+                        problem: J.current,
+                        dontShowAgain: q.current,
+                        feedback: Q.current
                     });
                 }
             ),
@@ -112,14 +112,14 @@ function I(e) {
         (0, n.jsxs)(u.ModalRoot, {
             transitionState: L,
             className: f.__invalid_modalRoot,
-            'aria-labelledby': V,
+            'aria-labelledby': z,
             children: [
                 (0, n.jsxs)(u.ModalHeader, {
                     separator: !1,
                     className: f.headerContainer,
                     children: [
                         (0, n.jsx)(u.Heading, {
-                            id: V,
+                            id: z,
                             variant: 'heading-xl/extrabold',
                             color: 'none',
                             children: o
@@ -130,13 +130,13 @@ function I(e) {
                             className: f.ratingBody,
                             children: s
                         }),
-                        Q
+                        X
                             ? null
                             : (0, n.jsx)(N, {
                                   className: l()(f.emojis, x),
-                                  selectedRating: y,
+                                  selectedRating: K,
                                   onChangeRating: function (e) {
-                                      K(e), e === A.aZ.GOOD && T();
+                                      F(e), e === A.aZ.GOOD && j();
                                   },
                                   ratingConfigs: I
                               })
@@ -145,16 +145,16 @@ function I(e) {
                 (0, n.jsxs)(u.ModalContent, {
                     className: f.__invalid_content,
                     children: [
-                        null == y || y === A.aZ.GOOD || Q
+                        null == K || K === A.aZ.GOOD || X
                             ? null
                             : (0, n.jsx)(u.FormItem, {
                                   title: i,
                                   className: f.problemInfo,
                                   children: (0, n.jsx)(m.Z, {
-                                      options: U,
+                                      options: P,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          H(t), !Z.includes(t) && T();
+                                          U(t), !Z.includes(t) && j();
                                       },
                                       hideCaret: (e) => {
                                           let { value: t } = e;
@@ -162,27 +162,27 @@ function I(e) {
                                       }
                                   })
                               }),
-                        Q
+                        X
                             ? (0, n.jsxs)(u.FormItem, {
                                   title: g.Z.Messages.FEEDBACK_DESCRIBE_ISSUE,
                                   className: f.problemInfo,
                                   children: [
                                       (0, n.jsx)(u.TextArea, {
-                                          value: w,
+                                          value: G,
                                           maxLength: A.iF,
-                                          onChange: G
+                                          onChange: V
                                       }),
-                                      (0, n.jsx)(v, {})
+                                      !M && (0, n.jsx)(v, {})
                                   ]
                               })
                             : null
                     ]
                 }),
-                (Q || !B) &&
+                (X || !B) &&
                     (0, n.jsx)(u.ModalFooter, {
                         className: f.footer,
                         direction: d.Z.Direction.HORIZONTAL,
-                        children: Q
+                        children: X
                             ? (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(u.Button, {
@@ -190,13 +190,13 @@ function I(e) {
                                           look: u.Button.Looks.LINK,
                                           color: u.Button.Colors.PRIMARY,
                                           onClick: () => {
-                                              H(null), G('');
+                                              U(null), V('');
                                           },
                                           children: g.Z.Messages.BACK
                                       }),
                                       (0, n.jsx)(u.Button, {
                                           size: u.Button.Sizes.SMALL,
-                                          onClick: T,
+                                          onClick: j,
                                           children: g.Z.Messages.SUBMIT
                                       })
                                   ]
@@ -206,20 +206,20 @@ function I(e) {
                                       (0, n.jsx)(u.Checkbox, {
                                           type: u.Checkbox.Types.INVERTED,
                                           size: 18,
-                                          value: k,
-                                          onChange: () => R(!k),
+                                          value: R,
+                                          onChange: () => y(!R),
                                           children: (0, n.jsx)(u.Text, {
                                               variant: 'text-sm/normal',
                                               children: g.Z.Messages.DONT_SHOW_AGAIN
                                           })
                                       }),
-                                      X &&
-                                          null != y &&
-                                          y !== A.aZ.GOOD &&
+                                      $ &&
+                                          null != K &&
+                                          K !== A.aZ.GOOD &&
                                           (0, n.jsx)(u.Button, {
                                               type: 'submit',
                                               size: u.Button.Sizes.SMALL,
-                                              onClick: T,
+                                              onClick: j,
                                               children: g.Z.Messages.SKIP
                                           })
                                   ]

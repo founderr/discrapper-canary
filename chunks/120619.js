@@ -9,8 +9,8 @@ var i,
 let u = new Map(),
     d = new Set(),
     h = new Set(),
-    p = null;
-class m extends (i = r.ZP.Store) {
+    m = null;
+class p extends (i = r.ZP.Store) {
     getPrice(e) {
         return u.get(e);
     }
@@ -21,11 +21,11 @@ class m extends (i = r.ZP.Store) {
         return h.has(e);
     }
     getEntitlement() {
-        return p;
+        return m;
     }
 }
 (l = 'ConsumablesStore'),
-    (a = 'displayName') in (s = m)
+    (a = 'displayName') in (s = p)
         ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
@@ -33,7 +33,7 @@ class m extends (i = r.ZP.Store) {
               writable: !0
           })
         : (s[a] = l),
-    (t.Z = new m(o.Z, {
+    (t.Z = new p(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
             d.add(e.skuId);
         },
@@ -49,6 +49,6 @@ class m extends (i = r.ZP.Store) {
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
-            if (t.sku_id === c.FX) p = t;
+            if (t.sku_id === c.FX) m = t;
         }
     }));

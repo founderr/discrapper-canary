@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(654030),
     d = n(744061),
     h = n(367907),
-    p = n(728345),
-    m = n(812206),
+    m = n(728345),
+    p = n(812206),
     _ = n(541716),
     f = n(752305),
     E = n(893718),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(300429),
     T = n(838440),
     x = n(981631),
-    v = n(689938),
-    S = n(940083);
+    S = n(689938),
+    v = n(940083);
 function N(e, t, n) {
     return (
         t in e
@@ -51,24 +51,24 @@ class Z extends s.PureComponent {
     }
     fetchApplication() {
         let { activity: e, application: t } = this.props;
-        null != e.application_id && null == t && p.ZP.fetchApplication(e.application_id);
+        null != e.application_id && null == t && m.ZP.fetchApplication(e.application_id);
     }
     renderTitle() {
         let { activity: e } = this.props;
         switch (e.type) {
             case x.IIU.LISTENING:
-                return v.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
+                return S.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
             case x.IIU.PLAYING:
             case x.IIU.STREAMING:
             default:
-                return v.Z.Messages.INVITE_EMBED_GAME_INVITE;
+                return S.Z.Messages.INVITE_EMBED_GAME_INVITE;
         }
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: s } = this.state,
-            { activity: a, analyticsLocations: r, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: f, onClose: g } = this.props,
-            C = p > 0,
-            I = C ? v.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
+            { activity: a, analyticsLocations: r, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: f, onClose: g } = this.props,
+            C = m > 0,
+            I = C ? S.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((m + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -84,21 +84,21 @@ class Z extends s.PureComponent {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: S.subHeader,
-                            children: v.Z.Messages.MESSAGE_PREVIEW
+                            className: v.subHeader,
+                            children: S.Z.Messages.MESSAGE_PREVIEW
                         }),
                         (0, i.jsx)(u.Z, {
                             activityActionType: h,
                             activity: a,
-                            className: S.preview,
-                            application: m,
+                            className: v.preview,
+                            application: p,
                             partyId: null != a.party ? a.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
                         (0, i.jsx)('div', {
-                            className: S.subHeader,
-                            children: v.Z.Messages.ADD_A_COMMENT_OPTIONAL
+                            className: v.subHeader,
+                            children: S.Z.Messages.ADD_A_COMMENT_OPTIONAL
                         }),
                         (0, i.jsx)(o.Popout, {
                             position: 'top',
@@ -119,7 +119,7 @@ class Z extends s.PureComponent {
                             },
                             children: () =>
                                 (0, i.jsx)(E.Z, {
-                                    className: S.textArea,
+                                    className: v.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -143,7 +143,7 @@ class Z extends s.PureComponent {
                                     children: (0, i.jsx)(o.Button, {
                                         disabled: C,
                                         onClick: this.handleShare,
-                                        children: v.Z.Messages.INVITE_EMBED_SEND_INVITE
+                                        children: S.Z.Messages.INVITE_EMBED_SEND_INVITE
                                     })
                                 })
                         }),
@@ -151,7 +151,7 @@ class Z extends s.PureComponent {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             onClick: g,
-                            children: v.Z.Messages.CANCEL
+                            children: S.Z.Messages.CANCEL
                         })
                     ]
                 })
@@ -241,10 +241,10 @@ class Z extends s.PureComponent {
             });
     }
 }
-t.default = r.ZP.connectStores([I.Z, m.Z], (e) => {
+t.default = r.ZP.connectStores([I.Z, p.Z], (e) => {
     let { channel: t, activity: n } = e;
     return {
         cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-        application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
+        application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
     };
 })(Z);

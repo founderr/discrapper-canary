@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(704215),
     d = n(481060),
     h = n(596454),
-    p = n(607070),
-    m = n(110630),
+    m = n(607070),
+    p = n(110630),
     _ = n(706140),
     f = n(543241),
     E = n(407477),
@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(346610),
     T = n(868643),
     x = n(245216),
-    v = n(223606),
-    S = n(188597),
+    S = n(223606),
+    v = n(188597),
     N = n(41776),
     A = n(222677),
     Z = n(995774),
@@ -153,8 +153,8 @@ function eo(e) {
             canPublish: f,
             canReact: g,
             canConfigureJoin: C,
-            canReply: v,
-            canStartThread: S,
+            canReply: S,
+            canStartThread: v,
             canViewThread: A,
             canForward: Z,
             isExpanded: M,
@@ -184,8 +184,8 @@ function eo(e) {
                     }),
                     [t, g]
                 ),
-                v = (0, b.U)(t, n),
-                S = (0, j.NE)(t, n),
+                S = (0, b.U)(t, n),
+                v = (0, j.NE)(t, n),
                 A = (0, j.Ek)(n),
                 Z = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
@@ -204,7 +204,7 @@ function eo(e) {
                     isGuest: M,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, m.Z)(n),
+                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, p.Z)(n),
                 J = t.getGuildId(),
                 ee = null != J && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && w.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: J }),
                 { canForwardMessages: et } = (0, I.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
@@ -212,7 +212,7 @@ function eo(e) {
                 { enabled: ei } = R.Z.useExperiment({ location: 'message_utilities' }),
                 es = (0, c.e7)([L.Z], () => null != L.Z.getSavedMessage(t.id, n.id)),
                 ea = (0, Q.Z)(),
-                el = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
+                el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
@@ -220,8 +220,8 @@ function eo(e) {
                 canEdit: K,
                 canDelete: B,
                 canReport: G,
-                canReply: v,
-                canStartThread: S,
+                canReply: S,
+                canStartThread: v,
                 canViewThread: A,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -253,8 +253,8 @@ function eo(e) {
         }, [G, et]),
         eu = (0, j.$R)(t),
         eh = n.hasFlag($.iLy.CROSSPOSTED),
-        [ep, em] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        e_ = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [em, ep] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        e_ = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [ef, eE] = s.useState(!1),
         eg = s.useCallback(() => {
             eE(!0);
@@ -264,9 +264,9 @@ function eo(e) {
         }, []),
         eI = s.useCallback(
             (e, t) => {
-                em(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
+                ep(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
             },
-            [em]
+            [ep]
         ),
         { canShowReactionsOnMessageHover: eT } = E.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     return (
@@ -342,7 +342,7 @@ function eo(e) {
                                         'pin'
                                     )
                                   : null,
-                              S && Z
+                              v && Z
                                   ? (0, i.jsx)(
                                         K.sF,
                                         {
@@ -353,7 +353,7 @@ function eo(e) {
                                         'thread'
                                     )
                                   : null,
-                              v && h
+                              S && h
                                   ? (0, i.jsx)(
                                         K.sF,
                                         {
@@ -392,7 +392,7 @@ function eo(e) {
                           ]
                       })
                     : null,
-                v && !h
+                S && !h
                     ? (0, i.jsx)(
                           K.sF,
                           {
@@ -428,7 +428,7 @@ function eo(e) {
                           'forward'
                       )
                     : null,
-                S && !Z
+                v && !Z
                     ? (0, i.jsx)(
                           K.sF,
                           {
@@ -439,7 +439,7 @@ function eo(e) {
                           'thread'
                       )
                     : null,
-                !S && A
+                !v && A
                     ? (0, i.jsx)(
                           K.sF,
                           {
@@ -515,8 +515,8 @@ function eo(e) {
 }
 function ec(e) {
     let { channel: t, message: n } = e,
-        s = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
-        a = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
+        s = (0, c.e7)([S.Z], () => null != S.Z.getMessage(n.id), [n.id]),
+        a = null == n.interaction || (null != n.interactionData && (0, v.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !s &&

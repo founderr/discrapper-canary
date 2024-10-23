@@ -86,7 +86,7 @@ function g(e) {
                       'disable-video'
                   )
                 : null,
-        v = t
+        O = t
             ? null
             : (0, l.jsx)(
                   a.MenuCheckboxItem,
@@ -151,7 +151,7 @@ function g(e) {
                   },
                   'self-mute'
               ),
-              v,
+              O,
               T
           ];
 }

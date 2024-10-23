@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(390322),
     d = n(871499),
     h = n(819640),
-    p = n(797258),
-    m = n(446226),
+    m = n(797258),
+    p = n(446226),
     _ = n(937393),
     f = n(43982),
     E = n(721351),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(981631),
     T = n(921944),
     x = n(689938),
-    v = n(798682);
-function S(e) {
+    S = n(798682);
+function v(e) {
     let { onClose: t, channel: n } = e,
         s = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
@@ -39,10 +39,10 @@ function S(e) {
 }
 function N(e) {
     let { channel: t, showLeftDivider: n = !1, ...g } = e,
-        N = (0, m.Z)(),
-        A = (0, a.e7)([p.Z], () => {
+        N = (0, p.Z)(),
+        A = (0, a.e7)([m.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = m.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         Z = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
@@ -62,7 +62,7 @@ function N(e) {
                     o = s === l.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
+                        n ? (0, i.jsx)('div', { className: S.leftDivider }) : null,
                         (0, i.jsx)(r.Popout, {
                             position: y,
                             spacing: o ? 16 : void 0,
@@ -81,7 +81,7 @@ function N(e) {
                                               },
                                               gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(S, {
+                                        : (0, i.jsx)(v, {
                                               onClose: () => {
                                                   n();
                                               },

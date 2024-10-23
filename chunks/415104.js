@@ -29,7 +29,7 @@ function C(e) {
                     properties: (0, l.mH)(r)
                 });
         }, [f, r, t.id]),
-        N = s.useCallback(() => {
+        v = s.useCallback(() => {
             f(!1);
         }, [f]);
     return (0, o.jsx)(d.A, {
@@ -46,7 +46,7 @@ function C(e) {
                 },
                 className: a()(x.container, n),
                 onMouseEnter: T,
-                onMouseLeave: N,
+                onMouseLeave: v,
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return _;
         }
     });
 var a = n(200651),
@@ -13,35 +13,35 @@ var a = n(200651),
     c = n(987562),
     u = n(981631),
     d = n(689938);
-function b(e) {
-    let { onClose: t, transitionState: b } = e,
-        m = (0, o.Z)(c.CE);
+function _(e) {
+    let { onClose: t, transitionState: _ } = e,
+        E = (0, o.Z)(c.CE);
     s.useEffect(() => {
         i.default.track(u.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
     }, []);
-    let f = s.useCallback((e) => {
-        let { rating: t, problem: s } = e;
+    let b = s.useCallback((e) => {
+        let { rating: t } = e;
         if (null != t)
-            null != s &&
-                (0, l.openModalLazy)(async () => {
-                    let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                    return (t) =>
-                        (0, a.jsx)(e, {
-                            body: d.Z.Messages.CALL_FEEDBACK_CONFIRMATION,
-                            ...t
-                        });
-                });
+            (0, l.openModalLazy)(async () => {
+                let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                return (t) =>
+                    (0, a.jsx)(e, {
+                        body: d.Z.Messages.CALL_FEEDBACK_CONFIRMATION,
+                        ...t
+                    });
+            });
     }, []);
     return (0, a.jsx)(r.Z, {
         modalType: 'block_user',
-        header: 'header goes here',
-        body: 'body goes here',
-        problemTitle: 'section header goes here',
-        problems: m,
-        feedbackProblems: [c.F5.OTHER],
-        onSubmit: f,
+        header: d.Z.Messages.BLOCK_USER_FEEDBACK_TITLE,
+        body: d.Z.Messages.BLOCK_USER_FEEDBACK_BODY,
+        problemTitle: d.Z.Messages.BLOCK_USER_FEEDBACK_OPTIONS_HEADER,
+        problems: E,
+        feedbackProblems: [c.F5.SOMETHING_ELSE],
+        onSubmit: b,
         onClose: t,
-        transitionState: b,
-        otherKey: c.F5.OTHER
+        transitionState: _,
+        otherKey: c.F5.SOMETHING_ELSE,
+        hideHelpDeskLink: !0
     });
 }

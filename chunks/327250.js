@@ -14,8 +14,8 @@ var s = n(120356),
     u = n(979264),
     d = n(69882),
     h = n(251794),
-    p = n(386696),
-    m = n(910693),
+    m = n(386696),
+    p = n(910693),
     _ = n(314897),
     f = n(271383),
     E = n(430824),
@@ -24,8 +24,8 @@ var s = n(120356),
     I = n(885110),
     T = n(594174),
     x = n(572004),
-    v = n(5192),
-    S = n(51144),
+    S = n(5192),
+    v = n(51144),
     N = n(981631),
     A = n(308083),
     Z = n(689938),
@@ -58,7 +58,7 @@ function b(e) {
                                     (0, i.jsx)(r.Text, {
                                         variant: 'text-lg/medium',
                                         children: (0, i.jsx)(r.NameWithRole, {
-                                            name: v.ZP.getName(n, null, t),
+                                            name: S.ZP.getName(n, null, t),
                                             color: r.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
@@ -76,7 +76,7 @@ function b(e) {
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: S.ZP.getUserTag(t)
+                                children: v.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -122,16 +122,16 @@ function L(e) {
             () => ({
                 canKickUser: null != u && g.Z.canManageUser(N.Plq.KICK_MEMBERS, t, u),
                 canBanUser: null != u && g.Z.canManageUser(N.Plq.BAN_MEMBERS, t, u),
-                canModerateMembers: null != u && (0, p.F)(u.id, t.id, [T.default, E.Z, g.Z])
+                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [T.default, E.Z, g.Z])
             }),
             [t, u]
         ),
-        v = (0, d.b)(s),
-        { analyticsLocations: S, newestAnalyticsLocation: A } = (0, c.ZP)(),
-        b = (0, m.sE)(a, {
+        S = (0, d.b)(s),
+        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, c.ZP)(),
+        b = (0, p.sE)(a, {
             targetUserId: t.id,
             location: A,
-            locations: S
+            locations: v
         }),
         L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
@@ -219,7 +219,7 @@ function L(e) {
                 disabled: !I,
                 'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    v ? (0, h.q)(s.guildId, s.userId, S) : (0, h.z)(s.guildId, s.userId, S);
+                    S ? (0, h.q)(s.guildId, s.userId, v) : (0, h.z)(s.guildId, s.userId, v);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -231,14 +231,14 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+                        children: S ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 'aria-label': Z.Z.Messages.COPY_ID,
                 onClick: () => {
-                    b(m.jQ.COPY_ID), (0, x.JG)(t.id);
+                    b(p.jQ.COPY_ID), (0, x.JG)(t.id);
                 },
                 disabled: !x.wS,
                 children: [

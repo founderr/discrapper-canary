@@ -1,7 +1,7 @@
 if (
     (n.d(t, {
         $: function () {
-            return p;
+            return m;
         },
         Q: function () {
             return h;
@@ -43,7 +43,7 @@ function h(e) {
         })
     )(e);
 }
-function p(e) {
+function m(e) {
     return (0, s.E)(
         d,
         {

@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(393238),
     d = n(607070),
     h = n(44315),
-    p = n(314897),
-    m = n(111583),
+    m = n(314897),
+    p = n(111583),
     _ = n(889901),
     f = n(64078),
     E = n(351780),
@@ -19,7 +19,7 @@ var i = n(200651),
     I = n(989830),
     T = n(689938),
     x = n(443528);
-let v = s.memo(function (e) {
+let S = s.memo(function (e) {
         let { channelId: t, width: n } = e,
             a = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
             l = (0, o.e7)([g.ZP], () => g.ZP.getMostRecentMessageCombo(t), [t]),
@@ -35,11 +35,11 @@ let v = s.memo(function (e) {
             }, 2000);
             return () => clearTimeout(e);
         }, [l]);
-        let p = null != l ? '100%' : '200%',
-            m = (0, c.useSpring)(
+        let m = null != l ? '100%' : '200%',
+            p = (0, c.useSpring)(
                 {
                     opacity: u ? 1 : 0,
-                    translateY: u ? '0' : p,
+                    translateY: u ? '0' : m,
                     pointerEvents: 'none',
                     width: n,
                     config: a ? r.config.stiff : r.config.slow
@@ -51,7 +51,7 @@ let v = s.memo(function (e) {
                 null != l &&
                 (0, i.jsx)(r.animated.div, {
                     className: x.messageComboScore,
-                    style: m,
+                    style: p,
                     children: (0, i.jsx)(c.Text, {
                         className: x.comboScore,
                         variant: 'text-sm/bold',
@@ -60,7 +60,7 @@ let v = s.memo(function (e) {
                 })
         });
     }),
-    S = s.memo(function (e) {
+    v = s.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: a, square: r, flair: o } = s.useMemo(() => (0, C.yz)(n), [n]),
             u = (0, h.Lq)(a);
@@ -126,8 +126,8 @@ let v = s.memo(function (e) {
     });
 t.Z = s.memo(function (e) {
     let { channelId: t } = e,
-        n = (0, o.e7)([p.default], () => p.default.getId()),
-        a = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [t, n]),
+        n = (0, o.e7)([m.default], () => m.default.getId()),
+        a = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [t, n]),
         l = (0, o.e7)([E.Z], () => E.Z.isEnabled()),
         d = (0, o.e7)([g.ZP], () => g.ZP.isComboing(n, t), [t, n]),
         { ref: h, width: _ = 0 } = (0, u.Z)(),
@@ -168,7 +168,7 @@ t.Z = s.memo(function (e) {
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(v, {
+            (0, i.jsx)(S, {
                 channelId: t,
                 width: _
             }),
@@ -176,7 +176,7 @@ t.Z = s.memo(function (e) {
                 ref: h,
                 className: x.combo,
                 style: A,
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(v, {
                     value: R,
                     multiplier: b
                 })

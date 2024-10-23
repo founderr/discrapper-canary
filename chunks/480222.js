@@ -36,7 +36,7 @@ t.Z = function (e) {
             config: _,
             delay: 200
         }),
-        f = (0, r.useSpring)({
+        C = (0, r.useSpring)({
             from: { opacity: 0 },
             to: { opacity: n ? 1 : 0 },
             config: _,
@@ -67,9 +67,9 @@ t.Z = function (e) {
                     }),
                     (0, i.jsxs)(s.animated.div, {
                         style: {
-                            opacity: f.opacity,
-                            transform: f.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)')),
-                            display: f.opacity.to([0, 1], [0, 40]).to((e) => (e > 0 ? 'flex' : 'none'))
+                            opacity: C.opacity,
+                            transform: C.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)')),
+                            display: C.opacity.to([0, 1], [0, 40]).to((e) => (e > 0 ? 'flex' : 'none'))
                         },
                         className: u.saveToolbar,
                         children: [

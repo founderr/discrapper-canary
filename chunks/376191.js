@@ -21,20 +21,20 @@ var a = n(442837),
     p = n(620924),
     g = n(332712),
     T = n(81471),
-    f = n(689938),
-    C = n(562352);
+    C = n(689938),
+    f = n(562352);
 let S = (e) => {
         let { userId: t } = e,
             n = (0, g.O)(t);
         return null == n || 0 === n.length
             ? (0, i.jsx)(s.Text, {
-                  className: C.mutualGuilds,
+                  className: f.mutualGuilds,
                   variant: 'text-sm/normal',
                   color: 'text-muted',
-                  children: f.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
+                  children: C.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
               })
             : (0, i.jsxs)('div', {
-                  className: C.mutualGuildsContainer,
+                  className: f.mutualGuildsContainer,
                   children: [
                       (0, i.jsx)(E.Z, {
                           guilds: n,
@@ -43,10 +43,10 @@ let S = (e) => {
                           hideOverflowCount: !0
                       }),
                       (0, i.jsx)(s.Text, {
-                          className: C.mutualGuilds,
+                          className: f.mutualGuilds,
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          children: f.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: n.length })
+                          children: C.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: n.length })
                       })
                   ]
               });
@@ -67,28 +67,28 @@ function A(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(N, {
-                className: C.avatar,
+                className: f.avatar,
                 src: (0, _.x)(n, 40, A),
                 avatarDecoration: Z,
                 size: s.AvatarSizes.SIZE_40,
-                'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : f.Z.Messages.UNKNOWN_USER
+                'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.Z.Messages.UNKNOWN_USER
             }),
             (0, i.jsxs)('div', {
-                className: C.userPreview,
+                className: f.userPreview,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: C.userContainerWithPreview,
+                        className: f.userContainerWithPreview,
                         children: [
                             (0, i.jsx)(r.Z, {
                                 nick: g,
                                 user: c,
                                 showAccountIdentifier: !0,
-                                className: C.tagContainer,
-                                usernameClass: C.username,
-                                discriminatorClass: null != m.ZP.getGlobalName(c) ? C.globalName : C.discriminator
+                                className: f.tagContainer,
+                                usernameClass: f.username,
+                                discriminatorClass: null != m.ZP.getGlobalName(c) ? f.globalName : f.discriminator
                             }),
                             (0, i.jsx)(s.Text, {
-                                className: C.timestampWithPreview,
+                                className: f.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
                                 children: v

@@ -28,10 +28,10 @@ function c(e) {
     i.useEffect(() => {
         n && ((d === o.M.NOT_FETCHED || d === o.M.FETCH_FAILED) && (0, r.Yz)(t), (h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)());
     }, [n, t, d, h]);
-    let p = new Set(c.map((e) => e.application.id));
+    let m = new Set(c.map((e) => e.application.id));
     return {
         installedIntegrations: c,
-        availableApplications: u.filter((e) => !p.has(e.id)),
+        availableApplications: u.filter((e) => !m.has(e.id)),
         applicationsShelf: u,
         fetched: d !== o.M.NOT_FETCHED && d !== o.M.FETCHING && h !== o.M.NOT_FETCHED && h !== o.M.FETCHING,
         appsInGDMEnabled: n

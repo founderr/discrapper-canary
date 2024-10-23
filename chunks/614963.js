@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i,
@@ -58,7 +58,7 @@ function h(e, t) {
     }
     return null;
 }
-function p(e, t, n, i) {
+function m(e, t, n, i) {
     if (n) return d(o.Z.Messages.STREAM_SOUNDSHARE_FAILED, 'Soundshare Failed');
     if (null != t) {
         let e = u(t, 5),

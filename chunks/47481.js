@@ -17,14 +17,14 @@ function d(e) {
     let t,
         n,
         d,
-        { channel: h, messages: p, oldestUnreadMessageId: m, treatSpam: _, summaries: f, selectedSummary: E } = e,
+        { channel: h, messages: m, oldestUnreadMessageId: p, treatSpam: _, summaries: f, selectedSummary: E } = e,
         g = [],
         C = !1,
-        I = null != m ? l.default.extractTimestamp(m) : null,
+        I = null != p ? l.default.extractTimestamp(p) : null,
         T = null;
     return (
-        p.forEach((e) => {
-            var s, x, v, S, N, A, Z, M;
+        m.forEach((e) => {
+            var s, x, S, v, N, A, Z, M;
             if (null != f && f.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == f ? void 0 : f.length)), s; e++) {
@@ -66,20 +66,20 @@ function d(e) {
                 let t, n;
                 [L, R] =
                     ((x = g),
-                    (v = e),
-                    (S = P),
+                    (S = e),
+                    (v = P),
                     (n = N = R),
-                    null == N || N.type !== S
+                    null == N || N.type !== v
                         ? ((t = {
-                              type: S,
+                              type: v,
                               content: [],
-                              key: v.id
+                              key: S.id
                           }),
                           x.push(t))
                         : (n = (t = N).content[t.content.length - 1]),
                     [t, n]);
             }
-            if (m === e.id && null != I) {
+            if (p === e.id && null != I) {
                 if (null != R && R.type === u.ys_.DIVIDER) (R.unreadId = e.id), (I = null);
                 else if (null !== L) {
                     (A = L),
@@ -122,9 +122,9 @@ function d(e) {
                 groupId: n
             };
             n === e.id && (d = D);
-            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = p;
+            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = m;
             k && e.id === w && null != U && (D.flashKey = U),
-                p.jumpTargetId === e.id && (D.jumpTarget = !0),
+                m.jumpTargetId === e.id && (D.jumpTarget = !0),
                 null != E &&
                     e.id === E.startId &&
                     E.count > 1 &&

@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(822951),
     d = n(835473),
     h = n(933557),
-    p = n(471445),
-    m = n(454585),
+    m = n(471445),
+    p = n(454585),
     _ = n(63063),
     f = n(984370),
     E = n(981631),
@@ -32,7 +32,7 @@ function I(e, t, n) {
 function T(e) {
     var t;
     let { channel: n, onClose: s, guild: a, transitionState: l } = e,
-        r = (0, p.KS)(n, a),
+        r = (0, m.KS)(n, a),
         c = (0, h.ZP)(n, !1),
         f = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
@@ -64,7 +64,7 @@ function T(e) {
                         selectable: !0,
                         variant: 'text-md/normal',
                         className: C.content,
-                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
+                        children: p.Z.parseTopic(n.topic, !0, { channelId: n.id })
                     }),
                     null != f
                         ? (0, i.jsxs)('div', {
@@ -99,7 +99,7 @@ function T(e) {
 function x(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class v extends s.Component {
+class S extends s.Component {
     render() {
         let { channel: e } = this.props;
         return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
@@ -120,7 +120,7 @@ class v extends s.Component {
                                   'aria-label': g.Z.Messages.OPEN_CHANNEL_TOPIC,
                                   className: C.topicClickTarget
                               }),
-                              m.Z.parseTopic(e.topic, !0, {
+                              p.Z.parseTopic(e.topic, !0, {
                                   channelId: e.id,
                                   allowLinks: !0
                               })
@@ -178,4 +178,4 @@ class v extends s.Component {
             });
     }
 }
-t.Z = v;
+t.Z = S;

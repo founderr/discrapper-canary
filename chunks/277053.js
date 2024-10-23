@@ -15,8 +15,8 @@ var s,
     p = n(981631),
     g = n(71080);
 let T = new Set(),
-    f = p.QZA.CLOSED,
-    C = !1,
+    C = p.QZA.CLOSED,
+    f = !1,
     S = null,
     N = null,
     A = null,
@@ -32,14 +32,14 @@ function O(e) {
 function x() {
     if (((A = m.Z.getChannel()), (v = m.Z.getCategory()), null == A)) return !1;
     let e = A.getGuildId();
-    (N = S = O(A)), null == S[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (C = !1), (f = p.QZA.CLOSED), T.clear();
+    (N = S = O(A)), null == S[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (C = p.QZA.CLOSED), T.clear();
 }
 class b extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, I.Z);
     }
     hasChanges() {
-        return C;
+        return f;
     }
     showNotice() {
         return this.hasChanges();
@@ -57,7 +57,7 @@ class b extends (s = u.ZP.Store) {
         return Z;
     }
     get formState() {
-        return f;
+        return C;
     }
     get isLockable() {
         return a;
@@ -105,8 +105,8 @@ class b extends (s = u.ZP.Store) {
                     [t]: s
                 }),
                 T.add(t),
-                (f = p.QZA.OPEN),
-                (C = !d().isEqual(S, N)),
+                (C = p.QZA.OPEN),
+                (f = !d().isEqual(S, N)),
                 (i = h.o4(A, v));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
@@ -118,7 +118,7 @@ class b extends (s = u.ZP.Store) {
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (f = p.QZA.CLOSED), (S = null), (N = null), (A = null), (v = null), (C = !1), T.clear(), (Z = null), (L = null);
+            (C = p.QZA.CLOSED), (S = null), (N = null), (A = null), (v = null), (f = !1), T.clear(), (Z = null), (L = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -152,11 +152,11 @@ class b extends (s = u.ZP.Store) {
             return n;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-            f = p.QZA.SUBMITTING;
+            C = p.QZA.SUBMITTING;
         },
         CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
             let { silent: t } = e;
-            t ? (f = p.QZA.OPEN) : ((f = p.QZA.CLOSED), x());
+            t ? (C = p.QZA.OPEN) : ((C = p.QZA.CLOSED), x());
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;

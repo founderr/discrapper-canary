@@ -12,7 +12,7 @@ var s = n(481060),
     o = n(868807),
     c = n(689938);
 function u(e) {
-    let { channel: t, buttonSize: n = s.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: p, onMouseLeave: m } = e,
+    let { channel: t, buttonSize: n = s.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: m, onMouseLeave: p } = e,
         { error: _, loaded: f } = (0, o.a)(t),
         E = t.isDM() ? t.getRecipientId() : null,
         g = (0, r.V)(t.id, E);
@@ -28,8 +28,8 @@ function u(e) {
         onClick: (e) => {
             e.stopPropagation(), null == d || d(), null != g && (0, l.WL)(g, C);
         },
-        onMouseEnter: p,
-        onMouseLeave: m,
+        onMouseEnter: m,
+        onMouseLeave: p,
         children: c.Z.Messages.REPORT
     });
 }

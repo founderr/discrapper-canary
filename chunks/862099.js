@@ -27,8 +27,8 @@ var i,
     p = n(565799),
     g = n(501655),
     T = n(192079),
-    f = n(427679),
-    C = n(448206),
+    C = n(427679),
+    f = n(448206),
     S = n(496675),
     N = n(938475),
     A = n(626135),
@@ -383,7 +383,7 @@ function Q(e) {
         a = t.getGuildId(),
         l = r.useMemo(() => n.slice(0, 3), [n]),
         _ = (0, c.e7)([S.Z], () => S.Z.can(w.Plq.CONNECT, t)),
-        E = (0, C.Z)(t.id),
+        E = (0, f.Z)(t.id),
         h = k.Z.Messages.JOIN;
     switch (i) {
         case 1:
@@ -439,7 +439,7 @@ function Q(e) {
             i = (0, M.y)(t.id),
             a = (0, D.k5)(t.id),
             r = (0, D.Vm)(t.id),
-            l = (0, c.e7)([f.Z], () => f.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+            l = (0, c.e7)([C.Z], () => C.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
             { isStageNoticeHidden: o, isEventNoticeHidden: d } = (0, c.cj)(
                 [O.Z],
                 () => ({

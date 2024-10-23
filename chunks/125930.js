@@ -71,7 +71,7 @@ let T = (e) => [
         value: e.notes
     }
 ];
-class f extends a.PureComponent {
+class C extends a.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { systemRequirements: n } = e,
             { selectedOperatingSystem: i } = t,
@@ -182,4 +182,4 @@ class f extends a.PureComponent {
         this.state = { selectedOperatingSystem: r };
     }
 }
-t.Z = f;
+t.Z = C;

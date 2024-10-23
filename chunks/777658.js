@@ -43,7 +43,7 @@ function c(e) {
                             ...e,
                             children: (0, l.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: r.Z.Messages.REMOVE_FRIEND_BODY.format({ name: c })
+                                children: r.Z.Messages.REMOVE_FRIEND_CONFIRMATION.format({ name: c })
                             })
                         })
                     );

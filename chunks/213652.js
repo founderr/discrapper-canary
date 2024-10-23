@@ -13,14 +13,14 @@ var i = n(200651),
     u = n(871499),
     d = n(199902),
     h = n(314897),
-    p = n(358221),
-    m = n(354459),
+    m = n(358221),
+    p = n(354459),
     _ = n(689938),
     f = n(285403);
 function E(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),
-        E = (null == n ? void 0 : n.type) === m.fO.STREAM,
+        n = (0, a.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
+        E = (null == n ? void 0 : n.type) === p.fO.STREAM,
         g = (0, a.e7)([d.Z], () => (E ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
         { ignoreSenderPreference: C } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: I, isAtMaxSavingClipOperations: T } = (0, a.cj)([r.Z], () => ({
@@ -28,8 +28,8 @@ function E(e) {
             isAtMaxSavingClipOperations: r.Z.getIsAtMaxSaveClipOperations()
         })),
         x = r.Z.getSettings().clipsEnabled,
-        v = (null == g ? void 0 : g.ownerId) === h.default.getId(),
-        S = !x || !(v || I) || T || null == n,
+        S = (null == g ? void 0 : g.ownerId) === h.default.getId(),
+        v = !x || !(S || I) || T || null == n,
         N = s.useCallback(
             (e) =>
                 (0, i.jsx)(l.CameraIcon, {
@@ -41,11 +41,11 @@ function E(e) {
     return (0, i.jsx)(u.Z, {
         className: f.actionBarButton,
         onClick: () => {
-            !S && (v ? (0, o.C1)() : (0, o.C1)(n.id));
+            !v && (S ? (0, o.C1)() : (0, o.C1)(n.id));
         },
-        disabled: S,
+        disabled: v,
         iconComponent: N,
-        label: null == g ? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : v || I ? (x ? (T ? void 0 : _.Z.Messages.CLIPS_SAVE) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+        label: null == g ? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : S || I ? (x ? (T ? void 0 : _.Z.Messages.CLIPS_SAVE) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
         grow: !1
     });
 }

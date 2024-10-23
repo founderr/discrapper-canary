@@ -15,7 +15,7 @@ function c(e, t, c) {
         h = () => {
             (0, a.showToast)((0, a.createToast)(o.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
         },
-        p = async () => {
+        m = async () => {
             if (!u && null != e && null != t && null != c) {
                 d(!0);
                 try {
@@ -28,7 +28,7 @@ function c(e, t, c) {
             }
         };
     return {
-        approveRequest: p,
+        approveRequest: m,
         rejectRequest: () => {
             null != e &&
                 null != t &&

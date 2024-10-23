@@ -22,23 +22,23 @@ var i = l(481060),
     C = l(88966),
     O = l(712301),
     A = l(520063),
-    h = l(725119),
-    v = l(931617),
-    T = l(332031),
+    T = l(725119),
+    h = l(931617),
+    v = l(332031),
     x = l(981631),
     b = l(689938);
 n.default = (0, s.Z)(
     (0, r.Z)(
         function (e) {
             let { user: n, guildId: l, channel: r, context: s, onSelect: o, onHeightUpdate: S } = e,
-                p = (0, h.Z)({
+                p = (0, T.Z)({
                     userId: n.id,
                     guildId: l,
                     channelId: r.id
                 }),
                 P = (0, N.Z)(n, l, s),
                 U = (0, C.Z)(n.id, s),
-                j = (0, T.Z)(n.id),
+                j = (0, v.Z)(n.id),
                 L = (0, m.Z)({
                     user: n,
                     context: s
@@ -67,9 +67,9 @@ n.default = (0, s.Z)(
                 y = (0, d.Z)(null, n),
                 V = (0, M.Z)(n),
                 K = (0, I.Z)({ user: n }),
-                B = (0, A.Z)(n, l, r.id),
-                H = (0, v.Z)(n.id, l),
-                q = (0, O.Z)(n, l),
+                H = (0, A.Z)(n, l, r.id),
+                q = (0, h.Z)(n.id, l),
+                B = (0, O.Z)(n, l),
                 w = (0, c.Z)({
                     id: n.id,
                     label: b.Z.Messages.COPY_ID_USER
@@ -100,9 +100,9 @@ n.default = (0, s.Z)(
                                 (0, t.jsxs)(i.MenuGroup, {
                                     children: [F, W, k, V, K]
                                 }),
-                                (0, t.jsx)(i.MenuGroup, { children: B }),
+                                (0, t.jsx)(i.MenuGroup, { children: H }),
                                 (0, t.jsxs)(i.MenuGroup, {
-                                    children: [H, q]
+                                    children: [q, B]
                                 })
                             ]
                         }),

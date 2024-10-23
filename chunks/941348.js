@@ -12,8 +12,8 @@ t.Z = function (e) {
     let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: C, onCtxMenuClosed: g, onCtxMenuSelection: _, quest: f, useReducedMotion: h, collapsedHeight: E } = e,
         S = s.useRef(null),
         T = s.useRef(null),
-        N = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        v = (0, r.Rf)(f);
+        v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        N = (0, r.Rf)(f);
     return (0, o.jsxs)(l.p, {
         expandedContentRef: n,
         collapsedContentRef: S,
@@ -27,7 +27,7 @@ t.Z = function (e) {
                 isExpansionAnimationComplete: x,
                 quest: f,
                 useReducedMotion: h,
-                taskDetails: v
+                taskDetails: N
             }),
             (0, o.jsx)(c.Z, {
                 expansionSpring: p,
@@ -42,14 +42,14 @@ t.Z = function (e) {
                 quest: f,
                 useReducedMotion: h,
                 ref: n,
-                taskDetails: v,
+                taskDetails: N,
                 children: (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)(d.Z, {
                             expansionSpring: p,
                             isExpanded: m
                         }),
-                        !N &&
+                        !v &&
                             (0, o.jsx)(a.Z, {
                                 quest: f,
                                 expansionSpring: p,

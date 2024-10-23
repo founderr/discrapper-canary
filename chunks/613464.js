@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(110924),
     d = n(410030),
     h = n(58540),
-    p = n(100527),
-    m = n(906732),
+    m = n(100527),
+    p = n(906732),
     _ = n(527379),
     f = n(687158),
     E = n(184301),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(594174),
     T = n(189357),
     x = n(718617),
-    v = n(327250),
-    S = n(7340);
+    S = n(327250),
+    v = n(7340);
 function N(e) {
     let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: A, style: Z } = e,
         M = (0, T.ms)(n),
@@ -34,7 +34,7 @@ function N(e) {
         [L, j] = s.useState(null == b || null == R),
         P = (0, u.Z)(R),
         O = s.useRef(null),
-        { analyticsLocations: y } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
+        { analyticsLocations: y } = (0, p.ZP)(m.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, f.ZP)(t, n),
         U = (0, d.ZP)();
     return (s.useEffect(() => {
@@ -72,17 +72,17 @@ function N(e) {
     M)
         ? L || null == b || null == R
             ? (0, i.jsx)('div', {
-                  className: l()(S.sidebarContainer, S.loadingContainer, N),
+                  className: l()(v.sidebarContainer, v.loadingContainer, N),
                   style: Z,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
                       type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
                   })
               })
-            : (0, i.jsx)(m.Gt, {
+            : (0, i.jsx)(p.Gt, {
                   value: y,
                   children: (0, i.jsx)('div', {
-                      className: l()(S.sidebarContainer, N),
+                      className: l()(v.sidebarContainer, N),
                       style: Z,
                       children: (0, i.jsx)(g.Z, {
                           user: b,
@@ -90,11 +90,11 @@ function N(e) {
                           profileType: null,
                           themeOverride: U,
                           forceShowPremium: !0,
-                          className: S.profileThemedContainer,
+                          className: v.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: S.innerContainer,
+                              className: v.innerContainer,
                               children: [
-                                  (0, i.jsx)(v.Z, {
+                                  (0, i.jsx)(S.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: a

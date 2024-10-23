@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(94455);
 function g(e) {
     let { user: t, type: n, status: g, isFocused: T } = e,
-        f = a.useContext(u.AnalyticsContext),
-        { analyticsLocations: C } = (0, o.ZP)(),
+        C = a.useContext(u.AnalyticsContext),
+        { analyticsLocations: f } = (0, o.ZP)(),
         S = (e) => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
@@ -40,8 +40,8 @@ function g(e) {
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: C,
-                analyticsLocation: f.location
+                sourceAnalyticsLocations: f,
+                analyticsLocation: C.location
             }),
         children: (e) => {
             var a;

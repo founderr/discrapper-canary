@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(763520),
     d = n(358221),
     h = n(414910),
-    p = n(266910),
-    m = n(352978),
+    m = n(266910),
+    p = n(352978),
     _ = n(928518),
     f = n(518950),
     E = n(470956),
@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(131951),
     T = n(451478),
     x = n(5192),
-    v = n(44136),
-    S = n(981631),
+    S = n(44136),
+    v = n(981631),
     N = n(65154),
     A = n(689938),
     Z = n(810190);
@@ -55,9 +55,9 @@ function L(e) {
         U = (0, r.e7)([g.default], () => g.default.getId()),
         { user: k, streamId: w, speaking: B } = t,
         H = k.id === U,
-        G = (0, v.ZP)(t),
+        G = (0, S.ZP)(t),
         V = (0, r.e7)([T.Z], () => T.Z.isFocused()),
-        F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
+        F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)),
         W = (0, r.e7)([I.Z], () => null != k.id && I.Z.isLocalVideoDisabled(k.id, (0, h.Z)(t.type)), [k.id, t.type]),
         z = (0, r.e7)([C.ZP], () => C.ZP.isGuestOrLurker(n.guild_id, k.id)),
         Y = x.ZP.getName(n.getGuildId(), n.id, k) + (z ? ' '.concat(A.Z.Messages.GUEST_NAME_SUFFIX) : ''),
@@ -75,7 +75,7 @@ function L(e) {
     }, [G]),
     a && !W && !O && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
         ? (0, i.jsx)(
-              m.Z,
+              p.Z,
               {
                   onResize: j,
                   wrapperClassName: Z.videoWrapper,
@@ -92,7 +92,7 @@ function L(e) {
           )
         : (0, i.jsx)('div', {
               className: l()(Z.content, { [Z.blockedAvatar]: P }),
-              children: (0, i.jsx)(p.Z, {
+              children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,
                   avatarDecoration: J,

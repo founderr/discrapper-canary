@@ -16,8 +16,8 @@ function h(e) {
     let { channel: t } = e,
         n = (0, a.e7)([c.Z], () => c.Z.effectCooldownEndTime),
         h = s.useMemo(() => (null != n ? (n.getTime() - Date.now()) / 1000 : 0), [n]),
-        { seconds: p } = (0, l.Z)(null != n ? n : new Date()),
-        m = p > 0;
+        { seconds: m } = (0, l.Z)(null != n ? n : new Date()),
+        p = m > 0;
     return (0, i.jsx)(d.Z, {
         renderPopout: (e) => {
             let { closePopout: n, onFocus: s } = e;
@@ -33,10 +33,10 @@ function h(e) {
             let { onMouseEnter: t, ...n } = e;
             return (0, i.jsx)(o.Z, {
                 totalCooldownSeconds: h,
-                remainingCooldownSeconds: p,
+                remainingCooldownSeconds: m,
                 onMouseEnter: (e) => {
                     var n, i;
-                    return (n = e), (i = t), void (!m && i(n));
+                    return (n = e), (i = t), void (!p && i(n));
                 },
                 ...n
             });

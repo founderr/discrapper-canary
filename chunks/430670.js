@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(594174),
     d = n(971393),
     h = n(646915),
-    p = n(184301),
-    m = n(432958),
+    m = n(184301),
+    p = n(432958),
     _ = n(792379),
     f = n(177222);
 function E(e) {
@@ -28,7 +28,7 @@ function E(e) {
     let C = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     l()(null != C, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         s.useEffect(() => {
-            (0, p.Z)(g, {
+            (0, m.Z)(g, {
                 withMutualFriends: !g.bot,
                 withMutualGuilds: !0,
                 channelId: t.id
@@ -36,14 +36,14 @@ function E(e) {
         }, [g, t.id]);
     let I = (0, r.e7)([c.Z], () => c.Z.isBlocked(g.id)),
         [T, x] = s.useState(I),
-        v = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
+        S = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
     return (s.useEffect(() => {
         x(I);
     }, [I]),
     a)
         ? null
-        : T && v
-          ? (0, i.jsx)(m.Z, {
+        : T && S
+          ? (0, i.jsx)(p.Z, {
                 user: g,
                 currentUser: C,
                 channel: t,

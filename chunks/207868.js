@@ -8,8 +8,8 @@ var i = n(200651),
     u = n(590293),
     d = n(66999),
     h = n(665906),
-    p = n(496675),
-    m = n(979651),
+    m = n(496675),
+    p = n(979651),
     _ = n(585483),
     f = n(665149),
     E = n(981631),
@@ -17,12 +17,12 @@ var i = n(200651),
 t.Z = s.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
-        a = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)),
-        C = (0, r.e7)([m.Z], () => !l().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
-        I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)),
+        a = (0, r.e7)([p.Z], () => p.Z.isInChannel(t.id)),
+        C = (0, r.e7)([p.Z], () => !l().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
+        I = (0, r.e7)([m.Z], () => m.Z.can(E.Plq.CONNECT, t)),
         { needSubscriptionToAccess: T } = (0, d.Z)(t.id),
         x = (0, h.$R)(t),
-        v = s.useCallback(() => {
+        S = s.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: a,
@@ -32,12 +32,12 @@ t.Z = s.memo(function (e) {
         }, [t, a, T]);
     return (s.useEffect(
         () => (
-            _.S.subscribe(E.CkL.CALL_START, v),
+            _.S.subscribe(E.CkL.CALL_START, S),
             () => {
-                _.S.unsubscribe(E.CkL.CALL_START, v);
+                _.S.unsubscribe(E.CkL.CALL_START, S);
             }
         ),
-        [v]
+        [S]
     ),
     h.tM.useExperiment(
         {
@@ -53,7 +53,7 @@ t.Z = s.memo(function (e) {
         t.isVocalThread())
         ? (0, i.jsx)(f.ZP.Icon, {
               icon: o.PhoneCallIcon,
-              onClick: v,
+              onClick: S,
               tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
           })
         : null;

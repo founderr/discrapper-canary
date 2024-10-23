@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     Eu: function () {
-        return p;
+        return m;
     },
     bt: function () {
         return h;
@@ -67,20 +67,20 @@ function h(e, t) {
         [r, t]
     );
 }
-function p(e, t) {
+function m(e, t) {
     let n = (0, a.e7)([r.default], () => r.default.getId() === t),
         s = (0, a.e7)([c.Z], () => c.Z.getChannelId()),
         l = i.useRef(null),
         [o, d] = i.useState(!1),
-        [h, p] = i.useState(!1),
-        m = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
+        [h, m] = i.useState(!1),
+        p = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
         _ = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
     return (
         i.useEffect(() => {
-            m && p(!0);
-        }, [m]),
+            p && m(!0);
+        }, [p]),
         i.useEffect(() => {
-            s !== e && p(!1);
+            s !== e && m(!1);
         }, [e, s]),
         i.useEffect(
             () => (

@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     cF: function () {
-        return p;
+        return m;
     }
 }),
     n(47120),
@@ -21,8 +21,8 @@ var i = n(200651),
     u = n(27457),
     d = n(354459),
     h = n(192698);
-let p = 112,
-    m = (16 / 9) * p + 8,
+let m = 112,
+    p = (16 / 9) * m + 8,
     _ = 10 * o.Z.Millis.SECOND;
 function f(e) {
     var t;
@@ -73,9 +73,9 @@ function E(e, t) {
                 u = s.findIndex(f),
                 h = null;
             -1 !== u && ((h = s[u]), s.splice(u, 1));
-            let p = null != h ? e - m - 8 : e,
-                E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
-                g = Math.min((p - 8) / E - 8, m),
+            let m = null != h ? e - p - 8 : e,
+                E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
+                g = Math.min((m - 8) / E - 8, p),
                 C = Math.max(0, E - o.length),
                 I = o.slice(0, E),
                 T = s.slice(0, C),
@@ -93,10 +93,10 @@ function E(e, t) {
                     x[t] = n;
                 }
             }
-            let v = x.filter(c.lm),
-                S = (0, a.keyBy)((0, a.range)(v.length), (e) => v[e].id);
-            r.current = S;
-            let N = [...I, ...v];
+            let S = x.filter(c.lm),
+                v = (0, a.keyBy)((0, a.range)(S.length), (e) => S[e].id);
+            r.current = v;
+            let N = [...I, ...S];
             return (
                 null != h && N.push(h),
                 {
@@ -111,7 +111,7 @@ function E(e, t) {
     };
 }
 function g(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: s, onDoubleClick: a, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: p = !1 } = e,
+    let { participants: t, participantTileWidth: n, selectedParticipantId: s, onDoubleClick: a, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
         _ = null != d;
     return (0, i.jsx)('div', {
         className: h.root,
@@ -132,9 +132,9 @@ function g(e) {
                         onClick: r,
                         onDoubleClick: a,
                         onContextMenu: l,
-                        width: t ? m : n,
+                        width: t ? p : n,
                         inCall: c,
-                        paused: p,
+                        paused: m,
                         inPopout: _
                     })
                 },

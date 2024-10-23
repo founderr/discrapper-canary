@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(192379),
@@ -13,11 +13,11 @@ var i = n(192379),
     u = n(289393),
     d = n(934826),
     h = n(981631);
-function p(e) {
+function m(e) {
     var t;
-    let { guildId: n, groupListingId: p, location: m, relevantSubscriptionListingIds: _ } = e,
+    let { guildId: n, groupListingId: m, location: p, relevantSubscriptionListingIds: _ } = e,
         f = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
-        { activeSubscription: E } = (0, d.Z)(p),
+        { activeSubscription: E } = (0, d.Z)(m),
         g = null != E,
         C = (0, s.Wu)(
             [u.Z],
@@ -32,17 +32,17 @@ function p(e) {
         T = i.useRef(!1);
     i.useEffect(() => {
         f &&
-            null != p &&
+            null != m &&
             null != C &&
             !T.current &&
             ((T.current = !0),
             o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
-                role_subscription_group_listing_id: p,
+                role_subscription_group_listing_id: m,
                 role_subscription_listing_ids: C,
                 is_premium_member: g,
                 location_stack: I,
-                location: m,
+                location: p,
                 ...(0, a.hH)(n)
             }));
-    }, [n, p, f, m, C, g, I]);
+    }, [n, m, f, p, C, g, I]);
 }

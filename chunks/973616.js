@@ -106,7 +106,7 @@ class _ extends i.Z {
             flags: null !== (v = e.flags) && void 0 !== v ? v : this.flags,
             maxParticipants: null !== (C = e.maxParticipants) && void 0 !== C ? C : this.maxParticipants,
             tags: null !== (L = e.tags) && void 0 !== L ? L : this.tags,
-            embeddedActivityConfig: null !== (D = e.embeddedActivityConfig) && void 0 !== D ? D : { ...this.embeddedActivityConfig },
+            embeddedActivityConfig: null !== (D = e.embeddedActivityConfig) && void 0 !== D ? D : null != this.embeddedActivityConfig ? { ...this.embeddedActivityConfig } : void 0,
             type: null !== (y = e.type) && void 0 !== y ? y : this.type,
             team: null !== (b = e.team) && void 0 !== b ? b : this.team,
             roleConnectionsVerificationUrl: null !== (M = e.roleConnectionsVerificationUrl) && void 0 !== M ? M : this.roleConnectionsVerificationUrl,

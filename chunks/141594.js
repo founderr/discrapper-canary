@@ -14,10 +14,10 @@ t.Z = () => {
     var e, t, n, h, m, I, p;
     let g = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         T = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-        f = (null == T ? void 0 : T.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        C = i.useMemo(() => ((0, d.Fc)(g) && null != T && !f ? [T.dismissibleContent] : []), [g, T, f]),
-        [S, N] = (0, o.US)(C, void 0, !0),
-        [A, v] = (0, o.XR)(f && (null == T ? void 0 : T.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == T ? void 0 : T.version) && void 0 !== e ? e : 0, void 0, !0),
+        C = (null == T ? void 0 : T.dismissibleContent) === l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
+        f = i.useMemo(() => ((0, d.Fc)(g) && null != T && !C ? [T.dismissibleContent] : []), [g, T, C]),
+        [S, N] = (0, o.US)(f, void 0, !0),
+        [A, v] = (0, o.XR)(C && (null == T ? void 0 : T.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == T ? void 0 : T.version) && void 0 !== e ? e : 0, void 0, !0),
         Z = null;
     if ((null != S || null != A) && null != T && T.type === s.Z.COACHTIP) {
         Z = {
@@ -40,7 +40,7 @@ t.Z = () => {
     return {
         collectiblesShopTabNewBadgeDisplayOptions: Z,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = f ? v : N;
+            let e = C ? v : N;
             null != Z && e(E.L.AUTO);
         }
     };

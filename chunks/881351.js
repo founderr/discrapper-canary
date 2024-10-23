@@ -15,23 +15,23 @@ var s = t(481060),
     _ = t(389052),
     f = t(24311),
     g = t(710631),
-    A = t(88966),
-    I = t(991307),
-    N = t(725119),
+    I = t(88966),
+    N = t(991307),
+    A = t(725119),
     C = t(700994),
-    m = t(332031),
-    O = t(981631),
+    O = t(332031),
+    m = t(981631),
     T = t(689938);
 n.default = (0, o.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: u, onSelect: O } = e,
-                U = (0, N.Z)({
+            let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: u, onSelect: m } = e,
+                U = (0, A.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: a
                 }),
-                S = (0, A.Z)(n.id),
+                S = (0, I.Z)(n.id),
                 v = (0, f.Z)({ user: n }),
                 x = (0, M.Z)({
                     user: n,
@@ -39,9 +39,9 @@ n.default = (0, o.Z)(
                     channelId: a
                 }),
                 b = (0, E.Z)({ user: n }),
-                D = (0, m.Z)(n.id),
+                D = (0, O.Z)(n.id),
                 L = (0, C.Z)(n.id),
-                h = (0, I.Z)(n.id, u),
+                h = (0, N.Z)(n.id, u),
                 R = (0, g.Z)({ user: n }),
                 j = (0, d.Z)(null, n),
                 p = (0, Z.Z)(n),
@@ -56,7 +56,7 @@ n.default = (0, o.Z)(
                 navId: 'user-context',
                 onClose: i.Zy,
                 'aria-label': T.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: O,
+                onSelect: m,
                 children: [
                     !F &&
                         (0, l.jsxs)(l.Fragment, {
@@ -76,7 +76,7 @@ n.default = (0, o.Z)(
                 ]
             });
         },
-        { object: O.qAy.CONTEXT_MENU }
+        { object: m.qAy.CONTEXT_MENU }
     ),
     [u.Z.CONTEXT_MENU, u.Z.USER_GENERIC_MENU]
 );

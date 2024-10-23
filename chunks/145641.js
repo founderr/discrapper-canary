@@ -47,7 +47,7 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        f = (0, s.ZP)({
+        C = (0, s.ZP)({
             id: 'people-list',
             isEnabled: m,
             scrollToStart: p,
@@ -55,7 +55,7 @@ t.Z = function (e) {
             setFocus: T
         });
     return (0, i.jsx)(r.bG, {
-        navigator: f,
+        navigator: C,
         children: (0, i.jsx)(r.SJ, {
             children: (e) => {
                 let { ref: n, ...a } = e;

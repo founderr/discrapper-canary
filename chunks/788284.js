@@ -61,7 +61,7 @@ function _(e) {
         var e, t, n, o;
         C ? T && (null === (o = _.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = _.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
     }, [T, C]);
-    let N = s.useCallback(() => {
+    let v = s.useCallback(() => {
         h(!0);
     }, []);
     return null == E || S
@@ -75,7 +75,7 @@ function _(e) {
                   d.LottieAnimation,
                   {
                       ref: _,
-                      onComplete: N,
+                      onComplete: v,
                       importData: () => E,
                       shouldAnimate: !f && T,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),

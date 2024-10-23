@@ -15,8 +15,8 @@ var s = n(120356),
     u = n(657305),
     d = n(835473),
     h = n(12498),
-    p = n(933557),
-    m = n(471445),
+    m = n(933557),
+    p = n(471445),
     _ = n(925329),
     f = n(554747),
     E = n(854698),
@@ -25,8 +25,8 @@ var s = n(120356),
     I = n(984370),
     T = n(910611),
     x = n(454585),
-    v = n(134483),
-    S = n(210975),
+    S = n(134483),
+    v = n(210975),
     N = n(809244),
     A = n(618158),
     Z = n(358221),
@@ -147,8 +147,8 @@ function G(e) {
             }),
             [t.id]
         ),
-        E = (0, p.ZP)(t),
-        g = (0, m.KS)(t),
+        E = (0, m.ZP)(t),
+        g = (0, p.KS)(t),
         [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
         A = D.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);
@@ -197,7 +197,7 @@ function G(e) {
             { modalKey: j.VOICE_CHANNEL_STATUS_MODAL_KEY }
         );
     }
-    let V = (0, S.m$)({
+    let V = (0, v.m$)({
         channelId: t.id,
         location: 'ChannelCallHeader'
     });
@@ -259,7 +259,7 @@ function G(e) {
                         ]
                     })
             }),
-            (0, i.jsx)(v.Z, { channelId: t.id })
+            (0, i.jsx)(S.Z, { channelId: t.id })
         ]
     });
 }

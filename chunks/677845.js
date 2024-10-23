@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(317381),
     d = n(374065),
     h = n(213609),
-    p = n(358221),
-    m = n(381586),
+    m = n(358221),
+    p = n(381586),
     _ = n(159300),
     f = n(800329),
     E = n(470956),
@@ -24,15 +24,15 @@ var i = n(200651),
     I = n(434488),
     T = n(27457),
     x = n(251564),
-    v = n(695492),
-    S = n(981631),
+    S = n(695492),
+    v = n(981631),
     N = n(301439);
 function A(e) {
     let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
-        P = (0, c.bp)() === S.IlC.POPOUT,
+        P = (0, c.bp)() === v.IlC.POPOUT,
         O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, x.d)(),
-        D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]),
+        D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
         U = (0, E.bt)(M.id, t),
         k = s.useCallback(() => {
             (0, l.j)(() => {
@@ -50,7 +50,7 @@ function A(e) {
         B = (null == O ? void 0 : O.afkChannelId) === M.id,
         H = M.userLimit <= 0 || M.userLimit > 1,
         G = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(M.id).length <= 0),
-        V = (0, m.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        V = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         F = (0, d.KF)(M.id) !== d.jy.CAN_LAUNCH,
         W = null != y && y === M.id,
         z = U.map(
@@ -104,7 +104,7 @@ function A(e) {
                             })
                         )
                       : z.push((e) =>
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(S.Z, {
                                 width: e,
                                 channel: M,
                                 guild: O,

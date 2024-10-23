@@ -9,8 +9,8 @@ var i,
     u = n(642047),
     d = n(189786),
     h = n(5192),
-    p = n(592125),
-    m = n(19780),
+    m = n(592125),
+    p = n(19780),
     _ = n(594174),
     f = n(979651),
     E = n(938475),
@@ -19,7 +19,7 @@ var i,
 let I = new u.Z(),
     T = new u.Z(),
     x = new Set();
-function v(e, t, n) {
+function S(e, t, n) {
     let i = new d.Z({
             userId: e.id,
             channelId: n
@@ -42,7 +42,7 @@ function v(e, t, n) {
     };
     T.set(e.id, a);
 }
-function S(e) {
+function v(e) {
     let t = I.delete(e),
         n = T.delete(e),
         i = x.delete(e);
@@ -50,9 +50,9 @@ function S(e) {
 }
 function N() {
     var e;
-    let t = m.Z.getChannelId();
+    let t = p.Z.getChannelId();
     if (null == t) return !1;
-    let n = null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId(),
+    let n = null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId(),
         i = !1;
     return (
         x.forEach((e) => {
@@ -61,7 +61,7 @@ function N() {
                 return;
             }
             let s = _.default.getUser(e);
-            null != s && ((i = !0), x.delete(e), v(s, n, t));
+            null != s && ((i = !0), x.delete(e), S(s, n, t));
         }),
         i
     );
@@ -71,7 +71,7 @@ function A() {
 }
 class Z extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.default, p.Z, m.Z), this.syncWith([_.default], N);
+        this.waitFor(f.Z, _.default, m.Z, p.Z), this.syncWith([_.default], N);
     }
     get desyncedVoiceStatesCount() {
         return I.size();
@@ -107,12 +107,12 @@ class Z extends (i = r.ZP.Store) {
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e,
-                n = m.Z.getChannelId();
+                n = p.Z.getChannelId();
             return (
                 null != n &&
                 t.reduce((e, t) => {
                     let { userId: i, channelId: s } = t;
-                    return (s === n && !!S(i)) || e;
+                    return (s === n && !!v(i)) || e;
                 }, !1)
             );
         },
@@ -123,12 +123,12 @@ class Z extends (i = r.ZP.Store) {
                 t.reduce((e, t) => {
                     if (null != f.Z.getVoiceStateForChannel(i, t)) return e;
                     let s = _.default.getUser(t);
-                    return null == s ? (x.add(t), e) : (v(s, n, i), !0);
+                    return null == s ? (x.add(t), e) : (S(s, n, i), !0);
                 }, !1)
             );
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, context: n } = e;
-            return n === o.Yn.DEFAULT && S(t);
+            return n === o.Yn.DEFAULT && v(t);
         }
     }));

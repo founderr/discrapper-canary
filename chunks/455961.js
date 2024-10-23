@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(46973),
     d = n(481060),
     h = n(846027),
-    p = n(607070),
-    m = n(361291),
+    m = n(607070),
+    p = n(361291),
     _ = n(131951),
     f = n(626135),
     E = n(120522),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(746599),
     T = n(1163),
     x = n(738672),
-    v = n(981631),
-    S = n(37113),
+    S = n(981631),
+    v = n(37113),
     N = n(689938),
     A = n(351065);
 function Z(e) {
@@ -44,13 +44,13 @@ function Z(e) {
         })
     });
 }
-let M = S.LY.RESOLUTION_1440,
-    b = S.ws.FPS_60;
+let M = v.LY.RESOLUTION_1440,
+    b = v.ws.FPS_60;
 function R(e) {
     let { channel: t } = e,
-        n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
+        n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         [a, l] = s.useState(!1),
-        { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
+        { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
         g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
         T = s.useCallback(() => {
             l(!0),
@@ -59,7 +59,7 @@ function R(e) {
                         if (e) {
                             if (
                                 ((0, I.J1)(!(0, C.mc)(M, b)),
-                                f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                f.default.track(S.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -155,7 +155,7 @@ function j(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(S.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY

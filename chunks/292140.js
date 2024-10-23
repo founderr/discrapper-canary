@@ -21,8 +21,8 @@ function I(e) {
         p = (0, c.Z)(t),
         g = (0, _.Z)(t),
         T = (0, u.Z)(t),
-        f = (0, d.Z)(t),
-        C = (0, l.Z)(t),
+        C = (0, d.Z)(t),
+        f = (0, l.Z)(t),
         S = (0, o.Z)(t);
     return (
         a.useEffect(() => {
@@ -47,8 +47,8 @@ function I(e) {
                 (0, i.jsxs)(s.MenuGroup, {
                     children: [g, T]
                 }),
-                (0, i.jsx)(s.MenuGroup, { children: f }),
                 (0, i.jsx)(s.MenuGroup, { children: C }),
+                (0, i.jsx)(s.MenuGroup, { children: f }),
                 S
             ]
         })

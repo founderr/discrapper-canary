@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(496675),
     d = n(709054),
     h = n(826581),
-    p = n(246364),
-    m = n(360328),
+    m = n(246364),
+    p = n(360328),
     _ = n(981631),
     f = n(689938),
     E = n(905071);
@@ -26,7 +26,7 @@ function g(e) {
             joinRequest: I,
             isModmin: T,
             guildId: x,
-            maxMembers: v
+            maxMembers: S
         } = (0, s.cj)([h.Z, c.Z, u.Z], () => {
             let e = h.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -37,10 +37,10 @@ function g(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        S = (0, s.e7)([o.Z], () => (null != x ? o.Z.getMemberCount(x) : 0)),
-        N = null != v && (null != S ? S : 0) >= v,
-        { approveRequest: A, rejectRequest: Z, submitting: M } = (0, m.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
-    return null != I && I.applicationStatus === p.wB.SUBMITTED && T
+        v = (0, s.e7)([o.Z], () => (null != x ? o.Z.getMemberCount(x) : 0)),
+        N = null != S && (null != v ? v : 0) >= S,
+        { approveRequest: A, rejectRequest: Z, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
+    return null != I && I.applicationStatus === m.wB.SUBMITTED && T
         ? (0, i.jsxs)('div', {
               className: E.buttons,
               children: [
@@ -62,7 +62,7 @@ function g(e) {
                       color: a.Button.Colors.RED,
                       onClick: Z,
                       size: a.ButtonSizes.SMALL,
-                      disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
+                      disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
                       children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                   }),
                   n &&

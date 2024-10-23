@@ -14,8 +14,8 @@ var i,
     u = n(481060),
     d = n(542094),
     h = n(182906),
-    p = n(556505),
-    m = n(513202),
+    m = n(556505),
+    p = n(513202),
     _ = n(981631),
     f = n(689938),
     E = n(967960);
@@ -29,8 +29,8 @@ function I(e) {
     let { channel: n, activityItem: i, onClick: s, aspectRatio: r = 0, animatedDivClass: I, commandOrigin: T } = e,
         {
             onActivityItemSelected: x,
-            imageBackground: v,
-            activityAction: S,
+            imageBackground: S,
+            activityAction: v,
             labelType: N
         } = (0, d.ZP)({
             channel: n,
@@ -38,7 +38,7 @@ function I(e) {
             guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
             locationObject: {},
             onActivityItemSelected: s,
-            embeddedActivitiesManager: m.Z,
+            embeddedActivitiesManager: p.Z,
             assetNames: g,
             commandOrigin: T
         }),
@@ -55,7 +55,7 @@ function I(e) {
                     className: E.overlayBadge,
                     children: (0, a.jsx)('div', {
                         className: E.badgeContainer,
-                        children: (0, a.jsx)(p.Z, {
+                        children: (0, a.jsx)(m.Z, {
                             name: i.application.name,
                             labelType: N
                         })
@@ -64,7 +64,7 @@ function I(e) {
             [i.application.name, N]
         ),
         L = l.useMemo(() => {
-            switch (S) {
+            switch (v) {
                 case d.JS.JOIN:
                     return (0, a.jsx)('div', {
                         className: E.activityAction,
@@ -93,7 +93,7 @@ function I(e) {
                 default:
                     return (0, a.jsx)(a.Fragment, {});
             }
-        }, [S]);
+        }, [v]);
     return (0, a.jsx)(u.Button, {
         onClick: x,
         color: 'transparent',
@@ -124,7 +124,7 @@ function I(e) {
                             children: (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(h.Z, {
-                                        imageBackground: v,
+                                        imageBackground: S,
                                         applicationName: i.application.name,
                                         imageClassName: E.activitySuggestionImage,
                                         imageNotFoundClassName: E.brokenImageIconWrapper

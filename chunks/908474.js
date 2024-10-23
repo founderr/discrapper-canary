@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
@@ -13,12 +13,12 @@ var i = n(200651),
     u = n(893966),
     d = n(776767),
     h = n(689938),
-    p = n(194898);
-function m(e) {
+    m = n(194898);
+function p(e) {
     let { member: t } = e,
         n = t.userId,
-        m = t.guildId,
-        _ = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [n, m]),
+        p = t.guildId,
+        _ = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [n, p]),
         f = (null != _ ? _ : t).unusualDMActivityUntil,
         E = s.useCallback((e) => {
             if (null == e) return null;
@@ -31,7 +31,7 @@ function m(e) {
     return null != f || C
         ? (0, i.jsx)(l.FormItem, {
               title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-              titleClassName: p.infoTitle,
+              titleClassName: m.infoTitle,
               children: (0, i.jsxs)(d.WM, {
                   children: [
                       null != f &&

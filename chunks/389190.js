@@ -17,8 +17,8 @@ var s = n(442837),
     u = n(785717),
     d = n(697927),
     h = n(171368),
-    p = n(981631),
-    m = n(689938),
+    m = n(981631),
+    p = n(689938),
     _ = n(519294);
 let f = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_40);
 function E(e) {
@@ -66,7 +66,7 @@ function g(e) {
                     ...r,
                     userId: e,
                     sourceAnalyticsLocations: l,
-                    analyticsLocation: { section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                    analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
     return (0, i.jsx)(a.ScrollerThin, {
@@ -85,7 +85,7 @@ function g(e) {
                             (0, i.jsx)('div', { className: _.emptyIconFriends }),
                             (0, i.jsx)('div', {
                                 className: _.emptyText,
-                                children: m.Z.Messages.NO_MUTUAL_FRIENDS
+                                children: p.Z.Messages.NO_MUTUAL_FRIENDS
                             })
                         ]
                     })

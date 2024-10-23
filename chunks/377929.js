@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(109764),
     d = n(323597),
     h = n(438536),
-    p = n(251746),
-    m = n(193987),
+    m = n(251746),
+    p = n(193987),
     _ = n(933793),
     f = n(13736),
     E = n(732393),
@@ -24,15 +24,15 @@ var i = n(200651),
     I = n(665149),
     T = n(695346),
     x = n(979651),
-    v = n(488131),
-    S = n(689938);
+    S = n(488131),
+    v = n(689938);
 function N(e) {
     let { channel: t } = e,
         [n, a] = s.useState(!1);
     function l() {
         a((e) => !e);
     }
-    let r = S.Z.Messages.MORE;
+    let r = v.Z.Messages.MORE;
     return (0, i.jsx)(o.Popout, {
         shouldShow: n,
         animation: o.Popout.Animation.NONE,
@@ -62,25 +62,25 @@ function N(e) {
 function A(e) {
     let { channel: t, closePopout: n, onSelect: s } = e,
         a = (0, c.Z)(t),
-        I = (0, m.Z)(t),
+        I = (0, p.Z)(t),
         N = (0, E.Z)(t.id),
         A = (0, f.Z)(t),
         Z = (0, C.Z)({
             id: t.id,
-            label: S.Z.Messages.COPY_ID_THREAD
+            label: v.Z.Messages.COPY_ID_THREAD
         }),
         M = (0, u.Z)(t),
         b = (0, d.Z)(t),
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
-        j = (0, p.Z)(t),
+        j = (0, m.Z)(t),
         P = (0, g.Z)(t),
         O = T.vF.useSetting(),
         y = (0, r.e7)([x.Z], () => !l().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': S.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
         onSelect: s,
         children: [
             (0, i.jsxs)(o.MenuGroup, {
@@ -94,9 +94,9 @@ function A(e) {
                     O && !y
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
-                              label: S.Z.Messages.OPEN_IN_SPLIT_VIEW,
+                              label: v.Z.Messages.OPEN_IN_SPLIT_VIEW,
                               action: function () {
-                                  (0, v.ok)(t);
+                                  (0, S.ok)(t);
                               }
                           })
                         : null

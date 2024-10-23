@@ -45,30 +45,30 @@ function u(e) {
             },
             [n.keyboardModeEnabled]
         ),
-        p = i.useCallback(() => {
+        m = i.useCallback(() => {
             !n.hasMoreAfter && l.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
-        m = (0, s.ZP)({
+        p = (0, s.ZP)({
             id: r.W,
             preserveFocusPosition: !1,
             setFocus: h,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
             scrollToStart: d,
             scrollToEnd: u,
-            onNavigateNextAtEnd: p
+            onNavigateNextAtEnd: m
         }),
         _ = i.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
-                t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
+                t ? p.focusLastVisibleItem() : p.focusFirstVisibleItem();
             },
-            [m]
+            [p]
         );
     return (
         (0, a.yp)({
             event: c.CkL.FOCUS_MESSAGES,
             handler: _
         }),
-        m
+        p
     );
 }

@@ -14,8 +14,8 @@ var i,
     u = n.n(c),
     d = n(442837),
     h = n(481060),
-    p = n(239091),
-    m = n(99690),
+    m = n(239091),
+    p = n(99690),
     _ = n(58540),
     f = n(665149),
     E = n(484459),
@@ -24,8 +24,8 @@ var i,
     I = n(496675),
     T = n(158776),
     x = n(471253),
-    v = n(431328),
-    S = n(62526),
+    S = n(431328),
+    v = n(62526),
     N = n(590415),
     A = n(614173),
     Z = n(618896),
@@ -62,7 +62,7 @@ let L = l.memo(function (e) {
         }, []);
         let f = t.getGuildId();
         u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: v } = (0, d.cj)([T.Z], () => ({
+        let { isMobile: I, status: S } = (0, d.cj)([T.Z], () => ({
                 isMobile: T.Z.isMobileOnline(i.user.id),
                 status: T.Z.getStatus(i.user.id, f)
             })),
@@ -77,7 +77,7 @@ let L = l.memo(function (e) {
             (0, x.DT)(t, i.user.id, !0);
         }
         let P = (e) => {
-            (0, p.jW)(e, async () => {
+            (0, m.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, a.jsx)(e, {
@@ -114,12 +114,12 @@ let L = l.memo(function (e) {
                             onContextMenu: P,
                             ...e,
                             children: [
-                                (0, a.jsx)(m.Z, {
+                                (0, a.jsx)(p.Z, {
                                     size: h.AvatarSizes.SIZE_40,
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: I,
-                                    status: v
+                                    status: S
                                 }),
                                 (0, a.jsxs)('div', {
                                     className: R.participantTextContainer,
@@ -132,7 +132,7 @@ let L = l.memo(function (e) {
                                         (0, a.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, S.$)(i)
+                                            children: (0, v.$)(i)
                                         })
                                     ]
                                 })
@@ -206,7 +206,7 @@ let L = l.memo(function (e) {
     });
 function y(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        s = (0, v.Fd)(t.id),
+        s = (0, S.Fd)(t.id),
         l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, s.length)];
     return (0, a.jsxs)('div', {
         className: o()(R.container, { [R.chatOpen]: i }),

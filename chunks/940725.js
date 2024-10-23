@@ -30,11 +30,11 @@ function h(e, t) {
                     if (null == a.clan) return !0;
                     let d = null != u.joinedAt ? new Date(u.joinedAt) : null,
                         h = null != d && Date.now() - d.getTime() > 259200000,
-                        { identityGuildId: p, identityEnabled: m } = a.clan;
-                    return null != p && null == m ? e === p : null == p && null == m ? h : (p !== e || !1 !== m) && null != p && !1 === m && h;
+                        { identityGuildId: m, identityEnabled: p } = a.clan;
+                    return null != m && null == p ? e === m : null == m && null == p ? h : (m !== e || !1 !== p) && null != m && !1 === p && h;
                 })(e, [o.default, r.Z, l.ZP]),
             [e]
         ),
-        p = (0, a.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
-    return n && h && !p;
+        m = (0, a.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
+    return n && h && !m;
 }

@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(703656),
     g = n(769654),
     T = n(601964),
-    f = n(430824),
-    C = n(843445),
+    C = n(430824),
+    f = n(843445),
     S = n(981631),
     N = n(689938),
     A = n(144902);
@@ -83,7 +83,7 @@ class Z extends a.PureComponent {
                     : a && t && (u = N.Z.Messages.JOIN_GUILD)
                 : ((u = N.Z.Messages._LOGIN), (_ = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: r()(l, o === C.b.SMALL ? A.inviteSmall : A.inviteLarge),
+                className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
                 children: [
                     (0, i.jsx)(E.Z, { children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
                     (0, i.jsxs)('div', {
@@ -148,11 +148,11 @@ class Z extends a.PureComponent {
     }
 }
 t.Z = (0, _.Z)(
-    o.ZP.connectStores([f.Z, I.Z], (e) => {
+    o.ZP.connectStores([C.Z, I.Z], (e) => {
         let { guild: t } = e,
             n = I.Z.isLurking(t.id);
         return {
-            isInGuild: null != f.Z.getGuild(t.id) && !n,
+            isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
     })(Z)

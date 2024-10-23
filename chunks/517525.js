@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(692547),
     d = n(477690),
     h = n(481060),
-    p = n(2052),
-    m = n(906732),
+    m = n(2052),
+    p = n(906732),
     _ = n(194082),
     f = n(484459),
     E = n(594174),
@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(557457),
     T = n(475674),
     x = n(981631),
-    v = n(474936),
-    S = n(689938),
+    S = n(474936),
+    v = n(689938),
     N = n(659102);
 let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     Z = {
@@ -46,7 +46,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             a,
             { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: A, setDidTrackUpsellViewed: Z, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
-            { analyticsLocations: L } = (0, m.ZP)(),
+            { analyticsLocations: L } = (0, p.ZP)(),
             j = null != (0, T.Z)(r);
         try {
             t = (0, I.nG)(R);
@@ -59,9 +59,9 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             a = !1;
         }
         let P = t || a,
-            { location: O } = (0, p.O)(),
+            { location: O } = (0, m.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-            D = o && !C.ZP.isPremium(y, v.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+            D = o && !C.ZP.isPremium(y, S.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
             U = s.useCallback(() => {
                 D &&
                     P &&
@@ -79,7 +79,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 !A &&
                     P &&
                     (g.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: v.cd.STREAM_QUALITY_INDICATOR,
+                        type: S.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
                         location_stack: L
@@ -90,7 +90,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         )
             return null;
         let k = (0, i.jsx)(h.Tooltip, {
-            text: j ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+            text: j ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
             position: 'bottom',
             color: h.Tooltip.Colors.GREY,
             children: (e) =>
@@ -123,10 +123,10 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     };
 t.Z = (e) => {
     let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: c, premiumIndicator: u } = e,
-        [d, p] = s.useState(!1),
-        m = (0, I.Wc)(t),
+        [d, m] = s.useState(!1),
+        p = (0, I.Wc)(t),
         { reducedMotion: E } = s.useContext(h.AccessibilityPreferencesContext),
-        g = n && null != m;
+        g = n && null != p;
     s.useEffect(() => {
         (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
@@ -166,7 +166,7 @@ t.Z = (e) => {
                                   shape: h.BadgeShapes.ROUND_LEFT,
                                   isUpsellEnabled: a,
                                   didTrackUpsellViewed: d,
-                                  setDidTrackUpsellViewed: p,
+                                  setDidTrackUpsellViewed: m,
                                   premiumIndicator: u
                               })
                           })

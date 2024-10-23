@@ -14,7 +14,7 @@ var s = n(442837),
 function u(e) {
     let { platform: t, color: n, look: u, onAction: d, Icon: h } = e;
     if ((0, s.e7)([l.Z], () => l.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let p =
+    let m =
         null != h
             ? (0, i.jsx)(h, { className: c.platformIcon })
             : (0, i.jsx)('img', {
@@ -37,7 +37,7 @@ function u(e) {
             fullWidth: !0,
             children: (0, i.jsxs)('div', {
                 className: c.flex,
-                children: [p, o.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: t.name })]
+                children: [m, o.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: t.name })]
             })
         },
         'connect-platform-activity'

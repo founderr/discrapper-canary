@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(933557),
     d = n(605436),
     h = n(736052),
-    p = n(189156),
-    m = n(878857),
+    m = n(189156),
+    p = n(878857),
     _ = n(621853),
     f = n(484459),
     E = n(131704),
@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(496675),
     T = n(594174),
     x = n(51144),
-    v = n(7782),
-    S = n(967128),
+    S = n(7782),
+    v = n(967128),
     N = n(320781),
     A = n(269203),
     Z = n(86863),
@@ -63,7 +63,7 @@ function H(e) {
             canReadMessageHistory: I.Z.can(y.Plq.READ_MESSAGE_HISTORY, d)
         })),
         O = (0, a.e7)([_.Z], () => (C === y.d4z.DM ? _.Z.getMutualGuilds(d.getRecipientId()) : null), [d, C]),
-        { systemDMRedesignEnabled: H } = m.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = d.isSystemDM()) && void 0 !== t && t }),
+        { systemDMRedesignEnabled: H } = p.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = d.isSystemDM()) && void 0 !== t && t }),
         G = (0, c.Z)(null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : y.lds),
         { authorizedAppToken: V, authorizedAppsFetchState: F } = (0, a.cj)([g.Z], () => {
             var e;
@@ -108,7 +108,7 @@ function H(e) {
                           })
                       ]
                   }))
-                : (e = (0, i.jsx)(v.Z, {
+                : (e = (0, i.jsx)(S.Z, {
                       userId: d.getRecipientId(),
                       channel: d,
                       showingBanner: h
@@ -124,7 +124,7 @@ function H(e) {
                             children: R
                         }),
                     U.Z.Messages.BEGINNING_DM.format({ username: E }),
-                    (null == N ? void 0 : N.isProvisional) && (0, i.jsx)(p.Z, { look: 'channel_header' }),
+                    (null == N ? void 0 : N.isProvisional) && (0, i.jsx)(m.Z, { look: 'channel_header' }),
                     e
                 ]
             })
@@ -132,9 +132,9 @@ function H(e) {
     }
     if (d.isMultiUserDM())
         return d.isManaged()
-            ? (0, i.jsxs)(S.ZP, {
+            ? (0, i.jsxs)(v.ZP, {
                   channelId: d.id,
-                  children: [(0, i.jsx)(S.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
+                  children: [(0, i.jsx)(v.Ot, { children: U.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: E }) }), (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
               })
             : d.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(A.Z, { channel: d })
@@ -147,8 +147,8 @@ function H(e) {
               channel: d,
               canManageRoles: j
           })
-        : (0, i.jsx)(S.ZP, {
+        : (0, i.jsx)(v.ZP, {
               channelId: d.id,
-              children: (0, i.jsx)(S.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
+              children: (0, i.jsx)(v.jz, { children: U.Z.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({ channelName: E }) })
           });
 }

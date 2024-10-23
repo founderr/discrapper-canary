@@ -9,8 +9,8 @@ var i,
     u = n(568611),
     d = n(731965),
     h = n(442837),
-    p = n(481060),
-    m = n(490173),
+    m = n(481060),
+    p = n(490173),
     _ = n(40851),
     f = n(607070),
     E = n(899663),
@@ -19,8 +19,8 @@ var i,
     I = n(100527),
     T = n(906732),
     x = n(168551),
-    v = n(597952),
-    S = n(628123),
+    S = n(597952),
+    v = n(628123),
     N = n(686546),
     A = n(80006),
     Z = n(151851),
@@ -68,9 +68,9 @@ class F extends (i = a.Component) {
         e.removeEventListener('blur', this.handleBlur),
             t.removeEventListener('contextmenu', this.handleContextMenu, !0),
             (0, d.j)(() =>
-                p.useModalsStore.setState((e) => ({
+                m.useModalsStore.setState((e) => ({
                     ...e,
-                    [p.POPOUT_MODAL_CONTEXT]: []
+                    [m.POPOUT_MODAL_CONTEXT]: []
                 }))
             ),
             e.removeEventListener('beforeunload', this.warnPopoutClose);
@@ -125,18 +125,18 @@ class F extends (i = a.Component) {
             children: (0, s.jsx)(
                 L.Z,
                 {
-                    children: (0, s.jsx)(p.ThemeProvider, {
+                    children: (0, s.jsx)(m.ThemeProvider, {
                         theme: e,
                         children: (e) =>
-                            (0, s.jsx)(p.RedesignIconContextProvider, {
+                            (0, s.jsx)(m.RedesignIconContextProvider, {
                                 children: (0, s.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: r()(e, (0, v.Z)(), x, g, I),
-                                    children: (0, s.jsx)(p.FocusRingScope, {
+                                    className: r()(e, (0, S.Z)(), x, g, I),
+                                    children: (0, s.jsx)(m.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, s.jsx)(E.Z, {
-                                            children: (0, s.jsxs)(S.Z, {
+                                            children: (0, s.jsxs)(v.Z, {
                                                 children: [
                                                     (0, s.jsx)(N.Co, {}),
                                                     (0, s.jsx)(_.Wu, {
@@ -161,8 +161,8 @@ class F extends (i = a.Component) {
                                                                         })
                                                                     ]
                                                                 }),
-                                                                (0, s.jsx)(p.Modals, {}),
-                                                                (0, s.jsx)(m.Z, {}),
+                                                                (0, s.jsx)(m.Modals, {}),
+                                                                (0, s.jsx)(p.Z, {}),
                                                                 (0, s.jsx)(R.Un, {})
                                                             ]
                                                         })
@@ -214,14 +214,14 @@ let W = a.forwardRef(function (e, t) {
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),
-        m = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        p = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, M.Z)(n, !1);
     let _ = (0, b.Z)(n, i),
         { analyticsLocations: E } = (0, T.ZP)(I.Z.POPOUT_WINDOW),
-        { clientThemesClassName: C, clientThemesCSS: v } = (0, x.ZP)();
+        { clientThemesClassName: C, clientThemesCSS: S } = (0, x.ZP)();
     return null == n
         ? null
-        : (0, s.jsx)(p.DnDProvider, {
+        : (0, s.jsx)(m.DnDProvider, {
               children: (0, s.jsx)(T.Gt, {
                   value: E,
                   children: (0, s.jsx)(F, {
@@ -239,12 +239,12 @@ let W = a.forwardRef(function (e, t) {
                       keyboardModeEnabled: u.keyboardModeEnabled,
                       mouseModeEnabled: _,
                       reducedMotionEnabled: u.useReducedMotion,
-                      connectedToEmbeddedActivity: m,
+                      connectedToEmbeddedActivity: p,
                       fontScaleClass: u.fontScaleClass,
                       saturation: u.saturation,
                       alwaysShowLinkDecorations: u.alwaysShowLinkDecorations,
                       clientThemesClassName: C,
-                      clientThemesCSS: v,
+                      clientThemesCSS: S,
                       appWrapperClassName: d
                   })
               })

@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(481060),
     d = n(846027),
     h = n(410575),
-    p = n(812206),
-    m = n(835473),
+    m = n(812206),
+    p = n(835473),
     _ = n(414910),
     f = n(415635),
     E = n(925329),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(833858),
     T = n(223135),
     x = n(37091),
-    v = n(6572),
-    S = n(352978),
+    S = n(6572),
+    v = n(352978),
     N = n(535400),
     A = n(512384),
     Z = n(6242),
@@ -65,7 +65,7 @@ var i = n(200651),
     er = n(810190);
 let eo = s.memo((e) => {
     var t, n, a, c, E;
-    let { participant: I, onDoubleClick: T, onContextMenu: z, onClick: Y, onMouseDown: ee, onKeyDown: eo, className: ec, style: ed, channel: eh, width: ep, inPopout: em, onVideoResize: e_, inCall: ef = !1, selected: eE = !1, noBorder: eg = !1, noVideoRender: eC = !1, focused: eI = !1, blocked: eT = !1, fit: ex = S.L.CONTAIN, paused: ev = !1, pulseSpeakingIndicator: eS = !1 } = e,
+    let { participant: I, onDoubleClick: T, onContextMenu: z, onClick: Y, onMouseDown: ee, onKeyDown: eo, className: ec, style: ed, channel: eh, width: em, inPopout: ep, onVideoResize: e_, inCall: ef = !1, selected: eE = !1, noBorder: eg = !1, noVideoRender: eC = !1, focused: eI = !1, blocked: eT = !1, fit: ex = v.L.CONTAIN, paused: eS = !1, pulseSpeakingIndicator: ev = !1 } = e,
         eN = s.useContext(D.h9),
         [eA, eZ] = s.useState(!1),
         eM = y.Sb.useSetting(),
@@ -74,7 +74,7 @@ let eo = s.memo((e) => {
         ej = (0, o.e7)([w.default], () => w.default.getId()),
         eP = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
         eO = I.type === ei.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id,
-        [ey] = (0, m.Z)(I.type === ei.fO.ACTIVITY ? [I.id] : []),
+        [ey] = (0, p.Z)(I.type === ei.fO.ACTIVITY ? [I.id] : []),
         eD = (0, o.e7)([x.Z], () => x.Z.getEnabled()),
         eU = (0, o.e7)([G.Z], () => null != eO && G.Z.isLocalVideoDisabled(eO, (0, _.Z)(I.type)), [eO, I.type]),
         ek = (0, o.e7)([G.Z], () => (null != eO ? G.Z.getVideoToggleState(eO, (0, _.Z)(I.type)) : en.ZUi.NONE), [eO, I.type]),
@@ -143,7 +143,7 @@ let eo = s.memo((e) => {
             [e$, eO, e1]
         ),
         e4 = (0, o.e7)([H.Z], () => ((null == e3 ? void 0 : e3.application_id) != null ? H.Z.getDetectableGame(e3.application_id) : null)),
-        e7 = (0, o.e7)([p.Z], () => (null != e4 && (null == e3 ? void 0 : e3.application_id) != null ? p.Z.getApplication(null == e3 ? void 0 : e3.application_id) : void 0)),
+        e7 = (0, o.e7)([m.Z], () => (null != e4 && (null == e3 ? void 0 : e3.application_id) != null ? m.Z.getApplication(null == e3 ? void 0 : e3.application_id) : void 0)),
         e6 = (0, O.wV)({
             userId: eO,
             channelId: eh.id,
@@ -192,17 +192,17 @@ let eo = s.memo((e) => {
             (ta = (0, i.jsx)(Q.Z, {
                 participant: I,
                 selected: eE,
-                width: ep,
+                width: em,
                 fit: ex,
                 onVideoResize: e_,
-                paused: ev,
-                inPopout: em,
+                paused: eS,
+                inPopout: ep,
                 focused: eI
             })),
                 (tl = (0, i.jsx)(Q._, {
                     participant: I,
                     selected: eE,
-                    width: ep,
+                    width: em,
                     focused: eI,
                     idle: ts,
                     premiumIndicator: eK || eX.enabled
@@ -216,12 +216,12 @@ let eo = s.memo((e) => {
                 participant: I,
                 fit: ex,
                 onVideoResize: e_,
-                paused: ev,
+                paused: eS,
                 selected: eE,
-                width: ep,
+                width: em,
                 blocked: eT,
                 noVideoRender: eC || ew,
-                pulseSpeakingIndicator: eS
+                pulseSpeakingIndicator: ev
             })),
                 (tl = (0, i.jsx)($.T, {
                     userId: I.user.id,
@@ -235,7 +235,7 @@ let eo = s.memo((e) => {
                 participant: I,
                 selected: eE,
                 channel: eh,
-                width: ep
+                width: em
             })),
                 (tr = el.Z.Messages.CALL_TILE_A11Y_LABEL_ACTIVITY.format({ activityName: null == ey ? void 0 : ey.name }));
             break;
@@ -243,11 +243,11 @@ let eo = s.memo((e) => {
             ta = (0, i.jsx)(Q.Z, {
                 participant: I,
                 selected: eE,
-                width: ep,
+                width: em,
                 fit: ex,
                 onVideoResize: e_,
-                paused: ev,
-                inPopout: em,
+                paused: eS,
+                inPopout: ep,
                 focused: eI
             });
     }
@@ -335,7 +335,7 @@ let eo = s.memo((e) => {
                                 I.type !== ei.fO.ACTIVITY
                                     ? (0, i.jsx)(eu, {
                                           focused: eI,
-                                          width: ep,
+                                          width: em,
                                           inCall: ef,
                                           participantType: I.type,
                                           hasVideo: null != eG && eG,
@@ -357,7 +357,7 @@ let eo = s.memo((e) => {
                                       })
                                     : null,
                                 I.type === ei.fO.USER && eD
-                                    ? (0, i.jsx)(v.Z, {
+                                    ? (0, i.jsx)(S.Z, {
                                           userId: I.id,
                                           channelId: eh.id
                                       })
@@ -416,17 +416,17 @@ function ec(e) {
 }
 eo.displayName = 'CallTile';
 let eu = s.memo((e) => {
-    let { muted: t, deafened: n, localMuted: s, serverMuted: a, serverDeafened: r, idle: d, title: h, width: p, hasVideo: m, inCall: f, localVideoDisabled: g, videoToggleState: C, focused: x, blocked: v, hideAudioIcon: S, participantType: N, participantUserId: A, onContextMenu: Z, onToggleMute: M, platform: b, hangStatusActivity: R, application: L, speaking: j, secureFramesVerified: P } = e,
+    let { muted: t, deafened: n, localMuted: s, serverMuted: a, serverDeafened: r, idle: d, title: h, width: m, hasVideo: p, inCall: f, localVideoDisabled: g, videoToggleState: C, focused: x, blocked: S, hideAudioIcon: v, participantType: N, participantUserId: A, onContextMenu: Z, onToggleMute: M, platform: b, hangStatusActivity: R, application: L, speaking: j, secureFramesVerified: P } = e,
         O = null,
         y = null,
         D = null,
         U = null,
-        k = (0, ee.K)(p),
-        w = (0, ee.N)(p),
+        k = (0, ee.K)(m),
+        w = (0, ee.N)(m),
         B = (0, o.e7)([G.Z], () => null != A && G.Z.isLocalVideoAutoDisabled(A, (0, _.Z)(N)), [A, N]),
         H = (0, u.useRedesignIconContext)().enabled;
-    if (!S) {
-        if (s && N === ei.fO.STREAM && m && !x)
+    if (!v) {
+        if (s && N === ei.fO.STREAM && p && !x)
             O = (0, i.jsx)(u.Tooltip, {
                 text: el.Z.Messages.UNMUTE,
                 children: (e) => {
@@ -444,7 +444,7 @@ let eu = s.memo((e) => {
                     });
                 }
             });
-        else if (s || N !== ei.fO.STREAM || !m || k || x) {
+        else if (s || N !== ei.fO.STREAM || !p || k || x) {
             if (H) {
                 let e;
                 r ? (e = u.HeadphonesDenyIcon) : a ? (e = u.MicrophoneDenyIcon) : n ? (e = u.HeadphonesSlashIcon) : s ? (e = u.MicrophoneDenyIcon) : t && (e = u.MicrophoneSlashIcon), (O = null != e ? (0, i.jsx)(e, { color: c.Z.colors.WHITE }) : null);
@@ -472,9 +472,9 @@ let eu = s.memo((e) => {
             });
     }
     return (
-        (f && G.Z.supports(ea.AN.VIDEO)) || !m
+        (f && G.Z.supports(ea.AN.VIDEO)) || !p
             ? f &&
-              m &&
+              p &&
               g &&
               !B &&
               (y = (0, i.jsx)(u.VideoSlashIcon, {
@@ -488,7 +488,7 @@ let eu = s.memo((e) => {
               })),
         N === ei.fO.STREAM &&
             !x &&
-            m &&
+            p &&
             (D = (0, i.jsx)(u.Tooltip, {
                 text: el.Z.Messages.OPTIONS,
                 children: (e) => {
@@ -512,7 +512,7 @@ let eu = s.memo((e) => {
                   children: (e) =>
                       (0, i.jsx)('div', {
                           ...e,
-                          className: l()(er.hangStatusContainer, { [er.hangStatusSmall]: p < 500 }),
+                          className: l()(er.hangStatusContainer, { [er.hangStatusSmall]: m < 500 }),
                           children: (0, i.jsx)(T.Z, {
                               hangStatusActivity: R,
                               className: er.hangStatusIcon,
@@ -527,7 +527,7 @@ let eu = s.memo((e) => {
                   children: (e) =>
                       (0, i.jsx)('div', {
                           ...e,
-                          className: l()(er.hangStatusContainer, { [er.hangStatusSmall]: p < 500 }),
+                          className: l()(er.hangStatusContainer, { [er.hangStatusSmall]: m < 500 }),
                           children: (0, i.jsx)(E.Z, {
                               className: er.hangStatusIcon,
                               game: L,
@@ -539,7 +539,7 @@ let eu = s.memo((e) => {
             className: er.overlayContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: l()(er.overlayTop, { [er.small]: p < 195 }),
+                    className: l()(er.overlayTop, { [er.small]: m < 195 }),
                     children:
                         B || C === en.ZUi.AUTO_PROBING
                             ? d
@@ -570,7 +570,7 @@ let eu = s.memo((e) => {
                             : null
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(er.overlayBottom, { [er.small]: p < 195 }),
+                    className: l()(er.overlayBottom, { [er.small]: m < 195 }),
                     children: [
                         w
                             ? (0, i.jsx)('div', {})
@@ -579,7 +579,7 @@ let eu = s.memo((e) => {
                                   color: 'none',
                                   variant: 'text-md/normal',
                                   children: [
-                                      v
+                                      S
                                           ? (0, i.jsx)('div', {
                                                 className: er.blocked,
                                                 children: (0, i.jsx)(u.DenyIcon, {
@@ -638,5 +638,5 @@ let eu = s.memo((e) => {
     );
 });
 eu.displayName = 'CallTileOverlay';
-let ed = S.L;
+let ed = v.L;
 t.ZP = eo;

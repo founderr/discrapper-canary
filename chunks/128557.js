@@ -18,8 +18,8 @@ var i = n(200651),
     u = n(704215),
     d = n(481060),
     h = n(699682),
-    p = n(367907),
-    m = n(812206),
+    m = n(367907),
+    p = n(812206),
     _ = n(644914),
     f = n(434404),
     E = n(330010),
@@ -28,8 +28,8 @@ var i = n(200651),
     I = n(594174),
     T = n(259580),
     x = n(585483),
-    v = n(63063),
-    S = n(358085),
+    S = n(63063),
+    v = n(358085),
     N = n(709054),
     A = n(967128),
     Z = n(981631),
@@ -38,12 +38,12 @@ var i = n(200651),
     R = n(776187);
 function L(e) {
     let { className: t, iconUrl: n, icon: a, header: r, completed: o, onClick: c } = e,
-        [u, p] = s.useState(!1),
-        m = (0, h.Z)(o);
+        [u, m] = s.useState(!1),
+        p = (0, h.Z)(o);
     return (
         s.useEffect(() => {
-            null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
-        }, [o, m]),
+            null != p && o !== p && (m(!0), setTimeout(() => m(!1), 1000));
+        }, [o, p]),
         (0, i.jsxs)(d.Clickable, {
             className: l()(t, R.card, { [R.completed]: o }),
             onClick: c,
@@ -93,7 +93,7 @@ function j(e) {
             handleAddApplication: V
         } = (function (e) {
             let t = s.useCallback(() => {
-                    p.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.INVITE
                     }),
@@ -110,7 +110,7 @@ function j(e) {
                             });
                 }, [e]),
                 a = s.useCallback(() => {
-                    p.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.SEND_MESSAGE
                     }),
@@ -120,14 +120,14 @@ function j(e) {
                         });
                 }, []),
                 l = s.useCallback(() => {
-                    p.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.PERSONALIZE_SERVER
                     }),
                         null != e && f.Z.open(e.id, Z.pNK.OVERVIEW, { section: Z.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
                 r = s.useCallback(() => {
-                    p.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.DOWNLOAD
                     }),
@@ -147,7 +147,7 @@ function j(e) {
                 handleDownload: r,
                 handleAddApplication: s.useCallback(() => {
                     null != e &&
-                        (p.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: M.Ft.CHANNEL_WELCOME,
                             action: M.j7.ADD_APP
                         }),
@@ -225,7 +225,7 @@ function j(e) {
                 }
             );
         })(F),
-        Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == a ? void 0 : a.id)).length > 0;
+        Y = (0, c.e7)([p.Z], () => p.Z.getGuildApplicationIds(null == a ? void 0 : a.id)).length > 0;
     if (
         (s.useEffect(() => {
             var e;
@@ -287,7 +287,7 @@ function j(e) {
                     'message'
                 )
             ),
-        (0, S.isWeb)() &&
+        (0, v.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -322,7 +322,7 @@ function j(e) {
         ));
     let q = T ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(v.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let X = ''.concat(S.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(A.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {

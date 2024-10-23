@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(58540),
     d = n(850827),
     h = n(951844),
-    p = n(258609),
-    m = n(199902),
+    m = n(258609),
+    p = n(199902),
     _ = n(314897),
     f = n(430824),
     E = n(496675),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(626135),
     T = n(382182),
     x = n(687516),
-    v = n(718805),
-    S = n(871118),
+    S = n(718805),
+    v = n(871118),
     N = n(981631),
     A = n(689938),
     Z = n(278552);
@@ -47,7 +47,7 @@ class M extends s.PureComponent {
             onClick: t,
             className: Z.previewContainer,
             children: [
-                (0, i.jsx)(S.Z, {
+                (0, i.jsx)(v.Z, {
                     className: Z.previewImage,
                     stream: e
                 }),
@@ -58,7 +58,7 @@ class M extends s.PureComponent {
                               variant: 'text-sm/normal',
                               color: 'none',
                               className: Z.white,
-                              children: (0, v.Z)(e, n, s, l)
+                              children: (0, S.Z)(e, n, s, l)
                           })
                       })
                     : null
@@ -116,15 +116,15 @@ class M extends s.PureComponent {
 }
 function b(e) {
     let { user: t, channel: n, ...a } = e,
-        [l, o] = (0, r.Wu)([C.Z, f.Z, E.Z, p.Z], () => (0, T.p9)(n, C.Z, f.Z, E.Z, p.Z)),
-        c = (0, r.e7)([m.Z], () => m.Z.getStreamForUser(t.id, n.getGuildId())),
-        d = (0, r.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(c)),
+        [l, o] = (0, r.Wu)([C.Z, f.Z, E.Z, m.Z], () => (0, T.p9)(n, C.Z, f.Z, E.Z, m.Z)),
+        c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
+        d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
         h = (0, r.e7)([_.default], () => _.default.getId()),
         I = (0, x.Cf)(c),
-        v = (0, r.e7)([g.Z], () => (0, x.Um)(c, g.Z)),
-        S = s.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+        S = (0, r.e7)([g.Z], () => (0, x.Um)(c, g.Z)),
+        v = s.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
-        (0, u.$)(S),
+        (0, u.$)(v),
         (0, i.jsx)(M, {
             ...a,
             canWatch: l,
@@ -134,7 +134,7 @@ function b(e) {
             stream: c,
             activeStream: d,
             currentUserId: h,
-            activity: v
+            activity: S
         })
     );
 }

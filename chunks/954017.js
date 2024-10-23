@@ -17,8 +17,8 @@ var i = n(512722),
     u = n(690725),
     d = n(90712),
     h = n(592125),
-    p = n(81063),
-    m = n(176354),
+    m = n(81063),
+    p = n(176354),
     _ = n(201133),
     f = n(55000),
     E = n(314091),
@@ -26,7 +26,7 @@ var i = n(512722),
     C = n(689938);
 let I = async (e) => {
         let { reaction: t, altText: n, ...i } = e,
-            s = await v(i);
+            s = await S(i);
         (0, _.a)({
             file: s,
             altText: n,
@@ -36,7 +36,7 @@ let I = async (e) => {
     },
     T = async (e) => {
         let { reply: t, altText: n, ...i } = e,
-            l = await v(i),
+            l = await S(i),
             r = await a.Z.openPrivateChannel(i.user.id, !1, !1),
             o = h.Z.getChannel(r);
         s()(null != o, 'Channel cannot be null'),
@@ -54,12 +54,12 @@ let I = async (e) => {
             r = 'dark' === l,
             o = (0, d.Z)(i),
             { assets: c, application_id: u } = i,
-            h = (0, p.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
+            h = (0, m.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
             _ = null == s ? void 0 : s.getIconURL(64),
             f = null != o ? (r ? o.icon.darkPNG : o.icon.lightPNG) : i.type === g.IIU.PLAYING ? (r ? n(414575) : n(807612)) : null,
             C =
                 i.type === g.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
-                    ? (0, m.qc)({
+                    ? (0, p.qc)({
                           id: i.emoji.id,
                           name: i.emoji.name,
                           animated: !1
@@ -72,7 +72,7 @@ let I = async (e) => {
             ...(null != C && { HangStatus: C })
         };
     },
-    v = async (e) => {
+    S = async (e) => {
         let { user: t, activity: n, application: i, stream: s } = e,
             d = await a.Z.openPrivateChannel(t.id, !1, !1),
             h = x({
@@ -108,7 +108,7 @@ let I = async (e) => {
             }
         });
     },
-    S = (e, t) => {
+    v = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
                 f.Cv,
@@ -175,7 +175,7 @@ let I = async (e) => {
                         },
                         8
                     )
-                  : S(e, r);
+                  : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -319,7 +319,7 @@ let I = async (e) => {
                       },
                       8
                   )
-                : S(e, r);
+                : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -486,7 +486,7 @@ let I = async (e) => {
                         },
                         8
                     )
-                  : S(e, r);
+                  : v(e, r);
         let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({

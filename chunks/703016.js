@@ -16,8 +16,8 @@ var i = n(913527),
     p = n(430824),
     g = n(131951),
     T = n(292959),
-    f = n(699516),
-    C = n(944486),
+    C = n(699516),
+    f = n(944486),
     S = n(9156),
     N = n(594174),
     A = n(51144),
@@ -47,7 +47,7 @@ function y(e, t, n, i) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = m.Z.getChannel(t);
-                return null == n ? e : (0, o.F6)(n, N.default, f.Z);
+                return null == n ? e : (0, o.F6)(n, N.default, C.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(O.Z.Messages.EMOJI, ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -110,13 +110,13 @@ function H(e) {
     if (c || g.Z.isSelfDeaf()) return !1;
     let d = m.Z.getChannel(l);
     if (null == d) return !1;
-    let u = C.Z.getChannelId(),
+    let u = f.Z.getChannelId(),
         p = h.ZP.getCurrentSidebarChannelId(u),
         N = l === u || l === p,
         v = _.OW.getSetting() && o.tts && N,
         Z = T.Z.getTTSType(),
         O = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== E.default.getId() && (Z === R.PrB.ALL_CHANNELS || (Z === R.PrB.SELECTED_CHANNEL && N));
-    if ((v || O) && !f.Z.isBlockedForMessage(o)) {
+    if ((v || O) && !C.Z.isBlockedForMessage(o)) {
         if (x.indexOf(o.id) >= 0) return !1;
         x.unshift(o.id) > 10 && x.pop();
         let e = d.getGuildId();

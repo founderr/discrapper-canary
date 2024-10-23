@@ -8,8 +8,8 @@ var i = n(200651),
     u = n(333984),
     d = n(486622),
     h = n(922409),
-    p = n(86203),
-    m = n(6025),
+    m = n(86203),
+    p = n(6025),
     _ = n(621853),
     f = n(171368),
     E = n(433355),
@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(768581),
     T = n(525541),
     x = n(981631),
-    v = n(377668),
-    S = n(228168),
+    S = n(377668),
+    v = n(228168),
     N = n(689938),
     A = n(995593);
 let Z = (e) => {
@@ -86,7 +86,7 @@ let Z = (e) => {
                               (0, f.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: S.oh.MUTUAL_GUILDS,
+                                  section: v.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: x.jXE.DIRECT_MESSAGE }
                               });
                           },
@@ -211,16 +211,16 @@ let Z = (e) => {
                 (0, r.showToast)((0, r.createToast)(N.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
             }, []),
             l = s.useCallback(() => {
-                m.Z.closeChannelSidebar(E.uZ);
+                p.Z.closeChannelSidebar(E.uZ);
             }, []),
             o = s.useCallback(() => {
-                m.Z.closeChannelSidebar(E.uZ);
+                p.Z.closeChannelSidebar(E.uZ);
             }, []),
             {
                 acceptMessageRequest: c,
                 rejectMessageRequest: u,
                 isAcceptLoading: h,
-                isRejectLoading: p,
+                isRejectLoading: m,
                 isOptimisticAccepted: _,
                 isOptimisticRejected: f
             } = (0, d.m)({
@@ -229,7 +229,7 @@ let Z = (e) => {
                 onAcceptSuccess: o,
                 onRejectSuccess: l
             }),
-            g = h || p || _ || f;
+            g = h || m || _ || f;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.Button, {
@@ -246,7 +246,7 @@ let Z = (e) => {
                     onClick: () => u(t),
                     color: r.Button.Colors.PRIMARY,
                     disabled: g,
-                    submitting: p,
+                    submitting: m,
                     children: N.Z.Messages.MESSAGE_REQUEST_IGNORE
                 })
             ]
@@ -258,7 +258,7 @@ t.Z = (e) => {
         o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]),
         c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]),
         d = n.id === r;
-    return t === v.fL
+    return t === S.fL
         ? null
         : o || d
           ? (0, i.jsxs)('div', {
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                 channelId: n.id,
                                 otherUserId: t
                             }),
-                            (0, i.jsx)(p.Z, { channel: n })
+                            (0, i.jsx)(m.Z, { channel: n })
                         ]
                     })
                 ]

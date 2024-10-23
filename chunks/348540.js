@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(719311),
     d = n(249978),
     h = n(172351),
-    p = n(648052),
-    m = n(280885),
+    m = n(648052),
+    p = n(280885),
     _ = n(483424),
     f = n(681837),
     E = n(91433),
@@ -24,8 +24,8 @@ var s = n(442837),
     I = n(502762),
     T = n(530),
     x = n(827313),
-    v = n(101638),
-    S = n(228168),
+    S = n(101638),
+    v = n(228168),
     N = n(981631),
     A = n(689938),
     Z = n(299336);
@@ -44,13 +44,13 @@ function M(e) {
         children: [
             (0, i.jsx)(T.Z, {
                 user: t,
-                profileType: S.y0.PANEL,
+                profileType: v.y0.PANEL,
                 nickname: o.ZP.getName(null, b.id, t),
                 pronouns: null == M ? void 0 : M.pronouns,
                 onOpenProfile: L,
-                tags: (0, i.jsx)(p.Z, {
+                tags: (0, i.jsx)(m.Z, {
                     displayProfile: M,
-                    profileType: S.y0.PANEL
+                    profileType: v.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -88,7 +88,7 @@ function M(e) {
                         (0, i.jsx)(C.Z, {
                             heading: A.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
-                            children: (0, i.jsx)(m.Z, {
+                            children: (0, i.jsx)(p.Z, {
                                 userBio: M.bio,
                                 animateOnHover: !0,
                                 isHovering: R,
@@ -116,7 +116,7 @@ function M(e) {
                             currentUser: n,
                             className: Z.activity
                         }),
-                        (0, i.jsx)(v.Z, { user: t })
+                        (0, i.jsx)(S.Z, { user: t })
                     ]
                 })
         ]

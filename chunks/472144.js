@@ -22,8 +22,8 @@ t.Z = s.forwardRef((e, t) => {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: -s * h
         },
-        N = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: v } = (0, i.useSpring)({
+        v = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
+        { progressTextAnimation: N } = (0, i.useSpring)({
             progressTextAnimation: null != x && 1 !== s ? 1 : 0,
             config: d.Y
         });
@@ -33,11 +33,11 @@ t.Z = s.forwardRef((e, t) => {
         children: [
             (0, o.jsxs)('div', {
                 className: u.inner,
-                style: N,
+                style: v,
                 children: [
                     C,
                     (0, o.jsxs)(l.animated.div, {
-                        style: { opacity: v },
+                        style: { opacity: N },
                         className: a()(u.coverContent, u.progressTextWrapper),
                         children: [
                             (0, o.jsx)('div', { className: a()(u.coverContent, u.progressTextOverlay) }),

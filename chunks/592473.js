@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -56,7 +56,7 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     let { className: t, numRequestToSpeak: n } = e,
         s = n > 0;
     return (0, i.jsxs)('div', {
@@ -73,7 +73,7 @@ function p(e) {
         ]
     });
 }
-function m(e) {
+function p(e) {
     let { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: a, numRequestToSpeak: l, onClick: r, ...o } = e,
         d = s.useCallback(() => {
             null == r || r(), t();
@@ -83,7 +83,7 @@ function m(e) {
         label: n ? u.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : u.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
         className: a,
         iconComponent: () =>
-            (0, i.jsx)(p, {
+            (0, i.jsx)(m, {
                 numRequestToSpeak: l,
                 className: a
             }),

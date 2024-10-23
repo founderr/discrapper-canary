@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(524484),
     g = n(689938),
     T = n(497867);
-let f = { offset: 2 },
-    C = {
+let C = { offset: 2 },
+    f = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
@@ -68,11 +68,11 @@ function S(e) {
         } = null !==
             (a = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: a, localMute: s } = e;
-                if (t) return C.serverDeaf;
-                if (n) return C.deaf;
-                if (i) return C.serverMute;
-                else if (s) return C.localMute;
-                else if (a) return C.mute;
+                if (t) return f.serverDeaf;
+                if (n) return f.deaf;
+                if (i) return f.serverMute;
+                else if (s) return f.localMute;
+                else if (a) return f.mute;
             })({
                 serverDeaf: Z,
                 deaf: A,
@@ -135,7 +135,7 @@ function S(e) {
                         ...e,
                         className: T.avatarContainer,
                         onContextMenu: j,
-                        focusProps: f,
+                        focusProps: C,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: p.oZ.VOICE_USER,
                             isShaking: R,
@@ -170,7 +170,7 @@ function N(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            focusProps: f
+            focusProps: C
         }),
         E = (0, l.e7)([h.default], () => h.default.getId(), []),
         [m, I] = (function (e, t) {

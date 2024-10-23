@@ -17,8 +17,8 @@ var i = n(200651),
     u = n(481060),
     d = n(570140),
     h = n(475179),
-    p = n(904245),
-    m = n(372900),
+    m = n(904245),
+    p = n(372900),
     _ = n(905405),
     f = n(937889),
     E = n(739566),
@@ -27,26 +27,26 @@ var i = n(200651),
     I = n(419922),
     T = n(375954),
     x = n(699516),
-    v = n(768581),
-    S = n(70956),
+    S = n(768581),
+    v = n(70956),
     N = n(823379),
     A = n(981631),
     Z = n(217702),
     M = n(837161);
-let b = 10 * S.Z.Millis.SECOND;
+let b = 10 * v.Z.Millis.SECOND;
 function R(e) {
     var t;
     let { message: n } = e,
         a = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)),
         r = (0, E.Uj)(n),
-        o = s.useContext(m.Z),
+        o = s.useContext(p.Z),
         [d, T] = s.useState(!1),
-        S = (0, _.p)(),
+        v = (0, _.p)(),
         N = s.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
-                        p.Z.jumpToMessage({
+                        m.Z.jumpToMessage({
                             channelId: n.channel_id,
                             messageId: n.id,
                             flash: !0
@@ -58,7 +58,7 @@ function R(e) {
             null != n.content && '' !== n.content
                 ? (0, f.ZP)(n, {
                       isInteracting: d,
-                      shouldFilterKeywords: S
+                      shouldFilterKeywords: v
                   }).content
                 : null,
         {
@@ -105,7 +105,7 @@ function R(e) {
                 alt: '',
                 src:
                     (null == r ? void 0 : r.guildMemberAvatar) != null && null != o
-                        ? (0, v.JM)({
+                        ? (0, S.JM)({
                               guildId: o,
                               userId: n.author.id,
                               avatar: r.guildMemberAvatar
@@ -119,20 +119,20 @@ function R(e) {
 function L(e) {
     let { channelId: t, className: n } = e,
         [a, h] = s.useState(!1),
-        { toastsHidden: p, toastMessages: m } = (function (e) {
+        { toastsHidden: m, toastMessages: p } = (function (e) {
             var t;
             let { channelId: n, isFrozen: i, count: a, lingerMs: l } = e,
                 [r, o] = s.useState([]),
                 [u, h] = s.useState(!1),
-                p = s.useRef(null),
-                m = s.useRef(),
+                m = s.useRef(null),
+                p = s.useRef(),
                 _ = s.useCallback(() => {
                     o([]), h(!0);
                 }, []);
             s.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(_, l)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -143,7 +143,7 @@ function L(e) {
             }, [n, _, a, l]),
                 s.useEffect(
                     () => () => {
-                        clearTimeout(m.current);
+                        clearTimeout(p.current);
                     },
                     []
                 ),
@@ -154,8 +154,8 @@ function L(e) {
                             return [...e.slice(t)];
                         });
                 }, [r]),
-                i && null == p.current ? (p.current = r) : !i && null != p.current && (p.current = null);
-            let f = null !== (t = p.current) && void 0 !== t ? t : r;
+                i && null == m.current ? (m.current = r) : !i && null != m.current && (m.current = null);
+            let f = null !== (t = m.current) && void 0 !== t ? t : r;
             return {
                 toastsHidden: u,
                 toastMessages: (0, c.Wu)([T.Z], () => f.map((e) => T.Z.getMessage(n, e)), [n, f]).filter(N.lm)
@@ -174,14 +174,14 @@ function L(e) {
     s.useLayoutEffect(() => {
         let e = {},
             t = 0;
-        for (let i of m) {
+        for (let i of p) {
             var n;
             let s = null !== (n = _.current[i.id]) && void 0 !== n ? n : 0;
             (e[i.id] = t), (t += s + 8);
         }
         !(0, r.isEqual)(e, f) && E(e);
-    }, [m]);
-    let C = m.map((e) => ({
+    }, [p]);
+    let C = p.map((e) => ({
             message: e,
             height: _.current[e.id],
             y: f[e.id]
@@ -204,7 +204,7 @@ function L(e) {
                 let { height: t, y: n } = e;
                 return {
                     opacity: 0,
-                    translateY: p ? n : -(null != t ? t : 0) - 8,
+                    translateY: m ? n : -(null != t ? t : 0) - 8,
                     pointerEvents: 'none'
                 };
             }

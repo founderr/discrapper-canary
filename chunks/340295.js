@@ -8,21 +8,21 @@ var i = n(200651),
     u = n(27457),
     d = n(354459),
     h = n(689938),
-    p = n(754833);
+    m = n(754833);
 t.Z = function (e) {
     var t, n;
-    let { participants: m, channel: _, hasConnectPermission: f } = e,
-        E = m.filter(d.Io),
+    let { participants: p, channel: _, hasConnectPermission: f } = e,
+        E = p.filter(d.Io),
         g = (0, o.J)(_.guild_id),
         C = s.useCallback(() => {
             g ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
         }, [_.id, _.guild_id, g]),
         I = 4 === E.length ? 2 : 3;
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: m.container,
         children: [
             (0, i.jsx)('div', {
-                className: p.tiles,
+                className: m.tiles,
                 style: { maxWidth: 168 * I },
                 children: E.slice(0, 5).map((e) =>
                     (0, i.jsx)(
@@ -30,7 +30,7 @@ t.Z = function (e) {
                         {
                             participant: e,
                             channel: _,
-                            className: p.tile,
+                            className: m.tile,
                             paused: !0,
                             inCall: !0,
                             noVideoRender: !0,
@@ -42,12 +42,12 @@ t.Z = function (e) {
                 )
             }),
             (0, i.jsx)(a.Heading, {
-                className: p.channelName,
+                className: m.channelName,
                 variant: 'heading-xxl/semibold',
                 children: _.name
             }),
             (0, i.jsx)('div', {
-                className: p.participantsRow,
+                className: m.participantsRow,
                 children: (0, i.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
@@ -73,7 +73,7 @@ t.Z = function (e) {
             }),
             (0, i.jsx)(a.Button, {
                 disabled: !f,
-                className: p.joinButton,
+                className: m.joinButton,
                 color: f ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
                 onClick: C,
                 size: a.Button.Sizes.MEDIUM,

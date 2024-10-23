@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(689938),
     g = n(593741);
 let T = 70,
-    f = () => {
+    C = () => {
         let [e, t] = a.useState(!1),
             n = (0, m.GN)((e) => e.selectedGames, o.Z),
             { options: s, matchSorterOptions: l } = (0, _.P)(),
@@ -45,7 +45,7 @@ let T = 70,
             ]
         });
     },
-    C = (e) => {
+    f = (e) => {
         var t;
         let { game: n, index: a, currentIndex: s, gamesCount: r } = e,
             o = a - s,
@@ -103,7 +103,7 @@ t.Z = () => {
                         className: g.cardCarousel,
                         children: t.map((e, a) =>
                             (0, i.jsx)(
-                                C,
+                                f,
                                 {
                                     game: e,
                                     index: a,
@@ -152,7 +152,7 @@ t.Z = () => {
                         color: 'header-secondary',
                         children: p.Z.Messages.DISCOVERY_PLUS_HEADER_SUBTITLE
                     }),
-                    (0, i.jsx)(f, {})
+                    (0, i.jsx)(C, {})
                 ]
             })
         ]

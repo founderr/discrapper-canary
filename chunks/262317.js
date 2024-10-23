@@ -17,8 +17,8 @@ var i,
     u = n(481060),
     d = n(475179),
     h = n(239091),
-    p = n(287734),
-    m = n(872810),
+    m = n(287734),
+    p = n(872810),
     _ = n(888651),
     f = n(100527),
     E = n(258609),
@@ -27,8 +27,8 @@ var i,
     I = n(382182),
     T = n(525925),
     x = n(701362),
-    v = n(224184),
-    S = n(184301),
+    S = n(224184),
+    v = n(184301),
     N = n(347475),
     A = n(597998),
     Z = n(314897),
@@ -101,7 +101,7 @@ class w extends (i = a.PureComponent) {
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
                 children: (0, s.jsx)(u.Popout, {
                     preload: () =>
-                        (0, S.Z)(a.id, a.getAvatarURL(l.guild_id, 80), {
+                        (0, v.Z)(a.id, a.getAvatarURL(l.guild_id, 80), {
                             guildId: l.guild_id,
                             channelId: l.id
                         }),
@@ -158,11 +158,11 @@ class w extends (i = a.PureComponent) {
                     channelId: t.id,
                     guildId: t.guild_id
                 };
-                Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, T.Z)(s), d.Z.selectParticipant(s.channelId, (0, C.V9)(s))) : (0, m.iV)(s), null == i || i(e.id);
+                Z.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, T.Z)(s), d.Z.selectParticipant(s.channelId, (0, C.V9)(s))) : (0, p.iV)(s), null == i || i(e.id);
             }),
             D(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
-                b.Z.can(o.$e(L.Plq.CONNECT, L.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
+                b.Z.can(o.$e(L.Plq.CONNECT, L.Plq.VIEW_CHANNEL), t) && (m.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
             D(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: i } = this.props;
@@ -202,7 +202,7 @@ class w extends (i = a.PureComponent) {
             }),
             D(this, 'renderHangStatusPopout', () => {
                 let { hangStatusActivity: e, previewIsOpen: t, user: n, channel: i } = this.props;
-                return (0, s.jsx)(v.Z, {
+                return (0, s.jsx)(S.Z, {
                     userId: n.id,
                     channel: i,
                     hangStatusActivity: e,
@@ -210,11 +210,11 @@ class w extends (i = a.PureComponent) {
                 });
             }),
             D(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: p, deaf: m, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: T, serverMute: x, serverDeaf: v, tabIndex: S, embeddedApplication: N, channel: Z, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: T, serverMute: x, serverDeaf: S, tabIndex: v, embeddedApplication: N, channel: Z, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
                     { userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
                     U = j.al.has(null != n ? n : ''),
                     k = {
-                        user: p,
+                        user: m,
                         speaking: d,
                         disconnected: h,
                         mute: l,
@@ -224,13 +224,13 @@ class w extends (i = a.PureComponent) {
                         isGuest: C,
                         video: T,
                         priority: _,
-                        deaf: m,
+                        deaf: p,
                         nick: I,
                         collapsed: f,
                         overlap: f,
                         serverMute: x,
-                        serverDeaf: v,
-                        tabIndex: S,
+                        serverDeaf: S,
+                        tabIndex: v,
                         otherClientSessionType: n,
                         voicePlatform: i,
                         embeddedApplication: N,

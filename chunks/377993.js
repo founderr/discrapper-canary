@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(100527),
     d = n(906732),
     h = n(385499),
-    p = n(82295),
-    m = n(554300),
+    m = n(82295),
+    p = n(554300),
     _ = n(556084),
     f = n(184301),
     E = n(347475),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(111583),
     T = n(594174),
     x = n(626135),
-    v = n(768581),
-    S = n(585483),
+    S = n(768581),
+    v = n(585483),
     N = n(233870),
     A = n(51144),
     Z = n(998502),
@@ -40,8 +40,8 @@ let P = [],
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
-        p = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
-        m = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        m = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
+        p = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
         _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
         x = (e) => {
             (0, o.jW)(e, async () => {
@@ -67,7 +67,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -78,7 +78,7 @@ function y(e) {
                 M.Z,
                 {
                     user: t,
-                    currentUser: p,
+                    currentUser: m,
                     isOwner: t.id === s.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
                     shouldAnimateStatus: O,
@@ -87,7 +87,7 @@ function y(e) {
                     activities: d,
                     channel: s,
                     onContextMenu: x,
-                    isMobile: m,
+                    isMobile: p,
                     nick: _,
                     ...e
                 },
@@ -113,7 +113,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        p = v.ZP.getApplicationIconURL({
+        m = S.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -121,7 +121,7 @@ function D(e) {
         });
     return null != d
         ? (0, i.jsx)(r.Popout, {
-              preload: () => (0, f.Z)(d.id, p, { channelId: c.id }),
+              preload: () => (0, f.Z)(d.id, m, { channelId: c.id }),
               renderPopout: (e) =>
                   (0, i.jsx)(E.Z, {
                       ...e,
@@ -131,7 +131,7 @@ function D(e) {
               position: a.tq ? 'window_center' : 'left',
               spacing: 16,
               children: (e) =>
-                  (0, i.jsx)(m.Z, {
+                  (0, i.jsx)(p.Z, {
                       onContextMenu: u,
                       className: L.member,
                       name: (0, i.jsx)('span', {
@@ -140,7 +140,7 @@ function D(e) {
                       }),
                       avatar: (0, i.jsx)(r.Avatar, {
                           size: r.AvatarSizes.SIZE_32,
-                          src: p,
+                          src: m,
                           'aria-label': l.application.name,
                           statusTooltip: !0
                       }),
@@ -210,7 +210,7 @@ function k(e) {
                 [t],
                 U
             )),
-        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
+        { installedIntegrations: I, applicationsShelf: S, fetched: v, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
     s.useEffect(() => {
         x.default.track(b.rMx.MEMBER_LIST_VIEWED, {
             channel_id: a.id,
@@ -227,7 +227,7 @@ function k(e) {
                 className: j.members,
                 fade: !0,
                 children: [
-                    (0, i.jsxs)(p.Z, {
+                    (0, i.jsxs)(m.Z, {
                         className: j.membersGroup,
                         children: [''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(E.length, ' '), M && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                     }),
@@ -244,10 +244,10 @@ function k(e) {
                         )
                     ),
                     A &&
-                        (I.length > 0 || (S && v.length > 0)) &&
+                        (I.length > 0 || (v && S.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(m.Z, {
                                     className: j.membersGroup,
                                     children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(I.length)
                                 }),
@@ -262,7 +262,7 @@ function k(e) {
                                     )
                                 ),
                                 Z.length > 0 &&
-                                    (0, i.jsx)(m.Z, {
+                                    (0, i.jsx)(p.Z, {
                                         className: L.member,
                                         onClick: () => {
                                             (0, r.openModalLazy)(async () => {

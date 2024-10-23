@@ -23,25 +23,25 @@ function f(e) {
         m = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
         T = (0, i.e7)([Z.Z, r.Z], () => Z.Z.getVoiceChannelId() === r.Z.getDMFromUserId(n.id));
     if (C || f === E.IlC.POPOUT || T || n.bot || n.isProvisional) return null;
-    let v = () => {
+    let O = () => {
             null == A || A(), s.Z.openPrivateChannel(n.id, !0, I), N.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
         },
-        O = !u.ZP.disableCallUserConfirmationPrompt;
+        v = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(a.MenuItem, {
         id: null != g ? g : 'call',
         label: null != _ ? _ : M.Z.Messages.CALL,
-        action: O
+        action: v
             ? () => {
                   (0, a.openModalLazy)(async () => {
                       let { default: e } = await t.e('27157').then(t.bind(t, 736454));
                       return (n) =>
                           (0, l.jsx)(e, {
-                              onSubmit: v,
+                              onSubmit: O,
                               ...n
                           });
                   });
               }
-            : v,
+            : O,
         disabled: m
     });
 }

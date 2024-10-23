@@ -14,26 +14,26 @@ var s = n(442837),
     u = n(592125),
     d = n(15274),
     h = n(482241),
-    p = n(389303),
-    m = n(554747),
+    m = n(389303),
+    p = n(554747),
     _ = n(689938),
     f = n(249786);
 function E(e) {
     let { channelId: t, onClick: n } = e,
         E = (0, l.bp)(),
-        g = (0, m.qY)(t),
+        g = (0, p.qY)(t),
         C = (0, s.e7)([u.Z], () => u.Z.getChannel(t), [t]),
         { canManageGuildEvent: I } = (0, r.XJ)(C),
         T = I(g);
     if (null == g) return null;
     let x = () => {
-            if (null != C && (0, p.Z)(C)) {
+            if (null != C && (0, m.Z)(C)) {
                 (0, d.lC)(C, E);
                 return;
             }
             n();
         },
-        v = () => {
+        S = () => {
             h.Z.endEvent(g.id, g.guild_id);
         };
     return T
@@ -49,7 +49,7 @@ function E(e) {
                           children: (0, i.jsx)(a.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: v,
+                              action: S,
                               label: _.Z.Messages.END_EVENT,
                               icon: a.CircleXIcon
                           })

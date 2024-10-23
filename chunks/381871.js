@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(230711),
     d = n(607070),
     h = n(367907),
-    p = n(243778),
-    m = n(543241),
+    m = n(243778),
+    p = n(543241),
     _ = n(633302),
     f = n(970731),
     E = n(594174),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(74538),
     T = n(401062),
     x = n(696900),
-    v = n(456631),
-    S = n(963838),
+    S = n(456631),
+    v = n(963838),
     N = n(535879),
     A = n(310892),
     Z = n(12168),
@@ -51,7 +51,7 @@ function w(e) {
         B = I.ZP.canUseFancyVoiceChannelReactions(w),
         H = (0, l.e7)([x.Z], () => x.Z.getState().animationType),
         G = s.useRef(!1),
-        V = (0, m.wC)(n.guild_id),
+        V = (0, p.wC)(n.guild_id),
         F = (0, a.uniqBy)([...V, ...k], 'name')
             .filter(
                 (e) =>
@@ -62,9 +62,9 @@ function w(e) {
                     })
             )
             .slice(0, R.e5),
-        W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
+        W = (null !== (t = S.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, S.Iu)(H),
+    let z = (0, v.Iu)(H),
         Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -105,7 +105,7 @@ function w(e) {
     }, [X, J]);
     let Q = L ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = H === M.q.PREMIUM;
-    return (0, i.jsx)(p.ZP, {
+    return (0, i.jsx)(m.ZP, {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: s } = e,

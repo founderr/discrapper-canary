@@ -14,8 +14,8 @@ var s = n(410030),
     u = n(483517),
     d = n(502762),
     h = n(171368),
-    p = n(389190),
-    m = n(428927),
+    m = n(389190),
+    p = n(428927),
     _ = n(638785),
     f = n(689938),
     E = n(346799);
@@ -25,10 +25,10 @@ function g(e) {
         { context: g } = (0, r.KZ)(),
         C = (0, s.ZP)(),
         { mutualFriends: I, isFetching: T } = (0, o.Z)(t.id, !t.bot),
-        { mutualGuilds: x, isFetching: v } = (0, c.Z)(t.id, !0),
-        S = !t.bot && null != I && I.length > 0,
+        { mutualGuilds: x, isFetching: S } = (0, c.Z)(t.id, !0),
+        v = !t.bot && null != I && I.length > 0,
         N = null != x && x.length > 0;
-    return S || N
+    return v || N
         ? (0, i.jsxs)(d.Z.Overlay, {
               className: E.overlay,
               children: [
@@ -36,12 +36,12 @@ function g(e) {
                       (0, i.jsx)(_.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: f.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER,
-                          isLoading: v,
+                          isLoading: S,
                           listClassName: E.list,
                           items: x.map((e) => {
                               let { guild: n, nick: s } = e;
                               return (0, i.jsx)(
-                                  m.D,
+                                  p.D,
                                   {
                                       user: t,
                                       guild: n,
@@ -53,8 +53,8 @@ function g(e) {
                               );
                           })
                       }),
-                  N && S && (0, i.jsx)(u.Z, { className: E.divider }),
-                  S &&
+                  N && v && (0, i.jsx)(u.Z, { className: E.divider }),
+                  v &&
                       (0, i.jsx)(_.Z, {
                           section: 'MUTUAL_FRIENDS',
                           header: f.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER,
@@ -63,7 +63,7 @@ function g(e) {
                           items: I.map((e) => {
                               let { key: t, user: s, status: a } = e;
                               return (0, i.jsx)(
-                                  p.T,
+                                  m.T,
                                   {
                                       user: s,
                                       status: a,

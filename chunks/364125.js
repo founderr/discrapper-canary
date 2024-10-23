@@ -12,15 +12,15 @@ var i = n(192379),
     c = n(370663),
     u = n(743597);
 function d(e) {
-    let { user: t, channelId: n, streamerId: d, stream: h, focused: p, canvas: m } = e,
+    let { user: t, channelId: n, streamerId: d, stream: h, focused: m, canvas: p } = e,
         _ = i.useRef(!1),
         f = (0, s.e7)([a.Z], () => a.Z.getDrawMode()),
         E = (0, o.Z)((0, c.Z)(t.id, n, d), h),
         g = (0, o.Z)((0, u.Z)(t.id, n, d), h),
         C = i.useCallback(
             (e, t, n) => {
-                if (null == m) return;
-                let { x: i, y: s } = (0, r.hn)(m, n);
+                if (null == p) return;
+                let { x: i, y: s } = (0, r.hn)(p, n);
                 switch (t.type) {
                     case l.W.LINE:
                         return E[e](t, i, s);
@@ -28,27 +28,27 @@ function d(e) {
                         return g[e](t, i, s);
                 }
             },
-            [m, E, g]
+            [p, E, g]
         ),
         I = i.useCallback(
             (e) => {
-                if (!!p && null != f) e.stopPropagation(), (_.current = !0), C('handleMouseDown', f, e);
+                if (!!m && null != f) e.stopPropagation(), (_.current = !0), C('handleMouseDown', f, e);
             },
-            [C, f, p]
+            [C, f, m]
         ),
         T = i.useCallback(
             (e) => {
-                if (!!p && null != f) e.stopPropagation(), _.current && C('handleMouseMove', f, e);
+                if (!!m && null != f) e.stopPropagation(), _.current && C('handleMouseMove', f, e);
             },
-            [C, f, p]
+            [C, f, m]
         ),
         x = i.useCallback(
             (e) => {
-                if (!!p && null != f) e.stopPropagation(), (_.current = !1), C('handleMouseUp', f, e);
+                if (!!m && null != f) e.stopPropagation(), (_.current = !1), C('handleMouseUp', f, e);
             },
-            [C, f, p]
+            [C, f, m]
         ),
-        v = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 if (!!_.current && null != f) C('handleMouseEnter', f, e);
             },
@@ -64,12 +64,12 @@ function d(e) {
         {
             handleClick: i.useCallback(
                 (e) => {
-                    p && null != f && e.stopPropagation();
+                    m && null != f && e.stopPropagation();
                 },
-                [f, p]
+                [f, m]
             ),
             handleMouseDown: I,
-            handleMouseEnter: v,
+            handleMouseEnter: S,
             handleMouseMove: T,
             handleMouseUp: x
         }

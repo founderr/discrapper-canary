@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(153867),
     d = n(110924),
     h = n(607070),
-    p = n(900211),
-    m = n(740492),
+    m = n(900211),
+    p = n(740492),
     _ = n(871499),
     f = n(402113),
     E = n(592125),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(594174),
     T = n(585483),
     x = n(51144),
-    v = n(566620),
-    S = n(317381),
+    S = n(566620),
+    v = n(317381),
     N = n(619915),
     A = n(988980),
     Z = n(952561),
@@ -46,17 +46,17 @@ function k(e) {
     var t, n;
     let { maxHeight: a, connectedChannelId: k, renderExternalHeader: w } = e,
         B = (0, Z.Z)(),
-        H = (0, r.Wu)([S.ZP], () => (null != k ? S.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
+        H = (0, r.Wu)([v.ZP], () => (null != k ? v.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
         G = (0, r.e7)([E.Z], () => E.Z.getChannel(k)),
         V = (0, N.gb)(H),
         F = (0, N.uF)(V),
         W = s.useCallback(() => {
-            (0, v.tg)(j.Ez.PIP);
+            (0, S.tg)(j.Ez.PIP);
         }, []),
         z = s.useRef(null),
-        Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
         K = Y !== j.MI.NO_CHAT,
-        [q, X] = s.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
+        [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
@@ -243,7 +243,7 @@ function k(e) {
                         ]
                     }),
                     K
-                        ? (0, i.jsx)(p.Z, {
+                        ? (0, i.jsx)(m.Z, {
                               minHeight: 480,
                               maxHeight: a,
                               resizableNode: z,

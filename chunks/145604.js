@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(594190),
     g = n(38618),
     T = n(501640),
-    f = n(924301),
-    C = n(734307),
+    C = n(924301),
+    f = n(734307),
     S = n(355298),
     N = n(427679),
     A = n(695346),
@@ -60,7 +60,7 @@ class z extends a.PureComponent {
             let t = p.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
                 i = N.Z.getStageInstanceByChannel(e.voiceChannelId),
-                a = f.ZP.getActiveEventByChannel(e.voiceChannelId);
+                a = C.ZP.getActiveEventByChannel(e.voiceChannelId);
             k.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
                 channel_id: e.voiceChannelId,
                 channel_type: e.voiceChannelType,
@@ -83,7 +83,7 @@ class z extends a.PureComponent {
             let e = p.ZP.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : '',
                 n = N.Z.getStageInstanceByChannel(a),
-                i = f.ZP.getActiveEventByChannel(a);
+                i = C.ZP.getActiveEventByChannel(a);
             (0, c.yw)(F.rMx.CHANNEL_OPENED, { ...(0, c.$H)(a) }),
                 (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: a }),
                 k.default.track(F.rMx.JOIN_VOICE_CHANNEL, {
@@ -174,7 +174,7 @@ class z extends a.PureComponent {
                 postable_channels: Q,
                 premium_progress_bar_enabled: null !== (n = null === (t = R.Z.getGuild(P.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
                 viewing_all_channels: !y.ZP.isOptInEnabled(j),
-                num_recent_channels: C.Z.recentsChannelCount(j)
+                num_recent_channels: f.Z.recentsChannelCount(j)
             };
             (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: j });
         } else U && null == j && G === F.Z5c.FRIENDS && (!e.connected || z !== e.friendsTabSection || G !== e.homeLink) ? (0, _.Z)({ tab_opened: z }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), k.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
@@ -254,7 +254,7 @@ function W() {
         E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []),
         m = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []),
         I = (0, s.e7)([g.Z], () => g.Z.isConnected(), []),
-        [f, C] = (0, s.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
+        [C, f] = (0, s.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
         N = (0, s.e7)([D.Z], () => D.Z.getPrimaryActivity(), []),
         A = (0, s.e7)([p.ZP], () => p.ZP.getCurrentGameForAnalytics(), []),
         Z = (0, T.Z)(c),
@@ -266,8 +266,8 @@ function W() {
             friendsTabSection: E,
             homeLink: m,
             connected: I,
-            videoEnabled: f,
-            isScreenSharing: C,
+            videoEnabled: C,
+            isScreenSharing: f,
             voiceChannelId: null == l ? void 0 : l.id,
             voiceChannelGuildId: null == l ? void 0 : l.getGuildId(),
             voiceChannelType: null == l ? void 0 : l.type,

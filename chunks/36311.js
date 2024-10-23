@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(986035),
     d = n(594174),
     h = n(63063),
-    p = n(981631),
-    m = n(689938),
+    m = n(981631),
+    p = n(689938),
     _ = n(401701);
 function f(e, t, n) {
     return (
@@ -32,25 +32,25 @@ class E extends s.PureComponent {
     }
     render() {
         let { nsfwDisallowed: e } = this.props,
-            t = m.Z.Messages.NSFW_DESCRIPTION;
-        t = e ? m.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({ helpURL: h.Z.getArticleURL(p.BhN.NSFW_AGE_GATING) }) : m.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
+            t = p.Z.Messages.NSFW_DESCRIPTION;
+        t = e ? p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({ helpURL: h.Z.getArticleURL(m.BhN.NSFW_AGE_GATING) }) : p.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
         let n = e
             ? (0, i.jsx)(u.Z, {
                   onAgree: this.handleAgree,
                   onDisagree: this.handleDisagree,
-                  title: m.Z.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
+                  title: p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
                   description: t,
                   agreement: null,
-                  disagreement: m.Z.Messages.BACK,
+                  disagreement: p.Z.Messages.BACK,
                   imageClassName: _.ageGatedImage
               })
             : (0, i.jsx)(u.Z, {
                   onAgree: this.handleAgree,
                   onDisagree: this.handleDisagree,
-                  title: m.Z.Messages.NSFW_TITLE,
+                  title: p.Z.Messages.NSFW_TITLE,
                   description: t,
-                  agreement: m.Z.Messages.NSFW_ACCEPT,
-                  disagreement: m.Z.Messages.NSFW_DECLINE
+                  agreement: p.Z.Messages.NSFW_ACCEPT,
+                  disagreement: p.Z.Messages.NSFW_DECLINE
               });
         return (0, i.jsx)(o.AdvancedScroller, {
             ref: this.scroller,

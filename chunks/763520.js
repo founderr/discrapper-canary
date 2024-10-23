@@ -17,8 +17,8 @@ var i,
     u = n(19780),
     d = n(979651),
     h = n(626135),
-    p = n(981631);
-function m(e, t, n) {
+    m = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ class f {
         }
         this.logger.info('spinner visible for '.concat(s, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
         let a = u.Z.getGuildId(),
-            m = d.Z.getUserVoiceChannelId(a, r.default.getId()),
+            p = d.Z.getUserVoiceChannelId(a, r.default.getId()),
             f = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return 'guild_voice';
@@ -60,15 +60,15 @@ class f {
                     if (e.isGroupDM()) return 'group_dm';
                 }
                 return null;
-            })(o.Z.getChannel(m));
-        h.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
+            })(o.Z.getChannel(p));
+        h.default.track(m.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: s,
             rtc_connection_id: u.Z.getRTCConnectionId(),
             media_session_id: u.Z.getMediaSessionId(),
             event_count_for_stream: i,
             guild_id: a,
-            channel_id: m,
+            channel_id: p,
             channel_type: f,
             spinning_user_id: t,
             connection_type: c.Z.getType(),
@@ -77,6 +77,6 @@ class f {
         });
     }
     constructor(e) {
-        m(this, 'logger', void 0), m(this, 'spinnerVisibleStart', null), (this.logger = new a.Y(e));
+        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new a.Y(e));
     }
 }

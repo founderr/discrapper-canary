@@ -17,14 +17,14 @@ var i,
     u = n(692547),
     d = n(153867),
     h = n(347469),
-    p = n(740492),
-    m = n(36645),
+    m = n(740492),
+    p = n(36645),
     _ = n(866274);
 ((s = i || (i = {}))[(s.PostSidebar = 0)] = 'PostSidebar'), (s[(s.ThreadSidebar = 1)] = 'ThreadSidebar'), (s[(s.CallChatSidebar = 2)] = 'CallChatSidebar'), (s[(s.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (s[(s.HomeSidebar = 4)] = 'HomeSidebar');
 function f(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s } = e,
         l = (0, h.Z)({
-            minDimension: m.C,
+            minDimension: p.C,
             maxDimension: s,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -53,24 +53,24 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [g, C] = l.useState(p.ZP[E]),
+        [g, C] = l.useState(m.ZP[E]),
         I = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [E]: e });
             },
             [E]
         ),
-        T = (0, m.W)({ maxWidth: n }),
-        x = (0, c.clamp)(g, m.C, n),
-        v = T ? x : x + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        T = (0, p.W)({ maxWidth: n }),
+        x = (0, c.clamp)(g, p.C, n),
+        S = T ? x : x + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(x, T);
     }, [x, i, T]);
-    let S = null != r ? r : l.Fragment;
+    let v = null != r ? r : l.Fragment;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            !T && (0, a.jsx)('div', { style: { minWidth: v } }),
-            (0, a.jsx)(S, {
+            !T && (0, a.jsx)('div', { style: { minWidth: S } }),
+            (0, a.jsx)(v, {
                 children: (0, a.jsxs)('div', {
                     className: _.chatLayerWrapper,
                     children: [
@@ -79,7 +79,7 @@ function E(e) {
                                 [_.floating]: T,
                                 [_.notFloating]: !T
                             }),
-                            style: { width: v }
+                            style: { width: S }
                         }),
                         !T &&
                             (0, a.jsx)(f, {

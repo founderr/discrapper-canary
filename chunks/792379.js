@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(906732),
     d = n(580552),
     h = n(688465),
-    p = n(680295),
-    m = n(5192),
+    m = n(680295),
+    p = n(5192),
     _ = n(785717),
     f = n(221292),
     E = n(687158),
@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(867176),
     T = n(280885),
     x = n(900927),
-    v = n(678738),
-    S = n(502762),
+    S = n(678738),
+    v = n(502762),
     N = n(530),
     A = n(679332),
     Z = n(544989),
@@ -57,7 +57,7 @@ function P(e) {
         value: D,
         children: (0, i.jsx)(_.Mt, {
             value: U,
-            children: (0, i.jsxs)(S.Z, {
+            children: (0, i.jsxs)(v.Z, {
                 ref: k,
                 user: t,
                 displayProfile: O,
@@ -96,7 +96,7 @@ function P(e) {
                                     (0, i.jsx)(N.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL,
-                                        nickname: m.ZP.getName(null, n.id, t),
+                                        nickname: p.ZP.getName(null, n.id, t),
                                         pronouns: null == O ? void 0 : O.pronouns,
                                         onOpenProfile: P ? void 0 : B,
                                         tags: (0, i.jsx)(C.Z, {
@@ -104,10 +104,10 @@ function P(e) {
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(S.Z.Overlay, {
+                                    (0, i.jsxs)(v.Z.Overlay, {
                                         className: j.overlay,
                                         children: [
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(S.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(T.Z, {
@@ -117,7 +117,7 @@ function P(e) {
                                                     isHovering: w
                                                 })
                                             }),
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(S.Z, {
                                                 heading: R.Z.Messages.BOT_PROFILE_CREATED_ON,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(x.Z, { userId: t.id })
@@ -148,7 +148,7 @@ function P(e) {
                             })
                         }),
                     (null == O ? void 0 : O.profileEffectId) != null &&
-                        (0, i.jsx)(p.Z, {
+                        (0, i.jsx)(m.Z, {
                             profileEffectId: null == O ? void 0 : O.profileEffectId,
                             isHovering: w
                         })

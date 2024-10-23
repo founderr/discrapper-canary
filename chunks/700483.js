@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(40851),
     d = n(358221),
     h = n(659580),
-    p = n(793865),
-    m = n(575175),
+    m = n(793865),
+    p = n(575175),
     _ = n(258609),
     f = n(74299),
     E = n(924301),
@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(357156),
     T = n(923973),
     x = n(829750),
-    v = n(189771),
-    S = n(294629),
+    S = n(189771),
+    v = n(294629),
     N = n(793319),
     A = n(560688),
     Z = n(390322),
@@ -118,10 +118,10 @@ function es(e) {
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: p } = (0, S.Z)(t),
-        m = L.default.getId(),
+        { suppress: m } = (0, v.Z)(t),
+        p = L.default.getId(),
         [_] = (0, X.Z)(t),
-        f = H.ZP.isModerator(m, t.id),
+        f = H.ZP.isModerator(p, t.id),
         g = (0, w.B)(t.id),
         C = a(d);
     return h
@@ -170,7 +170,7 @@ function es(e) {
                       });
                   }
               })
-            : (p && !g) || _
+            : (m && !g) || _
               ? (0, i.jsx)(o.Button, {
                     size: o.Button.Sizes.MEDIUM,
                     color: o.Button.Colors.RED,
@@ -301,11 +301,11 @@ function el(e) {
 }
 let er = s.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: s, mute: a } = (0, S.Z)(t),
+        { suppress: n, selfMute: s, mute: a } = (0, v.Z)(t),
         c = (0, w.B)(t.id),
         u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: E, enabled: g } = (0, T.Z)(),
-        C = (0, v.Z)(t),
+        C = (0, S.Z)(t),
         { limit: I, reachedLimit: M } = (0, x.Z)(t),
         L = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         P = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
@@ -320,7 +320,7 @@ let er = s.memo(function (e) {
             (0, i.jsx)(o.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(p.Z, { onClose: t }) });
+                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
                 },
                 position: 'top',
                 align: 'center',
@@ -386,7 +386,7 @@ let er = s.memo(function (e) {
                                       serverMute: a,
                                       suppress: n,
                                       popoutOpen: r,
-                                      onClick: () => (0, m.Z)(a, n, 'Stage Channel Controls'),
+                                      onClick: () => (0, p.Z)(a, n, 'Stage Channel Controls'),
                                       awaitingRemote: u
                                   });
                               }

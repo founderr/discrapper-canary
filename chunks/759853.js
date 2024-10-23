@@ -18,8 +18,8 @@ let f = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: r, quest: h, progressBarRef: E, isExpanded: S } = e,
-        { completionSpring: T, startCompletionAnimation: N } = (0, x.G)(),
-        v = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        { completionSpring: T, startCompletionAnimation: v } = (0, x.G)(),
+        N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         j = s.useRef(!1),
         A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         b = s.useRef(null),
@@ -27,22 +27,22 @@ t.Z = (e) => {
         B = (0, u.Z)(R),
         [I, y] = s.useState(null),
         [M, O] = s.useState(null),
-        w = s.useRef(
+        k = s.useRef(
             new l.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        k = (0, l.uR)(I, M),
+        w = (0, l.uR)(I, M),
         L = s.useCallback(() => {
             if (A) return;
             let e = E.current,
                 t = b.current;
-            if (null != t && null != e && k.isReady) {
+            if (null != t && null != e && w.isReady) {
                 var n, o, s, r;
                 let { x: a, y: l } = e.getBoundingClientRect(),
                     { x: i, y: c } = t.getBoundingClientRect();
-                k.createMultipleConfetti(
+                w.createMultipleConfetti(
                     ((n = a - i),
                     (o = l - c),
                     (s = e.clientHeight),
@@ -89,22 +89,22 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [E, b, k, A]),
+        }, [E, b, w, A]),
         U = (0, u.Z)(S);
     return (s.useEffect(() => {
-        v && S && !U && (N(), L());
-    }, [S, v, N, L, U]),
+        N && S && !U && (v(), L());
+    }, [S, N, v, L, U]),
     s.useEffect(() => {
-        v &&
+        N &&
             !R &&
             B &&
             setTimeout(() => {
-                N(), L();
+                v(), L();
             }, 200);
-    }, [v, B, R, N, L]),
+    }, [N, B, R, v, L]),
     s.useEffect(() => {
-        if (!!k.isReady) !j.current && v && (N(), L()), (j.current = v);
-    }, [v, j, L, N, k]),
+        if (!!w.isReady) !j.current && N && (v(), L()), (j.current = N);
+    }, [N, j, L, v, w]),
     A)
         ? null
         : (0, o.jsxs)('div', {
@@ -134,7 +134,7 @@ t.Z = (e) => {
                           (0, o.jsx)(l.O_, {
                               ref: y,
                               className: g.confetti,
-                              environment: w.current
+                              environment: k.current
                           }),
                           (0, o.jsx)(l.Ji, {
                               ref: O,

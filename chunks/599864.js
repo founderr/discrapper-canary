@@ -20,7 +20,7 @@ function E(e) {
         h = (0, i.e7)([l.Z], () => l.Z.isInChannel(t.id)),
         p = t.isGuildStageVoice();
     return (0, r.jsx)(c.tG, {
-        text: p ? (h ? _.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON : f === d.y0.FULL_SIZE ? _.Z.Messages.JOIN : _.Z.Messages.STAGE_CHANNEL_JOIN) : h && f === d.y0.FULL_SIZE ? _.Z.Messages.OPEN : h ? _.Z.Messages.PROFILE_OPEN_VOICE_CHANNEL : f === d.y0.FULL_SIZE ? _.Z.Messages.JOIN : _.Z.Messages.JOIN_VOICE,
+        text: p ? (h && f === d.y0.FULL_SIZE ? _.Z.Messages.OPEN : h ? _.Z.Messages.USER_PROFILE_OPEN_STAGE_CHANNEL : f === d.y0.FULL_SIZE ? _.Z.Messages.JOIN : _.Z.Messages.STAGE_CHANNEL_JOIN) : h && f === d.y0.FULL_SIZE ? _.Z.Messages.OPEN : h ? _.Z.Messages.PROFILE_OPEN_VOICE_CHANNEL : f === d.y0.FULL_SIZE ? _.Z.Messages.JOIN : _.Z.Messages.JOIN_VOICE,
         themeColor: h ? 'secondary' : 'primary',
         fullWidth: !0,
         onClick: () => {

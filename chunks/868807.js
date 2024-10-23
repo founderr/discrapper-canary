@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -14,8 +14,8 @@ var i = n(392711),
     u = n(748902),
     d = n(981631);
 let h = new Set(),
-    p = null;
-function m(e) {
+    m = null;
+function p(e) {
     let { id: t } = e,
         {
             loaded: n,
@@ -45,7 +45,7 @@ function m(e) {
             null == i &&
             l &&
             (function (e) {
-                h.add(e), null == p && (p = setTimeout(_, 0));
+                h.add(e), null == m && (m = setTimeout(_, 0));
             })(t),
         {
             loaded: n,
@@ -58,7 +58,7 @@ async function _() {
     try {
         for (; !s().isEmpty(h); ) await f();
     } finally {
-        p = null;
+        m = null;
     }
 }
 async function f() {

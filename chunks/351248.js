@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(780384),
     d = n(481060),
     h = n(410030),
-    p = n(451478),
-    m = n(584511),
+    m = n(451478),
+    p = n(584511),
     _ = n(354459),
     f = n(634817),
     E = n(739017),
@@ -48,8 +48,8 @@ let I = {
         EASING_OUT: r.Z.Easing.quad
     },
     x = 200,
-    v = 125;
-class S extends s.PureComponent {
+    S = 125;
+class v extends s.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -93,7 +93,7 @@ class S extends s.PureComponent {
             r.Z.sequence(a),
             r.Z.timing(s, {
                 toValue: 0,
-                duration: v
+                duration: S
             })
         ]).start(e);
     }
@@ -160,19 +160,19 @@ function N(e) {
     let { participants: s, onContextMenu: a, className: r, onClick: u, width: E, guildId: g } = e,
         C = (0, h.ZP)();
     let I = ((t = E), (n = s.length), ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
-        T = (0, o.e7)([p.Z], () => p.Z.isFocused()),
+        T = (0, o.e7)([m.Z], () => m.Z.isFocused()),
         x = s.map((e) => {
             var t, n;
             if (e.type !== _.fO.USER) return null;
             let { user: s, voiceState: l, speaking: r, ringing: o } = e;
             return (0, i.jsx)(
-                S,
+                v,
                 {
                     className: f.participant,
                     width: (0, d.getAvatarSize)(I),
                     theme: C,
                     children: (0, i.jsx)(
-                        m.Z,
+                        p.Z,
                         {
                             src: s.getAvatarURL(g, (0, d.getAvatarSize)(I), r && T),
                             size: I,

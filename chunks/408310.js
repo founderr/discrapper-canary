@@ -9,7 +9,7 @@ var s = n(481060),
     u = n(176480);
 t.Z = (e) => {
     let t,
-        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: p, handleSearchKeyPress: m, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
+        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: m, handleSearchKeyPress: p, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
     if (E)
         t = (0, i.jsx)('div', {
             className: o.pageContainer,
@@ -70,7 +70,7 @@ t.Z = (e) => {
                             className: c.headerTitleWrapper,
                             children: [
                                 (0, i.jsx)(s.Clickable, {
-                                    onClick: p,
+                                    onClick: m,
                                     className: c.arrow,
                                     children: (0, i.jsx)(a.Z, { direction: a.Z.Directions.LEFT })
                                 }),
@@ -91,8 +91,8 @@ t.Z = (e) => {
                             label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             onChange: d,
-                            onClear: p,
-                            onKeyPress: m,
+                            onClear: m,
+                            onKeyPress: p,
                             cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                         })
                     ]

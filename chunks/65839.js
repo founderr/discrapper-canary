@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(430824),
     d = n(496675),
     h = n(768581),
-    p = n(400251),
-    m = n(486527),
+    m = n(400251),
+    p = n(486527),
     _ = n(981631),
     f = n(689938),
     E = n(904151),
@@ -74,7 +74,7 @@ function x(e) {
             var n, i;
             return (null !== (n = t.approximateMemberCount) && void 0 !== n ? n : 0) - (null !== (i = e.approximateMemberCount) && void 0 !== i ? i : 0);
         });
-    let m = h.ZP.getGuildSplashURL({
+    let p = h.ZP.getGuildSplashURL({
         id: t.id,
         splash: t.splash
     });
@@ -86,11 +86,11 @@ function x(e) {
                 (0, i.jsxs)('div', {
                     className: g.header,
                     children: [
-                        null != m
+                        null != p
                             ? (0, i.jsx)('img', {
                                   alt: '',
                                   className: l()(g.headerImage, g.headerImageSimple),
-                                  src: m
+                                  src: p
                               })
                             : null,
                         (0, i.jsx)('div', { className: g.headerImageBG }),
@@ -111,14 +111,14 @@ function x(e) {
                     ? (0, i.jsx)(o.Spinner, { className: E.spinner })
                     : (0, i.jsxs)('div', {
                           className: E.cardsContainer,
-                          children: [u.map((e) => (0, i.jsx)(p.Z, { entry: e }, e.guildId)), c && null != s ? (0, i.jsx)(p.m, { onClick: s }) : null]
+                          children: [u.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), c && null != s ? (0, i.jsx)(m.m, { onClick: s }) : null]
                       })
             ]
         })
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: v, allEntriesCount: S, isLoading: N } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: S, allEntriesCount: v, isLoading: N } = e,
         A = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != A && A.hasFeature(_.oNc.SHARD)
         ? (0, i.jsx)(x, {
@@ -153,19 +153,19 @@ t.Z = (e) => {
                                       o.TabBar.Item,
                                       {
                                           className: g.tabBarItem,
-                                          id: m.AR.ALL,
-                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(S, ')')
+                                          id: p.AR.ALL,
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
                                       },
-                                      m.AR.ALL
+                                      p.AR.ALL
                                   ),
-                                  (0, m.b7)(t.id).map((e) => {
+                                  (0, p.b7)(t.id).map((e) => {
                                       let { value: t, label: n } = e;
                                       return (0, i.jsx)(
                                           o.TabBar.Item,
                                           {
                                               className: g.tabBarItem,
                                               id: t,
-                                              children: ''.concat(n, ' ').concat(null != v[t] ? '('.concat(v[t], ')') : '')
+                                              children: ''.concat(n, ' ').concat(null != S[t] ? '('.concat(S[t], ')') : '')
                                           },
                                           t
                                       );
@@ -191,7 +191,7 @@ t.Z = (e) => {
                                                   : null,
                                               (0, i.jsxs)('div', {
                                                   className: E.cardsContainer,
-                                                  children: [e.entries.map((e) => (0, i.jsx)(p.Z, { entry: e }, e.guildId)), e.appendEndCard && null != a ? (0, i.jsx)(p.m, { onClick: a }) : null]
+                                                  children: [e.entries.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), e.appendEndCard && null != a ? (0, i.jsx)(m.m, { onClick: a }) : null]
                                               })
                                           ]
                                       },

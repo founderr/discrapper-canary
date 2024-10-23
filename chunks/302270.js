@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(475179),
     d = n(40851),
     h = n(358221),
-    p = n(933557),
-    m = n(320007),
+    m = n(933557),
+    p = n(320007),
     _ = n(236091),
     f = n(623624),
     E = n(665149),
@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(618158),
     T = n(390322),
     x = n(616286),
-    v = n(961048),
-    S = n(430824),
+    S = n(961048),
+    v = n(430824),
     N = n(496675),
     A = n(626135),
     Z = n(431328),
@@ -41,11 +41,11 @@ var i = n(200651),
     k = n(219912);
 function w(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: o } = e,
-        p = (0, d.bp)(),
+        m = (0, d.bp)(),
         f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         E = (0, b.B)(n.id),
         g = (0, Z.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: S, allowIdle: N } = (0, I.Y)('popup');
+        { preventIdle: v, allowIdle: N } = (0, I.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -60,13 +60,13 @@ function w(e) {
                             children: (0, i.jsx)(P.Z, {
                                 ...e,
                                 channelId: n.id,
-                                appContext: p
+                                appContext: m
                             })
                         }),
                     autoInvert: !1,
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return (0, s.createElement)(v.Z, {
+                        return (0, s.createElement)(S.Z, {
                             ...e,
                             key: 'more-options',
                             isActive: n,
@@ -77,11 +77,11 @@ function w(e) {
                 },
                 'more-options-popout'
             ),
-            !t && (0, i.jsx)(m.Z, { className: k.button }, 'clips'),
+            !t && (0, i.jsx)(p.Z, { className: k.button }, 'clips'),
             (0, i.jsx)(
                 C.Z,
                 {
-                    onOpen: S,
+                    onOpen: v,
                     onClose: N,
                     className: k.button
                 },
@@ -115,13 +115,13 @@ function w(e) {
 function B(e) {
     var t;
     let { inPopout: n, channel: a, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: h } = e,
-        m = (0, p.ZP)(a),
+        p = (0, m.ZP)(a),
         _ = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(a.id)),
         C = (0, Z.Io)(a.id),
         I = (0, Z.Rk)(a.id, M.pV.AUDIENCE),
-        T = (0, r.e7)([S.Z], () => S.Z.getGuild(a.guild_id), [a.guild_id]),
+        T = (0, r.e7)([v.Z], () => v.Z.getGuild(a.guild_id), [a.guild_id]),
         x = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-        v = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
+        S = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
         b = (0, O.Z)(a),
         j = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
         P = () => {
@@ -167,7 +167,7 @@ function B(e) {
                     (0, i.jsx)(E.ZP.Title, {
                         className: k.channelName,
                         wrapperClassName: k.channelNameWrapper,
-                        children: null !== (t = null == _ ? void 0 : _.topic) && void 0 !== t ? t : m
+                        children: null !== (t = null == _ ? void 0 : _.topic) && void 0 !== t ? t : p
                     }),
                     (0, i.jsx)(E.ZP.Divider, { className: k.divider }),
                     (0, i.jsxs)(E.ZP.Title, {
@@ -212,18 +212,18 @@ function B(e) {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_TITLE : U.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
+                                      children: S ? U.Z.Messages.STAGE_FULL_MODERATOR_TITLE : U.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
                                   }),
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_BODY : U.Z.Messages.STAGE_FULL_MAX_BODY
+                                      children: S ? U.Z.Messages.STAGE_FULL_MODERATOR_BODY : U.Z.Messages.STAGE_FULL_MAX_BODY
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
                               className: k.buttons,
-                              children: v
+                              children: S
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.Button, {

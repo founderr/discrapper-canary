@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(353093),
     g = n(603839),
     T = n(84615),
-    f = n(430824),
-    C = n(231467),
+    C = n(430824),
+    f = n(231467),
     S = n(207796),
     N = n(273254),
     A = n(559469),
@@ -199,7 +199,7 @@ t.Z = a.memo(function (e) {
                 location: _.Z.CLAN_DISCOVERY
             });
     }, [r, S]);
-    let O = (0, o.e7)([f.Z], () => f.Z.getGuild(S)),
+    let O = (0, o.e7)([C.Z], () => C.Z.getGuild(S)),
         M = (0, o.e7)([I.ZP], () => (null != S ? I.ZP.getStateForGuild(S).progress : null)),
         D = a.useCallback(() => {
             !r &&
@@ -328,7 +328,7 @@ t.Z = a.memo(function (e) {
                             ...B,
                             ...k
                         },
-                        children: (0, i.jsx)(C.xV, {
+                        children: (0, i.jsx)(f.xV, {
                             clan: U[0],
                             className: L.clanCardOuterLeft
                         })
@@ -339,7 +339,7 @@ t.Z = a.memo(function (e) {
                             ...H,
                             ...k
                         },
-                        children: (0, i.jsx)(C.xV, {
+                        children: (0, i.jsx)(f.xV, {
                             clan: U[1],
                             className: L.clanCardInnerLeft
                         })
@@ -354,7 +354,7 @@ t.Z = a.memo(function (e) {
                                     style: { overflow: G ? 'hidden' : 'visible' },
                                     children: (0, i.jsx)(l.animated.div, {
                                         style: z,
-                                        children: (0, i.jsx)(C.xV, {
+                                        children: (0, i.jsx)(f.xV, {
                                             clan: j,
                                             className: L.clanCardCenter,
                                             bannerUrl: (0, p.pY)(U[4].id, U[4].bannerHash)
@@ -369,7 +369,7 @@ t.Z = a.memo(function (e) {
                             ...V,
                             ...k
                         },
-                        children: (0, i.jsx)(C.xV, {
+                        children: (0, i.jsx)(f.xV, {
                             clan: U[2],
                             className: L.clanCardInnerRight
                         })
@@ -380,7 +380,7 @@ t.Z = a.memo(function (e) {
                             ...F,
                             ...k
                         },
-                        children: (0, i.jsx)(C.xV, {
+                        children: (0, i.jsx)(f.xV, {
                             clan: U[3],
                             className: L.clanCardOuterRight
                         })

@@ -8,8 +8,8 @@ var i = n(200651),
     u = n(496675),
     d = n(981631),
     h = n(689938),
-    p = n(976320);
-let m = () =>
+    m = n(976320);
+let p = () =>
     n
         .e('26176')
         .then(n.t.bind(n, 737848, 19))
@@ -26,15 +26,15 @@ t.Z = s.memo(function (e) {
     return n
         ? _ && !f && t.ownerId !== E
             ? (0, i.jsxs)('div', {
-                  className: p.box,
+                  className: m.box,
                   children: [
                       (0, i.jsx)(l.LottieAnimation, {
-                          importData: m,
+                          importData: p,
                           shouldAnimate: !s,
-                          className: p.animation
+                          className: m.animation
                       }),
                       (0, i.jsxs)('div', {
-                          className: p.textContainer,
+                          className: m.textContainer,
                           children: [
                               (0, i.jsx)(l.Heading, {
                                   variant: 'heading-md/semibold',
@@ -50,5 +50,5 @@ t.Z = s.memo(function (e) {
                   ]
               })
             : null
-        : (0, i.jsx)('div', { className: p.divider });
+        : (0, i.jsx)('div', { className: m.divider });
 });

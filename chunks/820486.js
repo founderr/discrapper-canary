@@ -32,8 +32,8 @@ let m = {},
     p = !1,
     g = {},
     T = {},
-    f = {},
-    C = {
+    C = {},
+    f = {
         id: null,
         justChanged: !1
     },
@@ -73,13 +73,13 @@ class Z extends (i = r.ZP.DeviceSettingsStore) {
         return p;
     }
     get lastDeviceConnected() {
-        return f;
+        return C;
     }
     get inputDevices() {
         return g;
     }
     get lastInputSystemDevice() {
-        return C;
+        return f;
     }
     get outputDevices() {
         return T;
@@ -94,12 +94,12 @@ h(Z, 'displayName', 'ConnectedDeviceStore'),
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
-            (C.justChanged = !1),
+            (f.justChanged = !1),
                 t.forEach((e) => {
                     if (((i[A(e)] = e.id), e.id === E.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== C.id && (C.justChanged = !0), (C.id = n);
+                        n !== f.id && (f.justChanged = !0), (f.id = n);
                     }
                 });
             let a = {};
@@ -125,16 +125,16 @@ h(Z, 'displayName', 'ConnectedDeviceStore'),
                 u = s().difference(o, c);
             return (
                 d.length > 0 || u.length > 0
-                    ? (f = {})
+                    ? (C = {})
                     : (s()
                           .difference(l, r)
                           .forEach((e) => {
-                              f[e] = v(f[e], e, _.QyF.INPUT);
+                              C[e] = v(C[e], e, _.QyF.INPUT);
                           }),
                       s()
                           .difference(c, o)
                           .forEach((e) => {
-                              f[e] = v(f[e], e, _.QyF.OUTPUT);
+                              C[e] = v(C[e], e, _.QyF.OUTPUT);
                           })),
                 !(s().isEqual(r, l) && s().isEqual(o, c)) && ((g = i), (T = a), !0)
             );
@@ -151,13 +151,13 @@ h(Z, 'displayName', 'ConnectedDeviceStore'),
                     l.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
                 }
             })(t, n, i),
-                delete f[t];
+                delete C[t];
         },
         CONNECTED_DEVICE_IGNORE: function (e) {
             let { displayName: t } = e;
-            delete f[t];
+            delete C[t];
         },
         CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-            (f = {}), (I = { neverShowModal: !0 });
+            (C = {}), (I = { neverShowModal: !0 });
         }
     }));

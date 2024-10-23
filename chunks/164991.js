@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     BK: function () {
-        return C;
+        return f;
     },
     D1: function () {
         return S;
@@ -33,7 +33,7 @@ n.d(t, {
         return I;
     },
     uP: function () {
-        return f;
+        return C;
     }
 });
 var i = n(192379),
@@ -75,8 +75,8 @@ let _ = () => d('resultsQuery'),
     p = () => d('languageCode'),
     g = () => u('languageCode'),
     T = () => d('query'),
-    f = () => u('query'),
-    C = () => u('scrollPosition'),
+    C = () => u('query'),
+    f = () => u('scrollPosition'),
     S = () => d('resultsInitialCategoryId'),
     N = (e) => {
         (0, r.j)(() => o.setState(e));

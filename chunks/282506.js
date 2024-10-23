@@ -15,13 +15,13 @@ var a = n(570140),
     p = n(979651),
     g = n(981631),
     T = n(65154);
-function f() {
+function C() {
     var e;
     let t = i;
     if (null == t || !E.Z.isOpen(t)) return !1;
     a.Z.wait(() => s.xv(t)), null === (e = h.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), (i = null);
 }
-function C() {
+function f() {
     let e = h.Z.getChannelId(),
         t = i === e;
     return (function () {
@@ -39,8 +39,8 @@ function C() {
         let a = u.Z.hasLayers();
         return !(a && u.Z.getLayers().includes(g.S9g.RTC_DEBUG)) && (!!a || e === t || !1);
     })()
-        ? f()
-        : (!t && f(),
+        ? C()
+        : (!t && C(),
           null != e &&
               (function (e) {
                   var t;
@@ -51,10 +51,10 @@ function C() {
 }
 class S extends r.Z {
     _initialize() {
-        m.Z.addChangeListener(C), I.Z.addChangeListener(C), h.Z.addChangeListener(C), p.Z.addChangeListener(C), u.Z.addChangeListener(C), c.Z.addChangeListener(C), o.Z.addChangeListener(C), _.Z.addChangeListener(C), l.ZP.addChangeListener(C);
+        m.Z.addChangeListener(f), I.Z.addChangeListener(f), h.Z.addChangeListener(f), p.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f);
     }
     _terminate() {
-        m.Z.removeChangeListener(C), I.Z.removeChangeListener(C), h.Z.removeChangeListener(C), p.Z.removeChangeListener(C), u.Z.removeChangeListener(C), c.Z.removeChangeListener(C), o.Z.removeChangeListener(C), _.Z.removeChangeListener(C), l.ZP.removeChangeListener(C);
+        m.Z.removeChangeListener(f), I.Z.removeChangeListener(f), h.Z.removeChangeListener(f), p.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f);
     }
 }
 t.Z = new S();

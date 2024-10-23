@@ -9,8 +9,8 @@ var i,
     u = n(569545),
     d = n(314897),
     h = n(19780),
-    p = n(959457),
-    m = n(630759),
+    m = n(959457),
+    p = n(630759),
     _ = n(729303),
     f = n(651941),
     E = n(981631);
@@ -19,14 +19,14 @@ let g = new Map(),
     I = !1,
     T = null;
 function x() {
-    return p.Z.getAllActiveStreamKeys().reduce((e, t) => {
+    return m.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
             i = !0 === g.get(n),
             s = C.get(t) !== i;
         return C.set(t, i), !!s || e;
     }, !1);
 }
-function v() {
+function S() {
     var e;
     let t = null !== (e = h.Z.getUserIds()) && void 0 !== e ? e : new Set(),
         n = d.default.getId(),
@@ -39,7 +39,7 @@ function v() {
     let s = i !== I;
     return (I = i), s;
 }
-function S(e) {
+function v(e) {
     let { userId: t } = e;
     if (d.default.getId() === t) return !1;
     let n = (function (e) {
@@ -47,13 +47,13 @@ function S(e) {
             if (null == t) return !1;
             let n = new Uint8Array(t),
                 i = f.Z.isKeyVerified(e, n) || _.Z.isKeyVerified(e, n),
-                s = (0, m.UB)(e, [h.Z, p.Z]),
+                s = (0, p.UB)(e, [h.Z, m.Z]),
                 a = i && !s,
                 l = a !== g.get(e);
             return g.set(e, a), l;
         })(t),
         i = x(),
-        s = v();
+        s = S();
     return n || i || s;
 }
 function N() {
@@ -61,7 +61,7 @@ function N() {
 }
 class A extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, h.Z, p.Z);
+        this.waitFor(_.Z, f.Z, h.Z, m.Z);
     }
     isCallVerified() {
         return I;
@@ -95,7 +95,7 @@ class A extends (i = r.ZP.Store) {
             switch (i) {
                 case o.Yn.STREAM:
                     if (null == t) return !1;
-                    return C.delete(t), v();
+                    return C.delete(t), S();
                 case o.Yn.DEFAULT:
                     N();
             }
@@ -103,14 +103,14 @@ class A extends (i = r.ZP.Store) {
         RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
             let { userIds: t } = e,
                 n = d.default.getId(),
-                i = t.reduce((e, t) => (n === t ? e : !!S({ userId: t }) || e), !1),
+                i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
                 s = x(),
-                a = v();
+                a = S();
             return i || s || a;
         },
-        SECURE_FRAMES_TRANSIENT_KEY_CREATE: S,
-        SECURE_FRAMES_TRANSIENT_KEY_DELETE: S,
-        SECURE_FRAMES_VERIFIED_KEY_CREATE: S,
-        SECURE_FRAMES_VERIFIED_KEY_DELETE: S,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: S
+        SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
+        SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
+        SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
+        SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v
     }));
