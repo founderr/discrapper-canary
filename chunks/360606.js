@@ -1,11 +1,11 @@
 let i, a;
 t(653041), t(47120);
-var s,
-    l,
-    r,
+var l,
+    s,
     o,
-    c = t(392711),
-    d = t.n(c),
+    r,
+    d = t(392711),
+    c = t.n(d),
     u = t(442837),
     I = t(570140),
     m = t(308063),
@@ -17,8 +17,8 @@ let h = [],
     g = [],
     p = null,
     f = null,
-    x = null,
-    C = !1,
+    C = null,
+    x = !1,
     O = !1,
     S = T.QZA.CLOSED,
     A = {},
@@ -41,14 +41,14 @@ function v(e) {
         let e = L(f.id);
         null != e && (f = e);
     }
-    if (null != x) {
-        let e = j(x.id);
-        null != e && (x = e);
+    if (null != C) {
+        let e = j(C.id);
+        null != e && (C = e);
     }
     (p = null), (S = T.QZA.OPEN), (A = {}), (R = !1);
 }
-let M = d().debounce(() => {
-    R && (null != f ? d().isEqual(f, L(f.id)) && (R = !1) : null != x && d().isEqual(x, j(x.id)) && (R = !1), !R && P.emitChange());
+let M = c().debounce(() => {
+    R && (null != f ? c().isEqual(f, L(f.id)) && (R = !1) : null != C && c().isEqual(C, j(C.id)) && (R = !1), !R && P.emitChange());
 }, 500);
 function L(e) {
     return h.find((n) => {
@@ -62,7 +62,7 @@ function j(e) {
         return t === e;
     });
 }
-class D extends (s = u.ZP.Store) {
+class D extends (l = u.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, N.Z, _.Z);
     }
@@ -85,7 +85,7 @@ class D extends (s = u.ZP.Store) {
         return f;
     }
     get editedWebhook() {
-        return x;
+        return C;
     }
     get formState() {
         return S;
@@ -106,7 +106,7 @@ class D extends (s = u.ZP.Store) {
         return j(e);
     }
     isFetching() {
-        return O || C;
+        return O || x;
     }
     showNotice() {
         return this.hasChanges();
@@ -122,15 +122,15 @@ class D extends (s = u.ZP.Store) {
             : n.application;
     }
 }
-(o = 'GuildSettingsIntegrationsStore'),
-    (r = 'displayName') in (l = D)
-        ? Object.defineProperty(l, r, {
-              value: o,
+(r = 'GuildSettingsIntegrationsStore'),
+    (o = 'displayName') in (s = D)
+        ? Object.defineProperty(s, o, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o);
+        : (s[o] = r);
 let P = new D(
     I.Z,
     __OVERLAY__
@@ -150,7 +150,7 @@ let P = new D(
               },
               INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
-                  (p = n), (f = null), (x = null), (A = {}), (R = !0);
+                  (p = n), (f = null), (C = null), (A = {}), (R = !0);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
@@ -161,7 +161,7 @@ let P = new D(
                   let { integrationId: n } = e,
                       t = L(n);
                   if (null == t) return !1;
-                  (f = t), (p = null), (x = null), (A = {}), (R = !1);
+                  (f = t), (p = null), (C = null), (A = {}), (R = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
                   (f = null), (A = {}), (R = !1);
@@ -173,20 +173,20 @@ let P = new D(
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: n } = e;
-                  if (null == x) return !1;
-                  (x = { ...x }), null != n.name && x.name !== n.name && ((x.name = n.name), (R = !0)), void 0 !== n.avatar && x.avatar !== n.avatar && ((x.avatar = n.avatar), (R = !0)), null != n.channelId && x.channel_id !== n.channelId && ((x.channel_id = n.channelId), (R = !0)), R && M();
+                  if (null == C) return !1;
+                  (C = { ...C }), null != n.name && C.name !== n.name && ((C.name = n.name), (R = !0)), void 0 !== n.avatar && C.avatar !== n.avatar && ((C.avatar = n.avatar), (R = !0)), null != n.channelId && C.channel_id !== n.channelId && ((C.channel_id = n.channelId), (R = !0)), R && M();
               },
               INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                   let { webhookId: n } = e,
                       t = j(n);
                   if (null == t) return !1;
-                  (x = t), (p = null), (f = null), (A = {}), (R = !1);
+                  (C = t), (p = null), (f = null), (A = {}), (R = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (x = null), (A = {}), (R = !1);
+                  (C = null), (A = {}), (R = !1);
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (h = []), (g = []), (p = null), (f = null), (x = null), (S = T.QZA.CLOSED), (R = !1);
+                  (i = null), (h = []), (g = []), (p = null), (f = null), (C = null), (S = T.QZA.CLOSED), (R = !1);
               },
               GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                   let { guildId: n, integrations: t } = e;
@@ -199,8 +199,8 @@ let P = new D(
                               if (t === e.id) return !0;
                           })
                       ) {
-                          var a, s;
-                          h.push(e), e.type === (null == f ? void 0 : f.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = f.account) || void 0 === s ? void 0 : s.id) && (f = e);
+                          var a, l;
+                          h.push(e), e.type === (null == f ? void 0 : f.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (l = f.account) || void 0 === l ? void 0 : l.id) && (f = e);
                       }
                   for (let e = h.length - 1; e >= 0; e--) {
                       let n = h[e],
@@ -221,7 +221,7 @@ let P = new D(
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: n, channelId: t, webhooks: a } = e;
                   if (null == i || n !== i.id || null == a || S === T.QZA.SUBMITTING) return !1;
-                  C = !1;
+                  x = !1;
                   for (let e = g.length - 1; e >= 0; e--) {
                       let n = g[e];
                       if (null != t && (null == n ? void 0 : n.channel_id) !== t) continue;
@@ -234,8 +234,8 @@ let P = new D(
                               ...n,
                               ...i
                           };
-                          (g[e] = t), !R && (null == x ? void 0 : x.id) === t.id && (x = t);
-                      } else (null == x ? void 0 : x.id) === n.id && (x = null), g.splice(e, 1);
+                          (g[e] = t), !R && (null == C ? void 0 : C.id) === t.id && (C = t);
+                      } else (null == C ? void 0 : C.id) === n.id && (C = null), g.splice(e, 1);
                   }
                   for (let e of a)
                       null ==

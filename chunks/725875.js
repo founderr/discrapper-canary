@@ -7,12 +7,12 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     a = t(192379),
-    s = t(481060),
-    l = t(139387),
-    r = t(933557),
-    o = t(699516),
-    c = t(594174),
-    d = t(491302),
+    l = t(481060),
+    s = t(139387),
+    o = t(933557),
+    r = t(699516),
+    d = t(594174),
+    c = t(491302),
     u = t(936726),
     I = t(981631),
     m = t(689938),
@@ -23,7 +23,7 @@ function N(e) {
             () =>
                 Object.values(t).map((e) => ({
                     value: e.id,
-                    label: (0, r.F6)(e, c.default, o.Z, !0)
+                    label: (0, o.F6)(e, d.default, r.Z, !0)
                 })),
             [t]
         ),
@@ -43,7 +43,7 @@ function N(e) {
         }, [t, n]),
         f = a.useCallback(
             (e) => {
-                h() && (e === (null == E ? void 0 : E.id) ? l.Z.stopEditingWebhook() : l.Z.startEditingWebhook(e));
+                h() && (e === (null == E ? void 0 : E.id) ? s.Z.stopEditingWebhook() : s.Z.startEditingWebhook(e));
             },
             [h, E]
         );
@@ -52,12 +52,12 @@ function N(e) {
         children: p.map((e) => {
             let { channel: n, webhooks: t } = e;
             return (function (e) {
-                let { channel: n, webhooks: t, channelOptions: a, lastCreatedWebhookId: l, editedWebhook: N, errors: E, toggleWebhookExpand: T } = e;
+                let { channel: n, webhooks: t, channelOptions: a, lastCreatedWebhookId: s, editedWebhook: N, errors: E, toggleWebhookExpand: T } = e;
                 return (0, i.jsxs)(
                     'div',
                     {
                         children: [
-                            (0, i.jsx)(s.FormTitle, {
+                            (0, i.jsx)(l.FormTitle, {
                                 className: _.groupHeader,
                                 children: m.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SECTION.format({
                                     channelHook: () =>
@@ -65,7 +65,7 @@ function N(e) {
                                             'span',
                                             {
                                                 className: _.channelName,
-                                                children: (0, r.F6)(n, c.default, o.Z, !0)
+                                                children: (0, o.F6)(n, d.default, r.Z, !0)
                                             },
                                             n.id
                                         )
@@ -75,7 +75,7 @@ function N(e) {
                                 var n;
                                 if (e.type === I.ylB.CHANNEL_FOLLOWER)
                                     return (0, i.jsx)(
-                                        d.Z,
+                                        c.Z,
                                         {
                                             webhook: e,
                                             editedWebhook: N,
@@ -94,7 +94,7 @@ function N(e) {
                                         editedWebhook: N,
                                         channelOptions: a,
                                         isExpanded: (null == N ? void 0 : N.id) === e.id,
-                                        isNew: l === e.id,
+                                        isNew: s === e.id,
                                         onToggleExpand: () => T(e.id),
                                         errors: E
                                     },

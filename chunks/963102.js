@@ -1,32 +1,32 @@
-s.d(t, {
+r.d(t, {
     I: function () {
         return _;
     }
 });
-var a = s(200651),
-    r = s(192379),
-    n = s(120356),
-    i = s.n(n),
-    l = s(442837),
-    o = s(780384),
-    c = s(481060),
-    d = s(425493),
-    u = s(410030),
-    m = s(984370),
-    C = s(594174),
-    f = s(471731),
-    p = s(335131),
-    h = s(689938),
-    g = s(454801);
+var s = r(200651),
+    n = r(192379),
+    a = r(120356),
+    i = r.n(a),
+    l = r(442837),
+    o = r(780384),
+    c = r(481060),
+    d = r(425493),
+    u = r(410030),
+    m = r(984370),
+    f = r(594174),
+    p = r(471731),
+    C = r(335131),
+    h = r(689938),
+    g = r(454801);
 function _(e) {
-    let { isFullScreen: t, isLayer: s, onClose: n, isCatalogView: _, handleTransition: b, transparent: x } = e,
+    let { isFullScreen: t, isLayer: r, onClose: a, isCatalogView: _, handleTransition: b, transparent: x } = e,
         E = (0, u.ZP)(),
-        I = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
-        T = (null == I ? void 0 : I.isStaff()) || (null == I ? void 0 : I.isStaffPersonal()) || !1;
-    return (0, a.jsx)(c.ThemeProvider, {
+        I = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        v = (null == I ? void 0 : I.isStaff()) || (null == I ? void 0 : I.isStaffPersonal()) || !1;
+    return (0, s.jsx)(c.ThemeProvider, {
         theme: E,
         children: (e) =>
-            (0, a.jsxs)(m.Z, {
+            (0, s.jsxs)(m.Z, {
                 className: i()(e, g.headerBar, {
                     [g.fullscreenHeaderBar]: t,
                     [g.headerBarRegularBackground]: !x,
@@ -34,34 +34,34 @@ function _(e) {
                     [g.headerBarTransparentDarkBackground]: x && (0, o.wj)(E)
                 }),
                 transparent: x,
-                toolbar: t || !T ? null : (0, a.jsx)(r.Fragment, {}),
+                toolbar: t || !v ? null : (0, s.jsx)(n.Fragment, {}),
                 children: [
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, s.jsxs)(s.Fragment, {
                         children: [
                             _ &&
                                 null != b &&
-                                (0, a.jsx)(c.Clickable, {
+                                (0, s.jsx)(c.Clickable, {
                                     onClick: b,
                                     className: g.back,
                                     'aria-label': h.Z.Messages.BACK,
-                                    children: (0, a.jsx)(c.ArrowLargeLeftIcon, {})
+                                    children: (0, s.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
-                            (0, a.jsx)(f.Z, {
+                            (0, s.jsx)(p.Z, {
                                 color: x ? ((0, o.wj)(E) ? 'white' : 'black') : void 0,
                                 className: g.discordLogo
                             })
                         ]
                     }),
-                    (0, a.jsx)(m.Z.Title, { children: h.Z.Messages.COLLECTIBLES_SHOP }),
+                    (0, s.jsx)(m.Z.Title, { children: h.Z.Messages.COLLECTIBLES_SHOP }),
                     _ &&
-                        (0, a.jsx)(m.Z.Title, {
+                        (0, s.jsx)(m.Z.Title, {
                             className: g.shopAllHeader,
                             children: h.Z.Messages.COLLECTIBLES_SHOP_ALL
                         }),
                     t &&
-                        (0, a.jsx)(d.Z, {
+                        (0, s.jsx)(d.Z, {
                             className: g.closeIcon,
-                            closeAction: s ? p.DR : n,
+                            closeAction: r ? C.DR : a,
                             keybind: 'ESC'
                         })
                 ]

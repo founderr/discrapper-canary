@@ -1,11 +1,11 @@
 var i,
     a,
-    s = t(200651),
-    l = t(192379),
-    r = t(120356),
-    o = t.n(r),
-    c = t(481060),
-    d = t(600164),
+    l = t(200651),
+    s = t(192379),
+    o = t(120356),
+    r = t.n(o),
+    d = t(481060),
+    c = t(600164),
     u = t(121173);
 function I(e, n, t) {
     return (
@@ -20,22 +20,22 @@ function I(e, n, t) {
         e
     );
 }
-class m extends (i = l.PureComponent) {
+class m extends (i = s.PureComponent) {
     render() {
         let { scrollable: e, ...n } = this.props;
         return e
-            ? (0, s.jsx)('aside', {
+            ? (0, l.jsx)('aside', {
                   className: u.sidebarScrollable,
-                  children: (0, s.jsx)(c.Scroller, {
+                  children: (0, l.jsx)(d.Scroller, {
                       fade: !0,
                       className: u.scroller,
-                      children: (0, s.jsx)(d.Z.Child, {
+                      children: (0, l.jsx)(c.Z.Child, {
                           ...n,
                           wrap: !0
                       })
                   })
               })
-            : (0, s.jsx)(d.Z.Child, {
+            : (0, l.jsx)(c.Z.Child, {
                   ...n,
                   wrap: !0
               });
@@ -47,35 +47,35 @@ I(m, 'defaultProps', {
     shrink: 0,
     className: u.sidebar
 });
-class _ extends l.PureComponent {
+class _ extends s.PureComponent {
     render() {
         let { className: e, ...n } = this.props;
-        return (0, s.jsx)(d.Z.Child, {
-            className: o()(u.content, e),
+        return (0, l.jsx)(c.Z.Child, {
+            className: r()(u.content, e),
             wrap: !0,
             ...n
         });
     }
 }
-class N extends (a = l.PureComponent) {
+class N extends (a = s.PureComponent) {
     render() {
-        return (0, s.jsx)(d.Z, { ...this.props });
+        return (0, l.jsx)(c.Z, { ...this.props });
     }
 }
 I(N, 'defaultProps', {
     className: u.layout,
-    direction: d.Z.Direction.HORIZONTAL,
-    justify: d.Z.Justify.START,
-    align: d.Z.Align.START,
-    wrap: d.Z.Wrap.NO_WRAP,
+    direction: c.Z.Direction.HORIZONTAL,
+    justify: c.Z.Justify.START,
+    align: c.Z.Align.START,
+    wrap: c.Z.Wrap.NO_WRAP,
     shrink: 1,
     grow: 1,
     basis: 'auto'
 }),
-    I(N, 'Direction', d.Z.Direction),
-    I(N, 'Justify', d.Z.Justify),
-    I(N, 'Align', d.Z.Align),
-    I(N, 'Wrap', d.Z.Wrap),
+    I(N, 'Direction', c.Z.Direction),
+    I(N, 'Justify', c.Z.Justify),
+    I(N, 'Align', c.Z.Align),
+    I(N, 'Wrap', c.Z.Wrap),
     I(N, 'Sidebar', m),
     I(N, 'Content', _),
     (n.ZP = N);

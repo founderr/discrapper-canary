@@ -23,8 +23,8 @@ function E(e) {
     a.useEffect(() => {
         T && (m(!1), p(!1));
     }, [T]);
-    let f = u && (I || h),
-        S = a.useMemo(
+    let S = u && (I || h),
+        f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
@@ -66,7 +66,7 @@ function E(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != S &&
+                                null != f &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
                                         className: _.chevron,
                                         color: 'currentColor'
@@ -75,16 +75,16 @@ function E(e) {
                         })
                     ]
                 }),
-            [t, n, u, c, S]
+            [t, n, u, c, f]
         );
-    return null == S
+    return null == f
         ? C({})
         : (0, i.jsx)(o.Tooltip, {
-              text: S,
+              text: f,
               position: 'bottom',
               'aria-label': s,
-              shouldShow: f,
-              forceOpen: f,
+              shouldShow: S,
+              forceOpen: S,
               allowOverflow: !0,
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(_.filterTooltip, { [_.filterTooltipAutoWidth]: E }),

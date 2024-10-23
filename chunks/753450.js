@@ -34,8 +34,8 @@ var i = t(200651),
     v = t(782568),
     E = t(581364),
     P = t(970321),
-    T = t(283836),
-    S = t(220082),
+    S = t(283836),
+    T = t(220082),
     N = t(252618),
     A = t(299206),
     R = t(241209),
@@ -49,8 +49,8 @@ var i = t(200651),
     B = t(626135),
     k = t(768581),
     F = t(572004),
-    H = t(823379),
-    w = t(900849),
+    w = t(823379),
+    H = t(900849),
     G = t(135431),
     U = t(674588),
     Y = t(264043),
@@ -95,7 +95,7 @@ function eE(e) {
             }
         } = e,
         f = (0, ee.useApplicationDirectoryHistory)((e) => e.guildId),
-        S = (0, W.Z)(),
+        T = (0, W.Z)(),
         es = (0, m.e7)(
             [V.Z],
             () =>
@@ -108,7 +108,7 @@ function eE(e) {
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: eT, similarLoadId: eN } = (0, m.cj)([V.Z], () => {
+        { similarApplications: eS, similarLoadId: eN } = (0, m.cj)([V.Z], () => {
             let e = {
                     applicationId: p,
                     guildId: f
@@ -122,7 +122,7 @@ function eE(e) {
                 }
             );
         }),
-        eA = a.useMemo(() => (null == eT ? void 0 : eT.slice(0, 3)), [eT]),
+        eA = a.useMemo(() => (null == eS ? void 0 : eS.slice(0, 3)), [eS]),
         eR = (0, m.e7)([Y.Z], () => Y.Z.getApplicationFetchState(p)),
         [eL, eO] = a.useState(void 0),
         ej = a.useCallback(
@@ -158,29 +158,29 @@ function eE(e) {
                         guild_id: n
                     });
                 let e = { page: eu.ZY5.APPLICATION_DIRECTORY };
-                await (0, w.Ub)(n, e, { setsHistorySnapshot: !1 });
+                await (0, H.Ub)(n, e, { setsHistorySnapshot: !1 });
             }
         } catch {}
     }, [eM]);
     a.useEffect(() => {
         if (null == eM) return;
         let e = new URL(location.href);
-        if (S && null != ek && 'true' === e.searchParams.get(eb)) {
+        if (T && null != ek && 'true' === e.searchParams.get(eb)) {
             e.searchParams.delete(eb);
             let n = e.pathname + e.search;
             (0, j.dL)(n), eF();
         }
-    }, [S, eF, ek, eM]);
-    let eH = a.useCallback(() => {
+    }, [T, eF, ek, eM]);
+    let ew = a.useCallback(() => {
             var e;
-            null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) && (S ? eF() : (0, q.rf)({ [eb]: 'true' }));
-        }, [eM, S, eF]),
-        ew = a.useCallback(() => {
+            null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) && (T ? eF() : (0, q.rf)({ [eb]: 'true' }));
+        }, [eM, T, eF]),
+        eH = a.useCallback(() => {
             (0, en.replaceAppDirectoryURLWith)(''.concat(eu.Z5c.APPLICATION_DIRECTORY_PROFILE(p)).concat(location.search));
         }, [p]);
     a.useEffect(() => {
-        I === ed.ApplicationDirectoryProfileSections.GENERAL && ew();
-    }, [ew, I]),
+        I === ed.ApplicationDirectoryProfileSections.GENERAL && eH();
+    }, [eH, I]),
         a.useEffect(() => {
             if (null != p) {
                 let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
@@ -246,7 +246,7 @@ function eE(e) {
         ),
         eq = a.useMemo(() => {
             var e, n, t;
-            return null !== (t = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(q.RF).filter(H.lm)) && void 0 !== t ? t : [];
+            return null !== (t = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(q.RF).filter(w.lm)) && void 0 !== t ? t : [];
         }, [eM]),
         eX = a.useCallback(
             (e, n) => {
@@ -361,12 +361,12 @@ function eE(e) {
         }, [eM, e6, f]);
     a.useEffect(() => {
         let e = new URL(location.href);
-        if (S && 'true' === e.searchParams.get(ex)) {
+        if (T && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let n = e.pathname + e.search;
             (0, j.dL)(n), eV('product_page');
         }
-    }, [S, eV]);
+    }, [T, eV]);
     let e8 = a.useCallback(() => {
             if (null != eM) {
                 if ((u.tq || u.Em) && null == eM.custom_install_url) {
@@ -381,7 +381,7 @@ function eE(e) {
                         return;
                     }
                 }
-                S
+                T
                     ? eV('product_page')
                     : (B.default.track(eu.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: p,
@@ -392,7 +392,7 @@ function eE(e) {
                       }),
                       (0, q.rf)({ [ex]: 'true' }));
             }
-        }, [eM, S, eV, p, f]),
+        }, [eM, T, eV, p, f]),
         e9 = (null == eM ? void 0 : eM.id) === ep.g,
         [e5, e2] = a.useState(!1),
         [e4, e7] = a.useState(!1),
@@ -404,7 +404,7 @@ function eE(e) {
         na = (null == eM ? void 0 : eM.flags) != null,
         nr = (0, P.R)(null != p ? p : '');
     a.useEffect(() => {
-        nr && null != p && (0, T.Z)(p);
+        nr && null != p && (0, S.Z)(p);
     }, [nr, p]);
     let no = a.useMemo(() => {
             let e = [],
@@ -573,7 +573,7 @@ function eE(e) {
             }
             return (
                 nn(n),
-                0 === e.length && I !== ed.ApplicationDirectoryProfileSections.GENERAL && null != eM && ew(),
+                0 === e.length && I !== ed.ApplicationDirectoryProfileSections.GENERAL && null != eM && eH(),
                 e.map((e, n) =>
                     (0, i.jsx)(
                         'div',
@@ -585,7 +585,7 @@ function eE(e) {
                     )
                 )
             );
-        }, [I, ew, eM, eL, e4, e5, eq, ey, eX, nr, p, ni, na, ez]),
+        }, [I, eH, eM, eL, e4, e5, eq, ey, eX, nr, p, ni, na, ez]),
         ns = a.useMemo(() => {
             let e = [
                 {
@@ -641,7 +641,7 @@ function eE(e) {
                 : (0, i.jsxs)(Q.Z, {
                       loading: eR === Y.M.FETCHING,
                       children: [
-                          (0, i.jsx)(eS, {
+                          (0, i.jsx)(eT, {
                               app: eM,
                               iconSrc: eG
                           }),
@@ -785,7 +785,7 @@ function eE(e) {
                                               application: eM,
                                               guildId: f,
                                               onViewCategory: eJ,
-                                              onClickGuildWidget: eH
+                                              onClickGuildWidget: ew
                                           })
                                       ]
                                   })
@@ -829,7 +829,7 @@ let eP = (e) => {
                           })
                       ]
                   })),
-            (0, i.jsx)(eT, {
+            (0, i.jsx)(eS, {
                 children: (0, i.jsx)(h.Button, {
                     look: h.Button.Looks.BLANK,
                     color: h.Button.Colors.TRANSPARENT,
@@ -842,7 +842,7 @@ let eP = (e) => {
             })
         );
     },
-    eT = (e) => {
+    eS = (e) => {
         let { className: n, contentClassName: t, children: a } = e;
         return (0, i.jsxs)('div', {
             className: o()([eI.dividerContainer, n]),
@@ -862,9 +862,9 @@ let eP = (e) => {
             ]
         });
     };
-function eS(e) {
+function eT(e) {
     let { app: n, iconSrc: t } = e,
-        r = (0, S.ZP)(t, I.Z.unsafe_rawColors.PRIMARY_800.css),
+        r = (0, T.ZP)(t, I.Z.unsafe_rawColors.PRIMARY_800.css),
         { bot: o } = n,
         s = a.useMemo(() => {
             let e = { backgroundColor: r };

@@ -1,4 +1,4 @@
-s.d(t, {
+r.d(t, {
     T: function () {
         return i;
     },
@@ -6,18 +6,18 @@ s.d(t, {
         return l;
     }
 });
-var a = s(200651);
-s(192379);
-var r = s(481060);
-let n = 'collectibles shop product details modal',
+var s = r(200651);
+r(192379);
+var n = r(481060);
+let a = 'collectibles shop product details modal',
     i = (e) => {
         let { product: t, category: i, analyticsSource: l, analyticsLocations: o, returnRef: c } = e;
-        (0, r.openModalLazy)(
+        (0, n.openModalLazy)(
             async () => {
-                let { default: e } = await s.e('2026').then(s.bind(s, 702370));
-                return (s) =>
-                    (0, a.jsx)(e, {
-                        ...s,
+                let { default: e } = await r.e('2026').then(r.bind(r, 702370));
+                return (r) =>
+                    (0, s.jsx)(e, {
+                        ...r,
                         product: t,
                         category: i,
                         analyticsSource: l,
@@ -25,9 +25,9 @@ let n = 'collectibles shop product details modal',
                         returnRef: c
                     });
             },
-            { modalKey: n }
+            { modalKey: a }
         );
     },
     l = () => {
-        (0, r.closeModal)(n);
+        (0, n.closeModal)(a);
     };

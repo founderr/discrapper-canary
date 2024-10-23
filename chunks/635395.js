@@ -49,14 +49,14 @@ class T extends s.PureComponent {
                 : (t[n] = i);
     }
 }
-let f = () => null;
+let S = () => null;
 m.isPlatformEmbedded &&
     (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
     I.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
     I.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
         o.Z.open(p.oAB.VOICE);
     }),
-    (f = r.ZP.connectStores([_.Z, d.Z, h.Z, c.default, E.Z, u.Z], () => {
+    (S = r.ZP.connectStores([_.Z, d.Z, h.Z, c.default, E.Z, u.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
             n = E.Z.getPendingCount(),
@@ -69,4 +69,4 @@ m.isPlatformEmbedded &&
             unread: !i && !!(t || e + n > 0)
         };
     })(T))),
-    (t.Z = f);
+    (t.Z = S);

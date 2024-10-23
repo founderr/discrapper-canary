@@ -113,7 +113,7 @@ function j(e) {
     let e_ = () => {
             let e = s()(H.preview, q),
                 t = () => {
-                    J({ action: 'PRESS_STREAM_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == W || W();
+                    J({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == W || W();
                 };
             return null == ed && eo
                 ? (0, r.jsx)('div', {

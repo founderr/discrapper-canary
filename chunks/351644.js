@@ -7,12 +7,12 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     a = t(192379),
-    s = t(120356),
-    l = t.n(s),
-    r = t(658722),
-    o = t.n(r),
-    c = t(442837),
-    d = t(780384),
+    l = t(120356),
+    s = t.n(l),
+    o = t(658722),
+    r = t.n(o),
+    d = t(442837),
+    c = t(780384),
     u = t(481060),
     I = t(37234),
     m = t(410030),
@@ -24,8 +24,8 @@ var i = t(200651),
     g = t(600164),
     p = t(685929),
     f = t(163400),
-    x = t(553795),
-    C = t(496675),
+    C = t(553795),
+    x = t(496675),
     O = t(626135),
     S = t(768581),
     A = t(63063),
@@ -45,7 +45,7 @@ function G(e, n) {
 }
 function k(e) {
     let { query: n, setQuery: t } = e,
-        s = a.useCallback(
+        l = a.useCallback(
             (e) => {
                 t(e);
             },
@@ -56,7 +56,7 @@ function k(e) {
         children: (0, i.jsx)(u.SearchBar, {
             size: u.SearchBar.Sizes.MEDIUM,
             query: n,
-            onChange: s,
+            onChange: l,
             onClear: () => t(''),
             placeholder: j.Z.Messages.INTEGRATIONS_SEARCH,
             'aria-label': j.Z.Messages.INTEGRATIONS_SEARCH
@@ -64,27 +64,27 @@ function k(e) {
     });
 }
 function H(e) {
-    var n, t, s, r, H, w, U, W;
+    var n, t, l, o, H, w, U, W;
     let { guild: F, channel: V, applicationIntegrations: K, builtInIntegrations: Y, customWebhooks: z, followedChannelWebhooks: q, isLoading: X, canCreateWebhook: J, onManageBuiltIn: Q, onManageCustomWebhooks: $, onManageFollowedChannels: ee, onManageApplication: en, onManageChannelsSyncing: et } = e,
         ei = (0, m.ZP)(),
-        [ea, es] = a.useState(''),
-        { isFetchingConnections: el, accounts: er } = (0, c.cj)(
-            [x.Z],
+        [ea, el] = a.useState(''),
+        { isFetchingConnections: es, accounts: eo } = (0, d.cj)(
+            [C.Z],
             () => ({
-                isFetchingConnections: x.Z.isFetching(),
-                accounts: x.Z.getAccounts()
+                isFetchingConnections: C.Z.isFetching(),
+                accounts: C.Z.getAccounts()
             }),
             []
         ),
-        { canManageWebhooks: eo, canManageGuild: ec } = (0, c.cj)(
-            [C.Z],
+        { canManageWebhooks: er, canManageGuild: ed } = (0, d.cj)(
+            [x.Z],
             () => ({
-                canManageWebhooks: (null != F && C.Z.can(L.Plq.MANAGE_WEBHOOKS, F)) || (null != V && C.Z.can(L.Plq.MANAGE_WEBHOOKS, V)),
-                canManageGuild: null != F && null == V && C.Z.can(L.Plq.MANAGE_GUILD, F)
+                canManageWebhooks: (null != F && x.Z.can(L.Plq.MANAGE_WEBHOOKS, F)) || (null != V && x.Z.can(L.Plq.MANAGE_WEBHOOKS, V)),
+                canManageGuild: null != F && null == V && x.Z.can(L.Plq.MANAGE_GUILD, F)
             }),
             [F, V]
         ),
-        ed = (0, p.Y)(V),
+        ec = (0, p.Y)(V),
         eu = (0, T.q)(null == V ? void 0 : null === (n = V.linkedLobby) || void 0 === n ? void 0 : n.application_id),
         eI = (0, f.F)(null == F ? void 0 : F.id),
         {
@@ -93,46 +93,46 @@ function H(e) {
             guildTwitchIntegrations: eN,
             guildYoutubeIntegrations: eE
         } = a.useMemo(() => {
-            var e, n, t, i, a, s, l, r;
+            var e, n, t, i, a, l, s, o;
             return {
                 availableTwitchIntegrations: null !== (a = null === (e = Y.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-                availableYoutubeIntegrations: null !== (s = null === (n = Y.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
-                guildTwitchIntegrations: null !== (l = null === (t = Y.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
-                guildYoutubeIntegrations: null !== (r = null === (i = Y.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== r ? r : 0
+                availableYoutubeIntegrations: null !== (l = null === (n = Y.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0,
+                guildTwitchIntegrations: null !== (s = null === (t = Y.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== s ? s : 0,
+                guildYoutubeIntegrations: null !== (o = null === (i = Y.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== o ? o : 0
             };
         }, [Y.twitch, Y.youtube]),
         { showTwitchCard: eT, showYoutubeCard: eh } = a.useMemo(() => {
-            if (el || !ec)
+            if (es || !ed)
                 return {
                     showTwitchCard: !1,
                     showYoutubeCard: !1
                 };
             let e = null == F ? void 0 : F.hasFeature(L.oNc.COMMUNITY),
-                n = er.filter((e) => e.type === L.ABu.TWITCH).length > 0,
-                t = er.filter((e) => e.type === L.ABu.YOUTUBE).length > 0;
+                n = eo.filter((e) => e.type === L.ABu.TWITCH).length > 0,
+                t = eo.filter((e) => e.type === L.ABu.YOUTUBE).length > 0;
             return {
                 showTwitchCard: em > 0 || (!n && e),
                 showYoutubeCard: e_ > 0 || (!t && e)
             };
-        }, [el, ec, F, er, em, e_]),
+        }, [es, ed, F, eo, em, e_]),
         eg = Object.values(K).length,
         ep = a.useMemo(() => {
-            let e = eg > 100 ? G : o();
+            let e = eg > 100 ? G : r();
             return Object.values(K).filter((n) => {
                 var t, i, a;
-                let { application: s } = n;
-                return (t = s), (i = ea), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
+                let { application: l } = n;
+                return (t = l), (i = ea), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
             });
         }, [K, eg, ea]),
-        ef = (0, c.e7)(
+        ef = (0, d.e7)(
             [M.Z],
             () => {
                 if (null != F) return ep.find((e) => M.Z.canShowOverviewTooltip(F.id, e.integration.id));
             },
             [ep, F]
         ),
-        ex = a.useMemo(() => (void 0 !== ef ? [ef, ...ep.filter((e) => e.integration.id !== ef.integration.id)] : ep), [ep, ef]),
-        eC = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
+        eC = a.useMemo(() => (void 0 !== ef ? [ef, ...ep.filter((e) => e.integration.id !== ef.integration.id)] : ep), [ep, ef]),
+        ex = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
         [eO, eS] = a.useState(!1),
         eA = a.useRef(0),
         eR = () => {
@@ -143,57 +143,57 @@ function H(e) {
                 }, 200));
         };
     a.useEffect(() => (window.addEventListener('scroll', eR, !0), () => window.removeEventListener('scroll', eR)));
-    let eb = ex.map((e) => {
-            let n = !eC && e.integration.id === (null == ef ? void 0 : ef.integration.id);
-            return (function (e, n, t, a, s) {
-                var l;
-                let { application: r, integration: o } = n,
-                    c = [];
+    let eb = eC.map((e) => {
+            let n = !ex && e.integration.id === (null == ef ? void 0 : ef.integration.id);
+            return (function (e, n, t, a, l) {
+                var s;
+                let { application: o, integration: r } = n,
+                    d = [];
                 return (
-                    null != o.user
-                        ? c.push({
+                    null != r.user
+                        ? d.push({
                               icon: u.ClockIcon,
                               text: j.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-                                  timestamp: R.default.extractTimestamp(o.id),
-                                  user: b.ZP.getUserTag(o.user)
+                                  timestamp: R.default.extractTimestamp(r.id),
+                                  user: b.ZP.getUserTag(r.user)
                               })
                           })
-                        : c.push({
+                        : d.push({
                               icon: u.ClockIcon,
-                              text: j.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: R.default.extractTimestamp(o.id) })
+                              text: j.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: R.default.extractTimestamp(r.id) })
                           }),
                     (0, i.jsx)(
                         v.Z,
                         {
-                            name: r.name,
-                            imageSrc: null !== (l = r.getIconURL(48)) && void 0 !== l ? l : S.pK['0'],
+                            name: o.name,
+                            imageSrc: null !== (s = o.getIconURL(48)) && void 0 !== s ? s : S.pK['0'],
                             integration: n,
                             buttonText: j.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
                             hasNextSection: !0,
                             onButtonClick: () => {
-                                t(r.id),
+                                t(o.id),
                                     O.default.track(L.rMx.APP_MANAGE_CTA_CLICKED, {
-                                        application_id: r.id,
+                                        application_id: o.id,
                                         guild_id: null == e ? void 0 : e.id,
-                                        is_admin: null != e ? C.Z.can(L.Plq.ADMINISTRATOR, e) : void 0
+                                        is_admin: null != e ? x.Z.can(L.Plq.ADMINISTRATOR, e) : void 0
                                     });
                             },
-                            details: c,
+                            details: d,
                             guildId: null == e ? void 0 : e.id,
                             isScrolling: a,
-                            canShowMigrationTooltip: s
+                            canShowMigrationTooltip: l
                         },
-                        'integration-'.concat(o.id)
+                        'integration-'.concat(r.id)
                     )
                 );
             })(F, e, en, eO, n);
         }),
         eZ = (0, i.jsx)('div', { className: D.footerImage });
     0 === eb.length &&
-        ec &&
+        ed &&
         ((eb = (function (e, n, t) {
-            let a = (0, d.wj)(e) ? B : y,
-                s = (0, i.jsxs)(g.Z, {
+            let a = (0, c.wj)(e) ? B : y,
+                l = (0, i.jsxs)(g.Z, {
                     direction: g.Z.Direction.VERTICAL,
                     align: g.Z.Align.CENTER,
                     className: D.emptyStateWrapper,
@@ -214,7 +214,7 @@ function H(e) {
                         })
                     ]
                 }),
-                l = (0, i.jsx)(u.Card, {
+                s = (0, i.jsx)(u.Card, {
                     editable: !0,
                     className: D.emptyStateCard,
                     children: (0, i.jsxs)('div', {
@@ -246,19 +246,19 @@ function H(e) {
                         ]
                     })
                 });
-            return n > 0 ? s : l;
+            return n > 0 ? l : s;
         })(ei, eg, null == F ? void 0 : F.id)),
         (eZ = null));
     let ev = A.Z.getArticleURL(L.BhN.INTEGRATIONS),
         eM = null != V ? j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
         eL = [];
-    if (eo) {
+    if (er) {
         let e, n;
         if (
             (eL.push(
                 ((t = z.length),
-                (s = J),
-                (r = $),
+                (l = J),
+                (o = $),
                 t > 0 ? (n = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })) : (e = j.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON),
                 (0, i.jsx)(
                     v.Z,
@@ -266,9 +266,9 @@ function H(e) {
                         name: j.Z.Messages.INTEGRATIONS_WEBHOOKS,
                         icon: u.WebhookIcon,
                         buttonText: e,
-                        buttonDisabled: !s,
+                        buttonDisabled: !l,
                         trailing: n,
-                        onButtonClick: r,
+                        onButtonClick: o,
                         hasNextSection: t > 0,
                         details: [{ text: j.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: t }) }]
                     },
@@ -319,14 +319,14 @@ function H(e) {
     eT &&
         eL.push(
             (function (e, n, t) {
-                let a, s, l, r;
-                let o = _.Z.get(L.ABu.TWITCH);
+                let a, l, s, o;
+                let r = _.Z.get(L.ABu.TWITCH);
                 return (
                     e > 0
-                        ? ((r = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (s = j.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (l = () => t(L.ABu.TWITCH)))
+                        ? ((o = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (l = j.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (s = () => t(L.ABu.TWITCH)))
                         : ((a = j.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON),
-                          (s = j.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY),
-                          (l = () =>
+                          (l = j.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY),
+                          (s = () =>
                               (0, h.Z)({
                                   platformType: L.ABu.TWITCH,
                                   location: 'Integration Settings'
@@ -335,14 +335,14 @@ function H(e) {
                         v.Z,
                         {
                             name: j.Z.Messages.INTEGRATIONS_TWITCH,
-                            icon: o.icon.whiteSVG,
-                            iconBackgroundColor: o.color,
+                            icon: r.icon.whiteSVG,
+                            iconBackgroundColor: r.color,
                             iconClassName: D.platformIcon,
                             buttonText: a,
-                            onButtonClick: l,
-                            trailing: r,
+                            onButtonClick: s,
+                            trailing: o,
                             hasNextSection: e > 0,
-                            details: [{ text: s }]
+                            details: [{ text: l }]
                         },
                         'integrations-twitch'
                     )
@@ -352,14 +352,14 @@ function H(e) {
         eh &&
             eL.push(
                 (function (e, n, t) {
-                    let a, s, l, r;
-                    let o = _.Z.get(L.ABu.YOUTUBE);
+                    let a, l, s, o;
+                    let r = _.Z.get(L.ABu.YOUTUBE);
                     return (
                         e > 0
-                            ? ((r = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (s = j.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (l = () => t(L.ABu.YOUTUBE)))
+                            ? ((o = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (l = j.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (s = () => t(L.ABu.YOUTUBE)))
                             : ((a = j.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON),
-                              (s = j.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY),
-                              (l = () =>
+                              (l = j.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY),
+                              (s = () =>
                                   (0, h.Z)({
                                       platformType: L.ABu.YOUTUBE,
                                       location: 'Integration Settings'
@@ -368,30 +368,30 @@ function H(e) {
                             v.Z,
                             {
                                 name: j.Z.Messages.INTEGRATIONS_YOUTUBE,
-                                icon: o.icon.whiteSVG,
-                                iconBackgroundColor: o.color,
+                                icon: r.icon.whiteSVG,
+                                iconBackgroundColor: r.color,
                                 iconClassName: D.platformIcon,
                                 buttonText: a,
-                                onButtonClick: l,
-                                trailing: r,
+                                onButtonClick: s,
+                                trailing: o,
                                 hasNextSection: e > 0,
-                                details: [{ text: s }]
+                                details: [{ text: l }]
                             },
                             'integrations-youtube'
                         )
                     );
                 })(e_, eE, Q)
             );
-    let ej = null != V && ed && null != eu;
+    let ej = null != V && ec && null != eu;
     return (0, i.jsxs)(u.FormSection, {
-        className: l()(null != eZ ? D.footerPlaceholder : null),
+        className: s()(null != eZ ? D.footerPlaceholder : null),
         children: [
             (0, i.jsx)(u.FormText, {
                 type: u.FormTextTypes.DESCRIPTION,
                 children: eM.format({ helpdeskArticle: ev })
             }),
             (0, i.jsx)(u.FormDivider, { className: D.divider }),
-            X || el || null == F
+            X || es || null == F
                 ? (0, i.jsx)(u.Spinner, {
                       className: D.__invalid_spinner,
                       type: u.Spinner.Type.SPINNING_CIRCLE
@@ -419,7 +419,7 @@ function H(e) {
                                       })
                                   ]
                               }),
-                          ec
+                          ed
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         eL.length > 0 || ej ? (0, i.jsx)(u.FormDivider, { className: D.divider }) : null,
@@ -431,7 +431,7 @@ function H(e) {
                                         eg > 4
                                             ? (0, i.jsx)(k, {
                                                   query: ea,
-                                                  setQuery: es
+                                                  setQuery: el
                                               })
                                             : null,
                                         eb

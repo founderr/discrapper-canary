@@ -37,17 +37,17 @@ t.Z = function (e) {
         T = a.useCallback(() => {
             (0, u.JG)(g(n.id)), (0, r.showToast)((0, r.createToast)(h.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS));
         }, [n.id]),
-        f = (0, s.e7)([d.default], () => d.default.locale),
-        S = a.useCallback(() => {
+        S = (0, s.e7)([d.default], () => d.default.locale),
+        f = a.useCallback(() => {
             null != n &&
                 (0, l.Z)(
                     (0, o.G)({
                         id: n.id,
                         name: n.name,
-                        locale: f
+                        locale: S
                     })
                 );
-        }, [f, n]),
+        }, [S, n]),
         C = (0, c.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: h.Z.Messages.COPY_ID_APPLICATION,
@@ -66,13 +66,13 @@ t.Z = function (e) {
                                 id: 'report',
                                 label: h.Z.Messages.REPORT_APP,
                                 color: 'danger',
-                                action: S
+                                action: f
                             })
                         }),
                         null != C ? (0, i.jsx)(r.MenuGroup, { children: C }) : null
                     ]
                 }),
-            [C, S]
+            [C, f]
         );
     return (0, i.jsxs)('div', {
         className: m.actionContainer,

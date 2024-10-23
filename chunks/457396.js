@@ -22,8 +22,8 @@ var r = n(91192),
     p = n(594174),
     g = n(351402),
     T = n(78839),
-    f = n(626135),
-    S = n(74538),
+    S = n(626135),
+    f = n(74538),
     C = n(502087),
     N = n(657041),
     A = n(769415),
@@ -57,7 +57,7 @@ let W = (e) => {
         { selected: a, route: W, locationState: K, ...q } = e,
         Q = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         X = (0, l.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
-        J = (0, S.Qo)(Q, X),
+        J = (0, f.Qo)(Q, X),
         $ = (0, r.JA)('nitro'),
         ee = (0, R.N)(),
         et = (0, L.Ng)(),
@@ -79,8 +79,8 @@ let W = (e) => {
         ep = null != eE ? eE : null == Q ? void 0 : Q.createdAt,
         eg = a || null != ee || null != et || es || eu || e_ || el || null != eo || null != ec || J,
         { enabled: eT } = v._.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
-        { enabled: ef } = A.Z.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
-        eS = eT && (null == ee ? void 0 : ee.trial_id) === k.a7,
+        { enabled: eS } = A.Z.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
+        ef = eT && (null == ee ? void 0 : ee.trial_id) === k.a7,
         [eC, eN] = (0, m.US)(en ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(eg = eg || (null != Q && null != ep && Date.now() - ep.getTime() > z))) return null;
     em !== k.a$.NONE &&
@@ -91,7 +91,7 @@ let W = (e) => {
             messageStyle: _.a.SHORT_TIME,
             upperCase: !0
         }))),
-        ei && ef
+        ei && eS
             ? ((i = 10),
               (n = (0, s.jsx)(D.dX, {
                   isSelected: a,
@@ -122,7 +122,7 @@ let W = (e) => {
                                   includesAmountOff: !1
                               })),
                               (i = 3))
-                            : null == ee || eS || ei
+                            : null == ee || ef || ei
                               ? ed
                                   ? ((n = (0, s.jsx)(D.lH, {
                                         isSelected: a,
@@ -142,7 +142,7 @@ let W = (e) => {
         text: V.Z.Messages.PREMIUM,
         locationState: K,
         onClick: () => {
-            f.default.track(B.rMx.NITRO_TAB_VISITED, {
+            S.default.track(B.rMx.NITRO_TAB_VISITED, {
                 badge_decorator: i,
                 has_premium: J
             }),
@@ -153,7 +153,7 @@ let W = (e) => {
         className: t,
         children: n
     });
-    return ei && ef
+    return ei && eS
         ? (0, s.jsx)(D.CI, {
               variant: D.j$.TRIAL_FOR_ALL,
               trialOffer: ee,

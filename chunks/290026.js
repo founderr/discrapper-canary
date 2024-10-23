@@ -1,20 +1,20 @@
-s.d(t, {
+r.d(t, {
     P: function () {
         return c;
     }
 }),
-    s(47120);
-var a = s(192379),
-    r = s(979554),
-    n = s(442837),
-    i = s(597688),
-    l = s(365943),
-    o = s(25251);
+    r(47120);
+var s = r(192379),
+    n = r(979554),
+    a = r(442837),
+    i = r(597688),
+    l = r(365943),
+    o = r(25251);
 let c = () => {
-    let e = (0, n.e7)([i.Z], () => i.Z.products);
-    a.useEffect(() => {
+    let e = (0, a.e7)([i.Z], () => i.Z.products);
+    s.useEffect(() => {
         let t = [...e.values()]
-            .filter((e) => e.type === r.Z.PROFILE_EFFECT)
+            .filter((e) => e.type === n.Z.PROFILE_EFFECT)
             .some((e) => {
                 let t = e.items[0].id;
                 return null != t && null == o.Z.getProfileEffectById(t);

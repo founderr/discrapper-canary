@@ -46,8 +46,8 @@ let x = new _.h(
         (e) => e.id
     ),
     P = {},
-    T = {};
-function S(e) {
+    S = {};
+function T(e) {
     var n;
     for (let t of (x.set(e.id, e), null !== (n = e.subscription_listings) && void 0 !== n ? n : []))
         (function (e) {
@@ -74,7 +74,7 @@ class N extends (a = u.yh) {
     }
     getEntitlementsForGuildFetchState(e) {
         var n;
-        return null !== (n = T[e]) && void 0 !== n ? n : 0;
+        return null !== (n = S[e]) && void 0 !== n ? n : 0;
     }
     getSubscriptionListingForPlan(e) {
         let n = v.values(g(e));
@@ -100,7 +100,7 @@ class N extends (a = u.yh) {
         : (o[s] = l),
     (n.Z = new N(p.Z, {
         LOGOUT: function () {
-            x.clear(), v.clear(), E.clear(), (P = {}), (T = {});
+            x.clear(), v.clear(), E.clear(), (P = {}), (S = {});
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { applicationId: n, groupListingId: t } = e;
@@ -110,7 +110,7 @@ class N extends (a = u.yh) {
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { applicationId: n, groupListing: t } = e;
-            (P[n] = 2), S(t);
+            (P[n] = 2), T(t);
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { applicationId: n } = e;
@@ -118,11 +118,11 @@ class N extends (a = u.yh) {
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
             let { guildId: n } = e;
-            T[n] = 1;
+            S[n] = 1;
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(e) {
             let { guildId: n, entitlements: t } = e;
-            (T[n] = 2),
+            (S[n] = 2),
                 t.forEach((e) => {
                     let n = m.Z.createFromServer(e);
                     E.set(n.id, n);
@@ -130,10 +130,10 @@ class N extends (a = u.yh) {
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(e) {
             let { guildId: n } = e;
-            T[n] = 0;
+            S[n] = 0;
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: n } = e;
-            S(n);
+            T(n);
         }
     }));

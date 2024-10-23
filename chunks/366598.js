@@ -1,31 +1,31 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = t(200651),
     a = t(192379),
-    s = t(120356),
-    l = t.n(s),
-    r = t(481060),
-    o = t(926152);
-function c(e) {
-    let { children: n, icon: t, title: s } = e;
+    l = t(120356),
+    s = t.n(l),
+    o = t(481060),
+    r = t(926152);
+function d(e) {
+    let { children: n, icon: t, title: l } = e;
     return (0, i.jsxs)('header', {
-        className: o.header,
+        className: r.header,
         children: [
             (0, i.jsxs)('div', {
-                className: o.name,
+                className: r.name,
                 children: [
                     a.cloneElement(t, {
-                        className: l()(t.props.className, o.icon),
+                        className: s()(t.props.className, r.icon),
                         height: 24,
                         width: 24
                     }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(o.Heading, {
                         variant: 'heading-md/semibold',
-                        className: o.title,
-                        children: s
+                        className: r.title,
+                        children: l
                     })
                 ]
             }),

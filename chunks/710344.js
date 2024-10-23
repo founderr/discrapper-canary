@@ -7,36 +7,36 @@ t.d(n, {
 var i = t(192379);
 function a(e, n) {
     let [t, a] = i.useState(null),
-        s = i.useCallback((e) => {
+        l = i.useCallback((e) => {
             a(e);
         }, []),
-        l = i.useCallback(() => {
+        s = i.useCallback(() => {
             a(null);
         }, []),
-        r = i.useCallback(
+        o = i.useCallback(
             (i) => {
-                l();
+                s();
                 let a = e.find((e) => {
                         let { id: n } = e;
                         return t === n;
                     }),
-                    s = e.find((e) => {
+                    l = e.find((e) => {
                         let { id: n } = e;
                         return i === n;
                     });
-                if (null == a || null == s || a === s) return;
-                let r = [...e],
-                    o = r.indexOf(a),
-                    c = r.indexOf(s),
-                    d = c - o > 0 ? 1 : 0;
-                r.splice(o, 1), (c = r.indexOf(s)), r.splice(c + d, 0, a), n(r);
+                if (null == a || null == l || a === l) return;
+                let o = [...e],
+                    r = o.indexOf(a),
+                    d = o.indexOf(l),
+                    c = d - r > 0 ? 1 : 0;
+                o.splice(r, 1), (d = o.indexOf(l)), o.splice(d + c, 0, a), n(o);
             },
-            [e, t, l, n]
+            [e, t, s, n]
         );
     return {
         draggingId: t,
-        handleDragStart: s,
-        handleDragReset: l,
-        handleDragComplete: r
+        handleDragStart: l,
+        handleDragReset: s,
+        handleDragComplete: o
     };
 }

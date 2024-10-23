@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(730749),
     g = n(112724),
     T = n(812206),
-    f = n(44315),
-    S = n(600164),
+    S = n(44315),
+    f = n(600164),
     C = n(167533),
     N = n(925329),
     A = n(707409),
@@ -243,14 +243,14 @@ class K extends a.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: a, message: s } = e;
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(f.Z, {
+            direction: f.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.Progress, {
                     percent: t,
                     size: _.Progress.Sizes.SMALL,
-                    foregroundColor: (0, f.Lq)(n),
-                    foregroundGradientColor: null != a ? [(0, f.Lq)(a[0]), (0, f.Lq)(a[1])] : void 0,
+                    foregroundColor: (0, S.Lq)(n),
+                    foregroundGradientColor: null != a ? [(0, S.Lq)(a[0]), (0, S.Lq)(a[1])] : void 0,
                     animate: this.isFocused
                 }),
                 (0, i.jsx)('div', {
@@ -262,8 +262,8 @@ class K extends a.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(f.Z, {
+            direction: f.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.StackedProgress, {
                     percents: t,
@@ -447,8 +447,8 @@ let q = () =>
             key: Y,
             cellClassName: j.nameCell,
             render: (e) =>
-                (0, i.jsxs)(S.Z, {
-                    align: S.Z.Align.CENTER,
+                (0, i.jsxs)(f.Z, {
+                    align: f.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)(N.Z, {
                             game: e.application,
@@ -492,8 +492,8 @@ let q = () =>
                         : null != e.state
                           ? e.state.type !== D.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e })), (a = (0, i.jsx)(J, { item: e })))
                           : (a = (0, i.jsx)(J, { item: e })),
-                    (0, i.jsxs)(S.Z, {
-                        justify: S.Z.Justify.END,
+                    (0, i.jsxs)(f.Z, {
+                        justify: f.Z.Justify.END,
                         children: [n, a]
                     })
                 );

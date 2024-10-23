@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(433355),
     g = n(933557),
     T = n(287746),
-    f = n(689938),
-    S = n(868912),
+    S = n(689938),
+    f = n(868912),
     C = n(542348);
 function N(e) {
     let { channel: t, baseChannelId: n } = e,
@@ -35,7 +35,7 @@ function N(e) {
             I.Z.closeChannelSidebar(p.uZ), Z && A && (0, m.Kh)(t.id), L && v && (0, m.Kh)(t.id);
         }, [t.id, L, v, Z, A]),
         x = a.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(f.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
+            (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: b } = (0, E.m)({
             onAcceptSuccess: O,
@@ -47,7 +47,7 @@ function N(e) {
             o.ZP.Icon,
             {
                 icon: r.XSmallIcon,
-                tooltip: f.Z.Messages.CLOSE,
+                tooltip: S.Z.Messages.CLOSE,
                 onClick: () => I.Z.closeChannelSidebar(n)
             },
             'close'
@@ -57,7 +57,7 @@ function N(e) {
         children: [
             (0, i.jsx)(o.ZP, {
                 toolbar: M,
-                'aria-label': f.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+                'aria-label': S.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                 children: (0, c.ud)({
                     channel: t,
                     channelName: N,
@@ -71,18 +71,18 @@ function N(e) {
                         (0, i.jsx)(r.Text, {
                             className: C.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
-                            children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
+                            children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
                         }),
                         (0, i.jsx)(r.Button, {
                             className: C.hamBannerButton,
                             size: r.ButtonSizes.SMALL,
                             onClick: () => b(t, R),
-                            children: f.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
+                            children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
                         })
                     ]
                 }),
             (0, i.jsx)('div', {
-                className: S.chat,
+                className: f.chat,
                 children: (0, i.jsx)(
                     T.Z,
                     {

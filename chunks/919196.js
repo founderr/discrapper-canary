@@ -7,12 +7,12 @@ t.d(n, {
     t(653041);
 var i = t(200651),
     a = t(192379),
-    s = t(442837),
-    l = t(481060),
-    r = t(668781),
-    o = t(600164),
-    c = t(434404),
-    d = t(590157),
+    l = t(442837),
+    s = t(481060),
+    o = t(668781),
+    r = t(600164),
+    d = t(434404),
+    c = t(590157),
     u = t(280885),
     I = t(496675),
     m = t(768581),
@@ -24,23 +24,23 @@ var i = t(200651),
     g = t(725875),
     p = t(981631),
     f = t(689938),
-    x = t(695768);
-function C(e) {
-    let { application: n, guild: t, integration: a, ...s } = e;
-    return (0, i.jsx)(l.ConfirmModal, {
-        ...s,
+    C = t(695768);
+function x(e) {
+    let { application: n, guild: t, integration: a, ...l } = e;
+    return (0, i.jsx)(s.ConfirmModal, {
+        ...l,
         header: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({ applicationName: n.name }),
         confirmText: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
         cancelText: f.Z.Messages.CANCEL,
         onConfirm: () => {
-            c.Z.disableIntegration(t.id, a.id).catch(() => {
-                r.Z.show({
+            d.Z.disableIntegration(t.id, a.id).catch(() => {
+                o.Z.show({
                     title: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
                     body: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
                 });
             });
         },
-        children: (0, i.jsx)(l.Text, {
+        children: (0, i.jsx)(s.Text, {
             variant: 'text-md/normal',
             children: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({ applicationName: n.name })
         })
@@ -48,14 +48,14 @@ function C(e) {
 }
 function O(e) {
     var n;
-    let { guild: t, applicationIntegration: r, selectableWebhookChannels: c, editedWebhook: O, errors: S, canNavigate: A } = e,
-        { application: R, integration: b, webhooks: Z } = r,
-        [v, M] = (0, s.Wu)([I.Z], () => [I.Z.can(p.Plq.MANAGE_ROLES, t), null == R.bot || I.Z.canManageUser(p.Plq.MANAGE_GUILD, R.bot.id, t)], [R.bot, t]),
-        L = (0, s.e7)([I.Z], () => I.Z.can(p.Plq.MANAGE_WEBHOOKS, t), [t]),
+    let { guild: t, applicationIntegration: o, selectableWebhookChannels: d, editedWebhook: O, errors: S, canNavigate: A } = e,
+        { application: R, integration: b, webhooks: Z } = o,
+        [v, M] = (0, l.Wu)([I.Z], () => [I.Z.can(p.Plq.MANAGE_ROLES, t), null == R.bot || I.Z.canManageUser(p.Plq.MANAGE_GUILD, R.bot.id, t)], [R.bot, t]),
+        L = (0, l.e7)([I.Z], () => I.Z.can(p.Plq.MANAGE_WEBHOOKS, t), [t]),
         j = a.useCallback(() => {
             A() &&
-                (0, l.openModal)((e) =>
-                    (0, i.jsx)(C, {
+                (0, s.openModal)((e) =>
+                    (0, i.jsx)(x, {
                         guild: t,
                         application: R,
                         integration: b,
@@ -66,14 +66,14 @@ function O(e) {
         D = a.useMemo(() => {
             let e = [
                 {
-                    icon: l.ClockIcon,
+                    icon: s.ClockIcon,
                     text: f.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: _.default.extractTimestamp(b.id) })
                 }
             ];
             return (
                 null != b.user &&
                     e.push({
-                        icon: l.UserIcon,
+                        icon: s.UserIcon,
                         text: f.Z.Messages.INTEGRATION_ADDED_USER.format({ user: N.ZP.getUserTag(b.user) })
                     }),
                 e
@@ -84,18 +84,18 @@ function O(e) {
                 null != R.bot
                     ? (0, i.jsx)(h.Z, {
                           guild: t,
-                          applicationIntegration: r
+                          applicationIntegration: o
                       })
-                    : (0, i.jsx)(l.Card, {
-                          className: x.emptyCard,
+                    : (0, i.jsx)(s.Card, {
+                          className: C.emptyCard,
                           editable: !0,
-                          children: (0, i.jsx)(l.Text, {
+                          children: (0, i.jsx)(s.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
                               children: f.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
                           })
                       }),
-            [R.bot, r, t]
+            [R.bot, o, t]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -108,23 +108,23 @@ function O(e) {
             (null == R ? void 0 : R.description) != null
                 ? (0, i.jsx)(u.Z, {
                       userBio: R.description,
-                      className: x.headerDescription
+                      className: C.headerDescription
                   })
                 : null,
             v
-                ? (0, i.jsx)(d.Z, {
+                ? (0, i.jsx)(c.Z, {
                       application: R,
                       canNavigate: A,
                       guildId: t.id
                   })
                 : null,
-            (0, i.jsx)(l.FormDivider, { className: x.headerDivider }),
+            (0, i.jsx)(s.FormDivider, { className: C.headerDivider }),
             null != R.bot
                 ? (0, i.jsxs)('div', {
-                      className: x.section,
+                      className: C.section,
                       children: [
                           (0, i.jsx)(T.Z, {
-                              icon: (0, i.jsx)(l.RobotIcon, {
+                              icon: (0, i.jsx)(s.RobotIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
@@ -135,10 +135,10 @@ function O(e) {
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: x.section,
+                className: C.section,
                 children: [
                     (0, i.jsx)(T.Z, {
-                        icon: (0, i.jsx)(l.WebhookIcon, {
+                        icon: (0, i.jsx)(s.WebhookIcon, {
                             size: 'md',
                             color: 'currentColor'
                         }),
@@ -148,14 +148,14 @@ function O(e) {
                         ? (0, i.jsx)(g.Z, {
                               webhooks: Z,
                               editedWebhook: O,
-                              selectableWebhookChannels: c,
+                              selectableWebhookChannels: d,
                               errors: S,
                               canNavigate: A
                           })
-                        : (0, i.jsx)(l.Card, {
-                              className: x.emptyCard,
+                        : (0, i.jsx)(s.Card, {
+                              className: C.emptyCard,
                               editable: !0,
-                              children: (0, i.jsx)(l.Text, {
+                              children: (0, i.jsx)(s.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
                                   children: L ? f.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : f.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
@@ -163,24 +163,24 @@ function O(e) {
                           })
                 ]
             }),
-            (0, i.jsx)(l.FormDivider, { className: x.headerDivider }),
-            (0, i.jsxs)(o.Z, {
-                className: x.section,
-                justify: o.Z.Justify.BETWEEN,
-                align: o.Z.Align.CENTER,
+            (0, i.jsx)(s.FormDivider, { className: C.headerDivider }),
+            (0, i.jsxs)(r.Z, {
+                className: C.section,
+                justify: r.Z.Justify.BETWEEN,
+                align: r.Z.Align.CENTER,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(s.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
                         children: M ? f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
                     }),
-                    (0, i.jsx)(o.Z.Child, {
+                    (0, i.jsx)(r.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(l.Button, {
-                            size: l.Button.Sizes.SMALL,
-                            color: l.Button.Colors.RED,
-                            look: l.Button.Looks.FILLED,
+                        children: (0, i.jsx)(s.Button, {
+                            size: s.Button.Sizes.SMALL,
+                            color: s.Button.Colors.RED,
+                            look: s.Button.Looks.FILLED,
                             disabled: !M,
                             onClick: j,
                             children: f.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE

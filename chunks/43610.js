@@ -1,11 +1,11 @@
-s.d(t, {
+r.d(t, {
     t: function () {
         return i;
     }
 });
-var a = s(818083),
-    r = s(987338);
-let n = (0, a.B)({
+var s = r(818083),
+    n = r(987338);
+let a = (0, s.B)({
         kind: 'user',
         id: '2024-10_shop_browse_spookynight_switch',
         label: 'Collectibles Shop SpookyNight Switch',
@@ -17,6 +17,6 @@ let n = (0, a.B)({
                 config: { enabled: !0 }
             }
         ],
-        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: n.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    i = (e) => n.useExperiment({ location: e }).enabled;
+    i = (e) => a.useExperiment({ location: e }).enabled;

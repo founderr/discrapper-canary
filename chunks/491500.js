@@ -5,12 +5,12 @@ t.d(n, {
 });
 var i = t(200651),
     a = t(192379),
-    s = t(392711),
-    l = t.n(s),
-    r = t(481060),
-    o = t(139387),
-    c = t(835473),
-    d = t(471445),
+    l = t(392711),
+    s = t.n(l),
+    o = t(481060),
+    r = t(139387),
+    d = t(835473),
+    c = t(471445),
     u = t(925329),
     I = t(163400),
     m = t(327934),
@@ -19,7 +19,7 @@ var i = t(200651),
     E = t(778429);
 function T(e) {
     let { applicationId: n, channels: t } = e,
-        a = (0, c.q)(n);
+        a = (0, d.q)(n);
     return 0 === t.length || null == a
         ? null
         : (0, i.jsxs)('div', {
@@ -32,7 +32,7 @@ function T(e) {
                               game: a,
                               size: u.Z.Sizes.XSMALL
                           }),
-                          (0, i.jsx)(r.Heading, {
+                          (0, i.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
                               children: null == a ? void 0 : a.name
                           })
@@ -46,10 +46,10 @@ function T(e) {
                               channel: e,
                               application: a,
                               name: e.name,
-                              icon: null !== (n = (0, d.KS)(e)) && void 0 !== n ? n : void 0,
+                              icon: null !== (n = (0, c.KS)(e)) && void 0 !== n ? n : void 0,
                               iconWrapperClassName: E.iconwrapper,
                               hasNextSection: !0,
-                              trailing: (0, i.jsx)(r.PencilIcon, { size: 'xs' })
+                              trailing: (0, i.jsx)(o.PencilIcon, { size: 'xs' })
                           },
                           e.id
                       );
@@ -60,28 +60,28 @@ function T(e) {
 function h(e) {
     let { guild: n } = e,
         t = (0, I.F)(n.id),
-        s = l().groupBy(t, (e) => {
+        l = s().groupBy(t, (e) => {
             var n;
             return null === (n = e.linkedLobby) || void 0 === n ? void 0 : n.application_id;
         }),
-        c = Object.keys(s);
+        d = Object.keys(l);
     return (
         a.useEffect(() => {
-            0 === t.length && o.Z.setSection(_.b4C.OVERVIEW);
+            0 === t.length && r.Z.setSection(_.b4C.OVERVIEW);
         }, [t]),
-        (0, i.jsxs)(r.FormSection, {
+        (0, i.jsxs)(o.FormSection, {
             children: [
-                (0, i.jsx)(r.FormText, {
-                    type: r.FormTextTypes.DESCRIPTION,
+                (0, i.jsx)(o.FormText, {
+                    type: o.FormTextTypes.DESCRIPTION,
                     children: N.Z.Messages.INTEGRATIONS_LINKED_LOBBY_CHANNELS_SYNCING_INFO.format({ helpdeskArticle: '#' })
                 }),
-                (0, i.jsx)(r.FormDivider, { className: E.headerDivider }),
-                c.map((e) =>
+                (0, i.jsx)(o.FormDivider, { className: E.headerDivider }),
+                d.map((e) =>
                     (0, i.jsx)(
                         T,
                         {
                             applicationId: e,
-                            channels: s[e]
+                            channels: l[e]
                         },
                         e
                     )

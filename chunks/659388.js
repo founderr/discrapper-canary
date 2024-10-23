@@ -1,43 +1,43 @@
 t.d(n, {
     Z: function () {
-        return l;
+        return s;
     }
 }),
     t(47120);
 var i = t(192379),
     a = t(999153),
-    s = t(584922);
-function l(e) {
-    let { type: n, index: t, optionId: l, onDragStart: r, onDragComplete: o, onDragReset: c } = e,
-        [d, u] = i.useState(!1),
+    l = t(584922);
+function s(e) {
+    let { type: n, index: t, optionId: s, onDragStart: o, onDragComplete: r, onDragReset: d } = e,
+        [c, u] = i.useState(!1),
         [, I] = (0, a.c)({
             type: n,
             item: () => (
-                r(l),
+                o(s),
                 {
-                    id: l,
+                    id: s,
                     position: t
                 }
             ),
-            canDrag: () => d,
+            canDrag: () => c,
             collect: (e) => ({ isDragging: e.isDragging() }),
             end: (e, n) => {
                 let t = n.getDropResult();
                 if (null == t) {
-                    c();
+                    d();
                     return;
                 }
-                o(t.optionId);
+                r(t.optionId);
             }
         }),
-        [{ dragSourcePosition: m }, _] = (0, s.L)({
+        [{ dragSourcePosition: m }, _] = (0, l.L)({
             accept: n,
             canDrop: () => !0,
             collect: (e) => {
                 let n = e.getItem();
                 return null != n && e.isOver() && e.canDrop() ? { dragSourcePosition: n.position } : { dragSourcePosition: null };
             },
-            drop: () => ({ optionId: l })
+            drop: () => ({ optionId: s })
         });
     return {
         drag: I,

@@ -6,26 +6,26 @@ t.d(n, {
 var i = t(200651);
 t(192379);
 var a = t(442837),
-    s = t(481060),
-    l = t(434404),
-    r = t(962086),
-    o = t(225675),
-    c = t(496675),
-    d = t(981631),
+    l = t(481060),
+    s = t(434404),
+    o = t(962086),
+    r = t(225675),
+    d = t(496675),
+    c = t(981631),
     u = t(689938);
 function I(e, n) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
-    return (0, a.e7)([c.Z], () => c.Z.canImpersonateRole(e, n))
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.pNK.ROLES;
+    return (0, a.e7)([d.Z], () => d.Z.canImpersonateRole(e, n))
         ? (0, i.jsx)(
-              s.MenuItem,
+              l.MenuItem,
               {
                   id: 'view-as-role',
                   label: u.Z.Messages.VIEW_AS_ROLE,
-                  icon: s.ArrowSmallRightIcon,
+                  icon: l.ArrowSmallRightIcon,
                   action: () => {
-                      l.Z.close(),
-                          (0, r.iD)(e.id, {
-                              type: o.z.ROLES,
+                      s.Z.close(),
+                          (0, o.iD)(e.id, {
+                              type: r.z.ROLES,
                               roles: { [n.id]: n },
                               returnToSection: t
                           });

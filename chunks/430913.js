@@ -84,8 +84,8 @@ function E(e) {
     var n, t, r;
     let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
         [E, P] = a.useState(null),
-        T = [],
-        S = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+        S = [],
+        T = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
         if ((null === (e = s.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
@@ -104,7 +104,7 @@ function E(e) {
     return (
         null != s.categories &&
             s.categories.length > 0 &&
-            T.push(
+            S.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
@@ -142,7 +142,7 @@ function E(e) {
             ),
         null != E &&
             E.length > 0 &&
-            T.push(
+            S.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
@@ -154,8 +154,8 @@ function E(e) {
                     ]
                 })
             ),
-        (null != s.terms_of_service_url || null != s.privacy_policy_url || S.length > 0) &&
-            T.push(
+        (null != s.terms_of_service_url || null != s.privacy_policy_url || T.length > 0) &&
+            S.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
@@ -163,7 +163,7 @@ function E(e) {
                             variant: 'eyebrow',
                             children: g.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
                         }),
-                        S.map((e, n) =>
+                        T.map((e, n) =>
                             (0, i.jsx)(
                                 x,
                                 {
@@ -197,7 +197,7 @@ function E(e) {
             ),
         null != s.guild &&
             s.guild.features.includes(h.oNc.DISCOVERABLE) &&
-            T.push(
+            S.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(l.Heading, {
@@ -215,9 +215,9 @@ function E(e) {
         (0, i.jsx)('div', {
             className: o()(C.sidebar, d),
             children:
-                T.length > 0
+                S.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: T.map((e, n) =>
+                          children: S.map((e, n) =>
                               (0, i.jsx)(
                                   'div',
                                   {
