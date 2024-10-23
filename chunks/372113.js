@@ -55,48 +55,50 @@ function U(e) {
         E = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         x = (0, l.e7)([C.Z], () => C.Z.isEnrolling(t.id)),
         T = (0, _.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST),
-        S = (0, g.Ks)({
+        S = (0, _.cr)(t),
+        h = (0, g.Ks)({
             progressState: n,
             quest: t,
             isInHouseQuest: T,
             location: i,
             isCollectibleQuest: a,
             questContentPosition: u,
-            inGiftInventory: d
+            inGiftInventory: d,
+            isVideoQuest: S
         }),
-        h = T && d && c,
-        p = h ? R.inHouseButton : r.ButtonColors.BRAND,
-        j = c && !E ? r.ShinyButton : r.Button;
+        p = T && d && c,
+        j = p ? R.inHouseButton : r.ButtonColors.BRAND,
+        N = c && !E ? r.ShinyButton : r.Button;
     return (0, s.jsx)(
         r.Tooltip,
         {
-            text: S.tooltipText,
+            text: h.tooltipText,
             tooltipContentClassName: R.ctaTooltipText,
             children: (e) => {
                 var t;
-                return (0, s.jsx)(j, {
+                return (0, s.jsx)(N, {
                     ...e,
                     wrapperClassName: R.ctaButtonWrapper,
-                    color: p,
-                    disabled: null == S.onClick,
+                    color: j,
+                    disabled: null == h.onClick,
                     submitting: x,
-                    onClick: null !== (t = S.onClick) && void 0 !== t ? t : () => {},
+                    onClick: null !== (t = h.onClick) && void 0 !== t ? t : () => {},
                     children: (0, s.jsxs)('div', {
                         className: R.ctaButtonInner,
                         children: [
-                            h &&
+                            p &&
                                 (0, s.jsx)('img', {
                                     src: I,
                                     alt: '',
                                     className: R.inHouseIcon
                                 }),
-                            S.text
+                            h.text
                         ]
                     })
                 });
             }
         },
-        S.tooltipText
+        h.tooltipText
     );
 }
 t.Z = (e) => {

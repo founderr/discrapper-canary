@@ -267,12 +267,16 @@ function H(e) {
 function Z(e) {
     return u.useMemo(() => (0, v.Bz)(e), [e]);
 }
+((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
 function Y(e) {
     let t = H(e),
-        n = Z(e);
-    return t || n;
+        n = Z(e),
+        r = (function (e) {
+            let t = (0, f.e7)([R.Z], () => R.Z.getOptimisticProgress(e.id, d.X.WATCH_VIDEO));
+            return u.useMemo(() => (0, v.BM)(e), [e, t]);
+        })(e);
+    return t || n || r;
 }
-((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
 let j = (e) => {
     let t = u.useCallback(() => (0, v.il)(e), [e]),
         [n, r] = u.useState(t()),

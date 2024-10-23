@@ -1,27 +1,27 @@
 n.d(t, {
     DH: function () {
-        return C;
-    },
-    Ks: function () {
-        return v;
-    },
-    Ws: function () {
-        return D;
-    },
-    g2: function () {
-        return R;
-    },
-    hf: function () {
-        return A;
-    },
-    k3: function () {
-        return O;
-    },
-    qN: function () {
         return L;
     },
-    tP: function () {
+    Ks: function () {
+        return C;
+    },
+    Ws: function () {
+        return y;
+    },
+    g2: function () {
+        return O;
+    },
+    hf: function () {
         return N;
+    },
+    k3: function () {
+        return v;
+    },
+    qN: function () {
+        return D;
+    },
+    tP: function () {
+        return R;
     }
 }),
     n(47120);
@@ -42,9 +42,10 @@ var r = n(200651),
     I = n(920916),
     m = n(669041),
     T = n(341907),
-    S = n(46140),
-    g = n(689938);
-function A(e) {
+    S = n(604162),
+    g = n(46140),
+    A = n(689938);
+function N(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         o = (0, s.e7)([u.default], () => {
             var e;
@@ -60,7 +61,7 @@ function A(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, h.zK)(t, S.S7.FRACTIONS_QUEST)
+                ? (0, h.zK)(t, g.S7.FRACTIONS_QUEST)
                     ? (0, T.openQuestsNitroRewardModal)(t, n)
                     : (0, h.Xv)(t.config)
                       ? (0, I.openCollectibleRewardModal)(t, n)
@@ -74,14 +75,14 @@ function A(e) {
                 : (0, m.openRewardModalUnverified)());
     }, [t, n, r, o, a]);
 }
-function N(e) {
+function R(e) {
     var t;
     let n = (0, s.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     if (null == n) return !1;
     let r = Date.now() - 25920000000;
     return r <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0);
 }
-let R = (e) => {
+let O = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [s, l] = (0, o.useSpring)(() => ({})),
             u = i.useRef(!1),
@@ -113,7 +114,7 @@ let R = (e) => {
             }
         };
     },
-    O = (e, t) => {
+    v = (e, t) => {
         let { message: n, xboxURL: i } = (0, _.KX)();
         return (0, r.jsx)('span', {
             onClick: (n) => {
@@ -130,34 +131,37 @@ let R = (e) => {
             children: n
         });
     };
-function v(e) {
-    let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: l, inGiftInventory: u } = e,
-        E = A({
+function C(e) {
+    let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: l, inGiftInventory: u, isVideoQuest: E } = e,
+        f = N({
             quest: t,
             location: a,
             questContentPosition: s,
             questContentRowIndex: o
         }),
-        f = (0, _._s)({ quest: t });
+        p = (0, _._s)({ quest: t }),
+        I = (0, _.Rf)(t);
     return i.useMemo(() => {
         switch (n) {
             case _.OH.UNACCEPTED:
                 return {
-                    text: g.Z.Messages.QUESTS_ACCEPT,
-                    tooltipText: g.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
-                    onClick: () =>
+                    text: A.Z.Messages.QUESTS_ACCEPT,
+                    tooltipText: A.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
+                    onClick: () => {
                         (0, d.AH)(t.id, {
                             questContent: a,
                             questContentCTA: c.jZ.ACCEPT_QUEST,
                             questContentPosition: s,
                             questContentRowIndex: o
-                        })
+                        }),
+                            E && (0, T.openVideoQuestModal)(t);
+                    }
                 };
             case _.OH.ACCEPTED:
             case _.OH.IN_PROGRESS:
-                if (f && u)
+                if (p && u)
                     return {
-                        text: g.Z.Messages.QUESTS_CONNECT_CONSOLE,
+                        text: A.Z.Messages.QUESTS_CONNECT_CONSOLE,
                         tooltipText: null,
                         onClick: () =>
                             (0, h.gI)(
@@ -170,51 +174,57 @@ function v(e) {
                                 }
                             )
                     };
+                if (E)
+                    return {
+                        text: (0, S.F)(I),
+                        tooltipText: A.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+                        onClick: () => (0, T.openVideoQuestModal)(t)
+                    };
                 return {
-                    text: g.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: g.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+                    text: A.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: A.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
                     onClick: null
                 };
             case _.OH.COMPLETED:
                 return {
-                    text: g.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: l ? g.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
-                    onClick: E
+                    text: A.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: l ? A.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+                    onClick: f
                 };
             case _.OH.CLAIMED:
                 let e = {
                     tooltipText: null,
-                    onClick: E
+                    onClick: f
                 };
                 if (l)
                     return {
                         ...e,
-                        text: g.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 if (r)
                     return {
                         ...e,
-                        text: g.Z.Messages.COLLECTIBLES_USE_NOW
+                        text: A.Z.Messages.COLLECTIBLES_USE_NOW
                     };
                 else if ((0, h.vQ)(t.config))
                     return {
                         ...e,
-                        text: g.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 return {
                     ...e,
-                    text: g.Z.Messages.QUESTS_SEE_CODE
+                    text: A.Z.Messages.QUESTS_SEE_CODE
                 };
         }
-    }, [t, r, l, a, E, n, s, o, f, u]);
+    }, [t, r, E, l, a, f, n, s, o, p, u, I]);
 }
-function C() {
+function L() {
     return (0, s.e7)([E.Z], () => {
         var e, t;
         return null !== (t = null !== (e = E.Z.questDeliveryOverride) && void 0 !== e ? e : (0, h.PM)(E.Z.quests, E.Z.questToDeliverForPlacement, f.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, h._)(E.Z.quests, f.jn.QUEST_BAR);
     });
 }
-function L(e) {
+function D(e) {
     var t;
     let { location: n, quest: r } = e,
         i = (0, p.Zy)({ location: n }),
@@ -224,11 +234,11 @@ function L(e) {
         o = null != r.userStatus && (0, h.zE)(r.userStatus, f.jn.QUEST_BAR);
     return i && !o && !s && !a;
 }
-function D(e) {
+function y(e) {
     let { location: t } = e,
-        n = L({
+        n = D({
             location: t,
-            quest: C()
+            quest: L()
         });
     return 0 !== (0, s.e7)([E.Z], () => E.Z.lastFetchedCurrentQuests) && !n;
 }
