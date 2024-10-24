@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return D;
     }
 }),
     t(477488),
@@ -33,6 +33,10 @@ function N(e, n) {
     return ((e % n) + n) % n;
 }
 function b(e) {
+    let { width: n, height: t } = e;
+    return null == n || 0 === n || null == t || 0 === t;
+}
+function M(e) {
     let { children: n, hasMediaControls: t, isObscured: i, src: l } = e,
         [s, u] = (0, r.useState)(!1);
     return i
@@ -63,12 +67,12 @@ function b(e) {
           })
         : (0, a.jsx)(a.Fragment, { children: n(!1) });
 }
-function M(e) {
+function D(e) {
     var n, t, i;
-    let { items: o, onIndexChange: l, fit: p, startIndex: g = 0, shouldRedactExplicitContent: N = !1, shouldHideMediaOptions: M = !1, shouldAnimateCarousel: D = !1 } = e,
-        [I, k] = (0, r.useState)(g),
-        T = (0, r.useRef)(g),
-        [P, y] = (0, r.useState)([]);
+    let { items: o, onIndexChange: l, fit: p, startIndex: g = 0, shouldRedactExplicitContent: N = !1, shouldHideMediaOptions: D = !1, shouldAnimateCarousel: I = !1 } = e,
+        [k, T] = (0, r.useState)(g),
+        P = (0, r.useRef)(g),
+        [y, j] = (0, r.useState)([]);
     (0, r.useEffect)(
         () => (
             _.Z.disable(),
@@ -81,24 +85,24 @@ function M(e) {
     ),
         (0, r.useEffect)(() => {
             var e, n;
-            let t = (((I + 1) % (e = o.length)) + e) % e;
-            let a = (((I - 1) % (n = o.length)) + n) % n;
-            (0, E.po)(o[t].url), (0, E.po)(o[a].url);
-        }, [I, o]);
-    let j = (0, r.useCallback)(
+            let t = (((k + 1) % (e = o.length)) + e) % e;
+            let a = (((k - 1) % (n = o.length)) + n) % n;
+            b(o[t]) && (0, E.po)(o[t].url), b(o[a]) && (0, E.po)(o[a].url);
+        }, [k, o]);
+    let w = (0, r.useCallback)(
         (e) => {
             var n;
-            let t = e - T.current;
-            k((e = ((e % (n = o.length)) + n) % n)), (T.current = e), y((e) => [...e, t]), null == l || l(e);
+            let t = e - P.current;
+            T((e = ((e % (n = o.length)) + n) % n)), (P.current = e), j((e) => [...e, t]), null == l || l(e);
         },
         [l, o]
     );
     (0, r.useEffect)(() => {
         let e = s()(() => {
-                j(T.current + 1);
+                w(P.current + 1);
             }, 300),
             n = s()(() => {
-                j(T.current - 1);
+                w(P.current - 1);
             }, 300);
         return (
             L.S.subscribe(O.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -107,38 +111,38 @@ function M(e) {
                 L.S.unsubscribe(O.CkL.MODAL_CAROUSEL_NEXT, e), L.S.unsubscribe(O.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [j]);
-    let w = o[I],
-        Z = null !== (i = w.sourceMetadata) && void 0 !== i ? i : {},
-        F = null == Z ? void 0 : null === (n = Z.message) || void 0 === n ? void 0 : n.id,
-        W = null == Z ? void 0 : null === (t = Z.message) || void 0 === t ? void 0 : t.channel_id,
-        U = (0, c.e7)([S.Z], () => (null != W && null != F ? S.Z.getMessage(W, F) : null), [W, F]),
-        B = null != U ? U : null == Z ? void 0 : Z.message,
-        G = null != B && null != Z.identifier ? (0, C.s)(B, Z.identifier) : null,
-        z = (0, m.KP)(
+    }, [w]);
+    let Z = o[k],
+        F = null !== (i = Z.sourceMetadata) && void 0 !== i ? i : {},
+        W = null == F ? void 0 : null === (n = F.message) || void 0 === n ? void 0 : n.id,
+        U = null == F ? void 0 : null === (t = F.message) || void 0 === t ? void 0 : t.channel_id,
+        B = (0, c.e7)([S.Z], () => (null != U && null != W ? S.Z.getMessage(U, W) : null), [U, W]),
+        G = null != B ? B : null == F ? void 0 : F.message,
+        z = null != G && null != F.identifier ? (0, C.s)(G, F.identifier) : null,
+        H = (0, m.KP)(
             {
                 type: m.lJ.GenericMedia,
-                media: w
+                media: Z
             },
             N
         ),
-        H = M
+        X = D
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        X = (function (e) {
+        V = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(P[P.length - 1]),
-        V = (0, d.useTransition)(
-            w,
+        })(y[y.length - 1]),
+        K = (0, d.useTransition)(
+            Z,
             {
-                key: w.url,
+                key: Z.url,
                 from: {
                     opacity: 0,
-                    transform: X[0]
+                    transform: V[0]
                 },
                 enter: {
                     opacity: 1,
@@ -146,14 +150,14 @@ function M(e) {
                 },
                 leave: {
                     opacity: 0,
-                    transform: X[X.length - 1]
+                    transform: V[V.length - 1]
                 },
                 config: {
                     friction: 20,
                     tension: 250
                 }
             },
-            D ? 'respect-motion-settings' : 'animate-never'
+            I ? 'respect-motion-settings' : 'animate-never'
         );
     return (0, a.jsxs)('div', {
         className: R.wrapper,
@@ -164,7 +168,7 @@ function M(e) {
                       onClick: () => L.S.dispatch(O.CkL.MODAL_CAROUSEL_PREV)
                   })
                 : null,
-            V((e, n) => {
+            K((e, n) => {
                 var t;
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(
@@ -175,19 +179,19 @@ function M(e) {
                             children: (0, a.jsxs)('div', {
                                 onClick: (e) => (null != p && [A.D.CONTAIN, A.D.SCALE_DOWN].includes(p) ? null : e.stopPropagation()),
                                 children: [
-                                    (0, a.jsx)(b, {
-                                        isObscured: z,
+                                    (0, a.jsx)(M, {
+                                        isObscured: H,
                                         src: n.url,
                                         children: (e) =>
                                             (0, a.jsx)(A.Z, {
                                                 media: n,
                                                 fit: p,
                                                 obscured: e,
-                                                onContextMenu: H
+                                                onContextMenu: X
                                             })
                                     }),
                                     ('IMAGE' !== n.type || null != n.original) &&
-                                        !M &&
+                                        !D &&
                                         (0, a.jsxs)('div', {
                                             className: R.optionsContainer,
                                             children: [
@@ -196,7 +200,7 @@ function M(e) {
                                                     className: R.downloadLink,
                                                     children: v.Z.Messages.OPEN_IN_BROWSER
                                                 }),
-                                                null != G && (0, a.jsx)(G, { className: R.forward })
+                                                null != z && (0, a.jsx)(z, { className: R.forward })
                                             ]
                                         })
                                 ]

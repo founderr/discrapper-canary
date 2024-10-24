@@ -135,6 +135,8 @@ e.exports = Object.freeze({
     PAGINATION_NEXT: 'Next',
     PAGINATION_PAGE_LABEL: 'Page {pageNumber}',
     PAGINATION_SLIDE_LABEL: 'Slide {pageNumber}',
+    PAGINATION_ITEM_LABEL: 'Item {pageNumber} of {totalPages}',
+    PAGINATION_CURRENT_ITEM_LABEL: 'Item {pageNumber} of {totalPages} (current)',
     MUTE: 'Mute',
     MUTE_ALT: 'Turn Off Microphone',
     UNMUTE: 'Unmute',

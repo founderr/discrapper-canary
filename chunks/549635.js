@@ -1,48 +1,54 @@
+t.d(n, {
+    D: function () {
+        return _;
+    }
+});
 var r = t(200651),
     a = t(192379),
     i = t(124347),
-    o = t(80966),
-    l = t(524444),
+    l = t(80966),
+    o = t(524444),
     s = t(52824),
     u = t(956664),
     c = t(589530),
     d = t(591759),
-    _ = t(718263);
+    m = t(718263);
+function _(e) {
+    let n = d.Z.toURLSafe(e);
+    return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
+}
 n.Z = a.memo(function (e) {
     let { media: n, obscured: t = !1, onContextMenu: a } = e,
-        { width: m, height: h, url: f, proxyUrl: E, alt: x, type: p, maxWidth: C, maxHeight: S, ...g } = n,
-        { width: A, height: L } = (0, u.zp)(null != m ? m : 0, null != h ? h : 0),
-        O = (0, s.q)({
-            proxyURL: E,
-            url: f
+        { width: d, height: f, url: h, proxyUrl: x, alt: E, type: p, maxWidth: C, maxHeight: A, ...g } = n,
+        { width: I, height: L } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
+        S = (0, s.q)({
+            proxyURL: x,
+            url: h
         }),
-        M = !(null == m || 0 === m || null == h || 0 === h);
-    if ('VIDEO' === p && M && null != E) {
-        var I;
-        let e = (function (e) {
-            let n = d.Z.toURLSafe(e);
-            return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
-        })(E);
+        M = !(null == d || 0 === d || null == f || 0 === f);
+    if ('VIDEO' === p && M && null != x) {
+        var O;
+        let e = _(x);
         if (null == e) return null;
-        let i = null !== (I = n.renderLinkComponent) && void 0 !== I ? I : l.iT;
-        return (0, r.jsx)(o.Z, {
+        let i = null !== (O = n.renderLinkComponent) && void 0 !== O ? O : o.iT;
+        return (0, r.jsx)(l.Z, {
             ...g,
-            src: O,
-            width: m,
-            height: h,
-            maxWidth: A,
+            src: S,
+            width: d,
+            height: f,
+            maxWidth: I,
             maxHeight: L,
             responsive: !0,
             poster: e,
-            naturalWidth: m,
-            naturalHeight: h,
+            naturalWidth: d,
+            naturalHeight: f,
             volume: c.FC,
             autoMute: c.rs,
             onVolumeChange: c.jA,
             onMute: c.Zj,
             renderLinkComponent: i,
             autoPlay: !t,
-            alt: x,
+            alt: E,
             onContextMenu: a
         });
     }
@@ -50,24 +56,24 @@ n.Z = a.memo(function (e) {
         return M
             ? (0, r.jsx)(i.ZP, {
                   ...g,
-                  src: O,
-                  width: m,
-                  height: h,
+                  src: S,
+                  width: d,
+                  height: f,
                   shouldLink: !1,
-                  maxWidth: A,
+                  maxWidth: I,
                   maxHeight: L,
                   animated: !t && n.animated,
                   autoPlay: !t,
-                  alt: x,
+                  alt: E,
                   zoomThumbnailPlaceholder: n.zoomThumbnailPlaceholder,
                   onContextMenu: a,
                   responsive: !0
               })
             : (0, r.jsx)('img', {
-                  src: O,
-                  alt: x,
+                  src: S,
+                  alt: E,
                   onContextMenu: a,
-                  className: _.dimensionlessImage
+                  className: m.dimensionlessImage
               });
     return null;
 });
