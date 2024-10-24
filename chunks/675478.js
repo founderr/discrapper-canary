@@ -163,6 +163,9 @@ class N {
         let t = null !== (e = c.K.get(S)) && void 0 !== e ? e : {};
         (t[this.type] = Date.now()), c.K.set(S, t);
     }
+    loadIfUncached(e, t) {
+        (!h.Z.hasLoaded(e) || !0 === t) && this.loadIfNecessary(t);
+    }
     async loadIfNecessary(e) {
         if (__OVERLAY__) {
             d.Z.dispatch({
