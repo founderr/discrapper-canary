@@ -687,6 +687,7 @@ function ed(e, t, n) {
         });
     if (s) return U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: i });
     if (t) return n === O.LI.SELECT ? U.Z.Messages.QUEST_MULTIPLATFORM_SELECT_FUN_SUBTITLE : l;
+    if ((0, v.cr)(e)) return U.Z.Messages.QUESTS_VIDEO_QUESTBAR_SUBTITLE;
     if (a.percentComplete > 0)
         return o
             ? (0, v.AV)({
