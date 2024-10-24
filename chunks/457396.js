@@ -91,11 +91,12 @@ let W = (e) => {
             messageStyle: _.a.SHORT_TIME,
             upperCase: !0
         }))),
-        ei && eC
+        ei
             ? ((i = 10),
               (n = (0, s.jsx)(D.dX, {
                   isSelected: a,
-                  trialOffer: ee
+                  trialOffer: ee,
+                  q4MarketingEnabled: eC
               })))
             : eu
               ? ((t = F.referralIncentive), (i = 7))
@@ -122,7 +123,7 @@ let W = (e) => {
                                   includesAmountOff: !1
                               })),
                               (i = 3))
-                            : null == ee || ef || ei
+                            : null == ee || ef
                               ? ed
                                   ? ((n = (0, s.jsx)(D.lH, {
                                         isSelected: a,
