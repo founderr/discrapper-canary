@@ -1,4 +1,4 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
         return N;
     },
@@ -6,52 +6,52 @@ r.d(t, {
         return S;
     }
 });
-var s = r(200651),
-    n = r(192379),
-    a = r(120356),
-    i = r.n(a),
-    l = r(180650),
-    o = r(399606),
-    c = r(481060),
-    d = r(906732),
-    u = r(963249),
-    m = r(594174),
-    f = r(754347),
-    p = r(74538),
-    C = r(884697),
-    h = r(624377),
-    g = r(141011),
-    _ = r(813083),
-    b = r(67938),
-    x = r(372654),
-    E = r(215023),
-    I = r(474936),
-    v = r(689938),
-    T = r(462972),
-    L = r(275001);
+var r = n(200651),
+    s = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    l = n(180650),
+    o = n(399606),
+    c = n(481060),
+    d = n(906732),
+    u = n(963249),
+    m = n(594174),
+    f = n(754347),
+    p = n(74538),
+    C = n(884697),
+    h = n(624377),
+    g = n(141011),
+    _ = n(813083),
+    b = n(67938),
+    x = n(372654),
+    E = n(215023),
+    v = n(474936),
+    I = n(689938),
+    T = n(462972),
+    L = n(275001);
 let S = (0, C.IC)(96),
     k = (e) => {
         let { category: t } = e,
-            { analyticsLocations: r } = (0, d.ZP)(),
-            a = n.useRef(null),
+            { analyticsLocations: n } = (0, d.ZP)(),
+            a = s.useRef(null),
             i = (0, o.e7)([m.default], () => m.default.getCurrentUser());
         return p.ZP.canUseCollectibles(i)
-            ? (0, s.jsx)(s.Fragment, { children: t.summary })
-            : (0, s.jsx)(s.Fragment, {
-                  children: v.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+            ? (0, r.jsx)(r.Fragment, { children: t.summary })
+            : (0, r.jsx)(r.Fragment, {
+                  children: I.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
                       getPremium: (e) =>
-                          (0, s.jsx)(c.Clickable, {
+                          (0, r.jsx)(c.Clickable, {
                               innerRef: a,
                               className: T.getPremiumHook,
                               onClick: () => {
                                   (0, u.Z)({
-                                      subscriptionTier: I.Si.TIER_2,
-                                      analyticsLocations: r,
+                                      subscriptionTier: v.Si.TIER_2,
+                                      analyticsLocations: n,
                                       returnRef: a
                                   });
                               },
                               tag: 'span',
-                              children: (0, s.jsx)(c.Text, {
+                              children: (0, r.jsx)(c.Text, {
                                   variant: 'text-md/normal',
                                   color: 'always-white',
                                   tag: 'span',
@@ -62,13 +62,13 @@ let S = (0, C.IC)(96),
               });
     };
 function N(e) {
-    var t, r, n, a;
+    var t, n, s, a;
     let { category: o, className: d, hideLimitedTimeBadge: u = !1 } = e,
         { backgroundColors: m } = (0, h.Z)(o.styles),
         p = !!(null === (t = E.Ve[o.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
     return o.skuId === l.T.CHANCE
-        ? (0, s.jsx)(b.O, { category: o })
-        : (0, s.jsxs)(g.Z, {
+        ? (0, r.jsx)(b.O, { category: o })
+        : (0, r.jsxs)(g.Z, {
               asset: o.banner,
               className: i()(T.shopBanner, d),
               style:
@@ -80,41 +80,41 @@ function N(e) {
                       : void 0,
               children: [
                   o.skuId === l.T.BAND &&
-                      (0, s.jsx)('img', {
+                      (0, r.jsx)('img', {
                           src: L,
                           alt: '',
                           className: T.animationAsset
                       }),
-                  (null === (r = E.Ve[o.skuId]) || void 0 === r ? void 0 : r.addAttributionLogo)
-                      ? (0, s.jsxs)('div', {
+                  (null === (n = E.Ve[o.skuId]) || void 0 === n ? void 0 : n.addAttributionLogo)
+                      ? (0, r.jsxs)('div', {
                             className: T.discordLogo,
                             children: [
-                                (0, s.jsx)(c.ClydeIcon, {
+                                (0, r.jsx)(c.ClydeIcon, {
                                     size: 'custom',
                                     width: 28,
                                     height: 28,
                                     color: 'currentColor',
                                     className: T.discordIcon
                                 }),
-                                (0, s.jsx)(f.Z, { className: T.discordWordmark })
+                                (0, r.jsx)(f.Z, { className: T.discordWordmark })
                             ]
                         })
-                      : (0, s.jsx)(c.Spacer, { size: 28 }),
-                  (null === (n = E.Ve[o.skuId]) || void 0 === n ? void 0 : n.addLogo)
-                      ? (0, s.jsx)('img', {
+                      : (0, r.jsx)(c.Spacer, { size: 28 }),
+                  (null === (s = E.Ve[o.skuId]) || void 0 === s ? void 0 : s.addLogo)
+                      ? (0, r.jsx)('img', {
                             className: T.categoryLogo,
                             src: (0, C.uV)(o.logo, { size: S }),
                             alt: o.name,
                             style: { maxWidth: null === (a = E.Ve[o.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
                         })
-                      : (0, s.jsx)(c.Spacer, { size: 96 }),
-                  (0, s.jsx)(c.Text, {
+                      : (0, r.jsx)(c.Spacer, { size: 96 }),
+                  (0, r.jsx)(c.Text, {
                       className: i()(T.summary, { [T.blackSummary]: p }),
                       variant: 'text-md/normal',
-                      children: o.skuId === l.T.DISXCORE ? (0, s.jsx)(k, { category: o }) : o.summary
+                      children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(k, { category: o }) : o.summary
                   }),
                   !u &&
-                      (0, s.jsx)(_.Z, {
+                      (0, r.jsx)(_.Z, {
                           category: o,
                           className: T.limitedTimeBadge,
                           display: 'banner'

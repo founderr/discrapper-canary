@@ -62,7 +62,7 @@ function P(e) {
     s.useEffect(() => {
         null != A.current && (i && m ? (A.current.pause(), (A.current.currentTime = 0)) : !i && m && A.current.play());
     }, [i, m]);
-    let B = (0, _.cr)(t) ? U.Z.Messages.QUESTS_START_QUEST : U.Z.Messages.QUESTS_ACCEPT_QUEST;
+    let B = (0, _.cr)(t) ? U.Z.Messages.QUESTS_START_VIDEO_QUEST : U.Z.Messages.QUESTS_ACCEPT_QUEST;
     return (0, o.jsxs)(o.Fragment, {
         children: [
             (0, o.jsx)('div', {

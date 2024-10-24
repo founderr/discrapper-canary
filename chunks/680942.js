@@ -1,14 +1,14 @@
-var s = r(200651),
-    n = r(192379),
-    a = r(481060),
-    i = r(727637),
-    l = r(906732),
-    o = r(241553),
-    c = r(333867),
-    d = r(884697),
-    u = r(231338),
-    m = r(689938),
-    f = r(65297);
+var r = n(200651),
+    s = n(192379),
+    a = n(481060),
+    i = n(727637),
+    l = n(906732),
+    o = n(241553),
+    c = n(333867),
+    d = n(884697),
+    u = n(231338),
+    m = n(689938),
+    f = n(65297);
 let p = {
     dark: [
         {
@@ -72,18 +72,18 @@ let p = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: r, onSuccess: C, tooltipDelay: h, isGiftEasterEggEnabled: g, disableCustomColor: _ = !1 } = e,
+    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: h, isGiftEasterEggEnabled: g, disableCustomColor: _ = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(),
-        x = n.useRef(null),
+        x = s.useRef(null),
         E = (0, i.Z)(x),
-        I = _ ? u.BR.DARK : u.BR.LIGHT;
+        v = _ ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, s.jsx)(a.Tooltip, {
+        : (0, r.jsx)(a.Tooltip, {
               text: m.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
               delay: h,
               children: (e) =>
-                  (0, s.jsx)(a.Button, {
+                  (0, r.jsx)(a.Button, {
                       ...e,
                       buttonRef: x,
                       className: f.giftButton,
@@ -98,7 +98,7 @@ t.Z = (e) => {
                                   skuId: t.skuId,
                                   isGift: !0,
                                   analyticsLocations: b,
-                                  returnRef: r,
+                                  returnRef: n,
                                   onClose:
                                       null != C
                                           ? (e) => {
@@ -108,13 +108,13 @@ t.Z = (e) => {
                               });
                       },
                       children: g
-                          ? (0, s.jsx)(o.e, {
+                          ? (0, r.jsx)(o.e, {
                                 hovered: E,
                                 isContentDismissed: !0,
-                                themeOverride: I,
+                                themeOverride: v,
                                 boxColors: p
                             })
-                          : (0, s.jsx)(a.GiftIcon, {
+                          : (0, r.jsx)(a.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

@@ -1,4 +1,4 @@
-r.d(t, {
+n.d(t, {
     L: function () {
         return o;
     },
@@ -6,17 +6,17 @@ r.d(t, {
         return l;
     }
 });
-var s = r(24217),
-    n = r.n(s),
-    a = r(442837),
-    i = r(1870);
+var r = n(24217),
+    s = n.n(r),
+    a = n(442837),
+    i = n(1870);
 let l = (e, t) => {
-        var r;
-        let s = null != e.getPurchase(t.skuId),
-            a = null !== (r = t.items) && void 0 !== r ? r : [],
-            i = n()(a.map((t) => e.getPurchase(t.skuId)));
+        var n;
+        let r = null != e.getPurchase(t.skuId),
+            a = null !== (n = t.items) && void 0 !== n ? n : [],
+            i = s()(a.map((t) => e.getPurchase(t.skuId)));
         return {
-            isPurchased: s || (a.length > 0 && i.length === a.length),
+            isPurchased: r || (a.length > 0 && i.length === a.length),
             isPartiallyPurchased: i.length > 0 && i.length < a.length
         };
     },

@@ -1,9 +1,9 @@
-r.d(t, {
+n.d(t, {
     R: function () {
-        return n;
+        return s;
     }
 });
-let s = (0, r(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-07_reveal_mystery_card',
         label: 'Shop Reveal Mystery Card',
@@ -16,4 +16,4 @@ let s = (0, r(818083).B)({
             }
         ]
     }),
-    n = (e) => s.useExperiment({ location: e });
+    s = (e) => r.useExperiment({ location: e });

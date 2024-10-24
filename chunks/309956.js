@@ -1,30 +1,30 @@
-r.d(t, {
+n.d(t, {
     B: function () {
         return a;
     }
 }),
-    r(47120);
-var s = r(192379),
-    n = r(215023);
+    n(47120);
+var r = n(192379),
+    s = n(215023);
 let a = (e, t) => {
-    let [r, a] = s.useState(n.f7.HIDDEN),
-        [i, l] = s.useState(n.f7.HIDDEN);
-    s.useEffect(() => {
-        a(e ? n.f7.VISIBLE : n.f7.HIDDEN), l(e ? n.f7.HIDDEN : n.f7.VISIBLE);
+    let [n, a] = r.useState(s.f7.HIDDEN),
+        [i, l] = r.useState(s.f7.HIDDEN);
+    r.useEffect(() => {
+        a(e ? s.f7.VISIBLE : s.f7.HIDDEN), l(e ? s.f7.HIDDEN : s.f7.VISIBLE);
     }, [e]);
     let o = (e) => new Promise((t) => setTimeout(t, e)),
-        c = s.useCallback(
+        c = r.useCallback(
             async (e) => {
-                e && (a(n.f7.OUT), await o(1.1 * n.lb)), e && l(n.f7.IN), a(n.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), l(n.f7.VISIBLE);
+                e && (a(s.f7.OUT), await o(1.1 * s.lb)), e && l(s.f7.IN), a(s.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), l(s.f7.VISIBLE);
             },
             [t]
         );
     return {
-        feedState: r,
+        feedState: n,
         catalogState: i,
         transitionToCatalog: c,
-        transitionToFeed: s.useCallback(() => {
-            null != t.current && t.current.scrollTo({ to: 0 }), l(n.f7.HIDDEN), a(n.f7.VISIBLE);
+        transitionToFeed: r.useCallback(() => {
+            null != t.current && t.current.scrollTo({ to: 0 }), l(s.f7.HIDDEN), a(s.f7.VISIBLE);
         }, [t])
     };
 };

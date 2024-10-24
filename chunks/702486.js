@@ -1,20 +1,20 @@
-r.d(t, {
+n.d(t, {
     _: function () {
         return o;
     }
 });
-var s = r(192379),
-    n = r(772848),
-    a = r(638730),
-    i = r(626135);
-let l = (e, t, r, s) => {
-        let { scrollTop: n = 0, scrollOffset: a = 0, scrollHeight: l = 0, scrollWidth: o = 0 } = s;
+var r = n(192379),
+    s = n(772848),
+    a = n(638730),
+    i = n(626135);
+let l = (e, t, n, r) => {
+        let { scrollTop: s = 0, scrollOffset: a = 0, scrollHeight: l = 0, scrollWidth: o = 0 } = r;
         if (l > 0) {
-            let s = (n + a) / l;
-            s > 0 &&
+            let r = (s + a) / l;
+            r > 0 &&
                 i.default.track(e, {
-                    scroll_visible_percent: s,
-                    source: r,
+                    scroll_visible_percent: r,
+                    source: n,
                     page_height: Math.round(l),
                     page_width: Math.round(o),
                     page_session_id: t
@@ -22,22 +22,22 @@ let l = (e, t, r, s) => {
         }
     },
     o = (e, t) => {
-        let r = s.useRef(null),
-            i = s.useRef((0, n.Z)()),
+        let n = r.useRef(null),
+            i = r.useRef((0, s.Z)()),
             o = (0, a.h)(l, 5000, [], { trailing: !0 }),
-            c = s.useCallback(() => {
-                var s;
-                let n = null === (s = r.current) || void 0 === s ? void 0 : s.getScrollerNode();
-                null != n &&
+            c = r.useCallback(() => {
+                var r;
+                let s = null === (r = n.current) || void 0 === r ? void 0 : r.getScrollerNode();
+                null != s &&
                     o(e, i.current, t, {
-                        scrollTop: n.scrollTop,
-                        scrollOffset: n.offsetHeight,
-                        scrollHeight: n.scrollHeight,
-                        scrollWidth: n.scrollWidth
+                        scrollTop: s.scrollTop,
+                        scrollOffset: s.offsetHeight,
+                        scrollHeight: s.scrollHeight,
+                        scrollWidth: s.scrollWidth
                     });
             }, [o, e, t]);
         return {
-            scrollerRef: r,
+            scrollerRef: n,
             scrollHandler: c,
             sessionId: i.current
         };

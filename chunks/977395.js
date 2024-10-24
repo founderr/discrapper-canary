@@ -1,9 +1,9 @@
-r.d(t, {
+n.d(t, {
     f: function () {
         return i;
     }
 });
-var s = r(91641),
-    n = r(166350),
-    a = r(987338);
-let i = new s.E([n.NR, n.ZI, n.Ob, n.uc, n.m1], a.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+var r = n(91641),
+    s = n(166350),
+    a = n(987338);
+let i = new r.E([s.NR, s.ZI, s.Ob, s.uc, s.m1], a.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
