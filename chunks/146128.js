@@ -1,80 +1,93 @@
 n.d(t, {
     BV: function () {
-        return p;
+        return m;
     },
     Rm: function () {
-        return f;
+        return p;
     },
     aO: function () {
-        return m;
+        return S;
     }
-});
+}),
+    n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(442837),
     s = n(40851),
     o = n(607070),
-    l = n(375954),
-    u = n(378364),
-    c = n(197344),
-    d = n(978636),
-    _ = n(131333),
-    E = n(981631);
-let f = i.createContext({
+    l = n(633302),
+    u = n(375954),
+    c = n(378364),
+    d = n(197344),
+    _ = n(978636),
+    E = n(131333),
+    f = n(981631);
+function h(e) {
+    if (null == e || null == c.Z.emojiAnimationTriggers) return !1;
+    for (let t of c.Z.emojiAnimationTriggers) {
+        let n = l.ZP.getByName(t);
+        if (null != n) {
+            if (':'.concat(n.name, ':') === e) return !0;
+            for (let t in n.diversityChildren) {
+                let r = n.diversityChildren[t];
+                if (':'.concat(r.name, ':') === e) return !0;
+            }
+        }
+    }
+    return !1;
+}
+let p = i.createContext({
     triggerAnimation: () => {}
 });
-function h(e) {
+function I(e) {
     let { children: t } = e,
-        { triggerAnimation: n } = i.useContext(f),
+        { triggerAnimation: n } = i.useContext(p),
         a = (0, s.bp)(),
         o = i.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    var t, r;
-                    a === E.IlC.APP && null != e && null !== (r = null === (t = u.Z.emojiAnimationTriggers) || void 0 === t ? void 0 : t.has(e)) && void 0 !== r && r && n(e);
+                    a === f.IlC.APP && h(e) && n(e);
                 }
             }),
             [a, n]
         );
-    return (0, r.jsx)(f.Provider, {
+    return (0, r.jsx)(p.Provider, {
         value: o,
         children: t
     });
 }
-function p(e) {
+function m(e) {
     let { children: t } = e,
-        n = c.Z.useIsEligible(),
+        n = d.Z.useIsEligible(),
         a = i.useCallback((e, t) => {
-            if (t === u.O.THROW_EMOJI) return (0, r.jsx)(_.t, { children: e });
+            if (t === c.O.THROW_EMOJI) return (0, r.jsx)(E.t, { children: e });
         }, []);
-    return n && null != u.Z.emojiAnimationType ? a((0, r.jsx)(h, { children: t }), u.Z.emojiAnimationType) : (0, r.jsx)(r.Fragment, { children: t });
+    return n && null != c.Z.emojiAnimationType ? a((0, r.jsx)(I, { children: t }), c.Z.emojiAnimationType) : (0, r.jsx)(r.Fragment, { children: t });
 }
-function I(e) {
+function T(e) {
     let { emojiRef: t, channelId: n, messageId: r, emojiName: s } = e,
-        o = (0, a.e7)([l.Z], () => l.Z.getMessage(n, r)),
-        { triggerAnimation: c } = i.useContext(f);
+        o = (0, a.e7)([u.Z], () => u.Z.getMessage(n, r)),
+        { triggerAnimation: l } = i.useContext(p);
     return (
         i.useEffect(() => {
-            if (!u.Z.triggerEmojiAnimationFromSentMessage || (null == o ? void 0 : o.state) !== E.yb.SENT || (0, d.JL)(r)) return;
+            if (!c.Z.triggerEmojiAnimationFromSentMessage || (null == o ? void 0 : o.state) !== f.yb.SENT || (0, _.JL)(r)) return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
-            if (!!(e >= 0 && n <= window.innerHeight)) c(s), (0, d.i9)(r);
-        }, [s, t, null == o ? void 0 : o.state, r, c]),
+            if (!!(e >= 0 && n <= window.innerHeight)) l(s), (0, _.i9)(r);
+        }, [s, t, null == o ? void 0 : o.state, r, l]),
         null
     );
 }
-function m(e) {
-    var t, n;
-    let { channelId: i, messageId: l, emojiName: d, disable: _, emojiRef: f } = e,
-        h = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        p = c.Z.useIsEligible(),
-        m = null != d && null !== (n = null === (t = u.Z.emojiAnimationTriggers) || void 0 === t ? void 0 : t.has(d)) && void 0 !== n && n,
-        T = (0, s.bp)();
-    return _ || T !== E.IlC.APP || !p || !m || null == l || null == i || h || null == f
+function S(e) {
+    let { channelId: t, messageId: n, emojiName: i, disable: l, emojiRef: u } = e,
+        c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        _ = d.Z.useIsEligible(),
+        E = (0, s.bp)();
+    return l || E !== f.IlC.APP || !_ || null == n || null == t || c || null == u || !h(i)
         ? null
-        : (0, r.jsx)(I, {
-              emojiRef: f,
-              channelId: i,
-              messageId: l,
-              emojiName: d
+        : (0, r.jsx)(T, {
+              emojiRef: u,
+              channelId: t,
+              messageId: n,
+              emojiName: i
           });
 }

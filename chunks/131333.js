@@ -1,8 +1,9 @@
 n.d(t, {
     t: function () {
-        return C;
+        return v;
     }
 }),
+    n(653041),
     n(47120);
 var r,
     i,
@@ -16,33 +17,46 @@ var r,
     _ = n(745510),
     E = n(633302),
     f = n(549006),
-    h = n(176354),
-    p = n(146128),
-    I = n(981631),
-    m = n(675654),
-    T = n(10257);
-let S = [];
-function g(e) {
-    return e.map((e) => ({
-        src: h.ZP.getURL(E.ZP.convertNameToSurrogate(e)),
-        colorize: !1
-    }));
+    h = n(146128),
+    p = n(981631),
+    I = n(675654),
+    m = n(10257);
+let T = [];
+function S(e) {
+    let t = [];
+    return (
+        e.forEach((e) => {
+            let n = E.ZP.getByName(e);
+            if (null != n) {
+                if (
+                    (t.push({
+                        src: n.url,
+                        colorize: !1
+                    }),
+                    n.hasDiversity)
+                )
+                    for (let e in n.diversityChildren) {
+                        let r = n.diversityChildren[e];
+                        t.push({
+                            src: r.url,
+                            colorize: !1
+                        });
+                    }
+            }
+        }),
+        t
+    );
 }
-((a = r || (r = {})).JACK_O_LANTERN = ':jack_o_lantern:'), (a.NOSE = ':nose:'), (a.NOSE_1 = ':nose_tone1:'), (a.NOSE_2 = ':nose_tone2:'), (a.NOSE_3 = ':nose_tone3:'), (a.NOSE_4 = ':nose_tone4:'), (a.NOSE_5 = ':nose_tone5:');
-let A = new Set([':jack_o_lantern:', ':nose:', ':nose_tone1:', ':nose_tone2:', ':nose_tone3:', ':nose_tone4:', ':nose_tone5:']),
-    N = {
-        ':jack_o_lantern:': {
-            sprites: g(['chocolate_bar', 'lollipop', 'candy'])
+((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
+let g = new Set(['jack_o_lantern', 'nose']),
+    A = {
+        jack_o_lantern: {
+            sprites: S(['chocolate_bar', 'lollipop', 'candy'])
         },
-        ':nose:': { sprites: g(['foot']) },
-        ':nose_tone1:': { sprites: g(['foot_tone1']) },
-        ':nose_tone2:': { sprites: g(['foot_tone2']) },
-        ':nose_tone3:': { sprites: g(['foot_tone3']) },
-        ':nose_tone4:': { sprites: g(['foot_tone4']) },
-        ':nose_tone5:': { sprites: g(['foot_tone5']) }
+        nose: { sprites: S(['foot']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
-let R = {
+let N = {
     enter: {
         BEG: 0,
         END: 22
@@ -56,7 +70,7 @@ let R = {
         END: 200
     }
 };
-function O() {
+function R() {
     return n
         .e('60005')
         .then(n.t.bind(n, 931152, 19))
@@ -65,7 +79,7 @@ function O() {
             return t;
         });
 }
-let v = l.forwardRef(function (e, t) {
+let O = l.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [r, i] = l.useState(null),
         { confettiCanvas: a } = l.useContext(_.h),
@@ -77,7 +91,7 @@ let v = l.forwardRef(function (e, t) {
                 fireConfetti: (e, t) => {
                     s.createMultipleConfetti(
                         {
-                            ...m.We,
+                            ...I.We,
                             position: {
                                 type: 'static',
                                 value: {
@@ -114,14 +128,14 @@ let v = l.forwardRef(function (e, t) {
         ),
         (0, o.jsx)(u.Ji, {
             ref: i,
-            colors: S,
+            colors: T,
             sprites: n,
             spriteWidth: 48,
             spriteHeight: 48
         })
     );
 });
-function C(e) {
+function v(e) {
     let { children: t } = e,
         n = l.useRef({}),
         [r, i] = l.useState(null),
@@ -138,17 +152,23 @@ function C(e) {
         })(r),
         s = l.useRef(null),
         [u, _] = l.useState(!1),
-        E = l.useRef(':jack_o_lantern:'),
-        h = (0, d.bp)(),
-        m = l.useCallback(
+        E = l.useRef('jack_o_lantern'),
+        I = (0, d.bp)(),
+        T = l.useCallback(
             (e) => {
-                var t;
-                if (!u && null != (t = e) && A.has(t)) (E.current = e), _(!0), i(null);
+                if (!u) {
+                    let t = (function (e) {
+                        if (null == e) return null;
+                        for (let t of g) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+                        return null;
+                    })(e);
+                    null != t && ((E.current = t), _(!0), i(null));
+                }
             },
             [u]
         ),
-        S = l.useMemo(() => ({ triggerAnimation: m }), [m]),
-        g = l.useCallback((e) => {
+        S = l.useMemo(() => ({ triggerAnimation: T }), [T]),
+        v = l.useCallback((e) => {
             i(e);
         }, []),
         C = l.useCallback((e) => {
@@ -166,17 +186,17 @@ function C(e) {
                 i = n.current[E.current];
             null == i || i.fireConfetti(t, r);
         }
-    }, [E, r]),
-    h !== I.IlC.APP)
+    }, [r]),
+    I !== p.IlC.APP)
         ? (0, o.jsx)(o.Fragment, { children: t })
-        : (0, o.jsxs)(p.Rm.Provider, {
+        : (0, o.jsxs)(h.Rm.Provider, {
               value: S,
               children: [
                   t,
-                  Object.keys(N).map((e) => {
-                      let t = N[e];
+                  Object.keys(A).map((e) => {
+                      let t = A[e];
                       return (0, o.jsx)(
-                          v,
+                          O,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -189,15 +209,15 @@ function C(e) {
                   u
                       ? (0, o.jsx)(f.ZP, {
                             children: (0, o.jsx)('div', {
-                                className: T.animationWrapper,
+                                className: m.animationWrapper,
                                 children: (0, o.jsx)(c.SequencedLottieAnimation, {
                                     animationRef: L,
-                                    className: T.lottieAnimation,
+                                    className: m.lottieAnimation,
                                     nextScene: a,
-                                    sceneSegments: R,
-                                    onScenePlay: g,
+                                    sceneSegments: N,
+                                    onScenePlay: v,
                                     onSceneComplete: C,
-                                    importData: O,
+                                    importData: R,
                                     pauseWhileUnfocused: !1
                                 })
                             })
