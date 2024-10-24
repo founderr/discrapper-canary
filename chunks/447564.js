@@ -1,12 +1,13 @@
 n.r(t),
     n.d(t, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return T;
+            return x;
         },
         default: function () {
-            return I;
+            return T;
         }
-    });
+    }),
+    n(47120);
 var i = n(200651),
     s = n(192379),
     a = n(442837),
@@ -20,43 +21,45 @@ var i = n(200651),
     m = n(422034),
     p = n(938475),
     _ = n(937615),
-    f = n(215023),
-    E = n(689938),
-    g = n(912568),
-    C = n(99713);
-function I(e) {
+    f = n(981631),
+    E = n(215023),
+    g = n(689938),
+    C = n(912568),
+    I = n(99713);
+function T(e) {
     let { transitionState: t, channel: n } = e;
     return (0, i.jsx)(l.ModalRoot, {
         size: l.ModalSize.DYNAMIC,
         transitionState: t,
-        children: (0, i.jsx)(x, { channel: n })
+        children: (0, i.jsx)(S, { channel: n })
     });
 }
-let T = 'HD_STREAMING_POTION_MODAL_KEY';
-function x(e) {
+let x = 'HD_STREAMING_POTION_MODAL_KEY';
+function S(e) {
     let { channel: t } = e,
         n = p.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        I = (0, a.e7)([u.Z], () => u.Z.getFetching(f.FX)),
-        x = (0, a.e7)([u.Z], () => u.Z.getPrice(f.FX)),
-        S = (0, a.e7)([u.Z], () => u.Z.getErrored(f.FX)),
-        { analyticsLocations: v } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
-        N = (0, a.e7)([u.Z], () => u.Z.getEntitlement());
+        [T, S, v, N, A, Z] = (0, a.Wu)([u.Z], () => [u.Z.isFetchingPrice(E.FX), u.Z.isEntitlementFetched(E.FX), u.Z.isEntitlementFetching(E.FX), u.Z.getPrice(E.FX), u.Z.getErrored(E.FX), u.Z.getEntitlement(E.FX)]),
+        { analyticsLocations: M } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
+        b = null != Z && !Z.consumed && Z.type === f.qc2.DEVELOPER_GIFT;
     s.useEffect(() => {
-        null != N && N.sku_id === f.FX && !1 === N.consumed && (0, c.Zu)(t.id);
-    }, [N, t]),
+        null != Z && !1 === Z.consumed && Z.type !== f.qc2.DEVELOPER_GIFT && (0, c.Zu)(t.id);
+    }, [Z, t]),
         s.useEffect(
             () => () => {
-                (0, c.SN)(f.FX);
+                (0, c.SN)(E.FX);
             },
             []
         ),
         s.useEffect(() => {
-            !I && null == x && !S && (0, c.Gq)(f.FX);
-        }, [I, x, S]);
-    let A = () => {
-            (0, l.closeModal)(T);
+            !T && null == N && !A && (0, c.Gq)(E.FX);
+        }, [T, N, A]),
+        s.useEffect(() => {
+            !S && !v && (0, c.gA)(E.FX);
+        }, [S, v]);
+    let R = () => {
+            (0, l.closeModal)(x);
         },
-        Z = n.map((e, t) => {
+        L = n.map((e, t) => {
             let { user: s } = e;
             return (0, i.jsx)(
                 m.O,
@@ -68,76 +71,76 @@ function x(e) {
                 s.id
             );
         });
-    return S
+    return A
         ? (0, i.jsx)('div', {
-              className: g.anomaly,
+              className: C.anomaly,
               children: (0, i.jsxs)('div', {
-                  className: g.error,
+                  className: C.error,
                   children: [
                       (0, i.jsx)(l.Image, {
-                          src: C,
+                          src: I,
                           width: 178,
                           height: 190
                       }),
                       (0, i.jsx)(l.Text, {
                           variant: 'text-md/normal',
-                          children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_ERROR_MESSAGE
+                          children: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_ERROR_MESSAGE
                       })
                   ]
               })
           })
-        : null == x
+        : null == N
           ? (0, i.jsx)('div', {
-                className: g.anomaly,
+                className: C.anomaly,
                 children: (0, i.jsx)('div', {
-                    className: g.spinner,
+                    className: C.spinner,
                     children: (0, i.jsx)(l.Spinner, {})
                 })
             })
           : (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.modal,
+                        className: C.modal,
                         children: [
                             (0, i.jsx)('img', {
-                                className: g.image,
+                                className: C.image,
                                 src: 'https://cdn.discordapp.com/assets/content/5e2cb8d8137c2e5caecabaa7659295c2d443086ae7141bdc9e35a4825b47bdd7.png',
-                                alt: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_IMAGE_ALT
+                                alt: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_IMAGE_ALT
                             }),
                             (0, i.jsxs)('div', {
-                                className: g.body,
+                                className: C.body,
                                 children: [
                                     (0, i.jsx)(l.Heading, {
                                         variant: 'heading-lg/bold',
-                                        children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_TITLE
+                                        children: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_TITLE
                                     }),
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
-                                        children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_DESCR
+                                        children: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_DESCR
                                     }),
                                     (0, i.jsx)(d.Z, {
                                         onClick: () => {},
                                         children: (0, i.jsx)(l.Text, {
                                             color: 'text-link',
                                             variant: 'text-xs/medium',
-                                            children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_LINK
+                                            children: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_LINK
                                         })
                                     })
                                 ]
                             }),
-                            (0, i.jsx)('div', { className: g.divider }),
+                            (0, i.jsx)('div', { className: C.divider }),
                             (0, i.jsxs)('div', {
-                                className: g.applyingTo,
+                                className: C.applyingTo,
                                 children: [
                                     (0, i.jsx)(l.Text, {
                                         variant: 'eyebrow',
-                                        children: E.Z.Messages.CONSUMABLE_HD_STREAMING_APPLYING_TO
+                                        children: g.Z.Messages.CONSUMABLE_HD_STREAMING_APPLYING_TO
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: g.channel,
+                                        className: C.channel,
                                         children: [
                                             (0, i.jsxs)('div', {
-                                                className: g.channelLeft,
+                                                className: C.channelLeft,
                                                 children: [
                                                     (0, i.jsx)(l.VoiceNormalIcon, {}),
                                                     (0, i.jsx)(l.Text, {
@@ -147,8 +150,8 @@ function x(e) {
                                                 ]
                                             }),
                                             (0, i.jsx)('div', {
-                                                className: g.avatars,
-                                                children: Z
+                                                className: C.avatars,
+                                                children: L
                                             })
                                         ]
                                     })
@@ -157,21 +160,25 @@ function x(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: g.footer,
+                        className: C.footer,
                         children: [
                             (0, i.jsx)(l.Button, {
                                 color: l.Button.Colors.PRIMARY,
-                                children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_CANCEL_BUTTON_COPY
+                                children: g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_CANCEL_BUTTON_COPY
                             }),
                             (0, i.jsx)(l.Button, {
                                 onClick: () => {
+                                    if (b) {
+                                        (0, c.Zu)(t.id), (0, l.closeModal)(x);
+                                        return;
+                                    }
                                     (0, h.Z)({
-                                        skuId: f.FX,
-                                        analyticsLocations: v,
-                                        onComplete: A
+                                        skuId: E.FX,
+                                        analyticsLocations: M,
+                                        onComplete: R
                                     });
                                 },
-                                children: E.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_BUY_BUTTON_COPY.format({ price: (0, _.T4)(x.amount, x.currency) })
+                                children: b ? g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_BUY_FREEBIE_COPY : g.Z.Messages.CONSUMABLE_HD_STREAMING_MODAL_BUY_BUTTON_COPY.format({ price: (0, _.T4)(N.amount, N.currency) })
                             })
                         ]
                     })

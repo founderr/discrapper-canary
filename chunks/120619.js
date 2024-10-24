@@ -5,27 +5,35 @@ var i,
     l,
     r = n(442837),
     o = n(570140),
-    c = n(215023);
-let u = new Map(),
-    d = new Set(),
+    c = n(959546),
+    u = n(215023);
+let d = new Map(),
     h = new Set(),
-    m = null;
-class p extends (i = r.ZP.Store) {
+    m = new Set(),
+    p = new Set(),
+    _ = new Map();
+class f extends (i = r.ZP.Store) {
     getPrice(e) {
-        return u.get(e);
+        return d.get(e);
     }
-    getFetching(e) {
-        return d.has(e);
-    }
-    getErrored(e) {
+    isFetchingPrice(e) {
         return h.has(e);
     }
-    getEntitlement() {
-        return m;
+    getErrored(e) {
+        return p.has(e);
+    }
+    getEntitlement(e) {
+        return _.get(e);
+    }
+    isEntitlementFetched(e) {
+        return _.has(e);
+    }
+    isEntitlementFetching(e) {
+        return m.has(e);
     }
 }
 (l = 'ConsumablesStore'),
-    (a = 'displayName') in (s = p)
+    (a = 'displayName') in (s = f)
         ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
@@ -33,22 +41,31 @@ class p extends (i = r.ZP.Store) {
               writable: !0
           })
         : (s[a] = l),
-    (t.Z = new p(o.Z, {
+    (t.Z = new f(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
-            d.add(e.skuId);
+            h.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            u.set(e.skuId, e.price), d.delete(e.skuId);
+            d.set(e.skuId, e.price), h.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            d.delete(e.skuId), h.add(e.skuId);
+            h.delete(e.skuId), p.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
-            h.delete(e.skuId);
+            p.delete(e.skuId);
+        },
+        CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: (e) => {
+            m.delete(e.skuId), _.set(e.skuId, e.entitlement);
         },
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
-            if (t.sku_id === c.FX) m = t;
+            if (t.sku_id === u.FX) _.set(e.skuId, c.Z.createFromServer(t));
+        },
+        CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
+            p.add(e.skuId), m.delete(e.skuId);
+        },
+        CONSUMABLES_ENTITLEMENT_FETCH_STARTED: (e) => {
+            m.add(e.skuId);
         }
     }));
