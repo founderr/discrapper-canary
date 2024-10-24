@@ -1032,6 +1032,12 @@ n.r(t),
         MagnifyingGlassIcon: function () {
             return tv._Ve;
         },
+        MagnifyingGlassMinusIcon: function () {
+            return tv.BlJ;
+        },
+        MagnifyingGlassPlusIcon: function () {
+            return tv.OyE;
+        },
         ManaIcon: function () {
             return tv.tUM;
         },
@@ -1274,6 +1280,9 @@ n.r(t),
         },
         PaintbrushThinRetryIcon: function () {
             return tv.P19;
+        },
+        PaperClockIcon: function () {
+            return tv.HAL;
         },
         PaperIcon: function () {
             return tv.hH0;
@@ -1553,6 +1562,9 @@ n.r(t),
         },
         ShinyButton: function () {
             return t_.gt;
+        },
+        ShopCircleIcon: function () {
+            return tv.jZr;
         },
         ShopIcon: function () {
             return tv.EOn;
