@@ -1,6 +1,6 @@
 l.d(n, {
     ZP: function () {
-        return B;
+        return y;
     }
 }),
     l(47120);
@@ -74,7 +74,7 @@ function k(e) {
         })
     );
 }
-function y(e) {
+function B(e) {
     let { resource: n } = e,
         l = (0, s.e7)([v.Z], () => v.Z.getChannel(n.channelId)),
         r = (0, s.e7)([Z.Z], () => Z.Z.getMessages(n.channelId)),
@@ -166,7 +166,7 @@ function y(e) {
         ]
     });
 }
-function B(e) {
+function y(e) {
     let { guild: n, isNewMember: l } = e,
         i = (0, M.Z)(n.id);
     if (0 === i.length)
@@ -204,7 +204,7 @@ function B(e) {
                 color: 'header-primary',
                 children: S.Z.Messages.GUILD_HOME_RESOURCES
             }),
-            i.map((e) => (0, a.jsx)(y, { resource: e }, e.channelId))
+            i.map((e) => (0, a.jsx)(B, { resource: e }, e.channelId))
         ]
     });
 }

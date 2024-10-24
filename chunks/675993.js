@@ -73,7 +73,7 @@ function L(e) {
                         (0, i.jsxs)('div', {
                             className: C ? g.overviewContainerWithVideo : g.overviewContainerNoVideo,
                             children: [
-                                (0, i.jsx)(S, { application: t }),
+                                (0, i.jsx)(b, { application: t }),
                                 (0, i.jsx)(R, { application: t }),
                                 p.length > 0 ? (0, i.jsx)(y, { description: p }) : null,
                                 _
@@ -96,12 +96,12 @@ function L(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(b, { application: t })
+                (0, i.jsx)(S, { application: t })
             ]
         })
     );
 }
-function b(e) {
+function S(e) {
     let { application: n } = e,
         t = (0, E.Cb)(n),
         a = (0, E.Hu)(n);
@@ -145,7 +145,7 @@ function b(e) {
           })
         : null;
 }
-function S(e) {
+function b(e) {
     var n;
     let { application: t } = e,
         a = (0, E.BQ)(t) ? t.name : null !== (n = (0, E.$d)(t)) && void 0 !== n ? n : '',

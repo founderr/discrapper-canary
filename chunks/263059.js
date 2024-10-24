@@ -127,7 +127,7 @@ function P(e) {
                           onAction: K
                       })
                   });
-    if (null === B || B === b.y0.CARD) return null;
+    if (null === B) return null;
     let J = null !== (t = P.application_id) && void 0 !== t ? t : P.name,
         ee = V === b.n_.ACTIVITY && H === J;
     return (0, r.jsx)(c.Gt, {

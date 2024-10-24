@@ -77,15 +77,15 @@ function T(e) {
             source: T,
             fetchesApplication: h
         }),
-        b = s.ButtonColors.BRAND,
-        S = null != l ? l : x.Z.Messages.LAUNCH;
+        S = s.ButtonColors.BRAND,
+        b = null != l ? l : x.Z.Messages.LAUNCH;
     return (
-        g === d.JS.JOIN ? ((b = s.ButtonColors.GREEN), (S = x.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((b = s.ButtonColors.RED), (S = x.Z.Messages.LEAVE)),
+        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (b = x.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (b = x.Z.Messages.LEAVE)),
         {
             onActivityItemSelected: L,
             activityAction: g,
-            buttonColor: b,
-            buttonText: S
+            buttonColor: S,
+            buttonText: b
         }
     );
 }

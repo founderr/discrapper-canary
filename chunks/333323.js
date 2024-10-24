@@ -55,8 +55,8 @@ function k(e) {
     var n, l;
     let { guild: r, width: m } = e,
         A = (0, s.e7)([C.ZP], () => C.ZP.getSection(M.oC.GUILD_HOME)),
-        [k, y] = i.useState(!1),
-        [B, H] = i.useState(E.$Y6),
+        [k, B] = i.useState(!1),
+        [y, H] = i.useState(E.$Y6),
         L = A === E.ULH.SIDEBAR_CHAT,
         w = (0, d.useFocusJumpSection)(),
         D = (0, s.e7)([I.Z], () => I.Z.getSettings(r.id)),
@@ -64,7 +64,7 @@ function k(e) {
         U = (0, _.Z)(r.id),
         G = !U && (null !== (l = null == D ? void 0 : null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0) === 0,
         W = (0, o.Z)('(max-width: 1300px)'),
-        z = m - E.PrS - B,
+        z = m - E.PrS - y,
         F = (L && z < R) || W || G;
     return (i.useEffect(() => {
         if (D === I.P) (0, f.cP)(r.id);
@@ -147,7 +147,7 @@ function k(e) {
                       ? (0, a.jsx)(Z.Z, {
                             pageWidth: m,
                             onSidebarResize: (e, n) => {
-                                y(n), H(e);
+                                B(n), H(e);
                             }
                         })
                       : null

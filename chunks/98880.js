@@ -39,8 +39,8 @@ var i,
     g = t(973616),
     T = t(695103),
     L = t(880448),
-    b = t(768581),
-    S = t(541099),
+    S = t(768581),
+    b = t(541099),
     R = t(783097),
     M = t(695676),
     j = t(176412),
@@ -367,7 +367,7 @@ function q(e) {
 function J(e) {
     let { bot: n, fallbackColor: t, disableFadeIn: i } = e,
         a = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        o = (0, b.aN)({
+        o = (0, S.aN)({
             id: n.id,
             banner: n.banner,
             canAnimate: !a,
@@ -401,7 +401,7 @@ function X(e) {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
-                    source: S.Z.entrypoint(),
+                    source: b.Z.entrypoint(),
                     location: r,
                     query: a
                 }),

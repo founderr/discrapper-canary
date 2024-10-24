@@ -265,7 +265,7 @@ function j(e) {
                           onClose: Q
                       })
                   });
-    if (null === J || J === F.y0.CARD) return null;
+    if (null === J) return null;
     let eS = null !== (t = j.application_id) && void 0 !== t ? t : j.name,
         eg = et === F.n_.ACTIVITY && en === eS;
     return (0, r.jsx)(E.Gt, {

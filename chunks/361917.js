@@ -30,8 +30,8 @@ var i = t(200651),
     g = t(87005),
     T = t(219066),
     L = t(106066),
-    b = t(783097),
-    S = t(695676),
+    S = t(783097),
+    b = t(695676),
     R = t(98880),
     M = t(804307),
     j = t(888617),
@@ -63,15 +63,15 @@ function F(e) {
     let { channel: n, entrypoint: t, searchQuery: l, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         _ = t === P._b.TEXT && !n.isPrivate(),
-        C = (0, b.Yn)(t),
-        h = !(0, b.Yn)(t),
+        C = (0, S.Yn)(t),
+        h = !(0, S.Yn)(t),
         f = t === P._b.TEXT,
         [A, E] = K(!0),
         [N, v] = K(_),
         [x, I] = K(C),
         [g, T] = K(h),
         L = A && N && x && g,
-        S = (C || _) && !L,
+        b = (C || _) && !L,
         R = h && u;
     a.useEffect(() => {
         (0, p.w1)({
@@ -131,7 +131,7 @@ function F(e) {
                                       type: P.LG.HOME_EMPTY,
                                       textContent: t === P._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
-                              S && (0, i.jsx)(Z.Z, {})
+                              b && (0, i.jsx)(Z.Z, {})
                           ]
                       })
             })
@@ -470,7 +470,7 @@ function Q(e) {
                 m = t === r.I.APP_LAUNCHER_VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: a.useMemo(() => (m ? (0, b.pF)(d) : d), [d, m]),
+                recommendationsSections: a.useMemo(() => (m ? (0, S.pF)(d) : d), [d, m]),
                 isInstallOnDemand: o
             };
         })({
@@ -642,7 +642,7 @@ function K(e) {
 }
 function $(e) {
     let { title: n, look: t, items: i, limit: l, sectionName: o, sectionOverallPosition: r } = e,
-        { pushHistory: s } = (0, S.hH)();
+        { pushHistory: s } = (0, b.hH)();
     return a.useMemo(
         () =>
             i.length <= l
@@ -659,7 +659,7 @@ function $(e) {
                               num: i.length
                           }),
                               s({
-                                  type: S.gc.LIST,
+                                  type: b.gc.LIST,
                                   title: n,
                                   look: t,
                                   items: i,

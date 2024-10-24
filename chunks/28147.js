@@ -29,8 +29,8 @@ var i = t(200651),
     g = t(106771),
     T = t(79984),
     L = t(314734),
-    b = t(981631),
-    S = t(689938),
+    S = t(981631),
+    b = t(689938),
     R = t(454093);
 let M = Array(6)
         .fill(0)
@@ -105,7 +105,7 @@ function Z(e) {
           ? (0, i.jsx)(I.A, {
                 type: f.LG.SEARCH_EMPTY,
                 searchQuery: t,
-                textContent: l === f._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+                textContent: l === f._b.TEXT ? b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -149,7 +149,7 @@ function H(e) {
     a.useEffect(() => {
         !x &&
             E &&
-            (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: f.L3.SEARCH,
                 source: h.Z.entrypoint(),
                 num: o.length
@@ -161,7 +161,7 @@ function H(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(P.Z, {
-                title: S.Z.Messages.COMMANDS,
+                title: b.Z.Messages.COMMANDS,
                 buttonType: H,
                 onClickViewButton: m ? I : void 0
             }),
@@ -198,7 +198,7 @@ function H(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id
@@ -229,7 +229,7 @@ function D(e) {
     return l
         ? (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(P.Z, { title: S.Z.Messages.APPS }),
+                  (0, i.jsx)(P.Z, { title: b.Z.Messages.APPS }),
                   (0, i.jsxs)('div', {
                       className: R.sectionContentContainer,
                       children: [
@@ -255,7 +255,7 @@ function D(e) {
           })
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(P.Z, { title: S.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE }),
+                  (0, i.jsx)(P.Z, { title: b.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE }),
                   (0, i.jsxs)('div', {
                       className: R.sectionActivitiesContentContainer,
                       children: [
@@ -293,12 +293,12 @@ function k(e) {
 function B() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(P.Z, { title: S.Z.Messages.COMMANDS }),
+            (0, i.jsx)(P.Z, { title: b.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
                 className: R.sectionContentContainer,
                 children: M.map((e) => (0, i.jsx)(T.Z, {}, e))
             }),
-            (0, i.jsx)(P.Z, { title: S.Z.Messages.APPS }),
+            (0, i.jsx)(P.Z, { title: b.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: R.sectionContentContainer,
                 children: j.map((e) => (0, i.jsx)(T.Z, {}, e))

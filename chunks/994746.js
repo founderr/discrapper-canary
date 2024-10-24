@@ -52,7 +52,7 @@ function o(e) {
             )
             .with([{ type: a.IIU.COMPETING }, r.P.any], () => s.Z.Messages.USER_ACTIVITY_COMPETING_IN)
             .with([{ type: a.IIU.HANG_STATUS }, r.P.any], () => s.Z.Messages.USER_ACTIVITY_CURRENTLY)
-            .otherwise(() => null),
-        icon: null == t ? void 0 : t.icon
+            .otherwise(() => void 0),
+        platformIcon: null == t ? void 0 : t.icon
     };
 }

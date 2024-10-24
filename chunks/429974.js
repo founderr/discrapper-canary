@@ -19,11 +19,11 @@ var i = n(481060),
     h = n(616922);
 let p = null;
 function I(e, t) {
-    return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t || t === f.ME ? '' : t);
+    return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t ? '' : t);
 }
 async function m(e) {
     var t, a, s, m;
-    let { userId: T, section: S, subsection: g, guildId: A = f.ME, channelId: N, friendToken: R, analyticsLocation: O, showGuildProfile: v = !0, ...C } = e,
+    let { userId: T, section: S, subsection: g, guildId: A, channelId: N, friendToken: R, analyticsLocation: O, showGuildProfile: v = !0, ...C } = e,
         L = d.default.getUser(T);
     if (null == L) return;
     let D = E.Z.getUserProfile(T),
@@ -54,7 +54,7 @@ async function m(e) {
     )),
         _.default.track(f.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: A !== f.ME ? A : null,
+            guild_id: A,
             channel_id: N,
             other_user_id: T,
             application_id: null !== (a = null == y ? void 0 : y.application_id) && void 0 !== a ? a : null,

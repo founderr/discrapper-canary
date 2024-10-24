@@ -31,7 +31,7 @@ function I(e) {
         g = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         T = (0, _.ye)(g) ? P : A.Z,
         L = a.useRef(null),
-        [b, S] = a.useState(!1),
+        [S, b] = a.useState(!1),
         { iconURL: R, name: M } = a.useMemo(
             () =>
                 (0, _.sl)(g, {
@@ -72,7 +72,7 @@ function I(e) {
                     channel: t,
                     application: g,
                     sectionName: c,
-                    hasCommands: b
+                    hasCommands: S
                 }),
                 I === p._b.TEXT
                     ? (0, i.jsx)(h.Z, {
@@ -80,7 +80,7 @@ function I(e) {
                           application: g,
                           sectionName: c,
                           installOnDemand: Z,
-                          setHasCommands: S
+                          setHasCommands: b
                       })
                     : null
             ]
