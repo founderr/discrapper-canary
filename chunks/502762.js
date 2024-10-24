@@ -15,7 +15,6 @@ let f = (e, t) => {
                 .with(_.y0.BITE_SIZE, () => E.biteSizeOuter)
                 .with(_.y0.FULL_SIZE, () => E.fullSizeOuter)
                 .with(_.y0.PANEL, () => E.userPanelOuter)
-                .with(_.y0.CARD, () => E.userCardOuter)
                 .otherwise(() => E.userProfileOuter),
             r = t ? E.userProfileOuterThemed : E.userProfileOuterUnthemed;
         return s()(n, r);
@@ -25,7 +24,6 @@ let f = (e, t) => {
                 .with(_.y0.PANEL, () => E.userPanelInner)
                 .with(_.y0.FULL_SIZE, () => E.userProfileModalInner)
                 .with(_.y0.BITE_SIZE, () => E.biteSizeInner)
-                .with(_.y0.CARD, () => E.userCardInner)
                 .otherwise(() => E.userProfileInner),
             i = (0, o.EQ)(e)
                 .with(_.y0.PANEL, () => E.userPanelInnerThemed)

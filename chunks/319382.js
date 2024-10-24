@@ -1,7 +1,6 @@
 e.exports = {
     userProfileOuter: 'userProfileOuter_c69a7b',
     userPanelOuter: 'userPanelOuter_c69a7b',
-    userCardOuter: 'userCardOuter_c69a7b userProfileOuter_c69a7b',
     biteSizeOuter: 'biteSizeOuter_c69a7b userPopoutOuter_c69a7b userProfileOuter_c69a7b',
     fullSizeOuter: 'fullSizeOuter_c69a7b userProfileOuter_c69a7b',
     userProfileOuterThemed: 'userProfileOuterThemed_c69a7b',
@@ -10,7 +9,6 @@ e.exports = {
     biteSizeInner: 'biteSizeInner_c69a7b userProfileInner_c69a7b',
     userProfileModalInner: 'userProfileModalInner_c69a7b userProfileInner_c69a7b',
     userPanelInner: 'userPanelInner_c69a7b userProfileInner_c69a7b',
-    userCardInner: 'userCardInner_c69a7b userProfileInner_c69a7b',
     userPanelInnerThemed: 'userPanelInnerThemed_c69a7b',
     userProfileInnerThemedWithBanner: 'userProfileInnerThemedWithBanner_c69a7b',
     userProfileInnerThemedPremiumWithoutBanner: 'userProfileInnerThemedPremiumWithoutBanner_c69a7b',

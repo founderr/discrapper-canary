@@ -43,41 +43,40 @@ var i = t(200651),
     F = t(272216);
 function G(e) {
     let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: K, initialSection: Y, initialSubsection: H, transitionState: z, onClose: q, showGuildProfile: Q = !0, sourceAnalyticsLocations: X = [] } = e,
-        J = G === B.ME ? void 0 : G,
-        { analyticsLocations: $ } = (0, u.ZP)([...X, d.Z.SIMPLIFIED_PROFILE_MODAL]),
-        ee = (0, Z.Z)({
+        { analyticsLocations: J } = (0, u.ZP)([...X, d.Z.SIMPLIFIED_PROFILE_MODAL]),
+        $ = (0, Z.Z)({
             user: n,
             currentUser: t,
             location: B.Sbl.SIMPLIFIED_USER_PROFILE
         }),
-        en = (0, f.ZB)({
-            layout: ee ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
+        ee = (0, f.ZB)({
+            layout: $ ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: W,
-            guildId: J,
+            guildId: G,
             channelId: w,
             messageId: k,
             roleId: V,
             showGuildProfile: Q
         }),
-        et = (0, h.$m)(),
-        ei = (0, r.useSpring)({
-            opacity: null != et.interactionType ? 1 : 0,
+        en = (0, h.$m)(),
+        et = (0, r.useSpring)({
+            opacity: null != en.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        es = (0, x.ZP)(n.id, Q ? J : void 0),
-        eo = (0, x.ZP)(n.id, J),
-        el = (0, l.e7)([I.Z], () => I.Z.getRelationshipType(n.id)),
-        er = n.id === t.id,
-        ec = s.useMemo(() => (null != J ? { [J]: [n.id] } : {}), [J, n.id]);
-    (0, a.$)(ec);
-    let ea = s.createRef(),
-        ed = (0, c.Z)(ea),
-        { permanentEntryPointsEnabled: eu } = (0, p.u)({ location: 'UserProfileModal' }),
-        e_ = () =>
-            (null == eo ? void 0 : eo.guildId) == null
+        ei = (0, x.ZP)(n.id, Q ? G : void 0),
+        es = (0, x.ZP)(n.id, G),
+        eo = (0, l.e7)([I.Z], () => I.Z.getRelationshipType(n.id)),
+        el = n.id === t.id,
+        er = s.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
+    (0, a.$)(er);
+    let ec = s.createRef(),
+        ea = (0, c.Z)(ec),
+        { permanentEntryPointsEnabled: ed } = (0, p.u)({ location: 'UserProfileModal' }),
+        eu = () =>
+            (null == es ? void 0 : es.guildId) == null
                 ? null
-                : (null == es ? void 0 : es.guildId) != null
+                : (null == ei ? void 0 : ei.guildId) != null
                   ? (0, i.jsx)(r.MenuItem, {
                         id: 'view-main-profile',
                         label: D.Z.Messages.VIEW_MAIN_PROFILE,
@@ -85,43 +84,43 @@ function G(e) {
                         action: () => {
                             q(),
                                 (0, O.openUserProfileModal)({
-                                    ...en,
+                                    ...ee,
                                     showGuildProfile: !1,
                                     friendToken: K,
                                     sourceAnalyticsLocations: X
                                 }),
                                 (0, m.pQ)({
                                     action: 'PRESS_VIEW_MAIN_PROFILE',
-                                    analyticsLocations: $,
-                                    ...en
+                                    analyticsLocations: J,
+                                    ...ee
                                 });
                         }
                     })
                   : (0, i.jsx)(r.MenuItem, {
                         id: 'view-server-profile',
                         label: D.Z.Messages.VIEW_SERVER_PROFILE,
-                        subtext: D.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: E.ZP.getName(J, w, n) }),
+                        subtext: D.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: E.ZP.getName(G, w, n) }),
                         action: () => {
                             q(),
                                 (0, O.openUserProfileModal)({
-                                    ...en,
+                                    ...ee,
                                     showGuildProfile: !0,
                                     friendToken: K,
                                     sourceAnalyticsLocations: X
                                 }),
                                 (0, m.pQ)({
                                     action: 'PRESS_VIEW_SERVER_PROFILE',
-                                    analyticsLocations: $,
-                                    ...en
+                                    analyticsLocations: J,
+                                    ...ee
                                 });
                         }
                     });
     return (0, i.jsx)(u.Gt, {
-        value: $,
+        value: J,
         children: (0, i.jsx)(f.Mt, {
-            value: en,
+            value: ee,
             children: (0, i.jsx)(h.NJ, {
-                value: et,
+                value: en,
                 children: (0, i.jsxs)(r.ModalRoot, {
                     transitionState: z,
                     className: F.root,
@@ -130,15 +129,15 @@ function G(e) {
                     children: [
                         (0, i.jsxs)(N.Z, {
                             user: n,
-                            displayProfile: es,
+                            displayProfile: ei,
                             profileType: U.y0.FULL_SIZE,
-                            ref: ea,
+                            ref: ec,
                             children: [
                                 (0, i.jsxs)(A.Z, {
                                     profileType: U.y0.FULL_SIZE,
                                     children: [
-                                        eu &&
-                                            er &&
+                                        ed &&
+                                            el &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)(R.Z, { onClose: q }),
@@ -149,22 +148,22 @@ function G(e) {
                                                 ]
                                             }),
                                         (0, i.jsx)(P.Z, {
-                                            shouldShowTooltip: null === et.interactionType,
+                                            shouldShowTooltip: null === en.interactionType,
                                             user: n,
-                                            guildId: J,
+                                            guildId: G,
                                             channelId: w,
                                             onClose: q
                                         }),
                                         (0, i.jsx)(j.Z, {
-                                            shouldShowTooltip: null === et.interactionType,
+                                            shouldShowTooltip: null === en.interactionType,
                                             profileType: U.y0.FULL_SIZE,
                                             user: n,
                                             friendToken: K
                                         }),
                                         (0, i.jsx)(M.Z, {
                                             user: n,
-                                            guildId: J,
-                                            viewProfileItem: e_()
+                                            guildId: G,
+                                            viewProfileItem: eu()
                                         })
                                     ]
                                 }),
@@ -172,7 +171,7 @@ function G(e) {
                                     children: [
                                         (0, i.jsx)(v.Z, {
                                             user: n,
-                                            displayProfile: es,
+                                            displayProfile: ei,
                                             profileType: U.y0.FULL_SIZE
                                         }),
                                         (0, i.jsx)(g.Z, {
@@ -180,9 +179,9 @@ function G(e) {
                                             onClose: q,
                                             className: F.toast
                                         }),
-                                        null != et.interactionType &&
+                                        null != en.interactionType &&
                                             (0, i.jsx)(o.animated.div, {
-                                                style: ei,
+                                                style: et,
                                                 className: F.backdrop
                                             }),
                                         (0, i.jsxs)('div', {
@@ -191,16 +190,16 @@ function G(e) {
                                                 (0, i.jsx)(S.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    displayProfile: es,
-                                                    guildId: J,
+                                                    displayProfile: ei,
+                                                    guildId: G,
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     location: 'SimplifiedUserProfileModal',
                                                     user: n,
-                                                    displayProfile: es,
-                                                    guildId: J,
+                                                    displayProfile: ei,
+                                                    guildId: G,
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE,
                                                     hasEntered: z === r.ModalTransitionState.ENTERED,
@@ -210,15 +209,15 @@ function G(e) {
                                                     className: F.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(y.Z, {
-                                                            isCurrentUser: er,
+                                                            isCurrentUser: el,
                                                             user: n,
-                                                            relationshipType: el,
+                                                            relationshipType: eo,
                                                             friendToken: K,
                                                             onClose: q
                                                         }),
                                                         (0, i.jsx)(b.Z, {
                                                             user: n,
-                                                            guildId: J,
+                                                            guildId: G,
                                                             onClose: q
                                                         })
                                                     ]
@@ -231,7 +230,7 @@ function G(e) {
                                     user: n,
                                     currentUser: t,
                                     channelId: w,
-                                    displayProfile: es,
+                                    displayProfile: ei,
                                     initialSection: Y,
                                     initialSubsection: H,
                                     friendToken: K,
@@ -239,10 +238,10 @@ function G(e) {
                                 })
                             ]
                         }),
-                        (null == es ? void 0 : es.profileEffectId) != null &&
+                        (null == ei ? void 0 : ei.profileEffectId) != null &&
                             (0, i.jsx)(_.Z, {
-                                profileEffectId: null == es ? void 0 : es.profileEffectId,
-                                isHovering: ed
+                                profileEffectId: null == ei ? void 0 : ei.profileEffectId,
+                                isHovering: ea
                             })
                     ]
                 })

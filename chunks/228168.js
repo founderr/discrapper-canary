@@ -67,7 +67,6 @@ function C(e) {
     ((a = p || (p = {})).BITE_SIZE = 'BITE_SIZE'),
     (a.FULL_SIZE = 'FULL_SIZE'),
     (a.PANEL = 'PANEL'),
-    (a.CARD = 'CARD'),
     ((s = I || (I = {})).LIVE = 'live'),
     (s.RECENT = 'recent'),
     ((o = m || (m = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
