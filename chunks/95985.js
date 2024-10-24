@@ -10,8 +10,8 @@ var s = n(481060),
     u = n(183004);
 t.Z = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, taskDetails: x, activeScreen: C } = e,
-        { percentComplete: g } = x,
-        _ = (0, r.eQ)(n),
+        { percentComplete: _ } = x,
+        g = (0, r.eQ)(n),
         f = (0, r.vf)(n, m, C);
     return (0, o.jsxs)('div', {
         className: u.questProgressWrapper,
@@ -24,7 +24,7 @@ t.Z = (e) => {
                     (0, o.jsx)(c.Z, {
                         ref: e,
                         quest: n,
-                        percentComplete: g,
+                        percentComplete: _,
                         size: 42,
                         strokeWidth: 3,
                         children: (0, o.jsx)(l.Z, {
@@ -48,7 +48,7 @@ t.Z = (e) => {
                                 className: u.questProgressHint,
                                 color: 'header-primary',
                                 variant: 'text-sm/semibold',
-                                children: _
+                                children: g
                             })
                     }),
                     (0, o.jsx)(i.l7, {

@@ -17,8 +17,8 @@ var o = n(200651),
     m = n(497505),
     x = n(918701),
     C = n(667105),
-    g = n(341907),
-    _ = n(284851),
+    _ = n(341907),
+    g = n(284851),
     f = n(46140),
     h = n(689938),
     E = n(632946);
@@ -57,31 +57,31 @@ function T(e) {
 }
 function v(e) {
     var t, n, r, v;
-    let { quest: N, location: j, onReceiveErrorHints: A, contentPosition: b, rowIndex: R } = e,
-        B = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        I = (0, C.g2)({ useReducedMotion: B }),
-        y = (0, u._s)({ quest: N }),
+    let { quest: N, location: j, onReceiveErrorHints: A, contentPosition: b, rowIndex: B } = e,
+        R = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        y = (0, C.g2)({ useReducedMotion: R }),
+        I = (0, u._s)({ quest: N }),
         M = (0, u.z)(N),
         O = (0, u.B6)(N.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        { isClaiming: k, isEnrolling: w } = (0, l.cj)([p.Z], () => ({
+        { isClaiming: w, isEnrolling: k } = (0, l.cj)([p.Z], () => ({
             isClaiming: p.Z.isClaimingReward(N.id) || p.Z.isFetchingRewardCode(N.id),
             isEnrolling: p.Z.isEnrolling(N.id)
         })),
-        L = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        U = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        q = U && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
-        Z = (0, x.iQ)(N),
-        P = !(0, x.zi)(N),
+        P = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        L = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        U = L && (null === (r = N.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        q = (0, x.iQ)(N),
+        Z = !(0, x.zi)(N),
         Q = (0, u._Q)(N),
         D = (0, x.zK)(N, f.S7.IN_HOUSE_CONSOLE_QUEST),
         W = (0, x.Xv)(N.config),
         H = (0, x.cr)(N),
         V = (0, u.Rf)(N),
         [z, G, F] = (0, u.me)(N, V),
-        K = P && Q === u.OH.ACCEPTED,
+        K = Z && Q === u.OH.ACCEPTED,
         Y = K && z === m.LI.SELECT,
         X = K && !Y && G.length > 1,
         J = s.useCallback(
@@ -97,37 +97,37 @@ function v(e) {
             location: j,
             isCollectibleQuest: W,
             questContentPosition: b,
-            questContentRowIndex: R,
+            questContentRowIndex: B,
             inGiftInventory: !0,
             isVideoQuest: H
         }),
         { startingConsoleQuest: et, startConsoleQuest: en } = (0, u.GI)({
             questId: N.id,
             beforeRequest: () => {
-                I.startAnimation(),
+                y.startAnimation(),
                     (0, d._3)({
                         questId: N.id,
                         questContent: j,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: b,
-                        questContentRowIndex: R
+                        questContentRowIndex: B
                     });
             },
             afterRequest: (e) => {
-                I.stopAnimation(), A(e);
+                y.stopAnimation(), A(e);
             }
         }),
         eo = (null === (v = N.userStatus) || void 0 === v ? void 0 : v.claimedAt) != null,
         es = null;
-    return (Z && q
+    return (q && U
         ? (es = (0, o.jsx)(i.Button, {
               color: i.ButtonColors.BRAND,
-              submitting: k,
+              submitting: w,
               onClick: null != ee ? ee : void 0,
               className: E.button,
               children: $
           }))
-        : U
+        : L
           ? (es = H
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
@@ -136,7 +136,7 @@ function v(e) {
                               className: E.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, g.openVideoQuestModal)(N);
+                                  (0, _.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: E.ctaInner,
@@ -163,16 +163,16 @@ function v(e) {
                       onClick: null != ee ? ee : void 0,
                       children: $
                   }))
-          : P
-            ? P && q
+          : Z
+            ? Z && U
                 ? (es = (0, o.jsx)(i.Button, {
                       color: i.ButtonColors.BRAND,
-                      submitting: k,
+                      submitting: w,
                       onClick: null != ee ? ee : void 0,
                       className: E.button,
                       children: $
                   }))
-                : P && L && !eo
+                : Z && P && !eo
                   ? (es = Y
                         ? (0, o.jsx)(i.Select, {
                               className: E.platformSelectorPrimary,
@@ -191,7 +191,7 @@ function v(e) {
                               }
                           })
                         : (0, x.$J)(N) && !M && z !== m.LI.DESKTOP
-                          ? y
+                          ? I
                               ? (0, o.jsx)(i.Button, {
                                     color: i.ButtonColors.PRIMARY,
                                     className: E.button,
@@ -205,7 +205,7 @@ function v(e) {
                                     className: E.button,
                                     children: (0, o.jsxs)('div', {
                                         className: E.ctaInner,
-                                        children: [I.render(), h.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+                                        children: [y.render(), h.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                                     })
                                 })
                           : H
@@ -221,10 +221,10 @@ function v(e) {
                                   className: E.button,
                                   children: h.Z.Messages.QUEST_ACCEPTED
                               }))
-                  : P &&
-                    !L &&
+                  : Z &&
+                    !P &&
                     (es = (0, o.jsx)(i.Button, {
-                        submitting: w,
+                        submitting: k,
                         color: i.ButtonColors.BRAND,
                         onClick: null != ee ? ee : void 0,
                         className: E.button,
@@ -243,7 +243,7 @@ function v(e) {
               children: [
                   es,
                   X &&
-                      (0, o.jsx)(_.U, {
+                      (0, o.jsx)(g.U, {
                           onSelect: J,
                           quest: N,
                           questContent: m.jn.ACTIVITY_PANEL,

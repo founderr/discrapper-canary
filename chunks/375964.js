@@ -10475,7 +10475,7 @@ e.exports = Object.freeze({
     SOUNDPACK_BUBBLE_DESCRIPTION: 'Bubble',
     SOUNDPACK_ASMR_LABEL: 'ASMR',
     SOUNDPACK_ASMR_DESCRIPTION: '*hey there*',
-    SOUNDPACK_HALLOWEEN_LABEL: 'Halloween',
+    SOUNDPACK_HALLOWEEN_LABEL: '\uD83C\uDF83 Halloween',
     PAYMENT_METHOD_INFO: 'Payment method',
     PAID_SERVICE_TERMS_AGREEMENT: 'By clicking \u201CBuy gift\u201D, you agree to the Paid Services Terms',
     ONE_TIME_CHARGE_INFO: 'This will be a one time charge for the amount of time chosen. You will not be billed yearly.',

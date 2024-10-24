@@ -12,19 +12,19 @@ var s = n(120356),
     m = n(788284),
     x = n(46140),
     C = n(689938),
-    g = n(968387);
+    _ = n(968387);
 t.Z = function (e) {
     var t;
-    let { className: n, expansionSpring: s, isExpanded: _, isExpansionAnimationComplete: f, quest: h, useReducedMotion: E } = e,
+    let { className: n, expansionSpring: s, isExpanded: g, isExpansionAnimationComplete: f, quest: h, useReducedMotion: E } = e,
         S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { percentComplete: T } = (0, i.Rf)(h),
         v = (0, i.Jf)(h),
         N = null != v ? v.completedRatio > 0 : T > 0;
     return (0, o.jsxs)(a.animated.div, {
-        'aria-hidden': _ && f,
-        className: r()(n, g.contentCollapsed, {
-            [g.contentCollapsedExpanded]: _,
-            [g.contentCollapsedAccepted]: S
+        'aria-hidden': g && f,
+        className: r()(n, _.contentCollapsed, {
+            [_.contentCollapsedExpanded]: g,
+            [_.contentCollapsedAccepted]: S
         }),
         style: {
             opacity: s.to({
@@ -38,13 +38,13 @@ t.Z = function (e) {
                 useReducedMotion: E
             }),
             (0, o.jsx)('div', {
-                className: g.contentCollapsedWrapper,
+                className: _.contentCollapsedWrapper,
                 children: S
                     ? (0, o.jsxs)('div', {
-                          className: g.questProgressWrapper,
+                          className: _.questProgressWrapper,
                           children: [
                               (0, o.jsx)(p.Z, {
-                                  className: g.questProgressRewardTile,
+                                  className: _.questProgressRewardTile,
                                   quest: h,
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
@@ -52,11 +52,11 @@ t.Z = function (e) {
                               }),
                               N
                                   ? (0, o.jsx)(u.Z, {
-                                        className: g.questProgressBar,
+                                        className: _.questProgressBar,
                                         quest: h
                                     })
                                   : (0, o.jsx)(l.Text, {
-                                        className: g.questProgressHint,
+                                        className: _.questProgressHint,
                                         color: 'always-white',
                                         variant: 'text-sm/semibold',
                                         children: C.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
@@ -64,16 +64,16 @@ t.Z = function (e) {
                           ]
                       })
                     : (0, o.jsxs)('div', {
-                          className: g.brandingWrapper,
+                          className: _.brandingWrapper,
                           children: [
                               (0, o.jsx)(d.Z, {
-                                  className: g.partnerBranding,
+                                  className: _.partnerBranding,
                                   quest: h
                               }),
                               (0, o.jsx)(l.Heading, {
                                   color: 'always-white',
                                   variant: 'heading-sm/medium',
-                                  className: g.questName,
+                                  className: _.questName,
                                   children: C.Z.Messages.QUEST.format({ questName: h.config.messages.questName })
                               })
                           ]

@@ -31,7 +31,7 @@ let c = s.createContext({
     d = s.forwardRef(function (e, t) {
         var n;
         let { children: i, id: d, inState: u, isTextTransition: p = !1 } = e,
-            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: C, expansionSpring: g, mountPoints: _ } = s.useContext(c),
+            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: C, expansionSpring: _, mountPoints: g } = s.useContext(c),
             f = s.useRef(null),
             h = s.useRef(null),
             E = s.useRef();
@@ -55,12 +55,12 @@ let c = s.createContext({
             [m]
         );
         (0, l.P)(f, S);
-        let T = null === (n = _.get(d)) || void 0 === n ? void 0 : n.current,
+        let T = null === (n = g.get(d)) || void 0 === n ? void 0 : n.current,
             v = null;
         return (
             null == T
                 ? (v = null)
-                : p && null != g
+                : p && null != _
                   ? (v = (0, o.jsxs)(o.Fragment, {
                         children: [
                             'collapsed' === u &&
@@ -68,7 +68,7 @@ let c = s.createContext({
                                     (0, o.jsx)(a.animated.div, {
                                         style: {
                                             position: 'absolute',
-                                            opacity: g.to({
+                                            opacity: _.to({
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             })
@@ -82,7 +82,7 @@ let c = s.createContext({
                                     (0, o.jsx)(a.animated.div, {
                                         style: {
                                             position: 'absolute',
-                                            opacity: g.to({
+                                            opacity: _.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
@@ -129,7 +129,7 @@ let c = s.createContext({
                         return n.set(t, s.createRef()), n;
                     });
             }, []),
-            g = s.useCallback((e, t) => {
+            _ = s.useCallback((e, t) => {
                 let n = !1;
                 d((o) => {
                     var s;
@@ -155,7 +155,7 @@ let c = s.createContext({
                             return n.delete(e), n;
                         });
             }, []),
-            _ = s.useCallback(() => {
+            g = s.useCallback(() => {
                 let e = [];
                 for (let t in l) {
                     if (null == l[t] || null == n.current || null == r.current) continue;
@@ -170,14 +170,14 @@ let c = s.createContext({
                         m = d.top - u.top,
                         x = a.left - c.left + i.Li,
                         C = d.left - u.left,
-                        g = -a.right + c.right + i.Li,
-                        _ = -d.right + u.right;
+                        _ = -a.right + c.right + i.Li,
+                        g = -d.right + u.right;
                     e.push({
                         id: t,
                         collapsedLeft: C,
                         expandedLeft: x,
-                        collapsedRight: _,
-                        expandedRight: g,
+                        collapsedRight: g,
+                        expandedRight: _,
                         collapsedTop: m,
                         expandedTop: p,
                         width: a.width
@@ -188,11 +188,11 @@ let c = s.createContext({
         return (0, o.jsx)(c.Provider, {
             value: {
                 registerComponent: C,
-                unregisterComponent: g,
+                unregisterComponent: _,
                 animatedComponents: l,
                 expandedContentRef: n,
                 collapsedContentRef: r,
-                recalculateAnimationPositions: _,
+                recalculateAnimationPositions: g,
                 animatedComponentProps: u,
                 expansionSpring: a,
                 mountPoints: m

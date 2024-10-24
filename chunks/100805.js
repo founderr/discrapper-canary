@@ -11,8 +11,8 @@ var o = n(200651),
     m = n(703656),
     x = n(358085),
     C = n(617136),
-    g = n(272008),
-    _ = n(113434),
+    _ = n(272008),
+    g = n(113434),
     f = n(569984),
     h = n(497505),
     E = n(918701),
@@ -23,33 +23,33 @@ var o = n(200651),
     j = n(340100),
     A = n(611855),
     b = n(644646),
-    R = n(78826),
-    B = n(670638),
-    I = n(667105),
-    y = n(46140),
+    B = n(78826),
+    R = n(670638),
+    y = n(667105),
+    I = n(46140),
     M = n(981631),
     O = n(701488),
-    k = n(689938),
-    w = n(609706);
-let L = s.forwardRef(function (e, t) {
+    w = n(689938),
+    k = n(609706);
+let P = s.forwardRef(function (e, t) {
     var n, r;
-    let { children: S, className: L, collapsedHeight: q, expansionSpring: Z, isExpanded: P, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: W, onCtxMenuSelect: H, quest: V, useReducedMotion: z } = e,
+    let { children: S, className: P, collapsedHeight: U, expansionSpring: q, isExpanded: Z, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: W, onCtxMenuSelect: H, quest: V, useReducedMotion: z } = e,
         G = (0, i.e7)([f.Z], () => f.Z.isEnrolling(V.id), [V]),
-        F = (0, _.B6)(V.config.expiresAt),
+        F = (0, g.B6)(V.config.expiresAt),
         K = N.r.build(V.config),
-        Y = (0, _.B6)(K.rewardsExpireAt),
+        Y = (0, g.B6)(K.rewardsExpireAt),
         X = s.useMemo(() => (0, v.fh)(V, v.Bd.HERO), [V]),
-        J = (0, I.tP)(K.application.id),
-        $ = K.features.has(y.S7.START_QUEST_CTA) ? C.jZ.START_QUEST : C.jZ.ACCEPT_QUEST,
-        ee = K.features.has(y.S7.START_QUEST_CTA) ? k.Z.Messages.QUESTS_START_QUEST : k.Z.Messages.QUESTS_ACCEPT_QUEST,
+        J = (0, y.tP)(K.application.id),
+        $ = K.features.has(I.S7.START_QUEST_CTA) ? C.jZ.START_QUEST : C.jZ.ACCEPT_QUEST,
+        ee = K.features.has(I.S7.START_QUEST_CTA) ? w.Z.Messages.QUESTS_START_QUEST : w.Z.Messages.QUESTS_ACCEPT_QUEST,
         et = s.useCallback(() => {
-            (0, g.AH)(V.id, {
+            (0, _.AH)(V.id, {
                 questContent: h.jn.QUEST_BAR,
                 questContentCTA: $
             }),
-                K.features.has(y.S7.START_QUEST_CTA) && (0, m.uL)(M.Z5c.ACTIVITY_DETAILS(O.In), void 0);
+                K.features.has(I.S7.START_QUEST_CTA) && (0, m.uL)(M.Z5c.ACTIVITY_DETAILS(O.In), void 0);
         }, [V, $, K.features]),
-        en = (0, I.hf)({
+        en = (0, y.hf)({
             quest: V,
             location: h.jn.QUEST_BAR
         }),
@@ -59,18 +59,18 @@ let L = s.forwardRef(function (e, t) {
                 ctaContent: C.jZ.OPEN_GAME_LINK
             });
         }, [V]),
-        es = K.features.has(y.S7.POST_ENROLLMENT_CTA),
-        er = (0, _.Rf)(V),
-        ea = (0, _.Jf)(V),
+        es = K.features.has(I.S7.POST_ENROLLMENT_CTA),
+        er = (0, g.Rf)(V),
+        ea = (0, g.Jf)(V),
         el = null != ea ? ea.progress > 0 : er.progressSeconds > 0,
         ei = (null === (n = V.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         ec = (null === (r = V.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
         ed = s.useMemo(() => (0, E.Xv)(V.config), [V.config]),
-        eu = P && Q,
+        eu = Z && Q,
         ep = (0, T.D)({
             quest: V,
             taskDetails: er,
-            location: y.dr.QUESTS_BAR,
+            location: I.dr.QUESTS_BAR,
             questContent: h.jn.QUEST_BAR,
             thirdPartyTaskDetails: null != ea ? ea : void 0
         }),
@@ -87,20 +87,20 @@ let L = s.forwardRef(function (e, t) {
             };
         }, [V.config.colors.primary]);
     return (0, o.jsxs)(l.animated.div, {
-        className: a()(L, w.contentExpanded, { [w.contentInteractable]: eu }),
+        className: a()(P, k.contentExpanded, { [k.contentInteractable]: eu }),
         style: {
             backgroundColor: V.config.colors.secondary,
             transform: ec
                 ? void 0
                 : (0, l.to)(
                       [
-                          Z.to({
+                          q.to({
                               range: [0, 1],
                               output: [0, -100]
                           }),
-                          Z.to({
+                          q.to({
                               range: [0, 1],
-                              output: [0, q]
+                              output: [0, U]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -112,21 +112,21 @@ let L = s.forwardRef(function (e, t) {
                 'aria-hidden': !eu,
                 children: ei
                     ? (0, o.jsxs)('div', {
-                          className: w.questAcceptedContent,
+                          className: k.questAcceptedContent,
                           ref: t,
                           children: [
                               (0, o.jsxs)('div', {
-                                  className: w.utils,
+                                  className: k.utils,
                                   children: [
                                       (0, o.jsxs)('div', {
-                                          className: w.questAcceptedContentHeading,
+                                          className: k.questAcceptedContentHeading,
                                           children: [
                                               (0, o.jsx)(b.Z, {
-                                                  className: w.questProgressRewardTile,
+                                                  className: k.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: V,
                                                   questContent: h.jn.QUEST_BAR,
-                                                  location: y.dr.QUESTS_BAR
+                                                  location: I.dr.QUESTS_BAR
                                               }),
                                               (0, o.jsxs)('div', {
                                                   children: [
@@ -140,16 +140,16 @@ let L = s.forwardRef(function (e, t) {
                                                           })
                                                       }),
                                                       (0, o.jsx)(u.Text, {
-                                                          className: w.questAcceptedContentCopySubheading,
+                                                          className: k.questAcceptedContentCopySubheading,
                                                           color: 'always-white',
                                                           variant: 'text-xxs/normal',
-                                                          children: ec ? k.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y }) : k.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: F })
+                                                          children: ec ? w.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y }) : w.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: F })
                                                       })
                                                   ]
                                               })
                                           ]
                                       }),
-                                      (0, o.jsx)(B.r, {
+                                      (0, o.jsx)(R.r, {
                                           onOpen: D,
                                           onClose: W,
                                           onSelect: H,
@@ -160,12 +160,12 @@ let L = s.forwardRef(function (e, t) {
                                           children: (e) =>
                                               (0, o.jsx)(u.Clickable, {
                                                   ...e,
-                                                  className: w.submenuWrapper,
-                                                  'aria-label': k.Z.Messages.ACTIONS,
+                                                  className: k.submenuWrapper,
+                                                  'aria-label': w.Z.Messages.ACTIONS,
                                                   children: (0, o.jsx)(u.MoreHorizontalIcon, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: w.submenuIcon
+                                                      className: k.submenuIcon
                                                   })
                                               })
                                       })
@@ -173,35 +173,35 @@ let L = s.forwardRef(function (e, t) {
                               }),
                               ec
                                   ? (0, o.jsx)(u.Button, {
-                                        className: a()(w.cta, w.ctaClaimReward),
+                                        className: a()(k.cta, k.ctaClaimReward),
                                         style: ed ? ex : void 0,
                                         color: u.Button.Colors.CUSTOM,
                                         fullWidth: !0,
                                         onClick: en,
                                         size: u.Button.Sizes.NONE,
-                                        children: k.Z.Messages.QUESTS_CLAIM_REWARD
+                                        children: w.Z.Messages.QUESTS_CLAIM_REWARD
                                     })
                                   : (0, o.jsx)(u.Text, {
-                                        className: w.description,
+                                        className: k.description,
                                         color: 'always-white',
                                         variant: 'text-xs/normal',
                                         children: ep
                                     }),
                               (0, o.jsx)(j.Z, { quest: V }),
-                              !em && !el && !J && es && (0, o.jsx)(U, { onClick: eu ? eo : void 0 })
+                              !em && !el && !J && es && (0, o.jsx)(L, { onClick: eu ? eo : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {
                           children: [
                               (0, o.jsxs)('div', {
-                                  className: w.questPromoContent,
+                                  className: k.questPromoContent,
                                   ref: t,
                                   children: [
                                       (0, o.jsxs)('div', {
-                                          className: w.utils,
+                                          className: k.utils,
                                           children: [
                                               (0, o.jsx)(A.Z, { color: 'always-white' }),
-                                              (0, o.jsx)(B.r, {
+                                              (0, o.jsx)(R.r, {
                                                   onOpen: D,
                                                   onClose: W,
                                                   onSelect: H,
@@ -212,35 +212,35 @@ let L = s.forwardRef(function (e, t) {
                                                   children: (e) =>
                                                       (0, o.jsx)(u.Clickable, {
                                                           ...e,
-                                                          className: w.submenuWrapper,
-                                                          'aria-label': k.Z.Messages.ACTIONS,
+                                                          className: k.submenuWrapper,
+                                                          'aria-label': w.Z.Messages.ACTIONS,
                                                           children: (0, o.jsx)(u.MoreHorizontalIcon, {
                                                               size: 'md',
                                                               color: 'currentColor',
-                                                              className: w.submenuIcon
+                                                              className: k.submenuIcon
                                                           })
                                                       })
                                               })
                                           ]
                                       }),
                                       (0, o.jsxs)('div', {
-                                          className: w.details,
+                                          className: k.details,
                                           children: [
                                               (0, o.jsx)(b.Z, {
-                                                  className: w.rewardTile,
+                                                  className: k.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: V,
                                                   questContent: h.jn.QUEST_BAR,
-                                                  location: y.dr.QUESTS_BAR
+                                                  location: I.dr.QUESTS_BAR
                                               }),
                                               (0, o.jsx)(u.Heading, {
-                                                  className: w.title,
+                                                  className: k.title,
                                                   color: 'always-white',
                                                   variant: 'heading-md/medium',
-                                                  children: k.Z.Messages.QUESTS_TITLE.format({ questName: V.config.messages.questName })
+                                                  children: w.Z.Messages.QUESTS_TITLE.format({ questName: V.config.messages.questName })
                                               }),
                                               (0, o.jsx)(u.Text, {
-                                                  className: w.description,
+                                                  className: k.description,
                                                   color: 'always-white',
                                                   variant: 'text-sm/normal',
                                                   children: ep
@@ -248,7 +248,7 @@ let L = s.forwardRef(function (e, t) {
                                           ]
                                       }),
                                       (0, o.jsx)(u.Button, {
-                                          className: w.cta,
+                                          className: k.cta,
                                           style: '1232852290197655573' !== V.id ? ex : void 0,
                                           color: u.Button.Colors.CUSTOM,
                                           fullWidth: !0,
@@ -260,10 +260,10 @@ let L = s.forwardRef(function (e, t) {
                                   ]
                               }),
                               (0, o.jsx)('div', {
-                                  className: w.heroAssetWrapper,
+                                  className: k.heroAssetWrapper,
                                   style: { color: V.config.colors.secondary },
                                   children: X.isAnimated
-                                      ? (0, o.jsx)(R.Fl, {
+                                      ? (0, o.jsx)(B.Fl, {
                                             id: 'QuestBarContentExpanded_heroAnimated',
                                             children: (e) => {
                                                 var t;
@@ -273,7 +273,7 @@ let L = s.forwardRef(function (e, t) {
                                                     loop: !0,
                                                     muted: !0,
                                                     playsInline: !0,
-                                                    className: w.heroAsset,
+                                                    className: k.heroAsset,
                                                     controls: !1,
                                                     children: (0, o.jsx)('source', {
                                                         src: X.url,
@@ -282,13 +282,13 @@ let L = s.forwardRef(function (e, t) {
                                                 });
                                             }
                                         })
-                                      : (0, o.jsx)(R.Fl, {
+                                      : (0, o.jsx)(B.Fl, {
                                             id: 'QuestBarContentExpanded_heroStatic',
                                             children: (e) =>
                                                 (0, o.jsx)('img', {
                                                     ref: e,
                                                     alt: '',
-                                                    className: w.heroAsset,
+                                                    className: k.heroAsset,
                                                     src: X.url
                                                 })
                                         })
@@ -299,21 +299,21 @@ let L = s.forwardRef(function (e, t) {
         ]
     });
 });
-function U(e) {
+function L(e) {
     let { style: t, onClick: n } = e;
     return (0, S.O)({
-        location: y.dr.QUESTS_BAR,
+        location: I.dr.QUESTS_BAR,
         autoTrackExposure: !0
     })
         ? (0, o.jsx)(u.Button, {
-              className: w.cta,
+              className: k.cta,
               style: t,
               color: u.Button.Colors.CUSTOM,
               fullWidth: !0,
               onClick: n,
               size: u.Button.Sizes.NONE,
-              children: k.Z.Messages.QUESTS_GET_THIS_GAME
+              children: w.Z.Messages.QUESTS_GET_THIS_GAME
           })
         : null;
 }
-t.Z = L;
+t.Z = P;

@@ -37,23 +37,23 @@ function m(e) {
     let { children: n } = e,
         { springConfig: p, isExpanded: m } = s.useContext(u),
         x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: C, height: g = null } = (0, i.Z)(),
-        _ = null !== (t = (0, c.Z)(g)) && void 0 !== t ? t : null,
+        { ref: C, height: _ = null } = (0, i.Z)(),
+        g = null !== (t = (0, c.Z)(_)) && void 0 !== t ? t : null,
         [{ height: f }, h] = (0, l.useSpring)(() => ({
             from: { height: 0 },
             config: p
         }));
     return (
         s.useLayoutEffect(() => {
-            null !== g &&
+            null !== _ &&
                 h({
-                    height: g,
-                    immediate: !m || x || null === _
+                    height: _,
+                    immediate: !m || x || null === g
                 });
-        }, [g, h, m, x, _]),
+        }, [_, h, m, x, g]),
         (0, o.jsx)(r.animated.div, {
             style: {
-                height: null === _ ? 'auto' : f,
+                height: null === g ? 'auto' : f,
                 overflow: 'hidden'
             },
             children: (0, o.jsx)('div', {

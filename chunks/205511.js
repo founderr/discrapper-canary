@@ -11,8 +11,8 @@ var o = n(200651),
     m = n(111382),
     x = n(113434),
     C = n(497505),
-    g = n(918701),
-    _ = n(566078),
+    _ = n(918701),
+    g = n(566078),
     f = n(667105),
     h = n(585857),
     E = n(46140),
@@ -81,15 +81,15 @@ function j(e) {
                         children: h.map((e, n) => {
                             if (e.type === l.K.EXPIRED_CREDENTIAL && r) {
                                 let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                    r = (0, g.C9)(e),
-                                    a = (0, g._j)(e);
+                                    r = (0, _.C9)(e),
+                                    a = (0, _._j)(e);
                                 return (0, o.jsx)(
                                     N,
                                     {
                                         children: r.format({
                                             account_name: null == s ? void 0 : s.name,
                                             onClick: () => {
-                                                (0, g.fY)(
+                                                (0, _.fY)(
                                                     {
                                                         quest: t,
                                                         platformType: a
@@ -108,7 +108,7 @@ function j(e) {
                             return (0, o.jsx)(N, { children: e.message }, n);
                         })
                     });
-            if ((0, g.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
+            if ((0, _.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
                 return {
                     header: e ? S.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : S.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
                     renderBody: e
@@ -121,7 +121,7 @@ function j(e) {
                                   children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
                               })
                 };
-            let s = _.r.build(t.config).application.name;
+            let s = g.r.build(t.config).application.name;
             return {
                 header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: s }) : S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: s }),
                 renderBody: e
@@ -186,9 +186,9 @@ t.Z = function (e) {
         } = s.useMemo(() => {
             var e;
             let s = a.xboxAndPlaystationAccounts.length > 0,
-                r = s && (0, g.Bz)(t),
-                l = (0, g.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
-                i = _.r.build(t.config).application.name,
+                r = s && (0, _.Bz)(t),
+                l = (0, _.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
+                i = g.r.build(t.config).application.name,
                 c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
                 steps: [

@@ -1,9 +1,9 @@
 n.d(t, {
     Y: function () {
-        return o;
+        return r;
     }
 });
-let o = {
+let r = {
     tension: 250,
     friction: 20
 };

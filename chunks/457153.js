@@ -9,13 +9,13 @@ let d = s.forwardRef(function (e, t) {
     var n;
     let { className: r, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: m, taskDetails: x } = e,
         C = s.useRef(null),
-        g = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+        _ = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
     return (0, o.jsx)(l.animated.div, {
         ref: t,
         'aria-hidden': u && p,
         className: a()(r, c.contentCollapsed, {
             [c.contentCollapsedExpanded]: u,
-            [c.contentCollapsedAccepted]: g
+            [c.contentCollapsedAccepted]: _
         }),
         style: {
             opacity: d.to({
@@ -25,7 +25,7 @@ let d = s.forwardRef(function (e, t) {
         },
         children: (0, o.jsx)('div', {
             className: c.contentCollapsedWrapper,
-            children: g
+            children: _
                 ? (0, o.jsx)(i.Z, {
                       contentLocation: 'collapsed',
                       quest: m,

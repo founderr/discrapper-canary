@@ -16,8 +16,8 @@ var o = n(200651),
     m = n(566078),
     x = n(472144),
     C = n(644646),
-    g = n(69439),
-    _ = n(46140),
+    _ = n(69439),
+    g = n(46140),
     f = n(642145),
     h = n(689938),
     E = n(684688);
@@ -25,23 +25,23 @@ let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function T(e) {
     var t, n, r;
     let { quest: T, questContent: v, isHovering: N, contentPosition: j, rowIndex: A, onReceiveErrorHints: b } = e,
-        R = m.r.build(T.config),
-        B = R.defaultReward.messages.name,
-        I = R.defaultReward.messages.nameWithArticle,
-        y = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        B = m.r.build(T.config),
+        R = B.defaultReward.messages.name,
+        y = B.defaultReward.messages.nameWithArticle,
+        I = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: M, scrollHeight: O } = (0, d.Z)(),
-        k = 104 !== O,
-        { expansionSpring: w } = (0, c.useSpring)({
+        w = 104 !== O,
+        { expansionSpring: k } = (0, c.useSpring)({
             expansionSpring: N ? 1 : 0,
             config: {
                 ...f.Y,
                 clamp: !0
             }
         }),
-        L = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-        { completedRatio: q, completedRatioDisplay: Z } = (0, p.I)(T),
-        P = (0, p.Bd)(T),
+        P = (null === (n = T.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        L = (null === (r = T.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        { completedRatio: U, completedRatioDisplay: q } = (0, p.I)(T),
+        Z = (0, p.Bd)(T),
         Q = s.useCallback(
             (e) =>
                 (0, o.jsx)(c.Text, {
@@ -53,35 +53,35 @@ function T(e) {
                 }),
             []
         ),
-        D = s.useMemo(() => (U ? Q(B) : h.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => Q(I) })), [B, I, U, Q]),
+        D = s.useMemo(() => (L ? Q(R) : h.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => Q(y) })), [R, y, L, Q]),
         W = s.useMemo(() => {
-            if (null != P)
+            if (null != Z)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     className: a()(E.description),
-                    children: P
+                    children: Z
                 });
-        }, [P]),
+        }, [Z]),
         H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(E.container),
         children: [
             (0, o.jsxs)(l.animated.div, {
                 style: {
-                    maxHeight: w.to([0, 1], [104, (null != O ? O : 0) + 12])
+                    maxHeight: k.to([0, 1], [104, (null != O ? O : 0) + 12])
                 },
                 className: a()(E.rewardDescriptionContainer),
                 children: [
                     (0, o.jsxs)('div', {
                         className: E.assetWrapper,
                         children: [
-                            !U && L && (0, o.jsx)('div', { className: E.completionAnimation }),
-                            y && !U
+                            !L && P && (0, o.jsx)('div', { className: E.completionAnimation }),
+                            I && !L
                                 ? (0, o.jsxs)('div', {
                                       className: E.progressWrapper,
                                       children: [
-                                          L &&
+                                          P &&
                                               (0, o.jsx)(c.LottieAnimation, {
                                                   importData: S,
                                                   className: E.confetti,
@@ -92,15 +92,15 @@ function T(e) {
                                           (0, o.jsx)(x.Z, {
                                               quest: T,
                                               size: 76,
-                                              percentComplete: q,
-                                              percentCompleteText: N ? Z : void 0,
+                                              percentComplete: U,
+                                              percentCompleteText: N ? q : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: E.circularRewardTileWrapper,
                                                   children: (0, o.jsx)(C.Z, {
                                                       quest: T,
                                                       questContent: v,
                                                       className: E.circularQuestRewardTileAsset,
-                                                      location: _.dr.QUEST_HOME_DESKTOP
+                                                      location: g.dr.QUEST_HOME_DESKTOP
                                                   })
                                               })
                                           })
@@ -111,13 +111,13 @@ function T(e) {
                                       autoplay: N,
                                       questContent: v,
                                       className: E.questRewardTileAsset,
-                                      location: _.dr.QUEST_HOME_DESKTOP
+                                      location: g.dr.QUEST_HOME_DESKTOP
                                   })
                         ]
                     }),
                     (0, o.jsxs)('div', {
                         ref: M,
-                        className: a()(E.textContainer, { [E.justifyCenter]: !k }),
+                        className: a()(E.textContainer, { [E.justifyCenter]: !w }),
                         children: [
                             (0, o.jsx)(c.Heading, {
                                 variant: 'eyebrow',
@@ -134,16 +134,16 @@ function T(e) {
                             W
                         ]
                     }),
-                    k &&
+                    w &&
                         (0, o.jsx)(l.animated.div, {
                             style: {
-                                opacity: w.to([0, 1], [1, 0])
+                                opacity: k.to([0, 1], [1, 0])
                             },
                             className: E.textOverflowBlur
                         })
                 ]
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(_.Z, {
                 quest: T,
                 location: v,
                 contentPosition: j,

@@ -21,8 +21,8 @@ var o = n(200651),
     m = n(617136),
     x = n(113434),
     C = n(497505),
-    g = n(918701),
-    _ = n(475595),
+    _ = n(918701),
+    g = n(475595),
     f = n(667105),
     h = n(981631),
     E = n(689938),
@@ -33,20 +33,20 @@ function v(e) {
         j = (0, x.B4)(t);
     null == j && v();
     let [A, b] = (0, s.useState)(n),
-        R = (0, x.KX)(),
-        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        I = (0, f.g2)({
-            useReducedMotion: B,
+        B = (0, x.KX)(),
+        R = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, f.g2)({
+            useReducedMotion: R,
             className: S.colorTransition
         }),
-        y = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        M = (0, g.Bz)(j),
+        I = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        M = (0, _.Bz)(j),
         O = (0, l.e7)([p.Z], () => p.Z.getState().theme),
-        k = (0, i.wj)(O) ? h.BRd.DARK : h.BRd.LIGHT,
-        { startConsoleQuest: w, startingConsoleQuest: L } = (0, x.GI)({
+        w = (0, i.wj)(O) ? h.BRd.DARK : h.BRd.LIGHT,
+        { startConsoleQuest: k, startingConsoleQuest: P } = (0, x.GI)({
             questId: j.id,
             beforeRequest: () => {
-                I.startAnimation(),
+                y.startAnimation(),
                     (0, m._3)({
                         questId: j.id,
                         questContent: C.jn.CONNECTIONS_MODAL,
@@ -54,7 +54,7 @@ function v(e) {
                     });
             },
             afterRequest: (e) => {
-                I.stopAnimation(), b(e);
+                y.stopAnimation(), b(e);
             }
         });
     return (0, o.jsxs)(c.ModalRoot, {
@@ -92,7 +92,7 @@ function v(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: S.upperBodyText,
-                        children: R.message
+                        children: B.message
                     })
                 ]
             }),
@@ -108,10 +108,10 @@ function v(e) {
                                 children: E.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, o.jsxs)(c.Clickable, {
-                                className: a()(S.refreshWrapper, { [S.disabled]: L }),
-                                onClick: w,
+                                className: a()(S.refreshWrapper, { [S.disabled]: P }),
+                                onClick: k,
                                 children: [
-                                    I.render(),
+                                    y.render(),
                                     (0, o.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
@@ -132,7 +132,7 @@ function v(e) {
                             (0, o.jsx)(N, {
                                 icon: (0, o.jsx)(c.GameControllerIcon, { size: 'sm' }),
                                 text: E.Z.Messages.QUESTS_CONNECTED_CONSOLES,
-                                errors: M ? void 0 : y.map((e) => e.message),
+                                errors: M ? void 0 : I.map((e) => e.message),
                                 gameTile: M
                                     ? (0, o.jsx)(c.Tooltip, {
                                           'aria-label': j.config.messages.gameTitle,
@@ -156,7 +156,7 @@ function v(e) {
                                                   ...e,
                                                   className: S.gameTile,
                                                   alt: j.config.messages.gameTitle,
-                                                  src: (0, _.fh)(j, _.Bd.GAME_TILE, k).url
+                                                  src: (0, g.fh)(j, g.Bd.GAME_TILE, w).url
                                               })
                                       })
                                     : null
@@ -179,7 +179,7 @@ function v(e) {
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
                             v(),
-                                (0, g.V$)(
+                                (0, _.V$)(
                                     { quest: j },
                                     {
                                         content: C.jn.CONNECTIONS_MODAL,

@@ -178,7 +178,7 @@ function C(e) {
                     };
                 if (E)
                     return {
-                        text: (0, S.F)(I),
+                        text: (0, S.F9)(I),
                         tooltipText: A.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
                         onClick: () => (0, T.openVideoQuestModal)(t)
                     };

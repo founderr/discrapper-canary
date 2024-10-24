@@ -17,8 +17,8 @@ var o = n(200651),
     m = n(981631),
     x = n(968470);
 function C(e) {
-    let { quest: t, className: n, questContent: r, contentPosition: C, rowIndex: g } = e,
-        [_, f] = s.useState(!1),
+    let { quest: t, className: n, questContent: r, contentPosition: C, rowIndex: _ } = e,
+        [g, f] = s.useState(!1),
         [h, E] = s.useState([]),
         S = (0, i.qb)(t),
         T = s.useCallback(() => {
@@ -36,7 +36,7 @@ function C(e) {
         questOrQuests: t,
         questContent: r,
         questContentPosition: C,
-        questContentRowIndex: g,
+        questContentRowIndex: _,
         trackGuildAndChannelMetadata: r === c.jn.QUESTS_EMBED,
         children: (e) =>
             (0, o.jsxs)('div', {
@@ -50,16 +50,16 @@ function C(e) {
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,
-                        isHovering: _,
+                        isHovering: g,
                         errorHints: h,
                         warningHints: S
                     }),
                     (0, o.jsx)(p.Z, {
                         quest: t,
                         questContent: r,
-                        isHovering: _,
+                        isHovering: g,
                         contentPosition: C,
-                        rowIndex: g,
+                        rowIndex: _,
                         onReceiveErrorHints: E
                     })
                 ]

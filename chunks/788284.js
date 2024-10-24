@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 }),
     n(47120),
@@ -21,7 +21,7 @@ let x = [0, 0.5, 1],
         'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
     };
-async function g(e, t) {
+async function _(e, t) {
     let o = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
@@ -38,11 +38,11 @@ async function g(e, t) {
         o
     );
 }
-function _(e) {
+function g(e) {
     var t;
     let { animationClassName: n, className: r, quest: l, useReducedMotion: i } = e,
         C = (0, c.e7)([u.Z], () => u.Z.isFocused()),
-        _ = s.useRef(null),
+        g = s.useRef(null),
         [f, h] = s.useState(!1),
         E = s.useMemo(() => {
             if (null == l) return null;
@@ -53,13 +53,13 @@ function _(e) {
                     b: e.b / 255
                 },
                 n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-            return g(l.id, n);
+            return _(l.id, n);
         }, [l]),
         S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         T = !i && C;
     s.useEffect(() => {
         var e, t, n, o;
-        C ? T && (null === (o = _.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = _.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+        C ? T && (null === (o = g.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = g.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
     }, [T, C]);
     let v = s.useCallback(() => {
         h(!0);
@@ -74,7 +74,7 @@ function _(e) {
               children: (0, o.jsx)(
                   d.LottieAnimation,
                   {
-                      ref: _,
+                      ref: g,
                       onComplete: v,
                       importData: () => E,
                       shouldAnimate: !f && T,

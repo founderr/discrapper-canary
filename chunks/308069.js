@@ -11,8 +11,8 @@ var o = n(200651),
     m = n(685613),
     x = n(670638),
     C = n(341907),
-    g = n(303385),
-    _ = n(788284),
+    _ = n(303385),
+    g = n(788284),
     f = n(46140),
     h = n(689938),
     E = n(404846);
@@ -24,17 +24,17 @@ t.Z = (e) => {
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        R = s.useCallback(() => {
+        B = s.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        B = j && A,
-        I = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
-        y = (0, o.jsx)(i.Clickable, {
-            onClick: R,
-            className: a()({ [E.logo]: B }),
+        R = j && A,
+        y = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
+        I = (0, o.jsx)(i.Clickable, {
+            onClick: B,
+            className: a()({ [E.logo]: R }),
             children: (0, o.jsx)(m.Z, {
                 quest: t,
                 withGameTile: !1
@@ -42,15 +42,15 @@ t.Z = (e) => {
         });
     return (0, o.jsxs)(l.animated.div, {
         className: a()(E.wrapper, {
-            [E.interactable]: B,
-            [E.rewardHighlightWrapper]: I
+            [E.interactable]: R,
+            [E.rewardHighlightWrapper]: y
         }),
         style: {
             transform: (0, l.to)(
                 [
                     r.to({
                         range: [0, 1],
-                        output: [I ? 8 : 4, 0]
+                        output: [y ? 8 : 4, 0]
                     })
                 ],
                 (e) => 'translateY('.concat(e, 'px')
@@ -83,19 +83,19 @@ t.Z = (e) => {
                         output: [0, 8]
                     })
                 },
-                children: (0, o.jsx)(_.Z, {
+                children: (0, o.jsx)(g.Z, {
                     className: E.background,
                     animationClassName: E.backgroundAnimation,
                     quest: t,
                     useReducedMotion: N
                 })
             }),
-            I
-                ? (0, o.jsx)(g.Z, {
+            y
+                ? (0, o.jsx)(_.Z, {
                       quest: t,
                       expansionSpring: r,
-                      isFullyExpanded: B,
-                      partnerBranding: y,
+                      isFullyExpanded: R,
+                      partnerBranding: I,
                       useReducedMotion: N
                   })
                 : (0, o.jsxs)(o.Fragment, {
@@ -115,7 +115,7 @@ t.Z = (e) => {
                               style: {
                                   opacity: r.to({
                                       range: [0, 1],
-                                      output: [1, B ? 1 : 0.8]
+                                      output: [1, R ? 1 : 0.8]
                                   }),
                                   transform: (0, l.to)(
                                       [
@@ -131,7 +131,7 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: y
+                              children: I
                           }),
                           (0, o.jsx)(l.animated.div, {
                               className: E.questAvailable,
