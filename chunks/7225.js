@@ -1,37 +1,38 @@
-s.r(a),
-    s.d(a, {
+t.r(a),
+    t.d(a, {
         default: function () {
-            return x;
+            return C;
         }
     }),
-    s(47120);
-var t,
+    t(47120);
+var s,
     o,
-    r = s(200651),
-    i = s(192379),
-    c = s(541822),
-    n = s(442837),
-    l = s(481060),
-    d = s(728345),
-    p = s(812206),
-    u = s(600164),
-    f = s(886176),
-    _ = s(572004),
-    m = s(504211),
-    N = s(283836),
-    T = s(507608),
-    E = s(981631),
-    O = s(272242),
-    h = s(689938),
-    S = s(213891);
-function x(e) {
-    let { onClose: a, transitionState: s, appId: t, guildId: o } = e,
-        x = (0, n.e7)([p.Z], () => p.Z.getApplication(t), [t]),
-        [C, R] = i.useState(() => (p.Z.isFetchingApplication(t) ? { status: 1 } : { status: 0 }));
+    r = t(200651),
+    i = t(192379),
+    c = t(541822),
+    n = t(442837),
+    l = t(481060),
+    d = t(728345),
+    p = t(812206),
+    u = t(600164),
+    f = t(886176),
+    m = t(572004),
+    N = t(504211),
+    _ = t(283836),
+    h = t(507608),
+    T = t(533159),
+    E = t(981631),
+    O = t(272242),
+    x = t(689938),
+    S = t(213891);
+function C(e) {
+    let { onClose: a, transitionState: t, appId: s, guildId: o } = e,
+        C = (0, n.e7)([p.Z], () => p.Z.getApplication(s), [s]),
+        [g, R] = i.useState(() => (p.Z.isFetchingApplication(s) ? { status: 1 } : { status: 0 }));
     i.useEffect(() => {
-        0 === C.status &&
+        0 === g.status &&
             (R({ status: 1 }),
-            d.ZP.fetchApplication(t)
+            d.ZP.fetchApplication(s)
                 .then(() => {
                     R({ status: 2 });
                 })
@@ -41,13 +42,13 @@ function x(e) {
                         error: e.message
                     });
                 }));
-    }, [t, C.status]);
-    let { subscriptions: g, otps: I } = (0, N.q)(t);
-    if (null == x) return null;
-    let j = h.Z.Messages.STOREFRONT_TITLE.format({ appName: x.name });
+    }, [s, g.status]);
+    let { subscriptions: I, otps: j } = (0, _.q)(s);
+    if (null == C) return null;
+    let P = x.Z.Messages.STOREFRONT_TITLE.format({ appName: C.name });
     return (0, r.jsxs)(l.ModalRoot, {
-        transitionState: s,
-        'aria-label': j,
+        transitionState: t,
+        'aria-label': P,
         size: l.ModalSize.DYNAMIC,
         className: S.modal,
         children: [
@@ -60,22 +61,22 @@ function x(e) {
                             (0, r.jsx)(f.Z, {}),
                             (0, r.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: j
+                                children: P
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
                         className: S.modalHeaderLinks,
                         children: [
-                            _.wS &&
+                            m.wS &&
                                 (0, r.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
                                     color: l.ButtonColors.TRANSPARENT,
-                                    'aria-label': h.Z.Messages.COPY_LINK,
+                                    'aria-label': x.Z.Messages.COPY_LINK,
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE));
-                                        (0, _.JG)(e), (0, l.showToast)((0, l.createToast)(h.Z.Messages.COPIED_LINK, l.ToastType.SUCCESS)), (0, m.X)(t, m.B.STORE_MODAL);
+                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(s, O.ApplicationDirectoryProfileSections.STORE));
+                                        (0, m.JG)(e), (0, l.showToast)((0, l.createToast)(x.Z.Messages.COPIED_LINK, l.ToastType.SUCCESS)), (0, N.X)(s, N.B.STORE_MODAL);
                                     },
                                     children: (0, r.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),
@@ -91,11 +92,11 @@ function x(e) {
                 className: S.scrollerWrapper,
                 children: (0, r.jsx)(c.Z, {
                     className: S.scroller,
-                    children: (0, r.jsx)(T.AF, {
-                        app: x,
+                    children: (0, r.jsx)(h.AF, {
+                        app: C,
                         guildId: o,
-                        subscriptions: g,
-                        otps: I
+                        subscriptions: I,
+                        otps: j
                     })
                 })
             }),
@@ -104,15 +105,15 @@ function x(e) {
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children:
-                        null != x.termsOfServiceUrl && null != x.privacyPolicyUrl
-                            ? h.Z.Messages.STOREFRONT_VIEW_TOS_PP.format({
-                                  tosUrl: x.termsOfServiceUrl,
-                                  ppUrl: x.privacyPolicyUrl
+                        null != C.termsOfServiceUrl || null != C.privacyPolicyUrl
+                            ? (0, r.jsx)(T.Z, {
+                                  termsOfServiceUrl: C.termsOfServiceUrl,
+                                  privacyPolicyUrl: C.privacyPolicyUrl
                               })
-                            : h.Z.Messages.STOREFRONT_NO_TOS_PP
+                            : x.Z.Messages.STOREFRONT_NO_TOS_PP
                 })
             })
         ]
     });
 }
-((o = t || (t = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
+((o = s || (s = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
