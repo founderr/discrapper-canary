@@ -295,10 +295,11 @@ class J extends (r = c.ZP.Store) {
             s = this.getApplicationStates(),
             o = (0, y.k)(e, t.commandTypes),
             l = null == e || (null == o ? void 0 : o.hasBaseAccessPermissions) === !0,
-            u = !1 !== t.applicationCommands && l,
+            u = !1 !== t.applicationCommands,
             c = !1;
         n.allowFetch &&
             (u &&
+                l &&
                 null != e &&
                 eu(e) &&
                 (A.default.track(P.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
