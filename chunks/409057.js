@@ -272,8 +272,7 @@ function H(e) {
                     ref: J,
                     children: [
                         (0, r.jsx)(D.Z, {
-                            text: ee.text,
-                            icon: ee.icon,
+                            ...ee,
                             contextMenu: (0, r.jsx)(w.Z, {
                                 display: 'live',
                                 user: t,

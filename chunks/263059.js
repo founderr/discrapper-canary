@@ -154,8 +154,7 @@ function P(e) {
                                 interactionSourceId: J,
                                 children: [
                                     (0, r.jsx)(R.Z, {
-                                        text: Y.text,
-                                        icon: Y.icon,
+                                        ...Y,
                                         contextMenu: (0, r.jsx)(y.Z, {
                                             display: 'live',
                                             user: n,

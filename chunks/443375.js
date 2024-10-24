@@ -292,8 +292,7 @@ function j(e) {
                                 sourceType: F.n_.ACTIVITY,
                                 children: [
                                     (0, r.jsx)(M.Z, {
-                                        text: eo.text,
-                                        icon: eo.icon,
+                                        ...eo,
                                         contextMenu: (0, r.jsx)(k.Z, {
                                             display: 'live',
                                             user: n,

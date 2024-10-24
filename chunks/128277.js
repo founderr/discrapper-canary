@@ -134,8 +134,7 @@ function y(e) {
                     ref: V,
                     children: [
                         (0, r.jsx)(g.Z, {
-                            text: G.text,
-                            icon: G.icon,
+                            ...G,
                             contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
                                 user: t,
