@@ -2,7 +2,8 @@ n.d(t, {
     Z: function () {
         return u;
     }
-});
+}),
+    n(47120);
 var r = n(392711),
     i = n.n(r),
     a = n(314897),
@@ -34,11 +35,26 @@ function u(e, t, n) {
             reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({ releaseChannel: e })
         };
     }
-    if (null != d && (null == n || !d.includes(n)))
-        return {
-            valid: !1,
-            reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({ releaseChannel: d.join(', ') })
-        };
+    if (null != d) {
+        let e = !1;
+        if (null == n) e = !1;
+        else if (d.includes(n)) e = !0;
+        else {
+            let [t] = n.split('.');
+            for (let n of d) {
+                let [r, i] = n.split('.');
+                if ('*' === i && t === r) {
+                    e = !0;
+                    break;
+                }
+            }
+        }
+        if (!e)
+            return {
+                valid: !1,
+                reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({ releaseChannel: d.join(', ') })
+            };
+    }
     let f = null != u ? new Date(u).getTime() : null;
     return null != f && f < Date.now()
         ? {
