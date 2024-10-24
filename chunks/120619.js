@@ -11,8 +11,9 @@ let d = new Map(),
     h = new Set(),
     m = new Set(),
     p = new Set(),
-    _ = new Map();
-class f extends (i = r.ZP.Store) {
+    _ = new Map(),
+    f = !1;
+class E extends (i = r.ZP.Store) {
     getPrice(e) {
         return d.get(e);
     }
@@ -31,9 +32,12 @@ class f extends (i = r.ZP.Store) {
     isEntitlementFetching(e) {
         return m.has(e);
     }
+    getPlayedAnimation() {
+        return f;
+    }
 }
 (l = 'ConsumablesStore'),
-    (a = 'displayName') in (s = f)
+    (a = 'displayName') in (s = E)
         ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
@@ -41,7 +45,7 @@ class f extends (i = r.ZP.Store) {
               writable: !0
           })
         : (s[a] = l),
-    (t.Z = new f(o.Z, {
+    (t.Z = new E(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
             h.add(e.skuId);
         },
@@ -61,6 +65,12 @@ class f extends (i = r.ZP.Store) {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
             if (t.sku_id === u.FX) _.set(e.skuId, c.Z.createFromServer(t));
+        },
+        PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
+            f = !0;
+        },
+        RESET_PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
+            f = !1;
         },
         CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
             p.add(e.skuId), m.delete(e.skuId);

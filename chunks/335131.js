@@ -14,6 +14,9 @@ n.d(t, {
     K$: function () {
         return C;
     },
+    LE: function () {
+        return U;
+    },
     R2: function () {
         return L;
     },
@@ -22,6 +25,9 @@ n.d(t, {
     },
     Zu: function () {
         return b;
+    },
+    ag: function () {
+        return P;
     },
     fK: function () {
         return O;
@@ -296,4 +302,10 @@ let I = (e) => {
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
+    },
+    P = () => {
+        s.Z.dispatch({ type: 'PLAYED_HD_STREAMING_POTION_ANIMATION' });
+    },
+    U = () => {
+        s.Z.dispatch({ type: 'RESET_PLAYED_HD_STREAMING_POTION_ANIMATION' });
     };
