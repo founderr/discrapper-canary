@@ -235,7 +235,6 @@ class B extends (a = E.ZP.Store) {
                       i = t;
                       let o = U[t];
                       if (null == o && null != n) {
-                          var l, u, d;
                           null == b[t] && (y[t] = null);
                           let e = (0, m.my)(t);
                           null == y[t] && null == M[t] && (y[t] = (0, T.L2)(e, O.Z));
@@ -256,19 +255,19 @@ class B extends (a = E.ZP.Store) {
                               actionContext: D[t],
                               numViewers: null != s ? s.length : 0
                           });
-                          (l = t),
-                              (u = n),
-                              (d = i),
-                              c()(null != r, 'Creating RTCConnection without session.'),
-                              (o = new I.Z({
+                          (o = (function (e, t, n) {
+                              c()(null != r, 'Creating RTCConnection without session.');
+                              let i = new I.Z({
                                   sessionId: r,
-                                  streamKey: l,
-                                  serverId: u,
+                                  streamKey: e,
+                                  serverId: t,
                                   initialLayout: P,
-                                  analyticsContext: d,
-                                  isStreamer: null != y[l],
+                                  analyticsContext: n,
+                                  isStreamer: null != y[e],
                                   parentMediaSessionId: v.Z.getMediaSessionId()
-                              })),
+                              });
+                              return i.setOnLogFn((e, t, n) => R.Z.getMediaEngine().log(e, t, n)), i;
+                          })(t, n, i)),
                               (U[t] = o);
                       }
                       (w = []), R.Z.getMediaEngine().on(f.aB.ConnectionStats, G);

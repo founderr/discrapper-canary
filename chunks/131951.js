@@ -139,8 +139,11 @@ function eg() {
         automaticAudioSubsystem: !1
     };
 }
-let eA = (0, m.Mt)((0, m.jj)()),
-    eN = {},
+let eA = (0, m.Mt)((0, m.jj)());
+ep.setOnLogFn((e, t, n) => {
+    eA.log(t, '['.concat(e, '] ').concat(n));
+});
+let eN = {},
     eR = new Set([eE.Yn.DEFAULT]),
     eO = eA.supports(eE.AN.AUTO_ENABLE),
     ev = !1,

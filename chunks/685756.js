@@ -120,6 +120,9 @@ function C(e) {
 }
 ((c = s || (s = {})).Connecting = 'connecting'), (c.Connect = 'connect'), (c.Disconnect = 'disconnect'), (c.Resuming = 'resuming'), (c.Ready = 'ready'), (c.Speaking = 'speaking'), (c.Video = 'video'), (c.Ping = 'ping'), (c.ClientConnect = 'client-connect'), (c.ClientDisconnect = 'client-disconnect'), (c.Codecs = 'codecs'), (c.MediaSessionId = 'media-session-id'), (c.MediaSinkWants = 'media-sink-wants'), (c.VoiceBackendVersion = 'voice-backend-version'), (c.KeyframeInterval = 'keyframe-interval'), (c.ChannelOptionsUpdateSecureFramesProtocol = 'update-secure-frames-protocol'), (c.Flags = 'flags'), (c.Platform = 'platform'), (c.SDP = 'sdp'), (c.Encryption = 'encryption'), (c.BandwidthEstimationExperiment = 'bandwidth-estimation-experiment'), (c.SecureFramesInit = 'secure-frames-init'), (c.SecureFramesPrepareTransition = 'secure-frames-prepare-transition'), (c.SecureFramesExecuteTransition = 'secure-frames-execute-transition'), (c.SecureFramesPrepareEpoch = 'secure-frames-prepare-epoch'), (c.MLSExternalSenderPackage = 'mls-external-sender-package'), (c.MLSProposals = 'mls-proposals'), (c.MLSPrepareCommitTransition = 'mls-prepare-commit-transition'), (c.MLSWelcome = 'mls-welcome');
 class L extends f.Z {
+    setOnLogFn(e) {
+        this.logger.setOnLogFn(e);
+    }
     createWebSocket() {
         this.logger.info('[CONNECT] '.concat(this.url)),
             null !== this.webSocket && (this.logger.error('Connect called with already existing websocket'), this.cleanupWebSocket((e) => e.close(4000))),

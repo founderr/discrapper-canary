@@ -69,6 +69,10 @@ class d extends a.Z {
     setConnectionState(e) {
         this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)), (this.connectionState = e), this.emit(s.S.ConnectionStateChange, this.connectionState);
     }
+    log(e) {
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+        this.logger.info(e, n);
+    }
     updateVideoQuality(e) {
         var t, n;
         let r = this.videoStreamParameters.findIndex((e) => 100 === e.quality);
