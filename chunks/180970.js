@@ -8,8 +8,8 @@ var a = n(200651),
     s = n(192379),
     o = n(75124),
     l = n(481060),
-    r = n(332664),
-    i = n(626135),
+    i = n(332664),
+    r = n(626135),
     c = n(987562),
     u = n(981631),
     d = n(689938);
@@ -17,7 +17,7 @@ function _(e) {
     let { onClose: t, transitionState: _ } = e,
         E = (0, o.Z)(c.CE);
     s.useEffect(() => {
-        i.default.track(u.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
+        r.default.track(u.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
     }, []);
     let b = s.useCallback((e) => {
         let { rating: t } = e;
@@ -31,7 +31,7 @@ function _(e) {
                     });
             });
     }, []);
-    return (0, a.jsx)(r.Z, {
+    return (0, a.jsx)(i.Z, {
         modalType: 'block_user',
         header: d.Z.Messages.BLOCK_USER_FEEDBACK_TITLE,
         body: d.Z.Messages.BLOCK_USER_FEEDBACK_BODY,
@@ -42,6 +42,7 @@ function _(e) {
         onClose: t,
         transitionState: _,
         otherKey: c.F5.SOMETHING_ELSE,
-        hideHelpDeskLink: !0
+        hideHelpDeskLink: !0,
+        hideDontShowCheckbox: !0
     });
 }
