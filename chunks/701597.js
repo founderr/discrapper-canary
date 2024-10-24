@@ -108,7 +108,10 @@ class u {
         });
     }
     configGoLiveSimulcast(e, t) {
-        (this.goliveSimulcastEnabled = e), (this.goliveSimulcastLQBitrate = t);
+        (this.goliveSimulcastEnabled = e), (this.goliveSimulcastLQBitrateMax = t), (this.goliveSimulcastLQBitrateTarget = t);
+    }
+    setGoLiveSimulcastLQTargetBitrate(e) {
+        this.goliveSimulcastLQBitrateTarget = e;
     }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
@@ -155,12 +158,12 @@ class u {
         return new o({
             capture: this.goliveMaxQuality.capture,
             encode: this.goliveMaxQuality.encode,
-            bitrateMin: this.goliveMaxQuality.bitrateMin,
-            bitrateMax: this.goliveSimulcastLQBitrate,
-            bitrateTarget: this.goliveSimulcastLQBitrate
+            bitrateMin: i.UC,
+            bitrateMax: this.goliveSimulcastLQBitrateMax,
+            bitrateTarget: this.goliveSimulcastLQBitrateTarget
         });
     }
     constructor(e, t, n = i.kS) {
-        a(this, 'contextType', void 0), a(this, 'connection', void 0), a(this, 'options', void 0), a(this, 'isMuted', void 0), a(this, 'qualityOverwrite', void 0), a(this, 'goliveMaxQuality', void 0), a(this, 'goliveSimulcastEnabled', void 0), a(this, 'goliveSimulcastLQBitrate', void 0), a(this, 'isStreamContext', void 0), a(this, 'ladder', void 0), (this.contextType = e), (this.connection = t), (this.options = n), (this.isMuted = !1), (this.isStreamContext = this.contextType === i.Yn.STREAM), (this.ladder = new r.x(n)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveSimulcastLQBitrate = i.pk);
+        a(this, 'contextType', void 0), a(this, 'connection', void 0), a(this, 'options', void 0), a(this, 'isMuted', void 0), a(this, 'qualityOverwrite', void 0), a(this, 'goliveMaxQuality', void 0), a(this, 'goliveSimulcastEnabled', void 0), a(this, 'goliveSimulcastLQBitrateMax', void 0), a(this, 'goliveSimulcastLQBitrateTarget', void 0), a(this, 'isStreamContext', void 0), a(this, 'ladder', void 0), (this.contextType = e), (this.connection = t), (this.options = n), (this.isMuted = !1), (this.isStreamContext = this.contextType === i.Yn.STREAM), (this.ladder = new r.x(n)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveSimulcastLQBitrateMax = i.pk), (this.goliveSimulcastLQBitrateTarget = i.pk);
     }
 }

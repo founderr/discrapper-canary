@@ -1,9 +1,9 @@
 n.d(t, {
     $A: function () {
-        return X;
+        return $;
     },
     $B: function () {
-        return ee;
+        return et;
     },
     $j: function () {
         return R;
@@ -15,55 +15,58 @@ n.d(t, {
         return D;
     },
     Av: function () {
-        return j;
+        return W;
     },
     Dg: function () {
         return M;
     },
     Er: function () {
-        return ei;
+        return ea;
     },
     Gs: function () {
-        return en;
-    },
-    H3: function () {
-        return k;
-    },
-    JA: function () {
-        return Q;
-    },
-    P8: function () {
         return er;
     },
+    H3: function () {
+        return B;
+    },
+    JA: function () {
+        return X;
+    },
+    P8: function () {
+        return ei;
+    },
     QO: function () {
-        return q;
+        return Q;
     },
     QP: function () {
         return O;
     },
     Qx: function () {
-        return F;
+        return V;
     },
     Tr: function () {
         return P;
     },
+    UC: function () {
+        return eu;
+    },
     Uc: function () {
-        return G;
+        return k;
     },
     V8: function () {
-        return x;
+        return G;
     },
     WA: function () {
-        return z;
+        return q;
     },
     XR: function () {
-        return el;
+        return ec;
     },
     YE: function () {
-        return ea;
+        return es;
     },
     Yh: function () {
-        return V;
+        return H;
     },
     Yn: function () {
         return g;
@@ -72,16 +75,16 @@ n.d(t, {
         return C;
     },
     Zq: function () {
-        return K;
+        return z;
     },
     ad: function () {
         return b;
     },
     dX: function () {
-        return H;
+        return Z;
     },
     ed: function () {
-        return Z;
+        return Y;
     },
     fC: function () {
         return v;
@@ -93,43 +96,46 @@ n.d(t, {
         return y;
     },
     jg: function () {
-        return W;
+        return K;
     },
     kS: function () {
-        return eu;
+        return ed;
     },
     mC: function () {
-        return J;
+        return ee;
     },
     mN: function () {
-        return $;
+        return J;
     },
     n4: function () {
-        return ed;
+        return eE;
     },
     pM: function () {
         return N;
     },
     pk: function () {
-        return eo;
+        return el;
     },
     u$: function () {
-        return et;
+        return en;
     },
     uA: function () {
         return w;
     },
     ux: function () {
-        return ec;
+        return e_;
     },
     vA: function () {
-        return B.vA;
+        return F.vA;
     },
     w5: function () {
-        return Y;
+        return j;
     },
     yf: function () {
-        return es;
+        return eo;
+    },
+    ym: function () {
+        return x;
     }
 });
 var r,
@@ -168,36 +174,38 @@ var r,
     x,
     G,
     k,
-    B = n(268146);
+    B,
+    F = n(268146);
 ((r = g || (g = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = A || (A = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = R || (R = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = O || (O = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = v || (v = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
-let F = 100,
-    V = 18,
-    H = 64000,
-    Z = 128000,
-    Y = 'default',
-    j = 'disabled',
-    W = 0.1,
-    K = -40,
-    z = -25,
-    q = 1 / 15,
-    Q = 0.8,
-    X = 600000,
-    $ = 150000,
-    J = 10000000,
-    ee = 5000,
-    et = 15000,
-    en = 30,
-    er = 20,
-    ei = 12,
-    ea = 3500000,
-    es = 9000000,
-    eo = 1500000,
-    el = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    eu = {
+let V = 100,
+    H = 18,
+    Z = 64000,
+    Y = 128000,
+    j = 'default',
+    W = 'disabled',
+    K = 0.1,
+    z = -40,
+    q = -25,
+    Q = 1 / 15,
+    X = 0.8,
+    $ = 600000,
+    J = 150000,
+    ee = 10000000,
+    et = 5000,
+    en = 15000,
+    er = 30,
+    ei = 20,
+    ea = 12,
+    es = 3500000,
+    eo = 9000000,
+    el = 1500000,
+    eu = 150000,
+    ec = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
+    ed = {
         videoBudget: {
             width: 1280,
             height: 720,
-            framerate: en
+            framerate: er
         },
         videoCapture: {
             width: 1280,
@@ -215,8 +223,8 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    ec = 60000,
-    ed = '>=22.0.0';
+    e_ = 60000,
+    eE = '>=22.0.0';
 ((c = L || (L = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),
@@ -298,7 +306,8 @@ let F = 100,
     (p.PAUSED = 'paused'),
     ((I = w || (w = {})).FIXED = 'fixed'),
     (I.SOURCE = 'source'),
-    ((m = x || (x = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
+    ((x || (x = {})).REMB = 'remb'),
+    ((m = G || (G = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
     (m.SIGNAL_AV1 = 'signal_av1'),
     (m.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
     (m.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
@@ -310,9 +319,9 @@ let F = 100,
     (m.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
     (m.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
     (m.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
-    ((T = G || (G = {}))[(T.AUTO = 1)] = 'AUTO'),
+    ((T = k || (k = {}))[(T.AUTO = 1)] = 'AUTO'),
     (T[(T.FULL = 2)] = 'FULL'),
-    ((S = k || (k = {}))[(S.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
+    ((S = B || (B = {}))[(S.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
     (S[(S.FAILED = 2)] = 'FAILED'),
     (S[(S.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
     (S[(S.INITIALIZED = 4)] = 'INITIALIZED');

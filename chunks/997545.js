@@ -176,6 +176,7 @@ class C extends E.Z {
                                         t.setPingCallback(this.handlePing),
                                         null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout),
                                         null === (_ = t.setOnVideoEncoderFallbackCallback) || void 0 === _ || _.call(t, this.handleVideoEncoderFallback),
+                                        t.setOnRtcpMessageCallback(this.handleRTCPMessage),
                                         n.setTransportOptions({
                                             builtInEchoCancellation: !0,
                                             echoCancellation: this.echoCancellation,
@@ -906,6 +907,21 @@ class C extends E.Z {
             }),
             R(this, 'handleVideoEncoderFallback', (e) => {
                 if (!this.videoEncoderFallbackPending) this.logger.info('Falling back from current video encoder: '.concat(e)), (this.codecs = this.codecs.map((t) => ((e === t.name || ('AV1' === t.name && 'AV1X' === e)) && (t.encode = !1), t)).filter((e) => !('video' === e.type && !1 === e.encode && !1 === e.decode))), this.emit(p.Sh.VideoEncoderFallback, this.codecs), (this.videoEncoderFallbackPending = !0);
+            }),
+            R(this, 'handleRTCPMessage', (e, t) => {
+                if (e === A.ym.REMB && this.context === N.Yn.STREAM) {
+                    let e = JSON.parse(t);
+                    e.ssrcs.forEach((t) => {
+                        var n, r, a, s;
+                        let o = this.videoStreamParameters.find((e) => e.ssrc === t);
+                        if (void 0 !== o && (null !== (n = o.quality) && void 0 !== n ? n : 0) < 100 && 'video' === o.type) {
+                            let n = Math.floor(0.9 * e.bitrate);
+                            n = i()(n, null !== (r = o.minBitrate) && void 0 !== r ? r : 0, null !== (a = o.maxBitrate) && void 0 !== a ? a : n);
+                            let l = null !== (s = o.targetBitrate) && void 0 !== s ? s : 0;
+                            (Math.abs(n - l) / ((n + l) / 2) > 0.1 || void 0 === o.targetBitrate) && (this.logger.info('Updating target bitrate for SSRC '.concat(t, ' from ').concat(o.targetBitrate, ' to ').concat(n)), this.videoQualityManager.setGoLiveSimulcastLQTargetBitrate(n), this.updateVideoQuality());
+                        }
+                    });
+                }
             }),
             R(this, 'handleVideo', (e, t, n, r) => {
                 let i = s()(this.videoStreamParameters);
