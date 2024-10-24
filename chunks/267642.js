@@ -346,6 +346,7 @@ function P(e) {
     !u.Z.hasFetched && (0, l.X8)();
     let r = M(u.Z.boostSlots);
     if ((null == n ? void 0 : n.isPausedOrPausePending) && (t === p.a$.NONE || 0 === r.length)) return I.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
+    if (t === p.a$.FP_ONLY) return I.Z.Messages.FRACTIONAL_PREMIUM_BOOSTING_UNAVAILABLE;
     let { numAvailableGuildBoostSlots: i, numCanceledGuildBoostSlots: a } = Object.values(u.Z.boostSlots).reduce((e, t) => (H(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
