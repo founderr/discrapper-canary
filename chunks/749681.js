@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         transitionToGlobalDiscovery: function () {
-            return c;
+            return d;
         }
     }),
     n(411104);
@@ -11,14 +11,21 @@ var r = n(207796),
     s = n(703656),
     o = n(836768),
     l = n(49898),
-    u = n(981631);
-function c(e) {
+    u = n(981631),
+    c = n(128449);
+function d(e) {
     let t = e.tab;
     switch (((0, o.Sx)({ selectedTab: t }), t)) {
         case l.F$.SERVERS:
-            let n = e.selectedServersTab;
-            null != n && (0, i.jY)({ selectedTab: n });
-            let c = (function (e) {
+            var n, d;
+            let _ = e.selectedServersTab;
+            null != _
+                ? (0, i.jY)({
+                      selectedTab: _,
+                      entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : c.Qq.UNKNOWN
+                  })
+                : (0, i.jY)({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN });
+            let E = (function (e) {
                 let { extra: t } = e,
                     n = {},
                     i = r.GN.getState().entrypointGameId;
@@ -32,7 +39,7 @@ function c(e) {
                     n
                 );
             })({ extra: e.extra });
-            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, c);
+            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, E);
         case l.F$.APPS:
             return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
         case l.F$.QUESTS:

@@ -69,7 +69,8 @@ t.Z = i.memo(function (e) {
                 (0, g.hM)(B, g.UE.DISCOVERY),
                 (0, d.transitionToGlobalDiscovery)({
                     tab: b.F$.SERVERS,
-                    selectedServersTab: M.vf.GUILDS
+                    selectedServersTab: M.vf.GUILDS,
+                    entrypoint: M.Qq.PROFILE
                 });
         }, [B]),
         en = i.useCallback(() => {

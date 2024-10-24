@@ -143,7 +143,8 @@ function C(e) {
                                 onClick: () => {
                                     (0, c.transitionToGlobalDiscovery)({
                                         tab: I.F$.SERVERS,
-                                        selectedServersTab: m.vf.GUILDS
+                                        selectedServersTab: m.vf.GUILDS,
+                                        entrypoint: m.Qq.EMBED
                                     });
                                 },
                                 children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_CTA
@@ -202,6 +203,7 @@ function C(e) {
                                     (0, c.transitionToGlobalDiscovery)({
                                         tab: I.F$.SERVERS,
                                         selectedServersTab: m.vf.GUILDS,
+                                        entrypoint: m.Qq.EMBED,
                                         extra: { search: '?game='.concat(t) }
                                     });
                                 },

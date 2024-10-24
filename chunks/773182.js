@@ -136,7 +136,8 @@ let O = l.memo(function (e) {
                 }),
                 (0, E.transitionToGlobalDiscovery)({
                     tab: A.F$.SERVERS,
-                    selectedServersTab: M.vf.GUILDS
+                    selectedServersTab: M.vf.GUILDS,
+                    entrypoint: M.Qq.GUILDS_BAR
                 });
         }, [O, p, V, j]),
         z = l.useCallback(

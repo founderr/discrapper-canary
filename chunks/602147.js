@@ -13,48 +13,57 @@ var i = n(200651),
     f = n(603592),
     _ = n(921944),
     m = n(49898),
-    g = n(46140),
-    C = n(689938),
-    I = n(55869);
-let E = l.forwardRef(function (e, t) {
-    let { selected: n, className: E, onClick: N } = e,
-        x = (0, o.Z)('discovery_button'),
-        S = (0, p.Ws)({ location: g.dr.CONFLICT_CHECKS }),
-        [v, Z] = (0, c.US)(x && S ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], _.R.SIDEBAR, !0),
-        T = v === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        b = l.useCallback(() => {
-            null == N || N(),
+    g = n(128449),
+    C = n(46140),
+    I = n(689938),
+    E = n(55869);
+let N = l.forwardRef(function (e, t) {
+    let { selected: n, className: N, onClick: x } = e,
+        S = (0, o.Z)('discovery_button'),
+        v = (0, p.Ws)({ location: C.dr.CONFLICT_CHECKS }),
+        [Z, T] = (0, c.US)(S && v ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], _.R.SIDEBAR, !0),
+        b = Z === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        A = l.useCallback(() => {
+            null == x || x(),
                 (0, u.k5)({ source: m.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
-                    if (e === m.F$.QUESTS)
-                        return (0, h.transitionToGlobalDiscovery)({
-                            tab: m.F$.QUESTS,
-                            location: g.dr.DISCOVERY_COMPASS,
-                            questContent: r.j.DISCOVERY_COMPASS
-                        });
-                    (0, h.transitionToGlobalDiscovery)({ tab: e });
+                    switch (e) {
+                        case m.F$.QUESTS:
+                            return (0, h.transitionToGlobalDiscovery)({
+                                tab: m.F$.QUESTS,
+                                location: C.dr.DISCOVERY_COMPASS,
+                                questContent: r.j.DISCOVERY_COMPASS
+                            });
+                        case m.F$.SERVERS:
+                            return (0, h.transitionToGlobalDiscovery)({
+                                tab: m.F$.SERVERS,
+                                entrypoint: g.Qq.GUILDS_BAR
+                            });
+                        default:
+                            return (0, h.transitionToGlobalDiscovery)({ tab: e });
+                    }
                 })((0, d.qe)()),
-                T && Z(_.L.DISMISS);
-        }, [N, Z, T]),
-        A = l.useMemo(
+                b && T(_.L.DISMISS);
+        }, [x, T, b]),
+        M = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: T ? (0, i.jsx)('div', { className: I.guildNotif }) : void 0
+                lowerBadge: b ? (0, i.jsx)('div', { className: E.guildNotif }) : void 0
             }),
-            [T]
+            [b]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: E,
-        onClick: b,
+        className: N,
+        onClick: A,
         selected: n,
-        tooltip: C.Z.Messages.DISCOVER,
+        tooltip: I.Z.Messages.DISCOVER,
         icon: s.CompassIcon,
-        ...A
+        ...M
     });
 });
-t.Z = E;
+t.Z = N;

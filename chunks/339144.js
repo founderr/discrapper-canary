@@ -112,7 +112,8 @@ let L = l.memo(function (e) {
                 F(v.L.PRIMARY),
                 (0, g.transitionToGlobalDiscovery)({
                     tab: Z.F$.SERVERS,
-                    selectedServersTab: T.vf.GUILDS
+                    selectedServersTab: T.vf.GUILDS,
+                    entrypoint: T.Qq.RTC_PANEL
                 });
         }, [D, F]);
     let X =

@@ -171,11 +171,12 @@ function N(e, t) {
         enable_tag: t
     });
 }
-function R(e, t, n) {
+function R(e, t, n, r) {
     c.default.track(_.rMx.CLAN_DISCOVERY_VIEWED, {
         ...h(),
         section: e,
         treatment: n,
+        entrypoint: r,
         application_ids: t.games,
         playstyle: t.playstyle,
         traits: t.traits

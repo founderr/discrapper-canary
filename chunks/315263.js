@@ -134,6 +134,7 @@ function G(e) {
                     t({
                         tab: b.F$.SERVERS,
                         selectedServersTab: M.vf.GUILDS,
+                        entrypoint: M.Qq.GAME_LINK,
                         extra: { search: '?game='.concat(o.code) }
                     });
                 }),
