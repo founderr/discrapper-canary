@@ -19438,13 +19438,15 @@ h3.improved_f017d0:after {
 
 .header_ae1fa2 {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    gap: 4px
 }
 
 .headerText_ae1fa2 {
     display: flex;
     gap: 4px;
-    align-items: center
+    align-items: center;
+    overflow: hidden
 }
 
 .headerContextMenu_ae1fa2:empty {
