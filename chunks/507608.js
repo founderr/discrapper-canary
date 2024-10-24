@@ -1,12 +1,12 @@
 i.d(e, {
     AF: function () {
-        return y;
+        return B;
     },
     hd: function () {
-        return C;
+        return y;
     },
     zz: function () {
-        return B;
+        return C;
     }
 }),
     i(47120);
@@ -24,87 +24,87 @@ var l = i(200651),
     p = i(171246),
     I = i(930155),
     x = i(929011),
-    S = i(889989),
-    h = i(696906),
-    g = i(55563),
+    h = i(889989),
+    g = i(696906),
+    S = i(55563),
     R = i(551428),
-    T = i(626135),
-    P = i(768581),
-    j = i(73346),
+    b = i(626135),
+    j = i(768581),
+    k = i(73346),
     N = i(624138),
-    b = i(591759),
+    T = i(591759),
     f = i(601911),
-    k = i(150414),
-    O = i(110742),
-    _ = i(147496),
-    E = i(680005),
+    P = i(150414),
+    _ = i(110742),
+    E = i(147496),
+    O = i(680005),
     M = i(955335),
-    U = i(519896),
+    A = i(519896),
     Z = i(981631),
-    A = i(689938),
-    L = i(335567);
-let F = new Intl.DateTimeFormat(A.Z.getLocale(), {
+    L = i(689938),
+    U = i(335567);
+let F = new Intl.DateTimeFormat(L.Z.getLocale(), {
     month: 'short',
     day: 'numeric'
 });
-function y(n) {
+function B(n) {
     let { app: e, guildId: i, subscriptions: r, otps: a } = n,
         v = s.useMemo(() => (0, f.y)(e, 100), [e]),
         { bot: I } = e,
         x = s.useMemo(() => {
             var n;
             if ((null == I ? void 0 : I.banner) == null) return;
-            let e = (0, P.aN)({
+            let e = (0, j.aN)({
                 id: I.id,
                 banner: I.banner,
                 size: 1024,
                 canAnimate: !1
             });
-            return null != e && null !== (n = b.Z.toURLSafe(e)) && void 0 !== n ? n : void 0;
+            return null != e && null !== (n = T.Z.toURLSafe(e)) && void 0 !== n ? n : void 0;
         }, [I]),
-        S = s.useMemo(() => {
+        h = s.useMemo(() => {
             var n;
             if ((null == I ? void 0 : I.banner) == null) return;
-            let e = (0, P.aN)({
+            let e = (0, j.aN)({
                 id: I.id,
                 banner: I.banner,
                 size: 1024,
                 canAnimate: !0
             });
-            return null != e && null !== (n = b.Z.toURLSafe(e)) && void 0 !== n ? n : void 0;
+            return null != e && null !== (n = T.Z.toURLSafe(e)) && void 0 !== n ? n : void 0;
         }, [I]),
-        h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        g = s.useMemo(() => [...r.map((n) => n.skuId), ...a.map((n) => n.skuId)], [r, a]),
+        g = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        S = s.useMemo(() => [...r.map((n) => n.skuId), ...a.map((n) => n.skuId)], [r, a]),
         { analyticsLocations: R } = (0, m.ZP)(c.Z.APP_STOREFRONT);
     return (
         s.useEffect(() => {
-            0 !== g.length &&
-                T.default.track(Z.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
+            0 !== S.length &&
+                b.default.track(Z.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
                     application_id: e.id,
-                    sku_ids: g,
+                    sku_ids: S,
                     location_stack: R
                 });
-        }, [R, e.id, g]),
+        }, [R, e.id, S]),
         (0, l.jsxs)('div', {
-            className: L.wrapper,
+            className: U.wrapper,
             children: [
                 (0, l.jsx)(t.j, {
                     title: e.name,
                     iconSrc: v,
                     backgroundSrc: x,
-                    animatedBackgroundSrc: S,
-                    prefersReducedMotion: h
+                    animatedBackgroundSrc: h,
+                    prefersReducedMotion: g
                 }),
                 r.length > 0 &&
                     (0, l.jsxs)('div', {
-                        className: L.productSection,
+                        className: U.productSection,
                         children: [
                             (0, l.jsx)(M.r, { subscriptions: r }),
                             (0, l.jsx)('div', {
-                                className: L.productList,
+                                className: U.productList,
                                 children: r.map((n) =>
                                     (0, l.jsx)(
-                                        B,
+                                        C,
                                         {
                                             appId: e.id,
                                             guildId: i,
@@ -119,17 +119,17 @@ function y(n) {
                     }),
                 a.length > 0 &&
                     (0, l.jsxs)('div', {
-                        className: L.productSection,
+                        className: U.productSection,
                         children: [
                             (0, l.jsx)(d.Heading, {
                                 variant: 'heading-lg/semibold',
-                                children: A.Z.Messages.STOREFRONT_APP_PRODUCTS
+                                children: L.Z.Messages.STOREFRONT_APP_PRODUCTS
                             }),
                             (0, l.jsx)('div', {
-                                className: L.productList,
+                                className: U.productList,
                                 children: a.map((n) =>
                                     (0, l.jsx)(
-                                        C,
+                                        y,
                                         {
                                             skuId: n.skuId,
                                             appId: e.id
@@ -139,35 +139,24 @@ function y(n) {
                                 )
                             })
                         ]
-                    }),
-                (0, l.jsx)(d.Text, {
-                    variant: 'text-md/normal',
-                    className: L.legalText,
-                    children:
-                        null != e.termsOfServiceUrl && null != e.privacyPolicyUrl
-                            ? A.Z.Messages.STOREFRONT_VIEW_TOS_PP.format({
-                                  tosUrl: e.termsOfServiceUrl,
-                                  ppUrl: e.privacyPolicyUrl
-                              })
-                            : A.Z.Messages.STOREFRONT_NO_TOS_PP
-                })
+                    })
             ]
         })
     );
 }
-function B(n) {
+function C(n) {
     var e, i;
     let t,
         { appId: r, guildId: u, listing: c, subscriptionType: m, onDetails: p } = n,
         { data: x } = (0, I.H)(c.skuId),
         R = null == x ? void 0 : x[0],
-        T = (0, o.e7)([g.Z], () => g.Z.getParentSKU(c.skuId), [c.skuId]),
-        P = (0, v.Ev)(T, u),
-        j = (0, v.cr)(T, u),
-        N = null != j && (null == P ? void 0 : null === (e = P.subscriptionPlan) || void 0 === e ? void 0 : e.id) !== (null == j ? void 0 : j.subscriptionPlan.id),
-        b = (null == j ? void 0 : j.subscriptionPlan.skuId) === c.skuId,
-        f = (null == P ? void 0 : P.subscriptionPlan.skuId) === c.skuId,
-        { openModal: O, cannotOpenReason: _ } = (0, h.ZP)({
+        b = (0, o.e7)([S.Z], () => S.Z.getParentSKU(c.skuId), [c.skuId]),
+        j = (0, v.Ev)(b, u),
+        k = (0, v.cr)(b, u),
+        N = null != k && (null == j ? void 0 : null === (e = j.subscriptionPlan) || void 0 === e ? void 0 : e.id) !== (null == k ? void 0 : k.subscriptionPlan.id),
+        T = (null == k ? void 0 : k.subscriptionPlan.skuId) === c.skuId,
+        f = (null == j ? void 0 : j.subscriptionPlan.skuId) === c.skuId,
+        { openModal: _, cannotOpenReason: E } = (0, g.ZP)({
             skuId: c.skuId,
             subscribeForGuild: u,
             analyticsLocation: Z.Sbl.APP_STOREFRONT
@@ -180,27 +169,27 @@ function B(n) {
                       id: n.id,
                       title: n.name,
                       description: n.description,
-                      icon: (0, S.n)(r, n.icon)
+                      icon: (0, h.n)(r, n.icon)
                   }));
         }, [r, c.benefits]),
-        L = s.useMemo(() => (null != c.thumbnail ? (0, k.q)(r, c.thumbnail, 256) : void 0), [r, c.thumbnail]),
-        y = s.useCallback(
+        U = s.useMemo(() => (null != c.thumbnail ? (0, P.q)(r, c.thumbnail, 256) : void 0), [r, c.thumbnail]),
+        B = s.useCallback(
             (n) =>
-                (0, l.jsx)(E.p, {
+                (0, l.jsx)(O.p, {
                     ...n,
                     appId: r,
                     subscriptionType: m,
                     skuId: c.skuId,
                     subscriptionPlan: R,
-                    cannotOpenReason: _
+                    cannotOpenReason: E
                 }),
-            [r, m, c.skuId, R, _]
+            [r, m, c.skuId, R, E]
         );
-    if (N && (null == P ? void 0 : P.subscription.currentPeriodEnd) != null) {
-        let n = F.format(null == P ? void 0 : P.subscription.currentPeriodEnd);
-        f ? (t = A.Z.Messages.STOREFRONT_CURRENTLY_SUBSCRIBED_UNTIL.format({ date: n })) : b && (t = A.Z.Messages.STOREFRONT_SUBSCRIPTION_STARTS.format({ date: n }));
+    if (N && (null == j ? void 0 : j.subscription.currentPeriodEnd) != null) {
+        let n = F.format(null == j ? void 0 : j.subscription.currentPeriodEnd);
+        f ? (t = L.Z.Messages.STOREFRONT_CURRENTLY_SUBSCRIBED_UNTIL.format({ date: n })) : T && (t = L.Z.Messages.STOREFRONT_SUBSCRIPTION_STARTS.format({ date: n }));
     }
-    let B =
+    let C =
         null != t
             ? (0, l.jsx)(d.Text, {
                   color: 'header-secondary',
@@ -211,9 +200,9 @@ function B(n) {
     return (0, l.jsx)(a.U, {
         title: c.summary,
         description: null !== (i = c.description) && void 0 !== i ? i : void 0,
-        imgSrc: L,
-        onPurchase: O,
-        renderPurchaseButton: y,
+        imgSrc: U,
+        onPurchase: _,
+        renderPurchaseButton: B,
         benefitItems:
             null != M
                 ? M.map((n) =>
@@ -234,7 +223,7 @@ function B(n) {
                   ? () => {
                         (0, d.openModal)((n) => {
                             let { onClose: e, transitionState: i } = n;
-                            return (0, l.jsx)(U.SubscriptionDetailsModal, {
+                            return (0, l.jsx)(A.SubscriptionDetailsModal, {
                                 appId: r,
                                 subscriptionType: m,
                                 onClose: e,
@@ -245,39 +234,39 @@ function B(n) {
                         });
                     }
                   : void 0,
-        subtitle: B
+        subtitle: C
     });
 }
-function C(n) {
+function y(n) {
     var e, i, s, t;
     let { skuId: a, appId: u, onDetails: v } = n,
         { analyticsLocations: p } = (0, m.ZP)(c.Z.APP_STOREFRONT),
         I = (0, o.e7)([R.Z], () => R.Z.getForSKU(a), [a]),
-        S = (0, o.e7)([g.Z], () => g.Z.get(a), [a]),
-        h = (0, O.M)(a);
-    if (null == S) return null;
-    let T = null !== (i = S.name) && void 0 !== i ? i : '',
-        P = null !== (s = null == I ? void 0 : null === (e = I.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== s ? s : void 0,
-        f = (null == I ? void 0 : I.headerBackground) != null && null !== (t = b.Z.toURLSafe((0, j._W)(u, I.headerBackground, 256))) && void 0 !== t ? t : void 0,
-        k = S.type === Z.epS.DURABLE && h,
-        M = S.type === Z.epS.DURABLE ? (k ? A.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : A.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
-        { price: U } = S;
-    return null == U
+        h = (0, o.e7)([S.Z], () => S.Z.get(a), [a]),
+        g = (0, _.M)(a);
+    if (null == h) return null;
+    let b = null !== (i = h.name) && void 0 !== i ? i : '',
+        j = null !== (s = null == I ? void 0 : null === (e = I.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== s ? s : void 0,
+        f = (null == I ? void 0 : I.headerBackground) != null && null !== (t = T.Z.toURLSafe((0, k._W)(u, I.headerBackground, 256))) && void 0 !== t ? t : void 0,
+        P = h.type === Z.epS.DURABLE && g,
+        M = h.type === Z.epS.DURABLE ? (P ? L.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : L.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        { price: A } = h;
+    return null == A
         ? null
         : (0, l.jsx)(r.I, {
-              title: T,
-              description: P,
+              title: b,
+              description: j,
               headerImage: f,
               availabilityLabel: M,
               onDetails:
                   null != v
                       ? v
-                      : (0, N.Ew)(P)
+                      : (0, N.Ew)(j)
                         ? void 0
                         : () => {
                               (0, d.openModal)((n) => {
                                   let { onClose: e, transitionState: i } = n;
-                                  return (0, l.jsx)(_.ItemDetailsModal, {
+                                  return (0, l.jsx)(E.ItemDetailsModal, {
                                       appId: u,
                                       skuId: a,
                                       onClose: e,
@@ -286,15 +275,15 @@ function C(n) {
                               });
                           },
               PurchaseButton: (n) =>
-                  (0, l.jsx)(E.Y, {
+                  (0, l.jsx)(O.Y, {
                       ...n,
                       appId: u,
-                      sku: S
+                      sku: h
                   }),
               onPurchase: () => {
                   (0, x.r)({
                       appId: u,
-                      skuId: S.id,
+                      skuId: h.id,
                       analyticsLocations: p
                   });
               }
