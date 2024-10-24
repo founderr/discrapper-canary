@@ -1,54 +1,57 @@
-r.d(t, {
+n.d(t, {
     E: function () {
         return u;
     }
 }),
-    r(47120);
-var s = r(192379),
-    n = r(626135),
-    a = r(74538),
-    i = r(381585),
-    l = r(884697),
-    o = r(819490),
-    c = r(82892),
-    d = r(981631);
+    n(47120);
+var r = n(192379),
+    s = n(626135),
+    a = n(74538),
+    i = n(381585),
+    l = n(884697),
+    o = n(819490),
+    c = n(82892),
+    d = n(981631);
 function u(e, t) {
-    let r = (0, i.sp)(),
+    let n = (0, i.sp)(),
         u = (0, c.x)(),
         m = a.ZP.canUseCollectibles(u),
-        f = s.useRef(null),
-        [p, C] = s.useState(!1),
-        [h, g] = s.useState(!1),
+        f = r.useRef(null),
+        [p, C] = r.useState(!1),
+        [h, g] = r.useState(!1),
         _ = (0, o.B)('shop_product_card');
     return (
-        s.useEffect(() => {
-            if (
-                (p && null === f.current
+        r.useEffect(
+            () => (
+                p && null === f.current
                     ? (f.current = setTimeout(() => {
                           g(!0);
                       }, 1000))
-                    : !p && null !== f.current && clearTimeout(f.current),
-                h && _)
-            ) {
-                let s = (0, l.Vw)(e, m, !1),
+                    : !p && (null !== f.current && (clearTimeout(f.current), (f.current = null)), g(!1)),
+                () => {
+                    null !== f.current && (clearTimeout(f.current), (f.current = null));
+                }
+            ),
+            [p]
+        ),
+        r.useEffect(() => {
+            if (h && _) {
+                let r = (0, l.Vw)(e, m, !1),
                     a = (0, l.eu)(e, m, !1);
-                n.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+                s.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                     sku_id: e.skuId,
-                    display_price: null == s ? void 0 : s.amount,
-                    display_price_currency: null == s ? void 0 : s.currency.toString(),
+                    display_price: null == r ? void 0 : r.amount,
+                    display_price_currency: null == r ? void 0 : r.currency.toString(),
                     display_price_strikethrough: a,
-                    position: null == r ? void 0 : r.tilePosition,
+                    position: null == n ? void 0 : n.tilePosition,
                     page_type: t,
-                    page_category: null == r ? void 0 : r.pageCategory,
-                    page_section: null == r ? void 0 : r.pageSection,
+                    page_category: null == n ? void 0 : n.pageCategory,
+                    page_section: null == n ? void 0 : n.pageSection,
                     type: 'product',
-                    category_position: null == r ? void 0 : r.categoryPosition
+                    category_position: null == n ? void 0 : n.categoryPosition
                 });
             }
-            return () => {
-                null !== f.current && clearTimeout(f.current);
-            };
-        }, [p, m, e, r, t, h, _]),
+        }, [null == n ? void 0 : n.categoryPosition, null == n ? void 0 : n.pageCategory, null == n ? void 0 : n.pageSection, null == n ? void 0 : n.tilePosition, h, m, _, t, e]),
         {
             handleCardVisibilityChange: (e) => {
                 C(e);
