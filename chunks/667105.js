@@ -144,13 +144,15 @@ function C(e) {
     return i.useMemo(() => {
         switch (n) {
             case _.OH.UNACCEPTED:
+                let e = E ? A.Z.Messages.QUESTS_START_VIDEO_QUEST : A.Z.Messages.QUESTS_ACCEPT,
+                    i = E ? c.jZ.START_QUEST : c.jZ.ACCEPT_QUEST;
                 return {
-                    text: A.Z.Messages.QUESTS_ACCEPT,
+                    text: e,
                     tooltipText: A.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
                     onClick: () => {
                         (0, d.AH)(t.id, {
                             questContent: a,
-                            questContentCTA: c.jZ.ACCEPT_QUEST,
+                            questContentCTA: i,
                             questContentPosition: s,
                             questContentRowIndex: o
                         }),
@@ -192,27 +194,27 @@ function C(e) {
                     onClick: f
                 };
             case _.OH.CLAIMED:
-                let e = {
+                let m = {
                     tooltipText: null,
                     onClick: f
                 };
                 if (l)
                     return {
-                        ...e,
+                        ...m,
                         text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 if (r)
                     return {
-                        ...e,
+                        ...m,
                         text: A.Z.Messages.COLLECTIBLES_USE_NOW
                     };
                 else if ((0, h.vQ)(t.config))
                     return {
-                        ...e,
+                        ...m,
                         text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 return {
-                    ...e,
+                    ...m,
                     text: A.Z.Messages.QUESTS_SEE_CODE
                 };
         }
