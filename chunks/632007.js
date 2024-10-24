@@ -17,6 +17,7 @@ e.exports = {
     mainContent: 'mainContent_ebba41',
     heroHeaderContainer: 'heroHeaderContainer_ebba41',
     heroHeaderBadgeLogoSummaryContainer: 'heroHeaderBadgeLogoSummaryContainer_ebba41',
+    heroLogoNameContainer: 'heroLogoNameContainer_ebba41',
     heroHeaderLogo: 'heroHeaderLogo_ebba41',
     subHeaderText: 'subHeaderText_ebba41',
     heroHeaderButtonContainer: 'heroHeaderButtonContainer_ebba41',

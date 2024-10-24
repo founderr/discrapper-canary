@@ -36,21 +36,21 @@ t.Z = (e) => {
         V = null !== (t = null != D ? D : F) && void 0 !== t ? t : U,
         z = Array.from(M.values()),
         G = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        K = s.createRef(),
-        Y = (0, _.t)('CollectiblesFeedShop'),
+        Y = s.createRef(),
+        K = (0, _.t)('CollectiblesFeedShop'),
         $ = (0, g.m)('CollectiblesFeedShop'),
         X = (0, b.b)('Collectibles Shop Button'),
         q = (0, d.Z)('shop_disable_cache'),
         J = (0, d.Z)('shop_include_unpublished'),
-        Q = $ ? z[0] : p.Z.getCategory(Y ? l.T.SPOOKY_NIGHT : l.T.BAND),
-        ee = $ ? z[1] : p.Z.getCategory(Y ? l.T.BAND : l.T.AUTUMN_EQUINOX),
+        Q = $ ? z[0] : p.Z.getCategory(K ? l.T.SPOOKY_NIGHT : l.T.BAND),
+        ee = $ ? z[1] : p.Z.getCategory(K ? l.T.BAND : l.T.AUTUMN_EQUINOX),
         et = p.Z.getCategory(l.T.ANIME_V2),
         en = $
             ? (0, h.uV)(null !== (n = null == Q ? void 0 : Q.heroBanner) && void 0 !== n ? n : '', {
                   size: L.pv,
                   format: 'jpg'
               })
-            : Y
+            : K
               ? Z
               : j,
         er = $
@@ -58,7 +58,7 @@ t.Z = (e) => {
                   size: L.J0,
                   format: 'png'
               })
-            : Y
+            : K
               ? B
               : O,
         es = $
@@ -70,7 +70,7 @@ t.Z = (e) => {
         ea = s.useCallback(() => {
             W();
         }, [W]),
-        ei = $ ? (null !== (P = null == Q ? void 0 : Q.heroRanking) && void 0 !== P ? P : []) : Y ? L.Ku : L.WC,
+        ei = $ ? (null !== (P = null == Q ? void 0 : Q.heroRanking) && void 0 !== P ? P : []) : K ? L.Ku : L.WC,
         el = s.useMemo(
             () =>
                 ei
@@ -87,7 +87,7 @@ t.Z = (e) => {
                         return Number(n) - Number(r);
                     })
                     .slice(0, 4),
-            [H, Y]
+            [H, K]
         ),
         eo = s.useMemo(
             () =>
@@ -158,16 +158,22 @@ t.Z = (e) => {
                                                       text: S.Z.Messages.LIMITED_TIME,
                                                       className: k.limitedTimeBadge
                                                   }),
-                                              (0, r.jsx)('img', {
-                                                  className: k.heroHeaderLogo,
-                                                  src: (0, h.uV)(null !== (R = null == Q ? void 0 : Q.logo) && void 0 !== R ? R : '', { size: E.n }),
-                                                  alt: null == Q ? void 0 : Q.name
-                                              }),
-                                              (0, r.jsx)(c.Text, {
-                                                  color: 'always-white',
-                                                  variant: 'text-md/normal',
-                                                  className: k.subHeaderText,
-                                                  children: null == Q ? void 0 : Q.summary
+                                              (0, r.jsxs)('div', {
+                                                  className: i()(k.heroLogoNameContainer),
+                                                  style: (null == Q ? void 0 : Q.skuId) === l.T.MYTHICAL_CREATURES ? { alignItems: 'center' } : {},
+                                                  children: [
+                                                      (0, r.jsx)('img', {
+                                                          className: k.heroHeaderLogo,
+                                                          src: (0, h.uV)(null !== (R = null == Q ? void 0 : Q.logo) && void 0 !== R ? R : '', { size: E.n }),
+                                                          alt: null == Q ? void 0 : Q.name
+                                                      }),
+                                                      (0, r.jsx)(c.Text, {
+                                                          color: 'always-white',
+                                                          variant: 'text-md/normal',
+                                                          className: k.subHeaderText,
+                                                          children: null == Q ? void 0 : Q.summary
+                                                      })
+                                                  ]
                                               })
                                           ]
                                       }),
@@ -299,7 +305,7 @@ t.Z = (e) => {
                         }),
                         (0, r.jsx)('div', {
                             className: k.feed,
-                            ref: K,
+                            ref: Y,
                             children: H
                                 ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(I.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
