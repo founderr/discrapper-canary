@@ -23,6 +23,7 @@ function _(e) {
         R = () => {
             (0, o.openUserProfileModal)({
                 userId: s.id,
+                guildId: null,
                 joinRequestId: n,
                 sourceAnalyticsLocations: m,
                 analyticsLocation: {

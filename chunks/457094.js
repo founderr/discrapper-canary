@@ -195,6 +195,7 @@ let e5 = [
                 (0, F.h)(() =>
                     (0, eL.openUserProfileModal)({
                         userId: l,
+                        guildId: eX.ME,
                         friendToken: a,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME],
                         analyticsLocation: { section: eX.jXE.DIRECT_ROUTE_ACCESS }
