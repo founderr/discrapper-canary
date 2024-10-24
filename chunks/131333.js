@@ -28,13 +28,18 @@ function g(e) {
         colorize: !1
     }));
 }
-((a = r || (r = {})).JACK_O_LANTERN = ':jack_o_lantern:'), (a.NOSE = ':nose:');
-let A = new Set([':jack_o_lantern:', ':nose:']),
+((a = r || (r = {})).JACK_O_LANTERN = ':jack_o_lantern:'), (a.NOSE = ':nose:'), (a.NOSE_1 = ':nose_tone1:'), (a.NOSE_2 = ':nose_tone2:'), (a.NOSE_3 = ':nose_tone3:'), (a.NOSE_4 = ':nose_tone4:'), (a.NOSE_5 = ':nose_tone5:');
+let A = new Set([':jack_o_lantern:', ':nose:', ':nose_tone1:', ':nose_tone2:', ':nose_tone3:', ':nose_tone4:', ':nose_tone5:']),
     N = {
         ':jack_o_lantern:': {
             sprites: g(['chocolate_bar', 'lollipop', 'candy'])
         },
-        ':nose:': { sprites: g(['foot']) }
+        ':nose:': { sprites: g(['foot']) },
+        ':nose_tone1:': { sprites: g(['foot_tone1']) },
+        ':nose_tone2:': { sprites: g(['foot_tone2']) },
+        ':nose_tone3:': { sprites: g(['foot_tone3']) },
+        ':nose_tone4:': { sprites: g(['foot_tone4']) },
+        ':nose_tone5:': { sprites: g(['foot_tone5']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
 let R = {
