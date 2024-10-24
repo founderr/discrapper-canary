@@ -17,9 +17,9 @@ var i = n(392711),
     u = n(292793),
     d = n(88315),
     h = n(199766),
-    m = n(813900);
-let p = {
-        X_OFFSET: 2 * m.qh,
+    p = n(813900);
+let m = {
+        X_OFFSET: 2 * p.qh,
         Y_OFFSET: 25,
         X_SPEED: 0.5,
         Y_SPEED_MIN: -1,
@@ -27,8 +27,8 @@ let p = {
         OPACITY: 1,
         OPACITY_SPEED_MIN: 0.01,
         OPACITY_SPEED_MAX: 0.05,
-        SIZE_MIN: m.qh / 2,
-        SIZE_MAX: m.qh
+        SIZE_MIN: p.qh / 2,
+        SIZE_MAX: p.qh
     },
     _ = (0, l.Z)(() => ({
         particles: {},
@@ -77,13 +77,13 @@ function E(e) {
                                 (o = n),
                                 {
                                     id: (0, a.Z)(),
-                                    x: r + s().random(-p.X_OFFSET, p.X_OFFSET),
-                                    y: o + s().random(-p.Y_OFFSET, p.Y_OFFSET),
-                                    xSpeed: s().random(-p.X_SPEED, p.X_SPEED),
-                                    ySpeed: s().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
-                                    opacity: p.OPACITY,
-                                    opacitySpeed: s().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
-                                    size: s().random(p.SIZE_MIN, p.SIZE_MAX)
+                                    x: r + s().random(-m.X_OFFSET, m.X_OFFSET),
+                                    y: o + s().random(-m.Y_OFFSET, m.Y_OFFSET),
+                                    xSpeed: s().random(-m.X_SPEED, m.X_SPEED),
+                                    ySpeed: s().random(m.Y_SPEED_MIN, m.Y_SPEED_MAX),
+                                    opacity: m.OPACITY,
+                                    opacitySpeed: s().random(m.OPACITY_SPEED_MIN, m.OPACITY_SPEED_MAX),
+                                    size: s().random(m.SIZE_MIN, m.SIZE_MAX)
                                 });
                             c[e.id] = e;
                         }
@@ -91,7 +91,7 @@ function E(e) {
                     });
                 });
         })(E, Z, M),
-        (0, h.I)(g, Z, M, b, m.q2),
+        (0, h.I)(g, Z, M, b, p.q2),
         (0, h.T)(g, Z, M, E.userId),
         f(E, (e) =>
             (function (e, t, n) {
@@ -102,7 +102,7 @@ function E(e) {
                 (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + s, i / 2 + a, i, i);
             })(g, A, e)
         ),
-        E.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, E),
+        E.lastUpdatedAt + p.FO < Date.now() && (0, o.ZZ)(v, E),
         E.state === u.f.STOP && ((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
     )
         N.push(E);

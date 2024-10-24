@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(153867),
     d = n(110924),
     h = n(607070),
-    m = n(900211),
-    p = n(740492),
+    p = n(900211),
+    m = n(740492),
     _ = n(871499),
     f = n(402113),
     E = n(592125),
@@ -56,7 +56,7 @@ function k(e) {
         z = s.useRef(null),
         Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
         K = Y !== P.MI.NO_CHAT,
-        [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
+        [q, X] = s.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
@@ -243,7 +243,7 @@ function k(e) {
                         ]
                     }),
                     K
-                        ? (0, i.jsx)(m.Z, {
+                        ? (0, i.jsx)(p.Z, {
                               minHeight: 480,
                               maxHeight: a,
                               resizableNode: z,

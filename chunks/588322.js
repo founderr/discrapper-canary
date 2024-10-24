@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(541716),
     d = n(665149),
     h = n(910611),
-    m = n(703656),
-    p = n(664342),
+    p = n(703656),
+    m = n(664342),
     _ = n(592125),
     f = n(703558),
     E = n(430824),
@@ -35,7 +35,7 @@ function T(e) {
         null == T || null == S)
     )
         return null;
-    let A = (0, i.jsx)(p.Z, { channel: T });
+    let A = (0, i.jsx)(m.Z, { channel: T });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
@@ -62,7 +62,7 @@ function T(e) {
                         });
                     },
                     handleClick: function () {
-                        null != T && (0, m.XU)(T.guild_id, T.id);
+                        null != T && (0, p.XU)(T.guild_id, T.id);
                     }
                 })
             }),

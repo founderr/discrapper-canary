@@ -9,8 +9,8 @@ var r = n(200651),
     o = n(192379),
     a = n(442837),
     s = n(780384),
-    i = n(481060),
-    l = n(607070),
+    l = n(481060),
+    i = n(607070),
     c = n(210887),
     u = n(617136),
     d = n(113434),
@@ -34,8 +34,8 @@ function L(e) {
         B = (0, f.il)(j),
         P = (0, a.e7)([c.Z], () => c.Z.getState().theme),
         k = (0, s.wj)(P) ? N.BRd.DARK : N.BRd.LIGHT,
-        y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        R = o.useRef(null),
+        R = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
+        y = o.useRef(null),
         [D, A] = o.useState(B.progressSeconds),
         [M, Z] = o.useState(!1),
         { completedRatio: U, completedRatioDisplay: G } = (0, d.I)(j),
@@ -45,16 +45,16 @@ function L(e) {
                 content: p.jn.QUEST_SHARE_LINK,
                 ctaContent: u.jZ.COPY_QUEST_URL
             }),
-                (0, i.showToast)((0, i.createToast)(h.Z.Messages.COPIED_LINK, i.ToastType.LINK));
+                (0, l.showToast)((0, l.createToast)(h.Z.Messages.COPIED_LINK, l.ToastType.LINK));
         }, [j.id]),
         F = o.useMemo(() => _.r.build(j.config).defaultReward.messages.name, [j]),
         H = h.Z.Messages.QUESTS_VIDEO_REWARD_TOOLTIP.format({ rewardName: F });
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsx)('div', {
-            ref: R,
-            children: (0, r.jsx)(i.ModalRoot, {
+            ref: y,
+            children: (0, r.jsx)(l.ModalRoot, {
                 transitionState: L,
-                size: i.ModalSize.LARGE,
+                size: l.ModalSize.LARGE,
                 className: I.modalRoot,
                 children: (0, r.jsx)('div', {
                     className: I.modalBg,
@@ -66,7 +66,7 @@ function L(e) {
                                 (0, r.jsxs)('div', {
                                     className: I.contentHeader,
                                     children: [
-                                        (0, r.jsxs)(i.Clickable, {
+                                        (0, r.jsxs)(l.Clickable, {
                                             className: I.contentHeaderGameInfo,
                                             onClick: () => {
                                                 (0, f.FE)(j, {
@@ -84,12 +84,12 @@ function L(e) {
                                                 (0, r.jsxs)('div', {
                                                     className: I.questHeading,
                                                     children: [
-                                                        (0, r.jsx)(i.Heading, {
+                                                        (0, r.jsx)(l.Heading, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'header-primary',
                                                             children: h.Z.Messages.QUESTS_TITLE.format({ questName: j.config.messages.questName })
                                                         }),
-                                                        (0, r.jsx)(i.Text, {
+                                                        (0, r.jsx)(l.Text, {
                                                             variant: 'text-sm/medium',
                                                             color: 'header-secondary',
                                                             children: j.config.messages.gameTitle
@@ -98,7 +98,7 @@ function L(e) {
                                                 })
                                             ]
                                         }),
-                                        (0, r.jsx)(i.Tooltip, {
+                                        (0, r.jsx)(l.Tooltip, {
                                             position: 'left',
                                             text: H,
                                             onTooltipShow: () => {
@@ -108,7 +108,7 @@ function L(e) {
                                                 Z(!1);
                                             },
                                             children: (e) =>
-                                                (0, r.jsx)(i.Clickable, {
+                                                (0, r.jsx)(l.Clickable, {
                                                     className: I.progressCont,
                                                     ...e,
                                                     children: (0, r.jsx)(v.Z, {
@@ -142,25 +142,25 @@ function L(e) {
                                 (0, r.jsxs)('div', {
                                     className: I.contentFooter,
                                     children: [
-                                        (0, r.jsx)(i.Button, {
-                                            color: i.Button.Colors.PRIMARY,
+                                        (0, r.jsx)(l.Button, {
+                                            color: l.Button.Colors.PRIMARY,
                                             onClick: w,
                                             children: h.Z.Messages.COPY_LINK
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: I.contentFooterButtonCont,
                                             children: [
-                                                (0, r.jsx)(i.Button, {
+                                                (0, r.jsx)(l.Button, {
                                                     onClick: O,
-                                                    color: i.Button.Colors.PRIMARY,
-                                                    size: i.Button.Sizes.MEDIUM,
+                                                    color: l.Button.Colors.PRIMARY,
+                                                    size: l.Button.Sizes.MEDIUM,
                                                     children: h.Z.Messages.CLOSE
                                                 }),
                                                 (0, r.jsx)(E.i0, {
                                                     className: I.claimBtn,
-                                                    size: i.Button.Sizes.MEDIUM,
+                                                    size: l.Button.Sizes.MEDIUM,
                                                     quest: j,
-                                                    useReducedMotion: y,
+                                                    useReducedMotion: R,
                                                     isExpanded: (null === (n = j.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
                                                     disabled: (null === (m = j.userStatus) || void 0 === m ? void 0 : m.completedAt) == null,
                                                     ctaLabel: V

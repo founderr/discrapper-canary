@@ -15,8 +15,8 @@ var i,
     d = n(153066),
     h = n(500829);
 ((s = i || (i = {})).CONTAIN = 'contain'), (s.COVER = 'cover');
-let m = l.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: s, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,
+let p = l.memo(function (e) {
+    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: s, className: r, fit: p = 'contain', mirror: m = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,
         [C, I] = l.useState(!0),
         [T] = l.useState(() => new u.o('VideoStream'));
     l.useEffect(() => {
@@ -30,7 +30,7 @@ let m = l.memo(function (e) {
         children: [
             null != t &&
                 (0, a.jsx)(s, {
-                    className: o()(h.video, (0, d.l)(h, 'video', m), { [h.mirror]: p }, r),
+                    className: o()(h.video, (0, d.l)(h, 'video', p), { [h.mirror]: m }, r),
                     streamId: t,
                     onResize: n,
                     onReady: x,
@@ -61,4 +61,4 @@ let m = l.memo(function (e) {
         ]
     });
 });
-t.Z = m;
+t.Z = p;

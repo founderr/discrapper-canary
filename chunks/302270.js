@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(475179),
     d = n(40851),
     h = n(358221),
-    m = n(933557),
-    p = n(320007),
+    p = n(933557),
+    m = n(320007),
     _ = n(236091),
     f = n(623624),
     E = n(665149),
@@ -41,7 +41,7 @@ var i = n(200651),
     k = n(219912);
 function w(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: o } = e,
-        m = (0, d.bp)(),
+        p = (0, d.bp)(),
         f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         E = (0, b.B)(n.id),
         g = (0, Z.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
@@ -60,7 +60,7 @@ function w(e) {
                             children: (0, i.jsx)(j.Z, {
                                 ...e,
                                 channelId: n.id,
-                                appContext: m
+                                appContext: p
                             })
                         }),
                     autoInvert: !1,
@@ -77,7 +77,7 @@ function w(e) {
                 },
                 'more-options-popout'
             ),
-            !t && (0, i.jsx)(p.Z, { className: k.button }, 'clips'),
+            !t && (0, i.jsx)(m.Z, { className: k.button }, 'clips'),
             (0, i.jsx)(
                 C.Z,
                 {
@@ -115,7 +115,7 @@ function w(e) {
 function B(e) {
     var t;
     let { inPopout: n, channel: a, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: h } = e,
-        p = (0, m.ZP)(a),
+        m = (0, p.ZP)(a),
         _ = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(a.id)),
         C = (0, Z.Io)(a.id),
         I = (0, Z.Rk)(a.id, M.pV.AUDIENCE),
@@ -167,7 +167,7 @@ function B(e) {
                     (0, i.jsx)(E.ZP.Title, {
                         className: k.channelName,
                         wrapperClassName: k.channelNameWrapper,
-                        children: null !== (t = null == _ ? void 0 : _.topic) && void 0 !== t ? t : p
+                        children: null !== (t = null == _ ? void 0 : _.topic) && void 0 !== t ? t : m
                     }),
                     (0, i.jsx)(E.ZP.Divider, { className: k.divider }),
                     (0, i.jsxs)(E.ZP.Title, {

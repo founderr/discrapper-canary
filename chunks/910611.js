@@ -20,8 +20,8 @@ var i = n(200651),
     u = n(835473),
     d = n(385499),
     h = n(933557),
-    m = n(471445),
-    p = n(243778),
+    p = n(471445),
+    m = n(243778),
     _ = n(266076),
     f = n(565138),
     E = n(703656),
@@ -43,7 +43,7 @@ function P(e) {
     var t;
     let { channel: n } = e,
         s = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id),
-        [a, l] = (0, p.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
+        [a, l] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == s) return null;
     let r = T.ZP.getApplicationIconURL({
             id: s.id,
@@ -111,8 +111,8 @@ function P(e) {
     );
 }
 function j(e) {
-    let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: f, renderFollowButton: E } = e,
-        C = (0, m.KS)(t, r),
+    let { channel: t, channelName: n, parentChannel: a, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: m, handleParentContextMenu: f, renderFollowButton: E } = e,
+        C = (0, p.KS)(t, r),
         { prefix: T, level: x } = (function (e, t) {
             var n, i;
             switch (e) {
@@ -238,14 +238,14 @@ function j(e) {
         case M.d4z.PRIVATE_THREAD:
             let N = null;
             if (!o && null != a) {
-                let e = (0, m.KS)(a, r);
+                let e = (0, p.KS)(a, r);
                 N = (0, i.jsxs)(s.Fragment, {
                     children: [
                         D(e, R.Z.Messages.TEXT_CHANNEL),
                         (0, i.jsx)(A.Z.Title, {
                             level: x,
                             onContextMenu: f,
-                            onClick: p,
+                            onClick: m,
                             className: l()(L.parentChannelName, L.cursorPointer),
                             children: (0, h.F6)(a, I.default, g.Z)
                         }),

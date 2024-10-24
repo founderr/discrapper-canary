@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(699516),
     d = n(626135),
     h = n(63063),
-    m = n(862679),
-    p = n(981631),
+    p = n(862679),
+    m = n(981631),
     _ = n(596401),
     f = n(689938);
 function E(e) {
@@ -44,13 +44,13 @@ function E(e) {
             (x.onButtonClick = () => {
                 if (C) {
                     open(_.D2),
-                        d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
+                        d.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
                             target: _.D2
                         });
                     return;
                 }
-                open(h.Z.getArticleURL(p.BhN.SYSTEM_DMS));
+                open(h.Z.getArticleURL(m.BhN.SYSTEM_DMS));
             }),
             (x.imageSrc = n(780961));
     } else
@@ -60,7 +60,7 @@ function E(e) {
             (x.onButtonClick = () => {
                 l.Z.unblockUser(t.getRecipientId());
             }));
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(p.Z, {
         ...x,
         children: E
     });

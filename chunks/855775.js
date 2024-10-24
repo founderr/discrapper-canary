@@ -24,8 +24,8 @@ let a = 'no_payment_source',
     P = null,
     U = !1,
     d = !1,
-    f = !1,
     O = !1,
+    f = !1,
     L = null,
     p = new Set();
 function G(e) {
@@ -37,7 +37,7 @@ class Z extends (u = o.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? l.IlC.OVERLAY : l.IlC.APP;
-        return L === e && f;
+        return L === e && O;
     }
     get isPurchasingSKU() {
         return M;
@@ -67,7 +67,7 @@ class Z extends (u = o.ZP.Store) {
         return I;
     }
     get isGift() {
-        return O;
+        return f;
     }
     isFetchingSKU(e) {
         return p.has(e);
@@ -84,11 +84,11 @@ class Z extends (u = o.ZP.Store) {
         : (i[S] = _),
     (t.Z = new Z(A.Z, {
         SKU_PURCHASE_MODAL_OPEN: function (e) {
-            G(), (T = e.skuId), (c = e.applicationId), (d = e.isIAP), (R = e.analyticsLocation), (L = e.context), (O = e.isGift), (f = !0), (U = !1), (E = e.resolve), (r = e.reject), (P = null), (s = null), (C = e.promotionId);
+            G(), (T = e.skuId), (c = e.applicationId), (d = e.isIAP), (R = e.analyticsLocation), (L = e.context), (f = e.isGift), (O = !0), (U = !1), (E = e.resolve), (r = e.reject), (P = null), (s = null), (C = e.promotionId);
         },
         SKU_PURCHASE_MODAL_CLOSE: function (e) {
             let { error: t } = e;
-            (f = !1), (L = null), G(t);
+            (O = !1), (L = null), G(t);
         },
         SKU_PURCHASE_PREVIEW_FETCH: function (e) {
             let { skuId: t } = e;
@@ -127,12 +127,12 @@ class Z extends (u = o.ZP.Store) {
             P = null;
         },
         SKU_PURCHASE_UPDATE_IS_GIFT: function (e) {
-            O = e.isGift;
+            f = e.isGift;
         },
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
             if (!t || null == L) return !1;
-            (f = !1), (L = null), G();
+            (O = !1), (L = null), G();
         },
         GIFT_CODE_CREATE: function (e) {
             let { giftCode: t } = e;

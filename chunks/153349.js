@@ -14,8 +14,8 @@ var i,
     u = n.n(c),
     d = n(442837),
     h = n(481060),
-    m = n(239091),
-    p = n(99690),
+    p = n(239091),
+    m = n(99690),
     _ = n(58540),
     f = n(665149),
     E = n(484459),
@@ -77,7 +77,7 @@ let L = l.memo(function (e) {
             (0, x.DT)(t, i.user.id, !0);
         }
         let j = (e) => {
-            (0, m.jW)(e, async () => {
+            (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, a.jsx)(e, {
@@ -114,7 +114,7 @@ let L = l.memo(function (e) {
                             onContextMenu: j,
                             ...e,
                             children: [
-                                (0, a.jsx)(p.Z, {
+                                (0, a.jsx)(m.Z, {
                                     size: h.AvatarSizes.SIZE_40,
                                     className: R.participantAvatar,
                                     user: i.user,

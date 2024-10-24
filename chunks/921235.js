@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(268350),
     d = n(926491),
     h = n(419922),
-    m = n(314897),
-    p = n(375954),
+    p = n(314897),
+    m = n(375954),
     _ = n(594174),
     f = n(626135),
     E = n(51144),
@@ -32,11 +32,11 @@ function S(e) {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
     let v = (0, r.e7)(
-            [p.Z, m.default],
+            [m.Z, p.default],
             () =>
-                !!l()(p.Z.getMessages(n.id).toArray())
+                !!l()(m.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
+                    .find((e) => e.author.id !== p.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
         ),
         N = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         A = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,

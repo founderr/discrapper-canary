@@ -2,8 +2,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    i = n(100621),
-    l = n(481060),
+    l = n(100621),
+    i = n(481060),
     c = n(569379),
     u = n(642145),
     d = n(808326);
@@ -23,7 +23,7 @@ t.Z = o.forwardRef((e, t) => {
             strokeDashoffset: -o * S
         },
         h = { boxShadow: '0 0 30px 0px '.concat(E.glow) },
-        { progressTextAnimation: I } = (0, l.useSpring)({
+        { progressTextAnimation: I } = (0, i.useSpring)({
             progressTextAnimation: null != f && 1 !== o ? 1 : 0,
             config: u.Y
         });
@@ -36,12 +36,12 @@ t.Z = o.forwardRef((e, t) => {
                 style: h,
                 children: [
                     _,
-                    (0, r.jsxs)(i.animated.div, {
+                    (0, r.jsxs)(l.animated.div, {
                         style: { opacity: I },
                         className: s()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: s()(d.coverContent, d.progressTextOverlay) }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(i.Text, {
                                 variant: C,
                                 color: 'text-primary',
                                 className: d.progressText,

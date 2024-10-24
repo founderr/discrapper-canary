@@ -54,8 +54,8 @@ var i = t(200651),
     G = t(900849),
     U = t(135431),
     Y = t(674588),
-    V = t(264043),
-    W = t(303383),
+    W = t(264043),
+    V = t(303383),
     z = t(887706),
     K = t(738130),
     q = t(4461),
@@ -97,25 +97,25 @@ function eP(e) {
         f = (0, en.useApplicationDirectoryHistory)((e) => e.guildId),
         T = (0, z.Z)(),
         el = (0, m.e7)(
-            [W.Z],
+            [V.Z],
             () =>
-                W.Z.getFetchState({
+                V.Z.getFetchState({
                     applicationId: p,
                     guildId: f
-                }) === W.M.FETCHING
+                }) === V.M.FETCHING
         ),
         eP = a.useRef({
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: eS, similarLoadId: eN } = (0, m.cj)([W.Z], () => {
+        { similarApplications: eS, similarLoadId: eN } = (0, m.cj)([V.Z], () => {
             let e = {
                     applicationId: p,
                     guildId: f
                 },
-                n = W.Z.getSimilarApplications(e);
+                n = V.Z.getSimilarApplications(e);
             return (
-                null == n ? (n = W.Z.getSimilarApplications(eP.current)) : (eP.current = e),
+                null == n ? (n = V.Z.getSimilarApplications(eP.current)) : (eP.current = e),
                 {
                     similarApplications: null == n ? void 0 : n.applications,
                     similarLoadId: null == n ? void 0 : n.loadId
@@ -123,7 +123,7 @@ function eP(e) {
             );
         }),
         eA = a.useMemo(() => (null == eS ? void 0 : eS.slice(0, 3)), [eS]),
-        eR = (0, m.e7)([V.Z], () => V.Z.getApplicationFetchState(p)),
+        eR = (0, m.e7)([W.Z], () => W.Z.getApplicationFetchState(p)),
         [eL, eO] = a.useState(void 0),
         ej = a.useCallback(
             (e) => {
@@ -140,9 +140,9 @@ function eP(e) {
         ey = (0, m.e7)([M.Z], () => M.Z.isFocused()),
         eD = (0, m.e7)([Z.default], () => Z.default.locale),
         eZ = a.useRef(p),
-        eB = (0, m.e7)([V.Z], () => {
-            let e = V.Z.getApplication(p);
-            return null == e ? (e = V.Z.getApplication(eZ.current)) : (eZ.current = p), e;
+        eB = (0, m.e7)([W.Z], () => {
+            let e = W.Z.getApplication(p);
+            return null == e ? (e = W.Z.getApplication(eZ.current)) : (eZ.current = p), e;
         }),
         eM = (0, ei.Z)({ application: eB }),
         ek = (0, m.e7)([B.default], () => B.default.getSessionId());
@@ -213,13 +213,13 @@ function eP(e) {
             id: null !== (c = null == eB ? void 0 : eB.id) && void 0 !== c ? c : '',
             label: em.Z.Messages.COPY_ID_APPLICATION
         }),
-        { canInstall: eY, install: eV } = (0, q.P)(eB, f),
-        eW = null === (n = (0, en.getPreviousView)()) || void 0 === n ? void 0 : n.type;
+        { canInstall: eY, install: eW } = (0, q.P)(eB, f),
+        eV = null === (n = (0, en.getPreviousView)()) || void 0 === n ? void 0 : n.type;
     a.useEffect(() => {
         (null == eB ? void 0 : eB.id) != null &&
             k.default.track(e_.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                 current_page: 'product',
-                previous_page: eW,
+                previous_page: eV,
                 application_id: eB.id,
                 guild_id: f,
                 shown_mutual_guilds_count: eM.length,
@@ -357,10 +357,10 @@ function eP(e) {
         if (T && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let n = e.pathname + e.search;
-            (0, y.dL)(n), eV('product_page');
+            (0, y.dL)(n), eW('product_page');
         }
-    }, [T, eV]);
-    let e2 = a.useCallback(() => {
+    }, [T, eW]);
+    let e8 = a.useCallback(() => {
             if (null != eB) {
                 if ((u.tq || u.Em) && null == eB.custom_install_url) {
                     let e = (0, U.Er)({
@@ -375,7 +375,7 @@ function eP(e) {
                     }
                 }
                 T
-                    ? eV('product_page')
+                    ? eW('product_page')
                     : (k.default.track(e_.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: p,
                           guild_id: f,
@@ -385,8 +385,8 @@ function eP(e) {
                       }),
                       (0, X.rf)({ [ex]: 'true' }));
             }
-        }, [eB, T, eV, p, f]),
-        e8 = (null == eB ? void 0 : eB.id) === ep.g,
+        }, [eB, T, eW, p, f]),
+        e2 = (null == eB ? void 0 : eB.id) === ep.g,
         [e9, e5] = a.useState(!1),
         [e4, e7] = a.useState(!1),
         [ne, nn] = a.useState(!0),
@@ -612,8 +612,8 @@ function eP(e) {
     return (
         (d =
             null == eB
-                ? null == eR || eR === V.M.FETCHING
-                    ? (0, i.jsx)($.Z, { loading: eR === V.M.FETCHING })
+                ? null == eR || eR === W.M.FETCHING
+                    ? (0, i.jsx)($.Z, { loading: eR === W.M.FETCHING })
                     : (0, i.jsx)('div', {
                           className: eI.__invalid_page,
                           children: (0, i.jsxs)('div', {
@@ -632,7 +632,7 @@ function eP(e) {
                           })
                       })
                 : (0, i.jsxs)($.Z, {
-                      loading: eR === V.M.FETCHING,
+                      loading: eR === W.M.FETCHING,
                       children: [
                           (0, i.jsx)(eT, {
                               app: eB,
@@ -689,7 +689,7 @@ function eP(e) {
                                                                                   src: t(744050)
                                                                               })
                                                                       }),
-                                                                  e8 && (0, i.jsx)(ee.Z, { className: eI.partnerBadge })
+                                                                  e2 && (0, i.jsx)(ee.Z, { className: eI.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
@@ -702,7 +702,7 @@ function eP(e) {
                                                                   }),
                                                                   (0, i.jsx)(h.Button, {
                                                                       color: h.Button.Colors.BRAND,
-                                                                      onClick: e2,
+                                                                      onClick: e8,
                                                                       disabled: !eY,
                                                                       children: em.Z.Messages.APPLICATION_ADD_BUTTON
                                                                   }),

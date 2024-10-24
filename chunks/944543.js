@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(600164),
     d = n(903223),
     h = n(689938),
-    m = n(953320);
-function p(e, t, n) {
+    p = n(953320);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ let _ = {
         autoInvert: !1
     },
     f = (e) => {
-        let { region: t, className: n = m.regionSelectName } = e,
+        let { region: t, className: n = p.regionSelectName } = e,
             s = t.name.replace(/ \(VIP\)$/, '');
         return (0, i.jsx)('div', {
             className: n,
@@ -44,9 +44,9 @@ class E extends s.PureComponent {
             children: [
                 (0, i.jsx)(f, {
                     region: e,
-                    className: m.regionSelectName
+                    className: p.regionSelectName
                 }),
-                t ? (0, i.jsx)('i', { className: m.check }) : null
+                t ? (0, i.jsx)('i', { className: p.check }) : null
             ]
         });
     }
@@ -77,12 +77,12 @@ class g extends s.PureComponent {
             onChange: this.handleChangeVoiceRegion,
             renderOption: this.renderOption,
             popoutProps: _,
-            popoutClassName: m.regionSelectPopout
+            popoutClassName: p.regionSelectPopout
         });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'renderOption', (e, t) =>
+            m(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
                     E,
                     {
@@ -92,7 +92,7 @@ class g extends s.PureComponent {
                     e.value.id
                 )
             ),
-            p(this, 'getSelectedRegion', () => {
+            m(this, 'getSelectedRegion', () => {
                 var e;
                 let { regions: t, call: n } = this.props;
                 return n.regionUpdated && null != t && null != n.region
@@ -114,7 +114,7 @@ class g extends s.PureComponent {
                           hidden: !1
                       };
             }),
-            p(this, 'handleChangeVoiceRegion', (e) => {
+            m(this, 'handleChangeVoiceRegion', (e) => {
                 let { value: t } = e,
                     { channelId: n } = this.props.call;
                 c.Z.changeCallRegion(n, t.id);

@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(306680),
     d = n(626135),
     h = n(597),
-    m = n(99325),
-    p = n(866112),
+    p = n(99325),
+    m = n(866112),
     _ = n(273387),
     f = n(683818),
     E = n(102888),
@@ -57,12 +57,12 @@ t.Z = (e) => {
             mostRecentQuery: P,
             searchFetching: j,
             searchResults: O
-        } = (0, a.cj)([p.Z], () => {
-            let { mostRecentQuery: e, fetching: t } = p.Z.getSearchState(v.id);
+        } = (0, a.cj)([m.Z], () => {
+            let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(v.id);
             return {
                 mostRecentQuery: e,
                 searchFetching: t,
-                searchResults: p.Z.getSearchResults(v.id, e)
+                searchResults: m.Z.getSearchResults(v.id, e)
             };
         }),
         [y, D] = s.useState(P),
@@ -75,7 +75,7 @@ t.Z = (e) => {
             { autoTrackExposure: !1 }
         );
     s.useEffect(() => {
-        m.c$(v.id), m.YZ(v.id), k && h.c(v.id), D(P);
+        p.c$(v.id), p.YZ(v.id), k && h.c(v.id), D(P);
     }, [v.id]),
         s.useEffect(() => {
             d.default.track(x.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -102,14 +102,14 @@ t.Z = (e) => {
         B = (e) => {
             0 !== y.trim().length &&
                 e.charCode === x.yXg.ENTER &&
-                (m.Rq(v.id, y),
+                (p.Rq(v.id, y),
                 d.default.track(x.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: v.id,
                     directory_guild_id: N.id
                 }));
         },
         H = () => {
-            D(''), m.So(v.id);
+            D(''), p.So(v.id);
         };
     return U
         ? (0, i.jsx)(I.Z, {
@@ -144,7 +144,7 @@ t.Z = (e) => {
                   handleCreateOrAddGuild: w,
                   currentCategoryId: A,
                   handleSelectCategory: (e) => {
-                      m.Su(v.id, e);
+                      p.Su(v.id, e);
                   },
                   directoryEntries: L,
                   categoryCounts: M,

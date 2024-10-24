@@ -9,8 +9,8 @@ var i,
     u = n(486527);
 let d = Object.freeze({}),
     h = !1,
-    m = {},
     p = {},
+    m = {},
     _ = {},
     f = {},
     E = {};
@@ -20,19 +20,19 @@ class g extends (i = r.ZP.Store) {
     }
     getCurrentCategoryId(e) {
         var t;
-        return null !== (t = p[e]) && void 0 !== t ? t : u.AR.ALL;
+        return null !== (t = m[e]) && void 0 !== t ? t : u.AR.ALL;
     }
     getDirectoryEntries(e, t) {
         var n;
-        return null != t ? (null === (n = _[e]) || void 0 === n ? void 0 : n[t]) : m[e];
+        return null != t ? (null === (n = _[e]) || void 0 === n ? void 0 : n[t]) : p[e];
     }
     getDirectoryEntry(e, t) {
         var n;
-        return null === (n = m[e]) || void 0 === n ? void 0 : n[t];
+        return null === (n = p[e]) || void 0 === n ? void 0 : n[t];
     }
     getDirectoryAllEntriesCount(e) {
         var t;
-        return Object.keys(null !== (t = m[e]) && void 0 !== t ? t : {}).length;
+        return Object.keys(null !== (t = p[e]) && void 0 !== t ? t : {}).length;
     }
     getDirectoryCategoryCounts(e) {
         var t;
@@ -64,7 +64,7 @@ class g extends (i = r.ZP.Store) {
                 let t = (0, c.MQ)(e);
                 (i[t.guildId] = t), null != s[t.primaryCategoryId] ? (s[t.primaryCategoryId][t.guildId] = t) : (s[t.primaryCategoryId] = { [t.guildId]: t });
             }),
-                (m[t] = i),
+                (p[t] = i),
                 (_[t] = s);
         },
         GUILD_DIRECTORY_FETCH_FAILURE: function () {
@@ -74,9 +74,9 @@ class g extends (i = r.ZP.Store) {
             var t, n, i, s, a;
             let { channelId: l, entry: r } = e,
                 o = (0, c.MQ)(r);
-            if (null == o || (null === (t = m[l]) || void 0 === t ? void 0 : t[o.guildId]) != null) return;
-            m[l] = {
-                ...m[l],
+            if (null == o || (null === (t = p[l]) || void 0 === t ? void 0 : t[o.guildId]) != null) return;
+            p[l] = {
+                ...p[l],
                 [o.guildId]: o
             };
             let d = null !== (i = o.primaryCategoryId) && void 0 !== i ? i : u.AR.UNCATEGORIZED;
@@ -100,11 +100,11 @@ class g extends (i = r.ZP.Store) {
         GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
             var t, n;
             let { channelId: i, guildId: s } = e,
-                a = null === (t = m[i]) || void 0 === t ? void 0 : t[s];
+                a = null === (t = p[i]) || void 0 === t ? void 0 : t[s];
             if (null == a) return;
             let l = a.primaryCategoryId,
-                r = Object.assign({}, m[i]);
-            delete r[s], null === (n = E[i]) || void 0 === n || n.delete(s), (E[i] = new Set(E[i])), (m[i] = r);
+                r = Object.assign({}, p[i]);
+            delete r[s], null === (n = E[i]) || void 0 === n || n.delete(s), (E[i] = new Set(E[i])), (p[i] = r);
             let o = Object.assign({}, _[i][l]);
             if (
                 (delete o[s],
@@ -123,11 +123,11 @@ class g extends (i = r.ZP.Store) {
         },
         GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
             var t, n, i, s, a, l, r, o, d;
-            let { channelId: h, entry: p } = e,
-                E = (0, c.MQ)(p),
-                g = null === (t = m[h]) || void 0 === t ? void 0 : t[E.guildId];
-            m[h] = {
-                ...m[h],
+            let { channelId: h, entry: m } = e,
+                E = (0, c.MQ)(m),
+                g = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
+            p[h] = {
+                ...p[h],
                 [E.guildId]: {
                     ...g,
                     ...E
@@ -158,7 +158,7 @@ class g extends (i = r.ZP.Store) {
         },
         GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {
             let { channelId: t, categoryId: n } = e;
-            p[t] = n;
+            m[t] = n;
         },
         GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS: function (e) {
             let { channelId: t, counts: n } = e;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(200651),
@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(152376),
     d = n(981631),
     h = n(689938),
-    m = n(237530);
-function p(e) {
+    p = n(237530);
+function m(e) {
     let { channel: t, narrow: n } = e;
     return (
         s.useEffect(() => {
@@ -25,18 +25,18 @@ function p(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: l()(m.chatHeaderBar, { [m.narrow]: n }),
+            className: l()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
                 (0, i.jsx)(r.Text, {
-                    className: m.chatHeaderBarText,
+                    className: p.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'text-normal',
                     children: h.Z.Messages.OPT_IN_CHANNEL_NOTICE
                 }),
                 (0, i.jsxs)(r.Button, {
                     size: r.Button.Sizes.TINY,
-                    className: m.chatHeaderBarButton,
-                    innerClassName: m.chatHeaderBarButtonInner,
+                    className: p.chatHeaderBarButton,
+                    innerClassName: p.chatHeaderBarButtonInner,
                     color: r.Button.Colors.BRAND,
                     onClick: () => {
                         c.default.track(d.rMx.CHANNEL_BANNER_CTA_CLICKED, {

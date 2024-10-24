@@ -16,8 +16,8 @@ function u(e) {
     let { type: t, style: u, label: d, placeholder: m, minLength: _, maxLength: f, required: p, value: C } = e,
         [h, I] = i.useState(null != C ? C : ''),
         {
-            state: E,
-            executeStateUpdate: x,
+            state: x,
+            executeStateUpdate: E,
             error: v
         } = (0, o.Ee)(
             e,
@@ -30,8 +30,8 @@ function u(e) {
         ),
         T = (0, s.hz)(e.id);
     i.useEffect(() => {
-        (null == E ? void 0 : E.type) === t && I(E.value);
-    }, [t, E]);
+        (null == x ? void 0 : x.type) === t && I(x.value);
+    }, [t, x]);
     let N = {
         name: d,
         value: h,
@@ -41,7 +41,7 @@ function u(e) {
         required: p,
         onChange: (e) => {
             I(e),
-                x({
+                E({
                     type: t,
                     value: e
                 });

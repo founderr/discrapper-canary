@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(317381),
     d = n(917107),
     h = n(716600),
-    m = n(918559),
-    p = n(981631);
+    p = n(918559),
+    m = n(981631);
 let _ = (e, t) => {
     l.Z.wait(() => {
         (0, r.Cz)(e, t);
@@ -23,10 +23,10 @@ let _ = (e, t) => {
 function f(e) {
     let t,
         { embedId: n, className: l, style: r } = e,
-        f = (0, a.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
+        f = (0, a.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
         E = (0, h.Z)(),
         g = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null != E && !(0, d.Z)(E.channelId) && g === m.Ez.PANEL) t = window;
+    if (null != E && !(0, d.Z)(E.channelId) && g === p.Ez.PANEL) t = window;
     else {
         var C;
         t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window;
@@ -46,9 +46,9 @@ function f(e) {
         s.useEffect(
             () => (
                 t.addEventListener('resize', T),
-                c.S.subscribe(p.CkL.REMEASURE_TARGET, T),
+                c.S.subscribe(m.CkL.REMEASURE_TARGET, T),
                 () => {
-                    t.removeEventListener('resize', T), c.S.unsubscribe(p.CkL.REMEASURE_TARGET, T);
+                    t.removeEventListener('resize', T), c.S.unsubscribe(m.CkL.REMEASURE_TARGET, T);
                 }
             ),
             [T, t]

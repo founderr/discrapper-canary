@@ -43,7 +43,7 @@ let G = n.memo(function () {
                 })
         });
     }),
-    M = {
+    R = {
         [c.gq.UNSPECIFIED]: {
             type: c.gq.UNSPECIFIED,
             getJoinTypeLabel: () => O.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN,
@@ -127,7 +127,7 @@ let G = n.memo(function () {
             hasTooltip: !1
         }
     };
-function R(e) {
+function M(e) {
     var _;
     let { guildId: E, inviterUser: t, joinSourceType: I, className: o, onClickInviter: i } = e,
         N = (0, T.e7)([A.ZP], () => (null == t ? null : A.ZP.getMember(E, t.id)), [t, E]),
@@ -172,7 +172,7 @@ function g(e) {
         ? (0, s.jsx)(a.Tooltip, {
               'aria-label': r !== c.gq.BOT ? O.Z.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : O.Z.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP,
               allowOverflow: !0,
-              text: (0, s.jsx)(R, {
+              text: (0, s.jsx)(M, {
                   guildId: n,
                   inviterUser: t,
                   joinSourceType: r
@@ -197,7 +197,7 @@ function C(e) {
 }
 function f(e) {
     let { sourceInviteCode: _, joinSourceType: E, integrationType: t, showInviterAsFooter: T, guildId: I, inviterUser: l, onClickInviter: o, ...A } = e,
-        i = null != E ? M[E] : null,
+        i = null != E ? R[E] : null,
         N = E === c.gq.INTEGRATION && null != t,
         D = n.useCallback(
             (e) => {
@@ -263,7 +263,7 @@ function f(e) {
                         ]
                     }),
                     T &&
-                        (0, s.jsx)(R, {
+                        (0, s.jsx)(M, {
                             guildId: I,
                             inviterUser: l,
                             joinSourceType: E,
@@ -287,8 +287,8 @@ _.ZP = n.memo(function (e) {
     }, [r, D]);
     let u = (0, T.e7)([i.Z], () => i.Z.hideInstantInvites, []);
     if (null == A) return (0, s.jsx)(G, {});
-    let { sourceInviteCode: O, joinSourceType: U, integrationType: R } = A,
-        C = null != U ? M[U] : null,
+    let { sourceInviteCode: O, joinSourceType: U, integrationType: M } = A,
+        C = null != U ? R[U] : null,
         p = null !== (E = null == C ? void 0 : C.hasTooltip) && void 0 !== E && E;
     return (U === c.gq.INVITE || U === c.gq.VANITY_URL || (U === c.gq.MANUAL_MEMBER_VERIFICATION && null != O)) && u
         ? (0, s.jsx)(d, {})
@@ -301,7 +301,7 @@ _.ZP = n.memo(function (e) {
                   (0, s.jsx)(f, {
                       sourceInviteCode: O,
                       joinSourceType: U,
-                      integrationType: R,
+                      integrationType: M,
                       showInviterAsFooter: a,
                       inviterUser: null != L ? L : null,
                       guildId: r,

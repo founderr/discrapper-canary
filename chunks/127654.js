@@ -19,8 +19,8 @@ var i = n(475179),
     u = n(117530),
     d = n(594174),
     h = n(626135),
-    m = n(403182),
-    p = n(74538),
+    p = n(403182),
+    m = n(74538),
     _ = n(979956),
     f = n(981631),
     E = n(959517),
@@ -29,7 +29,7 @@ var i = n(475179),
 function I(e, t) {
     let n = d.default.getCurrentUser(),
         i = e.getGuildId(),
-        s = m.dg(i),
+        s = p.dg(i),
         a = [],
         r = 0,
         c = 0,
@@ -50,18 +50,18 @@ function I(e, t) {
             (0, l.openUploadError)({
                 title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
                 help: (0, _.BK)(n, i),
-                showPremiumUpsell: !(0, p.M5)(n, g.p9.TIER_2),
+                showPremiumUpsell: !(0, m.M5)(n, g.p9.TIER_2),
                 fileSize: c
             });
         return;
     }
     (0, l.openUploadError)({
         title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-        help: C.Z.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({ maxSize: m.Ng(m.OC()) })
+        help: C.Z.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({ maxSize: p.Ng(p.OC()) })
     });
 }
 function T(e, t, n) {
-    let { filesMetadata: o, requireConfirm: d = !0, showLargeMessageDialog: m = !1, isThumbnail: p = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    let { filesMetadata: o, requireConfirm: d = !0, showLargeMessageDialog: p = !1, isThumbnail: m = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
     if (null != o && o.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
     let E = t.getGuildId();
@@ -84,13 +84,13 @@ function T(e, t, n) {
         let i = Array.from(e).map((e, t) => ({
             file: e,
             platform: r.ow.WEB,
-            isThumbnail: p,
+            isThumbnail: m,
             ...(null == o ? void 0 : o[t])
         }));
         s.Z.addFiles({
             files: i,
             channelId: t.id,
-            showLargeMessageDialog: m,
+            showLargeMessageDialog: p,
             draftType: n
         });
     } else
@@ -98,7 +98,7 @@ function T(e, t, n) {
             channelId: t.id,
             files: e,
             draftType: n,
-            isThumbnail: p,
+            isThumbnail: m,
             filesMetadata: o
         });
 }

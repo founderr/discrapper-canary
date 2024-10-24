@@ -9,8 +9,8 @@ var i,
     u = n(569545),
     d = n(314897),
     h = n(19780),
-    m = n(959457),
-    p = n(630759),
+    p = n(959457),
+    m = n(630759),
     _ = n(729303),
     f = n(651941),
     E = n(981631);
@@ -19,7 +19,7 @@ let g = new Map(),
     I = !1,
     T = null;
 function x() {
-    return m.Z.getAllActiveStreamKeys().reduce((e, t) => {
+    return p.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
             i = !0 === g.get(n),
             s = C.get(t) !== i;
@@ -47,7 +47,7 @@ function v(e) {
             if (null == t) return !1;
             let n = new Uint8Array(t),
                 i = f.Z.isKeyVerified(e, n) || _.Z.isKeyVerified(e, n),
-                s = (0, p.UB)(e, [h.Z, m.Z]),
+                s = (0, m.UB)(e, [h.Z, p.Z]),
                 a = i && !s,
                 l = a !== g.get(e);
             return g.set(e, a), l;
@@ -61,7 +61,7 @@ function N() {
 }
 class A extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, h.Z, m.Z);
+        this.waitFor(_.Z, f.Z, h.Z, p.Z);
     }
     isCallVerified() {
         return I;

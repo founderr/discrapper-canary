@@ -9,8 +9,8 @@ var s,
     u = n(442837),
     d = n(570140),
     h = n(279779),
-    m = n(353926),
-    p = n(428598),
+    p = n(353926),
+    m = n(428598),
     _ = n(131704),
     f = n(624138),
     E = n(51144),
@@ -95,8 +95,8 @@ function O() {
 function y(e, t) {
     if (C.Z.hasConsented(S.pjP.PERSONALIZATION)) {
         var n, i, s, a;
-        let l = null !== (s = null === (n = p.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== s ? s : 0,
-            r = null !== (a = null === (i = p.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
+        let l = null !== (s = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== s ? s : 0,
+            r = null !== (a = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
         if (l !== r) return r - l;
     }
     return (0, f._I)(E.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, f._I)(E.ZP.getName(t.user).toLocaleLowerCase()));
@@ -128,7 +128,7 @@ function B() {
 }
 class H extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, g.Z, T.Z, m.Z, C.Z), this.syncWith([x.default, g.Z], j), this.syncWith([T.Z], O);
+        this.waitFor(x.default, g.Z, T.Z, p.Z, C.Z), this.syncWith([x.default, g.Z], j), this.syncWith([T.Z], O);
     }
     getResults() {
         return Z;

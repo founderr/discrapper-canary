@@ -145,7 +145,7 @@ function v(e) {
                                           color: i.tokens.colors.WHITE,
                                           className: E.videoQuestPlayIcon
                                       }),
-                                      (0, o.jsx)('span', { children: h.Z.Messages.QUESTS_WATCH_AGAIN })
+                                      (0, o.jsx)('span', { children: h.Z.Messages.QUESTS_VIDEO_WATCH_AGAIN })
                                   ]
                               })
                           }),

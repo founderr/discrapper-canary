@@ -28,14 +28,14 @@ function h(e, t, n) {
     );
 }
 ((a = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (a.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (a.USER_ACTIVITY = 'USER_ACTIVITY'), (a.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (a.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((l = s || (s = {})).START = 'START'), (l.END = 'END'), (l.TIME = 'TIME');
-let m = (e) => (t, n) =>
+let p = (e) => (t, n) =>
         null == n
             ? ''
             : e().format({
                   time: t,
                   ...n
               }),
-    p = {
+    m = {
         ACTIVITY_FEED: {
             START: {
                 [c.J6.SECONDS]: () => d.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -55,10 +55,10 @@ let m = (e) => (t, n) =>
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [c.J6.SECONDS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-                [c.J6.MINUTES]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-                [c.J6.HOURS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-                [c.J6.DAYS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+                [c.J6.SECONDS]: p(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+                [c.J6.MINUTES]: p(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+                [c.J6.HOURS]: p(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+                [c.J6.DAYS]: p(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
             },
             END: {
                 [c.J6.SECONDS]: (e) => d.Z.Messages.DURATION_SECONDS_AGO.format({ seconds: e }),
@@ -129,7 +129,7 @@ function _(e) {
             getTimeUnit(e, t, n) {
                 let i = (0, c.jU)(e, (e) =>
                     (function (e, t, n) {
-                        let i = p[n];
+                        let i = m[n];
                         if (null != i) {
                             let n = i[t];
                             if (null != n) return null != n[e];
@@ -153,7 +153,7 @@ function _(e) {
                     l = this.getType();
                 if (null == l) return null;
                 let o = this.getTimeUnit(a, t, l),
-                    u = p[t][l];
+                    u = m[t][l];
                 if (null == u) return null;
                 let d = u[o],
                     h = Math.floor((0, c.A3)(a, o));

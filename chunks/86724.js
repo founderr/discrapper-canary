@@ -118,9 +118,9 @@ function C(e, t, n, d) {
                                                 }),
                                                 E = '',
                                                 f = _.toLocaleLowerCase(),
-                                                h = ''.concat(N.GI).concat(c.displayName).toLocaleLowerCase(),
-                                                I = ''.concat(N.GI).concat(c.untranslatedName).toLocaleLowerCase();
-                                            f.startsWith(h) && f.length > h.length ? (E = _.substring(h.length).trim()) : f.startsWith(I) && f.length > I.length && (E = _.substring(I.length).trim());
+                                                h = ''.concat(N.GI).concat(c.displayName, ' ').toLocaleLowerCase(),
+                                                I = ''.concat(N.GI).concat(c.untranslatedName, ' ').toLocaleLowerCase();
+                                            f.startsWith(h) ? (E = _.substring(h.length).trim()) : f.startsWith(I) && (E = _.substring(I.length).trim());
                                             let A = [],
                                                 R = null,
                                                 v = null;

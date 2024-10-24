@@ -19,23 +19,23 @@ let A = '',
     P = '',
     U = '',
     d = '',
-    f = !1,
-    O = null,
+    O = !1,
+    f = null,
     L = null,
     p = null,
     G = null;
 function Z() {
-    (T = null), (A = ''), (l = null), (a = ''), (I = !1), (c = null), (R = 'US'), (C = ''), (N = ''), (s = ''), (M = ''), (P = ''), (U = ''), (d = ''), (f = !1), (O = null), (L = null), (p = null), (G = null);
+    (T = null), (A = ''), (l = null), (a = ''), (I = !1), (c = null), (R = 'US'), (C = ''), (N = ''), (s = ''), (M = ''), (P = ''), (U = ''), (d = ''), (O = !1), (f = null), (L = null), (p = null), (G = null);
 }
 function D(e) {
     (C = e.name), (R = e.country), (s = e.line1), (M = e.line2), (P = e.city), (U = e.postalCode), (d = e.state), (N = e.email);
 }
 function B() {
-    O = null;
+    f = null;
 }
 function F(e) {
     let { error: t } = e;
-    O = t;
+    f = t;
 }
 class K extends (i = S.ZP.Store) {
     get stripePaymentMethod() {
@@ -81,10 +81,10 @@ class K extends (i = S.ZP.Store) {
         };
     }
     get isBillingAddressInfoValid() {
-        return f;
+        return O;
     }
     get error() {
-        return O;
+        return f;
     }
 }
 (u = 'NewPaymentSourceStore'),
@@ -113,14 +113,14 @@ class K extends (i = S.ZP.Store) {
         },
         NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function (e) {
             let { info: t, isValid: n } = e;
-            null != t.name && '' !== t.name && (C = t.name), (R = t.country), (C = t.name), (s = t.line1), (M = t.line2), (P = t.city), (U = t.postalCode), (d = t.state), (N = t.email), (f = n);
+            null != t.name && '' !== t.name && (C = t.name), (R = t.country), (C = t.name), (s = t.line1), (M = t.line2), (P = t.city), (U = t.postalCode), (d = t.state), (N = t.email), (O = n);
         },
         BRAINTREE_TOKENIZE_PAYPAL_START: function () {
             (A = ''), (l = null);
         },
         BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: function (e) {
             let { email: t, nonce: n, billingAddress: E } = e;
-            (A = t), (l = n), D(E), (f = R.length > 0);
+            (A = t), (l = n), D(E), (O = R.length > 0);
         },
         BRAINTREE_TOKENIZE_VENMO_START: function () {
             (a = ''), (l = null);

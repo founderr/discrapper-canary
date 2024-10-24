@@ -3,45 +3,45 @@ t.d(n, {
         return c;
     }
 });
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var r = t(120356),
-    i = t.n(r),
-    s = t(481060),
-    o = t(422559),
+var a = t(120356),
+    r = t.n(a),
+    o = t(481060),
+    s = t(422559),
     l = t(594045);
 function c(e) {
-    let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: r, disabledPermissionsHeader: c, className: d } = e;
-    return (0, a.jsxs)('div', {
-        className: i()(l.list, d),
+    let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
+    return (0, i.jsxs)('div', {
+        className: r()(l.list, d),
         children: [
             null != n && n.length > 0
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != r
-                              ? (0, a.jsx)(s.Heading, {
+                          null != a
+                              ? (0, i.jsx)(o.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     className: l.header,
-                                    children: r
+                                    children: a
                                 })
                               : null,
-                          (0, a.jsx)('div', {
+                          (0, i.jsx)('div', {
                               className: l.container,
                               children: n.map((e) =>
-                                  (0, a.jsxs)(
+                                  (0, i.jsxs)(
                                       'div',
                                       {
                                           className: l.permission,
                                           children: [
-                                              (0, a.jsx)(s.CheckmarkLargeIcon, {
+                                              (0, i.jsx)(o.CheckmarkLargeIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: l.check
                                               }),
-                                              (0, a.jsx)(s.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, o.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },
@@ -53,32 +53,32 @@ function c(e) {
                   })
                 : null,
             null != t && t.length > 0
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, a.jsx)(s.Heading, {
+                              ? (0, i.jsx)(o.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     className: l.header,
                                     children: c
                                 })
                               : null,
-                          (0, a.jsx)('div', {
+                          (0, i.jsx)('div', {
                               className: l.container,
                               children: t.map((e) =>
-                                  (0, a.jsxs)(
+                                  (0, i.jsxs)(
                                       'div',
                                       {
                                           className: l.permission,
                                           children: [
-                                              (0, a.jsx)(s.XSmallIcon, {
+                                              (0, i.jsx)(o.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: l.cross
                                               }),
-                                              (0, a.jsx)(s.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, o.wt)(e)
+                                                  children: (0, s.wt)(e)
                                               })
                                           ]
                                       },

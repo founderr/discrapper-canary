@@ -35,7 +35,7 @@ function h(e) {
         };
     switch (n.content_type) {
         case o.s.TOP_ARTIST:
-            return (0, l.jsx)(x, {
+            return (0, l.jsx)(E, {
                 entry: n,
                 ...i
             });
@@ -60,7 +60,7 @@ function h(e) {
                 ...i
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(E, {
+            return (0, l.jsx)(x, {
                 entry: n,
                 ...i
             });
@@ -75,7 +75,7 @@ function I(e) {
         children: (0, l.jsx)(h, { ...t })
     });
 }
-function E(e) {
+function x(e) {
     let { entry: n, children: t, ...i } = e,
         a = (0, c.Z)({
             entry: n,
@@ -89,7 +89,7 @@ function E(e) {
         children: t
     });
 }
-function x(e) {
+function E(e) {
     let { entry: n, children: t, ...i } = e,
         a = (0, _.Z)({
             entry: n,

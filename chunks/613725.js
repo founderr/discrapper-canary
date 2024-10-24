@@ -14,8 +14,8 @@ var s = n(782690),
     u = n(592125),
     d = n(430824),
     h = n(594174),
-    m = n(768581),
-    p = n(522291);
+    p = n(768581),
+    m = n(522291);
 function _() {
     let { guildId: e, channelId: t } = (0, c.Z)((e) => {
             let { guildId: t, channelId: n } = e;
@@ -28,12 +28,12 @@ function _() {
         _ = (0, a.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
         f = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         E = null != _ ? (0, r.x)(_) : null,
-        g = null != f ? f.getAvatarURL(e, 80) : m.pK['0'],
+        g = null != f ? f.getAvatarURL(e, 80) : p.pK['0'],
         C = (0, i.jsx)(l.Avatar, {
             src: g,
             'aria-hidden': !0,
             size: l.AvatarSizes.SIZE_80,
-            className: p.avatarSizeOverride
+            className: m.avatarSizeOverride
         }),
         I = null;
     return (
@@ -45,22 +45,22 @@ function _() {
                         'aria-hidden': !0,
                         src: E,
                         size: l.AvatarSizes.SIZE_80,
-                        className: p.avatarSizeOverride
+                        className: m.avatarSizeOverride
                     })
                   : C),
         (0, i.jsxs)('div', {
-            className: p.container,
+            className: m.container,
             children: [
                 (0, i.jsx)('div', {
-                    className: p.personAvatar,
+                    className: m.personAvatar,
                     children: C
                 }),
                 (0, i.jsx)('div', {
-                    className: p.guildAvatar,
+                    className: m.guildAvatar,
                     children: I
                 }),
                 (0, i.jsx)('svg', {
-                    className: p.illustration,
+                    className: m.illustration,
                     xmlns: 'http://www.w3.org/2000/svg',
                     width: '156',
                     height: '70',

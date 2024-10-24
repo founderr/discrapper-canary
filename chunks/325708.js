@@ -17,14 +17,14 @@ var i,
     u = n(692547),
     d = n(153867),
     h = n(347469),
-    m = n(740492),
-    p = n(36645),
+    p = n(740492),
+    m = n(36645),
     _ = n(866274);
 ((s = i || (i = {}))[(s.PostSidebar = 0)] = 'PostSidebar'), (s[(s.ThreadSidebar = 1)] = 'ThreadSidebar'), (s[(s.CallChatSidebar = 2)] = 'CallChatSidebar'), (s[(s.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (s[(s.HomeSidebar = 4)] = 'HomeSidebar');
 function f(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s } = e,
         l = (0, h.Z)({
-            minDimension: p.C,
+            minDimension: m.C,
             maxDimension: s,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -53,15 +53,15 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [g, C] = l.useState(m.ZP[E]),
+        [g, C] = l.useState(p.ZP[E]),
         I = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [E]: e });
             },
             [E]
         ),
-        T = (0, p.W)({ maxWidth: n }),
-        x = (0, c.clamp)(g, p.C, n),
+        T = (0, m.W)({ maxWidth: n }),
+        x = (0, c.clamp)(g, m.C, n),
         S = T ? x : x + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(x, T);

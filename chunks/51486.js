@@ -9,14 +9,14 @@ var i = n(200651),
     u = n(38618),
     d = n(914010),
     h = n(921944);
-function m(e) {
+function p(e) {
     return 'dismissible_content_'.concat(h.R.GUILD_TAKEOVER_MODAL, '-').concat(e);
 }
 t.Z = s.memo(function () {
     return (
         !(function () {
             let e = (0, a.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
-                [t, p] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
+                [t, m] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
                 _ = (0, r.f9)(),
                 f = s.useRef(null);
             s.useEffect(() => {
@@ -29,7 +29,7 @@ t.Z = s.memo(function () {
                         let { dismissibleContent: t, markAsDismissed: s } = e,
                             a = {
                                 onCloseCallback: (e) => s(null != e ? e : h.L.UNKNOWN),
-                                modalKey: m(t)
+                                modalKey: p(t)
                             },
                             r = d.Z.getGuildId();
                         if (t === l.z.SERVER_SHOP_UPSELL)
@@ -45,13 +45,13 @@ t.Z = s.memo(function () {
                                 }, a);
                     })({
                         dismissibleContent: t,
-                        markAsDismissed: p
+                        markAsDismissed: m
                     }),
                         (f.current = t);
-            }, [t, _, p]),
+            }, [t, _, m]),
                 s.useEffect(
                     () => () => {
-                        null != t && (0, r.Mr)(m(t));
+                        null != t && (0, r.Mr)(p(t));
                     },
                     [t]
                 );

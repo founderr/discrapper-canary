@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(210887),
     d = n(914010),
     h = n(981631),
-    m = n(689938),
-    p = n(294826);
+    p = n(689938),
+    m = n(294826);
 function _(e) {
     let t,
         { channelId: _ } = e;
@@ -26,17 +26,17 @@ function _(e) {
     return (
         (t = f
             ? (0, i.jsx)(r.EmptyStateText, {
-                  note: m.Z.Messages.FAVORITES_EMPTY_BODY,
-                  children: m.Z.Messages.FAVORITES_EMPTY_TITLE
+                  note: p.Z.Messages.FAVORITES_EMPTY_BODY,
+                  children: p.Z.Messages.FAVORITES_EMPTY_TITLE
               })
             : null != _
               ? (0, i.jsx)(r.Spinner, { type: r.Spinner.Type.SPINNING_CIRCLE })
               : (0, i.jsx)(r.EmptyStateText, {
-                    note: m.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
-                    children: m.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
+                    note: p.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
+                    children: p.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
                 })),
         (0, i.jsxs)('div', {
-            className: p.noChannel,
+            className: m.noChannel,
             children: [
                 a.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(s.Fragment, {}) }),
                 (0, i.jsxs)(r.EmptyState, {

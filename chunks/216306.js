@@ -40,8 +40,8 @@ var s = E(192379),
     U = E(981631),
     G = E(176505),
     d = E(443063),
-    M = E(490897),
-    R = E(689938);
+    R = E(490897),
+    M = E(689938);
 function g(e, _) {
     e.index = _;
 }
@@ -90,7 +90,7 @@ function p(e, _) {
         (0, l.y5)(
             _.map((e) => ({
                 channelId: e,
-                readStateType: M.W.CHANNEL,
+                readStateType: R.W.CHANNEL,
                 messageId: c.ZP.lastMessageId(e)
             }))
         ),
@@ -142,5 +142,5 @@ function m(e) {
 }
 function P(e) {
     var _;
-    return R.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({ timeAgo: T()(O.default.extractTimestamp(null !== (_ = c.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow() });
+    return M.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({ timeAgo: T()(O.default.extractTimestamp(null !== (_ = c.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow() });
 }

@@ -14,8 +14,8 @@ var s = n(442837),
     u = n(719311),
     d = n(249978),
     h = n(172351),
-    m = n(648052),
-    p = n(280885),
+    p = n(648052),
+    m = n(280885),
     _ = n(483424),
     f = n(681837),
     E = n(91433),
@@ -48,7 +48,7 @@ function M(e) {
                 nickname: o.ZP.getName(null, b.id, t),
                 pronouns: null == M ? void 0 : M.pronouns,
                 onOpenProfile: L,
-                tags: (0, i.jsx)(m.Z, {
+                tags: (0, i.jsx)(p.Z, {
                     displayProfile: M,
                     profileType: v.y0.PANEL
                 }),
@@ -88,7 +88,7 @@ function M(e) {
                         (0, i.jsx)(C.Z, {
                             heading: A.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
-                            children: (0, i.jsx)(p.Z, {
+                            children: (0, i.jsx)(m.Z, {
                                 userBio: M.bio,
                                 animateOnHover: !0,
                                 isHovering: R,

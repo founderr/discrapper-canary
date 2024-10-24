@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(2052),
     d = n(40851),
     h = n(607070),
-    m = n(100527),
-    p = n(906732),
+    p = n(100527),
+    m = n(906732),
     _ = n(895924),
     f = n(390322),
     E = n(626135),
@@ -42,8 +42,8 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                 !a && r();
             }, [r, a]);
         let O = (0, d.bp)(),
-            { analyticsLocations: y } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: D } = (0, p.ZP)([...y, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            { analyticsLocations: y } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: D } = (0, m.ZP)([...y, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
             U = O === S.IlC.POPOUT,
             k = (0, u.O)(),
             w = (function (e) {
@@ -76,7 +76,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                 },
                 [Z, n]
             );
-        return (0, i.jsx)(p.Gt, {
+        return (0, i.jsx)(m.Gt, {
             value: y,
             children: (0, i.jsx)(f.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
@@ -134,7 +134,7 @@ let A = 'vc-activities-'.concat((0, r.Z)()),
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(p.Gt, {
+                                (0, i.jsx)(m.Gt, {
                                     value: D,
                                     children: null
                                 }),

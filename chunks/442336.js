@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(621600),
     d = n(665149),
     h = n(110255),
-    m = n(981631),
-    p = n(689938),
+    p = n(981631),
+    m = n(689938),
     _ = n(938565);
 function f(e) {
     let { channel: t } = e,
@@ -25,16 +25,16 @@ function f(e) {
     s.useEffect(() => {
         let e = () => C(!0);
         return (
-            c.S.subscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                c.S.unsubscribe(m.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                c.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
     let I = (e) => {
             e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, u.UE.muted(!f)) : C((e) => !e);
         },
-        T = p.Z.Messages.NOTIFICATION_SETTINGS;
+        T = m.Z.Messages.NOTIFICATION_SETTINGS;
     return (0, i.jsx)(l.Popout, {
         shouldShow: g,
         animation: l.Popout.Animation.NONE,
@@ -47,7 +47,7 @@ function f(e) {
                 ...e,
                 channel: t,
                 navId: 'channel-context',
-                label: p.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
+                label: m.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
             }),
         children: (e, t) => {
             let { isShown: s } = t;
@@ -55,7 +55,7 @@ function f(e) {
                 ...e,
                 onClick: I,
                 tooltip: s ? null : T,
-                icon: f || E !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
+                icon: f || E !== p.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
                 foreground: f && !n ? _.strikethrough : null,
                 'aria-label': T,
                 selected: s

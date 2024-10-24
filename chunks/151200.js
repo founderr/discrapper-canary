@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return x;
     }
 });
 var l = t(200651);
@@ -68,12 +68,12 @@ function I(e) {
         clickableClassName: C.clickable
     });
 }
-function E(e) {
-    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: E, titleClickable: x, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
+function x(e) {
+    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
         g = (0, m.Dt)(),
-        { primaryColor: S, secondaryColor: O } = (0, u.Z)(E);
+        { primaryColor: S, secondaryColor: O } = (0, u.Z)(x);
     return (
-        null != E && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
+        null != x && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
         (0, l.jsx)(r.ThemeProvider, {
             theme: _.BR.DARK,
             children: (e) =>
@@ -89,7 +89,7 @@ function E(e) {
                             clickableClassName: p.clickable,
                             clickable: T,
                             children: (0, l.jsx)(s.f, {
-                                src: E,
+                                src: x,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -105,7 +105,7 @@ function E(e) {
                                 }),
                                 (0, l.jsx)(r.Spacer, { size: 2 }),
                                 (0, l.jsx)(I, {
-                                    clickable: x,
+                                    clickable: E,
                                     className: p.clickableText,
                                     children: (0, l.jsx)(r.Heading, {
                                         id: g,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(200651);
@@ -14,10 +14,10 @@ var s = n(913527),
     u = n(777861),
     d = n(9156),
     h = n(621600),
-    m = n(689938);
-function p(e, t) {
+    p = n(689938);
+function m(e, t) {
     let n = null == e ? void 0 : e.id,
-        { muted: s, muteConfig: p } = (0, l.cj)(
+        { muted: s, muteConfig: m } = (0, l.cj)(
             [d.ZP],
             () => ({
                 muted: null != n ? d.ZP.isMuted(n) : void 0,
@@ -25,19 +25,19 @@ function p(e, t) {
             }),
             [n]
         ),
-        _ = (0, u.U)(p);
+        _ = (0, u.U)(m);
     return null == n
         ? null
         : s
           ? (0, i.jsx)(r.MenuItem, {
                 id: 'unmute-guild',
-                label: m.Z.Messages.UNMUTE_SERVER,
+                label: p.Z.Messages.UNMUTE_SERVER,
                 subtext: _,
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted)
             })
           : (0, i.jsx)(r.MenuItem, {
                 id: 'mute-guild',
-                label: m.Z.Messages.MUTE_SERVER,
+                label: p.Z.Messages.MUTE_SERVER,
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, h.ZB.Muted),
                 children: (0, c.k)().map((e) => {
                     let { value: s, label: l } = e;

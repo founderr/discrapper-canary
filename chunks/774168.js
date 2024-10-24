@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -69,23 +69,23 @@ function h(e) {
         ]
     });
 }
-function m(e) {
+function p(e) {
     var t;
     let { className: n, unreadCount: s, mentionCount: a, isTyping: r, canBadge: o } = e,
         c = null != a && a > 0,
-        m = null !== (t = c ? a : s) && void 0 !== t ? t : 0,
-        p = o && null != s && s > 0;
+        p = null !== (t = c ? a : s) && void 0 !== t ? t : 0,
+        m = o && null != s && s > 0;
     return (0, i.jsxs)('div', {
         className: l()(d.chatIcon, n),
         children: [
             (0, i.jsx)(h, {
-                isBadged: p,
+                isBadged: m,
                 isTyping: r
             }),
-            p &&
+            m &&
                 (0, i.jsx)(u.Z, {
                     hasMentions: c,
-                    truncatedCount: m > 99 ? '99+' : m,
+                    truncatedCount: p > 99 ? '99+' : p,
                     className: d.badge
                 })
         ]

@@ -21,8 +21,8 @@ function s() {
 function M(e) {
     let { error: t } = e,
         { code: n, paymentId: E } = t;
-    if (n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
-    !R && ((R = !0), (C = E), P(E));
+    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
+    !R && ((R = !0), (C = E), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && P(E));
 }
 async function P(e) {
     if (null == e) return;

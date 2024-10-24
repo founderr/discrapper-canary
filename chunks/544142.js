@@ -14,8 +14,8 @@ var s = n(120356),
     u = n(906732),
     d = n(471445),
     h = n(184301),
-    m = n(347475),
-    p = n(271383),
+    p = n(347475),
+    m = n(271383),
     _ = n(594174),
     f = n(51144),
     E = n(967128),
@@ -27,7 +27,7 @@ function T(e) {
     let { userId: d, channel: E } = e,
         { analyticsLocations: g } = (0, u.ZP)(c.Z.USERNAME),
         C = (0, l.e7)([_.default], () => _.default.getUser(d)),
-        T = (0, l.e7)([p.ZP], () => (null != d ? p.ZP.getMember(E.guild_id, d) : null));
+        T = (0, l.e7)([m.ZP], () => (null != d ? m.ZP.getMember(E.guild_id, d) : null));
     function x(e) {
         if (null == C) return null;
         (0, o.jW)(e, async () => {
@@ -57,7 +57,7 @@ function T(e) {
                           channelId: E.id
                       }),
                   renderPopout: (e) =>
-                      (0, i.jsx)(m.Z, {
+                      (0, i.jsx)(p.Z, {
                           userId: C.id,
                           guildId: E.guild_id,
                           channelId: E.id,

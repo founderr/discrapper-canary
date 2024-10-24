@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(963374),
     d = n(735020),
     h = n(786761),
-    m = n(937889),
-    p = n(619753),
+    p = n(937889),
+    m = n(619753),
     _ = n(433355),
     f = n(271383),
     E = n(594174),
@@ -100,7 +100,7 @@ function v(e) {
                             i.isSearchHit
                                 ? i.set(
                                       'customRenderedContent',
-                                      (0, m.ZP)(i, {
+                                      (0, p.ZP)(i, {
                                           postProcessor: t,
                                           allowHeading: !0,
                                           allowList: !0
@@ -153,7 +153,7 @@ function v(e) {
                       className: S.innerContainer,
                       ref: M,
                       onScroll: U,
-                      children: (0, i.jsx)(p.Z, {
+                      children: (0, i.jsx)(m.Z, {
                           searchResults: B,
                           search: H,
                           searchId: a,

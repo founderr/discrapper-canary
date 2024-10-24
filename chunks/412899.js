@@ -29,8 +29,8 @@ var s = E(200651),
     U = E(134433),
     G = E(600164),
     d = E(91218),
-    M = E(313201),
-    R = E(518738),
+    R = E(313201),
+    M = E(518738),
     g = E(434404),
     C = E(271383),
     f = E(430824),
@@ -44,7 +44,7 @@ var s = E(200651),
 let H = () => Promise.resolve();
 function F(e) {
     let { userRoles: _, position: E, ...n } = e,
-        t = (0, M.Dt)();
+        t = (0, R.Dt)();
     return (0, s.jsxs)(D.Dialog, {
         className: r()(b.overflowRolesPopout, {
             [b.popoutBottom]: 'bottom' === E,
@@ -83,9 +83,9 @@ function F(e) {
 let B = n.forwardRef(function (e, _) {
     var t, T, a;
     let I;
-    let { canRemove: o, className: S, role: u, onRemove: O, guildId: G, disableBorderColor: M, onMouseDown: g } = e,
+    let { canRemove: o, className: S, role: u, onRemove: O, guildId: G, disableBorderColor: R, onMouseDown: g } = e,
         { tabIndex: C, ...f } = (0, l.JA)(u.id),
-        p = (0, R.p9)({
+        p = (0, M.p9)({
             roleId: u.id,
             size: 16,
             guildId: G
@@ -130,10 +130,10 @@ let B = n.forwardRef(function (e, _) {
     let V = n.useMemo(() => {
         var _;
         return {
-            borderColor: M ? void 0 : F,
+            borderColor: R ? void 0 : F,
             ...(null !== (_ = e.style) && void 0 !== _ ? _ : {})
         };
-    }, [F, M, e.style]);
+    }, [F, R, e.style]);
     return (0, s.jsx)(D.FocusRing, {
         children: (0, s.jsxs)('div', {
             ref: _,
@@ -265,10 +265,10 @@ function j(e) {
             },
             [T, t.id, E.id]
         ),
-        [d, M] = n.useState(null),
-        R = (0, i.e7)([f.Z], () => f.Z.getRoles(t.id)),
+        [d, R] = n.useState(null),
+        M = (0, i.e7)([f.Z], () => f.Z.getRoles(t.id)),
         C = n.useMemo(() => {
-            let e = Object.values(R)
+            let e = Object.values(M)
                 .filter((e) => T.includes(e.id))
                 .sort((e, _) => {
                     var E, s;
@@ -277,7 +277,7 @@ function j(e) {
                     return n && !t ? 1 : !n && t ? -1 : 0;
                 });
             return null != d ? e.slice(0, d) : e;
-        }, [R, d, T]),
+        }, [M, d, T]),
         P = T.length - C.length;
     n.useLayoutEffect(() => {
         if (A) return;
@@ -293,7 +293,7 @@ function j(e) {
                 e++;
             }
         }
-        M((_) => (e < C.length ? e : _));
+        R((_) => (e < C.length ? e : _));
     }, [A, N, C]);
     let F = h.default.getCurrentUser();
     a()(null != F, 'MemberRolesList: currentUser cannot be undefined');

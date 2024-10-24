@@ -8,8 +8,8 @@ var i = n(200651),
     u = n(481060),
     d = n(367907),
     h = n(499254),
-    m = n(424602),
-    p = n(541099),
+    p = n(424602),
+    m = n(541099),
     _ = n(827498),
     f = n(569211),
     E = n(663924),
@@ -28,7 +28,7 @@ var i = n(200651),
     R = n(795361);
 let L = s.forwardRef(function (e, t) {
     let { type: n, animateRef: a } = e,
-        m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
+        p = (0, r.e7)([m.Z], () => m.Z.shouldShowPopup() && m.Z.activeViewType() === n),
         { Component: f, events: E, play: g } = (0, c.w)();
     s.useImperativeHandle(
         a,
@@ -40,8 +40,8 @@ let L = s.forwardRef(function (e, t) {
         [E]
     );
     let C = s.useCallback(() => {
-        (0, d.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.yT(_.ti.DISMISSED) : ((0, T.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: Z.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
-    }, [m, n, g]);
+        (0, d.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(_.ti.DISMISSED) : ((0, T.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: Z.L.TAKE_ACTION }), h.__(_._b.TEXT, n)), g();
+    }, [p, n, g]);
     return (0, i.jsx)('div', {
         className: l()(b.buttonContainer, A.t4),
         ref: t,
@@ -49,7 +49,7 @@ let L = s.forwardRef(function (e, t) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.NONE,
             tabIndex: 0,
-            className: l()(b.button, { [b.buttonActive]: m }),
+            className: l()(b.button, { [b.buttonActive]: p }),
             onClick: C,
             'aria-label': M.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
             focusProps: {
@@ -126,10 +126,10 @@ t.Z = s.memo(function (e) {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(t.id) : null };
         }),
-        d = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
+        d = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
         h = (0, v.Z)({ type: n }),
         _ = (0, I.h9)(t.id, 'ChannelAppLauncher'),
-        f = (0, r.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id));
+        f = (0, r.e7)([m.Z], () => m.Z.appDMChannelsWithFailedLoads().has(t.id));
     return d && null == u && c
         ? (0, i.jsxs)('div', {
               className: b.channelAppLauncher,

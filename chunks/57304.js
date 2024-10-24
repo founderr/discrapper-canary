@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(306680),
     d = n(594174),
     h = n(585483),
-    m = n(665149),
-    p = n(981631),
+    p = n(665149),
+    m = n(981631),
     _ = n(689938);
 t.Z = function (e) {
     let { channel: t } = e,
@@ -29,14 +29,14 @@ t.Z = function (e) {
             !n && E((e) => !e);
         }, [n]);
     function T(e) {
-        !(null == e ? void 0 : e.shiftKey) && C.dispatch(p.CkL.POPOUT_CLOSE);
+        !(null == e ? void 0 : e.shiftKey) && C.dispatch(m.CkL.POPOUT_CLOSE);
     }
     return (
         s.useEffect(
             () => (
-                h.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, I),
+                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, I),
                 () => {
-                    h.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, I);
+                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, I);
                 }
             ),
             [I]
@@ -58,7 +58,7 @@ t.Z = function (e) {
             },
             children: (e, t) => {
                 let { isShown: s } = t;
-                return (0, i.jsx)(m.JO, {
+                return (0, i.jsx)(p.JO, {
                     ...e,
                     onClick: I,
                     tooltip: s ? null : _.Z.Messages.PINNED_MESSAGES,

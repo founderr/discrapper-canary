@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(607744),
     d = n(819640),
     h = n(496675),
-    m = n(699516),
-    p = n(594174),
+    p = n(699516),
+    m = n(594174),
     _ = n(585483),
     f = n(127654),
     E = n(205822),
@@ -25,13 +25,13 @@ t.Z = function (e) {
         Z = null != (0, a.e7)([l.Z], () => l.Z.getActiveCommand(T.id)),
         M = T.getGuildId(),
         b = x === o.d.FirstThreadMessage,
-        R = (0, a.e7)([p.default], () => {
+        R = (0, a.e7)([m.default], () => {
             var e;
-            return !0 == !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
+            return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
         L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
         P = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
-        j = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : S ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
+        j = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : S ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, m.default, p.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return Z || !P
         ? null
         : (0, i.jsx)(E.Z, {

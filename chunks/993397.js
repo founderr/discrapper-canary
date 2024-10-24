@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(511010),
     d = n(834129),
     h = n(981631),
-    m = n(689938),
-    p = n(590008),
+    p = n(689938),
+    m = n(590008),
     _ = n(916315);
 function f(e) {
     let { expanded: t, onClick: n, count: s, compact: a, collapsedReason: l } = e;
@@ -19,14 +19,14 @@ function f(e) {
         role: 'group',
         childrenMessageContent: (0, i.jsx)(d.Z, {
             compact: a,
-            className: p.blockedSystemMessage,
+            className: m.blockedSystemMessage,
             iconNode: (0, i.jsx)(r.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: p.blockedIcon
+                className: m.blockedIcon
             }),
             children: (0, i.jsxs)('div', {
-                className: p.blockedMessageText,
+                className: m.blockedMessageText,
                 children: [
                     l.format({ count: s }),
                     ' \u2014',
@@ -34,8 +34,8 @@ function f(e) {
                     (0, i.jsx)(r.Clickable, {
                         tag: 'span',
                         onClick: n,
-                        className: p.blockedAction,
-                        children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: s }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: s })
+                        className: m.blockedAction,
+                        children: t ? p.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: s }) : p.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: s })
                     })
                 ]
             })
@@ -45,14 +45,14 @@ function f(e) {
 t.Z = s.memo(function (e) {
     var t;
     let { messages: n, channel: a, compact: r = !1, unreadId: o, collapsedReason: d } = e,
-        { hasJumpTarget: m = !1 } = n,
-        [E, g] = s.useState(m),
+        { hasJumpTarget: p = !1 } = n,
+        [E, g] = s.useState(p),
         C = s.useCallback(() => g((e) => !e), []),
         I = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
         className: l()({
             [_.groupStart]: !0,
-            [p.expanded]: E
+            [m.expanded]: E
         }),
         children: [
             n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER)
@@ -96,7 +96,7 @@ t.Z = s.memo(function (e) {
                           return (0, i.jsx)(
                               t,
                               {
-                                  className: p.__invalid_blocked,
+                                  className: m.__invalid_blocked,
                                   compact: r,
                                   channel: a,
                                   message: e.content,

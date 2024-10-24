@@ -11,7 +11,7 @@ var s = n(557711),
     r = n(981631),
     o = n(968333);
 function c(e) {
-    let { activity: t, user: n, guildId: c, channelId: u, source: d, look: h, color: m, onAction: p } = e;
+    let { activity: t, user: n, guildId: c, channelId: u, source: d, look: h, color: p, onAction: m } = e;
     return null != t && (0, a.Z)(t, r.xjy.SYNC) && (0, l.Z)(t)
         ? (0, i.jsx)(
               s.Z,
@@ -19,13 +19,13 @@ function c(e) {
                   className: o.button,
                   size: o.buttonSize,
                   look: h,
-                  color: m,
+                  color: p,
                   user: n,
                   activity: t,
                   guildId: null != c ? c : void 0,
                   channelId: u,
                   source: d,
-                  onAction: p
+                  onAction: m
               },
               'sync'
           )

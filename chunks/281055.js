@@ -1,6 +1,6 @@
 n.d(t, {
     Yy: function () {
-        return l;
+        return i;
     },
     xU: function () {
         return c;
@@ -11,8 +11,8 @@ var r = n(192379),
     o = n(442837),
     a = n(434650),
     s = n(110924),
-    i = n(451478);
-function l() {
+    l = n(451478);
+function i() {
     let [e, t] = r.useState(!1),
         n = e !== (0, s.Z)(e);
     return {
@@ -22,7 +22,7 @@ function l() {
     };
 }
 function c() {
-    let e = (0, o.e7)([i.Z], () => i.Z.isFocused()),
+    let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
         t = e !== (0, s.Z)(e);
     return {
         focused: e,

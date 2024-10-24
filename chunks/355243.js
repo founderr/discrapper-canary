@@ -8,8 +8,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    i = n(481060),
-    l = n(393903),
+    l = n(481060),
+    i = n(393903),
     c = n(604162),
     u = n(420212),
     d = n(504446);
@@ -28,7 +28,7 @@ function f(e) {
     o.useEffect(() => {
         if (null != g) null == E ? L(null) : L(p(E, _, g));
     }, [g, E, _]);
-    let b = (0, l.y)(() => {
+    let b = (0, i.y)(() => {
             if (null != b.current) x(b.current.getBoundingClientRect());
         }),
         B = (e) => {
@@ -42,15 +42,15 @@ function f(e) {
             [T, S]
         ),
         k = null != N && null != g ? m(N, g, _) : 0,
-        y = (0, c.yv)(k),
-        R = null != g ? g.right - p((t / 100) * _, _, g) : null,
+        R = (0, c.yv)(k),
+        y = null != g ? g.right - p((t / 100) * _, _, g) : null,
         D = null != N && null != g ? g.right - N : null,
         A = null != I && null != g ? g.right - I : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: b,
         children: [
-            (0, r.jsxs)(i.Clickable, {
+            (0, r.jsxs)(l.Clickable, {
                 className: s()(d.hitboxArea, { [d.interactionEnabled]: a }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
@@ -99,27 +99,27 @@ function f(e) {
                                 opacity: null != A ? 1 : 0
                             }
                         }),
-                    (0, r.jsx)(i.Progress, {
+                    (0, r.jsx)(l.Progress, {
                         className: d.progress,
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != f ? f : void 0,
-                        size: O ? i.Progress.Sizes.XSMALL : i.Progress.Sizes.XXSMALL,
+                        size: O ? l.Progress.Sizes.XSMALL : l.Progress.Sizes.XXSMALL,
                         animate: n
                     }),
                     O &&
-                        null != y &&
-                        (0, r.jsx)(i.Text, {
+                        null != R &&
+                        (0, r.jsx)(l.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
                             style: { right: null != D ? ''.concat(D - 10, 'px') : 'auto' },
-                            children: y
+                            children: R
                         }),
                     O &&
                         a &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: null != R ? ''.concat(R - 6, 'px') : 'auto' }
+                            style: { right: null != y ? ''.concat(y - 6, 'px') : 'auto' }
                         })
                 ]
             }),

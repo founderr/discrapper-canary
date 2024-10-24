@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(872810),
     d = n(763520),
     h = n(194082),
-    m = n(710845),
-    p = n(590293),
+    p = n(710845),
+    m = n(590293),
     _ = n(863908),
     f = n(871118),
     E = n(517525),
@@ -43,7 +43,7 @@ var i = n(200651),
     U = n(65154),
     k = n(689938),
     w = n(810190);
-let B = new m.Z('StreamTile');
+let B = new p.Z('StreamTile');
 function H(e) {
     let { participant: t, selected: n, focused: s, idle: a, width: l, premiumIndicator: o } = e,
         c = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
@@ -65,10 +65,10 @@ function H(e) {
     });
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: m, inPopout: E, width: j, focused: O } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: h, fit: p, inPopout: E, width: j, focused: O } = e,
         H = v.Z.getVideoComponent(),
         G = (0, r.e7)([x.default], () => x.default.getId()),
-        V = (0, p.Z)(),
+        V = (0, m.Z)(),
         { stream: F, user: W, streamId: z } = t,
         Y = (0, r.e7)([S.Z], () => S.Z.getChannel(F.channelId)),
         K = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
@@ -138,7 +138,7 @@ function G(e) {
                         className: w.content,
                         streamId: z,
                         videoComponent: H,
-                        fit: m,
+                        fit: p,
                         paused: h || Q,
                         videoSpinnerContext: J ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
                         userId: W.id

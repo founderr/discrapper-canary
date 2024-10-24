@@ -8,8 +8,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    i = n(100621),
-    l = n(442837),
+    l = n(100621),
+    i = n(442837),
     c = n(692547),
     u = n(561779),
     d = n(481060),
@@ -50,7 +50,7 @@ function S(e) {
     );
 }
 function g(e) {
-    let { iconComponent: t, animationTime: n, visible: o, ariaLabel: a, active: l, disabled: u, tooltipLabel: m, tooltipDelayMs: p = 1500, onClick: f } = e,
+    let { iconComponent: t, animationTime: n, visible: o, ariaLabel: a, active: i, disabled: u, tooltipLabel: m, tooltipDelayMs: p = 1500, onClick: f } = e,
         C = (e) =>
             (0, r.jsx)(d.Clickable, {
                 ...e,
@@ -58,10 +58,10 @@ function g(e) {
                 className: s()(v.videoControlsBtnCont, { [v.videoControlsBtnContDisabled]: u }),
                 'aria-label': a,
                 'aria-disabled': u,
-                children: (0, r.jsx)(i.animated.div, {
+                children: (0, r.jsx)(l.animated.div, {
                     className: s()(v.videoControlsBtnCont),
                     style: {
-                        opacity: (0, i.to)(
+                        opacity: (0, l.to)(
                             [
                                 n.to({
                                     range: [0, 1],
@@ -74,7 +74,7 @@ function g(e) {
                     children: (0, r.jsx)(t, {
                         color: !0 !== u ? c.Z.colors.WHITE : c.Z.colors.TEXT_MUTED,
                         className: s()(v.controlsBarItem, {
-                            [v.controlsBarItemActive]: l,
+                            [v.controlsBarItemActive]: i,
                             [v.videoControlsBtn]: !u
                         })
                     })
@@ -92,14 +92,14 @@ function x(e) {
     var t, n;
     let { videoRef: a, playerState: _, animSpring: T, visible: x, seekForwardEnabled: N, hideCaptionButton: h, handlePlayPauseBtnClick: I, handleTranscriptBtnClick: L, handleCaptionBtnClick: O, handleFullScreenBtnClick: j, handleSeekBackBtnClick: b, handleSeekForwardBtnClick: B, handleControlBarPendingInteraction: P } = e,
         k = (0, p.km)((e) => e.volume),
-        y = (0, p.km)((e) => e.setVolume),
-        R = (0, p.km)((e) => e.muted),
+        R = (0, p.km)((e) => e.setVolume),
+        y = (0, p.km)((e) => e.muted),
         D = (0, p.km)((e) => e.setMuted),
         A = (0, p.km)((e) => e.transcriptEnabled),
         M = (0, p.km)((e) => e.captionEnabled),
         Z = (0, p.km)((e) => e.fullScreenEnabled),
-        U = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
-        [G, V] = o.useState(R ? 0 : k),
+        U = (0, i.e7)([m.Z], () => m.Z.useReducedMotion),
+        [G, V] = o.useState(y ? 0 : k),
         [w, F] = o.useState(!1),
         [H, Q] = o.useState(!1),
         [{ volumeAnimSpring: z }, W] = (0, d.useSpring)(() => ({
@@ -146,10 +146,10 @@ function x(e) {
                     onClick: I
                 })
             }),
-            (0, r.jsxs)(i.animated.div, {
+            (0, r.jsxs)(l.animated.div, {
                 className: s()(v.videoControlsGroup, v.videoControlsGroupMid),
                 style: {
-                    opacity: (0, i.to)(
+                    opacity: (0, l.to)(
                         [
                             T.to({
                                 range: [0, 1],
@@ -172,15 +172,15 @@ function x(e) {
                                 animationTime: T,
                                 visible: x,
                                 onClick: () => {
-                                    if (null != a.current) 0 === G ? (Y(k), D(!1)) : (y(G), Y(0), D(!0));
+                                    if (null != a.current) 0 === G ? (Y(k), D(!1)) : (R(G), Y(0), D(!0));
                                 },
                                 ariaLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_CHANGE_VOLUME,
                                 tooltipLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_CHANGE_VOLUME
                             }),
-                            (0, r.jsx)(i.animated.div, {
+                            (0, r.jsx)(l.animated.div, {
                                 className: v.volumeSlider,
                                 style: {
-                                    opacity: (0, i.to)(
+                                    opacity: (0, l.to)(
                                         [
                                             z.to({
                                                 range: [0, 1],
@@ -189,7 +189,7 @@ function x(e) {
                                         ],
                                         (e) => ''.concat(x ? e : Math.pow(e, 8))
                                     ),
-                                    width: (0, i.to)(
+                                    width: (0, l.to)(
                                         [
                                             z.to({
                                                 range: [0, 1],
@@ -215,7 +215,7 @@ function x(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        Y(e), y(e), H && (Q(!1), P(!1)), R && e > 0 && D(!1);
+                                        Y(e), R(e), H && (Q(!1), P(!1)), y && e > 0 && D(!1);
                                     },
                                     asValueChanges: (e) => {
                                         Y(e), !H && (Q(!0), P(!0));

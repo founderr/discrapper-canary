@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
@@ -14,13 +14,13 @@ var s = n(442837),
     u = n(362658),
     d = n(916069),
     h = n(689938);
-function m(e) {
+function p(e) {
     let { channel: t } = e,
         { isFavoritesPerk: n } = (0, u.z)('ChannelFavoritesHeaderButton'),
-        m = (0, d.Z)(),
-        { notifyFavoriteAdded: p } = (0, c.up)(),
+        p = (0, d.Z)(),
+        { notifyFavoriteAdded: m } = (0, c.up)(),
         _ = (0, s.e7)([r.Z], () => r.Z.isFavorite(t.id));
-    if (!n || m) return null;
+    if (!n || p) return null;
     let f = _ ? a.StarIcon : a.StarOutlineIcon,
         E = _ ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
     return (0, i.jsx)(l.ZP.Icon, {
@@ -28,7 +28,7 @@ function m(e) {
         tooltip: E,
         'aria-label': E,
         onClick: () => {
-            _ ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id));
+            _ ? (0, o.oC)(t.id) : (m(), (0, o.kj)(t.id));
         }
     });
 }

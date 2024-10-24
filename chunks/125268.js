@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     ZZ: function () {
-        return m;
+        return p;
     },
     cV: function () {
         return u;
@@ -24,7 +24,7 @@ n.d(t, {
         return _;
     },
     gr: function () {
-        return p;
+        return m;
     },
     oW: function () {
         return o;
@@ -75,7 +75,7 @@ function h(e, t, n) {
         backoff: new i.Z()
     });
 }
-function m(e, t) {
+function p(e, t) {
     (t.state = l.f.STOP),
         a.Z.dispatch({
             type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
@@ -84,7 +84,7 @@ function m(e, t) {
             streamerId: e
         });
 }
-function p(e, t, n) {
+function m(e, t, n) {
     a.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
         emojiHose: e,

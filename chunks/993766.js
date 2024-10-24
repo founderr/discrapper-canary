@@ -25,18 +25,18 @@ function o(e) {
             let n = r.Z.getChannel(c);
             return null !== (t = null === (e = l.ZP.getContextState(n)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
         }),
-        m = i.useRef(!1),
-        p = i.useRef(!1);
+        p = i.useRef(!1),
+        m = i.useRef(!1);
     i.useEffect(() => {
-        (m.current = !1), (p.current = !1);
+        (p.current = !1), (m.current = !1);
     }, [c]),
         i.useEffect(() => {
-            d && (m.current = !0);
+            d && (p.current = !0);
         }, [d]),
         i.useEffect(() => {
-            h && (p.current = !0);
+            h && (m.current = !0);
         }, [h]),
         i.useEffect(() => {
-            !d && !h && m.current && p.current && 0 === u.length && (0, a.Tv)(c);
+            !d && !h && p.current && m.current && 0 === u.length && (0, a.Tv)(c);
         }, [d, h, u, c]);
 }

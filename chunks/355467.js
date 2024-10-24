@@ -858,14 +858,14 @@ async function X(e) {
         );
     } catch (t) {
         let e = t instanceof l.HF ? t : new l.HF(t);
-        if (e.code !== u.SM.CONFIRMATION_REQUIRED)
-            throw (
-                (o.Z.dispatch({
-                    type: 'BILLING_SUBSCRIPTION_UPDATE_FAIL',
-                    error: e
-                }),
-                e)
-            );
+        if (
+            (o.Z.dispatch({
+                type: 'BILLING_SUBSCRIPTION_UPDATE_FAIL',
+                error: e
+            }),
+            e.code !== u.SM.CONFIRMATION_REQUIRED)
+        )
+            throw e;
         if (!t.body.payment_id) throw D('payment id cannot be null on redirected confirmations.');
         return J(t.body, n);
     }

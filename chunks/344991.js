@@ -34,7 +34,7 @@ function h(e) {
 }
 function I(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: I, placeholder: E, maxValues: x, disabled: v } = n,
+        { type: I, placeholder: x, maxValues: E, disabled: v } = n,
         [T, N] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
@@ -58,22 +58,22 @@ function I(e) {
             type: I,
             selectedOptions: Array.from(S.values())
         }),
-        G = k === _.gH.LOADING;
+        w = k === _.gH.LOADING;
     r.useEffect(() => {
         if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
             O(e), M(new Set(e.keys()));
         }
     }, [P]);
-    let w = r.useCallback(() => {
+    let G = r.useCallback(() => {
         A({
             type: I,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
     }, [A, I, S]);
     r.useEffect(() => {
-        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) w();
-    }, [T, b, j, S, w]);
+        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
+    }, [T, b, j, S, G]);
     let D = 0 === S.size || T,
         V = {
             isDisabled: v || U,
@@ -82,7 +82,7 @@ function I(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != E ? E : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: D ? (null != x ? x : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => N(!1),
             onOpen: () => N(!0),
             onBlur: () => g(!1),
@@ -106,7 +106,7 @@ function I(e) {
             (0, a.jsxs)('div', {
                 className: p.container,
                 children: [
-                    x > 1
+                    E > 1
                         ? (0, a.jsx)(
                               c.SearchableSelect,
                               {
@@ -139,7 +139,7 @@ function I(e) {
                               },
                               R
                           ),
-                    G
+                    w
                         ? (0, a.jsx)('div', {
                               className: p.loading,
                               children: (0, a.jsx)(c.Dots, {

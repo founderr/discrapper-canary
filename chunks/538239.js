@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(654030),
     d = n(744061),
     h = n(367907),
-    m = n(728345),
-    p = n(812206),
+    p = n(728345),
+    m = n(812206),
     _ = n(541716),
     f = n(752305),
     E = n(893718),
@@ -51,7 +51,7 @@ class Z extends s.PureComponent {
     }
     fetchApplication() {
         let { activity: e, application: t } = this.props;
-        null != e.application_id && null == t && m.ZP.fetchApplication(e.application_id);
+        null != e.application_id && null == t && p.ZP.fetchApplication(e.application_id);
     }
     renderTitle() {
         let { activity: e } = this.props;
@@ -66,9 +66,9 @@ class Z extends s.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: s } = this.state,
-            { activity: a, analyticsLocations: r, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: f, onClose: g } = this.props,
-            C = m > 0,
-            I = C ? S.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((m + 1000) / 1000) }) : null;
+            { activity: a, analyticsLocations: r, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: f, onClose: g } = this.props,
+            C = p > 0,
+            I = C ? S.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -91,7 +91,7 @@ class Z extends s.PureComponent {
                             activityActionType: h,
                             activity: a,
                             className: v.preview,
-                            application: p,
+                            application: m,
                             partyId: null != a.party ? a.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
@@ -241,10 +241,10 @@ class Z extends s.PureComponent {
             });
     }
 }
-t.default = r.ZP.connectStores([I.Z, p.Z], (e) => {
+t.default = r.ZP.connectStores([I.Z, m.Z], (e) => {
     let { channel: t, activity: n } = e;
     return {
         cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-        application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
+        application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
     };
 })(Z);

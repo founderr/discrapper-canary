@@ -113,8 +113,8 @@ function h(e) {
     });
 }
 function I(e) {
-    let { type: n, options: t, id: a, placeholder: r, maxValues: s, minValues: I, disabled: E } = e,
-        x = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
+    let { type: n, options: t, id: a, placeholder: r, maxValues: s, minValues: I, disabled: x } = e,
+        E = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
         {
             state: v,
             executeStateUpdate: T,
@@ -123,7 +123,7 @@ function I(e) {
             error: g
         } = (0, d.Ee)(e, {
             type: n,
-            values: x
+            values: E
         }),
         S = s > 1,
         O = N === m.gH.LOADING,
@@ -136,10 +136,10 @@ function I(e) {
             let e = new Set(v.values);
             y(e), L(e);
         } else {
-            let e = new Set(x);
+            let e = new Set(E);
             y(e), L(e);
         }
-    }, [a, x, v]);
+    }, [a, E, v]);
     let A = i.useCallback(() => {
         if (R !== Z)
             T({
@@ -163,7 +163,7 @@ function I(e) {
                 className: f.container,
                 children: [
                     (0, l.jsx)(o.Select, {
-                        isDisabled: E || b,
+                        isDisabled: x || b,
                         className: f.select,
                         options: t.map((e) => ({
                             ...e,

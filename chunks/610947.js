@@ -14,8 +14,8 @@ var i = n(192379),
     u = n(673125),
     d = n(292793),
     h = n(88315),
-    m = n(262433),
-    p = n(400321),
+    p = n(262433),
+    m = n(400321),
     _ = n(813900);
 let f = 1000 / 60;
 function E(e, t, n, E) {
@@ -46,7 +46,7 @@ function E(e, t, n, E) {
                                 let { drawable: t, context: n, canvasWidth: i, canvasHeight: s, fallbackColor: a, outlineColorDark: l, outlineColorLight: r, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
                                 switch (t.type) {
                                     case d.W.LINE:
-                                        return (0, p.Z)({
+                                        return (0, m.Z)({
                                             line: t,
                                             context: n,
                                             canvasWidth: i,
@@ -58,7 +58,7 @@ function E(e, t, n, E) {
                                             deadDrawables: u
                                         });
                                     case d.W.EMOJI_HOSE:
-                                        return (0, m.Z)({
+                                        return (0, p.Z)({
                                             emojiHose: t,
                                             context: n,
                                             canvasWidth: i,
@@ -108,7 +108,7 @@ function E(e, t, n, E) {
     }, [e, S, n]);
     let v = i.useCallback(() => {
         let t = u.Z.getDrawables(n),
-            i = m.U.getState().particles,
+            i = p.U.getState().particles,
             s = t.length > 0 || Object.keys(i).length > 0;
         s && null == x.current._ref && (null == x.current._ref ? (S(n), x.current.start(f, () => S(n))) : !s && null != x.current._ref && (x.current.stop(), (0, h.UN)(e)));
     }, [e, S, n]);

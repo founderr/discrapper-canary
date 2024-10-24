@@ -20,7 +20,7 @@ var i = t(442837),
 function C(e) {
     let { message: n } = (0, f.CJ)(),
         t = (0, i.e7)([m.Z], () => m.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: E, getOnMediaItemContextMenu: x } = (0, c.c)();
+        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: x, getOnMediaItemContextMenu: E } = (0, c.c)();
     if (null == n || null == t) return null;
     let v = e.items
             .map((e) => ({
@@ -52,7 +52,7 @@ function C(e) {
     }
     let g = e.items.map((e) => {
         let t = e.media,
-            l = null == x ? void 0 : x(t),
+            l = null == E ? void 0 : E(t),
             i = {
                 message: n,
                 item: {
@@ -74,7 +74,7 @@ function C(e) {
                 renderPlaintextFilePreview: p.dG4,
                 renderGenericFileComponent: p.dG4,
                 renderMosaicItemFooter: p.dG4,
-                gifFavoriteButton: E(t),
+                gifFavoriteButton: x(t),
                 onPlay: (e, n, t) => {},
                 canRemoveItem: !1,
                 onRemoveItem: p.dG4

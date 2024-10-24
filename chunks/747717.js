@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
 var r = n(200651);
@@ -8,7 +8,7 @@ n(192379);
 var o = n(120356),
     a = n.n(o),
     s = n(417575);
-function i(e) {
+function l(e) {
     let { className: t } = e;
     return (0, r.jsx)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',

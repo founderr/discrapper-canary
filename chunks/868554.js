@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(518950),
     d = n(594174),
     h = n(63063),
-    m = n(981631),
-    p = n(689938),
+    p = n(981631),
+    m = n(689938),
     _ = n(277865),
     f = n(454120);
 function E(e) {
@@ -31,13 +31,13 @@ function E(e) {
                 null == C || null == I
                     ? ''
                     : C.id === I.id
-                      ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_SELF_COPY
+                      ? m.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_SELF_COPY
                       : !0 === E
-                        ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY_STREAMERS.format({
+                        ? m.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY_STREAMERS.format({
                               username: C.username,
-                              helpCenterLink: h.Z.getArticleURL(m.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+                              helpCenterLink: h.Z.getArticleURL(p.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                           })
-                        : p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY.format({ username: C.username }),
+                        : m.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY.format({ username: C.username }),
             [C, I, E]
         );
     if (null == C || null == I) return null;
@@ -90,7 +90,7 @@ function E(e) {
                                 (0, i.jsx)(o.Button, {
                                     onClick: v,
                                     className: l()({ [_.actionButton]: !0 !== E }),
-                                    children: !0 === E && I.id === C.id ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_DISMISS_BUTTON_COPY : p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_BUTTON_COPY
+                                    children: !0 === E && I.id === C.id ? m.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_DISMISS_BUTTON_COPY : m.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_BUTTON_COPY
                                 }),
                                 !0 !== E &&
                                     (0, i.jsx)(o.Clickable, {

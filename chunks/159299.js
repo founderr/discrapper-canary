@@ -9,8 +9,8 @@ var i,
     u = n(797316),
     d = n(158776),
     h = n(885110),
-    m = n(594174),
-    p = n(823379),
+    p = n(594174),
+    m = n(823379),
     _ = n(700785),
     f = n(709054),
     E = n(51144),
@@ -69,7 +69,7 @@ class T {
     }
     addUser(e, t, n, i, s) {
         this.allUserIds.add(e);
-        let a = m.default.getUser(e);
+        let a = p.default.getUser(e);
         if (null == a || '' === a.username) return;
         !(t in this.sections) &&
             (this.sections[t] = {
@@ -123,8 +123,8 @@ class T {
     calculateNewState(e, t) {
         var n, i;
         let s = c.ZP.getMember(this.guildId, e),
-            a = m.default.getUser(e),
-            l = m.default.getCurrentUser(),
+            a = p.default.getUser(e),
+            l = p.default.getCurrentUser(),
             r = (null == a ? void 0 : a.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
             o =
                 null != a &&
@@ -135,8 +135,8 @@ class T {
                     context: t
                 }),
             u = r !== g.Skl.OFFLINE && r !== g.Skl.INVISIBLE && r !== g.Skl.UNKNOWN ? (null !== (n = null == s ? void 0 : s.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
-            p = null !== (i = null == s ? void 0 : s.nick) && void 0 !== i ? i : E.ZP.getName(a);
-        return [u, null == p ? void 0 : p.toLowerCase(), o];
+            m = null !== (i = null == s ? void 0 : s.nick) && void 0 !== i ? i : E.ZP.getName(a);
+        return [u, null == m ? void 0 : m.toLowerCase(), o];
     }
     constructor(e, t, n) {
         C(this, 'guildId', void 0), C(this, 'parentId', void 0), C(this, 'threadId', void 0), C(this, 'version', void 0), C(this, 'sections', void 0), C(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
@@ -159,7 +159,7 @@ function v(e) {
 }
 class N extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, m.default),
+        this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, p.default),
             this.syncWith([u.Z], () => {
                 let e = u.Z.getSubscribedThreadIds(),
                     t = !1;
@@ -168,7 +168,7 @@ class N extends (i = l.ZP.Store) {
             }),
             this.syncWith([h.Z], () => {
                 var e;
-                return S(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return S(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             });
     }
     getMemberListVersion(e) {
@@ -247,7 +247,7 @@ C(N, 'displayName', 'ThreadMemberListStore'),
                         var t;
                         return null === (t = e.user) || void 0 === t ? void 0 : t.id;
                     })
-                    .filter(p.lm)
+                    .filter(m.lm)
                     .uniq()
                     .value(),
                 i = !1;

@@ -18,15 +18,15 @@ var i = n(192379),
     u = n(783097),
     d = n(895924),
     h = n(812236),
-    m = n(630388),
-    p = n(981631),
+    p = n(630388),
+    m = n(981631),
     _ = n(689938);
 function f(e) {
     let { channel: t, primaryEntryPointCommand: n, application: l } = e,
         [r, d] = i.useState(!1),
         f = (0, s.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
         E = i.useMemo(() => (null != n ? (0, u.XZ)(n.displayName) : _.Z.Messages.OPEN), [n]),
-        g = void 0 !== l.flags && (0, m.yE)(l.flags, p.udG.EMBEDDED),
+        g = void 0 !== l.flags && (0, p.yE)(l.flags, m.udG.EMBEDDED),
         C = null != f && f.applicationId === l.id && f.channelId === t.id,
         { analyticsLocations: I } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         T = null != t.recipients ? t.recipients[0] : void 0,
@@ -47,7 +47,7 @@ function f(e) {
     };
 }
 function E(e) {
-    let { channel: t, application: n, isEmbeddedApp: s, hasActiveMatchingEmbeddedActivity: a, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: u, setIsExecutingLaunchInteraction: m, analyticsLocations: p } = e,
+    let { channel: t, application: n, isEmbeddedApp: s, hasActiveMatchingEmbeddedActivity: a, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: u, setIsExecutingLaunchInteraction: p, analyticsLocations: m } = e,
         _ = (0, h.ms)({
             channel: t,
             applicationId: n.id,
@@ -59,16 +59,16 @@ function E(e) {
                       channelId: t.id,
                       applicationId: o.applicationId
                   })
-                : (m(!0),
+                : (p(!0),
                   (0, l.Z)({
                       targetApplicationId: n.id,
                       channelId: t.id,
-                      analyticsLocations: p,
+                      analyticsLocations: m,
                       onExecutedCallback: () => {
-                          m(!1);
+                          p(!1);
                       },
                       commandOrigin: d.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
                   }));
-        }, [a, t.id, n.id, o, p, m]);
+        }, [a, t.id, n.id, o, m, p]);
     return _ && s ? f : c;
 }

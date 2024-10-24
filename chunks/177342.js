@@ -10,12 +10,12 @@ var i = n(200651),
     r = n(596739),
     o = n(473092);
 function c(e) {
-    let { channelId: t, warningId: n, senderId: c, warningType: u, header: d, description: h, onDismiss: m, buttons: p } = e;
+    let { channelId: t, warningId: n, senderId: c, warningType: u, header: d, description: h, onDismiss: p, buttons: m } = e;
     s.useEffect(() => {
         l.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
     }, []);
     let _ = s.useCallback(() => {
-        null == m || m(),
+        null == p || p(),
             (0, o.qc)({
                 channelId: t,
                 warningId: n,
@@ -23,9 +23,9 @@ function c(e) {
                 warningType: u,
                 cta: o.NM.USER_BANNER_DISMISS
             });
-    }, [m, t, n, c, u]);
+    }, [p, t, n, c, u]);
     return (0, i.jsx)(r.W, {
-        buttons: p,
+        buttons: m,
         description: h,
         header: d,
         onDismiss: _

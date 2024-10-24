@@ -10,14 +10,14 @@ t.d(e, {
 var l = t(200651),
     i = t(481060),
     r = t(724870),
-    a = t(87484),
-    o = t(171246),
-    s = t(689011),
+    s = t(87484),
+    a = t(171246),
+    o = t(689011),
     u = t(981631);
 async function c(n) {
-    let { subscriptionPlanId: e, sku: a, subscriptionGroupPlanIds: c, activeSubscription: d, subscribeForGuild: p, analyticsLocations: f, analyticsLocation: m } = n,
-        { promise: v, resolve: h } = Promise.withResolvers();
-    if ((0, o.KK)(a.flags)) {
+    let { subscriptionPlanId: e, sku: s, subscriptionGroupPlanIds: c, activeSubscription: d, subscribeForGuild: f, analyticsLocations: p, analyticsLocation: v } = n,
+        { promise: m, resolve: h } = Promise.withResolvers();
+    if ((0, a.KK)(s.flags)) {
         let { promise: n, resolve: e } = Promise.withResolvers();
         (0, i.openModalLazy)(async () => {
             let { GuildSubscriptionSelectionModal: n } = await t.e('43889').then(t.bind(t, 279875));
@@ -25,39 +25,39 @@ async function c(n) {
                 (0, l.jsx)(n, {
                     transitionState: t.transitionState,
                     onClose: t.onClose,
-                    sku: a,
+                    sku: s,
                     onSelect: e,
-                    currentGuildId: p
+                    currentGuildId: f
                 });
         }),
-            (p = await n);
+            (f = await n);
     }
     return (
         (0, r.h)({
             initialPlanId: e,
-            skuId: a.id,
+            skuId: s.id,
             activeSubscription: null != d ? d : null,
-            applicationId: a.applicationId,
+            applicationId: s.applicationId,
             planGroup: c,
-            guildId: p,
+            guildId: f,
             renderHeader: (n, e, t) =>
-                (0, l.jsx)(s.t, {
+                (0, l.jsx)(o.t, {
                     step: t,
                     onClose: () => e(!1)
                 }),
             analyticsSubscriptionType: u.NYc.APPLICATION,
-            analyticsLocations: f,
-            analyticsLocation: m,
+            analyticsLocations: p,
+            analyticsLocation: v,
             onComplete: h,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
         }),
-        v
+        m
     );
 }
 function d(n) {
     let { appId: e, skuId: t, analyticsLocations: l } = n;
-    (0, a.Z)({
+    (0, s.Z)({
         applicationId: e,
         skuId: t,
         analyticsLocations: l

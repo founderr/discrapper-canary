@@ -9,8 +9,8 @@ var s = n(120356),
     u = n(730749),
     d = n(726542),
     h = n(600164),
-    m = n(750154),
-    p = n(592125),
+    p = n(750154),
+    m = n(592125),
     _ = n(594174),
     f = n(979651),
     E = n(374129),
@@ -40,9 +40,9 @@ t.Z = (0, u.Z)((e) => {
         F = (0, C.Z)(t),
         W = F || V ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL,
         z = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        Y = (0, o.e7)([f.Z, p.Z], () => {
+        Y = (0, o.e7)([f.Z, m.Z], () => {
             var e;
-            return z ? p.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(s.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return z ? m.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(s.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         K = W === h.Z.Direction.VERTICAL;
     return (0, i.jsx)(h.Z, {
@@ -107,8 +107,8 @@ t.Z = (0, u.Z)((e) => {
                     children: [n, e]
                 });
             }
-            if ((0, m.dS)(t)) {
-                let e = (0, m.rq)(t);
+            if ((0, p.dS)(t)) {
+                let e = (0, p.rq)(t);
                 return null == e
                     ? null
                     : (0, i.jsx)(

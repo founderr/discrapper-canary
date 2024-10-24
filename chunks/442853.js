@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(47120),
@@ -15,11 +15,11 @@ var i = n(192379),
     u = n(700785),
     d = n(231338);
 let h = [],
-    m = new Set();
-function p(e) {
+    p = new Set();
+function m(e) {
     let { entries: t, channelId: n } = e,
-        p = (0, a.e7)([r.Z], () => r.Z.getChannel(n)),
-        _ = null == p ? void 0 : p.guild_id,
+        m = (0, a.e7)([r.Z], () => r.Z.getChannel(n)),
+        _ = null == m ? void 0 : m.guild_id,
         f = i.useRef(new Set()),
         E = i.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
@@ -42,16 +42,16 @@ function p(e) {
             [E, _]
         ),
         C = i.useMemo(() => {
-            if (null == p || 0 === g.length) return m;
+            if (null == m || 0 === g.length) return p;
             let e = new Set();
             for (let t of g) {
                 let n = u.uB({
                     user: t,
-                    context: p
+                    context: m
                 });
                 s.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
-        }, [g, p]);
+        }, [g, m]);
     return i.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
 }

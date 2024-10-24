@@ -12,13 +12,13 @@ n.d(t, {
         return C;
     },
     YZ: function () {
-        return m;
+        return p;
     },
     _Q: function () {
         return I;
     },
     bF: function () {
-        return p;
+        return m;
     },
     c$: function () {
         return h;
@@ -52,7 +52,7 @@ let h = s()(async (e, t) => {
             r.Z.dispatch({ type: 'GUILD_DIRECTORY_FETCH_FAILURE' });
         }
     }, 200),
-    m = s()(async (e) => {
+    p = s()(async (e) => {
         try {
             let t = await l.tn.get({ url: d.ANM.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e) });
             r.Z.dispatch({
@@ -62,7 +62,7 @@ let h = s()(async (e, t) => {
             });
         } catch (e) {}
     }, 200);
-async function p(e, t, n) {
+async function m(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.AR.UNCATEGORIZED,
         s = await o.Z.post({
             url: d.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),

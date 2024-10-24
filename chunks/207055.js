@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(317381),
     d = n(812206),
     h = n(835473),
-    m = n(362721),
-    p = n(574176),
+    p = n(362721),
+    m = n(574176),
     _ = n(106301),
     f = n(512384),
     E = n(470956),
@@ -61,11 +61,11 @@ let y = s.memo((e) => {
         K = (0, r.e7)([A.Z], () => A.Z.getSessionById(o)),
         q = b.ZP.useName(a),
         X = (0, r.e7)([M.Z], () => M.Z.getVoicePlatformForChannel(l.id, S), [l.id, S]),
-        { enableHangStatus: J } = p.n.useExperiment({
+        { enableHangStatus: J } = m.n.useExperiment({
             guildId: l.guild_id,
             location: 'VoiceUsers'
         }),
-        Q = (0, m.Z)(l, !0, a),
+        Q = (0, p.Z)(l, !0, a),
         $ = (0, r.e7)([_.Z], () => (O ? _.Z.getHangStatusActivity() : null), [O]),
         ee = (0, r.e7)([v.Z], () => v.Z.findActivity(S, (e) => e.type === P.IIU.HANG_STATUS), [S]),
         et = (0, E.Eu)(l.id, S);
@@ -99,7 +99,7 @@ let y = s.memo((e) => {
 y.displayName = 'ConnectedVoiceUser';
 let D = [];
 t.Z = function (e) {
-    let { allowPreviews: t = !0, allowDragging: n = !0, channel: a, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: m, location: p, numAudience: _, withGuildIcon: f = !1, className: C, children: T } = e,
+    let { allowPreviews: t = !0, allowDragging: n = !0, channel: a, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: p, location: m, numAudience: _, withGuildIcon: f = !1, className: C, children: T } = e,
         [x, N] = s.useState(null),
         [A, Z] = s.useState(!1),
         M = s.useRef(null),
@@ -165,8 +165,8 @@ t.Z = function (e) {
                     hidePreview: k,
                     previewIsOpen: A,
                     shouldShowPreview: x === s.id,
-                    tabIndex: m,
-                    location: p
+                    tabIndex: p,
+                    location: m
                 },
                 s.id
             );

@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
@@ -13,17 +13,17 @@ var i = n(200651),
     u = n(626135),
     d = n(981631),
     h = n(689938);
-let m = (e) => {
-    let { className: t, channel: n, user: m, application: p, oauth2Token: _ } = e,
+let p = (e) => {
+    let { className: t, channel: n, user: p, application: m, oauth2Token: _ } = e,
         f = (0, s.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
-    if (!m.bot || null == p) return null;
+    if (!p.bot || null == m) return null;
     function E() {
         l.Z.delete(_.id);
-        let e = f.get(p.id);
+        let e = f.get(m.id);
         null != e &&
             c.Z.leaveActivity({
                 channelId: e.channelId,
-                applicationId: p.id
+                applicationId: m.id
             });
     }
     return (0, i.jsx)(a.Button, {
@@ -48,7 +48,7 @@ let m = (e) => {
                         channel_id: n.id,
                         channel_type: n.type
                     });
-            })(p, E, n),
+            })(m, E, n),
         children: h.Z.Messages.MANAGE_APP
     });
 };

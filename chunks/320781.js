@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -15,12 +15,12 @@ var s = n(442837),
     u = n(967128),
     d = n(689938),
     h = n(4953);
-function m(e) {
+function p(e) {
     var t;
     let { channel: n } = e,
-        m = (0, r.eV)(n),
-        { firstMessage: p } = (0, s.cj)([o.Z], () => o.Z.getMessage(n.id)),
-        _ = new Set((0, r.kn)(n, m)),
+        p = (0, r.eV)(n),
+        { firstMessage: m } = (0, s.cj)([o.Z], () => o.Z.getMessage(n.id)),
+        _ = new Set((0, r.kn)(n, p)),
         f = null !== (t = (0, l.KS)(n)) && void 0 !== t ? t : a.ChatIcon;
     return (0, i.jsxs)(u.ZP, {
         channelId: n.id,
@@ -37,7 +37,7 @@ function m(e) {
                 className: h.header,
                 children: n.name
             }),
-            null == p &&
+            null == m &&
                 (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',

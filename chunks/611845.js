@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
@@ -65,7 +65,7 @@ function h(e) {
         ]
     });
 }
-function m(e) {
+function p(e) {
     return (0, i.jsx)(o.h, {
         ...e,
         renderComponent: (e) => (0, i.jsx)(h, { ...e })

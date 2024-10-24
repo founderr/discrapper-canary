@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(276618),
     d = n(367408),
     h = n(473092),
-    m = n(819640),
-    p = n(665149),
+    p = n(819640),
+    m = n(665149),
     _ = n(134612),
     f = n(689938),
     E = n(830711);
@@ -20,7 +20,7 @@ t.Z = s.memo(function (e) {
         C = (0, u.o)(t.id),
         I = (0, d.M)(t.id),
         T = (0, l.f9)(),
-        x = (0, a.e7)([m.Z], () => m.Z.hasLayers()),
+        x = (0, a.e7)([p.Z], () => p.Z.hasLayers()),
         S = s.useCallback(() => (C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [C, I]),
         v = s.useMemo(() => (C || null != I) && !T && !x, [C, I, T, x]),
         [N, A] = s.useState(S());
@@ -98,7 +98,7 @@ t.Z = s.memo(function (e) {
               tooltipClassName: E.tooltip,
               tooltipContentClassName: E.tooltipContent,
               children: () =>
-                  (0, i.jsx)(p.ZP.Icon, {
+                  (0, i.jsx)(m.ZP.Icon, {
                       icon: r.ShieldIcon,
                       onClick: Z,
                       tooltip: f.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,

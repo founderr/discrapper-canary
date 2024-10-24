@@ -27,10 +27,10 @@ function h(e) {
     for (let t of c.Z.emojiAnimationTriggers) {
         let n = l.ZP.getByName(t);
         if (null != n) {
-            if (':'.concat(n.name, ':') === e) return !0;
+            if (':'.concat(n.uniqueName, ':') === e) return !0;
             for (let t in n.diversityChildren) {
                 let r = n.diversityChildren[t];
-                if (':'.concat(r.name, ':') === e) return !0;
+                if (':'.concat(r.uniqueName, ':') === e) return !0;
             }
         }
     }
