@@ -28,7 +28,7 @@ function g(e, t, n) {
     );
 }
 let T = _.Z.getArticleURL(h.BhN.VERIFICATION_FAQ);
-class C extends (i = s.PureComponent) {
+class f extends (i = s.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
         return (0, a.jsx)(a.Fragment, {
@@ -116,9 +116,9 @@ class C extends (i = s.PureComponent) {
             });
     }
 }
-g(C, 'defaultProps', {
+g(f, 'defaultProps', {
     types: [h.PUi.CAPTCHA],
     onCaptchaVerify: h.dG4,
     onLogout: h.dG4
 }),
-    (t.Z = C);
+    (t.Z = f);

@@ -30,7 +30,7 @@ function g(e) {
             e.pause(),
             e.on('readable', () => {
                 try {
-                    C(e);
+                    f(e);
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {
@@ -72,7 +72,7 @@ function T(e, t) {
         s = i.Buffer.alloc(8 + a);
     return s.writeInt32LE(e, 0), s.writeInt32LE(a, 4), s.write(t, 8, a), (n = s).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
-function C(e) {
+function f(e) {
     let t = e.read(8);
     if (null == t) return;
     let n = i.Buffer.from(t),
@@ -99,9 +99,9 @@ function C(e) {
         case m.CLOSE:
             e.end(), e.destroy();
     }
-    C(e);
+    f(e);
 }
-class f extends d.Z {
+class C extends d.Z {
     send(e) {
         h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(m.FRAME, e));
     }
@@ -136,7 +136,7 @@ class S extends a.EventEmitter {
             e.pause(),
             e.on('readable', () => {
                 try {
-                    C(e);
+                    f(e);
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {
@@ -152,7 +152,7 @@ class S extends a.EventEmitter {
                 let i = t.client_id,
                     a = +t.v;
                 try {
-                    n = new f(e, a, 'json');
+                    n = new C(e, a, 'json');
                 } catch (t) {
                     e.end(
                         T(m.CLOSE, {

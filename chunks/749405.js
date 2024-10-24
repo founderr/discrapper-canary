@@ -28,8 +28,8 @@ function h(e) {
         }, [h.id, m]),
         {
             acceptMessageRequest: T,
-            rejectMessageRequest: C,
-            isAcceptLoading: f,
+            rejectMessageRequest: f,
+            isAcceptLoading: C,
             isRejectLoading: S,
             isUserProfileLoading: N,
             isOptimisticAccepted: A,
@@ -40,7 +40,7 @@ function h(e) {
             onRejectSuccess: p,
             onError: I
         }),
-        Z = f || S || N || A || v;
+        Z = C || S || N || A || v;
     return (0, i.jsxs)('div', {
         className: E.container,
         children: [
@@ -57,7 +57,7 @@ function h(e) {
                         color: s.ButtonColors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), C(h.id);
+                            e.stopPropagation(), f(h.id);
                         },
                         disabled: Z,
                         submitting: S || v,
@@ -71,7 +71,7 @@ function h(e) {
                             e.stopPropagation(), T(h.id);
                         },
                         disabled: Z,
-                        submitting: f || N || A,
+                        submitting: C || N || A,
                         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
                     })
                 ]

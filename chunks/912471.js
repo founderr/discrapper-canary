@@ -21,7 +21,7 @@ let m = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
     p = null,
     g = null,
     T = !1;
-async function C() {
+async function f() {
     if (T) return;
     (T = !0), (0, E.fr)(!0), _.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
     let e = await i.K.getAfterRefresh(m).then(E.Hg);
@@ -31,7 +31,7 @@ async function C() {
     n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
         e > t && (n = 0),
         _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
-        f(!1),
+        C(!1),
         (p = setTimeout(
             () => {
                 S(),
@@ -42,7 +42,7 @@ async function C() {
             Math.max(n, 0)
         ));
 }
-function f() {
+function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     null != p && (clearTimeout(p), (p = null)), null != I && (clearInterval(I), (I = null)), null != g && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(g), (g = null));
 }
@@ -55,7 +55,7 @@ async function S() {
         return;
     }
     if (!T) {
-        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), f();
+        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
         return;
     }
     _.Z.addBreadcrumb({
@@ -81,13 +81,13 @@ let N = null,
 function v() {
     if (A || (null != N && N !== h.hes.DISCONNECTED && N !== h.hes.RTC_DISCONNECTED))
         try {
-            C();
+            f();
         } catch (e) {
             _.Z.captureException(e);
         }
     else
         !(function () {
-            if (!!T) (T = !1), _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, E.fr)(!1), f(), (0, s.Z)();
+            if (!!T) (T = !1), _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, E.fr)(!1), C(), (0, s.Z)();
         })();
 }
 function Z() {

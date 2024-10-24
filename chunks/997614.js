@@ -42,14 +42,14 @@ function T(e) {
             });
     }
     let L = s.useRef(null),
-        j = s.useCallback(() => {
+        P = s.useCallback(() => {
             var e;
             null === (e = L.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
         (0, E.yp)({
             event: C.CkL.TOGGLE_SOUNDBOARD,
-            handler: j
+            handler: P
         }),
         (0, i.jsx)(g.Z, {
             ref: L,

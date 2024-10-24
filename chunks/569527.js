@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(283293),
     g = n(797908),
     T = n(120549),
-    C = n(979007),
-    f = n(463051);
+    f = n(979007),
+    C = n(463051);
 function S(e) {
     var t;
     let { query: n, onSelectApplication: S } = e,
@@ -37,14 +37,14 @@ function S(e) {
                 query: n,
                 categoryId: N,
                 page: v,
-                pageSize: C.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             }),
             searchResults: E.Z.getSearchResults({
                 query: n,
                 categoryId: N,
                 page: v,
-                pageSize: C.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             })
         })),
@@ -52,7 +52,7 @@ function S(e) {
             let e = E.Z.getSearchResults({
                 query: n,
                 page: 1,
-                pageSize: C.IV,
+                pageSize: f.IV,
                 source: r.F.APP_DIRECTORY
             });
             return null != e
@@ -73,7 +73,7 @@ function S(e) {
                     query: n,
                     options: {
                         page: e,
-                        pageSize: C.IV,
+                        pageSize: f.IV,
                         source: r.F.APP_DIRECTORY,
                         categoryId: N
                     }
@@ -116,7 +116,7 @@ function S(e) {
                             children: (0, i.jsx)('div', {
                                 ref: w,
                                 children: (0, i.jsx)('div', {
-                                    className: f.content,
+                                    className: C.content,
                                     style: { paddingRight: L ? x + 32 : void 0 },
                                     children:
                                         null == U
@@ -139,9 +139,9 @@ function S(e) {
                             })
                         }),
                         (0, i.jsx)(o.Paginator, {
-                            className: f.paginationInput,
-                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * C.IV, C.Et * C.IV),
-                            pageSize: C.IV,
+                            className: C.paginationInput,
+                            totalCount: Math.min((null !== (t = null == U ? void 0 : U.totalPages) && void 0 !== t ? t : 0) * f.IV, f.Et * f.IV),
+                            pageSize: f.IV,
                             disablePaginationGap: !0,
                             hideMaxPage: !0,
                             currentPage: v,
@@ -152,10 +152,10 @@ function S(e) {
             }),
             L &&
                 (0, i.jsx)('div', {
-                    className: f.sidebar,
+                    className: C.sidebar,
                     ref: M,
                     children: (0, i.jsx)('div', {
-                        className: f.sidebarContent,
+                        className: C.sidebarContent,
                         children: (0, i.jsx)(T.Z, {
                             countsByCategory: y,
                             selectedCategoryId: null != N ? N : h.MU,

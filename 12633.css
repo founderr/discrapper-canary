@@ -11694,9 +11694,7 @@ div.modalHeader_c5e09c {
 }
 
 .buttonGroupContainer_c22357 {
-    margin: 12px;
-    margin-top: 0;
-    margin-bottom: 12px;
+    margin: 0 12px 12px;
     gap: 8px;
     display: flex;
     flex-direction: column
@@ -11726,6 +11724,35 @@ div.cardContainer_c22357 {
     display: flex;
     align-items: center;
     gap: 4px
+}
+
+.askToJoinInputWrapper_c22357 {
+    margin-top: 8px;
+    background: var(--bg-surface-overlay);
+    padding: 12px;
+    box-shadow: var(--elevation-high);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: var(--radius-md)
+}
+
+.inputRow_c22357 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    z-index: 9
+}
+
+.sendButton_c22357 {
+    flex: 1;
+    min-width: 0
+}
+
+.input_c22357 {
+    font-size: 14px;
+    height: var(--custom-custom-button-md-height)
 }
 
 .chipletContainerInner_d5cb59 {

@@ -36,8 +36,8 @@ var i,
     b = n(819640),
     R = n(594174),
     L = n(823379),
-    j = n(5192),
-    P = n(689938),
+    P = n(5192),
+    j = n(689938),
     O = n(456608);
 ((s = i || (i = {}))[(s.SMALL = 0)] = 'SMALL'), (s[(s.MEDIUM = 1)] = 'MEDIUM'), (s[(s.LARGE = 2)] = 'LARGE');
 let y = ['embedded_background'];
@@ -52,7 +52,7 @@ function D(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = j.ZP.getName(n, i, e);
+            let t = P.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -86,7 +86,7 @@ function U(e) {
         x = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
         { analyticsLocations: S } = (0, v.ZP)(),
         A = (0, d.O)(),
-        Z = j.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
+        Z = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
         b =
             (0, _.s5)({
                 userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -119,11 +119,11 @@ function U(e) {
                 variant: 'text-sm/normal',
                 children:
                     T.length > 1
-                        ? P.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                        ? j.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
                               username: Z,
                               count: T.length - 1
                           })
-                        : P.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
+                        : j.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: Z })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(O.header, {
@@ -160,7 +160,7 @@ function U(e) {
                           })(C),
                           className: O.button,
                           color: u.Button.Colors.PRIMARY,
-                          children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+                          children: j.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
                       })
                     : null
             })

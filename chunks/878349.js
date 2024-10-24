@@ -24,8 +24,8 @@ function E(e) {
         [Z, M] = s.useState(!1),
         b = (0, d.ZP)(),
         R = (0, o.wj)(b) || t ? f : _,
-        { width: L = 0, ref: j } = (0, u.Z)(),
-        { width: P = 0, ref: O } = (0, u.Z)();
+        { width: L = 0, ref: P } = (0, u.Z)(),
+        { width: j = 0, ref: O } = (0, u.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(m.X, {
             textColor: 'always-white',
@@ -58,7 +58,7 @@ function E(e) {
                     [p.labelChecked]: t,
                     [p.labelUnchecked]: !t && !E
                 }),
-                style: S ? { width: t ? L : L + P } : void 0,
+                style: S ? { width: t ? L : L + j } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
@@ -67,7 +67,7 @@ function E(e) {
                           })
                         : null,
                     (0, i.jsx)('img', {
-                        ref: j,
+                        ref: P,
                         src: R,
                         alt: g
                     }),

@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(283293),
     g = n(216742),
     T = n(84615),
-    C = n(889711),
-    f = n(229893),
+    f = n(889711),
+    C = n(229893),
     S = n(931515),
     N = n(702646),
     A = n(207796),
@@ -144,8 +144,8 @@ t.Z = a.memo(function (e) {
         }, [y, L]);
     a.useEffect(() => {
         if (!L) return;
-        let e = (0, C.pP)(w);
-        return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
+        let e = (0, f.pP)(w);
+        return (0, f.YP)(e, document.body), () => (0, f.UC)(e, document.body);
     }, [L, w]);
     let k = a.useCallback(() => {
             var e, t;
@@ -166,7 +166,7 @@ t.Z = a.memo(function (e) {
                 }),
             [P, T]
         ),
-        H = (0, r.e7)([f.Z], () => f.Z.getSavedGuilds().length),
+        H = (0, r.e7)([C.Z], () => C.Z.getSavedGuilds().length),
         V = a.useMemo(
             () => [
                 {

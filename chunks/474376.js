@@ -25,10 +25,10 @@ function T(e) {
     let t = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         n = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
         { multiAccountUsers: T } = (0, h.L)(),
-        C = (e) => {
+        f = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
         },
-        f = T.map((a) => {
+        C = T.map((a) => {
             let o = new l.Z(a),
                 c = o.id === (null == t ? void 0 : t.id),
                 d = a.tokenStatus === E.q.INVALID,
@@ -85,14 +85,14 @@ function T(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), d ? (0, m.Z)() : C(o.id);
+                        null == e || e(), d ? (0, m.Z)() : f(o.id);
                     }
                 },
                 o.id
             );
         });
     return (
-        f.push(
+        C.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(s.MenuSeparator, {}),
@@ -106,6 +106,6 @@ function T(e) {
                 ]
             })
         ),
-        f
+        C
     );
 }

@@ -74,11 +74,11 @@ function E(e) {
                 : t.application,
         R = i.useMemo(() => (null != b ? p.Z.createFromServer(b) : void 0), [b]),
         L = (0, d.q)(null == R && g ? v : void 0),
-        j = null !== (n = null != R ? R : L) && void 0 !== n ? n : void 0,
-        P = null == j || (M && 0 === Z.length);
+        P = null !== (n = null != R ? R : L) && void 0 !== n ? n : void 0,
+        j = null == P || (M && 0 === Z.length);
     return {
-        application: j,
-        isInitialLoading: P,
+        application: P,
+        isInitialLoading: j,
         primaryEntryPointCommand: A,
         isProfileFetching: I,
         wasProfileFetching: T,

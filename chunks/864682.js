@@ -16,7 +16,7 @@ var l = n(442837),
     d = n(441319);
 function h() {
     let [e, t, n] = (0, l.Wu)([a.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
-        h = d.QA[e],
+        h = (0, d.aW)(e),
         p = e !== c.aH.DEFAULT && (n || t),
         f = (0, r.useRedesignIconContext)().enabled,
         _ = (0, i.jsx)(r.ClydeIcon, {

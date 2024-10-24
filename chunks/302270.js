@@ -32,8 +32,8 @@ var i = n(200651),
     b = n(200498),
     R = n(146085),
     L = n(427679),
-    j = n(592473),
-    P = n(831002),
+    P = n(592473),
+    j = n(831002),
     O = n(903108),
     y = n(981631),
     D = n(474936),
@@ -57,7 +57,7 @@ function w(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(T.Z, {
-                            children: (0, i.jsx)(P.Z, {
+                            children: (0, i.jsx)(j.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: m
@@ -90,7 +90,7 @@ function w(e) {
             !o && E
                 ? (0, i.jsx)('div', {
                       className: k.button,
-                      children: (0, i.jsx)(j.Z, {
+                      children: (0, i.jsx)(P.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               f && u.Z.updateChatOpen(n.id, !1), a();
                           },
@@ -123,13 +123,13 @@ function B(e) {
         x = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         S = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
         b = (0, O.Z)(a),
-        j = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
-        P = () => {
+        P = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
+        j = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
                 A.default.track(y.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
                     type: D.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: j,
+                    is_moderator: P,
                     action: D.T7.DISMISS
                 });
         };
@@ -138,7 +138,7 @@ function B(e) {
             A.default.track(y.rMx.BOOSTING_UPSELL_VIEWED, {
                 guild_id: a.guild_id,
                 type: D.cd.VIDEO_STAGE_LIMIT,
-                is_moderator: j,
+                is_moderator: P,
                 listener_count: C + I
             });
     }, [b]);
@@ -228,7 +228,7 @@ function B(e) {
                                         children: [
                                             (0, i.jsx)(c.Button, {
                                                 className: k.notNowButton,
-                                                onClick: P,
+                                                onClick: j,
                                                 look: c.Button.Looks.BLANK,
                                                 size: c.Button.Sizes.SMALL,
                                                 children: U.Z.Messages.NOT_NOW
@@ -243,7 +243,7 @@ function B(e) {
                                                         A.default.track(y.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: a.guild_id,
                                                             type: D.cd.VIDEO_STAGE_LIMIT,
-                                                            is_moderator: j,
+                                                            is_moderator: P,
                                                             action: D.T7.BOOST
                                                         });
                                                 },
@@ -254,7 +254,7 @@ function B(e) {
                                     })
                                   : (0, i.jsx)(c.Button, {
                                         className: k.notNowButton,
-                                        onClick: P,
+                                        onClick: j,
                                         look: c.Button.Looks.BLANK,
                                         size: c.Button.Sizes.SMALL,
                                         children: U.Z.Messages.DISMISS

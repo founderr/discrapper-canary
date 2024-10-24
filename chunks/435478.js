@@ -24,14 +24,14 @@ function _(e) {
         { onFocus: m, ...I } = (0, r.JA)(t),
         { id: p } = (0, r.f$)(),
         [g, T] = a.useState(!1),
-        C = null != E;
+        f = null != E;
     a.useLayoutEffect(() => {
-        if (!!C)
+        if (!!f)
             return (0, s.N)(p, (e) => {
                 T(e === t);
             });
-    }, [t, p, C]);
-    let f = (e) =>
+    }, [t, p, f]);
+    let C = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ...I,
@@ -55,22 +55,22 @@ function _(e) {
                     className: u.menuItemLabel,
                     children: [n, _]
                 }),
-                C &&
+                f &&
                     (0, i.jsx)(l.Fbu, {
                         size: 'xs',
                         color: 'currentColor'
                     })
             ]
         });
-    return C
+    return f
         ? (0, i.jsx)(o.Popout, {
               spacing: 0,
               renderPopout: E,
               shouldShow: g,
               onRequestClose: () => T(!1),
-              children: f
+              children: C
           })
-        : f();
+        : C();
 }
 function E(e) {
     let { id: t, children: n } = e,

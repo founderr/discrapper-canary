@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     },
     i: function () {
         return L;
@@ -74,12 +74,12 @@ function L(e) {
         })
     );
 }
-function j(e) {
+function P(e) {
     let { channel: t } = e,
         a = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != a && N.default.extractTimestamp(a.id) < Date.now() - Z._8R,
         T = (0, c.e7)([g.default], () => (null == a ? void 0 : a.ownerId) === g.default.getId(), [a]),
-        { canInvite: j, canManageGuild: P, canMessage: O } = (0, _.TE)(t, a),
+        { canInvite: P, canManageGuild: j, canMessage: O } = (0, _.TE)(t, a),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
@@ -236,7 +236,7 @@ function j(e) {
         return null;
     let K = [];
     !h &&
-        (j &&
+        (P &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -253,7 +253,7 @@ function j(e) {
                     'invite'
                 )
             ),
-        P &&
+        j &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,

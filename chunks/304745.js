@@ -34,15 +34,15 @@ function Z(e) {
         M = (0, m.KF)(t.id),
         b = (0, m.g5)(M),
         R = M !== m.jy.CAN_LAUNCH || Z,
-        { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, T.Z)(200, 300),
+        { isHovered: L, setIsHovered: P, onMouseEnter: j, onMouseLeave: O } = (0, T.Z)(200, 300),
         y = (0, h.a)(),
         D = (0, d.Z)({ channelId: t.id }),
         U = !R,
         k = s.useCallback(
             (e) => {
-                'focus' !== e.type && P();
+                'focus' !== e.type && j();
             },
-            [P]
+            [j]
         ),
         w = (0, o.O)(),
         B = (0, c.bp)() === S.IlC.POPOUT,
@@ -80,7 +80,7 @@ function Z(e) {
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        j(!1);
+                        P(!1);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: s } = e;
@@ -89,7 +89,7 @@ function Z(e) {
                                   ref: s,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: P,
+                                  onMouseEnter: j,
                                   onMouseLeave: O,
                                   isHovered: L,
                                   onClick: () => a(v.L.UNKNOWN)

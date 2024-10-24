@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return j;
+        return P;
     }
 }),
     n(47120),
@@ -139,7 +139,7 @@ function L(e) {
         ]
     });
 }
-function j(e) {
+function P(e) {
     let { channel: t, ...n } = e,
         { shouldShowOptInPopout: a } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
         { enabled: l } = T.Z.useExperiment(

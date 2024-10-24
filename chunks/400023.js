@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(255269),
     R = n(47481),
     L = n(977391),
-    j = n(959258),
-    P = n(73274),
+    P = n(959258),
+    j = n(73274),
     O = n(419388),
     y = n(406534),
     D = n(981631),
@@ -39,7 +39,7 @@ let w = s.memo(
     function (e) {
         var t, n;
         let { className: a, messageGroupSpacing: d, scrollerClassName: m, channel: p, messages: _, unreadCount: f, showNewMessagesBar: g, messageDisplayCompact: C, channelStream: I, uploads: T, hasUnreads: x, editingMessageId: S, fontSize: N, keyboardModeEnabled: A, filterAfterTimestamp: Z, showingQuarantineBanner: b, hideSummaries: R = !1 } = e,
-            [j, w] = s.useState(!1),
+            [P, w] = s.useState(!1),
             B = s.useMemo(
                 () =>
                     C
@@ -72,7 +72,7 @@ let w = s.memo(
                 handleScrollToBottom: s.useCallback(() => w(!0), [w]),
                 handleScrollFromBottom: s.useCallback(() => w(!1), [w])
             }),
-            G = (0, P.Z)({
+            G = (0, j.Z)({
                 scrollerRef: H.ref,
                 isEditing: null != S,
                 keyboardModeEnabled: A,
@@ -99,7 +99,7 @@ let w = s.memo(
                 filterAfterTimestamp: null != Z ? Z : V,
                 showingQuarantineBanner: b,
                 hideSummaries: R,
-                isAtBottom: j,
+                isAtBottom: P,
                 jumpToPresent: () => {
                     if (_.hasPresent()) {
                         var e;
@@ -217,7 +217,7 @@ t.Z = s.memo(function (e) {
         })(t),
         {
             messageGroupSpacing: L,
-            fontSize: P,
+            fontSize: j,
             messageDisplayCompact: O,
             renderSpoilers: y,
             keyboardModeEnabled: U
@@ -309,7 +309,7 @@ t.Z = s.memo(function (e) {
         })(t);
     return (0, i.jsx)(p.a.Provider, {
         value: (0, b.Z)(y, u),
-        children: (0, i.jsx)(j.v, {
+        children: (0, i.jsx)(P.v, {
             children: (0, i.jsx)(w, {
                 ...c,
                 messageGroupSpacing: L,
@@ -324,7 +324,7 @@ t.Z = s.memo(function (e) {
                 hasUnreads: null != H,
                 canChat: M,
                 editingMessageId: G,
-                fontSize: P,
+                fontSize: j,
                 keyboardModeEnabled: U,
                 showingQuarantineBanner: n,
                 hideSummaries: a

@@ -34,8 +34,8 @@ var i = n(200651),
     b = n(981631),
     R = n(689938),
     L = n(226686),
-    j = n(204394);
-let P = [],
+    P = n(204394);
+let j = [],
     O = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
@@ -189,11 +189,11 @@ function k(e) {
                         C.Z.isFriend(t.id) || t.id === (null === (i = T.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
                                   status: null !== (s = g.Z.getStatus(t.id)) && void 0 !== s ? s : b.Skl.OFFLINE,
-                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : P
+                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : j
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: P
+                                  activities: j
                               });
                     }
                     let l = [];
@@ -222,13 +222,13 @@ function k(e) {
     return (0, i.jsx)(d.Gt, {
         value: f,
         children: (0, i.jsx)('div', {
-            className: j.membersWrap,
+            className: P.membersWrap,
             children: (0, i.jsxs)(r.Scroller, {
-                className: j.members,
+                className: P.members,
                 fade: !0,
                 children: [
                     (0, i.jsxs)(m.Z, {
-                        className: j.membersGroup,
+                        className: P.membersGroup,
                         children: [''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(E.length, ' '), M && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                     }),
                     E.map((e) =>
@@ -248,7 +248,7 @@ function k(e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(m.Z, {
-                                    className: j.membersGroup,
+                                    className: P.membersGroup,
                                     children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(I.length)
                                 }),
                                 I.map((e) =>
@@ -275,7 +275,7 @@ function k(e) {
                                             });
                                         },
                                         avatar: (0, i.jsx)('div', {
-                                            className: j.appIconWrapper,
+                                            className: P.appIconWrapper,
                                             children: (0, i.jsx)(r.PlusSmallIcon, {
                                                 size: 'sm',
                                                 color: 'currentColor'

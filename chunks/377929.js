@@ -73,8 +73,8 @@ function A(e) {
         b = (0, d.Z)(t),
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
-        j = (0, m.Z)(t),
-        P = (0, g.Z)(t),
+        P = (0, m.Z)(t),
+        j = (0, g.Z)(t),
         O = T.vF.useSetting(),
         y = (0, r.e7)([x.Z], () => !l().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
@@ -84,7 +84,7 @@ function A(e) {
         onSelect: s,
         children: [
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, j]
+                children: [R, P]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
@@ -103,7 +103,7 @@ function A(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [P, a, I, b]
+                children: [j, a, I, b]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [M, Z]

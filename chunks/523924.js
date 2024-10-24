@@ -18,7 +18,7 @@ t.Z = (e) => {
         null == g && null != p && o.Z.fetchJoinRequestCooldown(p.id);
     }, [g, p]);
     let T = (null != g ? g : 0) > 0,
-        C = T && null != g ? Math.ceil((1000 * g - Date.now()) / 86400000) : 0;
+        f = T && null != g ? Math.ceil((1000 * g - Date.now()) / 86400000) : 0;
     return (0, i.jsxs)('div', {
         className: u.confirmation,
         children: [
@@ -66,8 +66,8 @@ t.Z = (e) => {
                 children: [
                     (0, i.jsx)(r.TooltipContainer, {
                         className: u.confirmationButton,
-                        text: T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: C }) : null,
-                        'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: C }) : void 0,
+                        text: T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: f }) : null,
+                        'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: f }) : void 0,
                         children: (0, i.jsx)(r.Button, {
                             className: u.confirmationTooltipContents,
                             onClick: E,

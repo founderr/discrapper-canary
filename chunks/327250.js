@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     }
 });
 var i = n(200651);
@@ -258,7 +258,7 @@ function L(e) {
         ]
     });
 }
-function j(e) {
+function P(e) {
     let { userId: t, guildId: n, onClose: s } = e,
         a = (0, l.e7)([T.default], () => T.default.getUser(t), [t]),
         r = (0, l.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]);

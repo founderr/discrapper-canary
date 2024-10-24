@@ -17,8 +17,8 @@ var a = n(481060),
     p = n(747071),
     g = n(49230),
     T = n(981631),
-    C = n(65154);
-function f(e, t, n) {
+    f = n(65154);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,9 +42,9 @@ class S extends _.Z {
         var t;
         super(...e),
             (t = this),
-            f(this, 'playingSoundsWeb', new Map()),
-            f(this, '_stopAndClearSounds', () => {
-                c.Z.supports(C.AN.SAMPLE_PLAYBACK) &&
+            C(this, 'playingSoundsWeb', new Map()),
+            C(this, '_stopAndClearSounds', () => {
+                c.Z.supports(f.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
@@ -53,7 +53,7 @@ class S extends _.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            f(this, '_playSound', async function (e) {
+            C(this, '_playSound', async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     i = arguments.length > 2 ? arguments[2] : void 0,
                     a = arguments.length > 3 ? arguments[3] : void 0,
@@ -66,15 +66,15 @@ class S extends _.Z {
                             soundVolume: (0, p.Z)(n),
                             reportSoundStartedPlaying: () => (0, E.xR)(e, i)
                         };
-                        c.Z.supports(C.AN.SAMPLE_PLAYBACK) ? await (0, g.$)(a) : await (0, g.h)(a, t.playingSoundsWeb);
+                        c.Z.supports(f.AN.SAMPLE_PLAYBACK) ? await (0, g.$)(a) : await (0, g.h)(a, t.playingSoundsWeb);
                     } finally {
                         (0, E.R)(e, i);
                     }
             }),
-            f(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
+            C(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
                 (0, E.w)();
             }),
-            f(this, '_handleOpenEducationModal', (e, t) => {
+            C(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
                 let s = o.Z.getChannel(t),
                     c = u.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD);

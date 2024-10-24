@@ -32,8 +32,8 @@ var i,
     p = n(938736),
     g = n(227140),
     T = n(981631),
-    C = n(921944),
-    f = n(689938),
+    f = n(921944),
+    C = n(689938),
     S = n(938923),
     N = n(203302);
 let A = 'url(#dark-purple-gradient)';
@@ -50,11 +50,11 @@ let Z = () =>
             children: [
                 (0, s.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: f.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
+                    children: C.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
                 }),
                 (0, s.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: f.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
+                    children: C.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
                 })
             ]
         }),
@@ -70,7 +70,7 @@ let Z = () =>
                 fill: 'white'
             })
         }),
-    R = () => (0, d.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: C.L.TAKE_ACTION }),
+    R = () => (0, d.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: f.L.TAKE_ACTION }),
     O = (e) => {
         let { children: t } = e;
         return (0, s.jsx)(o.Popout, {
@@ -101,10 +101,10 @@ let Z = () =>
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: f.Z.Messages.CHECK_IT_OUT,
-                    header: f.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: p.Nq }),
+                    tryItText: C.Z.Messages.CHECK_IT_OUT,
+                    header: C.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: p.Nq }),
                     hideDismissButton: !0,
-                    body: f.Z.Messages.REFERRAL_INCENTIVE_GET_DISCOUNT_OFF_YOUR_NEXT_MONTH.format({ discountRate: p.Nq }),
+                    body: C.Z.Messages.REFERRAL_INCENTIVE_GET_DISCOUNT_OFF_YOUR_NEXT_MONTH.format({ discountRate: p.Nq }),
                     dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
@@ -148,7 +148,7 @@ let Z = () =>
             (0, s.jsx)(o.Tooltip, {
                 text: t,
                 position: 'right',
-                'aria-label': r ? f.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : f.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
+                'aria-label': r ? C.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : C.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
                 tooltipClassName: r ? S.marketingBadgeTooltip : S.t4AMarketingBadgeTooltip,
                 allowOverflow: !0,
                 tooltipContentClassName: S.tooltipContent,
@@ -166,7 +166,7 @@ let Z = () =>
             r.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, s.jsx)(g.Z, { copy: f.Z.Messages.NEW })
+            (0, s.jsx)(g.Z, { copy: C.Z.Messages.NEW })
         );
     },
     M = () =>
@@ -184,14 +184,14 @@ let Z = () =>
             children: [
                 (0, s.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: f.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER
+                    children: C.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER
                 }),
                 (0, s.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     children:
                         n.days > 0
-                            ? f.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP_DAYS.format({ days: n.days })
-                            : f.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP.format({
+                            ? C.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP_DAYS.format({ days: n.days })
+                            : C.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP.format({
                                   hours: v(n.hours),
                                   minutes: v(n.minutes),
                                   seconds: v(n.seconds)
@@ -210,12 +210,12 @@ let Z = () =>
             });
         return (
             r.useEffect(() => {
-                i && !c && (0, d.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: C.L.TAKE_ACTION });
+                i && !c && (0, d.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: f.L.TAKE_ACTION });
             }, [i, c]),
             (0, s.jsx)(m._y, {
                 className: S.trialBadgeBackground,
                 isTabSelected: i,
-                badgeCopy: o ? f.Z.Messages.NITRO_BADGE_TEXT : u,
+                badgeCopy: o ? C.Z.Messages.NITRO_BADGE_TEXT : u,
                 offerExpiresAt: c ? a.expires_at : void 0
             })
         );

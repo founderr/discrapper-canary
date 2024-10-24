@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(730749),
     g = n(666743),
     T = n(115130),
-    C = n(812206),
-    f = n(770146),
+    f = n(812206),
+    C = n(770146),
     S = n(600164),
     N = n(811066),
     A = n(252618),
@@ -257,7 +257,7 @@ class ec extends a.PureComponent {
         if (null == s) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(a.Fragment, {
             children: [
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(C.Z, {
                     tag: 'h1',
                     children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({ name: n.name })
                 }),
@@ -556,23 +556,23 @@ class ec extends a.PureComponent {
 }
 t.Z = (0, p.Z)(
     (0, g.Z)(
-        l.ZP.connectStores([P.Z, O.Z, R.default, G.Z, j.Z, y.Z, U.Z, T.Z, C.Z, M.Z, x.Z, D.Z], (e) => {
+        l.ZP.connectStores([P.Z, O.Z, R.default, G.Z, j.Z, y.Z, U.Z, T.Z, f.Z, M.Z, x.Z, D.Z], (e) => {
             let t,
                 n,
                 i,
                 { inputSkuId: a, applicationId: s, storeListingId: r, isAuthenticated: l, channel: o } = e;
             if (null == s) {
                 if (null == a) throw Error('Needs applicationId or skuId');
-                (t = a), null != (s = null != (n = y.Z.get(a)) ? n.applicationId : null) && (i = C.Z.getApplication(s));
+                (t = a), null != (s = null != (n = y.Z.get(a)) ? n.applicationId : null) && (i = f.Z.getApplication(s));
             } else if (null == a) {
                 if (null == s) throw Error('Needs applicationId or skuId');
-                null != (i = C.Z.getApplication(s)) && (t = i.destinationSkuId), (n = null != t ? y.Z.get(t) : null);
+                null != (i = f.Z.getApplication(s)) && (t = i.destinationSkuId), (n = null != t ? y.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ea.l4R.STICKER_PACK) && (n = null);
             let c = null != s && (U.Z.inTestModeForApplication(s) || T.Z.inDevModeForApplication(s));
             return {
                 skuId: t,
-                application: null != s ? C.Z.getApplication(s) : null,
+                application: null != s ? f.Z.getApplication(s) : null,
                 isFetchingEntitlements: null != s && D.Z.applicationIdsFetching.has(s),
                 didFetchEntitlements: null != s && D.Z.applicationIdsFetched.has(s),
                 shouldFetchStatistics: l && null != s && M.Z.shouldFetchStatisticsForApplication(s),

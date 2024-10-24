@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(885110),
     R = n(627553),
     L = n(38761),
-    j = n(585483),
-    P = n(358085),
+    P = n(585483),
+    j = n(358085),
     O = n(127654),
     y = n(316595),
     D = n(193910),
@@ -71,7 +71,7 @@ t.Z = s.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                j.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                P.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         eg = (0, r.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
     function eC() {
@@ -94,15 +94,15 @@ t.Z = s.memo(function (e) {
             return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         };
         return (
-            j.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            P.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                j.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                P.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });
     let eI = (0, x.NE)(W),
         eT = (0, x.Xu)(W),
-        ex = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
+        ex = !v.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
         eS = (0, T.UI)(null != W ? W : void 0),
         ev = (0, c.useRedesignIconContext)().enabled,
         eN = (0, m.qB)(W.id, 'ChannelAttachButton'),

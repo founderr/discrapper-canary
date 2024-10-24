@@ -25,7 +25,7 @@ let I = () => [h.Z.Messages.APP_ICON_PIRATE, h.Z.Messages.APP_ICON_PIRATE_1, h.Z
     };
 function T(e) {
     let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: _, locked: h = !1 } = e,
-        [I, T] = i.useState(E.QA[t].name),
+        [I, T] = i.useState((0, E.aW)(t).name),
         S = t === d.Ru.PIRATE,
         g = (0, u.useRadioItem)({
             label: I,

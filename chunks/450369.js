@@ -77,24 +77,24 @@ let R = 16 / 9,
                 })
         });
     },
-    j = (e) => {
+    P = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, width: l, isModerator: u, onContextMenu: h, inPopout: g } = e,
             { reducedMotion: C } = s.useContext(o.AccessibilityPreferencesContext),
             { id: v, blocked: L } = t,
-            j = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
-            { selectedParticipant: P, largeStream: O } = (0, r.cj)([m.Z], () => ({
+            P = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
+            { selectedParticipant: j, largeStream: O } = (0, r.cj)([m.Z], () => ({
                 selectedParticipant: null != a ? m.Z.getSelectedParticipant(a.id) : null,
                 largeStream: null != a && m.Z.getStageStreamSize(a.id)
             })),
             y = s.useCallback(
                 (e, t) => {
-                    if (e.type === M.fO.STREAM && 0 === j.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
+                    if (e.type === M.fO.STREAM && 0 === P.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
                         if (!(0, f.p9)(a, S.Z, T.Z, x.Z, p.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == P ? void 0 : P.id) === e.id ? (O ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
+                    (null == j ? void 0 : j.id) === e.id ? (O ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
                 },
-                [j, a, P, O]
+                [P, a, j, O]
             );
         return (0, i.jsx)(
             N.Z,
@@ -181,7 +181,7 @@ t.Z = s.memo(function (e) {
                   onContextMenu: E,
                   inPopout: c === Z.IlC.POPOUT
               })
-            : (0, i.jsx)(j, {
+            : (0, i.jsx)(P, {
                   stageParticipant: s,
                   rtcParticipant: _,
                   channel: a,

@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(812236),
     g = n(82295),
     T = n(973616),
-    C = n(592125),
-    f = n(626135),
+    f = n(592125),
+    C = n(626135),
     S = n(823379),
     N = n(404295),
     A = n(728345),
@@ -44,14 +44,14 @@ async function x(e, t, n) {
         }
     if (null != i) {
         let a,
-            s = null == C.Z.getDMFromUserId(i.id);
+            s = null == f.Z.getDMFromUserId(i.id);
         try {
             a = await c.Z.openPrivateChannel([i.id], !1, !1, _.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (f.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (C.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: s,
                 channel_id: a
@@ -82,7 +82,7 @@ async function x(e, t, n) {
 }
 function b(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: a, botUserId: s, analyticsLocations: c } = e,
-        u = (0, l.e7)([C.Z], () => C.Z.getDMFromUserId(s)),
+        u = (0, l.e7)([f.Z], () => f.Z.getDMFromUserId(s)),
         _ = (0, l.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
         E = null != _ && _.applicationId === t.id && _.channelId === u,
         h = n === t.id,
@@ -164,7 +164,7 @@ function P() {
         );
     return (a.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), f.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), C.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(g.Z, {

@@ -26,8 +26,8 @@ let m = s.memo(function (e) {
         b = (0, d.wq)(M, p.id),
         R = (0, d.JC)(M, p, C, T),
         L = (0, d.rY)(I, T),
-        j = (0, d.Xn)(g, T),
-        P = s.useCallback(
+        P = (0, d.Xn)(g, T),
+        j = s.useCallback(
             () =>
                 T({
                     interactionUsernameProfile: !1,
@@ -66,12 +66,12 @@ let m = s.memo(function (e) {
         showTargetUsernamePopout: C,
         onClickAvatar: A,
         onClickUsername: N,
-        onClickCommand: j,
+        onClickCommand: P,
         onUserContextMenu: v,
         onClickTargetAvatar: L,
         onClickTargetUsername: R,
         onTargetUserContextMenu: b,
-        onPopoutRequestClose: P,
+        onPopoutRequestClose: j,
         renderTargetMessage: O
     });
 });

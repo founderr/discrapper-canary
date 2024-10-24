@@ -34,8 +34,8 @@ var i = n(200651),
     b = n(91218),
     R = n(313201),
     L = n(623624),
-    j = n(518738),
-    P = n(155409),
+    P = n(518738),
+    j = n(155409),
     O = n(184301),
     y = n(347475),
     D = n(439170),
@@ -193,7 +193,7 @@ let Q = s.memo((e) => {
     }),
     $ = s.memo(function (e) {
         let { id: t, title: n, count: s, guildId: a } = e,
-            l = (0, j.p9)({
+            l = (0, P.p9)({
                 roleId: t,
                 guildId: a,
                 size: 16
@@ -342,7 +342,7 @@ class et extends s.Component {
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            P.Z,
+                            j.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',

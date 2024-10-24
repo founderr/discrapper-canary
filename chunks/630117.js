@@ -9,7 +9,7 @@ var i = n(441319),
     a = n(689938);
 function s(e) {
     let { id: t, width: n = i.M9 } = e,
-        s = i.QA[t];
+        s = (0, i.aW)(t);
     return null == s
         ? null
         : (0, r.jsx)('img', {

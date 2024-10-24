@@ -49,10 +49,10 @@ let N = (e) => {
             L = () => {
                 !A && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
             },
-            j = (e, t) => {
+            P = (e, t) => {
                 e.stopPropagation(), (0, f.Zx)(t, !0), L();
             },
-            P = (e, t) => {
+            j = (e, t) => {
                 e.stopPropagation(), (0, f._s)(t.status, t.emoji, !0), L();
             },
             O = s.useCallback((e) => {
@@ -152,7 +152,7 @@ let N = (e) => {
                                         {
                                             'aria-label': s.title,
                                             onMouseEnter: () => D(n),
-                                            onClick: (e) => j(e, n),
+                                            onClick: (e) => P(e, n),
                                             children: (0, i.jsx)(N, {
                                                 className: l()(v.iconWidget, { [v.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: s.title,
@@ -196,7 +196,7 @@ let N = (e) => {
                                         {
                                             'aria-label': e.status,
                                             onMouseEnter: () => U(e),
-                                            onClick: r ? void 0 : (t) => P(t, e),
+                                            onClick: r ? void 0 : (t) => j(t, e),
                                             className: v.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(N, {

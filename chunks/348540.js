@@ -31,8 +31,8 @@ var s = n(442837),
     Z = n(299336);
 function M(e) {
     let { user: t, currentUser: n, displayProfile: M, channel: b, isHovering: R, onOpenProfile: L } = e,
-        j = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
-        P = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
+        P = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
+        j = (0, s.e7)([r.Z], () => r.Z.hidePersonalInformation),
         O = (0, s.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
@@ -55,7 +55,7 @@ function M(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(f.Z, { userId: t.id }),
-                        !P &&
+                        !j &&
                             (0, i.jsx)(x.Z, {
                                 userId: t.id,
                                 isHovering: R,
@@ -64,7 +64,7 @@ function M(e) {
                     ]
                 })
             }),
-            j === N.OGo.PENDING_INCOMING &&
+            P === N.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(I.Z.Overlay, {
                     children: (0, i.jsx)(E.Z, {
                         user: t,
@@ -82,7 +82,7 @@ function M(e) {
             (0, i.jsxs)(I.Z.Overlay, {
                 className: Z.overlay,
                 children: [
-                    !P &&
+                    !j &&
                         (null == M ? void 0 : M.bio) != null &&
                         (null == M ? void 0 : M.bio) !== '' &&
                         (0, i.jsx)(C.Z, {

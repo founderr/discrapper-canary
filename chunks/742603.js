@@ -34,8 +34,8 @@ var s = n(120356),
     b = n(887012),
     R = n(613548),
     L = n(221888),
-    j = n(339340),
-    P = n(354459),
+    P = n(339340),
+    j = n(354459),
     O = n(981631),
     y = n(231338),
     D = n(689938),
@@ -85,7 +85,7 @@ function H(e) {
         o = (0, f.qY)(a.id),
         c = null != o ? (0, E.DK)(o) : null,
         d = null != o;
-    if ((null == s ? void 0 : s.type) === P.fO.ACTIVITY)
+    if ((null == s ? void 0 : s.type) === j.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -107,7 +107,7 @@ function H(e) {
                         })
                 ]
             }));
-    else if ((null == s ? void 0 : s.type) === P.fO.STREAM) {
+    else if ((null == s ? void 0 : s.type) === j.fO.STREAM) {
         let e = s.user,
             n = s.stream;
         t = (0, i.jsxs)(i.Fragment, {
@@ -149,7 +149,7 @@ function G(e) {
         ),
         E = (0, m.ZP)(t),
         g = (0, p.KS)(t),
-        [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
+        [N] = (0, d.Z)((null == f ? void 0 : f.type) === j.fO.ACTIVITY ? [f.id] : []),
         A = D.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);
     let b = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -194,7 +194,7 @@ function G(e) {
                         ...n
                     });
             },
-            { modalKey: j.VOICE_CHANNEL_STATUS_MODAL_KEY }
+            { modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY }
         );
     }
     let V = (0, v.m$)({

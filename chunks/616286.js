@@ -102,9 +102,9 @@ function x(e) {
         event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: S ? null : L
     });
-    let [j, P] = s.useState(!1),
+    let [P, j] = s.useState(!1),
         O = s.useCallback(() => {
-            h && P(!0);
+            h && j(!0);
         }, [h]);
     (0, p.yp)({
         event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
@@ -113,15 +113,15 @@ function x(e) {
         s.useEffect(() => {
             let e;
             return (
-                j &&
+                P &&
                     (e = setTimeout(() => {
-                        P(!1);
+                        j(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [j]);
+        }, [P]);
     let y = [(t = h && S ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
         M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
@@ -134,7 +134,7 @@ function x(e) {
             iconComponent: R,
             tooltipPosition: 'bottom',
             wrapperClassName: l()(a, null != r && { [r]: A }),
-            forceTooltipOpen: j,
+            forceTooltipOpen: P,
             ...x
         })
     );

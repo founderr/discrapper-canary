@@ -55,9 +55,9 @@ function T(e) {
         }, [V]),
         Z = i.useCallback(
             (e) => {
-                S && b(!0), w(E), null == R || R(e);
+                S && b(!0), null == d && w(E), null == R || R(e);
             },
-            [S, E, R, w]
+            [S, E, R, w, d]
         ),
         Y = i.useCallback(
             (e) => {

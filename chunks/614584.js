@@ -27,8 +27,8 @@ let S = s.memo(function (e) {
     var t;
     let { baseMessage: n, referencedMessage: S, channel: v, compact: N = !1, referencedUsernameProfile: A, referencedAvatarProfile: Z, setPopout: M, isReplySpineClickable: b, showReplySpine: R } = e,
         L = S.state === m.Y.LOADED ? S.message : void 0,
-        j = (0, E.Uj)(L),
-        P = (0, c.p)(),
+        P = (0, E.Uj)(L),
+        j = (0, c.p)(),
         O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         y = s.useMemo(() => {
             if (null == L) return null;
@@ -37,7 +37,7 @@ let S = s.memo(function (e) {
                 let t = _.Z.getWelcomeMessageKind(v.guild_id);
                 return (0, l.Rp)(
                     _.Z.getSystemMessageUserJoin(e.id, t).astFormat({
-                        username: null != j ? j.nick : e.author.username,
+                        username: null != P ? P.nick : e.author.username,
                         usernameHook: (e) => e
                     })
                 );
@@ -45,7 +45,7 @@ let S = s.memo(function (e) {
             if (e.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, l.Rp)(
                     (0, o.PA)({
-                        username: null != j ? j.nick : e.author.username,
+                        username: null != P ? P.nick : e.author.username,
                         guildId: null == v ? void 0 : v.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData
                     })
@@ -54,21 +54,21 @@ let S = s.memo(function (e) {
                 return (0, l.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
-                        username: null == j ? void 0 : j.nick
+                        username: null == P ? void 0 : P.nick
                     })
                 );
             else if (e.type === T.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, l.Rp)(
                     (0, h.B2)({
                         application: null == e ? void 0 : e.application,
-                        username: null == j ? void 0 : j.nick
+                        username: null == P ? void 0 : P.nick
                     })
                 );
             else if (e.type === T.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, l.Rp)(
                     (0, h.hj)({
                         application: null == e ? void 0 : e.application,
-                        username: null == j ? void 0 : j.nick
+                        username: null == P ? void 0 : P.nick
                     })
                 );
             else if (e.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : x.Z.Messages.DEADCHAT_PROMPT_1;
@@ -76,7 +76,7 @@ let S = s.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: P
+                        shouldFilterKeywords: j
                     },
                     n = e.isFirstMessageInForumPost(v)
                         ? {
@@ -94,7 +94,7 @@ let S = s.memo(function (e) {
                 return (0, f.ZP)(e, n).content;
             }
             return null;
-        }, [L, j, v, O, P]),
+        }, [L, P, v, O, j]),
         D = (0, a.e7)([p.Z], () => null != L && p.Z.isBlockedForMessage(L), [L]),
         U = (0, I.wq)(null == L ? void 0 : L.author.id, v.id),
         k = (0, I.$3)(n, L, D),
@@ -110,7 +110,7 @@ let S = s.memo(function (e) {
         ),
         G = (0, E.Uj)(n);
     return (0, i.jsx)(g.Z, {
-        repliedAuthor: j,
+        repliedAuthor: P,
         baseMessage: n,
         channel: v,
         baseAuthor: G,

@@ -30,10 +30,10 @@ let v = !1,
 function L() {
     (N = ''), (A = 0), (Z = []), (b = new Set()), (v = !1), (R = null);
 }
-function j(e) {
-    (N = e), (A = 0), P();
+function P(e) {
+    (N = e), (A = 0), j();
 }
-function P() {
+function j() {
     if (!v) return !1;
     let e = g.Z.getChannel(R);
     if (0 === N.trim().length)
@@ -117,7 +117,7 @@ function U() {
 }
 function k(e) {
     if (e.key !== S.vTt) return !1;
-    (v = !0), O(), (i = U()), (R = null), j('');
+    (v = !0), O(), (i = U()), (R = null), P('');
 }
 function w(e) {
     if (e.key !== S.vTt) return !1;
@@ -128,7 +128,7 @@ function B() {
 }
 class H extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, g.Z, T.Z, m.Z, C.Z), this.syncWith([x.default, g.Z], P), this.syncWith([T.Z], O);
+        this.waitFor(x.default, g.Z, T.Z, m.Z, C.Z), this.syncWith([x.default, g.Z], j), this.syncWith([T.Z], O);
     }
     getResults() {
         return Z;
@@ -169,18 +169,18 @@ let G = new H(d.Z, {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
         let i = v;
-        return L(), (v = i), (R = n), P();
+        return L(), (v = i), (R = n), j();
     },
     MODAL_PUSH: k,
     SHOW_ACTION_SHEET: k,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (v = !0), O(), (i = U()), (R = e.channelId), j('');
+        (v = !0), O(), (i = U()), (R = e.channelId), P('');
     },
     MODAL_POP: w,
     HIDE_ACTION_SHEET: w,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: B,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-        (R = e.channelId), j(e.query);
+        (R = e.channelId), P(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
         A = e.row;

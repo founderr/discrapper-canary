@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(827498),
     R = n(845936),
     L = n(555573),
-    j = n(213459),
-    P = n(456007),
+    P = n(213459),
+    j = n(456007),
     O = n(10718),
     y = n(998698),
     D = n(895924),
@@ -82,8 +82,8 @@ var i = n(200651),
     eb = n(585483),
     eR = n(709054),
     eL = n(838440),
-    ej = n(228488),
-    eP = n(127654),
+    eP = n(228488),
+    ej = n(127654),
     eO = n(979956),
     ey = n(655687),
     eD = n(165540),
@@ -168,7 +168,7 @@ class eX extends s.PureComponent {
                 command: s,
                 section: e,
                 location: D.Vh.RECALL,
-                initialValues: (0, P.Dw)(s, null != i ? i : [])
+                initialValues: (0, j.Dw)(s, null != i ? i : [])
             });
         }
     }
@@ -193,7 +193,7 @@ class eX extends s.PureComponent {
                 onKeyDown: this.handleKeyDown,
                 renderAttachButton: this.renderAttachButton,
                 renderApplicationCommandIcon: this.renderApplicationCommandIcon,
-                promptToUpload: eP.d,
+                promptToUpload: ej.d,
                 highlighted: l,
                 setEditorRef: (e) => (this.editorRef = e),
                 onCommandSentinelTyped: _
@@ -341,8 +341,8 @@ class eX extends s.PureComponent {
                         if (
                             !(await (0, R.L)({
                                 applicationId: s.applicationId,
-                                userIndexState: j.ZP.getUserState(),
-                                guildIndexState: j.ZP.getGuildState(o.guild_id),
+                                userIndexState: P.ZP.getUserState(),
+                                guildIndexState: P.ZP.getGuildState(o.guild_id),
                                 location: t,
                                 sectionName: n,
                                 entrypoint: i
@@ -414,7 +414,7 @@ class eX extends s.PureComponent {
                         let e = (0, eO.KZ)(n);
                         if ((0, eO.Bf)(e, null == r ? void 0 : r.id))
                             return (
-                                (0, eP.G)(o, e),
+                                (0, ej.G)(o, e),
                                 {
                                     shouldClear: !1,
                                     shouldRefocus: !1
@@ -550,8 +550,8 @@ class eJ extends s.PureComponent {
                         : null
                 ]
             }),
-            j = S && v,
-            P = j && v ? R : L;
+            P = S && v,
+            j = P && v ? R : L;
         return (0, i.jsx)(
             I.Z,
             {
@@ -619,17 +619,17 @@ class eJ extends s.PureComponent {
                                                       : (0, i.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: eY,
-                                                            className: l()(eW.form, { [eW.formWithLoadedChatInput]: !j }),
+                                                            className: l()(eW.form, { [eW.formWithLoadedChatInput]: !P }),
                                                             children: [
                                                                 g && (0, i.jsx)(ec.Z, { channelId: n.id }),
                                                                 n.isPrivate()
                                                                     ? (0, i.jsx)(eH.Z, {
                                                                           channel: n,
-                                                                          children: P
+                                                                          children: j
                                                                       })
                                                                     : (0, i.jsx)(eG.Z, {
                                                                           channel: n,
-                                                                          children: P
+                                                                          children: j
                                                                       }),
                                                                 (0, i.jsx)(C.Z, {
                                                                     channel: n,
@@ -666,7 +666,7 @@ class eJ extends s.PureComponent {
             }),
             ez(this, 'handleInputFocus', (e) => {
                 var t;
-                if ((null === (t = this.dispatchGroupRef.current) || void 0 === t || t.bumpDispatchPriority(), !(0, ej.rB)()))
+                if ((null === (t = this.dispatchGroupRef.current) || void 0 === t || t.bumpDispatchPriority(), !(0, eP.rB)()))
                     (null == e ? void 0 : e.highlight) != null
                         ? this.setState({
                               textAreaFocused: !0,
@@ -759,7 +759,7 @@ t.Z = s.memo(function (e) {
         commands: R
     });
     let L = s.useRef(null),
-        j = (0, h.e7)([M.Z], () => M.Z.appDMChannelsWithFailedLoads().has(t.id));
+        P = (0, h.e7)([M.Z], () => M.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eJ, {
         channel: t,
         isEditing: null != (0, h.e7)([eC.Z], () => eC.Z.getEditingMessageId(t.id)),
@@ -781,6 +781,6 @@ t.Z = s.memo(function (e) {
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != T,
         entryPointCommandButtonRef: L,
-        isFailedAppDMLoad: j
+        isFailedAppDMLoad: P
     });
 });
