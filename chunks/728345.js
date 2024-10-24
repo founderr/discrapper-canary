@@ -139,10 +139,11 @@ t.ZP = {
                 });
             } catch (e) {
                 throw (
-                    (a.Z.dispatch({
-                        type: 'APPLICATIONS_FETCH_FAIL',
-                        applicationIds: n
-                    }),
+                    (429 !== e.status &&
+                        a.Z.dispatch({
+                            type: 'APPLICATIONS_FETCH_FAIL',
+                            applicationIds: n
+                        }),
                     e)
                 );
             }
