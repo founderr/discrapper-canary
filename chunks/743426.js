@@ -431,10 +431,6 @@ class T extends s.Z {
             null != n ? (n(), e()) : t(Error('Audio debug state is not supported.'));
         });
     }
-    log(e, t, n) {
-        var r, i;
-        null === (r = (i = this.logger).onLogFn) || void 0 === r || r.call(i, e, t, n);
-    }
     startAecDump() {}
     stopAecDump() {}
     setAecDump(e) {
@@ -621,7 +617,8 @@ class T extends s.Z {
                 -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
         let i = (0, d.zS)();
-        i.setDeviceChangeCallback(this.handleDeviceChange),
+        if (
+            (i.setDeviceChangeCallback(this.handleDeviceChange),
             i.setVolumeChangeCallback(this.handleVolumeChange),
             i.setOnVoiceCallback(this.handleVoiceActivity),
             null === (t = i.setVideoInputInitializationCallback) || void 0 === t || t.call(i, this.handleVideoInputInitialization),
@@ -631,9 +628,6 @@ class T extends s.Z {
             }),
             null === (n = i.setNativeScreenSharePickerCallbacks) || void 0 === n || n.call(i, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
             null === (r = i.setAudioDeviceModuleErrorCallback) || void 0 === r || r.call(i, this.handleAudioDeviceModuleErrorCallback),
-            this.logger.setOnLogFn((e, t, n) => {
-                i.consoleLog(t, '['.concat(e, '] ').concat(n));
-            }),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -642,7 +636,24 @@ class T extends s.Z {
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
             null != i.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            null != i.setActiveSinksChangeCallback && i.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            (0, l.Z)(this);
+            this.getDebugLogging() && !T.installedLogHooks)
+        )
+            for (let e of ((T.installedLogHooks = !0), ['trace', 'debug', 'info', 'warn', 'error', 'log'])) {
+                let t = console,
+                    n = t[e];
+                null != n &&
+                    (t[e] = function () {
+                        n.apply(this, arguments);
+                        try {
+                            let t = Array.from(arguments)
+                                .map((e) => (null != e ? e.toString() : e))
+                                .filter((e) => 'string' != typeof e || '\nfont-weight: bold;\ncolor: purple;\n' !== e)
+                                .map((e) => (e.startsWith('%c') ? e.slice(2) : e));
+                            (0, d.zS)().consoleLog(e, t.join(' '));
+                        } catch (e) {}
+                    });
+            }
+        null != i.setActiveSinksChangeCallback && i.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
     }
 }
+p(T, 'installedLogHooks', !1);

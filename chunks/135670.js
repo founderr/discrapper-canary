@@ -114,9 +114,6 @@ class u extends r.Z {
     writeAudioDebugState() {
         return Promise.reject(Error('Audio debug state is not supported.'));
     }
-    log(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-    }
     setExperimentalAdm(e) {}
     setLoopback(e, t) {}
     getLoopback() {

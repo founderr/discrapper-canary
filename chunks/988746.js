@@ -58,7 +58,6 @@ class l {
             (this.handleSelfMute = (e) => {
                 if (!this.connection.hasDesktopSource()) this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate();
             }),
-            o.setOnLogFn((t, n, r) => e.log(r)),
             e.on(i.Sh.Speaking, this.handleSpeaking),
             e.on(i.Sh.Mute, this.handleSelfMute),
             this.initialize();

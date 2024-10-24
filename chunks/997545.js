@@ -1008,11 +1008,7 @@ class C extends E.Z {
             R(this, 'handleMLSFailure', (e, t) => {
                 this.emit(p.Sh.MLSFailure, e, t);
             }),
+            (this.logger = new _.Y('Connection('.concat(e, ')'))),
             (this.videoSupported = n);
-        let r = (0, T.zS)();
-        (this.logger = new _.Y('Connection('.concat(e, ')'))),
-            this.logger.setOnLogFn((e, t, n) => {
-                r.consoleLog(t, '['.concat(e, '] ').concat(n));
-            });
     }
 }
