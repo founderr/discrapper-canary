@@ -347,11 +347,16 @@ function z(e, t, n) {
             onClick: a,
             gameTitle: b.r.build(e.config).application.name
         });
+    if ((0, v.cr)(e)) {
+        var s;
+        let t = null === (s = e.config.videoMetadata) || void 0 === s ? void 0 : s.messages.videoTitle;
+        return null == t ? U.Z.Messages.QUESTS_VIDEO_QUESTBAR_SUBTITLE : U.Z.Messages.QUESTS_WATCH_VIDEO_TASK.format({ videoTitle: t });
+    }
     if (null != i) return i.title;
-    let s = U.Z.Messages.QUESTS_STREAM_TASK;
+    let o = U.Z.Messages.QUESTS_STREAM_TASK;
     return (
-        (0, v.Nj)({ quest: e }) && (s = U.Z.Messages.QUESTS_PLAY_TASK),
-        s.format({
+        (0, v.Nj)({ quest: e }) && (o = U.Z.Messages.QUESTS_PLAY_TASK),
+        o.format({
             minutes: r,
             gameTitle: e.config.messages.gameTitle
         })
