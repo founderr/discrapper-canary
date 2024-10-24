@@ -120,23 +120,25 @@ function R(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: s()(N.presets, { [N.presetsJustified]: L && R }),
-                        children: T.UZ.filter((e) => {
-                            let { isHidden: t } = e;
-                            return !t;
-                        }).map((e, t) =>
-                            (0, r.jsx)(
-                                m.Z,
-                                {
-                                    icon: e,
-                                    isSelected: v === e.id,
-                                    onSelect: (e) => M(e),
-                                    disabled: a,
-                                    tabIndex: 0 !== t || a ? void 0 : 0,
-                                    locked: L && !R && e.id !== I.aH.DEFAULT
-                                },
-                                e.id
+                        children: (0, T.wu)()
+                            .filter((e) => {
+                                let { isHidden: t } = e;
+                                return !t;
+                            })
+                            .map((e, t) =>
+                                (0, r.jsx)(
+                                    m.Z,
+                                    {
+                                        icon: e,
+                                        isSelected: v === e.id,
+                                        onSelect: (e) => M(e),
+                                        disabled: a,
+                                        tabIndex: 0 !== t || a ? void 0 : 0,
+                                        locked: L && !R && e.id !== I.aH.DEFAULT
+                                    },
+                                    e.id
+                                )
                             )
-                        )
                     })
                 ]
             })
