@@ -197,7 +197,9 @@ function eo(e) {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
-            home_session_id: 'gravity'
+            home_session_id: 'gravity',
+            unread_feed_item_types: $.map((e) => (0, v.v$)(e)),
+            read_feed_item_types: ee.map((e) => (0, v.v$)(e))
         }),
             (D = null !== (t = k.load_id) && void 0 !== t ? t : null),
             (k = {});
