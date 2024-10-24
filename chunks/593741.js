@@ -6,6 +6,7 @@ e.exports = {
     popoutOpen: 'popoutOpen_f8ccce',
     inputWrapper: 'inputWrapper_f8ccce',
     searchIcon: 'searchIcon_f8ccce',
+    searchBar: 'searchBar_f8ccce',
     carouselBackground: 'carouselBackground_f8ccce',
     cardCarousel: 'cardCarousel_f8ccce',
     carouselCard: 'carouselCard_f8ccce',

@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(689938),
     g = n(593741);
 let T = 70,
-    C = () => {
+    f = () => {
         let [e, t] = a.useState(!1),
             n = (0, m.GN)((e) => e.selectedGames, o.Z),
             { options: s, matchSorterOptions: l } = (0, _.P)(),
@@ -35,6 +35,7 @@ let T = 70,
                     autoFocus: !0,
                     look: d.SelectLooks.CUSTOM,
                     wrapperClassName: g.inputWrapper,
+                    className: g.searchBar,
                     options: s,
                     value: n,
                     placeholder: p.Z.Messages.DISCOVERY_PLUS_HEADER_SEARCH_PLACEHOLDER,
@@ -45,7 +46,7 @@ let T = 70,
             ]
         });
     },
-    f = (e) => {
+    C = (e) => {
         var t;
         let { game: n, index: a, currentIndex: s, gamesCount: r } = e,
             o = a - s,
@@ -103,7 +104,7 @@ t.Z = () => {
                         className: g.cardCarousel,
                         children: t.map((e, a) =>
                             (0, i.jsx)(
-                                f,
+                                C,
                                 {
                                     game: e,
                                     index: a,
@@ -152,7 +153,7 @@ t.Z = () => {
                         color: 'header-secondary',
                         children: p.Z.Messages.DISCOVERY_PLUS_HEADER_SUBTITLE
                     }),
-                    (0, i.jsx)(C, {})
+                    (0, i.jsx)(f, {})
                 ]
             })
         ]
