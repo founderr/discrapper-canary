@@ -81,7 +81,8 @@ let I = i.memo(function (e) {
                     isLoading: T,
                     clan: m,
                     onClose: t,
-                    profileViewedAnalytics: h
+                    profileViewedAnalytics: h,
+                    userId: d
                 });
             },
             position: 'top',

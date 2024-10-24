@@ -10016,6 +10016,8 @@ e.exports = Object.freeze({
     DISCOVERY_ENTRYPOINT_EMBED_ERROR_TITLE: 'Oops! Something went wrong...',
     DISCOVERY_ENTRYPOINT_EMBED_ERROR_DESCRIPTION: "We're having trouble displaying this Guild discovery link.",
     DISCOVERY_ENTRYPOINT_EMBED_ERROR_CTA: 'View All Guilds',
+    RAPIDASH_ASK_TO_JOIN_CTA: 'Ask to Join',
+    RAPIDASH_ASK_TO_JOIN_LABEL: 'Ask **!!{username}!!** to join',
     GUILD_POPOUT_VIEW_SERVER_BUTTON: 'View Server',
     GUILD_POPOUT_UNAVAILABLE_HEADER: 'This server is not available.',
     GUILD_POPOUT_UNAVAILABLE_FLAVOR: "We can't show any further details.",
