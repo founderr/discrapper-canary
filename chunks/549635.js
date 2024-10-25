@@ -4,8 +4,8 @@ t.d(n, {
     }
 });
 var r = t(200651),
-    a = t(192379),
-    i = t(124347),
+    i = t(192379),
+    a = t(124347),
     l = t(80966),
     o = t(524444),
     s = t(52824),
@@ -17,22 +17,22 @@ function _(e) {
     let n = d.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
 }
-n.Z = a.memo(function (e) {
-    let { media: n, obscured: t = !1, onContextMenu: a } = e,
-        { width: d, height: f, url: h, proxyUrl: x, alt: E, type: p, maxWidth: C, maxHeight: A, ...g } = n,
+n.Z = i.memo(function (e) {
+    let { media: n, obscured: t = !1, onContextMenu: i } = e,
+        { width: d, height: f, url: h, proxyUrl: E, alt: x, type: p, maxWidth: C, maxHeight: g, ...A } = n,
         { width: I, height: L } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
         S = (0, s.q)({
-            proxyURL: x,
+            proxyURL: E,
             url: h
         }),
         M = !(null == d || 0 === d || null == f || 0 === f);
-    if ('VIDEO' === p && M && null != x) {
+    if ('VIDEO' === p && M && null != E) {
         var O;
-        let e = _(x);
+        let e = _(E);
         if (null == e) return null;
-        let i = null !== (O = n.renderLinkComponent) && void 0 !== O ? O : o.iT;
+        let a = null !== (O = n.renderLinkComponent) && void 0 !== O ? O : o.iT;
         return (0, r.jsx)(l.Z, {
-            ...g,
+            ...A,
             src: S,
             width: d,
             height: f,
@@ -46,16 +46,16 @@ n.Z = a.memo(function (e) {
             autoMute: c.rs,
             onVolumeChange: c.jA,
             onMute: c.Zj,
-            renderLinkComponent: i,
+            renderLinkComponent: a,
             autoPlay: !t,
-            alt: E,
-            onContextMenu: a
+            alt: x,
+            onContextMenu: i
         });
     }
     if ('IMAGE' === p)
         return M
-            ? (0, r.jsx)(i.ZP, {
-                  ...g,
+            ? (0, r.jsx)(a.ZP, {
+                  ...A,
                   src: S,
                   width: d,
                   height: f,
@@ -64,15 +64,15 @@ n.Z = a.memo(function (e) {
                   maxHeight: L,
                   animated: !t && n.animated,
                   autoPlay: !t,
-                  alt: E,
+                  alt: x,
                   zoomThumbnailPlaceholder: n.zoomThumbnailPlaceholder,
-                  onContextMenu: a,
+                  onContextMenu: i,
                   responsive: !0
               })
             : (0, r.jsx)('img', {
                   src: S,
-                  alt: E,
-                  onContextMenu: a,
+                  alt: x,
+                  onContextMenu: i,
                   className: m.dimensionlessImage
               });
     return null;

@@ -65,7 +65,7 @@ function C(t) {
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
                 children: (0, a.jsx)(l.Text, {
                     variant: 'text-md/medium',
-                    children: _.Z.Messages.SUBMIT
+                    children: _.Z.Messages.CONTINUE
                 })
             })
         ]

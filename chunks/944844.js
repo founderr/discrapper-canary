@@ -48,29 +48,29 @@ async function f(t, e, n) {
         await (0, l.i2)(t, e, n);
     } catch (t) {}
 }
-function _(t, e, n, r) {
+function _(t, e, n) {
     return a.useCallback(
-        async (a) => {
-            if (!a) {
+        async (a, r) => {
+            if (!r) {
                 try {
-                    await (0, l.tR)(t.userCode, 'denied');
+                    await (0, l.tR)(a.userCode, 'denied');
                 } catch (t) {}
-                e();
+                t();
                 return;
             }
-            if (null == t.twoWayLinkCode)
+            if (null == a.twoWayLinkCode)
                 try {
-                    await (0, l.tR)(t.userCode, 'granted'), r(t);
-                } catch (e) {
-                    n(t);
+                    await (0, l.tR)(a.userCode, 'granted'), n(a);
+                } catch (t) {
+                    e(a);
                 }
             else
                 try {
-                    await d(t.clientId, t.twoWayLinkCode, t.userCode), r(t);
-                } catch (e) {
-                    n(t);
+                    await d(a.clientId, a.twoWayLinkCode, a.userCode), n(a);
+                } catch (t) {
+                    e(a);
                 }
         },
-        [t, e, n, r]
+        [t, e, n]
     );
 }

@@ -218,7 +218,7 @@ function ed(e) {
     let tt = s.useCallback(
             async (e) => {
                 if (null != ev) {
-                    ev(e);
+                    eB(!0), ev(e);
                     return;
                 }
                 if (!e && !eA) {

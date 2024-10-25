@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return x;
     }
 });
 var r = t(200651),
-    a = t(192379),
-    i = t(120356),
-    l = t.n(i),
+    i = t(192379),
+    a = t(120356),
+    l = t.n(a),
     o = t(442837),
     s = t(481060),
     u = t(700582),
@@ -16,7 +16,7 @@ var r = t(200651),
     _ = t(592125),
     f = t(231338),
     h = t(182763);
-let x = a.memo(function (e) {
+let E = i.memo(function (e) {
     let { message: n } = e,
         t = (0, o.e7)([_.Z], () => _.Z.getChannel(n.channel_id));
     return null == t
@@ -41,10 +41,10 @@ let x = a.memo(function (e) {
               })
           });
 });
-function E(e) {
+function x(e) {
     var n;
-    let { item: t, onClose: a } = e,
-        i = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
+    let { item: t, onClose: i } = e,
+        a = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
     return (0, r.jsx)(s.ThemeProvider, {
         theme: f.BR.DARK,
         children: (e) =>
@@ -56,10 +56,10 @@ function E(e) {
                         color: s.ButtonColors.CUSTOM,
                         size: s.ButtonSizes.ICON,
                         className: h.closeButton,
-                        onClick: a,
+                        onClick: i,
                         children: (0, r.jsx)(s.XLargeIcon, {})
                     }),
-                    null != i && (0, r.jsx)(x, { message: i })
+                    null != a && (0, r.jsx)(E, { message: a })
                 ]
             })
     });

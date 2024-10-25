@@ -1,6 +1,6 @@
 var r = t(200651),
-    a = t(192379),
-    i = t(481060),
+    i = t(192379),
+    a = t(481060),
     l = t(346610),
     o = t(868643),
     s = t(912332),
@@ -11,33 +11,33 @@ var r = t(200651),
     _ = t(689938),
     f = t(92718);
 function h() {
-    (0, i.closeModal)(m.U);
+    (0, a.closeModal)(m.U);
 }
-function x(e) {
-    let { onClick: n, tooltipText: t, children: a, ...l } = e;
-    return (0, r.jsx)(i.Tooltip, {
+function E(e) {
+    let { onClick: n, tooltipText: t, children: i, ...l } = e;
+    return (0, r.jsx)(a.Tooltip, {
         text: t,
         children: (e) => {
             let { ...t } = e;
-            return (0, r.jsx)(i.Button, {
+            return (0, r.jsx)(a.Button, {
                 ...t,
                 onClick: n,
-                look: i.ButtonLooks.BLANK,
-                size: i.ButtonSizes.ICON,
-                color: i.ButtonColors.CUSTOM,
+                look: a.ButtonLooks.BLANK,
+                size: a.ButtonSizes.ICON,
+                color: a.ButtonColors.CUSTOM,
                 className: f.actionButton,
                 ...l,
-                children: a
+                children: i
             });
         }
     });
 }
-function E() {
+function x() {
     let { zoomed: e, setZoomed: n } = (0, d.Y)();
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         onClick: () => n(!e),
         tooltipText: e ? _.Z.Messages.MEDIA_VIEWER_CTA_ZOOM_OUT : _.Z.Messages.MEDIA_VIEWER_CTA_ZOOM_IN,
-        children: e ? (0, r.jsx)(i.XLargeIcon, {}) : (0, r.jsx)(i.MagnifyingGlassIcon, {})
+        children: e ? (0, r.jsx)(a.XLargeIcon, {}) : (0, r.jsx)(a.MagnifyingGlassIcon, {})
     });
 }
 function p(e) {
@@ -45,7 +45,7 @@ function p(e) {
     let { item: u } = e,
         c = null === (n = u.sourceMetadata) || void 0 === n ? void 0 : n.message,
         d = null === (t = u.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
-        m = a.useCallback(() => {
+        m = i.useCallback(() => {
             if (null != c && null != d) {
                 if ('embed' === d.type) {
                     (0, s.l8)({
@@ -70,48 +70,48 @@ function p(e) {
         }, [c, d]),
         { canForwardMessages: f } = (0, l.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return null != c && f && (0, o.h)(c)
-        ? (0, r.jsx)(x, {
+        ? (0, r.jsx)(E, {
               onClick: m,
               tooltipText: _.Z.Messages.MESSAGE_ACTION_FORWARD,
-              children: (0, r.jsx)(i.ArrowAngleRightUpIcon, {})
+              children: (0, r.jsx)(a.ArrowAngleRightUpIcon, {})
           })
         : null;
 }
 function C(e) {
     let {} = e;
     return c.isPlatformEmbedded
-        ? (0, r.jsx)(x, {
+        ? (0, r.jsx)(E, {
               tooltipText: _.Z.Messages.DOWNLOAD,
-              children: (0, r.jsx)(i.DownloadIcon, {})
+              children: (0, r.jsx)(a.DownloadIcon, {})
           })
         : null;
 }
-function A(e) {
+function g(e) {
     var n;
     let { item: t } = e,
-        a = null !== (n = t.original) && void 0 !== n ? n : t.url;
-    return (0, r.jsx)(x, {
-        onClick: () => (0, u.q)({ href: a }),
+        i = null !== (n = t.original) && void 0 !== n ? n : t.url;
+    return (0, r.jsx)(E, {
+        onClick: () => (0, u.q)({ href: i }),
         tooltipText: _.Z.Messages.OPEN_LINK,
-        children: (0, r.jsx)(i.WindowLaunchIcon, {})
+        children: (0, r.jsx)(a.WindowLaunchIcon, {})
     });
 }
-function g(e) {
+function A(e) {
     let {} = e;
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         tooltipText: _.Z.Messages.MORE,
-        children: (0, r.jsx)(i.MoreHorizontalIcon, {})
+        children: (0, r.jsx)(a.MoreHorizontalIcon, {})
     });
 }
-n.Z = a.memo(function (e) {
+n.Z = i.memo(function (e) {
     let { item: n, hideMediaOptions: t } = e;
     return (0, r.jsxs)('div', {
         className: f.actionButtons,
         children: [
-            (0, r.jsx)(E, {}),
+            (0, r.jsx)(x, {}),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(p, { item: n }), (0, r.jsx)(C, { item: n }), (0, r.jsx)(A, { item: n }), (0, r.jsx)(g, { item: n })]
+                    children: [(0, r.jsx)(p, { item: n }), (0, r.jsx)(C, { item: n }), (0, r.jsx)(g, { item: n }), (0, r.jsx)(A, { item: n })]
                 })
         ]
     });

@@ -6,8 +6,8 @@ t.r(n),
     }),
     t(47120);
 var r = t(200651),
-    a = t(192379),
-    i = t(481060),
+    i = t(192379),
+    a = t(481060),
     l = t(585483),
     o = t(212459),
     s = t(73249),
@@ -17,10 +17,10 @@ var r = t(200651),
     m = t(689938),
     _ = t(619377);
 function f(e) {
-    let { onClose: n, items: t, startingIndex: f, onIndexChange: h, shouldRedactExplicitContent: x, shouldHideMediaOptions: E = !1, className: p, ...C } = e,
-        [A, g] = a.useState(null != f ? f : 0),
-        [I, L] = a.useState(!1);
-    a.useEffect(() => {
+    let { onClose: n, items: t, startingIndex: f, onIndexChange: h, shouldRedactExplicitContent: E, shouldHideMediaOptions: x = !1, className: p, ...C } = e,
+        [g, A] = i.useState(null != f ? f : 0),
+        [I, L] = i.useState(!1);
+    i.useEffect(() => {
         if (null != n)
             return (
                 l.S.subscribe(d.CkL.MEDIA_MODAL_CLOSE, n),
@@ -29,25 +29,25 @@ function f(e) {
                 }
             );
     }, [n]);
-    let S = a.useCallback(
+    let S = i.useCallback(
             (e) => {
-                g(e), null == h || h(e);
+                A(e), null == h || h(e);
             },
             [h]
         ),
-        M = a.useMemo(
+        M = i.useMemo(
             () => ({
                 zoomed: I,
                 setZoomed: L
             }),
             [I]
         ),
-        O = t[A];
-    return (0, r.jsx)(i.ModalRoot, {
+        O = t[g];
+    return (0, r.jsx)(a.ModalRoot, {
         hideShadow: !0,
         className: _.carouselModal,
         ...C,
-        size: i.ModalSize.DYNAMIC,
+        size: a.ModalSize.DYNAMIC,
         fullscreenOnMobile: !1,
         'aria-label': m.Z.Messages.MEDIA_VIEWER_MODAL_ALT_TEXT,
         children: (0, r.jsxs)(o.z.Provider, {
@@ -59,16 +59,16 @@ function f(e) {
                 }),
                 (0, r.jsx)(u.Z, {
                     items: t,
-                    startIndex: A,
+                    startIndex: g,
                     onIndexChange: S,
-                    shouldRedactExplicitContent: x,
-                    shouldHideMediaOptions: E
+                    shouldRedactExplicitContent: E,
+                    shouldHideMediaOptions: x
                 }),
                 (0, r.jsx)('div', {
                     className: _.actionButtonContainer,
                     children: (0, r.jsx)(s.Z, {
                         item: O,
-                        hideMediaOptions: ('IMAGE' === O.type && null == O.original) || E
+                        hideMediaOptions: ('IMAGE' === O.type && null == O.original) || x
                     })
                 })
             ]

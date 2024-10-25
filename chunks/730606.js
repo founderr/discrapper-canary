@@ -6,9 +6,9 @@ t.d(n, {
     t(477488),
     t(47120);
 var r = t(200651),
-    a = t(192379),
-    i = t(120356),
-    l = t.n(i),
+    i = t(192379),
+    a = t(120356),
+    l = t.n(a),
     o = t(299608),
     s = t.n(o),
     u = t(100621),
@@ -18,12 +18,12 @@ var r = t(200651),
     _ = t(714338),
     f = t(95398),
     h = t(163268),
-    x = t(134432),
-    E = t(169525),
+    E = t(134432),
+    x = t(169525),
     p = t(585483),
     C = t(212459),
-    A = t(683528),
-    g = t(549635),
+    g = t(683528),
+    A = t(549635),
     I = t(981631),
     L = t(689938),
     S = t(193889);
@@ -35,9 +35,9 @@ function O(e) {
     return null == n || 0 === n || null == t || 0 === t;
 }
 function v(e) {
-    let { children: n, isObscured: t, src: i } = e,
-        [o, s] = a.useState(!1),
-        u = a.useCallback(() => {
+    let { children: n, isObscured: t, src: a } = e,
+        [o, s] = i.useState(!1),
+        u = i.useCallback(() => {
             s((e) => !e);
         }, []);
     return t
@@ -47,7 +47,7 @@ function v(e) {
                   f.Z,
                   {
                       type: f.Z.Types.ATTACHMENT,
-                      reason: E.wk.EXPLICIT_CONTENT,
+                      reason: x.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
@@ -59,19 +59,19 @@ function v(e) {
                               })
                           })
                   },
-                  i
+                  a
               )
           })
         : (0, r.jsx)(r.Fragment, { children: n(!1) });
 }
 function R(e) {
     var n;
-    let { items: t, onIndexChange: i, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
-        [E, M] = a.useState(l),
-        R = a.useRef(l),
-        [b, N] = a.useState([]),
-        { zoomed: j, setZoomed: y } = (0, C.Y)();
-    a.useEffect(
+    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
+        [x, M] = i.useState(l),
+        R = i.useRef(l),
+        [b, N] = i.useState([]),
+        { zoomed: y, setZoomed: j } = (0, C.Y)();
+    i.useEffect(
         () => (
             _.Z.disable(),
             _.Z.enableTemp(m.P),
@@ -81,21 +81,21 @@ function R(e) {
         ),
         []
     ),
-        a.useEffect(() => {
+        i.useEffect(() => {
             var e, n;
-            let r = (((E + 1) % (e = t.length)) + e) % e;
-            let a = (((E - 1) % (n = t.length)) + n) % n;
-            O(t[r]) && (0, x.po)(t[r].url), O(t[a]) && (0, x.po)(t[a].url);
-        }, [E, t]);
-    let T = a.useCallback(
+            let r = (((x + 1) % (e = t.length)) + e) % e;
+            let i = (((x - 1) % (n = t.length)) + n) % n;
+            O(t[r]) && (0, E.po)(t[r].url), O(t[i]) && (0, E.po)(t[i].url);
+        }, [x, t]);
+    let T = i.useCallback(
         (e) => {
             var n;
             let r = e - R.current;
-            M((e = ((e % (n = t.length)) + n) % n)), (R.current = e), N((e) => [...e, r]), null == i || i(e), y(!1);
+            M((e = ((e % (n = t.length)) + n) % n)), (R.current = e), N((e) => [...e, r]), null == a || a(e), j(!1);
         },
-        [i, t, y]
+        [a, t, j]
     );
-    a.useEffect(() => {
+    i.useEffect(() => {
         let e = s()(() => {
                 T(R.current + 1);
             }, 300),
@@ -109,8 +109,8 @@ function R(e) {
                 p.S.unsubscribe(I.CkL.MODAL_CAROUSEL_NEXT, e), p.S.unsubscribe(I.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [T, y]);
-    let D = t[E],
+    }, [T, j]);
+    let D = t[x],
         k = (0, h.KP)(
             {
                 type: h.lJ.GenericMedia,
@@ -173,10 +173,10 @@ function R(e) {
                                         style: e,
                                         className: S.mediaWrapper,
                                         children: (0, r.jsx)(v, {
-                                            isObscured: !j && k,
+                                            isObscured: !y && k,
                                             src: n.url,
                                             children: (e) =>
-                                                (0, r.jsx)(g.Z, {
+                                                (0, r.jsx)(A.Z, {
                                                     media: n,
                                                     obscured: e,
                                                     onContextMenu: Z
@@ -201,9 +201,9 @@ function R(e) {
                 ]
             }),
             U &&
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(g.Z, {
                     items: t,
-                    currentIndex: E,
+                    currentIndex: x,
                     onGalleryItemClick: T
                 })
         ]

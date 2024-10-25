@@ -1,16 +1,16 @@
 t.d(n, {
     Y: function () {
-        return i;
+        return a;
     },
     z: function () {
-        return a;
+        return i;
     }
 });
 var r = t(192379);
-let a = (0, r.createContext)({
+let i = (0, r.createContext)({
     zoomed: !1,
     setZoomed: () => {}
 });
-function i() {
-    return (0, r.useContext)(a);
+function a() {
+    return (0, r.useContext)(i);
 }
