@@ -1,70 +1,47 @@
 n.d(t, {
     P: function () {
-        return N;
+        return m;
     },
     e: function () {
-        return p;
+        return f;
     }
 });
 var i = n(200651),
     a = n(192379),
     s = n(481060),
-    r = n(239091),
-    l = n(739566),
-    o = n(942951),
-    c = n(834129),
-    u = n(184301),
-    d = n(347475),
-    _ = n(594174),
-    E = n(768581),
-    I = n(91047),
-    m = n(628566),
-    T = n(693912),
-    f = n(981631);
-function h(e, t) {
+    r = n(739566),
+    l = n(942951),
+    o = n(834129),
+    c = n(184301),
+    u = n(347475),
+    d = n(768581),
+    _ = n(693912),
+    E = n(981631);
+function I(e, t) {
     return a.useCallback(
-        (a) => (l, o) => {
-            var c;
-            let T = E.ZP.getApplicationIconURL({
-                    id: a.id,
-                    icon: a.icon,
-                    bot: a.bot,
+        (n) => (a, r) => {
+            let l = d.ZP.getApplicationIconURL({
+                    id: n.id,
+                    icon: n.icon,
+                    bot: n.bot,
                     botIconFirst: !0
                 }),
-                f = _.default.getUser(null === (c = a.bot) || void 0 === c ? void 0 : c.id),
-                h = m.Z.getIntegration(e.id, a.id),
-                N =
-                    e.isPrivate() && null != h
-                        ? (t) => {
-                              (0, r.jW)(t, async () => {
-                                  let { default: t } = await n.e('30887').then(n.bind(n, 496281));
-                                  return (n) =>
-                                      (0, i.jsx)(t, {
-                                          ...n,
-                                          channel: e,
-                                          integration: h
-                                      });
-                              });
-                          }
-                        : null != f
-                          ? (t) => (0, I.Pv)(t, f, e)
-                          : void 0,
-                { bot: p } = a;
-            return null == p
-                ? l
+                { bot: o } = n;
+            return null == o
+                ? a
                 : (0, i.jsx)(
                       s.Popout,
                       {
                           position: 'right',
                           preload: () =>
-                              (0, u.Z)(p.id, T, {
+                              (0, c.Z)(o.id, l, {
                                   guildId: e.guild_id,
                                   channelId: e.id
                               }),
                           renderPopout: (n) =>
-                              (0, i.jsx)(d.Z, {
+                              (0, i.jsx)(u.Z, {
                                   ...n,
-                                  userId: p.id,
+                                  userId: o.id,
                                   guildId: e.guild_id,
                                   channelId: e.id,
                                   messageId: t.id
@@ -72,59 +49,58 @@ function h(e, t) {
                           children: (e) =>
                               (0, i.jsx)(s.Anchor, {
                                   ...e,
-                                  onContextMenu: N,
-                                  children: l
+                                  children: a
                               })
                       },
-                      o
+                      r
                   );
         },
         [e, t.id]
     );
 }
-function N(e) {
+function m(e) {
     let { message: t, channel: a, compact: s } = e,
-        r = (0, l.ZP)(t),
+        c = (0, r.ZP)(t),
         u = t.application,
-        d = (0, o.l)({
+        d = (0, l.l)({
             user: t.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: t.id
         }),
-        _ = h(a, t);
-    return (0, i.jsx)(c.Z, {
+        m = I(a, t);
+    return (0, i.jsx)(o.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: s,
-        children: (0, T.DS)({
+        children: (0, _.DS)({
             application: u,
-            username: r.nick,
-            usernameHook: d(r),
-            applicationNameHook: null != u ? _(u) : f.dG4
+            username: c.nick,
+            usernameHook: d(c),
+            applicationNameHook: null != u ? m(u) : E.dG4
         })
     });
 }
-function p(e) {
+function f(e) {
     let { message: t, channel: a, compact: s } = e,
-        r = (0, l.ZP)(t),
+        c = (0, r.ZP)(t),
         u = t.application,
-        d = (0, o.l)({
+        d = (0, l.l)({
             user: t.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: t.id
         }),
-        _ = h(a, t);
-    return (0, i.jsx)(c.Z, {
+        m = I(a, t);
+    return (0, i.jsx)(o.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
         compact: s,
-        children: (0, T.nh)({
+        children: (0, _.nh)({
             application: u,
-            username: r.nick,
-            usernameHook: d(r),
-            applicationNameHook: null != u ? _(u) : f.dG4
+            username: c.nick,
+            usernameHook: d(c),
+            applicationNameHook: null != u ? m(u) : E.dG4
         })
     });
 }

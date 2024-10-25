@@ -1656,25 +1656,6 @@ B(
             });
         }
     ),
-    k(['PRIVATE_CHANNEL_INTEGRATION_CREATE'], (e) => {
-        V({
-            type: 'PRIVATE_CHANNEL_INTEGRATION_CREATE',
-            integration: e
-        });
-    }),
-    k(['PRIVATE_CHANNEL_INTEGRATION_UPDATE'], (e) => {
-        V({
-            type: 'PRIVATE_CHANNEL_INTEGRATION_UPDATE',
-            integration: e
-        });
-    }),
-    k(['PRIVATE_CHANNEL_INTEGRATION_DELETE'], (e) => {
-        V({
-            type: 'PRIVATE_CHANNEL_INTEGRATION_DELETE',
-            channelId: e.channel_id,
-            applicationId: e.application_id
-        });
-    }),
     k(['CREATOR_MONETIZATION_RESTRICTIONS_UPDATE'], (e) => {
         V({
             type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS',
