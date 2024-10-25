@@ -6131,8 +6131,7 @@ div.modalHeader_c5e09c {
 }
 
 .entryText_d5a5e0 {
-    flex: 1;
-    color: var(--text-muted)
+    flex: 1
 }
 
 .scopes_cf14a8:not(:first-child) {
