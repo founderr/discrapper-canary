@@ -197,7 +197,8 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let s = [...b.socialLinks],
                     a = s[t],
                     i = e;
-                0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), (s[t] = i), u.t$(n.id, s);
+                0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i);
+                if (!/\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i)) (s[t] = i), u.t$(n.id, s);
             },
             en = (e) => {
                 let t = [...F];
