@@ -10,12 +10,14 @@ function a(e) {
         { applicationId: n } = e,
         a = (0, i.ZP)(e);
     return a.shouldOpenGameProfile && null != n
-        ? () => {
-              r.Z.openGameProfileModal({
-                  ...e,
-                  applicationId: n,
-                  gameProfileModalChecks: a
-              }),
+        ? (i) => {
+              i.stopPropagation(),
+                  i.preventDefault(),
+                  r.Z.openGameProfileModal({
+                      ...e,
+                      applicationId: n,
+                      gameProfileModalChecks: a
+                  }),
                   null == t || t();
           }
         : void 0;
