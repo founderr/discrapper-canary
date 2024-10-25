@@ -17,7 +17,7 @@ var i,
     g = n(594174),
     T = n(981631),
     f = n(474936);
-function C(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function C(e, t, n) {
         e
     );
 }
-function S(e) {
+function C(e) {
     let t = g.default.getUser(e);
     return {
         user: t,
@@ -66,7 +66,7 @@ class v extends c.Z {
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (a = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : this.usernameLower];
     }
     constructor(e) {
-        super(), C(this, 'key', void 0), C(this, 'type', void 0), C(this, 'status', void 0), C(this, 'isMobile', void 0), C(this, 'activities', void 0), C(this, 'applicationStream', void 0), C(this, 'user', void 0), C(this, 'usernameLower', void 0), C(this, 'mutualGuildsLength', void 0), C(this, 'mutualGuilds', void 0), C(this, 'nickname', void 0), C(this, 'spam', void 0), C(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
+        super(), S(this, 'key', void 0), S(this, 'type', void 0), S(this, 'status', void 0), S(this, 'isMobile', void 0), S(this, 'activities', void 0), S(this, 'applicationStream', void 0), S(this, 'user', void 0), S(this, 'usernameLower', void 0), S(this, 'mutualGuildsLength', void 0), S(this, 'mutualGuilds', void 0), S(this, 'nickname', void 0), S(this, 'spam', void 0), S(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
     }
 }
 class Z {
@@ -78,7 +78,7 @@ class Z {
                         key: t,
                         type: e,
                         nickname: p.Z.getNickname(t),
-                        ...S(t),
+                        ...C(t),
                         ...N(t),
                         ...A(t),
                         spam: (0, _.A)({ location: 'friend-store' }) && p.Z.isSpam(t),
@@ -92,7 +92,7 @@ class Z {
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...S(e.key),
+                        ...C(e.key),
                         ...N(e.key),
                         ...A(e.key)
                     })
@@ -157,7 +157,7 @@ class Z {
         );
     }
     constructor(e = []) {
-        C(this, '_rows', void 0), (this._rows = e);
+        S(this, '_rows', void 0), (this._rows = e);
     }
 }
 let L = !0,
@@ -185,7 +185,7 @@ function j(e) {
 }
 class U extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, I.Z, g.default, m.Z, h.ZP, E.Z, d.Z), this.syncWith([p.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([g.default], j(S)), this.syncWith([I.Z, E.Z], j(N)), D();
+        this.waitFor(p.Z, I.Z, g.default, m.Z, h.ZP, E.Z, d.Z), this.syncWith([p.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([g.default], j(C)), this.syncWith([I.Z, E.Z], j(N)), D();
     }
     getState() {
         return {
@@ -196,7 +196,7 @@ class U extends (i = r.ZP.Store) {
         };
     }
 }
-C(U, 'displayName', 'FriendsStore'),
+S(U, 'displayName', 'FriendsStore'),
     (t.ZP = new U(l.Z, {
         CONNECTION_OPEN: function () {
             D();

@@ -8,36 +8,36 @@ var i = n(192379),
     l = n(442837),
     r = n(835473),
     o = n(594174),
-    u = n(695103),
-    a = n(823379),
+    a = n(695103),
+    u = n(823379),
     c = n(358085),
     d = n(317381),
     s = n(761122);
 function f(e) {
     let t = (0, l.e7)([o.default], o.default.getCurrentUser),
         n = (0, l.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
-        f = (0, l.e7)([u.Z], () => u.Z.testModeEmbeddedApplicationId),
+        f = (0, l.e7)([a.Z], () => a.Z.testModeEmbeddedApplicationId),
         p = n.map((e) => e.application_id),
         v = null != f ? [f, ...p] : p,
-        Z = (0, r.Z)(v),
-        h = i.useMemo(() => Z.filter(a.lm), [Z]),
-        E = i.useMemo(
+        h = (0, r.Z)(v),
+        Z = i.useMemo(() => h.filter(u.lm), [h]),
+        g = i.useMemo(
             () =>
-                null != f && h.length > 0 && h[0].id === f && null != h[0].embeddedActivityConfig
+                null != f && Z.length > 0 && Z[0].id === f && null != Z[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: h[0].embeddedActivityConfig,
-                              application: h[0]
+                              activity: Z[0].embeddedActivityConfig,
+                              application: Z[0]
                           }
                       ]
                     : [],
-            [h, f]
+            [Z, f]
         ),
-        I = i.useMemo(
+        _ = i.useMemo(
             () =>
                 n
                     .map((e) => {
-                        let t = h.find((t) => t.id === e.application_id);
+                        let t = Z.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -45,12 +45,12 @@ function f(e) {
                                   application: t
                               };
                     })
-                    .filter(a.lm),
-            [n, h]
+                    .filter(u.lm),
+            [n, Z]
         );
     return i.useMemo(
         () =>
-            [...E, ...I]
+            [...g, ..._]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -60,6 +60,6 @@ function f(e) {
                     let { activity: n } = e;
                     return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, I, E]
+        [null == t ? void 0 : t.nsfwAllowed, _, g]
     );
 }

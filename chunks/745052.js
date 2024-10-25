@@ -17,8 +17,8 @@ var i = n(200651),
     g = n(325708),
     T = n(320149),
     f = n(82295),
-    C = n(252618),
-    S = n(605236),
+    S = n(252618),
+    C = n(605236),
     N = n(243778),
     A = n(984370),
     v = n(797614),
@@ -197,7 +197,7 @@ let ea = function (e) {
             r = (0, b._p)({ location: 'message-request-coachmark' });
         return (
             a.useEffect(() => {
-                (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
             (0, i.jsx)(N.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
@@ -258,11 +258,11 @@ let el = (0, h.Z)(function (e) {
         null != m && !p && g && I && ((0, Z.Kh)(m), L.Z.closeChannelSidebar(P.uZ));
     }, [m, g, I, p]);
     let [T, f] = a.useState(q.pS.REQUESTS),
-        S = (e) => {
+        C = (e) => {
             f(e);
         };
     return (
-        (0, C.Tt)({ location: $.Z.Messages.MESSAGE_REQUESTS }),
+        (0, S.Tt)({ location: $.Z.Messages.MESSAGE_REQUESTS }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -288,7 +288,7 @@ let el = (0, h.Z)(function (e) {
                                             'aria-label': $.Z.Messages.MESSAGE_REQUESTS,
                                             selectedItem: T,
                                             type: 'top-pill',
-                                            onItemSelect: S,
+                                            onItemSelect: C,
                                             className: ee.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

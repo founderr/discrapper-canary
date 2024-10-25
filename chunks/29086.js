@@ -17,7 +17,7 @@ function c() {
             includeConverted: !0,
             autoTrackExposure: !0
         }),
-        n = (0, l.jg)(),
+        n = l.Z.useField('selectedTab'),
         c = i.useMemo(() => {
             let n = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
             return (
@@ -29,7 +29,7 @@ function c() {
             );
         }, [t, e]),
         d = i.useCallback((e) => {
-            (0, l.jY)({ selectedTab: e });
+            l.Z.setState({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {

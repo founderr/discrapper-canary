@@ -38,7 +38,7 @@ t.Z = function (e) {
             (0, u.JG)(g(n.id)), (0, r.showToast)((0, r.createToast)(h.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS));
         }, [n.id]),
         f = (0, s.e7)([d.default], () => d.default.locale),
-        C = a.useCallback(() => {
+        S = a.useCallback(() => {
             null != n &&
                 (0, l.Z)(
                     (0, o.G)({
@@ -48,7 +48,7 @@ t.Z = function (e) {
                     })
                 );
         }, [f, n]),
-        S = (0, c.Z)({
+        C = (0, c.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: h.Z.Messages.COPY_ID_APPLICATION,
             onSuccess: () => (0, r.showToast)((0, r.createToast)(h.Z.Messages.TOAST_ID_COPIED, r.ToastType.SUCCESS))
@@ -66,13 +66,13 @@ t.Z = function (e) {
                                 id: 'report',
                                 label: h.Z.Messages.REPORT_APP,
                                 color: 'danger',
-                                action: C
+                                action: S
                             })
                         }),
-                        null != S ? (0, i.jsx)(r.MenuGroup, { children: S }) : null
+                        null != C ? (0, i.jsx)(r.MenuGroup, { children: C }) : null
                     ]
                 }),
-            [S, C]
+            [C, S]
         );
     return (0, i.jsxs)('div', {
         className: m.actionContainer,

@@ -76,7 +76,7 @@ function h(e) {
 }
 function m(e) {
     let { loadId: t } = e,
-        n = (0, u.QQ)(),
+        n = u.Z.useField('isSearchVisible'),
         a = (0, c.A3)();
     i.useEffect(() => {
         l.Z.createAlgoliaIndex(), (0, s.le)();
@@ -96,7 +96,7 @@ function m(e) {
                     resultsInitialCategoryId: null,
                     scrollPosition: null
                 }),
-                (0, u.jY)({ isSearchVisible: !1 });
+                u.Z.setState({ isSearchVisible: !1 });
         }, [t]);
     return {
         searchQuery: a,
@@ -110,7 +110,7 @@ function m(e) {
             let i = (0, c.a7)(),
                 a = (0, c.lx)();
             (0, c.LD)({ resultsInitialCategoryId: a }),
-                (0, u.jY)({ isSearchVisible: !0 }),
+                u.Z.setState({ isSearchVisible: !0 }),
                 (0, d.NL)({
                     loadId: t,
                     categoryId: a,

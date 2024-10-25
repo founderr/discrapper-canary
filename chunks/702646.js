@@ -24,7 +24,7 @@ function E(e) {
         T && (m(!1), p(!1));
     }, [T]);
     let f = u && (I || h),
-        C = a.useMemo(
+        S = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
@@ -41,7 +41,7 @@ function E(e) {
                     : null,
             [l, c, T]
         ),
-        S = a.useCallback(
+        C = a.useCallback(
             (e) =>
                 (0, i.jsxs)(o.Button, {
                     ...e,
@@ -66,7 +66,7 @@ function E(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != C &&
+                                null != S &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
                                         className: _.chevron,
                                         color: 'currentColor'
@@ -75,12 +75,12 @@ function E(e) {
                         })
                     ]
                 }),
-            [t, n, u, c, C]
+            [t, n, u, c, S]
         );
-    return null == C
-        ? S({})
+    return null == S
+        ? C({})
         : (0, i.jsx)(o.Tooltip, {
-              text: C,
+              text: S,
               position: 'bottom',
               'aria-label': s,
               shouldShow: f,
@@ -89,7 +89,7 @@ function E(e) {
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(_.filterTooltip, { [_.filterTooltipAutoWidth]: E }),
               tooltipContentClassName: _.filterTooltipContent,
-              children: S
+              children: C
           });
 }
 function h() {

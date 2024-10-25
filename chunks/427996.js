@@ -8,8 +8,8 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     o = n(399606),
-    u = n(481060),
-    a = n(337682),
+    a = n(481060),
+    u = n(337682),
     c = n(115130),
     d = n(689938),
     s = n(828018);
@@ -31,22 +31,22 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: r()(s.container, n),
         children: [
-            (0, i.jsx)(u.Checkbox, {
-                type: u.Checkbox.Types.INVERTED,
+            (0, i.jsx)(a.Checkbox, {
+                type: a.Checkbox.Types.INVERTED,
                 value: f,
-                onClick: a.Y$,
-                children: (0, i.jsx)(u.Text, {
+                onClick: u.Y$,
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/semibold',
                     children: d.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
                 })
             }),
             f
-                ? (0, i.jsx)(u.FormItem, {
+                ? (0, i.jsx)(a.FormItem, {
                       title: d.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
-                      children: (0, i.jsx)(u.TextInput, {
+                      children: (0, i.jsx)(a.TextInput, {
                           disabled: !f,
                           value: null != l ? l : void 0,
-                          onChange: a.jS,
+                          onChange: u.jS,
                           placeholder: 'https://localhost:3000'
                       })
                   })
@@ -54,12 +54,12 @@ function f(e) {
             !0 === t
                 ? null
                 : (0, i.jsx)('div', {
-                      children: (0, i.jsx)(u.SearchBar, {
+                      children: (0, i.jsx)(a.SearchBar, {
                           className: s.searchBar,
                           query: p,
-                          onChange: a.a8,
+                          onChange: u.a8,
                           onClear: function () {
-                              a.a8('');
+                              u.a8('');
                           }
                       })
                   })

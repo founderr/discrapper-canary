@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Qv: function () {
-        return w;
+        return b;
     },
     ZP: function () {
         return C;
@@ -12,7 +12,7 @@ n.d(t, {
         return y;
     },
     w1: function () {
-        return b;
+        return w;
     }
 }),
     n(789020),
@@ -21,43 +21,43 @@ var i,
     l,
     r = n(442837),
     o = n(911969),
-    u = n(906732),
-    a = n(835473),
+    a = n(906732),
+    u = n(835473),
     c = n(592125),
     d = n(630388),
     s = n(358085),
     f = n(317381),
     p = n(638880),
     v = n(122613),
-    Z = n(619915),
-    h = n(761122),
-    E = n(361213),
-    I = n(716600),
-    g = n(952561),
-    _ = n(778569),
-    m = n(701488),
+    h = n(619915),
+    Z = n(761122),
+    g = n(361213),
+    _ = n(716600),
+    m = n(952561),
+    E = n(778569),
+    I = n(701488),
     A = n(981631);
 ((l = i || (i = {}))[(l.START = 0)] = 'START'), (l[(l.JOIN = 1)] = 'JOIN'), (l[(l.LEAVE = 2)] = 'LEAVE');
 function C(e) {
-    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: u = ['embedded_cover'], backgroundResolution: a = 250, launchingComponentId: c, commandOrigin: d, source: f } = e,
+    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: a = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c, commandOrigin: d, source: f } = e,
         { application: p, activity: v } = t,
-        I = v.client_platform_config[(0, h.Z)((0, s.getOS)())],
-        g = null != I.label_until && Date.now() < Date.parse(I.label_until),
-        m = (0, _.Z)({
+        _ = v.client_platform_config[(0, Z.Z)((0, s.getOS)())],
+        m = null != _.label_until && Date.now() < Date.parse(_.label_until),
+        I = (0, E.Z)({
             applicationId: p.id,
-            size: a,
-            names: u
+            size: u,
+            names: a
         }),
-        A = null != v.activity_preview_video_asset_id ? (0, E.Z)(p.id, v.activity_preview_video_asset_id) : null,
-        C = (0, Z.ZP)(n).find((e) => {
+        A = null != v.activity_preview_video_asset_id ? (0, g.Z)(p.id, v.activity_preview_video_asset_id) : null,
+        C = (0, h.ZP)(n).find((e) => {
             let { embeddedActivity: t } = e;
             return p.id === t.applicationId;
         }),
-        S = w({
+        S = b({
             channelId: null == n ? void 0 : n.id,
             applicationId: p.id
         }),
-        T = b({
+        T = w({
             applicationId: t.application.id,
             channelId: null == n ? void 0 : n.id,
             locationObject: i,
@@ -69,12 +69,12 @@ function C(e) {
         }),
         M = y(p, t.activity);
     return {
-        imageBackground: m,
+        imageBackground: I,
         videoUrl: A,
         joinableEmbeddedApp: C,
         activityAction: S,
         onActivityItemSelected: T,
-        labelType: g ? I.label_type : o.ww.NONE,
+        labelType: m ? _.label_type : o.ww.NONE,
         staffReleasePhase: M
     };
 }
@@ -82,40 +82,40 @@ function y(e, t) {
     var n;
     let i = null !== (n = e.flags) && void 0 !== n ? n : 0;
     if (!((0, d.yE)(i, A.udG.EMBEDDED_RELEASED) || (0, d.yE)(i, A.udG.EMBEDDED_FIRST_PARTY))) return;
-    let l = t.client_platform_config[(0, h.Z)((0, s.getOS)())].release_phase;
-    return m.eB.includes(l) ? l.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
+    let l = t.client_platform_config[(0, Z.Z)((0, s.getOS)())].release_phase;
+    return I.eB.includes(l) ? l.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function w(e) {
+function b(e) {
     let { channelId: t, applicationId: n, fetchesApplication: i = !0 } = e,
         l = 0,
         o = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
-        u = (0, I.Z)(),
-        d = (0, g.Z)({ fetchesApplication: i }),
-        s = (0, a.q)(n, i),
-        f = (0, Z.ZP)(o).find((e) => {
+        a = (0, _.Z)(),
+        d = (0, m.Z)({ fetchesApplication: i }),
+        s = (0, u.q)(n, i),
+        f = (0, h.ZP)(o).find((e) => {
             let { embeddedActivity: t } = e;
             return null != s && s.id === t.applicationId;
         });
-    return null == s ? l : (null != o && (null == u ? void 0 : u.channelId) === o.id && (null == d ? void 0 : d.id) === s.id ? (l = 2) : null != f && (l = 1), l);
+    return null == s ? l : (null != o && (null == a ? void 0 : a.channelId) === o.id && (null == d ? void 0 : d.id) === s.id ? (l = 2) : null != f && (l = 1), l);
 }
-function b(e) {
-    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: o, commandOrigin: a, sectionName: c, source: d, fetchesApplication: s = !0 } = e,
-        Z = w({
+function w(e) {
+    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: o, commandOrigin: u, sectionName: c, source: d, fetchesApplication: s = !0 } = e,
+        h = b({
             channelId: n,
             applicationId: t,
             fetchesApplication: s
         }),
-        { analyticsLocations: h } = (0, u.ZP)();
-    switch (Z) {
+        { analyticsLocations: Z } = (0, a.ZP)();
+    switch (h) {
         case 0:
             return async () => {
                 await (0, v.Z)({
                     targetApplicationId: t,
                     locationObject: i,
                     channelId: n,
-                    analyticsLocations: h,
+                    analyticsLocations: Z,
                     componentId: o,
-                    commandOrigin: a,
+                    commandOrigin: u,
                     sectionName: c,
                     source: d
                 }).then((e) => e && (null == r ? void 0 : r({ applicationId: t })));
@@ -127,7 +127,7 @@ function b(e) {
                         applicationId: t,
                         activityChannelId: n,
                         locationObject: i,
-                        analyticsLocations: h,
+                        analyticsLocations: Z,
                         componentId: o,
                         sectionName: c,
                         source: d

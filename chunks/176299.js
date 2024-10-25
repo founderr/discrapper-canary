@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(279240),
     T = n(765717),
     f = n(358221),
-    C = n(823748),
-    S = n(626421),
+    S = n(823748),
+    C = n(626421),
     N = n(118379),
     A = n(652515),
     v = n(544978),
@@ -98,13 +98,13 @@ let em = 'resizable-sidebar-width',
         name: 'GuildHomePage',
         renderLoader: ep
     }),
-    eC = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => Promise.all([n.e('85552'), n.e('44400')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: ep
     }),
-    eS = (0, c.Un)({
+    eC = (0, c.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('38359'), n.e('66690')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -159,19 +159,19 @@ let em = 'resizable-sidebar-width',
                 case e_.oC.GUILD_HOME:
                     return (0, i.jsx)(ef, { guildId: a });
                 case e_.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(eC, {
                         guildId: a,
                         selectedSection: eE.l7.BROWSE
                     });
                 case e_.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eN, { guildId: a });
                 case e_.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(eC, {
                         guildId: a,
                         selectedSection: eE.l7.CUSTOMIZE
                     });
                 case e_.oC.MEMBER_SAFETY:
-                    return (0, i.jsx)(eC, { guildId: a });
+                    return (0, i.jsx)(eS, { guildId: a });
                 default:
                     (0, et.vE)(s);
             }
@@ -191,7 +191,7 @@ let em = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(C.Z, {});
+        return (0, i.jsx)(S.Z, {});
     },
     ev = a.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
@@ -313,27 +313,27 @@ function ew(e) {
                 Number.isNaN(t) && (t = 264), eG(t);
             }
         }, [T]);
-    let C = a.useRef(null),
-        S = a.useCallback((e, t) => {
+    let S = a.useRef(null),
+        C = a.useCallback((e, t) => {
             var n;
             eG(e);
             let i = t < 80;
             ea.useAppSidebarState.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eh.collapsing) : document.body.classList.remove(eh.collapsing);
             let a = t - e;
-            null === (n = C.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && eG(76);
+            null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && eG(76);
         }, []),
         N = a.useCallback(() => {
             document.body.classList.add(eh.dragging);
         }, []),
         A = a.useCallback((e) => {
             var t;
-            document.body.classList.remove(eh.dragging), document.body.classList.remove(eh.collapsing), null === (t = C.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(em, e);
+            document.body.classList.remove(eh.dragging), document.body.classList.remove(eh.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(em, e);
         }, []),
         v = (0, I.Z)({
             minDimension: 240,
             maxDimension: 416,
-            resizableDomNodeRef: C,
-            onElementResize: S,
+            resizableDomNodeRef: S,
+            onElementResize: C,
             onElementResizeStart: N,
             onElementResizeEnd: A,
             orientation: I.y.HORIZONTAL_RIGHT,
@@ -355,7 +355,7 @@ function ew(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: g ? C : void 0,
+                ref: g ? S : void 0,
                 'data-collapsed': T,
                 className: r()(eh.sidebar, e, {
                     [eh.hasNotice]: t,
@@ -455,7 +455,7 @@ function ek() {
                             (0, i.jsxs)('div', {
                                 className: eh.content,
                                 children: [
-                                    (0, i.jsx)(S.Z, {}),
+                                    (0, i.jsx)(C.Z, {}),
                                     (0, i.jsx)(ew, {
                                         isOnFullScreenCollectiblesShopRoute: _,
                                         isSidebarOpen: E,

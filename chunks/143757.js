@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(82295),
     T = n(973616),
     f = n(592125),
-    C = n(626135),
-    S = n(823379),
+    S = n(626135),
+    C = n(823379),
     N = n(404295),
     A = n(728345),
     v = n(812206),
@@ -51,7 +51,7 @@ async function x(e, t, n) {
             t(void 0);
         }
         if (
-            (C.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: s,
                 channel_id: a
@@ -158,13 +158,13 @@ function P() {
             () =>
                 t
                     .map((e) => e.application)
-                    .filter(S.lm)
+                    .filter(C.lm)
                     .slice(0, 5),
             [t]
         );
     return (a.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), C.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(g.Z, {

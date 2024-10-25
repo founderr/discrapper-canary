@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(672775),
     T = n(601463),
     f = n(192565),
-    C = n(641037),
-    S = n(689938),
+    S = n(641037),
+    C = n(689938),
     N = n(837275);
 let A = {
     mass: 1,
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, C.G)(Z), [Z]),
+        R = a.useMemo(() => (0, S.G)(Z), [Z]),
         [O, x] = a.useState(!1),
         [b, M] = a.useState(window.innerWidth),
         [P, D] = a.useState(1),
@@ -101,7 +101,7 @@ function v(e) {
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [P, y]);
     let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
-        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, C.G)(Z).find((e) => e.hasError) : null), [Z]),
+        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, S.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -109,7 +109,7 @@ function v(e) {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
         W = a.useCallback(() => {
-            (0, C.V)({
+            (0, S.V)({
                 guildId: t,
                 onSuccess: () => {
                     z(), n();
@@ -133,12 +133,12 @@ function v(e) {
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-primary',
-                                      children: S.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                                      children: C.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
                                   }),
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: S.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+                                      children: C.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
                                           backHook: (e, t) =>
                                               (0, i.jsx)(
                                                   d.Anchor,
@@ -169,7 +169,7 @@ function v(e) {
                     size: d.Button.Sizes.MEDIUM,
                     color: d.Button.Colors.PRIMARY,
                     onClick: n,
-                    children: S.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+                    children: C.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
                 }),
                 (0, i.jsxs)('div', {
                     className: N.content,
@@ -226,7 +226,7 @@ function v(e) {
                                 color: d.Tooltip.Colors.GREY,
                                 tooltipClassName: N.tooltip,
                                 text: q,
-                                'aria-label': null != F ? S.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+                                'aria-label': null != F ? C.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
                                 shouldShow: null != F,
                                 forceOpen: null != F,
                                 children: (e) =>
@@ -239,7 +239,7 @@ function v(e) {
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,
                                         onClick: W,
-                                        children: S.Z.Messages.FINISH
+                                        children: C.Z.Messages.FINISH
                                     })
                             })
                         })

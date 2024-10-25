@@ -1,33 +1,33 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return f;
     }
 }),
-    n(47120);
-var r = n(200651),
-    o = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    i = n(481060),
-    l = n(393903),
-    c = n(604162),
-    u = n(420212),
-    d = n(504446);
-function m(e, t, n) {
-    return n * (Math.max(e - t.left, 0) / t.width);
+    t(47120);
+var r = t(200651),
+    o = t(192379),
+    a = t(120356),
+    s = t.n(a),
+    i = t(481060),
+    l = t(393903),
+    c = t(604162),
+    u = t(420212),
+    d = t(504446);
+function m(e, n, t) {
+    return t * (Math.max(e - n.left, 0) / n.width);
 }
-function p(e, t, n) {
-    return n.left + (e / t) * n.width;
+function p(e, n, t) {
+    return t.left + (e / n) * t.width;
 }
 function f(e) {
-    let { percent: t, animate: n, interactionEnabled: a, backgroundColor: f, preloadedBuffers: C, duration: _, maxSeekableTime: E, onClick: v, onScrubBack: S, onScrubForward: T } = e,
+    let { percent: n, animate: t, interactionEnabled: a, backgroundColor: f, preloadedBuffers: _, duration: C, maxSeekableTime: E, onClick: v, onScrubBack: S, onScrubForward: T } = e,
         [g, x] = o.useState(null),
         [N, h] = o.useState(null),
         [I, L] = o.useState(null),
         [O, j] = o.useState(!1);
     o.useEffect(() => {
-        if (null != g) null == E ? L(null) : L(p(E, _, g));
-    }, [g, E, _]);
+        if (null != g) null == E ? L(null) : L(p(E, C, g));
+    }, [g, E, C]);
     let b = (0, l.y)(() => {
             if (null != b.current) x(b.current.getBoundingClientRect());
         }),
@@ -36,14 +36,14 @@ function f(e) {
         },
         P = o.useCallback(
             (e) => {
-                let { key: t } = e;
-                t === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === u.mR.ArrowRight && null != T && (e.preventDefault(), e.stopPropagation(), T());
+                let { key: n } = e;
+                n === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : n === u.mR.ArrowRight && null != T && (e.preventDefault(), e.stopPropagation(), T());
             },
             [S, T]
         ),
-        k = null != N && null != g ? m(N, g, _) : 0,
+        k = null != N && null != g ? m(N, g, C) : 0,
         y = (0, c.yv)(k),
-        R = null != g ? g.right - p((t / 100) * _, _, g) : null,
+        R = null != g ? g.right - p((n / 100) * C, C, g) : null,
         D = null != N && null != g ? g.right - N : null,
         A = null != I && null != g ? g.right - I : null;
     return (0, r.jsxs)('div', {
@@ -54,7 +54,7 @@ function f(e) {
                 className: s()(d.hitboxArea, { [d.interactionEnabled]: a }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    if (!!a && null != v) v(m(e.clientX, e.currentTarget.getBoundingClientRect(), _));
+                    if (!!a && null != v) v(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
                     if (!!a) j(!0), B(e);
@@ -74,9 +74,9 @@ function f(e) {
                     }
                 },
                 children: [
-                    null == C
+                    null == _
                         ? void 0
-                        : C.map((e) =>
+                        : _.map((e) =>
                               (0, r.jsx)(
                                   'div',
                                   {
@@ -101,11 +101,11 @@ function f(e) {
                         }),
                     (0, r.jsx)(i.Progress, {
                         className: d.progress,
-                        percent: t,
+                        percent: n,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != f ? f : void 0,
                         size: O ? i.Progress.Sizes.XSMALL : i.Progress.Sizes.XXSMALL,
-                        animate: n
+                        animate: t
                     }),
                     O &&
                         null != y &&
@@ -125,7 +125,7 @@ function f(e) {
             }),
             (0, r.jsx)('div', {
                 className: d.progressGlow,
-                style: { width: ''.concat(t, '%') }
+                style: { width: ''.concat(n, '%') }
             })
         ]
     });

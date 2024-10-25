@@ -20,11 +20,11 @@ function d(e) {
             var n, d;
             let _ = e.selectedServersTab;
             null != _
-                ? (0, i.jY)({
+                ? i.Z.setState({
                       selectedTab: _,
                       entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : c.Qq.UNKNOWN
                   })
-                : (0, i.jY)({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN });
+                : i.Z.setState({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN });
             let E = (function (e) {
                 let { extra: t } = e,
                     n = {},

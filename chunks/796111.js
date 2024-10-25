@@ -1,9 +1,9 @@
-n.d(t, {
+t.d(n, {
     P: function () {
         return o;
     }
 });
-let r = (0, n(818083).B)({
+let r = (0, t(818083).B)({
         id: '2024-06_quest_inline_console_connection',
         kind: 'user',
         label: 'Quest Inline Console Connection Experiment',
@@ -22,7 +22,7 @@ let r = (0, n(818083).B)({
         ]
     }),
     o = (e) => {
-        let { location: t, autoTrackExposure: n = !1 } = e,
-            { enabled: o } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+        let { location: n, autoTrackExposure: t = !1 } = e,
+            { enabled: o } = r.useExperiment({ location: n }, { autoTrackExposure: t });
         return o;
     };

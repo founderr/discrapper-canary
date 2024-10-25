@@ -37,7 +37,7 @@ function x() {
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: u.OI,
+                onClick: u.O,
                 children: 'Reset Global Discovery Servers State'
             })
         ]

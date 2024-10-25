@@ -25,8 +25,8 @@ var i = n(200651),
     g = n(358085),
     T = n(998502),
     f = n(981631),
-    C = n(741764),
-    S = n(350133);
+    S = n(741764),
+    C = n(350133);
 let N = (0, s.Z)(() => ({ isOpen: !0 }));
 function A(e) {
     e.stopPropagation();
@@ -38,17 +38,17 @@ function v() {
         s = N((e) => e.isOpen),
         { hasBugReporterAccess: v } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     a.useLayoutEffect(() => {
-        T.ZP.setMinimumSize(C.J, C.N);
+        T.ZP.setMinimumSize(S.J, S.N);
     }, []);
     let L = a.useCallback(() => {
         (0, g.isMac)() && T.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
-        className: S.bar,
+        className: C.bar,
         onDoubleClick: L,
         children: [
             (0, i.jsx)('div', {
-                className: S.left,
+                className: C.left,
                 'data-sidebar-collapsed': !s,
                 onDoubleClick: A,
                 children:
@@ -71,17 +71,17 @@ function v() {
                     })
             }),
             (0, i.jsx)('div', {
-                className: S.center,
+                className: C.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: S.guild,
+                        className: C.guild,
                         children: [
                             (0, i.jsx)(d.Z, {
                                 guild: n,
                                 size: d.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: S.icon
+                                className: C.icon
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
@@ -91,7 +91,7 @@ function v() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: S.right,
+                className: C.right,
                 onDoubleClick: A,
                 children: [(0, i.jsx)(h.Z, {}), v ? (0, i.jsx)(_.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(E.Z, {})]
             })
@@ -101,7 +101,7 @@ function v() {
 function Z() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: S.icon,
+        className: C.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

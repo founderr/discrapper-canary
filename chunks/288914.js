@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(676035),
     T = n(440051),
     f = n(734934),
-    C = n(158238),
-    S = n(759198),
+    S = n(158238),
+    C = n(759198),
     N = n(300284),
     A = n(680295),
     v = n(703656),
@@ -186,12 +186,12 @@ function ec(e) {
         eg = (0, o.e7)([Y.Z], () => Y.Z.hidePersonalInformation),
         eT = (0, f.p)(),
         ef = V.Sb.useSetting(),
-        eC = (0, g.a)(),
-        eS = (function (e) {
+        eS = (0, g.a)(),
+        eC = (function (e) {
             let t = T.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
                 a = (0, f.p)(),
-                r = C.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
+                r = S.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
                 l = V.fv.useSetting(),
                 o = e === et.Skl.DND,
                 d = (t) => {
@@ -458,7 +458,7 @@ function ec(e) {
                                                         : (0, i.jsx)($.Mv, {
                                                               id: 'get-premium',
                                                               action: en.yM.GET_PREMIUM,
-                                                              label: (0, i.jsx)(S.Z, {
+                                                              label: (0, i.jsx)(C.Z, {
                                                                   variant: 'text-sm/medium',
                                                                   children: ei.Z.Messages.USER_PROFILE_ENTRY_POINTS_GET_PREMIUM
                                                               }),
@@ -496,7 +496,7 @@ function ec(e) {
                                                                       className: ea.statusPickerModalMenu,
                                                                       'aria-label': ei.Z.Messages.STATUS_MENU_LABEL,
                                                                       onClose: t,
-                                                                      children: eS
+                                                                      children: eC
                                                                   });
                                                               },
                                                         onClick: r.tq
@@ -520,7 +520,7 @@ function ec(e) {
                                                                                               hideScroller: !0,
                                                                                               onClose: t,
                                                                                               onSelect: void 0,
-                                                                                              children: eS
+                                                                                              children: eC
                                                                                           })
                                                                                       });
                                                                                   })
@@ -533,7 +533,7 @@ function ec(e) {
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: ea.menuDivider }),
-                                                                null == eC
+                                                                null == eS
                                                                     ? (0, i.jsx)($.Mv, {
                                                                           id: 'add-custom-status',
                                                                           action: 'PRESS_ADD_CUSTOM_STATUS',
@@ -548,9 +548,9 @@ function ec(e) {
                                                                           action: 'PRESS_EDIT_CUSTOM_STATUS',
                                                                           label: ei.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                                                                           icon: () =>
-                                                                              null != eC.emoji
+                                                                              null != eS.emoji
                                                                                   ? (0, i.jsx)(d.Iv, {
-                                                                                        emoji: eC.emoji,
+                                                                                        emoji: eS.emoji,
                                                                                         animate: !0,
                                                                                         hideTooltip: !0
                                                                                     })

@@ -209,7 +209,7 @@ function w() {
                 return;
             }
             (0, c.j)(() => {
-                P.GN.setState({ mode: P.v0.DISCOVERY }), (0, g.jY)({ selectedTab: y.vf.GUILDS });
+                g.Z.setState({ selectedTab: y.vf.GUILDS }), P.GN.setState({ mode: P.v0.DISCOVERY });
             }),
                 null == a
                     ? ((0, c.j)(() => {

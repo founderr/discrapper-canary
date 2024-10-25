@@ -378,7 +378,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     SharedSpacesWarningManager: {
-        actions: ['CHANNEL_SELECT'],
+        actions: ['CHANNEL_SELECT', 'APP_STATE_UPDATE'],
         inlineRequire: () => n(414509).Z,
         neverLoadBeforeConnectionOpen: !0
     },
