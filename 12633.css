@@ -19448,7 +19448,7 @@ h3.improved_f017d0:after {
 }
 
 .card_ae1fa2.hoisted_ae1fa2 {
-    background: var(--profile-body-background-color) !important;
+    background: linear-gradient(rgb(var(--bg-overlay-color)/.4), rgb(var(--bg-overlay-color)/.4)), linear-gradient(var(--profile-gradient-end), var(--profile-gradient-end)) !important;
     z-index: 4;
     pointer-events: none
 }
