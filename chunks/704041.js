@@ -5,19 +5,22 @@ var r = n(200651),
     s = n(481060),
     o = n(511010),
     l = n(553795),
-    u = n(979192),
-    c = n(114201),
-    d = n(154658),
-    _ = n(370611),
-    E = n(463031),
-    f = n(981631),
-    h = n(231338),
-    p = n(689938),
-    I = n(304818);
-function m(e) {
+    u = n(709054),
+    c = n(979192),
+    d = n(814059),
+    _ = n(873128),
+    E = n(114201),
+    f = n(154658),
+    h = n(370611),
+    p = n(463031),
+    I = n(981631),
+    m = n(231338),
+    T = n(689938),
+    S = n(304818);
+function g(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {
-        theme: h.BR.DARK,
+        theme: m.BR.DARK,
         children: (e) =>
             (0, r.jsx)('div', {
                 'data-disable-adaptive-theme': !0,
@@ -26,15 +29,51 @@ function m(e) {
             })
     });
 }
-function T(e) {
+function A(e) {
+    let { leaderboard: t } = e,
+        n = i.useMemo(() => (0, d.n)(u.default.extractTimestamp(t.interval_end)), [t]);
+    return (0, r.jsxs)('div', {
+        className: S.header,
+        children: [
+            (0, r.jsx)(s.LeagueOfLegendsBrandIcon, { size: 'md' }),
+            (0, r.jsx)(s.Spacer, {
+                size: 8,
+                horizontal: !0
+            }),
+            (0, r.jsx)(s.Heading, {
+                variant: 'heading-sm/normal',
+                className: S.leaderboardTitle,
+                children: T.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
+                    leaderboardName: 'League of Legends',
+                    timeLeft: n,
+                    leaderboardNameHook: (e, t) =>
+                        (0, r.jsx)(
+                            s.Text,
+                            {
+                                variant: 'text-sm/medium',
+                                className: S.leaderboardName,
+                                children: e
+                            },
+                            t
+                        )
+                })
+            }),
+            (0, r.jsx)(E.Z, {
+                guildId: t.guild_id,
+                leaderboardId: p._
+            })
+        ]
+    });
+}
+function N(e) {
     let { guildId: t, leaderboardId: i } = e,
-        { leaderboardsDisabled: c } = (0, u.O)(t, i);
-    return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, f.ABu.RIOT_GAMES)) || c
+        { leaderboardsDisabled: u } = (0, c.O)(t, i);
+    return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, I.ABu.RIOT_GAMES)) || u
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(o.Z, { className: I.divider }),
+                  (0, r.jsx)(o.Z, { className: S.divider }),
                   (0, r.jsx)(s.Button, {
-                      className: I.joinLeaderboardButton,
+                      className: S.joinLeaderboardButton,
                       onClick: function () {
                           (0, s.openModalLazy)(async () => {
                               let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -45,7 +84,7 @@ function T(e) {
                                   });
                           });
                       },
-                      children: p.Z.Messages.JOIN_LEADERBOARD
+                      children: T.Z.Messages.JOIN_LEADERBOARD
                   })
               ]
           })
@@ -54,67 +93,40 @@ function T(e) {
 t.Z = (e) => {
     let { guildId: t, previewMode: n = !1 } = e,
         [a, o] = i.useState(n),
-        l = i.useRef(null);
-    return ((0, s.useFocusLock)(l), null == t)
+        l = i.useRef(null),
+        u = (0, _.Z)({
+            guildId: t,
+            leaderboardId: p._,
+            intervalOffset: 0
+        });
+    return ((0, s.useFocusLock)(l), null == u)
         ? null
-        : (0, r.jsx)(m, {
+        : (0, r.jsx)(g, {
               children: (0, r.jsxs)('div', {
-                  className: I.popout,
+                  className: S.popout,
                   ref: l,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: I.content,
+                          className: S.content,
                           children: [
-                              (0, r.jsxs)('div', {
-                                  className: I.header,
-                                  children: [
-                                      (0, r.jsx)(s.LeagueOfLegendsBrandIcon, { size: 'md' }),
-                                      (0, r.jsx)(s.Spacer, {
-                                          size: 8,
-                                          horizontal: !0
-                                      }),
-                                      (0, r.jsx)(s.Heading, {
-                                          variant: 'heading-sm/normal',
-                                          className: I.leaderboardTitle,
-                                          children: p.Z.Messages.LEADERBOARD_POPOUT_TITLE.format({
-                                              leaderboardName: 'League of Legends',
-                                              leaderboardNameHook: (e, t) =>
-                                                  (0, r.jsx)(
-                                                      s.Text,
-                                                      {
-                                                          variant: 'text-sm/medium',
-                                                          className: I.leaderboardName,
-                                                          children: e
-                                                      },
-                                                      t
-                                                  )
-                                          })
-                                      }),
-                                      (0, r.jsx)(c.Z, {
-                                          guildId: t,
-                                          leaderboardId: E._
-                                      })
-                                  ]
-                              }),
-                              (0, r.jsx)(_.Z, {
-                                  guildId: t,
-                                  leaderboardId: E._,
-                                  intervalOffset: 0,
+                              (0, r.jsx)(A, { leaderboard: u }),
+                              (0, r.jsx)(h.Z, {
+                                  leaderboard: u,
                                   previewMode: a
                               }),
                               a
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(d.Z, {
-                                                className: I.previousChampion,
+                                            (0, r.jsx)(f.Z, {
+                                                className: S.previousChampion,
                                                 guildId: t,
-                                                leaderboardId: E._,
+                                                leaderboardId: p._,
                                                 intervalOffset: -1
                                             }),
-                                            (0, r.jsx)(T, {
+                                            (0, r.jsx)(N, {
                                                 guildId: t,
-                                                leaderboardId: E._
+                                                leaderboardId: p._
                                             })
                                         ]
                                     })
@@ -125,11 +137,11 @@ t.Z = (e) => {
                                 children: (0, r.jsx)(s.Clickable, {
                                     onClick: () => o(!1),
                                     children: (0, r.jsx)('div', {
-                                        className: I.exitPreviewModeButton,
+                                        className: S.exitPreviewModeButton,
                                         children: (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            className: I.exitPreviewModeText,
-                                            children: p.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
+                                            className: S.exitPreviewModeText,
+                                            children: T.Z.Messages.LEADERBOARD_POPOUT_PREVIEW_SHOW_FULL_LEADERBOARD
                                         })
                                     })
                                 })
