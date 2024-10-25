@@ -9273,6 +9273,7 @@ e.exports = Object.freeze({
     ACTIVATE_DEVICE_ERROR_BODY: 'We weren\u2019t able to connect accounts. Please try again or contact support if the issue persists.',
     ACTIVATE_DEVICE_SUCCESS_TITLE: 'You\u2019re all set up!',
     ACTIVATE_DEVICE_SUCCESS_TWO_WAY_BODY: 'Head over to a voice channel to try it out.',
+    ACTIVATE_DEVICE_SUCCESS_SOCIAL_LAYER_BODY: 'You\u2019ve connected your Discord account to the game. It might take a bit more time for your game friends to show up in Discord. Head back to the game to start playing!',
     GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE: 'Voice Transfer Failed',
     GAME_CONSOLE_TRANSFER_TIMEOUT_BODY: 'Transfer to console timed out, please check that your console is on and try again.',
     CONSOLE_VOICE_MOBILE_UPSELL: 'Transfer voice chat to console!',

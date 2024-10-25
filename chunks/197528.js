@@ -1,29 +1,29 @@
 n.r(e), n(47120);
 var a = n(200651),
     r = n(192379),
-    o = n(830064),
-    s = n(702493),
-    i = n(77987),
-    l = n(133853),
-    c = n(703656),
-    u = n(643366),
-    d = n(94628),
-    f = n(659154),
-    p = n(902928),
+    o = n(702493),
+    s = n(77987),
+    c = n(133853),
+    i = n(703656),
+    l = n(643366),
+    u = n(94628),
+    d = n(659154),
+    f = n(902928),
     _ = n(240479),
-    E = n(981631),
-    I = n(621727);
-e.default = (0, i.e)(function () {
+    p = n(981631),
+    C = n(621727);
+let E = n(575703);
+e.default = (0, s.e)(function () {
     let t;
     let [e, n] = r.useState({
         type: 'user-code-input',
         usePrefilledCode: !0
     });
-    (0, s.Z)(), (0, u.Y)(e);
-    let i = r.useCallback(() => {
+    (0, o.Z)(), (0, l.Y)(e);
+    let s = r.useCallback(() => {
             n({ type: 'user-code-input' });
         }, [n]),
-        C = r.useCallback(
+        I = r.useCallback(
             (t) => {
                 n({
                     type: 'authorization',
@@ -32,7 +32,7 @@ e.default = (0, i.e)(function () {
             },
             [n]
         ),
-        h = r.useCallback(
+        A = r.useCallback(
             (t) => {
                 n({
                     type: 'success',
@@ -41,7 +41,7 @@ e.default = (0, i.e)(function () {
             },
             [n]
         ),
-        A = r.useCallback(
+        h = r.useCallback(
             (t) => {
                 n({
                     type: 'error',
@@ -55,44 +55,45 @@ e.default = (0, i.e)(function () {
         case 'user-code-input':
             t = (0, a.jsx)(_.v, {
                 usePrefilledCode: e.usePrefilledCode || !1,
-                onUserCodeAccepted: C
+                onUserCodeAccepted: I
             });
             break;
         case 'authorization':
-            (t = (0, a.jsx)(d.B, {
+            (t = (0, a.jsx)(u.B, {
                 data: e.userCodeData,
-                onDenied: i,
-                onError: A,
-                onSuccess: h
+                onDenied: s,
+                onError: h,
+                onSuccess: A
             })),
                 (T = !1);
             break;
         case 'success':
-            t = (0, a.jsx)(p.u, {
-                onComplete: () => (0, c.uL)(E.Z5c.ME),
+            t = (0, a.jsx)(f.u, {
+                onComplete: () => (0, i.uL)(p.Z5c.ME),
                 data: e.userCodeData
             });
             break;
         case 'error':
-            t = (0, a.jsx)(f.c, { onTryAgain: i });
+            t = (0, a.jsx)(d.c, { onTryAgain: s });
             break;
         default:
             t = null;
     }
     return (0, a.jsxs)('div', {
-        className: I.activatePage,
+        className: C.activatePage,
         children: [
-            (0, a.jsx)(o.Z, {
-                className: I.artwork,
-                preserveAspectRatio: 'xMinYMin slice'
+            (0, a.jsx)('img', {
+                className: C.artwork,
+                src: E,
+                alt: ''
             }),
-            (0, a.jsx)(l.Z, {
+            (0, a.jsx)(c.Z, {
                 show: !0,
-                className: I.logo
+                className: C.logo
             }),
             T
                 ? (0, a.jsx)('div', {
-                      className: I.content,
+                      className: C.content,
                       children: t
                   })
                 : t

@@ -1,6 +1,6 @@
 n.d(e, {
     v: function () {
-        return E;
+        return C;
     }
 }),
     n(47120);
@@ -8,60 +8,64 @@ var a = n(200651),
     r = n(192379),
     o = n(120356),
     s = n.n(o),
-    i = n(593473),
-    l = n(512969),
-    c = n(481060),
+    c = n(593473),
+    i = n(512969),
+    l = n(481060),
     u = n(489863),
     d = n(511540),
     f = n(828878),
-    p = n(689938),
-    _ = n(74939);
-function E(t) {
+    _ = n(689938),
+    p = n(74939);
+function C(t) {
     let { onUserCodeAccepted: e, usePrefilledCode: n } = t,
-        [o, E] = r.useState(() => {
-            let { user_code: t } = i.parse(window.location.search);
+        [o, C] = r.useState(() => {
+            let { user_code: t } = c.parse(window.location.search);
             return n && null != t ? t : '';
         }),
-        I = (0, l.TH)(),
-        C = r.useCallback(() => {
-            (0, u.c$)(I);
-        }, [I]),
-        { manualSubmit: h, error: A, submitting: T } = (0, d.c)(o, e, C);
+        E = (0, i.TH)(),
+        I = r.useCallback(() => {
+            (0, u.c$)(E);
+        }, [E]),
+        { manualSubmit: A, error: h, submitting: T } = (0, d.c)(o, e, I);
     return (0, a.jsxs)('div', {
-        className: _.content,
+        className: p.content,
         children: [
-            (0, a.jsx)(c.Heading, {
-                variant: 'heading-xl/extrabold',
-                className: _.text,
-                children: p.Z.Messages.ACTIVATE_DEVICE_TITLE
+            (0, a.jsxs)('div', {
+                className: p.innerContent,
+                children: [
+                    (0, a.jsx)(l.Heading, {
+                        variant: 'heading-xl/extrabold',
+                        className: p.text,
+                        children: _.Z.Messages.ACTIVATE_DEVICE_TITLE
+                    }),
+                    (0, a.jsx)(l.Text, {
+                        variant: 'text-md/medium',
+                        color: 'header-secondary',
+                        className: p.text,
+                        children: _.Z.Messages.ACTIVATE_DEVICE_BODY
+                    }),
+                    (0, a.jsx)(l.TextInput, {
+                        placeholder: _.Z.Messages.ACTIVATE_DEVICE_INPUT_PLACEHOLDER.format({ number: f.A.USER_CODE_LENGTH }),
+                        maxLength: f.A.USER_CODE_LENGTH,
+                        className: p.textInputContainer,
+                        inputClassName: s()(p.textInput, { [p.textInputError]: null != h }),
+                        autoComplete: 'off',
+                        autoFocus: !0,
+                        value: o,
+                        onChange: C,
+                        error: h
+                    })
+                ]
             }),
-            (0, a.jsx)(c.Text, {
-                tag: 'p',
-                variant: 'text-md/medium',
-                color: 'header-secondary',
-                className: _.text,
-                children: p.Z.Messages.ACTIVATE_DEVICE_BODY
-            }),
-            (0, a.jsx)(c.TextInput, {
-                placeholder: p.Z.Messages.ACTIVATE_DEVICE_INPUT_PLACEHOLDER.format({ number: f.A.USER_CODE_LENGTH }),
-                maxLength: f.A.USER_CODE_LENGTH,
-                className: _.textInputContainer,
-                inputClassName: s()(_.textInput, { [_.textInputError]: null != A }),
-                autoComplete: 'off',
-                autoFocus: !0,
-                value: o,
-                onChange: E,
-                error: A
-            }),
-            (0, a.jsx)(c.Button, {
+            (0, a.jsx)(l.Button, {
                 fullWidth: !0,
-                color: c.Button.Colors.BRAND,
-                onClick: h,
+                color: l.Button.Colors.BRAND,
+                onClick: A,
                 submitting: T,
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
-                children: (0, a.jsx)(c.Text, {
+                children: (0, a.jsx)(l.Text, {
                     variant: 'text-md/medium',
-                    children: p.Z.Messages.SUBMIT
+                    children: _.Z.Messages.SUBMIT
                 })
             })
         ]
