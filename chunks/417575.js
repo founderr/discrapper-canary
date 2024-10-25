@@ -28,6 +28,7 @@ e.exports = {
     contentHeader: 'contentHeader_c73f92',
     contentHeaderGameInfo: 'contentHeaderGameInfo_c73f92',
     contentHeaderLogotype: 'contentHeaderLogotype_c73f92',
+    accentOnHover: 'accentOnHover_c73f92',
     questHeading: 'questHeading_c73f92',
     contentFooter: 'contentFooter_c73f92',
     contentFooterButtonCont: 'contentFooterButtonCont_c73f92',
