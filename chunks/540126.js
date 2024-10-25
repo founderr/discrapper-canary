@@ -188,6 +188,8 @@ class en {
     }
     getCategoryFromSection(e) {
         switch (e) {
+            case q:
+                throw Error('Invalid section. Use getChannelNoticeSection instead');
             case J:
                 throw Error('Invalid section. Use getGuildActionSection instead');
             case K:
