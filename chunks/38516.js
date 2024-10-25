@@ -1,17 +1,17 @@
-t(411104);
-var a = t(200651);
-t(192379);
-var r = t(120356),
-    s = t.n(r),
-    i = t(643872),
-    o = t(481060),
-    l = t(810568),
-    c = t(689938),
-    d = t(51527),
-    u = t(825718);
+n(411104);
+var a = n(200651);
+n(192379);
+var r = n(120356),
+    s = n.n(r),
+    i = n(643872),
+    o = n(481060),
+    l = n(810568),
+    c = n(689938),
+    d = n(51527),
+    u = n(825718);
 let _ = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE];
 function E(e) {
-    let { website: n, trackClick: t } = e,
+    let { website: t, trackClick: n } = e,
         {
             action: r,
             icon: s,
@@ -39,18 +39,20 @@ function E(e) {
                 default:
                     throw Error('Unknown IGDB website category');
             }
-        })(n);
+        })(t);
     return (0, a.jsx)(o.Tooltip, {
-        text: n.url,
+        text: t.url,
+        tooltipClassName: u.tooltip,
+        tooltipContentClassName: u.tooltipContent,
         children: (e) => {
             let { onClick: i, ...l } = e;
             return (0, a.jsx)(o.Anchor, {
                 ...l,
                 className: u.linkAnchor,
                 title: d,
-                href: n.url,
+                href: t.url,
                 onClick: () => {
-                    t(r), null == i || i();
+                    n(r), null == i || i();
                 },
                 target: '_blank',
                 children: s
@@ -58,15 +60,15 @@ function E(e) {
         }
     });
 }
-n.Z = function (e) {
-    let { detectedGame: n, trackClick: t } = e;
-    if (null == n.websites) return null;
-    let r = n.websites
+t.Z = function (e) {
+    let { detectedGame: t, trackClick: n } = e;
+    if (null == t.websites) return null;
+    let r = t.websites
         .filter((e) => {
-            let { category: n } = e;
-            return _.includes(n);
+            let { category: t } = e;
+            return _.includes(t);
         })
-        .sort((e, n) => e.category - n.category);
+        .sort((e, t) => e.category - t.category);
     return 0 === r.length
         ? null
         : (0, a.jsxs)('div', {
@@ -84,7 +86,7 @@ n.Z = function (e) {
                               E,
                               {
                                   website: e,
-                                  trackClick: t
+                                  trackClick: n
                               },
                               e.url
                           )
