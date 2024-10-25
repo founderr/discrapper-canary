@@ -14,7 +14,6 @@ e.exports = {
     headerInfo: 'headerInfo_e881fc',
     logoWrapper: 'logoWrapper_e881fc',
     logo: 'logo_e881fc',
-    followButton: 'followButton_e881fc',
     gameDetails: 'gameDetails_e881fc',
     gameBadge: 'gameBadge_e881fc',
     newBadge: 'newBadge_e881fc',
