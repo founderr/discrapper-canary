@@ -92,7 +92,8 @@ function A(e) {
                                 onSubmit: F,
                                 parentModalKey: E.so,
                                 autoCompletePosition: 'bottom',
-                                emojiPickerCloseOnModalOuterClick: !0
+                                emojiPickerCloseOnModalOuterClick: !0,
+                                disableThemedBackground: !0
                             }),
                             (0, l.jsx)(i.Button, {
                                 className: S.sendWithMessage,
