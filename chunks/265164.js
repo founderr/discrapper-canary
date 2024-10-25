@@ -17,8 +17,8 @@ var i,
     g = n(375954),
     T = n(306680),
     f = n(699516),
-    C = n(9156),
-    S = n(626135),
+    S = n(9156),
+    C = n(626135),
     N = n(70956),
     A = n(900849),
     v = n(761080),
@@ -193,7 +193,7 @@ function eo(e) {
     }
     if ((er(), null != k.load_id && D !== k.load_id)) {
         var t;
-        S.default.track(R.rMx.FEED_LOADED, {
+        C.default.track(R.rMx.FEED_LOADED, {
             ...k,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),
@@ -259,7 +259,7 @@ function eI(e) {
 }
 class ep extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, C.ZP, h.default, Z.Z, l.Z), null != e)) {
+        if ((this.waitFor(g.Z, m.Z, T.ZP, d.Z, S.ZP, h.default, Z.Z, l.Z), null != e)) {
             var t, n, i, a, s, r;
             (P = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
@@ -432,19 +432,28 @@ x(ep, 'displayName', 'GravityStore'),
                     return;
                 }
                 let n = B[e.message_id];
-                if (null == n) {
-                    V[e.message_id] = !0;
-                    return;
-                }
-                null != g.Z.getMessage(t.channel_id, t.message.id)
-                    ? (H[t.message.id] = {
-                          ...n,
-                          message: g.Z.getMessage(t.channel_id, t.message.id)
-                      })
-                    : (H[t.message.id] = {
-                          ...n,
-                          message: (0, _.e5)(t.message)
-                      });
+                null == n &&
+                    (n = {
+                        id: e.message_id,
+                        type: v.Rr.MESSAGE,
+                        score: -1,
+                        data: {
+                            guild_id: t.guild_id,
+                            channel_id: t.channel_id,
+                            message_id: t.message.id,
+                            channel_type: R.d4z.GUILD_TEXT,
+                            has_mention: !1
+                        }
+                    }),
+                    null != g.Z.getMessage(t.channel_id, t.message.id)
+                        ? (H[t.message.id] = {
+                              ...n,
+                              message: g.Z.getMessage(t.channel_id, t.message.id)
+                          })
+                        : (H[t.message.id] = {
+                              ...n,
+                              message: (0, _.e5)(t.message)
+                          });
             }),
                 s.forEach((e) => {
                     let t = d[e.summary_id];

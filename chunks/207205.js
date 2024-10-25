@@ -24,9 +24,10 @@ n.d(t, {
         return I;
     }
 }),
+    n(653041),
+    n(536091),
     n(47120),
-    n(724458),
-    n(653041);
+    n(724458);
 var i,
     a,
     s = n(661869),
@@ -57,19 +58,50 @@ async function m(e, t, n) {
                 message_id: e.data.message_id
             })),
         l = s
+            .map((e) => {
+                if (e.type === _.Rr.MESSAGE) {
+                    var t, n, i, a, s, r;
+                    let l = [];
+                    return (
+                        (null === (t = e.data.message_context) || void 0 === t ? void 0 : t.reply_message_id) != null &&
+                            0 !== parseInt(null === (n = e.data.message_context) || void 0 === n ? void 0 : n.reply_message_id) &&
+                            l.push({
+                                channel_id: e.data.channel_id,
+                                message_id: e.data.message_context.reply_message_id
+                            }),
+                        (null === (i = e.data.message_context) || void 0 === i ? void 0 : i.before_message_id) != null &&
+                            0 !== parseInt(null === (a = e.data.message_context) || void 0 === a ? void 0 : a.before_message_id) &&
+                            l.push({
+                                channel_id: e.data.channel_id,
+                                message_id: e.data.message_context.before_message_id
+                            }),
+                        (null === (s = e.data.message_context) || void 0 === s ? void 0 : s.after_message_id) != null &&
+                            0 !== parseInt(null === (r = e.data.message_context) || void 0 === r ? void 0 : r.after_message_id) &&
+                            l.push({
+                                channel_id: e.data.channel_id,
+                                message_id: e.data.message_context.after_message_id
+                            }),
+                        l
+                    );
+                }
+                return [];
+            })
+            .flat()
+            .filter(Boolean),
+        o = s
             .filter((e) => e.type === _.Rr.SUMMARY)
             .map((e) => ({
                 guild_id: e.data.guild_id,
                 channel_id: e.data.channel_id,
                 summary_id: e.data.summary_id
             })),
-        o = s
+        c = s
             .filter((e) => e.type === _.Rr.ACTIVITY)
             .map((e) => ({
                 user_id: e.data.user_id,
                 content_id: e.data.content_id
             }));
-    await d.Z.fetchHydrated(r, l, o, t, n);
+    await d.Z.fetchHydrated([...r, ...l], o, c, t, n);
 }
 ((a = i || (i = {}))[(a.UNKNOWN = 0)] = 'UNKNOWN'), (a[(a.DEFAULT = 1)] = 'DEFAULT'), (a[(a.MORE = 2)] = 'MORE'), (a[(a.LESS = 3)] = 'LESS'), (a[(a.MUTED = 4)] = 'MUTED');
 function I(e, t) {
