@@ -1,42 +1,45 @@
 n.d(t, {
     I6: function () {
-        return T;
-    },
-    J7: function () {
-        return A;
-    },
-    JM: function () {
         return S;
     },
+    J7: function () {
+        return N;
+    },
+    JM: function () {
+        return g;
+    },
+    Jw: function () {
+        return f;
+    },
     WL: function () {
-        return p;
+        return I;
     },
     ak: function () {
         return E;
     },
     d$: function () {
-        return h;
+        return p;
     },
     eE: function () {
-        return g;
+        return A;
     },
     ic: function () {
-        return f;
+        return h;
     },
     lt: function () {
         return d;
     },
     pX: function () {
-        return m;
+        return T;
     },
     sq: function () {
         return _;
     },
     wk: function () {
-        return N;
+        return R;
     },
     zd: function () {
-        return I;
+        return m;
     }
 });
 var r = n(367907),
@@ -48,7 +51,7 @@ var r = n(367907),
     u = n(443599),
     c = n(981631);
 function d(e, t) {
-    R(o.b.GUILD_DISCOVERY, { guild_id: e.id }),
+    O(o.b.GUILD_DISCOVERY, { guild_id: e.id }),
         (0, u.m)(
             {
                 name: o.b.GUILD_DISCOVERY,
@@ -59,7 +62,7 @@ function d(e, t) {
         );
 }
 function _(e, t) {
-    R(o.b.GUILD_DIRECTORY_ENTRY, {
+    O(o.b.GUILD_DIRECTORY_ENTRY, {
         channel_id: e.channelId,
         guild_id: e.guildId
     }),
@@ -73,7 +76,7 @@ function _(e, t) {
         );
 }
 function E(e, t, n) {
-    R(o.b.MESSAGE, {
+    O(o.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -86,10 +89,24 @@ function E(e, t, n) {
             n
         );
 }
-function f(e, t) {
+function f(e, t, n) {
+    O(o.b.MESSAGE, {
+        message_id: e.id,
+        channel_id: e.channel_id
+    }),
+        (0, u.m)(
+            {
+                name: o.b.MESSAGE,
+                record: e
+            },
+            { variant: 'staff' },
+            n
+        );
+}
+function h(e, t) {
     let n = i.Z.getStageInstanceByChannel(e.id);
     if (null != n)
-        R(o.b.STAGE_CHANNEL, {
+        O(o.b.STAGE_CHANNEL, {
             stage_instance_id: n.id,
             channel_id: n.channel_id,
             guild_id: n.guild_id
@@ -103,9 +120,9 @@ function f(e, t) {
                 t
             );
 }
-function h(e, t) {
+function p(e, t) {
     var n;
-    R(o.b.GUILD_SCHEDULED_EVENT, {
+    O(o.b.GUILD_SCHEDULED_EVENT, {
         guild_scheduled_event_id: e.id,
         guild_id: e.guild_id,
         channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
@@ -119,8 +136,8 @@ function h(e, t) {
             t
         );
 }
-function p(e, t) {
-    R(o.b.FIRST_DM, {
+function I(e, t) {
+    O(o.b.FIRST_DM, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -135,7 +152,7 @@ function p(e, t) {
             !1
         );
 }
-async function I(e, t) {
+async function m(e, t) {
     try {
         await (0, l.ox)(
             {
@@ -147,8 +164,8 @@ async function I(e, t) {
             null == t || t();
     } catch {}
 }
-function m(e, t, n) {
-    R(o.b.USER, { reported_user_id: e.id }),
+function T(e, t, n) {
+    O(o.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
                 name: o.b.USER,
@@ -160,8 +177,8 @@ function m(e, t, n) {
             void 0
         );
 }
-function T(e, t, n) {
-    R(o.b.USER, { reported_user_id: e.id }),
+function S(e, t, n) {
+    O(o.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
                 name: o.b.USER,
@@ -174,9 +191,9 @@ function T(e, t, n) {
             !1
         );
 }
-function S(e, t) {
+function g(e, t) {
     let n = new s.Z({});
-    R(o.BM.USER, { reported_user_id: n.id }),
+    O(o.BM.USER, { reported_user_id: n.id }),
         (0, u.m)(
             {
                 name: o.BM.USER,
@@ -190,9 +207,9 @@ function S(e, t) {
             e
         );
 }
-function g(e, t) {
+function A(e, t) {
     let n = new a.ZP({});
-    R(o.BM.MESSAGE, {
+    O(o.BM.MESSAGE, {
         message_id: void 0,
         channel_id: void 0
     }),
@@ -209,7 +226,7 @@ function g(e, t) {
             e
         );
 }
-async function A(e, t, n) {
+async function N(e, t, n) {
     try {
         await (0, l.ox)(
             {
@@ -223,8 +240,8 @@ async function A(e, t, n) {
         null == n || n();
     }
 }
-function N(e, t) {
-    R(o.b.MESSAGE, {
+function R(e, t) {
+    O(o.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -237,7 +254,7 @@ function N(e, t) {
             t
         );
 }
-function R(e, t) {
+function O(e, t) {
     r.ZP.trackWithMetadata(c.rMx.IAR_MODAL_OPEN, {
         report_type: e,
         ...t

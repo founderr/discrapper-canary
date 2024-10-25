@@ -4,7 +4,7 @@ t.r(n),
             return w;
         },
         useMessageMenu: function () {
-            return k;
+            return F;
         }
     });
 var i = t(200651);
@@ -57,7 +57,7 @@ function w(e) {
         Z = c.getAttribute('data-name');
     if (null != E) s = i = r = E.url;
     else for (; (0, a.k)(m); ) (0, a.k)(m, HTMLImageElement) && null != m.src && (s = m.src), (0, a.k)(m, HTMLAnchorElement) && null != m.href && ((i = m.href), (o = m.textContent), null == s && 'img' === m.getAttribute('data-role') && ((s = i), m.hasAttribute('data-safe-src') && '' !== m.getAttribute('data-safe-src') && (r = m.getAttribute('data-safe-src')))), (m = m.parentNode);
-    return k({
+    return F({
         message: d,
         channel: u,
         mediaItem: E,
@@ -78,8 +78,8 @@ function w(e) {
         shouldHideMediaOptions: M
     });
 }
-function k(e) {
-    let { message: n, channel: t, mediaItem: a, textSelection: l, favoriteableType: w, favoriteableId: k, favoriteableName: F, itemHref: K, itemSrc: H, itemSafeSrc: B, itemTextContent: Y, canReport: V, onHeightUpdate: z, onSelect: X, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
+function F(e) {
+    let { message: n, channel: t, mediaItem: a, textSelection: l, favoriteableType: w, favoriteableId: F, favoriteableName: k, itemHref: K, itemSrc: H, itemSafeSrc: B, itemTextContent: Y, canReport: V, onHeightUpdate: z, onSelect: X, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
         Q = (0, u.Z)(l),
         ee = (0, E.Z)(l),
         en = (0, O.Z)(n, t),
@@ -88,8 +88,8 @@ function k(e) {
         ea = (0, p.Z)(n, t),
         es = (0, N.Z)({
             type: w,
-            id: k,
-            name: F
+            id: F,
+            name: k
         }),
         el = (0, L.Z)(n, t),
         er = (0, T.Z)(n, t),
@@ -100,30 +100,31 @@ function k(e) {
         eE = (0, C.Z)(n, t),
         eM = (0, h.Z)(n, t),
         eg = (0, P.Z)(n),
-        ef = (0, b.Z)(n, t),
-        em = (0, c.Z)(null != K ? K : H, Y, n, { shouldHideMediaOptions: $ }),
-        eI = (0, d.Z)(B, n, { shouldHideMediaOptions: $ }),
-        e_ = (0, y.Z)(n, a),
-        eZ = (0, o.Z)({
+        ef = (0, P.e)(n),
+        em = (0, b.Z)(n, t),
+        eI = (0, c.Z)(null != K ? K : H, Y, n, { shouldHideMediaOptions: $ }),
+        e_ = (0, d.Z)(B, n, { shouldHideMediaOptions: $ }),
+        eZ = (0, y.Z)(n, a),
+        eS = (0, o.Z)({
             id: n.id,
             label: U.Z.Messages.COPY_ID_MESSAGE,
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
         }),
-        eS = (0, D.Z)(n, t),
-        eh = (0, v.Z)(n, t),
-        eA = (0, j.Z)(n, t),
-        eN = (0, f.Z)(l, t.getGuildId()),
-        ev = (0, m.Z)(n),
-        eT = (0, S.Z)(n),
-        ep = (0, g.Z)({
+        eh = (0, D.Z)(n, t),
+        eA = (0, v.Z)(n, t),
+        eN = (0, j.Z)(n, t),
+        ev = (0, f.Z)(l, t.getGuildId()),
+        eT = (0, m.Z)(n),
+        ep = (0, S.Z)(n),
+        eO = (0, g.Z)({
             commandType: r.yU.MESSAGE,
             commandTargetId: n.id,
             channel: t,
             guildId: void 0,
             onHeightUpdate: z
         }),
-        eO = (0, G.Z)(n),
-        eR = (0, M.Z)(n);
+        eR = (0, G.Z)(n),
+        ex = (0, M.Z)(n);
     return (0, i.jsxs)(s.Menu, {
         navId: q,
         onClose: W,
@@ -136,19 +137,19 @@ function k(e) {
                 children: ['' === l ? en : null, et, eo]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [ei, eS, eh, eA]
+                children: [ei, eh, eA, eN]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [eT, ea, ev, ep, el, er, eu, ed, ef, eR, eO]
+                children: [ep, ea, eT, eO, el, er, eu, ed, em, ex, eR]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [eE, ec, eM, V && eg]
+                children: [eE, ec, eM, V && eg, V && ef]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [es, eN, eI, e_]
+                children: [es, ev, e_, eZ]
             }),
-            (0, i.jsx)(s.MenuGroup, { children: em }),
-            (0, i.jsx)(s.MenuGroup, { children: eZ })
+            (0, i.jsx)(s.MenuGroup, { children: eI }),
+            (0, i.jsx)(s.MenuGroup, { children: eS })
         ]
     });
 }
