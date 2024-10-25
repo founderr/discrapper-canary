@@ -25,8 +25,8 @@ var i,
     g = n(594174),
     T = n(823379),
     f = n(51144),
-    C = n(945124),
-    S = n(231467),
+    S = n(945124),
+    C = n(231467),
     N = n(301544),
     A = n(931515),
     v = n(286083),
@@ -51,10 +51,10 @@ function D(e) {
         },
         className: b.animatedCard,
         children: (0, l.jsx)(
-            S.ZP,
+            C.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, C.y)(n, s),
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, S.y)(n, s),
                 className: d()(b.card, r),
                 source: null != o ? o : O.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
@@ -67,8 +67,8 @@ function D(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: C = 16, paddingHorizontal: S = 32, variant: O = 'default', onUpdatePage: P } = e,
-        y = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
+    let { width: c, paddingVertical: S = 16, paddingHorizontal: C = 32, variant: O = 'default', onUpdatePage: P } = e,
+        y = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * C, 0), [c, C]),
         j = o.useMemo(() => {
             if (0 === y) return 1;
             let e = y / 256,
@@ -85,7 +85,9 @@ t.ZP = o.memo(function (e) {
         q = (0, _.e7)([g.default], () => g.default.getCurrentUser()),
         { treatment: Q } = (0, I.I7)();
     o.useEffect(() => {
-        if (null != w && !!(0, R.Pw)(w)) (!(null != F && (0, R.Pw)(F)) || !(F.loadedAt >= w.loadedAt)) && (0, m.Oe)('top_picks', k, Q, (0, p.z)());
+        if (null == w || !(0, R.Pw)(w) || (null != F && (0, R.Pw)(F) && F.loadedAt >= w.loadedAt)) return;
+        let e = p.Z.getField('entrypoint');
+        (0, m.Oe)('top_picks', k, Q, e);
     }, [k, w, F, Q]);
     let X = V.length > 0 || H.length > 0 ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != q ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: f.ZP.getName(q) }) : '';
     let J =
@@ -325,11 +327,11 @@ t.ZP = o.memo(function (e) {
           : (0, l.jsx)('div', {
                 className: b.sectionContainer,
                 style: {
-                    paddingTop: C,
-                    paddingLeft: S,
-                    paddingRight: S,
-                    paddingBottom: C,
-                    width: 'calc(100% - '.concat(2 * S, 'px)'),
+                    paddingTop: S,
+                    paddingLeft: C,
+                    paddingRight: C,
+                    paddingBottom: S,
+                    width: 'calc(100% - '.concat(2 * C, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
                 children: el.map((e, t) => {
