@@ -107,6 +107,18 @@ class D extends (r = u.yh) {
             n
         );
     }
+    getUnactivatedFractionalPremiumUnits() {
+        var e;
+        let t = [];
+        return (
+            null === (e = this.getForApplication(p.CL)) ||
+                void 0 === e ||
+                e.forEach((e) => {
+                    p.xJ.includes(e.skuId) && !e.consumed && t.push(e);
+                }),
+            t
+        );
+    }
 }
 (s = 'EntitlementStore'),
     (a = 'displayName') in (i = D)

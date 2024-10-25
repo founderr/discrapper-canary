@@ -128,6 +128,9 @@ n.d(t, {
     qV: function () {
         return J;
     },
+    sk: function () {
+        return eF;
+    },
     u0: function () {
         return eB;
     },
@@ -1127,6 +1130,20 @@ function ek(e) {
 function eB(e) {
     return null != e && M.OT.includes(e) ? 1 : 2;
 }
+function eF(e) {
+    return e.reduce((e, t) => {
+        let [n, r] = M.Cx[t.skuId],
+            i = 1;
+        switch (n) {
+            case M.Se.HOUR:
+                i = 1;
+                break;
+            case M.Se.DAY:
+                i = 24;
+        }
+        return e + i * r;
+    }, 0);
+}
 t.ZP = Object.freeze({
     isNewUser: (e) => null != e && Date.now() - e.createdAt.getTime() < 2592000000,
     isPremiumAtLeast: L.yd,
@@ -1194,7 +1211,8 @@ t.ZP = Object.freeze({
     getBillingInformationString: function (e, t) {
         var n, r, i;
         let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            s = a
+            s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [],
+            o = a
                 ? (0, D.T4)(
                       t.invoiceItems
                           .filter((e) => M.UD.has(e.subscriptionPlanId))
@@ -1215,14 +1233,14 @@ t.ZP = Object.freeze({
                 ? a
                     ? U.Z.Messages.PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN.format({
                           planName: U.Z.Messages.PREMIUM,
-                          price: s
+                          price: o
                       })
                     : U.Z.Messages.PREMIUM_SETTINGS_PAUSED_INFO
                 : a
                   ? U.Z.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN.format({
                         planName: U.Z.Messages.PREMIUM,
                         resumeDate: e.pauseEndsAt,
-                        price: s
+                        price: o
                     })
                   : U.Z.Messages.PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO.format({ resumeDate: e.pauseEndsAt });
         else if (e.status === y.O0b.PAST_DUE) {
@@ -1235,47 +1253,54 @@ t.ZP = Object.freeze({
                   })
                 : U.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
                       endDate: t.toDate(),
-                      price: s
+                      price: o
                   });
-        } else if (e.status === y.O0b.BILLING_RETRY)
-            return U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-                endDate: c()(e.currentPeriodStart).add(M.A5, 'days').toDate(),
-                price: s
-            });
-        else if (e.status === y.O0b.ACCOUNT_HOLD)
-            return e.isPurchasedViaGoogle && !(0, v.isAndroid)()
-                ? U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
-                      endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
-                      paymentGatewayName: P.Vz[e.paymentGateway],
-                      paymentSourceLink: eR(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
-                  })
-                : U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
-                      endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
-                      price: s
-                  });
-        else
-            return (function (e) {
-                return null != e.paymentSourceId && ec(e.paymentSourceId);
-            })(e)
-                ? U.Z.Messages.PREMIUM_SETTINGS_PREPAID_THROUGH_DATE.format({ prepaidEndDate: e.currentPeriodEnd })
-                : e.status === y.O0b.UNPAID
-                  ? U.Z.Messages.PREMIUM_SETTINGS_PAYMENT_PROCESSING.format({ maxProcessingTimeInDays: M.Rg })
-                  : e.isPurchasedExternally
-                    ? U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
-                          renewalDate: t.subscriptionPeriodStart,
+        } else {
+            if (e.status === y.O0b.BILLING_RETRY)
+                return U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
+                    endDate: c()(e.currentPeriodStart).add(M.A5, 'days').toDate(),
+                    price: o
+                });
+            if (e.status === y.O0b.ACCOUNT_HOLD)
+                return e.isPurchasedViaGoogle && !(0, v.isAndroid)()
+                    ? U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
+                          endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
                           paymentGatewayName: P.Vz[e.paymentGateway],
-                          subscriptionManagementLink: eR(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                          paymentSourceLink: eR(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
                       })
-                    : a
-                      ? U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({
-                            planName: U.Z.Messages.PREMIUM,
-                            renewalDate: t.subscriptionPeriodStart,
-                            price: s
-                        })
-                      : U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO.format({
-                            renewalDate: t.subscriptionPeriodStart,
-                            price: s
-                        });
+                    : U.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
+                          endDate: c()(e.currentPeriodStart).add(M.gh, 'days').toDate(),
+                          price: o
+                      });
+            if (
+                (function (e) {
+                    return null != e.paymentSourceId && ec(e.paymentSourceId);
+                })(e)
+            )
+                return U.Z.Messages.PREMIUM_SETTINGS_PREPAID_THROUGH_DATE.format({ prepaidEndDate: e.currentPeriodEnd });
+            if (e.status === y.O0b.UNPAID) return U.Z.Messages.PREMIUM_SETTINGS_PAYMENT_PROCESSING.format({ maxProcessingTimeInDays: M.Rg });
+            if (e.isPurchasedExternally)
+                return U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
+                    renewalDate: t.subscriptionPeriodStart,
+                    paymentGatewayName: P.Vz[e.paymentGateway],
+                    subscriptionManagementLink: eR(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                });
+            let n = new Date(t.subscriptionPeriodStart);
+            if (s.length > 0) {
+                let e = eF(s);
+                n.setHours(n.getHours() + e);
+            }
+            return a
+                ? U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({
+                      planName: U.Z.Messages.PREMIUM,
+                      renewalDate: n,
+                      price: o
+                  })
+                : U.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO.format({
+                      renewalDate: n,
+                      price: o
+                  });
+        }
     },
     isSwitchingPlansDisabled: function (e, t) {
         return (null != t && t !== M.a$.NONE) || null != e.renewalMutations || null != e.trialEndsAt || e.status === y.O0b.PAST_DUE;
@@ -1342,6 +1367,7 @@ t.ZP = Object.freeze({
                 return b.Rj.PREMIUM_TIER_2;
         }
     },
+    getUnactivatedFractionalPremiumHours: eF,
     castPremiumSubscriptionAsSkuId: eG,
     canUseAnimatedEmojis: function (e) {
         return (0, h.ks)(h.g_, e);

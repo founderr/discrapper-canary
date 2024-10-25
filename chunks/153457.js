@@ -17,5 +17,7 @@ e.exports = {
     fractionalTimeRemainingPillWrapper: 'fractionalTimeRemainingPillWrapper_b7f69f',
     fractionalTimeRemainingPill: 'fractionalTimeRemainingPill_b7f69f',
     fractionalTimeRemainingPillText: 'fractionalTimeRemainingPillText_b7f69f',
-    tier1AccountCreditHeader: 'tier1AccountCreditHeader_b7f69f'
+    tier1AccountCreditHeader: 'tier1AccountCreditHeader_b7f69f',
+    fractionalUnactivatedPill: 'fractionalUnactivatedPill_b7f69f',
+    fractionalUnactivatedPillText: 'fractionalUnactivatedPillText_b7f69f'
 };
