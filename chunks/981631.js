@@ -4671,6 +4671,7 @@ let ot = Object.freeze({
     (nO.IAR_FEEDBACK_SUBMITTED = 'iar_feedback_submitted'),
     (nO.IAR_SETTINGS_UPSELLS_ACTION = 'iar_settings_upsells_action'),
     (nO.DM_MUTE_FEEDBACK_SUBMITTED = 'dm_mute_feedback_submitted'),
+    (nO.BLOCK_USER_FEEDBACK_SUBMITTED = 'block_user_feedback_submitted'),
     (nO.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = 'emoji_upload_file_size_limit_exceeded'),
     (nO.EMOJI_UPLOAD_STARTED = 'emoji_upload_started'),
     (nO.EMOJI_UPLOAD_COMPLETED = 'emoji_upload_completed'),

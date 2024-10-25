@@ -6389,7 +6389,7 @@ div.modalHeader_c5e09c {
 }
 
 .icon_a94328 {
-    border-radius: 25%;
+    border-radius: var(--radius-md);
     flex-shrink: 0;
     box-sizing: border-box;
     border: 1px solid var(--border-subtle)
