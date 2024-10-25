@@ -161,8 +161,8 @@ function k(e) {
         );
     }, [F, V, Y]);
     let W = (0, c.e7)([x.Z], () => (null != u.guild ? x.Z.getGuild(u.guild.id) : null), [u]),
-        z = (0, N.Z)([G.id])[0],
-        K = (0, c.e7)([E.ZP], () => {
+        K = (0, N.Z)([G.id])[0],
+        z = (0, c.e7)([E.ZP], () => {
             var e;
             return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
         }),
@@ -198,7 +198,7 @@ function k(e) {
         if (null == u.guild) return (0, i.jsx)(M.Z, {});
         W = new S.ZP(u.guild);
     }
-    let ea = (ei && !q) || (ei && K),
+    let ea = (ei && !q) || (ei && z),
         es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: u.code,
@@ -206,7 +206,7 @@ function k(e) {
                 analyticsLocations: J
             });
         };
-    return (ei && K && (s = b.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (s = b.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = K ? b.Z.Messages.INVITE_EMBED_JOINED : X || !ei ? b.Z.Messages.JOIN : b.Z.Messages.START), null == u.code || '' === u.code)
+    return (ei && z && (s = b.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (s = b.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = z ? b.Z.Messages.INVITE_EMBED_JOINED : X || !ei ? b.Z.Messages.JOIN : b.Z.Messages.START), null == u.code || '' === u.code)
         ? null
         : (0, i.jsxs)('div', {
               className: P.container,
@@ -219,7 +219,7 @@ function k(e) {
                       }),
                       children: (0, i.jsx)(m.Z, {
                           imageBackground: $,
-                          applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
+                          applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
                           imageClassName: r()(P.img, {
                               [P.large]: w,
                               [P.stacked]: H
@@ -243,7 +243,7 @@ function k(e) {
                                   (0, i.jsx)(d.Heading, {
                                       className: P.heading,
                                       variant: 'heading-xl/semibold',
-                                      children: null == z ? void 0 : z.name
+                                      children: null == K ? void 0 : K.name
                                   }),
                                   (0, i.jsx)(B, {
                                       channel: Q,

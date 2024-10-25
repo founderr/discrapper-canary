@@ -8,8 +8,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    l = n(100621),
-    i = n(442837),
+    i = n(100621),
+    l = n(442837),
     c = n(692547),
     u = n(561779),
     d = n(481060),
@@ -20,11 +20,11 @@ var r = n(200651),
     _ = n(604162),
     E = n(689938),
     v = n(417575);
-let T = '-:--';
-function S(e) {
+let S = '-:--';
+function T(e) {
     let { current: t, duration: n } = e,
-        o = null != t ? (0, _.yv)(t) : T,
-        a = null != n ? (0, _.yv)(n) : T;
+        o = null != t ? (0, _.yv)(t) : S,
+        a = null != n ? (0, _.yv)(n) : S;
     return (
         (o = o.padStart(a.length, '0')),
         (0, r.jsxs)('div', {
@@ -50,7 +50,7 @@ function S(e) {
     );
 }
 function g(e) {
-    let { iconComponent: t, animationTime: n, visible: o, ariaLabel: a, active: i, disabled: u, tooltipLabel: m, tooltipDelayMs: p = 1500, onClick: f } = e,
+    let { iconComponent: t, animationTime: n, visible: o, ariaLabel: a, active: l, disabled: u, tooltipLabel: m, tooltipDelayMs: p = 1500, onClick: f } = e,
         C = (e) =>
             (0, r.jsx)(d.Clickable, {
                 ...e,
@@ -58,10 +58,10 @@ function g(e) {
                 className: s()(v.videoControlsBtnCont, { [v.videoControlsBtnContDisabled]: u }),
                 'aria-label': a,
                 'aria-disabled': u,
-                children: (0, r.jsx)(l.animated.div, {
+                children: (0, r.jsx)(i.animated.div, {
                     className: s()(v.videoControlsBtnCont),
                     style: {
-                        opacity: (0, l.to)(
+                        opacity: (0, i.to)(
                             [
                                 n.to({
                                     range: [0, 1],
@@ -74,7 +74,7 @@ function g(e) {
                     children: (0, r.jsx)(t, {
                         color: !0 !== u ? c.Z.colors.WHITE : c.Z.colors.TEXT_MUTED,
                         className: s()(v.controlsBarItem, {
-                            [v.controlsBarItemActive]: i,
+                            [v.controlsBarItemActive]: l,
                             [v.videoControlsBtn]: !u
                         })
                     })
@@ -90,17 +90,17 @@ function g(e) {
 }
 function x(e) {
     var t, n;
-    let { videoRef: a, playerState: _, animSpring: T, visible: x, seekForwardEnabled: N, hideCaptionButton: h, handlePlayPauseBtnClick: I, handleTranscriptBtnClick: L, handleCaptionBtnClick: O, handleFullScreenBtnClick: j, handleSeekBackBtnClick: b, handleSeekForwardBtnClick: B, handleControlBarPendingInteraction: P } = e,
+    let { videoRef: a, playerState: _, animSpring: S, visible: x, seekForwardEnabled: N, hideCaptionButton: h, handlePlayPauseBtnClick: I, handleTranscriptBtnClick: L, handleCaptionBtnClick: O, handleFullScreenBtnClick: j, handleSeekBackBtnClick: b, handleSeekForwardBtnClick: B, handleControlBarPendingInteraction: P } = e,
         k = (0, p.km)((e) => e.volume),
-        R = (0, p.km)((e) => e.setVolume),
-        y = (0, p.km)((e) => e.muted),
+        y = (0, p.km)((e) => e.setVolume),
+        R = (0, p.km)((e) => e.muted),
         D = (0, p.km)((e) => e.setMuted),
         A = (0, p.km)((e) => e.transcriptEnabled),
         M = (0, p.km)((e) => e.captionEnabled),
         Z = (0, p.km)((e) => e.fullScreenEnabled),
-        U = (0, i.e7)([m.Z], () => m.Z.useReducedMotion),
-        [G, V] = o.useState(y ? 0 : k),
-        [w, F] = o.useState(!1),
+        U = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
+        [G, V] = o.useState(R ? 0 : k),
+        [F, w] = o.useState(!1),
         [H, Q] = o.useState(!1),
         [{ volumeAnimSpring: z }, W] = (0, d.useSpring)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -114,22 +114,22 @@ function x(e) {
             if (null != a.current) e !== a.current.volume && (a.current.volume = e), e !== G && V(e);
         },
         q = () => {
-            F(!0);
+            w(!0);
         },
         K = () => {
-            F(!1);
+            w(!1);
         };
     o.useEffect(
         () => (
             W({
-                volumeAnimSpring: H || w ? 1 : 0,
+                volumeAnimSpring: H || F ? 1 : 0,
                 immediate: U
             }),
             () => {
                 z.stop();
             }
         ),
-        [H, w, W, U, z]
+        [H, F, W, U, z]
     );
     let X = 0 === G ? d.VoiceXIcon : G < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
         J = _ === C.r.ENDED ? d.RetryIcon : _ === C.r.PLAYING ? d.PauseIcon : d.PlayIcon,
@@ -140,18 +140,18 @@ function x(e) {
                 className: s()(v.videoControlsGroup, v.videoControlsGroupStart),
                 children: (0, r.jsx)(g, {
                     iconComponent: J,
-                    animationTime: T,
+                    animationTime: S,
                     visible: x,
                     ariaLabel: $,
                     onClick: I
                 })
             }),
-            (0, r.jsxs)(l.animated.div, {
+            (0, r.jsxs)(i.animated.div, {
                 className: s()(v.videoControlsGroup, v.videoControlsGroupMid),
                 style: {
-                    opacity: (0, l.to)(
+                    opacity: (0, i.to)(
                         [
-                            T.to({
+                            S.to({
                                 range: [0, 1],
                                 output: [0, 1]
                             })
@@ -169,18 +169,18 @@ function x(e) {
                         children: [
                             (0, r.jsx)(g, {
                                 iconComponent: X,
-                                animationTime: T,
+                                animationTime: S,
                                 visible: x,
                                 onClick: () => {
-                                    if (null != a.current) 0 === G ? (Y(k), D(!1)) : (R(G), Y(0), D(!0));
+                                    if (null != a.current) 0 === G ? (Y(k), D(!1)) : (y(G), Y(0), D(!0));
                                 },
                                 ariaLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_CHANGE_VOLUME,
                                 tooltipLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_CHANGE_VOLUME
                             }),
-                            (0, r.jsx)(l.animated.div, {
+                            (0, r.jsx)(i.animated.div, {
                                 className: v.volumeSlider,
                                 style: {
-                                    opacity: (0, l.to)(
+                                    opacity: (0, i.to)(
                                         [
                                             z.to({
                                                 range: [0, 1],
@@ -189,7 +189,7 @@ function x(e) {
                                         ],
                                         (e) => ''.concat(x ? e : Math.pow(e, 8))
                                     ),
-                                    width: (0, l.to)(
+                                    width: (0, i.to)(
                                         [
                                             z.to({
                                                 range: [0, 1],
@@ -215,7 +215,7 @@ function x(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        Y(e), R(e), H && (Q(!1), P(!1)), y && e > 0 && D(!1);
+                                        Y(e), y(e), H && (Q(!1), P(!1)), R && e > 0 && D(!1);
                                     },
                                     asValueChanges: (e) => {
                                         Y(e), !H && (Q(!0), P(!0));
@@ -227,7 +227,7 @@ function x(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(T, {
                         current: null == a ? void 0 : null === (t = a.current) || void 0 === t ? void 0 : t.currentTime,
                         duration: null == a ? void 0 : null === (n = a.current) || void 0 === n ? void 0 : n.duration
                     })
@@ -238,7 +238,7 @@ function x(e) {
                 children: [
                     (0, r.jsx)(g, {
                         iconComponent: d.ArrowAngleLeftUpIcon,
-                        animationTime: T,
+                        animationTime: S,
                         visible: x,
                         onClick: b,
                         ariaLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_REWIND,
@@ -246,7 +246,7 @@ function x(e) {
                     }),
                     (0, r.jsx)(g, {
                         iconComponent: d.ArrowAngleRightUpIcon,
-                        animationTime: T,
+                        animationTime: S,
                         visible: x,
                         onClick: B,
                         disabled: !N,
@@ -256,7 +256,7 @@ function x(e) {
                     }),
                     (0, r.jsx)(g, {
                         iconComponent: d.PaperIcon,
-                        animationTime: T,
+                        animationTime: S,
                         visible: x,
                         onClick: L,
                         active: A && _ !== C.r.ENDED,
@@ -266,7 +266,7 @@ function x(e) {
                     !h &&
                         (0, r.jsx)(g, {
                             iconComponent: f.c,
-                            animationTime: T,
+                            animationTime: S,
                             visible: x,
                             active: M,
                             onClick: O,
@@ -275,7 +275,7 @@ function x(e) {
                         }),
                     (0, r.jsx)(g, {
                         iconComponent: Z ? d.FullscreenExitIcon : d.FullscreenEnterIcon,
-                        animationTime: T,
+                        animationTime: S,
                         visible: x,
                         onClick: j,
                         ariaLabel: E.Z.Messages.QUESTS_VIDEO_CONTROL_BTN_TOOLTIP_TOGGLE_FULLSCREEN,

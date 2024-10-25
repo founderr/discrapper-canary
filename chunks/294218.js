@@ -39,8 +39,8 @@ t.Z = a.memo(function (e) {
             previewLinkTarget: !0
         }),
         W = a.type === O.uaV.REPLY ? a.messageReference : void 0,
-        z = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
-        K = (0, l.JA)(a.id),
+        K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
+        z = (0, l.JA)(a.id),
         X = (0, f.ZP)(a),
         Q = (0, o.e7)([_.Z], () => a.hasFlag(O.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))),
         q = (0, c.p9)({
@@ -63,7 +63,7 @@ t.Z = a.memo(function (e) {
             [M.disableInteraction]: F
         }),
         disableInteraction: F,
-        childrenRepliedMessage: (0, v.Z)(a, D, W, z, s),
+        childrenRepliedMessage: (0, v.Z)(a, D, W, K, s),
         childrenExecutedCommand: (0, R.Z)(a, D, s),
         childrenHeader: (0, A.Z)({
             ...e,
@@ -84,7 +84,7 @@ t.Z = a.memo(function (e) {
         'aria-labelledby': ee,
         'aria-describedby': et,
         messageRef: $,
-        ...K,
+        ...z,
         ...G
     });
 });

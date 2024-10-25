@@ -48,7 +48,7 @@ function B(e) {
         V = x.QK.useSetting(),
         H = (0, L.n)(),
         [Y, W] = a.useState(!1),
-        [z, K] = a.useState((null == G ? void 0 : G.coverImage) == null),
+        [K, z] = a.useState((null == G ? void 0 : G.coverImage) == null),
         X = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         Q = (0, d.e7)(
             [R.ZP, v.default],
@@ -124,14 +124,14 @@ function B(e) {
                 onMouseEnter: ea,
                 onMouseLeave: es,
                 children: [
-                    !z &&
+                    !K &&
                         (!0 === G.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
                                   src: y,
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
                                   className: r()(U.thumbnail, { [U.spoiler]: G.shouldSpoiler }),
                                   onContextMenu: w,
-                                  onError: () => K(!0)
+                                  onError: () => z(!0)
                               })
                             : (0, i.jsx)(h.Z, {
                                   src: !(H && (V || Y)) && eE ? ''.concat(e_, '?format=png') : e_,
@@ -141,7 +141,7 @@ function B(e) {
                                   className: r()(U.thumbnail, { [U.spoiler]: G.shouldSpoiler }),
                                   imageChildClassName: U.thumbnailImage,
                                   onContextMenu: w,
-                                  onError: () => K(!0)
+                                  onError: () => z(!0)
                               })),
                     null != G.coverImageOverlayText &&
                         (0, i.jsx)(_.Clickable, {

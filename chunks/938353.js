@@ -57,8 +57,8 @@ var i,
     H = n(505104),
     Y = n(954654),
     W = n(41776),
-    z = n(628238),
-    K = n(454585),
+    K = n(628238),
+    z = n(454585),
     X = n(768494),
     Q = n(124347),
     q = n(976853),
@@ -111,8 +111,8 @@ var i,
     eH = n(817384),
     eY = n(981631),
     eW = n(474936),
-    ez = n(689938),
-    eK = n(916315),
+    eK = n(689938),
+    ez = n(916315),
     eX = n(287847),
     eQ = n(680674);
 function eq(e, t, n) {
@@ -140,7 +140,7 @@ function eJ() {
             (0, a.jsx)(_.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: ez.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({ onClick: () => (0, en.z)() })
+                children: eK.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({ onClick: () => (0, en.z)() })
             })
         ]
     });
@@ -433,7 +433,7 @@ class e9 extends (i = s.Component) {
             }),
             N = n
                 ? (0, a.jsx)(j.Z, {
-                      className: eK.hideIfMessageNotFocused,
+                      className: ez.hideIfMessageNotFocused,
                       messageId: e.id,
                       channelId: t.id,
                       targetKind: 'media'
@@ -546,7 +546,7 @@ class e9 extends (i = s.Component) {
             if (!(Date.now() - eg.default.extractTimestamp(e.id) >= e$))
                 return (0, a.jsx)('div', {
                     className: eX.threadRoleMentionFailure,
-                    children: ez.Z.Messages.THREAD_ROLE_MENTION_FAILURE
+                    children: eK.Z.Messages.THREAD_ROLE_MENTION_FAILURE
                 });
         }
     }
@@ -554,9 +554,9 @@ class e9 extends (i = s.Component) {
         let { channel: e, message: t } = this.props;
         return (0, a.jsxs)(_.DeclarativeConfirmModal, {
             dismissable: !0,
-            header: ez.Z.Messages.SUPPRESS_EMBED_TITLE,
-            confirmText: ez.Z.Messages.SUPPRESS_EMBED_CONFIRM,
-            cancelText: ez.Z.Messages.CANCEL,
+            header: eK.Z.Messages.SUPPRESS_EMBED_TITLE,
+            confirmText: eK.Z.Messages.SUPPRESS_EMBED_CONFIRM,
+            cancelText: eK.Z.Messages.CANCEL,
             onCancel: () => this.setState({ showSuppressModal: !1 }),
             onConfirm: () => {
                 E.Z.suppressEmbeds(e.id, t.id), this.setState({ showSuppressModal: !1 });
@@ -566,12 +566,12 @@ class e9 extends (i = s.Component) {
                     variant: 'text-md/normal',
                     color: 'text-normal',
                     className: eX.confirmText,
-                    children: ez.Z.Messages.SUPPRESS_EMBED_BODY
+                    children: eK.Z.Messages.SUPPRESS_EMBED_BODY
                 }),
                 (0, a.jsx)(_.Text, {
                     variant: 'text-md/normal',
                     color: 'text-muted',
-                    children: ez.Z.Messages.SUPPRESS_EMBED_TIP
+                    children: eK.Z.Messages.SUPPRESS_EMBED_TIP
                 })
             ]
         });
@@ -585,9 +585,9 @@ class e9 extends (i = s.Component) {
         }
         return (0, a.jsx)(_.DeclarativeConfirmModal, {
             dismissable: !0,
-            header: ez.Z.Messages.REMOVE_ATTACHMENT_TITLE,
-            confirmText: ez.Z.Messages.REMOVE_ATTACHMENT_CONFIRM,
-            cancelText: ez.Z.Messages.CANCEL,
+            header: eK.Z.Messages.REMOVE_ATTACHMENT_TITLE,
+            confirmText: eK.Z.Messages.REMOVE_ATTACHMENT_CONFIRM,
+            cancelText: eK.Z.Messages.CANCEL,
             onCancel: () =>
                 this.setState({
                     showRemoveAttachmentModal: !1,
@@ -605,7 +605,7 @@ class e9 extends (i = s.Component) {
                 variant: 'text-md/normal',
                 color: 'text-normal',
                 className: eX.confirmText,
-                children: ez.Z.Messages.REMOVE_ATTACHMENT_BODY
+                children: eK.Z.Messages.REMOVE_ATTACHMENT_BODY
             })
         });
     }
@@ -758,7 +758,7 @@ class e9 extends (i = s.Component) {
                           children: [
                               m,
                               (0, a.jsx)(j.Z, {
-                                  className: eK.hideIfMessageNotFocused,
+                                  className: ez.hideIfMessageNotFocused,
                                   messageId: E,
                                   channelId: _,
                                   targetKind: 'embed',
@@ -768,10 +768,10 @@ class e9 extends (i = s.Component) {
                       })
                     : m;
             }),
-            eq(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? K.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
+            eq(this, 'renderEmbedTitle', (e, t) => (e.type === eY.hBH.RICH ? z.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
             eq(this, 'renderEmbedDescription', (e, t, n) =>
                 e.type === eY.hBH.RICH
-                    ? K.Z.parse(t, !0, {
+                    ? z.Z.parse(t, !0, {
                           channelId: this.props.channel.id,
                           allowLinks: !0,
                           allowEmojiLinks: !0,
@@ -837,7 +837,7 @@ function e3(e) {
             isActiveChannelOrUnarchivableThread: g,
             isAutomodQuarantined: p
         }),
-        L = (0, z.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
+        L = (0, K.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
         Z = (0, q.Z)(null == n ? void 0 : n.id),
         D = (0, ee.Z)(i),
         j = (0, O.V)(n.id, i.author.id),
@@ -879,7 +879,7 @@ let e6 = (e) => {
         E = ed.RS.useSetting(),
         I = ed.NA.useSetting(),
         m = ed.QK.useSetting(),
-        T = (0, z.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        T = (0, K.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         f = (0, q.Z)(null == i ? void 0 : i.id),
         h = (0, O.V)(i.id, n.author.id),
         N = (0, M.r)(n.id),

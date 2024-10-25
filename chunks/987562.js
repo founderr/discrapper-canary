@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     },
     TL: function () {
-        return i;
+        return r;
     },
     YA: function () {
         return o;
@@ -16,32 +16,32 @@ var a,
     s,
     o,
     l,
-    r = n(689938);
-function i() {
+    i = n(689938);
+function r() {
     return [
         {
             value: 'too_many_notifications',
-            label: r.Z.Messages.MUTE_FEEDBACK_TOO_MANY_NOTIFICATIONS
+            label: i.Z.Messages.MUTE_FEEDBACK_TOO_MANY_NOTIFICATIONS
         },
         {
             value: 'temporary_break',
-            label: r.Z.Messages.MUTE_FEEDBACK_TEMPORARY_BREAK
+            label: i.Z.Messages.MUTE_FEEDBACK_TEMPORARY_BREAK
         },
         {
             value: 'annoying',
-            label: r.Z.Messages.MUTE_FEEDBACK_ANNOYING
+            label: i.Z.Messages.MUTE_FEEDBACK_ANNOYING
         },
         {
             value: 'unsafe',
-            label: r.Z.Messages.MUTE_FEEDBACK_UNSAFE
+            label: i.Z.Messages.MUTE_FEEDBACK_UNSAFE
         },
         {
             value: 'spam',
-            label: r.Z.Messages.MUTE_FEEDBACK_SPAM
+            label: i.Z.Messages.MUTE_FEEDBACK_SPAM
         },
         {
             value: 'other',
-            label: r.Z.Messages.MUTE_FEEDBACK_OTHER
+            label: i.Z.Messages.MUTE_FEEDBACK_OTHER
         }
     ];
 }
@@ -49,19 +49,19 @@ function c() {
     return [
         {
             value: 'confusion',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_CONFUSION
+            label: i.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_CONFUSION
         },
         {
             value: 'does_not_achieve_wants',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_DOES_NOT_ACHIEVE_WANTS
+            label: i.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_DOES_NOT_ACHIEVE_WANTS
         },
         {
             value: 'hard_to_access',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_HARD_TO_ACCESS
+            label: i.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_HARD_TO_ACCESS
         },
         {
             value: 'something_else',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_SOMETHING_ELSE
+            label: i.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_SOMETHING_ELSE
         }
     ];
 }

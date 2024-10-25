@@ -61,8 +61,8 @@ function j(e) {
         H = 'coachmark' === n,
         Y = H ? D.innerContentCoachmark : D.innerContent,
         W = H ? D.recipientUserAvatarCoachmark : D.recipientUserAvatar,
-        z = H ? D.currentUserAvatarCoachmark : D.currentUserAvatar,
-        K = H ? D.subHeaderTextCoachmark : D.subHeaderText,
+        K = H ? D.currentUserAvatarCoachmark : D.currentUserAvatar,
+        z = H ? D.subHeaderTextCoachmark : D.subHeaderText,
         X = H ? _.Button.Colors.BRAND : _.Button.Colors.WHITE,
         Q = H ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
         q = H ? D.buttonTextPrimaryCoachmark : D.buttonTextPrimary;
@@ -90,7 +90,7 @@ function j(e) {
                                 }),
                                 null != G &&
                                     (0, s.jsx)(m.Z, {
-                                        className: z,
+                                        className: K,
                                         user: G,
                                         'aria-label': i.username,
                                         size: Z.EF.SIZE_24
@@ -110,7 +110,7 @@ function j(e) {
                                     })()
                                 }),
                                 (0, s.jsx)(_.Text, {
-                                    className: K,
+                                    className: z,
                                     variant: 'text-sm/normal',
                                     children: (() => {
                                         if (t === M.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: w });

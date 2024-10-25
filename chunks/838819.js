@@ -43,8 +43,8 @@ var r = n(200651),
     V = n(709999),
     z = n(373113),
     G = n(802022),
-    K = n(558117),
-    Y = n(141594),
+    Y = n(558117),
+    K = n(141594),
     $ = n(566564),
     X = n(531864),
     q = n(302800),
@@ -109,7 +109,7 @@ function ea(e) {
             },
             [o, n]
         ),
-        { revealed: u } = (0, K.R)('CollectiblesShop'),
+        { revealed: u } = (0, Y.R)('CollectiblesShop'),
         m = !u && t.skuId === l.T.STORM && i.length <= 15;
     return (0, r.jsx)(es, {
         products: i,
@@ -173,7 +173,7 @@ t.default = function (e) {
         { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([O.Z], () => O.Z.getAnalytics()),
         { analyticsLocations: E } = (0, h.ZP)([...p, C.Z.COLLECTIBLES_SHOP]),
         { sessionId: v, scrollerRef: R, scrollHandler: w } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
-        { feedState: H, catalogState: V, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(a, R),
+        { feedState: H, catalogState: V, transitionToCatalog: G, transitionToFeed: Y } = (0, A.B)(a, R),
         [q, es] = s.useState(!1),
         [ea, el] = s.useState(J.IV),
         [eo, ec] = s.useState(),
@@ -214,7 +214,7 @@ t.default = function (e) {
                     location_stack: E
                 });
         }, [a, eh, E, l, v, H, V, eo, ec, ed]);
-    let { dismissCollectiblesShopTabNewBadge: eN } = (0, Y.Z)();
+    let { dismissCollectiblesShopTabNewBadge: eN } = (0, K.Z)();
     s.useEffect(() => {
         if ((eN(), !(0, _.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, _.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
@@ -323,7 +323,7 @@ t.default = function (e) {
                                             onClose: ep,
                                             isCatalogView: a,
                                             transparent: a,
-                                            handleTransition: K
+                                            handleTransition: Y
                                         }),
                                         (0, r.jsx)('div', {
                                             className: er.pageWrapper,

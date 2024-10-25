@@ -97,7 +97,7 @@ function W(e) {
         children: t
     });
 }
-function z(e, t) {
+function K(e, t) {
     switch (e) {
         case T.d.DELETE_USER_MESSAGE:
             return (0, i.jsx)(_.TrashIcon, {
@@ -124,12 +124,12 @@ function z(e, t) {
             return null;
     }
 }
-function K(e) {
+function z(e) {
     let { alertAction: t, guildId: n } = e,
         a = (0, d.e7)([A.default], () => A.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
-        if (null == a) return z(e, {});
+        if (null == a) return K(e, {});
         let s = (function (e, t, n) {
             var i;
             let a = null !== (i = x.ZP.getNickname(n, null, t)) && void 0 !== i ? i : R.ZP.getUserTag(t),
@@ -161,7 +161,7 @@ function K(e) {
         })(t, a, n);
         return (0, i.jsx)(_.Tooltip, {
             text: s,
-            children: (t) => z(e, t)
+            children: (t) => K(e, t)
         });
     } catch (e) {
         return null;
@@ -174,7 +174,7 @@ function X(e) {
         className: w.alertActionsIconContainer,
         children: a.map((e) =>
             (0, i.jsx)(
-                K,
+                z,
                 {
                     alertAction: e,
                     guildId: n
@@ -252,7 +252,7 @@ function q(e) {
         { isFocused: M, handleFocus: b, handleBlur: D } = (0, P.bb)(R),
         y = (0, d.e7)([I.Z], () => I.Z.keyboardModeEnabled),
         H = (0, d.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
-        { ruleName: z, embedChannel: K, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, f.ZP)(l),
+        { ruleName: K, embedChannel: z, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, f.ZP)(l),
         el = a.useMemo(() => (0, v.k$)(ee, J, o.id), [ee, J, o]),
         { selected: eo, ...ec } = V(l, o),
         eu = a.useCallback(() => {
@@ -260,21 +260,21 @@ function q(e) {
         }, [l.id, ee, q, o]),
         ed = a.useCallback(
             (e) => {
-                if (null != et && null != K) e.stopPropagation(), e.preventDefault(), (0, p.Z)(B.Z5c.CHANNEL(null == K ? void 0 : K.guild_id, null == K ? void 0 : K.id, et));
+                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, p.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
             },
-            [K, et]
+            [z, et]
         ),
         e_ = a.useCallback(
             (e) => {
-                null != K &&
+                null != z &&
                     (E.default.selectChannel({
-                        guildId: K.guild_id,
+                        guildId: z.guild_id,
                         channelId: e,
                         messageId: l.id
                     }),
                     (0, C.Kh)(e));
             },
-            [l, K]
+            [l, z]
         ),
         eE = a.useCallback(() => {
             (0, N.Xx)(l.id, o, T.d.DELETE_USER_MESSAGE);
@@ -316,7 +316,7 @@ function q(e) {
                                 (0, i.jsx)(Q, {
                                     message: l,
                                     channel: o,
-                                    embedChannel: K,
+                                    embedChannel: z,
                                     compact: s,
                                     interactionUserId: er
                                 })
@@ -330,7 +330,7 @@ function q(e) {
                         children: (0, i.jsx)(L.Z, {
                             ...O,
                             message: l,
-                            channel: K,
+                            channel: z,
                             content: el,
                             compact: s,
                             withFooter: !0,
@@ -338,7 +338,7 @@ function q(e) {
                             className: r()(w.embedCard, {
                                 [w.compact]: s,
                                 [w.selected]: eo || (y && M),
-                                [w.isClickable]: null != et && null != K
+                                [w.isClickable]: null != et && null != z
                             }),
                             childrenAccessories: (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -357,12 +357,12 @@ function q(e) {
                                                         (0, i.jsx)('div', { className: r()(w.dot, w.dotMargin) })
                                                     ]
                                                 }),
-                                            null != z &&
+                                            null != K &&
                                                 (0, i.jsx)(_.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     tag: 'span',
-                                                    children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({ ruleName: z })
+                                                    children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({ ruleName: K })
                                                 }),
                                             null != eI &&
                                                 (0, i.jsxs)(i.Fragment, {

@@ -163,7 +163,7 @@ class C extends E.Z {
                                 this.logger.info('Audio codecs: '.concat(this.codecs.filter((e) => 'audio' === e.type).map((e) => e.name))),
                                 this.logger.info('Video codecs: '.concat(this.codecs.filter((e) => 'video' === e.type).map((e) => e.name + '[encode: ' + e.encode + ', decode: ' + e.decode + ']'))),
                                 t.getEncryptionModes((r) => {
-                                    var i, a, u, c, d, _, E, f, h, I, m, T;
+                                    var i, a, u, c, d, _, E, f, h, I, m, T, S;
                                     this.logger.info('Encryption modes: '.concat(r)),
                                         t.setTransportOptions(this.getConnectionTransportOptions()),
                                         t.setSelfMute(this.selfMute || this.context === N.Yn.STREAM),
@@ -176,7 +176,7 @@ class C extends E.Z {
                                         t.setPingCallback(this.handlePing),
                                         null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout),
                                         null === (_ = t.setOnVideoEncoderFallbackCallback) || void 0 === _ || _.call(t, this.handleVideoEncoderFallback),
-                                        t.setOnRtcpMessageCallback(this.handleRTCPMessage),
+                                        null === (E = t.setOnRtcpMessageCallback) || void 0 === E || E.call(t, this.handleRTCPMessage),
                                         n.setTransportOptions({
                                             builtInEchoCancellation: !0,
                                             echoCancellation: this.echoCancellation,
@@ -186,8 +186,8 @@ class C extends E.Z {
                                         }),
                                         n.setNoInputThreshold(-100),
                                         n.setNoInputCallback(this.handleNoInput),
-                                        this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (f = t.setOnFirstFrameCallback) || void 0 === f || f.call(t, this.handleFirstFrame), null === (h = t.setOnDesktopSourceEnded) || void 0 === h || h.call(t, this.handleDesktopSourceEnded), null === (I = t.setOnSoundshare) || void 0 === I || I.call(t, this.handleSoundshare), null === (m = t.setOnSoundshareEnded) || void 0 === m || m.call(t, this.handleSoundshareEnded), null === (T = t.setOnSoundshareFailed) || void 0 === T || T.call(t, this.handleSoundshareFailed)),
-                                        null === (E = t.setOnMLSFailureCallback) || void 0 === E || E.call(t, this.handleMLSFailure),
+                                        this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (h = t.setOnFirstFrameCallback) || void 0 === h || h.call(t, this.handleFirstFrame), null === (I = t.setOnDesktopSourceEnded) || void 0 === I || I.call(t, this.handleDesktopSourceEnded), null === (m = t.setOnSoundshare) || void 0 === m || m.call(t, this.handleSoundshare), null === (T = t.setOnSoundshareEnded) || void 0 === T || T.call(t, this.handleSoundshareEnded), null === (S = t.setOnSoundshareFailed) || void 0 === S || S.call(t, this.handleSoundshareFailed)),
+                                        null === (f = t.setOnMLSFailureCallback) || void 0 === f || f.call(t, this.handleMLSFailure),
                                         this.setConnectionState(N.$j.CONNECTED),
                                         this.emit(p.Sh.Connected, s, {
                                             address: o,
@@ -196,8 +196,8 @@ class C extends E.Z {
                                             codecs: this.codecs
                                         }),
                                         this.on(p.Sh.Stats, this.handleStats);
-                                    let S = this.getUserOptions();
-                                    for (let e of (S.forEach((e) => {
+                                    let g = this.getUserOptions();
+                                    for (let e of (g.forEach((e) => {
                                         var t, n;
                                         return this.logger.info(
                                             'Creating user: '
@@ -206,8 +206,8 @@ class C extends E.Z {
                                                 .concat(null !== (n = null === (t = e.videoSsrcs) || void 0 === t ? void 0 : t.join(',')) && void 0 !== n ? n : 0)
                                         );
                                     }),
-                                    t.mergeUsers(S),
-                                    this.emit(p.Sh.RemoteStreamsReady, S.length),
+                                    t.mergeUsers(g),
+                                    this.emit(p.Sh.RemoteStreamsReady, g.length),
                                     Object.keys(this.localSpeakingFlags)))
                                         e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                                 });

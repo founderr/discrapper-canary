@@ -43,12 +43,12 @@ t.Z = (e, t, n, s) => {
         H = (0, S._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
         Y = (0, A.V)(F),
         W = null != Y,
-        z = (null == F ? void 0 : F.trialId) != null,
-        { loading: K, getTrialPurchaseEligibility: X } = (0, R.F)(),
+        K = (null == F ? void 0 : F.trialId) != null,
+        { loading: z, getTrialPurchaseEligibility: X } = (0, R.F)(),
         Q = (0, S.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: q } = (0, E.ZP)(),
         J = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
-    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : b && !P ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : z ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : b && !P ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let $ = (0, _.Z)(M.iP);
     a.useEffect(() => {
         B &&
@@ -115,8 +115,8 @@ t.Z = (e, t, n, s) => {
         }, [t]);
     return {
         openModal: P ? et : ee,
-        canOpenModal: !b && null != G && V && !j && !W && !z && !J,
+        canOpenModal: !b && null != G && V && !j && !W && !K && !J,
         cannotOpenReason: l,
-        isCheckingTrialEligibility: K
+        isCheckingTrialEligibility: z
     };
 };

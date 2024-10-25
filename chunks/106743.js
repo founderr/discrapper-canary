@@ -7,13 +7,13 @@ var r = n(200651),
     o = n(192379),
     a = n(261833),
     s = n(481060),
-    l = n(184299),
-    i = n(417575);
+    i = n(184299),
+    l = n(417575);
 function c(e) {
     var t;
     let { quest: n, onClose: c } = e,
-        u = (0, l.km)((e) => e.transcript),
-        d = (null == u ? void 0 : u.questId) === n.id && (null == u ? void 0 : u.fetchStatus) === l.iF.SUCCESS && null !== (t = u.text) && void 0 !== t ? t : '',
+        u = (0, i.km)((e) => e.transcript),
+        d = (null == u ? void 0 : u.questId) === n.id && (null == u ? void 0 : u.fetchStatus) === i.iF.SUCCESS && null !== (t = u.text) && void 0 !== t ? t : '',
         m = o.useMemo(
             () =>
                 d
@@ -25,7 +25,7 @@ function c(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: i.transcriptHeader,
+                className: l.transcriptHeader,
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
@@ -34,20 +34,20 @@ function c(e) {
                     }),
                     (0, r.jsx)(s.Clickable, {
                         onClick: c,
-                        className: i.transcriptBackBtn,
+                        className: l.transcriptBackBtn,
                         children: (0, r.jsx)(a.D, { color: 'currentColor' })
                     })
                 ]
             }),
             (0, r.jsx)(s.ScrollerAuto, {
-                className: i.transcriptScroller,
+                className: l.transcriptScroller,
                 fade: !0,
                 children: (0, r.jsx)('div', {
-                    className: i.transcriptBody,
+                    className: l.transcriptBody,
                     children:
-                        (null == u ? void 0 : u.fetchStatus) === l.iF.FETCHING
+                        (null == u ? void 0 : u.fetchStatus) === i.iF.FETCHING
                             ? (0, r.jsx)('div', {
-                                  className: i.transcriptBodySpinner,
+                                  className: l.transcriptBodySpinner,
                                   children: (0, r.jsx)(s.Spinner, { type: s.Spinner.Type.WANDERING_CUBES })
                               })
                             : (0, r.jsx)(s.Heading, {

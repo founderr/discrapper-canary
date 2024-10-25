@@ -43,8 +43,8 @@ var r = n(200651),
     V = n(216541),
     z = n(832149),
     G = n(474936),
-    K = n(689938),
-    Y = n(352177);
+    Y = n(689938),
+    K = n(352177);
 let $ = (e) => {
         let { children: t, onClick: n, ...s } = e;
         return (0, r.jsx)(h.Button, {
@@ -63,9 +63,9 @@ let $ = (e) => {
             color: h.ButtonColors.BRAND,
             look: h.Button.Looks.FILLED,
             size: h.ButtonSizes.ICON,
-            className: i()(Y.previewButton, t),
-            innerClassName: Y.previewButtonInner,
-            'aria-label': K.Z.Messages.PREVIEW,
+            className: i()(K.previewButton, t),
+            innerClassName: K.previewButtonInner,
+            'aria-label': Y.Z.Messages.PREVIEW,
             ...n,
             children: (0, r.jsx)(h.EyeIcon, {
                 size: 'md',
@@ -143,33 +143,33 @@ t.Z = function (e) {
         ej = eN(x.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
         eO = () =>
             (0, r.jsx)('div', {
-                className: Y.hoverUpsellContainer,
+                className: K.hoverUpsellContainer,
                 children: (0, r.jsx)(T.Z, {
                     fullWidth: !0,
-                    className: Y.__invalid_premiumSubscribeButton,
+                    className: K.__invalid_premiumSubscribeButton,
                     disabled: eh,
                     onClick: (e) => e.stopPropagation(),
-                    buttonText: K.Z.Messages.UNLOCK_WITH_NITRO,
+                    buttonText: Y.Z.Messages.UNLOCK_WITH_NITRO,
                     subscriptionTier: G.Si.TIER_2
                 })
             }),
         eZ = () =>
             ef || ep
                 ? (0, r.jsx)(M.U, {
-                      className: Y.priceTag,
+                      className: K.priceTag,
                       isPartiallyPurchased: ep
                   })
                 : eu
                   ? (0, r.jsx)(h.Text, {
                         variant: 'text-md/semibold',
-                        className: Y.priceTag,
-                        children: K.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
+                        className: K.priceTag,
+                        children: Y.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
                   : (0, r.jsx)(F.Z, {
                         product: t,
                         discount: ed,
                         isPremiumUser: eo,
-                        className: Y.priceTag
+                        className: K.priceTag
                     }),
         ey = () =>
             eu || d.tq
@@ -188,8 +188,8 @@ t.Z = function (e) {
             let e = eu
                 ? {
                       submitting: eC,
-                      submittingStartedLabel: K.Z.Messages.COLLECTIBLES_COLLECTING,
-                      submittingFinishedLabel: K.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
+                      submittingStartedLabel: Y.Z.Messages.COLLECTIBLES_COLLECTING,
+                      submittingFinishedLabel: Y.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
                       onClick: async () => {
                           await (0, j.fK)(t.skuId),
                               (0, z.Z)({
@@ -207,7 +207,7 @@ t.Z = function (e) {
                           })
                   };
             return (0, r.jsxs)('div', {
-                className: Y.buttonsContainer,
+                className: K.buttonsContainer,
                 children: [
                     ep
                         ? null
@@ -216,13 +216,13 @@ t.Z = function (e) {
                                 disabled: eh,
                                 onClick: eb ? eL : ek,
                                 submitting: eS,
-                                children: K.Z.Messages.COLLECTIBLES_USE_NOW
+                                children: Y.Z.Messages.COLLECTIBLES_USE_NOW
                             })
                           : (0, r.jsx)($, {
                                 disabled: eh,
-                                className: Y.purchaseButton,
+                                className: K.purchaseButton,
                                 ...e,
-                                children: eu ? K.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : K.Z.Messages.COLLECTIBLES_PURCHASE.format({ price: ec })
+                                children: eu ? Y.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : Y.Z.Messages.COLLECTIBLES_PURCHASE.format({ price: ec })
                             }),
                     ey()
                 ]
@@ -236,11 +236,11 @@ t.Z = function (e) {
               children: (0, r.jsx)(h.FocusRing, {
                   children: (0, r.jsxs)(h.Clickable, {
                       innerRef: ee,
-                      className: i()(eg ? Y.shopCardDark : Y.shopCard, {
-                          [Y.partiallyOwned]: ep,
-                          [Y.shopCardAnimation]: !el && eE !== y.D.NO_MOVEMENT,
-                          [eg ? Y.shopCardDarkHighlighted : Y.shopCardHighlighted]: ea,
-                          [Y.mysteryShopCard]: ev
+                      className: i()(eg ? K.shopCardDark : K.shopCard, {
+                          [K.partiallyOwned]: ep,
+                          [K.shopCardAnimation]: !el && eE !== y.D.NO_MOVEMENT,
+                          [eg ? K.shopCardDarkHighlighted : K.shopCardHighlighted]: ea,
+                          [K.mysteryShopCard]: ev
                       }),
                       onBlur: () => es(!1),
                       onClick: eB,
@@ -248,26 +248,26 @@ t.Z = function (e) {
                       children: [
                           eu &&
                               (0, r.jsx)(h.Tooltip, {
-                                  tooltipContentClassName: Y.premiumWheelTooltipContent,
+                                  tooltipContentClassName: K.premiumWheelTooltipContent,
                                   color: h.Tooltip.Colors.PRIMARY,
-                                  text: K.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
+                                  text: Y.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
                                   children: (e) =>
                                       (0, r.jsx)(h.TextBadge, {
                                           ...e,
-                                          className: Y.premiumWheelBadge,
+                                          className: K.premiumWheelBadge,
                                           text: (0, r.jsx)(h.NitroWheelIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: Y.premiumWheel
+                                              className: K.premiumWheel
                                           })
                                       })
                               }),
                           (0, r.jsx)('div', {
-                              className: Y.preview,
+                              className: K.preview,
                               children: (0, c.EQ)(t.type)
                                   .with(m.Z.PROFILE_EFFECT, () =>
                                       (0, r.jsx)('div', {
-                                          className: Y.profileEffectShopPreview,
+                                          className: K.profileEffectShopPreview,
                                           children: (0, r.jsx)(S.Z, {
                                               isHovering: ea,
                                               profileEffectId: ei.id,
@@ -281,7 +281,7 @@ t.Z = function (e) {
                                       () => (
                                           o()(ei.type === m.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
                                           (0, r.jsx)('div', {
-                                              className: i()(Y.avatarContainer, ev && Y.mysteryAvatarContainer),
+                                              className: i()(K.avatarContainer, ev && K.mysteryAvatarContainer),
                                               children: (0, r.jsx)(W.R, {
                                                   item: ei,
                                                   user: n,
@@ -303,34 +303,34 @@ t.Z = function (e) {
                           }),
                           ef
                               ? (0, r.jsx)('div', {
-                                    className: Y.checkmarkWrapper,
+                                    className: K.checkmarkWrapper,
                                     children: (0, r.jsx)(h.CheckmarkLargeBoldIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 38,
                                         height: 38,
-                                        className: Y.checkmark
+                                        className: K.checkmark
                                     })
                                 })
                               : null,
                           (0, r.jsxs)('div', {
-                              className: i()(Y.cardText, { [Y.cardTextBlur]: (null == ei ? void 0 : ei.type) === m.Z.PROFILE_EFFECT }),
+                              className: i()(K.cardText, { [K.cardTextBlur]: (null == ei ? void 0 : ei.type) === m.Z.PROFILE_EFFECT }),
                               children: [
-                                  (0, r.jsx)('div', { className: i()(Y.cardBackground, eg ? Y.darkCardBackground : Y.lightCardBackground, (null == ei ? void 0 : ei.type) === m.Z.PROFILE_EFFECT ? Y.cardLowOpacity : null) }),
+                                  (0, r.jsx)('div', { className: i()(K.cardBackground, eg ? K.darkCardBackground : K.lightCardBackground, (null == ei ? void 0 : ei.type) === m.Z.PROFILE_EFFECT ? K.cardLowOpacity : null) }),
                                   (0, r.jsx)(h.Text, {
                                       variant: 'text-lg/bold',
-                                      className: Y.productName,
+                                      className: K.productName,
                                       children: t.name
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: Y.detailsWrapper,
+                                      className: K.detailsWrapper,
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: ep ? void 0 : Y.innerBlur,
+                                              className: ep ? void 0 : K.innerBlur,
                                               children: eZ()
                                           }),
                                           (0, r.jsx)('div', {
-                                              className: Y.innerHover,
+                                              className: K.innerHover,
                                               children: eP()
                                           })
                                       ]
@@ -339,16 +339,16 @@ t.Z = function (e) {
                           }),
                           (0, r.jsx)(H.Z, {
                               category: a,
-                              className: Y.limitedTimeBadge,
+                              className: K.limitedTimeBadge,
                               display: 'card'
                           }),
                           ex &&
                               !ep &&
                               !ef &&
                               (0, r.jsx)(h.TextBadge, {
-                                  text: K.Z.Messages.NEW,
+                                  text: Y.Z.Messages.NEW,
                                   disableColor: !0,
-                                  className: Y.newBadge
+                                  className: K.newBadge
                               })
                       ]
                   })

@@ -2,8 +2,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    l = n(100621),
-    i = n(481060),
+    i = n(100621),
+    l = n(481060),
     c = n(569379),
     u = n(642145),
     d = n(808326);
@@ -11,19 +11,19 @@ t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: a = 42, strokeWidth: m = 3, glowBlur: p = 0.4, percentCompleteText: f, percentCompleteTextVariant: C = 'text-lg/medium', children: _ } = e,
         E = (0, c.E)(n, o > 0),
         v = a / 2,
-        T = a / 2 - m / 2,
-        S = 2 * Math.PI * T,
-        g = S - o * S,
+        S = a / 2 - m / 2,
+        T = 2 * Math.PI * S,
+        g = T - o * T,
         x = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
+            strokeDasharray: ''.concat(T, ' ').concat(T),
             strokeDashoffset: g
         },
         N = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
-            strokeDashoffset: -o * S
+            strokeDasharray: ''.concat(T, ' ').concat(T),
+            strokeDashoffset: -o * T
         },
         h = { boxShadow: '0 0 30px 0px '.concat(E.glow) },
-        { progressTextAnimation: I } = (0, i.useSpring)({
+        { progressTextAnimation: I } = (0, l.useSpring)({
             progressTextAnimation: null != f && 1 !== o ? 1 : 0,
             config: u.Y
         });
@@ -36,12 +36,12 @@ t.Z = o.forwardRef((e, t) => {
                 style: h,
                 children: [
                     _,
-                    (0, r.jsxs)(l.animated.div, {
+                    (0, r.jsxs)(i.animated.div, {
                         style: { opacity: I },
                         className: s()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: s()(d.coverContent, d.progressTextOverlay) }),
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: C,
                                 color: 'text-primary',
                                 className: d.progressText,
@@ -93,7 +93,7 @@ t.Z = o.forwardRef((e, t) => {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: T,
+                        r: S,
                         cx: v,
                         cy: v,
                         stroke: 'url(#linear)',
@@ -103,7 +103,7 @@ t.Z = o.forwardRef((e, t) => {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: T,
+                        r: S,
                         cx: v,
                         cy: v,
                         stroke: E.foreground,

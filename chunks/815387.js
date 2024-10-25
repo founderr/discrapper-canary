@@ -43,8 +43,8 @@ var i = n(200651),
     H = n(960048),
     Y = n(709054),
     W = n(937889),
-    z = n(15642),
-    K = n(260736),
+    K = n(15642),
+    z = n(260736),
     X = n(930282),
     Q = n(990099),
     q = n(942951),
@@ -660,7 +660,7 @@ let eZ = Object.freeze({
             r = (0, s.e7)([G.default], () => G.default.getUser(null == a ? void 0 : a.recipientUserId));
         return null == a || null == r
             ? null
-            : (0, i.jsx)(z.Z, {
+            : (0, i.jsx)(K.Z, {
                   giftIntentType: a.giftIntentType,
                   recipientUser: r,
                   channel: n,
@@ -681,7 +681,7 @@ let eZ = Object.freeze({
     [ex.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: I.R6,
     [ex.uaV.HD_STREAMING_UPGRADED]: function (e) {
         let { message: t, channel: n, compact: a } = e;
-        return (0, i.jsx)(K.Z, {
+        return (0, i.jsx)(z.Z, {
             message: t,
             channel: n,
             compact: a
