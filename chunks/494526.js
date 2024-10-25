@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return U;
     }
 }),
     n(411104),
@@ -35,8 +35,8 @@ var s,
     b = n(113207);
 ((i = s || (s = {}))[(i.INITIALIZING = 0)] = 'INITIALIZING'), (i[(i.PENDING_REMOTE_INIT = 1)] = 'PENDING_REMOTE_INIT'), (i[(i.PENDING_FINISH = 2)] = 'PENDING_FINISH'), (i[(i.PENDING_TICKET = 3)] = 'PENDING_TICKET'), (i[(i.PENDING_LOGIN = 4)] = 'PENDING_LOGIN'), (i[(i.FINISH = 5)] = 'FINISH'), ((a = r || (r = {}))[(a.QR_CODE = 0)] = 'QR_CODE'), (a[(a.CONFIRM = 1)] = 'CONFIRM');
 let L = n(515695),
-    D = new I.Z('LoginQRSocket');
-function M(e) {
+    M = new I.Z('LoginQRSocket');
+function D(e) {
     let { text: t = '' } = e,
         [n, s] = o.useState(!1);
     return (
@@ -96,7 +96,7 @@ function j(e) {
         case 1:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(M, { text: 1 === t.step ? 'https://discord.com/ra/'.concat(t.fingerprint) : '' }),
+                    (0, l.jsx)(D, { text: 1 === t.step ? 'https://discord.com/ra/'.concat(t.fingerprint) : '' }),
                     (0, l.jsx)(m.Dx, {
                         className: b.marginBottom8,
                         children: Z.Z.Messages.LOGIN_WITH_QR
@@ -158,7 +158,7 @@ function j(e) {
             return (0, l.jsx)(h.Spinner, { type: h.Spinner.Type.WANDERING_CUBES });
     }
 }
-function y(e) {
+function U(e) {
     let { authTokenCallback: t, conditionalMediationAbortController: n } = e,
         s = (0, d.e7)([N.default], () => N.default.getIsPasswordlessActive()),
         {
@@ -175,7 +175,7 @@ function y(e) {
                 _ = o.useMemo(() => new u.Z(1500, 30000), []),
                 h = o.useRef();
             h.current = o.useCallback(() => {
-                a({ step: 0 }), d ? n((e) => e + 1) : (D.info('document is not visible, will defer reconnection when document becomes visible.'), r(!0));
+                a({ step: 0 }), d ? n((e) => e + 1) : (M.info('document is not visible, will defer reconnection when document becomes visible.'), r(!0));
             }, [d]);
             let E = o.useCallback(() => {
                     (function (e) {
@@ -185,19 +185,19 @@ function y(e) {
                     })(h)();
                 }, [h]),
                 g = o.useCallback(() => {
-                    D.error('Could not complete QR code login, trying to restart with a new QR code.'), a({ step: 0 }), !_.pending && _.fail(E);
+                    M.error('Could not complete QR code login, trying to restart with a new QR code.'), a({ step: 0 }), !_.pending && _.fail(E);
                 }, [E, _]);
             return (
                 o.useEffect(() => {
-                    d && s && 0 === i.step && (D.info('reconnecting, now that document is visible'), r(!1), n((e) => e + 1));
+                    d && s && 0 === i.step && (M.info('reconnecting, now that document is visible'), r(!1), n((e) => e + 1));
                 }, [i, d, s, r]),
                 o.useEffect(() => {
                     let t = Date.now(),
                         n = () => ''.concat(Date.now() - t, 'ms'),
                         s = 'wss:'.concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, '/?v=2'),
                         r = new WebSocket(s);
-                    D.info('[0ms] connecting to '.concat(s));
-                    let i = (e) => D.info('['.concat(n(), '] ').concat(e)),
+                    M.info('[0ms] connecting to '.concat(s));
+                    let i = (e) => M.info('['.concat(n(), '] ').concat(e)),
                         l = null,
                         o = null,
                         u = null,

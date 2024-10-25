@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(763520),
     d = n(358221),
     h = n(414910),
-    p = n(266910),
-    m = n(352978),
+    m = n(266910),
+    p = n(352978),
     _ = n(928518),
     f = n(518950),
     E = n(470956),
@@ -75,7 +75,7 @@ function L(e) {
     }, [G]),
     a && !W && !O && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
         ? (0, i.jsx)(
-              m.Z,
+              p.Z,
               {
                   onResize: P,
                   wrapperClassName: Z.videoWrapper,
@@ -92,7 +92,7 @@ function L(e) {
           )
         : (0, i.jsx)('div', {
               className: l()(Z.content, { [Z.blockedAvatar]: j }),
-              children: (0, i.jsx)(p.Z, {
+              children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,
                   avatarDecoration: J,

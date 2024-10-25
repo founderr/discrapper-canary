@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(104494),
     C = n(639119),
     A = n(230916),
-    f = n(248042),
-    p = n(823188),
+    p = n(248042),
+    f = n(823188),
     M = n(21023),
     S = n(318747),
     h = n(409100),
@@ -31,11 +31,11 @@ var s = n(200651),
     L = n(314907),
     Z = n(826701);
 let D = () => {
-        let e = (0, f.W1)();
-        return (0, s.jsx)(p.Cy, {
+        let e = (0, p.W1)();
+        return (0, s.jsx)(f.Cy, {
             text: e,
             className: O.bogoPillWithSparkles,
-            colorOptions: p.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+            colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
     U = () =>
@@ -117,8 +117,8 @@ t.Z = (e) => {
     var t;
     let n,
         { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
-        { analyticsLocations: H } = (0, u.ZP)(E.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        y = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        { analyticsLocations: y } = (0, u.ZP)(E.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         k = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, _.j)({
@@ -143,8 +143,8 @@ t.Z = (e) => {
         et = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, M.n)(et, en, q, ee),
-        ea = (0, f.Vi)();
-    if (!y || !k) return null;
+        ea = (0, p.Vi)();
+    if (!H || !k) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
             className: O.__invalid_textColor,
@@ -222,17 +222,17 @@ t.Z = (e) => {
         (n = L
             ? null
             : null != Q || null != J
-              ? (0, s.jsx)(p.Cy, {
+              ? (0, s.jsx)(f.Cy, {
                     text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: O.freeTrialPillWithSparkles,
-                    colorOptions: Q === x.Si.TIER_0 ? (W ? p.VE.PREMIUM_TIER_0_GRADIENT_FILL : p.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? p.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : p.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : p.VE.PREMIUM_TIER_2_WHITE_FILL
+                    colorOptions: Q === x.Si.TIER_0 ? (W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : f.VE.PREMIUM_TIER_2_WHITE_FILL
                 })
               : ea
                 ? (0, s.jsx)(D, {})
                 : (0, s.jsx)(U, {}));
     let ei = Q === x.Si.TIER_0 || J === x.p9.TIER_0 || w === x.p9.TIER_0;
     return (0, s.jsx)(u.Gt, {
-        value: H,
+        value: y,
         children: (0, s.jsxs)('div', {
             className: i()(O.root, r),
             'data-testid': 'v2-marketing-page-comparison-table',

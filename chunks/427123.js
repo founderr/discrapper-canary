@@ -12,8 +12,8 @@ var i,
     E = n(16084),
     I = n(728345),
     m = n(812206),
-    T = n(594190),
-    f = n(594174),
+    f = n(594190),
+    T = n(594174),
     h = n(580130),
     N = n(55563),
     p = n(981631);
@@ -35,7 +35,7 @@ function x() {
             !N.Z.isFetching(t) && !N.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
             continue;
         }
-        h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(f.default.getCurrentUser(), t, i.id, i.id) || !a.available
+        h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(T.default.getCurrentUser(), t, i.id, i.id) || !a.available
             ? null != g[t] && (delete g[t], (e = !0))
             : ((g[t] = {
                   skuId: t,
@@ -48,7 +48,7 @@ function x() {
 class R extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(T.ZP, N.Z, h.Z), (A = null !== (e = u.K.get(C)) && void 0 !== e ? e : A);
+        this.waitFor(f.ZP, N.Z, h.Z), (A = null !== (e = u.K.get(C)) && void 0 !== e ? e : A);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(g);
@@ -78,7 +78,7 @@ class R extends (i = c.ZP.Store) {
         },
         RUNNING_GAMES_CHANGE: function () {
             let e = !1;
-            for (let { id: t, distributor: n } of T.ZP.getRunningGames())
+            for (let { id: t, distributor: n } of f.ZP.getRunningGames())
                 if (null != t && n !== p.GQo.DISCORD)
                     for (let { skuId: n, applicationId: i } of p.Lg6) {
                         if (!(i !== t || A.includes(n)))

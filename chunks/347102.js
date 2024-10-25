@@ -1,6 +1,6 @@
 n.d(t, {
     e: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
@@ -14,16 +14,16 @@ var s = n(693789),
     u = n(799352),
     d = n(110223),
     h = n(981631),
-    p = n(689938);
-function m(e) {
+    m = n(689938);
+function p(e) {
     let { channel: t } = e;
     if (!(0, c.f)({ location: 'blocked_user_banner' }) || null == t || !t.isGroupDM() || t.blockedUserWarningDismissed) return null;
     let n = t.recipients.filter((e) => r.Z.isBlocked(e));
     if (0 === n.length) return null;
-    let m = n.length > 1 ? p.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_BANNER : p.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_BANNER,
+    let p = n.length > 1 ? m.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_BANNER : m.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_BANNER,
         _ = [
             {
-                text: p.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
+                text: m.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
                 color: s.zx.Colors.BRAND,
                 onclick: () => {
                     (0, u.O)(t.id),
@@ -38,7 +38,7 @@ function m(e) {
                 size: s.zx.Sizes.MEDIUM
             },
             {
-                text: p.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY,
+                text: m.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY,
                 color: s.zx.Colors.PRIMARY,
                 onclick: () => {
                     (0, u.O)(t.id),
@@ -53,8 +53,8 @@ function m(e) {
             }
         ];
     return (0, i.jsx)(l.W, {
-        header: m,
-        description: p.Z.Messages.GDM_BLOCKED_USER_WARNING_BANNER_DESCRIPTION,
+        header: p,
+        description: m.Z.Messages.GDM_BLOCKED_USER_WARNING_BANNER_DESCRIPTION,
         buttons: _,
         dismissible: !1
     });

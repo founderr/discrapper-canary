@@ -13,8 +13,8 @@ var i = n(192379),
     u = n(812206),
     d = n(835473),
     h = n(621853),
-    p = n(484459),
-    m = n(973616),
+    m = n(484459),
+    p = n(973616),
     _ = n(594174),
     f = n(981631);
 function E(e) {
@@ -40,7 +40,7 @@ function E(e) {
     i.useEffect(() => {
         if (null == v && g) {
             var e;
-            (0, p.Z)(null !== (e = null == C ? void 0 : C.id) && void 0 !== e ? e : f.lds);
+            (0, m.Z)(null !== (e = null == C ? void 0 : C.id) && void 0 !== e ? e : f.lds);
         }
     }, [C, v, g]),
         i.useEffect(() => {
@@ -72,7 +72,7 @@ function E(e) {
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        R = i.useMemo(() => (null != b ? m.Z.createFromServer(b) : void 0), [b]),
+        R = i.useMemo(() => (null != b ? p.Z.createFromServer(b) : void 0), [b]),
         L = (0, d.q)(null == R && g ? v : void 0),
         P = null !== (n = null != R ? R : L) && void 0 !== n ? n : void 0,
         j = null == P || (M && 0 === Z.length);

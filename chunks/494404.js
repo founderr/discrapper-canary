@@ -24,8 +24,8 @@ var i = n(200651),
     E = n(904245),
     I = n(724757),
     m = n(951844),
-    T = n(294218),
-    f = n(703656),
+    f = n(294218),
+    T = n(703656),
     h = n(210887),
     N = n(592125),
     p = n(375954),
@@ -147,7 +147,7 @@ let D = u.ZP.connectStores([C.Z], (e) => {
     return { canManageMessages: null != t && C.Z.can(R.Plq.MANAGE_MESSAGES, t) };
 })(P);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: f, getProTip: N, scrollerClassName: p, className: C, listName: M } = e,
+    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: f, renderItem: T, getProTip: N, scrollerClassName: p, className: C, listName: M } = e,
         Z = a.useRef(null),
         b = (0, I.Z)(M, Z),
         P = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
@@ -191,11 +191,11 @@ function j(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(a.Fragment, { children: T(h.Z.theme) }, 'empty-state'))
+          ? U.push((0, i.jsx)(a.Fragment, { children: f(h.Z.theme) }, 'empty-state'))
           : ((y = !1),
             (U = []),
             o().each(n, (e) => {
-                U.push(...f(e));
+                U.push(...T(e));
             }));
     let B = null;
     null != n &&
@@ -223,7 +223,7 @@ function j(e) {
                 })
               : (0, i.jsx)('div', {
                     className: O.scrollingFooterWrap,
-                    children: T(h.Z.theme)
+                    children: f(h.Z.theme)
                 }));
     let k = null == N ? void 0 : N(),
         G =
@@ -294,7 +294,7 @@ function U(e) {
             });
         else if (!L) {
             let e = N.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, f.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     a.useEffect(() => {
@@ -334,7 +334,7 @@ function U(e) {
                           {
                               className: O.messageGroupWrapper,
                               children: [
-                                  (0, i.jsx)(T.Z, {
+                                  (0, i.jsx)(f.Z, {
                                       className: O.messageGroupCozy,
                                       message: t,
                                       channel: n

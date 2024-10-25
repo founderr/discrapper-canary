@@ -18,8 +18,8 @@ var i,
     E = n(592745),
     I = n(757266),
     m = n(417363),
-    T = n(358085),
-    f = n(346329),
+    f = n(358085),
+    T = n(346329),
     h = n(981631),
     N = n(689938),
     p = n(201219);
@@ -88,7 +88,7 @@ class g extends (i = s.PureComponent) {
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: i, isLaunchable: s, isLaunching: r, isRunning: o, isShiny: u, hideNotLaunchable: d } = this.props;
-        if (!s) return d ? null : this.renderDisabledButton(N.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? N.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : N.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+        if (!s) return d ? null : this.renderDisabledButton(N.Z.Messages.GAME_ACTION_BUTTON_PLAY, f.isPlatformEmbedded ? N.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : N.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
         if (o) return this.renderDisabledButton(N.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = u ? c.ShinyButton : c.Button;
         return (0, a.jsxs)(_, {
@@ -130,7 +130,7 @@ class g extends (i = s.PureComponent) {
             }),
             C(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: i } = this.props;
-                f.playApplication(e, t, {
+                T.playApplication(e, t, {
                     analyticsParams: {
                         location: this.analyticsLocation,
                         list_sort: n,

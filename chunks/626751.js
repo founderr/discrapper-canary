@@ -17,7 +17,7 @@ function _(e) {
     let { channel: _, message: E } = e,
         I = null !== (n = null === (t = E.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, u.Md)() : (0, u.Q8)(),
         m = _.guild_id,
-        T = (0, s.e7)(
+        f = (0, s.e7)(
             [l.Z],
             () => {
                 var e;
@@ -25,9 +25,9 @@ function _(e) {
             },
             [m]
         ),
-        f = null != T && (0, o.yE)(T, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        T = null != f && (0, o.yE)(f, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
         h = a.useMemo(() => (0, c._i)(_, E), [_, E]);
-    return f
+    return T
         ? null
         : (0, i.jsx)(r.Z, {
               channel: _,

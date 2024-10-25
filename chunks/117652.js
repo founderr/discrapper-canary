@@ -17,8 +17,8 @@ var a = n(442837),
     E = n(987209),
     I = n(598),
     m = n(409813),
-    T = n(614277),
-    f = n(474936),
+    f = n(614277),
+    T = n(474936),
     h = n(689938),
     N = n(829294);
 let p = {
@@ -52,7 +52,7 @@ function g(e) {
         R = (0, a.e7)([_.default], () => _.default.getCurrentUser());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(T.C3, {
+            (0, i.jsx)(f.C3, {
                 children: (0, i.jsxs)('div', {
                     className: N.stepBody,
                     children: [
@@ -86,14 +86,14 @@ function g(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(T.O3, {
+            (0, i.jsx)(f.O3, {
                 children: (0, i.jsx)(s.ModalFooter, {
                     justify: o.Z.Justify.BETWEEN,
                     align: o.Z.Align.CENTER,
                     children: (0, i.jsx)(C, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != p || null == S || S.id === (null == R ? void 0 : R.id) || d.length > f.$n,
+                        disabled: null != p || null == S || S.id === (null == R ? void 0 : R.id) || d.length > T.$n,
                         loading: g
                     })
                 })

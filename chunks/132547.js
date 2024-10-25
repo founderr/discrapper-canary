@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(391110),
     C = n(71363),
     A = n(781800),
-    f = n(981631),
-    p = n(689938),
+    p = n(981631),
+    f = n(689938),
     M = n(170367),
     S = n(865215);
 let h = 'SubscriberNitroHome';
@@ -65,14 +65,14 @@ t.Z = () => {
                                 className: M.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: f.ZY5.NITRO_HOME,
-                                    section: f.jXE.GIFT_BANNER
+                                    page: p.ZY5.NITRO_HOME,
+                                    section: p.jXE.GIFT_BANNER
                                 }
                             }),
                             (0, s.jsx)('div', { className: M.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !x && (u.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), b(!0));
+                                    e && !x && (u.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), b(!0));
                                 },
                                 children: (0, s.jsx)('div', { className: M.bottomOfPageVisibilitySensor })
                             }),
@@ -81,7 +81,7 @@ t.Z = () => {
                                 className: M.bottomIllustration,
                                 width: 112,
                                 height: 85,
-                                alt: p.Z.Messages.IMAGE
+                                alt: f.Z.Messages.IMAGE
                             })
                         ]
                     })

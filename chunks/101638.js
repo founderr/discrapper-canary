@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(527790),
     d = n(638785),
     h = n(689938);
-let p = new a.Y('UserProfilePanelRecentActivity');
-function m(e) {
+let m = new a.Y('UserProfilePanelRecentActivity');
+function p(e) {
     let { user: t } = e,
         { recent: n } = (0, o.Z)(t.id),
         a = (0, l.Z)();
@@ -23,7 +23,7 @@ function m(e) {
             try {
                 await (0, r.Z)(t.id, a);
             } catch (e) {
-                p.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
+                m.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }
         })();
     }, [t.id, a]),

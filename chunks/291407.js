@@ -14,12 +14,12 @@ var i = n(200651),
     u = n(890977),
     d = n(921944);
 function h(e) {
-    let { children: t, animationContainerClassName: n, glowClassName: h, trinketsClassName: p } = e,
-        m = (0, a.e7)([c.Z], () => c.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let { children: t, animationContainerClassName: n, glowClassName: h, trinketsClassName: m } = e,
+        p = (0, a.e7)([c.Z], () => c.Z.hasCurrentUserSentMessageSinceAppStart()),
         _ = s.useMemo(() => {
             let e = [];
-            return m && e.push(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
-        }, [m]),
+            return p && e.push(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
+        }, [p]),
         f = () => {
             setTimeout(() => (0, r.EW)(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: d.L.AUTO_DISMISS }), 10000);
         };
@@ -31,7 +31,7 @@ function h(e) {
                 return (0, i.jsx)(u.b, {
                     animationContainerClassName: n,
                     glowClassName: h,
-                    trinketsClassName: p,
+                    trinketsClassName: m,
                     onMount: f,
                     children: t
                 });

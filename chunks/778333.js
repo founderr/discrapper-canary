@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return T;
     }
 });
 var i = n(200651),
@@ -16,10 +16,10 @@ var i = n(200651),
     E = n(51144),
     I = n(981631),
     m = n(689938),
-    T = n(691784);
-function f(e) {
+    f = n(691784);
+function T(e) {
     var t;
-    let { invite: n, getAcceptInviteContext: f } = e,
+    let { invite: n, getAcceptInviteContext: T } = e,
         h = (0, s.e7)([u.default], () => u.default.getId()),
         N = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === h,
         p = n.state === I.r2o.ACCEPTING,
@@ -31,12 +31,12 @@ function f(e) {
             null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
         S = a.useCallback(() => {
-            let e = f('Invite Button Embed');
+            let e = T('Invite Button Embed');
             l.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n.code, f]);
+        }, [n.code, T]);
     if (null == n.inviter) return null;
     let A = C ? g : S,
         x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,
@@ -51,7 +51,7 @@ function f(e) {
             (0, i.jsxs)(o.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: T.headerLine,
+                        className: f.headerLine,
                         children: [
                             (0, i.jsx)(o.Z.Icon, {
                                 user: new c.Z(n.inviter),

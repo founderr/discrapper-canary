@@ -13,14 +13,14 @@ var i = n(200651),
     u = n(871499),
     d = n(199902),
     h = n(314897),
-    p = n(358221),
-    m = n(354459),
+    m = n(358221),
+    p = n(354459),
     _ = n(689938),
     f = n(285403);
 function E(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),
-        E = (null == n ? void 0 : n.type) === m.fO.STREAM,
+        n = (0, a.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
+        E = (null == n ? void 0 : n.type) === p.fO.STREAM,
         g = (0, a.e7)([d.Z], () => (E ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
         { ignoreSenderPreference: C } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: I, isAtMaxSavingClipOperations: T } = (0, a.cj)([r.Z], () => ({

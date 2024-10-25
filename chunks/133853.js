@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return p;
+        return _;
     }
 }),
     n(47120);
@@ -8,9 +8,9 @@ var a,
     r = n(200651),
     o = n(192379),
     s = n(120356),
-    i = n.n(s),
-    l = n(748780),
-    c = n(481060),
+    c = n.n(s),
+    i = n(748780),
+    l = n(481060),
     u = n(981631),
     d = n(559737);
 function f(t, e, n) {
@@ -26,7 +26,7 @@ function f(t, e, n) {
         t
     );
 }
-class p extends (a = o.Component) {
+class _ extends (a = o.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
@@ -52,19 +52,19 @@ class p extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(l.Z.a, {
+        return (0, r.jsx)(i.Z.a, {
             href: u.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
-            className: i()(d.logo, this.props.className),
+            className: c()(d.logo, this.props.className),
             style: this.getAnimatedStyle()
         });
     }
     constructor(...t) {
         super(...t),
-            f(this, 'anim', new l.Z.Value(0)),
+            f(this, 'anim', new i.Z.Value(0)),
             f(this, 'animate', (t) => {
-                l.Z.spring(this.anim, {
+                i.Z.spring(this.anim, {
                     toValue: t,
                     friction: 10,
                     tension: 100
@@ -72,4 +72,4 @@ class p extends (a = o.Component) {
             });
     }
 }
-f(p, 'contextType', c.AccessibilityPreferencesContext);
+f(_, 'contextType', l.AccessibilityPreferencesContext);

@@ -15,7 +15,7 @@ var s = n(200651),
     R = n(689938),
     g = n(916548);
 let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: A, onClick: f, index: p } = e,
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: N, videoUrl: m, shouldLoadVideo: C, isCompact: A, onClick: p, index: f } = e,
         M = (0, d.rO)(),
         S = a.useRef(null),
         [h, x] = a.useState(0),
@@ -77,11 +77,11 @@ let N = (e) => {
                         children: r
                     }),
                     null != R &&
-                        (null != f
+                        (null != p
                             ? (0, s.jsx)(o.Button, {
                                   className: g.whatsNewBoxButton,
                                   onClick: () => {
-                                      O(), f();
+                                      O(), p();
                                   },
                                   children: R
                               })
@@ -121,7 +121,7 @@ let N = (e) => {
                 })
             });
         };
-    return p % 2 != 0
+    return f % 2 != 0
         ? (0, s.jsxs)('div', {
               className: i()(b, {
                   [g.whatsNewBoxContainer]: !A,

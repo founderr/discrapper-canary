@@ -13,15 +13,15 @@ var s = n(442837),
     c = n(981631),
     u = n(689938);
 function d(e) {
-    let { className: t, color: n, look: d, hangStatusChannel: h, onAction: p } = e,
-        m = (0, s.e7)([l.Z], () => l.Z.getChannelId() === h.id);
+    let { className: t, color: n, look: d, hangStatusChannel: h, onAction: m } = e,
+        p = (0, s.e7)([l.Z], () => l.Z.getChannelId() === h.id);
     return (0, i.jsx)(
         o.Z,
         {
             className: t,
-            disabled: m,
+            disabled: p,
             onClick: () => {
-                null == p || p(),
+                null == m || m(),
                     a.default.selectVoiceChannel(h.id),
                     r.default.track(c.rMx.HANG_STATUS_CTA_CLICKED, {
                         source: 'UserProfilePopout',

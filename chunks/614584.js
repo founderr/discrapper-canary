@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(628238),
     d = n(499401),
     h = n(693912),
-    p = n(869765),
-    m = n(699516),
+    m = n(869765),
+    p = n(699516),
     _ = n(352736),
     f = n(937889),
     E = n(739566),
@@ -26,7 +26,7 @@ var i = n(200651),
 let S = s.memo(function (e) {
     var t;
     let { baseMessage: n, referencedMessage: S, channel: v, compact: N = !1, referencedUsernameProfile: A, referencedAvatarProfile: Z, setPopout: M, isReplySpineClickable: b, showReplySpine: R } = e,
-        L = S.state === p.Y.LOADED ? S.message : void 0,
+        L = S.state === m.Y.LOADED ? S.message : void 0,
         P = (0, E.Uj)(L),
         j = (0, c.p)(),
         O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
@@ -95,7 +95,7 @@ let S = s.memo(function (e) {
             }
             return null;
         }, [L, P, v, O, j]),
-        D = (0, a.e7)([m.Z], () => null != L && m.Z.isBlockedForMessage(L), [L]),
+        D = (0, a.e7)([p.Z], () => null != L && p.Z.isBlockedForMessage(L), [L]),
         U = (0, I.wq)(null == L ? void 0 : L.author.id, v.id),
         k = (0, I.$3)(n, L, D),
         w = (0, I.Wl)(L, v, A, M),

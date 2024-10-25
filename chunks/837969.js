@@ -20,7 +20,7 @@ function u(e) {
     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
 function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: p, getNewFocusIndex: m, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: g = !0, onDispatch: C } = e,
+    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: m, getNewFocusIndex: p, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: g = !0, onDispatch: C } = e,
         I = i.useCallback(
             (e, t) => {
                 let n = (0, s.Z)(e, t);
@@ -42,7 +42,7 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: p = u, getNewFocusIndex: m, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: T } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: T } = e,
                 x = i.useRef(n),
                 S = i.useRef(T);
             (S.current = T), (x.current = n);
@@ -66,9 +66,9 @@ function d(e) {
             i.useEffect(() => () => Z.clean(), [Z]);
             let M = i.useCallback(
                     (e, t) => {
-                        v.current && p(e, t);
+                        v.current && m(e, t);
                     },
-                    [p]
+                    [m]
                 ),
                 [b, R] = i.useState(!0);
             i.useEffect(() => {
@@ -81,7 +81,7 @@ function d(e) {
             let L = i.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            n = null != m ? m(d) : d;
+                            n = null != p ? p(d) : d;
                         n !== d &&
                             _({
                                 type: s.G.SET_FOCUSED_INDEX,
@@ -89,7 +89,7 @@ function d(e) {
                             }),
                             e && M(I(t, n), n);
                     },
-                    [I, d, m, _, t, M]
+                    [I, d, p, _, t, M]
                 ),
                 P = i.useCallback(
                     (e) => {
@@ -203,8 +203,8 @@ function d(e) {
             focusedIndex: v,
             dispatch: N,
             onSelect: h,
-            setFocus: p,
-            getNewFocusIndex: m,
+            setFocus: m,
+            getNewFocusIndex: p,
             maintainFocusPosition: _,
             includeSetSizes: f,
             focusOnMount: E,

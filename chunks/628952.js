@@ -13,8 +13,8 @@ var a = n(120356),
     E = n(731896),
     I = n(484459),
     m = n(594174),
-    T = n(937615),
-    f = n(583434),
+    f = n(937615),
+    T = n(583434),
     h = n(689938),
     N = n(696307),
     p = n(223223);
@@ -55,7 +55,7 @@ let C = (e) => {
     };
 t.Z = (e) => {
     let { selectedSkuId: t, selectedSkuPricePreview: n, className: a } = e,
-        { product: c } = (0, f.T)(t),
+        { product: c } = (0, T.T)(t),
         { giftRecipient: u, giftRecipientError: E } = (0, d.wD)(),
         p = (0, l.e7)([m.default], () => m.default.getCurrentUser());
     if (null == c || null == n) return null;
@@ -124,7 +124,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
-                        children: (0, T.T4)(n.amount, n.currency)
+                        children: (0, f.T4)(n.amount, n.currency)
                     })
                 ]
             }),

@@ -38,7 +38,7 @@ let C = (e) => (e ? N.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.Z.
             ]
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { title: t, description: n, className: a, imageSource: r, imageClassName: l, titleBadge: c, isNew: T = !1, isEarlyAccess: I = !1 } = e,
             { analyticsLocations: R } = (0, d.ZP)(_.Z.PREMIUM_MARKETING_PERK_CARD);
         return (0, s.jsx)(d.Gt, {
@@ -83,8 +83,8 @@ t.Z = (e) => {
         E = (0, R.N)({ styles: m }),
         u = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: N } = (0, d.ZP)(),
-        p = (0, T._f)(),
-        M = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, p ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
+        f = (0, T._f)(),
+        M = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, f ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
     return (0, s.jsxs)('div', {
         className: i()(m.perksContainer, t, {
             [m.partiallyHidden]: n && !r,
@@ -99,7 +99,7 @@ t.Z = (e) => {
             }),
             (0, s.jsx)('div', {
                 className: i()(m.perkCardContainer, { [m.perkCardContainerExpanded]: r }),
-                children: M.map((e) => null != e && (0, s.jsx)(f, { ...e }, e.title))
+                children: M.map((e) => null != e && (0, s.jsx)(p, { ...e }, e.title))
             }),
             n &&
                 (0, s.jsxs)(s.Fragment, {

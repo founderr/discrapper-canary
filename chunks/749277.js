@@ -17,8 +17,8 @@ var a = n(442837),
     E = n(963249),
     I = n(346585),
     m = n(303172),
-    T = n(463230),
-    f = n(246965),
+    f = n(463230),
+    T = n(246965),
     h = n(703656),
     N = n(706454),
     p = n(933429),
@@ -158,12 +158,12 @@ let L = (e) => {
                         ]
                     });
                 case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, i.jsx)(f.Z, {
+                    return (0, i.jsx)(T.Z, {
                         dismissCurrentNotice: () => a(A.L.UNKNOWN),
                         subscriptionTier: v.Si.TIER_2
                     });
                 case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, i.jsx)(f.Z, {
+                    return (0, i.jsx)(T.Z, {
                         dismissCurrentNotice: () => a(A.L.UNKNOWN),
                         subscriptionTier: v.Si.TIER_0
                     });
@@ -186,7 +186,7 @@ let L = (e) => {
                         ]
                     });
                 case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                    return (0, i.jsx)(T.Z, {
+                    return (0, i.jsx)(f.Z, {
                         notice: Z,
                         noticeType: L,
                         dismissCurrentNotice: () => a(A.L.UNKNOWN)

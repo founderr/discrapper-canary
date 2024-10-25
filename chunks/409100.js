@@ -26,9 +26,9 @@ let I = (e) => {
 t.Z = (e) => {
     let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: N = !1, useShorterCTA: m = !1, ...C } = e,
         A = (0, i.ZP)(),
-        f = (0, a.wj)(A) || t,
-        p = (0, _.N)(),
-        M = null == p ? void 0 : p.subscription_trial,
+        p = (0, a.wj)(A) || t,
+        f = (0, _.N)(),
+        M = null == f ? void 0 : f.subscription_trial,
         S = (0, l.a5)({
             intervalType: null == M ? void 0 : M.interval,
             intervalCount: null == M ? void 0 : M.interval_count
@@ -36,7 +36,7 @@ t.Z = (e) => {
         h = (0, c.Ng)(),
         x = null != M && n === M.sku_id,
         { enabled: b } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        O = b && (null == p ? void 0 : p.trial_id) === E.a7,
+        O = b && (null == f ? void 0 : f.trial_id) === E.a7,
         P = g
             ? u.Z.Messages.BOGO_CLAIM_OFFER
             : null != h
@@ -51,8 +51,8 @@ t.Z = (e) => {
                     subscriptionTrial: M
                 });
     return (0, s.jsx)(d.Z, {
-        color: f ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in C ? C.buttonShineClassName : f ? T.brandShine : void 0,
+        color: p ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
+        buttonShineClassName: 'buttonShineClassName' in C ? C.buttonShineClassName : p ? T.brandShine : void 0,
         buttonText: P,
         buttonTextClassName: x ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,

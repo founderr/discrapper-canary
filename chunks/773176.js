@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(704215),
     d = n(481060),
     h = n(596454),
-    p = n(607070),
-    m = n(110630),
+    m = n(607070),
+    p = n(110630),
     _ = n(706140),
     f = n(543241),
     E = n(407477),
@@ -204,7 +204,7 @@ function eo(e) {
                     isGuest: M,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, m.Z)(n),
+                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, p.Z)(n),
                 J = t.getGuildId(),
                 ee = null != J && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && w.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: J }),
                 { canForwardMessages: et } = (0, I.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
@@ -212,7 +212,7 @@ function eo(e) {
                 { enabled: ei } = R.Z.useExperiment({ location: 'message_utilities' }),
                 es = (0, c.e7)([L.Z], () => null != L.Z.getSavedMessage(t.id, n.id)),
                 ea = (0, Q.Z)(),
-                el = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
+                el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
@@ -253,8 +253,8 @@ function eo(e) {
         }, [G, et]),
         eu = (0, P.$R)(t),
         eh = n.hasFlag($.iLy.CROSSPOSTED),
-        [ep, em] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        e_ = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [em, ep] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        e_ = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [ef, eE] = s.useState(!1),
         eg = s.useCallback(() => {
             eE(!0);
@@ -264,9 +264,9 @@ function eo(e) {
         }, []),
         eI = s.useCallback(
             (e, t) => {
-                em(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
+                ep(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
             },
-            [em]
+            [ep]
         ),
         { canShowReactionsOnMessageHover: eT } = E.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     return (

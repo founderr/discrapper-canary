@@ -1,6 +1,6 @@
 n.d(t, {
     II: function () {
-        return m;
+        return p;
     },
     Ow: function () {
         return I;
@@ -26,8 +26,8 @@ var i,
     u = n(110924),
     d = n(840877),
     h = n(952537),
-    p = n(981631);
-let m = -1;
+    m = n(981631);
+let p = -1;
 ((s = i || (i = {})).MESSAGES = 'messages'), (s.LINKS = 'links'), (s.MEDIA = 'media'), (s.ALL_COUNTS = 'all_counts');
 function _(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -39,7 +39,7 @@ let f = {
         searchFetcher: null,
         searchTabFetcher: null,
         result: null,
-        messageCount: m,
+        messageCount: p,
         lastMessage: null
     },
     E = (0, l.Z)(() => new Map()),
@@ -103,10 +103,10 @@ function T(e, t, n) {
             a.useEffect(() => {
                 if (E !== r) {
                     let i = I(e, n, s),
-                        a = new d.ZP(t, p.aib.GUILD, i);
+                        a = new d.ZP(t, m.aib.GUILD, i);
                     g(r, {
                         searchFetcher: a,
-                        messageCount: m,
+                        messageCount: p,
                         lastMessage: null
                     }),
                         setTimeout(() => {
@@ -205,10 +205,10 @@ function S(e, t, n) {
             [C]
         );
     a.useEffect(() => {
-        let e = new d.tJ(t, p.aib.GUILD, f, E);
+        let e = new d.tJ(t, m.aib.GUILD, f, E);
         T({
             searchTabFetcher: e,
-            messageCount: m,
+            messageCount: p,
             lastMessage: null
         });
         let n = setTimeout(async () => {
@@ -252,8 +252,8 @@ function S(e, t, n) {
     }, [e, t, f, E, T, C]);
     let [S, v] = a.useState({});
     return {
-        messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : m,
-        linksCount: null !== (s = null == u ? void 0 : u.messageCount) && void 0 !== s ? s : m,
-        mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : m
+        messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
+        linksCount: null !== (s = null == u ? void 0 : u.messageCount) && void 0 !== s ? s : p,
+        mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : p
     };
 }

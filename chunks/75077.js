@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     gx: function () {
-        return f;
+        return p;
     },
     k3: function () {
         return N;
@@ -90,8 +90,8 @@ function A(e, t) {
             return '';
     }
 }
-let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
-    p = 'getWhatsNewRow',
+let p = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    f = 'getWhatsNewRow',
     M = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
@@ -102,9 +102,9 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: E } = u._.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
-            { enabled: T } = d.r.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
-            { enabled: I } = _.C.getCurrentConfig({ location: p }, { autoTrackExposure: !1 }),
+            { enabled: E } = u._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
+            { enabled: T } = d.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
+            { enabled: I } = _.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             R = E && !T && !I,
             g = b();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;

@@ -34,12 +34,12 @@ function h(e) {
     let [t, n] = s.useState(),
         [a, l] = s.useState(),
         [r, u] = s.useState(!1),
-        [h, p] = s.useState(!1),
-        { enabled: m } = (0, o.s1)(e);
+        [h, m] = s.useState(!1),
+        { enabled: p } = (0, o.s1)(e);
     return (
         s.useEffect(() => {
-            m && null != t && null != a ? u(t < a) : u(!1);
-        }, [m, t, a]),
+            p && null != t && null != a ? u(t < a) : u(!1);
+        }, [p, t, a]),
         {
             horizontalScrollNotice: s.useMemo(
                 () =>
@@ -51,7 +51,7 @@ function h(e) {
                         : null,
                 [r, h]
             ),
-            handleScroll: () => p(!0),
+            handleScroll: () => m(!0),
             handleSetScrollerRef: (e) => {
                 var t;
                 return l(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);

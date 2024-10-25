@@ -91,22 +91,22 @@ function y(e) {
         y,
         { channel: O, entry: j, closePopout: w, onReaction: b, onVoiceChannelPreview: D } = e,
         { largeImage: U } = (0, v.rv)({ entry: j }),
-        { activity: H, currentEntry: B, artist: k, title: V, user: F } = (0, T.pi)(j),
+        { activity: k, currentEntry: H, artist: B, title: V, user: F } = (0, T.pi)(j),
         { primaryColor: G, secondaryColor: Y } = (0, f.Z)(null == U ? void 0 : U.src),
-        z = (0, r.e7)([c.Z, x.default], () => ((null == H ? void 0 : H.type) === Z.IIU.LISTENING && null != F ? (0, h.Z)(c.Z, x.default, F, H) : void 0), [H, F], s.Z),
+        z = (0, r.e7)([c.Z, x.default], () => ((null == k ? void 0 : k.type) === Z.IIU.LISTENING && null != F ? (0, h.Z)(c.Z, x.default, F, k) : void 0), [k, F], s.Z),
         W = a.useCallback(() => {
             var e;
             if (null == O || null == F) return;
-            let t = null === (e = H.timestamps) || void 0 === e ? void 0 : e.start,
+            let t = null === (e = k.timestamps) || void 0 === e ? void 0 : e.start,
                 n = (0, C.T_)(null != t ? { start: t } : j, Date.now());
             return (0, p.CR)({
                 user: F,
                 channel: O,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: k,
+                artist: B,
                 description: A(
                     {
-                        artist: k,
+                        artist: B,
                         media: V
                     },
                     O,
@@ -115,26 +115,26 @@ function y(e) {
                 colors: [G, Y],
                 badges: (0, p.jE)({ timestamp: n })
             });
-        }, [H, k, O, j, null == U ? void 0 : U.src, G, Y, V, F]);
-    if (null == H || null == B) return null;
-    let q = k,
+        }, [k, B, O, j, null == U ? void 0 : U.src, G, Y, V, F]);
+    if (null == k || null == H) return null;
+    let q = B,
         J = [];
-    if (B.media.provider === i.p.SPOTIFY) {
+    if (H.media.provider === i.p.SPOTIFY) {
         (L = () => {
-            (0, u.aG)(H);
+            (0, u.aG)(k);
         }),
             (y = () => {
-                (0, u.Z5)(H, F.id);
+                (0, u.Z5)(k, F.id);
             }),
             (I = () => {
-                (0, u.aG)(H);
+                (0, u.aG)(k);
             });
         (q = (0, l.jsx)(d.Z, {
-            artists: k,
-            canOpen: null != H.sync_id,
+            artists: B,
+            canOpen: null != k.sync_id,
             linkClassName: S.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, u.d$)(H, F.id, e);
+                (0, u.d$)(k, F.id, e);
             }
         })),
             (null == z ? void 0 : z.syncDisabled) === !1 &&
@@ -157,7 +157,7 @@ function y(e) {
         channel: O,
         entry: j,
         headerIcons:
-            B.media.provider === i.p.SPOTIFY
+            H.media.provider === i.p.SPOTIFY
                 ? (0, l.jsx)(N.Z, {
                       onClick: I,
                       'aria-label': M.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
@@ -169,7 +169,7 @@ function y(e) {
         onClickTitle: L,
         subtitle: q,
         badges: null,
-        children: (null === (t = H.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(R, { activity: H })
+        children: (null === (t = k.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(R, { activity: k })
     });
     return (0, l.jsxs)(g.yR, {
         children: [
@@ -182,7 +182,7 @@ function y(e) {
                     channel: O,
                     generateReactionImage: W,
                     reactionImageAltText:
-                        ((n = k),
+                        ((n = B),
                         (_ = F),
                         M.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
                             username: _.username,

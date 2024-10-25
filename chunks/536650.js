@@ -58,7 +58,7 @@ function E(e) {
         }, [S, x]),
         R = A(I),
         M = A(P),
-        j = a.useCallback(() => {
+        y = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c, d;
             let u = E.current,
                 m = I.current,
@@ -89,12 +89,12 @@ function E(e) {
         }, [b, S, null == M ? void 0 : M.height, x, E, null == R ? void 0 : R.height]);
     return (
         a.useEffect(() => {
-            j();
-        }, [j, x]),
+            y();
+        }, [y, x]),
         a.useEffect(() => {
             let e = E.current,
                 n = () => {
-                    j();
+                    y();
                 };
             return (
                 null == e || e.addEventListener('scroll', n),
@@ -102,7 +102,7 @@ function E(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [E, j]),
+        }, [E, y]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {

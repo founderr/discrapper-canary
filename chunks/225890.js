@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(897285),
     I = n(924301),
     m = n(482241),
-    T = n(11868),
-    f = n(231338);
+    f = n(11868),
+    T = n(231338);
 function h(e) {
     let { code: t } = e,
         [n, h, N] = t.split('-'),
@@ -47,12 +47,12 @@ function h(e) {
         a.useEffect(() => {
             (null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, h), E.Z.getGuildEventUserCounts(n, h, null != N ? [N] : []), E.Z.getGuildEventsForCurrentUser(n);
         }, [h, n, null == p ? void 0 : p.id, N]),
-        (0, i.jsx)(T.ZP, {
+        (0, i.jsx)(f.ZP, {
             guild: C,
             channel: g,
             guildScheduledEvent: p,
             isMember: S,
-            onAcceptInstantInvite: f.dG,
+            onAcceptInstantInvite: T.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, l.n)(n)) {
                     (0, r.hk)(n);

@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(692547),
     I = n(481060),
     m = n(256638),
-    T = n(385499),
-    f = n(528011),
+    f = n(385499),
+    T = n(528011),
     h = n(533244),
     N = n(825829),
     p = n(226192),
@@ -214,10 +214,10 @@ function G(e) {
 function F(e) {
     var t;
     let { message: n, compact: s } = e,
-        { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: T } = (0, N.FL)(n),
+        { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: f } = (0, N.FL)(n),
         C = (0, _.e7)([x.Z], () => x.Z.getChannel(n.channel_id), [n.channel_id]),
         g = null !== (t = null == C ? void 0 : C.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: S } = (0, f.mI)(g),
+        { shouldShowIncidentActions: S } = (0, T.mI)(g),
         A = (0, M.sR)(n.author.id, n.channel_id),
         R = a.useCallback(() => {
             let e = null == C ? void 0 : C.guild_id;
@@ -316,7 +316,7 @@ function F(e) {
                               children: (0, i.jsx)(I.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, N.ge)(T)
+                                  children: (0, N.ge)(f)
                               })
                           })
                       })
@@ -474,7 +474,7 @@ function H(e) {
                                     className: j.username,
                                     children: D.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
-                                (0, i.jsx)(T.Z, {
+                                (0, i.jsx)(f.Z, {
                                     type: P.Hb.SYSTEM_DM,
                                     className: j.systemTag
                                 }),

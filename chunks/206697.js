@@ -16,23 +16,23 @@ var i = n(200651),
     E = n(981631),
     I = n(474936),
     m = n(689938),
-    T = n(169458),
-    f = n(492764),
+    f = n(169458),
+    T = n(492764),
     h = n(235810);
 function N() {
     return (0, _.Z)()
         ? (0, i.jsx)('div', {
-              className: T.emptyContainer,
+              className: f.emptyContainer,
               children: (0, i.jsxs)('div', {
-                  className: T.emptyInner,
+                  className: f.emptyInner,
                   children: [
                       (0, i.jsx)('img', {
-                          src: f,
-                          className: T.image,
+                          src: T,
+                          className: f.image,
                           alt: ''
                       }),
                       (0, i.jsx)(l.Heading, {
-                          className: T.header,
+                          className: f.header,
                           variant: 'heading-xl/semibold',
                           color: 'text-normal',
                           children: m.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE
@@ -46,18 +46,18 @@ function N() {
               })
           })
         : (0, i.jsxs)('div', {
-              className: T.emptyContainer,
+              className: f.emptyContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: T.emptyInner,
+                      className: f.emptyInner,
                       children: [
                           (0, i.jsx)('img', {
                               src: h,
-                              className: T.image,
+                              className: f.image,
                               alt: ''
                           }),
                           (0, i.jsx)(l.Heading, {
-                              className: T.header,
+                              className: f.header,
                               variant: 'heading-xl/semibold',
                               color: 'text-normal',
                               children: m.Z.Messages.FOR_LATER_UPSELL_MODAL_TITLE
@@ -92,7 +92,7 @@ function p() {
             onClick: t
         });
     return (0, i.jsxs)('div', {
-        className: T.upsellContainer,
+        className: f.upsellContainer,
         children: [
             (0, i.jsx)(s.SrA, {
                 size: 'md',
@@ -101,13 +101,13 @@ function p() {
             (0, i.jsx)(r.xv, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                className: T.upsellText,
+                className: f.upsellText,
                 children: _
             }),
             (0, i.jsx)(u.Z, {
-                className: T.upsellButton,
+                className: f.upsellButton,
                 size: l.ButtonSizes.TINY,
-                shinyButtonClassName: T.upsellButton,
+                shinyButtonClassName: f.upsellButton,
                 subscriptionTier: I.Si.TIER_2,
                 premiumModalAnalyticsLocation: { section: E.jXE.FOR_LATER_POPOUT_UPSELL }
             })

@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(287734),
     I = n(607070),
     m = n(385499),
-    T = n(313889),
-    f = n(825829),
+    f = n(313889),
+    T = n(825829),
     h = n(226192),
     N = n(36459),
     p = n(336197),
@@ -99,21 +99,21 @@ function W(e) {
 }
 function K(e, t) {
     switch (e) {
-        case T.d.DELETE_USER_MESSAGE:
+        case f.d.DELETE_USER_MESSAGE:
             return (0, i.jsx)(_.TrashIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: w.alertActionIcon,
                 ...t
             });
-        case T.d.SET_COMPLETED:
+        case f.d.SET_COMPLETED:
             return (0, i.jsx)(_.CheckmarkLargeIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: r()(w.alertActionIcon, w.alertActionSetCompletedIcon),
                 ...t
             });
-        case T.d.SUBMIT_FEEDBACK:
+        case f.d.SUBMIT_FEEDBACK:
             return (0, i.jsx)(_.FlagIcon, {
                 size: 'xs',
                 color: 'currentColor',
@@ -137,17 +137,17 @@ function z(e) {
                 r = ''.concat(a, ' ').concat(s.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
-                    case T.d.DELETE_USER_MESSAGE:
+                    case f.d.DELETE_USER_MESSAGE:
                         return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
                             userName: a,
                             timestamp: s.fromNow()
                         });
-                    case T.d.SET_COMPLETED:
+                    case f.d.SET_COMPLETED:
                         return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
                             userName: a,
                             timestamp: s.fromNow()
                         });
-                    case T.d.SUBMIT_FEEDBACK:
+                    case f.d.SUBMIT_FEEDBACK:
                         return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
                             userName: a,
                             timestamp: s.fromNow()
@@ -224,7 +224,7 @@ let Q = a.memo(function (e) {
         color: 'header-primary',
         tag: 'span',
         className: w.spanCorrection,
-        children: (0, f.Mq)(
+        children: (0, T.Mq)(
             n,
             s,
             () =>
@@ -252,7 +252,7 @@ function q(e) {
         { isFocused: M, handleFocus: b, handleBlur: D } = (0, P.bb)(R),
         y = (0, d.e7)([I.Z], () => I.Z.keyboardModeEnabled),
         H = (0, d.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
-        { ruleName: K, embedChannel: z, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, f.ZP)(l),
+        { ruleName: K, embedChannel: z, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, T.ZP)(l),
         el = a.useMemo(() => (0, v.k$)(ee, J, o.id), [ee, J, o]),
         { selected: eo, ...ec } = V(l, o),
         eu = a.useCallback(() => {
@@ -277,13 +277,13 @@ function q(e) {
             [l, z]
         ),
         eE = a.useCallback(() => {
-            (0, N.Xx)(l.id, o, T.d.DELETE_USER_MESSAGE);
+            (0, N.Xx)(l.id, o, f.d.DELETE_USER_MESSAGE);
         }, [o, l.id]),
         eI = (0, G.L9)(Number(en)),
         em = null != ei,
-        eT = H && null != et && (null == ea || !ea.actions.hasOwnProperty(T.d.DELETE_USER_MESSAGE)),
-        ef = l.embeds.length > 0 ? (null === (t = l.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
-        eh = null != ef;
+        ef = H && null != et && (null == ea || !ea.actions.hasOwnProperty(f.d.DELETE_USER_MESSAGE)),
+        eT = l.embeds.length > 0 ? (null === (t = l.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
+        eh = null != eT;
     return (0, i.jsx)('div', {
         onMouseEnter: A,
         onMouseLeave: x,
@@ -386,7 +386,7 @@ function q(e) {
                                                             color: 'text-muted',
                                                             tag: 'span',
                                                             className: w.titleCase,
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, f.hU)(es) })
+                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, T.hU)(es) })
                                                         })
                                                     ]
                                                 })
@@ -446,7 +446,7 @@ function q(e) {
                                           children: [
                                               (0, i.jsx)('div', { className: w.dot }),
                                               (0, i.jsx)(_.Button, {
-                                                  onClick: () => e_(ef),
+                                                  onClick: () => e_(eT),
                                                   color: _.Button.Colors.LINK,
                                                   look: _.Button.Looks.LINK,
                                                   size: _.Button.Sizes.SMALL,
@@ -479,7 +479,7 @@ function q(e) {
                                         })
                                     })
                                 }),
-                                eT
+                                ef
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)('div', { className: w.dot }),

@@ -12,8 +12,8 @@ var i = n(200651),
     E = n(231053),
     I = n(697568),
     m = n(183023),
-    T = n(524444),
-    f = n(98278),
+    f = n(524444),
+    T = n(98278),
     h = n(197115),
     N = n(430824),
     p = n(594174),
@@ -39,7 +39,7 @@ function j(e) {
         location_page: null != e.guild_id ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
         location_section: O.jXE.STICKER_POPOUT
     }),
-        (0, f.z)();
+        (0, T.z)();
 }
 function U(e) {
     let { sticker: t, description: n } = e;
@@ -91,8 +91,8 @@ let y = (e) => {
             });
         }, [n.pack_id]),
         d || null == c)
-            ? (0, i.jsx)(T.SE, { className: Z.popoutLoader })
-            : (0, i.jsxs)(T.W_, {
+            ? (0, i.jsx)(f.SE, { className: Z.popoutLoader })
+            : (0, i.jsxs)(f.W_, {
                   className: Z.popoutContent,
                   children: [
                       (0, i.jsx)(o.Heading, {
@@ -143,7 +143,7 @@ let y = (e) => {
     },
     B = (e) => {
         let t,
-            { sticker: n, channel: s, closePopout: _, refreshPositionKey: f } = e,
+            { sticker: n, channel: s, closePopout: _, refreshPositionKey: T } = e,
             [S, A] = a.useState(null),
             [x, v] = a.useState(!1),
             P = p.default.getCurrentUser(),
@@ -186,7 +186,7 @@ let y = (e) => {
                   (z = 'Custom Sticker Popout (Soft Upsell)'));
         let X = !K && !B && W && D;
         return (a.useEffect(() => {
-            f();
+            T();
         }, [x, S]),
         a.useEffect(() => {
             C.default.track(O.rMx.OPEN_POPOUT, {
@@ -195,7 +195,7 @@ let y = (e) => {
             });
         }, []),
         x)
-            ? (0, i.jsxs)(T.W_, {
+            ? (0, i.jsxs)(f.W_, {
                   className: b.popoutContent,
                   children: [
                       (() => {
@@ -262,7 +262,7 @@ let y = (e) => {
                                               children: [
                                                   (0, i.jsx)(o.Clickable, {
                                                       onClick: () => {
-                                                          f(), G(!k);
+                                                          T(), G(!k);
                                                       },
                                                       className: b.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
@@ -292,7 +292,7 @@ let y = (e) => {
                                                                   o.Tooltip,
                                                                   {
                                                                       text: e.name,
-                                                                      ...T.b_,
+                                                                      ...f.b_,
                                                                       children: (t) => {
                                                                           let { onMouseEnter: n, onMouseLeave: a, ...s } = t;
                                                                           return (0, i.jsx)(
@@ -330,11 +330,11 @@ let y = (e) => {
                           })()
                   ]
               })
-            : (0, i.jsx)(T.SE, { className: Z.popoutLoader });
+            : (0, i.jsx)(f.SE, { className: Z.popoutLoader });
     };
 function k(e) {
     let { channel: t, closePopout: n, sticker: a } = e;
-    return (0, i.jsx)(T.W_, {
+    return (0, i.jsx)(f.W_, {
         className: Z.popoutContent,
         children: (0, i.jsx)(U, {
             sticker: a,
@@ -363,7 +363,7 @@ t.Z = (e) => {
             closePopout: a,
             refreshPositionKey: s
         });
-    if (!l) return (0, i.jsx)(T.SE, {});
+    if (!l) return (0, i.jsx)(f.SE, {});
     else if (l && null == r)
         return (0, i.jsx)(k, {
             channel: n,

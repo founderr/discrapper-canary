@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(914010),
     I = n(594174),
     m = n(626135),
-    T = n(135431),
-    f = n(674588),
+    f = n(135431),
+    T = n(674588),
     h = n(264043),
     N = n(132871),
     p = n(147890),
@@ -41,7 +41,7 @@ function A(e) {
         }, []),
         U = (0, c.O)(j);
     a.useEffect(() => {
-        (0, f.gZ)(x);
+        (0, T.gZ)(x);
     }, [x]),
         a.useEffect(() => {
             P &&
@@ -109,7 +109,7 @@ function A(e) {
             compactDisplay: 'short'
         }),
         k = null !== (n = null === (t = v.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        G = (0, T.Eb)({
+        G = (0, f.Eb)({
             customInstallUrl: v.custom_install_url,
             installParams: v.install_params,
             integrationTypesConfig: v.integration_types_config
@@ -158,7 +158,7 @@ function A(e) {
                         (0, i.jsx)(u.Z.Button, {
                             onClick: () => {
                                 if (null != v)
-                                    (0, T.LO)({
+                                    (0, f.LO)({
                                         applicationId: x,
                                         customInstallUrl: v.custom_install_url,
                                         installParams: v.install_params,

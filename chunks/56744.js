@@ -17,7 +17,7 @@ let E = a.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: _, compact: E = !1 } = e,
         I = _.state === l.Y.LOADED ? _.message : void 0,
         m = (0, r.p)(),
-        T = a.useMemo(
+        f = a.useMemo(
             () =>
                 (null == I ? void 0 : I.content) != null && '' !== I.content
                     ? (0, c.ZP)(I, {
@@ -27,7 +27,7 @@ let E = a.memo(function (e) {
                     : null,
             [I, m]
         ),
-        f = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
+        T = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
         h = (0, u.Uj)(I),
         N = (0, u.Uj)(t);
     return (0, i.jsx)(d.Z, {
@@ -36,9 +36,9 @@ let E = a.memo(function (e) {
         baseMessage: t,
         channel: n,
         referencedMessage: _,
-        content: T,
+        content: f,
         compact: E,
-        isReplyAuthorBlocked: f,
+        isReplyAuthorBlocked: T,
         isReplySpineClickable: !1,
         showReplySpine: !0
     });

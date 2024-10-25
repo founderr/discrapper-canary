@@ -18,8 +18,8 @@ var i = n(200651),
     E = n(659215),
     I = n(222677),
     m = n(995774),
-    T = n(931651),
-    f = n(594174),
+    f = n(931651),
+    T = n(594174),
     h = n(630388),
     N = n(74538),
     p = n(833803),
@@ -50,10 +50,10 @@ class M extends a.Component {
             c = t.state === g.yb.SENDING,
             E = e === C.O.BURST;
         if (c || (0, h.yE)(t.flags, g.iLy.EPHEMERAL)) return null;
-        let I = f.default.getCurrentUser(),
+        let I = T.default.getCurrentUser(),
             m = (0, N.I5)(I),
-            T = E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION;
-        !m && E && (T = (0, i.jsx)(_.X, { tooltipText: x.Z.Messages.ADD_BURST_REACTION }));
+            f = E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION;
+        !m && E && (f = (0, i.jsx)(_.X, { tooltipText: x.Z.Messages.ADD_BURST_REACTION }));
         let A = s ? v : R,
             { canShowImprovedReactionButton: O } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             M = O && !this.props.isForumToolbar,
@@ -70,7 +70,7 @@ class M extends a.Component {
             children: (e, t) => {
                 let { isShown: s } = t;
                 return (0, i.jsx)(u.TooltipContainer, {
-                    text: T,
+                    text: f,
                     color: u.TooltipColors.PRIMARY,
                     'aria-label': E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION,
                     tooltipClassName: A.__invalid_addReactionTooltip,
@@ -110,7 +110,7 @@ class M extends a.Component {
             O(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = f.default.getCurrentUser();
+                let i = T.default.getCurrentUser();
                 t === C.O.BURST &&
                     !(0, N.I5)(i) &&
                     (0, E.openBurstReactionsUpsellModal)({
@@ -135,7 +135,7 @@ class M extends a.Component {
                             object: g.qAy.REACTION_RAIL
                         })
                     },
-                    l = (0, i.jsx)(T.$, {
+                    l = (0, i.jsx)(f.$, {
                         closePopout: t,
                         channel: a,
                         onSelectEmoji: (e, n, i) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return f;
+        return T;
     }
 });
 var i = n(933557),
@@ -29,7 +29,7 @@ function m(e, t, n) {
         e
     );
 }
-function T(e, t) {
+function f(e, t) {
     return {
         originLabel: e.name,
         originIconUrl: u.ZP.getGuildIconURL({
@@ -45,11 +45,11 @@ function T(e, t) {
         })
     };
 }
-class f {
+class T {
     getForwardInfo() {
         var e, t, n, u;
         let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
-            f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            T = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             h = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
             N = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
@@ -75,7 +75,7 @@ class f {
                       }
                     : {
                           snapshotIndex: g,
-                          footerInfo: T(e, v),
+                          footerInfo: f(e, v),
                           useOldIcon: x
                       };
             }
@@ -84,7 +84,7 @@ class f {
                     snapshotIndex: g,
                     useOldIcon: x
                 };
-            let t = (0, i.F6)(e, f, h, !0);
+            let t = (0, i.F6)(e, T, h, !0);
             return {
                 snapshotIndex: g,
                 footerInfo: {
@@ -112,7 +112,7 @@ class f {
               }
             : {
                   snapshotIndex: g,
-                  footerInfo: T(L, v),
+                  footerInfo: f(L, v),
                   useOldIcon: x
               };
     }

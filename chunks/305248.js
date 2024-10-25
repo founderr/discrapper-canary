@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(488131),
     I = n(592125),
     m = n(823379),
-    T = n(709054),
-    f = n(124368),
+    f = n(709054),
+    T = n(124368),
     h = n(302762);
 function N(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
@@ -29,19 +29,19 @@ function N(e) {
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return T.default.compare(n, t.oldestReadMessageId) > 0;
+                        return f.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
                         return I.Z.getChannel(t);
                     })
                     .filter(m.lm)
-                    .sort((e, t) => T.default.compare(e.id, t.id))
+                    .sort((e, t) => f.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
         p = a.useCallback((e, t) => {
-            (0, E.ok)(e, t, f.on.INBOX);
+            (0, E.ok)(e, t, T.on.INBOX);
         }, []);
     return (
         a.useEffect(() => {

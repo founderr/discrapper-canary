@@ -14,13 +14,13 @@ function l(e) {
         E = (0, a.ZP)(l),
         I = E.nick,
         m = o(E),
-        T = (0, a.Sw)(c, _);
-    if (null != T && null != u) {
-        let e = u(T);
+        f = (0, a.Sw)(c, _);
+    if (null != f && null != u) {
+        let e = u(f);
         t = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
             username: I,
             usernameHook: m,
-            otherUsername: T.nick,
+            otherUsername: f.nick,
             otherUsernameHook: e
         });
     } else

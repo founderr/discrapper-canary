@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(32173),
     C = n(391110),
     A = n(75077),
-    f = n(981631),
-    p = n(689938),
+    p = n(981631),
+    f = n(689938),
     M = n(170367),
     S = n(865215);
 t.Z = (e) => {
@@ -39,7 +39,7 @@ t.Z = (e) => {
         j = (0, A.mN)(),
         { fractionalState: G } = (0, u.Z)();
     return (
-        v === R.mJ.DEFAULT ? ((t = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = p.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = p.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
+        v === R.mJ.DEFAULT ? ((t = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: i()(M.allPerksScroller, {
                 [M.open]: r,
@@ -55,7 +55,7 @@ t.Z = (e) => {
                             className: M.heroHeading,
                             onBackClick: () => {
                                 h(!1),
-                                    I.default.track(f.rMx.NITRO_HOME_NAVIGATION, {
+                                    I.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: C.MQ.SEE_ALL,
                                         next_component: x,
                                         interaction_component: 'Back Button'
@@ -107,7 +107,7 @@ t.Z = (e) => {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
                                     className: M.heading,
-                                    children: p.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+                                    children: f.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
                                 }),
                                 (0, s.jsx)(N.Z, {
                                     className: M.cardCarousel,
@@ -127,7 +127,7 @@ t.Z = (e) => {
                         (0, s.jsx)('div', { className: M.footerSpacing }),
                         (0, s.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !Z && (I.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: L }), D(!0));
+                                e && !Z && (I.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: L }), D(!0));
                             },
                             children: (0, s.jsx)('div', { className: M.bottomOfPageVisibilitySensor })
                         }),
@@ -136,7 +136,7 @@ t.Z = (e) => {
                             className: M.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: p.Z.Messages.IMAGE
+                            alt: f.Z.Messages.IMAGE
                         })
                     ]
                 })

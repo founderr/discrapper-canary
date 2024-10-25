@@ -35,12 +35,12 @@ var s,
     v = n(473855),
     b = n(726745),
     L = n(929809),
-    D = n(541692),
-    M = n(986197),
+    M = n(541692),
+    D = n(986197),
     P = n(135200),
     j = n(219496),
-    y = n(794099),
-    U = n(807369),
+    U = n(794099),
+    y = n(807369),
     G = n(180529),
     B = n(108427),
     k = n(314897),
@@ -432,9 +432,9 @@ class el extends (s = i.PureComponent) {
                 hasLoggedInAccounts: b,
                 registrationCopyExperimentConfig: { hasCopyAboveButton: L }
             } = this.props,
-            { subText: D, consentText: j } = this.renderConsentComponents(),
-            y = this.renderErrorMessage(),
-            U = (0, r.jsx)(h.Tooltip, {
+            { subText: M, consentText: j } = this.renderConsentComponents(),
+            U = this.renderErrorMessage(),
+            y = (0, r.jsx)(h.Tooltip, {
                 text: !c && I ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                 children: (e) =>
                     (0, r.jsx)('div', {
@@ -449,7 +449,7 @@ class el extends (s = i.PureComponent) {
                     })
             }),
             B = async () => {
-                this.setState({ usernameFocused: !0 }), T && a.length > 0 && !P.Z.wasRegistrationSuggestionFetched(a) && (await M.Z.fetchSuggestionsRegistration(a));
+                this.setState({ usernameFocused: !0 }), T && a.length > 0 && !P.Z.wasRegistrationSuggestionFetched(a) && (await D.Z.fetchSuggestionsRegistration(a));
             },
             k = null != e ? (0, r.jsx)(i.Fragment, { children: e() }, 'custom-header') : (0, r.jsx)(A.Dx, { children: et.Z.Messages.REGISTER_TITLE }, 'title'),
             F = (0, r.jsxs)(A.gO, {
@@ -548,12 +548,12 @@ class el extends (s = i.PureComponent) {
                         value: u,
                         required: !0
                     }),
-                    L && D,
+                    L && M,
                     (0, r.jsx)(R.Z, {}),
-                    U,
                     y,
+                    U,
                     j,
-                    !L && D,
+                    !L && M,
                     Q.a
                         ? null
                         : (0, r.jsx)(A.zx, {
@@ -714,16 +714,16 @@ class el extends (s = i.PureComponent) {
     }
 }
 function eo(e) {
-    let t = (0, d.cj)([F.Z, k.default, g.Z, D.Z, b.Z], () => ({
+    let t = (0, d.cj)([F.Z, k.default, g.Z, M.Z, b.Z], () => ({
             consentRequired: F.Z.getAuthenticationConsentRequired(),
             registering: k.default.getRegisterStatus() === J.$ib.REGISTERING,
             apiErrors: k.default.getErrors(),
             authenticated: k.default.isAuthenticated(),
             isUnderage: g.Z.isUnderageAnonymous(),
-            country: D.Z.getCountryCode(),
+            country: M.Z.getCountryCode(),
             hasLoggedInAccounts: b.Z.getHasLoggedInAccounts()
         })),
-        n = (0, y.F4)(),
+        n = (0, U.F4)(),
         s = (0, d.e7)([P.Z], () => P.Z.registrationUsernameSuggestion()),
         [a, l] = i.useState(X.EW.FULL);
     return (
@@ -752,7 +752,7 @@ function eo(e) {
 function ec(e) {
     let t,
         { username: n, suggestion: s, globalName: i, livecheckEnabled: a, isUsernameFocused: l, onClickSuggestion: o } = e,
-        u = (0, U.a)(n, a, !0),
+        u = (0, y.a)(n, a, !0),
         d = a && n.length > 0;
     return (
         (t = d

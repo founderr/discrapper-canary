@@ -20,9 +20,9 @@ var a = n(120356),
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: a } = e,
         { promotion: A } = (0, R.mq)(),
-        f = (0, i.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription());
+        p = (0, i.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription());
     if (!(0, T.Vi)()) return null;
-    let p = new Date(A.endDate);
+    let f = new Date(A.endDate);
     return (0, s.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, s.jsxs)('div', {
@@ -44,12 +44,12 @@ t.Z = function (e) {
                                 (0, s.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == f || null == (0, E.he)(f) ? m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+                                    children: null == p || null == (0, E.he)(p) ? m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : m.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     className: C.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, s.jsx)(u.Z, { endDate: p })
+                                    children: (0, s.jsx)(u.Z, { endDate: f })
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/medium',

@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(873546),
     d = n(106351),
     h = n(442837),
-    p = n(481060),
-    m = n(430742),
+    m = n(481060),
+    p = n(430742),
     _ = n(904245),
     f = n(144144),
     E = n(166459),
@@ -63,8 +63,8 @@ var i = n(200651),
     eu = n(247944),
     ed = n(623292),
     eh = n(807092),
-    ep = n(268350),
-    em = n(155409),
+    em = n(268350),
+    ep = n(155409),
     e_ = n(314897),
     ef = n(433355),
     eE = n(703558),
@@ -172,7 +172,7 @@ class eq extends s.PureComponent {
         }
     }
     render() {
-        let { channel: e, focused: t, onBlur: n, onFocus: s, onResize: a, highlighted: l, pendingReply: r, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: m, onCommandSentinelTyped: _ } = this.props,
+        let { channel: e, focused: t, onBlur: n, onFocus: s, onResize: a, highlighted: l, pendingReply: r, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: p, onCommandSentinelTyped: _ } = this.props,
             { contentWarningProps: f } = this.state,
             E = (0, i.jsx)(F.Z, {
                 textValue: this.state.textValue,
@@ -197,7 +197,7 @@ class eq extends s.PureComponent {
                 setEditorRef: (e) => (this.editorRef = e),
                 onCommandSentinelTyped: _
             });
-        return (0, i.jsx)(p.Popout, {
+        return (0, i.jsx)(m.Popout, {
             position: 'top',
             onRequestClose: () => {
                 var e;
@@ -215,8 +215,8 @@ class eq extends s.PureComponent {
                 );
             },
             children: () =>
-                m
-                    ? (0, i.jsx)(p.Shaker, {
+                p
+                    ? (0, i.jsx)(m.Shaker, {
                           isShaking: h > 0,
                           intensity: h,
                           className: eF.shaker,
@@ -299,7 +299,7 @@ class eq extends s.PureComponent {
                     keyboardModeEnabled: i,
                     channel: { id: s }
                 } = this.props;
-                m.Z.changeDraft(s, t, eE.d.ChannelMessage);
+                p.Z.changeDraft(s, t, eE.d.ChannelMessage);
                 let a = '' !== t && n !== this.state.richValue,
                     l = a && !eY.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
                 (this.isFirstChange = !1),
@@ -397,12 +397,12 @@ class eq extends s.PureComponent {
                         isEdit: !1
                     });
                     null != h && (null != h.content && (t = h.content), null != h.tts && (d = h.tts));
-                    let p = ei.ZP.parse(o, t);
-                    p.tts = p.tts || d;
-                    let m = _.Z.getSendMessageOptionsForReply(c);
+                    let m = ei.ZP.parse(o, t);
+                    m.tts = m.tts || d;
+                    let p = _.Z.getSendMessageOptionsForReply(c);
                     if (l)
                         return (
-                            _.Z.sendMessage(o.id, p, void 0, m),
+                            _.Z.sendMessage(o.id, m, void 0, p),
                             (0, ed.A6)(o.id),
                             {
                                 shouldClear: !1,
@@ -423,9 +423,9 @@ class eq extends s.PureComponent {
                             channelId: o.id,
                             uploads: n,
                             draftType: eE.d.ChannelMessage,
-                            parsedMessage: p,
+                            parsedMessage: m,
                             options: {
-                                ...m,
+                                ...p,
                                 stickerIds: i
                             }
                         }),
@@ -433,16 +433,16 @@ class eq extends s.PureComponent {
                     } else
                         null != i && i.length > 0
                             ? '' !== t
-                                ? _.Z.sendMessage(o.id, p, void 0, {
-                                      ...m,
+                                ? _.Z.sendMessage(o.id, m, void 0, {
+                                      ...p,
                                       stickerIds: i
                                   })
-                                : _.Z.sendStickers(o.id, i, t, m, p.tts)
-                            : _.Z.sendMessage(o.id, p, void 0, m);
+                                : _.Z.sendStickers(o.id, i, t, p, m.tts)
+                            : _.Z.sendMessage(o.id, m, void 0, p);
                     return (
                         this.setState((0, H.H2)()),
                         (0, ed.A6)(o.id),
-                        (0, ep.qB)(o.id, u.drafts.type),
+                        (0, em.qB)(o.id, u.drafts.type),
                         {
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -498,7 +498,7 @@ class eX extends s.PureComponent {
     render() {
         var e;
         let t;
-        let { channel: n, guild: s, keyboardModeEnabled: a, hasModalOpen: r, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: h, showQuarantinedUserBanner: m, filterAfterTimestamp: _, communicationDisabledUntil: f, shakeIntensity: E, poggermodeEnabled: g, isSelectedResourceChannel: T, showAutomodUserProfileChatBlocker: x, showAppDMsUI: S, isInitialLoading: v, entryPointCommandButtonRef: N, isFailedAppDMLoad: A } = this.props,
+        let { channel: n, guild: s, keyboardModeEnabled: a, hasModalOpen: r, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: h, showQuarantinedUserBanner: p, filterAfterTimestamp: _, communicationDisabledUntil: f, shakeIntensity: E, poggermodeEnabled: g, isSelectedResourceChannel: T, showAutomodUserProfileChatBlocker: x, showAppDMsUI: S, isInitialLoading: v, entryPointCommandButtonRef: N, isFailedAppDMLoad: A } = this.props,
             { textAreaFocused: Z, textAreaHighlighted: M } = this.state,
             b = c === B.I.SIDEBAR;
         t = b && n.type === eG.d4z.GUILD_VOICE ? eV.Z.Messages.TEXT_IN_VOICE_A11Y_LABEL : b && n.type === eG.d4z.GUILD_STAGE_VOICE ? eV.Z.Messages.TEXT_IN_STAGE_A11Y_LABEL : d.T.THREADS.has(n.type) ? eV.Z.Messages.THREAD_A11Y_LABEL : eV.Z.Messages.CHANNEL_A11Y_LABEL;
@@ -509,7 +509,7 @@ class eX extends s.PureComponent {
             L = (0, i.jsxs)('div', {
                 className: eF.channelBottomBarArea,
                 children: [
-                    (0, i.jsx)(em.Z, {
+                    (0, i.jsx)(ep.Z, {
                         tutorialId: 'writing-messages',
                         position: 'left',
                         offsetX: 75,
@@ -589,21 +589,21 @@ class eX extends s.PureComponent {
                                             guild: s,
                                             narrow: b
                                         }),
-                                        (0, i.jsxs)(p.HeadingLevel, {
-                                            component: (0, i.jsx)(p.HiddenVisually, { children: (0, i.jsx)(p.H, { children: eV.Z.Messages.CHANNEL_CHAT_HEADING.format({ channelName: n.name }) }) }),
+                                        (0, i.jsxs)(m.HeadingLevel, {
+                                            component: (0, i.jsx)(m.HiddenVisually, { children: (0, i.jsx)(m.H, { children: eV.Z.Messages.CHANNEL_CHAT_HEADING.format({ channelName: n.name }) }) }),
                                             children: [
                                                 (0, i.jsx)(es.Z, {
                                                     channel: n,
                                                     forceCozy: T,
                                                     filterAfterTimestamp: _,
-                                                    showingQuarantineBanner: m
+                                                    showingQuarantineBanner: p
                                                 }),
                                                 T
                                                     ? null
                                                     : null !==
                                                             (e = this.renderMessageBanner({
                                                                 channel: n,
-                                                                showQuarantinedUserBanner: m,
+                                                                showQuarantinedUserBanner: p,
                                                                 guild: s,
                                                                 communicationDisabledUntil: f,
                                                                 showAutomodUserProfileChatBlocker: x
@@ -734,10 +734,10 @@ t.Z = s.memo(function (e) {
         c = (0, eu.S)(ev.default.getCurrentUser(), t),
         [u] = (0, J.AB)(null == n ? void 0 : n.id),
         d = (0, K.Ux)(null == n ? void 0 : n.id),
-        m = (0, h.e7)([ev.default], () => ev.default.getCurrentUser()),
+        p = (0, h.e7)([ev.default], () => ev.default.getCurrentUser()),
         _ = (0, h.e7)([eC.ZP], () => {
             var e, t, i;
-            return null != m && null !== (i = null === (e = eC.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
+            return null != p && null !== (i = null === (e = eC.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == p ? void 0 : p.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
         }),
         f = (0, h.e7)([el.Z], () => el.Z.isEnabled()),
         E = (0, ec.Z)(t.id),
@@ -756,7 +756,7 @@ t.Z = s.memo(function (e) {
     return (0, i.jsx)(eX, {
         channel: t,
         isEditing: null != (0, h.e7)([eg.Z], () => eg.Z.getEditingMessageId(t.id)),
-        hasModalOpen: (0, p.useModalsStore)(p.hasAnyModalOpenSelector),
+        hasModalOpen: (0, m.useModalsStore)(m.hasAnyModalOpenSelector),
         guild: n,
         keyboardModeEnabled: (0, h.e7)([S.Z], () => S.Z.keyboardModeEnabled),
         pendingReply: (0, h.e7)([eh.Z], () => eh.Z.getPendingReply(t.id)),

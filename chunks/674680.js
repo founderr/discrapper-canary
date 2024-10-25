@@ -33,11 +33,11 @@ function T(e) {
         { name: N, rarity: m } = R,
         { color: C } = (0, c.F7)(m),
         A = (0, a.wj)(I) ? E : u,
-        f = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        p = g.size - g.stroke,
+        p = (g.size - g.offset - 2 * g.stroke) * 0.8,
+        f = g.size - g.stroke,
         M = {
-            width: 0.4 * f,
-            height: 0.4 * f
+            width: 0.4 * p,
+            height: 0.4 * p
         },
         S = {
             width: M.width + 1,
@@ -49,8 +49,8 @@ function T(e) {
     return (0, s.jsxs)('div', {
         className: d.container,
         style: {
-            width: p,
-            height: p,
+            width: f,
+            height: f,
             padding: g.stroke
         },
         'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
@@ -60,8 +60,8 @@ function T(e) {
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
                     color: _ ? C : (0, l.Lq)(A.trophy),
-                    width: f,
-                    height: f
+                    width: p,
+                    height: p
                 })
             }),
             !_ &&

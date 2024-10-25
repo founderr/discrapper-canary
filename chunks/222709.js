@@ -17,7 +17,7 @@ t.Z = (e) => {
         m = a.useCallback(() => {
             l.Z.dismissPublishBump(n);
         }, [n]),
-        T = a.useCallback(() => {
+        f = a.useCallback(() => {
             l.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return E
@@ -60,7 +60,7 @@ t.Z = (e) => {
                       className: _.hidePermanently,
                       variant: 'text-sm/normal',
                       children: (0, i.jsx)(r.Clickable, {
-                          onClick: T,
+                          onClick: f,
                           children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
                       })
                   })

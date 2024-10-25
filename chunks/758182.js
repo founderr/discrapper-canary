@@ -25,8 +25,8 @@ var o = n(149765),
     m = n(632093),
     C = n(347994),
     A = n(591526),
-    f = n(261875),
-    p = n(710845),
+    p = n(261875),
+    f = n(710845),
     M = n(38618),
     S = n(218543),
     h = n(314897),
@@ -37,14 +37,14 @@ var o = n(149765),
     v = n(38217),
     L = n(864631),
     Z = n(981631);
-let D = new p.Z('CacheStore'),
+let D = new f.Z('CacheStore'),
     U = !1,
     B = !1,
     j = 'initializing',
     G = 0,
     w = !1,
-    H = !1,
-    y = !1;
+    y = !1,
+    H = !1;
 function k(e) {
     D.log('Clearing cache store'), (G = Date.now()), _.K.remove(Z.FsG), _.K.remove(Z.ihW), _.K.remove(Z.O42), (j = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (B = !0);
 }
@@ -90,9 +90,9 @@ async function V(e, t, n) {
         I = S.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
         R = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => A.Z.getAsync(e, null)) : Promise.resolve([]),
         g = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => C.Z.getAll(e)),
-        f = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => N.Z.getAll(e)),
-        p = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => m.Z.getAll(e)),
-        [[h, O], P, v, Z, U, B, j] = await Promise.all([u, T, I, R, g, f, p]),
+        p = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => N.Z.getAll(e)),
+        f = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => m.Z.getAll(e)),
+        [[h, O], P, v, Z, U, B, j] = await Promise.all([u, T, I, R, g, p, f]),
         G = performance.now() - E;
     if ((D.verbose('cache loaded in '.concat(G, 'ms (channel_history ').concat(h, 'ms)')), null == O)) return (0, L.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
@@ -246,7 +246,7 @@ async function z(e, t, n, s) {
                 d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
-        if (H) {
+        if (y) {
             (0, L.Z)('already_connected'), D.log('Skipping lazy cache; already connected.'), d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
@@ -359,7 +359,7 @@ class J extends (s = c.ZP.Store) {
         return G;
     }
     canWriteCaches(e) {
-        return (0, O.$8)() ? (B ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!y || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
+        return (0, O.$8)() ? (B ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!H || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, P.h)(t);
@@ -374,7 +374,7 @@ class J extends (s = c.ZP.Store) {
         }
         try {
             let t = h.default.getId(),
-                s = f.Z.carefullyOpenDatabase(t),
+                s = p.Z.carefullyOpenDatabase(t),
                 [a, r, i] = await S.Z.loadMiniCache.measureAsync(() => V(s, t, e));
             a ? (n(), await z(s, t, r, i)) : (n(), await (Q(() => d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' })), Promise.resolve()));
         } catch (e) {
@@ -405,11 +405,11 @@ class J extends (s = c.ZP.Store) {
         U
             ? {
                   CONNECTION_OPEN: function () {
-                      return (H = !0), (y = !0), !1;
+                      return (y = !0), (H = !0), !1;
                   },
                   LOGOUT: k,
                   CONNECTION_CLOSED: function () {
-                      return (H = !1), (y = !0), !1;
+                      return (y = !1), (H = !0), !1;
                   },
                   CACHE_LOADED: function () {
                       w = !0;

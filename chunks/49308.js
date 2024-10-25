@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(372654),
     I = n(987209),
     m = n(598),
-    T = n(179118),
-    f = n(614277),
+    f = n(179118),
+    T = n(614277),
     h = n(698708);
 function N(e) {
     let { handleClose: t, confettiCanvas: n, hideConfetti: a = !1, analyticsLocations: s } = e,
@@ -27,7 +27,7 @@ function N(e) {
     let I = o[u];
     return (r()(null != I, 'Expected sku'), null == E)
         ? null
-        : (0, i.jsxs)(f.C3, {
+        : (0, i.jsxs)(T.C3, {
               children: [
                   (0, i.jsx)(h.Z, {}),
                   (0, i.jsx)(_.CollectiblesCollectedModalInner, {
@@ -41,7 +41,7 @@ function N(e) {
           });
 }
 function p(e) {
-    let { isGift: t, giftCode: n, selectedGiftStyle: s, hasSentMessage: r, giftRecipient: _, giftMessageError: f, isSendingMessage: h } = (0, I.wD)(),
+    let { isGift: t, giftCode: n, selectedGiftStyle: s, hasSentMessage: r, giftRecipient: _, giftMessageError: T, isSendingMessage: h } = (0, I.wD)(),
         p = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         C = a.useRef(null),
         { selectedSkuId: g } = (0, m.usePaymentContext)(),
@@ -51,13 +51,13 @@ function p(e) {
         ? (0, i.jsxs)('div', {
               ref: C,
               children: [
-                  (0, i.jsx)(T.Z, {
+                  (0, i.jsx)(f.Z, {
                       giftCode: n,
                       onClose: e.handleClose,
                       selectedGiftStyle: s,
                       hasSentMessage: r,
                       giftRecipient: _,
-                      giftMessageError: f,
+                      giftMessageError: T,
                       isSendingMessage: h
                   }),
                   !e.hideConfetti &&

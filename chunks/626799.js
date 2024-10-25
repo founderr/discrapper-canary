@@ -18,8 +18,8 @@ var i,
     E = n(914602),
     I = n(568836),
     m = n(730749),
-    T = n(112724),
-    f = n(812206),
+    f = n(112724),
+    T = n(812206),
     h = n(283595),
     N = n(558314),
     p = n(55563),
@@ -174,7 +174,7 @@ let O = [p.Z, N.Z, h.Z, C.Z];
 function M(e) {
     let { skuId: t } = e,
         n = p.Z.get(t),
-        i = null != n ? f.Z.getApplication(n.applicationId) : null;
+        i = null != n ? T.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
@@ -184,6 +184,6 @@ function M(e) {
         libraryApplication: null != n ? h.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, T.Z)((0, m.Z)(v));
+let L = (0, f.Z)((0, m.Z)(v));
 t.Z = l.ZP.connectStores(O, M)(L);
 let Z = (0, m.Z)(l.ZP.connectStores(O, M)(v));

@@ -25,8 +25,8 @@ var s,
     m = n(872532),
     C = n(91342),
     A = n(181708),
-    f = n(821721),
-    p = n(158897),
+    p = n(821721),
+    f = n(158897),
     M = n(290650),
     S = n(751125),
     h = n(904505),
@@ -89,7 +89,7 @@ t.ZP = (e) => {
                 description: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_SUBTITLE,
                 descriptionCta: E.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
                 previewImage: g,
-                videoUrl: s ? f.Z : p.Z
+                videoUrl: s ? p.Z : f.Z
             }
         },
         u = {

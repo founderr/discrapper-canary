@@ -21,8 +21,8 @@ let u = _.Z.Millis.SECOND,
 function g(e) {
     let { text: t, copyValue: n, children: _, onCopy: E, 'aria-label': g, delay: N = I } = e,
         [m, C] = a.useState(0),
-        [A, f] = a.useState(!1),
-        [p, M] = a.useState(!1),
+        [A, p] = a.useState(!1),
+        [f, M] = a.useState(!1),
         [S] = a.useState(() => new i.V7()),
         [h] = a.useState(() => new i.V7());
     if (
@@ -39,7 +39,7 @@ function g(e) {
         b = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         O = A ? b : l.TooltipColors.PRIMARY,
         P = () => {
-            null == E || E(), (0, c.JG)(n), o.default.track(d.rMx.TEXT_COPIED), !p && C(m + 1), M(!0), f(!0), S.start(u, () => M(!1)), h.start(T, () => C(0));
+            null == E || E(), (0, c.JG)(n), o.default.track(d.rMx.TEXT_COPIED), !f && C(m + 1), M(!0), p(!0), S.start(u, () => M(!1)), h.start(T, () => C(0));
         };
     return (0, s.jsx)(l.Tooltip, {
         text: (() => {
@@ -55,9 +55,9 @@ function g(e) {
         delay: N,
         'aria-label': g,
         color: O,
-        forceOpen: p,
+        forceOpen: f,
         onAnimationRest: (e, t) => {
-            !p && A && t.phase === d.UkZ.LEAVE && f(!1);
+            !f && A && t.phase === d.UkZ.LEAVE && p(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...s } = e;

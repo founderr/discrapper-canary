@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(906732),
     d = n(580552),
     h = n(688465),
-    p = n(680295),
-    m = n(5192),
+    m = n(680295),
+    p = n(5192),
     _ = n(785717),
     f = n(221292),
     E = n(687158),
@@ -96,7 +96,7 @@ function j(e) {
                                     (0, i.jsx)(N.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL,
-                                        nickname: m.ZP.getName(null, n.id, t),
+                                        nickname: p.ZP.getName(null, n.id, t),
                                         pronouns: null == O ? void 0 : O.pronouns,
                                         onOpenProfile: j ? void 0 : B,
                                         tags: (0, i.jsx)(C.Z, {
@@ -148,7 +148,7 @@ function j(e) {
                             })
                         }),
                     (null == O ? void 0 : O.profileEffectId) != null &&
-                        (0, i.jsx)(p.Z, {
+                        (0, i.jsx)(m.Z, {
                             profileEffectId: null == O ? void 0 : O.profileEffectId,
                             isHovering: w
                         })

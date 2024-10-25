@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return f;
     }
 });
 var i = n(200651);
@@ -55,19 +55,19 @@ function m(e) {
         ]
     });
 }
-function T(e) {
+function f(e) {
     var t, a, s;
     let { channel: r, message: d, compact: I } = e,
-        T = (0, l.ZP)(d),
-        f = (0, o.l)({
+        f = (0, l.ZP)(d),
+        T = (0, o.l)({
             user: d.author,
             channelId: r.id,
             guildId: r.guild_id,
             messageId: d.id
-        })(T),
+        })(f),
         h = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-            username: T.nick,
-            usernameHook: f,
+            username: f.nick,
+            usernameHook: T,
             productName: null !== (s = null === (a = d.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== s ? s : '',
             handleProductListingClick: () => {
                 var e, t, n;
@@ -83,7 +83,7 @@ function T(e) {
                 children: h
             }),
             (0, i.jsx)(m, {
-                username: T.nick,
+                username: f.nick,
                 guildId: r.guild_id,
                 user: d.author
             })

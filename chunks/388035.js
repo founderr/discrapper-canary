@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return T;
+        return f;
     }
 }),
     n(47120);
@@ -39,7 +39,7 @@ let E = a.z.FOR_LATER_POPOUT_COACHMARK,
             markAsDismissed: e,
             caretPosition: l.DF.TOP_RIGHT
         });
-function T(e) {
+function f(e) {
     let { location: t, children: n } = e,
         { enabled: a, inInbox: l } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
         [c, u] = (0, r.US)(a && t === (l ? 'inbox-button' : 'bookmarks-button') ? [E] : [], void 0);

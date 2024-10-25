@@ -17,27 +17,27 @@ var a = n(657707),
 function E(e) {
     let { message: t, channel: n, author: E, compact: I } = e,
         { nick: m } = (0, l.Sw)(E, n),
-        T = (0, c.l)({
+        f = (0, c.l)({
             user: E,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0
         })(),
-        f = (0, s.q)(t.applicationId);
-    if (null == f) return null;
+        T = (0, s.q)(t.applicationId);
+    if (null == T) return null;
     let h = d.Z.Messages.SYSTEM_MESSAGE_IN_GAME_MESSAGE_NUX.format({
         username: m,
-        usernameHook: T,
-        gameName: f.name,
+        usernameHook: f,
+        gameName: T.name,
         gameIconHook: (e) =>
             (0, i.jsx)(o.j, {
-                application: f,
+                application: T,
                 timestamp: t.timestamp,
                 children: (0, i.jsxs)('span', {
                     className: _.gameContainer,
                     children: [
                         (0, i.jsx)(r.Z, {
-                            game: f,
+                            game: T,
                             size: r.Z.Sizes.XXSMALL,
                             className: _.inlineIcon
                         }),

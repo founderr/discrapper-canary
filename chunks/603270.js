@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(592125),
     I = n(509545),
     m = n(238),
-    T = n(55563),
-    f = n(551428),
+    f = n(55563),
+    T = n(551428),
     h = n(626135),
     N = n(572004),
     p = n(601911),
@@ -37,7 +37,7 @@ var i = n(200651),
 let M = b(function (e) {
         let { appId: t, message: o } = e,
             d = (0, S.R)(t),
-            [_, I, T, f, N, g, A] = (0, s.Wu)(
+            [_, I, f, T, N, g, A] = (0, s.Wu)(
                 [c.Z, m.Z, E.Z],
                 () => {
                     var e;
@@ -49,10 +49,10 @@ let M = b(function (e) {
                 [t, o.channel_id]
             );
         a.useEffect(() => {
-            N === m.N.NONE && (0, l.k)(t), null == _ && !I && !T && (0, u.UM)(t);
-        }, [_, t, T, I, N]);
-        let M = f.subscriptions.length,
-            L = f.otps.length,
+            N === m.N.NONE && (0, l.k)(t), null == _ && !I && !f && (0, u.UM)(t);
+        }, [_, t, f, I, N]);
+        let M = T.subscriptions.length,
+            L = T.otps.length,
             b = a.useMemo(
                 () =>
                     M > 0 && L > 0
@@ -113,16 +113,16 @@ let M = b(function (e) {
         var t, l;
         let { skuId: u, message: m } = e,
             [N, g, M, L, b, P, D, j] = (0, s.Wu)(
-                [T.Z, f.Z, I.Z, E.Z, c.Z],
+                [f.Z, T.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
                     let a = null === (e = E.Z.getBasicChannel(m.channel_id)) || void 0 === e ? void 0 : e.guild_id,
-                        s = T.Z.get(u),
+                        s = f.Z.get(u),
                         r = null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == s ? void 0 : s.applicationId,
                         l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
                         o = null != l ? (0, p.y)(l, 45) : void 0,
                         d = I.Z.getForSKU(u);
-                    return [s, l, f.Z.getForSKU(u), T.Z.isFetching(u), T.Z.didFetchingSkuFail(u), d.length > 0 ? d[0] : null, a, o];
+                    return [s, l, T.Z.getForSKU(u), f.Z.isFetching(u), f.Z.didFetchingSkuFail(u), d.length > 0 ? d[0] : null, a, o];
                 },
                 [m.channel_id, u]
             ),
@@ -133,7 +133,7 @@ let M = b(function (e) {
             a.useEffect(() => {
                 if ((null == g ? void 0 : g.id) != null) (0, o.oJ)(null == g ? void 0 : g.id);
             }, [null == g ? void 0 : g.id]);
-        let y = (0, s.e7)([T.Z], () => (null != u ? T.Z.getParentSKU(u) : void 0), [u]),
+        let y = (0, s.e7)([f.Z], () => (null != u ? f.Z.getParentSKU(u) : void 0), [u]),
             { openModal: B, cannotOpenReason: k } = (0, _.ZP)({
                 skuId: u,
                 subscribeForGuild: D

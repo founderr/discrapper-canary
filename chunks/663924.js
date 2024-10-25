@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(835473),
     d = n(314910),
     h = n(585483),
-    p = n(5967),
-    m = n(499254),
+    m = n(5967),
+    p = n(499254),
     _ = n(541099),
     f = n(827498),
     E = n(695676),
@@ -21,11 +21,11 @@ var i = n(200651),
     x = n(767346);
 let S = { height: C.lv };
 function v() {
-    m.yT(f.ti.DISMISSED);
+    p.yT(f.ti.DISMISSED);
 }
 function N(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: d } = e,
-        m = s.useRef(null),
+        p = s.useRef(null),
         { renderWindow: T, windowDispatch: x } = s.useContext(c.ZP),
         S = null != d,
         N = (0, r.Jw)(null != d ? d : ''),
@@ -36,7 +36,7 @@ function N(e) {
                 let { target: i } = e;
                 if ((0, a.k)(i) && null != i.closest('.' + C.Jh)) return;
                 for (; (0, a.k)(i); ) {
-                    if (i === m.current) return;
+                    if (i === p.current) return;
                     if (i.classList.contains(C.t4)) {
                         e.preventDefault();
                         return;
@@ -45,7 +45,7 @@ function N(e) {
                     i = i.parentNode;
                 }
                 v();
-                let s = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                let s = null === (t = (0, m.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == s || 'BODY' === s.tagName) && h.S.dispatchToLastSubscribed(I.CkL.TEXTAREA_FOCUS);
             },
             [n, N, S]
@@ -61,7 +61,7 @@ function N(e) {
         ),
         [A, T, x]
     ),
-        (0, o.useFocusLock)(m),
+        (0, o.useFocusLock)(p),
         s.useEffect(() => {
             ((!S && (0, r.$s)()) || (S && !N)) && v();
         }, [N, S]);
@@ -81,7 +81,7 @@ function N(e) {
             );
         }, [Z, M]);
     return (0, i.jsx)(g.Z, {
-        ref: m,
+        ref: p,
         channel: t,
         entrypoint: f._b.TEXT,
         initHistory: b

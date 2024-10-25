@@ -23,8 +23,8 @@ var i = n(399606),
     m = n(78839),
     C = n(626135),
     A = n(424218),
-    f = n(63063),
-    p = n(74538),
+    p = n(63063),
+    f = n(74538),
     M = n(860489),
     S = n(471309),
     h = n(494127),
@@ -41,8 +41,8 @@ var i = n(399606),
     j = n(332325),
     G = n(689938),
     w = n(977341),
-    H = n(660372),
-    y = n(926433),
+    y = n(660372),
+    H = n(926433),
     k = n(302036),
     F = n(994554),
     V = n(704565),
@@ -76,15 +76,15 @@ t.Z = () => {
         t = (0, _.ZP)(),
         s = (0, A.BU)(D.Uq / 1024, { useKibibytes: !0 }),
         a = (0, i.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
-        eI = null != a ? p.ZP.getPremiumPlanItem(a) : null,
-        eR = null != eI ? p.ZP.getSkuIdForPlan(eI.planId) : null,
+        eI = null != a ? f.ZP.getPremiumPlanItem(a) : null,
+        eR = null != eI ? f.ZP.getSkuIdForPlan(eI.planId) : null,
         eg = eR === D.Si.TIER_2,
         eN = eR === D.Si.TIER_0,
         { flipped: em } = (0, h.JP)(),
         { flipped: eC } = (0, h.as)(),
         eA = (0, x.nY)({ showAnimations: !0 }),
-        ef = null != eA ? eA.initialPercentage : void 0,
-        ep = null != eA ? eA.percentage : void 0,
+        ep = null != eA ? eA.initialPercentage : void 0,
+        ef = null != eA ? eA.percentage : void 0,
         eM = (0, T.Z)(N.Z),
         eS = (0, b.Z)(),
         { fractionalState: eh } = (0, u.Z)(),
@@ -159,7 +159,7 @@ t.Z = () => {
                                 });
                             }
                           : () => {
-                                window.open(f.Z.getArticleURL(U.BhN.CLIPS), '_blank');
+                                window.open(p.Z.getArticleURL(U.BhN.CLIPS), '_blank');
                             },
                       perkImage: Q
                   }
@@ -394,7 +394,7 @@ t.Z = () => {
                 name: 'badge',
                 title: G.Z.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
                 subtitle: G.Z.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-                perkImage: H,
+                perkImage: y,
                 description: G.Z.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS,
                 imageOverlayText: eh === D.a$.FP_ONLY ? G.Z.Messages.NITRO_HOME_REQUIRES_SUBSCRIPTION : void 0
             },
@@ -418,7 +418,7 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: G.Z.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
                 subtitle: G.Z.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-                perkImage: (0, L.gx)(t, y, k),
+                perkImage: (0, L.gx)(t, H, k),
                 description: G.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
             },
             specialStickerAccess: {
@@ -456,7 +456,7 @@ t.Z = () => {
                 name: 'referralProgram',
                 title: G.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
                 subtitle: G.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
-                description: G.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: f.Z.getArticleURL(U.BhN.REFERRAL_PROGRAM) }),
+                description: G.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: p.Z.getArticleURL(U.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: G.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eg || void 0,
                 perkImage: er
@@ -477,8 +477,8 @@ t.Z = () => {
                 className: w.cardComponent,
                 children: (0, r.jsx)(O.Z, {
                     showAnimations: !0,
-                    percentage: ep,
-                    initialPercentage: ef
+                    percentage: ef,
+                    initialPercentage: ep
                 })
             });
         eL.freeBoost = {

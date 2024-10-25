@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(16829),
     d = n(430824),
     h = n(944486),
-    p = n(189432),
-    m = n(776767),
+    m = n(189432),
+    p = n(776767),
     _ = n(981631),
     f = n(689938),
     E = n(194898);
@@ -33,13 +33,13 @@ function g(e) {
         : (0, i.jsx)(l.FormItem, {
               title: f.Z.Messages.ACCOUNT,
               titleClassName: E.infoTitle,
-              children: (0, i.jsxs)(m.WM, {
+              children: (0, i.jsxs)(p.WM, {
                   children: [
-                      (0, i.jsx)(m._2, {
+                      (0, i.jsx)(p._2, {
                           icon: (0, i.jsx)(l.ShieldUserIcon, {
                               size: 'custom',
-                              width: m.Mn,
-                              height: m.Mn
+                              width: p.Mn,
+                              height: p.Mn
                           }),
                           name: (0, i.jsx)(l.Text, {
                               variant: 'text-sm/medium',
@@ -49,23 +49,23 @@ function g(e) {
                           description: g
                               ? (0, i.jsx)(l.CheckmarkLargeBoldIcon, {
                                     size: 'custom',
-                                    width: m.Mn,
-                                    height: m.Mn,
+                                    width: p.Mn,
+                                    height: p.Mn,
                                     color: l.tokens.colors.INFO_POSITIVE_FOREGROUND
                                 })
                               : (0, i.jsx)(l.XLargeBoldIcon, {
                                     size: 'custom',
-                                    width: m.Mn,
-                                    height: m.Mn,
+                                    width: p.Mn,
+                                    height: p.Mn,
                                     color: l.tokens.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
                       C !== c.qc.NO_GATE &&
-                          (0, i.jsx)(m._2, {
+                          (0, i.jsx)(p._2, {
                               icon: (0, i.jsx)(l.BookCheckIcon, {
                                   size: 'custom',
-                                  width: m.Mn,
-                                  height: m.Mn
+                                  width: p.Mn,
+                                  height: p.Mn
                               }),
                               name: (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/medium',
@@ -76,23 +76,23 @@ function g(e) {
                                   C === c.qc.AGREED
                                       ? (0, i.jsx)(l.CheckmarkLargeBoldIcon, {
                                             size: 'custom',
-                                            width: m.Mn,
-                                            height: m.Mn,
+                                            width: p.Mn,
+                                            height: p.Mn,
                                             color: l.tokens.colors.INFO_POSITIVE_FOREGROUND
                                         })
                                       : (0, i.jsx)(l.XLargeBoldIcon, {
                                             size: 'custom',
-                                            width: m.Mn,
-                                            height: m.Mn,
+                                            width: p.Mn,
+                                            height: p.Mn,
                                             color: l.tokens.colors.INFO_DANGER_FOREGROUND
                                         })
                           }),
-                      (0, i.jsx)(m._2, {
+                      (0, i.jsx)(p._2, {
                           icon: (0, i.jsx)(l.ClydeIcon, {
                               size: 'custom',
                               color: 'currentColor',
-                              width: m.Mn,
-                              height: m.Mn
+                              width: p.Mn,
+                              height: p.Mn
                           }),
                           name: (0, i.jsx)(l.Text, {
                               variant: 'text-sm/medium',
@@ -105,7 +105,7 @@ function g(e) {
                               children: I
                           })
                       }),
-                      (0, i.jsx)(m._2, {
+                      (0, i.jsx)(p._2, {
                           icon: (0, i.jsx)(r.Vj, {
                               guild: n,
                               size: r.Vj.Sizes.SMOL,
@@ -123,11 +123,11 @@ function g(e) {
                               children: T
                           })
                       }),
-                      (0, i.jsx)(m._2, {
+                      (0, i.jsx)(p._2, {
                           icon: (0, i.jsx)(l.GroupPlusIcon, {
                               size: 'custom',
-                              width: m.Mn,
-                              height: m.Mn
+                              width: p.Mn,
+                              height: p.Mn
                           }),
                           name: (0, i.jsx)(l.Text, {
                               variant: 'text-sm/medium',
@@ -143,7 +143,7 @@ function g(e) {
                                   showInviterAsFooter: !0,
                                   onClickInviter: (e) => {
                                       let n = h.Z.getChannelId();
-                                      (0, p.r)(t.guildId, e.id, null != n ? n : _.lds);
+                                      (0, m.r)(t.guildId, e.id, null != n ? n : _.lds);
                                   }
                               })
                           })

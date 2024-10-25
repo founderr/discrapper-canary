@@ -28,12 +28,12 @@ var s = n(200651),
     v = n(63063),
     b = n(782605),
     L = n(954824),
-    D = n(588705),
-    M = n(781428),
+    M = n(588705),
+    D = n(781428),
     P = n(423527),
     j = n(981631),
-    y = n(188785),
-    U = n(701476),
+    U = n(188785),
+    y = n(701476),
     G = n(436620),
     B = n(689938),
     k = n(113207);
@@ -93,7 +93,7 @@ class z extends r.PureComponent {
         }
         if ((n !== e.nativeAppState && n === j.kEZ.OPEN && this.track(j.rMx.INVITE_APP_INVOKED, !1), this.getMode() === V.REGISTER && s && !e.authenticated)) {
             let { channel: e } = t;
-            null != e && ((0, T.c)(U.M5.INVITE_UNCLAIMED), null != t.guild ? r(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(t, r));
+            null != e && ((0, T.c)(y.M5.INVITE_UNCLAIMED), null != t.guild ? r(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(t, r));
         }
     }
     getInviteKey() {
@@ -102,7 +102,7 @@ class z extends r.PureComponent {
     }
     getMode() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-        return y.a ? V.REGISTER : e.login ? V.LOGIN : V.REGISTER;
+        return U.a ? V.REGISTER : e.login ? V.LOGIN : V.REGISTER;
     }
     track(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -155,7 +155,7 @@ class z extends r.PureComponent {
         var e, t;
         return (0, s.jsxs)(g.ZP, {
             children: [
-                (0, s.jsx)(D.Z, {
+                (0, s.jsx)(M.Z, {
                     invite: this.props.invite,
                     error: null === (e = this.state.error) || void 0 === e ? void 0 : e.message
                 }),
@@ -194,7 +194,7 @@ class z extends r.PureComponent {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event
                 })
-              : (0, s.jsx)(D.Z, { invite: e });
+              : (0, s.jsx)(M.Z, { invite: e });
     }
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
@@ -234,7 +234,7 @@ class z extends r.PureComponent {
             case j.r2o.APP_NOT_OPENED:
                 return this.renderContinue();
             case j.r2o.RESOLVING:
-                return y.a ? this.renderSpinner(B.Z.Messages.DEFAULT_INPUT_PLACEHOLDER) : this.renderSpinner(B.Z.Messages.APP_OPENING);
+                return U.a ? this.renderSpinner(B.Z.Messages.DEFAULT_INPUT_PLACEHOLDER) : this.renderSpinner(B.Z.Messages.APP_OPENING);
             case j.r2o.APP_OPENING:
                 return this.renderSpinner(B.Z.Messages.APP_OPENING);
             case j.r2o.RESOLVED:
@@ -242,7 +242,7 @@ class z extends r.PureComponent {
                 if (n && (0, Z.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(I.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
                 if (n || !G.KO) return this.renderAuthenticatedOrDownload();
                 else if (this.getMode() === V.LOGIN)
-                    return (0, s.jsx)(M.Z, {
+                    return (0, s.jsx)(D.Z, {
                         invite: e,
                         transitionTo: r,
                         location: i

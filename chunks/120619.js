@@ -9,8 +9,8 @@ var i,
     u = n(215023);
 let d = new Map(),
     h = new Set(),
-    p = new Set(),
     m = new Set(),
+    p = new Set(),
     _ = new Map(),
     f = !1;
 class E extends (i = r.ZP.Store) {
@@ -21,7 +21,7 @@ class E extends (i = r.ZP.Store) {
         return h.has(e);
     }
     getErrored(e) {
-        return m.has(e);
+        return p.has(e);
     }
     getEntitlement(e) {
         return _.get(e);
@@ -30,7 +30,7 @@ class E extends (i = r.ZP.Store) {
         return _.has(e);
     }
     isEntitlementFetching(e) {
-        return p.has(e);
+        return m.has(e);
     }
     getPlayedAnimation() {
         return f;
@@ -53,13 +53,13 @@ class E extends (i = r.ZP.Store) {
             d.set(e.skuId, e.price), h.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            h.delete(e.skuId), m.add(e.skuId);
+            h.delete(e.skuId), p.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
-            m.delete(e.skuId);
+            p.delete(e.skuId);
         },
         CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: (e) => {
-            p.delete(e.skuId), _.set(e.skuId, e.entitlement);
+            m.delete(e.skuId), _.set(e.skuId, e.entitlement);
         },
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
@@ -73,9 +73,9 @@ class E extends (i = r.ZP.Store) {
             f = !1;
         },
         CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
-            m.add(e.skuId), p.delete(e.skuId);
+            p.add(e.skuId), m.delete(e.skuId);
         },
         CONSUMABLES_ENTITLEMENT_FETCH_STARTED: (e) => {
-            p.add(e.skuId);
+            m.add(e.skuId);
         }
     }));

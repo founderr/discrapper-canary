@@ -20,8 +20,8 @@ var a = n(120356),
     E = n(817460),
     I = n(584825),
     m = n(570533),
-    T = n(629262),
-    f = n(575460),
+    f = n(629262),
+    T = n(575460),
     h = n(293810),
     N = n(689938),
     p = n(265746);
@@ -77,7 +77,7 @@ let C = (e) => {
             s = (0, r.e7)([d.Z], () => d.Z.getGuild(a), [a]),
             c = (0, m.Z)(a).filter((e) => e.roles.includes(n.role_id)),
             u = n.role_benefits.benefits.filter(E.rC).slice(0, null === c.length ? 4 : 3),
-            _ = (0, T.Z)(u).slice(0, null === c.length ? 4 : 3);
+            _ = (0, f.Z)(u).slice(0, null === c.length ? 4 : 3);
         return (0, i.jsxs)('div', {
             className: p.confirmationContainer,
             children: [
@@ -106,7 +106,7 @@ let C = (e) => {
                                 className: p.confirmationBenefits,
                                 children: _.map((e) =>
                                     (0, i.jsx)(
-                                        f.Z,
+                                        T.Z,
                                         {
                                             benefit: e,
                                             guildId: a,

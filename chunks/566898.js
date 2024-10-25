@@ -18,7 +18,7 @@ n.d(t, {
         return f;
     },
     pk: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
@@ -48,9 +48,9 @@ function h(e) {
         }
     });
 }
-function p(e) {
+function m(e) {
     let t,
-        { groupStart: n = !1, compact: s = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: p, className: m, style: _ } = e,
+        { groupStart: n = !1, compact: s = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: m, className: p, style: _ } = e,
         f = s ? 50 : r().random(40, 50);
     return (
         !s && n
@@ -61,7 +61,7 @@ function p(e) {
                           className: c.header,
                           children: (0, i.jsx)(h, {
                               width: u,
-                              opacity: p,
+                              opacity: m,
                               className: c.__invalid_username
                           })
                       })
@@ -82,14 +82,14 @@ function p(e) {
                           className: c.header,
                           children: (0, i.jsx)(h, {
                               width: u,
-                              opacity: p
+                              opacity: m
                           })
                       })
                   ]
               })),
         (0, i.jsxs)('div', {
             'aria-hidden': !0,
-            className: a()(m, {
+            className: a()(p, {
                 [c.wrapper]: !0,
                 [c.compact]: s,
                 [c.cozy]: !s
@@ -133,7 +133,7 @@ function p(e) {
         })
     );
 }
-let m = 44,
+let p = 44,
     _ = 22,
     f = 26,
     E = 26,
@@ -148,7 +148,7 @@ function C(e) {
             .fill(null)
             .map((e, t) =>
                 (0, i.jsx)(
-                    p,
+                    m,
                     {
                         compact: s,
                         className: l,

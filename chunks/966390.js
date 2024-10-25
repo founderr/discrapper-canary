@@ -44,7 +44,7 @@ async function S(e) {
     let [w, k] = (0, R.Z)(y.content);
     w && ((y.content = k), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let U = null !== (t = Z.nonce) && void 0 !== t ? t : (0, g.r)(),
-        F = (0, p.ZP)({
+        H = (0, p.ZP)({
             channelId: _,
             content: y.content,
             tts: null !== (a = null == G ? void 0 : G.tts) && void 0 !== a && a,
@@ -58,7 +58,7 @@ async function S(e) {
         ((y.nonce = U),
         j.on('start', (e) => {
             (u = (0, A.e5)({
-                ...F,
+                ...H,
                 id: e.id
             })),
                 r.Z.dispatch({

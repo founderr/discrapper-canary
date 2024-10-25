@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(626135),
     I = n(528011),
     m = n(666657),
-    T = n(533244),
-    f = n(981631),
+    f = n(533244),
+    T = n(981631),
     h = n(176505),
     N = n(689938),
     p = n(900547);
@@ -29,13 +29,13 @@ function C(e) {
         x = null != S ? S : null,
         R = (0, s.e7)([u.Z], () => (null != x ? u.Z.getGuild(x) : null), [x]),
         { shouldShowIncidentActions: v, incidentData: O, isUnderLockdown: M } = (0, I.mI)(x),
-        L = (0, o.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : f.lds),
+        L = (0, o.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : T.lds),
         Z = a.useCallback(() => null != R && (0, c._X)(R.id), [R]);
     if (null == R || null == O || !v) return null;
     let b = (e) => {
             if (e && L && A !== h.oC.MEMBER_SAFETY && Z()) {
-                E.default.track(f.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                    notice_type: f.kVF.GUILD_RAID_NOTIFICATION,
+                E.default.track(T.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                    notice_type: T.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: R.id
                 });
                 return;
@@ -43,7 +43,7 @@ function C(e) {
             (0, r.openModalLazy)(async () => {
                 let e = {
                         source: m.Zu.NAGBAR,
-                        alertType: (0, T.T1)(O)
+                        alertType: (0, f.T1)(O)
                     },
                     { default: t } = await n.e('58175').then(n.bind(n, 664452));
                 return (n) =>
@@ -59,7 +59,7 @@ function C(e) {
             guild: R,
             size: l.Z.Sizes.MINI
         }),
-        D = (0, T.OY)(O, R.name);
+        D = (0, f.OY)(O, R.name);
     if (null != (null !== (C = O.dmsDisabledUntil) && void 0 !== C ? C : O.invitesDisabledUntil) && M)
         return (0, i.jsxs)(r.Notice, {
             className: p.notice,
@@ -67,7 +67,7 @@ function C(e) {
             children: [
                 (0, i.jsx)(r.NoticeCloseButton, {
                     onClick: g,
-                    noticeType: f.kVF.GUILD_RAID_NOTIFICATION
+                    noticeType: T.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 P,
                 D,
@@ -87,7 +87,7 @@ function C(e) {
                 })
             ]
         });
-    let j = (0, T.CG)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : (0, T.kk)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : N.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: R.name }),
+    let j = (0, f.CG)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : (0, f.kk)(O) ? N.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: R.name }) : N.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: R.name }),
         U = L && A === h.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(r.Notice, {
         className: p.notice,
@@ -95,7 +95,7 @@ function C(e) {
         children: [
             (0, i.jsx)(r.NoticeCloseButton, {
                 onClick: g,
-                noticeType: f.kVF.GUILD_RAID_NOTIFICATION
+                noticeType: T.kVF.GUILD_RAID_NOTIFICATION
             }),
             P,
             j,

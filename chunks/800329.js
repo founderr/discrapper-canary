@@ -25,7 +25,7 @@ function d(e, t, n) {
 }
 function h(e) {
     var t;
-    let { className: n, children: a, keyExtractor: h, paddingTop: p = 0, paddingBottom: m = 0 } = e,
+    let { className: n, children: a, keyExtractor: h, paddingTop: m = 0, paddingBottom: p = 0 } = e,
         [_, f] = s.useState({
             width: 0,
             height: 0
@@ -33,7 +33,7 @@ function h(e) {
         { width: E, height: g } = _,
         C = null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0,
         I = E - 16,
-        T = g - (p + m),
+        T = g - (m + p),
         {
             tileStyle: x,
             tileWidth: S,
@@ -91,7 +91,7 @@ function h(e) {
     return (0, i.jsx)(r.Z, {
         fade: !0,
         className: n,
-        listPadding: [p + b, 0, m + b - 8, 8],
+        listPadding: [m + b, 0, p + b - 8, 8],
         renderRow: function (e) {
             var t;
             let n = e * N;

@@ -14,8 +14,8 @@ var s = n(120356),
     u = n(979264),
     d = n(69882),
     h = n(251794),
-    p = n(386696),
-    m = n(910693),
+    m = n(386696),
+    p = n(910693),
     _ = n(314897),
     f = n(271383),
     E = n(430824),
@@ -122,13 +122,13 @@ function L(e) {
             () => ({
                 canKickUser: null != u && g.Z.canManageUser(N.Plq.KICK_MEMBERS, t, u),
                 canBanUser: null != u && g.Z.canManageUser(N.Plq.BAN_MEMBERS, t, u),
-                canModerateMembers: null != u && (0, p.F)(u.id, t.id, [T.default, E.Z, g.Z])
+                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [T.default, E.Z, g.Z])
             }),
             [t, u]
         ),
         S = (0, d.b)(s),
         { analyticsLocations: v, newestAnalyticsLocation: A } = (0, c.ZP)(),
-        b = (0, m.sE)(a, {
+        b = (0, p.sE)(a, {
             targetUserId: t.id,
             location: A,
             locations: v
@@ -238,7 +238,7 @@ function L(e) {
             (0, i.jsxs)(R, {
                 'aria-label': Z.Z.Messages.COPY_ID,
                 onClick: () => {
-                    b(m.jQ.COPY_ID), (0, x.JG)(t.id);
+                    b(p.jQ.COPY_ID), (0, x.JG)(t.id);
                 },
                 disabled: !x.wS,
                 children: [

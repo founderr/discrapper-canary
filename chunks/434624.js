@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return f;
+        return T;
     }
 }),
     n(47120);
@@ -17,15 +17,15 @@ var i = n(200651),
     E = n(287151),
     I = n(96042),
     m = n(968661);
-let T = a.memo(function (e) {
+let f = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: f, me: h, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: v } = e,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: f, count: T, me: h, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: v } = e,
             O = R === _.O.BURST,
             M = (0, E.y4)(h, N, R),
             L = (0, d.v)(O && null != C ? C : []),
             Z = a ? m : I,
-            b = O ? p : f,
+            b = O ? p : T,
             P = (0, u.y)(b, E.aO),
             D = {};
         if (O && null != L) {
@@ -40,7 +40,7 @@ let T = a.memo(function (e) {
             borderColor: n
         };
         return (0, i.jsxs)('div', {
-            className: r()(Z.reaction, Z.reactionInner, T, {
+            className: r()(Z.reaction, Z.reactionInner, f, {
                 [Z.reactionMe]: M,
                 [Z.reactionReadOnly]: g && !S && !x && !A
             }),
@@ -61,7 +61,7 @@ let T = a.memo(function (e) {
             ]
         });
     }),
-    f = a.memo(function (e) {
+    T = a.memo(function (e) {
         let { showImmediate: t, reactions: n, emojiSize: s, ...r } = e,
             [l, o] = a.useState(!1),
             [u, d] = a.useTransition(),
@@ -77,14 +77,14 @@ let T = a.memo(function (e) {
                 [l, u]
             ),
             m = (0, c.O)(I),
-            f = (l && !u) || t ? E.le : T;
+            T = (l && !u) || t ? E.le : f;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', { ref: m }),
                 n.map((e) => {
                     var t, n;
                     return (0, i.jsx)(
-                        f,
+                        T,
                         {
                             ...r,
                             ...e,

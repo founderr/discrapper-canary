@@ -26,8 +26,8 @@ var i,
     E = n(904245),
     I = n(637374),
     m = n(626799),
-    T = n(624367),
-    f = n(433074),
+    f = n(624367),
+    T = n(433074),
     h = n(421474),
     N = n(603270),
     p = n(171364),
@@ -80,8 +80,8 @@ var i,
     eE = n(271383),
     eI = n(607744),
     em = n(496675),
-    eT = n(594174),
-    ef = n(52824),
+    ef = n(594174),
+    eT = n(52824),
     eh = n(626135),
     eN = n(70956),
     ep = n(408433),
@@ -250,7 +250,7 @@ class e9 extends (i = s.Component) {
                       );
                   else if (n === A.g.APP_DIRECTORY_PROFILE)
                       return (0, a.jsx)(
-                          f.Z,
+                          T.Z,
                           {
                               code: i,
                               message: e
@@ -259,7 +259,7 @@ class e9 extends (i = s.Component) {
                       );
                   else if (n === A.g.ACTIVITY_BOOKMARK)
                       return (0, a.jsx)(
-                          T.Z,
+                          f.Z,
                           {
                               applicationId: i,
                               message: e
@@ -299,7 +299,7 @@ class e9 extends (i = s.Component) {
     }
     renderGiftCodes(e) {
         let { giftCodes: t, author: n, channel_id: i, type: s, content: r, giftInfo: l } = e,
-            o = eT.default.getCurrentUser();
+            o = ef.default.getCurrentUser();
         return null != o && t.length > 0
             ? t.map((e) =>
                   (0, a.jsx)(
@@ -385,8 +385,8 @@ class e9 extends (i = s.Component) {
                           I
                       )
                     : {},
-            T = (0, eC.yE)(d, eY.iLy.IS_VOICE_MESSAGE);
-        function f(e, t) {
+            f = (0, eC.yE)(d, eY.iLy.IS_VOICE_MESSAGE);
+        function T(e, t) {
             return (0, eA.dn)(e.originalItem, t);
         }
         let h = _.map((n) => {
@@ -398,14 +398,14 @@ class e9 extends (i = s.Component) {
                         canRemoveItem: s && (_.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
                         className: eX.embedWrapper,
-                        getObscureReason: f,
+                        getObscureReason: T,
                         onContextMenu:
                             null != l
                                 ? (e) => {
                                       e.stopPropagation(), e.preventDefault(), l(e, a);
                                   }
                                 : void 0,
-                        renderAudioComponent: T ? ej.jY : ej.q7,
+                        renderAudioComponent: f ? ej.jY : ej.q7,
                         renderImageComponent: ej.dS,
                         renderVideoComponent: ej.vZ,
                         renderPlaintextFilePreview: ej.d4,
@@ -425,7 +425,7 @@ class e9 extends (i = s.Component) {
                         gifFavoriteButton: e2(a),
                         isSearchResult: this.props.isSearchResult
                     },
-                    c = (0, ef.q)({
+                    c = (0, eT.q)({
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
@@ -683,8 +683,8 @@ class e9 extends (i = s.Component) {
             E = this.renderSocialProofingFileSizeNitroUpsell(t),
             I = this.renderEmbeds(t),
             m = this.renderActivityInvite(t),
-            T = this.renderReactions(t),
-            f = this.renderPublishBump(t),
+            f = this.renderReactions(t),
+            T = this.renderPublishBump(t),
             h = this.renderEphemeralAccessories(t),
             N = this.renderStickersAccessories(t),
             p = this.renderThreadAccessories(t),
@@ -699,12 +699,12 @@ class e9 extends (i = s.Component) {
             M = this.renderMediaObscureNotice(t),
             L = this.renderPoll(t, i),
             Z = this.renderForwardedMessage(t);
-        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == f && null == h && null == N && null == p && null == C && null == S && null == g && null == x && null == R && null != A && null == L && null == O && null == Z
+        return null == o && null == d && null == I && null == m && null == f && null == c && null == u && null == T && null == h && null == N && null == p && null == C && null == S && null == g && null == x && null == R && null != A && null == L && null == O && null == Z
             ? null
             : (0, a.jsxs)('div', {
                   id: (0, eU.bX)(t),
                   className: l()(e, eX.container),
-                  children: [Z, g, L, o, c, u, x, d, _, I, M, m, N, C, S, A, E, T, f, h, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), p, R, v, O]
+                  children: [Z, g, L, o, c, u, x, d, _, I, M, m, N, C, S, A, E, f, T, h, s && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), p, R, v, O]
               });
     }
     constructor(...e) {
@@ -805,10 +805,10 @@ function e3(e) {
         E = ed.QK.useSetting(),
         I = (0, c.e7)([eI.Z], () => null == n.guild_id || eI.Z.canChatInGuild(n.guild_id), [n]),
         m = (0, c.e7)([W.Z], () => null != n.guild_id && W.Z.isLurking(n.guild_id), [n]),
-        T = (0, c.e7)([eE.ZP], () => eE.ZP.isCurrentUserGuest(n.guild_id), [n]),
-        f = (0, c.e7)([eE.ZP, eT.default], () => {
+        f = (0, c.e7)([eE.ZP], () => eE.ZP.isCurrentUserGuest(n.guild_id), [n]),
+        T = (0, c.e7)([eE.ZP, ef.default], () => {
             var e, t;
-            let i = eT.default.getCurrentUser();
+            let i = ef.default.getCurrentUser();
             return null !== (t = null != n.guild_id && null != i ? (null === (e = eE.ZP.getMember(n.guild_id, i.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
         { canAddNewReactions: h, canManageMessages: N } = (0, c.cj)(
@@ -832,7 +832,7 @@ function e3(e) {
             renderReactions: _,
             canAddNewReactions: h,
             isLurking: m,
-            isGuest: T,
+            isGuest: f,
             communicationDisabled: C,
             isActiveChannelOrUnarchivableThread: g,
             isAutomodQuarantined: p
@@ -851,8 +851,8 @@ function e3(e) {
         disableReactionReads: !!R || v.disableReactionReads,
         ...e,
         isLurking: m && I,
-        isGuest: T && I,
-        isPendingMember: f && I,
+        isGuest: f && I,
+        isPendingMember: T && I,
         isCurrentUser: x,
         inlineAttachmentMedia: o,
         inlineEmbedMedia: u,
@@ -879,8 +879,8 @@ let e6 = (e) => {
         E = ed.RS.useSetting(),
         I = ed.NA.useSetting(),
         m = ed.QK.useSetting(),
-        T = (0, K.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        f = (0, q.Z)(null == i ? void 0 : i.id),
+        f = (0, K.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        T = (0, q.Z)(null == i ? void 0 : i.id),
         h = (0, O.V)(i.id, n.author.id),
         N = (0, M.r)(n.id),
         p = (0, ee.Z)(n);
@@ -900,9 +900,9 @@ let e6 = (e) => {
         renderEmbeds: I,
         gifAutoPlay: m,
         poll: p,
-        showListsAndHeaders: T,
-        showMaskedLinks: T,
-        shouldHideMediaOptions: f,
+        showListsAndHeaders: f,
+        showMaskedLinks: f,
+        shouldHideMediaOptions: T,
         shouldRedactExplicitContent: h,
         shouldRenderCtaButton: N,
         hasInlineForwardButton: !1,

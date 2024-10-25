@@ -17,8 +17,8 @@ var i = n(512722),
     u = n(690725),
     d = n(90712),
     h = n(592125),
-    p = n(81063),
-    m = n(176354),
+    m = n(81063),
+    p = n(176354),
     _ = n(201133),
     f = n(55000),
     E = n(314091),
@@ -54,12 +54,12 @@ let I = async (e) => {
             r = 'dark' === l,
             o = (0, d.Z)(i),
             { assets: c, application_id: u } = i,
-            h = (0, p.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
+            h = (0, m.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
             _ = null == s ? void 0 : s.getIconURL(64),
             f = null != o ? (r ? o.icon.darkPNG : o.icon.lightPNG) : i.type === g.IIU.PLAYING ? (r ? n(414575) : n(807612)) : null,
             C =
                 i.type === g.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
-                    ? (0, m.qc)({
+                    ? (0, p.qc)({
                           id: i.emoji.id,
                           name: i.emoji.name,
                           animated: !1

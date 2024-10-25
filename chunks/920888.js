@@ -12,8 +12,8 @@ var i = n(200651),
     E = n(453687),
     I = n(434624),
     m = n(287151),
-    T = n(689938),
-    f = n(96042),
+    f = n(689938),
+    T = n(96042),
     h = n(968661);
 let N = (e, t) => (null == e && null == t) || e === t,
     p = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
@@ -37,7 +37,7 @@ class g extends a.PureComponent {
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: p, channel: C, className: g, forceAddReactions: S, reactionClassName: A, useChatFontScaling: x, forceHideReactionCreates: R, remainingReactions: v, combinedReactions: O, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: L } = this.state,
-            Z = x ? h : f,
+            Z = x ? h : T,
             b = M > 0;
         if (!b && !S) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
@@ -73,7 +73,7 @@ class g extends a.PureComponent {
                             t.stopPropagation(), (0, m.op)(C, e);
                         },
                         className: r()(Z.reaction, A, Z.remainingReactions),
-                        'aria-label': T.Z.Messages.ADD_REACTION,
+                        'aria-label': f.Z.Messages.ADD_REACTION,
                         children: (0, i.jsxs)(o.Text, {
                             className: Z.reactionInner,
                             variant: 'text-sm/normal',

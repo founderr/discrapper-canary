@@ -75,7 +75,7 @@ function L(e) {
                             children: [
                                 (0, i.jsx)(b, { application: t }),
                                 (0, i.jsx)(R, { application: t }),
-                                p.length > 0 ? (0, i.jsx)(y, { description: p }) : null,
+                                p.length > 0 ? (0, i.jsx)(j, { description: p }) : null,
                                 _
                                     ? (0, i.jsx)('div', {
                                           className: g.developerShelfControlsContainer,
@@ -85,7 +85,7 @@ function L(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(j, {
+                                (0, i.jsx)(y, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -220,7 +220,7 @@ function M(e) {
         ]
     });
 }
-function j(e) {
+function y(e) {
     var n;
     let { channel: t, application: a, sectionName: l, hasCommands: o, isDeveloperOfThisApp: r } = e,
         c = (0, p.Fs)(t, a.id),
@@ -232,7 +232,7 @@ function j(e) {
             botUserId: u
         }),
         f = (0, _.bG)('PrimaryEntryPointArea');
-    if (!(0, E.BQ)(a)) return null;
+    if (!(0, E.BQ)(a) || !(0, E.ye)(a)) return null;
     let A = s.ButtonSizes.MAX;
     return null == c || (f && null == u)
         ? r && !o && (0, E.ye)(a)
@@ -268,7 +268,7 @@ function j(e) {
               ]
           });
 }
-function y(e) {
+function j(e) {
     let { description: n } = e,
         [t, l] = a.useState(!0);
     a.useLayoutEffect(() => l(!1), []);

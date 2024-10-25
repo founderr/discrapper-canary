@@ -10,12 +10,12 @@ var i = n(88315),
 function l(e) {
     let { line: t, context: n, canvasWidth: l, canvasHeight: r, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: h } = e;
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
-    let p = t.points.map((e) => (0, i.RR)(e, l, r)),
-        m = d.current[t.id],
-        _ = (e) => m + e.deltaTime,
+    let m = t.points.map((e) => (0, i.RR)(e, l, r)),
+        p = d.current[t.id],
+        _ = (e) => p + e.deltaTime,
         f = (e) => _(e) + 1500 >= Date.now(),
         E = (e) => _(e) <= Date.now() && f(e),
-        g = p.find(E);
+        g = m.find(E);
     if (null == g) {
         !f(t.points[t.points.length - 1]) && h.push(t);
         return;
@@ -23,8 +23,8 @@ function l(e) {
     let C = (e, t) => {
             let i = null;
             (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(g.x, g.y);
-            for (let e = 1; e < p.length; e++) {
-                let t = p[e];
+            for (let e = 1; e < m.length; e++) {
+                let t = m[e];
                 E(t) && (n.lineTo(t.x, t.y), (i = t));
             }
             return n.stroke(), i;

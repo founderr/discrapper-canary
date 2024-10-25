@@ -298,13 +298,13 @@ function T(e) {
             });
         }, [s, C, o, n, t, T, L]),
         M = b.length > 0,
-        j = R.length > 0;
+        y = R.length > 0;
     return {
         commandResults: b,
         hasCommandResults: M,
         applicationResults: R,
-        hasApplicationResults: j,
-        isEmptyState: !M && !j,
+        hasApplicationResults: y,
+        isEmptyState: !M && !y,
         loading: E && r
     };
 }

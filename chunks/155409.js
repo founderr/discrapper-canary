@@ -13,8 +13,8 @@ var i,
     u = n(374470),
     d = n(442837),
     h = n(260300),
-    p = n(451478),
-    m = n(5560),
+    m = n(451478),
+    p = n(5560),
     _ = n(10401);
 class f extends (l = o.Component) {
     componentDidMount() {
@@ -59,7 +59,7 @@ class f extends (l = o.Component) {
                   children: [
                       n,
                       i &&
-                          (0, r.jsx)(m.V, {
+                          (0, r.jsx)(p.V, {
                               autoInvert: l,
                               position: a,
                               tutorialId: t,
@@ -75,8 +75,8 @@ class f extends (l = o.Component) {
 function E(e) {
     let { tutorialId: t } = e,
         n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]),
-        i = (0, d.e7)([p.Z], () => p.Z.isFocused()),
-        s = (0, d.e7)([p.Z], () => p.Z.windowSize(), []);
+        i = (0, d.e7)([m.Z], () => m.Z.isFocused()),
+        s = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
     return (0, r.jsx)(f, {
         ...e,
         visible: n,

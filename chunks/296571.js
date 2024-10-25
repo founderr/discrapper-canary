@@ -15,15 +15,15 @@ var a = n(442837),
 function d(e) {
     var t;
     let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,
-        T = (0, l.ZP)(n),
-        f = _(T),
+        f = (0, l.ZP)(n),
+        T = _(f),
         h = (0, a.e7)([r.Z], () => {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
         N = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-            actorName: T.nick,
-            actorHook: f,
+            actorName: f.nick,
+            actorHook: T,
             threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: E,

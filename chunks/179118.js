@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(700582),
     I = n(925329),
     m = n(479446),
-    T = n(522489),
-    f = n(857039),
+    f = n(522489),
+    T = n(857039),
     h = n(93127),
     N = n(814443),
     p = n(590783),
@@ -41,7 +41,7 @@ function P(e) {
         U = _ || (null != o && null != m),
         y = (null == s ? void 0 : s.productLine) === M.POd.COLLECTIBLES,
         { selectedPlan: B } = (0, O.usePaymentContext)(),
-        k = (0, f.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
+        k = (0, T.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
         G = () => (null != l ? l.skuId : null != s ? s.id : null),
         F = () => {
             let e;
@@ -173,7 +173,7 @@ function P(e) {
                         })
                       : (() => {
                             let e = (0, x.MY)(m, y),
-                                { removeGiftRecipientUI: n } = T.m.getCurrentConfig(
+                                { removeGiftRecipientUI: n } = f.m.getCurrentConfig(
                                     { location: 'GiftPurchaseConfirmation' },
                                     {
                                         autoTrackExposure: !1,
@@ -207,7 +207,7 @@ let D = (e) => {
     }, []);
     let [s, r] = a.useState(),
         [l, I] = a.useState(!1),
-        [T, f] = a.useState(!1),
+        [f, T] = a.useState(!1),
         { userAffinities: p, isLoading: g } = (0, c.cj)([N.Z], () => ({
             userAffinities: N.Z.getUserAffinitiesUserIds(),
             isLoading: N.Z.getFetching()
@@ -249,16 +249,16 @@ let D = (e) => {
                     }),
                     (0, i.jsx)(u.Button, {
                         disabled: null == s,
-                        submitting: T,
+                        submitting: f,
                         className: b.sendToRecipientButton,
                         onClick: () => {
-                            f(!0),
+                            T(!0),
                                 (0, m.YD)(s, t)
                                     .then(() => {
                                         n(), (0, d.Ou)();
                                     })
                                     .catch(() => {
-                                        I(!0), f(!1);
+                                        I(!0), T(!1);
                                     });
                         },
                         children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON

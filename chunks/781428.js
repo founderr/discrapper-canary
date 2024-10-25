@@ -32,12 +32,12 @@ var s,
     v = n(952802),
     b = n(108427),
     L = n(365007),
-    D = n(314897),
-    M = n(117240),
+    M = n(314897),
+    D = n(117240),
     P = n(896797),
     j = n(626135),
-    y = n(585483),
-    U = n(358085),
+    U = n(585483),
+    y = n(358085),
     G = n(481153),
     B = n(588705),
     k = n(494526),
@@ -154,7 +154,7 @@ class q extends (s = i.PureComponent) {
             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + w.ANM.SSO,
                 t = {
                     ...r,
-                    token: D.default.getToken()
+                    token: M.default.getToken()
                 };
             window.location = ''.concat(e, '?').concat((0, c.stringify)(t));
         }
@@ -335,7 +335,7 @@ class q extends (s = i.PureComponent) {
                                       },
                                       'title'
                                   ),
-                                  !1 === (0, U.isAndroidWeb)() ? (0, r.jsx)(f.DK, { children: H.Z.Messages.AUTH_LOGIN_BODY }, 'subtitle') : null
+                                  !1 === (0, y.isAndroidWeb)() ? (0, r.jsx)(f.DK, { children: H.Z.Messages.AUTH_LOGIN_BODY }, 'subtitle') : null
                               ]
                           })
                     : (0, r.jsx)(B.Z, { invite: s })),
@@ -621,7 +621,7 @@ class q extends (s = i.PureComponent) {
                         giftCodeSKUId: this.giftCodeSKUId,
                         invite: this.props.invite
                     }),
-                    y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
+                    U.S.dispatch(w.CkL.WAVE_EMPHASIZE);
             }),
             W(this, 'handleIPAuthorize', async (e) => {
                 let { password: t, undelete: n } = this.state,
@@ -636,7 +636,7 @@ class q extends (s = i.PureComponent) {
                             source: this.loginSource,
                             giftCodeSKUId: this.giftCodeSKUId
                         }),
-                        y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
+                        U.S.dispatch(w.CkL.WAVE_EMPHASIZE);
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
@@ -659,7 +659,7 @@ class q extends (s = i.PureComponent) {
             W(this, 'handleTokenSubmitMFA', (e) => {
                 let { mfaType: t, data: n, ticket: s } = e;
                 return (
-                    y.S.dispatch(w.CkL.WAVE_EMPHASIZE),
+                    U.S.dispatch(w.CkL.WAVE_EMPHASIZE),
                     E.Z.loginMFAv2({
                         code: n,
                         ticket: s,
@@ -673,7 +673,7 @@ class q extends (s = i.PureComponent) {
                 null != e && e.preventDefault(), null != this.loginRef && this.loginRef.focus();
                 let t = this.getFullLogin();
                 try {
-                    y.S.dispatch(w.CkL.WAVE_EMPHASIZE),
+                    U.S.dispatch(w.CkL.WAVE_EMPHASIZE),
                         await E.Z.forgotPassword(t),
                         (0, _.openModal)((e) =>
                             (0, r.jsx)(_.ConfirmModal, {
@@ -715,7 +715,7 @@ class q extends (s = i.PureComponent) {
                 let { login: t } = this.state,
                     { invite: n, giftCode: s, guildTemplate: r, location: i, transitionTo: a, redirectTo: l } = this.props,
                     o = null != i ? (0, c.parse)(i.search) : {};
-                '' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = w.Z5c.INVITE(n.code))) : null != s ? ((o.mode = 'register'), (e = w.Z5c.GIFT_CODE(s.code))) : null != r ? (e = w.Z5c.GUILD_TEMPLATE(r.code)) : null != l ? ((e = w.Z5c.REGISTER), (o.redirect_to = l)) : (e = w.Z5c.REGISTER), E.Z.loginReset(), a(e, { search: (0, c.stringify)(o) }), y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
+                '' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = w.Z5c.INVITE(n.code))) : null != s ? ((o.mode = 'register'), (e = w.Z5c.GIFT_CODE(s.code))) : null != r ? (e = w.Z5c.GUILD_TEMPLATE(r.code)) : null != l ? ((e = w.Z5c.REGISTER), (o.redirect_to = l)) : (e = w.Z5c.REGISTER), E.Z.loginReset(), a(e, { search: (0, c.stringify)(o) }), U.S.dispatch(w.CkL.WAVE_EMPHASIZE);
             });
         let s = null != e.location ? (0, c.parse)(e.location.search) : {};
         this.state = {
@@ -735,16 +735,16 @@ class q extends (s = i.PureComponent) {
 }
 W(q, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 t.Z = function (e) {
-    let t = (0, d.cj)([M.Z, P.Z, D.default, R.Z, Z.Z], () => ({
-        authenticated: D.default.isAuthenticated(),
-        handoffAvailable: M.Z.isHandoffAvailable(),
-        user: M.Z.user,
-        loginStatus: D.default.getLoginStatus(),
-        mfaTicket: D.default.getMFATicket(),
-        mfaSMS: D.default.getMFASMS(),
-        mfaMethods: D.default.getMFAMethods(),
-        maskedPhone: D.default.getMaskedPhone(),
-        errors: D.default.getErrors(),
+    let t = (0, d.cj)([D.Z, P.Z, M.default, R.Z, Z.Z], () => ({
+        authenticated: M.default.isAuthenticated(),
+        handoffAvailable: D.Z.isHandoffAvailable(),
+        user: D.Z.user,
+        loginStatus: M.default.getLoginStatus(),
+        mfaTicket: M.default.getMFATicket(),
+        mfaSMS: M.default.getMFASMS(),
+        mfaMethods: M.default.getMFAMethods(),
+        maskedPhone: M.default.getMaskedPhone(),
+        errors: M.default.getErrors(),
         defaultRoute: P.Z.defaultRoute,
         country: Z.Z.getCountryCode(),
         hasLoggedInAccounts: R.Z.getHasLoggedInAccounts()

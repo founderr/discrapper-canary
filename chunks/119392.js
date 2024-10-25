@@ -17,22 +17,22 @@ var a = n(481060),
     E = n(981631),
     I = n(49898),
     m = n(128449),
-    T = n(689938),
-    f = n(818768),
+    f = n(689938),
+    T = n(818768),
     h = n(761604);
 function N(e) {
     let { gameId: t, onSelect: n } = e;
     return (0, i.jsx)(a.Menu, {
         onSelect: n,
         navId: 'discovery-entrypoint-context-menu',
-        'aria-label': T.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        'aria-label': f.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: s.Zy,
         children: (0, i.jsxs)(a.MenuGroup, {
             children: [
                 u.wS &&
                     (0, i.jsx)(a.MenuItem, {
                         id: 'copy',
-                        label: T.Z.Messages.COPY_LINK,
+                        label: f.Z.Messages.COPY_LINK,
                         icon: a.CopyIcon,
                         action: () => {
                             (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
@@ -40,7 +40,7 @@ function N(e) {
                     }),
                 (0, i.jsx)(a.MenuItem, {
                     id: 'learn-more',
-                    label: T.Z.Messages.LEARN_MORE,
+                    label: f.Z.Messages.LEARN_MORE,
                     icon: a.LinkExternalMediumIcon,
                     action: () => {
                         (0, r.Z)(d.Z.getArticleURL(E.BhN.CLANS_FAQ));
@@ -53,7 +53,7 @@ function N(e) {
 function p(e) {
     let { gameId: t } = e;
     return (0, i.jsx)(o.ZP, {
-        className: f.buttonContainer,
+        className: T.buttonContainer,
         children: (0, i.jsx)(a.Popout, {
             animation: a.Popout.Animation.NONE,
             position: 'bottom',
@@ -69,7 +69,7 @@ function p(e) {
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsx)(a.Tooltip, {
-                    text: T.Z.Messages.MORE,
+                    text: f.Z.Messages.MORE,
                     hideOnClick: !0,
                     children: (e) => {
                         let { onClick: s, ...r } = e;
@@ -79,11 +79,11 @@ function p(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), null == s || s(), t(e);
                             },
-                            'aria-label': T.Z.Messages.MORE,
+                            'aria-label': f.Z.Messages.MORE,
                             children: (0, i.jsx)(a.MoreHorizontalIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: f.overflowIcon
+                                className: T.overflowIcon
                             })
                         });
                     }
@@ -103,40 +103,40 @@ function C(e) {
             coverImageHeight: 280
         });
     return n
-        ? (0, i.jsx)(a.Spinner, { className: f.spinner })
+        ? (0, i.jsx)(a.Spinner, { className: T.spinner })
         : null == r
           ? (0, i.jsxs)('div', {
-                className: f.wrapper,
+                className: T.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.errorHeader,
+                        className: T.errorHeader,
                         children: [
                             (0, i.jsx)('div', {
-                                className: f.headerContent,
+                                className: T.headerContent,
                                 children: (0, i.jsx)(a.Heading, {
-                                    className: f.title,
+                                    className: T.title,
                                     variant: 'display-md',
                                     color: 'header-secondary',
-                                    children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_TITLE
+                                    children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_TITLE
                                 })
                             }),
                             (0, i.jsx)('img', {
                                 alt: '',
                                 src: h,
-                                className: f.errorImage
+                                className: T.errorImage
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.content,
+                        className: T.content,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_DESCRIPTION
+                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_DESCRIPTION
                             }),
                             (0, i.jsx)(a.Button, {
-                                className: f.button,
+                                className: T.button,
                                 look: a.Button.Looks.FILLED,
                                 size: a.Button.Sizes.MEDIUM,
                                 color: a.Button.Colors.BRAND,
@@ -147,55 +147,55 @@ function C(e) {
                                         entrypoint: m.Qq.EMBED
                                     });
                                 },
-                                children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_CTA
+                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_CTA
                             })
                         ]
                     })
                 ]
             })
           : (0, i.jsxs)('div', {
-                className: f.wrapper,
+                className: T.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.header,
+                        className: T.header,
                         children: [
                             (0, i.jsx)(p, { gameId: t }),
                             (0, i.jsx)('div', {
-                                className: f.splashWrapper,
+                                className: T.splashWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: f.splash,
+                                    className: T.splash,
                                     style: { backgroundImage: 'url("'.concat(s, '")') }
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: f.headerContent,
+                                className: T.headerContent,
                                 children: [
                                     (0, i.jsxs)(a.Text, {
-                                        className: f.label,
+                                        className: T.label,
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: [(0, i.jsx)(l.Z, { className: f.icon }), T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_LABEL]
+                                        children: [(0, i.jsx)(l.Z, { className: T.icon }), f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_LABEL]
                                     }),
                                     (0, i.jsx)(a.Heading, {
-                                        className: f.title,
+                                        className: T.title,
                                         variant: 'display-md',
                                         color: 'header-secondary',
-                                        children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_TITLE.format({ gameName: r })
+                                        children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_TITLE.format({ gameName: r })
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.content,
+                        className: T.content,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_DESCRIPTION.format({ gameName: r })
+                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_DESCRIPTION.format({ gameName: r })
                             }),
                             (0, i.jsx)(a.Button, {
-                                className: f.button,
+                                className: T.button,
                                 look: a.Button.Looks.FILLED,
                                 size: a.Button.Sizes.MEDIUM,
                                 color: a.Button.Colors.BRAND,
@@ -207,7 +207,7 @@ function C(e) {
                                         extra: { search: '?game='.concat(t) }
                                     });
                                 },
-                                children: T.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_CTA
+                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_CTA
                             })
                         ]
                     })

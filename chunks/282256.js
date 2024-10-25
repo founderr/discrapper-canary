@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(22469);
 t.Z = s.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: a, ...h } = e,
-        p = s.useRef(null),
-        [m, _] = s.useState({ maskImage: 'none' }),
+        m = s.useRef(null),
+        [p, _] = s.useState({ maskImage: 'none' }),
         f = s.useCallback(() => {
             var e, t;
             if (n) {
@@ -19,7 +19,7 @@ t.Z = s.memo(function (e) {
                 return;
             }
             let i = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                s = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+                s = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == s) {
                 _({ maskImage: 'none' });
                 return;
@@ -51,8 +51,8 @@ t.Z = s.memo(function (e) {
                 ref: C,
                 children: (0, i.jsx)('span', {
                     className: l()(d.chipletContainer, !g && n && d.noPadding),
-                    ref: p,
-                    style: m,
+                    ref: m,
+                    style: p,
                     children: (0, i.jsx)(u.ZP, {
                         ...h,
                         contextGuildId: a,

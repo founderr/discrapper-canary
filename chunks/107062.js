@@ -53,7 +53,7 @@ t.ZP = (e) => {
         { user: R, details: y, activity: O, embeddedActivity: j } = (0, I.n)(n),
         { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: U, participant1: H, participant2: B, numOtherParticipants: k } = (0, v.Z)(n, 3),
+        { displayParticipants: U, participant1: k, participant2: H, numOtherParticipants: B } = (0, v.Z)(n, 3),
         V = () => {
             c.__(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
@@ -61,12 +61,12 @@ t.ZP = (e) => {
             (e) => {
                 if ((null == A ? void 0 : A.src) == null || null == t || null == R) return;
                 let l =
-                    k > 0
+                    B > 0
                         ? L({
                               entry: n,
                               channel: t,
-                              users: [H, B],
-                              countOthers: k
+                              users: [k, H],
+                              countOthers: B
                           })
                         : M(n, t, R);
                 return (0, p.C4)({
@@ -79,7 +79,7 @@ t.ZP = (e) => {
                     channelId: e
                 });
             },
-            [null == A ? void 0 : A.src, t, U, n, D, k, H, B, w, b, R]
+            [null == A ? void 0 : A.src, t, U, n, D, B, k, H, w, b, R]
         );
     if (null == R) return null;
     let G = (0, l.jsx)(T.PZ, {

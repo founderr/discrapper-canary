@@ -19,9 +19,9 @@ var a = n(120356),
 function m(e) {
     let { message: t, compact: n, usernameHook: a } = e,
         m = (0, o.ZP)(t),
-        T = a(m),
+        f = a(m),
         {
-            avatarSrc: f,
+            avatarSrc: T,
             eventHandlers: { onMouseEnter: h, onMouseLeave: N }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
@@ -29,7 +29,7 @@ function m(e) {
         onMouseLeave: N,
         children: (0, i.jsx)(d.Z, {
             className: s()(I.mainContainer, { [I.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: f }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: T }),
             iconContainerClassName: I.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
@@ -62,7 +62,7 @@ function m(e) {
                         className: s()(I.__invalid_messageContent, { [I.compact]: n }),
                         children: E.Z.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
                             username: m.nick,
-                            usernameHook: T
+                            usernameHook: f
                         })
                     })
                 ]

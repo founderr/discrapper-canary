@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(100527),
     d = n(906732),
     h = n(111028),
-    p = n(150039),
-    m = n(171368),
+    m = n(150039),
+    p = n(171368),
     _ = n(271383),
     f = n(430824),
     E = n(594174),
@@ -120,7 +120,7 @@ class A {
                 )
             ),
             N(this, 'handleClick', () => {
-                (0, m.openUserProfileModal)({
+                (0, p.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
@@ -137,9 +137,9 @@ class A {
 function Z(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        a = (0, p.gc)(n),
+        a = (0, m.gc)(n),
         l = Array(a.length).fill(null),
-        { analyticsLocations: m } = (0, d.ZP)(u.Z.AKA),
+        { analyticsLocations: p } = (0, d.ZP)(u.Z.AKA),
         _ = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
                 a = (0, r.e7)([E.default], () => E.default.getUser(t), [t]),
@@ -163,13 +163,13 @@ function Z(e) {
             );
         })({
             userId: n,
-            analyticsLocations: m,
+            analyticsLocations: p,
             channelId: t.id
         });
     return 0 === _.getNicknameGuildPairs().length && 0 === a.length
         ? (0, i.jsx)('div', { className: v.spacer })
         : (0, i.jsxs)(d.Gt, {
-              value: m,
+              value: p,
               children: [
                   (0, i.jsx)(I.iz, {}),
                   (0, i.jsx)(o.TextBadge, {

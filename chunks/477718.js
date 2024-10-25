@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(481060),
     d = n(480137),
     h = n(906732),
-    p = n(376923),
-    m = n(472596),
+    m = n(376923),
+    p = n(472596),
     _ = n(987707),
     f = n(909746),
     E = n(501801),
@@ -35,11 +35,11 @@ function Z(e) {
         C = f.QM(n),
         T = null === (t = f.V$(x.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
         A = f.J5(n),
-        Z = (0, p.LJ)(n.id),
+        Z = (0, m.LJ)(n.id),
         M = (0, c.e7)([g.ZP], () => (null != n.userId ? g.ZP.getMember(a.guildId, n.userId) : null), [a.guildId, n.userId]),
         b = s.useCallback(
             (e) => (t) => {
-                t.preventDefault(), t.stopPropagation(), null != e && (0, m.RE)(e, d);
+                t.preventDefault(), t.stopPropagation(), null != e && (0, p.RE)(e, d);
             },
             [d]
         ),

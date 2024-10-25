@@ -13,8 +13,8 @@ var a = n(120356),
     E = n(246364),
     I = n(937111),
     m = n(981631),
-    T = n(176505),
-    f = n(689938),
+    f = n(176505),
+    T = n(689938),
     h = n(373359),
     N = n(250812);
 t.Z = () => {
@@ -23,7 +23,7 @@ t.Z = () => {
         p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
         C = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
         g = (0, r.TH)(),
-        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, f.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
     if (null == p || !p.hasVerificationGate() || S) return null;
     let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         x = null,
@@ -32,28 +32,28 @@ t.Z = () => {
         O = [h.notice, N.notice];
     switch (A) {
         case E.wB.SUBMITTED:
-            (x = f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
-                (R = f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
+            (x = T.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
+                (R = T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
                 (v = () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: f.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                            confirmText: f.Z.Messages.CONFIRM,
-                            cancelText: f.Z.Messages.CANCEL,
+                            header: T.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+                            confirmText: T.Z.Messages.CONFIRM,
+                            cancelText: T.Z.Messages.CANCEL,
                             onConfirm: () => d.Z.removeGuildJoinRequest(p.id),
                             confirmButtonColor: o.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+                                children: T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
                             })
                         })
                     );
                 });
             break;
         case E.wB.REJECTED:
-            (x = f.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
-                (R = f.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
+            (x = T.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
+                (R = T.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
                 (v = () => {
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
@@ -67,8 +67,8 @@ t.Z = () => {
                 O.push(h.error);
             break;
         default:
-            (x = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
-                (R = f.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
+            (x = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
+                (R = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
                 (v = () => {
                     (0, _.hk)(p.id);
                 });

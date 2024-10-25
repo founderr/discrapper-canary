@@ -12,12 +12,12 @@ var s = n(481060),
     o = n(718538),
     c = n(689938);
 function u(e) {
-    let { otherUserId: t, channel: n, buttonSize: u = s.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: p = !0, onReportClick: m, onReportSubmit: _, onMouseEnter: f, onMouseLeave: E } = e,
+    let { otherUserId: t, channel: n, buttonSize: u = s.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: m = !0, onReportClick: p, onReportSubmit: _, onMouseEnter: f, onMouseLeave: E } = e,
         g = (0, r.Q)(t),
         C = (0, o.V)(n.id, t);
     if (!g || null == C) return null;
     let I = () => {
-        null == _ || _(), a.Z.closePrivateChannel(n.id, p);
+        null == _ || _(), a.Z.closePrivateChannel(n.id, m);
     };
     return (0, i.jsx)(s.Button, {
         className: d,
@@ -25,7 +25,7 @@ function u(e) {
         color: s.Button.Colors.RED,
         disabled: null == C,
         onClick: () => {
-            null == m || m(), (0, l.WL)(C, I);
+            null == p || p(), (0, l.WL)(C, I);
         },
         onMouseEnter: f,
         onMouseLeave: E,

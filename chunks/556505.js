@@ -14,10 +14,10 @@ function c(e) {
     let { name: t, labelType: n, collapsed: c = !1, showTooltip: u = !1 } = e,
         d = n === l.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED,
         h = n === l.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge,
-        [p, m] = s.useState(c ? '' : d);
+        [m, p] = s.useState(c ? '' : d);
     if (
         (s.useEffect(() => {
-            c ? m('') : n === l.ww.NEW ? m(r.Z.Messages.NEW) : n === l.ww.UPDATED && m(r.Z.Messages.UPDATED);
+            c ? p('') : n === l.ww.NEW ? p(r.Z.Messages.NEW) : n === l.ww.UPDATED && p(r.Z.Messages.UPDATED);
         }, [c, n]),
         n === l.ww.NONE)
     )
@@ -25,7 +25,7 @@ function c(e) {
     let _ = (0, i.jsx)(a.TextBadge, {
         className: h,
         disableColor: !0,
-        text: (0, i.jsx)('span', { children: p })
+        text: (0, i.jsx)('span', { children: m })
     });
     if (!u) return _;
     let f = r.Z.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({ activity: t });

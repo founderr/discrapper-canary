@@ -26,7 +26,7 @@ function m(e, t, n) {
         'aria-selected': n
     };
 }
-class T extends (i = o.PureComponent) {
+class f extends (i = o.PureComponent) {
     renderQuery(e) {
         let { query: t, navId: n, focusedIndex: i, onSelectQuery: a, onSelectSearchEverywhere: s, onHighlightQuery: r, hideQuery: o, searchFavorites: c } = this.props;
         if (e || o) return null;
@@ -107,7 +107,7 @@ class T extends (i = o.PureComponent) {
     hideQuery: !1,
     width: 320
 }),
-    (s = 'defaultProps') in (a = T)
+    (s = 'defaultProps') in (a = f)
         ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
@@ -115,4 +115,4 @@ class T extends (i = o.PureComponent) {
               writable: !0
           })
         : (a[s] = r),
-    (t.Z = T);
+    (t.Z = f);

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return T;
     }
 }),
     n(789020);
@@ -18,9 +18,9 @@ var a = n(533800),
     E = n(358595),
     I = n(981631),
     m = n(689938),
-    T = n(691784);
-function f(e) {
-    var t, f;
+    f = n(691784);
+function T(e) {
+    var t, T;
     let h,
         N,
         p,
@@ -34,7 +34,7 @@ function f(e) {
         j = null != b && b.isGuildVocal(),
         U = null != b && b.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        B = null !== (f = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== f && f;
+        B = null !== (T = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== T && T;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
         S = d.Qs(A.guild);
@@ -52,11 +52,11 @@ function f(e) {
         });
     return (
         (N = (0, i.jsxs)('span', {
-            className: T.infoTitle,
+            className: f.infoTitle,
             children: [
                 (0, i.jsx)(l.Z.GuildName, { guild: S }),
                 (0, i.jsx)('span', {
-                    className: T.infoBadge,
+                    className: f.infoBadge,
                     children: (0, i.jsx)(r.Z, {
                         guild: S,
                         isBannerVisible: !1,
@@ -67,22 +67,22 @@ function f(e) {
         })),
         y &&
             (p = (0, i.jsx)(s.TooltipContainer, {
-                className: T.tooltipContainer,
+                className: f.tooltipContainer,
                 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                 children: (0, i.jsx)(s.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: T.infoIcon
+                    className: f.infoIcon
                 })
             })),
         j
             ? ((N = (0, i.jsx)(l.Z.Channel, { channel: b })),
               (h = (0, i.jsxs)('span', {
-                  className: T.infoTitle,
+                  className: f.infoTitle,
                   children: [
                       m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
                       (0, i.jsx)('span', {
-                          className: T.infoBadge,
+                          className: f.infoBadge,
                           children: (0, i.jsx)(r.Z, {
                               guild: S,
                               isBannerVisible: !1
@@ -110,7 +110,7 @@ function f(e) {
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: T.headerLine,
+                            className: f.headerLine,
                             children: [
                                 (0, i.jsx)(l.Z.Icon, { guild: S }),
                                 (0, i.jsx)(l.Z.Info, {
@@ -131,7 +131,7 @@ function f(e) {
                 S.hasFeature(I.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: T.separator }),
+                            (0, i.jsx)('div', { className: f.separator }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

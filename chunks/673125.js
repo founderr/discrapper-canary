@@ -9,8 +9,8 @@ var i,
     u = n(594174),
     d = n(176354),
     h = n(292793),
-    p = n(88315),
-    m = n(813900);
+    m = n(88315),
+    p = n(813900);
 let _ = {},
     f = {},
     E = {},
@@ -20,7 +20,7 @@ function I(e) {
     if (null == f[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
-        let n = t.getAvatarURL(null, m.Ks),
+        let n = t.getAvatarURL(null, p.Ks),
             i = new Image();
         (i.src = n), (f[e] = i);
     }
@@ -73,7 +73,7 @@ let x = new T(o.Z, {
                       userId: i,
                       points: n
                   })
-                : (0, p.P7)(e) && e.points.push(...n);
+                : (0, m.P7)(e) && e.points.push(...n);
         }
         I(i);
     },
@@ -104,7 +104,7 @@ let x = new T(o.Z, {
                         name: null !== (i = null != e ? e : s.emojiName) && void 0 !== i ? i : '',
                         animated: !1
                     },
-                    m.qh
+                    p.qh
                 ));
         }
         I(l);

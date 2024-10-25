@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(695346),
     I = n(626135),
     m = n(709054),
-    T = n(791914),
-    f = n(981631),
+    f = n(791914),
+    T = n(981631),
     h = n(689938),
     N = n(802840),
     p = n(811304);
@@ -53,7 +53,7 @@ function g(e) {
     return (0, i.jsxs)('div', {
         className: N.container,
         children: [
-            (0, i.jsx)(T.Z, {
+            (0, i.jsx)(f.Z, {
                 tab: r.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
@@ -61,7 +61,7 @@ function g(e) {
                 children: O
                     ? (0, i.jsx)(C, {
                           onClick: () => {
-                              null != R && (E.d$.updateSetting(R.id), I.default.track(f.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != R && (E.d$.updateSetting(R.id), I.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }
                       })
                     : null

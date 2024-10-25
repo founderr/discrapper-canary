@@ -15,8 +15,8 @@ var i = n(192379),
     u = n(40851),
     d = n(607070),
     h = n(703656),
-    p = n(479313),
-    m = n(796974),
+    m = n(479313),
+    p = n(796974),
     _ = n(709054),
     f = n(534469),
     E = n(173033),
@@ -505,7 +505,7 @@ class S {
             I(this, '_bottomAnchor', null),
             I(this, '_automaticAnchorCallbacks', []),
             I(this, '_scrollCompleteCallbacks', []),
-            I(this, 'updateVisibleMessagesDebounced', a().debounce(p.JR, 300)),
+            I(this, 'updateVisibleMessagesDebounced', a().debounce(m.JR, 300)),
             I(this, 'handleScroll', (e) => {
                 var t;
                 if (!this.isInitialized()) return;
@@ -569,15 +569,15 @@ class S {
         )
             this.pinned = !1;
         else {
-            let i = m.Z.isAtBottom(e.channel.id);
-            (this.pinned = null == i || i), (this.initialScrollTop = i ? null : null !== (n = null === (t = m.Z.getChannelDimensions(e.channel.id)) || void 0 === t ? void 0 : t.scrollTop) && void 0 !== n ? n : null);
+            let i = p.Z.isAtBottom(e.channel.id);
+            (this.pinned = null == i || i), (this.initialScrollTop = i ? null : null !== (n = null === (t = p.Z.getChannelDimensions(e.channel.id)) || void 0 === t ? void 0 : t.scrollTop) && void 0 !== n ? n : null);
         }
     }
 }
 function v(e) {
     let { messages: t, channel: n, compact: s, hasUnreads: a, focusId: l, placeholderHeight: r, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: d } = e,
         { windowId: h } = i.useContext(u.ZP),
-        [p] = i.useState(
+        [m] = i.useState(
             () =>
                 new S({
                     messages: t,
@@ -593,9 +593,9 @@ function v(e) {
                 })
         );
     return (
-        p.getSnapshotBeforeUpdate(l),
+        m.getSnapshotBeforeUpdate(l),
         i.useLayoutEffect(() =>
-            p.mergePropsAndUpdate({
+            m.mergePropsAndUpdate({
                 messages: t,
                 channel: n,
                 compact: s,
@@ -608,7 +608,7 @@ function v(e) {
                 handleScrollFromBottom: d
             })
         ),
-        i.useLayoutEffect(() => () => p.cleanup(), [p]),
-        p
+        i.useLayoutEffect(() => () => m.cleanup(), [m]),
+        m
     );
 }

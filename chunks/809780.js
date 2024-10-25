@@ -27,8 +27,8 @@ var i,
     E = n(570140),
     I = n(904245),
     m = n(45114),
-    T = n(607070),
-    f = n(853856),
+    f = n(607070),
+    T = n(853856),
     h = n(181945),
     N = n(220444),
     p = n(601070),
@@ -217,7 +217,7 @@ class V extends o.EventEmitter {
                         deleted: !0
                     }))
                 }),
-                    T.Z.useReducedMotion && this.deleteChannel(t),
+                    f.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
             (this.markGuildRead = (e) => {
@@ -386,7 +386,7 @@ function W(e, t, n, i) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let i = v.Z.getChannel(t);
-            if (f.Z.isFavorite(t)) return 0;
+            if (T.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (P.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {

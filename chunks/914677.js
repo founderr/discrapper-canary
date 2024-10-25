@@ -47,10 +47,10 @@ t.Z = (e) => {
         return () => clearTimeout(e);
     }, [t]);
     let A = (0, i.ZP)(),
-        f = (0, r.ap)(A),
-        p = d(I),
-        M = _(I, f),
-        S = null != R ? R : E(f, I);
+        p = (0, r.ap)(A),
+        f = d(I),
+        M = _(I, p),
+        S = null != R ? R : E(p, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -65,7 +65,7 @@ t.Z = (e) => {
                         r: ''.concat(g),
                         cx: '50%',
                         cy: '50%',
-                        stroke: p,
+                        stroke: f,
                         strokeOpacity: M
                     }),
                     (0, s.jsx)('circle', {

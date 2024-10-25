@@ -17,8 +17,8 @@ var i = n(192379),
     u = n(592125),
     d = n(984933),
     h = n(650774),
-    p = n(430824),
-    m = n(819640),
+    m = n(430824),
+    p = n(819640),
     _ = n(375954),
     f = n(496675),
     E = n(709054),
@@ -65,8 +65,8 @@ function I(e) {
             })(i.useMemo(() => (null == t ? [] : a().values(t)), [t]));
         })(e),
         guildPersonalized: (function (e) {
-            let t = (0, l.e7)([m.Z], () => m.Z.hasLayers()),
-                n = (0, l.e7)([p.Z], () => p.Z.getGuild(null == e ? void 0 : e.id));
+            let t = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+                n = (0, l.e7)([m.Z], () => m.Z.getGuild(null == e ? void 0 : e.id));
             return (null == n ? void 0 : n.icon) != null && !t;
         })(e),
         guildChannelCreated:

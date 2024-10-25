@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(419821),
     C = n(367515),
     A = n(250285),
-    f = n(292352),
-    p = n(134612),
+    p = n(292352),
+    f = n(134612),
     M = n(689938),
     S = n(776710),
     h = n(113207),
@@ -152,7 +152,7 @@ function v(e) {
                           {
                               userId: i.id,
                               isLast: l,
-                              children: () => (t === f.ne.ACTIVE ? (0, s.jsx)(m.u, { user: i }) : (0, s.jsx)(C.B, { user: i }))
+                              children: () => (t === p.ne.ACTIVE ? (0, s.jsx)(m.u, { user: i }) : (0, s.jsx)(C.B, { user: i }))
                           },
                           i.id
                       );
@@ -193,8 +193,8 @@ function v(e) {
                                 var n;
                                 (i.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            sectionHeight: f.zE,
-                            rowHeight: f.ip,
+                            sectionHeight: p.zE,
+                            rowHeight: p.ip,
                             renderSection: T,
                             renderRow: u,
                             sections: [r.length],
@@ -211,8 +211,8 @@ function v(e) {
 }
 let L = () => {
         let e = (0, I.Z)(),
-            t = (0, R.mq)(f.ne.ACTIVE),
-            n = e ? f.AG : f.i0,
+            t = (0, R.mq)(p.ne.ACTIVE),
+            n = e ? p.AG : p.i0,
             a = {
                 count: t.length,
                 max: n
@@ -222,7 +222,7 @@ let L = () => {
             children:
                 t.length > 0
                     ? (0, s.jsx)(v, {
-                          sectionType: f.ne.ACTIVE,
+                          sectionType: p.ne.ACTIVE,
                           sectionTitle: r,
                           requests: t
                       })
@@ -245,7 +245,7 @@ let L = () => {
     },
     Z = () => {
         let e = (0, R.VM)(),
-            t = (0, I.Z)() ? f.AG : f.i0,
+            t = (0, I.Z)() ? p.AG : p.i0,
             n = (0, u.o)(M.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), M.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
         return e
             ? (0, s.jsx)('div', {
@@ -266,7 +266,7 @@ let L = () => {
                 throughline: t
             })
                 .with({ helpline: !0 }, () => M.Z.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({ helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => M.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: p.$l }))
+                .with({ throughline: !0 }, () => M.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: f.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -287,12 +287,12 @@ let L = () => {
               });
     },
     U = () => {
-        let e = (0, R.mq)(f.ne.PENDING),
+        let e = (0, R.mq)(p.ne.PENDING),
             t = (0, u.o)(M.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), M.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
             ? null
             : (0, s.jsx)(v, {
-                  sectionType: f.ne.PENDING,
+                  sectionType: p.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });

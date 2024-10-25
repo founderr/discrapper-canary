@@ -20,8 +20,8 @@ var i = n(512722),
     E = n(881052),
     I = n(367907),
     m = n(41776),
-    T = n(566006),
-    f = n(48854),
+    f = n(566006),
+    T = n(48854),
     h = n(869765),
     N = n(314897),
     p = n(592125),
@@ -133,7 +133,7 @@ async function y(e) {
                     },
                     userId: u,
                     optimistic: !0,
-                    reactionType: T.O.VOTE
+                    reactionType: f.O.VOTE
                 });
             return e;
         });
@@ -343,7 +343,7 @@ async function F(e) {
                 items: c,
                 token: e,
                 poll: d,
-                nonce: (0, f.r)(),
+                nonce: (0, T.r)(),
                 maxSizeCallback: () => {}
             });
         } else await _.Z.sendPollMessage(t.id, d);

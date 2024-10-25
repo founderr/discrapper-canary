@@ -48,7 +48,7 @@ let C = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = R.R0.PERKS_DISCOVERABILITY, noBackground: A = !1, leftAlignHeaders: f = !1, showAllPerksButton: p, headerClassname: M, isFullScreen: S = !0 } = e,
+    let { className: n, variant: r = R.R0.PERKS_DISCOVERABILITY, noBackground: A = !1, leftAlignHeaders: p = !1, showAllPerksButton: f, headerClassname: M, isFullScreen: S = !0 } = e,
         h = a.useRef(null),
         x = (0, E.yQ)(),
         b = (0, u.Ag)(x),
@@ -86,13 +86,13 @@ t.Z = (e) => {
             fractionalState: j
         }),
         w = G.some((e) => null != e.pillText),
-        [H, y] = a.useState(null),
+        [y, H] = a.useState(null),
         k = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (null == U ? void 0 : null === (t = U.freeBoost) || void 0 === t ? void 0 : t.name) === T.u.FREE_BOOST &&
                 (0, s.jsx)(l.O_, {
-                    ref: y,
+                    ref: H,
                     className: m.confettiCanvas,
                     environment: k.current
                 }),
@@ -101,15 +101,15 @@ t.Z = (e) => {
                 className: i()(
                     m.section,
                     {
-                        [m.centerAlignSection]: !f,
-                        [m.leftAlignSection]: f
+                        [m.centerAlignSection]: !p,
+                        [m.leftAlignSection]: p
                     },
                     n
                 ),
                 children: [
                     (0, s.jsx)(C, {
-                        showAllPerksButton: p,
-                        leftAlignHeaders: f,
+                        showAllPerksButton: f,
+                        leftAlignHeaders: p,
                         title: D.title,
                         headerClassname: M
                     }),
@@ -117,20 +117,20 @@ t.Z = (e) => {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: i()(m.subtitle, {
-                            [m.subtitle]: null == p || f,
-                            [m.subtitleWithButton]: null != p && !f,
-                            [m.fullWidth]: v || f,
+                            [m.subtitle]: null == f || p,
+                            [m.subtitleWithButton]: null != f && !p,
+                            [m.fullWidth]: v || p,
                             [m.moreSubtitleMargin]: w,
-                            [m.leftAlignSubtitle]: f,
-                            [m.centerAlignSubtitle]: !f
+                            [m.leftAlignSubtitle]: p,
+                            [m.centerAlignSubtitle]: !p
                         }),
                         children: D.subtitle
                     }),
-                    !f &&
-                        null != p &&
+                    !p &&
+                        null != f &&
                         (0, s.jsx)('div', {
                             className: i()(m.showAllPerksButtonCenter),
-                            children: p
+                            children: f
                         }),
                     (0, s.jsx)('div', {
                         className: i()({
@@ -141,7 +141,7 @@ t.Z = (e) => {
                             (0, s.jsx)(
                                 N.Z,
                                 {
-                                    confettiCanvas: e.name === T.u.FREE_BOOST ? H : void 0,
+                                    confettiCanvas: e.name === T.u.FREE_BOOST ? y : void 0,
                                     ...e,
                                     forceShadow: A
                                 },

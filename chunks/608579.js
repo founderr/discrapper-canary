@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(791785),
     I = n(961830),
     m = n(742956),
-    T = n(346790),
-    f = n(49308),
+    f = n(346790),
+    T = n(49308),
     h = n(117652),
     N = n(126982),
     p = n(981631),
@@ -46,13 +46,13 @@ function x(e) {
             () => [
                 I.WA,
                 h.Dd,
-                T.n,
+                f.n,
                 ...I.yp,
                 I.wo,
                 {
                     key: _.h8.CONFIRM,
                     renderStep: (e) =>
-                        (0, i.jsx)(f.x, {
+                        (0, i.jsx)(T.x, {
                             ...e,
                             confettiCanvas: j,
                             analyticsLocations: P,

@@ -32,8 +32,8 @@ var i,
     E = n(377171),
     I = n(124347),
     m = n(695346),
-    T = n(186523),
-    f = n(553826),
+    f = n(186523),
+    T = n(553826),
     h = n(506071),
     N = n(203143),
     p = n(79390),
@@ -295,12 +295,12 @@ function k(e) {
             'aria-hidden': !0
         };
     return t
-        ? (0, s.jsx)(f.Z, {
+        ? (0, s.jsx)(T.Z, {
               ...a,
               foreground: R.radioForeground,
               className: i
           })
-        : (0, s.jsx)(T.Z, {
+        : (0, s.jsx)(f.Z, {
               ...a,
               className: i
           });

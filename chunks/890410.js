@@ -13,12 +13,12 @@ var a = n(120356),
     c = n(464891),
     u = n(831557);
 function d(e) {
-    let { message: t, channel: n, content: a, className: d, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...T } = e,
-        f = (0, r.ZP)(t);
+    let { message: t, channel: n, content: a, className: d, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...f } = e,
+        T = (0, r.ZP)(t);
     return (0, i.jsx)('div', {
         className: s()({ [u.withFooter]: m }, u.embedCard, { [u.compact]: _ }, d),
         children: (0, i.jsx)(l.Z, {
-            ...T,
+            ...f,
             className: s()(u.messageContainer, { [u.compact]: _ }),
             childrenMessageContent: (0, i.jsx)(o.ZP, {
                 className: s()(u.__invalid_messageContent, { [u.compact]: _ }),
@@ -28,7 +28,7 @@ function d(e) {
             childrenHeader: (0, i.jsx)(c.ZP, {
                 message: t,
                 channel: n,
-                author: f,
+                author: T,
                 guildId: null == n ? void 0 : n.guild_id,
                 compact: _,
                 hideTimestamp: I,

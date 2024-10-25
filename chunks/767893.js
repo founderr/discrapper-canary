@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(565138),
     I = n(430824),
     m = n(689938),
-    T = n(239048);
-let f = {
+    f = n(239048);
+let T = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -26,9 +26,9 @@ let f = {
 function h(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
-        offset: f,
+        offset: T,
         children: (0, i.jsxs)('div', {
-            className: T.channelHeader,
+            className: f.channelHeader,
             'data-recents-channel': t.id,
             children: [(0, i.jsx)(N, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
         })
@@ -39,7 +39,7 @@ function N(e) {
         n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
     return null != n
         ? (0, i.jsx)(E.Z, {
-              className: T.icon,
+              className: f.icon,
               guild: n,
               size: E.Z.Sizes.SMALLER,
               'aria-hidden': !0
@@ -51,7 +51,7 @@ function N(e) {
                 experimentLocation: 'ForLaterChannelHeader'
             })
           : (0, i.jsx)('div', {
-                className: s()(T.icon, T.dmIcon),
+                className: s()(f.icon, f.dmIcon),
                 children: (0, i.jsx)(l.kBi, { size: 'xxs' })
             });
 }
@@ -63,12 +63,12 @@ function p(e) {
         r = t.isPrivate() || null == s,
         l = t.isDM() ? m.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: a }) : a;
     return (0, i.jsxs)('div', {
-        className: T.channelNameSection,
+        className: f.channelNameSection,
         children: [
             r
                 ? null
                 : (0, i.jsx)(s, {
-                      className: T.channelTypeIcon,
+                      className: f.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {

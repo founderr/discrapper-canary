@@ -17,13 +17,13 @@ function d(e) {
     let t,
         n,
         d,
-        { channel: h, messages: p, oldestUnreadMessageId: m, treatSpam: _, summaries: f, selectedSummary: E } = e,
+        { channel: h, messages: m, oldestUnreadMessageId: p, treatSpam: _, summaries: f, selectedSummary: E } = e,
         g = [],
         C = !1,
-        I = null != m ? l.default.extractTimestamp(m) : null,
+        I = null != p ? l.default.extractTimestamp(p) : null,
         T = null;
     return (
-        p.forEach((e) => {
+        m.forEach((e) => {
             var s, x, S, v, N, A, Z, M;
             if (null != f && f.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
@@ -79,7 +79,7 @@ function d(e) {
                         : (n = (t = N).content[t.content.length - 1]),
                     [t, n]);
             }
-            if (m === e.id && null != I) {
+            if (p === e.id && null != I) {
                 if (null != R && R.type === u.ys_.DIVIDER) (R.unreadId = e.id), (I = null);
                 else if (null !== L) {
                     (A = L),
@@ -122,9 +122,9 @@ function d(e) {
                 groupId: n
             };
             n === e.id && (d = D);
-            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = p;
+            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = m;
             k && e.id === w && null != U && (D.flashKey = U),
-                p.jumpTargetId === e.id && (D.jumpTarget = !0),
+                m.jumpTargetId === e.id && (D.jumpTarget = !0),
                 null != E &&
                     e.id === E.startId &&
                     E.count > 1 &&

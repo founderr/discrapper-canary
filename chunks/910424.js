@@ -15,8 +15,8 @@ var s = n(442837),
     u = n(382182),
     d = n(199902),
     h = n(592125),
-    p = n(585483),
-    m = n(915863),
+    m = n(585483),
+    p = n(915863),
     _ = n(981631),
     f = n(689938),
     E = n(511292);
@@ -36,7 +36,7 @@ function g(e) {
         A = (0, c.Aq)(),
         Z = null != T && null != C && T.state !== _.jm8.ENDED && T.ownerId === C.ownerId,
         M = (e) => {
-            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !Z && (0, o.iV)(C, { forceMultiple: e }), A.dispatch(_.CkL.POPOUT_CLOSE), p.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
+            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !Z && (0, o.iV)(C, { forceMultiple: e }), A.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
         };
     if (null == C) return null;
     let b = (0, u.P9)(N);
@@ -48,7 +48,7 @@ function g(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(
-                m.Z,
+                p.Z,
                 {
                     disabled: t || Z || !v,
                     onClick: () => M(!1),
@@ -69,7 +69,7 @@ function g(e) {
                 ? (0, i.jsx)(a.Tooltip, {
                       text: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                       children: (e) =>
-                          (0, i.jsx)(m.Z, {
+                          (0, i.jsx)(p.Z, {
                               ...e,
                               onClick: () => {
                                   var t;

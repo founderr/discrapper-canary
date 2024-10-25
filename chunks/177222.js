@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(100527),
     d = n(906732),
     h = n(688465),
-    p = n(680295),
-    m = n(785717),
+    m = n(680295),
+    p = n(785717),
     _ = n(221292),
     f = n(687158),
     E = n(326094),
@@ -45,7 +45,7 @@ function y(e) {
             currentUser: n,
             location: P.Sbl.PROFILE_PANEL
         }),
-        B = (0, m.ZB)({
+        B = (0, p.ZB)({
             layout: w ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
             channelId: y.id
@@ -67,7 +67,7 @@ function y(e) {
         };
     return (0, i.jsx)(d.Gt, {
         value: H,
-        children: (0, i.jsx)(m.Mt, {
+        children: (0, i.jsx)(p.Mt, {
             value: B,
             children: (0, i.jsx)(g.NJ, {
                 value: F,
@@ -158,7 +158,7 @@ function y(e) {
                                 })
                             }),
                         (null == U ? void 0 : U.profileEffectId) != null &&
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(m.Z, {
                                 profileEffectId: null == U ? void 0 : U.profileEffectId,
                                 isHovering: V
                             })

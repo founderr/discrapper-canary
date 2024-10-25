@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-class T extends a.Component {
+class f extends a.Component {
     renderMedia() {
         let { src: e, className: t, title: n } = this.props,
             { imageLoading: a } = this.state;
@@ -94,7 +94,7 @@ class T extends a.Component {
             });
     }
 }
-class f extends a.Component {
+class T extends a.Component {
     componentWillUnmount() {
         this.videoTimeout.stop();
     }
@@ -121,7 +121,7 @@ class f extends a.Component {
         let { playing: e, slideImages: t, image: n, title: a, splashClassName: s } = this.props;
         return null == t
             ? (0, i.jsx)(
-                  T,
+                  f,
                   {
                       className: r()(I.splash, s),
                       src: n,
@@ -170,7 +170,7 @@ class f extends a.Component {
             }),
             m(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
-                    { video: t, image: n, title: s, playing: l, muted: c, splashClassName: _, splashPlaceholderClassName: m, renderMediaOverlay: f } = this.props,
+                    { video: t, image: n, title: s, playing: l, muted: c, splashClassName: _, splashPlaceholderClassName: m, renderMediaOverlay: T } = this.props,
                     h = c ? d.VoiceXIcon : d.VoiceNormalIcon;
                 return (0, i.jsxs)(a.Fragment, {
                     children: [
@@ -194,7 +194,7 @@ class f extends a.Component {
                                 l && e
                                     ? null
                                     : (0, i.jsx)(
-                                          T,
+                                          f,
                                           {
                                               className: r()(I.splashPlaceholder, m),
                                               src: n,
@@ -206,7 +206,7 @@ class f extends a.Component {
                         (0, i.jsx)(d.Clickable, {
                             className: r()(I.muteContainer, {
                                 [I.muteContainerPlaying]: l && e,
-                                [I.muteContainerMediaOverlay]: null != f
+                                [I.muteContainerMediaOverlay]: null != T
                             }),
                             onClick: this.handleToggleMute,
                             children: l && e ? (0, i.jsx)(h, { className: I.mute }) : null
@@ -223,7 +223,7 @@ class f extends a.Component {
                     { currentIndex: l } = this.state;
                 return a
                     ? (0, i.jsx)(
-                          T,
+                          f,
                           {
                               className: r()(I.splash, s),
                               src: e[l],
@@ -232,7 +232,7 @@ class f extends a.Component {
                           l
                       )
                     : (0, i.jsx)(
-                          T,
+                          f,
                           {
                               className: r()(I.splash, s),
                               src: t,
@@ -243,4 +243,4 @@ class f extends a.Component {
             });
     }
 }
-t.Z = f;
+t.Z = T;

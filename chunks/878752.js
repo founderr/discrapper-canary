@@ -14,8 +14,8 @@ var s = n(512722),
     u = n(441167),
     d = n(822183),
     h = n(641015),
-    p = n(131951),
-    m = n(594174),
+    m = n(131951),
+    p = n(594174),
     _ = n(700785),
     f = n(213652),
     E = n(320427),
@@ -28,8 +28,8 @@ var s = n(512722),
     v = n(307410);
 function N(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
-        N = (0, l.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
+        N = (0, l.e7)([p.default], () => {
+            let e = p.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
         A = (0, o.j)('VoiceEffectsActionBar'),
@@ -39,7 +39,7 @@ function N(e) {
             location: 'b7309a_1'
         }),
         { enableViewerClipping: b } = u.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        R = (0, r.Z)(p.Z);
+        R = (0, r.Z)(m.Z);
     if (null == t || null != Z) return null;
     let L = (0, h.Z)(t),
         P = _.BT({

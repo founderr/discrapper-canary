@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(100527),
     I = n(906732),
     m = n(963249),
-    T = n(594174),
-    f = n(78839),
+    f = n(594174),
+    T = n(78839),
     h = n(55935),
     N = n(63063),
     p = n(74538),
@@ -32,9 +32,9 @@ var i = n(200651),
 class O extends a.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,
-            a = T.default.getUser(i.user_id),
+            a = f.default.getUser(i.user_id),
             s = null != a ? a.username : '???',
-            r = T.default.getUser(i.referrer_id),
+            r = f.default.getUser(i.referrer_id),
             l = null != r ? r.username : '???';
         if (e && void 0 === i.redeemed_at) return R.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: s });
         if (t) return n ? R.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : R.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: l });
@@ -173,11 +173,11 @@ function M(e) {
             }),
             [n, t]
         ),
-        r = T.default.getCurrentUser(),
-        l = (0, u.e7)([T.default], () => null != a && (0, p.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))),
-        o = (0, u.e7)([f.ZP], () => {
+        r = f.default.getCurrentUser(),
+        l = (0, u.e7)([f.default], () => null != a && (0, p.I5)(void 0 !== r && a.user_id === r.id ? r : f.default.getUser(a.user_id))),
+        o = (0, u.e7)([T.ZP], () => {
             var e;
-            return l ? (null === (e = f.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return l ? (null === (e = T.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
         { analyticsLocations: d } = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED),
         { enabled: m } = g.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });

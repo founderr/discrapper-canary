@@ -16,13 +16,13 @@ var i = n(200651),
     E = n(626135),
     I = n(74538),
     m = n(163684),
-    T = n(748770),
-    f = n(474936),
+    f = n(748770),
+    T = n(474936),
     h = n(981631),
     N = n(689938),
     p = n(464780);
 function C() {
-    let e = (0, r.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), f.p9.TIER_2)),
+    let e = (0, r.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), T.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = m.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -34,7 +34,7 @@ function C() {
         { analyticsLocations: g } = (0, u.ZP)(),
         S = a.useCallback(() => {
             (0, d.Z)({
-                subscriptionTier: I.ZP.getSkuIdForPremiumType(f.p9.TIER_2),
+                subscriptionTier: I.ZP.getSkuIdForPremiumType(T.p9.TIER_2),
                 analyticsLocations: g,
                 analyticsObject: {
                     ...C,
@@ -44,7 +44,7 @@ function C() {
             });
         }, [g, C]),
         A = a.useCallback(() => {
-            o.Z.open(h.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
+            o.Z.open(h.oAB.INVENTORY), f.ZP.dismissOutboundPromotionNotice();
         }, []),
         x = a.useCallback(() => {
             E.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
@@ -55,7 +55,7 @@ function C() {
             (0, i.jsx)(l.NoticeCloseButton, {
                 noticeType: h.kVF.OUTBOUND_PROMOTION,
                 onClick: () => {
-                    T.ZP.dismissOutboundPromotionNotice();
+                    f.ZP.dismissOutboundPromotionNotice();
                 }
             }),
             (0, i.jsx)(l.NitroWheelIcon, {

@@ -118,7 +118,7 @@ function L(e) {
         children: (e) => n(e)
     });
 }
-function D(e) {
+function M(e) {
     let { invite: t } = e,
         n = (n) => {
             if (null == t) return (0, i.jsx)(O, {});
@@ -149,7 +149,7 @@ function D(e) {
         children: (e) => n(e)
     });
 }
-function M(e) {
+function D(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: s } = null != t ? t : {},
         r = {};
@@ -166,7 +166,7 @@ function M(e) {
         style: r,
         contentClassName: S.centerAuthBoxContent,
         children: [
-            (0, i.jsx)(D, {
+            (0, i.jsx)(M, {
                 ...e,
                 onAcceptInvite: n
             }),
@@ -193,7 +193,7 @@ function P(e) {
                     { flush: !0 }
                 );
         }, [s, t]),
-        (0, i.jsx)(M, {
+        (0, i.jsx)(D, {
             invite: s,
             onAcceptInvite: (e) => {
                 !(function (e, t, n) {

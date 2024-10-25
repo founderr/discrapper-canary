@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(39604),
     d = n(175470),
     h = n(569545),
-    p = n(314910),
-    m = n(247280);
+    m = n(314910),
+    p = n(247280);
 let _ = { visibility: 'hidden' },
     f = {
         precision: 0.0001,
@@ -122,26 +122,26 @@ function C(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
-                    className: m.hidden,
+                    className: p.hidden,
                     ref: I
                 }),
                 b(
                     (e, t) =>
                         null != t &&
                         (0, i.jsx)(a.animated.div, {
-                            className: m.whiteFlash,
+                            className: p.whiteFlash,
                             style: e
                         })
                 ),
-                (0, i.jsx)(p.ZP, {
+                (0, i.jsx)(m.ZP, {
                     children: (0, i.jsx)('div', {
-                        className: m.hidden,
+                        className: p.hidden,
                         children: L(
                             (e, t, n, s) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, i.jsx)(a.animated.img, {
                                     src: t.thumbnail,
-                                    className: m.movingImage,
+                                    className: p.movingImage,
                                     style: e
                                 })
                         )

@@ -73,8 +73,8 @@ t.Z = (e) => {
                 'empty-member-'.concat(e)
             )
         );
-    let T = Math.max(Math.min(c - I.length, 99), 0);
-    if (1 === T) {
+    let f = Math.max(Math.min(c - I.length, 99), 0);
+    if (1 === f) {
         let e = n[r];
         I.push(
             (0, i.jsx)(
@@ -93,10 +93,10 @@ t.Z = (e) => {
             className: _.partyMembers,
             children: [
                 I,
-                T > 1
+                f > 1
                     ? (0, i.jsxs)('div', {
                           className: _.partyMemberOverflow,
-                          children: ['+', T]
+                          children: ['+', f]
                       })
                     : null
             ]

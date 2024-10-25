@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(442837),
     d = n(481060),
     h = n(194082),
-    p = n(320007),
-    m = n(236091),
+    m = n(320007),
+    p = n(236091),
     _ = n(540059),
     f = n(569545),
     E = n(517525),
@@ -140,7 +140,7 @@ function Y(e) {
             ),
         ei.push(
             (0, i.jsx)(
-                m.Z,
+                p.Z,
                 {
                     className: W.button,
                     channelId: N
@@ -214,7 +214,7 @@ function Y(e) {
                           'select-participant'
                       )
             ),
-        !t && ei.push((0, i.jsx)(p.Z, { className: W.button }, 'clips')),
+        !t && ei.push((0, i.jsx)(m.Z, { className: W.button }, 'clips')),
         !ee &&
             ei.push(
                 (0, i.jsx)(

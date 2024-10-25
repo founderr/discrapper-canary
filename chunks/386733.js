@@ -17,8 +17,8 @@ var s = n(200651),
     m = n(520540),
     C = n(197115),
     A = n(119269),
-    f = n(938736),
-    p = n(981631),
+    p = n(938736),
+    f = n(981631),
     M = n(689938),
     S = n(837661),
     h = n(691766);
@@ -29,7 +29,7 @@ let x = (e) => {
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
             }),
-            c = (0, f.TW)('UserAvatarProgressBarUnit'),
+            c = (0, p.TW)('UserAvatarProgressBarUnit'),
             _ = null != t,
             d = _
                 ? (0, s.jsx)(o.Avatar, {
@@ -121,13 +121,13 @@ t.Z = (e) => {
         { isInSettings: E = !1 } = e,
         x = (0, l.Wu)([N.Z], () => N.Z.getSentUserIds()),
         b = (0, l.e7)([N.Z], () => N.Z.getRecipientStatus()),
-        P = (0, f.uv)('ReferralProgramProgressBar'),
-        v = (0, f.TW)('ReferralProgramProgressBar'),
+        P = (0, p.uv)('ReferralProgramProgressBar'),
+        v = (0, p.TW)('ReferralProgramProgressBar'),
         L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new u.Z(e)), [L]),
         D = (0, l.e7)([N.Z], () => N.Z.getRefreshAt()),
         { subscriberHomeVariant: U } = m.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        B = P === p.g2L.UNAPPLIED || P === p.g2L.QUALIFIED,
+        B = P === f.g2L.UNAPPLIED || P === f.g2L.QUALIFIED,
         j = U === m.p.VARIANT_2;
     a.useEffect(() => {
         x.forEach((e) => {
@@ -142,13 +142,13 @@ t.Z = (e) => {
     b.forEach((e) => {
         e === g.Fe.REDEEMED && G.redeemed++, e === g.Fe.CONVERTED && (G.redeemed++, G.converted++);
     });
-    let w = G.sent === f.Q_,
-        H = R.Z.getArticleURL(p.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: y } = (0, d.ZP)(_.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+    let w = G.sent === p.Q_,
+        y = R.Z.getArticleURL(f.BhN.REFERRAL_PROGRAM),
+        { analyticsLocations: H } = (0, d.ZP)(_.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         k = a.useRef(null),
-        F = (G.sent / f.Q_) * 100,
+        F = (G.sent / p.Q_) * 100,
         V = !1;
-    v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < f.AV), (r = (100 * (f.AV - t)) / f.AV));
+    v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < p.AV), (r = (100 * (p.AV - t)) / p.AV));
     let W = V && null != t,
         K = (0, s.jsxs)('div', {
             className: S.referralInfoContent,
@@ -167,7 +167,7 @@ t.Z = (e) => {
                         (0, s.jsx)(o.Heading, {
                             variant: E ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                             className: S.expandedProgressBarHeader,
-                            children: (0, f.$s)({
+                            children: (0, p.$s)({
                                 referralIncentiveLifecycleState: P,
                                 hasSentAll: w,
                                 referralsStatuses: G
@@ -196,8 +196,8 @@ t.Z = (e) => {
                               }),
                         (0, s.jsx)(o.Text, {
                             variant: E ? 'text-sm/normal' : 'text-lg/medium',
-                            children: (0, f.Hg)({
-                                helpdeskArticle: H,
+                            children: (0, p.Hg)({
+                                helpdeskArticle: y,
                                 referralIncentiveLifecycleState: P,
                                 referralsStatuses: G,
                                 isWithinCountdownRange: V
@@ -220,13 +220,13 @@ t.Z = (e) => {
                                         className: S.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            I.default.track(p.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: y }),
+                                            I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, s.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: y
+                                                            sourceAnalyticsLocations: H
                                                         });
                                                 });
                                         },
@@ -249,10 +249,10 @@ t.Z = (e) => {
                 })
             ]
         }),
-        Y = x.length === f.Q_,
-        z = G.redeemed === f.Q_;
+        Y = x.length === p.Q_,
+        z = G.redeemed === p.Q_;
     return (0, s.jsx)(d.Gt, {
-        value: y,
+        value: H,
         children: (0, s.jsx)('div', {
             className: i()({
                 [S.containerWithGlowWithoutBanner]: !W && z && !B,
@@ -285,7 +285,7 @@ t.Z = (e) => {
                                 color: 'always-white',
                                 variant: 'heading-md/extrabold',
                                 children: M.Z.Messages.REFERRAL_INCENTIVE_YOU_EARNED_DISCOUNT.format({
-                                    discountRate: f.Nq,
+                                    discountRate: p.Nq,
                                     subscriptionInterval: M.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                                 })
                             })

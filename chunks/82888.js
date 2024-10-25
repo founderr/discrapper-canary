@@ -27,10 +27,10 @@ function u(e) {
             };
         });
     if (!(0, a.NX)(u)) return null;
-    let p = null == d ? void 0 : d.applicationId;
-    return h !== c.Ez.PANEL || null == p
+    let m = null == d ? void 0 : d.applicationId;
+    return h !== c.Ez.PANEL || null == m
         ? null
-        : null == u || null == d || (0, r.Z)(u) || null == p
+        : null == u || null == d || (0, r.Z)(u) || null == m
           ? null
           : (0, i.jsx)(o.Z, {
                 maxHeight: t,

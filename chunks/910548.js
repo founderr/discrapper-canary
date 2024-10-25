@@ -17,8 +17,8 @@ var i,
     E = n(468194),
     I = n(477690),
     m = n(481060),
-    T = n(230711),
-    f = n(745510),
+    f = n(230711),
+    T = n(745510),
     h = n(549006),
     N = n(64078),
     p = n(29270),
@@ -150,7 +150,7 @@ function k(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(f.h),
+        { createMultipleConfettiAt: f, confettiCanvas: h } = o.useContext(T.h),
         [N, p] = o.useState(null),
         C = (0, d.uR)(h, N),
         g = (function (e, t) {
@@ -198,7 +198,7 @@ function k(e) {
                             y: i.top + a.y
                         };
                     })(r.current, I, s);
-                T(t.x, t.y, {
+                f(t.x, t.y, {
                     velocity: {
                         type: 'static-random',
                         minValue: {
@@ -212,7 +212,7 @@ function k(e) {
                     }
                 });
             }
-        }, [T, I, c, s]),
+        }, [f, I, c, s]),
         o.useEffect(() => {
             if (S && 'leaf_fall' === c) {
                 let e = b[I].leafRotationDirection;
@@ -314,7 +314,7 @@ function G(e) {
             return null;
         })(n),
         u = (0, p.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(f.h),
+        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(T.h),
         [E, I] = o.useState(!1),
         O = o.useRef(null),
         { reducedMotion: M } = o.useContext(m.AccessibilityPreferencesContext),
@@ -360,7 +360,7 @@ function G(e) {
             I(!1);
         }, []),
         U = o.useCallback(() => {
-            (0, N.AI)({ settingsVisible: !0 }), T.Z.open(x.oAB.POGGERMODE), I(!1);
+            (0, N.AI)({ settingsVisible: !0 }), f.Z.open(x.oAB.POGGERMODE), I(!1);
         }, []),
         y = o.useCallback(
             (e, t) => {

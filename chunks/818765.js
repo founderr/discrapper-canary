@@ -26,19 +26,19 @@ let T = (0, _.uk)('poggermode_applause', r.Z.getSoundpack()),
             t = d.Z.comboSoundsEnabled;
         return (!!e && !!t && null != o.Z.getChannelId()) || !1;
     },
-    f = () => {
+    p = () => {
         if (0 === g.length || !A() || R) return;
         R = !0;
         let [e, t] = g[g.length - 1];
-        (0, _.GN)(e, t), (N = setTimeout(p, 1000));
+        (0, _.GN)(e, t), (N = setTimeout(f, 1000));
     },
-    p = () => {
-        g.pop(), (R = !1), f();
+    f = () => {
+        g.pop(), (R = !1), p();
     },
     M = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = l.Z.isConnected();
-        g.push([e, t * (n ? 0.1 : 1)]), f();
+        g.push([e, t * (n ? 0.1 : 1)]), p();
     };
 class S extends a.Z {
     _initialize() {

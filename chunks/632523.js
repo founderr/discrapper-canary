@@ -16,7 +16,7 @@ var i = n(200651),
 function E(e) {
     let { initialized: t, items: n, loading: E, loadMore: I } = e,
         m = a.useRef(null),
-        T = (0, o.Z)('for-you', m);
+        f = (0, o.Z)('for-you', m);
     (0, c.Z)(
         {
             type: s.ImpressionTypes.VIEW,
@@ -26,7 +26,7 @@ function E(e) {
         { disableTrack: !t },
         [t]
     );
-    let f = () => {
+    let T = () => {
         var e;
         let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
         if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && I();
@@ -36,7 +36,7 @@ function E(e) {
             ? (0, i.jsx)(u.v, {})
             : (0, i.jsx)(i.Fragment, {
                   children: (0, i.jsx)(r.bG, {
-                      navigator: T,
+                      navigator: f,
                       children: (0, i.jsx)(r.SJ, {
                           children: (e) => {
                               let { ref: t, ...a } = e;
@@ -47,7 +47,7 @@ function E(e) {
                                       (m.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                                   },
                                   ...a,
-                                  onScroll: f,
+                                  onScroll: T,
                                   children: [(0, i.jsx)(d.U, { items: n }), E ? (0, i.jsx)(l.Spinner, { className: _.spinner }) : null]
                               });
                           }

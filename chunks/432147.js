@@ -17,8 +17,8 @@ var a = n(120356),
     E = n(144140),
     I = n(91159),
     m = n(576799),
-    T = n(488131),
-    f = n(981631),
+    f = n(488131),
+    T = n(981631),
     h = n(689938),
     N = n(119487);
 function p(e) {
@@ -78,13 +78,13 @@ function C(e) {
             }),
             (0, i.jsx)(l.Clickable, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, T.ok)(t, e.shiftKey);
+                    e.stopPropagation(), (0, f.ok)(t, e.shiftKey);
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         i = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === f.yXg.SPACE || e.which === f.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, T.ok)(t, i));
+                    (e.which === T.yXg.SPACE || e.which === T.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, f.ok)(t, i));
                 },
                 onContextMenu: function (e) {
                     (0, o.jW)(e, async () => {

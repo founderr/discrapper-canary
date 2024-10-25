@@ -13,8 +13,8 @@ var i,
     u = n.n(c),
     d = n(442837),
     h = n(607070),
-    p = n(484334),
-    m = n(158877),
+    m = n(484334),
+    p = n(158877),
     _ = n(958050);
 function f(e) {
     let t = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -42,14 +42,14 @@ function f(e) {
 function E(e) {
     let { className: t } = e;
     return (0, a.jsx)('div', {
-        ref: f(i || (i = n.t(p, 2))),
+        ref: f(i || (i = n.t(m, 2))),
         className: o()(_.glow, t)
     });
 }
 function g(e) {
     let { className: t } = e;
     return (0, a.jsx)('div', {
-        ref: f(s || (s = n.t(m, 2))),
+        ref: f(s || (s = n.t(p, 2))),
         className: o()(_.trinkets, t)
     });
 }

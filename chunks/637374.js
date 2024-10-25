@@ -12,8 +12,8 @@ var i = n(200651),
     E = n(730749),
     I = n(112724),
     m = n(607070),
-    T = n(884697),
-    f = n(600164),
+    f = n(884697),
+    T = n(600164),
     h = n(479446),
     N = n(930114),
     p = n(981632),
@@ -113,10 +113,10 @@ class V extends a.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(f.Z, {
-            justify: f.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(T.Z, {
+            justify: T.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(f.Z, {
+                (0, i.jsxs)(T.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends a.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(f.Z, {
-                    align: f.Z.Align.END,
-                    justify: f.Z.Justify.END,
+                (0, i.jsxs)(T.Z, {
+                    align: T.Z.Align.END,
+                    justify: T.Z.Justify.END,
                     className: k.metadata,
-                    direction: f.Z.Direction.VERTICAL,
+                    direction: T.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -154,7 +154,7 @@ class V extends a.Component {
             (e.redeemed || r || e.isClaimed || !n.verified) && ((s.color = u.Button.Colors.BRAND), (s.disabled = !0)),
             (0, i.jsx)(u.Button, {
                 ...s,
-                className: (0, T.mO)(e) ? k.collectiblesAcceptButton : null,
+                className: (0, f.mO)(e) ? k.collectiblesAcceptButton : null,
                 size: u.Button.Sizes.SMALL,
                 children: e.redeemed ? B.Z.Messages.GIFT_EMBED_BUTTON_CLAIMED : null != e.giftStyle ? B.Z.Messages.SEASONAL_GIFTING_OPEN_GIFT : B.Z.Messages.GIFT_EMBED_BUTTON_ACCEPT
             })
@@ -174,7 +174,7 @@ class V extends a.Component {
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
         let l = i.isPreorder() ? B.Z.Messages.PREORDER_SKU_NAME.format({ name: i.name }) : i.name;
         if (e.redeemed)
-            return e.isSubscription || (0, T.mO)(e)
+            return e.isSubscription || (0, f.mO)(e)
                 ? B.Z.Messages.GIFT_EMBED_BODY_CLAIMED_SELF_SUBSCRIPTION
                 : B.Z.Messages.GIFT_EMBED_BODY_CLAIMED_SELF.format({
                       skuName: l,
@@ -267,7 +267,7 @@ class V extends a.Component {
                       width: n
                   })
                 : (0, i.jsx)(_.OR, { isHorizontal: n >= _.aL });
-        return (0, T.mO)(e)
+        return (0, f.mO)(e)
             ? (0, i.jsx)('div', {
                   className: k.collectiblesEmbedWrapper,
                   children: this.renderEmbed()

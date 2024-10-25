@@ -19,17 +19,17 @@ function o(e) {
     i.useEffect(() => {
         n && u(null);
     }, [n]);
-    let p = null != c && !t;
+    let m = null != c && !t;
     return (
         i.useEffect(() => {
-            if (!p) return;
+            if (!m) return;
             let e = setTimeout(() => {
                 if (!t) u(null);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
-        }, [t, p]),
+        }, [t, m]),
         i.useEffect(() => {
             if (t) return;
             let e = (e) => {
@@ -53,7 +53,7 @@ function o(e) {
             enabled: o.enabled,
             showsTooltip: o.showsTooltip,
             applicationDetails: h,
-            shouldShow: p
+            shouldShow: m
         }
     );
 }

@@ -14,7 +14,7 @@ var i = n(200651),
     u = n(375954),
     d = n(921944);
 function h(e) {
-    let { children: t, enabled: n, animationContainerClassName: h, glowClassName: p, trinketsClassName: m } = e,
+    let { children: t, enabled: n, animationContainerClassName: h, glowClassName: m, trinketsClassName: p } = e,
         _ = (0, a.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
         f = s.useMemo(() => {
             let e = [];
@@ -30,8 +30,8 @@ function h(e) {
             if (n === l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
                 return (0, i.jsx)(r.b, {
                     animationContainerClassName: h,
-                    glowClassName: p,
-                    trinketsClassName: m,
+                    glowClassName: m,
+                    trinketsClassName: p,
                     onMount: E,
                     children: t
                 });

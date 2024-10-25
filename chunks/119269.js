@@ -18,14 +18,14 @@ var i = n(120356),
 ((s = a || (a = {}))[(s.NITRO_GEM = 0)] = 'NITRO_GEM'), (s[(s.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
     let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: N, customAnimationClassName: m, circleColor: C, circleStroke: A } = e,
-        f = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        p = t && !f;
+        p = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        f = t && !p;
     return (0, r.jsx)('div', {
         className: l()(u.progressCircle, n, { [u.progressCricleBottomMargin]: 0 === g }),
         children: (0, r.jsx)(E.Z, {
             animationClassName: l()(u.activeProgressCircle, {
-                [u.activeProgressCircleAnimation]: p,
-                [null != m ? m : '']: p
+                [u.activeProgressCircleAnimation]: f,
+                [null != m ? m : '']: f
             }),
             progressCircleStroke: A,
             progressCircleStrokeSize: i,
@@ -35,7 +35,7 @@ t.Z = (e) => {
             children:
                 0 === g
                     ? (0, r.jsx)(_.Z, {
-                          className: p ? u.nitroGemAnimation : void 0,
+                          className: f ? u.nitroGemAnimation : void 0,
                           backgroundColor: l()(u.gemBackgroundFill, a),
                           backgroundCircleSize: T
                       })

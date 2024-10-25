@@ -12,7 +12,7 @@ var s = n(120356),
     o = n(829820),
     c = n(26118);
 function u(e) {
-    let { activity: t, user: n, channelId: s, guildId: u, source: d, size: h, look: p, color: m, className: _, onAction: f } = e,
+    let { activity: t, user: n, channelId: s, guildId: u, source: d, size: h, look: m, color: p, className: _, onAction: f } = e,
         { tooltip: E, loading: g, disabled: C, onClick: I } = (0, o.Fe)(t, n, d, r.ZP.getNickname(u, s, n)),
         T = () => {
             null == f || f(), I();
@@ -25,8 +25,8 @@ function u(e) {
                 size: h,
                 className: a()(c.syncButton, _),
                 innerClassName: c.syncButtonInner,
-                look: p,
-                color: m,
+                look: m,
+                color: p,
                 onClick: T,
                 onMouseEnter: n,
                 onMouseLeave: s,

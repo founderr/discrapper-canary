@@ -33,8 +33,8 @@ var s = n(200651),
     v = n(630724),
     b = n(436620),
     L = n(689938),
-    D = n(60561),
-    M = n(113207);
+    M = n(60561),
+    D = n(113207);
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
@@ -46,11 +46,11 @@ class P extends r.PureComponent {
     renderButton(e, t) {
         return b.KO
             ? (0, s.jsx)(u.zx, {
-                  className: M.marginTop40,
+                  className: D.marginTop40,
                   onClick: t,
                   children: e
               })
-            : (0, s.jsx)(u.v6, { className: M.marginTop40 });
+            : (0, s.jsx)(u.v6, { className: D.marginTop40 });
     }
     renderSpinner(e) {
         return (0, s.jsxs)(u.ZP, {
@@ -62,10 +62,10 @@ class P extends r.PureComponent {
             children: [
                 (0, s.jsx)(u.Ee, {
                     src: n(167969),
-                    className: M.marginBottom8
+                    className: D.marginBottom8
                 }),
                 (0, s.jsx)(u.Dx, {
-                    className: a()(M.marginTop8, M.marginBottom8),
+                    className: a()(D.marginTop8, D.marginBottom8),
                     children: L.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
                 }),
                 (0, s.jsx)(u.DK, { children: L.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE }),
@@ -77,7 +77,7 @@ class P extends r.PureComponent {
         return (0, s.jsxs)(u.ZP, {
             children: [
                 (0, s.jsx)(u.Dx, {
-                    className: M.marginBottom8,
+                    className: D.marginBottom8,
                     children: L.Z.Messages.APP_OPENED_TITLE
                 }),
                 (0, s.jsx)(u.DK, { children: L.Z.Messages.APP_OPENED_BODY }),
@@ -89,10 +89,10 @@ class P extends r.PureComponent {
         let { guildTemplate: e } = this.props;
         return (o()(null != e, 'guild template must not be null'), e.state === O.Rj.RESOLVING)
             ? (0, s.jsx)(u.ZP, {
-                  className: D.authBox,
+                  className: M.authBox,
                   children: (0, s.jsx)(p.Z, { guildTemplate: e })
               })
-            : (0, s.jsx)(y, { guildTemplate: e });
+            : (0, s.jsx)(U, { guildTemplate: e });
     }
     renderContinue() {
         return (0, s.jsxs)(u.ZP, {
@@ -161,32 +161,32 @@ function j(e) {
         ...t
     });
 }
-function y(e) {
+function U(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: r } = (0, h.Z)(t, !1);
     I.Z.flowStep(v.MK.ORGANIC_GUILD_TEMPLATES, v.X2.GUILD_CREATE);
     let i = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(u.Dx, {
-                className: D.header,
+                className: M.header,
                 children: L.Z.Messages.GUILD_TEMPLATE_SETUP_DISCORD
             }),
             n,
             (0, s.jsx)(u.zx, {
-                className: D.createButton,
+                className: M.createButton,
                 onClick: r,
                 children: L.Z.Messages.GUILD_TEMPLATE_CREATE_DISCORD
             })
         ]
     });
     return (0, s.jsx)(C.Z, {
-        className: D.authBox,
+        className: M.authBox,
         children: () => [
             (0, s.jsx)(g.Z, { guildTemplate: t }, 'template'),
             (0, s.jsx)(
                 'div',
                 {
-                    className: D.formContainer,
+                    className: M.formContainer,
                     children: i
                 },
                 'contents'

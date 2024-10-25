@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     },
     r: function () {
         return i;
@@ -17,8 +17,8 @@ var i,
     u = n(594174),
     d = n(981631),
     h = n(689938);
-function p(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: s, hasClips: p, channel: m, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: g, appContext: C } = e,
+function m(e) {
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: s, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: g, appContext: C } = e,
         I = [];
     return (
         t &&
@@ -32,7 +32,7 @@ function p(e) {
                 icon: a.FileUpIcon,
                 display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
             })),
-        p &&
+        m &&
             t &&
             C !== d.IlC.POPOUT &&
             I.push({
@@ -75,7 +75,7 @@ function p(e) {
                         type: 'INVITE_TO_GAME',
                         icon: a.DpadIcon,
                         display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-                            channel: (0, r.F6)(m, u.default, c.Z, !0),
+                            channel: (0, r.F6)(p, u.default, c.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
@@ -86,7 +86,7 @@ function p(e) {
                             type: 'INVITE_TO_LISTEN',
                             icon: a.UserPlayIcon,
                             display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-                                channel: (0, r.F6)(m, u.default, c.Z, !0),
+                                channel: (0, r.F6)(p, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e
@@ -97,7 +97,7 @@ function p(e) {
                             type: 'INVITE_TO_WATCH',
                             icon: a.EyeIcon,
                             display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-                                channel: (0, r.F6)(m, u.default, c.Z, !0),
+                                channel: (0, r.F6)(p, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e

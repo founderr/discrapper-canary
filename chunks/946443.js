@@ -20,8 +20,8 @@ var i = n(200651),
     E = n(570140),
     I = n(607070),
     m = n(724757),
-    T = n(626135),
-    f = n(585483),
+    f = n(626135),
+    T = n(585483),
     h = n(143316),
     N = n(240126),
     p = n(791914),
@@ -58,15 +58,15 @@ function R(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    f.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    T.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        f.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        T.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
         })(L, Z),
         a.useEffect(() => {
-            T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            f.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         a.useEffect(
             () => (

@@ -18,8 +18,8 @@ var a = n(120356),
     m = n(710220),
     C = n(318747),
     A = n(409100),
-    f = n(474936),
-    p = n(689938),
+    p = n(474936),
+    f = n(689938),
     M = n(679757);
 let S = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
@@ -67,7 +67,7 @@ function x(e) {
         variant: t,
         color: 'always-white',
         className: r()(M.description, { [M.descriptionBottomMargin]: n }),
-        children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
+        children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
 t.Z = (e) => {
@@ -79,7 +79,7 @@ t.Z = (e) => {
         Z = (0, i.e7)([d.Z], () => d.Z.affinities),
         D = (0, I.Z)(),
         { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        B = b === f.EZ.ApplicationStoreHome && null != D && U,
+        B = b === p.EZ.ApplicationStoreHome && null != D && U,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -96,7 +96,7 @@ t.Z = (e) => {
                         (0, s.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: p.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
+                            children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
                         B
                             ? (0, s.jsx)(m.Z, { referrer: D })

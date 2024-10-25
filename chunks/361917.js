@@ -34,8 +34,8 @@ var i = t(200651),
     b = t(695676),
     R = t(98880),
     M = t(804307),
-    j = t(888617),
-    y = t(561160),
+    y = t(888617),
+    j = t(561160),
     O = t(41558),
     Z = t(105862),
     H = t(28147),
@@ -127,7 +127,7 @@ function F(e) {
                                       onEmptyState: T
                                   }),
                               L &&
-                                  (0, i.jsx)(y.A, {
+                                  (0, i.jsx)(j.A, {
                                       type: P.LG.HOME_EMPTY,
                                       textContent: t === P._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
@@ -330,7 +330,7 @@ function q(e) {
     (0, C.g)();
     let l = (0, _.Z)({ guildId: n.getGuildId() }),
         o = R.U4.LARGE_BANNER,
-        { trackSectionImpressionRef: r } = (0, j.Z)({
+        { trackSectionImpressionRef: r } = (0, y.Z)({
             sectionName: P.L3.ACTIVITIES,
             numItems: l.length,
             numVisibleItems: l.length
@@ -383,7 +383,7 @@ function J(e) {
             limit: 4,
             sectionName: l
         }),
-        { trackSectionImpressionRef: d } = (0, j.Z)({
+        { trackSectionImpressionRef: d } = (0, y.Z)({
             sectionName: l,
             numItems: o.length,
             numVisibleItems: s.length
@@ -591,7 +591,7 @@ function X(e) {
             sectionName: m,
             sectionOverallPosition: c
         }),
-        { trackSectionImpressionRef: C } = (0, j.Z)({
+        { trackSectionImpressionRef: C } = (0, y.Z)({
             sectionName: m,
             numItems: u.length,
             numVisibleItems: p.length

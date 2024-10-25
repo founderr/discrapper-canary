@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(607070),
     I = n(100527),
     m = n(367907),
-    T = n(676742),
-    f = n(1585),
+    f = n(676742),
+    T = n(1585),
     h = n(841762),
     N = n(336197),
     p = n(406432),
@@ -59,7 +59,7 @@ function B(e) {
             [G]
         ),
         q = (0, d.e7)([R.ZP], () => ((null == G ? void 0 : G.authorId) != null ? R.ZP.getMember(G.guildId, G.authorId) : null)),
-        J = (0, T.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
+        J = (0, f.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = a.useMemo(() => {
             var e;
             return [null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit', null == q ? void 0 : q.colorRoleId];
@@ -107,7 +107,7 @@ function B(e) {
         ),
         ec = (0, O.NZ)({
             avatarDecoration: J,
-            size: (0, f.y9)(_.AvatarSizes.SIZE_40),
+            size: (0, T.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
         eu = null === (n = G.user) || void 0 === n ? void 0 : n.getAvatarURL(G.guildId, 40, en),

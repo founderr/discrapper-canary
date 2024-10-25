@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return H;
+        return y;
     }
 });
 var s = n(399606),
@@ -22,8 +22,8 @@ var s = n(399606),
     m = n(269987),
     C = n(548629),
     A = n(507084),
-    f = n(680313),
-    p = n(926433),
+    p = n(680313),
+    f = n(926433),
     M = n(302036),
     S = n(994554),
     h = n(1549),
@@ -40,14 +40,14 @@ var s = n(399606),
     j = n(772969),
     G = n(926262);
 let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
-    H = (e) => {
+    y = (e) => {
         let { styles: t } = e,
             n = (0, i.ZP)(),
             a = (0, s.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
                 return c.ZP.canUsePremiumProfileCustomization(e);
             }),
-            H = (0, o.BU)(_.Uq / 1024, { useKibibytes: !0 });
+            y = (0, o.BU)(_.Uq / 1024, { useKibibytes: !0 });
         return {
             badge: {
                 title: u.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
@@ -109,7 +109,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: u.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: u.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, A, f),
+                imageSource: w(n, A, p),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
@@ -122,7 +122,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             soundboard: {
                 title: u.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: u.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: w(n, p, M),
+                imageSource: w(n, f, M),
                 imageClassName: t.soundboardImage
             },
             stickers: {
@@ -156,8 +156,8 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 imageClassName: t.superReactionsImage
             },
             upload: {
-                title: u.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({ premiumMaxSize: H }),
-                description: u.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({ premiumMaxSize: H }),
+                title: u.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({ premiumMaxSize: y }),
+                description: u.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({ premiumMaxSize: y }),
                 imageSource: G,
                 imageClassName: t.uploadImage
             },

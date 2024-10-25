@@ -18,8 +18,8 @@ var i = n(200651),
     u = n(120619),
     d = n(690221),
     h = n(333867),
-    p = n(422034),
-    m = n(938475),
+    m = n(422034),
+    p = n(938475),
     _ = n(937615),
     f = n(981631),
     E = n(215023),
@@ -37,7 +37,7 @@ function T(e) {
 let x = 'HD_STREAMING_POTION_MODAL_KEY';
 function S(e) {
     let { channel: t } = e,
-        n = m.ZP.getVoiceStatesForChannel(t).slice(0, 6),
+        n = p.ZP.getVoiceStatesForChannel(t).slice(0, 6),
         [T, S, v, N, A, Z] = (0, a.Wu)([u.Z], () => [u.Z.isFetchingPrice(E.FX), u.Z.isEntitlementFetched(E.FX), u.Z.isEntitlementFetching(E.FX), u.Z.getPrice(E.FX), u.Z.getErrored(E.FX), u.Z.getEntitlement(E.FX)]),
         { analyticsLocations: M } = (0, o.ZP)([r.Z.HD_STREAMING_POTION_MODAL]),
         b = null != Z && !Z.consumed && Z.type === f.qc2.DEVELOPER_GIFT;
@@ -62,7 +62,7 @@ function S(e) {
         L = n.map((e, t) => {
             let { user: s } = e;
             return (0, i.jsx)(
-                p.O,
+                m.O,
                 {
                     affinity: s,
                     applyMask: t !== n.length - 1,

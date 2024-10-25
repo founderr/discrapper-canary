@@ -16,8 +16,8 @@ var i = n(200651),
     E = n(779618),
     I = n(175470),
     m = n(203259),
-    T = n(356659),
-    f = n(689938);
+    f = n(356659),
+    T = n(689938);
 function h(e) {
     let { canShowReminder: t = !1, className: h } = e,
         N = (0, E.Z)(u.Z),
@@ -46,7 +46,7 @@ function h(e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
-            { modalKey: T.Qr }
+            { modalKey: f.Qr }
         );
     }
     return (a.useEffect(() => (x ? L() : Z(), () => Z()), [x, L, Z]), p && N && C)
@@ -69,7 +69,7 @@ function h(e) {
                           className: h,
                           icon: r.ClipsIcon,
                           showBadge: g,
-                          tooltip: f.Z.Messages.CLIPS_GALLERY_TOOLTIP,
+                          tooltip: T.Z.Messages.CLIPS_GALLERY_TOOLTIP,
                           onClick: b
                       })
                   })

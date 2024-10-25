@@ -17,8 +17,8 @@ var i,
     u = n(481060),
     d = n(2052),
     h = n(317381),
-    p = n(638880),
-    m = n(613611),
+    m = n(638880),
+    p = n(613611),
     _ = n(527805),
     f = n(716600),
     E = n(778569),
@@ -80,7 +80,7 @@ function U(e) {
     let [I] = (s = g) > 400 ? [u.AvatarSizes.SIZE_56, 56] : s > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
         T = (0, c.Wu)([R.default, M.default], () =>
             Array.from(r)
-                .map((e) => ((0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)))
+                .map((e) => ((0, p.J)(e, M.default) ? null : R.default.getUser(e.userId)))
                 .filter(L.lm)
         ),
         x = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
@@ -139,7 +139,7 @@ function U(e) {
                     ? (0, a.jsx)(u.Button, {
                           onClick: function (e) {
                               if ((e.stopPropagation(), null != x))
-                                  (0, p.Z)({
+                                  (0, m.Z)({
                                       applicationId: x.applicationId,
                                       activityChannelId: E.id,
                                       locationObject: A.location,
@@ -173,8 +173,8 @@ function k(e) {
         { id: u } = t,
         d = (0, f.Z)(),
         h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u,
-        [p] = (0, A.Z)([u]),
-        { url: m } = (0, E.Z)({
+        [m] = (0, A.Z)([u]),
+        { url: p } = (0, E.Z)({
             applicationId: u,
             names: y,
             size: 1024
@@ -206,20 +206,20 @@ function k(e) {
                                 className: O.iframe,
                                 embedId: (0, T.Z)(r.id, u)
                             }),
-                        I && null != p && null != m && '' !== m
+                        I && null != m && null != p && '' !== p
                             ? (0, a.jsx)('img', {
                                   className: O.splashImage,
-                                  alt: p.name,
-                                  src: m
+                                  alt: m.name,
+                                  src: p
                               })
                             : null,
                         N &&
-                            null != p &&
+                            null != m &&
                             (0, a.jsx)(U, {
                                 width: n,
                                 channel: r,
                                 participants: t.participants,
-                                application: p
+                                application: m
                             }),
                         s || I ? null : (0, a.jsx)('div', { className: O.clickShield })
                     ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return T;
     }
 }),
     n(47120);
@@ -17,9 +17,9 @@ var i = n(200651),
     E = n(791914),
     I = n(326838),
     m = n(689938),
-    T = n(706897);
-function f(e) {
-    let { setTab: t, badgeState: s, closePopout: f } = e,
+    f = n(706897);
+function T(e) {
+    let { setTab: t, badgeState: s, closePopout: T } = e,
         N = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
         p = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
         [C, g] = a.useMemo(
@@ -35,16 +35,16 @@ function f(e) {
     }),
     0 === N.length)
         ? (0, i.jsxs)('div', {
-              className: T.container,
+              className: f.container,
               children: [
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: f
+                      closePopout: T
                   }),
                   (0, i.jsx)('div', {
-                      className: T.__invalid_emptyStateContainer,
+                      className: f.__invalid_emptyStateContainer,
                       children: (0, i.jsx)(_.Z, {
                           Icon: c.GameControllerIcon,
                           header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -54,15 +54,15 @@ function f(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: T.container,
+              className: f.container,
               children: [
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: f,
+                      closePopout: T,
                       children: (0, i.jsx)(c.CircleIconButton, {
-                          className: T.__invalid_deleteButton,
+                          className: f.__invalid_deleteButton,
                           tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
                           color: c.CircleIconButtonColors.SECONDARY,
                           icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
@@ -82,7 +82,7 @@ function f(e) {
                   }),
                   (0, i.jsx)(c.AdvancedScrollerThin, {
                       children: (0, i.jsxs)('div', {
-                          className: T.invitesContainer,
+                          className: f.invitesContainer,
                           children: [
                               C.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
@@ -129,15 +129,15 @@ function f(e) {
 function h(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
-        className: T.headerContainer,
+        className: f.headerContainer,
         children: [
             (0, i.jsx)(c.Text, {
-                className: T.headerTitle,
+                className: f.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, i.jsx)('div', { className: T.headerDivider })
+            (0, i.jsx)('div', { className: f.headerDivider })
         ]
     });
 }

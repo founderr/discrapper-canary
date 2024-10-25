@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(184508),
     C = n(67645),
     A = n(599659),
-    f = n(257944),
-    p = n(91802),
+    p = n(257944),
+    f = n(91802),
     M = n(104494),
     S = n(639119),
     h = n(906461),
@@ -36,8 +36,8 @@ var s = n(200651),
     j = n(177839),
     G = n(794484),
     w = n(392521),
-    H = n(349803),
-    y = n(179984),
+    y = n(349803),
+    H = n(179984),
     k = n(409100),
     F = n(391110),
     V = n(71363),
@@ -145,7 +145,7 @@ t.Z = (e) => {
     var t;
     let { isFullscreen: n, entrypoint: r } = e;
     (0, T.z)(u.X);
-    let Z = (0, f.z7)('PremiumMarketingHome'),
+    let Z = (0, p.z7)('PremiumMarketingHome'),
         U = (0, C.g)('PremiumMarketingHome'),
         j = (0, m.tY)('PremiumMarketingHome'),
         G = a.useRef(null),
@@ -159,13 +159,13 @@ t.Z = (e) => {
         eu = null != eE ? (0, g.Af)(eE) : null,
         eT = null != eu ? g.ZP.getSkuIdForPlan(eu.planId) : null,
         eI = null !== eT && eT !== K.Si.TIER_2 ? K.Si.TIER_2 : null,
-        eR = (0, p.n)(),
+        eR = (0, f.n)(),
         eg = null != eR,
         [eN, em] = a.useState(!1),
         eC = (0, M.Ng)(),
         eA = (0, S.N)(),
-        ef = null == eA ? void 0 : null === (t = eA.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        ep = (0, N.Nx)(),
+        ep = null == eA ? void 0 : null === (t = eA.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        ef = (0, N.Nx)(),
         eM = (0, P.Vi)(),
         { analyticsLocations: eS } = (0, E.ZP)(d.Z.PREMIUM_MARKETING),
         eh = 'PremiumMarketingHome';
@@ -194,7 +194,7 @@ t.Z = (e) => {
                     variant: j ? (n ? L.NN.TAGLINE_XP_COPY_HOME : L.NN.TAGLINE_XP_COPY_SETTINGS) : L.NN.DEFAULT,
                     showWumpus: !j,
                     tier0CTAButton:
-                        ef === K.Si.TIER_2 || eM || null != eC
+                        ep === K.Si.TIER_2 || eM || null != eC
                             ? (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
@@ -212,7 +212,7 @@ t.Z = (e) => {
                                   buttonShineClassName: Q.buttonShine
                               }),
                     tier2CTAButton:
-                        ef === K.Si.TIER_0
+                        ep === K.Si.TIER_0
                             ? (0, s.jsx)(k.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
@@ -240,12 +240,12 @@ t.Z = (e) => {
             children: [
                 (0, s.jsx)(D.Z, {
                     premiumSubscription: eE,
-                    className: i()(n ? Q.fullscreenExistingSubscriberSpacing : Q.existingSubscriberSpacing, { [Q.zIndex1]: ep }),
+                    className: i()(n ? Q.fullscreenExistingSubscriberSpacing : Q.existingSubscriberSpacing, { [Q.zIndex1]: ef }),
                     isFullscreen: n
                 }),
                 (0, s.jsx)(ee, {
                     isFullscreen: n,
-                    inOfferExperience: ep
+                    inOfferExperience: ef
                 }),
                 !n && eg
                     ? (0, s.jsx)(O.Z, {
@@ -258,11 +258,11 @@ t.Z = (e) => {
                           active: !0,
                           children: (0, s.jsx)(B.Z, {
                               subscriptionTier: eI,
-                              isFullscreen: n || ep,
+                              isFullscreen: n || ef,
                               className: i()({
                                   [Q.fullscreenHero]: n,
-                                  [Q.settingsHeroNoBackground]: !n && ep,
-                                  [Q.trialMarketingMargin]: ep,
+                                  [Q.settingsHeroNoBackground]: !n && ef,
+                                  [Q.trialMarketingMargin]: ef,
                                   [Q.settingsHeroBogoHeight]: !n && eM,
                                   [Q.settingsHeroBogoMarginFullscreen]: n && eM,
                                   [Q.noTopPaddingOverride]: null != eE
@@ -278,7 +278,7 @@ t.Z = (e) => {
                 eO && (0, s.jsx)(v.d, { className: Q.nitroweenGiftCard }),
                 (0, s.jsx)(et, {
                     isFullscreen: n,
-                    inOfferExperience: ep,
+                    inOfferExperience: ef,
                     setIsAllPerksVisible: em,
                     whatsNewV2Enabled: Z,
                     BestOfNitroV2Enabled: U,
@@ -292,7 +292,7 @@ t.Z = (e) => {
                 (0, s.jsxs)('div', {
                     className: Q.planComparisonTableContainer,
                     children: [
-                        (0, s.jsx)(y.Z, {
+                        (0, s.jsx)(H.Z, {
                             className: Q.planComparisonTable,
                             hideCTAs: !0
                         }),
@@ -319,7 +319,7 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)('div', { className: n ? Q.footerSpacingFullscreen : Q.footerSpacing }),
-                (0, s.jsx)(H.Z, {
+                (0, s.jsx)(y.Z, {
                     isVisible: !w && !en && !ea && !ei && e_,
                     isFullscreen: n,
                     subscriptionTier: eI

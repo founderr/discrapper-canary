@@ -51,15 +51,15 @@ function A(e) {
             launchingComponentId: v,
             submitting: null != P ? P : I
         }),
-        { disabled: j, reason: y } = (0, u.Z)({
+        { disabled: y, reason: j } = (0, u.Z)({
             channelId: n.id,
             application: t,
             activityAction: L
         });
     return (0, i.jsx)(l.Tooltip, {
-        shouldShow: null != y,
+        shouldShow: null != j,
         tooltipContentClassName: f.tooltipContent,
-        text: y,
+        text: j,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(l.Button, {
@@ -67,7 +67,7 @@ function A(e) {
                 type: 'submit',
                 size: N,
                 color: R,
-                disabled: j,
+                disabled: y,
                 submitting: g,
                 onClick: () => {
                     T(!0),

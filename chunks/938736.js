@@ -33,7 +33,7 @@ n.d(t, {
         return m;
     },
     wG: function () {
-        return p;
+        return f;
     }
 });
 var s = n(442837),
@@ -98,12 +98,12 @@ let E = '40%',
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? _.g2L.NOT_ELIGIBLE : n && t ? r : _.g2L.NOT_ELIGIBLE;
     },
-    f = (e) => {
+    p = (e) => {
         let t = A(e);
         return t === _.g2L.COOLDOWN || t === _.g2L.UNAPPLIED || t === _.g2L.QUALIFIED;
     },
-    p = (e) => {
-        let t = f(e),
+    f = (e) => {
+        let t = p(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },

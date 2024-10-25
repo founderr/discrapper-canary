@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return f;
+        return T;
     }
 }),
     n(536091);
@@ -17,12 +17,12 @@ var i = n(904245),
     E = n(709054),
     I = n(981631),
     m = n(185923);
-function T(e) {
+function f(e) {
     let t = u.Z.getGuild(e);
     return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE);
 }
-async function f(e, t) {
-    var n, I, f;
+async function T(e, t) {
+    var n, I, T;
     let h = t.getGuildId();
     if (null == h || null == u.Z.getGuild(h)) return;
     let N = d.default.getCurrentUser();
@@ -31,7 +31,7 @@ async function f(e, t) {
     let p = Array.from(o.Z.getAllStickersIterator()),
         C = p
             .filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => T(e.guild_id) && (0, r.kl)(e, N, t))
+            .filter((e) => f(e.guild_id) && (0, r.kl)(e, N, t))
             .sort((e, t) => -E.default.compare(e.id, t.id));
     if (C.length > 5) {
         let a = [C[Math.floor(Math.pow(Math.random(), 2) * C.length)].id];
@@ -45,7 +45,7 @@ async function f(e, t) {
         return;
     }
     let g = u.Z.getGuildIds()
-        .filter(T)
+        .filter(f)
         .map((e) => a.ZP.getUsableGuildEmoji(e))
         .flat()
         .filter(
@@ -74,7 +74,7 @@ async function f(e, t) {
         A = [S[Math.floor(Math.random() * S.length)].id];
     i.Z.sendStickers(t.id, A, '', {
         messageReference: {
-            guild_id: null !== (f = t.getGuildId()) && void 0 !== f ? f : void 0,
+            guild_id: null !== (T = t.getGuildId()) && void 0 !== T ? T : void 0,
             channel_id: t.id,
             message_id: e
         }

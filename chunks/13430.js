@@ -117,45 +117,45 @@ let I = r.forwardRef(function (e, t) {
             );
         })(),
         [b, L] = r.useState(I ? 0 : -1),
-        D = r.useRef(null),
         M = r.useRef(null),
+        D = r.useRef(null),
         P = r.useRef(null),
         j = r.useMemo(f, []),
-        y = r.useCallback(() => {
+        U = r.useCallback(() => {
             var e, t, n, s;
             switch (null === (e = j[b]) || void 0 === e ? void 0 : e.type) {
                 case 'day':
-                    null === (t = D.current) || void 0 === t || t.focus();
+                    null === (t = M.current) || void 0 === t || t.focus();
                     break;
                 case 'month':
-                    null === (n = M.current) || void 0 === n || n.focus();
+                    null === (n = D.current) || void 0 === n || n.focus();
                     break;
                 case 'year':
                     null === (s = P.current) || void 0 === s || s.focus();
             }
-        }, [b, D, M, P, j]);
+        }, [b, M, D, P, j]);
     r.useEffect(() => {
-        setTimeout(y, 500);
+        setTimeout(U, 500);
     }, []),
         r.useEffect(() => {
             if (b >= j.length) {
                 null == h || h();
                 return;
             }
-            y();
-        }, [b, y]);
-    let U = [];
+            U();
+        }, [b, U]);
+    let y = [];
     for (let e = 0; e < 3; e++) {
         let { type: t } = j[e];
         switch (t) {
             case 'day':
-                U.push({
+                y.push({
                     key: 'day',
                     input: (0, s.jsx)(m, {
                         options: E,
                         selectOption: A,
                         children: (0, s.jsx)(u.Z, {
-                            ref: D,
+                            ref: M,
                             className: _.__invalid_inputDay,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_DAY,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -175,13 +175,13 @@ let I = r.forwardRef(function (e, t) {
                 });
                 break;
             case 'month':
-                U.push({
+                y.push({
                     key: 'month',
                     input: (0, s.jsx)(m, {
                         options: g,
                         selectOption: C,
                         children: (0, s.jsx)(u.Z, {
-                            ref: M,
+                            ref: D,
                             className: _.__invalid_inputMonth,
                             'aria-label': d.Z.Messages.AGE_GATE_DOB_MONTH,
                             menuPlacement: u.Z.MenuPlacements.TOP,
@@ -201,7 +201,7 @@ let I = r.forwardRef(function (e, t) {
                 });
                 break;
             case 'year':
-                U.push({
+                y.push({
                     key: 'year',
                     input: (0, s.jsx)(m, {
                         options: v,
@@ -238,7 +238,7 @@ let I = r.forwardRef(function (e, t) {
             }),
             (0, s.jsx)('div', {
                 className: _.inputs,
-                children: U.map((e, t) => {
+                children: y.map((e, t) => {
                     let { key: n, input: r } = e;
                     return (0, s.jsx)(
                         'div',

@@ -28,12 +28,12 @@ var s = n(200651),
     v = n(626135),
     b = n(81063),
     L = n(449934),
-    D = n(768581),
-    M = n(625054),
+    M = n(768581),
+    D = n(625054),
     P = n(645499),
     j = n(320830),
-    y = n(721751),
-    U = n(718182),
+    U = n(721751),
+    y = n(718182),
     G = n(223543),
     B = n(73906),
     k = n(299852),
@@ -61,7 +61,7 @@ let en = (0, j.Z)(z.Z),
     ea = (0, j.Z)(F.Z),
     el = (0, j.Z)(C.Z),
     eo = (0, j.Z)(Y.Z),
-    ec = (0, j.Z)(U.Z),
+    ec = (0, j.Z)(y.Z),
     eu = (0, j.Z)(G.Z),
     ed = (0, j.Z)(Q.Z),
     e_ = (0, j.Z)(f.Z),
@@ -89,7 +89,7 @@ class eA extends r.PureComponent {
                 ? null != a && (o = (0, b.getAssetImage)(t.id, a, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
-                  (o = D.ZP.getGuildSplashURL({
+                  (o = M.ZP.getGuildSplashURL({
                       id: e.id,
                       splash: e.splash
                   }));
@@ -107,7 +107,7 @@ class eA extends r.PureComponent {
                 $.rMx.INVITE_OPENED,
                 {
                     invite_code: (0, x.jX)(e),
-                    load_time: M.Z.getTimeSinceNavigationStart()
+                    load_time: D.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             )),
@@ -147,7 +147,7 @@ class eA extends r.PureComponent {
                 $.rMx.GUILD_TEMPLATE_OPENED,
                 {
                     guild_template_code: e,
-                    load_time: M.Z.getTimeSinceNavigationStart()
+                    load_time: D.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             ),
@@ -164,7 +164,7 @@ class eA extends r.PureComponent {
     render() {
         let { splash: e, redirectTo: t } = this.state,
             { inviteKey: n } = this.props;
-        return (0, s.jsxs)(y.Z, {
+        return (0, s.jsxs)(U.Z, {
             splash: e,
             children: [
                 (0, s.jsx)(g.Z, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -14,10 +14,10 @@ var i = n(200651),
     u = n(91159),
     d = n(593130),
     h = n(689938),
-    p = n(402135);
-function m(e) {
+    m = n(402135);
+function p(e) {
     let { channel: t } = e,
-        [n, m] = s.useState(!1),
+        [n, p] = s.useState(!1),
         _ = (0, a.e7)(
             [o.Z, c.default],
             () => {
@@ -27,10 +27,10 @@ function m(e) {
             [t]
         ),
         f = s.useCallback(() => {
-            m(!1);
+            p(!1);
         }, []),
         E = s.useCallback(() => {
-            !n && (0, u.U4)('Popout'), m(!n);
+            !n && (0, u.U4)('Popout'), p(!n);
         }, [n]);
     return (0, i.jsx)(l.Popout, {
         animation: l.Popout.Animation.NONE,
@@ -42,7 +42,7 @@ function m(e) {
         renderPopout: function () {
             return (0, i.jsx)(l.Dialog, {
                 children: (0, i.jsx)(d.Z, {
-                    className: p.browser,
+                    className: m.browser,
                     channel: t,
                     onClose: f
                 })
@@ -52,7 +52,7 @@ function m(e) {
             let { isShown: n } = t;
             return (0, i.jsx)(r.JO, {
                 ...e,
-                className: p.icon,
+                className: m.icon,
                 onClick: E,
                 icon: l.ThreadIcon,
                 'aria-label': h.Z.Messages.THREADS,

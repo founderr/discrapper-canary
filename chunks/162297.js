@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(783097),
     I = n(220082),
     m = n(240991),
-    T = n(914010),
-    f = n(768581),
+    f = n(914010),
+    T = n(768581),
     h = n(135431),
     N = n(728345),
     p = n(812206),
@@ -44,9 +44,9 @@ function R(e) {
 }
 function v(e) {
     let { application: t } = e,
-        n = (0, r.e7)([T.Z], () => {
+        n = (0, r.e7)([f.Z], () => {
             var e;
-            return null !== (e = T.Z.getGuildId()) && void 0 !== e ? e : void 0;
+            return null !== (e = f.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
         {
             iconURL: c,
@@ -60,7 +60,7 @@ function v(e) {
                 }),
             [t]
         ),
-        f = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
+        T = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
         [N, p] = a.useState(!1),
         R = a.useCallback((e) => {
             e && p(!0);
@@ -101,11 +101,11 @@ function v(e) {
                                     color: 'interactive-active',
                                     children: u
                                 }),
-                                null != f &&
+                                null != T &&
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: f
+                                        children: T
                                     })
                             ]
                         }),
@@ -152,7 +152,7 @@ function O(e) {
             imageNotFoundClassName: S.bannerImage
         });
     else if ((null == r ? void 0 : r.banner) != null) {
-        let e = (0, f.aN)({
+        let e = (0, T.aN)({
             id: r.id,
             banner: r.banner,
             size: 280,

@@ -17,10 +17,10 @@ var s = n(481060),
 function h(e) {
     var t, n;
     let { guild: h } = e,
-        { analyticsLocations: p } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [m, _] = (0, o.ww)({
+        { analyticsLocations: m } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [p, _] = (0, o.ww)({
             guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
-            analyticsLocations: p,
+            analyticsLocations: m,
             openWithoutBackstack: !0
         }),
         f = _ ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION,
@@ -38,7 +38,7 @@ function h(e) {
             headerStyles: d.bannerHeader,
             children: (0, i.jsx)(s.Button, {
                 onClick: () => {
-                    m();
+                    p();
                 },
                 size: s.Button.Sizes.SMALL,
                 children: E

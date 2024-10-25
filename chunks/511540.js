@@ -1,6 +1,6 @@
 n.d(e, {
     c: function () {
-        return i;
+        return c;
     }
 }),
     n(47120);
@@ -8,14 +8,14 @@ var a = n(192379),
     r = n(489863),
     o = n(828878),
     s = n(689938);
-function i(t, e, n) {
-    let [i, l] = a.useState(!1),
-        [c, u] = a.useState(null),
+function c(t, e, n) {
+    let [c, i] = a.useState(!1),
+        [l, u] = a.useState(null),
         d = a.useCallback(async () => {
             try {
-                l(!0);
+                i(!0);
                 let n = await (0, r.tV)(t);
-                l(!1),
+                i(!1),
                     e({
                         userCode: t,
                         clientId: n.body.client_id,
@@ -24,7 +24,7 @@ function i(t, e, n) {
                     });
             } catch (t) {
                 var a;
-                u(429 === (a = null == t ? void 0 : t.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), l(!1), (null == t ? void 0 : t.status) === 401 && n();
+                u(429 === (a = null == t ? void 0 : t.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), i(!1), (null == t ? void 0 : t.status) === 401 && n();
             }
         }, [t, e, n]);
     return (
@@ -33,8 +33,8 @@ function i(t, e, n) {
         }, [t, d]),
         {
             manualSubmit: d,
-            error: c,
-            submitting: i
+            error: l,
+            submitting: c
         }
     );
 }

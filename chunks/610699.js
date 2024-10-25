@@ -19,8 +19,8 @@ var i = n(200651),
     E = n(317381),
     I = n(778569),
     m = n(182906),
-    T = n(884338),
-    f = n(100527),
+    f = n(884338),
+    T = n(100527),
     h = n(906732),
     N = n(835473),
     p = n(471445),
@@ -175,7 +175,7 @@ function k(e) {
         }),
         Q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
         q = (0, c.e7)([R.Z], () => null != Q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
-        { analyticsLocations: J } = (0, h.ZP)(f.Z.INVITE_EMBED),
+        { analyticsLocations: J } = (0, h.ZP)(T.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: G.id,
             size: D,
@@ -288,7 +288,7 @@ function k(e) {
                                           null != W && X
                                               ? (0, i.jsx)('div', {
                                                     className: P.avatars,
-                                                    children: (0, i.jsx)(T.Z, {
+                                                    children: (0, i.jsx)(f.Z, {
                                                         guildId: W.id,
                                                         users: et,
                                                         max: 4

@@ -18,8 +18,8 @@ var s = n(200651),
     m = n(176782),
     C = n(238108),
     A = n(32173),
-    f = n(391110),
-    p = n(484239),
+    p = n(391110),
+    f = n(484239),
     M = n(658370),
     S = n(735825),
     h = n(981631),
@@ -33,33 +33,33 @@ let P = {
         yMax: -20
     },
     v = a.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: m, cardType: p, confettiCanvas: M } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: m, cardType: f, confettiCanvas: M } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
             [U, B] = a.useState(!1),
             [j, G] = a.useState(!1),
             w = (0, g.yQ)(),
-            H = (0, g.IB)(),
-            [y, k] = a.useState(!1),
-            [F, V] = a.useState(t === A.u.FREE_BOOST && H && (null == w ? void 0 : w.nitroTenureStatus) === S.EB.REDEEMABLE);
+            y = (0, g.IB)(),
+            [H, k] = a.useState(!1),
+            [F, V] = a.useState(t === A.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === S.EB.REDEEMABLE);
         a.useEffect(() => {
-            t === A.u.FREE_BOOST && H && (null == w ? void 0 : w.nitroTenureStatus) === S.EB.REDEEMABLE && V(!0);
-        }, [H, t, w]);
+            t === A.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === S.EB.REDEEMABLE && V(!0);
+        }, [y, t, w]);
         let W = a.useCallback(() => {
                 k(!0);
             }, []),
-            K = p === f.R0.CARD_CAROUSEL_FIRST_ROW || p === f.R0.CARD_CAROUSEL_SECOND_ROW || p === f.R0.CARD_CAROUSEL_THIRD_ROW,
+            K = f === p.R0.CARD_CAROUSEL_FIRST_ROW || f === p.R0.CARD_CAROUSEL_SECOND_ROW || f === p.R0.CARD_CAROUSEL_THIRD_ROW,
             Y = (0, A.Z)(),
             [z, Q] = (0, I.cv)((null != r && n) || r === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
         a.useEffect(
             () => () => {
-                z === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI && y && (0, T.EW)(z);
+                z === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
             },
-            [z, y]
+            [z, H]
         ),
             a.useEffect(() => {
-                z === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI && y && (0, T.EW)(z);
-            }, [z, y]);
+                z === _.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
+            }, [z, H]);
         let { easterEggLevel: J, isEasterEggTriggered: X, onHover: q, onUnhover: $ } = (0, C.Z)(5),
             ee = (0, l.debounce)(() => {
                 R.default.track(h.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -224,10 +224,10 @@ v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: _ = '', isPremiumGetCta: E, onCtaClick: u, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: C, onClick: A, backgroundImage: S, pillText: h, perkImage: x, imageOverlayText: b } = e,
-        P = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
-        v = '' !== c || '' !== _ || ('' !== o && N === f.zW.REWARD),
+        P = C === p.R0.CARD_CAROUSEL_FIRST_ROW || C === p.R0.CARD_CAROUSEL_SECOND_ROW || C === p.R0.CARD_CAROUSEL_THIRD_ROW,
+        v = '' !== c || '' !== _ || ('' !== o && N === p.zW.REWARD),
         L = (0, g.IB)(),
-        [Z, D] = a.useState(N !== f.zW.REWARD || L);
+        [Z, D] = a.useState(N !== p.zW.REWARD || L);
     a.useEffect(() => {
         L && D(!0);
     }, [L]);
@@ -248,7 +248,7 @@ let L = a.forwardRef((e, t) => {
                     children: h
                 }),
             (0, s.jsx)('div', { ref: t }),
-            (0, s.jsx)(p.Z, {
+            (0, s.jsx)(f.Z, {
                 title: r,
                 titleClassName: l,
                 subtitle: o,

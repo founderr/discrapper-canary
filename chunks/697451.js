@@ -16,8 +16,8 @@ var i,
     E = n(481060),
     I = n(911969),
     m = n(595519),
-    T = n(566620),
-    f = n(403404),
+    f = n(566620),
+    T = n(403404),
     h = n(100527),
     N = n(906732),
     p = n(783097),
@@ -54,7 +54,7 @@ function j(e) {
 ((i = a || (a = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function U(e, t, n, i, a) {
     var r, l, c;
-    let { message: u, compact: d, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: T, onClickAvatar: f, onUserContextMenu: h, onClickTargetAvatar: N, onTargetUserContextMenu: p, onPopoutRequestClose: C } = e;
+    let { message: u, compact: d, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: f, onClickAvatar: T, onUserContextMenu: h, onClickTargetAvatar: N, onTargetUserContextMenu: p, onPopoutRequestClose: C } = e;
     if (d && 1 === n) return null;
     if ((d && null == u.activityInstance) || I)
         return (0, s.jsx)('div', {
@@ -88,10 +88,10 @@ function U(e, t, n, i, a) {
                 user: t,
                 guildId: _.guild_id,
                 guildAvatar: g,
-                onClick: 1 === n ? N : f,
+                onClick: 1 === n ? N : T,
                 onContextMenu: 1 === n ? p : h
             }),
-        A = 1 === n ? T : m;
+        A = 1 === n ? f : m;
     return null != a && null != A
         ? (0, s.jsx)(E.Popout, {
               renderPopout: a,
@@ -270,7 +270,7 @@ function k(e) {
                   }));
     else {
         let e = () => {
-            (0, f.Z)({
+            (0, T.Z)({
                 channel: a,
                 guildId: a.guild_id,
                 locationObject: {
@@ -283,7 +283,7 @@ function k(e) {
                 enableSelectedTextChannelInvite: !0,
                 analyticsLocations: l
             }),
-                (0, T.w1)({ guildId: a.guild_id });
+                (0, f.w1)({ guildId: a.guild_id });
         };
         n = w
             ? P.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({

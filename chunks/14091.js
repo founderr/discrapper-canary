@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(481060),
     d = n(447543),
     h = n(603263),
-    p = n(367907),
-    m = n(210887),
+    m = n(367907),
+    p = n(210887),
     _ = n(695346),
     f = n(768119),
     E = n(944486),
@@ -68,7 +68,7 @@ class Z extends s.Component {
                         .forEach((e) => {
                             null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && a++), null != e.embeds && e.embeds.length > 0 && s++, null != e.attachments && e.attachments.length > 0 && i++;
                         }),
-                    p.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_VIEWED, {
+                    m.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_VIEWED, {
                         search_type: t.props.searchType,
                         search_id: t.props.searchAnalyticsId,
                         prev_search_id: e !== t.props.searchAnalyticsId ? e : null,
@@ -196,7 +196,7 @@ class b extends s.PureComponent {
                     { searchMode: i } = this.state;
                 e !== i &&
                     !n &&
-                    (p.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_SORT_CHANGED, {
+                    (m.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_SORT_CHANGED, {
                         search_id: f.Z.getAnalyticsId(t),
                         new_sort_type: e
                     }),
@@ -297,8 +297,8 @@ function R(e) {
         ...(0, C.Z)(t),
         renderEmbeds: _.NA.useSetting(),
         developerMode: _.Sb.useSetting(),
-        ...(0, c.cj)([m.Z], () => {
-            let { theme: e } = m.Z;
+        ...(0, c.cj)([p.Z], () => {
+            let { theme: e } = p.Z;
             return { theme: e };
         })
     });

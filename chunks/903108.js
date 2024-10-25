@@ -16,11 +16,11 @@ function h(e) {
     var t;
     let n = (0, i.e7)([s.Z], () => s.Z.getStageVideoLimitBoostUpsellDismissed(e.id), [e.id]),
         h = (0, r.Io)(e.id),
-        p = (0, r.Rk)(e.id, o.pV.AUDIENCE),
-        m = (0, u.PK)(e.id),
+        m = (0, r.Rk)(e.id, o.pV.AUDIENCE),
+        p = (0, u.PK)(e.id),
         _ = (0, i.e7)([a.Z], () => a.Z.getGuild(e.guild_id), [e.guild_id]),
         f = (0, i.e7)([l.Z], () => l.Z.can(c.yP, e), [e]),
         E = null !== (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         g = !(null == _ ? void 0 : _.isCommunity()) && E > d.RcX;
-    return m && !n && f && !g && h + p >= E;
+    return p && !n && f && !g && h + m >= E;
 }

@@ -12,8 +12,8 @@ var i,
     E = n(994339),
     I = n(275920),
     m = n(917621),
-    T = n(431583),
-    f = n(592745),
+    f = n(431583),
+    T = n(592745),
     h = n(952164),
     N = n(768419),
     p = n(456432),
@@ -133,7 +133,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'handleDownloadApp', () => {
                 (0, l.openModal)((e) =>
-                    (0, a.jsx)(T.default, {
+                    (0, a.jsx)(f.default, {
                         source: 'Game Invite',
                         ...e
                     })
@@ -171,7 +171,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'renderEmbed', () => {
                 let e;
-                let { activity: t, partyId: n, myPartyId: i, application: s, partyMembers: r, isPreview: l, isLaunching: o, isSender: c, activityActionType: u, className: d, channelId: _, message: E, hideParty: I, isSyncable: T, isLaunchable: f, guildId: h } = this.props;
+                let { activity: t, partyId: n, myPartyId: i, application: s, partyMembers: r, isPreview: l, isLaunching: o, isSender: c, activityActionType: u, className: d, channelId: _, message: E, hideParty: I, isSyncable: f, isLaunchable: T, guildId: h } = this.props;
                 if (null != s) e = s.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -187,11 +187,11 @@ class G extends (i = s.PureComponent) {
                     className: d,
                     coverImage: this.getCoverImage(),
                     isPreview: l,
-                    isGameLaunchable: f,
+                    isGameLaunchable: T,
                     isLoading: o || this.state.sending,
                     activityActionType: u,
                     isInBrowser: !P.isPlatformEmbedded,
-                    isSyncable: T,
+                    isSyncable: f,
                     isSender: c,
                     channelId: _,
                     guildId: null != h ? h : void 0,
@@ -212,7 +212,7 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([N.Z, x.Z, O.Z, v.Z, f.Z, Z.Z, A.Z, L.Z, M.default, R.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([N.Z, x.Z, O.Z, v.Z, T.Z, Z.Z, A.Z, L.Z, M.default, R.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? x.Z.getParty(t.party.id) : null,
@@ -247,7 +247,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
                 null != l &&
                 (0, D.t)({
                     LibraryApplicationStore: v.Z,
-                    LaunchableGameStore: f.Z,
+                    LaunchableGameStore: T.Z,
                     DispatchApplicationStore: Z.Z,
                     ConnectedAppsStore: A.Z,
                     applicationId: l

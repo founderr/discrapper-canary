@@ -12,8 +12,8 @@ var i,
     E = n(73346),
     I = n(568836),
     m = n(345898),
-    T = n(981631),
-    f = n(262203);
+    f = n(981631),
+    T = n(262203);
 function h(e, t, n) {
     return (
         t in e
@@ -48,17 +48,17 @@ class N extends (i = s.PureComponent) {
                 return null != n
                     ? n()
                     : (0, a.jsxs)('div', {
-                          className: f.priceOs,
+                          className: T.priceOs,
                           children: [
                               (0, a.jsx)(o.Z, {
                                   type: o.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: r && i ? f.tilePriceWithVisibleBuyButton : f.tilePrice
+                                  className: r && i ? T.tilePriceWithVisibleBuyButton : T.tilePrice
                               }),
                               (0, a.jsx)(c.n, {
-                                  systems: [T.TaA.WINDOWS],
-                                  className: f.platform
+                                  systems: [f.TaA.WINDOWS],
+                                  className: T.platform
                               }),
                               r ? (0, a.jsx)('div', { children: 'deprecated!' }) : null
                           ]
@@ -69,7 +69,7 @@ class N extends (i = s.PureComponent) {
                 return (0, a.jsxs)(s.Fragment, {
                     children: [
                         (0, a.jsx)(_.Z, {
-                            className: l()(f.splashContainer, { [f.splashContainerHorizontal]: o }),
+                            className: l()(T.splashContainer, { [T.splashContainerHorizontal]: o }),
                             video: null != c.previewVideo ? (0, E._W)(r.applicationId, c.previewVideo) : void 0,
                             image: null != c.thumbnail ? (0, E._W)(r.applicationId, c.thumbnail, 600) : null,
                             title: r.name,
@@ -77,10 +77,10 @@ class N extends (i = s.PureComponent) {
                             muted: t,
                             placeholder: n,
                             onToggleMute: i,
-                            splashClassName: f.splashVideo,
-                            splashPlaceholderClassName: f.splashPlaceholder
+                            splashClassName: T.splashVideo,
+                            splashPlaceholderClassName: T.splashPlaceholder
                         }),
-                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : null
+                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(T.exclusiveRegular, { [T.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(T.exclusiveRegular, { [T.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });

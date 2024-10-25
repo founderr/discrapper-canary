@@ -18,17 +18,17 @@ var a = n(481060),
 let E = (e) => {
     let { listingId: t, isListingPublished: n, expanded: E, onToggleExpanded: I } = e,
         m = (0, c.Z)(),
-        [T] = o._T(t),
-        [f] = o.d9(t, m),
+        [f] = o._T(t),
+        [T] = o.d9(t, m),
         [h] = o.H9(t);
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
-            (0, i.jsx)(u.BM, { image: f }),
+            (0, i.jsx)(u.BM, { image: T }),
             (0, i.jsxs)('div', {
                 className: _.tierTextInfoContainer,
                 children: [
-                    (0, i.jsx)(u.Ey, { listingName: T }),
+                    (0, i.jsx)(u.Ey, { listingName: f }),
                     (0, i.jsxs)('div', {
                         className: _.tierPriceContainer,
                         children: [

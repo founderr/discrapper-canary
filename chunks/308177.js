@@ -9,8 +9,8 @@ var i,
     u = n(565799),
     d = n(431328),
     h = n(501655),
-    p = n(27931),
-    m = n(260979),
+    m = n(27931),
+    p = n(260979),
     _ = n(766015),
     f = n(401139),
     E = n(12779),
@@ -63,8 +63,8 @@ t.Z = (0, o.Z)((e) => {
             [h.pV.AUDIENCE]: O,
             [h.pV.SELECTED]: 1
         },
-        U = (0, p.Dx)(i.id),
-        [k, w] = (0, p.aP)(i.id, D, U),
+        U = (0, m.Dx)(i.id),
+        [k, w] = (0, m.aP)(i.id, D, U),
         B = [Math.max(null !== (t = k[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = k[1]) && void 0 !== n ? n : 1, 1), k[2]],
         { speakerTileWidth: H, speakerTileHeight: G } = v(s, y),
         V = x ? s - 32 : Math.min(s - 64, 3 * H + 8),
@@ -146,7 +146,7 @@ t.Z = (0, o.Z)((e) => {
                 case 2:
                     if (Y) return null;
                     return (0, a.jsx)(
-                        m.Z,
+                        p.Z,
                         {
                             channel: i,
                             participants: s,

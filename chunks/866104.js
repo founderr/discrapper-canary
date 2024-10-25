@@ -20,8 +20,8 @@ var i = n(200651),
     E = n(353254),
     I = n(695346),
     m = n(271383),
-    T = n(594174),
-    f = n(671533),
+    f = n(594174),
+    T = n(671533),
     h = n(51144),
     N = n(506071),
     p = n(696014),
@@ -45,8 +45,8 @@ function R(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(f.Z, {
-                direction: f.Z.Directions.RIGHT,
+            (0, i.jsx)(T.Z, {
+                direction: T.Z.Directions.RIGHT,
                 className: x.showMoreArrow
             })
         ]
@@ -88,13 +88,13 @@ function O(e) {
     var t, n, s;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
-    let { nickname: f, nickcolor: N } =
+    let { nickname: T, nickcolor: N } =
             ((s = I),
             (0, l.cj)(
-                [m.ZP, T.default],
+                [m.ZP, f.default],
                 () => {
                     var e, t;
-                    let n = T.default.getCurrentUser();
+                    let n = f.default.getCurrentUser();
                     r()(null != n, 'user cannot be null');
                     let i = m.ZP.getMember(s, n.id);
                     return {
@@ -169,7 +169,7 @@ function O(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-                                            username: f,
+                                            username: T,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',

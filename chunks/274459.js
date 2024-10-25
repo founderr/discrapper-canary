@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(596454),
     d = n(607070),
     h = n(70956),
-    p = n(456631),
-    m = n(205498);
+    m = n(456631),
+    p = n(205498);
 let _ = 6 * h.Z.Millis.SECOND,
     f = 2 * h.Z.Millis.SECOND,
     E = 2 * h.Z.Millis.SECOND,
@@ -40,10 +40,10 @@ function C(e) {
         let e;
         return (
             Date.now() - C >= E
-                ? (0, p.H)(t)
+                ? (0, m.H)(t)
                 : (e = setTimeout(
                       () => {
-                          x(!1), S && (0, p.H)(t);
+                          x(!1), S && (0, m.H)(t);
                       },
                       S ? f : _
                   )),
@@ -60,10 +60,10 @@ function C(e) {
               return (
                   t &&
                   (0, i.jsx)(r.animated.div, {
-                      className: m.voiceChannelEffectEmojiContainer,
+                      className: p.voiceChannelEffectEmojiContainer,
                       style: { transform: s.to(g) },
                       children: (0, i.jsx)(u.Z, {
-                          className: l()(m.voiceChannelEffectEmoji),
+                          className: l()(p.voiceChannelEffectEmoji),
                           emojiId: h.id,
                           emojiName: h.name,
                           animated: null !== (n = h.animated) && void 0 !== n && n

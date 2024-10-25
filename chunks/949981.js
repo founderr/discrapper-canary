@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return f;
     }
 }),
     n(724458),
@@ -19,10 +19,10 @@ var a = n(512722),
     E = n(981631),
     I = n(689938),
     m = n(691784);
-function T(e) {
+function f(e) {
     let t,
-        { invite: n, author: a, currentUserId: T, onTransitionToInviteChannel: f, onAcceptInstantInvite: h } = e,
-        N = T === a.id,
+        { invite: n, author: a, currentUserId: f, onTransitionToInviteChannel: T, onAcceptInstantInvite: h } = e,
+        N = f === a.id,
         p = n.state === E.r2o.ACCEPTING,
         C = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
     s()(null == C || C.isPrivate(), 'must be a private channel');
@@ -47,7 +47,7 @@ function T(e) {
                       .map((e) => e.username)
                       .join(', ')
                 : I.Z.Messages.UNNAMED);
-    let A = g ? f : h,
+    let A = g ? T : h,
         x = I.Z.Messages.JOIN_GUILD,
         R = l.Z.Button.Colors.GREEN;
     g && ((x = I.Z.Messages.JOINED_GUILD), (R = l.Z.Button.Colors.PRIMARY));

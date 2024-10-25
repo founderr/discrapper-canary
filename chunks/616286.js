@@ -15,15 +15,15 @@ var i = n(200651),
     u = n(358221),
     d = n(306680),
     h = n(944486),
-    p = n(111583),
-    m = n(459273),
+    m = n(111583),
+    p = n(459273),
     _ = n(880831),
     f = n(774168),
     E = n(871499),
     g = n(981631),
     C = n(689938);
 function I(e) {
-    let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
+    let t = (0, o.e7)([m.Z], () => !(0, r.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: s } = (0, o.cj)(
             [d.ZP],
@@ -53,7 +53,7 @@ function T(e) {
 }
 function x(e) {
     let t,
-        { channelId: n, className: a, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: f, ...x } = e,
+        { channelId: n, className: a, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: f, ...x } = e,
         { disabled: S } = x,
         v = s.useRef(null),
         N = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
@@ -82,8 +82,8 @@ function x(e) {
             );
         })(n),
         b = s.useCallback(() => {
-            null == d || d(), !N && p && (null == f || f()), c.Z.updateChatOpen(n, !N);
-        }, [n, N, d, p, f]),
+            null == d || d(), !N && m && (null == f || f()), c.Z.updateChatOpen(n, !N);
+        }, [n, N, d, m, f]),
         R = s.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -98,7 +98,7 @@ function x(e) {
             var e;
             null === (e = v.current) || void 0 === e || e.focus();
         }, []);
-    (0, m.yp)({
+    (0, p.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: S ? null : L
     });
@@ -106,7 +106,7 @@ function x(e) {
         O = s.useCallback(() => {
             h && j(!0);
         }, [h]);
-    (0, m.yp)({
+    (0, p.yp)({
         event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: O
     }),

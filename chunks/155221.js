@@ -73,7 +73,7 @@ let y = (0, h.Un)({
         name: 'LinkAuthorize'
     }),
     k = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('19878'), n.e('49277')]).then(n.bind(n, 197528)),
+        createPromise: () => n.e('49277').then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),

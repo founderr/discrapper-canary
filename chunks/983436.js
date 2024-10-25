@@ -17,22 +17,22 @@ var i = n(200651),
     I = n(691784);
 function m(e) {
     var t;
-    let { guild: n, channel: m, messageData: T } = e,
-        f = u.Z.getGuildId(),
-        h = c.Z.getChannelId(f),
+    let { guild: n, channel: m, messageData: f } = e,
+        T = u.Z.getGuildId(),
+        h = c.Z.getChannelId(T),
         N = a.useCallback(() => {
             var e;
             d.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
+                author_id: null === (e = f.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
                 link_channel_id: m.id,
                 link_channel_type: m.type,
-                guild_id: f,
+                guild_id: T,
                 channel_id: h
             }),
                 (0, r.K)(n.id, m.id),
                 s.default.selectVoiceChannel(m.id);
-        }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, f, h]),
+        }, [null === (t = f.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, T, h]),
         p = (0, i.jsx)(o.Z.Channel, { channel: m });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsxs)(o.Z.Body, {

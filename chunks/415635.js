@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(37091),
     d = n(721264),
     h = n(963838),
-    p = n(39127),
-    m = n(981631),
+    m = n(39127),
+    p = n(981631),
     _ = n(776042);
 function f(e) {
     let { channelId: t, guildId: n, userId: f, containerDimensions: E } = e,
@@ -25,22 +25,22 @@ function f(e) {
     s.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: s, userId: l, emoji: r, animationType: o, animationId: p } = e;
+            let { channelId: s, userId: l, emoji: r, animationType: o, animationId: m } = e;
             if ((null != f && f !== l) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))) return;
-            let _ = null != r && null != o && null != p;
+            let _ = null != r && null != o && null != m;
             if (s === t && !g && T && _) {
                 let e = (0, h._r)(r),
                     i = null != r.id && !r.animated,
                     s = {
                         id: (0, a.Z)(),
                         animationType: o,
-                        animationId: p,
+                        animationId: m,
                         shouldResize: i,
                         url: e,
                         userId: l
                     };
                 I((e) => [...e, s]),
-                    c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                    c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
                     });
@@ -69,7 +69,7 @@ function f(e) {
                   className: _.effects,
                   children: C.map((e) =>
                       (0, i.jsx)(
-                          p.Z,
+                          m.Z,
                           {
                               containerDimensions: E,
                               effect: e,
