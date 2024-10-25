@@ -57,5 +57,6 @@ e.exports = {
     play: 'play_c73f92',
     pause: 'pause_c73f92',
     transcriptBodySpinner: 'transcriptBodySpinner_c73f92',
-    pauseText: 'pauseText_c73f92'
+    pauseText: 'pauseText_c73f92',
+    copyLinkBtn: 'copyLinkBtn_c73f92'
 };
