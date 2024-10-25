@@ -311,6 +311,7 @@ function Z(e) {
             id: (t = e.config).id,
             startsAt: t.starts_at,
             expiresAt: t.expires_at,
+            features: t.features,
             messages: {
                 questName: t.messages.quest_name,
                 gamePublisher: t.messages.game_publisher,
