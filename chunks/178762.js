@@ -86,32 +86,23 @@ let j = (e) => {
         }
     },
     w = (e) => {
-        let { requestId: t, closePopout: n, ...a } = e;
+        let { closePopout: t, ...n } = e;
         return (0, l.jsx)(b, {
             onReaction: (e, l) => {
-                (0, v.L)(e, {
-                    entry: a.entry,
-                    channelId: a.channel.id,
-                    guildId: a.channel.guild_id,
-                    requestId: t,
+                n.trackRankingItemInteraction(e, {
                     destinationChannelId: l.id,
                     destinationGuildId: l.guild_id
                 }),
-                    n();
+                    t();
             },
-            closePopout: n,
-            onVoiceChannelPreview: (e, n) => {
-                (0, v.L)(R.xP.VOICE_CHANNEL_PREVIEWED, {
-                    entry: a.entry,
-                    channelId: a.channel.id,
-                    guildId: a.channel.guild_id,
-                    requestId: t,
+            closePopout: t,
+            onVoiceChannelPreview: (e) => {
+                n.trackRankingItemInteraction(R.xP.VOICE_CHANNEL_PREVIEWED, {
                     destinationChannelId: e.id,
-                    destinationGuildId: e.guild_id,
-                    richPresenceName: n
+                    destinationGuildId: e.guild_id
                 });
             },
-            ...a
+            ...n
         });
     },
     b = (e) => {
@@ -161,13 +152,16 @@ t.ZP = a.memo((e) => {
         E = (0, s.JA)(''.concat(i)),
         C = null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: p, appName: f } = (0, A.n)(o.entry),
-        T = {
-            entry: o.entry,
-            channelId: o.channel.id,
-            guildId: o.channel.guild_id,
-            requestId: o.requestId,
-            richPresenceName: p ? f : void 0
-        },
+        T = a.useMemo(
+            () => ({
+                entry: o.entry,
+                channelId: o.channel.id,
+                guildId: o.channel.guild_id,
+                requestId: o.requestId,
+                richPresenceName: p ? f : void 0
+            }),
+            [f, o.channel.guild_id, o.channel.id, o.entry, o.requestId, p]
+        ),
         g = a.useRef(!1),
         [I, N] = a.useState(!1),
         [Z, P] = a.useState(!1),
@@ -193,6 +187,16 @@ t.ZP = a.memo((e) => {
             x(String(Date.now()));
         }, []),
         y = a.useCallback(
+            function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                (0, v.L)(e, {
+                    ...T,
+                    ...t
+                });
+            },
+            [T]
+        ),
+        O = a.useCallback(
             r().throttle(
                 (e) => {
                     (0, v.L)(R.xP.CARD_POPOUT_OPEN, e);
@@ -205,7 +209,7 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        O = () => {
+        b = () => {
             (g.current = !1),
                 setTimeout(() => {
                     !g.current && (N(!1), P(M));
@@ -215,25 +219,26 @@ t.ZP = a.memo((e) => {
         onMouseEnter: () => {
             (g.current = !0),
                 setTimeout(() => {
-                    g.current && N(!0), y(T);
+                    g.current && N(!0), O(T);
                 }, 100);
         },
-        onMouseLeave: O,
+        onMouseLeave: b,
         children: (0, l.jsx)(c.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, l.jsx)(w, {
                     closePopout: t,
                     updatePopoutPosition: S,
+                    trackRankingItemInteraction: y,
                     ...o
                 });
             },
             position: 'left',
             shouldShow: I,
             positionKey: m,
-            onRequestOpen: () => y(T),
+            onRequestOpen: () => O(T),
             onRequestClose: () => {
-                Z && O();
+                Z && b();
             },
             spacing: 8,
             children: (e, t) => {
