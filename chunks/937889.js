@@ -75,7 +75,7 @@ function f(e) {
     return (function (e, t, n) {
         var a;
         let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: _ = !1, postProcessor: E, shouldFilterKeywords: f, contentMessage: h } = n,
-            m = !1,
+            I = !1,
             T = (null != h ? h : t).content,
             S = e(
                 f
@@ -101,19 +101,18 @@ function f(e) {
                         (e = (function (e, t) {
                             return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
                         })(e, n)),
-                    (m = (function (e, t) {
-                        return t ? I(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && I(e[0].content);
-                    })(
-                        (e = (function (e) {
-                            let t = e.some((e) => 'link' !== e.type || !1);
-                            return e.filter((e) => {
-                                let n = 'link' === e.type,
-                                    i = (0, r.el)(e.target);
-                                return !(n && null != i && !t);
-                            });
-                        })(e)),
-                        n
-                    )),
+                    (e = (function (e) {
+                        let t = e.some((e) => 'link' !== e.type || !1);
+                        return e.filter((e) => {
+                            let n = 'link' === e.type,
+                                i = (0, r.el)(e.target);
+                            return !(n && null != i && !t);
+                        });
+                    })(e)),
+                    t.embeds.length > 0 &&
+                        (I = (function (e, t) {
+                            return t ? m(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && m(e[0].content);
+                        })(e, n)),
                     _ &&
                         (e = (function e(t) {
                             return (
@@ -128,7 +127,7 @@ function f(e) {
                 )
             );
         return {
-            hasSpoilerEmbeds: m,
+            hasSpoilerEmbeds: I,
             content: S
         };
     })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
@@ -173,6 +172,14 @@ function p(e) {
           }),
           e);
 }
-function I(e) {
-    return e.some((e) => 'spoiler' === e.type && Array.isArray(e.content) && e.content.some((e) => 'link' === e.type || 'attachmentLink' === e.type));
+function I(e, t) {
+    if (e instanceof Array) return e.some((e) => I(e, t));
+    let n = t(e);
+    if (null != n) return n;
+    if (e.content instanceof Array) return I(e.content, t);
+    if (e.items instanceof Array) return e.items.some((e) => I(e, t));
+    else return !1;
+}
+function m(e) {
+    return I(e, (e) => ('spoiler' === e.type ? I(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
 }
