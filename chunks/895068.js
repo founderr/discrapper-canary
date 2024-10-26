@@ -24,9 +24,9 @@ var i,
     p = n(859921),
     g = n(594174),
     T = n(823379),
-    f = n(51144),
-    S = n(945124),
-    C = n(231467),
+    S = n(51144),
+    C = n(945124),
+    f = n(231467),
     N = n(301544),
     A = n(931515),
     v = n(286083),
@@ -51,10 +51,10 @@ function D(e) {
         },
         className: b.animatedCard,
         children: (0, l.jsx)(
-            C.ZP,
+            f.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, S.y)(n, s),
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, C.y)(n, s),
                 className: d()(b.card, r),
                 source: null != o ? o : O.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
@@ -67,8 +67,8 @@ function D(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: S = 16, paddingHorizontal: C = 32, variant: O = 'default', onUpdatePage: P } = e,
-        y = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * C, 0), [c, C]),
+    let { width: c, paddingVertical: C = 16, paddingHorizontal: f = 32, variant: O = 'default', onUpdatePage: P } = e,
+        y = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
         j = o.useMemo(() => {
             if (0 === y) return 1;
             let e = y / 256,
@@ -89,7 +89,7 @@ t.ZP = o.memo(function (e) {
         let e = p.Z.getField('entrypoint');
         (0, m.Oe)('top_picks', k, Q, e);
     }, [k, w, F, Q]);
-    let X = V.length > 0 || H.length > 0 ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != q ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: f.ZP.getName(q) }) : '';
+    let X = V.length > 0 || H.length > 0 ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != q ? x.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: S.ZP.getName(q) }) : '';
     let J =
             ((t = G),
             (n = j),
@@ -327,11 +327,11 @@ t.ZP = o.memo(function (e) {
           : (0, l.jsx)('div', {
                 className: b.sectionContainer,
                 style: {
-                    paddingTop: S,
-                    paddingLeft: C,
-                    paddingRight: C,
-                    paddingBottom: S,
-                    width: 'calc(100% - '.concat(2 * C, 'px)'),
+                    paddingTop: C,
+                    paddingLeft: f,
+                    paddingRight: f,
+                    paddingBottom: C,
+                    width: 'calc(100% - '.concat(2 * f, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
                 children: el.map((e, t) => {

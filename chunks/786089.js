@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(626135),
     g = n(617136),
     T = n(113434),
-    f = n(497505),
-    S = n(475595),
-    C = n(981631),
+    S = n(497505),
+    C = n(475595),
+    f = n(981631),
     N = n(689938),
     A = n(874976);
 t.Z = (0, a.memo)(function (e) {
@@ -51,20 +51,20 @@ t.Z = (0, a.memo)(function (e) {
         b((i.top - n.top - a.height) / 2);
     });
     let W = (0, c.wj)(k),
-        K = (0, a.useMemo)(() => (0, S.fh)(L, S.Bd.LOGO_TYPE, 'dark'), [L]),
-        q = (0, a.useMemo)(() => (0, S.fh)(L, S.Bd.REWARD), [L]),
+        K = (0, a.useMemo)(() => (0, C.fh)(L, C.Bd.LOGO_TYPE, 'dark'), [L]),
+        q = (0, a.useMemo)(() => (0, C.fh)(L, C.Bd.REWARD), [L]),
         Q = R ? w + 8 : 0,
         X = () => {
             O(!0),
-                p.default.track(C.rMx.QUEST_HOVER, {
+                p.default.track(f.rMx.QUEST_HOVER, {
                     quest_id: L.id,
-                    ...(0, g.mH)(f.jn.TROPHY_CASE_CARD)
+                    ...(0, g.mH)(S.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => O(!1),
         $ = (e) => {
             P(!0),
-                p.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                p.default.track(f.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: L.id

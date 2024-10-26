@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(94455);
 function g(e) {
     let { user: t, type: n, status: g, isFocused: T } = e,
-        f = a.useContext(u.AnalyticsContext),
-        { analyticsLocations: S } = (0, o.ZP)(),
-        C = (e) => {
+        S = a.useContext(u.AnalyticsContext),
+        { analyticsLocations: C } = (0, o.ZP)(),
+        f = (e) => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
         N = (e) => {
@@ -40,8 +40,8 @@ function g(e) {
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: S,
-                analyticsLocation: f.location
+                sourceAnalyticsLocations: C,
+                analyticsLocation: S.location
             }),
         children: (e) => {
             var a;
@@ -69,7 +69,7 @@ function g(e) {
                                   icon: r.XSmallIcon,
                                   actionType: _.Z.ActionTypes.DENY,
                                   tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-                                  onClick: C,
+                                  onClick: f,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function g(e) {
                           icon: r.XSmallIcon,
                           actionType: _.Z.ActionTypes.DENY,
                           tooltip: I.Z.Messages.FRIEND_REQUEST_CANCEL,
-                          onClick: C,
+                          onClick: f,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {

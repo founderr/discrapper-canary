@@ -72,7 +72,7 @@ function C(e) {
         I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
         E = l.useCallback(() => (0, i.jsx)(_, { title: C }), [C]),
         N = l.useCallback(() => {
-            (0, c._9)({
+            (0, c.aN)({
                 guildId: t.id,
                 location: a.Z.GUILD_CHANNEL_LIST
             }),

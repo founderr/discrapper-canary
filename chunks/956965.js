@@ -52,7 +52,7 @@ function g(e) {
                               className: r()(m.bannerImage, m.bannerMedia),
                               muted: !0
                           }),
-                    (0, i.jsx)(f, {
+                    (0, i.jsx)(S, {
                         isHovered: n,
                         url: E,
                         isVideo: !0
@@ -80,7 +80,7 @@ function T(e) {
                 onLoad: () => o(!0)
             }),
             null != s
-                ? (0, i.jsx)(f, {
+                ? (0, i.jsx)(S, {
                       isHovered: t,
                       url: s,
                       isVideo: !1
@@ -89,7 +89,7 @@ function T(e) {
         ]
     });
 }
-function f(e) {
+function S(e) {
     let { isHovered: t, url: n, isVideo: s } = e,
         [l, o] = a.useState(!1),
         [c, d] = a.useState(t);
@@ -128,9 +128,9 @@ t.Z = function (e) {
         _ = a.useCallback(() => {
             d(!0);
         }, []),
-        f = a.useCallback(() => d(!1), []),
-        S = (0, u.ye)(t),
-        C = (0, h.u)(s),
+        S = a.useCallback(() => d(!1), []),
+        C = (0, u.ye)(t),
+        f = (0, h.u)(s),
         N = t.bot,
         { botBannerUrl: A, botBannerUrlAnimated: v } = a.useMemo(
             () =>
@@ -157,15 +157,15 @@ t.Z = function (e) {
     return (0, i.jsx)('div', {
         className: m.banner,
         style: {
-            backgroundImage: C,
+            backgroundImage: f,
             aspectRatio: 'card' === n ? I : p
         },
         onMouseEnter: _,
         onFocus: _,
-        onMouseLeave: f,
-        onBlur: f,
+        onMouseLeave: S,
+        onBlur: S,
         children:
-            'card' === n && S
+            'card' === n && C
                 ? (0, i.jsx)(g, {
                       application: t,
                       isHovered: c,

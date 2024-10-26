@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(283293),
     g = n(216742),
     T = n(84615),
-    f = n(889711),
-    S = n(229893),
-    C = n(931515),
+    S = n(889711),
+    C = n(229893),
+    f = n(931515),
     N = n(702646),
     A = n(207796),
     v = n(782322),
@@ -48,7 +48,7 @@ function x(e) {
         ),
         m = n && s.length > 0,
         I = a.useCallback(() => {
-            (0, c._9)({
+            (0, c.aN)({
                 guildId: r,
                 location: o.Z.GLOBAL_DISCOVERY
             }),
@@ -134,7 +134,7 @@ t.Z = a.memo(function (e) {
         P = (0, A.GN)((e) => e.completedNux, s.Z),
         D = (0, A.GN)((e) => e.entrypointGameId, s.Z),
         [y, j] = a.useState(null),
-        { backgroundImageUrl: U, gameName: G } = (0, C.kN)(D),
+        { backgroundImageUrl: U, gameName: G } = (0, f.kN)(D),
         w = a.useCallback(() => {
             var e, t, n;
             if (!L) return;
@@ -144,8 +144,8 @@ t.Z = a.memo(function (e) {
         }, [y, L]);
     a.useEffect(() => {
         if (!L) return;
-        let e = (0, f.pP)(w);
-        return (0, f.YP)(e, document.body), () => (0, f.UC)(e, document.body);
+        let e = (0, S.pP)(w);
+        return (0, S.YP)(e, document.body), () => (0, S.UC)(e, document.body);
     }, [L, w]);
     let k = a.useCallback(() => {
             var e, t;
@@ -166,7 +166,7 @@ t.Z = a.memo(function (e) {
                 }),
             [P, T]
         ),
-        H = (0, r.e7)([S.Z], () => S.Z.getSavedGuilds().length),
+        H = (0, r.e7)([C.Z], () => C.Z.getSavedGuilds().length),
         V = a.useMemo(
             () => [
                 {

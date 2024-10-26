@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(185666),
     g = n(503737),
     T = n(513202),
-    f = n(318891),
-    S = n(687751),
-    C = n(912471),
+    S = n(318891),
+    C = n(687751),
+    f = n(912471),
     N = n(100527),
     A = n(838134),
     v = n(77987),
@@ -70,9 +70,9 @@ var i = n(200651),
     ep = n(298969),
     eg = n(719256),
     eT = n(6025),
-    ef = n(897473),
-    eS = n(377368),
-    eC = n(262702),
+    eS = n(897473),
+    eC = n(377368),
+    ef = n(262702),
     eN = n(639033),
     eA = n(479313),
     ev = n(911560),
@@ -119,7 +119,7 @@ function e0(e, t, n) {
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073);
 let e1 = !1;
-(0, C.DL)(),
+(0, f.DL)(),
     l.ZP.initialize(),
     ep.Z.loadServer(),
     eK.isPlatformEmbedded &&
@@ -393,10 +393,10 @@ class te extends a.PureComponent {
             H.Z.init(),
             B.Z.init(),
             ea.Z.initialize(),
-            S.Z.initialize(),
+            C.Z.initialize(),
             U.Z.initialize(),
             e_.Z.initialize(),
-            f.ZP.initialize(),
+            S.ZP.initialize(),
             eM.Z.initialize(),
             eo.Z.initialize(),
             T.Z.initialize(),
@@ -408,14 +408,14 @@ class te extends a.PureComponent {
             eZ.Z.init(),
             eF.Z.init(),
             eO.Z.init(),
-            eC.Z.initialize(),
+            ef.Z.initialize(),
             eN.Z.initialize(),
             eR.Z.initialize(),
             ex.Z.init(),
             j.Z.initialize(),
             p.Z.initialize(),
             eg.Z.initialize(),
-            eS.Z.initialize(),
+            eC.Z.initialize(),
             er.Z.initialize(),
             es.Z.initialize(),
             el.Z.initialize(),
@@ -440,7 +440,7 @@ class te extends a.PureComponent {
             (this.historyUnlisten = eh.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eP.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), Z.Z.terminate(), f.ZP.terminate(), eM.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eR.Z.terminate(), g.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), p.Z.terminate(), eE.Z.terminate(), eg.Z.terminate(), eS.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), R.Z.terminate(), O.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eP.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), Z.Z.terminate(), S.ZP.terminate(), eM.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eR.Z.terminate(), g.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), p.Z.terminate(), eE.Z.terminate(), eg.Z.terminate(), eC.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), R.Z.terminate(), O.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -486,7 +486,7 @@ class te extends a.PureComponent {
                         if (null != a && null != o && e) {
                             if (t) (0, eI.dL)(eX.Z5c.CHANNEL(i, o, l));
                             else {
-                                let e = { type: ef.Ff.THREAD };
+                                let e = { type: eS.Ff.THREAD };
                                 null != l && (e.initialMessageId = l),
                                     eT.Z.openThreadAsSidebar({
                                         guildId: i,

@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(209613),
     g = n(325708),
     T = n(320149),
-    f = n(82295),
-    S = n(252618),
-    C = n(605236),
+    S = n(82295),
+    C = n(252618),
+    f = n(605236),
     N = n(243778),
     A = n(984370),
     v = n(797614),
@@ -94,7 +94,7 @@ function en() {
         T = a.useCallback(
             () =>
                 (0, i.jsxs)(
-                    f.Z,
+                    S.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
@@ -197,7 +197,7 @@ let ea = function (e) {
             r = (0, b._p)({ location: 'message-request-coachmark' });
         return (
             a.useEffect(() => {
-                (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
             (0, i.jsx)(N.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
@@ -257,12 +257,12 @@ let el = (0, h.Z)(function (e) {
     a.useEffect(() => {
         null != m && !p && g && I && ((0, Z.Kh)(m), L.Z.closeChannelSidebar(P.uZ));
     }, [m, g, I, p]);
-    let [T, f] = a.useState(q.pS.REQUESTS),
-        C = (e) => {
-            f(e);
+    let [T, S] = a.useState(q.pS.REQUESTS),
+        f = (e) => {
+            S(e);
         };
     return (
-        (0, S.Tt)({ location: $.Z.Messages.MESSAGE_REQUESTS }),
+        (0, C.Tt)({ location: $.Z.Messages.MESSAGE_REQUESTS }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -288,7 +288,7 @@ let el = (0, h.Z)(function (e) {
                                             'aria-label': $.Z.Messages.MESSAGE_REQUESTS,
                                             selectedItem: T,
                                             type: 'top-pill',
-                                            onItemSelect: C,
+                                            onItemSelect: f,
                                             className: ee.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     },
     Ew: function () {
-        return C;
+        return f;
     },
     Mf: function () {
         return g;
@@ -12,7 +12,7 @@ n.d(t, {
         return O;
     },
     QW: function () {
-        return f;
+        return S;
     },
     U0: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(t, {
         return T;
     },
     lg: function () {
-        return S;
+        return C;
     },
     oT: function () {
         return L;
@@ -112,7 +112,7 @@ function T(e) {
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function f(e) {
+function S(e) {
     switch (e) {
         case E.vf.FEATURED:
             return I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_FEATURED;
@@ -130,7 +130,7 @@ function f(e) {
             return null;
     }
 }
-function S(e) {
+function C(e) {
     switch (e) {
         case E.vf.FEATURED:
             return m.Hk;
@@ -152,7 +152,7 @@ function S(e) {
             (0, l.vE)(e);
     }
 }
-function C(e) {
+function f(e) {
     return null == e || Date.now() - e > E.AF;
 }
 function N(e) {

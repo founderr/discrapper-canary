@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(782959),
     g = n(276645),
     T = n(970731),
-    f = n(626135),
-    S = n(267642),
-    C = n(981631),
+    S = n(626135),
+    C = n(267642),
+    f = n(981631),
     N = n(921944),
     A = n(30513),
     v = n(474936),
@@ -30,18 +30,18 @@ var i = n(200651),
     b = n(31932),
     M = n(642301);
 function P(e) {
-    if (null != e) m.Z.open(e.id, C.pNK.OVERVIEW, { section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR }, C.KsC.DISPLAY);
+    if (null != e) m.Z.open(e.id, f.pNK.OVERVIEW, { section: f.jXE.PREMIUM_GUILD_PROGRESS_BAR }, f.KsC.DISPLAY);
 }
 function D(e, t) {
-    t && m.Z.open(e.id, C.pNK.DISCOVERY);
+    t && m.Z.open(e.id, f.pNK.DISCOVERY);
 }
 function y(e, t) {
     if (null != t)
-        (0, S.f2)(t, C.Eu4.TIER_1)
-            ? m.Z.open(t.id, C.pNK.OVERVIEW, { section: C.jXE.PREMIUM_GUILD_INVITE_SPLASH }, C.KsC.INVITE)
+        (0, C.f2)(t, f.Eu4.TIER_1)
+            ? m.Z.open(t.id, f.pNK.OVERVIEW, { section: f.jXE.PREMIUM_GUILD_INVITE_SPLASH }, f.KsC.INVITE)
             : (0, _.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: C.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: f.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
                   perks: (0, A.o9)()
               });
@@ -65,15 +65,15 @@ t.Z = a.memo(function (e) {
     let { contentTypes: t, theme: n, guild: a, renderGuildHeaderDropdownButton: l } = e,
         { analyticsLocations: _ } = (0, o.ZP)(),
         A = () => {
-            f.default.track(C.rMx.TOOLTIP_VIEWED, {
+            S.default.track(f.rMx.TOOLTIP_VIEWED, {
                 type: v.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: C.ZY5.GUILD_CHANNEL }
+                location: { page: f.ZY5.GUILD_CHANNEL }
             });
         },
         U = () => {
-            f.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.INVITE_SPLASH_UPSELL,
-                location: { page: C.ZY5.GUILD_CHANNEL },
+                location: { page: f.ZY5.GUILD_CHANNEL },
                 location_stack: _
             });
         },
@@ -154,8 +154,8 @@ t.Z = a.memo(function (e) {
                         renderGuildHeaderDropdownButton: l
                     });
                 case s.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, S.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, S.KK)(a, C.Eu4.TIER_1) }),
-                        t = (0, S.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
+                    let e = (0, C.f2)(a, f.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, C.KK)(a, f.Eu4.TIER_1) }),
+                        t = (0, C.f2)(a, f.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(T.ZP, {
                             onComponentMount: U,
@@ -204,7 +204,7 @@ t.Z = a.memo(function (e) {
                                 className: R.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
+                                m.Z.open(a.id, f.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
                             },
                             markAsDismissed: k
                         }),

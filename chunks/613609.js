@@ -19,12 +19,12 @@ t.Z = (e) => {
     a.useEffect(() => {
         null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
     }, [n]);
-    let f = (0, s.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
-        S = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
+    let S = (0, s.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
+        C = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
     a.useEffect(() => {
-        null != S && (0, o.uL)(E.Z5c.CHANNEL(t));
-    }, [S, t]);
-    let C = a.useCallback((e) => {
+        null != C && (0, o.uL)(E.Z5c.CHANNEL(t));
+    }, [C, t]);
+    let f = a.useCallback((e) => {
             p((t) => Math.max(t, e));
         }, []),
         N = (0, u.gK)();
@@ -35,12 +35,12 @@ t.Z = (e) => {
             splash: N,
             waveState: I,
             showLogo: !1,
-            updateWaveState: C,
+            updateWaveState: f,
             children: [
                 (0, i.jsx)('div', { className: m.dragRegion }),
                 (0, i.jsx)('div', {
                     className: m.contentWrapper,
-                    children: !g && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: f })
+                    children: !g && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: S })
                 })
             ]
         })

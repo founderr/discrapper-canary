@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return C;
     }
 }),
     n(47120);
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-class f extends a.Component {
+class S extends a.Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
     }
@@ -125,10 +125,10 @@ class f extends a.Component {
             });
     }
 }
-function S() {
+function C() {
     let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-    return (0, i.jsx)(f, {
+    return (0, i.jsx)(S, {
         activeRowKey: (0, l.e7)([E.Z], () => E.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, l.e7)([_.Z], () => _.Z.applicationFilterQuery),

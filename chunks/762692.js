@@ -20,7 +20,7 @@ let p = window.GLOBAL_ENV.ALGOLIA_KEY,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-async function f(e, t, n) {
+async function S(e, t, n) {
     let { categoryId: i, languageCode: a, offset: s, length: r } = t,
         l = E.Z.getAlgoliaSearchIndex();
     if (null == l || E.Z.getIsBlocked(e)) return;
@@ -57,9 +57,9 @@ async function f(e, t, n) {
             total: n
         });
     } catch (o) {
-        var S;
+        var C;
         let s = new c.Hx(o),
-            r = null !== (S = null == n ? void 0 : n.isRetry) && void 0 !== S && S;
+            r = null !== (C = null == n ? void 0 : n.isRetry) && void 0 !== C && C;
         o.body.retry_after > 0 && l === E.Z.getAlgoliaSearchIndex()
             ? (_.m9({
                   categoryId: i,
@@ -67,7 +67,7 @@ async function f(e, t, n) {
                   willRequestRetry: !0,
                   isRequestRetry: r
               }),
-              setTimeout(() => f(e, t, { isRetry: !0 }), o.body.retry_after * u.Z.Millis.SECOND))
+              setTimeout(() => S(e, t, { isRetry: !0 }), o.body.retry_after * u.Z.Millis.SECOND))
             : (_.m9({
                   categoryId: i,
                   error: s,
@@ -83,7 +83,7 @@ async function f(e, t, n) {
               }));
     }
 }
-async function S(e) {
+async function C(e) {
     let { query: t, algoliaFilters: n, onComplete: i } = e,
         a = E.Z.getAlgoliaSearchIndex();
     if (null == a || E.Z.getIsBlocked(t)) return;
@@ -123,7 +123,7 @@ async function S(e) {
         null == i || i();
     }
 }
-async function C(e) {
+async function f(e) {
     let { categoryId: t, forceRefresh: n = !1 } = e,
         i = E.Z.getLastFetchTimestamp({ categoryId: t });
     if (n || (0, h.Ew)(i)) {
@@ -208,8 +208,8 @@ t.Z = {
             algoliaSearchIndex: e
         });
     },
-    fetchAlgoliaSearchResults: f,
-    fetchAlgoliaSearchResultCounts: S,
+    fetchAlgoliaSearchResults: S,
+    fetchAlgoliaSearchResultCounts: C,
     clearAlgoliaSearchResults: function (e) {
         var t;
         d.Z.dispatch({
@@ -218,7 +218,7 @@ t.Z = {
         });
     },
     fetchFeaturedGuilds: N,
-    fetchCategoryFeaturedGuilds: C,
+    fetchCategoryFeaturedGuilds: f,
     resetSearchLayout: function () {
         d.Z.dispatch({ type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET' });
     }

@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(459273),
     g = n(242291),
     T = n(792165),
-    f = n(603074),
-    S = n(981631),
-    C = n(921944),
+    S = n(603074),
+    C = n(981631),
+    f = n(921944),
     N = n(689938),
     A = n(663031);
 function v(e) {
@@ -60,7 +60,7 @@ function v(e) {
                 onRequestClose: () => P(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, i.jsx)(f.Z, {
+                    return (0, i.jsx)(S.Z, {
                         guildId: D,
                         channel: t,
                         onClose: n,
@@ -87,7 +87,7 @@ function v(e) {
                             disabled: b,
                             onClick: () => {
                                 var t, n;
-                                null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(C.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!M), B();
+                                null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(f.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!M), B();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -114,7 +114,7 @@ function v(e) {
         }, [b, M]);
     return (
         (0, p.yp)({
-            event: S.CkL.TOGGLE_SOUNDBOARD,
+            event: C.CkL.TOGGLE_SOUNDBOARD,
             handler: Y
         }),
         (0, i.jsx)(E.Gt, {

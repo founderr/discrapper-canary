@@ -16,9 +16,9 @@ var i = n(913527),
     p = n(430824),
     g = n(131951),
     T = n(292959),
-    f = n(699516),
-    S = n(944486),
-    C = n(9156),
+    S = n(699516),
+    C = n(944486),
+    f = n(9156),
     N = n(594174),
     A = n(51144),
     v = n(196051),
@@ -47,7 +47,7 @@ function y(e, t, n, i) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = m.Z.getChannel(t);
-                return null == n ? e : (0, o.F6)(n, N.default, f.Z);
+                return null == n ? e : (0, o.F6)(n, N.default, S.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(O.Z.Messages.EMOJI, ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -110,17 +110,17 @@ function H(e) {
     if (c || g.Z.isSelfDeaf()) return !1;
     let d = m.Z.getChannel(l);
     if (null == d) return !1;
-    let u = S.Z.getChannelId(),
+    let u = C.Z.getChannelId(),
         p = h.ZP.getCurrentSidebarChannelId(u),
         N = l === u || l === p,
         v = _.OW.getSetting() && o.tts && N,
         Z = T.Z.getTTSType(),
         O = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== E.default.getId() && (Z === R.PrB.ALL_CHANNELS || (Z === R.PrB.SELECTED_CHANNEL && N));
-    if ((v || O) && !f.Z.isBlockedForMessage(o)) {
+    if ((v || O) && !S.Z.isBlockedForMessage(o)) {
         if (x.indexOf(o.id) >= 0) return !1;
         x.unshift(o.id) > 10 && x.pop();
         let e = d.getGuildId();
-        if (null != e && C.ZP.getMutedChannels(e).has(l)) return !1;
+        if (null != e && f.ZP.getMutedChannels(e).has(l)) return !1;
         let t = null !== (s = null !== (a = I.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : A.ZP.getName(o.author)) && void 0 !== s ? s : '',
             c = o.type === R.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (r = I.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== r ? r : A.ZP.getName(c)) : null;

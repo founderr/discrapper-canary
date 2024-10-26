@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(585500),
     g = n(475595),
     T = n(566078),
-    f = n(602667),
-    S = n(611855),
-    C = n(670638),
+    S = n(602667),
+    C = n(611855),
+    f = n(670638),
     N = n(667105),
     A = n(860151),
     v = n(341907),
@@ -111,7 +111,7 @@ t.Z = function (e) {
         });
     return B || U || k || !(0, I.dl)(o)
         ? null
-        : (0, i.jsx)(f.A, {
+        : (0, i.jsx)(S.A, {
               questOrQuests: o,
               questContent: m.jn.ACTIVITY_PANEL,
               children: (e) => {
@@ -131,8 +131,8 @@ t.Z = function (e) {
                           (0, i.jsxs)('div', {
                               className: O.utils,
                               children: [
-                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(C.r, {
+                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(C.Z, { textOpacity: 0.5 }),
+                                  (0, i.jsx)(f.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
