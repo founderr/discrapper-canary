@@ -31,7 +31,7 @@ function E(e) {
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        f = (0, i.jsxs)(i.Fragment, {
+        S = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
@@ -47,7 +47,7 @@ function E(e) {
         });
     return (0, i.jsx)(o.Tooltip, {
         color: m ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
-        text: m ? f : s,
+        text: m ? S : s,
         'aria-label': m ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
         shouldShow: null != n,
         tooltipStyle: p,
@@ -104,7 +104,7 @@ function h(e) {
     });
 }
 function m(e) {
-    let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, nextButtonBackgroundColor: E, nextButtonClassName: h, nextButtonAnimationStyle: m } = e;
+    let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, backButtonClassName: E, nextButtonBackgroundColor: h, nextButtonClassName: m, nextButtonAnimationStyle: I } = e;
     return (0, i.jsxs)('div', {
         className: r()(_.buttonsContainer, t),
         children: [
@@ -112,15 +112,16 @@ function m(e) {
                 look: o.Button.Looks.OUTLINED,
                 size: o.Button.Sizes.MEDIUM,
                 color: o.Button.Colors.PRIMARY,
+                className: E,
                 onClick: c,
                 disabled: n,
                 children: u.Z.Messages.BACK
             }),
             (0, i.jsx)(l.animated.div, {
-                style: m,
+                style: I,
                 children: (0, i.jsx)(d.Z, {
-                    className: h,
-                    themeColor: E,
+                    className: m,
+                    themeColor: h,
                     color: o.Button.Colors.BRAND,
                     look: o.Button.Looks.FILLED,
                     size: o.Button.Sizes.MEDIUM,

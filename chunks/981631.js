@@ -4902,6 +4902,7 @@ let ot = Object.freeze({
     (nO.DISCOVERY_GUILD_CARD_INTERACTION = 'discovery_guild_card_interaction'),
     (nO.GUILD_APPLICATION_ABANDONED = 'guild_application_abandoned'),
     (nO.RAPIDASH_PROFILE_CTA_CLICKED = 'rapidash_profile_cta_clicked'),
+    (nO.RAPIDASH_GUILDS_SIGN_UP_ACTION = 'rapidash_guilds_sign_up_action'),
     (nO.CHANNEL_PROMPT_ACTION_CLICKED = 'channel_prompt_action_clicked'),
     (nO.GPLAY_PURCHASE_FAILED = 'gplay_purchase_failed'),
     (nO.LIVE_ACTIVITY_SETTINGS_UPDATED = 'live_activity_settings_updated'),

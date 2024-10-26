@@ -1,6 +1,6 @@
 n.d(t, {
     Ce: function () {
-        return m;
+        return T;
     },
     GN: function () {
         return f;
@@ -13,6 +13,9 @@ n.d(t, {
     },
     hz: function () {
         return o;
+    },
+    kw: function () {
+        return m;
     },
     t1: function () {
         return I;
@@ -46,6 +49,7 @@ let f = (0, u.Z)(
             selectedPlaystyle: null,
             selectedTraits: [],
             dismissedPilotAdminNux: !1,
+            dismissedSignupAdmin: !1,
             entrypointGameId: null,
             setGame: (t) => (0, d.j)(() => e({ game: t })),
             setSelectedGames: (t) => {
@@ -89,7 +93,8 @@ let f = (0, u.Z)(
                 selectedGames: e.selectedGames,
                 selectedPlaystyle: e.selectedPlaystyle,
                 selectedTraits: e.selectedTraits,
-                dismissedPilotAdminNux: e.dismissedPilotAdminNux
+                dismissedPilotAdminNux: e.dismissedPilotAdminNux,
+                dismissedSignupAdmin: e.dismissedSignupAdmin
             })
         }
     )
@@ -101,6 +106,8 @@ function h(e, t) {
         let t = (0, E.rx)('setClanDiscoveryMode'),
             n = f.getState().dismissedPilotAdminNux;
         t && n && (e = 'discovery');
+        let r = f.getState().dismissedSignupAdmin;
+        t && r && (e = 'discovery');
     }
     (0, d.j)(() => {
         f.setState({
@@ -115,6 +122,7 @@ function p() {
         f.setState({
             completedNux: !1,
             dismissedPilotAdminNux: !1,
+            dismissedSignupAdmin: !1,
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
             game: 'none',
@@ -137,6 +145,11 @@ function I(e) {
     };
 }
 function m() {
+    (0, d.j)(() => {
+        f.setState({ dismissedSignupAdmin: !0 }), h('discovery');
+    });
+}
+function T() {
     (0, d.j)(() => {
         f.setState({ dismissedPilotAdminNux: !0 }), h('discovery');
     });

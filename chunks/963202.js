@@ -8,11 +8,17 @@ n.d(t, {
     It: function () {
         return O;
     },
+    Pu: function () {
+        return M;
+    },
     St: function () {
         return T;
     },
     YH: function () {
         return D;
+    },
+    c7: function () {
+        return U;
     },
     iN: function () {
         return _;
@@ -30,7 +36,8 @@ n.d(t, {
         return E;
     }
 }),
-    n(47120);
+    n(47120),
+    n(653041);
 var r = n(192379),
     i = n(442837),
     a = n(818083),
@@ -180,13 +187,20 @@ function m(e) {
             return (
                 o.forEach((n) => {
                     let r = c.getCurrentConfig(
-                        {
-                            guildId: n.id,
-                            location: t
-                        },
-                        { autoTrackExposure: a }
-                    );
-                    e.enableClanCreation = e.enableClanCreation || r.enableClanCreation;
+                            {
+                                guildId: n.id,
+                                location: t
+                            },
+                            { autoTrackExposure: a }
+                        ),
+                        i = P.getCurrentConfig(
+                            {
+                                guildId: n.id,
+                                location: t
+                            },
+                            { autoTrackExposure: a }
+                        ).enableSignups;
+                    e.enableClanCreation = e.enableClanCreation || r.enableClanCreation || i;
                 }),
                 e
             );
@@ -355,4 +369,48 @@ let y = (0, a.B)({
 });
 function b(e) {
     return y.useExperiment({ location: e }).showDiscovery;
+}
+function M(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        a = (0, i.Wu)([s.Z], () => Object.values(s.Z.getGuilds())),
+        { signupGuilds: l } = r.useMemo(() => {
+            let e = [];
+            for (let r of a) {
+                if (!r.hasFeature(u.oNc.CLAN))
+                    P.getCurrentConfig(
+                        {
+                            guildId: r.id,
+                            location: t
+                        },
+                        { autoTrackExposure: n }
+                    ).enableSignups &&
+                        o.Z.can(u.Plq.MANAGE_GUILD, r) &&
+                        e.push(r);
+            }
+            return { signupGuilds: e };
+        }, [a, t, n]);
+    return {
+        signupEnabled: l.length > 0,
+        guilds: l
+    };
+}
+let P = (0, a.B)({
+    kind: 'guild',
+    id: '2024-10_rapidash_discovery_sign_up',
+    label: 'Rapidash Discovery Early Sign Up',
+    defaultConfig: { enableSignups: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable',
+            config: { enableSignups: !0 }
+        }
+    ]
+});
+function U(e) {
+    let { guildId: t, location: n } = e;
+    return P.useExperiment({
+        guildId: t,
+        location: n
+    }).enableSignups;
 }

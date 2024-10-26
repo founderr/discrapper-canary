@@ -17,28 +17,32 @@ function c() {
             includeConverted: !0,
             autoTrackExposure: !0
         }),
-        n = l.Z.useField('selectedTab'),
-        c = i.useMemo(() => {
-            let n = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
+        { signupEnabled: n } = (0, a.Pu)({
+            location: 'global_discovery',
+            autoTrackExposure: !0
+        }),
+        c = l.Z.useField('selectedTab'),
+        d = i.useMemo(() => {
+            let i = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
             return (
-                e || t ? n.unshift(o.vf.GUILDS) : n.unshift(o.vf.FEATURED),
-                n.map((e) => ({
+                e || t || n ? i.unshift(o.vf.GUILDS) : i.unshift(o.vf.FEATURED),
+                i.map((e) => ({
                     id: e,
                     label: (0, r.vb)(e)
                 }))
             );
-        }, [t, e]),
-        d = i.useCallback((e) => {
+        }, [t, e, n]),
+        u = i.useCallback((e) => {
             l.Z.setState({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {
-            (null == n || !c.some((e) => e.id === n)) && d(c[0].id);
-        }, [n, c, d]),
+            (null == c || !d.some((e) => e.id === c)) && u(d[0].id);
+        }, [c, d, u]),
         {
-            tabs: c,
-            selectedTab: null != n ? n : c[0].id,
-            setSelectedTab: d
+            tabs: d,
+            selectedTab: null != c ? c : d[0].id,
+            setSelectedTab: u
         }
     );
 }
