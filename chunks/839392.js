@@ -2,8 +2,8 @@ var a,
     r,
     s,
     i,
-    o = t(442837),
-    l = t(570140);
+    o = n(442837),
+    l = n(570140);
 let c = {},
     d = {};
 class u extends (i = o.ZP.Store) {
@@ -23,13 +23,13 @@ class u extends (i = o.ZP.Store) {
               writable: !0
           })
         : (a[r] = s),
-    (n.Z = new u(l.Z, {
+    (t.Z = new u(l.Z, {
         GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-            let { applicationId: n, games: t } = e;
-            c[n] = t;
+            let { applicationId: t, games: n } = e;
+            c[t] = n;
         },
         GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
-            let { applicationId: n, error: t } = e;
-            d[n] = t;
+            let { applicationId: t, error: n } = e;
+            d[t] = n;
         }
     }));

@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     C: function () {
         return _;
     },
@@ -6,23 +6,23 @@ t.d(n, {
         return a;
     }
 }),
-    t(47120);
+    n(47120);
 var a,
     r,
-    s = t(200651),
-    i = t(192379),
-    o = t(120356),
-    l = t.n(o),
-    c = t(793030),
-    d = t(689938),
-    u = t(522840);
+    s = n(200651),
+    i = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    c = n(793030),
+    d = n(689938),
+    u = n(522840);
 function _(e) {
-    var n;
-    let { game: t, application: a, size: r, className: o } = e,
+    var t;
+    let { game: n, application: a, size: r, className: o } = e,
         [_, E] = i.useState(!1),
-        m = null !== (n = null == a ? void 0 : a.name) && void 0 !== n ? n : t.name,
-        I = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null;
-    return null == t.coverImageUrl || _
+        m = null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : n.name,
+        I = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
+    return null == n.coverImageUrl || _
         ? (0, s.jsxs)('div', {
               className: l()(u.fallback, o),
               children: [
@@ -43,7 +43,7 @@ function _(e) {
           })
         : (0, s.jsx)('img', {
               className: o,
-              src: t.coverImageUrl,
+              src: n.coverImageUrl,
               alt: d.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: m }),
               onError: () => {
                   E(!0);

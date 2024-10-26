@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var a = t(200651);
-t(192379);
-var r = t(481060),
-    s = t(239091),
-    i = t(299206),
-    o = t(858042),
-    l = t(689938);
+var a = n(200651);
+n(192379);
+var r = n(481060),
+    s = n(239091),
+    i = n(299206),
+    o = n(858042),
+    l = n(689938);
 function c(e) {
-    let { applicationId: n, className: t, viewId: c } = e,
+    let { applicationId: t, className: n, viewId: c } = e,
         d = (0, i.Z)({
-            id: n,
+            id: t,
             label: l.Z.Messages.COPY_ID_APPLICATION
         }),
         u = (0, o.M)({
-            applicationId: n,
+            applicationId: t,
             viewId: c
         });
     return null == d && null == u
@@ -27,11 +27,11 @@ function c(e) {
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: n } = e;
+                  let { closePopout: t } = e;
                   return (0, a.jsx)(r.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, s.Zy)(), n();
+                          (0, s.Zy)(), t();
                       },
                       'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
@@ -43,10 +43,10 @@ function c(e) {
               children: (e) =>
                   (0, a.jsx)(r.Tooltip, {
                       text: l.Z.Messages.MORE,
-                      children: (n) =>
+                      children: (t) =>
                           (0, a.jsx)(r.Clickable, {
-                              className: t,
-                              ...n,
+                              className: n,
+                              ...t,
                               ...e,
                               children: (0, a.jsx)(r.MoreHorizontalIcon, {
                                   size: 'xs',

@@ -66,8 +66,8 @@ function E(e) {
         : (0, r.jsx)(i.MenuItem, {
               id: 'game-profile',
               label: c.Z.Messages.VIEW_GAME_PROFILE,
-              action: () => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), f();
+              action: (e) => {
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), f(e);
               }
           });
 }

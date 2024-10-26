@@ -9,7 +9,7 @@ n.d(t, {
         return Z;
     },
     Iq: function () {
-        return p;
+        return f;
     },
     Md: function () {
         return o;
@@ -54,7 +54,7 @@ n.d(t, {
         return i;
     },
     kC: function () {
-        return f;
+        return p;
     },
     m2: function () {
         return g;
@@ -88,8 +88,8 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     _ = 12,
     v = 96,
     C = 32,
-    p = 120,
-    f = 260,
+    f = 120,
+    p = 260,
     T = 88,
     g = 99,
     I = 12,

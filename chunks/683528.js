@@ -66,7 +66,7 @@ function E(e) {
                     return (0, r.jsx)(
                         o.Clickable,
                         {
-                            id: f(t),
+                            id: f(i),
                             className: l()(_.galleryItem, { [_.selected]: s }),
                             'aria-label': u.format({
                                 pageNumber: i + 1,

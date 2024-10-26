@@ -106,8 +106,8 @@ function j(e) {
                       smallImage: eu,
                       size: h.J.SIZE_60,
                       aspectRatio: e,
-                      onClick: () => {
-                          ea({ action: 'PRESS_IMAGE' }), ec();
+                      onClick: (e) => {
+                          ea({ action: 'PRESS_IMAGE' }), ec(e);
                       }
                   });
         },
@@ -232,8 +232,8 @@ function j(e) {
                   })
                 : (0, r.jsxs)(o.Clickable, {
                       className: Y.clickable,
-                      onClick: () => {
-                          ea({ action: 'PRESS_TEXT' }), ec();
+                      onClick: (e) => {
+                          ea({ action: 'PRESS_TEXT' }), ec(e);
                       },
                       children: [e_(), eE(), ef()]
                   }),

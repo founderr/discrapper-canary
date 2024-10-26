@@ -15,8 +15,8 @@ var l = n(200651),
     _ = n(278399),
     v = n(297781),
     C = n(591853),
-    p = n(410441),
-    f = n(616922),
+    f = n(410441),
+    p = n(616922),
     T = n(689938);
 let g = (e, t, n, l) => {
         let a = (function (e) {
@@ -58,8 +58,8 @@ t.Z = (e) => {
         }, [P, M, t, n, S, R, A, L]);
     if (null == L || !(0, d.Hi)(R, _.y9)) return null;
     let O = () => {
-        let e = f.Hw.ALBUM,
-            t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : f.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+        let e = p.Hw.ALBUM,
+            t = o.Z.isProtocolRegistered() ? p.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : p.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
     return (0, l.jsxs)(C.yR, {
@@ -67,8 +67,8 @@ t.Z = (e) => {
             (0, l.jsx)(C.wG, {
                 onClickTitle: O,
                 onClickSubtitle: () => {
-                    let e = f.Hw.ARTIST,
-                        t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : f.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                    let e = p.Hw.ARTIST,
+                        t = o.Z.isProtocolRegistered() ? p.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : p.C7.WEB_OPEN(e, n.extra.artist.external_id);
                     window.open(t);
                 },
                 onClickThumbnail: O,
@@ -76,7 +76,7 @@ t.Z = (e) => {
                 entry: n,
                 headerIcons:
                     Z === r.p.SPOTIFY
-                        ? (0, l.jsx)(p.Z, {
+                        ? (0, l.jsx)(f.Z, {
                               Icon: c.Z,
                               'aria-label': T.Z.Messages.SPOTIFY
                           })

@@ -19,8 +19,8 @@ var l = n(200651),
     _ = n(823379),
     v = n(379357),
     C = n(192918),
-    p = n(22211),
-    f = n(561308),
+    f = n(22211),
+    p = n(561308),
     T = n(919394),
     g = n(438226),
     I = n(206295),
@@ -47,7 +47,7 @@ t.Z = (e) => {
         { user: w, details: b, appName: D, activity: U } = (0, L.n)(n),
         { primaryColor: k, secondaryColor: H } = (0, I.Z)(null == j ? void 0 : j.src),
         B = (0, r.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: V, stream: F } = (0, p.Z)(n),
+        { streamPreviewUrl: V, stream: F } = (0, f.Z)(n),
         { displayParticipants: G, participant1: Y, participant2: z, numOtherParticipants: W } = (0, C.Z)(n, 3),
         q = a.useCallback(
             (e) => {
@@ -66,7 +66,7 @@ t.Z = (e) => {
                     applicationImageSrc: null == j ? void 0 : j.src,
                     avatarSrcs: G.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, f.yh)(n, B),
+                    timestamp: (0, p.yh)(n, B),
                     colors: [k, H],
                     channelId: e
                 });
@@ -90,7 +90,7 @@ t.Z = (e) => {
                                     Icon: J,
                                     'aria-label': A.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
-                      userDescription: (0, f.kr)(n) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                      userDescription: (0, p.kr)(n) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                       title: D,
                       subtitle: b,
                       badges: K,

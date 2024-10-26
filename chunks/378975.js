@@ -116,9 +116,9 @@ function I(e) {
     let { type: n, options: t, id: a, placeholder: r, maxValues: s, minValues: I, disabled: x } = e,
         E = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
         {
-            state: v,
-            executeStateUpdate: T,
-            visualState: N,
+            state: T,
+            executeStateUpdate: N,
+            visualState: v,
             isDisabled: b,
             error: g
         } = (0, d.Ee)(e, {
@@ -126,35 +126,35 @@ function I(e) {
             values: E
         }),
         S = s > 1,
-        O = N === m.gH.LOADING,
+        O = v === m.gH.LOADING,
         [j, M] = i.useState(!1),
-        [Z, y] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
-        [R, L] = i.useState(Z),
+        [y, Z] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
+        [R, L] = i.useState(y),
         P = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
     i.useEffect(() => {
-        if ((null == v ? void 0 : v.type) === c.re.STRING_SELECT) {
-            let e = new Set(v.values);
-            y(e), L(e);
+        if ((null == T ? void 0 : T.type) === c.re.STRING_SELECT) {
+            let e = new Set(T.values);
+            Z(e), L(e);
         } else {
             let e = new Set(E);
-            y(e), L(e);
+            Z(e), L(e);
         }
-    }, [a, E, v]);
+    }, [a, E, T]);
     let A = i.useCallback(() => {
-        if (R !== Z)
-            T({
+        if (R !== y)
+            N({
                 type: c.re.STRING_SELECT,
-                values: Array.from(Z)
-            }) && L(Z);
-    }, [Z, R, L, T]);
+                values: Array.from(y)
+            }) && L(y);
+    }, [y, R, L, N]);
     i.useEffect(() => {
-        if (!(j || (Z.size === R.size && Array.from(R).every((e) => Z.has(e))))) A();
-    }, [j, Z, R, A]);
+        if (!(j || (y.size === R.size && Array.from(R).every((e) => y.has(e))))) A();
+    }, [j, y, R, A]);
     let k = o.singleSelect;
     S ? (k = o.multiSelect) : 0 === I && (k = o.toggleSelect);
     let U = (0, o.useVariableSelect)({
-        value: Z,
-        onChange: (e) => y(e),
+        value: y,
+        onChange: (e) => Z(e),
         onSelectInteraction: k
     });
     return (0, l.jsxs)(i.Fragment, {
@@ -167,7 +167,7 @@ function I(e) {
                         className: f.select,
                         options: t.map((e) => ({
                             ...e,
-                            disabled: S && !Z.has(e.value) && Z.size === s
+                            disabled: S && !y.has(e.value) && y.size === s
                         })),
                         placeholder: null != r ? r : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
                         onClose: () => M(!1),
@@ -178,7 +178,7 @@ function I(e) {
                         renderOptionLabel: (e) =>
                             (0, l.jsx)(p, {
                                 ...e,
-                                isDisabled: S && !Z.has(e.value) && Z.size === s,
+                                isDisabled: S && !y.has(e.value) && y.size === s,
                                 isOffset: P
                             }),
                         renderOptionValue: (e) => (S ? (0, l.jsx)(h, { options: e }) : (0, l.jsx)(C, { ...e[0] })),

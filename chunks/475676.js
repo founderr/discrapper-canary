@@ -20,22 +20,22 @@ var l = n(200651),
     _ = n(531501),
     v = n(463031),
     C = n(689938),
-    p = n(835777);
-function f() {
+    f = n(835777);
+function p() {
     return (0, l.jsxs)('div', {
-        className: p.gameTitleContainer,
+        className: f.gameTitleContainer,
         children: [
             (0, l.jsx)(r.LeagueOfLegendsBrandIcon, { size: 'xs' }),
             (0, l.jsx)(r.Text, {
                 variant: 'text-sm/medium',
-                className: p.gameTitle,
+                className: f.gameTitle,
                 children: 'League of Legends'
             })
         ]
     });
 }
 function T(e) {
-    var t, n, _, p;
+    var t, n, _, f;
     let T,
         { selected: I, channel: N } = e,
         Z = N.guild_id,
@@ -62,7 +62,7 @@ function T(e) {
     if (null == P) return null;
     if (0 === P.users.length || null == S) return (0, l.jsx)(g, { selected: I });
     let { sort_by_statistic_id: O } = P.guild_settings,
-        j = null !== (p = null == A ? void 0 : null === (n = A.statistics) || void 0 === n ? void 0 : null === (t = n[O]) || void 0 === t ? void 0 : t.value) && void 0 !== p ? p : 0,
+        j = null !== (f = null == A ? void 0 : null === (n = A.statistics) || void 0 === n ? void 0 : null === (t = n[O]) || void 0 === t ? void 0 : t.value) && void 0 !== f ? f : 0,
         { currentRank: w } = S;
     return (
         (T =
@@ -77,7 +77,7 @@ function T(e) {
             children: [
                 (0, l.jsxs)(o.e$, {
                     children: [
-                        (0, l.jsx)(f, {}),
+                        (0, l.jsx)(p, {}),
                         (0, l.jsx)(r.Spacer, { size: 2 }),
                         (0, l.jsx)(o.ll, { children: T }),
                         (0, l.jsx)(s.Gk, {
@@ -101,7 +101,7 @@ function g(e) {
         children: [
             (0, l.jsxs)(o.e$, {
                 children: [
-                    (0, l.jsx)(f, {}),
+                    (0, l.jsx)(p, {}),
                     (0, l.jsx)(r.Spacer, { size: 2 }),
                     (0, l.jsx)(o.ll, { children: C.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_CARD_EMPTY_STATE_TITLE }),
                     (0, l.jsx)(s.Gk, {
@@ -115,7 +115,7 @@ function g(e) {
                 children: (0, l.jsx)('img', {
                     src: 'https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png',
                     alt: '',
-                    className: p.emptyStateImage
+                    className: f.emptyStateImage
                 })
             })
         ]

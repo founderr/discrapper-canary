@@ -23,13 +23,13 @@ var l = n(200651),
     _ = n(633302),
     v = n(806966),
     C = n(176354),
-    p = n(823379),
-    f = n(354459),
+    f = n(823379),
+    p = n(354459),
     T = n(185923),
     g = n(420212),
     I = n(264699);
 let N = T.Hz.CHAT,
-    Z = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(p.lm);
+    Z = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(f.lm);
 function P(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: s } = e,
         h = a.useRef(null),
@@ -83,7 +83,7 @@ function M(e) {
     });
 }
 function L(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: _, recentlyUsedEmojis: p, analyticsOverride: L } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: _, recentlyUsedEmojis: f, analyticsOverride: L } = e,
         S = (0, h.Dt)(),
         [A, R] = a.useState(!1),
         y = (0, m.wC)(t.guild_id),
@@ -96,8 +96,8 @@ function L(e) {
                         intention: N
                     })
             )
-            .slice(0, f.e5);
-    null != p && p.length > 0 && O.splice(O.length - 1, 1, p[0]);
+            .slice(0, p.e5);
+    null != f && f.length > 0 && O.splice(O.length - 1, 1, f[0]);
     let j = (e) => {
             R(e), null == x || x(e);
         },

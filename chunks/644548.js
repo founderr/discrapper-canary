@@ -15,7 +15,7 @@ var l = n(200651),
     _ = n(410441),
     v = n(797342),
     C = n(689938);
-let p = (e, t, n, l) => {
+let f = (e, t, n, l) => {
         let a = (function (e) {
                 if (e === i._.WEEK) return C.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(l),
@@ -28,7 +28,7 @@ let p = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    f = (e, t) =>
+    p = (e, t) =>
         C.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name
@@ -47,7 +47,7 @@ t.Z = (e) => {
                         entry: n,
                         applicationImageSrc: null == g ? void 0 : g.src,
                         avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: p(n, t, I, S),
+                        description: f(n, t, I, S),
                         timestamp: C.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(L / r.Z.Seconds.HOUR) }),
                         colors: [P, M],
                         channelId: e
@@ -85,7 +85,7 @@ t.Z = (e) => {
                     user: I,
                     channel: t,
                     generateReactionImage: A,
-                    reactionImageAltText: f(n, I),
+                    reactionImageAltText: p(n, I),
                     entry: n
                 })
             })

@@ -69,7 +69,7 @@ function I(e) {
     });
 }
 function x(e) {
-    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
+    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: T, thumbnailClickable: N, providerIconProps: v, style: b = {} } = e,
         g = (0, m.Dt)(),
         { primaryColor: S, secondaryColor: O } = (0, u.Z)(x);
     return (
@@ -87,7 +87,7 @@ function x(e) {
                         (0, l.jsx)(h, {
                             className: p.thumbnailContainer,
                             clickableClassName: p.clickable,
-                            clickable: T,
+                            clickable: N,
                             children: (0, l.jsx)(s.f, {
                                 src: x,
                                 constrain: 'width',
@@ -121,7 +121,7 @@ function x(e) {
                                           children: [
                                               (0, l.jsx)(r.Spacer, { size: 2 }),
                                               (0, l.jsx)(I, {
-                                                  clickable: v,
+                                                  clickable: T,
                                                   className: p.clickableText,
                                                   children: (0, l.jsx)(r.Text, {
                                                       variant: 'text-sm/normal',
@@ -143,7 +143,7 @@ function x(e) {
                         }),
                         (0, l.jsx)('div', {
                             className: p.headerIcons,
-                            children: null != N ? (0, l.jsx)(c.Z, { ...N }) : null
+                            children: null != v ? (0, l.jsx)(c.Z, { ...v }) : null
                         })
                     ]
                 })

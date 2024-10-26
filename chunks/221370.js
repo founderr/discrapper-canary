@@ -1,53 +1,53 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return I;
     }
 }),
-    t(47120),
-    t(653041);
-var a = t(200651),
-    r = t(192379),
-    s = t(120356),
-    i = t.n(s),
-    o = t(758713),
-    l = t(657707),
-    c = t(481060),
-    d = t(689938),
-    u = t(51527);
+    n(47120),
+    n(653041);
+var a = n(200651),
+    r = n(192379),
+    s = n(120356),
+    i = n.n(s),
+    o = n(758713),
+    l = n(657707),
+    c = n(481060),
+    d = n(689938),
+    u = n(51527);
 let _ = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
 function E(e) {
-    let { platform: n, ...t } = e;
-    switch (n) {
+    let { platform: t, ...n } = e;
+    switch (t) {
         case o.z.DESKTOP:
             return (0, a.jsx)(l.pzj, {
                 size: 'xs',
-                ...t
+                ...n
             });
         case o.z.XBOX:
             return (0, a.jsx)(l.Mko, {
                 size: 'xs',
-                ...t
+                ...n
             });
         case o.z.PLAYSTATION:
             return (0, a.jsx)(l.Tsp, {
                 size: 'xs',
-                ...t
+                ...n
             });
         case o.z.NINTENDO:
             return (0, a.jsx)(l.aPH, {
                 size: 'xs',
-                ...t
+                ...n
             });
         default:
             return null;
     }
 }
 function m(e) {
-    let { platforms: n } = e;
+    let { platforms: t } = e;
     return (0, a.jsx)('div', {
         className: i()(u.row, u.gapSm),
         style: { alignItems: 'center' },
-        children: n.map((e) =>
+        children: t.map((e) =>
             (0, a.jsx)(
                 c.Tooltip,
                 {
@@ -65,9 +65,9 @@ function m(e) {
                                 return null;
                         }
                     })(e),
-                    children: (n) =>
+                    children: (t) =>
                         (0, a.jsx)(E, {
-                            ...n,
+                            ...t,
                             platform: e
                         })
                 },
@@ -77,16 +77,16 @@ function m(e) {
     });
 }
 function I(e) {
-    let { detectedGame: n, className: t } = e,
+    let { detectedGame: t, className: n } = e,
         s = r.useMemo(() => {
-            let e = new Set(n.platforms),
-                t = [...e];
-            return !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && t.push(o.z.DESKTOP), t.filter((e) => _.includes(e));
-        }, [n.platforms]);
+            let e = new Set(t.platforms),
+                n = [...e];
+            return !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && n.push(o.z.DESKTOP), n.filter((e) => _.includes(e));
+        }, [t.platforms]);
     return 0 === s.length
         ? null
         : (0, a.jsx)('div', {
-              className: i()(u.column, u.gapLg, t),
+              className: i()(u.column, u.gapLg, n),
               children: s.length > 0 && (0, a.jsx)(m, { platforms: s })
           });
 }

@@ -1,16 +1,16 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return o;
     }
 });
-var a = t(200651);
-t(192379);
-var r = t(793030),
-    s = t(689938),
-    i = t(51527);
+var a = n(200651);
+n(192379);
+var r = n(793030),
+    s = n(689938),
+    i = n(51527);
 function o(e) {
-    let { detectedGame: n } = e;
-    return 0 === n.publishers.length
+    let { detectedGame: t } = e;
+    return 0 === t.publishers.length
         ? null
         : (0, a.jsxs)('div', {
               children: [
@@ -22,7 +22,7 @@ function o(e) {
                   }),
                   (0, a.jsx)(r.xv, {
                       variant: 'text-sm/normal',
-                      children: n.publishers.join(', ')
+                      children: t.publishers.join(', ')
                   })
               ]
           });

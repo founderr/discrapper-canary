@@ -1,6 +1,6 @@
 t.d(n, {
     s: function () {
-        return v;
+        return T;
     }
 }),
     t(789020);
@@ -62,7 +62,7 @@ let E = (0, a.Kb)([d.Z, u.Z, m.Z], {
     },
     useStateHook: a.cj
 });
-function v(e) {
+function T(e) {
     let { data: n } = E(e),
         t = null == n ? void 0 : n.parentSku,
         a = null == n ? void 0 : n.sku,

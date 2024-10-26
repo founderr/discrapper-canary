@@ -40,17 +40,17 @@ function I(e) {
 function x(e) {
     let n;
     let { label: t, style: i, disabled: m, emoji: C, url: x, skuId: E } = e,
-        { executeStateUpdate: v, visualState: T, isDisabled: N } = (0, f.Ee)(e),
+        { executeStateUpdate: T, visualState: N, isDisabled: v } = (0, f.Ee)(e),
         b = (0, d.s)(E),
         g = null != E && i === u.ZJ.PREMIUM,
         S = g && (null == b ? void 0 : b.disabled),
         O = g ? (null == b ? void 0 : b.label) : t,
         j = null != C,
         M = null != O && O.length > 0,
-        Z = i === u.ZJ.LINK && null != x && x.length > 0,
-        y = T === p.gH.LOADING || (g && null == b);
+        y = i === u.ZJ.LINK && null != x && x.length > 0,
+        Z = N === p.gH.LOADING || (g && null == b);
     return (
-        (n = Z
+        (n = y
             ? () => {
                   (0, _.q)({
                       href: null != x ? x : '',
@@ -61,7 +61,7 @@ function x(e) {
               ? null != b && !1 === b.disabled
                   ? b.onClick
                   : r.noop
-              : () => v()),
+              : () => T()),
         (0, l.jsxs)(o.Button, {
             color: (function (e) {
                 switch (e) {
@@ -77,10 +77,10 @@ function x(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || T === p.gH.DISABLED || N || S,
+            disabled: m || N === p.gH.DISABLED || v || S,
             onClick: n,
             onContextMenu: (e) => {
-                Z &&
+                y &&
                     (0, s.vq)(e, (e) =>
                         (0, l.jsx)(I, {
                             ...e,
@@ -88,14 +88,14 @@ function x(e) {
                         })
                     );
             },
-            role: Z ? 'link' : 'button',
+            role: y ? 'link' : 'button',
             children: [
                 (0, l.jsxs)('div', {
                     className: a()(h.content, {
-                        [h.hidden]: y,
+                        [h.hidden]: Z,
                         [h.premium]: g
                     }),
-                    'aria-hidden': y,
+                    'aria-hidden': Z,
                     children: [
                         g
                             ? (0, l.jsx)('div', {
@@ -121,7 +121,7 @@ function x(e) {
                                   children: O
                               })
                             : null,
-                        Z
+                        y
                             ? (0, l.jsx)(o.WindowLaunchIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -130,7 +130,7 @@ function x(e) {
                             : null
                     ]
                 }),
-                y
+                Z
                     ? (0, l.jsx)('div', {
                           className: h.loading,
                           children: (0, l.jsx)(o.Dots, {

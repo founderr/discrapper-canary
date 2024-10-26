@@ -120,8 +120,8 @@ function w(e) {
                           children: [
                               (0, i.jsx)(j.E, {
                                   image: x,
-                                  onClick: () => {
-                                      I({ action: 'PRESS_IMAGE' }), h();
+                                  onClick: (e) => {
+                                      I({ action: 'PRESS_IMAGE' }), h(e);
                                   },
                                   size: j.J.SIZE_60
                               }),
@@ -130,8 +130,8 @@ function w(e) {
                                   children: [
                                       (0, i.jsx)(d.Clickable, {
                                           className: M.clickable,
-                                          onClick: () => {
-                                              I({ action: 'PRESS_TEXT' }), h();
+                                          onClick: (e) => {
+                                              I({ action: 'PRESS_TEXT' }), h(e);
                                           },
                                           children: (0, i.jsx)(k.Z, {
                                               variant: 'heading-sm/semibold',

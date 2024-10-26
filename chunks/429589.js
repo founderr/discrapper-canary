@@ -20,8 +20,8 @@ var l = n(200651),
     _ = n(650774),
     v = n(430824),
     C = n(283595),
-    p = n(496675),
-    f = n(699516),
+    f = n(496675),
+    p = n(699516),
     T = n(944486),
     g = n(594174),
     I = n(979651),
@@ -80,7 +80,7 @@ function k(e) {
             channelId: $,
             application: en
         }),
-        ea = (0, i.e7)([x.Z, v.Z, _.Z, f.Z, T.Z, I.Z, p.Z], () =>
+        ea = (0, i.e7)([x.Z, v.Z, _.Z, p.Z, T.Z, I.Z, f.Z], () =>
             null != H
                 ? el === y.Fw.CAN_JOIN
                 : null != k
@@ -94,10 +94,10 @@ function k(e) {
                         ChannelStore: x.Z,
                         GuildStore: v.Z,
                         GuildMemberCountStore: _.Z,
-                        RelationshipStore: f.Z,
+                        RelationshipStore: p.Z,
                         SelectedChannelStore: T.Z,
                         VoiceStateStore: I.Z,
-                        PermissionStore: p.Z
+                        PermissionStore: f.Z
                     })
                   : void 0
         ),

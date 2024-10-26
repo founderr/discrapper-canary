@@ -26,8 +26,8 @@ var l = n(200651),
     _ = n(594174),
     v = n(69259),
     C = n(370370),
-    p = n(107062),
-    f = n(91140),
+    f = n(107062),
+    p = n(91140),
     T = n(227172),
     g = n(551228),
     I = n(678869),
@@ -47,7 +47,7 @@ let j = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(f.Z, {
+                return (0, l.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
@@ -134,13 +134,13 @@ let j = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(p.ZP, {
+                return (0, l.jsx)(f.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LEADERBOARD:
                 var a;
-                return (0, l.jsx)(m.Z, { guildId: null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id });
+                return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null ? (0, l.jsx)(m.Z, { guildId: n.channel.guild_id }) : null;
             default:
                 return null;
         }
@@ -151,16 +151,16 @@ t.ZP = a.memo((e) => {
         [m, x] = a.useState('default'),
         E = (0, s.JA)(''.concat(i)),
         C = null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: p, appName: f } = (0, A.n)(o.entry),
+        { isRich: f, appName: p } = (0, A.n)(o.entry),
         T = a.useMemo(
             () => ({
                 entry: o.entry,
                 channelId: o.channel.id,
                 guildId: o.channel.guild_id,
                 requestId: o.requestId,
-                richPresenceName: p ? f : void 0
+                richPresenceName: f ? p : void 0
             }),
-            [f, o.channel.guild_id, o.channel.id, o.entry, o.requestId, p]
+            [p, o.channel.guild_id, o.channel.id, o.entry, o.requestId, f]
         ),
         g = a.useRef(!1),
         [I, N] = a.useState(!1),

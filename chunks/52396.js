@@ -40,17 +40,17 @@ function h(e) {
                 ...i
             });
         case o.s.TOP_GAME:
-            return (0, l.jsx)(v, {
-                entry: n,
-                ...i
-            });
-        case o.s.PLAYED_GAME:
             return (0, l.jsx)(T, {
                 entry: n,
                 ...i
             });
-        case o.s.WATCHED_MEDIA:
+        case o.s.PLAYED_GAME:
             return (0, l.jsx)(N, {
+                entry: n,
+                ...i
+            });
+        case o.s.WATCHED_MEDIA:
+            return (0, l.jsx)(v, {
                 entry: n,
                 ...i
             });
@@ -103,20 +103,6 @@ function E(e) {
         children: t
     });
 }
-function v(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, d.Z)({
-            entry: n,
-            ...i
-        });
-    return (0, l.jsx)(p.Provider, {
-        value: {
-            parsedEntry: a,
-            ...i
-        },
-        children: t
-    });
-}
 function T(e) {
     let { entry: n, children: t, ...i } = e,
         a = (0, d.Z)({
@@ -132,6 +118,20 @@ function T(e) {
     });
 }
 function N(e) {
+    let { entry: n, children: t, ...i } = e,
+        a = (0, d.Z)({
+            entry: n,
+            ...i
+        });
+    return (0, l.jsx)(p.Provider, {
+        value: {
+            parsedEntry: a,
+            ...i
+        },
+        children: t
+    });
+}
+function v(e) {
     let { entry: n, children: t, ...i } = e,
         a = (0, f.Z)({
             entry: n,

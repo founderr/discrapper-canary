@@ -48,8 +48,8 @@ function _(e) {
     a.useEffect(() => {
         !v && (C.current = _);
     }, [_, v]);
-    let p = null == _ || v ? C.current : _;
-    return null == p
+    let f = null == _ || v ? C.current : _;
+    return null == f
         ? (0, l.jsx)(E, {
               className: n,
               isLoading: v,
@@ -59,7 +59,7 @@ function _(e) {
         : (0, l.jsx)('div', {
               className: n,
               children: (0, l.jsx)('img', {
-                  src: p,
+                  src: f,
                   alt: '',
                   className: x.image
               })

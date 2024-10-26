@@ -22,8 +22,8 @@ var l = n(200651),
     _ = n(5192),
     v = n(379357),
     C = n(561308),
-    p = n(256726),
-    f = n(206295),
+    f = n(256726),
+    p = n(206295),
     T = n(551228),
     g = n(591853),
     I = n(371991),
@@ -92,14 +92,14 @@ function y(e) {
         { channel: O, entry: j, closePopout: w, onReaction: b, onVoiceChannelPreview: D } = e,
         { largeImage: U } = (0, v.rv)({ entry: j }),
         { activity: k, currentEntry: H, artist: B, title: V, user: F } = (0, T.pi)(j),
-        { primaryColor: G, secondaryColor: Y } = (0, f.Z)(null == U ? void 0 : U.src),
+        { primaryColor: G, secondaryColor: Y } = (0, p.Z)(null == U ? void 0 : U.src),
         z = (0, r.e7)([c.Z, x.default], () => ((null == k ? void 0 : k.type) === Z.IIU.LISTENING && null != F ? (0, h.Z)(c.Z, x.default, F, k) : void 0), [k, F], s.Z),
         W = a.useCallback(() => {
             var e;
             if (null == O || null == F) return;
             let t = null === (e = k.timestamps) || void 0 === e ? void 0 : e.start,
                 n = (0, C.T_)(null != t ? { start: t } : j, Date.now());
-            return (0, p.CR)({
+            return (0, f.CR)({
                 user: F,
                 channel: O,
                 mediaImageSrc: null == U ? void 0 : U.src,
@@ -113,7 +113,7 @@ function y(e) {
                     F
                 ),
                 colors: [G, Y],
-                badges: (0, p.jE)({ timestamp: n })
+                badges: (0, f.jE)({ timestamp: n })
             });
         }, [k, B, O, j, null == U ? void 0 : U.src, G, Y, V, F]);
     if (null == k || null == H) return null;

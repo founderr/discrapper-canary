@@ -22,28 +22,28 @@ function C(e) {
         t = (0, i.e7)([m.Z], () => m.Z.getChannel(null == n ? void 0 : n.channel_id)),
         { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: x, getOnMediaItemContextMenu: E } = (0, c.c)();
     if (null == n || null == t) return null;
-    let v = e.items
+    let T = e.items
             .map((e) => ({
                 ...(0, a.y_)(e.media),
                 original: e.media.url,
                 srcIsAnimated: e.media.srcIsAnimated
             }))
             .filter((e) => 'INVALID' !== e.type),
-        T = {
+        N = {
             source: 'Media Mosaic',
             guild_id: t.guild_id,
             channel_id: t.id,
             channel_type: t.type
         },
-        N =
-            v.length > 1
+        v =
+            T.length > 1
                 ? (0, d._)(
-                      v,
+                      T,
                       {
                           shouldHideMediaOptions: C,
                           shouldRedactExplicitContent: h
                       },
-                      T
+                      N
                   )
                 : {};
     function b(e, n) {
@@ -83,7 +83,7 @@ function C(e) {
                 proxyURL: t.proxyUrl,
                 url: t.url
             });
-        return a in N && (i.onClick = N[a]), i;
+        return a in v && (i.onClick = v[a]), i;
     });
     return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: g }) });
 }

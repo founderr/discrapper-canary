@@ -538,8 +538,8 @@ class q extends (s = r.PureComponent) {
                                               className: c()(null != o && V.openGameProfile),
                                               onClick:
                                                   null != o
-                                                      ? () => {
-                                                            o(), null == r || r();
+                                                      ? (e) => {
+                                                            o(e), null == r || r();
                                                         }
                                                       : void 0,
                                               children: [_, f, g, C]

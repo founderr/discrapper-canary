@@ -1,40 +1,40 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return _;
     }
 }),
-    t(47120);
-var a = t(200651),
-    r = t(192379),
-    s = t(481060),
-    i = t(341176),
-    o = t(312097),
-    l = t(810568),
-    c = t(689938),
-    d = t(51527),
-    u = t(133512);
+    n(47120);
+var a = n(200651),
+    r = n(192379),
+    s = n(481060),
+    i = n(341176),
+    o = n(312097),
+    l = n(810568),
+    c = n(689938),
+    d = n(51527),
+    u = n(133512);
 function _(e) {
-    let { detectedGame: n, trackAction: t } = e,
+    let { detectedGame: t, trackAction: n } = e,
         _ = r.useRef(null),
         E = r.useMemo(() => {
-            let e = n.artwork.map((e) => ({
+            let e = t.artwork.map((e) => ({
                 url: e,
                 type: 'IMAGE'
             }));
             return [
-                ...n.screenshots.map((e) => ({
+                ...t.screenshots.map((e) => ({
                     url: e,
                     type: 'IMAGE'
                 })),
                 ...e
             ];
-        }, [n.artwork, n.screenshots]),
+        }, [t.artwork, t.screenshots]),
         m = E.length > 2;
     function I(e) {
         if (null == _.current) return;
-        let n = _.current.getScrollerState().scrollLeft;
+        let t = _.current.getScrollerState().scrollLeft;
         _.current.scrollTo({
-            to: n + 280 * e,
+            to: t + 280 * e,
             animate: !0
         });
     }
@@ -55,7 +55,7 @@ function _(e) {
                               ref: _,
                               className: u.imageScroller,
                               orientation: 'horizontal',
-                              children: E.map((e, n) =>
+                              children: E.map((e, t) =>
                                   (0, a.jsx)(
                                       s.Clickable,
                                       {
@@ -65,12 +65,12 @@ function _(e) {
                                               ringClassName: u.gameArtworkFocusRing
                                           },
                                           onClick: () => {
-                                              t(l.as.ClickImage),
+                                              n(l.as.ClickImage),
                                                   (0, o.K)({
                                                       className: u.mediaModal,
                                                       items: E,
                                                       fit: i.D.SCALE_DOWN,
-                                                      startingIndex: n,
+                                                      startingIndex: t,
                                                       shouldHideMediaOptions: !0,
                                                       shouldAnimateCarousel: !0,
                                                       location: 'GameProfileMedia'
@@ -82,7 +82,7 @@ function _(e) {
                                               alt: c.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: name })
                                           })
                                       },
-                                      n
+                                      t
                                   )
                               )
                           }),

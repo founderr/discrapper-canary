@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return E;
     }
 }),
-    t(47120);
-var a = t(200651),
-    r = t(192379),
-    s = t(120356),
-    i = t.n(s),
-    o = t(793030),
-    l = t(481060),
-    c = t(383895),
-    d = t(689938),
-    u = t(51527),
-    _ = t(268236);
+    n(47120);
+var a = n(200651),
+    r = n(192379),
+    s = n(120356),
+    i = n.n(s),
+    o = n(793030),
+    l = n(481060),
+    c = n(383895),
+    d = n(689938),
+    u = n(51527),
+    _ = n(268236);
 function E(e) {
-    let { entries: n, viewId: t, officialGuildId: s, onClose: E } = e,
-        m = n.length > 7,
-        [I, A] = r.useState(!1),
-        p = r.useMemo(() => n.slice(0, m && !I ? 6 : void 0), [n, m, I]);
+    let { entries: t, viewId: n, officialGuildId: s, onClose: E } = e,
+        m = t.length > 7,
+        [I, p] = r.useState(!1),
+        A = r.useMemo(() => t.slice(0, m && !I ? 6 : void 0), [t, m, I]);
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
@@ -27,7 +27,7 @@ function E(e) {
                 color: 'header-primary',
                 children: d.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
             }),
-            0 === n.length
+            0 === t.length
                 ? (0, a.jsx)(o.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
@@ -40,12 +40,12 @@ function E(e) {
                               className: i()(_.friends, { [_.fadedEntries]: m && !I }),
                               children: (0, a.jsx)('div', {
                                   className: u.column,
-                                  children: p.map((e) =>
+                                  children: A.map((e) =>
                                       (0, a.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
-                                              viewId: t,
+                                              viewId: n,
                                               onClose: E,
                                               officialGuildId: s
                                           },
@@ -58,7 +58,7 @@ function E(e) {
                               !I &&
                               (0, a.jsxs)(l.Clickable, {
                                   className: _.expandEntriesButton,
-                                  onClick: () => A(!0),
+                                  onClick: () => p(!0),
                                   children: [
                                       (0, a.jsx)(o.xv, {
                                           variant: 'text-xs/semibold',

@@ -15,8 +15,8 @@ var l = n(200651),
     _ = n(379357),
     v = n(192918),
     C = n(561308),
-    p = n(907152),
-    f = n(206295),
+    f = n(907152),
+    p = n(206295),
     T = n(297781),
     g = n(591853),
     I = n(797342),
@@ -51,7 +51,7 @@ t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: S } = e,
         { largeImage: A } = (0, _.rv)({ entry: n }),
         { user: R, details: y, activity: O, embeddedActivity: j } = (0, I.n)(n),
-        { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
+        { primaryColor: w, secondaryColor: b } = (0, p.Z)(null == A ? void 0 : A.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
         { displayParticipants: U, participant1: k, participant2: H, numOtherParticipants: B } = (0, v.Z)(n, 3),
         V = () => {
@@ -69,7 +69,7 @@ t.ZP = (e) => {
                               countOthers: B
                           })
                         : M(n, t, R);
-                return (0, p.C4)({
+                return (0, f.C4)({
                     entry: n,
                     applicationImageSrc: null == A ? void 0 : A.src,
                     avatarSrcs: U.map((e) => e.getAvatarURL(t.guild_id, 128)),

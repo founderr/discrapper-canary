@@ -200,7 +200,7 @@ function k() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
                             },
                             error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}

@@ -15,55 +15,55 @@ var s,
     r = n(392711),
     c = n(442837),
     m = n(481060),
-    u = n(224706),
-    E = n(812206),
-    _ = n(835473),
-    g = n(206295),
-    h = n(669764),
+    E = n(224706),
+    u = n(812206),
+    g = n(835473),
+    h = n(206295),
+    _ = n(669764),
     x = n(925329),
     I = n(77498),
-    v = n(49012),
-    M = n(810568),
-    A = n(701488),
-    C = n(689938),
-    p = n(666046);
+    M = n(49012),
+    A = n(810568),
+    C = n(701488),
+    p = n(689938),
+    O = n(666046);
 ((t = s || (s = {}))[(t.FEEDBACK_TYPE = 0)] = 'FEEDBACK_TYPE'), (t[(t.WRONG_GAME = 1)] = 'WRONG_GAME'), (t[(t.OUTDATED_INFO = 2)] = 'OUTDATED_INFO'), (t[(t.OTHER = 3)] = 'OTHER'), (t[(t.CONFIRMATION = 4)] = 'CONFIRMATION');
-function O(e) {
+function F(e) {
     let { showOutdatedInfoOption: a, onChoice: n } = e,
         s = [
             {
-                name: C.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_WRONG_GAME,
+                name: p.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_WRONG_GAME,
                 value: 1
             },
             ...(a
                 ? [
                       {
-                          name: C.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OUTDATED,
+                          name: p.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OUTDATED,
                           value: 2
                       }
                   ]
                 : []),
             {
-                name: C.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OTHER,
+                name: p.Z.Messages.GAME_PROFILE_FEEDBACK_CHOICE_OTHER,
                 value: 3
             }
         ];
     return (0, l.jsx)(l.Fragment, {
         children: (0, l.jsxs)(m.ModalContent, {
-            className: p.content,
+            className: O.content,
             children: [
                 (0, l.jsx)(m.Heading, {
                     variant: 'heading-xl/bold',
-                    className: p.header,
-                    children: C.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_CHOOSE_TYPE
+                    className: O.header,
+                    children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_CHOOSE_TYPE
                 }),
                 (0, l.jsx)(m.Text, {
-                    className: p.tip,
+                    className: O.tip,
                     variant: 'text-md/normal',
-                    children: C.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_CHOOSE_TYPE
+                    children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_CHOOSE_TYPE
                 }),
                 (0, l.jsx)(m.RadioGroup, {
-                    className: p.radioGroup,
+                    className: O.radioGroup,
                     options: s,
                     onChange: (e) => {
                         let { value: a } = e;
@@ -74,85 +74,85 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function N(e) {
     let { applicationId: a, onSubmitted: n, viewId: s } = e,
-        t = (0, _.q)(a);
+        t = (0, g.q)(a);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(m.ModalContent, {
-                className: p.content,
+                className: O.content,
                 children: [
                     (0, l.jsx)(m.Heading, {
                         variant: 'heading-xl/bold',
-                        className: p.header,
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_OUTDATED
+                        className: O.header,
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_OUTDATED
                     }),
                     (0, l.jsx)(m.Text, {
-                        className: p.tip,
+                        className: O.tip,
                         variant: 'text-md/normal',
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OUTDATED
                     })
                 ]
             }),
             (0, l.jsx)(m.ModalFooter, {
-                className: p.footer,
+                className: O.footer,
                 children: (0, l.jsx)(m.Button, {
                     fullWidth: !0,
                     onClick: () => {
                         var e;
-                        (0, v.q)({
+                        (0, M.q)({
                             href: (null == (e = t) ? void 0 : e.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(e.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
-                            (0, M.MH)({
+                            (0, A.MH)({
                                 applicationId: a,
                                 submitted: !0,
                                 viewId: s
                             }),
                             n();
                     },
-                    children: C.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB
+                    children: p.Z.Messages.GAME_PROFILE_FEEDBACK_VISIT_IGDB
                 })
             })
         ]
     });
 }
-let F = (e) => {
+let R = (e) => {
     let { id: a, name: n, applicationRecord: s } = e;
     return (0, l.jsxs)('div', {
-        className: p.gameSuggestion,
+        className: O.gameSuggestion,
         children: [
             null != a
                 ? (0, l.jsx)(x.Z, {
                       game: s,
-                      className: p.smolGameIcon
+                      className: O.smolGameIcon
                   })
                 : (0, l.jsx)(m.PencilIcon, {
-                      className: p.customGameNameIcon,
+                      className: O.customGameNameIcon,
                       size: 'sm'
                   }),
             n
         ]
     });
 };
-function N(e) {
+function j(e) {
     var a, n, s;
     let { applicationId: t, onSubmitted: i, viewId: x } = e,
-        [v, O] = o.useState(''),
-        R = (0, c.e7)([E.Z], () => E.Z.getApplication(t)),
-        [N, j] = o.useState(''),
-        G = (0, c.e7)([h.Z], () => h.Z.getGame(t)),
-        T = null !== (n = null !== (a = null == G ? void 0 : G.name) && void 0 !== a ? a : null == R ? void 0 : R.name) && void 0 !== n ? n : '',
-        D = null == R ? void 0 : R.getIconURL(A.Si.LARGE),
-        { primaryColor: b, secondaryColor: B } = (0, g.Z)(D);
+        [M, F] = o.useState(''),
+        N = (0, c.e7)([u.Z], () => u.Z.getApplication(t)),
+        [j, v] = o.useState(''),
+        G = (0, c.e7)([_.Z], () => _.Z.getGame(t)),
+        T = null !== (n = null !== (a = null == G ? void 0 : G.name) && void 0 !== a ? a : null == N ? void 0 : N.name) && void 0 !== n ? n : '',
+        b = null == N ? void 0 : N.getIconURL(C.Si.LARGE),
+        { primaryColor: D, secondaryColor: B } = (0, h.Z)(b);
     o.useEffect(() => {
-        u.Z.getDetectableGames();
+        E.Z.getDetectableGames();
     }, []);
     let f = (0, c.Wu)(
             [I.Z],
             () => {
-                let e = ((null == v ? void 0 : v.length) > 0 ? v : T).toLowerCase(),
-                    a = null != N ? I.Z.getDetectableGame(N) : void 0;
+                let e = ((null == M ? void 0 : M.length) > 0 ? M : T).toLowerCase(),
+                    a = null != j ? I.Z.getDetectableGame(j) : void 0;
                 return (0, r.chain)(I.Z.games)
                     .filter((a) => d()(e, a.name.toLowerCase()))
                     .filter((e) => e.id !== t)
@@ -162,19 +162,19 @@ function N(e) {
                     .uniqBy('id')
                     .value();
             },
-            [t, N, T, v]
+            [t, j, T, M]
         ),
-        Z = (0, _.Z)(f.map((e) => e.id)),
-        L = (0, r.chain)(Z).compact().keyBy('id').value(),
-        P = v.length > 0 && !f.map((e) => e.name.toLowerCase()).includes(v.toLowerCase()),
-        S = N === t || (null === N && 0 === v.length),
+        L = (0, g.Z)(f.map((e) => e.id)),
+        Z = (0, r.chain)(L).compact().keyBy('id').value(),
+        P = M.length > 0 && !f.map((e) => e.name.toLowerCase()).includes(M.toLowerCase()),
+        S = j === t || (null === j && 0 === M.length),
         H = f.map((e) => {
             let { name: a, id: n } = e;
             return {
-                name: (0, l.jsx)(F, {
+                name: (0, l.jsx)(R, {
                     name: a,
                     id: n,
-                    applicationRecord: L[n]
+                    applicationRecord: Z[n]
                 }),
                 value: n
             };
@@ -182,72 +182,72 @@ function N(e) {
     return (
         P &&
             H.push({
-                name: (0, l.jsx)(F, { name: v }),
+                name: (0, l.jsx)(R, { name: M }),
                 value: ''
             }),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)(m.ModalContent, {
-                    className: p.content,
+                    className: O.content,
                     children: [
                         (0, l.jsx)(m.Heading, {
                             variant: 'heading-xl/bold',
-                            className: p.header,
-                            children: C.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_WRONG_GAME
+                            className: O.header,
+                            children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_WRONG_GAME
                         }),
                         (0, l.jsx)(m.Text, {
-                            className: p.tip,
+                            className: O.tip,
                             variant: 'text-md/normal',
-                            children: C.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_WRONG_GAME
+                            children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_WRONG_GAME
                         }),
                         (0, l.jsxs)('div', {
-                            className: p.gameInfoBox,
-                            style: { background: 'linear-gradient(45deg, '.concat(b, ', ').concat(B, ')') },
+                            className: O.gameInfoBox,
+                            style: { background: 'linear-gradient(45deg, '.concat(D, ', ').concat(B, ')') },
                             children: [
-                                null != D &&
+                                null != b &&
                                     (0, l.jsx)('img', {
-                                        className: p.gameIcon,
-                                        src: D,
+                                        className: O.gameIcon,
+                                        src: b,
                                         alt: ''
                                     }),
                                 (0, l.jsx)(m.Heading, {
                                     variant: 'heading-lg/semibold',
-                                    className: p.gameTitle,
-                                    children: null !== (s = null == G ? void 0 : G.name) && void 0 !== s ? s : null == R ? void 0 : R.name
+                                    className: O.gameTitle,
+                                    children: null !== (s = null == G ? void 0 : G.name) && void 0 !== s ? s : null == N ? void 0 : N.name
                                 })
                             ]
                         }),
                         (0, l.jsxs)('div', {
-                            className: p.applicationSearch,
+                            className: O.applicationSearch,
                             children: [
                                 (0, l.jsx)(m.SearchBar, {
-                                    className: p.searchBar,
-                                    query: v,
+                                    className: O.searchBar,
+                                    query: M,
                                     onChange: (e) => {
-                                        if (0 === e.length) null === N && j(t);
+                                        if (0 === e.length) null === j && v(t);
                                         else {
                                             var a;
                                             let n = f.find((a) => a.name.toLowerCase() === e.toLowerCase());
-                                            j(null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : '');
+                                            v(null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : '');
                                         }
-                                        O(e);
+                                        F(e);
                                     },
                                     size: m.SearchBar.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === N && j(t), O('');
+                                        null === j && v(t), F('');
                                     },
-                                    placeholder: C.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
+                                    placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_INCORRECT
                                 }),
                                 (0, l.jsx)(m.RadioGroup, {
                                     size: m.RadioGroup.Sizes.NONE,
                                     radioPosition: 'right',
                                     withTransparentBackground: !0,
-                                    radioItemClassName: p.gameSuggestionRadioItem,
-                                    value: N,
+                                    radioItemClassName: O.gameSuggestionRadioItem,
+                                    value: j,
                                     options: H,
                                     onChange: (e) => {
                                         let { value: a } = e;
-                                        return j(a);
+                                        return v(a);
                                     }
                                 })
                             ]
@@ -255,63 +255,63 @@ function N(e) {
                     ]
                 }),
                 (0, l.jsx)(m.ModalFooter, {
-                    className: p.footer,
+                    className: O.footer,
                     children: (0, l.jsx)(m.Button, {
                         fullWidth: !0,
                         onClick: () => {
-                            let e = null != N && N.length > 0;
-                            (0, M.MH)({
+                            let e = null != j && j.length > 0;
+                            (0, A.MH)({
                                 applicationId: t,
-                                suggestedGameApplicationId: e ? N : void 0,
-                                suggestedGameName: e ? void 0 : v,
+                                suggestedGameApplicationId: e ? j : void 0,
+                                suggestedGameName: e ? void 0 : M,
                                 submitted: !0,
                                 viewId: x
                             }),
                                 i();
                         },
                         disabled: S,
-                        children: C.Z.Messages.SUBMIT
+                        children: p.Z.Messages.SUBMIT
                     })
                 })
             ]
         })
     );
 }
-function j(e) {
+function v(e) {
     let { applicationId: a, onSubmitted: n, viewId: s } = e,
         [t, i] = o.useState('');
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(m.ModalContent, {
-                className: p.content,
+                className: O.content,
                 children: [
                     (0, l.jsx)(m.Heading, {
                         variant: 'heading-xl/bold',
-                        className: p.header,
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_OTHER
+                        className: O.header,
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_OTHER
                     }),
                     (0, l.jsx)(m.Text, {
-                        className: p.tip,
+                        className: O.tip,
                         variant: 'text-md/normal',
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OTHER
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_OTHER
                     }),
                     (0, l.jsx)('div', {
-                        className: p.otherFeedbackInput,
+                        className: O.otherFeedbackInput,
                         children: (0, l.jsx)(m.TextArea, {
                             value: t,
                             onChange: (e) => i(e),
-                            placeholder: C.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER,
+                            placeholder: p.Z.Messages.GAME_PROFILE_FEEDBACK_PLACEHOLDER_OTHER,
                             maxLength: 300
                         })
                     })
                 ]
             }),
             (0, l.jsx)(m.ModalFooter, {
-                className: p.footer,
+                className: O.footer,
                 children: (0, l.jsx)(m.Button, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, M.MH)({
+                        (0, A.MH)({
                             applicationId: a,
                             submitted: !0,
                             feedback: t,
@@ -320,7 +320,7 @@ function j(e) {
                             n();
                     },
                     disabled: 0 === t.length,
-                    children: C.Z.Messages.SUBMIT
+                    children: p.Z.Messages.SUBMIT
                 })
             })
         ]
@@ -331,26 +331,26 @@ function G(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(m.ModalContent, {
-                className: p.content,
+                className: O.content,
                 children: [
                     (0, l.jsx)(m.Heading, {
                         variant: 'heading-xl/bold',
-                        className: p.header,
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_TY
+                        className: O.header,
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_HEADER_TY
                     }),
                     (0, l.jsx)(m.Text, {
-                        className: p.tip,
+                        className: O.tip,
                         variant: 'text-md/normal',
-                        children: C.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
+                        children: p.Z.Messages.GAME_PROFILE_FEEDBACK_TIP_TY
                     })
                 ]
             }),
             (0, l.jsx)(m.ModalFooter, {
-                className: p.footer,
+                className: O.footer,
                 children: (0, l.jsx)(m.Button, {
                     fullWidth: !0,
                     onClick: a,
-                    children: C.Z.Messages.DONE
+                    children: p.Z.Messages.DONE
                 })
             })
         ]
@@ -365,24 +365,24 @@ function T(e) {
         children: (() => {
             switch (d) {
                 case 0:
-                    return (0, l.jsx)(O, {
+                    return (0, l.jsx)(F, {
                         showOutdatedInfoOption: i,
                         onChoice: (e) => r(e)
                     });
                 case 1:
-                    return (0, l.jsx)(N, {
+                    return (0, l.jsx)(j, {
                         applicationId: a,
                         viewId: n,
                         onSubmitted: () => r(4)
                     });
                 case 2:
-                    return (0, l.jsx)(R, {
+                    return (0, l.jsx)(N, {
                         applicationId: a,
                         viewId: n,
                         onSubmitted: () => t()
                     });
                 case 3:
-                    return (0, l.jsx)(j, {
+                    return (0, l.jsx)(v, {
                         applicationId: a,
                         viewId: n,
                         onSubmitted: () => r(4)

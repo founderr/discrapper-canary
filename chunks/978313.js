@@ -1,40 +1,40 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return p;
+        return A;
     }
 }),
-    t(47120);
-var a = t(200651),
-    r = t(192379),
-    s = t(120356),
-    i = t.n(s),
-    o = t(657707),
-    l = t(793030),
-    c = t(692547),
-    d = t(481060),
-    u = t(885006),
-    _ = t(810568),
-    E = t(221370),
-    m = t(689938),
-    I = t(51527),
-    A = t(110367);
-function p(e) {
-    let { detectedGame: n, trackAction: t } = e,
-        [s, p] = r.useState((null == n ? void 0 : n.summaryLocalized) != null),
-        [g, f] = r.useState(!0),
-        [T, O] = r.useState(!1),
-        N = r.useRef(null),
+    n(47120);
+var a = n(200651),
+    r = n(192379),
+    s = n(120356),
+    i = n.n(s),
+    o = n(657707),
+    l = n(793030),
+    c = n(692547),
+    d = n(481060),
+    u = n(885006),
+    _ = n(810568),
+    E = n(221370),
+    m = n(689938),
+    I = n(51527),
+    p = n(110367);
+function A(e) {
+    let { detectedGame: t, trackAction: n } = e,
+        [s, A] = r.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [g, T] = r.useState(!0),
+        [f, N] = r.useState(!1),
+        O = r.useRef(null),
         { width: R, height: h } = (0, u.Z)();
     return (r.useEffect(() => {
-        let e = N.current;
-        null != e && O(e.scrollHeight - e.clientHeight > 1 || !g);
-    }, [N, R, h, g]),
-    null == n.summary)
+        let e = O.current;
+        null != e && N(e.scrollHeight - e.clientHeight > 1 || !g);
+    }, [O, R, h, g]),
+    null == t.summary)
         ? null
         : (0, a.jsxs)('div', {
               className: i()(I.column, I.gapMd),
               children: [
-                  null != n.summaryLocalized &&
+                  null != t.summaryLocalized &&
                       (0, a.jsxs)('div', {
                           className: i()(I.row, I.gapSm),
                           children: [
@@ -45,21 +45,21 @@ function p(e) {
                               (0, a.jsx)(l.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: s ? m.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => p(!1) }) : m.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => p(!0) })
+                                  children: s ? m.Z.Messages.MACHINE_TRANSLATED_TRANSLATED.format({ onShowOriginal: () => A(!1) }) : m.Z.Messages.MACHINE_TRANSLATED_ORIGINAL.format({ onShowTranslated: () => A(!0) })
                               })
                           ]
                       }),
                   (0, a.jsx)(l.xv, {
-                      ref: N,
+                      ref: O,
                       lineClamp: g ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: s ? n.summaryLocalized : n.summary
+                      children: s ? t.summaryLocalized : t.summary
                   }),
-                  T &&
+                  f &&
                       (0, a.jsx)(d.Clickable, {
                           className: I.clickable,
                           onClick: () => {
-                              t(g ? _.as.ShowMore : _.as.ShowLess), f(!g);
+                              n(g ? _.as.ShowMore : _.as.ShowLess), T(!g);
                           },
                           children: (0, a.jsx)(l.xv, {
                               variant: 'text-sm/semibold',
@@ -67,8 +67,8 @@ function p(e) {
                           })
                       }),
                   (0, a.jsx)(E.Z, {
-                      className: A.platforms,
-                      detectedGame: n
+                      className: p.platforms,
+                      detectedGame: t
                   })
               ]
           });

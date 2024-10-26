@@ -15,10 +15,10 @@ var l = n(200651),
     _ = n(335326),
     v = n(297781),
     C = n(591853),
-    p = n(410441),
-    f = n(689938);
+    f = n(410441),
+    p = n(689938);
 let T = (e, t, n) => {
-        let l = f.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+        let l = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
         return l
@@ -30,7 +30,7 @@ let T = (e, t, n) => {
             .replaceAll('*', '');
     },
     g = (e, t) =>
-        f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
             username: t.username,
             activity: e.extra.media_title
         });
@@ -73,12 +73,12 @@ t.Z = (e) => {
                   (0, l.jsx)(C.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, m.kr)(n) ? f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+                      userDescription: (0, m.kr)(n) ? p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
-                      headerIcons: (0, l.jsx)(p.Z, {
+                      headerIcons: (0, l.jsx)(f.Z, {
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': f.Z.Messages.CRUNCHYROLL
+                          'aria-label': p.Z.Messages.CRUNCHYROLL
                       }),
                       badges: (0, l.jsx)(v.Gk, {
                           location: v.Gt.POPOUT,

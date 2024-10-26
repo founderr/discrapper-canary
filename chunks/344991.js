@@ -34,20 +34,20 @@ function h(e) {
 }
 function I(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: I, placeholder: x, maxValues: E, disabled: v } = n,
-        [T, N] = r.useState(!1),
+        { type: I, placeholder: x, maxValues: E, disabled: T } = n,
+        [N, v] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [j, M] = r.useState(new Set(S.keys())),
-        [Z, y] = r.useState(() => (null != o ? o : []).map((e) => e.value)),
+        [y, Z] = r.useState(() => (null != o ? o : []).map((e) => e.value)),
         [R, L] = r.useState(0);
     r.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
-        if (e.every((e) => Z.includes(e)) && Z.every((n) => e.includes(n))) return;
-        y(e);
+        if (e.every((e) => y.includes(e)) && y.every((n) => e.includes(n))) return;
+        Z(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
         O(n), M(new Set(n.keys())), L((e) => e + 1);
-    }, [o, Z]);
+    }, [o, y]);
     let {
             state: P,
             executeStateUpdate: A,
@@ -72,19 +72,19 @@ function I(e) {
         }) && M(new Set(S.keys()));
     }, [A, I, S]);
     r.useEffect(() => {
-        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
-    }, [T, b, j, S, G]);
-    let D = 0 === S.size || T,
+        if (!(N || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
+    }, [N, b, j, S, G]);
+    let D = 0 === S.size || N,
         V = {
-            isDisabled: v || U,
+            isDisabled: T || U,
             wrapperClassName: p.select,
             options: (e) =>
                 new Promise((n) => {
                     n(t(e));
                 }),
             placeholder: D ? (null != x ? x : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
-            onClose: () => N(!1),
-            onOpen: () => N(!0),
+            onClose: () => v(!1),
+            onOpen: () => v(!0),
             onBlur: () => g(!1),
             maxVisibleItems: 5,
             optionClassName: p.__invalid_selectOption,
@@ -113,7 +113,7 @@ function I(e) {
                                   className: p.badges,
                                   value: Array.from(S.values()),
                                   onChange: (e) => {
-                                      !T && g(!0), O(new Map(e.map((e) => [e.value, e])));
+                                      !N && g(!0), O(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
