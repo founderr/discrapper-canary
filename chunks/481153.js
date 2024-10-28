@@ -13,8 +13,8 @@ var s = n(200651),
     g = n(509545),
     p = n(55563),
     m = n(296848),
-    f = n(981631),
-    I = n(474936),
+    I = n(981631),
+    f = n(474936),
     N = n(689938),
     T = n(295242),
     A = n(739017),
@@ -35,7 +35,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
         p = l.name;
     return (
         null != E &&
-            (p = (E.interval === I.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+            (p = (E.interval === f.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
                 skuName: l.name,
                 intervalCount: E.intervalCount
             })),
@@ -62,7 +62,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
                               (0, s.jsxs)(u.Dx, {
                                   className: a()(x.marginTop8, A.flexCenter),
                                   children: [
-                                      l.productLine !== f.POd.COLLECTIBLES &&
+                                      l.productLine !== I.POd.COLLECTIBLES &&
                                           (0, s.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: T.applicationIcon,

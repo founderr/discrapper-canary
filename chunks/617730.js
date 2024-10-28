@@ -30,16 +30,16 @@ function g(e) {
     if (null == t) return null;
     let p = null != t.guild ? new l.ZP(t.guild) : null,
         m = null != t.channel ? (0, a.jD)(t.channel) : null,
-        f = null != t.target_application ? new i.Z(t.target_application) : null,
-        I = g || null == t.inviter ? null : new o.Z(t.inviter),
-        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
+        I = null != t.target_application ? new i.Z(t.target_application) : null,
+        f = g || null == t.inviter ? null : new o.Z(t.inviter),
+        N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != f && (0, c.WT)(t),
         T = E(t),
         A = {
             invite: t,
-            user: I,
+            user: f,
             guild: p,
             channel: m,
-            application: f
+            application: I
         };
     return (0, c.JI)(t)
         ? (0, s.jsx)(u.Z, {
@@ -52,9 +52,9 @@ function g(e) {
               className: h.container,
               children: [
                   (0, s.jsx)(c.GB, {
-                      application: f,
+                      application: I,
                       guild: p,
-                      user: N || (0, c.X7)(t) ? I : null
+                      user: N || (0, c.X7)(t) ? f : null
                   }),
                   (0, c.X7)(t)
                       ? null

@@ -14,8 +14,8 @@ var s = n(200651),
     g = n(314897),
     p = n(63063),
     m = n(981631),
-    f = n(689938),
-    I = n(987742),
+    I = n(689938),
+    f = n(987742),
     N = n(113207);
 a.ZP.initialize();
 let T = (e) => {
@@ -27,8 +27,8 @@ let T = (e) => {
                     (0, s.jsx)(e, {
                         ...t,
                         onSuccess: o,
-                        headerText: f.Z.Messages.ENTER_EMAIL,
-                        confirmButtonText: f.Z.Messages.NEXT,
+                        headerText: I.Z.Messages.ENTER_EMAIL,
+                        confirmButtonText: I.Z.Messages.NEXT,
                         confirmButtonColor: l.Button.Colors.BRAND,
                         impressionName: i.ImpressionNames.URF_ENTER_EMAIL
                     });
@@ -52,15 +52,15 @@ let T = (e) => {
                             onFormSubmit: a,
                             onResend: t,
                             onSuccess: o,
-                            headerText: f.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-                            confirmButtonText: f.Z.Messages.VERIFY,
+                            headerText: I.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+                            confirmButtonText: I.Z.Messages.VERIFY,
                             confirmButtonColor: l.Button.Colors.BRAND,
                             impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                         });
                 });
         };
     return (0, s.jsx)('div', {
-        className: I.buttonColumn,
+        className: f.buttonColumn,
         children: (0, s.jsx)(l.Button, {
             className: N.__invalid_reportButton,
             fullWidth: !0,
@@ -106,21 +106,21 @@ t.Z = () => {
                   children: [
                       (0, s.jsx)(u.Dx, {
                           className: N.marginBottom8,
-                          children: f.Z.Messages.URF_LANDING_PAGE_TITLE
+                          children: I.Z.Messages.URF_LANDING_PAGE_TITLE
                       }),
                       (0, s.jsx)(u.DK, {
                           className: N.marginBottom8,
-                          children: f.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: p.Z.getArticleURL(m.BhN.COPYRIGHT_AND_IP_POLICY) })
+                          children: I.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: p.Z.getArticleURL(m.BhN.COPYRIGHT_AND_IP_POLICY) })
                       }),
                       (0, s.jsxs)('div', {
-                          className: I.container,
+                          className: f.container,
                           children: [
                               (0, s.jsx)(T, {
-                                  title: f.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+                                  title: I.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
                                   menuType: _.BM.MESSAGE
                               }),
                               (0, s.jsx)(T, {
-                                  title: f.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+                                  title: I.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
                                   menuType: _.BM.USER
                               })
                           ]

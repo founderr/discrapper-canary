@@ -8,8 +8,8 @@ t.d(n, {
 var i = t(718528),
     l = t(931261),
     o = t(355298),
-    r = t(333984),
-    E = t(905423),
+    E = t(333984),
+    r = t(905423),
     a = t(695346),
     u = t(283595),
     s = t(923834),
@@ -19,7 +19,7 @@ var i = t(718528),
     C = t(981631),
     I = t(176505);
 let A = () => {
-    let e = o.Z.getMessageRequestsCount() > 0 || r.Z.getSpamChannelsCount() > 0;
+    let e = o.Z.getMessageRequestsCount() > 0 || E.Z.getSpamChannelsCount() > 0;
     return [C.Z5c.FRIENDS, u.Z.hasLibraryApplication() && !a.bm.getSetting() ? C.Z5c.APPLICATION_LIBRARY : null, C.Z5c.APPLICATION_STORE, e ? C.Z5c.MESSAGE_REQUESTS : null, C.Z5c.COLLECTIBLES_SHOP, a.Ex.getSetting() ? C.Z5c.FAMILY_CENTER : null].filter(_.lm);
 };
 function S(e, n) {
@@ -27,14 +27,14 @@ function S(e, n) {
 }
 function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        n = E.Z.getState().guildId;
+        n = r.Z.getState().guildId;
     null == n
         ? !(function (e) {
               var n, t, i;
-              let { channelId: l, path: o, basePath: r } = E.Z.getState(),
+              let { channelId: l, path: o, basePath: E } = r.Z.getState(),
                   a = d.Z.getPrivateChannelIds(),
                   u = __OVERLAY__ ? a : [...A(), ...a];
-              let _ = (null == l ? ((n = null != o ? o : r), A().findIndex((e) => n.startsWith(e))) : null != l ? u.indexOf(l) : 0) + e;
+              let _ = (null == l ? ((n = null != o ? o : E), A().findIndex((e) => n.startsWith(e))) : null != l ? u.indexOf(l) : 0) + e;
               _ >= u.length ? (_ = 0) : _ < 0 && (_ = u.length - 1);
               let I = u[_];
               if (A().includes(I))
@@ -47,11 +47,11 @@ function T() {
               }
           })(e)
         : !(function (e, n) {
-              var t, o, r, a;
-              let u = E.Z.getState().channelId,
+              var t, o, E, a;
+              let u = r.Z.getState().channelId,
                   s = (0, i.Z)(n, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
               (0, l.s)(n) && s.unshift(I.oC.GUILD_HOME);
               let d = ((t = (null != u ? s.indexOf(u) : -1) + e), (o = s.length), t < 0 ? o - 1 : t >= o ? 0 : t);
-              (r = n), (a = s[d]), (0, c.K)(r, a);
+              (E = n), (a = s[d]), (0, c.K)(E, a);
           })(e, n);
 }

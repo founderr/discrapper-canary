@@ -18,8 +18,8 @@ var s = n(200651),
     g = n(981631),
     p = n(58346),
     m = n(689938),
-    f = n(113207);
-function I(e, t, n) {
+    I = n(113207);
+function f(e, t, n) {
     e.preventDefault(),
         h.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
@@ -47,8 +47,8 @@ function N(e) {
                         tall: !0
                     }),
                     (0, s.jsx)(l.zx, {
-                        onClick: (e) => I(e, t, n),
-                        className: f.marginTop20,
+                        onClick: (e) => f(e, t, n),
+                        className: I.marginTop20,
                         children: m.Z.Messages.GUILD_TEMPLATE_OPEN
                     })
                 ]
@@ -56,7 +56,7 @@ function N(e) {
           : (0, s.jsx)(E.Z, {
                 text: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
                 buttonCta: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
-                onClick: (e) => I(e, t, n)
+                onClick: (e) => f(e, t, n)
             });
 }
 i.ZP.initialize();

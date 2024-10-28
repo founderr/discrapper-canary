@@ -3,7 +3,7 @@ t.d(n, {
         return o;
     },
     gN: function () {
-        return r;
+        return E;
     }
 });
 var i = t(585483),
@@ -13,7 +13,7 @@ let o = {
         comboKeysBindGlobal: !0,
         action: () => (i.S.dispatchToLastSubscribed(l.CkL.SCROLL_PAGE_UP), !1)
     },
-    r = {
+    E = {
         binds: ['pagedown'],
         comboKeysBindGlobal: !0,
         action: () => (i.S.dispatchToLastSubscribed(l.CkL.SCROLL_PAGE_DOWN), !1)

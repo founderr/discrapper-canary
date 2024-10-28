@@ -13,8 +13,8 @@ var s,
     g = n(108427),
     p = n(314897),
     m = n(981631),
-    f = n(689938),
-    I = n(113207);
+    I = n(689938),
+    f = n(113207);
 d.ZP.initialize();
 class N extends (a = o.PureComponent) {
     componentDidMount() {
@@ -26,7 +26,7 @@ class N extends (a = o.PureComponent) {
         let { transitionTo: e } = this.props;
         return (0, l.jsx)(E.zx, {
             onClick: () => e(m.Z5c.LOGIN),
-            children: f.Z.Messages._LOGIN
+            children: I.Z.Messages._LOGIN
         });
     }
     renderFailed() {
@@ -35,15 +35,15 @@ class N extends (a = o.PureComponent) {
                 (0, l.jsx)('img', {
                     alt: '',
                     src: n(211095),
-                    className: I.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, l.jsx)(E.Dx, {
-                    className: I.marginBottom8,
-                    children: f.Z.Messages.AUTHORIZATION_EXPIRED
+                    className: f.marginBottom8,
+                    children: I.Z.Messages.AUTHORIZATION_EXPIRED
                 }),
                 (0, l.jsx)(E.DK, {
-                    className: I.marginBottom40,
-                    children: f.Z.Messages._AUTH_EXPIRED_SUGGESTION
+                    className: f.marginBottom40,
+                    children: I.Z.Messages._AUTH_EXPIRED_SUGGESTION
                 }),
                 this.renderLoginButton()
             ]
@@ -55,15 +55,15 @@ class N extends (a = o.PureComponent) {
                 (0, l.jsx)('img', {
                     alt: '',
                     src: n(640356),
-                    className: I.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, l.jsx)(E.Dx, {
-                    className: I.marginBottom8,
-                    children: f.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
+                    className: f.marginBottom8,
+                    children: I.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
                 }),
                 (0, l.jsx)(E.DK, {
-                    className: I.marginBottom40,
-                    children: f.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
+                    className: f.marginBottom40,
+                    children: I.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
                 }),
                 this.renderLoginButton()
             ]
@@ -71,7 +71,7 @@ class N extends (a = o.PureComponent) {
     }
     renderDefault() {
         return (0, l.jsxs)(E.ZP, {
-            children: [(0, l.jsx)(E.Hh, {}), (0, l.jsx)(E.Dx, { children: f.Z.Messages.AUTHORIZING })]
+            children: [(0, l.jsx)(E.Hh, {}), (0, l.jsx)(E.Dx, { children: I.Z.Messages.AUTHORIZING })]
         });
     }
     render() {

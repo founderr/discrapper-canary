@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120),
@@ -21,8 +21,8 @@ var s = n(200651),
     g = n(689938),
     p = n(340214),
     m = n(113207);
-function f(e) {
-    let { setOriginalEmail: t, setSlide: i, ready: f, token: I } = e,
+function I(e) {
+    let { setOriginalEmail: t, setSlide: i, ready: I, token: f } = e,
         [N, T] = r.useState(!1),
         [A, x] = r.useState(null),
         [C, R] = r.useState(null),
@@ -30,11 +30,11 @@ function f(e) {
         Z = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (f) {
+            if (I) {
                 var e;
                 null === (e = Z.current) || void 0 === e || e.focus();
             }
-        }, [f]),
+        }, [I]),
         (0, s.jsxs)('div', {
             children: [
                 (0, s.jsx)(u.Ee, {
@@ -81,7 +81,7 @@ function f(e) {
                                         _.Z.post({
                                             url: E.ANM.ACCOUNT_REVERT,
                                             body: {
-                                                token: I,
+                                                token: f,
                                                 password: S
                                             },
                                             trackedActionData: { event: l.NetworkActionNames.ACCOUNT_REVERT }

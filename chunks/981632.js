@@ -17,14 +17,14 @@ function u(e) {
         h = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
         [E, g] = r.useState(d),
         p = r.useRef((0, o._)(t, E)),
-        [m, f] = r.useState(null == _),
-        [I, N] = r.useState(!1),
+        [m, I] = r.useState(null == _),
+        [f, N] = r.useState(!1),
         [T, A] = r.useState(-1),
         x = () => {
             (p.current = (0, o._)(t, E)), A((e) => e + 1);
         },
         C = () => {
-            f(!1), N(!0), A(-1), g(d);
+            I(!1), N(!0), A(-1), g(d);
         };
     r.useEffect(() => {
         null == _ && g(d);
@@ -37,11 +37,11 @@ function u(e) {
             x();
         }, [t, _]),
         r.useEffect(() => {
-            (!I || null == _) && x();
+            (!f || null == _) && x();
         }, [E]),
         r.useEffect(() => {
-            I && (f(null == _), N(!1), x());
-        }, [I]);
+            f && (I(null == _), N(!1), x());
+        }, [f]);
     if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
     return (0, s.jsx)(a.LottieAnimation, {
         importData: p.current,
@@ -51,7 +51,7 @@ function u(e) {
         onComplete:
             null != _
                 ? () => {
-                      null != _ && (g(_), f(!0));
+                      null != _ && (g(_), I(!0));
                   }
                 : void 0,
         loop: m

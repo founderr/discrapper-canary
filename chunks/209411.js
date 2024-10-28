@@ -41,7 +41,7 @@ function m(e) {
             isAuthenticated: h.default.isAuthenticated(),
             loginStatus: h.default.getLoginStatus()
         })),
-        { location: f, redirectTo: I } = e,
+        { location: I, redirectTo: f } = e,
         [N, T] = r.useState(n);
     function A(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: s } = e;
@@ -53,10 +53,10 @@ function m(e) {
             T(!1);
     }
     return (r.useEffect(() => {
-        if (null != f) {
-            let { handoff_key: e, handoff_token: t } = (0, i.parse)(f.search);
+        if (null != I) {
+            let { handoff_key: e, handoff_token: t } = (0, i.parse)(I.search);
             if (null != e && null != t) {
-                let n = null != I ? (0, u.L)(I) : void 0;
+                let n = null != f ? (0, u.L)(f) : void 0;
                 N
                     ? o.Z.logout(null).finally(() => {
                           A({

@@ -14,8 +14,8 @@ var s,
     g = n(388905),
     p = n(362762),
     m = n(108427),
-    f = n(314897),
-    I = n(896797),
+    I = n(314897),
+    f = n(896797),
     N = n(82142),
     T = n(283595),
     A = n(55563),
@@ -255,7 +255,7 @@ class D extends a.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([N.Z, T.Z, f.default, A.Z, I.Z, p.Z], (e) => {
+t.Z = c.ZP.connectStores([N.Z, T.Z, I.default, A.Z, f.Z, p.Z], (e) => {
     let t = e.match.params.giftCode,
         n = N.Z.get(t),
         s = null != n ? A.Z.get(n.skuId) : null;
@@ -263,8 +263,8 @@ t.Z = c.ZP.connectStores([N.Z, T.Z, f.default, A.Z, I.Z, p.Z], (e) => {
         giftCode: n,
         sku: s,
         libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? x.z2(n.entitlementBranches, s, T.Z) : null,
-        authenticated: f.default.isAuthenticated(),
-        defaultRoute: I.Z.defaultRoute,
+        authenticated: I.default.isAuthenticated(),
+        defaultRoute: f.Z.defaultRoute,
         isResolved: N.Z.getIsResolved(t),
         isAccepting: N.Z.getIsAccepting(t),
         libraryApplicationsFetched: T.Z.fetched,

@@ -20,7 +20,7 @@ var s = n(200651),
 function p(e) {
     let { location: t } = e,
         [p, m] = r.useState(!1),
-        { verifySuccess: f, verifyErrors: I, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
+        { verifySuccess: I, verifyErrors: f, redirectGuildId: N } = (0, i.e7)([d.Z], () => d.Z.getState());
     r.useEffect(() => {
         let e = (0, l.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
@@ -46,7 +46,7 @@ function p(e) {
                   })
               ]
           })
-        : f
+        : I
           ? (0, s.jsxs)(o.ZP, {
                 children: [
                     (0, s.jsx)(o.Ee, {
@@ -63,7 +63,7 @@ function p(e) {
                     })
                 ]
             })
-          : null != I
+          : null != f
             ? (0, s.jsxs)(o.ZP, {
                   children: [
                       (0, s.jsx)(o.Ee, {

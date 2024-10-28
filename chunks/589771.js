@@ -8,18 +8,18 @@ var i = t(200651),
     r = t(192379),
     o = t(89057),
     a = t(509545),
-    l = t(74538),
-    s = t(987209),
+    s = t(74538),
+    l = t(987209),
     c = t(598),
     d = t(456251);
 function u(e) {
     let { initialStep: n, initialPlanId: t, guildId: u, setAnalyticsData: _, handleClose: p } = e,
-        { blockedPayments: f, setStep: I, hasFetchedSubscriptions: C, hasFetchedSubscriptionPlans: b, currencyLoading: m, selectedSkuId: S, setSelectedSkuId: h, setSelectedPlanId: T, priceOptions: g, setSubscriptionMetadataRequest: x } = (0, c.usePaymentContext)(),
-        { isGift: O } = (0, s.wD)(),
-        [N, P] = r.useState(!C || !b || m);
+        { blockedPayments: f, setStep: I, hasFetchedSubscriptions: C, hasFetchedSubscriptionPlans: m, currencyLoading: b, selectedSkuId: S, setSelectedSkuId: h, setSelectedPlanId: T, priceOptions: g, setSubscriptionMetadataRequest: x } = (0, c.usePaymentContext)(),
+        { isGift: O } = (0, l.wD)(),
+        [N, A] = r.useState(!C || !m || b);
     return (r.useEffect(() => {
-        P(!C || !b || m);
-    }, [m, b, C]),
+        A(!C || !m || b);
+    }, [b, m, C]),
     r.useEffect(() => {
         null != u && x({ guild_id: u });
     }, [u, x]),
@@ -28,7 +28,7 @@ function u(e) {
         let e = null != t ? a.Z.get(t) : null;
         if (!N && !f)
             _((n) => {
-                let t = null != e ? (0, l.aS)(e.id, !1, O, g) : void 0;
+                let t = null != e ? (0, s.aS)(e.id, !1, O, g) : void 0;
                 return {
                     ...n,
                     subscription_plan_id: null == e ? void 0 : e.id,

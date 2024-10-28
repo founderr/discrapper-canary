@@ -16,8 +16,8 @@ var s = n(200651),
     m = n(113207);
 t.Z = () => {
     let [e, t] = r.useState(''),
-        [i, f] = r.useState(''),
-        [I, N] = r.useState(!1),
+        [i, I] = r.useState(''),
+        [f, N] = r.useState(!1),
         [T, A] = r.useState(!1),
         [x, C] = r.useState(null),
         [R, S] = r.useState(null),
@@ -84,7 +84,7 @@ t.Z = () => {
                               className: m.marginTop20,
                               label: g.Z.Messages.CONFIRMATION_CODE,
                               value: i,
-                              onChange: f,
+                              onChange: I,
                               maxLength: E.z,
                               error: R
                           }),
@@ -97,7 +97,7 @@ t.Z = () => {
                           (0, s.jsx)(h.zx, {
                               className: m.marginTop20,
                               onClick: b,
-                              submitting: I,
+                              submitting: f,
                               children: g.Z.Messages.DONE
                           })
                       ]

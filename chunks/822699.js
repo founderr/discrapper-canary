@@ -14,8 +14,8 @@ var s = n(200651),
     g = n(765717),
     p = n(267394),
     m = n(761305),
-    f = n(698177),
-    I = n(353926),
+    I = n(698177),
+    f = n(353926),
     N = n(409059),
     T = n(962220),
     A = n(637776),
@@ -64,14 +64,14 @@ let en = (0, j.Z)(z.Z),
     ec = (0, j.Z)(y.Z),
     eu = (0, j.Z)(G.Z),
     ed = (0, j.Z)(Q.Z),
-    e_ = (0, j.Z)(f.Z),
+    e_ = (0, j.Z)(I.Z),
     eh = (0, j.Z)(J.Z),
     eE = (0, j.Z)(k.Z),
     eg = (0, j.Z)(m.Z),
     ep = (0, j.Z)(A.Z),
     em = (0, j.Z)(B.Z),
-    ef = (0, j.Z)(W.Z),
-    eI = (0, j.Z)(X.Z),
+    eI = (0, j.Z)(W.Z),
+    ef = (0, j.Z)(X.Z),
     eN = (0, j.Z)(q.Z),
     eT = (0, j.Z)(E.Z);
 class eA extends r.PureComponent {
@@ -315,7 +315,7 @@ class eA extends r.PureComponent {
                 }),
                 (0, s.jsx)(g.Z, {
                     path: $.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
-                    render: (e) => (0, s.jsx)(ef, { ...e })
+                    render: (e) => (0, s.jsx)(eI, { ...e })
                 }),
                 (0, s.jsx)(g.Z, {
                     path: $.Z5c.CHANNEL(R.Hw.guildId(), R.Hw.channelId({ optional: !0 }), ':messageId?'),
@@ -323,7 +323,7 @@ class eA extends r.PureComponent {
                 }),
                 (0, s.jsx)(g.Z, {
                     path: $.Z5c.REPORT,
-                    render: (e) => (0, s.jsx)(eI, { ...e })
+                    render: (e) => (0, s.jsx)(ef, { ...e })
                 }),
                 (0, s.jsx)(g.Z, {
                     path: $.Z5c.REPORT_SECOND_LOOK,
@@ -355,7 +355,7 @@ class eA extends r.PureComponent {
                 : (t[n] = s);
     }
 }
-t.default = o.ZP.connectStores([S.default, Z.Z, O.Z, I.Z, N.Z], (e) => {
+t.default = o.ZP.connectStores([S.default, Z.Z, O.Z, f.Z, N.Z], (e) => {
     var t, n, s;
     let { match: r, location: i } = e,
         a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
@@ -371,6 +371,6 @@ t.default = o.ZP.connectStores([S.default, Z.Z, O.Z, I.Z, N.Z], (e) => {
         gift: null != c ? O.Z.get(c) : null,
         invite: null != o ? Z.Z.getInvite(o) : null,
         guildTemplate: null != u ? N.Z.getGuildTemplate(u) : null,
-        hasLoadedExperiments: I.Z.hasLoadedExperiments
+        hasLoadedExperiments: f.Z.hasLoadedExperiments
     };
 })(eA);

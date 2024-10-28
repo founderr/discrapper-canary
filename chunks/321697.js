@@ -1,12 +1,12 @@
 t.d(n, {
     r: function () {
-        return r;
+        return E;
     }
 });
 var i = t(481060),
     l = t(560067),
     o = t(675999);
-let r = {
+let E = {
     binds: ['mod+shift+n'],
     comboKeysBindGlobal: !0,
     action() {

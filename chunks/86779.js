@@ -14,8 +14,8 @@ var s,
     g = n(314897),
     p = n(626135),
     m = n(70956),
-    f = n(970648),
-    I = n(981631),
+    I = n(970648),
+    f = n(981631),
     N = n(689938),
     T = n(715859);
 let A = 'mweb_handoff_nonce',
@@ -45,7 +45,7 @@ t.Z = () => {
             (e) => {
                 Z(e),
                     p.default.track(
-                        I.rMx.MOBILE_WEB_HANDOFF_FAILURE,
+                        f.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                         {
                             reason: e,
                             fingerprint: (0, o.K)(r)
@@ -72,7 +72,7 @@ t.Z = () => {
                 null == m &&
                 u.tn
                     .post({
-                        url: I.ANM.HANDOFF_EXCHANGE,
+                        url: f.ANM.HANDOFF_EXCHANGE,
                         body: {
                             key: b,
                             handoff_token: n
@@ -80,8 +80,8 @@ t.Z = () => {
                     })
                     .then((e) => E.Z.loginToken(e.body.token, !1))
                     .then(() => {
-                        p.default.track(I.rMx.LOGIN_SUCCESSFUL, {
-                            source: I.uRl.MOBILE_WEB_HANDOFF,
+                        p.default.track(f.rMx.LOGIN_SUCCESSFUL, {
+                            source: f.uRl.MOBILE_WEB_HANDOFF,
                             is_new_user: !1,
                             fingerprint: (0, o.K)(r)
                         });
@@ -126,9 +126,9 @@ t.Z = () => {
                   (0, i.jsx)(_.Button, {
                       color: _.Button.Colors.BRAND_INVERTED,
                       onClick: () => {
-                          let e = f.Z.generateNonce();
+                          let e = I.Z.generateNonce();
                           d.K.set(A, e), d.K.set(x, Date.now() + C);
-                          let t = new URL(I.x0X),
+                          let t = new URL(f.x0X),
                               n = new URLSearchParams(window.location.search);
                           n.delete('fingerprint'), n.delete('handoff_token');
                           let s = new URLSearchParams();
@@ -137,11 +137,11 @@ t.Z = () => {
                               s.set('fingerprint', r),
                               (t.search = s.toString()),
                               p.default.track(
-                                  I.rMx.DEEP_LINK_CLICKED,
+                                  f.rMx.DEEP_LINK_CLICKED,
                                   {
                                       fingerprint: (0, o.K)(r),
                                       source: 'mobile_web_handoff',
-                                      destination: I.x0X
+                                      destination: f.x0X
                                   },
                                   {
                                       fingerprint: r,

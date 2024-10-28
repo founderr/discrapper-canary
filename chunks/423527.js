@@ -21,8 +21,8 @@ var s,
     g = n(899370),
     p = n(224841),
     m = n(13430),
-    f = n(213609),
-    I = n(882037),
+    I = n(213609),
+    f = n(882037),
     N = n(201207),
     T = n(481230),
     A = n(388905),
@@ -161,7 +161,7 @@ class el extends (s = i.PureComponent) {
             { invite: a, guildTemplate: l, giftCode: o, onRegister: c, usernameSuggestion: u, isMobileWebInviteRegistration: d } = this.props,
             _ = null != a ? a.code : null,
             h = null != o ? o.skuId : null,
-            E = I.MD.getState(),
+            E = f.MD.getState(),
             g = (0, K.Ew)(u) ? null : t === u,
             p = Q.a ? await (0, O.K)(t) : t,
             m = Q.a ? await (0, O.K)(n) : n;
@@ -423,8 +423,8 @@ class el extends (s = i.PureComponent) {
     renderFull(e, t) {
         let { email: n, username: s, globalName: a, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: _, usernameClientError: E, passwordClientError: g, dateOfBirthClientError: p } = this.state,
             {
-                registering: f,
-                consentRequired: I,
+                registering: I,
+                consentRequired: f,
                 isMobileWebInviteRegistration: N,
                 uniqueUsernameRegistrationConfig: { suggestions: T },
                 authBoxClassName: x,
@@ -435,14 +435,14 @@ class el extends (s = i.PureComponent) {
             { subText: M, consentText: j } = this.renderConsentComponents(),
             U = this.renderErrorMessage(),
             y = (0, r.jsx)(h.Tooltip, {
-                text: !c && I ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
+                text: !c && f ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                 children: (e) =>
                     (0, r.jsx)('div', {
                         className: es.marginTop20,
                         ...e,
                         children: (0, r.jsx)(A.zx, {
                             type: 'submit',
-                            submitting: f,
+                            submitting: I,
                             disabled: !this.hasConsent() || this.state.isRateLimited,
                             children: et.Z.Messages.CONTINUE
                         })
@@ -727,7 +727,7 @@ function eo(e) {
         s = (0, d.e7)([P.Z], () => P.Z.registrationUsernameSuggestion()),
         [a, l] = i.useState(X.EW.FULL);
     return (
-        (0, f.Z)(
+        (0, I.Z)(
             {
                 type: u.ImpressionTypes.VIEW,
                 name: u.ImpressionNames.USER_REGISTRATION,

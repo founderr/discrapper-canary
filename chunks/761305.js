@@ -27,7 +27,7 @@ function m(e, t, n) {
     );
 }
 l.ZP.initialize();
-class f extends (s = i.PureComponent) {
+class I extends (s = i.PureComponent) {
     componentDidMount() {
         let e = (0, _.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
@@ -125,4 +125,4 @@ class f extends (s = i.PureComponent) {
             });
     }
 }
-m(f, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(f));
+m(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(I));

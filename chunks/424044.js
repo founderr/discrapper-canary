@@ -14,12 +14,12 @@ var s = n(200651),
     g = n(314897),
     p = n(981631),
     m = n(689938),
-    f = n(113207);
+    I = n(113207);
 i.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
         n = (0, i.e7)([g.default], () => g.default.isAuthenticated()),
-        I = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        f = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         N = (0, h.oK)('RSL - Landing Page'),
         [T, A] = r.useState(!1),
         [x, C] = r.useState(m.Z.Messages.AUTHORIZING),
@@ -54,8 +54,8 @@ t.Z = (e) => {
                 : S(!1);
         }, [n]),
         r.useEffect(() => {
-            !I && !N && l.Z.getExperiments();
-        }, [I, N]),
+            !f && !N && l.Z.getExperiments();
+        }, [f, N]),
         r.useEffect(() => {
             let e = async (e) => {
                 var t, n;
@@ -75,7 +75,7 @@ t.Z = (e) => {
             (0, s.jsxs)(u.ZP, {
                 children: [
                     (0, s.jsx)(u.Dx, {
-                        className: f.marginBottom8,
+                        className: I.marginBottom8,
                         children: x
                     }),
                     T && (0, s.jsx)(a.Spinner, {})

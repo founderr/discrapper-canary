@@ -43,7 +43,7 @@ function m(e) {
         children: i
     });
 }
-function f() {
+function I() {
     let e = o()().localeData().longDateFormat('L'),
         t = e.indexOf('D'),
         n = e.indexOf('M'),
@@ -66,8 +66,8 @@ function f() {
         ].sort((e, t) => (e.index < t.index ? -1 : 1))
     );
 }
-let I = r.forwardRef(function (e, t) {
-    let { value: n, wrapperClassName: i, onChange: l, onPopulated: h, error: p, autoFocus: I, required: N } = e,
+let f = r.forwardRef(function (e, t) {
+    let { value: n, wrapperClassName: i, onChange: l, onPopulated: h, error: p, autoFocus: f, required: N } = e,
         {
             day: T,
             setDay: A,
@@ -116,11 +116,11 @@ let I = r.forwardRef(function (e, t) {
                 t.current
             );
         })(),
-        [b, L] = r.useState(I ? 0 : -1),
+        [b, L] = r.useState(f ? 0 : -1),
         M = r.useRef(null),
         D = r.useRef(null),
         P = r.useRef(null),
-        j = r.useMemo(f, []),
+        j = r.useMemo(I, []),
         U = r.useCallback(() => {
             var e, t, n, s;
             switch (null === (e = j[b]) || void 0 === e ? void 0 : e.type) {
@@ -254,4 +254,4 @@ let I = r.forwardRef(function (e, t) {
         ]
     });
 });
-t.Z = I;
+t.Z = f;

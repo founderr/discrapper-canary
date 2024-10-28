@@ -20,8 +20,8 @@ var s,
     g = n(99690),
     p = n(937154),
     m = n(388905),
-    f = n(198993),
-    I = n(710845),
+    I = n(198993),
+    f = n(710845),
     N = n(314897),
     T = n(585483),
     A = n(358085),
@@ -35,7 +35,7 @@ var s,
     b = n(113207);
 ((i = s || (s = {}))[(i.INITIALIZING = 0)] = 'INITIALIZING'), (i[(i.PENDING_REMOTE_INIT = 1)] = 'PENDING_REMOTE_INIT'), (i[(i.PENDING_FINISH = 2)] = 'PENDING_FINISH'), (i[(i.PENDING_TICKET = 3)] = 'PENDING_TICKET'), (i[(i.PENDING_LOGIN = 4)] = 'PENDING_LOGIN'), (i[(i.FINISH = 5)] = 'FINISH'), ((a = r || (r = {}))[(a.QR_CODE = 0)] = 'QR_CODE'), (a[(a.CONFIRM = 1)] = 'CONFIRM');
 let L = n(515695),
-    M = new I.Z('LoginQRSocket');
+    M = new f.Z('LoginQRSocket');
 function D(e) {
     let { text: t = '' } = e,
         [n, s] = o.useState(!1);
@@ -53,7 +53,7 @@ function D(e) {
                 '' !== t && n
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(f.ZP, {
+                              (0, l.jsx)(I.ZP, {
                                   className: v.qrCode,
                                   size: 160,
                                   text: t

@@ -10,8 +10,8 @@ t(192379);
 var r = t(409813),
     o = t(276442),
     a = t(961830),
-    l = t(721165),
-    s = t(519801),
+    s = t(721165),
+    l = t(519801),
     c = t(589771),
     d = t(883419),
     u = t(689938);
@@ -29,7 +29,7 @@ function _(e) {
         },
         {
             key: r.h8.BENEFITS,
-            renderStep: (e) => (0, i.jsx)(l.Z, { ...e }),
+            renderStep: (e) => (0, i.jsx)(s.Z, { ...e }),
             options: { useBreadcrumbLabel: () => u.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS }
         },
         {
@@ -60,7 +60,7 @@ function _(e) {
         {
             key: r.h8.CONFIRM,
             renderStep: (e) =>
-                (0, i.jsx)(s.Z, {
+                (0, i.jsx)(l.Z, {
                     showBenefits: !t,
                     ...e
                 })

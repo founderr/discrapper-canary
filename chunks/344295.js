@@ -14,8 +14,8 @@ var s = n(200651),
     g = n(388905),
     p = n(639946),
     m = n(792766),
-    f = n(362762),
-    I = n(978684),
+    I = n(362762),
+    f = n(978684),
     N = n(264229),
     T = n(929809),
     A = n(703656),
@@ -239,7 +239,7 @@ class z extends r.PureComponent {
                 return this.renderSpinner(B.Z.Messages.APP_OPENING);
             case j.r2o.RESOLVED:
                 var a;
-                if (n && (0, Z.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(I.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
+                if (n && (0, Z.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
                 if (n || !G.KO) return this.renderAuthenticatedOrDownload();
                 else if (this.getMode() === V.LOGIN)
                     return (0, s.jsx)(D.Z, {
@@ -327,12 +327,12 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([S.Z, R.Z, C.default, f.Z, h.Z], (e) => {
+t.Z = c.ZP.connectStores([S.Z, R.Z, C.default, I.Z, h.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
         invite: null !== (t = S.Z.getInvite(n)) && void 0 !== t ? t : {},
-        nativeAppState: f.Z.getState(n),
+        nativeAppState: I.Z.getState(n),
         authenticated: C.default.isAuthenticated(),
         defaultRoute: R.Z.defaultRoute,
         isUnderage: h.Z.isUnderageAnonymous()

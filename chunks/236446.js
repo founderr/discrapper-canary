@@ -19,8 +19,8 @@ var s = n(200651),
     g = n(473855),
     p = n(306453),
     m = n(929809),
-    f = n(108427),
-    I = n(390885),
+    I = n(108427),
+    f = n(390885),
     N = n(314897),
     T = n(896797),
     A = n(954824),
@@ -38,7 +38,7 @@ var s = n(200651),
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, f.e)('guildTemplate'), !b.KO && A.Z.launch('discord://' + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, I.e)('guildTemplate'), !b.KO && A.Z.launch('discord://' + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && E.Z.resolveGuildTemplate(this.props.code);
@@ -121,7 +121,7 @@ class P extends r.PureComponent {
                         transitionTo: r,
                         location: i,
                         onRegister: () => {
-                            (0, m.c)(Z.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), I.Z.flowStart(v.MK.ORGANIC_GUILD_TEMPLATES, v.EW.NUF_STARTED);
+                            (0, m.c)(Z.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), f.Z.flowStart(v.MK.ORGANIC_GUILD_TEMPLATES, v.EW.NUF_STARTED);
                         }
                     });
             case O.Rj.EXPIRED:
@@ -164,7 +164,7 @@ function j(e) {
 function U(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: r } = (0, h.Z)(t, !1);
-    I.Z.flowStep(v.MK.ORGANIC_GUILD_TEMPLATES, v.X2.GUILD_CREATE);
+    f.Z.flowStep(v.MK.ORGANIC_GUILD_TEMPLATES, v.X2.GUILD_CREATE);
     let i = (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(u.Dx, {
