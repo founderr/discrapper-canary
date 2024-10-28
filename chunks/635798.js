@@ -1,106 +1,105 @@
 n.d(t, {
     x: function () {
-        return s;
+        return a;
     }
 });
 var r = n(239700),
-    i = n(158082),
-    a = n(192379);
-function s(e) {
+    i = n(192379);
+function a(e) {
     var t;
-    let { isDisabled: n = !1, minValue: s = 0, maxValue: c = 100, numberFormatter: d, step: _ = 1, orientation: E = 'horizontal' } = e,
-        f = (0, a.useMemo)(() => {
-            let e = (c - s) / 10;
-            return Math.max((e = (0, r.N4)(e, 0, e + _, _)), _);
-        }, [_, c, s]),
-        h = (0, a.useMemo)(() => l(e.value), [e.value]),
-        p = (0, a.useMemo)(() => (null !== (t = l(e.defaultValue)) && void 0 !== t ? t : [s]), [e.defaultValue, s]),
-        I = u(e.value, e.defaultValue, e.onChange),
-        m = u(e.value, e.defaultValue, e.onChangeEnd),
-        [T, S] = (0, i.zk)(h, p, I),
-        [g, A] = (0, a.useState)(Array(T.length).fill(!1)),
-        N = (0, a.useRef)(Array(T.length).fill(!0)),
-        [R, O] = (0, a.useState)(void 0),
-        v = (0, a.useRef)(T),
-        C = (0, a.useRef)(g),
-        L = (e) => {
-            (v.current = e), S(e);
+    let { isDisabled: n = !1, minValue: a = 0, maxValue: u = 100, numberFormatter: c, step: d = 1, orientation: _ = 'horizontal' } = e,
+        E = (0, i.useMemo)(() => {
+            let e = (u - a) / 10;
+            return Math.max((e = (0, r.N4)(e, 0, e + d, d)), d);
+        }, [d, u, a]),
+        f = (0, i.useMemo)(() => o(e.value), [e.value]),
+        h = (0, i.useMemo)(() => (null !== (t = o(e.defaultValue)) && void 0 !== t ? t : [a]), [e.defaultValue, a]),
+        p = l(e.value, e.defaultValue, e.onChange),
+        I = l(e.value, e.defaultValue, e.onChangeEnd),
+        [m, T] = (0, r.zk)(f, h, p),
+        [S, g] = (0, i.useState)(Array(m.length).fill(!1)),
+        A = (0, i.useRef)(Array(m.length).fill(!0)),
+        [N, R] = (0, i.useState)(void 0),
+        O = (0, i.useRef)(m),
+        v = (0, i.useRef)(S),
+        C = (e) => {
+            (O.current = e), T(e);
         },
-        D = (e) => {
-            (C.current = e), A(e);
+        L = (e) => {
+            (v.current = e), g(e);
         };
+    function D(e) {
+        return (e - a) / (u - a);
+    }
     function y(e) {
-        return (e - s) / (c - s);
+        return 0 === e ? a : m[e - 1];
     }
     function b(e) {
-        return 0 === e ? s : T[e - 1];
+        return e === m.length - 1 ? u : m[e + 1];
     }
     function M(e) {
-        return e === T.length - 1 ? c : T[e + 1];
+        return A.current[e];
     }
-    function P(e) {
-        return N.current[e];
+    function P(e, t) {
+        if (n || !M(e)) return;
+        let i = y(e),
+            a = b(e);
+        (t = (0, r.N4)(t, i, a, d)), C(s(O.current, e, t));
     }
-    function U(e, t) {
-        if (n || !P(e)) return;
-        let i = b(e),
-            a = M(e);
-        (t = (0, r.N4)(t, i, a, _)), L(o(v.current, e, t));
+    function U(e) {
+        return c.format(e);
     }
     function w(e) {
-        return d.format(e);
-    }
-    function x(e) {
-        let t = e * (c - s) + s;
-        return (0, r.uZ)(Math.round((t - s) / _) * _ + s, s, c);
+        let t = e * (u - a) + a;
+        return (0, r.uZ)(Math.round((t - a) / d) * d + a, a, u);
     }
     return {
-        values: T,
-        getThumbValue: (e) => T[e],
-        setThumbValue: U,
+        values: m,
+        getThumbValue: (e) => m[e],
+        setThumbValue: P,
         setThumbPercent: function (e, t) {
-            U(e, x(t));
+            P(e, w(t));
         },
-        isThumbDragging: (e) => g[e],
+        isThumbDragging: (e) => S[e],
         setThumbDragging: function (e, t) {
-            if (n || !P(e)) return;
-            let r = C.current[e];
-            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(v.current);
+            if (n || !M(e)) return;
+            let r = v.current[e];
+            (v.current = s(v.current, e, t)), L(v.current), I && r && !v.current.some(Boolean) && I(O.current);
         },
-        focusedThumb: R,
-        setFocusedThumb: O,
-        getThumbPercent: (e) => y(T[e]),
-        getValuePercent: y,
-        getThumbValueLabel: (e) => w(T[e]),
-        getFormattedValue: w,
-        getThumbMinValue: b,
-        getThumbMaxValue: M,
-        getPercentValue: x,
-        isThumbEditable: P,
+        focusedThumb: N,
+        setFocusedThumb: R,
+        getThumbPercent: (e) => D(m[e]),
+        getValuePercent: D,
+        getThumbValueLabel: (e) => U(m[e]),
+        getFormattedValue: U,
+        getThumbMinValue: y,
+        getThumbMaxValue: b,
+        getPercentValue: w,
+        isThumbEditable: M,
         setThumbEditable: function (e, t) {
-            N.current[e] = t;
+            A.current[e] = t;
         },
         incrementThumb: function (e, t = 1) {
-            let n = Math.max(t, _);
-            U(e, (0, r.N4)(T[e] + n, s, c, _));
+            let n = Math.max(t, d);
+            P(e, (0, r.N4)(m[e] + n, a, u, d));
         },
         decrementThumb: function (e, t = 1) {
-            let n = Math.max(t, _);
-            U(e, (0, r.N4)(T[e] - n, s, c, _));
+            let n = Math.max(t, d);
+            P(e, (0, r.N4)(m[e] - n, a, u, d));
         },
-        step: _,
-        pageSize: f,
-        orientation: E,
+        step: d,
+        pageSize: E,
+        orientation: _,
         isDisabled: n
     };
 }
-function o(e, t, n) {
+function s(e, t, n) {
     return e[t] === n ? e : [...e.slice(0, t), n, ...e.slice(t + 1)];
 }
-function l(e) {
+function o(e) {
     if (null != e) return Array.isArray(e) ? e : [e];
 }
-function u(e, t, n) {
+function l(e, t, n) {
     return (r) => {
         'number' == typeof e || 'number' == typeof t ? null == n || n(r[0]) : null == n || n(r);
     };
