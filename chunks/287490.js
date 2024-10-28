@@ -72,7 +72,7 @@ function m(e) {
         }, []),
         A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
         g = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)),
-        h = (0, o.e7)([d.Z], () =>
+        h = (0, o.Wu)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.USER, i), (e) => {
                     let [s, t] = e;
@@ -212,7 +212,7 @@ function C(e) {
             E((e) => !e);
         }, []),
         A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
-        g = (0, o.e7)([d.Z], () =>
+        g = (0, o.Wu)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), (e) => {
                     let [s, t] = e;
@@ -233,15 +233,13 @@ function C(e) {
                     r = null !== (a = null == e ? void 0 : e.bucket) && void 0 !== a ? a : T.NZ.NOT_ELIGIBLE;
                 !(r in s) && (s[r] = 0), s[r]++, n.push(''.concat(i.name, ': ').concat(r));
             }
-            return [
-                n,
-                r()(s)
-                    .keys()
-                    .map(Number)
-                    .sort()
-                    .map((e) => ''.concat(s[e], ' guilds in bucket ').concat(e))
-                    .join(', ')
-            ];
+            let i = r()(s)
+                .keys()
+                .map(Number)
+                .sort()
+                .map((e) => ''.concat(s[e], ' guilds in bucket ').concat(e))
+                .join(', ');
+            return [n.join('\n'), i];
         }),
         p = (0, n.jsx)(l.Clickable, {
             onClick: C,
@@ -323,7 +321,7 @@ function C(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: h.join('\n')
+                                            children: h
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',
