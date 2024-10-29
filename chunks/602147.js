@@ -42,7 +42,7 @@ let N = l.forwardRef(function (e, t) {
                         default:
                             return (0, h.transitionToGlobalDiscovery)({ tab: e });
                     }
-                })((0, d.qe)()),
+                })(d.Z.getField('selectedTab')),
                 b && T(_.L.DISMISS);
         }, [x, T, b]),
         M = l.useMemo(

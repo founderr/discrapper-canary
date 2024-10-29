@@ -14,7 +14,7 @@ var i = n(200651),
     I = n(696165);
 function p(e) {
     let { tab: t } = e,
-        n = (0, d.OA)(),
+        n = d.Z.useField('selectedTab'),
         s = a.useMemo(
             () =>
                 (function (e) {

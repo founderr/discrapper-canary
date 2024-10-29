@@ -14,7 +14,7 @@ var i = n(200651),
     I = n(909482);
 t.Z = function () {
     let e = (0, l.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = (0, E.OA)(),
+        t = E.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
                 case m.F$.SERVERS:
@@ -32,7 +32,7 @@ t.Z = function () {
         a.useEffect(() => {
             let t = p.pathname,
                 n = (0, h.IE)(t, e);
-            n !== (0, E.qe)() && (0, E.Sx)({ selectedTab: n });
+            n !== E.Z.getField('selectedTab') && E.Z.setState({ selectedTab: n });
         }, [e, p.pathname]),
         a.useEffect(() => {
             (0, _.RI)({ selectedTab: t });

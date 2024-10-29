@@ -15,7 +15,7 @@ var r = n(207796),
     c = n(128449);
 function d(e) {
     let t = e.tab;
-    switch (((0, o.Sx)({ selectedTab: t }), t)) {
+    switch ((o.Z.setState({ selectedTab: t }), t)) {
         case l.F$.SERVERS:
             var n, d;
             let _ = e.selectedServersTab;

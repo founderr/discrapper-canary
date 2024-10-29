@@ -100,7 +100,7 @@ function A(e, t, n) {
         utmContentCurrent: Object.keys(l.jn).find((e) => l.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    (0, a.Sx)({ selectedTab: I.F$.QUESTS }), (0, s.uL)(p.Z5c.QUEST_HOME + i);
+    a.Z.setState({ selectedTab: I.F$.QUESTS }), (0, s.uL)(p.Z5c.QUEST_HOME + i);
 }
 function N(e) {
     let t = (0, d.T)({ quest: e }),
