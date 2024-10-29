@@ -40,6 +40,11 @@ let I = {
         roleMention: { type: 'inlineObject' },
         commandMention: { type: 'inlineObject' },
         channelMention: { type: 'inlineObject' },
+        silentPrefix: {
+            type: 'inlineStyle',
+            before: '@silent',
+            after: ' '
+        },
         emoji: { type: 'inlineObject' },
         customEmoji: { type: 'inlineObject' },
         looseEm: {
@@ -302,6 +307,7 @@ function M(e, t, n, r, a) {
         case 'roleMention':
         case 'channelMention':
         case 'commandMention':
+        case 'silentPrefix':
         case 'soundboard':
         case 'channel': {
             let { text: a, id: s } = n;

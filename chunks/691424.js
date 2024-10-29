@@ -275,7 +275,8 @@ let G = {
                 className: n.formatInline ? U.inlineFormat : null
             });
         }
-    }
+    },
+    silentPrefix: { react: () => null }
 };
 function k(e) {
     return {

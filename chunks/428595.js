@@ -244,6 +244,17 @@ let w = (e) => {
                 };
             }
         },
+        silentPrefix: {
+            order: g.ZP.order,
+            requiredFirstCharacters: ['@'],
+            match: (e, t, n) => (null == n || '' === n ? /^(@silent)/.exec(e) : null),
+            parse: function (e) {
+                return {
+                    type: 'silentPrefix',
+                    content: e[0]
+                };
+            }
+        },
         channelMention: p.Z.channelMention,
         channelOrMessageUrl: p.Z.channelOrMessageUrl,
         mediaPostLink: p.Z.mediaPostLink,

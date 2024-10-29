@@ -26,6 +26,7 @@ let c = {
     link: o.fakeLink,
     url: o.fakeLink,
     autolink: o.fakeLink,
+    silentPrefix: o.fakeLink,
     spoiler: a()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, o.spoiler),
     staticRouteLink: o.fakeLink,
     syntaxBefore: o.syntaxBefore,
