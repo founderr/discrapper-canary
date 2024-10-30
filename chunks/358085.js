@@ -5,19 +5,19 @@ n.r(t),
             return r;
         },
         getNativePlatform: function () {
-            return T;
-        },
-        getOS: function () {
             return S;
         },
-        getPlatform: function () {
-            return I;
+        getOS: function () {
+            return g;
         },
-        getPlatformName: function () {
+        getPlatform: function () {
             return m;
         },
+        getPlatformName: function () {
+            return T;
+        },
         isAndroid: function () {
-            return h;
+            return p;
         },
         isAndroidChrome: function () {
             return E;
@@ -29,13 +29,16 @@ n.r(t),
             return d;
         },
         isIOS: function () {
-            return p;
+            return I;
         },
         isLinux: function () {
             return c;
         },
         isMac: function () {
             return u;
+        },
+        isMacWeb: function () {
+            return h;
         },
         isPlatformEmbedded: function () {
             return s;
@@ -67,7 +70,7 @@ function d() {
     return l() || u() || c();
 }
 function _() {
-    return 'WEB' === I();
+    return 'WEB' === m();
 }
 function E() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
@@ -77,18 +80,22 @@ function f() {
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
 function h() {
-    return 'android' === o;
+    var e;
+    return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/Macintosh/i)) != null;
 }
 function p() {
-    return 'ios' === o;
+    return 'android' === o;
 }
 function I() {
-    return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
+    return 'ios' === o;
 }
 function m() {
-    return o;
+    return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
 function T() {
+    return o;
+}
+function S() {
     switch (o) {
         case 'ios':
         case 'android':
@@ -97,7 +104,7 @@ function T() {
             return 'web';
     }
 }
-function S() {
+function g() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

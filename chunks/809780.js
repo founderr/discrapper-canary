@@ -28,8 +28,8 @@ var i,
     I = n(904245),
     m = n(45114),
     f = n(607070),
-    T = n(853856),
-    h = n(181945),
+    h = n(853856),
+    T = n(181945),
     N = n(220444),
     p = n(601070),
     C = n(344185),
@@ -39,8 +39,8 @@ var i,
     x = n(581883),
     R = n(131704),
     v = n(592125),
-    O = n(984933),
-    M = n(731290),
+    M = n(984933),
+    O = n(731290),
     L = n(430824),
     Z = n(375954),
     b = n(496675),
@@ -183,10 +183,12 @@ class V extends o.EventEmitter {
         super(),
             F(this, 'state', void 0),
             F(this, 'scrollerRef', void 0),
+            F(this, 'undoStack', void 0),
             F(this, 'maybeLoadMore', void 0),
             F(this, 'reloadMessages', void 0),
             F(this, 'getNumUnreadChannels', void 0),
             F(this, 'markChannelRead', void 0),
+            F(this, 'undoMarkChannelRead', void 0),
             F(this, 'markGuildRead', void 0),
             F(this, 'deleteChannel', void 0),
             F(this, 'markAllRead', void 0),
@@ -196,6 +198,7 @@ class V extends o.EventEmitter {
             F(this, 'handleActiveThreadsStoreChange', void 0),
             (this.state = e),
             (this.scrollerRef = t),
+            (this.undoStack = []),
             (this.maybeLoadMore = () => {
                 var e;
                 let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerState();
@@ -207,7 +210,9 @@ class V extends o.EventEmitter {
             (this.getNumUnreadChannels = () => this.state.channels.length),
             (this.markChannelRead = (e) => {
                 let { channelId: t, newestUnreadMessageId: n } = e;
-                if ((E.Z.wait(() => m.In(t, !0, void 0, n, { section: k.jXE.INBOX })), 1 === this.state.channels.length)) {
+                E.Z.wait(() => m.In(t, !0, void 0, n, { section: k.jXE.INBOX }));
+                let i = this.state.channels.find((e) => e.channelId === t);
+                if ((null != i && this.undoStack.push(i), 1 === this.state.channels.length)) {
                     this.deleteChannel(t);
                     return;
                 }
@@ -220,8 +225,21 @@ class V extends o.EventEmitter {
                     f.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
+            (this.undoMarkChannelRead = () => {
+                if (0 === this.undoStack.length) return;
+                let e = this.undoStack.pop();
+                if (null == e) return;
+                m.In(e.channelId, !0, void 0, e.oldestReadMessageId, { section: k.jXE.INBOX });
+                let t = this.state.channels.findIndex((t) => t.order > e.order),
+                    n = [...this.state.channels];
+                t < 0 ? n.push(e) : n.splice(t, 0, e),
+                    this.setState({
+                        scrollToChannelIndex: t,
+                        channels: n
+                    });
+            }),
             (this.markGuildRead = (e) => {
-                E.Z.wait(() => (0, h.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
+                E.Z.wait(() => (0, T.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
                 this.setState({
@@ -287,6 +305,7 @@ class V extends o.EventEmitter {
                 });
                 this.setState({ channels: e });
             });
+        for (let t = 0; t < e.channels.length; t++) e.channels[t].order = t;
     }
 }
 function H(e, t) {
@@ -324,7 +343,7 @@ function Y() {
                 v.Z.getSortedPrivateChannels().forEach((n) => W(e, t, null, n.id)),
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
-                    let i = O.ZP.getSelectableChannelIds(n),
+                    let i = M.ZP.getSelectableChannelIds(n),
                         a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     i.forEach((i) => {
                         var s;
@@ -386,7 +405,7 @@ function W(e, t, n, i) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let i = v.Z.getChannel(t);
-            if (T.Z.isFavorite(t)) return 0;
+            if (h.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (P.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
@@ -403,9 +422,10 @@ function W(e, t, n, i) {
                     i = n === k.bL.NULL ? j.ZP.getMessageNotifications(e) : n;
                 return i === k.bL.ALL_MESSAGES ? 3 : i === k.bL.NO_MESSAGES ? 6 : 4;
             }
-        })(n, i, l)
+        })(n, i, l),
+        order: 0
     };
-    a.isNSFW() && !M.Z.didAgree(a.guild_id)
+    a.isNSFW() && !O.Z.didAgree(a.guild_id)
         ? t.push({
               ...u,
               type: 'nsfw'
