@@ -40,83 +40,95 @@ function E(e) {
     let t = _.get(e);
     null != t && t.release() && ((0, l.zS)().removeDirectVideoOutputSink(e), _.delete(e));
 }
-function f(e) {
-    let { streamId: t, paused: n, onReady: a, onResize: o, className: u, ...f } = e,
-        h = i.useRef(null),
+function f(e, t) {
+    let { streamId: n, paused: a, onReady: o, onResize: u, className: f, ...h } = e,
         p = i.useRef(null),
-        I = i.useRef({
+        I = i.useRef(null),
+        m = i.useRef({
             width: 0,
             height: 0
         }),
-        m = i.useRef({
-            streamId: t,
-            paused: n,
-            onReady: a,
-            onResize: o
+        T = i.useRef({
+            streamId: n,
+            paused: a,
+            onReady: o,
+            onResize: u,
+            onContainerResized: t
         });
     return (
         i.useLayoutEffect(() => {
-            let { current: e } = h;
+            let { current: e } = p,
+                t = new ResizeObserver((e) => {
+                    for (let r of e) {
+                        var t, n;
+                        if (r.target !== I.current) continue;
+                        let e = r.target.clientWidth,
+                            i = r.target.clientHeight;
+                        null === (t = (n = T.current).onContainerResized) || void 0 === t || t.call(n, T.current.streamId, e, i);
+                    }
+                });
             if (null != e) {
-                let t = document.createElement('video');
-                (t.style.display = 'block'),
-                    (t.style.width = '100%'),
-                    (t.style.height = '100%'),
-                    (t.autoplay = !0),
-                    (t.muted = !0),
-                    t.addEventListener('pause', function () {
-                        if (!m.current.paused) {
+                let n = document.createElement('video');
+                (n.style.display = 'block'),
+                    (n.style.width = '100%'),
+                    (n.style.height = '100%'),
+                    (n.autoplay = !0),
+                    (n.muted = !0),
+                    n.addEventListener('pause', function () {
+                        if (!T.current.paused) {
                             var e;
-                            null === (e = p.current) || void 0 === e || e.play();
+                            null === (e = I.current) || void 0 === e || e.play();
                         }
                     }),
-                    t.addEventListener('resize', function () {
+                    n.addEventListener('resize', function () {
                         var e, t, n, r, i, a;
-                        let { width: s, height: o } = I.current,
-                            l = null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
-                            u = null !== (r = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
+                        let { width: s, height: o } = m.current,
+                            l = null !== (n = null === (e = I.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
+                            u = null !== (r = null === (t = I.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
                         if (s !== l || o !== u) {
                             let e = {
                                 width: l,
                                 height: u
                             };
-                            null === (i = (a = m.current).onResize) || void 0 === i || i.call(a, e), (I.current = e);
+                            null === (i = (a = T.current).onResize) || void 0 === i || i.call(a, e), (m.current = e);
                         }
                     }),
-                    t.addEventListener('canplaythrough', function () {
+                    n.addEventListener('canplaythrough', function () {
                         var e, t;
-                        c.info('handleReady for '.concat(m.current.streamId, ', have onReady callback = ').concat(null != m.current.onReady)), null === (e = (t = m.current).onReady) || void 0 === e || e.call(t);
+                        c.info('handleReady for '.concat(T.current.streamId, ', have onReady callback = ').concat(null != T.current.onReady)), null === (e = (t = T.current).onReady) || void 0 === e || e.call(t);
                     }),
-                    c.info('create video element for '.concat(m.current.streamId, ', readyState=').concat(t.readyState)),
-                    t.readyState > 3 && c.error('video element for '.concat(m.current.streamId, ' was ready before attached')),
-                    e.appendChild(t),
-                    (p.current = t);
+                    c.info('create video element for '.concat(T.current.streamId, ', readyState=').concat(n.readyState)),
+                    n.readyState > 3 && c.error('video element for '.concat(T.current.streamId, ' was ready before attached')),
+                    e.appendChild(n),
+                    t.disconnect(),
+                    t.observe(n),
+                    (I.current = n);
             }
         }, []),
         i.useEffect(() => {
-            (m.current.streamId = t), (m.current.paused = n), (m.current.onReady = a), (m.current.onResize = o);
+            (T.current.streamId = n), (T.current.paused = a), (T.current.onReady = o), (T.current.onResize = u);
         }),
         i.useEffect(() => {
-            let e = p.current;
+            let e = I.current;
             if (null != e) {
-                if (n) null != e.srcObject && ((e.srcObject = null), E(t));
+                if (a) null != e.srcObject && ((e.srcObject = null), E(n));
                 else {
-                    var r;
-                    let n;
-                    c.info('attaching srcObject for '.concat(t));
+                    var t;
+                    let r;
+                    c.info('attaching srcObject for '.concat(n));
                     return (
-                        (e.srcObject = ((r = t), null == (n = _.get(r)) ? ((n = new d(r)), (0, l.zS)().addDirectVideoOutputSink(r), _.set(r, n)) : n.addref(), n.stream)),
+                        (e.srcObject = ((t = n), null == (r = _.get(t)) ? ((r = new d(t)), (0, l.zS)().addDirectVideoOutputSink(t), _.set(t, r)) : r.addref(), r.stream)),
                         () => {
-                            E(t), (e.srcObject = null);
+                            E(n), (e.srcObject = null);
                         }
                     );
                 }
             }
-        }, [n, t]),
+        }, [a, n]),
         (0, r.jsx)('div', {
-            className: s()('media-engine-video', u),
-            ref: h,
-            ...f
+            className: s()('media-engine-video', f),
+            ref: p,
+            ...h
         })
     );
 }

@@ -260,6 +260,10 @@ class es extends E.Z {
         var r, i;
         if (t === this.context) t === en.Yn.DEFAULT ? null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.setSimulcastDebugOverride(e, n) : null === (i = this._goLiveQualityManager) || void 0 === i || i.setSimulcastDebugOverride(n);
     }
+    setVideoSize(e, t) {
+        var n;
+        if (this.context === en.Yn.DEFAULT) null === (n = this._localMediaSinkWantsManager) || void 0 === n || n.setVideoSize(e, t);
+    }
     set channelId(e) {
         (this._channelId = e), this.channelIds.add(e);
     }
@@ -796,20 +800,21 @@ class es extends E.Z {
         };
     }
     _handleClientConnect(e) {
-        var t;
+        var t, n;
         e.forEach((e) => {
             var t;
             this._userIds.add(e), null === (t = this._connection) || void 0 === t || t.createUser(e, 0);
         }),
             this.emit(j.z.ClientConnect, e),
-            null === (t = this._goLiveQualityManager) || void 0 === t || t.updateCallUserIds(this._userIds);
+            null === (t = this._goLiveQualityManager) || void 0 === t || t.updateCallUserIds(this._userIds),
+            null === (n = this._localMediaSinkWantsManager) || void 0 === n || n.updateCallUserIds(this._userIds);
     }
     _handleClientDisconnect(e) {
-        var t, n, r, i;
-        let a = this._videoQuality;
-        if (null != a && this.context === en.Yn.DEFAULT) {
-            let t = a.getInboundStats(e),
-                n = null !== (r = null == t ? void 0 : t.num_frames) && void 0 !== r ? r : 0;
+        var t, n, r, i, a;
+        let s = this._videoQuality;
+        if (null != s && this.context === en.Yn.DEFAULT) {
+            let t = s.getInboundStats(e),
+                n = null !== (i = null == t ? void 0 : t.num_frames) && void 0 !== i ? i : 0;
             null != t &&
                 n > 0 &&
                 (B.default.track(et.rMx.VIDEO_STREAM_ENDED, {
@@ -822,14 +827,14 @@ class es extends E.Z {
                     hostname: this.hostname,
                     hardware_enabled: U.Z.getHardwareEncoding(),
                     ...t,
-                    ...a.getNetworkStats(),
-                    ...a.getCodecUsageStats('receiver', e)
+                    ...s.getNetworkStats(),
+                    ...s.getCodecUsageStats('receiver', e)
                 }),
-                a.destroyUser(e),
-                null === (i = this._videoHealthManager) || void 0 === i || i.deleteUser(e));
+                s.destroyUser(e),
+                null === (a = this._videoHealthManager) || void 0 === a || a.deleteUser(e));
         }
-        let s = this._connection;
-        null != s && s.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(j.z.ClientDisconnect, e), null === (n = this._goLiveQualityManager) || void 0 === n || n.updateCallUserIds(this._userIds);
+        let o = this._connection;
+        null != o && o.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(j.z.ClientDisconnect, e), null === (n = this._goLiveQualityManager) || void 0 === n || n.updateCallUserIds(this._userIds), null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.updateCallUserIds(this._userIds);
     }
     _handleCodecs(e, t) {
         let n = this._connection;

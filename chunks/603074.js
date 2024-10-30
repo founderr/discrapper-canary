@@ -22,48 +22,49 @@ var r = n(200651),
     T = n(526617),
     S = n(126857);
 function g(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: R, shouldShowUpsell: O = !0, gridNotice: v, inExpressionPicker: C, soundButtonOverlay: L, listPadding: D, renderHeader: y, defaultSoundsOnly: b } = e,
-        M = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
-        P = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
-        { analyticsLocations: U } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: R, shouldValidateSelectedSound: O, shouldShowUpsell: v = !0, gridNotice: C, inExpressionPicker: L, soundButtonOverlay: D, listPadding: y, renderHeader: b, defaultSoundsOnly: M } = e,
+        P = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
+        U = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
+        { analyticsLocations: w } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
     (0, _.Z)({
         type: o.ImpressionTypes.POPOUT,
         name: o.ImpressionNames.SOUNDBOARD_POPOUT,
         properties: {
             source: N,
             guild_id: t,
-            media_session_id: P
+            media_session_id: U
         }
     }),
         i.useEffect(() => {
             p.w(), f.DZ.loadIfNecessary(), (0, E.ql)('');
         }, []);
-    let { refreshEnabled: w } = (0, I.Z)({ location: 'SoundboardSoundPicker' });
+    let { refreshEnabled: x } = (0, I.Z)({ location: 'SoundboardSoundPicker' });
     return (0, r.jsx)(d.Gt, {
-        value: U,
+        value: w,
         children: (0, r.jsx)(u.Dialog, {
             className: s()(S.picker, {
-                [S.fetching]: M,
-                [S.inExpressionPicker]: C,
-                [S.refresh]: w
+                [S.fetching]: P,
+                [S.inExpressionPicker]: L,
+                [S.refresh]: x
             }),
-            children: M
+            children: P
                 ? (0, r.jsx)(u.Spinner, {})
                 : (0, r.jsx)(T.Z, {
                       guildId: t,
                       channel: n,
                       onClose: g,
                       onSelect: A,
+                      shouldValidateSelectedSound: O,
                       containerWidth: a,
                       suppressPlaySound: R,
-                      shouldShowUpsell: O,
-                      gridNotice: v,
-                      soundButtonOverlay: L,
-                      listPadding: D,
-                      renderHeader: y,
-                      defaultSoundsOnly: b,
-                      inExpressionPicker: C,
-                      refreshEnabled: w
+                      shouldShowUpsell: v,
+                      gridNotice: C,
+                      soundButtonOverlay: D,
+                      listPadding: y,
+                      renderHeader: b,
+                      defaultSoundsOnly: M,
+                      inExpressionPicker: L,
+                      refreshEnabled: x
                   })
         })
     });

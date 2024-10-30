@@ -56,12 +56,16 @@ n.d(t, {
     uV: function () {
         return v;
     },
+    x0: function () {
+        return x;
+    },
     x6: function () {
         return U;
     }
 }),
     n(724458),
-    n(47120);
+    n(47120),
+    n(653041);
 var r = n(392711),
     i = n(979554),
     a = n(134432),
@@ -180,4 +184,23 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
         if (U(e)) return h(e);
         let r = p(e, t ? (n ? c.tuJ.MOBILE : c.tuJ.DEFAULT) : n ? c.tuJ.MOBILE_PREMIUM_TIER_2 : c.tuJ.PREMIUM_TIER_2);
         return null == r ? void 0 : r.amount;
+    },
+    x = (e, t) => {
+        let n = [];
+        for (let r of e) {
+            let e = r.heroRanking;
+            if (null != e)
+                for (let r of e) {
+                    let e = t.get(r);
+                    if (null != e && !U(e) && (n.push(r), n.length >= u.K8)) return n;
+                }
+        }
+        return G(n);
+    },
+    G = (e) => {
+        if (e.length < u.K8) {
+            let t = u.HU.slice(0, u.K8 - e.length);
+            return e.concat(t);
+        }
+        return e;
     };

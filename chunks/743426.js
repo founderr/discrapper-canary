@@ -458,6 +458,9 @@ class T extends s.Z {
     setUseDirectVideo(e) {
         E.Z.useDirectVideo = e;
     }
+    setOnVideoContainerResized(e) {
+        E.Z.onContainerResized = e;
+    }
     setMaxSyncDelayOverride(e) {
         let { setMaxSyncDelayOverride: t } = (0, d.zS)();
         null != t && t(e);

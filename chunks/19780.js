@@ -270,6 +270,10 @@ let P = new M(
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: b,
               RTC_CONNECTION_CLIENT_CONNECT: b,
               RTC_CONNECTION_CLIENT_DISCONNECT: b,
+              VIDEO_SIZE_UPDATE: function (e) {
+                  let { streamId: t, pixelCount: n } = e;
+                  null == r || r.setVideoSize(t, n);
+              },
               VOICE_STATE_UPDATES: function (e) {
                   let { voiceStates: t } = e;
                   return t.reduce((e, t) => {

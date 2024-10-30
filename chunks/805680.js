@@ -328,7 +328,8 @@ t.Z = i.memo(function (e) {
                                                                 className: G.soundboardHeader,
                                                                 children: e
                                                             }),
-                                                        inExpressionPicker: !0
+                                                        inExpressionPicker: !0,
+                                                        shouldValidateSelectedSound: !0
                                                     })
                                                 })
                                               : null

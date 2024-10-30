@@ -785,6 +785,15 @@ class tO extends (l = I.ZP.Store) {
                     device_name: n
                 });
             }),
+            eA.setOnVideoContainerResized((e, t, n) => {
+                g.Z.wait(() =>
+                    g.Z.dispatch({
+                        type: 'VIDEO_SIZE_UPDATE',
+                        streamId: e,
+                        pixelCount: t * n
+                    })
+                );
+            }),
             to.reset(),
             (0, es.q)().then((e) => {
                 null != e && (e3 = e.gpu_brand);

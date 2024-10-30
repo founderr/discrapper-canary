@@ -91,6 +91,7 @@ function a(e, t, n, a, s) {
             sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
             sinkWantAsInt: (0, r.F)(n, e.ssrc),
             sinkWantLocal: (0, r.f)(a, e.ssrc, 'video' === e.kind),
+            sinkWantLocalAsInt: (0, r.F)(a, e.ssrc),
             codec: i(s),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,

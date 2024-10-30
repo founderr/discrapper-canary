@@ -113,6 +113,7 @@ function u(e, t, n, i) {
         sinkWant: (0, r.f)(t, e.ssrc, !0),
         sinkWantAsInt: (0, r.F)(t, e.ssrc),
         sinkWantLocal: (0, r.f)(n, e.ssrc, !0),
+        sinkWantLocalAsInt: (0, r.F)(n, e.ssrc),
         codec: {
             id: e.codecPayloadType,
             name: e.codecName
