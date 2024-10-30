@@ -6,10 +6,11 @@ var r = n(200651),
     o = n(241553),
     c = n(333867),
     d = n(884697),
-    u = n(231338),
-    m = n(689938),
-    f = n(65297);
-let p = {
+    u = n(474936),
+    m = n(231338),
+    f = n(689938),
+    p = n(65297);
+let C = {
     dark: [
         {
             box: '#FFF19E',
@@ -72,47 +73,48 @@ let p = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: h, isGiftEasterEggEnabled: g, disableCustomColor: _ = !1 } = e,
-        { analyticsLocations: b } = (0, l.ZP)(),
-        x = s.useRef(null),
-        E = (0, i.Z)(x),
-        v = _ ? u.BR.DARK : u.BR.LIGHT;
+    let { product: t, returnRef: n, onSuccess: h, tooltipDelay: g, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
+        { analyticsLocations: x } = (0, l.ZP)(),
+        E = s.useRef(null),
+        v = (0, i.Z)(E),
+        I = b ? m.BR.DARK : m.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(a.Tooltip, {
-              text: m.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-              delay: h,
+              text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+              delay: g,
               children: (e) =>
                   (0, r.jsx)(a.Button, {
                       ...e,
-                      buttonRef: x,
-                      className: f.giftButton,
-                      color: _ ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
+                      buttonRef: E,
+                      className: p.giftButton,
+                      color: b ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
                       look: a.Button.Looks.FILLED,
                       size: a.ButtonSizes.ICON,
-                      innerClassName: f.giftButtonInner,
-                      'aria-label': m.Z.Messages.PREMIUM_GIFTING_BUTTON,
+                      innerClassName: p.giftButtonInner,
+                      'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
                                   skuId: t.skuId,
                                   isGift: !0,
-                                  analyticsLocations: b,
+                                  giftingOrigin: u.Wt.SHOP_PAGE,
+                                  analyticsLocations: x,
                                   returnRef: n,
                                   onClose:
-                                      null != C
+                                      null != h
                                           ? (e) => {
-                                                e && C();
+                                                e && h();
                                             }
                                           : void 0
                               });
                       },
-                      children: g
+                      children: _
                           ? (0, r.jsx)(o.e, {
-                                hovered: E,
+                                hovered: v,
                                 isContentDismissed: !0,
-                                themeOverride: v,
-                                boxColors: p
+                                themeOverride: I,
+                                boxColors: C
                             })
                           : (0, r.jsx)(a.GiftIcon, {
                                 size: 'md',

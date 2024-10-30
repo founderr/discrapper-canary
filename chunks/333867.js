@@ -19,10 +19,10 @@ let E = 'payment-modal',
     I = new Set([u.h8.REVIEW, u.h8.CONFIRM]);
 function m(e) {
     let t;
-    let { skuId: n, isGift: u = !1, giftMessage: m, onClose: f, onComplete: T, analyticsLocations: h, analyticsObject: N } = e,
-        p = !1,
-        C = (0, a.Z)(),
-        g = (e) => {
+    let { skuId: n, isGift: u = !1, giftMessage: m, giftingOrigin: f, onClose: T, onComplete: h, analyticsLocations: N, analyticsObject: p } = e,
+        C = !1,
+        g = (0, a.Z)(),
+        S = (e) => {
             t = e;
         };
     (0, s.openModalLazy)(
@@ -30,36 +30,37 @@ function m(e) {
             let { onClose: t, returnRef: a, ...s } = e;
             return (0, i.jsx)(d.Z, {
                 ...s,
-                loadId: C,
+                loadId: g,
                 skuId: n,
                 isGift: u,
                 giftMessage: m,
-                analyticsLocations: h,
+                giftingOrigin: f,
+                analyticsLocations: N,
                 onClose: (e) => {
-                    t(), null == f || f(e);
+                    t(), null == T || T(e);
                 },
                 onComplete: () => {
-                    (p = !0), null == T || T();
+                    (C = !0), null == h || h();
                 },
                 returnRef: a,
-                onStepChange: g
+                onStepChange: S
             });
         },
         {
             modalKey: E,
             onCloseCallback: () => {
-                !p &&
+                !C &&
                     c.default.track(_.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: C,
+                        load_id: g,
                         payment_type: _.Zuq[_.GZQ.ONE_TIME],
-                        location: N,
+                        location: p,
                         is_gift: u,
-                        location_stack: h
+                        location_stack: N
                     }),
                     (0, r.fw)(),
                     (0, l.p)(),
-                    null == f || f(p),
-                    p && (0, o.qg)();
+                    null == T || T(C),
+                    C && (0, o.qg)();
             },
             onCloseRequest: () => {
                 null != t && I.has(t) && (0, s.closeModal)(E);
