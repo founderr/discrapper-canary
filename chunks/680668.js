@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 }),
     n(789020);
@@ -19,22 +19,22 @@ var a = n(533800),
     I = n(981631),
     m = n(689938),
     f = n(691784);
-function T(e) {
-    var t, T;
-    let h,
+function h(e) {
+    var t, h;
+    let T,
         N,
         p,
         { onTransitionToInviteChannel: C, onAcceptInstantInvite: g, guild: S, invite: A, author: x, currentUserId: R } = e,
         v = R === x.id,
-        { channel: O, approximate_member_count: M, approximate_presence_count: L } = A,
+        { channel: M, approximate_member_count: O, approximate_presence_count: L } = A,
         Z = A.state === I.r2o.ACCEPTING,
-        b = null != O ? (0, o.jD)(O) : null,
+        b = null != M ? (0, o.jD)(M) : null,
         P = null != S,
         D = null != b,
         j = null != b && b.isGuildVocal(),
         U = null != b && b.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        B = null !== (T = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== T && T;
+        B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
         S = d.Qs(A.guild);
@@ -77,7 +77,7 @@ function T(e) {
             })),
         j
             ? ((N = (0, i.jsx)(l.Z.Channel, { channel: b })),
-              (h = (0, i.jsxs)('span', {
+              (T = (0, i.jsxs)('span', {
                   className: f.infoTitle,
                   children: [
                       m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
@@ -90,13 +90,13 @@ function T(e) {
                       })
                   ]
               })))
-            : (null != M && M >= 5) || (null != L && L > 0)
-              ? (h = (0, i.jsx)(l.Z.Data, {
-                    members: M,
+            : (null != O && O >= 5) || (null != L && L > 0)
+              ? (T = (0, i.jsx)(l.Z.Data, {
+                    members: O,
                     membersOnline: L
                 }))
               : D &&
-                (h = (0, i.jsx)(l.Z.Channel, {
+                (T = (0, i.jsx)(l.Z.Channel, {
                     channel: b,
                     guild: S
                 })),
@@ -116,7 +116,7 @@ function T(e) {
                                 (0, i.jsx)(l.Z.Info, {
                                     title: N,
                                     onClick: P ? k : null,
-                                    children: h
+                                    children: T
                                 })
                             ]
                         }),

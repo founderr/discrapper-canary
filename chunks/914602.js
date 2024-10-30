@@ -13,8 +13,8 @@ var i,
     I = n(568836),
     m = n(345898),
     f = n(981631),
-    T = n(262203);
-function h(e, t, n) {
+    h = n(262203);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,34 +42,34 @@ class N extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'renderActions', () => {
+            T(this, 'renderActions', () => {
                 let { inLibrary: e, sku: t, renderCustomActions: n, isMouseOver: i, showBuyInline: s } = this.props,
                     r = (s || !t.requiresPayment) && !e;
                 return null != n
                     ? n()
                     : (0, a.jsxs)('div', {
-                          className: T.priceOs,
+                          className: h.priceOs,
                           children: [
                               (0, a.jsx)(o.Z, {
                                   type: o.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: r && i ? T.tilePriceWithVisibleBuyButton : T.tilePrice
+                                  className: r && i ? h.tilePriceWithVisibleBuyButton : h.tilePrice
                               }),
                               (0, a.jsx)(c.n, {
                                   systems: [f.TaA.WINDOWS],
-                                  className: T.platform
+                                  className: h.platform
                               }),
                               r ? (0, a.jsx)('div', { children: 'deprecated!' }) : null
                           ]
                       });
             }),
-            h(this, 'renderMedia', () => {
+            T(this, 'renderMedia', () => {
                 let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: i, sku: r, isHorizontal: o, storeListing: c } = this.props;
                 return (0, a.jsxs)(s.Fragment, {
                     children: [
                         (0, a.jsx)(_.Z, {
-                            className: l()(T.splashContainer, { [T.splashContainerHorizontal]: o }),
+                            className: l()(h.splashContainer, { [h.splashContainerHorizontal]: o }),
                             video: null != c.previewVideo ? (0, E._W)(r.applicationId, c.previewVideo) : void 0,
                             image: null != c.thumbnail ? (0, E._W)(r.applicationId, c.thumbnail, 600) : null,
                             title: r.name,
@@ -77,16 +77,16 @@ class N extends (i = s.PureComponent) {
                             muted: t,
                             placeholder: n,
                             onToggleMute: i,
-                            splashClassName: T.splashVideo,
-                            splashPlaceholderClassName: T.splashPlaceholder
+                            splashClassName: h.splashVideo,
+                            splashPlaceholderClassName: h.splashPlaceholder
                         }),
-                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(T.exclusiveRegular, { [T.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(T.exclusiveRegular, { [T.exclusivePlaying]: e }) }) : null
+                        r.exclusive ? (0, a.jsx)(d.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });
     }
 }
-h(N, 'defaultProps', {
+T(N, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,

@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(742989),
     m = n(675478),
     f = n(581883),
-    T = n(585483),
-    h = n(400445),
+    h = n(585483),
+    T = n(400445),
     N = n(153209),
     p = n(956961),
     C = n(903672),
@@ -28,7 +28,7 @@ var i = n(200651),
     A = n(981631),
     x = n(689938);
 function R(e) {
-    let { onOpen: t, onClose: n, children: R, badgeState: v, popoutPosition: O, popoutAlign: M } = e,
+    let { onOpen: t, onClose: n, children: R, badgeState: v, popoutPosition: M, popoutAlign: O } = e,
         { analyticsLocations: L } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [Z, b] = a.useState(!1),
         [P, D] = (function () {
@@ -75,7 +75,7 @@ function R(e) {
         B = a.useCallback(() => {
             b(!Z), Z ? null == n || n() : null == t || t();
         }, [n, t, Z]);
-    a.useEffect(() => (T.S.subscribe(A.CkL.TOGGLE_INBOX, B), () => void T.S.unsubscribe(A.CkL.TOGGLE_INBOX, B)), [B]);
+    a.useEffect(() => (h.S.subscribe(A.CkL.TOGGLE_INBOX, B), () => void h.S.unsubscribe(A.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: k } = I.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: G, inInbox: F } = _.Z.useExperiment({ location: 'RecentsPopout' }),
         w = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(), []) && G && F,
@@ -93,8 +93,8 @@ function R(e) {
         value: L,
         children: (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
-            position: O,
-            align: M,
+            position: M,
+            align: O,
             autoInvert: !1,
             shouldShow: Z,
             onRequestClose: y,
@@ -128,7 +128,7 @@ function R(e) {
                                         closePopout: y
                                     })
                                   : G && F && P === l.X.BOOKMARKS
-                                    ? (0, i.jsx)(h.Z, {
+                                    ? (0, i.jsx)(T.Z, {
                                           setTab: D,
                                           badgeState: v,
                                           closePopout: y

@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(171368),
     m = n(592125),
     f = n(430824),
-    T = n(594174),
-    h = n(739566),
+    h = n(594174),
+    T = n(739566),
     N = n(981631),
     p = n(665692),
     C = n(689938),
@@ -36,18 +36,18 @@ function x(e) {
 }
 t.Z = a.memo(function (e) {
     var t, n, s, r, R, v;
-    let O,
-        { channel: M, messageId: L, interactionData: Z } = e,
+    let M,
+        { channel: O, messageId: L, interactionData: Z } = e,
         { analyticsLocations: b } = (0, u.ZP)(),
-        { onCopy: P, copyRef: D } = (0, d.Z)(M, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
-        j = (0, l.e7)([f.Z], () => f.Z.getGuild(M.guild_id), [M.guild_id]);
+        { onCopy: P, copyRef: D } = (0, d.Z)(O, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
+        j = (0, l.e7)([f.Z], () => f.Z.getGuild(O.guild_id), [O.guild_id]);
     if (
         (a.useEffect(() => {
-            (null == Z || (Z.type === c.yU.CHAT && void 0 === Z.application_command)) && _.OG(M.id, L);
-        }, [M.id, L, Z]),
+            (null == Z || (Z.type === c.yU.CHAT && void 0 === Z.application_command)) && _.OG(O.id, L);
+        }, [O.id, L, Z]),
         null == Z)
     )
-        O = (0, i.jsx)(o.Spinner, {
+        M = (0, i.jsx)(o.Spinner, {
             type: o.Spinner.Type.SPINNING_CIRCLE,
             className: g.spinner
         });
@@ -59,7 +59,7 @@ t.Z = a.memo(function (e) {
                 (function e(t) {
                     var n, s, r, l, u, d, _;
                     let g,
-                        { option: R, channel: v, guild: O, messageId: M, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: b } = t,
+                        { option: R, channel: v, guild: M, messageId: O, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: b } = t,
                         P = null != L ? L + ' ' + R.name : R.name;
                     if (R.type === c.jw.SUB_COMMAND || R.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
@@ -83,8 +83,8 @@ t.Z = a.memo(function (e) {
                                 e({
                                     option: n,
                                     channel: v,
-                                    guild: O,
-                                    messageId: M,
+                                    guild: M,
+                                    messageId: O,
                                     parentOptionKey: P,
                                     commandOptionSpec: c[n.name],
                                     sourceAnalyticsLocations: b
@@ -97,9 +97,9 @@ t.Z = a.memo(function (e) {
                         switch (R.type) {
                             case c.jw.USER: {
                                 let e = R.value.toString(),
-                                    t = T.default.getUser(e);
+                                    t = h.default.getUser(e);
                                 if (null != t) {
-                                    let e = (0, h.ij)(t, v);
+                                    let e = (0, T.ij)(t, v);
                                     g = (0, i.jsxs)(E.Z, {
                                         ...A,
                                         onClick: () =>
@@ -107,7 +107,7 @@ t.Z = a.memo(function (e) {
                                                 userId: t.id,
                                                 guildId: v.guild_id,
                                                 channelId: v.id,
-                                                messageId: M,
+                                                messageId: O,
                                                 sourceAnalyticsLocations: b,
                                                 analyticsLocation: { section: N.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
@@ -128,7 +128,7 @@ t.Z = a.memo(function (e) {
                             }
                             case c.jw.ROLE: {
                                 let e = R.value.toString(),
-                                    t = null != O ? f.Z.getRole(O.id, e) : void 0;
+                                    t = null != M ? f.Z.getRole(M.id, e) : void 0;
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
@@ -138,15 +138,15 @@ t.Z = a.memo(function (e) {
                             }
                             case c.jw.MENTIONABLE: {
                                 let e = R.value.toString(),
-                                    t = null != O ? f.Z.getRole(O.id, e) : void 0;
+                                    t = null != M ? f.Z.getRole(M.id, e) : void 0;
                                 if (null != t)
                                     g = (0, i.jsxs)(E.Z, {
                                         children: [p.ME, t.name]
                                     });
                                 else {
-                                    let t = T.default.getUser(e);
+                                    let t = h.default.getUser(e);
                                     if (null != t) {
-                                        let e = (0, h.ij)(t, v);
+                                        let e = (0, T.ij)(t, v);
                                         g = (0, i.jsxs)(E.Z, {
                                             ...A,
                                             onClick: () =>
@@ -189,7 +189,7 @@ t.Z = a.memo(function (e) {
                     );
                 })({
                     option: n,
-                    channel: M,
+                    channel: O,
                     guild: j,
                     messageId: L,
                     parentOptionKey: null,
@@ -197,7 +197,7 @@ t.Z = a.memo(function (e) {
                     sourceAnalyticsLocations: b
                 })
             );
-        O = (0, i.jsxs)(i.Fragment, {
+        M = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(o.Text, {
                     ...S,
@@ -218,7 +218,7 @@ t.Z = a.memo(function (e) {
             (0, i.jsx)('div', {
                 className: g.tooltip,
                 ref: D,
-                children: O
+                children: M
             }),
             (0, i.jsx)('div', { className: g.tooltipPointer })
         ]

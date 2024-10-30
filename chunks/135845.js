@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var i = n(200651);
@@ -18,30 +18,30 @@ var a = n(512722),
     I = n(245335),
     m = n(689938),
     f = n(691784);
-function T(e) {
+function h(e) {
     let t,
         n,
         a,
-        { invite: T, currentUserId: h, guild: N, onTransitionToInviteChannel: p, onAcceptInstantInvite: C } = e,
+        { invite: h, currentUserId: T, guild: N, onTransitionToInviteChannel: p, onAcceptInstantInvite: C } = e,
         g = null == N ? void 0 : N.id,
         S = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        A = (0, r.e7)([u.Z], () => (null != T && null != T.target_user ? u.Z.getActiveStreamForUser(T.target_user.id, g) : null), [T, g]),
-        x = (0, r.e7)([u.Z], () => (null != T && null != T.target_user ? u.Z.getStreamForUser(T.target_user.id, g) : null), [T, g]),
-        R = null != T && T.target_type === I.Iq.STREAM && null != T.target_user && null != A,
-        v = null != T && null != x && null != T.channel && null != T.guild && x.channelId === T.channel.id && x.guildId === T.guild.id;
-    s()(null != T, 'Invite cannot be null');
-    let { target_type: O, target_user: M } = T;
-    s()(O === I.Iq.STREAM && null != M, 'invalid streaming invite');
-    let L = h === M.id,
-        Z = T.state === E.r2o.ACCEPTING,
+        A = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null), [h, g]),
+        x = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null), [h, g]),
+        R = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
+        v = null != h && null != x && null != h.channel && null != h.guild && x.channelId === h.channel.id && x.guildId === h.guild.id;
+    s()(null != h, 'Invite cannot be null');
+    let { target_type: M, target_user: O } = h;
+    s()(M === I.Iq.STREAM && null != O, 'invalid streaming invite');
+    let L = T === O.id,
+        Z = h.state === E.r2o.ACCEPTING,
         b = null != N;
     if (null == N) {
-        if (null == T.guild) return (0, i.jsx)(_.Z, {});
-        N = new c.ZP(T.guild);
+        if (null == h.guild) return (0, i.jsx)(_.Z, {});
+        N = new c.ZP(h.guild);
     }
-    let P = null != T.channel ? (0, o.jD)(T.channel) : null,
+    let P = null != h.channel ? (0, o.jD)(h.channel) : null,
         D = R ? p : C;
-    b && !v ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: M.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), R && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: M.username })));
+    b && !v ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: O.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), R && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: O.username })));
     let j = S === N.id && null != P ? (0, i.jsx)(l.Z.Channel, { channel: P }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: N.name });
     return (0, i.jsxs)(l.Z, {
         children: [

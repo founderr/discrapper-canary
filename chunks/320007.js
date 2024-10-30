@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 });
 var i = n(200651),
@@ -17,9 +17,9 @@ var i = n(200651),
     I = n(175470),
     m = n(203259),
     f = n(356659),
-    T = n(689938);
-function h(e) {
-    let { canShowReminder: t = !1, className: h } = e,
+    h = n(689938);
+function T(e) {
+    let { canShowReminder: t = !1, className: T } = e,
         N = (0, E.Z)(u.Z),
         { showClipsHeaderEntrypoint: p } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
@@ -37,8 +37,8 @@ function h(e) {
         })),
         R = null != S && S.newClipIds.length > 0,
         v = (0, I.n)((e) => e.clipsButtonRef),
-        O = (0, I.n)((e) => e.setClipsButtonRef),
-        M = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
+        M = (0, I.n)((e) => e.setClipsButtonRef),
+        O = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
     function b() {
         (0, r.openModalLazy)(
@@ -57,19 +57,19 @@ function h(e) {
                       A &&
                       R &&
                       !(0, r.hasAnyModalOpen)() &&
-                      !M &&
+                      !O &&
                       (0, i.jsx)(m.Z, {
                           clipIconRef: v,
                           lastClipsSession: S,
                           onOpenClipsGallery: b
                       }),
                   (0, i.jsx)('div', {
-                      ref: O,
+                      ref: M,
                       children: (0, i.jsx)(l.JO, {
-                          className: h,
+                          className: T,
                           icon: r.ClipsIcon,
                           showBadge: g,
-                          tooltip: T.Z.Messages.CLIPS_GALLERY_TOOLTIP,
+                          tooltip: h.Z.Messages.CLIPS_GALLERY_TOOLTIP,
                           onClick: b
                       })
                   })

@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return O;
+        return M;
     },
     Z: function () {
         return v;
@@ -21,8 +21,8 @@ var i = n(200651),
     I = n(695346),
     m = n(271383),
     f = n(594174),
-    T = n(671533),
-    h = n(51144),
+    h = n(671533),
+    T = n(51144),
     N = n(506071),
     p = n(696014),
     C = n(847033),
@@ -45,8 +45,8 @@ function R(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(T.Z, {
-                direction: T.Z.Directions.RIGHT,
+            (0, i.jsx)(h.Z, {
+                direction: h.Z.Directions.RIGHT,
                 className: x.showMoreArrow
             })
         ]
@@ -84,11 +84,11 @@ function v(e) {
                   })
     });
 }
-function O(e) {
+function M(e) {
     var t, n, s;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
-    let { nickname: T, nickcolor: N } =
+    let { nickname: h, nickcolor: N } =
             ((s = I),
             (0, l.cj)(
                 [m.ZP, f.default],
@@ -98,13 +98,13 @@ function O(e) {
                     r()(null != n, 'user cannot be null');
                     let i = m.ZP.getMember(s, n.id);
                     return {
-                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : h.ZP.getName(n),
+                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : T.ZP.getName(n),
                         nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                     };
                 },
                 [s]
             )),
-        { isTruncated: O, ExpandableTextContainer: M } = (0, p.s)(),
+        { isTruncated: M, ExpandableTextContainer: O } = (0, p.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [Z, b] = a.useState(1),
         P = (0, c.Z)('(max-width: 1439px)'),
@@ -113,7 +113,7 @@ function O(e) {
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(M, {
+                      (0, i.jsx)(O, {
                           lineClamp: P || 2 === Z ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
@@ -121,7 +121,7 @@ function O(e) {
                               children: null == E ? void 0 : E.description
                           })
                       }),
-                      O &&
+                      M &&
                           (0, i.jsxs)(i.Fragment, {
                               children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(R, { onClick: () => (0, S.Z)({ guildId: I }) })]
                           })
@@ -169,7 +169,7 @@ function O(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-                                            username: T,
+                                            username: h,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',

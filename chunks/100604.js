@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return T;
+        return h;
     }
 });
 var i = n(933557),
@@ -45,12 +45,12 @@ function f(e, t) {
         })
     };
 }
-class T {
+class h {
     getForwardInfo() {
         var e, t, n, u;
         let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
-            T = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-            h = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+            h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            T = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
             N = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
             C = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
@@ -63,11 +63,11 @@ class T {
                 useOldIcon: x
             };
         let v = (0, d.Xf)(A.message.timestamp),
-            O = m.getChannel(this.parentMessage.channel_id);
-        if (null != O && O.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+            M = m.getChannel(this.parentMessage.channel_id);
+        if (null != M && M.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = m.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
             if (null == e) {
-                let e = p.getGuild(O.guild_id);
+                let e = p.getGuild(M.guild_id);
                 return null == e
                     ? {
                           snapshotIndex: g,
@@ -84,7 +84,7 @@ class T {
                     snapshotIndex: g,
                     useOldIcon: x
                 };
-            let t = (0, i.F6)(e, T, h, !0);
+            let t = (0, i.F6)(e, h, T, !0);
             return {
                 snapshotIndex: g,
                 footerInfo: {
@@ -98,13 +98,13 @@ class T {
                 useOldIcon: x
             };
         }
-        let M = null === (t = S.messageReference) || void 0 === t ? void 0 : t.guild_id;
-        if (null == M)
+        let O = null === (t = S.messageReference) || void 0 === t ? void 0 : t.guild_id;
+        if (null == O)
             return {
                 snapshotIndex: g,
                 useOldIcon: x
             };
-        let L = null !== (u = p.getGuild(M)) && void 0 !== u ? u : C.getGuild(M);
+        let L = null !== (u = p.getGuild(O)) && void 0 !== u ? u : C.getGuild(O);
         return null == L
             ? {
                   snapshotIndex: g,

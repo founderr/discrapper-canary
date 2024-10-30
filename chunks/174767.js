@@ -49,7 +49,7 @@ async function c(e) {
 async function u(e) {
     if (e.platform_type === l.ABu.XBOX) {
         let t = e.parsed_launch_parameters.inviteToken;
-        return !!(0, r.isWindows)() && null != t && (await T(t));
+        return !!(0, r.isWindows)() && null != t && (await h(t));
     }
     throw Error('Unsupported invite platform ' + e.platform_type);
 }
@@ -101,7 +101,7 @@ async function f(e) {
         });
     });
 }
-async function T(e) {
+async function h(e) {
     if (!(0, r.isWindows)()) return !1;
     let t = await (0, s.Z)();
     return new Promise((n, i) => {

@@ -13,8 +13,8 @@ var i,
     I = n(275920),
     m = n(917621),
     f = n(431583),
-    T = n(592745),
-    h = n(952164),
+    h = n(592745),
+    T = n(952164),
     N = n(768419),
     p = n(456432),
     C = n(347475),
@@ -24,8 +24,8 @@ var i,
     x = n(831506),
     R = n(271383),
     v = n(283595),
-    O = n(293273),
-    M = n(594174),
+    M = n(293273),
+    O = n(594174),
     L = n(181106),
     Z = n(417363),
     b = n(768581),
@@ -64,13 +64,13 @@ class G extends (i = s.PureComponent) {
               });
     }
     handleOpenSpotifyTrack(e) {
-        (0, h.aG)(e);
+        (0, T.aG)(e);
     }
     handleOpenSpotifyArtist(e, t, n) {
-        (0, h.d$)(e, t, n);
+        (0, T.d$)(e, t, n);
     }
     handleOpenSpotifyAlbum(e, t) {
-        (0, h.Z5)(e, t);
+        (0, T.Z5)(e, t);
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
@@ -171,7 +171,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'renderEmbed', () => {
                 let e;
-                let { activity: t, partyId: n, myPartyId: i, application: s, partyMembers: r, isPreview: l, isLaunching: o, isSender: c, activityActionType: u, className: d, channelId: _, message: E, hideParty: I, isSyncable: f, isLaunchable: T, guildId: h } = this.props;
+                let { activity: t, partyId: n, myPartyId: i, application: s, partyMembers: r, isPreview: l, isLaunching: o, isSender: c, activityActionType: u, className: d, channelId: _, message: E, hideParty: I, isSyncable: f, isLaunchable: h, guildId: T } = this.props;
                 if (null != s) e = s.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -187,14 +187,14 @@ class G extends (i = s.PureComponent) {
                     className: d,
                     coverImage: this.getCoverImage(),
                     isPreview: l,
-                    isGameLaunchable: T,
+                    isGameLaunchable: h,
                     isLoading: o || this.state.sending,
                     activityActionType: u,
                     isInBrowser: !P.isPlatformEmbedded,
                     isSyncable: f,
                     isSender: c,
                     channelId: _,
-                    guildId: null != h ? h : void 0,
+                    guildId: null != T ? T : void 0,
                     message: E,
                     hideParty: I,
                     onJoin: this.handleJoin,
@@ -212,17 +212,17 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([N.Z, x.Z, O.Z, v.Z, T.Z, Z.Z, A.Z, L.Z, M.default, R.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([N.Z, x.Z, M.Z, v.Z, h.Z, Z.Z, A.Z, L.Z, O.default, R.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? x.Z.getParty(t.party.id) : null,
-            c = null != l ? O.Z.getApplicationActivity(l) : O.Z.findActivity((e) => e.type === U.IIU.LISTENING),
+            c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity((e) => e.type === U.IIU.LISTENING),
             u = !1;
         null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
         let d = Array.from(null != o ? o : []).map((e) => {
                 let t = null != r ? R.ZP.getMember(r, e) : null,
                     n = null != t ? t.nick : null,
-                    i = M.default.getUser(e),
+                    i = O.default.getUser(e),
                     a = null == i;
                 return (
                     null == i && (i = new S.Z({ discriminator: '0005' })),
@@ -247,7 +247,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
                 null != l &&
                 (0, D.t)({
                     LibraryApplicationStore: v.Z,
-                    LaunchableGameStore: T.Z,
+                    LaunchableGameStore: h.Z,
                     DispatchApplicationStore: Z.Z,
                     ConnectedAppsStore: A.Z,
                     applicationId: l

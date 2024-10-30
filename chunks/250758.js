@@ -13,8 +13,8 @@ var i,
     I = n(405656),
     m = n(51144),
     f = n(271383),
-    T = n(768119),
-    h = n(246946),
+    h = n(768119),
+    T = n(246946),
     N = n(594174),
     p = n(981631);
 let C = {},
@@ -88,7 +88,7 @@ function x(e, t, n) {
     let i,
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
     if (null == e || '' === e) return null;
-    if (T.Z.getSearchType(n) === p.aib.GUILD && (e === p.dCx.FILTER_FROM || e === p.dCx.FILTER_MENTIONS)) {
+    if (h.Z.getSearchType(n) === p.aib.GUILD && (e === p.dCx.FILTER_FROM || e === p.dCx.FILTER_MENTIONS)) {
         let e = g[n];
         null == e
             ? (i = null)
@@ -119,13 +119,13 @@ function R(e) {
         n = (function () {
             let e = (0, d.cn)() && !1;
             return {
-                [p.dCx.FILTER_FROM]: !h.Z.hidePersonalInformation,
-                [p.dCx.FILTER_MENTIONS]: !h.Z.hidePersonalInformation,
+                [p.dCx.FILTER_FROM]: !T.Z.hidePersonalInformation,
+                [p.dCx.FILTER_MENTIONS]: !T.Z.hidePersonalInformation,
                 [p.dCx.FILTER_HAS]: !0,
                 [p.dCx.FILTER_BEFORE]: !0,
                 [p.dCx.FILTER_AFTER]: !0,
                 [p.dCx.FILTER_ON]: !0,
-                [p.dCx.FILTER_IN]: T.Z.getSearchType() === p.aib.GUILD,
+                [p.dCx.FILTER_IN]: h.Z.getSearchType() === p.aib.GUILD,
                 [p.dCx.FILTER_PINNED]: !e
             };
         })(),
@@ -148,9 +148,9 @@ function v(e, t) {
                         null != n &&
                             '' !== n &&
                             ((function (e) {
-                                let t = T.Z.getSearchType(e),
+                                let t = h.Z.getSearchType(e),
                                     n = [p.dCx.FILTER_HAS];
-                                return !h.Z.hidePersonalInformation && (n.push(p.dCx.FILTER_FROM), n.push(p.dCx.FILTER_MENTIONS)), t === p.aib.GUILD && n.push(p.dCx.FILTER_IN), n;
+                                return !T.Z.hidePersonalInformation && (n.push(p.dCx.FILTER_FROM), n.push(p.dCx.FILTER_MENTIONS)), t === p.aib.GUILD && n.push(p.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
                                 let a = x(n, e, t, 3);
@@ -182,8 +182,8 @@ function v(e, t) {
                 (0, d.cn)(),
                 n.push(
                     (function (e) {
-                        if (h.Z.hidePersonalInformation) return null;
-                        let t = T.Z.getHistory(e);
+                        if (T.Z.hidePersonalInformation) return null;
+                        let t = h.Z.getHistory(e);
                         return null == t
                             ? null
                             : {
@@ -195,10 +195,10 @@ function v(e, t) {
         n
     );
 }
-function O() {
+function M() {
     (0, I.WU)();
 }
-function M(e) {
+function O(e) {
     let t = C[e];
     if (null == t) return;
     let { query: n, mode: i, tokens: a, cursorScope: s, autocompletes: r } = t;
@@ -212,7 +212,7 @@ function M(e) {
     });
 }
 function L() {
-    let e = T.Z.getCurrentSearchId();
+    let e = h.Z.getCurrentSearchId();
     if (null == e || null == C[e]) return;
     let { query: t, mode: n, tokens: i, cursorScope: a } = C[e];
     C[e] = S({
@@ -226,7 +226,7 @@ function L() {
 }
 class Z extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.ZP, h.Z);
+        this.waitFor(f.ZP, T.Z);
     }
     getState(e) {
         var t;
@@ -275,16 +275,16 @@ let b = new Z(o.Z, {
             n = g[t];
         null != n && (n.context.destroy(), (n.results = []), delete g[t]), delete C[t];
     },
-    CHANNEL_CREATE: O,
-    CHANNEL_DELETE: O,
+    CHANNEL_CREATE: M,
+    CHANNEL_DELETE: M,
     STREAMER_MODE_UPDATE: L,
     SEARCH_SCREEN_OPEN: L,
     SEARCH_CLEAR_HISTORY: function (e) {
         let { searchId: t } = e;
-        null != t ? M(t) : Object.keys(C).forEach(M);
+        null != t ? O(t) : Object.keys(C).forEach(O);
     },
     LOGOUT: function () {
-        Object.keys(C).forEach(M);
+        Object.keys(C).forEach(O);
     }
 });
 t.Z = b;

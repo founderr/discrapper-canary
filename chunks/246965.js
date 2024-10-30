@@ -27,8 +27,8 @@ t.Z = function (e) {
             })(I)
         ),
         f = (0, c.N)(),
-        T = (0, s.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0);
-    return null == f || (null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == f.expires_at || Object.values(T).every((e) => 0 === e)
+        h = (0, s.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0);
+    return null == f || (null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == f.expires_at || Object.values(h).every((e) => 0 === e)
         ? null
         : (0, i.jsxs)(a.Notice, {
               color: (function (e) {
@@ -57,7 +57,7 @@ t.Z = function (e) {
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(I, T),
+                  })(I, h),
                   (0, i.jsx)(a.NoticeButton, {
                       onClick: () => {
                           (0, o.Z)({

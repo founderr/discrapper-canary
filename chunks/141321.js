@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 });
 var i = n(200651),
@@ -17,9 +17,9 @@ var i = n(200651),
     I = n(222940),
     m = n(490897),
     f = n(689938),
-    T = n(233194);
-function h(e) {
-    let { onOpen: t, onClose: n, className: h } = e,
+    h = n(233194);
+function T(e) {
+    let { onOpen: t, onClose: n, className: T } = e,
         N = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         p = a.useRef(null),
         C = (0, s.e7)([d.ZP], () => (null == N ? void 0 : N.id) != null && d.ZP.getMentionCount(N.id, m.W.NOTIFICATION_CENTER) > 0),
@@ -34,7 +34,7 @@ function h(e) {
         children: (e, t, n, a) =>
             (0, i.jsxs)('div', {
                 ref: p,
-                className: T.recentsIcon,
+                className: h.recentsIcon,
                 children: [
                     g &&
                         (0, i.jsx)(I.Z, {
@@ -45,7 +45,7 @@ function h(e) {
                         location: 'inbox-button',
                         children: (0, i.jsx)(c.JO, {
                             ...n,
-                            className: h,
+                            className: T,
                             onClick: e,
                             icon: r.InboxIcon,
                             'aria-label': f.Z.Messages.INBOX,

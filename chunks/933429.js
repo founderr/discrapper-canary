@@ -18,8 +18,8 @@ var i,
     I = n(579806),
     m = n(726542),
     f = n(812206),
-    T = n(223892),
-    h = n(674525),
+    h = n(223892),
+    T = n(674525),
     N = n(605236),
     p = n(353926),
     C = n(594190),
@@ -29,8 +29,8 @@ var i,
     x = n(528011),
     R = n(487419),
     v = n(715903),
-    O = n(223606),
-    M = n(160404),
+    M = n(223606),
+    O = n(160404),
     L = n(41776),
     Z = n(347649),
     b = n(332473),
@@ -72,8 +72,8 @@ var i,
     eI = n(979651),
     em = n(351402),
     ef = n(853872),
-    eT = n(78839),
-    eh = n(295226),
+    eh = n(78839),
+    eT = n(295226),
     eN = n(580130),
     ep = n(695103),
     eC = n(358085),
@@ -83,8 +83,8 @@ var i,
     ex = n(941128),
     eR = n(981631),
     ev = n(188785),
-    eO = n(474936),
-    eM = n(46140),
+    eM = n(474936),
+    eO = n(46140),
     eL = n(231338),
     eZ = n(65154);
 let eb = {
@@ -189,7 +189,7 @@ let eF = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
         [eR.kVF.VIEWING_ROLES]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return M.Z.isViewingRoles(t);
+                return O.Z.isViewingRoles(t);
             }
         },
         [eR.kVF.INVITED_TO_SPEAK]: {
@@ -345,15 +345,15 @@ let eF = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
             metadata: () => ({ dismissUntil: o()().add(5, 'days').toDate() })
         },
         [eR.kVF.CONNECT_PLAYSTATION]: { predicate: () => J.Z.isSuggestedAccountType(eR.ABu.PLAYSTATION) && null == J.Z.getAccount(null, eR.ABu.PLAYSTATION) && !eG(eR.kVF.CONNECT_PLAYSTATION) },
-        [eR.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eh.Z.getAlmostExpiringTrialOffers([eO.Si.TIER_2]).length > 0 && !eG(eR.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
-        [eR.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eh.Z.getAlmostExpiringTrialOffers([eO.Si.TIER_0]).length > 0 && !eG(eR.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
+        [eR.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eM.Si.TIER_2]).length > 0 && !eG(eR.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
+        [eR.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eM.Si.TIER_0]).length > 0 && !eG(eR.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
         [eR.kVF.PREMIUM_UNCANCEL]: {
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
                     a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eR.O0b.CANCELED && 1 >= o()().diff(o()(t.canceledAt), 'days'),
                     s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    r = null != t && t.status === eR.O0b.CANCELED && !s && i <= 7 && i >= 0 && (0, eg.M5)(n, eO.p9.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    r = null != t && t.status === eR.O0b.CANCELED && !s && i <= 7 && i >= 0 && (0, eg.M5)(n, eM.p9.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eG(eR.kVF.PREMIUM_UNCANCEL) && r;
             },
             metadata: (e) => {
@@ -374,8 +374,8 @@ let eF = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
                     a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0,
                     s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    r = eN.Z.applicationIdsFetched.has(eO.CL),
-                    l = eN.Z.getForApplication(eO.CL),
+                    r = eN.Z.applicationIdsFetched.has(eM.CL),
+                    l = eN.Z.getForApplication(eM.CL),
                     c = null != t ? (0, eg.Af)(t) : null,
                     u = null != c ? eg.ZP.getSkuIdForPlan(c.planId) : null,
                     d =
@@ -485,19 +485,19 @@ let eF = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
                     n = null != t ? et.Z.getGuild(t) : null;
-                return (null != t && null != O.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eR.oNc.COMMUNITY)) && !eG(eR.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
+                return (null != t && null != M.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eR.oNc.COMMUNITY)) && !eG(eR.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
             },
             metadata: (e) => {
                 let { selectedGuildId: t } = e,
                     n = { dismissUntil: o()().add(2, 'hours').toDate() };
                 if (null != t) {
-                    let e = O.Z.getMentionRaidDetected(t);
+                    let e = M.Z.getMentionRaidDetected(t);
                     null != e && (n.decisionId = e.decisionId);
                 }
                 return n;
             }
         },
-        [eR.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eG(eR.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== h.Z.getEligibleGuildsForNagActivate().length && (0, T.Lm)() },
+        [eR.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eG(eR.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== T.Z.getEligibleGuildsForNagActivate().length && (0, h.Lm)() },
         [eR.kVF.SAFETY_USER_SENTIMENT_NAGBAR]: {
             predicate: (e) => {
                 let { currentUser: t } = e;
@@ -510,7 +510,7 @@ let eF = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
                 if (null == e) return !1;
                 let t = (0, S.V9)(e),
                     n = F.Z.getStreamHeartbeatFailure(t);
-                return null != n && Date.now() - n.firstFailedAt >= eM.Ot;
+                return null != n && Date.now() - n.firstFailedAt >= eO.Ot;
             },
             metadata: () => {
                 let e = K.Z.getCurrentUserActiveStream();
@@ -535,7 +535,7 @@ function eH() {
     ey = null;
     let e = eE.default.getCurrentUser();
     if (null == e) return !1;
-    let t = eT.ZP.getPremiumSubscription(),
+    let t = eh.ZP.getPremiumSubscription(),
         n = em.Z.isLocalizedPromoEnabled,
         i = eo.Z.getGuildId(),
         a = el.Z.getVoiceChannelId(),
@@ -577,7 +577,7 @@ function eY() {
 }
 class eW extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([ed.Z, es.Z, $.Z, eo.Z, B.Z, eh.Z, X.Z, J.Z, W.Z, R.Z, F.Z, K.Z], eH), this.waitFor(eE.default, ec.Z, et.Z, ee.ZP, er.Z, en.Z, eu.Z, p.Z, eo.Z, e_.Z, H.Z, C.ZP, es.Z, eS.Z, eA.Z, ep.Z, ei.Z, eT.ZP, ex.Z, $.Z, ef.Z, ea.Z, B.Z, eN.Z, eh.Z, J.Z, L.Z, h.Z, G.Z, F.Z, K.Z);
+        this.syncWith([ed.Z, es.Z, $.Z, eo.Z, B.Z, eT.Z, X.Z, J.Z, W.Z, R.Z, F.Z, K.Z], eH), this.waitFor(eE.default, ec.Z, et.Z, ee.ZP, er.Z, en.Z, eu.Z, p.Z, eo.Z, e_.Z, H.Z, C.ZP, es.Z, eS.Z, eA.Z, ep.Z, ei.Z, eh.ZP, ex.Z, $.Z, ef.Z, ea.Z, B.Z, eN.Z, eT.Z, J.Z, L.Z, T.Z, G.Z, F.Z, K.Z);
     }
     hasNotice() {
         return null != ey && null != ey.type;

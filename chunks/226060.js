@@ -20,10 +20,10 @@ var a = n(512722),
 function f(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: a } = e,
         f = (0, r.e7)([_.Z], () => _.Z.getGuildProduct(n)),
-        T = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        h = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        h = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        T = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         N = (0, u.n)();
-    if ((s()(null != T, 'guild cannot be null'), s()(null != f, 'guildProductListing cannot be null'), (0, d.SO)(T)))
+    if ((s()(null != h, 'guild cannot be null'), s()(null != f, 'guildProductListing cannot be null'), (0, d.SO)(h)))
         return (0, i.jsx)(l.Tooltip, {
             text: m.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
             children: (e) =>
@@ -37,18 +37,18 @@ function f(e) {
     if (!f.has_entitlement)
         return (0, i.jsx)(l.ShinyButton, {
             shineSize: l.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: h || !N,
+            pauseAnimation: T || !N,
             onClick: () =>
                 (0, E.z)({
                     guildProductListing: f,
-                    guildId: T.id,
+                    guildId: h.id,
                     sourceAnalyticsLocations: a
                 }),
             children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
         });
     return null != f.attachments
         ? (0, i.jsx)(I.Z, {
-              guildId: T.id,
+              guildId: h.id,
               productId: f.id
           })
         : (0, i.jsx)(l.Button, {

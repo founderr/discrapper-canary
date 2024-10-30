@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(100527),
     m = n(367907),
     f = n(676742),
-    T = n(1585),
-    h = n(841762),
+    h = n(1585),
+    T = n(841762),
     N = n(336197),
     p = n(406432),
     C = n(348238),
@@ -29,8 +29,8 @@ var i = n(200651),
     x = n(695346),
     R = n(271383),
     v = n(594174),
-    O = n(768581),
-    M = n(900849),
+    M = n(768581),
+    O = n(900849),
     L = n(506071),
     Z = n(495114),
     b = n(170140),
@@ -80,7 +80,7 @@ function B(e) {
                     can_access: G.canAccess,
                     is_member: Q
                 }),
-                G.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await M.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+                G.canAccess ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : Q ? (0, N.Z)(P.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await O.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
         }, [G, k, Q]),
         el = a.useCallback(
             () => (
@@ -105,9 +105,9 @@ function B(e) {
                 newAnalyticsLocations: t
             })
         ),
-        ec = (0, O.NZ)({
+        ec = (0, M.NZ)({
             avatarDecoration: J,
-            size: (0, T.y9)(_.AvatarSizes.SIZE_40),
+            size: (0, h.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
         eu = null === (n = G.user) || void 0 === n ? void 0 : n.getAvatarURL(G.guildId, 40, en),
@@ -133,7 +133,7 @@ function B(e) {
                                   onContextMenu: w,
                                   onError: () => z(!0)
                               })
-                            : (0, i.jsx)(h.Z, {
+                            : (0, i.jsx)(T.Z, {
                                   src: !(H && (V || Y)) && eE ? ''.concat(e_, '?format=png') : e_,
                                   backgroundSrc: ''.concat(e_, '?format=png'),
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,

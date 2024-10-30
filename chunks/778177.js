@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(442837),
     m = n(481060),
     f = n(603263),
-    T = n(542051),
-    h = n(349033),
+    h = n(542051),
+    T = n(349033),
     N = n(999650),
     p = n(933557),
     C = n(471445),
@@ -24,8 +24,8 @@ var i = n(200651),
     x = n(250758),
     R = n(944486),
     v = n(914010),
-    O = n(246946),
-    M = n(594174),
+    M = n(246946),
+    O = n(594174),
     L = n(585483),
     Z = n(63063),
     b = n(405656),
@@ -56,7 +56,7 @@ let k = _()('2015-05-15').local(),
         var a, s, r;
         let { user: l, text: o } = n;
         if (null == l) return (0, i.jsx)('strong', { children: o });
-        let c = M.default.getUser(l.id),
+        let c = O.default.getUser(l.id),
             u = g.Z.getChannel(e),
             d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
             _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : P.ZP.getName(l),
@@ -83,7 +83,7 @@ let k = _()('2015-05-15').local(),
                 'span',
                 {
                     className: y.displayUsername,
-                    children: P.ZP.getUserTag(l, { identifiable: O.Z.enabled && O.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: P.ZP.getUserTag(l, { identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(l.id)
             )
@@ -98,11 +98,11 @@ let k = _()('2015-05-15').local(),
             className: y.resultChannel,
             children: [
                 null != l ? (0, i.jsx)(l, { className: y.searchResultChannelIcon }) : null,
-                (0, i.jsx)('strong', { children: (0, p.F6)(a, M.default, A.Z) }),
+                (0, i.jsx)('strong', { children: (0, p.F6)(a, O.default, A.Z) }),
                 null != r
                     ? (0, i.jsx)('span', {
                           className: y.searchResultChannelCategory,
-                          children: (0, p.F6)(r, M.default, A.Z)
+                          children: (0, p.F6)(r, O.default, A.Z)
                       })
                     : null
             ]
@@ -111,16 +111,16 @@ let k = _()('2015-05-15').local(),
     V = (e) => {
         let t,
             n,
-            { id: a, searchId: s, result: l, group: o, className: c, role: u, tabIndex: d, 'aria-selected': _, onSelect: E, onFocus: I, showFilter: f, renderResult: T } = e;
+            { id: a, searchId: s, result: l, group: o, className: c, role: u, tabIndex: d, 'aria-selected': _, onSelect: E, onFocus: I, showFilter: f, renderResult: h } = e;
         if (f) {
-            var h, p;
+            var T, p;
             t = (0, i.jsx)('span', {
                 className: y.filter,
-                children: null !== (p = null === (h = N.ZP[o]) || void 0 === h ? void 0 : h.key) && void 0 !== p ? p : 'addme:'
+                children: null !== (p = null === (T = N.ZP[o]) || void 0 === T ? void 0 : T.key) && void 0 !== p ? p : 'addme:'
             });
         }
         return (
-            (n = null != T ? T(s, o, l) : (0, i.jsx)('strong', { children: l.text })),
+            (n = null != h ? h(s, o, l) : (0, i.jsx)('strong', { children: l.text })),
             (0, i.jsxs)(m.Clickable, {
                 tag: 'li',
                 className: r()(y.option, c),
@@ -200,7 +200,7 @@ let k = _()('2015-05-15').local(),
                     E = a
                         .useMemo(() => {
                             var e;
-                            return (e = s.text), b.kG(e).map((e, t, n) => (b.Fr(e, n[t + 1]) ? e : new h.WU(e.getFullMatch(), h.Xe)));
+                            return (e = s.text), b.kG(e).map((e, t, n) => (b.Fr(e, n[t + 1]) ? e : new T.WU(e.getFullMatch(), T.Xe)));
                         }, [s.text])
                         .map((e) => {
                             let t = e.getFullMatch();
@@ -301,7 +301,7 @@ class W extends a.PureComponent {
     render() {
         let { selectedIndex: e } = this.state,
             { navId: t, resultsState: n, totalResults: a, searchId: s } = this.props;
-        return (0, i.jsx)(T.Z, {
+        return (0, i.jsx)(h.Z, {
             numResults: a,
             query: n.query,
             navId: t,
@@ -471,7 +471,7 @@ class W extends a.PureComponent {
                                             showFilter: f,
                                             onSelect: this.selectOption.bind(null, r),
                                             onFocus: this.focusOption.bind(null, r),
-                                            ...(0, T.M)(t, r, c)
+                                            ...(0, h.M)(t, r, c)
                                         },
                                         ''
                                             .concat(a.group, '-')

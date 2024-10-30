@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(409813),
     m = n(791785),
     f = n(961830),
-    T = n(742956),
-    h = n(346790),
+    h = n(742956),
+    T = n(346790),
     N = n(49308),
     p = n(117652),
     C = n(126982),
@@ -30,7 +30,7 @@ var i = n(200651),
     R = n(556709);
 function v(e) {
     var t;
-    let { onClose: n, onComplete: s, onStepChange: v, transitionState: O, loadId: M, skuId: L, isGift: Z = !1, giftRecipient: b, giftMessage: P, giftingOrigin: D, analyticsLocations: j, returnRef: U } = e,
+    let { onClose: n, onComplete: s, onStepChange: v, transitionState: M, loadId: O, skuId: L, isGift: Z = !1, giftRecipient: b, giftMessage: P, giftingOrigin: D, analyticsLocations: j, returnRef: U } = e,
         { analyticsLocations: y } = (0, u.ZP)([...j, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
         B = a.useRef(new l.qA()),
         [k, G] = a.useState(null),
@@ -53,7 +53,7 @@ function v(e) {
             () => [
                 f.WA,
                 p.Dd,
-                h.n,
+                T.n,
                 ...f.yp,
                 f.wo,
                 {
@@ -90,7 +90,7 @@ function v(e) {
                     'aria-hidden': !0
                 }),
             (0, i.jsx)(E.PaymentContextProvider, {
-                loadId: M,
+                loadId: O,
                 stepConfigs: Q,
                 applicationId: g.XAJ,
                 skuIDs: Y,
@@ -109,10 +109,10 @@ function v(e) {
                         skuId: W,
                         initialPlanId: null,
                         analyticsLocations: y,
-                        transitionState: O,
+                        transitionState: M,
                         renderHeader: (e, t, n) =>
                             Z
-                                ? (0, i.jsx)(T.Z, {
+                                ? (0, i.jsx)(h.Z, {
                                       step: n,
                                       onClose: () => t(!1)
                                   })

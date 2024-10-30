@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(778569),
     m = n(182906),
     f = n(884338),
-    T = n(100527),
-    h = n(906732),
+    h = n(100527),
+    T = n(906732),
     N = n(835473),
     p = n(471445),
     C = n(111028),
@@ -31,15 +31,15 @@ var i = n(200651),
     x = n(430824),
     R = n(496675),
     v = n(594174),
-    O = n(624138),
-    M = n(358595),
+    M = n(624138),
+    O = n(358595),
     L = n(981631),
     Z = n(245335),
     b = n(689938),
     P = n(610935);
-let D = (0, O.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    j = (0, O.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    U = (0, O.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let D = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    j = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    U = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let { members: t, membersOnline: n, isLarge: a, isStacked: s } = e,
         l = [];
@@ -139,7 +139,7 @@ function k(e) {
     let s,
         l,
         { invite: u, getAcceptInviteContext: p } = e,
-        { approximate_member_count: C, approximate_presence_count: O, target_type: k, target_application: G } = u;
+        { approximate_member_count: C, approximate_presence_count: M, target_type: k, target_application: G } = u;
     o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
     let F = a.useRef(null),
         [w, V] = a.useState(!1),
@@ -175,7 +175,7 @@ function k(e) {
         }),
         Q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
         q = (0, c.e7)([R.Z], () => null != Q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
-        { analyticsLocations: J } = (0, h.ZP)(T.Z.INVITE_EMBED),
+        { analyticsLocations: J } = (0, T.ZP)(h.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: G.id,
             size: D,
@@ -195,7 +195,7 @@ function k(e) {
         en = u.state === L.r2o.ACCEPTING,
         ei = null != W;
     if (null == W) {
-        if (null == u.guild) return (0, i.jsx)(M.Z, {});
+        if (null == u.guild) return (0, i.jsx)(O.Z, {});
         W = new S.ZP(u.guild);
     }
     let ea = (ei && !q) || (ei && z),
@@ -278,7 +278,7 @@ function k(e) {
                                       ? null
                                       : (0, i.jsx)(y, {
                                             members: C,
-                                            membersOnline: O,
+                                            membersOnline: M,
                                             isLarge: w,
                                             isStacked: H
                                         }),

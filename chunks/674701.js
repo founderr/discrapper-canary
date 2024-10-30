@@ -20,8 +20,8 @@ var i,
     I = n(758059),
     m = n(700582),
     f = n(906732),
-    T = n(213609),
-    h = n(541716),
+    h = n(213609),
+    T = n(541716),
     N = n(28546),
     p = n(963249),
     C = n(703656),
@@ -31,8 +31,8 @@ var i,
     x = n(479446),
     R = n(795448),
     v = n(441623),
-    O = n(317271),
-    M = n(474936),
+    M = n(317271),
+    O = n(474936),
     L = n(981631),
     Z = n(182294),
     b = n(957825),
@@ -44,7 +44,7 @@ function j(e) {
         { analyticsLocations: F } = (0, f.ZP)(),
         w = (0, u.e7)([v.Z], () => v.Z.getFriendAnniversaryYears(i.id));
     r.useEffect(() => {
-        (0, T.h)({
+        (0, h.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
             type: c.ImpressionTypes.VIEW,
             properties: {
@@ -55,7 +55,7 @@ function j(e) {
         });
     }, [t, n]);
     let V = () => {
-            if (t === M.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: w });
+            if (t === O.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: w });
             return (0, x.Ou)(t);
         },
         H = 'coachmark' === n,
@@ -105,7 +105,7 @@ function j(e) {
                                     color: H ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === M.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: A.ZP.getName(i) });
+                                        if (t === O.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_HEADER.format({ friendUserName: A.ZP.getName(i) });
                                         return (0, x.Ou)(t);
                                     })()
                                 }),
@@ -113,7 +113,7 @@ function j(e) {
                                     className: z,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === M.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: w });
+                                        if (t === O.hX.FRIEND_ANNIVERSARY) return P.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY_CARD_SUB_HEADER_V2.format({ numberOfYears: w });
                                         return (0, x.Ou)(t);
                                     })()
                                 })
@@ -133,13 +133,13 @@ function j(e) {
                                             gift_intent_type: t,
                                             cta_type: k
                                         }),
-                                        k === M.X2.VIEW_ALL
+                                        k === O.X2.VIEW_ALL
                                             ? ((0, C.uL)(L.Z5c.FRIENDS), I.Z.setSection(L.pJs.ALL))
-                                            : k === M.X2.SEND_MESSAGE &&
+                                            : k === O.X2.SEND_MESSAGE &&
                                               ((0, R.PV)(i.id),
                                               E.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
-                                                      (0, N.PG)(b.X1.GIF, h.I.NORMAL),
+                                                      (0, N.PG)(b.X1.GIF, T.I.NORMAL),
                                                           setTimeout(() => {
                                                               (0, N.ql)(P.Z.Messages.PREMIUM_GIFTING_INTENT_GIF_SEARCH_SUGGESTION, !0);
                                                           }, 50);
@@ -156,9 +156,9 @@ function j(e) {
                                         className: o()(D.buttonText, D.buttonTextSecondary),
                                         children: (() => {
                                             switch (k) {
-                                                case M.X2.VIEW_ALL:
+                                                case O.X2.VIEW_ALL:
                                                     return P.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_VIEW_ALL_SECONDARY_CTA;
-                                                case M.X2.SEND_MESSAGE:
+                                                case O.X2.SEND_MESSAGE:
                                                     return P.Z.Messages.PREMIUM_GIFTING_INTENT_CARD_GIF_SECONDARY_CTA;
                                                 default:
                                                     return;
@@ -171,7 +171,7 @@ function j(e) {
                             className: D.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let a = (0, O.F)(t);
+                                let a = (0, M.F)(t);
                                 (0, p.Z)({
                                     isGift: !0,
                                     initialPlanId: null,

@@ -18,15 +18,15 @@ var a = n(442837),
     I = n(598),
     m = n(409813),
     f = n(614277),
-    T = n(474936),
-    h = n(689938),
+    h = n(474936),
+    T = n(689938),
     N = n(829294);
 let p = {
     key: m.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, i.jsx)(g, { ...e }),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => h.Z.Messages.GIFT_CARD_SELECTION
+        useBreadcrumbLabel: () => T.Z.Messages.GIFT_CARD_SELECTION
     }
 };
 function C(e) {
@@ -39,7 +39,7 @@ function C(e) {
                 onClick: () => t(c),
                 disabled: r,
                 submitting: l,
-                children: h.Z.Messages.PAGINATION_NEXT
+                children: T.Z.Messages.PAGINATION_NEXT
             }),
             a ? (0, i.jsx)(d.Z, { onClick: n }) : null
         ]
@@ -68,7 +68,7 @@ function g(e) {
                                     className: N.sendTo
                                 }),
                                 (0, i.jsx)(c.Z, {
-                                    sectionTitle: h.Z.Messages.GIFT_OPTIONAL_MESSAGE,
+                                    sectionTitle: T.Z.Messages.GIFT_OPTIONAL_MESSAGE,
                                     onTextChange: (e) => (null == m ? void 0 : m(e)),
                                     pendingText: d,
                                     currentText: d,
@@ -93,7 +93,7 @@ function g(e) {
                     children: (0, i.jsx)(C, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != p || null == S || S.id === (null == R ? void 0 : R.id) || d.length > T.$n,
+                        disabled: null != p || null == S || S.id === (null == R ? void 0 : R.id) || d.length > h.$n,
                         loading: g
                     })
                 })

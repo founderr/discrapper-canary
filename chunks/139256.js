@@ -33,8 +33,8 @@ var i,
     I = n(124347),
     m = n(695346),
     f = n(186523),
-    T = n(553826),
-    h = n(506071),
+    h = n(553826),
+    T = n(506071),
     N = n(203143),
     p = n(79390),
     C = n(839963),
@@ -51,7 +51,7 @@ function v(e) {
         children: n
     });
 }
-function O(e) {
+function M(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)('div', {
         'aria-label': x.Z.Messages.POLL_OPTIONS_ARIA,
@@ -60,7 +60,7 @@ function O(e) {
         children: n
     });
 }
-function M(e) {
+function O(e) {
     let { className: t, children: n } = e,
         i = (0, u.useRadioGroup)({ orientation: 'vertical' });
     return (0, s.jsx)('div', {
@@ -104,11 +104,11 @@ function b(e) {
             answersInteraction: n
         })
             .with({ answersInteraction: C.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: M,
+                ContainerComponent: O,
                 answerElementType: 1
             }))
             .with({ answersInteraction: C.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: O,
+                ContainerComponent: M,
                 answerElementType: 2
             }))
             .with(
@@ -185,7 +185,7 @@ function P(e) {
 function D(e) {
     var t;
     let { attachment: n, className: i } = e,
-        a = (0, h.n)(),
+        a = (0, T.n)(),
         r = m.QK.useSetting();
     return (0, s.jsx)(I.ZP, {
         className: i,
@@ -295,7 +295,7 @@ function k(e) {
             'aria-hidden': !0
         };
     return t
-        ? (0, s.jsx)(T.Z, {
+        ? (0, s.jsx)(h.Z, {
               ...a,
               foreground: R.radioForeground,
               className: i

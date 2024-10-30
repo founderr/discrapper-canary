@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(585483),
     m = n(115610),
     f = n(981631),
-    T = n(689938),
-    h = n(809858);
+    h = n(689938),
+    T = n(809858);
 function N(e) {
     let { message: t, channel: s, compact: N } = e,
         p = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
@@ -36,22 +36,22 @@ function N(e) {
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(h.mainContainer, { [h.compact]: N }),
+                      className: r()(T.mainContainer, { [T.compact]: N }),
                       icon: n(570111),
                       compact: N,
                       children: (0, i.jsx)('div', {
-                          className: r()(h.__invalid_content, { [h.compact]: N }),
+                          className: r()(T.__invalid_content, { [T.compact]: N }),
                           children: (0, i.jsx)('div', {
-                              className: r()(h.__invalid_messageContent, { [h.compact]: N }),
-                              children: '' !== t.content ? t.content : T.Z.Messages.DEADCHAT_PROMPT_1
+                              className: r()(T.__invalid_messageContent, { [T.compact]: N }),
+                              children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: h.actions,
+                      className: T.actions,
                       children: [
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: T.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
+                              text: h.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {
@@ -75,7 +75,7 @@ function N(e) {
                               })
                           }),
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: T.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
+                              text: h.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {

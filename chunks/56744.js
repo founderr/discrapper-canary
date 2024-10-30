@@ -27,18 +27,18 @@ let E = a.memo(function (e) {
                     : null,
             [I, m]
         ),
-        T = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
-        h = (0, u.Uj)(I),
+        h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
+        T = (0, u.Uj)(I),
         N = (0, u.Uj)(t);
     return (0, i.jsx)(d.Z, {
-        repliedAuthor: h,
+        repliedAuthor: T,
         baseAuthor: N,
         baseMessage: t,
         channel: n,
         referencedMessage: _,
         content: f,
         compact: E,
-        isReplyAuthorBlocked: T,
+        isReplyAuthorBlocked: h,
         isReplySpineClickable: !1,
         showReplySpine: !0
     });

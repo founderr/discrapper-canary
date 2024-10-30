@@ -23,21 +23,21 @@ function E(e) {
             guildId: void 0,
             messageId: void 0
         })(),
-        T = (0, s.q)(t.applicationId);
-    if (null == T) return null;
-    let h = d.Z.Messages.SYSTEM_MESSAGE_IN_GAME_MESSAGE_NUX.format({
+        h = (0, s.q)(t.applicationId);
+    if (null == h) return null;
+    let T = d.Z.Messages.SYSTEM_MESSAGE_IN_GAME_MESSAGE_NUX.format({
         username: m,
         usernameHook: f,
-        gameName: T.name,
+        gameName: h.name,
         gameIconHook: (e) =>
             (0, i.jsx)(o.j, {
-                application: T,
+                application: h,
                 timestamp: t.timestamp,
                 children: (0, i.jsxs)('span', {
                     className: _.gameContainer,
                     children: [
                         (0, i.jsx)(r.Z, {
-                            game: T,
+                            game: h,
                             size: r.Z.Sizes.XXSMALL,
                             className: _.inlineIcon
                         }),
@@ -52,6 +52,6 @@ function E(e) {
         iconNode: (0, i.jsx)(a.iWm, { size: 'sm' }),
         compact: I,
         contentClassName: _.content,
-        children: (0, i.jsx)('div', { children: h })
+        children: (0, i.jsx)('div', { children: T })
     });
 }

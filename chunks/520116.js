@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return M;
     }
 }),
     n(653041);
@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(661824),
     m = n(37772),
     f = n(695346),
-    T = n(314897),
-    h = n(496675),
+    h = n(314897),
+    T = n(496675),
     N = n(594174),
     p = n(55935),
     C = n(655354),
@@ -74,16 +74,16 @@ function v(e) {
         )
     });
 }
-function O(e) {
+function M(e) {
     var t, n;
     let { channel: a, channelRecord: s, gotoChannel: l } = e,
         { enabled: m } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         C = f.jU.useSetting(),
-        R = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)),
-        O = (0, E.P1)(s),
-        M = !1,
+        R = (0, o.e7)([T.Z], () => T.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)),
+        M = (0, E.P1)(s),
+        O = !1,
         L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'),
-        Z = null !== (n = null === (t = N.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
+        Z = null !== (n = null === (t = N.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
         b = [];
     if (!a.collapsed) {
         let e = null,
@@ -107,7 +107,7 @@ function O(e) {
                 }
                 let a = null == t || (0, _.Z)(s, t, n);
                 (t = n),
-                    (M = M || (0, E.DQ)(n)),
+                    (O = O || (0, E.DQ)(n)),
                     b.push(
                         (0, i.jsx)(
                             v,
@@ -116,7 +116,7 @@ function O(e) {
                                 message: n,
                                 compact: C,
                                 isGroupStart: a,
-                                treatSpam: !Z && m && (0, E.DQ)(n) && O,
+                                treatSpam: !Z && m && (0, E.DQ)(n) && M,
                                 gotoChannel: l
                             },
                             n.id
@@ -140,7 +140,7 @@ function O(e) {
             0 === b.length && (b = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        M && O && u.Z.trackExposure({ location: '20e3b0_2' }),
+        O && M && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: x.messages,
             children: b

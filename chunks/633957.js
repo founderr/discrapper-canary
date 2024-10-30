@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(906732),
     m = n(895924),
     f = n(973616),
-    T = n(314897),
-    h = n(592125),
+    h = n(314897),
+    T = n(592125),
     N = n(158776),
     p = n(594174),
     C = n(823379),
@@ -30,11 +30,11 @@ var i = n(200651),
 function R(e) {
     var t;
     let { application: n, channelId: R, guildId: v } = e,
-        { analyticsLocations: O } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
-        M = (0, l.O)(),
-        L = (0, s.e7)([h.Z], () => h.Z.getChannel(R)),
+        { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
+        O = (0, l.O)(),
+        L = (0, s.e7)([T.Z], () => T.Z.getChannel(R)),
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : R,
-        b = (0, s.e7)([T.default], () => T.default.getId()),
+        b = (0, s.e7)([h.default], () => h.default.getId()),
         {
             embeddedActivity: P,
             currentEmbeddedActivity: D,
@@ -78,16 +78,16 @@ function R(e) {
                 ? await (0, u.Z)({
                       targetApplicationId: n.id,
                       channelId: R,
-                      locationObject: M.location,
-                      analyticsLocations: O,
+                      locationObject: O.location,
+                      analyticsLocations: M,
                       componentId: w,
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
                       applicationId: P.applicationId,
                       activityChannelId: R,
-                      locationObject: M.location,
-                      analyticsLocations: O,
+                      locationObject: O.location,
+                      analyticsLocations: M,
                       componentId: w
                   });
         },

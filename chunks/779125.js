@@ -18,8 +18,8 @@ var a = n(442837),
     I = n(699516),
     m = n(594174),
     f = n(934415),
-    T = n(900849),
-    h = n(981631);
+    h = n(900849),
+    T = n(981631);
 function N(e) {
     let { channel: t, onClick: n, beforeTransition: N, className: p, openChatWithoutConnecting: C } = e,
         g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
@@ -42,19 +42,19 @@ function N(e) {
                                   if (null == e || null == t) return;
                                   let i = E.Z.getGuild(e);
                                   if ((null == i ? void 0 : i.joinedAt) == null) {
-                                      T.Ub(e, {}, { channelId: t });
+                                      h.Ub(e, {}, { channelId: t });
                                       return;
                                   }
                                   let a = _.Z.getChannel(t);
                                   if (null != a && (0, d.bw)(a.type)) {
                                       if (n) {
-                                          r.Z.updateChatOpen(a.id, !0), (0, u.uL)(h.Z5c.CHANNEL(e, t));
+                                          r.Z.updateChatOpen(a.id, !0), (0, u.uL)(T.Z5c.CHANNEL(e, t));
                                           return;
                                       }
                                       l.default.selectVoiceChannel(a.id);
                                       return;
                                   }
-                                  (0, u.uL)(h.Z5c.CHANNEL(e, t));
+                                  (0, u.uL)(T.Z5c.CHANNEL(e, t));
                               })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, C));
                 },
                 onMouseEnter: a,

@@ -18,21 +18,21 @@ var a = n(399606),
     I = n(942833),
     m = n(391181),
     f = n(964793),
-    T = n(226060),
-    h = n(981631);
+    h = n(226060),
+    T = n(981631);
 function N(e) {
     let { guildProductListing: t, guildId: n, location: N, shouldShowFullDescriptionButton: p = !0, hideRoleTag: C = !1, lineClamp: g = 1, cardWidth: S, cardHeight: A, thumbnailHeight: x, descriptionTextVariant: R = 'text-sm/normal', showOpaqueBackground: v = !1 } = e,
-        O = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
-        M = (0, a.e7)([o.Z], () => {
+        M = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
+        O = (0, a.e7)([o.Z], () => {
             var e;
-            return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.lds);
+            return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : T.lds);
         }),
         L = (0, s.U)(t, 600),
         Z = (0, I.C)(t),
-        b = (0, u.SO)(O),
+        b = (0, u.SO)(M),
         { shouldHideGuildPurchaseEntryPoints: P } = (0, l.uP)(n),
         D = (0, I.k)(t);
-    if (null == O || P) return null;
+    if (null == M || P) return null;
     let j = () =>
             (0, f.e)({
                 guildId: n,
@@ -50,7 +50,7 @@ function N(e) {
             showReportProduct: !0,
             onEditProduct: b
                 ? () => {
-                      _.h(O.id, t.id);
+                      _.h(M.id, t.id);
                   }
                 : () => {},
             onUnpublishProduct: () => {},
@@ -70,8 +70,8 @@ function N(e) {
             name: t.name,
             description: t.description,
             formattedPrice: D,
-            role: M,
-            ctaComponent: (0, i.jsx)(T.Z, {
+            role: O,
+            ctaComponent: (0, i.jsx)(h.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
                 sourceAnalyticsLocations: N

@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(594174),
     m = n(626135),
     f = n(135431),
-    T = n(674588),
-    h = n(264043),
+    h = n(674588),
+    T = n(264043),
     N = n(132871),
     p = n(147890),
     C = n(981631),
@@ -28,7 +28,7 @@ var i = n(200651),
 function A(e) {
     var t, n, A;
     let { code: x, message: R } = e,
-        [v, O, M] = (0, l.Wu)([h.Z], () => [h.Z.getApplication(x), h.Z.isInvalidApplication(x), h.Z.getApplicationFetchState(x)], [x]),
+        [v, M, O] = (0, l.Wu)([T.Z], () => [T.Z.getApplication(x), T.Z.isInvalidApplication(x), T.Z.getApplicationFetchState(x)], [x]),
         L = (0, l.e7)([d.default], () => d.default.locale),
         Z = (0, l.e7)([E.Z], () => {
             var e;
@@ -41,11 +41,11 @@ function A(e) {
         }, []),
         U = (0, c.O)(j);
     a.useEffect(() => {
-        (0, T.gZ)(x);
+        (0, h.gZ)(x);
     }, [x]),
         a.useEffect(() => {
             P &&
-                M === h.M.FETCHED &&
+                O === T.M.FETCHED &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: x,
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
@@ -53,17 +53,17 @@ function A(e) {
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [P, x, null == b ? void 0 : b.id, R.channel_id, Z, R.author.id, M]),
+        }, [P, x, null == b ? void 0 : b.id, R.channel_id, Z, R.author.id, O]),
         a.useEffect(() => {
             P &&
-                O &&
+                M &&
                 m.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: R.author.id,
                     guild_id: Z,
                     channel_id: R.channel_id
                 });
-        }, [P, Z, O, R.author.id, R.channel_id]);
+        }, [P, Z, M, R.author.id, R.channel_id]);
     let y = (e) => {
         m.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: x,
@@ -79,7 +79,7 @@ function A(e) {
                 entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
-    if (O)
+    if (M)
         return (0, i.jsxs)(u.Z, {
             containerRef: U,
             children: [
@@ -99,7 +99,7 @@ function A(e) {
                 })
             ]
         });
-    if (null == v || M === h.M.FETCHING)
+    if (null == v || O === T.M.FETCHING)
         return (0, i.jsxs)(u.Z, {
             containerRef: U,
             children: [(0, i.jsx)(u.Z.Header, { text: g.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]

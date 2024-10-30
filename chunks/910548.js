@@ -18,8 +18,8 @@ var i,
     I = n(477690),
     m = n(481060),
     f = n(230711),
-    T = n(745510),
-    h = n(549006),
+    h = n(745510),
+    T = n(549006),
     N = n(64078),
     p = n(29270),
     C = n(709586),
@@ -30,7 +30,7 @@ var i,
     R = n(689938),
     v = n(172421);
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.LEAF_PEEL = 'leaf_peel'), (s.LEAF_FALL = 'leaf_fall'), (s.EXIT = 'exit');
-let O = {
+let M = {
     enter: {
         BEG: 0,
         END: 22
@@ -53,7 +53,7 @@ let O = {
     }
 };
 ((r = a || (a = {})).TOP_LEFT = 'TOP_LEFT'), (r.TOP_RIGHT = 'TOP_RIGHT'), (r.BOTTOM_LEFT = 'BOTTOM_LEFT'), (r.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
-let M = ['TOP_LEFT', 'TOP_RIGHT'],
+let O = ['TOP_LEFT', 'TOP_RIGHT'],
     L = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
     Z = {
         leafPosition: {
@@ -150,16 +150,16 @@ function k(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: f, confettiCanvas: h } = o.useContext(T.h),
+        { createMultipleConfettiAt: f, confettiCanvas: T } = o.useContext(h.h),
         [N, p] = o.useState(null),
-        C = (0, d.uR)(h, N),
+        C = (0, d.uR)(T, N),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
                     return 'confetti';
                 case 'confetti':
-                    if (M.includes(t)) return 'leaf_peel';
+                    if (O.includes(t)) return 'leaf_peel';
                     return 'exit';
                 case 'leaf_peel':
                     return 'leaf_fall';
@@ -169,7 +169,7 @@ function k(e) {
                     return 'enter';
             }
         })(c, I),
-        S = M.includes(I),
+        S = O.includes(I),
         A = S && 'exit' === c,
         x = o.useCallback((e) => {
             E(e);
@@ -288,7 +288,7 @@ function k(e) {
                         animationRef: Z,
                         className: u()(v.easterEggAnimation, { [v.easterEggAnimationHideLeaf]: A }),
                         nextScene: g,
-                        sceneSegments: O,
+                        sceneSegments: M,
                         onScenePlay: x,
                         onSceneComplete: R,
                         importData: B,
@@ -314,10 +314,10 @@ function G(e) {
             return null;
         })(n),
         u = (0, p.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(T.h),
+        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(h.h),
         [E, I] = o.useState(!1),
-        O = o.useRef(null),
-        { reducedMotion: M } = o.useContext(m.AccessibilityPreferencesContext),
+        M = o.useRef(null),
+        { reducedMotion: O } = o.useContext(m.AccessibilityPreferencesContext),
         L = (0, S.ZH)(n),
         Z = L.nick,
         b = s(L);
@@ -348,14 +348,14 @@ function G(e) {
                     newTierName: (0, g.nW)(c)
                 });
     let D = o.useCallback(() => {
-            if (!M.enabled)
+            if (!O.enabled)
                 if (E || 0 !== Math.floor(50 * Math.random())) {
                     var e;
-                    let t = null === (e = O.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+                    let t = null === (e = M.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else I(!0);
-        }, [d, M, E]),
+        }, [d, O, E]),
         j = o.useCallback(() => {
             I(!1);
         }, []),
@@ -371,7 +371,7 @@ function G(e) {
     o.useEffect(() => _(y));
     let B = (0, l.jsx)(m.Clickable, {
         className: v.iconWrapper,
-        innerRef: O,
+        innerRef: M,
         onClick: r,
         children: (0, l.jsx)(C.Z, {
             className: v.icon,
@@ -389,7 +389,7 @@ function G(e) {
                 children: t
             }),
             E
-                ? (0, l.jsx)(h.ZP, {
+                ? (0, l.jsx)(T.ZP, {
                       children: (0, l.jsx)('div', {
                           className: v.cannonWrapper,
                           children: (0, l.jsx)(k, {

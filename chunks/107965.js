@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 }),
     n(653041);
@@ -30,8 +30,8 @@ let E = 1 * o.Z.Millis.HOUR,
     I = 7 * o.Z.Millis.DAY,
     m = 1 * o.Z.Millis.DAY,
     f = a.K.get('lastNonRequiredUpdateShown', Date.now()),
-    T = new l.Z('AutoUpdateManager');
-class h {
+    h = new l.Z('AutoUpdateManager');
+class T {
     destroy() {
         clearInterval(this._checkInterval);
     }
@@ -40,7 +40,7 @@ class h {
     }
     async _requestNewUpdaterBootstrap() {
         let e;
-        T.log('Bootstrapping new updater host...');
+        h.log('Bootstrapping new updater host...');
         try {
             await d.ZP.ensureModule('discord_updater_bootstrap'), (e = d.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e);
         } catch (e) {
@@ -50,7 +50,7 @@ class h {
         try {
             this._handleCheckingForUpdates(), await e.bootstrap(d.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.hasNativeUpdate = !0), this._handleUpdateDownloaded(!0);
         } catch (e) {
-            T.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), u.Z.captureException(e);
+            h.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), u.Z.captureException(e);
         }
     }
     _emitCallbacks() {
@@ -85,7 +85,7 @@ class h {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '34c73114e92fa0a2579bb218c2c45b167a3a22db' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || 'eeb6c759e9c524b977a5a003fe06be6d12510b30' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, r.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;
                                 if (Date.now() - f > t) return a.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);

@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return T;
+        return h;
     }
 }),
     n(536091);
@@ -21,10 +21,10 @@ function f(e) {
     let t = u.Z.getGuild(e);
     return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE);
 }
-async function T(e, t) {
-    var n, I, T;
-    let h = t.getGuildId();
-    if (null == h || null == u.Z.getGuild(h)) return;
+async function h(e, t) {
+    var n, I, h;
+    let T = t.getGuildId();
+    if (null == T || null == u.Z.getGuild(T)) return;
     let N = d.default.getCurrentUser();
     if (null == N) return;
     await (0, l.$p)();
@@ -54,7 +54,7 @@ async function T(e, t) {
                 _.ZP.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: h,
+                    guildId: T,
                     intention: m.Hz.CHAT
                 })
         )
@@ -74,7 +74,7 @@ async function T(e, t) {
         A = [S[Math.floor(Math.random() * S.length)].id];
     i.Z.sendStickers(t.id, A, '', {
         messageReference: {
-            guild_id: null !== (T = t.getGuildId()) && void 0 !== T ? T : void 0,
+            guild_id: null !== (h = t.getGuildId()) && void 0 !== h ? h : void 0,
             channel_id: t.id,
             message_id: e
         }

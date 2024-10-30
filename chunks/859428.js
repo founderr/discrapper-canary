@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(41776),
     m = n(981631),
     f = n(689938),
-    T = n(331781),
-    h = n(250812);
+    h = n(331781),
+    T = n(250812);
 t.Z = () => {
     let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []),
         t = (0, l.e7)([d.Z], () => d.Z.getGuild(e), [e]),
@@ -30,14 +30,14 @@ t.Z = () => {
         }
     };
     return (0, i.jsxs)('div', {
-        className: r()(T.notice, h.notice),
+        className: r()(h.notice, T.notice),
         children: [
             (0, i.jsxs)(o.Button, {
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,
-                className: r()(T.button, T.back),
-                innerClassName: T.iconButton,
+                className: r()(h.button, h.back),
+                innerClassName: h.iconButton,
                 onClick: () => {
                     let e = (0, u.s1)();
                     null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
@@ -46,18 +46,18 @@ t.Z = () => {
                     (0, i.jsx)(o.ArrowSmallLeftIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: T.arrow
+                        className: h.arrow
                     }),
                     f.Z.Messages.BACK
                 ]
             }),
             (0, i.jsx)(o.Text, {
-                className: T.header,
+                className: h.header,
                 variant: 'text-sm/normal',
                 children: f.Z.Messages.LURKER_MODE_NAG_BAR_HEADER
             }),
             (0, i.jsx)(o.Button, {
-                className: T.button,
+                className: h.button,
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,

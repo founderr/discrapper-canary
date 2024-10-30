@@ -14,7 +14,7 @@ var a = n(430824),
     u = n(981631),
     d = n(689938);
 function _(e) {
-    var t, n, _, E, I, m, f, T, h, N, p, C, g, S, A;
+    var t, n, _, E, I, m, f, h, T, N, p, C, g, S, A;
     let x = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : u.lds,
         R = o.ZP.getName(r.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
@@ -22,12 +22,12 @@ function _(e) {
             return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({ username: '**'.concat(R, '**') });
         case c.O7.FRIEND_REQUESTS_GROUPED:
             let v = o.ZP.getName(r.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
-                O = o.ZP.getName(r.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (m = f[1]) || void 0 === m ? void 0 : m.id)),
-                M = Math.max((null !== (h = null === (T = e.other_users) || void 0 === T ? void 0 : T.length) && void 0 !== h ? h : 0) - 2, 0);
+                M = o.ZP.getName(r.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (m = f[1]) || void 0 === m ? void 0 : m.id)),
+                O = Math.max((null !== (T = null === (h = e.other_users) || void 0 === h ? void 0 : h.length) && void 0 !== T ? T : 0) - 2, 0);
             return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
                 user: v,
-                user2: O,
-                count: M
+                user2: M,
+                count: O
             });
         case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
             let L = null !== (p = null === (N = e.local_id) || void 0 === N ? void 0 : N.split('_').pop()) && void 0 !== p ? p : 'unknown';

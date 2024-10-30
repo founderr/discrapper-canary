@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var i = n(200651),
@@ -17,11 +17,11 @@ var i = n(200651),
     I = n(981631),
     m = n(689938),
     f = n(691784);
-function T(e) {
+function h(e) {
     var t;
-    let { invite: n, getAcceptInviteContext: T } = e,
-        h = (0, s.e7)([u.default], () => u.default.getId()),
-        N = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === h,
+    let { invite: n, getAcceptInviteContext: h } = e,
+        T = (0, s.e7)([u.default], () => u.default.getId()),
+        N = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === T,
         p = n.state === I.r2o.ACCEPTING,
         C = (0, s.e7)([_.Z], () => {
             var e;
@@ -31,20 +31,20 @@ function T(e) {
             null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
         S = a.useCallback(() => {
-            let e = T('Invite Button Embed');
+            let e = h('Invite Button Embed');
             l.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n.code, T]);
+        }, [n.code, h]);
     if (null == n.inviter) return null;
     let A = C ? g : S,
         x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,
         R = o.Z.Button.Colors.GREEN;
     C ? ((x = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS), (R = o.Z.Button.Colors.PRIMARY)) : N && ((x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND), (R = o.Z.Button.Colors.PRIMARY));
     let v = N ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-        O = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        M = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
+        M = null != n.inviter ? ''.concat(n.inviter.username) : '',
+        O = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(o.Z, {
         children: [
             (0, i.jsx)(o.Z.Header, { text: v }),
@@ -58,9 +58,9 @@ function T(e) {
                                 onClick: C ? A : void 0
                             }),
                             (0, i.jsx)(o.Z.Info, {
-                                title: O,
+                                title: M,
                                 onClick: C ? A : void 0,
-                                children: M
+                                children: O
                             })
                         ]
                     }),

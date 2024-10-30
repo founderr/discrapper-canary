@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(703656),
     m = n(324701),
     f = n(768943),
-    T = n(695346),
-    h = n(592125),
+    h = n(695346),
+    T = n(592125),
     N = n(655354),
     p = n(324081),
     C = n(791914),
@@ -64,16 +64,16 @@ function v(e) {
                     })
                 ]
             }),
-            0 === _.length ? (0, i.jsx)(M, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(O, { messageReminder: e }, e.saveData.messageId)) })
+            0 === _.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(M, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function O(e) {
+function M(e) {
     let t,
         { messageReminder: a } = e,
         s = a.saveData,
         l = a.message,
-        u = (0, c.e7)([h.Z], () => h.Z.getChannel(s.channelId)),
+        u = (0, c.e7)([T.Z], () => T.Z.getChannel(s.channelId)),
         f = () => {
             (0, I.uL)(g.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), s.channelId, s.messageId));
         },
@@ -175,7 +175,7 @@ function O(e) {
                                   message: l,
                                   channel: u,
                                   className: x.message,
-                                  compact: T.jU.getSetting(),
+                                  compact: h.jU.getSetting(),
                                   animateAvatar: !1,
                                   focusProps: R,
                                   trackAnnouncementViews: !0
@@ -187,6 +187,6 @@ function O(e) {
               ]
           });
 }
-function M() {
+function O() {
     return null;
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     fC: function () {
-        return T;
+        return h;
     },
     gr: function () {
         return f;
@@ -60,7 +60,7 @@ function f(e) {
         [t, e]
     );
 }
-async function T(e, t) {
+async function h(e, t) {
     if ((null == t ? void 0 : t.type) === E.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
             let t = await c.Z.fetchChannel(e.saveData.channelId);

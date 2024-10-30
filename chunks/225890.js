@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 }),
     n(47120);
@@ -18,10 +18,10 @@ var i = n(200651),
     I = n(924301),
     m = n(482241),
     f = n(11868),
-    T = n(231338);
-function h(e) {
+    h = n(231338);
+function T(e) {
     let { code: t } = e,
-        [n, h, N] = t.split('-'),
+        [n, T, N] = t.split('-'),
         {
             guildScheduledEvent: p,
             guild: C,
@@ -31,7 +31,7 @@ function h(e) {
             [I.ZP, d.Z, c.Z, u.ZP, _.default],
             () => {
                 var e, t;
-                let i = null !== (t = I.ZP.getGuildScheduledEvent(h)) && void 0 !== t ? t : void 0,
+                let i = null !== (t = I.ZP.getGuildScheduledEvent(T)) && void 0 !== t ? t : void 0,
                     a = d.Z.getGuild(n),
                     s = c.Z.getChannel(null == i ? void 0 : i.channel_id);
                 return {
@@ -41,18 +41,18 @@ function h(e) {
                     isMember: u.ZP.isMember(n, null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 };
             },
-            [n, h]
+            [n, T]
         );
     return (
         a.useEffect(() => {
-            (null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, h), E.Z.getGuildEventUserCounts(n, h, null != N ? [N] : []), E.Z.getGuildEventsForCurrentUser(n);
-        }, [h, n, null == p ? void 0 : p.id, N]),
+            (null == p ? void 0 : p.id) == null && m.Z.fetchGuildEvent(n, T), E.Z.getGuildEventUserCounts(n, T, null != N ? [N] : []), E.Z.getGuildEventsForCurrentUser(n);
+        }, [T, n, null == p ? void 0 : p.id, N]),
         (0, i.jsx)(f.ZP, {
             guild: C,
             channel: g,
             guildScheduledEvent: p,
             isMember: S,
-            onAcceptInstantInvite: T.dG,
+            onAcceptInstantInvite: h.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, l.n)(n)) {
                     (0, r.hk)(n);

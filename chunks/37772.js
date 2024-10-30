@@ -12,8 +12,8 @@ var i = n(200651),
     I = n(869765),
     m = n(695346),
     f = n(592125),
-    T = n(699516),
-    h = n(709054),
+    h = n(699516),
+    T = n(709054),
     N = n(786761),
     p = n(493892),
     C = n(901461),
@@ -23,8 +23,8 @@ var i = n(200651),
     x = n(938353),
     R = n(25015),
     v = n(689674),
-    O = n(963550),
-    M = n(845080),
+    M = n(963550),
+    O = n(845080),
     L = n(295790),
     Z = n(145807),
     b = n(56744),
@@ -76,7 +76,7 @@ t.Z = a.memo(function e(t) {
             previewLinkTarget: !0
         }),
         en = (0, g.ZP)(o),
-        ei = (0, l.e7)([f.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && f.Z.getChannel(h.default.castMessageIdAsChannelId(o.id))),
+        ei = (0, l.e7)([f.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && f.Z.getChannel(T.default.castMessageIdAsChannelId(o.id))),
         ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         es = !ea && void 0 === a,
         er = (0, v.Z)({
@@ -94,7 +94,7 @@ t.Z = a.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (T.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, p.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
+        : (h.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, p.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
           ? (0, i.jsx)(B, {
                 className: U,
                 compact: P,
@@ -109,7 +109,7 @@ t.Z = a.memo(function e(t) {
                     [y.groupStart]: t.isGroupStart
                 }),
                 childrenRepliedMessage: (0, b.Z)(o, s, H, Y, P),
-                childrenHeader: (0, M.Z)({
+                childrenHeader: (0, O.Z)({
                     ...t,
                     author: en,
                     guildId: s.guild_id
@@ -139,7 +139,7 @@ t.Z = a.memo(function e(t) {
                     hasInlineForwardButton: !1
                 }),
                 childrenExecutedCommand: (0, Z.Z)(o, s, P),
-                childrenMessageContent: (0, O.Z)(t, ee),
+                childrenMessageContent: (0, M.Z)(t, ee),
                 childrenSystemMessage: (0, L.Z)(t),
                 onContextMenu: k,
                 onClick: G,

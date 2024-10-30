@@ -25,9 +25,9 @@ function _(e) {
             },
             [m]
         ),
-        T = null != f && (0, o.yE)(f, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        h = a.useMemo(() => (0, c._i)(_, E), [_, E]);
-    return T
+        h = null != f && (0, o.yE)(f, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        T = a.useMemo(() => (0, c._i)(_, E), [_, E]);
+    return h
         ? null
         : (0, i.jsx)(r.Z, {
               channel: _,
@@ -35,6 +35,6 @@ function _(e) {
               buttonLabels: I,
               stickers: u.HG,
               event: d.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
-              eventProperties: h
+              eventProperties: T
           });
 }

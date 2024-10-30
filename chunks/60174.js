@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return M;
+        return O;
     }
 }),
     n(789020),
@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(222677),
     m = n(995774),
     f = n(931651),
-    T = n(594174),
-    h = n(630388),
+    h = n(594174),
+    T = n(630388),
     N = n(74538),
     p = n(833803),
     C = n(566006),
@@ -30,7 +30,7 @@ var i = n(200651),
     x = n(689938),
     R = n(96042),
     v = n(968661);
-function O(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,24 +43,24 @@ function O(e, t, n) {
         e
     );
 }
-class M extends a.Component {
+class O extends a.Component {
     render() {
         let { type: e, message: t, className: n, children: a, useChatFontScaling: s, tabIndex: l = 0 } = this.props,
             { isReactionPickerActive: o } = this.state,
             c = t.state === g.yb.SENDING,
             E = e === C.O.BURST;
-        if (c || (0, h.yE)(t.flags, g.iLy.EPHEMERAL)) return null;
-        let I = T.default.getCurrentUser(),
+        if (c || (0, T.yE)(t.flags, g.iLy.EPHEMERAL)) return null;
+        let I = h.default.getCurrentUser(),
             m = (0, N.I5)(I),
             f = E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION;
         !m && E && (f = (0, i.jsx)(_.X, { tooltipText: x.Z.Messages.ADD_BURST_REACTION }));
         let A = s ? v : R,
-            { canShowImprovedReactionButton: O } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
-            M = O && !this.props.isForumToolbar,
+            { canShowImprovedReactionButton: M } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
+            O = M && !this.props.isForumToolbar,
             L = {
                 size: 'sm',
                 color: 'currentColor',
-                className: r()(A.icon, { [A.largeIcon]: M })
+                className: r()(A.icon, { [A.largeIcon]: O })
             };
         return (0, i.jsx)(u.Popout, {
             shouldShow: o,
@@ -86,7 +86,7 @@ class M extends a.Component {
                             A.reactionBtn,
                             {
                                 [A.active]: s,
-                                [A.largeReactionBtn]: M
+                                [A.largeReactionBtn]: O
                             },
                             n
                         ),
@@ -98,19 +98,19 @@ class M extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', { isReactionPickerActive: !1 }),
-            O(this, 'onAddReaction', (e, t) => {
+            M(this, 'state', { isReactionPickerActive: !1 }),
+            M(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: i, isForumToolbar: a } = this.props;
                 (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            O(this, 'handleReactionPickerToggle', () => {
+            M(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            O(this, 'handleAddReactionClick', (e) => {
+            M(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = T.default.getCurrentUser();
+                let i = h.default.getCurrentUser();
                 t === C.O.BURST &&
                     !(0, N.I5)(i) &&
                     (0, E.openBurstReactionsUpsellModal)({
@@ -123,7 +123,7 @@ class M extends a.Component {
                     }),
                     this.handleReactionPickerToggle();
             }),
-            O(this, 'renderReactionPopout', (e) => {
+            M(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
                     { type: n, channel: a, message: s } = this.props,
                     r = {

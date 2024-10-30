@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return O;
     }
 }),
     n(47120);
@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(906732),
     m = n(963249),
     f = n(594174),
-    T = n(78839),
-    h = n(55935),
+    h = n(78839),
+    T = n(55935),
     N = n(63063),
     p = n(74538),
     C = n(276444),
@@ -29,7 +29,7 @@ var i = n(200651),
     x = n(981631),
     R = n(689938),
     v = n(526387);
-class O extends a.Component {
+class M extends a.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,
             a = f.default.getUser(i.user_id),
@@ -88,10 +88,10 @@ class O extends a.Component {
     }
     renderExpirationDate(e, t, n) {
         let { trialOffer: i, trialEndsAt: a } = this.props;
-        if (void 0 !== i.redeemed_at && !n && null !== a) return R.Z.Messages.TRIAL_EXPIRES.format({ date: (0, h.vc)(o()(a), 'LL') });
+        if (void 0 !== i.redeemed_at && !n && null !== a) return R.Z.Messages.TRIAL_EXPIRES.format({ date: (0, T.vc)(o()(a), 'LL') });
         if (e || void 0 === i.expires_at) return null;
         let s = o()(i.expires_at);
-        if (t) return R.Z.Messages.EXPIRED_DATE.format({ date: (0, h.vc)(o()(s), 'LL') });
+        if (t) return R.Z.Messages.EXPIRED_DATE.format({ date: (0, T.vc)(o()(s), 'LL') });
         let r = s.diff(o()(), 'h');
         if (r > 48) {
             let e = s.diff(o()(), 'd');
@@ -163,7 +163,7 @@ class O extends a.Component {
                 : (t[n] = i);
     }
 }
-function M(e) {
+function O(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: a, isResolving: s } = (0, u.cj)(
             [C.Z],
@@ -175,16 +175,16 @@ function M(e) {
         ),
         r = f.default.getCurrentUser(),
         l = (0, u.e7)([f.default], () => null != a && (0, p.I5)(void 0 !== r && a.user_id === r.id ? r : f.default.getUser(a.user_id))),
-        o = (0, u.e7)([T.ZP], () => {
+        o = (0, u.e7)([h.ZP], () => {
             var e;
-            return l ? (null === (e = T.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return l ? (null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
         { analyticsLocations: d } = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED),
         { enabled: m } = g.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });
     return s
         ? (0, i.jsx)(_.OR, { isHorizontal: !c.tq })
         : n && null != a && void 0 !== r
-          ? (0, i.jsx)(O, {
+          ? (0, i.jsx)(M, {
                 trialOffer: a,
                 currentUser: r,
                 recipientHasNitro: l,

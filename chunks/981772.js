@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     R6: function () {
-        return T;
+        return h;
     },
     Ue: function () {
         return f;
@@ -72,7 +72,7 @@ function f(e) {
         })
     });
 }
-function T(e) {
+function h(e) {
     var t, a, s;
     let { message: r, channel: o, compact: c } = e,
         { guild: u, joinRequest: d, usernameHook: _, guildNameClick: m } = I(r, o);

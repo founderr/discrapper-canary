@@ -21,14 +21,14 @@ var a = n(120356),
     I = n(584825),
     m = n(570533),
     f = n(629262),
-    T = n(575460),
-    h = n(293810),
+    h = n(575460),
+    T = n(293810),
     N = n(689938),
     p = n(265746);
 let C = (e) => {
         let { onClose: t, listing: n, step: a, guildId: r } = e,
             o = (0, I.YB)(r),
-            d = (0, c.Z)(h.Xy),
+            d = (0, c.Z)(T.Xy),
             E = (() => {
                 var e;
                 if (d) return null;
@@ -106,7 +106,7 @@ let C = (e) => {
                                 className: p.confirmationBenefits,
                                 children: _.map((e) =>
                                     (0, i.jsx)(
-                                        T.Z,
+                                        h.Z,
                                         {
                                             benefit: e,
                                             guildId: a,

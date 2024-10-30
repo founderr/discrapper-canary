@@ -17,8 +17,8 @@ var i = n(200651),
     I = n(438075),
     m = n(695346),
     f = n(592125),
-    T = n(906467),
-    h = n(430824),
+    h = n(906467),
+    T = n(430824),
     N = n(496675),
     p = n(699516),
     C = n(594174),
@@ -28,7 +28,7 @@ var i = n(200651),
     x = n(245216),
     R = n(689938),
     v = n(85961);
-function O() {
+function M() {
     return (0, i.jsxs)('div', {
         className: v.headerContainer,
         children: [
@@ -46,10 +46,10 @@ function O() {
         ]
     });
 }
-function M(e) {
+function O(e) {
     let { message: t, snapshot: n, index: d } = e,
         _ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
-        E = (0, r.e7)([f.Z, C.default, p.Z, N.Z, h.Z, u.Z], () => _.getForwardInfo(f.Z, C.default, p.Z, N.Z, h.Z, u.Z).footerInfo, [_], l.Z),
+        E = (0, r.e7)([f.Z, C.default, p.Z, N.Z, T.Z, u.Z], () => _.getForwardInfo(f.Z, C.default, p.Z, N.Z, T.Z, u.Z).footerInfo, [_], l.Z),
         I = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
@@ -85,7 +85,7 @@ function L(e) {
         o = a.useMemo(() => (0, A.Z)(n, s), [n, s]),
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
-        h = (0, r.e7)([T.Z], () => T.Z.isDeveloper),
+        T = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
         N = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
         { content: p, hasSpoilerEmbeds: C } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && u,
@@ -94,7 +94,7 @@ function L(e) {
             allowList: N,
             allowHeading: N,
             allowLinks: !0,
-            allowDevLinks: h,
+            allowDevLinks: T,
             previewLinkTarget: !0
         }),
         g = (0, r.e7)([f.Z], () => f.Z.getChannel(n.channel_id)),
@@ -110,7 +110,7 @@ function L(e) {
                       (0, i.jsxs)('div', {
                           className: v.content,
                           children: [
-                              (0, i.jsx)(O, {}),
+                              (0, i.jsx)(M, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
                                   content: p
@@ -126,7 +126,7 @@ function L(e) {
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1
                               }),
-                              (0, i.jsx)(M, {
+                              (0, i.jsx)(O, {
                                   message: n,
                                   snapshot: s,
                                   index: l

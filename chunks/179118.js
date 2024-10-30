@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(925329),
     m = n(479446),
     f = n(522489),
-    T = n(857039),
-    h = n(93127),
+    h = n(857039),
+    T = n(93127),
     N = n(814443),
     p = n(590783),
     C = n(699516),
@@ -29,24 +29,24 @@ var i = n(200651),
     x = n(669079),
     R = n(74538),
     v = n(51144),
-    O = n(598),
-    M = n(981631),
+    M = n(598),
+    O = n(981631),
     L = n(474936),
     Z = n(689938),
     b = n(524254);
 function P(e) {
-    let { giftCode: t, application: n, sku: s, subscriptionPlan: l, selectedGiftStyle: o, onClose: d, hasSentMessage: _, giftRecipient: m, giftMessageError: h, isSendingMessage: N, halloweenDecoPurchase: C } = e,
+    let { giftCode: t, application: n, sku: s, subscriptionPlan: l, selectedGiftStyle: o, onClose: d, hasSentMessage: _, giftRecipient: m, giftMessageError: T, isSendingMessage: N, halloweenDecoPurchase: C } = e,
         [S, P] = a.useState(u.CopyInput.Modes.DEFAULT),
         j = (0, c.e7)([g.Z], () => g.Z.enabled),
         U = _ || (null != o && null != m),
-        y = (null == s ? void 0 : s.productLine) === M.POd.COLLECTIBLES,
-        { selectedPlan: B } = (0, O.usePaymentContext)(),
-        k = (0, T.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
+        y = (null == s ? void 0 : s.productLine) === O.POd.COLLECTIBLES,
+        { selectedPlan: B } = (0, M.usePaymentContext)(),
+        k = (0, h.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
         G = () => (null != l ? l.skuId : null != s ? s.id : null),
         F = () => {
             let e;
             let t = null != o && L.V4.includes(o);
-            if (null != h) return Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
+            if (null != T) return Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
             if (null == l) return null;
             if (l.interval === L.rV.MONTH) {
                 if (k) return Z.Z.Messages.NITROWEEN_DESKTOP_GIFT_CONFIRMATION_TITLE_MONTH;
@@ -146,9 +146,9 @@ function P(e) {
                           [b.header]: null == o && !y,
                           [b.headerCustomGifting]: null != o && !y
                       }),
-                      children: null != m || (_ && null == h) ? Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != h ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+                      children: null != m || (_ && null == T) ? Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != T ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
                   }),
-                  (_ && null != m && null == h) || U
+                  (_ && null != m && null == T) || U
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(E.Z, {
@@ -187,7 +187,7 @@ function P(e) {
                                         children: F()
                                     }),
                                     !n &&
-                                        null == h &&
+                                        null == T &&
                                         (0, i.jsx)(D, {
                                             giftCode: t,
                                             onClose: d
@@ -203,11 +203,11 @@ function P(e) {
 let D = (e) => {
     let { giftCode: t, onClose: n } = e;
     a.useEffect(() => {
-        _.Z.fetchRelationships(), (0, h.W)();
+        _.Z.fetchRelationships(), (0, T.W)();
     }, []);
     let [s, r] = a.useState(),
         [l, I] = a.useState(!1),
-        [f, T] = a.useState(!1),
+        [f, h] = a.useState(!1),
         { userAffinities: p, isLoading: g } = (0, c.cj)([N.Z], () => ({
             userAffinities: N.Z.getUserAffinitiesUserIds(),
             isLoading: N.Z.getFetching()
@@ -215,10 +215,10 @@ let D = (e) => {
         A = Array.from(p.values()),
         x = (0, c.e7)([C.Z], () => C.Z.getFriendIDs()),
         R = o().difference(x, A),
-        O = [...A, ...R],
-        M = (0, c.e7)([S.default], () => S.default.filter((e) => O.includes(e.id) && !e.bot), [O]);
-    if (null == M || 0 === M.length) return null;
-    let L = o().sortBy(M, (e) => O.indexOf(e.id));
+        M = [...A, ...R],
+        O = (0, c.e7)([S.default], () => S.default.filter((e) => M.includes(e.id) && !e.bot), [M]);
+    if (null == O || 0 === O.length) return null;
+    let L = o().sortBy(O, (e) => M.indexOf(e.id));
     return (0, i.jsxs)('div', {
         className: b.giftRecipientSection,
         children: [
@@ -252,13 +252,13 @@ let D = (e) => {
                         submitting: f,
                         className: b.sendToRecipientButton,
                         onClick: () => {
-                            T(!0),
+                            h(!0),
                                 (0, m.YD)(s, t)
                                     .then(() => {
                                         n(), (0, d.Ou)();
                                     })
                                     .catch(() => {
-                                        I(!0), T(!1);
+                                        I(!0), h(!1);
                                     });
                         },
                         children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON

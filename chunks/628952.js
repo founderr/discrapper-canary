@@ -14,8 +14,8 @@ var a = n(120356),
     I = n(484459),
     m = n(594174),
     f = n(937615),
-    T = n(583434),
-    h = n(689938),
+    h = n(583434),
+    T = n(689938),
     N = n(696307),
     p = n(223223);
 let C = (e) => {
@@ -55,7 +55,7 @@ let C = (e) => {
     };
 t.Z = (e) => {
     let { selectedSkuId: t, selectedSkuPricePreview: n, className: a } = e,
-        { product: c } = (0, T.T)(t),
+        { product: c } = (0, h.T)(t),
         { giftRecipient: u, giftRecipientError: E } = (0, d.wD)(),
         p = (0, l.e7)([m.default], () => m.default.getCurrentUser());
     if (null == c || null == n) return null;
@@ -69,7 +69,7 @@ t.Z = (e) => {
                 children: [
                     (0, i.jsx)(o.FormTitle, {
                         className: N.previewTitle,
-                        children: h.Z.Messages.COLLECTIBLES_GIFT_LABEL
+                        children: T.Z.Messages.COLLECTIBLES_GIFT_LABEL
                     }),
                     A &&
                         (0, i.jsx)(
@@ -95,7 +95,7 @@ t.Z = (e) => {
                                         children: (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-link',
-                                            children: h.Z.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+                                            children: T.Z.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
                                         })
                                     })
                             },
@@ -118,7 +118,7 @@ t.Z = (e) => {
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-sm/medium',
                                 color: 'header-secondary',
-                                children: S.type === r.Z.AVATAR_DECORATION ? h.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : S.type === r.Z.PROFILE_EFFECT ? h.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+                                children: S.type === r.Z.AVATAR_DECORATION ? T.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : S.type === r.Z.PROFILE_EFFECT ? T.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
                             })
                         ]
                     }),

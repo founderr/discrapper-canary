@@ -12,8 +12,8 @@ var i = n(200651),
     I = n(709054),
     m = n(786761),
     f = n(900164),
-    T = n(739566),
-    h = n(492593),
+    h = n(739566),
+    T = n(492593),
     N = n(453687),
     p = n(25015),
     C = n(689674),
@@ -23,12 +23,12 @@ var i = n(200651),
     x = n(295790),
     R = n(145807),
     v = n(56744),
-    O = n(981631),
-    M = n(916315);
+    M = n(981631),
+    O = n(916315);
 t.Z = a.memo(function (e) {
     var t, n;
     let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: b, hideSimpleEmbedContent: P = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,
-        F = a.type === O.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
+        F = a.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         w = a.isFirstMessageInForumPost(D),
         V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: Y } = (0, p.Z)(a, {
@@ -38,16 +38,16 @@ t.Z = a.memo(function (e) {
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        W = a.type === O.uaV.REPLY ? a.messageReference : void 0,
+        W = a.type === M.uaV.REPLY ? a.messageReference : void 0,
         K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
         z = (0, l.JA)(a.id),
-        X = (0, T.ZP)(a),
-        Q = (0, o.e7)([_.Z], () => a.hasFlag(O.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))),
+        X = (0, h.ZP)(a),
+        Q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))),
         q = (0, c.p9)({
             guildId: D.guild_id,
             roleId: X.iconRoleId
         }),
-        J = (0, o.e7)([E.Z], () => E.Z.can(O.Plq.CREATE_INSTANT_INVITE, D)),
+        J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)),
         $ = (0, C.Z)({
             message: a,
             channel: D,
@@ -56,11 +56,11 @@ t.Z = a.memo(function (e) {
     if ((0, f.Z)(a, J)) return null;
     let ee = (0, N.iG)(a),
         et = (0, N.Gx)(a);
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(T.Z, {
         compact: s,
         className: r()(L, {
-            [M.ephemeral]: (0, m.Pv)(a),
-            [M.disableInteraction]: F
+            [O.ephemeral]: (0, m.Pv)(a),
+            [O.disableInteraction]: F
         }),
         disableInteraction: F,
         childrenRepliedMessage: (0, v.Z)(a, D, W, K, s),
@@ -79,8 +79,8 @@ t.Z = a.memo(function (e) {
         }),
         onContextMenu: Z,
         onClick: b,
-        hasThread: B && null != Q && a.hasFlag(O.iLy.HAS_THREAD),
-        hasReply: a.type === O.uaV.REPLY,
+        hasThread: B && null != Q && a.hasFlag(M.iLy.HAS_THREAD),
+        hasReply: a.type === M.uaV.REPLY,
         'aria-labelledby': ee,
         'aria-describedby': et,
         messageRef: $,

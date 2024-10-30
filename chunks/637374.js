@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(112724),
     m = n(607070),
     f = n(884697),
-    T = n(600164),
-    h = n(479446),
+    h = n(600164),
+    T = n(479446),
     N = n(930114),
     p = n(981632),
     C = n(108989),
@@ -24,8 +24,8 @@ var i = n(200651),
     x = n(283595),
     R = n(594174),
     v = n(509545),
-    O = n(55563),
-    M = n(199480),
+    M = n(55563),
+    O = n(199480),
     L = n(626135),
     Z = n(669079),
     b = n(74538),
@@ -113,10 +113,10 @@ class V extends a.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(T.Z, {
-            justify: T.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(h.Z, {
+            justify: h.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(T.Z, {
+                (0, i.jsxs)(h.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends a.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(T.Z, {
-                    align: T.Z.Align.END,
-                    justify: T.Z.Justify.END,
+                (0, i.jsxs)(h.Z, {
+                    align: h.Z.Align.END,
+                    justify: h.Z.Justify.END,
                     className: k.metadata,
-                    direction: T.Z.Direction.VERTICAL,
+                    direction: h.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -335,10 +335,10 @@ class V extends a.Component {
                                 className: k.snow,
                                 wind: 5
                             }),
-                        a && (0, i.jsx)(M.Z, { className: k.headerIcon }),
+                        a && (0, i.jsx)(O.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(p.Z, {
-                                defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
+                                defaultAnimationState: e.redeemed ? T.SR.LOOP : T.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })
@@ -348,10 +348,10 @@ class V extends a.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([A.Z, O.Z, R.default, x.Z, v.Z, S.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([A.Z, M.Z, R.default, x.Z, v.Z, S.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
         a = A.Z.get(t),
-        s = null != a ? O.Z.get(a.skuId) : null,
+        s = null != a ? M.Z.get(a.skuId) : null,
         r = null != a && null != a.userId ? R.default.getUser(a.userId) : null,
         l = m.Z.useReducedMotion;
     return {

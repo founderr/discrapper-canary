@@ -18,43 +18,43 @@ var a = n(442837),
     I = n(921944),
     m = n(474936),
     f = n(526761),
-    T = n(689938),
-    h = n(568492);
+    h = n(689938),
+    T = n(568492);
 function N(e) {
     var t;
     let { onClose: n, markAsDismissed: N } = e,
         p = (0, a.e7)([d.default], () => d.default.getCurrentUser());
-    let C = (t = null == p ? void 0 : p.premiumType) === m.p9.TIER_2 ? T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+    let C = (t = null == p ? void 0 : p.premiumType) === m.p9.TIER_2 ? h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
         g = _.ZP.canUseCustomCallSounds(p);
     return (0, i.jsxs)(u.Z, {
         isShown: !0,
         type: u.Y.PREMIUM,
-        className: h.upsellOuter,
-        backgroundClassName: h.upsellInner,
+        className: T.upsellOuter,
+        backgroundClassName: T.upsellInner,
         children: [
             null != N
                 ? (0, i.jsx)(l.Clickable, {
-                      className: h.close,
+                      className: T.close,
                       onClick: () => (null == N ? void 0 : N(I.L.DISMISS)),
-                      'aria-label': T.Z.Messages.CLOSE,
+                      'aria-label': h.Z.Messages.CLOSE,
                       children: (0, i.jsx)(l.XSmallIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: h.closeIcon
+                          className: T.closeIcon
                       })
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: h.upsellTitle,
+                className: T.upsellTitle,
                 children: [
                     (0, i.jsx)(l.NitroWheelIcon, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: h.nitroWheel
+                        className: T.nitroWheel
                     }),
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-sm/bold',
-                        children: T.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
+                        children: h.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
                     })
                 ]
             }),
@@ -67,10 +67,10 @@ function N(e) {
                       onClick: function () {
                           o.Z.open(E.oAB.VOICE, f.GA), null == n || n(), null == N || N(I.L.PRIMARY);
                       },
-                      children: T.Z.Messages.CHECK_IT_OUT
+                      children: h.Z.Messages.CHECK_IT_OUT
                   })
                 : (0, i.jsx)(c.Z, {
-                      buttonText: T.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
+                      buttonText: h.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                       subscriptionTier: m.Si.TIER_2,
                       premiumModalAnalyticsLocation: {
                           section: E.jXE.SOUNDBOARD_SOUND_PICKER,

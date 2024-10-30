@@ -17,8 +17,8 @@ var i = n(200651),
     I = n(626135),
     m = n(709054),
     f = n(591759),
-    T = n(833592),
-    h = n(497089),
+    h = n(833592),
+    T = n(497089),
     N = n(178480),
     p = n(418316),
     C = n(526146),
@@ -28,8 +28,8 @@ var i = n(200651),
     x = n(981631),
     R = n(689938),
     v = n(56599),
-    O = n(756688),
-    M = n(886765);
+    M = n(756688),
+    O = n(886765);
 function L(e) {
     var t, n, a;
     let { item: l } = e,
@@ -70,10 +70,10 @@ function Z(e) {
 }
 function b(e) {
     let { item: t } = e,
-        n = M,
+        n = O,
         a = R.Z.Messages.NOTIFICATION_CENTER_TODO;
     return (
-        t.completed && ((n = O), (a = R.Z.Messages.NOTIFICATION_CENTER_DONE)),
+        t.completed && ((n = M), (a = R.Z.Messages.NOTIFICATION_CENTER_DONE)),
         (0, i.jsxs)('div', {
             className: v.lifecycleContainer,
             children: [
@@ -98,7 +98,7 @@ let P = a.memo(function (e) {
             { analyticsLocations: _ } = (0, l.ZP)(),
             E = (0, C.I)(r, d),
             R = a.useCallback(async () => {
-                if ((!E && (0, T.wt)(r), null != r.item_enum && r.item_enum === h.AM.FIND_FRIENDS)) {
+                if ((!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === T.AM.FIND_FRIENDS)) {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -128,16 +128,16 @@ let P = a.memo(function (e) {
                         } else await (0, o.Z)(i);
                     }
                     I.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: h.ud.CLICKED,
+                        action_type: T.ud.CLICKED,
                         notification_center_id: r.id,
                         item_type: r.type,
                         acked: E
                     });
                 }
             }, [r, E, _]),
-            O = null;
-        r.type === h.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (O = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
-        let M = null != r.local_id,
+            M = null;
+        r.type === T.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
+        let O = null != r.local_id,
             P = (0, p.Z)(r);
         return (0, i.jsxs)('div', {
             className: v.row,
@@ -166,12 +166,12 @@ let P = a.memo(function (e) {
                                     color: E ? 'text-muted' : 'header-secondary',
                                     children: (0, N.a3)(m.default.extractTimestamp(r.id))
                                 }),
-                                O
+                                M
                             ]
                         })
                     ]
                 }),
-                M ? null : (0, i.jsx)(A.z, { item: r })
+                O ? null : (0, i.jsx)(A.z, { item: r })
             ]
         });
     }),

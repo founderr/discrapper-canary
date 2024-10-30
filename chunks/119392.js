@@ -18,8 +18,8 @@ var a = n(481060),
     I = n(49898),
     m = n(128449),
     f = n(689938),
-    T = n(818768),
-    h = n(761604);
+    h = n(818768),
+    T = n(761604);
 function N(e) {
     let { gameId: t, onSelect: n } = e;
     return (0, i.jsx)(a.Menu, {
@@ -53,7 +53,7 @@ function N(e) {
 function p(e) {
     let { gameId: t } = e;
     return (0, i.jsx)(o.ZP, {
-        className: T.buttonContainer,
+        className: h.buttonContainer,
         children: (0, i.jsx)(a.Popout, {
             animation: a.Popout.Animation.NONE,
             position: 'bottom',
@@ -83,7 +83,7 @@ function p(e) {
                             children: (0, i.jsx)(a.MoreHorizontalIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: T.overflowIcon
+                                className: h.overflowIcon
                             })
                         });
                     }
@@ -103,18 +103,18 @@ function C(e) {
             coverImageHeight: 280
         });
     return n
-        ? (0, i.jsx)(a.Spinner, { className: T.spinner })
+        ? (0, i.jsx)(a.Spinner, { className: h.spinner })
         : null == r
           ? (0, i.jsxs)('div', {
-                className: T.wrapper,
+                className: h.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: T.errorHeader,
+                        className: h.errorHeader,
                         children: [
                             (0, i.jsx)('div', {
-                                className: T.headerContent,
+                                className: h.headerContent,
                                 children: (0, i.jsx)(a.Heading, {
-                                    className: T.title,
+                                    className: h.title,
                                     variant: 'display-md',
                                     color: 'header-secondary',
                                     children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_TITLE
@@ -122,13 +122,13 @@ function C(e) {
                             }),
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: h,
-                                className: T.errorImage
+                                src: T,
+                                className: h.errorImage
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: h.content,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
@@ -136,7 +136,7 @@ function C(e) {
                                 children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_DESCRIPTION
                             }),
                             (0, i.jsx)(a.Button, {
-                                className: T.button,
+                                className: h.button,
                                 look: a.Button.Looks.FILLED,
                                 size: a.Button.Sizes.MEDIUM,
                                 color: a.Button.Colors.BRAND,
@@ -154,30 +154,30 @@ function C(e) {
                 ]
             })
           : (0, i.jsxs)('div', {
-                className: T.wrapper,
+                className: h.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: T.header,
+                        className: h.header,
                         children: [
                             (0, i.jsx)(p, { gameId: t }),
                             (0, i.jsx)('div', {
-                                className: T.splashWrapper,
+                                className: h.splashWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: T.splash,
+                                    className: h.splash,
                                     style: { backgroundImage: 'url("'.concat(s, '")') }
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: T.headerContent,
+                                className: h.headerContent,
                                 children: [
                                     (0, i.jsxs)(a.Text, {
-                                        className: T.label,
+                                        className: h.label,
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: [(0, i.jsx)(l.Z, { className: T.icon }), f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_LABEL]
+                                        children: [(0, i.jsx)(l.Z, { className: h.icon }), f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_LABEL]
                                     }),
                                     (0, i.jsx)(a.Heading, {
-                                        className: T.title,
+                                        className: h.title,
                                         variant: 'display-md',
                                         color: 'header-secondary',
                                         children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_TITLE.format({ gameName: r })
@@ -187,7 +187,7 @@ function C(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: h.content,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
@@ -195,7 +195,7 @@ function C(e) {
                                 children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_DESCRIPTION.format({ gameName: r })
                             }),
                             (0, i.jsx)(a.Button, {
-                                className: T.button,
+                                className: h.button,
                                 look: a.Button.Looks.FILLED,
                                 size: a.Button.Sizes.MEDIUM,
                                 color: a.Button.Colors.BRAND,

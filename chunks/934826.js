@@ -44,11 +44,11 @@ function d(e) {
         I = null == E ? void 0 : E.id,
         m = null == E ? void 0 : E.sku_id,
         f = (0, a.e7)([r.Z], () => (null != I ? r.Z.get(I) : null)),
-        T = null == _ ? void 0 : _.soft_deleted;
+        h = null == _ ? void 0 : _.soft_deleted;
     return (
         i.useEffect(() => {
-            null == f && null != m && !r.Z.isFetchingForSKU(m) && (0, s.GZ)(m, void 0, void 0, T);
-        }, [f, m, T]),
+            null == f && null != m && !r.Z.isFetchingForSKU(m) && (0, s.GZ)(m, void 0, void 0, h);
+        }, [f, m, h]),
         {
             activeSubscription: d,
             activeSubscriptionListing: _,

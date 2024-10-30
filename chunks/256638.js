@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(37234),
     m = n(254854),
     f = n(195500),
-    T = n(287734),
-    h = n(205355),
+    h = n(287734),
+    T = n(205355),
     N = n(558381),
     p = n(223245),
     C = n(491428),
@@ -31,8 +31,8 @@ var i = n(200651),
     x = n(100527),
     R = n(906732),
     v = n(812206),
-    O = n(391650),
-    M = n(600164),
+    M = n(391650),
+    O = n(600164),
     L = n(605236),
     Z = n(749277),
     b = n(492435),
@@ -74,8 +74,8 @@ var i = n(200651),
     eI = n(610674),
     em = n(65154),
     ef = n(689938),
-    eT = n(569252);
-let eh = () =>
+    eh = n(569252);
+let eT = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -163,24 +163,24 @@ let eC =
                       let { dismissUntil: ev } = ed.metadata;
                       return (0, i.jsx)(D.Z, { onDismiss: () => ep(ev) });
                   case e_.kVF.WIN32_DEPRECATED_MESSAGE:
-                      let { dismissUntil: eO } = ed.metadata;
-                      return (0, i.jsxs)(c.Notice, {
-                          color: c.NoticeColors.WARNING,
-                          children: [
-                              (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ep(eO),
-                                  noticeType: e_.kVF.WIN32_DEPRECATED_MESSAGE
-                              }),
-                              ef.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: eo.Z.getArticleURL(e_.BhN.WIN32_DEPRECATE) })
-                          ]
-                      });
-                  case e_.kVF.WIN7_8_DEPRECATED_MESSAGE:
                       let { dismissUntil: eM } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => ep(eM),
+                                  noticeType: e_.kVF.WIN32_DEPRECATED_MESSAGE
+                              }),
+                              ef.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: eo.Z.getArticleURL(e_.BhN.WIN32_DEPRECATE) })
+                          ]
+                      });
+                  case e_.kVF.WIN7_8_DEPRECATED_MESSAGE:
+                      let { dismissUntil: eO } = ed.metadata;
+                      return (0, i.jsxs)(c.Notice, {
+                          color: c.NoticeColors.WARNING,
+                          children: [
+                              (0, i.jsx)(c.NoticeCloseButton, {
+                                  onClick: () => ep(eO),
                                   noticeType: e_.kVF.WIN7_8_DEPRECATED_MESSAGE
                               }),
                               ef.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: eo.Z.getArticleURL(e_.BhN.WIN7_8_DEPRECATE) })
@@ -248,7 +248,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
                                   },
                                   noticeType: e_.kVF.VOICE_DISABLED,
                                   children: ef.Z.Messages.RECONNECT
@@ -269,7 +269,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
                                   },
                                   noticeType: e_.kVF.VOICE_CONNECTED_LAST_SESSION,
                                   children: ef.Z.Messages.RECONNECT
@@ -287,7 +287,7 @@ let eC =
                               }),
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  className: eT.platformIcon,
+                                  className: eh.platformIcon,
                                   src: eZ.icon.whiteSVG
                               }),
                               ef.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
@@ -297,7 +297,7 @@ let eC =
                                   children: ef.Z.Messages.VOICE_SETTINGS
                               }),
                               (0, i.jsx)(c.Anchor, {
-                                  className: eT.textLinkSmall,
+                                  className: eh.textLinkSmall,
                                   href: eo.Z.getArticleURL(e_.BhN.SPOTIFY_AUTO_PAUSED),
                                   target: '_blank',
                                   children: ef.Z.Messages.NOTICE_WHATS_THIS
@@ -311,7 +311,7 @@ let eC =
                               ef.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: e_.kVF.UNCLAIMED_ACCOUNT,
-                                  onClick: () => (eA && null != x ? (0, y.hk)(x) : O.j()),
+                                  onClick: () => (eA && null != x ? (0, y.hk)(x) : M.j()),
                                   children: ef.Z.Messages.CLAIM_ACCOUNT
                               })
                           ]
@@ -329,7 +329,7 @@ let eC =
                                               title: ef.Z.Messages.VERIFICATION_EMAIL_TITLE,
                                               body: ef.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null == m ? void 0 : m.email }),
                                               secondaryConfirmText: ef.Z.Messages.CHANGE_EMAIL,
-                                              onConfirmSecondary: O.j
+                                              onConfirmSecondary: M.j
                                           });
                                   },
                                   children: ef.Z.Messages.RESEND_EMAIL_SHORT
@@ -342,7 +342,7 @@ let eC =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => h.Z.ackScheduledMaintenance(),
+                                  onClick: () => T.Z.ackScheduledMaintenance(),
                                   noticeType: e_.kVF.SCHEDULED_MAINTENANCE
                               }),
                               ef.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ed.metadata),
@@ -353,7 +353,7 @@ let eC =
                           ]
                       });
                   case e_.kVF.NO_INPUT_DETECTED:
-                      if (!ee.Z.supports(em.AN.LOOPBACK)) return (0, i.jsx)(eh, {});
+                      if (!ee.Z.supports(em.AN.LOOPBACK)) return (0, i.jsx)(eT, {});
                       return (0, i.jsx)(eN, {});
                   case e_.kVF.HARDWARE_MUTE:
                       if (null == ed.metadata) return null;
@@ -429,7 +429,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eT.premiumIcon
+                                  className: eh.premiumIcon
                               }),
                               ef.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
                                   applicationName: ey.name,
@@ -473,7 +473,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eT.premiumIcon
+                                  className: eh.premiumIcon
                               }),
                               ef.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
                                   applicationName: a.name,
@@ -606,8 +606,8 @@ let eC =
                                   onClick: () => ep(),
                                   noticeType: e_.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
                               }),
-                              (0, i.jsxs)(M.Z, {
-                                  justify: M.Z.Justify.CENTER,
+                              (0, i.jsxs)(O.Z, {
+                                  justify: O.Z.Justify.CENTER,
                                   children: [
                                       null != ew
                                           ? ef.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
@@ -621,7 +621,7 @@ let eC =
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
-                                          className: eT.ellipsis
+                                          className: eh.ellipsis
                                       })
                                   ]
                               })
@@ -632,9 +632,9 @@ let eC =
                       if (null != es.Z.testModeEmbeddedApplicationId)
                           return (0, i.jsx)(c.Notice, {
                               color: c.NoticeColors.WARNING,
-                              children: (0, i.jsxs)(M.Z, {
-                                  justify: M.Z.Justify.CENTER,
-                                  align: M.Z.Align.CENTER,
+                              children: (0, i.jsxs)(O.Z, {
+                                  justify: O.Z.Justify.CENTER,
+                                  align: O.Z.Align.CENTER,
                                   children: [
                                       (0, i.jsx)('div', { children: ef.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({ applicationName: ed.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
@@ -646,14 +646,14 @@ let eC =
                           });
                       return (0, i.jsx)(c.Notice, {
                           color: c.NoticeColors.WARNING,
-                          children: (0, i.jsxs)(M.Z, {
-                              justify: M.Z.Justify.CENTER,
-                              align: M.Z.Align.CENTER,
+                          children: (0, i.jsxs)(O.Z, {
+                              justify: O.Z.Justify.CENTER,
+                              align: O.Z.Align.CENTER,
                               children: [
                                   (0, i.jsx)('div', { children: ef.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({ applicationName: ed.metadata.applicationName }) }),
                                   (0, i.jsx)(eu.Z, {
                                       dropdownSize: eu.E.DropdownSizes.SMALL,
-                                      className: eT.testModeSKUSelector,
+                                      className: eh.testModeSKUSelector,
                                       color: eu.E.Colors.WHITE,
                                       look: eu.E.Looks.OUTLINED,
                                       size: eu.E.Sizes.MIN,
@@ -693,7 +693,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eT.premiumIcon
+                                  className: eh.premiumIcon
                               }),
                               eR === eE.p9.TIER_1 ? ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }) : eR === eE.p9.TIER_0 ? ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }) : ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -822,7 +822,7 @@ let eC =
                   case e_.kVF.QUARANTINED:
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.CUSTOM,
-                          className: eT.quarantineNotice,
+                          className: eh.quarantineNotice,
                           children: [
                               ef.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE,
                               (0, i.jsx)(c.NoticeButtonAnchor, {
@@ -833,7 +833,7 @@ let eC =
                               (0, i.jsx)(c.Anchor, {
                                   href: eo.Z.getArticleURL(e_.BhN.QUARANTINE),
                                   target: '_blank',
-                                  className: eT.quarantineLearnMoreLink,
+                                  className: eh.quarantineLearnMoreLink,
                                   children: ef.Z.Messages.LEARN_MORE
                               })
                           ]

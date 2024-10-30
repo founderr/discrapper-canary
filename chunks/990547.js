@@ -70,14 +70,14 @@ var a,
     l = n(512722),
     u = n.n(l),
     c = n(264344),
-    d = n.n(c),
-    _ = n(627420),
+    d = n.n(c);
+n(804098);
+var _ = n(627420),
     E = n(433517),
     f = n(298444),
     h = n(979675),
-    p = n(947486);
-n(804098);
-var I = n(699407),
+    p = n(947486),
+    I = n(699407),
     m = n(20281),
     T = n(525769);
 let S = 'deviceProperties',
@@ -270,7 +270,7 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '339786'), '339786'), 10);
+        let a = parseInt(((n = '340340'), '340340'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

@@ -14,8 +14,8 @@ var a = n(120356),
     I = n(937111),
     m = n(981631),
     f = n(176505),
-    T = n(689938),
-    h = n(373359),
+    h = n(689938),
+    T = n(373359),
     N = n(250812);
 t.Z = () => {
     var e, t;
@@ -29,31 +29,31 @@ t.Z = () => {
         x = null,
         R = null,
         v = null,
-        O = [h.notice, N.notice];
+        M = [T.notice, N.notice];
     switch (A) {
         case E.wB.SUBMITTED:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
+            (x = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
+                (R = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
                 (v = () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: T.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                            confirmText: T.Z.Messages.CONFIRM,
-                            cancelText: T.Z.Messages.CANCEL,
+                            header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+                            confirmText: h.Z.Messages.CONFIRM,
+                            cancelText: h.Z.Messages.CANCEL,
                             onConfirm: () => d.Z.removeGuildJoinRequest(p.id),
                             confirmButtonColor: o.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+                                children: h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
                             })
                         })
                     );
                 });
             break;
         case E.wB.REJECTED:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
+            (x = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
+                (R = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
                 (v = () => {
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
@@ -64,25 +64,25 @@ t.Z = () => {
                             });
                     });
                 }),
-                O.push(h.error);
+                M.push(T.error);
             break;
         default:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
+            (x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
+                (R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
                 (v = () => {
                     (0, _.hk)(p.id);
                 });
     }
     return (0, i.jsxs)('div', {
-        className: s()(...O),
+        className: s()(...M),
         children: [
             (0, i.jsx)(o.Text, {
-                className: h.header,
+                className: T.header,
                 variant: 'text-sm/normal',
                 children: x
             }),
             (0, i.jsx)(o.Button, {
-                className: h.button,
+                className: T.button,
                 look: o.Button.Looks.OUTLINED,
                 color: o.Button.Colors.WHITE,
                 size: o.Button.Sizes.NONE,

@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(163268),
     m = n(719548),
     f = n(689938),
-    T = n(614092);
-let h = (e) => {
+    h = n(614092);
+let T = (e) => {
         let { attachment: t } = e,
             { url: n, description: a } = t;
         return null == n
@@ -42,15 +42,15 @@ let h = (e) => {
         let { url: t, description: n } = e,
             a = (0, _.cb)(t);
         return (0, i.jsx)('div', {
-            className: T.mediaContainer,
+            className: h.mediaContainer,
             children: a
                 ? (0, i.jsx)(d.Z, {
-                      className: r()(T.video, T.media),
+                      className: r()(h.video, h.media),
                       controls: !0,
                       src: t
                   })
                 : (0, i.jsx)('img', {
-                      className: r()(T.image, T.media),
+                      className: r()(h.image, h.media),
                       src: t,
                       alt: n
                   })
@@ -103,29 +103,29 @@ function g(e) {
                     children: [
                         (0, i.jsx)(o.ModalCloseButton, {
                             onClick: p,
-                            className: T.closeButton
+                            className: h.closeButton
                         }),
                         (0, i.jsx)(o.Heading, {
                             id: m,
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            className: T.header,
+                            className: h.header,
                             children: f.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            className: T.subheader,
+                            className: h.subheader,
                             children: f.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                         }),
-                        null != l && (0, i.jsx)(h, { attachment: l }),
+                        null != l && (0, i.jsx)(T, { attachment: l }),
                         null != c && (0, i.jsx)(N, { embed: c })
                     ]
                 }),
                 (0, i.jsxs)(o.ModalFooter, {
                     children: [
                         (0, i.jsx)(o.Button, {
-                            className: T.button,
+                            className: h.button,
                             disabled: s,
                             submitting: s,
                             size: o.Button.Sizes.MEDIUM,
@@ -134,7 +134,7 @@ function g(e) {
                             children: f.Z.Messages.CONFIRM
                         }),
                         (0, i.jsx)(o.Button, {
-                            className: T.button,
+                            className: h.button,
                             disabled: s,
                             color: o.Button.Colors.TRANSPARENT,
                             size: o.Button.Sizes.MEDIUM,

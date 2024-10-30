@@ -17,7 +17,7 @@ let _ = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
             m = (0, a.e7)([u.Z], () => u.Z.shouldReload()),
             f = i.useRef(!1),
-            [T, h] = i.useState(!1),
+            [h, T] = i.useState(!1),
             {
                 initialized: N,
                 loading: p,
@@ -58,7 +58,7 @@ let _ = (e) => {
                         everyone_filter: R
                     });
             }, [N, m, t, E, x, R, I]);
-        let O = i.useCallback(
+        let M = i.useCallback(
             async (e) => {
                 !f.current &&
                     N &&
@@ -66,7 +66,7 @@ let _ = (e) => {
                     null != S &&
                     (e || !A) &&
                     ((f.current = !0),
-                    h(!0),
+                    T(!0),
                     await (0, o.jk)(
                         {
                             after: S,
@@ -79,7 +79,7 @@ let _ = (e) => {
                             f.current = !1;
                         }
                     ),
-                    h(!1));
+                    T(!1));
             },
             [N, g, S, A, E, x, R]
         );
@@ -88,8 +88,8 @@ let _ = (e) => {
             loading: p,
             items: C,
             hasMore: g,
-            loadMore: O,
-            loadingMore: T,
+            loadMore: M,
+            loadingMore: h,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

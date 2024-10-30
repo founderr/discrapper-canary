@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 }),
     n(47120);
@@ -18,7 +18,7 @@ var i = n(200651),
     I = n(55935),
     m = n(689938),
     f = n(575954);
-function T(e) {
+function h(e) {
     let { invite: t, expired: n } = e,
         s = (0, l.e7)([E.default], () => {
             var e, n;
@@ -26,7 +26,7 @@ function T(e) {
         }),
         u = (0, I.vc)(r()(t.created_at), 'LT'),
         d = a.useRef(null),
-        T = (0, c.Z)(d);
+        h = (0, c.Z)(d);
     return (
         a.useEffect(() => {
             !n && (0, _.Br)(t);
@@ -52,10 +52,10 @@ function T(e) {
                         (0, i.jsxs)('div', {
                             className: f.buttonContainer,
                             children: [
-                                (0, i.jsx)(h, {
+                                (0, i.jsx)(T, {
                                     expired: n,
                                     invite: t,
-                                    isHoveringInvite: T
+                                    isHoveringInvite: h
                                 }),
                                 (0, i.jsx)(o.CircleIconButton, {
                                     className: f.deleteButton,
@@ -96,19 +96,19 @@ function T(e) {
         })
     );
 }
-function h(e) {
+function T(e) {
     let { expired: t, invite: n, isHoveringInvite: s } = e,
         r = (0, l.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
         c = (0, l.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
         [E, I] = a.useState(!1),
-        T = a.useCallback(async () => {
+        h = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.MH)(n);
             } catch {}
             I(!1);
         }, [n]),
-        h = a.useCallback(async () => {
+        T = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.Ol)(n);
@@ -122,7 +122,7 @@ function h(e) {
                   color: o.ButtonColors.TRANSPARENT,
                   disabled: E,
                   size: o.ButtonSizes.SMALL,
-                  onClick: T,
+                  onClick: h,
                   children: m.Z.Messages.GAME_INVITES_LAUNCH_GAME
               })
             : null;
@@ -132,7 +132,7 @@ function h(e) {
               color: o.ButtonColors.GREEN,
               disabled: E,
               size: o.ButtonSizes.SMALL,
-              onClick: h,
+              onClick: T,
               children: m.Z.Messages.GAME_INVITES_JOIN_GAME
           })
         : null != n.fallback_url

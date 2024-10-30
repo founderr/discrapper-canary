@@ -19,9 +19,9 @@ function _(e) {
     let I = e.message.embeds[0],
         m = null !== (s = null === (t = I.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== s ? s : void 0,
         f = null !== (_ = null == m ? void 0 : m.rawValue) && void 0 !== _ ? _ : void 0,
-        T = null !== (E = null === (a = I.fields) || void 0 === a ? void 0 : a.find((e) => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== E ? E : void 0,
-        h = null == T || null == T.rawValue ? void 0 : parseFloat(T.rawValue);
-    return null == f || null == h
+        h = null !== (E = null === (a = I.fields) || void 0 === a ? void 0 : a.find((e) => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== E ? E : void 0,
+        T = null == h || null == h.rawValue ? void 0 : parseFloat(h.rawValue);
+    return null == f || null == T
         ? null
         : (0, i.jsxs)(l.Clickable, {
               onClick: () => {
@@ -58,7 +58,7 @@ function _(e) {
                               className: u.incidentTiming,
                               children: (0, i.jsx)(l.Text, {
                                   variant: 'text-xs/medium',
-                                  children: c.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: d(h) })
+                                  children: c.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: d(T) })
                               })
                           }),
                           (0, i.jsx)('div', {
