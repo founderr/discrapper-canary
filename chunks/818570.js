@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
     c: function () {
-        return i;
+        return s;
     }
 });
-var r = t(200651);
-t(192379);
-var o = t(692547),
-    a = t(390507),
-    s = t(325767);
-let i = (e) => {
-    var n, t;
-    let { size: i = 'md', width: l, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...m } = e,
-        p = (0, a.m)(i),
-        f = null !== (n = null == p ? void 0 : p.width) && void 0 !== n ? n : l,
-        _ = null !== (t = null == p ? void 0 : p.height) && void 0 !== t ? t : c;
+var r = n(200651);
+n(192379);
+var o = n(692547),
+    a = n(390507),
+    i = n(325767);
+let s = (e) => {
+    var t, n;
+    let { size: s = 'md', width: l, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...m } = e,
+        p = (0, a.m)(s),
+        f = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : l,
+        C = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : c;
     return (0, r.jsx)('svg', {
-        ...(0, s.Z)(m),
+        ...(0, i.Z)(m),
         xmlns: 'http://www.w3.org/2000/svg',
         width: f,
-        height: _,
+        height: C,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, r.jsx)('path', {

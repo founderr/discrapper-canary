@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     i0: function () {
         return T;
     },
@@ -6,116 +6,116 @@ t.d(n, {
         return x;
     }
 });
-var r = t(200651);
-t(192379);
-var o = t(120356),
-    a = t.n(o),
-    s = t(481060),
-    i = t(617136),
-    l = t(497505),
-    c = t(918701),
-    u = t(796111),
-    d = t(667105),
-    m = t(341907),
-    p = t(604162),
-    f = t(46140),
-    _ = t(689938),
-    C = t(128220);
-function E(e) {
-    let { quest: n, taskDetails: t } = e;
-    return (0, r.jsx)(s.Button, {
-        className: C.cta,
-        color: s.Button.Colors.BRAND,
+var r = n(200651);
+n(192379);
+var o = n(120356),
+    a = n.n(o),
+    i = n(481060),
+    s = n(617136),
+    l = n(497505),
+    c = n(918701),
+    u = n(796111),
+    d = n(667105),
+    m = n(341907),
+    p = n(604162),
+    f = n(46140),
+    C = n(689938),
+    _ = n(128220);
+function v(e) {
+    let { quest: t, taskDetails: n } = e;
+    return (0, r.jsx)(i.Button, {
+        className: _.cta,
+        color: i.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
-            (0, m.openVideoQuestModal)(n);
+            (0, m.openVideoQuestModal)(t);
         },
-        size: s.Button.Sizes.SMALL,
-        children: (0, p.F9)(t)
+        size: i.Button.Sizes.SMALL,
+        children: (0, p.F9)(n)
     });
 }
-let v = (e) => {
-        let { quest: n } = e;
-        return (0, r.jsx)(s.Button, {
-            className: C.cta,
-            size: s.Button.Sizes.SMALL,
+let E = (e) => {
+        let { quest: t } = e;
+        return (0, r.jsx)(i.Button, {
+            className: _.cta,
+            size: i.Button.Sizes.SMALL,
             onClick: () =>
-                (0, c.FE)(n, {
+                (0, c.FE)(t, {
                     content: l.jn.QUEST_BAR_V2,
-                    ctaContent: i.jZ.OPEN_GAME_LINK
+                    ctaContent: s.jZ.OPEN_GAME_LINK
                 }),
-            children: _.Z.Messages.QUESTS_GET_THIS_GAME
+            children: C.Z.Messages.QUESTS_GET_THIS_GAME
         });
     },
     S = (e) => {
-        let { quest: n } = e;
-        return (0, r.jsx)(s.Button, {
+        let { quest: t } = e;
+        return (0, r.jsx)(i.Button, {
             fullWidth: !0,
-            className: C.cta,
+            className: _.cta,
             onClick: () =>
                 (0, c.gI)(
-                    { quest: n },
+                    { quest: t },
                     {
                         content: l.jn.QUEST_BAR_V2,
-                        ctaContent: i.jZ.CONNECT_CONSOLE
+                        ctaContent: s.jZ.CONNECT_CONSOLE
                     }
                 ),
-            size: s.Button.Sizes.SMALL,
-            children: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+            size: i.Button.Sizes.SMALL,
+            children: C.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
         });
     },
     T = (e) => {
-        let { quest: n, useReducedMotion: t, isExpanded: o, className: i, ctaLabel: c, ...u } = e,
+        let { quest: t, useReducedMotion: n, isExpanded: o, className: s, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
-                quest: n,
+                quest: t,
                 location: l.jn.QUEST_BAR_V2
             });
-        return (0, r.jsx)(s.ShinyButton, {
+        return (0, r.jsx)(i.ShinyButton, {
             fullWidth: !0,
-            size: s.Button.Sizes.SMALL,
+            size: i.Button.Sizes.SMALL,
             onClick: m,
-            pauseAnimation: t || !o,
-            className: a()(C.cta, i),
-            buttonShineClassName: C.shine,
+            pauseAnimation: n || !o,
+            className: a()(_.cta, s),
+            buttonShineClassName: _.shine,
             ...u,
-            children: null != c ? c : _.Z.Messages.QUESTS_CLAIM_REWARD
+            children: null != c ? c : C.Z.Messages.QUESTS_CLAIM_REWARD
         });
     },
     g = (e) => {
-        var n;
-        let { quest: t, useReducedMotion: o, isExpanded: a, awaitingConsoleConnections: s, hasMadeProgress: i, isProgressing: d, activeScreen: m, taskDetails: p } = e,
-            _ = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-            C = (0, u.P)({ location: f.dr.QUESTS_BAR }),
-            g = (0, c.cr)(t);
-        if (_)
+        var t;
+        let { quest: n, useReducedMotion: o, isExpanded: a, awaitingConsoleConnections: i, hasMadeProgress: s, isProgressing: d, activeScreen: m, taskDetails: p } = e,
+            C = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+            _ = (0, u.P)({ location: f.dr.QUESTS_BAR }),
+            g = (0, c.cr)(n);
+        if (C)
             return (0, r.jsx)(T, {
-                quest: t,
+                quest: n,
                 useReducedMotion: o,
                 isExpanded: a
             });
         if (g)
-            return (0, r.jsx)(E, {
-                quest: t,
+            return (0, r.jsx)(v, {
+                quest: n,
                 taskDetails: p
             });
-        if (m === l.LI.CONSOLE && s && !C) return (0, r.jsx)(S, { quest: t });
-        else if (m !== l.LI.SELECT && !i && !d) return (0, r.jsx)(v, { quest: t });
+        if (m === l.LI.CONSOLE && i && !_) return (0, r.jsx)(S, { quest: n });
+        else if (m !== l.LI.SELECT && !s && !d) return (0, r.jsx)(E, { quest: n });
         return null;
     };
 function x(e) {
     return (0, r.jsxs)('div', {
-        className: C.ctaButtons,
+        className: _.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, r.jsx)(s.Button, {
-                    className: C.backButton,
-                    innerClassName: C.backButtonInner,
+                (0, r.jsx)(i.Button, {
+                    className: _.backButton,
+                    innerClassName: _.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(s.ChevronSmallLeftIcon, { className: C.backIcon })
+                    children: (0, r.jsx)(i.ChevronSmallLeftIcon, { className: _.backIcon })
                 }),
             (0, r.jsx)(g, { ...e })
         ]
