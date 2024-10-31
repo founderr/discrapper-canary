@@ -46,7 +46,6 @@ e.exports = {
     endScreenPanel: 'endScreenPanel_c73f92',
     endScreenPanelInner: 'endScreenPanelInner_c73f92',
     endScreenPanelTextCont: 'endScreenPanelTextCont_c73f92',
-    endScreenPanelLeft: 'endScreenPanelLeft_c73f92',
     endScreenPanelRight: 'endScreenPanelRight_c73f92',
     endScreenIcon: 'endScreenIcon_c73f92',
     verticalDivider: 'verticalDivider_c73f92',
