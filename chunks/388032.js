@@ -6,11 +6,14 @@ n.r(t),
         getLanguages: function () {
             return l.Vb;
         },
+        getSystemLocale: function () {
+            return c;
+        },
         international: function () {
             return u;
         },
         intl: function () {
-            return c;
+            return _;
         },
         t: function () {
             return u;
@@ -26,9 +29,13 @@ var r = n(200651),
     s = n(302454),
     o = n.n(s),
     l = n(424395);
-let u = {},
-    c = new a.IntlManager({
-        initialLocale: 'en-US',
+let u = {};
+function c(e) {
+    return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
+}
+let d = (0, l.YI)(c('en-US'), 'en-US'),
+    _ = new a.IntlManager({
+        initialLocale: d,
         defaultLocale: 'en-US'
     }).withFormatters({
         format: (0, a.makeReactFormatter)({
