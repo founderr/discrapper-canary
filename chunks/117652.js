@@ -1,100 +1,164 @@
 n.d(t, {
     Dd: function () {
-        return p;
+        return x;
     }
 });
-var i = n(200651);
-n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(628952),
-    l = n(225657),
-    o = n(600164),
-    c = n(927699),
-    u = n(987716),
-    d = n(311821),
-    _ = n(594174),
-    E = n(987209),
-    I = n(598),
-    m = n(409813),
-    f = n(614277),
-    h = n(474936),
-    T = n(689938),
-    N = n(829294);
-let p = {
-    key: m.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, i.jsx)(g, { ...e }),
+var i = n(200651),
+    a = n(192379),
+    s = n(442837),
+    r = n(481060),
+    l = n(335131),
+    o = n(628952),
+    c = n(225657),
+    u = n(600164),
+    d = n(109213),
+    _ = n(927699),
+    E = n(987716),
+    I = n(311821),
+    m = n(251660),
+    f = n(594174),
+    T = n(855775),
+    h = n(987209),
+    N = n(598),
+    p = n(409813),
+    C = n(614277),
+    g = n(474936),
+    S = n(689938),
+    A = n(829294);
+let x = {
+    key: p.h8.GIFT_CUSTOMIZATION,
+    renderStep: (e) => (0, i.jsx)(v, { ...e }),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => T.Z.Messages.GIFT_CARD_SELECTION
+        useBreadcrumbLabel: () => S.Z.Messages.GIFT_CARD_SELECTION
     }
 };
-function C(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: r = !1, loading: l = !1 } = e,
-        { hasPaymentSources: o } = (0, I.usePaymentContext)(),
-        c = o ? m.h8.REVIEW : m.h8.ADD_PAYMENT_STEPS;
+function R(e) {
+    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: s = !1, loading: l = !1 } = e,
+        { hasPaymentSources: o } = (0, N.usePaymentContext)(),
+        c = o ? p.h8.REVIEW : p.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.Button, {
+            (0, i.jsx)(r.Button, {
                 onClick: () => t(c),
-                disabled: r,
+                disabled: s,
                 submitting: l,
-                children: T.Z.Messages.PAGINATION_NEXT
+                children: S.Z.Messages.PAGINATION_NEXT
             }),
-            a ? (0, i.jsx)(d.Z, { onClick: n }) : null
+            a ? (0, i.jsx)(I.Z, { onClick: n }) : null
         ]
     });
 }
-function g(e) {
+function v(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: d = '', setCustomGiftMessage: m, giftRecipientError: p, validatingGiftRecipient: g, giftRecipient: S } = (0, E.wD)(),
-        { selectedSkuId: A, selectedSkuPricePreview: x } = (0, I.usePaymentContext)(),
-        R = (0, a.e7)([_.default], () => _.default.getCurrentUser());
+        { customGiftMessage: I = '', setCustomGiftMessage: p, giftRecipientError: x, setGiftRecipientError: v, validatingGiftRecipient: M, giftRecipient: O, recommendedGiftSkuIds: L, giftingOrigin: Z, setValidatingGiftRecipient: b } = (0, h.wD)(),
+        { selectedSkuId: P, setSelectedSkuId: D, selectedSkuPricePreview: j, paymentSourceId: U, skuPricePreviewsById: y } = (0, N.usePaymentContext)(),
+        B = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        { enabled: k, giftRecommendationAlgorithm: G } = d.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
+        F = k && Z === g.Wt.DM_CHANNEL,
+        w = G === d.u.POPULAR ? S.Z.Messages.GIFT_COLLECTIBLES_MODAL_TITLE : S.Z.Messages.GIFT_COLLECTIBLES_MODAL_TITLE_V2,
+        V = async (e, t) => {
+            b(!0), null != x && v(), !(await (0, l.B1)(e.id, t)) && v(S.Z.Messages.GIFT_COLLECTIBLES_MODAL_ALREADY_HAS_ITEM_ERROR), b(!1);
+        };
+    a.useEffect(() => {
+        null != P && null != O && V(O, P);
+    }, []);
+    let H = (e) => {
+            null != O && V(O, e), D(e);
+        },
+        Y = (e) => {
+            let t = y[e],
+                n = null != U ? U : T.c,
+                a = null != t ? t[n] : null;
+            if (null != a)
+                return (0, i.jsx)(
+                    o.Z,
+                    {
+                        skuId: e,
+                        skuPricePreview: a,
+                        isSelected: e === P,
+                        onSelect: (e) => H(e),
+                        className: A.recommendedGiftPreview
+                    },
+                    e
+                );
+        },
+        W = () =>
+            (0, i.jsx)(_.Z, {
+                sectionTitle: S.Z.Messages.GIFT_OPTIONAL_MESSAGE,
+                onTextChange: (e) => (null == p ? void 0 : p(e)),
+                pendingText: I,
+                currentText: I,
+                disableThemedBackground: !0,
+                className: A.customGiftMessageWrapper,
+                innerClassName: A.customGiftMessage
+            });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.C3, {
+            (0, i.jsx)(C.C3, {
                 children: (0, i.jsxs)('div', {
-                    className: N.stepBody,
+                    className: A.stepBody,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: N.bodyColumnMiddle,
-                            children: (0, i.jsx)(u.q, { isShopGift: !0 })
-                        }),
-                        (0, i.jsxs)('div', {
-                            className: N.bodyColumnRight,
-                            children: [
-                                (0, i.jsx)(l.Z, {
-                                    selectedSkuId: A,
-                                    className: N.sendTo
-                                }),
-                                (0, i.jsx)(c.Z, {
-                                    sectionTitle: T.Z.Messages.GIFT_OPTIONAL_MESSAGE,
-                                    onTextChange: (e) => (null == m ? void 0 : m(e)),
-                                    pendingText: d,
-                                    currentText: d,
-                                    disableThemedBackground: !0,
-                                    className: N.customGiftMessageWrapper,
-                                    innerClassName: N.customGiftMessage
-                                }),
-                                (0, i.jsx)(r.Z, {
-                                    selectedSkuId: A,
-                                    selectedSkuPricePreview: x,
-                                    className: N.giftPreview
-                                })
-                            ]
-                        })
+                        F
+                            ? (0, i.jsxs)('div', {
+                                  className: A.bodyColumnLeft,
+                                  children: [
+                                      (0, i.jsx)(r.Text, {
+                                          variant: 'text-xs/bold',
+                                          color: 'header-secondary',
+                                          className: A.selectGiftTitle,
+                                          children: w.toLocaleUpperCase()
+                                      }),
+                                      L.map((e) => Y(e))
+                                  ]
+                              })
+                            : (0, i.jsx)('div', {
+                                  className: A.bodyColumnMiddle,
+                                  children: (0, i.jsx)(E.q, { isShopGift: !0 })
+                              }),
+                        F
+                            ? (0, i.jsxs)('div', {
+                                  className: A.bodyColumnRight,
+                                  children: [
+                                      (0, i.jsx)(m.s, { giftRecipient: O }),
+                                      (0, i.jsx)(E.q, {
+                                          isShopGift: !0,
+                                          className: A.selectedGiftAnimation,
+                                          optionsContainerClassName: A.giftAnimationOptionsContainer
+                                      }),
+                                      W()
+                                  ]
+                              })
+                            : (0, i.jsxs)('div', {
+                                  className: A.bodyColumnRight,
+                                  children: [
+                                      (0, i.jsx)(c.Z, {
+                                          selectedSkuId: P,
+                                          className: A.sendTo,
+                                          validateSelectedGift: V
+                                      }),
+                                      W(),
+                                      (0, i.jsx)(o.Z, {
+                                          skuId: P,
+                                          skuPricePreview: j,
+                                          className: A.giftPreview,
+                                          isSelected: !0,
+                                          shouldDisplayHeader: !0
+                                      })
+                                  ]
+                              })
                     ]
                 })
             }),
-            (0, i.jsx)(f.O3, {
-                children: (0, i.jsx)(s.ModalFooter, {
-                    justify: o.Z.Justify.BETWEEN,
-                    align: o.Z.Align.CENTER,
-                    children: (0, i.jsx)(C, {
+            (0, i.jsx)(C.O3, {
+                children: (0, i.jsx)(r.ModalFooter, {
+                    justify: u.Z.Justify.BETWEEN,
+                    align: u.Z.Align.CENTER,
+                    children: (0, i.jsx)(R, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != p || null == S || S.id === (null == R ? void 0 : R.id) || d.length > h.$n,
-                        loading: g
+                        disabled: null != x || null == O || O.id === (null == B ? void 0 : B.id) || I.length > g.$n,
+                        loading: M
                     })
                 })
             })

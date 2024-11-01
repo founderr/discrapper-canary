@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(409813),
     m = n(791785),
     f = n(961830),
-    h = n(742956),
-    T = n(346790),
+    T = n(742956),
+    h = n(346790),
     N = n(49308),
     p = n(117652),
     C = n(126982),
@@ -53,7 +53,7 @@ function v(e) {
             () => [
                 f.WA,
                 p.Dd,
-                T.n,
+                h.n,
                 ...f.yp,
                 f.wo,
                 {
@@ -112,9 +112,10 @@ function v(e) {
                         transitionState: M,
                         renderHeader: (e, t, n) =>
                             Z
-                                ? (0, i.jsx)(h.Z, {
+                                ? (0, i.jsx)(T.Z, {
                                       step: n,
-                                      onClose: () => t(!1)
+                                      onClose: () => t(!1),
+                                      giftingOrigin: D
                                   })
                                 : (0, i.jsx)(C.Z, {
                                       step: n,
