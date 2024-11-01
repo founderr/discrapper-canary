@@ -541,10 +541,13 @@ class eX extends s.PureComponent {
                         })
                     }),
                     S && !A
-                        ? (0, i.jsx)(ek.Z, {
-                              channel: n,
-                              entryPointCommandButtonRef: N,
-                              type: c
+                        ? (0, i.jsx)('div', {
+                              className: eF.entryPointButtonContainer,
+                              children: (0, i.jsx)(ek.Z, {
+                                  channel: n,
+                                  entryPointCommandButtonRef: N,
+                                  type: c
+                              })
                           })
                         : null
                 ]
