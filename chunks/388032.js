@@ -22,12 +22,15 @@ n.r(t),
     n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(450961),
+    a = n(171426),
     s = n(302454),
     o = n.n(s),
     l = n(424395);
 let u = {},
-    c = new a.IntlManager('en-US').withFormatters({
+    c = new a.IntlManager({
+        initialLocale: 'en-US',
+        defaultLocale: 'en-US'
+    }).withFormatters({
         format: (0, a.makeReactFormatter)({
             $i: (e, t) => (0, r.jsx)('em', { children: e }, t),
             $b: (e, t) => (0, r.jsx)('strong', { children: e }, t),
