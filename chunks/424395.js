@@ -1,30 +1,32 @@
 n.d(t, {
     Vb: function () {
-        return a;
-    },
-    YI: function () {
         return s;
     },
+    YI: function () {
+        return o;
+    },
     u5: function () {
-        return i;
+        return a;
     },
     vJ: function () {
-        return r;
+        return i;
     }
 });
-let r = n(139458).B || !1;
-function i() {
-    return a()
+var r = n(171426);
+let i = n(139458).B || !1;
+function a() {
+    let e = n(132137).Z;
+    return s()
         .filter((e) => {
             let { enabled: t } = e;
             return t;
         })
-        .map((e) => {
-            let { code: t, name: n } = e;
+        .map((t) => {
+            let { code: n, name: i } = t;
             return {
-                value: t,
-                name: n,
-                localizedName: t
+                value: n,
+                name: i,
+                localizedName: e[(0, r.runtimeHashMessageKey)(n)]
             };
         })
         .sort((e, t) => {
@@ -33,12 +35,12 @@ function i() {
             return (n = n.toLowerCase()), n < (r = r.toLowerCase()) ? -1 : n > r ? 1 : 0;
         });
 }
-function a() {
+function s() {
     return n(515297);
 }
-function s(e, t) {
+function o(e, t) {
     var n, r;
-    let i = a()
+    let i = s()
         .filter((e) => {
             let { enabled: t } = e;
             return t;
@@ -48,6 +50,6 @@ function s(e, t) {
             return t;
         });
     if (i.includes(e)) return e;
-    let s = e.split('-');
-    return i.includes(s[0]) ? s[0] : 'zh' === s[0] && s.length > 1 && 'Hant' === s[1] ? (null !== (n = i.find((e) => 'zh-TW' === e)) && void 0 !== n ? n : t) : null !== (r = i.find((e) => e.split('-')[0] === s[0])) && void 0 !== r ? r : t;
+    let a = e.split('-');
+    return i.includes(a[0]) ? a[0] : 'zh' === a[0] && a.length > 1 && 'Hant' === a[1] ? (null !== (n = i.find((e) => 'zh-TW' === e)) && void 0 !== n ? n : t) : null !== (r = i.find((e) => e.split('-')[0] === a[0])) && void 0 !== r ? r : t;
 }

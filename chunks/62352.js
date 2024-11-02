@@ -1,1 +1,1 @@
-e.exports = { list: 'list_fd4745' };
+t.exports = { list: 'list_fd4745' };

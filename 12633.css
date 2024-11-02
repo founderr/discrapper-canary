@@ -1,3 +1,41 @@
+.anchor_af404b {
+    color: var(--text-link);
+    -webkit-text-decoration: var(--link-decoration);
+    text-decoration: var(--link-decoration)
+}
+
+.low-saturation .anchor_af404b {
+    color: var(--text-link-low-saturation)
+}
+
+.anchorUnderlineOnHover_af404b:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
+.enable-forced-colors .anchor_af404b,
+.enable-forced-colors .anchorUnderlineOnHover_af404b {
+    color: LinkText !important;
+    background-color: Canvas;
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
+.enable-forced-colors .anchor_af404b svg,
+.enable-forced-colors .anchorUnderlineOnHover_af404b svg {
+    color: currentColor
+}
+
+.enable-forced-colors .anchor_af404b:not([href]),
+.enable-forced-colors .anchorUnderlineOnHover_af404b:not([href]) {
+    color: ButtonText !important
+}
+
+.enable-forced-colors .anchor_af404b:not([href]),
+.enable-forced-colors .anchorUnderlineOnHover_af404b:not([href]) {
+    background-color: ButtonFace
+}
+
 @keyframes spinner-wandering-cubes_b6db20 {
     25% {
         transform: translatex(22px)rotate(-90deg)scale(.5)
@@ -1147,44 +1185,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 :where(.visual-refresh) .disabledButtonWrapper_dd4f85 {
     padding: 0
-}
-
-.anchor_af404b {
-    color: var(--text-link);
-    -webkit-text-decoration: var(--link-decoration);
-    text-decoration: var(--link-decoration)
-}
-
-.low-saturation .anchor_af404b {
-    color: var(--text-link-low-saturation)
-}
-
-.anchorUnderlineOnHover_af404b:hover {
-    -webkit-text-decoration: underline;
-    text-decoration: underline
-}
-
-.enable-forced-colors .anchor_af404b,
-.enable-forced-colors .anchorUnderlineOnHover_af404b {
-    color: LinkText !important;
-    background-color: Canvas;
-    -webkit-text-decoration: underline;
-    text-decoration: underline
-}
-
-.enable-forced-colors .anchor_af404b svg,
-.enable-forced-colors .anchorUnderlineOnHover_af404b svg {
-    color: currentColor
-}
-
-.enable-forced-colors .anchor_af404b:not([href]),
-.enable-forced-colors .anchorUnderlineOnHover_af404b:not([href]) {
-    color: ButtonText !important
-}
-
-.enable-forced-colors .anchor_af404b:not([href]),
-.enable-forced-colors .anchorUnderlineOnHover_af404b:not([href]) {
-    background-color: ButtonFace
 }
 
 .dots_ce0450 {

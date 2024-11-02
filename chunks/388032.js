@@ -7,19 +7,16 @@ n.r(t),
             return l.Vb;
         },
         getSystemLocale: function () {
-            return c;
+            return f;
         },
         international: function () {
-            return u;
+            return c.Z;
         },
         intl: function () {
-            return _;
+            return h;
         },
         t: function () {
-            return u;
-        },
-        untranslated: function () {
-            return u;
+            return p;
         }
     }),
     n(47120);
@@ -28,14 +25,16 @@ var r = n(200651),
     a = n(171426),
     s = n(302454),
     o = n.n(s),
-    l = n(424395);
-let u = {};
-function c(e) {
+    l = n(424395),
+    u = n(132137),
+    c = n(87841),
+    d = n(985348);
+function f(e) {
     return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
 }
-let d = (0, l.YI)(c('en-US'), 'en-US'),
-    _ = new a.IntlManager({
-        initialLocale: d,
+let _ = (0, l.YI)(f('en-US'), 'en-US'),
+    h = new a.IntlManager({
+        initialLocale: _,
         defaultLocale: 'en-US'
     }).withFormatters({
         format: (0, a.makeReactFormatter)({
@@ -74,4 +73,8 @@ let d = (0, l.YI)(c('en-US'), 'en-US'),
         formatToPlainString: a.stringFormatter,
         formatToMarkdownString: a.markdownFormatter,
         formatToParts: a.astFormatter
-    });
+    }),
+    p = {
+        ...u.Z,
+        ...d.Z
+    };

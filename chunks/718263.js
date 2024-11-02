@@ -1,1 +1,1 @@
-e.exports = { dimensionlessImage: 'dimensionlessImage_a4c000' };
+n.exports = { dimensionlessImage: 'dimensionlessImage_a4c000' };
