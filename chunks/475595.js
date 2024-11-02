@@ -1,18 +1,18 @@
 n.d(t, {
-    Bd: function () {
-        return r;
-    },
     Dm: function () {
-        return d;
+        return _;
     },
     N0: function () {
         return l;
     },
     Q2: function () {
-        return c;
+        return d;
+    },
+    eC: function () {
+        return r;
     },
     fh: function () {
-        return u;
+        return c;
     }
 }),
     n(571269),
@@ -29,70 +29,44 @@ var r,
     s = n(46140);
 let o = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
-function u(e, t, n) {
-    switch (t) {
-        case 'hero': {
-            let t = null == e.config.assets.heroVideo || a.tq ? e.config.assets.hero : e.config.assets.heroVideo,
-                n = c(e.id, t),
-                r = d(t),
-                i = null != r && l.includes(r);
-            return {
-                url: n,
-                mimetype: r,
-                isAnimated: i
-            };
-        }
-        case 'quest_bar_hero': {
-            let t = null == e.config.assets.questBarHeroVideo || a.tq ? e.config.assets.questBarHero : e.config.assets.questBarHeroVideo,
-                n = c(e.id, t),
-                r = d(t),
-                i = null != r && l.includes(r);
-            return {
-                url: n,
-                mimetype: r,
-                isAnimated: i
-            };
-        }
-        case 'reward': {
-            var r, i;
-            let t = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedTier) && void 0 !== i ? i : 0,
-                n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t],
-                s = null == n.assetVideo || a.tq ? n.asset : n.assetVideo,
-                o = c(e.id, s),
-                u = d(s),
-                _ = null != u && l.includes(u);
-            return {
-                url: o,
-                mimetype: u,
-                isAnimated: _
-            };
-        }
-        case 'game_tile': {
-            let t = e.config.assets.gameTile,
-                r = c(e.id, t, n),
-                i = d(t),
-                a = null != i && l.includes(i);
-            return {
-                url: r,
-                mimetype: i,
-                isAnimated: a
-            };
-        }
-        case 'logo_type': {
-            let t = e.config.assets.logotype,
-                r = c(e.id, t, n),
-                i = d(t),
-                a = null != i && l.includes(i);
-            return {
-                url: r,
-                mimetype: i,
-                isAnimated: a
-            };
-        }
-    }
-}
 ((i = r || (r = {})).HERO = 'hero'), (i.QUEST_BAR_HERO = 'quest_bar_hero'), (i.REWARD = 'reward'), (i.GAME_TILE = 'game_tile'), (i.LOGO_TYPE = 'logo_type');
+function u(e, t) {
+    return null == e || a.tq ? t : e;
+}
 function c(e, t, n) {
+    let r;
+    switch (t) {
+        case 'hero':
+            r = u(e.config.assets.heroVideo, e.config.assets.hero);
+            break;
+        case 'quest_bar_hero':
+            r = u(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            break;
+        case 'reward': {
+            var i, a;
+            let t = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedTier) && void 0 !== a ? a : 0,
+                n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
+            r = u(n.assetVideo, n.asset);
+            break;
+        }
+        case 'game_tile':
+            r = e.config.assets.gameTile;
+            break;
+        case 'logo_type':
+            r = e.config.assets.logotype;
+    }
+    return (function (e, t, n) {
+        let r = d(e, t, n),
+            i = _(t),
+            a = null != i && l.includes(i);
+        return {
+            url: r,
+            mimetype: i,
+            isAnimated: a
+        };
+    })(e.id, r, n);
+}
+function d(e, t, n) {
     if (t.startsWith('blob:')) {
         var r, i;
         return null !== (i = (r = t).split('?', 1).at(0)) && void 0 !== i ? i : r;
@@ -103,7 +77,7 @@ function c(e, t, n) {
         .concat(null != n ? '/'.concat(n) : '', '/')
         .concat(t);
 }
-function d(e) {
+function _(e) {
     var t, n, r;
     if (e.startsWith('blob:')) {
         let t = null !== (r = new URL(e).searchParams.get('mimetype')) && void 0 !== r ? r : void 0;
