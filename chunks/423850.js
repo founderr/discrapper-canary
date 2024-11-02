@@ -10,8 +10,8 @@ var n = r(263449),
     a = r(696486),
     _ = r(988097),
     o = r(152228),
-    E = r(101284),
-    i = r(467510),
+    i = r(101284),
+    E = r(467510),
     c = r(370336),
     s = r(395848),
     l = r(501684),
@@ -19,7 +19,7 @@ var n = r(263449),
 let I = [],
     R = new Map();
 function N() {
-    if ((0, u.QV)() && E.Z1) {
+    if ((0, u.QV)() && i.Z1) {
         let e = (function () {
             return (0, l.YF)(({ metric: e }) => {
                 let t,
@@ -30,34 +30,34 @@ function N() {
                 let { interactionId: I } = l,
                     N = A[l.name],
                     T = r.getOptions(),
-                    d = (0, u.XL)(E.Z1 + l.startTime),
-                    L = (0, u.XL)(e.value),
-                    f = (0, n.nZ)(),
+                    d = (0, u.XL)(i.Z1 + l.startTime),
+                    f = (0, u.XL)(e.value),
+                    L = (0, n.nZ)(),
                     O = (0, a.HN)(),
                     p = O ? (0, a.Gx)(O) : void 0,
                     h = (null != I ? R.get(I) : void 0) || p,
-                    S = h ? (0, a.XU)(h).description : f.getScopeData().transactionName,
-                    D = f.getUser(),
+                    S = h ? (0, a.XU)(h).description : L.getScopeData().transactionName,
+                    D = L.getUser(),
                     C = r.getIntegrationByName('Replay'),
                     g = C && C.getReplayId(),
-                    U = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
+                    P = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
                 try {
-                    t = f.getScopeData().contexts.profile.profile_id;
+                    t = L.getScopeData().contexts.profile.profile_id;
                 } catch (e) {}
-                let P = (0, i.Rt)(l.target),
+                let U = (0, E.Rt)(l.target),
                     M = (0, c.Jr)({
                         release: T.release,
                         environment: T.environment,
                         transaction: S,
                         [_.JQ]: e.value,
                         [_.S3]: 'auto.http.browser.inp',
-                        user: U || void 0,
+                        user: P || void 0,
                         profile_id: t || void 0,
                         replay_id: g || void 0,
                         'user_agent.original': s.m.navigator && s.m.navigator.userAgent
                     }),
                     G = (0, o.qp)({
-                        name: P,
+                        name: U,
                         op: `ui.interaction.${N}`,
                         attributes: M,
                         startTime: d,
@@ -67,7 +67,7 @@ function N() {
                     [_.E1]: 'millisecond',
                     [_.Wb]: e.value
                 }),
-                    G.end(d + L);
+                    G.end(d + f);
             });
         })();
         return () => {

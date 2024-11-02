@@ -1,14 +1,14 @@
 r.d(t, {
     f: function () {
-        return L;
+        return f;
     }
 });
 var n = r(469359),
     a = r(157079),
     _ = r(393523),
     o = r(151122),
-    E = r(263449),
-    i = r(572299),
+    i = r(263449),
+    E = r(572299),
     c = r(910731),
     s = r(64685),
     l = r(394798),
@@ -19,7 +19,7 @@ var n = r(469359),
     A = r(873567),
     T = r(454463),
     d = r(163162);
-let L = (0, o._I)((e = {}) => {
+let f = (0, o._I)((e = {}) => {
     let t = {
         console: !0,
         dom: !0,
@@ -36,7 +36,7 @@ let L = (0, o._I)((e = {}) => {
                 (0, c.e)(
                     (function (e) {
                         return function (t) {
-                            if ((0, E.s3)() !== e) return;
+                            if ((0, i.s3)() !== e) return;
                             let r = {
                                 category: 'console',
                                 data: {
@@ -50,7 +50,7 @@ let L = (0, o._I)((e = {}) => {
                                 if (!1 !== t.args[0]) return;
                                 (r.message = `Assertion failed: ${(0, N.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
                             }
-                            (0, i.n)(r, {
+                            (0, E.n)(r, {
                                 input: t.args,
                                 level: t.level
                             });
@@ -62,7 +62,7 @@ let L = (0, o._I)((e = {}) => {
                         (function (e, t) {
                             return function (r) {
                                 let n, a;
-                                if ((0, E.s3)() !== e) return;
+                                if ((0, i.s3)() !== e) return;
                                 let _ = 'object' == typeof t ? t.serializeAttribute : void 0,
                                     o = 'object' == typeof t && 'number' == typeof t.maxStringLength ? t.maxStringLength : void 0;
                                 o && o > 1024 && (T.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${o} was configured. Sentry will use 1024 instead.`), (o = 1024)), 'string' == typeof _ && (_ = [_]);
@@ -87,7 +87,7 @@ let L = (0, o._I)((e = {}) => {
                                     message: n
                                 };
                                 a && (c.data = { 'ui.component_name': a }),
-                                    (0, i.n)(c, {
+                                    (0, E.n)(c, {
                                         event: r.event,
                                         name: r.name,
                                         global: r.global
@@ -99,7 +99,7 @@ let L = (0, o._I)((e = {}) => {
                     (0, a.UK)(
                         (function (e) {
                             return function (t) {
-                                if ((0, E.s3)() !== e) return;
+                                if ((0, i.s3)() !== e) return;
                                 let { startTimestamp: r, endTimestamp: n } = t,
                                     _ = t.xhr[a.xU];
                                 if (!r || !n || !_) return;
@@ -110,7 +110,7 @@ let L = (0, o._I)((e = {}) => {
                                         startTimestamp: r,
                                         endTimestamp: n
                                     };
-                                (0, i.n)(
+                                (0, E.n)(
                                     {
                                         category: 'xhr',
                                         data: {
@@ -129,7 +129,7 @@ let L = (0, o._I)((e = {}) => {
                     (0, s.Uf)(
                         (function (e) {
                             return function (t) {
-                                if ((0, E.s3)() !== e) return;
+                                if ((0, i.s3)() !== e) return;
                                 let { startTimestamp: r, endTimestamp: n } = t;
                                 if (!(!n || (t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method)))
                                     if (t.error) {
@@ -140,7 +140,7 @@ let L = (0, o._I)((e = {}) => {
                                                 startTimestamp: r,
                                                 endTimestamp: n
                                             };
-                                        (0, i.n)(
+                                        (0, E.n)(
                                             {
                                                 category: 'fetch',
                                                 data: e,
@@ -161,7 +161,7 @@ let L = (0, o._I)((e = {}) => {
                                                 startTimestamp: r,
                                                 endTimestamp: n
                                             };
-                                        (0, i.n)(
+                                        (0, E.n)(
                                             {
                                                 category: 'fetch',
                                                 data: a,
@@ -177,7 +177,7 @@ let L = (0, o._I)((e = {}) => {
                     (0, _.a)(
                         (function (e) {
                             return function (t) {
-                                if ((0, E.s3)() !== e) return;
+                                if ((0, i.s3)() !== e) return;
                                 let r = t.from,
                                     n = t.to,
                                     a = (0, A.en)(d.m9.location.href),
@@ -186,7 +186,7 @@ let L = (0, o._I)((e = {}) => {
                                 (!_ || !_.path) && (_ = a),
                                     a.protocol === o.protocol && a.host === o.host && (n = o.relative),
                                     a.protocol === _.protocol && a.host === _.host && (r = _.relative),
-                                    (0, i.n)({
+                                    (0, E.n)({
                                         category: 'navigation',
                                         data: {
                                             from: r,
@@ -201,8 +201,8 @@ let L = (0, o._I)((e = {}) => {
                         'beforeSendEvent',
                         (function (e) {
                             return function (t) {
-                                if ((0, E.s3)() === e)
-                                    (0, i.n)(
+                                if ((0, i.s3)() === e)
+                                    (0, E.n)(
                                         {
                                             category: `sentry.${'transaction' === t.type ? 'transaction' : 'event'}`,
                                             event_id: t.event_id,

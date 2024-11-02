@@ -51,8 +51,8 @@ t.Z = (0, a.memo)(function (e) {
         b((i.top - n.top - a.height) / 2);
     });
     let W = (0, c.wj)(k),
-        K = (0, a.useMemo)(() => (0, C.fh)(L, C.Bd.LOGO_TYPE, 'dark'), [L]),
-        q = (0, a.useMemo)(() => (0, C.fh)(L, C.Bd.REWARD), [L]),
+        K = (0, a.useMemo)(() => (0, C.fh)(L, C.eC.LOGO_TYPE, 'dark'), [L]),
+        q = (0, a.useMemo)(() => (0, C.fh)(L, C.eC.REWARD), [L]),
         Q = R ? w + 8 : 0,
         X = () => {
             O(!0),

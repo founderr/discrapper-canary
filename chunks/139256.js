@@ -33,8 +33,8 @@ var i,
     I = n(124347),
     m = n(695346),
     f = n(186523),
-    h = n(553826),
-    T = n(506071),
+    T = n(553826),
+    h = n(506071),
     N = n(203143),
     p = n(79390),
     C = n(839963),
@@ -185,7 +185,7 @@ function P(e) {
 function D(e) {
     var t;
     let { attachment: n, className: i } = e,
-        a = (0, T.n)(),
+        a = (0, h.n)(),
         r = m.QK.useSetting();
     return (0, s.jsx)(I.ZP, {
         className: i,
@@ -295,7 +295,7 @@ function k(e) {
             'aria-hidden': !0
         };
     return t
-        ? (0, s.jsx)(h.Z, {
+        ? (0, s.jsx)(T.Z, {
               ...a,
               foreground: R.radioForeground,
               className: i

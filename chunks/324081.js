@@ -18,8 +18,8 @@ var a = n(120356),
     I = n(313201),
     m = n(565138),
     f = n(199902),
-    h = n(592125),
-    T = n(430824),
+    T = n(592125),
+    h = n(430824),
     N = n(158776),
     p = n(594174),
     C = n(689938),
@@ -87,7 +87,7 @@ function R(e) {
 }
 function v(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id));
+        a = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null == a
         ? null
         : (0, i.jsx)(m.Z, {
@@ -102,8 +102,8 @@ function v(e) {
 }
 function M(e) {
     let { channel: t, gotoChannel: n, mentionCount: a } = e,
-        r = (0, l.e7)([T.Z], () => T.Z.getGuild(t.guild_id)),
-        c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
+        r = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
+        c = (0, l.e7)([T.Z], () => T.Z.getChannel(t.parent_id)),
         u = (0, _.KS)(t, r),
         I = (0, d.ZP)(t, !1),
         m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),

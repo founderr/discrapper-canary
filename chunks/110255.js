@@ -15,8 +15,8 @@ var a = n(442837),
     d = n(131704),
     _ = n(430824);
 function E(e) {
-    let { channel: t, closePopout: n, onSelect: E, navId: I, label: m, location: f, includeGuildMute: h } = e,
-        T = (0, l.c)(t),
+    let { channel: t, closePopout: n, onSelect: E, navId: I, label: m, location: f, includeGuildMute: T } = e,
+        h = (0, l.c)(t),
         N = (0, o.EQ)(t),
         p = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)),
         C = (0, c.Z)(p),
@@ -26,6 +26,6 @@ function E(e) {
         onClose: n,
         'aria-label': m,
         onSelect: E,
-        children: [(0, i.jsx)(s.MenuGroup, { children: (0, r.ZP)(t, f) }), h ? (0, i.jsx)(s.MenuGroup, { children: C }) : null, g ? N : (0, i.jsx)(s.MenuGroup, { children: T })]
+        children: [(0, i.jsx)(s.MenuGroup, { children: (0, r.ZP)(t, f) }), T ? (0, i.jsx)(s.MenuGroup, { children: C }) : null, g ? N : (0, i.jsx)(s.MenuGroup, { children: h })]
     });
 }

@@ -1,4 +1,4 @@
-var n, a, _, o, E, i, c, s, l, u, I, R, N, A, T, d, L;
+var n, a, _, o, i, E, c, s, l, u, I, R, N, A, T, d, f;
 r.d(t, {
     Ax: function () {
         return l;
@@ -34,13 +34,13 @@ r.d(t, {
         return g;
     },
     oX: function () {
-        return f;
+        return L;
     },
     rP: function () {
         return o;
     },
     to: function () {
-        return i;
+        return E;
     },
     u0: function () {
         return u;
@@ -49,24 +49,24 @@ r.d(t, {
         return O;
     },
     vc: function () {
-        return U;
+        return P;
     },
     yP: function () {
         return c;
     }
 });
-let f = 250,
+let L = 250,
     O = 762880,
     p = 'ROLE_SUBSCRIPTIONS',
     h = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
     S = 'SOUNDBOARD_SUBSECTION';
-((I = n || (n = {})).USER_PROFILE = 'user_profile'), (I.GUILD = 'guild'), (I.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((_ || (_ = {})).TRY_IT_OUT = 'try_it_out'), ((R = o || (o = {})).REDUCED_MOTION = 'reduced_motion'), (R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (R.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((E || (E = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((N = i || (i = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (N.DM_SAFETY_ALERTS_V2 = 'dm_safety_alerts_v2'), (N.MESSAGE_REQUESTS = 'message_requests'), (N.MESSAGE_REQUESTS_V2 = 'message_requests_v2'), (N.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction'), (N.EXPLICIT_MEDIA_REDACTION_V2 = 'explicit_media_redaction_v2');
+((I = n || (n = {})).USER_PROFILE = 'user_profile'), (I.GUILD = 'guild'), (I.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((_ || (_ = {})).TRY_IT_OUT = 'try_it_out'), ((R = o || (o = {})).REDUCED_MOTION = 'reduced_motion'), (R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (R.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((i || (i = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((N = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (N.DM_SAFETY_ALERTS_V2 = 'dm_safety_alerts_v2'), (N.MESSAGE_REQUESTS = 'message_requests'), (N.MESSAGE_REQUESTS_V2 = 'message_requests_v2'), (N.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction'), (N.EXPLICIT_MEDIA_REDACTION_V2 = 'explicit_media_redaction_v2');
 let D = {
     ProfileCustomizationScrollPositions: _,
     AccessibilityScrollPositions: o,
-    VoiceAndVideoScrollPositions: E,
+    VoiceAndVideoScrollPositions: i,
     AppearanceScrollPositions: a,
-    PrivacyAndSafetyScrollPositions: i
+    PrivacyAndSafetyScrollPositions: E
 };
 function C() {
     return {
@@ -90,10 +90,10 @@ let g = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512
     },
-    U = {
+    P = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048
     };
-((L = u || (u = {})).USER = 'user'), (L.STREAM = 'stream');
+((f = u || (u = {})).USER = 'user'), (f.STREAM = 'stream');

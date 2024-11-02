@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(697568),
     m = n(183023),
     f = n(524444),
-    h = n(98278),
-    T = n(197115),
+    T = n(98278),
+    h = n(197115),
     N = n(430824),
     p = n(594174),
     C = n(626135),
@@ -39,7 +39,7 @@ function j(e) {
         location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
         location_section: M.jXE.STICKER_POPOUT
     }),
-        (0, h.z)();
+        (0, T.z)();
 }
 function U(e) {
     let { sticker: t, description: n } = e;
@@ -143,7 +143,7 @@ let y = (e) => {
     },
     B = (e) => {
         let t,
-            { sticker: n, channel: s, closePopout: _, refreshPositionKey: h } = e,
+            { sticker: n, channel: s, closePopout: _, refreshPositionKey: T } = e,
             [S, A] = a.useState(null),
             [x, v] = a.useState(!1),
             P = p.default.getCurrentUser(),
@@ -186,7 +186,7 @@ let y = (e) => {
                   (z = 'Custom Sticker Popout (Soft Upsell)'));
         let X = !K && !B && W && D;
         return (a.useEffect(() => {
-            h();
+            T();
         }, [x, S]),
         a.useEffect(() => {
             C.default.track(M.rMx.OPEN_POPOUT, {
@@ -215,7 +215,7 @@ let y = (e) => {
                                       sticker: n
                                   }),
                                   K &&
-                                      (0, i.jsx)(T.Z, {
+                                      (0, i.jsx)(h.Z, {
                                           className: b.ctaButton,
                                           subscriptionTier: O.Si.TIER_2,
                                           size: o.Button.Sizes.SMALL,
@@ -262,7 +262,7 @@ let y = (e) => {
                                               children: [
                                                   (0, i.jsx)(o.Clickable, {
                                                       onClick: () => {
-                                                          h(), G(!k);
+                                                          T(), G(!k);
                                                       },
                                                       className: b.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {

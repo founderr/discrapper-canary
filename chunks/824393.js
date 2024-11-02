@@ -37,7 +37,7 @@ function T(e) {
         [N, E] = s.useState(null),
         j = s.useRef(new d.qA()),
         T = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
-        B = s.useMemo(() => (0, x.fh)(l, x.Bd.HERO), [l]),
+        B = s.useMemo(() => (0, x.fh)(l, x.eC.HERO), [l]),
         D = (null === (r = l.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         [I, w] = s.useState(D ? { state: 'claimed' } : { state: 'loading' });
     let L = ((o = l), A.r.build(o.config).defaultReward);

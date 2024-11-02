@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return h;
+        return T;
     }
 });
 var i = n(200651);
@@ -18,8 +18,8 @@ var a = n(512722),
     I = n(689011),
     m = n(55563),
     f = n(981631);
-async function h(e) {
-    let { applicationId: t, skuId: n, initialPlanId: a, analyticsLocations: h, analyticsLocationObject: T } = e,
+async function T(e) {
+    let { applicationId: t, skuId: n, initialPlanId: a, analyticsLocations: T, analyticsLocationObject: h } = e,
         N = m.Z.get(n);
     if (null == N) {
         let e = (await (0, l.oJ)(t)).find((e) => e.sku.id === n);
@@ -35,8 +35,8 @@ async function h(e) {
             (0, d.Z)({
                 applicationId: t,
                 skuId: n,
-                analyticsLocationObject: T,
-                analyticsLocations: h,
+                analyticsLocationObject: h,
+                analyticsLocations: T,
                 contextKey: p,
                 onComplete: (t) => {
                     var n;
@@ -60,5 +60,5 @@ async function h(e) {
                     onClose: () => t(!1)
                 })
         });
-    })(t, n, a, T, h);
+    })(t, n, a, h, T);
 }

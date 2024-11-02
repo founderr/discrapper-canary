@@ -12,8 +12,8 @@ var i = n(200651),
     I = n(709054),
     m = n(786761),
     f = n(900164),
-    h = n(739566),
-    T = n(492593),
+    T = n(739566),
+    h = n(492593),
     N = n(453687),
     p = n(25015),
     C = n(689674),
@@ -41,7 +41,7 @@ t.Z = a.memo(function (e) {
         W = a.type === M.uaV.REPLY ? a.messageReference : void 0,
         K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
         z = (0, l.JA)(a.id),
-        X = (0, h.ZP)(a),
+        X = (0, T.ZP)(a),
         Q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(a.id))),
         q = (0, c.p9)({
             guildId: D.guild_id,
@@ -56,7 +56,7 @@ t.Z = a.memo(function (e) {
     if ((0, f.Z)(a, J)) return null;
     let ee = (0, N.iG)(a),
         et = (0, N.Gx)(a);
-    return (0, i.jsx)(T.Z, {
+    return (0, i.jsx)(h.Z, {
         compact: s,
         className: r()(L, {
             [O.ephemeral]: (0, m.Pv)(a),

@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     g3: function () {
-        return h;
+        return T;
     },
     jF: function () {
         return E;
@@ -98,7 +98,7 @@ async function f(e) {
         });
     }
 }
-async function h(e) {
+async function T(e) {
     let t = l.d$.getSetting();
     try {
         r.Z.dispatch({

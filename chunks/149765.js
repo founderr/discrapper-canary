@@ -1,6 +1,6 @@
 r.d(t, {
     $e: function () {
-        return L;
+        return f;
     },
     Bw: function () {
         return s;
@@ -18,7 +18,7 @@ r.d(t, {
         return T;
     },
     e$: function () {
-        return f;
+        return L;
     },
     fS: function () {
         return d;
@@ -53,7 +53,7 @@ function _(e, t, r) {
     );
 }
 let o = 4;
-function E(e) {
+function i(e) {
     let t = [];
     for (let r = 0; r < e.length; r++) {
         let n = Number(e[r]);
@@ -61,11 +61,11 @@ function E(e) {
     }
     return t;
 }
-class i {
+class E {
     static fromString(e) {
-        return new i(
+        return new E(
             (function (e) {
-                let t = E(e),
+                let t = i(e),
                     r = Array(o);
                 for (let e = 0; e < o; e++)
                     r[o - 1 - e] = (function (e, t, r) {
@@ -86,7 +86,7 @@ class i {
         let t = Array(o),
             r = Math.floor(e / 16);
         for (let n = 0; n < o; n++) t[o - 1 - n] = n === r ? 1 << (e - 16 * r) : 0;
-        return new i(t);
+        return new E(t);
     }
     static asUintN(e, t) {
         let { parts: r } = t,
@@ -102,18 +102,18 @@ class i {
     }
     and(e) {
         let { parts: t } = e;
-        return new i(this.parts.map((e, r) => e & t[r]));
+        return new E(this.parts.map((e, r) => e & t[r]));
     }
     or(e) {
         let { parts: t } = e;
-        return new i(this.parts.map((e, r) => e | t[r]));
+        return new E(this.parts.map((e, r) => e | t[r]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new i(this.parts.map((e, r) => e ^ t[r]));
+        return new E(this.parts.map((e, r) => e ^ t[r]));
     }
     not() {
-        return new i(this.parts.map((e) => ~e));
+        return new E(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -124,7 +124,7 @@ class i {
         let e = Array(16);
         return (
             this.parts.forEach((t, r) => {
-                let n = E(t.toString());
+                let n = i(t.toString());
                 for (let t = 0; t < 4; t++) e[t + 4 * r] = n[3 - t] || 0;
             }),
             (this.str = a().fromArray(e, 16).toString())
@@ -154,7 +154,7 @@ let s = c
               return 'bigint' == typeof e;
           }
         : function (e) {
-              return e instanceof i;
+              return e instanceof E;
           },
     l = {},
     u = c
@@ -162,7 +162,7 @@ let s = c
               return BigInt(e);
           }
         : function (e) {
-              return e instanceof i ? e : ('number' == typeof e && (e = e.toString()), null != l[e]) ? l[e] : ((l[e] = i.fromString(e)), l[e]);
+              return e instanceof E ? e : ('number' == typeof e && (e = e.toString()), null != l[e]) ? l[e] : ((l[e] = E.fromString(e)), l[e]);
           },
     I = u(0),
     R = c
@@ -214,13 +214,13 @@ let s = c
         : function (e, t) {
               return null == e || null == t ? e == t : e.equals(t);
           };
-function L() {
+function f() {
     for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     let n = t[0];
     for (let e = 1; e < t.length; e++) n = N(n, t[e]);
     return n;
 }
-function f(e, t) {
+function L(e, t) {
     return d(R(e, t), t);
 }
 function O(e, t) {
@@ -237,12 +237,12 @@ let S = c
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return i.fromBit(e);
+              return E.fromBit(e);
           },
     D = c
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }
         : function (e, t) {
-              return i.asUintN(e, t);
+              return E.asUintN(e, t);
           };

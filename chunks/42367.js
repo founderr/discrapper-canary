@@ -12,8 +12,8 @@ let o = (0, n._I)((e = {}) => {
     return {
         name: 'LinkedErrors',
         preprocessEvent(e, n, o) {
-            let E = o.getOptions();
-            (0, a.Z)(_.GJ, E.stackParser, E.maxValueLength, r, t, e, n);
+            let i = o.getOptions();
+            (0, a.Z)(_.GJ, i.stackParser, i.maxValueLength, r, t, e, n);
         }
     };
 });

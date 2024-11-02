@@ -9,7 +9,7 @@ r.d(t, {
         return l;
     },
     Sq: function () {
-        return E;
+        return i;
     },
     pE: function () {
         return o;
@@ -21,7 +21,7 @@ let n = '?',
 function o(...e) {
     let t = e.sort((e, t) => e[0] - t[0]).map((e) => e[1]);
     return (e, r = 0, o = 0) => {
-        let E = [],
+        let i = [],
             c = e.split('\n');
         for (let e = r; e < c.length; e++) {
             let r = c[e];
@@ -31,33 +31,33 @@ function o(...e) {
                 for (let e of t) {
                     let t = e(n);
                     if (t) {
-                        E.push(t);
+                        i.push(t);
                         break;
                     }
                 }
-                if (E.length >= 50 + o) break;
+                if (i.length >= 50 + o) break;
             }
         }
         return (function (e) {
             if (!e.length) return [];
             let t = Array.from(e);
             return (
-                /sentryWrapped/.test(i(t).function || '') && t.pop(),
+                /sentryWrapped/.test(E(t).function || '') && t.pop(),
                 t.reverse(),
-                _.test(i(t).function || '') && (t.pop(), _.test(i(t).function || '') && t.pop()),
+                _.test(E(t).function || '') && (t.pop(), _.test(E(t).function || '') && t.pop()),
                 t.slice(0, 50).map((e) => ({
                     ...e,
-                    filename: e.filename || i(t).filename,
+                    filename: e.filename || E(t).filename,
                     function: e.function || n
                 }))
             );
-        })(E.slice(o));
+        })(i.slice(o));
     };
 }
-function E(e) {
+function i(e) {
     return Array.isArray(e) ? o(...e) : e;
 }
-function i(e) {
+function E(e) {
     return e[e.length - 1] || {};
 }
 let c = '<anonymous>';

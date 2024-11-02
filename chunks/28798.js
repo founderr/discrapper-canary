@@ -18,7 +18,7 @@ t.Z = function (e) {
             className: u.content,
             children: [
                 (0, l.jsx)('img', {
-                    src: (0, o.fh)(t, o.Bd.GAME_TILE, f).url,
+                    src: (0, o.fh)(t, o.eC.GAME_TILE, f).url,
                     alt: '',
                     className: u.gameTile
                 }),

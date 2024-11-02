@@ -9,7 +9,7 @@ var a = n(481060),
     s = n(987209),
     r = n(981631);
 function l(e) {
-    let { initialPlanId: t, activeSubscription: l, trialId: o, trialFooterMessageOverride: c, onClose: u, analyticsObject: d, analyticsLocation: _, analyticsLocations: E, analyticsSubscriptionType: I, renderHeader: m, renderPurchaseConfirmation: f, planGroup: h, reviewWarningMessage: T, skuId: N } = e;
+    let { initialPlanId: t, activeSubscription: l, trialId: o, trialFooterMessageOverride: c, onClose: u, analyticsObject: d, analyticsLocation: _, analyticsLocations: E, analyticsSubscriptionType: I, renderHeader: m, renderPurchaseConfirmation: f, planGroup: T, reviewWarningMessage: h, skuId: N } = e;
     (0, a.openModalLazy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 598)),
@@ -35,10 +35,10 @@ function l(e) {
                             skuId: N,
                             renderHeader: m,
                             renderPurchaseConfirmation: f,
-                            planGroup: h,
+                            planGroup: T,
                             trialId: o,
                             trialFooterMessageOverride: c,
-                            reviewWarningMessage: T
+                            reviewWarningMessage: h
                         })
                     })
                 });

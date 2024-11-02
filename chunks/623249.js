@@ -156,7 +156,7 @@ function v(e) {
                                                   ...e,
                                                   className: S.gameTile,
                                                   alt: j.config.messages.gameTitle,
-                                                  src: (0, g.fh)(j, g.Bd.GAME_TILE, w).url
+                                                  src: (0, g.fh)(j, g.eC.GAME_TILE, w).url
                                               })
                                       })
                                     : null

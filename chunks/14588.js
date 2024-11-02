@@ -22,15 +22,15 @@ function a(e, t, r = Date.now()) {
 function _(e, { statusCode: t, headers: r }, a = Date.now()) {
     let _ = { ...e },
         o = r && r['x-sentry-rate-limits'],
-        E = r && r['retry-after'];
+        i = r && r['retry-after'];
     if (o)
         for (let e of o.trim().split(',')) {
             let [t, r, , , n] = e.split(':', 5),
                 o = parseInt(t, 10),
-                E = (isNaN(o) ? 60 : o) * 1000;
-            if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (_[e] = a + E) : (_[e] = a + E);
-            else _.all = a + E;
+                i = (isNaN(o) ? 60 : o) * 1000;
+            if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (_[e] = a + i) : (_[e] = a + i);
+            else _.all = a + i;
         }
-    else E ? (_.all = a + n(E, a)) : 429 === t && (_.all = a + 60000);
+    else i ? (_.all = a + n(i, a)) : 429 === t && (_.all = a + 60000);
     return _;
 }

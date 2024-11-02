@@ -1,33 +1,33 @@
 var n = r(990393),
     a = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, r, _, o, E) {
-    var i = 1 & r,
+e.exports = function (e, t, r, _, o, i) {
+    var E = 1 & r,
         c = n(e),
         s = c.length;
-    if (s != n(t).length && !i) return !1;
+    if (s != n(t).length && !E) return !1;
     for (var l = s; l--; ) {
         var u = c[l];
-        if (!(i ? u in t : a.call(t, u))) return !1;
+        if (!(E ? u in t : a.call(t, u))) return !1;
     }
-    var I = E.get(e),
-        R = E.get(t);
+    var I = i.get(e),
+        R = i.get(t);
     if (I && R) return I == t && R == e;
     var N = !0;
-    E.set(e, t), E.set(t, e);
-    for (var A = i; ++l < s; ) {
+    i.set(e, t), i.set(t, e);
+    for (var A = E; ++l < s; ) {
         var T = e[(u = c[l])],
             d = t[u];
-        if (_) var L = i ? _(d, T, u, t, e, E) : _(T, d, u, e, t, E);
-        if (!(void 0 === L ? T === d || o(T, d, r, _, E) : L)) {
+        if (_) var f = E ? _(d, T, u, t, e, i) : _(T, d, u, e, t, i);
+        if (!(void 0 === f ? T === d || o(T, d, r, _, i) : f)) {
             N = !1;
             break;
         }
         A || (A = 'constructor' == u);
     }
     if (N && !A) {
-        var f = e.constructor,
+        var L = e.constructor,
             O = t.constructor;
-        f != O && 'constructor' in e && 'constructor' in t && !('function' == typeof f && f instanceof f && 'function' == typeof O && O instanceof O) && (N = !1);
+        L != O && 'constructor' in e && 'constructor' in t && !('function' == typeof L && L instanceof L && 'function' == typeof O && O instanceof O) && (N = !1);
     }
-    return E.delete(e), E.delete(t), N;
+    return i.delete(e), i.delete(t), N;
 };

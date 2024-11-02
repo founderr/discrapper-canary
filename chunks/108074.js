@@ -1,6 +1,6 @@
 r.d(t, {
     W: function () {
-        return E;
+        return i;
     }
 });
 var n = r(617726),
@@ -10,13 +10,13 @@ function o(e, t) {
     let r;
     return (0, n.gv)(e, (e, n) => (t.includes(n) && (r = Array.isArray(e) ? e[1] : void 0), !!r)), r;
 }
-function E(e, t) {
+function i(e, t) {
     return (r) => {
-        let E = e(r),
-            i = new Map();
+        let i = e(r),
+            E = new Map();
         function c(t, n) {
-            let E = n ? `${t}:${n}` : t,
-                c = i.get(E);
+            let i = n ? `${t}:${n}` : t,
+                c = E.get(i);
             if (!c) {
                 var s, l;
                 let u = (0, a.U4)(t);
@@ -42,7 +42,7 @@ function E(e, t) {
                           ...r,
                           url: I
                       })),
-                    i.set(E, c);
+                    E.set(i, c);
             }
             return [t, c];
         }
@@ -56,7 +56,7 @@ function E(e, t) {
                     })
                         .map((e) => ('string' == typeof e ? c(e, void 0) : c(e.dsn, e.release)))
                         .filter((e) => !!e),
-                    a = r.length ? r : [['', E]];
+                    a = r.length ? r : [['', i]];
                 return (
                     await Promise.all(
                         a.map(([t, r]) => {
@@ -79,7 +79,7 @@ function E(e, t) {
                 )[0];
             },
             flush: async function e(e) {
-                let t = [...i.values(), E];
+                let t = [...E.values(), i];
                 return (await Promise.all(t.map((t) => t.flush(e)))).every((e) => e);
             }
         };

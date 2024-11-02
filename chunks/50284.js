@@ -28,8 +28,8 @@ async function I(e, t) {
     a.forAll((e) => {
         d.default.compare(e.id, m) > 0 && (0, c.Ex)(e, n) && f++;
     });
-    let h = l.Z.getChannel(e);
-    null != h && h.isThread() && (h.isArchivedThread() && (await r.Z.unarchiveThread(h, !1)), !s.Z.hasJoined(e) && (await r.Z.joinThread(h, 'Mark Unread'))),
+    let T = l.Z.getChannel(e);
+    null != T && T.isThread() && (T.isArchivedThread() && (await r.Z.unarchiveThread(T, !1)), !s.Z.hasJoined(e) && (await r.Z.joinThread(T, 'Mark Unread'))),
         E.log('Marking unread', {
             channelId: e,
             messageId: t

@@ -24,7 +24,7 @@ r.d(t, {
         return u;
     },
     eW: function () {
-        return L;
+        return f;
     },
     mG: function () {
         return A;
@@ -48,15 +48,15 @@ r.d(t, {
         return S;
     },
     yl: function () {
-        return f;
+        return L;
     }
 });
 var n = r(622916),
     a = r(899517),
     _ = r(559508),
     o = r(263449),
-    E = r(255768),
-    i = r(112797),
+    i = r(255768),
+    E = r(112797),
     c = r(822578);
 function s(e, t) {
     return (0, o.nZ)().captureException(e, (0, c.U0)(t));
@@ -87,16 +87,16 @@ function T(e, t) {
 function d(e) {
     (0, o.aF)().setUser(e);
 }
-function L() {
+function f() {
     return (0, o.aF)().lastEventId();
 }
-async function f(e) {
+async function L(e) {
     let t = (0, o.s3)();
-    return t ? t.flush(e) : (E.X && n.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
+    return t ? t.flush(e) : (i.X && n.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
 }
 async function O(e) {
     let t = (0, o.s3)();
-    return t ? t.close(e) : (E.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
+    return t ? t.close(e) : (i.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
 }
 function p() {
     return !!(0, o.s3)();
@@ -108,23 +108,23 @@ function S(e) {
     let t = (0, o.s3)(),
         r = (0, o.aF)(),
         n = (0, o.nZ)(),
-        { release: E, environment: c = _.J } = (t && t.getOptions()) || {},
+        { release: i, environment: c = _.J } = (t && t.getOptions()) || {},
         { userAgent: s } = a.n.navigator || {},
-        l = (0, i.Hv)({
-            release: E,
+        l = (0, E.Hv)({
+            release: i,
             environment: c,
             user: n.getUser() || r.getUser(),
             ...(s && { userAgent: s }),
             ...e
         }),
         u = r.getSession();
-    return u && 'ok' === u.status && (0, i.CT)(u, { status: 'exited' }), D(), r.setSession(l), n.setSession(l), l;
+    return u && 'ok' === u.status && (0, E.CT)(u, { status: 'exited' }), D(), r.setSession(l), n.setSession(l), l;
 }
 function D() {
     let e = (0, o.aF)(),
         t = (0, o.nZ)(),
         r = t.getSession() || e.getSession();
-    r && (0, i.RJ)(r), C(), e.setSession(), t.setSession();
+    r && (0, E.RJ)(r), C(), e.setSession(), t.setSession();
 }
 function C() {
     let e = (0, o.aF)(),

@@ -18,8 +18,8 @@ var i,
     I = n(477690),
     m = n(481060),
     f = n(230711),
-    h = n(745510),
-    T = n(549006),
+    T = n(745510),
+    h = n(549006),
     N = n(64078),
     p = n(29270),
     C = n(709586),
@@ -150,9 +150,9 @@ function k(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: f, confettiCanvas: T } = o.useContext(h.h),
+        { createMultipleConfettiAt: f, confettiCanvas: h } = o.useContext(T.h),
         [N, p] = o.useState(null),
-        C = (0, d.uR)(T, N),
+        C = (0, d.uR)(h, N),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -314,7 +314,7 @@ function G(e) {
             return null;
         })(n),
         u = (0, p.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(h.h),
+        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(T.h),
         [E, I] = o.useState(!1),
         M = o.useRef(null),
         { reducedMotion: O } = o.useContext(m.AccessibilityPreferencesContext),
@@ -389,7 +389,7 @@ function G(e) {
                 children: t
             }),
             E
-                ? (0, l.jsx)(T.ZP, {
+                ? (0, l.jsx)(h.ZP, {
                       children: (0, l.jsx)('div', {
                           className: v.cannonWrapper,
                           children: (0, l.jsx)(k, {

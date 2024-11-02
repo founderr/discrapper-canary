@@ -6,10 +6,10 @@ r.d(t, {
         return g;
     },
     Gx: function () {
-        return U;
+        return P;
     },
     HN: function () {
-        return P;
+        return U;
     },
     HR: function () {
         return N;
@@ -21,7 +21,7 @@ r.d(t, {
         return O;
     },
     XU: function () {
-        return f;
+        return L;
     },
     _4: function () {
         return p;
@@ -49,8 +49,8 @@ var n = r(370336),
     a = r(370541),
     _ = r(101284),
     o = r(833873),
-    E = r(356442),
-    i = r(263449),
+    i = r(356442),
+    E = r(263449),
     c = r(899195),
     s = r(988097),
     l = r(793373),
@@ -59,20 +59,20 @@ let I = 0,
     R = 1;
 function N(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { data: a, op: _, parent_span_id: o, status: E, origin: i } = f(e);
+        { data: a, op: _, parent_span_id: o, status: i, origin: E } = L(e);
     return (0, n.Jr)({
         parent_span_id: o,
         span_id: t,
         trace_id: r,
         data: a,
         op: _,
-        status: E,
-        origin: i
+        status: i,
+        origin: E
     });
 }
 function A(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { parent_span_id: a } = f(e);
+        { parent_span_id: a } = L(e);
     return (0, n.Jr)({
         parent_span_id: a,
         span_id: t,
@@ -85,12 +85,12 @@ function T(e) {
     return (0, a.$p)(t, r, n);
 }
 function d(e) {
-    return 'number' == typeof e ? L(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? L(e.getTime()) : (0, _.ph)();
-}
-function L(e) {
-    return e > 9999999999 ? e / 1000 : e;
+    return 'number' == typeof e ? f(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? f(e.getTime()) : (0, _.ph)();
 }
 function f(e) {
+    return e > 9999999999 ? e / 1000 : e;
+}
+function L(e) {
     if (
         (function (e) {
             return 'function' == typeof e.getSpanJSON;
@@ -104,15 +104,15 @@ function f(e) {
                 return !!e.attributes && !!e.startTime && !!e.name && !!e.endTime && !!e.status;
             })(e)
         ) {
-            let { attributes: a, startTime: _, name: o, endTime: E, parentSpanId: i, status: l } = e;
+            let { attributes: a, startTime: _, name: o, endTime: i, parentSpanId: E, status: l } = e;
             return (0, n.Jr)({
                 span_id: t,
                 trace_id: r,
                 data: a,
                 description: o,
-                parent_span_id: i,
+                parent_span_id: E,
                 start_timestamp: d(_),
-                timestamp: d(E) || void 0,
+                timestamp: d(i) || void 0,
                 status: p(l),
                 op: a[s.$J],
                 origin: a[s.S3],
@@ -154,15 +154,15 @@ function g(e) {
         Array.from(t)
     );
 }
-function U(e) {
+function P(e) {
     return e[S] || e;
 }
-function P() {
-    let e = (0, E.c)(),
+function U() {
+    let e = (0, i.c)(),
         t = (0, o.G)(e);
-    return t.getActiveSpan ? t.getActiveSpan() : (0, u.Y)((0, i.nZ)());
+    return t.getActiveSpan ? t.getActiveSpan() : (0, u.Y)((0, E.nZ)());
 }
 function M(e, t, r, n, a, _) {
-    let o = P();
+    let o = U();
     o && (0, c.V)(o, e, t, r, n, a, _);
 }

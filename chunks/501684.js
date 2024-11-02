@@ -1,10 +1,10 @@
-let n, a, _, o, E;
+let n, a, _, o, i;
 r.d(t, {
     $A: function () {
-        return f;
+        return L;
     },
     PR: function () {
-        return L;
+        return f;
     },
     YF: function () {
         return h;
@@ -22,7 +22,7 @@ r.d(t, {
         return O;
     }
 });
-var i = r(622916),
+var E = r(622916),
     c = r(688838),
     s = r(665909),
     l = r(795927),
@@ -33,20 +33,20 @@ var i = r(622916),
     A = r(288570);
 let T = {},
     d = {};
-function L(e, t = !1) {
+function f(e, t = !1) {
     return G('cls', e, C, n, t);
 }
-function f(e, t = !1) {
-    return G('lcp', e, U, _, t);
+function L(e, t = !1) {
+    return G('lcp', e, P, _, t);
 }
 function O(e) {
     return G('fid', e, g, a);
 }
 function p(e) {
-    return G('ttfb', e, P, o);
+    return G('ttfb', e, U, o);
 }
 function h(e) {
-    return G('inp', e, M, E);
+    return G('inp', e, M, i);
 }
 function S(e, t) {
     return (
@@ -75,7 +75,7 @@ function D(e, t) {
                 n(t);
             } catch (t) {
                 s.X &&
-                    i.kg.error(
+                    E.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${e}
 Name: ${(0, c.$P)(n)}
@@ -97,7 +97,7 @@ function g() {
         D('fid', { metric: e }), (a = e);
     });
 }
-function U() {
+function P() {
     return (0, R.N)(
         (e) => {
             D('lcp', { metric: e }), (_ = e);
@@ -105,14 +105,14 @@ function U() {
         { reportAllChanges: !0 }
     );
 }
-function P() {
+function U() {
     return (0, A.m)((e) => {
         D('ttfb', { metric: e }), (o = e);
     });
 }
 function M() {
     return (0, I.Y)((e) => {
-        D('inp', { metric: e }), (E = e);
+        D('inp', { metric: e }), (i = e);
     });
 }
 function G(e, t, r, n, a = !1) {

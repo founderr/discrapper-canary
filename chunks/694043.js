@@ -3,10 +3,10 @@ r.d(t, {
         return o;
     },
     QC: function () {
-        return E;
+        return i;
     },
     t$: function () {
-        return i;
+        return E;
     },
     zb: function () {
         return c;
@@ -23,19 +23,19 @@ function o() {
         return !1;
     }
 }
-function E(e) {
+function i(e) {
     return e && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString());
 }
-function i() {
+function E() {
     if ('string' == typeof EdgeRuntime) return !0;
     if (!o()) return !1;
-    if (E(_.fetch)) return !0;
+    if (i(_.fetch)) return !0;
     let e = !1,
         t = _.document;
     if (t && 'function' == typeof t.createElement)
         try {
             let r = t.createElement('iframe');
-            (r.hidden = !0), t.head.appendChild(r), r.contentWindow && r.contentWindow.fetch && (e = E(r.contentWindow.fetch)), t.head.removeChild(r);
+            (r.hidden = !0), t.head.appendChild(r), r.contentWindow && r.contentWindow.fetch && (e = i(r.contentWindow.fetch)), t.head.removeChild(r);
         } catch (e) {
             n.X && a.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', e);
         }

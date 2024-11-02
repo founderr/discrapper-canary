@@ -38,7 +38,7 @@ let P = s.forwardRef(function (e, t) {
         F = (0, g.B6)(V.config.expiresAt),
         K = N.r.build(V.config),
         Y = (0, g.B6)(K.rewardsExpireAt),
-        X = s.useMemo(() => (0, v.fh)(V, v.Bd.HERO), [V]),
+        X = s.useMemo(() => (0, v.fh)(V, v.eC.HERO), [V]),
         J = (0, y.tP)(K.application.id),
         $ = K.features.has(I.S7.START_QUEST_CTA) ? C.jZ.START_QUEST : C.jZ.ACCEPT_QUEST,
         ee = K.features.has(I.S7.START_QUEST_CTA) ? w.Z.Messages.QUESTS_START_QUEST : w.Z.Messages.QUESTS_ACCEPT_QUEST,

@@ -20,8 +20,8 @@ var a = n(568611),
     I = n(522474),
     m = n(523746),
     f = n(592125),
-    h = n(594174),
-    T = n(630388),
+    T = n(594174),
+    h = n(630388),
     N = n(823379),
     p = n(624138),
     C = n(317381),
@@ -51,7 +51,7 @@ function P(e) {
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
         [Y] = (0, s.Wu)([C.ZP], () => (G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === P) : []), [P, y, G]),
         W = Array.from(null !== (p = null == Y ? void 0 : Y.userIds) && void 0 !== p ? p : []),
-        K = (0, s.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(N.lm), [W]),
+        K = (0, s.Wu)([T.default], () => W.map((e) => T.default.getUser(e)).filter(N.lm), [W]),
         z = (0, x.Z)({
             applicationId: P,
             size: b,
@@ -97,7 +97,7 @@ function P(e) {
                     analyticsLocations: j
                 });
         };
-    return null != V && (0, T.yE)(V.flags, O.udG.EMBEDDED)
+    return null != V && (0, h.yE)(V.flags, O.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: j,
               children: (0, i.jsxs)('div', {

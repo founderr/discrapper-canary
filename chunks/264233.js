@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 }),
     n(47120);
@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(326838),
     m = n(689938),
     f = n(706897);
-function h(e) {
-    let { setTab: t, badgeState: s, closePopout: h } = e,
+function T(e) {
+    let { setTab: t, badgeState: s, closePopout: T } = e,
         N = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
         p = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
         [C, g] = a.useMemo(
@@ -41,7 +41,7 @@ function h(e) {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: h
+                      closePopout: T
                   }),
                   (0, i.jsx)('div', {
                       className: f.__invalid_emptyStateContainer,
@@ -60,7 +60,7 @@ function h(e) {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
                       badgeState: s,
-                      closePopout: h,
+                      closePopout: T,
                       children: (0, i.jsx)(c.CircleIconButton, {
                           className: f.__invalid_deleteButton,
                           tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
@@ -87,7 +87,7 @@ function h(e) {
                               C.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
                                               children: C.map((e) =>
                                                   (0, i.jsx)(
@@ -105,7 +105,7 @@ function h(e) {
                               g.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
+                                          (0, i.jsx)(h, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
                                               children: g.map((e) =>
                                                   (0, i.jsx)(
@@ -126,7 +126,7 @@ function h(e) {
               ]
           });
 }
-function T(e) {
+function h(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
         className: f.headerContainer,

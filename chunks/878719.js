@@ -16,8 +16,8 @@ var n = r(263449),
     a = r(202811),
     _ = r(573736),
     o = r(394798),
-    E = r(928541),
-    i = r(370336);
+    i = r(928541),
+    E = r(370336);
 function c(e, t) {
     let r = l(e, t),
         n = {
@@ -48,13 +48,13 @@ function l(e, t) {
 let u = /Minified React error #\d+;/i;
 function I(e, t, r, n) {
     let a = N(e, t, (r && r.syntheticException) || void 0, n);
-    return (0, o.EG)(a), (a.level = 'error'), r && r.event_id && (a.event_id = r.event_id), (0, E.WD)(a);
+    return (0, o.EG)(a), (a.level = 'error'), r && r.event_id && (a.event_id = r.event_id), (0, i.WD)(a);
 }
 function R(e, t, r = 'info', n, a) {
     let _ = A(e, t, (n && n.syntheticException) || void 0, a);
-    return (_.level = r), n && n.event_id && (_.event_id = n.event_id), (0, E.WD)(_);
+    return (_.level = r), n && n.event_id && (_.event_id = n.event_id), (0, i.WD)(_);
 }
-function N(e, t, r, E, u) {
+function N(e, t, r, i, u) {
     let I;
     if ((0, _.VW)(t) && t.error) return s(e, t.error);
     if ((0, _.TX)(t) || (0, _.fm)(t)) {
@@ -62,7 +62,7 @@ function N(e, t, r, E, u) {
         else {
             let n = t.name || ((0, _.TX)(t) ? 'DOMError' : 'DOMException'),
                 a = t.message ? `${n}: ${t.message}` : n;
-            (I = A(e, a, r, E)), (0, o.Db)(I, a);
+            (I = A(e, a, r, i)), (0, o.Db)(I, a);
         }
         return (
             'code' in t &&
@@ -77,8 +77,8 @@ function N(e, t, r, E, u) {
         ? s(e, t)
         : (0, _.PO)(t) || (0, _.cO)(t)
           ? ((I = (function (e, t, r, o) {
-                let E = (0, n.s3)(),
-                    s = E && E.getOptions().normalizeDepth,
+                let i = (0, n.s3)(),
+                    s = i && i.getOptions().normalizeDepth,
                     u = (function (e) {
                         for (let t in e)
                             if (Object.prototype.hasOwnProperty.call(e, t)) {
@@ -98,7 +98,7 @@ function N(e, t, r, E, u) {
                             {
                                 type: (0, _.cO)(t) ? t.constructor.name : o ? 'UnhandledRejection' : 'Error',
                                 value: (function (e, { isUnhandledRejection: t }) {
-                                    let r = (0, i.zf)(e),
+                                    let r = (0, E.zf)(e),
                                         n = t ? 'promise rejection' : 'exception';
                                     if ((0, _.VW)(e)) return `Event \`ErrorEvent\` captured as ${n} with message \`${e.message}\``;
                                     if ((0, _.cO)(e)) {
@@ -125,7 +125,7 @@ function N(e, t, r, E, u) {
             })(e, t, r, u)),
             (0, o.EG)(I, { synthetic: !0 }),
             I)
-          : ((I = A(e, t, r, E)), (0, o.Db)(I, `${t}`, void 0), (0, o.EG)(I, { synthetic: !0 }), I);
+          : ((I = A(e, t, r, i)), (0, o.Db)(I, `${t}`, void 0), (0, o.EG)(I, { synthetic: !0 }), I);
 }
 function A(e, t, r, n) {
     let a = {};

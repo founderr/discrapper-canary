@@ -82,7 +82,7 @@ function L(e) {
                                                 (0, r.jsx)('img', {
                                                     alt: B.config.messages.gameTitle,
                                                     className: i()(j.contentHeaderLogotype, j.accentOnHover),
-                                                    src: (0, v.fh)(B, v.Bd.LOGO_TYPE, R).url
+                                                    src: (0, v.fh)(B, v.eC.LOGO_TYPE, R).url
                                                 }),
                                                 (0, r.jsx)(N.Z, {}),
                                                 (0, r.jsxs)('div', {

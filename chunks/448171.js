@@ -7,8 +7,8 @@ var n = r(967752),
     a = r(622916),
     _ = r(394798),
     o = r(573736),
-    E = r(928541),
-    i = r(617726),
+    i = r(928541),
+    E = r(617726),
     c = r(370336),
     s = r(116698),
     l = r(538022),
@@ -19,8 +19,8 @@ var n = r(967752),
     A = r(151122),
     T = r(112797),
     d = r(305625),
-    L = r(820754),
-    f = r(822578);
+    f = r(820754),
+    L = r(822578);
 let O = "Not capturing exception because it's already been captured.";
 class p {
     constructor(e) {
@@ -48,9 +48,9 @@ class p {
                 event_id: (0, _.DM)(),
                 ...r
             },
-            E = (0, o.Le)(e) ? e : String(e),
-            i = (0, o.pt)(e) ? this.eventFromMessage(E, t, a) : this.eventFromException(e, a);
-        return this._process(i.then((e) => this._captureEvent(e, a, n))), a.event_id;
+            i = (0, o.Le)(e) ? e : String(e),
+            E = (0, o.pt)(e) ? this.eventFromMessage(i, t, a) : this.eventFromException(e, a);
+        return this._process(E.then((e) => this._captureEvent(e, a, n))), a.event_id;
     }
     captureEvent(e, t, r) {
         let n = (0, _.DM)();
@@ -59,8 +59,8 @@ class p {
                 event_id: n,
                 ...t
             },
-            E = (e.sdkProcessingMetadata || {}).capturedSpanScope;
-        return this._process(this._captureEvent(e, o, E || r)), o.event_id;
+            i = (e.sdkProcessingMetadata || {}).capturedSpanScope;
+        return this._process(this._captureEvent(e, o, i || r)), o.event_id;
     }
     captureSession(e) {
         'string' != typeof e.release ? R.X && a.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(e), (0, T.CT)(e, { init: !1 }));
@@ -79,7 +79,7 @@ class p {
     }
     flush(e) {
         let t = this._transport;
-        return t ? (this.emit('flush'), this._isClientDoneProcessing(e).then((r) => t.flush(e).then((e) => r && e))) : (0, E.WD)(!0);
+        return t ? (this.emit('flush'), this._isClientDoneProcessing(e).then((r) => t.flush(e).then((e) => r && e))) : (0, i.WD)(!0);
     }
     close(e) {
         return this.flush(e).then((e) => ((this.getOptions().enabled = !1), this.emit('close'), e));
@@ -103,7 +103,7 @@ class p {
     sendEvent(e, t = {}) {
         this.emit('beforeSendEvent', e, t);
         let r = (0, N.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
-        for (let e of t.attachments || []) r = (0, i.BO)(r, (0, i.zQ)(e));
+        for (let e of t.attachments || []) r = (0, E.BO)(r, (0, E.zQ)(e));
         let n = this.sendEnvelope(r);
         n && n.then((t) => this.emit('afterSendEvent', e, t), null);
     }
@@ -133,7 +133,7 @@ class p {
         r && r.forEach((e) => e(...t));
     }
     sendEnvelope(e) {
-        return (this.emit('beforeEnvelope', e), this._isEnabled() && this._transport) ? this._transport.send(e).then(null, (e) => (R.X && a.kg.error('Error while sending event:', e), e)) : (R.X && a.kg.error('Transport disabled'), (0, E.WD)({}));
+        return (this.emit('beforeEnvelope', e), this._isEnabled() && this._transport) ? this._transport.send(e).then(null, (e) => (R.X && a.kg.error('Error while sending event:', e), e)) : (R.X && a.kg.error('Transport disabled'), (0, i.WD)({}));
     }
     _setupIntegrations() {
         let { integrations: e } = this._options;
@@ -160,7 +160,7 @@ class p {
             this.captureSession(e));
     }
     _isClientDoneProcessing(e) {
-        return new E.cW((t) => {
+        return new i.cW((t) => {
             let r = 0,
                 n = setInterval(() => {
                     0 == this._numProcessing ? (clearInterval(n), t(!0)) : ((r += 1), e && r >= e && (clearInterval(n), t(!1)));
@@ -177,7 +177,7 @@ class p {
             !t.integrations && _.length > 0 && (t.integrations = _),
             this.emit('preprocessEvent', e, t),
             !e.type && n.setLastEventId(e.event_id || t.event_id),
-            (0, f.R)(a, e, t, r, this, n).then((e) => {
+            (0, L.R)(a, e, t, r, this, n).then((e) => {
                 if (null === e) return e;
                 let t = {
                     ...n.getPropagationContext(),
@@ -215,11 +215,11 @@ class p {
         let n = this.getOptions(),
             { sampleRate: a } = n,
             _ = S(e),
-            i = h(e),
+            E = h(e),
             c = e.type || 'error',
             l = `before send for type \`${c}\``,
-            u = void 0 === a ? void 0 : (0, L.o)(a);
-        if (i && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, E.$2)(new s.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
+            u = void 0 === a ? void 0 : (0, f.o)(a);
+        if (E && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, i.$2)(new s.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
         let I = 'replay_event' === c ? 'replay' : c,
             R = (e.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
         return this._prepareEvent(e, t, r, R)

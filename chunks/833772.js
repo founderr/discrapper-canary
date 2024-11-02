@@ -7,8 +7,8 @@ var n = r(448171),
     a = r(78355),
     _ = r(747677),
     o = r(622916),
-    E = r(454463),
-    i = r(878719),
+    i = r(454463),
+    E = r(878719),
     c = r(163162),
     s = r(463461);
 class l extends n.W {
@@ -27,14 +27,14 @@ class l extends n.W {
                 });
     }
     eventFromException(e, t) {
-        return (0, i.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
+        return (0, E.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
     }
     eventFromMessage(e, t = 'info', r) {
-        return (0, i.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
+        return (0, E.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
     }
     captureUserFeedback(e) {
         if (!this._isEnabled()) {
-            E.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
         let t = (0, s.r)(e, {

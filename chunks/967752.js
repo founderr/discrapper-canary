@@ -3,7 +3,7 @@ r.d(t, {
         return o;
     },
     U4: function () {
-        return E;
+        return i;
     },
     vK: function () {
         return c;
@@ -13,10 +13,10 @@ var n = r(309544),
     a = r(622916);
 let _ = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 function o(e, t = !1) {
-    let { host: r, path: n, pass: a, port: _, projectId: o, protocol: E, publicKey: i } = e;
-    return `${E}://${i}${t && a ? `:${a}` : ''}@${r}${_ ? `:${_}` : ''}/${n ? `${n}/` : n}${o}`;
+    let { host: r, path: n, pass: a, port: _, projectId: o, protocol: i, publicKey: E } = e;
+    return `${i}://${E}${t && a ? `:${a}` : ''}@${r}${_ ? `:${_}` : ''}/${n ? `${n}/` : n}${o}`;
 }
-function E(e) {
+function i(e) {
     let t = _.exec(e);
     if (!t) {
         (0, a.Cf)(() => {
@@ -24,7 +24,7 @@ function E(e) {
         });
         return;
     }
-    let [r, n, o = '', E = '', c = '', s = ''] = t.slice(1),
+    let [r, n, o = '', i = '', c = '', s = ''] = t.slice(1),
         l = '',
         u = s,
         I = u.split('/');
@@ -32,8 +32,8 @@ function E(e) {
         let e = u.match(/^\d+/);
         e && (u = e[0]);
     }
-    return i({
-        host: E,
+    return E({
+        host: i,
         pass: o,
         path: l,
         projectId: u,
@@ -42,7 +42,7 @@ function E(e) {
         publicKey: n
     });
 }
-function i(e) {
+function E(e) {
     return {
         protocol: e.protocol,
         publicKey: e.publicKey || '',
@@ -54,7 +54,7 @@ function i(e) {
     };
 }
 function c(e) {
-    let t = 'string' == typeof e ? E(e) : i(e);
+    let t = 'string' == typeof e ? i(e) : E(e);
     if (
         !!t &&
         !!(function (e) {

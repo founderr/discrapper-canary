@@ -5,8 +5,8 @@ r.d(t, {
     }
 });
 var o = r(578346),
-    E = r(370336),
-    i = r(394798),
+    i = r(370336),
+    E = r(394798),
     c = r(395848);
 function s(e) {
     (0, o.Hj)('dom', e), (0, o.D2)('dom', l);
@@ -20,7 +20,7 @@ function l() {
         ['EventTarget', 'Node'].forEach((t) => {
             let r = c.m[t] && c.m[t].prototype;
             if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
-                (0, E.hl)(r, 'addEventListener', function (t) {
+                (0, i.hl)(r, 'addEventListener', function (t) {
                     return function (r, n, a) {
                         if ('click' === r || 'keypress' == r)
                             try {
@@ -35,7 +35,7 @@ function l() {
                         return t.call(this, r, n, a);
                     };
                 }),
-                    (0, E.hl)(r, 'removeEventListener', function (e) {
+                    (0, i.hl)(r, 'removeEventListener', function (e) {
                         return function (t, r, n) {
                             if ('click' === t || 'keypress' == t)
                                 try {
@@ -60,7 +60,7 @@ function u(e, t = !1) {
             }
         })(r);
         if (((o = r.type), (s = l), 'keypress' === o && (!s || !s.tagName || ('INPUT' !== s.tagName && 'TEXTAREA' !== s.tagName && !s.isContentEditable)))) return;
-        (0, E.xp)(r, '_sentryCaptured', !0), l && !l._sentryId && (0, E.xp)(l, '_sentryId', (0, i.DM)());
+        (0, i.xp)(r, '_sentryCaptured', !0), l && !l._sentryId && (0, i.xp)(l, '_sentryId', (0, E.DM)());
         let u = 'keypress' === r.type ? 'input' : r.type;
         !(function (e) {
             if (e.type !== a) return !1;

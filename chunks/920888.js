@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(434624),
     m = n(287151),
     f = n(689938),
-    h = n(96042),
-    T = n(968661);
+    T = n(96042),
+    h = n(968661);
 let N = (e, t) => (null == e && null == t) || e === t,
     p = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
     C = (e, t) => {
@@ -37,7 +37,7 @@ class g extends a.PureComponent {
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: p, channel: C, className: g, forceAddReactions: S, reactionClassName: A, useChatFontScaling: x, forceHideReactionCreates: R, remainingReactions: v, combinedReactions: M, visibleReactionsCount: O } = this.props,
             { disableTransitionAppear: L } = this.state,
-            Z = x ? T : h,
+            Z = x ? h : T,
             b = O > 0;
         if (!b && !S) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),

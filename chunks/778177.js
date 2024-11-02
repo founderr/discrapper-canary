@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(442837),
     m = n(481060),
     f = n(603263),
-    h = n(542051),
-    T = n(349033),
+    T = n(542051),
+    h = n(349033),
     N = n(999650),
     p = n(933557),
     C = n(471445),
@@ -111,16 +111,16 @@ let k = _()('2015-05-15').local(),
     V = (e) => {
         let t,
             n,
-            { id: a, searchId: s, result: l, group: o, className: c, role: u, tabIndex: d, 'aria-selected': _, onSelect: E, onFocus: I, showFilter: f, renderResult: h } = e;
+            { id: a, searchId: s, result: l, group: o, className: c, role: u, tabIndex: d, 'aria-selected': _, onSelect: E, onFocus: I, showFilter: f, renderResult: T } = e;
         if (f) {
-            var T, p;
+            var h, p;
             t = (0, i.jsx)('span', {
                 className: y.filter,
-                children: null !== (p = null === (T = N.ZP[o]) || void 0 === T ? void 0 : T.key) && void 0 !== p ? p : 'addme:'
+                children: null !== (p = null === (h = N.ZP[o]) || void 0 === h ? void 0 : h.key) && void 0 !== p ? p : 'addme:'
             });
         }
         return (
-            (n = null != h ? h(s, o, l) : (0, i.jsx)('strong', { children: l.text })),
+            (n = null != T ? T(s, o, l) : (0, i.jsx)('strong', { children: l.text })),
             (0, i.jsxs)(m.Clickable, {
                 tag: 'li',
                 className: r()(y.option, c),
@@ -200,7 +200,7 @@ let k = _()('2015-05-15').local(),
                     E = a
                         .useMemo(() => {
                             var e;
-                            return (e = s.text), b.kG(e).map((e, t, n) => (b.Fr(e, n[t + 1]) ? e : new T.WU(e.getFullMatch(), T.Xe)));
+                            return (e = s.text), b.kG(e).map((e, t, n) => (b.Fr(e, n[t + 1]) ? e : new h.WU(e.getFullMatch(), h.Xe)));
                         }, [s.text])
                         .map((e) => {
                             let t = e.getFullMatch();
@@ -301,7 +301,7 @@ class W extends a.PureComponent {
     render() {
         let { selectedIndex: e } = this.state,
             { navId: t, resultsState: n, totalResults: a, searchId: s } = this.props;
-        return (0, i.jsx)(h.Z, {
+        return (0, i.jsx)(T.Z, {
             numResults: a,
             query: n.query,
             navId: t,
@@ -471,7 +471,7 @@ class W extends a.PureComponent {
                                             showFilter: f,
                                             onSelect: this.selectOption.bind(null, r),
                                             onFocus: this.focusOption.bind(null, r),
-                                            ...(0, h.M)(t, r, c)
+                                            ...(0, T.M)(t, r, c)
                                         },
                                         ''
                                             .concat(a.group, '-')

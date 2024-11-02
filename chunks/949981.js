@@ -21,7 +21,7 @@ var a = n(512722),
     m = n(691784);
 function f(e) {
     let t,
-        { invite: n, author: a, currentUserId: f, onTransitionToInviteChannel: h, onAcceptInstantInvite: T } = e,
+        { invite: n, author: a, currentUserId: f, onTransitionToInviteChannel: T, onAcceptInstantInvite: h } = e,
         N = f === a.id,
         p = n.state === E.r2o.ACCEPTING,
         C = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
@@ -47,7 +47,7 @@ function f(e) {
                       .map((e) => e.username)
                       .join(', ')
                 : I.Z.Messages.UNNAMED);
-    let A = g ? h : T,
+    let A = g ? T : h,
         x = I.Z.Messages.JOIN_GUILD,
         R = l.Z.Button.Colors.GREEN;
     g && ((x = I.Z.Messages.JOINED_GUILD), (R = l.Z.Button.Colors.PRIMARY));

@@ -28,8 +28,8 @@ var i,
     I = n(904245),
     m = n(45114),
     f = n(607070),
-    h = n(853856),
-    T = n(181945),
+    T = n(853856),
+    h = n(181945),
     N = n(220444),
     p = n(601070),
     C = n(344185),
@@ -239,7 +239,7 @@ class V extends o.EventEmitter {
                     });
             }),
             (this.markGuildRead = (e) => {
-                E.Z.wait(() => (0, T.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
+                E.Z.wait(() => (0, h.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
                 this.setState({
@@ -405,7 +405,7 @@ function W(e, t, n, i) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let i = v.Z.getChannel(t);
-            if (h.Z.isFavorite(t)) return 0;
+            if (T.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (P.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {

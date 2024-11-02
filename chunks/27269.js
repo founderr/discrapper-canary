@@ -1,6 +1,6 @@
 r.d(t, {
     R: function () {
-        return i;
+        return E;
     }
 });
 var n = r(263449),
@@ -24,13 +24,13 @@ let o = {
         sessionTimingIntegration: 'sessiontiming',
         browserProfilingIntegration: 'browserprofiling'
     },
-    E = _.m9;
-async function i(e) {
+    i = _.m9;
+async function E(e) {
     let t = o[e],
-        r = (E.Sentry = E.Sentry || {});
+        r = (i.Sentry = i.Sentry || {});
     if (!t) throw Error(`Cannot lazy load integration: ${e}`);
-    let i = r[e];
-    if ('function' == typeof i) return i;
+    let E = r[e];
+    if ('function' == typeof E) return E;
     let c = (function (e) {
             let t = (0, n.s3)(),
                 r = t && t.getOptions(),

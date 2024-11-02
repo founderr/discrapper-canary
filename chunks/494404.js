@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(724757),
     m = n(951844),
     f = n(294218),
-    h = n(703656),
-    T = n(210887),
+    T = n(703656),
+    h = n(210887),
     N = n(592125),
     p = n(375954),
     C = n(496675),
@@ -147,7 +147,7 @@ let D = u.ZP.connectStores([C.Z], (e) => {
     return { canManageMessages: null != t && C.Z.can(R.Plq.MANAGE_MESSAGES, t) };
 })(P);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: f, renderItem: h, getProTip: N, scrollerClassName: p, className: C, listName: O } = e,
+    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: f, renderItem: T, getProTip: N, scrollerClassName: p, className: C, listName: O } = e,
         Z = a.useRef(null),
         b = (0, I.Z)(O, Z),
         P = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
@@ -191,11 +191,11 @@ function j(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(a.Fragment, { children: f(T.Z.theme) }, 'empty-state'))
+          ? U.push((0, i.jsx)(a.Fragment, { children: f(h.Z.theme) }, 'empty-state'))
           : ((y = !1),
             (U = []),
             o().each(n, (e) => {
-                U.push(...h(e));
+                U.push(...T(e));
             }));
     let B = null;
     null != n &&
@@ -223,7 +223,7 @@ function j(e) {
                 })
               : (0, i.jsx)('div', {
                     className: M.scrollingFooterWrap,
-                    children: f(T.Z.theme)
+                    children: f(h.Z.theme)
                 }));
     let k = null == N ? void 0 : N(),
         G =
@@ -279,7 +279,7 @@ function j(e) {
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: T, renderMessage: C, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: x, listName: O } = e,
+    let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: C, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: x, listName: O } = e,
         L = (0, u.e7)([p.Z], () => {
             let e = null != s ? p.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -294,7 +294,7 @@ function U(e) {
             });
         else if (!L) {
             let e = N.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     a.useEffect(() => {
@@ -316,7 +316,7 @@ function U(e) {
         items: b,
         loading: o,
         analyticsName: t,
-        renderEmptyState: T,
+        renderEmptyState: h,
         renderHeader: m,
         hasMore: l,
         loadMore: c,

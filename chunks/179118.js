@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(925329),
     m = n(479446),
     f = n(522489),
-    h = n(857039),
-    T = n(93127),
+    T = n(857039),
+    h = n(93127),
     N = n(814443),
     p = n(590783),
     C = n(699516),
@@ -35,18 +35,18 @@ var i = n(200651),
     Z = n(689938),
     b = n(524254);
 function P(e) {
-    let { giftCode: t, application: n, sku: s, subscriptionPlan: l, selectedGiftStyle: o, onClose: d, hasSentMessage: _, giftRecipient: m, giftMessageError: T, isSendingMessage: N, halloweenDecoPurchase: C } = e,
+    let { giftCode: t, application: n, sku: s, subscriptionPlan: l, selectedGiftStyle: o, onClose: d, hasSentMessage: _, giftRecipient: m, giftMessageError: h, isSendingMessage: N, halloweenDecoPurchase: C } = e,
         [S, P] = a.useState(u.CopyInput.Modes.DEFAULT),
         j = (0, c.e7)([g.Z], () => g.Z.enabled),
         U = _ || (null != o && null != m),
         y = (null == s ? void 0 : s.productLine) === O.POd.COLLECTIBLES,
         { selectedPlan: B } = (0, M.usePaymentContext)(),
-        k = (0, h.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
+        k = (0, T.Z)({ location: 'Gift purchase confirm' }) && (null == B ? void 0 : B.skuId) === L.Si.TIER_2 && null != C,
         G = () => (null != l ? l.skuId : null != s ? s.id : null),
         F = () => {
             let e;
             let t = null != o && L.V4.includes(o);
-            if (null != T) return Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
+            if (null != h) return Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
             if (null == l) return null;
             if (l.interval === L.rV.MONTH) {
                 if (k) return Z.Z.Messages.NITROWEEN_DESKTOP_GIFT_CONFIRMATION_TITLE_MONTH;
@@ -146,9 +146,9 @@ function P(e) {
                           [b.header]: null == o && !y,
                           [b.headerCustomGifting]: null != o && !y
                       }),
-                      children: null != m || (_ && null == T) ? Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != T ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+                      children: null != m || (_ && null == h) ? Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != h ? Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : Z.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
                   }),
-                  (_ && null != m && null == T) || U
+                  (_ && null != m && null == h) || U
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(E.Z, {
@@ -187,7 +187,7 @@ function P(e) {
                                         children: F()
                                     }),
                                     !n &&
-                                        null == T &&
+                                        null == h &&
                                         (0, i.jsx)(D, {
                                             giftCode: t,
                                             onClose: d
@@ -203,11 +203,11 @@ function P(e) {
 let D = (e) => {
     let { giftCode: t, onClose: n } = e;
     a.useEffect(() => {
-        _.Z.fetchRelationships(), (0, T.W)();
+        _.Z.fetchRelationships(), (0, h.W)();
     }, []);
     let [s, r] = a.useState(),
         [l, I] = a.useState(!1),
-        [f, h] = a.useState(!1),
+        [f, T] = a.useState(!1),
         { userAffinities: p, isLoading: g } = (0, c.cj)([N.Z], () => ({
             userAffinities: N.Z.getUserAffinitiesUserIds(),
             isLoading: N.Z.getFetching()
@@ -252,13 +252,13 @@ let D = (e) => {
                         submitting: f,
                         className: b.sendToRecipientButton,
                         onClick: () => {
-                            h(!0),
+                            T(!0),
                                 (0, m.YD)(s, t)
                                     .then(() => {
                                         n(), (0, d.Ou)();
                                     })
                                     .catch(() => {
-                                        I(!0), h(!1);
+                                        I(!0), T(!1);
                                     });
                         },
                         children: Z.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON

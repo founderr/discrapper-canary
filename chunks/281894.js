@@ -11,10 +11,10 @@ function o(e) {
         (e.oncomplete = e.onsuccess = () => t(e.result)), (e.onabort = e.onerror = () => r(e.error));
     });
 }
-function E(e) {
+function i(e) {
     return o(e.getAllKeys());
 }
-function i(e) {
+function E(e) {
     let t;
     function r() {
         return (
@@ -31,28 +31,28 @@ function i(e) {
     return {
         push: async (t) => {
             try {
-                var n, _, i;
+                var n, _, E;
                 let c = await (0, a.V$)(t);
                 await ((n = r()),
                 (_ = c),
-                (i = e.maxQueueSize || 30),
+                (E = e.maxQueueSize || 30),
                 n((e) =>
-                    E(e).then((t) => {
-                        if (!(t.length >= i)) return e.put(_, Math.max(...t, 0) + 1), o(e.transaction);
+                    i(e).then((t) => {
+                        if (!(t.length >= E)) return e.put(_, Math.max(...t, 0) + 1), o(e.transaction);
                     })
                 ));
             } catch (e) {}
         },
         unshift: async (t) => {
             try {
-                var n, _, i;
+                var n, _, E;
                 let c = await (0, a.V$)(t);
                 await ((n = r()),
                 (_ = c),
-                (i = e.maxQueueSize || 30),
+                (E = e.maxQueueSize || 30),
                 n((e) =>
-                    E(e).then((t) => {
-                        if (!(t.length >= i)) return e.put(_, Math.min(...t, 0) - 1), o(e.transaction);
+                    i(e).then((t) => {
+                        if (!(t.length >= E)) return e.put(_, Math.min(...t, 0) - 1), o(e.transaction);
                     })
                 ));
             } catch (e) {}
@@ -60,7 +60,7 @@ function i(e) {
         shift: async () => {
             try {
                 let e = await r()((e) =>
-                    E(e).then((t) => {
+                    i(e).then((t) => {
                         let r = t[0];
                         if (null != r) return o(e.get(r)).then((t) => (e.delete(r), o(e.transaction).then(() => t)));
                     })
@@ -77,7 +77,7 @@ function c(e = _.f) {
         (e) =>
             t({
                 ...e,
-                createStore: i
+                createStore: E
             })
     );
 }

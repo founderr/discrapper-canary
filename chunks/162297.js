@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(220082),
     m = n(240991),
     f = n(914010),
-    h = n(768581),
-    T = n(135431),
+    T = n(768581),
+    h = n(135431),
     N = n(728345),
     p = n(812206),
     C = n(981631),
@@ -34,7 +34,7 @@ function R(e) {
         null == n && !s && !l && N.ZP.fetchApplication(t);
     }, [n, s, l, t]),
     null != n &&
-        (0, T.Eb)({
+        (0, h.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
@@ -60,7 +60,7 @@ function v(e) {
                 }),
             [t]
         ),
-        h = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
+        T = a.useMemo(() => (null != I ? (0, m.parseBioReact)(I) : null), [I]),
         [N, p] = a.useState(!1),
         R = a.useCallback((e) => {
             e && p(!0);
@@ -101,11 +101,11 @@ function v(e) {
                                     color: 'interactive-active',
                                     children: u
                                 }),
-                                null != h &&
+                                null != T &&
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: h
+                                        children: T
                                     })
                             ]
                         }),
@@ -116,7 +116,7 @@ function v(e) {
                             size: l.Button.Sizes.MEDIUM,
                             onClick: () => {
                                 d.ZP.trackWithMetadata(C.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
-                                    (0, T.LO)({
+                                    (0, h.LO)({
                                         applicationId: t.id,
                                         customInstallUrl: t.customInstallUrl,
                                         installParams: t.installParams,
@@ -152,7 +152,7 @@ function M(e) {
             imageNotFoundClassName: S.bannerImage
         });
     else if ((null == r ? void 0 : r.banner) != null) {
-        let e = (0, h.aN)({
+        let e = (0, T.aN)({
             id: r.id,
             banner: r.banner,
             size: 280,

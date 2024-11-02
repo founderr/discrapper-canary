@@ -1,31 +1,31 @@
 r.d(t, {
     $2: function () {
-        return E;
+        return i;
     },
     WD: function () {
         return o;
     },
     cW: function () {
-        return i;
+        return E;
     }
 });
 var n,
     a,
     _ = r(573736);
 function o(e) {
-    return new i((t) => {
+    return new E((t) => {
         t(e);
     });
 }
-function E(e) {
-    return new i((t, r) => {
+function i(e) {
+    return new E((t, r) => {
         r(e);
     });
 }
 ((n = a || (a = {}))[(n.PENDING = 0)] = 'PENDING'), (n[(n.RESOLVED = 1)] = 'RESOLVED'), (n[(n.REJECTED = 2)] = 'REJECTED');
-class i {
+class E {
     constructor(e) {
-        i.prototype.__init.call(this), i.prototype.__init2.call(this), i.prototype.__init3.call(this), i.prototype.__init4.call(this), (this._state = a.PENDING), (this._handlers = []);
+        E.prototype.__init.call(this), E.prototype.__init2.call(this), E.prototype.__init3.call(this), E.prototype.__init4.call(this), (this._state = a.PENDING), (this._handlers = []);
         try {
             e(this._resolve, this._reject);
         } catch (e) {
@@ -33,7 +33,7 @@ class i {
         }
     }
     then(e, t) {
-        return new i((r, n) => {
+        return new E((r, n) => {
             this._handlers.push([
                 !1,
                 (t) => {
@@ -62,7 +62,7 @@ class i {
         return this.then((e) => e, e);
     }
     finally(e) {
-        return new i((t, r) => {
+        return new E((t, r) => {
             let n, a;
             return this.then(
                 (t) => {

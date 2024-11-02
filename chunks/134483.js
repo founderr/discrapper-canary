@@ -202,7 +202,7 @@ t.Z = function (e) {
                                         : (0, s.jsx)('img', {
                                               className: B.gameTile,
                                               alt: K.config.messages.gameTitle,
-                                              src: (0, f.fh)(K, f.Bd.GAME_TILE, Y).url
+                                              src: (0, f.fh)(K, f.eC.GAME_TILE, Y).url
                                           }),
                                     (0, s.jsxs)('div', {
                                         children: [

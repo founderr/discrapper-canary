@@ -16,7 +16,7 @@ function c(e) {
         I = (0, r.ZP)(n),
         m = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
         f = _(I),
-        h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+        T = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
             username: I.nick,
             activityName: null != u ? u.name : 'unknown',
             onJoinStream: d,
@@ -24,7 +24,7 @@ function c(e) {
         });
     return (
         null != m &&
-            (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+            (T = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
                 username: I.nick,
                 duration: m.humanize(),
                 channelName: c.name,
@@ -42,7 +42,7 @@ function c(e) {
                     : (0, i.jsx)(s.ZP, { size: s.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: E,
-            children: h
+            children: T
         })
     );
 }

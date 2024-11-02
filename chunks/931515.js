@@ -36,8 +36,8 @@ var c = n(731965),
     I = n(728345),
     m = n(812206),
     f = n(963202),
-    h = n(564990),
-    T = n(353647),
+    T = n(564990),
+    h = n(353647),
     N = n(669764),
     p = n(210753),
     C = n(571457),
@@ -145,7 +145,7 @@ function F(e) {
         I = (0, P.GN)((e) => e.loadingGameApplication, o.Z),
         m = (0, u.e7)([L.Z], () => L.Z.getSavedGuildIds()),
         f = B(),
-        { searchResult: h, hasError: T } = (0, u.cj)(
+        { searchResult: T, hasError: h } = (0, u.cj)(
             [L.Z],
             () => ({
                 searchResult: L.Z.getSearchResult(f),
@@ -155,7 +155,7 @@ function F(e) {
         );
     i.useEffect(() => {
         n(e, b.$, { pageMemoryEnabled: !0 });
-    }, [e, n, h]),
+    }, [e, n, T]),
         !(function (e) {
             let [t, n] = i.useState(!1),
                 a = i.useRef(),
@@ -186,13 +186,13 @@ function F(e) {
         p = (0, u.Wu)([L.Z], () => N.map((e) => L.Z.getGuildProfile(e)).filter(M.lm), [N]),
         C = N.length === p.length || t,
         g = p.length === r || C,
-        S = (0, D.Pw)(h);
+        S = (0, D.Pw)(T);
     return {
         loaded: e === a && S && g && !I,
         clans: p,
         searchCriteria: f,
-        searchResult: h,
-        hasError: T
+        searchResult: T,
+        hasError: h
     };
 }
 function w() {
@@ -260,7 +260,7 @@ function Y() {
         n = (0, u.e7)([A.default], () => A.default.getId()),
         a = (0, E.ZP)(),
         { recent: s, outbox: r } = (0, S.Z)(n),
-        l = (0, u.e7)([T.Z], () => T.Z.hasInitialized),
+        l = (0, u.e7)([h.Z], () => h.Z.hasInitialized),
         o = (0, u.e7)([x.Z], () => x.Z.hasConsented(j.pjP.PERSONALIZATION)),
         c = null == r && l,
         _ = i.useMemo(() => (o ? s.reduce((t, n) => (t.length >= e || 'played_game_extra' !== n.extra.type || null == U.gQ.get(n.extra.application_id) ? t : t.concat(n.extra.application_id)), []) : []), [o, s, e]),
@@ -269,7 +269,7 @@ function Y() {
             return t && n.length < e && n.push(...U.Id, ...U.J6.slice(0, e)), Array.from(new Set(n)).slice(0, e);
         }, [_, t, e]);
     i.useEffect(() => {
-        c && o && (0, h.JX)(n);
+        c && o && (0, T.JX)(n);
     }, [n, c, o]),
         i.useEffect(() => {
             d.Z.getDetectableGamesSupplemental(I);

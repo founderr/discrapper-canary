@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 });
 var i = n(200651);
@@ -18,8 +18,8 @@ var a = n(399606),
     I = n(818186),
     m = n(689938),
     f = n(811304);
-function h(e) {
-    let { tab: t, setTab: n, children: h, badgeState: T, closePopout: N } = e,
+function T(e) {
+    let { tab: t, setTab: n, children: T, badgeState: h, closePopout: N } = e,
         { showReminders: p } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: C, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
@@ -44,7 +44,7 @@ function h(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: f.controls,
-                        children: [h, (0, i.jsx)(I.Z, { closePopout: N })]
+                        children: [T, (0, i.jsx)(I.Z, { closePopout: N })]
                     })
                 ]
             }),
@@ -63,7 +63,7 @@ function h(e) {
                             className: f.tab,
                             children: [
                                 m.Z.Messages.FOR_YOU,
-                                (null == T ? void 0 : T.badgeForYou)
+                                (null == h ? void 0 : h.badgeForYou)
                                     ? (0, i.jsx)(r.CircleBadge, {
                                           color: o.Z.STATUS_DANGER,
                                           className: f.iconBadge

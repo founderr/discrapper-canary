@@ -2,8 +2,8 @@ var n = r(135839),
     a = r(117973),
     _ = r(780712),
     o = r(400353),
-    E = r(653180),
-    i = r(657398),
+    i = r(653180),
+    E = r(657398),
     c = r(19235),
     s = '[object Map]',
     l = '[object Promise]',
@@ -14,11 +14,11 @@ var n = r(135839),
     A = c(a),
     T = c(_),
     d = c(o),
-    L = c(E),
-    f = i;
-((n && f(new n(new ArrayBuffer(1))) != R) || (a && f(new a()) != s) || (_ && f(_.resolve()) != l) || (o && f(new o()) != u) || (E && f(new E()) != I)) &&
-    (f = function (e) {
-        var t = i(e),
+    f = c(i),
+    L = E;
+((n && L(new n(new ArrayBuffer(1))) != R) || (a && L(new a()) != s) || (_ && L(_.resolve()) != l) || (o && L(new o()) != u) || (i && L(new i()) != I)) &&
+    (L = function (e) {
+        var t = E(e),
             r = '[object Object]' == t ? e.constructor : void 0,
             n = r ? c(r) : '';
         if (n)
@@ -31,9 +31,9 @@ var n = r(135839),
                     return l;
                 case d:
                     return u;
-                case L:
+                case f:
                     return I;
             }
         return t;
     }),
-    (e.exports = f);
+    (e.exports = L);

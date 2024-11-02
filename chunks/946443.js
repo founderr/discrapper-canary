@@ -21,8 +21,8 @@ var i = n(200651),
     I = n(607070),
     m = n(724757),
     f = n(626135),
-    h = n(585483),
-    T = n(358085),
+    T = n(585483),
+    h = n(358085),
     N = n(143316),
     p = n(240126),
     C = n(791914),
@@ -59,9 +59,9 @@ function v(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    h.S.subscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    T.S.subscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        h.S.unsubscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        T.S.unsubscribe(A.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
@@ -69,7 +69,7 @@ function v(e) {
         (function (e) {
             a.useEffect(() => {
                 let t = (t) => {
-                    ((0, T.isMac)() || (0, T.isMacWeb)() ? t.metaKey : t.ctrlKey) && !t.shiftKey && !t.altKey && 'z' === t.key && e.undoMarkChannelRead();
+                    ((0, h.isMac)() || (0, h.isMacWeb)() ? t.metaKey : t.ctrlKey) && !t.shiftKey && !t.altKey && 'z' === t.key && e.undoMarkChannelRead();
                 };
                 return (
                     document.addEventListener('keydown', t),

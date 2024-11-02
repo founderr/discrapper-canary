@@ -26,7 +26,7 @@ function E(e) {
         { disableTrack: !t },
         [t]
     );
-    let h = () => {
+    let T = () => {
         var e;
         let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
         if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && I();
@@ -47,7 +47,7 @@ function E(e) {
                                       (m.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                                   },
                                   ...a,
-                                  onScroll: h,
+                                  onScroll: T,
                                   children: [(0, i.jsx)(d.U, { items: n }), E ? (0, i.jsx)(l.Spinner, { className: _.spinner }) : null]
                               });
                           }

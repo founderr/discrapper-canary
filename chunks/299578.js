@@ -2,10 +2,10 @@ var n = r(807419),
     a = r(143283),
     _ = r(706627),
     o = r(19235),
-    E = /^\[object .+?Constructor\]$/,
-    i = Object.prototype,
+    i = /^\[object .+?Constructor\]$/,
+    E = Object.prototype,
     c = Function.prototype.toString,
-    s = i.hasOwnProperty,
+    s = E.hasOwnProperty,
     l = RegExp(
         '^' +
             c
@@ -15,5 +15,5 @@ var n = r(807419),
             '$'
     );
 e.exports = function (e) {
-    return !(!_(e) || a(e)) && (n(e) ? l : E).test(o(e));
+    return !(!_(e) || a(e)) && (n(e) ? l : i).test(o(e));
 };

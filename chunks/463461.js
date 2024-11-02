@@ -18,8 +18,8 @@ function _(e, { metadata: t, tunnel: r, dsn: _ }) {
                 }),
             ...(!!r && !!_ && { dsn: (0, n.RA)(_) })
         },
-        E = (function (e) {
+        i = (function (e) {
             return [{ type: 'user_report' }, e];
         })(e);
-    return (0, a.Jd)(o, [E]);
+    return (0, a.Jd)(o, [i]);
 }

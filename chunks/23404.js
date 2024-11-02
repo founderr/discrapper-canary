@@ -40,7 +40,7 @@ function x(e) {
             (0, i.jsx)('img', {
                 className: O.headingGameTile,
                 alt: '',
-                src: (0, g.fh)(n, g.Bd.GAME_TILE, u).url
+                src: (0, g.fh)(n, g.eC.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
                 className: O.headingCopy,

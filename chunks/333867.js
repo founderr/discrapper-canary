@@ -19,7 +19,7 @@ let E = 'payment-modal',
     I = new Set([u.h8.REVIEW, u.h8.CONFIRM]);
 function m(e) {
     let t;
-    let { skuId: n, isGift: u = !1, giftMessage: m, giftingOrigin: f, onClose: h, onComplete: T, analyticsLocations: N, analyticsObject: p } = e,
+    let { skuId: n, isGift: u = !1, giftMessage: m, giftingOrigin: f, onClose: T, onComplete: h, analyticsLocations: N, analyticsObject: p } = e,
         C = !1,
         g = (0, a.Z)(),
         S = (e) => {
@@ -37,10 +37,10 @@ function m(e) {
                 giftingOrigin: f,
                 analyticsLocations: N,
                 onClose: (e) => {
-                    t(), null == h || h(e);
+                    t(), null == T || T(e);
                 },
                 onComplete: () => {
-                    (C = !0), null == T || T();
+                    (C = !0), null == h || h();
                 },
                 returnRef: a,
                 onStepChange: S
@@ -59,7 +59,7 @@ function m(e) {
                     }),
                     (0, r.fw)(),
                     (0, l.p)(),
-                    null == h || h(C),
+                    null == T || T(C),
                     C && (0, o.qg)();
             },
             onCloseRequest: () => {

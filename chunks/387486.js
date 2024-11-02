@@ -10,9 +10,9 @@ function o(e, t = (0, n.L2)('fetch')) {
     let r = 0,
         o = 0;
     return (0, a.q)(e, function (a) {
-        let E = a.body.length;
-        (r += E), o++;
-        let i = {
+        let i = a.body.length;
+        (r += i), o++;
+        let E = {
             body: a.body,
             method: 'POST',
             referrerPolicy: 'origin',
@@ -22,9 +22,9 @@ function o(e, t = (0, n.L2)('fetch')) {
         };
         if (!t) return (0, n._6)('fetch'), (0, _.$2)('No fetch implementation available');
         try {
-            return t(e.url, i).then(
+            return t(e.url, E).then(
                 (e) => (
-                    (r -= E),
+                    (r -= i),
                     o--,
                     {
                         statusCode: e.status,
@@ -36,7 +36,7 @@ function o(e, t = (0, n.L2)('fetch')) {
                 )
             );
         } catch (e) {
-            return (0, n._6)('fetch'), (r -= E), o--, (0, _.$2)(e);
+            return (0, n._6)('fetch'), (r -= i), o--, (0, _.$2)(e);
         }
     });
 }

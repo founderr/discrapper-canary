@@ -20,8 +20,8 @@ var i,
     I = n(758059),
     m = n(700582),
     f = n(906732),
-    h = n(213609),
-    T = n(541716),
+    T = n(213609),
+    h = n(541716),
     N = n(28546),
     p = n(963249),
     C = n(703656),
@@ -44,7 +44,7 @@ function j(e) {
         { analyticsLocations: F } = (0, f.ZP)(),
         w = (0, u.e7)([v.Z], () => v.Z.getFriendAnniversaryYears(i.id));
     r.useEffect(() => {
-        (0, h.h)({
+        (0, T.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
             type: c.ImpressionTypes.VIEW,
             properties: {
@@ -139,7 +139,7 @@ function j(e) {
                                               ((0, R.PV)(i.id),
                                               E.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
-                                                      (0, N.PG)(b.X1.GIF, T.I.NORMAL),
+                                                      (0, N.PG)(b.X1.GIF, h.I.NORMAL),
                                                           setTimeout(() => {
                                                               (0, N.ql)(P.Z.Messages.PREMIUM_GIFTING_INTENT_GIF_SEARCH_SUGGESTION, !0);
                                                           }, 50);

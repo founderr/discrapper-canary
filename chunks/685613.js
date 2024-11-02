@@ -32,7 +32,7 @@ t.Z = function (e) {
                             ref: e,
                             className: C.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, d.fh)(s, d.Bd.GAME_TILE, x).url,
+                            src: (0, d.fh)(s, d.eC.GAME_TILE, x).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -54,7 +54,7 @@ t.Z = function (e) {
                         ref: e,
                         className: r()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: _ }),
                         alt: s.config.messages.gameTitle,
-                        src: (0, d.fh)(s, d.Bd.LOGO_TYPE, x).url
+                        src: (0, d.fh)(s, d.eC.LOGO_TYPE, x).url
                     })
             })
         ]

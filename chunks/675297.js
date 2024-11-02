@@ -18,14 +18,14 @@ var a = n(399606),
     I = n(942833),
     m = n(391181),
     f = n(964793),
-    h = n(226060),
-    T = n(981631);
+    T = n(226060),
+    h = n(981631);
 function N(e) {
     let { guildProductListing: t, guildId: n, location: N, shouldShowFullDescriptionButton: p = !0, hideRoleTag: C = !1, lineClamp: g = 1, cardWidth: S, cardHeight: A, thumbnailHeight: x, descriptionTextVariant: R = 'text-sm/normal', showOpaqueBackground: v = !1 } = e,
         M = (0, a.e7)([o.Z], () => o.Z.getGuild(n), [n]),
         O = (0, a.e7)([o.Z], () => {
             var e;
-            return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : T.lds);
+            return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.lds);
         }),
         L = (0, s.U)(t, 600),
         Z = (0, I.C)(t),
@@ -71,7 +71,7 @@ function N(e) {
             description: t.description,
             formattedPrice: D,
             role: O,
-            ctaComponent: (0, i.jsx)(h.Z, {
+            ctaComponent: (0, i.jsx)(T.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
                 sourceAnalyticsLocations: N

@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(509545),
     m = n(238),
     f = n(55563),
-    h = n(551428),
-    T = n(626135),
+    T = n(551428),
+    h = n(626135),
     N = n(572004),
     p = n(601911),
     C = n(504211),
@@ -37,7 +37,7 @@ var i = n(200651),
 let O = b(function (e) {
         let { appId: t, message: o } = e,
             d = (0, S.R)(t),
-            [_, I, f, h, N, g, A] = (0, s.Wu)(
+            [_, I, f, T, N, g, A] = (0, s.Wu)(
                 [c.Z, m.Z, E.Z],
                 () => {
                     var e;
@@ -51,8 +51,8 @@ let O = b(function (e) {
         a.useEffect(() => {
             N === m.N.NONE && (0, l.k)(t), null == _ && !I && !f && (0, u.UM)(t);
         }, [_, t, f, I, N]);
-        let O = h.subscriptions.length,
-            L = h.otps.length,
+        let O = T.subscriptions.length,
+            L = T.otps.length,
             b = a.useMemo(
                 () =>
                     O > 0 && L > 0
@@ -91,7 +91,7 @@ let O = b(function (e) {
             iconSrc: A,
             onIconClick: () => {
                 P(),
-                    T.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
                     });
@@ -99,7 +99,7 @@ let O = b(function (e) {
             children: (0, i.jsx)(r.Button, {
                 onClick: () => {
                     P(),
-                        T.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                        h.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
@@ -113,7 +113,7 @@ let O = b(function (e) {
         var t, l;
         let { skuId: u, message: m } = e,
             [N, g, O, L, b, P, D, j] = (0, s.Wu)(
-                [f.Z, h.Z, I.Z, E.Z, c.Z],
+                [f.Z, T.Z, I.Z, E.Z, c.Z],
                 () => {
                     var e, t, n, i;
                     let a = null === (e = E.Z.getBasicChannel(m.channel_id)) || void 0 === e ? void 0 : e.guild_id,
@@ -122,7 +122,7 @@ let O = b(function (e) {
                         l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
                         o = null != l ? (0, p.y)(l, 45) : void 0,
                         d = I.Z.getForSKU(u);
-                    return [s, l, h.Z.getForSKU(u), f.Z.isFetching(u), f.Z.didFetchingSkuFail(u), d.length > 0 ? d[0] : null, a, o];
+                    return [s, l, T.Z.getForSKU(u), f.Z.isFetching(u), f.Z.didFetchingSkuFail(u), d.length > 0 ? d[0] : null, a, o];
                 },
                 [m.channel_id, u]
             ),
@@ -214,7 +214,7 @@ let O = b(function (e) {
                     : t.trim();
         '' === H && (H = void 0);
         let Y = () => {
-            T.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+            h.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                 application_id: g.id,
                 sku_id: N.id,
                 area: 'purchase_button'
@@ -231,7 +231,7 @@ let O = b(function (e) {
             iconSrc: j,
             onIconClick: () => {
                 w(),
-                    T.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                    h.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                         application_id: g.id,
                         sku_id: N.id,
                         area: 'app_icon'
@@ -244,7 +244,7 @@ let O = b(function (e) {
                         color: r.ButtonColors.CUSTOM,
                         onClick: () => {
                             V(),
-                                T.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                                h.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                     application_id: g.id,
                                     sku_id: N.id,
                                     area: 'view_details'

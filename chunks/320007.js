@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var i = n(200651),
@@ -17,9 +17,9 @@ var i = n(200651),
     I = n(175470),
     m = n(203259),
     f = n(356659),
-    h = n(689938);
-function T(e) {
-    let { canShowReminder: t = !1, className: T } = e,
+    T = n(689938);
+function h(e) {
+    let { canShowReminder: t = !1, className: h } = e,
         N = (0, E.Z)(u.Z),
         { showClipsHeaderEntrypoint: p } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
@@ -66,10 +66,10 @@ function T(e) {
                   (0, i.jsx)('div', {
                       ref: M,
                       children: (0, i.jsx)(l.JO, {
-                          className: T,
+                          className: h,
                           icon: r.ClipsIcon,
                           showBadge: g,
-                          tooltip: h.Z.Messages.CLIPS_GALLERY_TOOLTIP,
+                          tooltip: T.Z.Messages.CLIPS_GALLERY_TOOLTIP,
                           onClick: b
                       })
                   })

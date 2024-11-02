@@ -17,12 +17,12 @@ var i = n(200651),
     I = n(74538),
     m = n(163684),
     f = n(748770),
-    h = n(474936),
-    T = n(981631),
+    T = n(474936),
+    h = n(981631),
     N = n(689938),
     p = n(464780);
 function C() {
-    let e = (0, r.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), h.p9.TIER_2)),
+    let e = (0, r.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), T.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = m.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -34,26 +34,26 @@ function C() {
         { analyticsLocations: g } = (0, u.ZP)(),
         S = a.useCallback(() => {
             (0, d.Z)({
-                subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
+                subscriptionTier: I.ZP.getSkuIdForPremiumType(T.p9.TIER_2),
                 analyticsLocations: g,
                 analyticsObject: {
                     ...C,
-                    object: T.qAy.BUTTON_CTA,
-                    objectType: T.Qqv.TIER_2
+                    object: h.qAy.BUTTON_CTA,
+                    objectType: h.Qqv.TIER_2
                 }
             });
         }, [g, C]),
         A = a.useCallback(() => {
-            o.Z.open(T.oAB.INVENTORY), f.ZP.dismissOutboundPromotionNotice();
+            o.Z.open(h.oAB.INVENTORY), f.ZP.dismissOutboundPromotionNotice();
         }, []),
         x = a.useCallback(() => {
-            E.default.track(T.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
+            E.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
         }, [n, S, A]);
     return (0, i.jsxs)(l.Notice, {
         color: l.NoticeColors.PREMIUM_TIER_2,
         children: [
             (0, i.jsx)(l.NoticeCloseButton, {
-                noticeType: T.kVF.OUTBOUND_PROMOTION,
+                noticeType: h.kVF.OUTBOUND_PROMOTION,
                 onClick: () => {
                     f.ZP.dismissOutboundPromotionNotice();
                 }
@@ -73,7 +73,7 @@ function C() {
                     : N.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE
                 : N.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
             (0, i.jsx)(l.PrimaryCTANoticeButton, {
-                noticeType: T.kVF.OUTBOUND_PROMOTION,
+                noticeType: h.kVF.OUTBOUND_PROMOTION,
                 onClick: x,
                 children: n ? N.Z.Messages.PREMIUM_UPSELL_GET_NITRO : N.Z.Messages.TAKE_ME_THERE
             })

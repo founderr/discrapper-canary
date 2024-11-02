@@ -1,15 +1,15 @@
 r.d(t, {
     R: function () {
-        return function e(t, r, E, i = 0) {
+        return function e(t, r, i, E = 0) {
             return new n.cW((n, c) => {
-                let s = t[i];
+                let s = t[E];
                 if (null === r || 'function' != typeof s) n(r);
                 else {
-                    let l = s({ ...r }, E);
+                    let l = s({ ...r }, i);
                     o.X && s.id && null === l && a.kg.log(`Event processor "${s.id}" dropped event`),
                         (0, _.J8)(l)
-                            ? l.then((r) => e(t, r, E, i + 1).then(n)).then(null, c)
-                            : e(t, l, E, i + 1)
+                            ? l.then((r) => e(t, r, i, E + 1).then(n)).then(null, c)
+                            : e(t, l, i, E + 1)
                                   .then(n)
                                   .then(null, c);
                 }

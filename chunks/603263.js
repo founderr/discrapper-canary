@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     j8: function () {
-        return h;
+        return T;
     },
     jn: function () {
         return _;
@@ -24,7 +24,7 @@ n.d(t, {
         return E;
     },
     qt: function () {
-        return T;
+        return h;
     },
     u$: function () {
         return N;
@@ -120,7 +120,7 @@ function f(e) {
         searchId: e
     });
 }
-function h(e, t) {
+function T(e, t) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',
@@ -128,7 +128,7 @@ function h(e, t) {
             editorState: t
         });
 }
-function T(e) {
+function h(e) {
     a.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, { search_id: s.Z.getAnalyticsId(e) }),
         i.Z.wait(() =>
             i.Z.dispatch({

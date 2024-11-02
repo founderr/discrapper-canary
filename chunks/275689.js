@@ -7,8 +7,8 @@ var n = r(394798),
     a = r(101284),
     _ = r(370336),
     o = r(622916),
-    E = r(263449),
-    i = r(255768),
+    i = r(263449),
+    E = r(255768),
     c = r(380132),
     s = r(899195),
     l = r(988097),
@@ -93,26 +93,26 @@ class T {
         return !this._endTime && !!this._sampled;
     }
     addEvent(e, t, r) {
-        i.X && o.kg.log('[Tracing] Adding an event to span:', e);
+        E.X && o.kg.log('[Tracing] Adding an event to span:', e);
         let n = d(t) ? t : r || (0, a.ph)(),
             _ = d(t) ? {} : t || {},
-            E = {
+            i = {
                 name: e,
                 time: (0, u.$k)(n),
                 attributes: _
             };
-        return this._events.push(E), this;
+        return this._events.push(i), this;
     }
     isStandaloneSpan() {
         return !!this._isStandaloneSpan;
     }
     _onSpanEnded() {
-        let e = (0, E.s3)();
+        let e = (0, i.s3)();
         if ((e && e.emit('spanEnd', this), !(this._isStandaloneSpan || this === (0, u.Gx)(this)))) return;
         if (this._isStandaloneSpan) {
             this._sampled
                 ? (function (e) {
-                      let t = (0, E.s3)();
+                      let t = (0, i.s3)();
                       if (!t) return;
                       let r = e[1];
                       if (!r || 0 === r.length) {
@@ -122,22 +122,22 @@ class T {
                       let n = t.getTransport();
                       n &&
                           n.send(e).then(null, (e) => {
-                              i.X && o.kg.error('Error while sending span:', e);
+                              E.X && o.kg.error('Error while sending span:', e);
                           });
                   })((0, c.uE)([this], e))
-                : (i.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), e && e.recordDroppedEvent('sample_rate', 'span'));
+                : (E.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), e && e.recordDroppedEvent('sample_rate', 'span'));
             return;
         }
         let t = this._convertSpanToTransaction();
-        t && ((0, A.I1)(this).scope || (0, E.nZ)()).captureEvent(t);
+        t && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(t);
     }
     _convertSpanToTransaction() {
-        if (!L((0, u.XU)(this))) return;
-        !this._name && (i.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
+        if (!f((0, u.XU)(this))) return;
+        !this._name && (E.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
         let { scope: e, isolationScope: t } = (0, A.I1)(this),
-            r = (e || (0, E.nZ)()).getClient() || (0, E.s3)();
+            r = (e || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
-            i.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), r && r.recordDroppedEvent('sample_rate', 'transaction');
+            E.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), r && r.recordDroppedEvent('sample_rate', 'transaction');
             return;
         }
         let n = (0, u.Dp)(this)
@@ -149,7 +149,7 @@ class T {
                         })(e)
                 )
                 .map((e) => (0, u.XU)(e))
-                .filter(L),
+                .filter(f),
             a = this._attributes[l.Zj],
             c = {
                 contexts: { trace: (0, u.HR)(this) },
@@ -167,12 +167,12 @@ class T {
                 ...(a && { transaction_info: { source: a } })
             },
             R = (0, N.l)(this._events);
-        return R && Object.keys(R).length && (i.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (c.measurements = R)), c;
+        return R && Object.keys(R).length && (E.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (c.measurements = R)), c;
     }
 }
 function d(e) {
     return (e && 'number' == typeof e) || e instanceof Date || Array.isArray(e);
 }
-function L(e) {
+function f(e) {
     return !!e.start_timestamp && !!e.timestamp && !!e.span_id && !!e.trace_id;
 }

@@ -138,8 +138,8 @@ function w(e) {
     var t, n, o;
     let { quest: s, isHovering: l, errorHints: c, warningHints: m, onCtxMenuClose: C, onCtxMenuOpen: N, onCtxMenuSelect: B } = e,
         w = (0, S.cr)(s),
-        k = a.useMemo(() => (0, T.fh)(s, T.Bd.HERO), [s]),
-        P = a.useMemo(() => (0, T.fh)(s, T.Bd.LOGO_TYPE, 'dark'), [s]),
+        k = a.useMemo(() => (0, T.fh)(s, T.eC.HERO), [s]),
+        P = a.useMemo(() => (0, T.fh)(s, T.eC.LOGO_TYPE, 'dark'), [s]),
         L = (0, x.ZP)(),
         U = ((0, u.wj)(L) ? R.BRd.DARK : R.BRd.LIGHT) === R.BRd.DARK,
         q = a.useContext(d.S).reducedMotion.enabled,

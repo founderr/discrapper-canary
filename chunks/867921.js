@@ -7,8 +7,8 @@ var n = r(672410),
     a = r(617726),
     _ = r(14588),
     o = r(928541),
-    E = r(622916),
-    i = r(116698),
+    i = r(622916),
+    E = r(116698),
     c = r(255768);
 function s(e, t, r = (0, n.x)(e.bufferSize || 64)) {
     let s = {};
@@ -36,7 +36,7 @@ function s(e, t, r = (0, n.x)(e.bufferSize || 64)) {
             return r
                 .add(() =>
                     t({ body: (0, a.V$)(I) }).then(
-                        (e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && c.X && E.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (s = (0, _.WG)(s, e)), e),
+                        (e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && c.X && i.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (s = (0, _.WG)(s, e)), e),
                         (e) => {
                             throw (R('network_error'), e);
                         }
@@ -45,7 +45,7 @@ function s(e, t, r = (0, n.x)(e.bufferSize || 64)) {
                 .then(
                     (e) => e,
                     (e) => {
-                        if (e instanceof i.b) return c.X && E.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
+                        if (e instanceof E.b) return c.X && i.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
                         throw e;
                     }
                 );

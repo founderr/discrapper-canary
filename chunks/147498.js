@@ -3,7 +3,7 @@ r.d(t, {
         return n;
     },
     RF: function () {
-        return E;
+        return i;
     },
     g_: function () {
         return o;
@@ -19,4 +19,4 @@ let n = 'c',
     a = 'g',
     _ = 's',
     o = 'd',
-    E = 5000;
+    i = 5000;

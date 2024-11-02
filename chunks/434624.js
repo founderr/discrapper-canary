@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return h;
+        return T;
     }
 }),
     n(47120);
@@ -20,12 +20,12 @@ var i = n(200651),
 let f = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: f, count: h, me: T, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: v } = e,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: f, count: T, me: h, me_burst: N, burst_count: p, burst_colors: C, readOnly: g, isLurking: S, isGuest: A, isPendingMember: x, type: R, emojiSize: v } = e,
             M = R === _.O.BURST,
-            O = (0, E.y4)(T, N, R),
+            O = (0, E.y4)(h, N, R),
             L = (0, d.v)(M && null != C ? C : []),
             Z = a ? m : I,
-            b = M ? p : h,
+            b = M ? p : T,
             P = (0, u.y)(b, E.aO),
             D = {};
         if (M && null != L) {
@@ -61,7 +61,7 @@ let f = a.memo(function (e) {
             ]
         });
     }),
-    h = a.memo(function (e) {
+    T = a.memo(function (e) {
         let { showImmediate: t, reactions: n, emojiSize: s, ...r } = e,
             [l, o] = a.useState(!1),
             [u, d] = a.useTransition(),
@@ -77,14 +77,14 @@ let f = a.memo(function (e) {
                 [l, u]
             ),
             m = (0, c.O)(I),
-            h = (l && !u) || t ? E.le : f;
+            T = (l && !u) || t ? E.le : f;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', { ref: m }),
                 n.map((e) => {
                     var t, n;
                     return (0, i.jsx)(
-                        h,
+                        T,
                         {
                             ...r,
                             ...e,

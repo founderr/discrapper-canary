@@ -3,7 +3,7 @@ r.d(t, {
         return _;
     },
     E1: function () {
-        return i;
+        return E;
     },
     JQ: function () {
         return l;
@@ -21,7 +21,7 @@ r.d(t, {
         return n;
     },
     ju: function () {
-        return E;
+        return i;
     },
     p6: function () {
         return s;
@@ -31,8 +31,8 @@ let n = 'sentry.source',
     a = 'sentry.sample_rate',
     _ = 'sentry.op',
     o = 'sentry.origin',
-    E = 'sentry.idle_span_finish_reason',
-    i = 'sentry.measurement_unit',
+    i = 'sentry.idle_span_finish_reason',
+    E = 'sentry.measurement_unit',
     c = 'sentry.measurement_value',
     s = 'sentry.profile_id',
     l = 'sentry.exclusive_time';

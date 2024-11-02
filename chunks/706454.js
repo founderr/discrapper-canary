@@ -10,7 +10,7 @@ var r,
     d = n(581883),
     _ = n(689938),
     E = n(388032);
-let f = c.vJ ? E.intl.defaultLocale : _.Z.getDefaultLocale();
+let f = c.vJ ? E.intl.currentLocale : _.Z.getDefaultLocale();
 function h() {
     var e, t;
     let n = null === (t = d.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;

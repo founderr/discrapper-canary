@@ -1,14 +1,14 @@
 r.d(t, {
     t: function () {
-        return i;
+        return E;
     }
 });
 var n = r(151122),
     a = r(370336),
     _ = r(688838),
     o = r(163162);
-let E = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
-    i = (0, n._I)((e = {}) => {
+let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
+    E = (0, n._I)((e = {}) => {
         let t = {
             XMLHttpRequest: !0,
             eventTarget: !0,
@@ -22,7 +22,7 @@ let E = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
             setupOnce() {
                 t.setTimeout && (0, a.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, a.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, a.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', l);
                 let e = t.eventTarget;
-                e && (Array.isArray(e) ? e : E).forEach(u);
+                e && (Array.isArray(e) ? e : i).forEach(u);
             }
         };
     });

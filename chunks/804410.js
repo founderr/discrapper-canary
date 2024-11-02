@@ -7,8 +7,8 @@ var n = r(151122),
     a = r(263449),
     _ = r(233517),
     o = r(824851),
-    E = r(753642),
-    i = r(573736),
+    i = r(753642),
+    E = r(573736),
     c = r(467510),
     s = r(688838),
     l = r(622916),
@@ -32,16 +32,16 @@ let N = (0, n._I)((e = {}) => {
                     (0, o.V)((t) => {
                         let { stackParser: r, attachStacktrace: n } = T();
                         if ((0, a.s3)() !== e || (0, R.Wz)()) return;
-                        let { msg: o, url: E, line: l, column: u, error: N } = t,
+                        let { msg: o, url: i, line: l, column: u, error: N } = t,
                             A = (function (e, t, r, n) {
                                 let a = (e.exception = e.exception || {}),
                                     _ = (a.values = a.values || []),
                                     o = (_[0] = _[0] || {}),
-                                    E = (o.stacktrace = o.stacktrace || {}),
-                                    l = (E.frames = E.frames || []),
+                                    i = (o.stacktrace = o.stacktrace || {}),
+                                    l = (i.frames = i.frames || []),
                                     u = isNaN(parseInt(n, 10)) ? void 0 : n,
                                     I = isNaN(parseInt(r, 10)) ? void 0 : r,
-                                    R = (0, i.HD)(t) && t.length > 0 ? t : (0, c.l4)();
+                                    R = (0, E.HD)(t) && t.length > 0 ? t : (0, c.l4)();
                                 return (
                                     0 === l.length &&
                                         l.push({
@@ -53,7 +53,7 @@ let N = (0, n._I)((e = {}) => {
                                         }),
                                     e
                                 );
-                            })((0, I.ME)(r, N || o, void 0, n, !1), E, l, u);
+                            })((0, I.ME)(r, N || o, void 0, n, !1), i, l, u);
                         (A.level = 'error'),
                             (0, _.eN)(A, {
                                 originalException: N,
@@ -67,18 +67,18 @@ let N = (0, n._I)((e = {}) => {
                 A('onerror')),
                 t.onunhandledrejection &&
                     ((function (e) {
-                        (0, E.h)((t) => {
+                        (0, i.h)((t) => {
                             let { stackParser: r, attachStacktrace: n } = T();
                             if ((0, a.s3)() !== e || (0, R.Wz)()) return;
                             let o = (function (e) {
-                                    if ((0, i.pt)(e)) return e;
+                                    if ((0, E.pt)(e)) return e;
                                     try {
                                         if ('reason' in e) return e.reason;
                                         if ('detail' in e && 'reason' in e.detail) return e.detail.reason;
                                     } catch (e) {}
                                     return e;
                                 })(t),
-                                E = (0, i.pt)(o)
+                                i = (0, E.pt)(o)
                                     ? (function (e) {
                                           return {
                                               exception: {
@@ -92,8 +92,8 @@ let N = (0, n._I)((e = {}) => {
                                           };
                                       })(o)
                                     : (0, I.ME)(r, o, void 0, n, !0);
-                            (E.level = 'error'),
-                                (0, _.eN)(E, {
+                            (i.level = 'error'),
+                                (0, _.eN)(i, {
                                     originalException: o,
                                     mechanism: {
                                         handled: !1,

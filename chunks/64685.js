@@ -10,19 +10,19 @@ var n = r(573736),
     a = r(370336),
     _ = r(694043),
     o = r(101284),
-    E = r(899517),
-    i = r(578346);
+    i = r(899517),
+    E = r(578346);
 function c(e, t) {
     let r = 'fetch';
-    (0, i.Hj)(r, e), (0, i.D2)(r, () => l(void 0, t));
+    (0, E.Hj)(r, e), (0, E.D2)(r, () => l(void 0, t));
 }
 function s(e) {
     let t = 'fetch-body-resolved';
-    (0, i.Hj)(t, e), (0, i.D2)(t, () => l(u));
+    (0, E.Hj)(t, e), (0, E.D2)(t, () => l(u));
 }
 function l(e, t = !1) {
     if (!t || !!(0, _.t$)())
-        (0, a.hl)(E.n, 'fetch', function (t) {
+        (0, a.hl)(i.n, 'fetch', function (t) {
             return function (...r) {
                 let { method: _, url: c } = (function (e) {
                         if (0 === e.length)
@@ -51,9 +51,9 @@ function l(e, t = !1) {
                         },
                         startTimestamp: 1000 * (0, o.ph)()
                     };
-                !e && (0, i.rK)('fetch', { ...s });
+                !e && (0, E.rK)('fetch', { ...s });
                 let l = Error().stack;
-                return t.apply(E.n, r).then(
+                return t.apply(i.n, r).then(
                     async (t) => {
                         if (e) e(t);
                         else {
@@ -62,7 +62,7 @@ function l(e, t = !1) {
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 response: t
                             };
-                            (0, i.rK)('fetch', e);
+                            (0, E.rK)('fetch', e);
                         }
                         return t;
                     },
@@ -73,7 +73,7 @@ function l(e, t = !1) {
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 error: t
                             };
-                            throw ((0, i.rK)('fetch', e), (0, n.VZ)(t) && void 0 === t.stack && ((t.stack = l), (0, a.xp)(t, 'framesToPop', 1)), t);
+                            throw ((0, E.rK)('fetch', e), (0, n.VZ)(t) && void 0 === t.stack && ((t.stack = l), (0, a.xp)(t, 'framesToPop', 1)), t);
                         }
                     }
                 );
@@ -110,7 +110,7 @@ async function u(e) {
                 .catch(() => {});
         }
     })(t, () => {
-        (0, i.rK)('fetch-body-resolved', {
+        (0, E.rK)('fetch-body-resolved', {
             endTimestamp: 1000 * (0, o.ph)(),
             response: e
         });

@@ -112,7 +112,7 @@ function W(e) {
 function H(e) {
     let { quest: t, taskDetails: n, expansionSpring: r, isInteractable: a, reducedMotion: i, containerRef: d, isExpanded: m, onAcceptQuest: x } = e,
         C = (0, c.e7)([_.Z], () => _.Z.isEnrolling(t.id), [t]),
-        h = s.useMemo(() => (0, N.fh)(t, N.Bd.QUEST_BAR_HERO), [t]),
+        h = s.useMemo(() => (0, N.fh)(t, N.eC.QUEST_BAR_HERO), [t]),
         T = (0, S.vI)(t, U.dr.QUESTS_BAR, !0),
         j = s.useRef(null),
         { primaryVariant: A } = E.u.useExperiment({ location: U.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),

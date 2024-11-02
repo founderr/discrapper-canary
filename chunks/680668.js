@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return T;
     }
 }),
     n(789020);
@@ -19,9 +19,9 @@ var a = n(533800),
     I = n(981631),
     m = n(689938),
     f = n(691784);
-function h(e) {
-    var t, h;
-    let T,
+function T(e) {
+    var t, T;
+    let h,
         N,
         p,
         { onTransitionToInviteChannel: C, onAcceptInstantInvite: g, guild: S, invite: A, author: x, currentUserId: R } = e,
@@ -34,7 +34,7 @@ function h(e) {
         j = null != b && b.isGuildVocal(),
         U = null != b && b.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
+        B = null !== (T = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== T && T;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
         S = d.Qs(A.guild);
@@ -77,7 +77,7 @@ function h(e) {
             })),
         j
             ? ((N = (0, i.jsx)(l.Z.Channel, { channel: b })),
-              (T = (0, i.jsxs)('span', {
+              (h = (0, i.jsxs)('span', {
                   className: f.infoTitle,
                   children: [
                       m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
@@ -91,12 +91,12 @@ function h(e) {
                   ]
               })))
             : (null != O && O >= 5) || (null != L && L > 0)
-              ? (T = (0, i.jsx)(l.Z.Data, {
+              ? (h = (0, i.jsx)(l.Z.Data, {
                     members: O,
                     membersOnline: L
                 }))
               : D &&
-                (T = (0, i.jsx)(l.Z.Channel, {
+                (h = (0, i.jsx)(l.Z.Channel, {
                     channel: b,
                     guild: S
                 })),
@@ -116,7 +116,7 @@ function h(e) {
                                 (0, i.jsx)(l.Z.Info, {
                                     title: N,
                                     onClick: P ? k : null,
-                                    children: T
+                                    children: h
                                 })
                             ]
                         }),

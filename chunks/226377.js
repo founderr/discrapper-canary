@@ -7,8 +7,8 @@ var n = r(899517),
     a = r(622916),
     _ = r(101284),
     o = r(263449),
-    E = r(255768),
-    i = r(696486),
+    i = r(255768),
+    E = r(696486),
     c = r(152228),
     s = r(366569),
     l = r(147498);
@@ -22,23 +22,23 @@ function u(e, t) {
 function I(e, t, r, n, _ = {}) {
     let c = _.client || (0, o.s3)();
     if (!c) return;
-    let s = (0, i.HN)(),
-        l = s ? (0, i.Gx)(s) : void 0,
-        I = l && (0, i.XU)(l).description,
+    let s = (0, E.HN)(),
+        l = s ? (0, E.Gx)(s) : void 0,
+        I = l && (0, E.XU)(l).description,
         { unit: R, tags: N, timestamp: A } = _,
         { release: T, environment: d } = c.getOptions(),
-        L = {};
-    T && (L.release = T),
-        d && (L.environment = d),
-        I && (L.transaction = I),
-        E.X && a.kg.log(`Adding value of ${n} to ${t} metric ${r}`),
+        f = {};
+    T && (f.release = T),
+        d && (f.environment = d),
+        I && (f.transaction = I),
+        i.X && a.kg.log(`Adding value of ${n} to ${t} metric ${r}`),
         u(c, e).add(
             t,
             r,
             n,
             R,
             {
-                ...L,
+                ...f,
                 ...N
             },
             A

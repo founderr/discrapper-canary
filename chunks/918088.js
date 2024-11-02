@@ -28,8 +28,8 @@ var i = n(278074),
     I = n(768581),
     m = n(176354),
     f = n(358085),
-    h = n(798628),
-    T = n(79390),
+    T = n(798628),
+    h = n(79390),
     N = n(839963),
     p = n(897325),
     C = n(57101),
@@ -106,7 +106,7 @@ function O(e, t) {
     let E = e.state === S.yb.SENT,
         I = E ? (null != r ? r : (0, g.H)(l.expiry)) : '',
         m = null == I && E,
-        { selectedAnswerIds: f, submitting: T, editing: N, showResults: p } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : x,
+        { selectedAnswerIds: f, submitting: h, editing: N, showResults: p } = null !== (a = null != t ? t : (0, T.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : x,
         C = e.reactions,
         A = !0;
     if (!M(e)) {
@@ -127,7 +127,7 @@ function O(e, t) {
         canTapAnswers: Z,
         canRemoveVote: O && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !T && R && !O && E && !D && !j,
+        canSubmitVote: !h && R && !O && E && !D && !j,
         expirationLabel: I,
         hasSelectedAnswer: R,
         hasVoted: O,
@@ -138,7 +138,7 @@ function O(e, t) {
         isSent: E,
         reactions: C,
         selectedAnswerIds: f,
-        submitting: T,
+        submitting: h,
         tapShouldOpenVotersModal: L,
         showResults: p
     };
@@ -146,19 +146,19 @@ function O(e, t) {
 function L(e, t) {
     var n, o;
     let { animateEmoji: c = !1, theme: d = 'dark', formattedExpirationLabel: _ } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { poll: h } = e;
-    if (null == h) return;
+        { poll: T } = e;
+    if (null == T) return;
     let g = E.default.getCurrentUser();
     if (null == g) return;
     let S = s.Z.useReducedMotion,
         x = null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
         M = (0, p.E)(g, x),
-        L = h.answers,
-        Z = h.layout_type,
+        L = T.answers,
+        Z = T.layout_type,
         b = O(e, t, { formattedExpirationLabel: _ });
     if (null == b) return;
     let { canTapAnswers: P, canRemoveVote: D, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = b,
-        z = (0, T.cZ)(V),
+        z = (0, h.cZ)(V),
         X = A.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
         Q = Math.max(
             ...L.map((e) => {
@@ -175,9 +175,9 @@ function L(e, t) {
                 _ = 0 === z ? 0 : d / z,
                 E = H.has(o),
                 f = d >= Q && 0 !== d,
-                h = k && null !== (s = null == u ? void 0 : u.me_vote) && void 0 !== s && s,
-                T = v({
-                    didSelfVote: h,
+                T = k && null !== (s = null == u ? void 0 : u.me_vote) && void 0 !== s && s,
+                h = v({
+                    didSelfVote: T,
                     hasVoted: k,
                     isExpired: F,
                     isSelected: E,
@@ -217,8 +217,8 @@ function L(e, t) {
                 },
                 isSelected: E,
                 isVictor: F && f,
-                didSelfVote: h,
-                style: T,
+                didSelfVote: T,
+                style: h,
                 shouldAnimateTransition: Y && !S,
                 votesPercentage: Math.round(100 * _),
                 votes: (0, i.EQ)(Z)
@@ -307,7 +307,7 @@ function L(e, t) {
                       enabled: !0,
                       type: 'showVotes'
                   },
-        en = h.allow_multiselect,
+        en = T.allow_multiselect,
         ei = (0, i.EQ)({
             isInteractive: w,
             isExpired: F,
@@ -318,7 +318,7 @@ function L(e, t) {
             .with({ canSelectMultipleAnswers: !0 }, () => A.Z.Messages.POLL_SELECT_MULTIPLE_ANSWERS)
             .otherwise(() => A.Z.Messages.POLL_SELECT_ONE_ANSWER);
     return {
-        question: h.question,
+        question: T.question,
         promptLabel: ei,
         answers: q,
         answersInteraction: (0, i.EQ)({

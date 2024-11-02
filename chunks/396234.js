@@ -1,19 +1,19 @@
 r.d(t, {
     gi: function () {
-        return E;
+        return i;
     },
     yo: function () {
-        return i;
+        return E;
     }
 });
 var n = r(370336),
     a = r(394798),
     _ = r(305625),
     o = r(696486);
-function E(e, t) {
-    let { fingerprint: r, span: E, breadcrumbs: i, sdkProcessingMetadata: c } = t;
+function i(e, t) {
+    let { fingerprint: r, span: i, breadcrumbs: E, sdkProcessingMetadata: c } = t;
     (function (e, t) {
-        let { extra: r, tags: a, user: _, contexts: o, level: E, transactionName: i } = t,
+        let { extra: r, tags: a, user: _, contexts: o, level: i, transactionName: E } = t,
             c = (0, n.Jr)(r);
         c &&
             Object.keys(c).length &&
@@ -42,10 +42,10 @@ function E(e, t) {
                 ...u,
                 ...e.contexts
             }),
-            E && (e.level = E),
-            i && 'transaction' !== e.type && (e.transaction = i);
+            i && (e.level = i),
+            E && 'transaction' !== e.type && (e.transaction = E);
     })(e, t),
-        E &&
+        i &&
             (function (e, t) {
                 (e.contexts = {
                     trace: (0, o.wy)(t),
@@ -58,14 +58,14 @@ function E(e, t) {
                 let r = (0, o.Gx)(t),
                     n = (0, o.XU)(r).description;
                 n && !e.transaction && 'transaction' === e.type && (e.transaction = n);
-            })(e, E),
+            })(e, i),
         (function (e, t) {
             (e.fingerprint = e.fingerprint ? (0, a.lE)(e.fingerprint) : []), t && (e.fingerprint = e.fingerprint.concat(t)), e.fingerprint && !e.fingerprint.length && delete e.fingerprint;
         })(e, r),
         (function (e, t) {
             let r = [...(e.breadcrumbs || []), ...t];
             e.breadcrumbs = r.length ? r : void 0;
-        })(e, i),
+        })(e, E),
         (function (e, t) {
             e.sdkProcessingMetadata = {
                 ...e.sdkProcessingMetadata,
@@ -73,17 +73,17 @@ function E(e, t) {
             };
         })(e, c);
 }
-function i(e, t) {
-    let { extra: r, tags: n, user: a, contexts: _, level: o, sdkProcessingMetadata: E, breadcrumbs: i, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: N } = t;
+function E(e, t) {
+    let { extra: r, tags: n, user: a, contexts: _, level: o, sdkProcessingMetadata: i, breadcrumbs: E, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: N } = t;
     c(e, 'extra', r),
         c(e, 'tags', n),
         c(e, 'user', a),
         c(e, 'contexts', _),
-        c(e, 'sdkProcessingMetadata', E),
+        c(e, 'sdkProcessingMetadata', i),
         o && (e.level = o),
         R && (e.transactionName = R),
         N && (e.span = N),
-        i.length && (e.breadcrumbs = [...e.breadcrumbs, ...i]),
+        E.length && (e.breadcrumbs = [...e.breadcrumbs, ...E]),
         s.length && (e.fingerprint = [...e.fingerprint, ...s]),
         l.length && (e.eventProcessors = [...e.eventProcessors, ...l]),
         u.length && (e.attachments = [...e.attachments, ...u]),

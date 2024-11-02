@@ -18,8 +18,8 @@ var a = n(442837),
     I = n(346585),
     m = n(303172),
     f = n(463230),
-    h = n(246965),
-    T = n(703656),
+    T = n(246965),
+    h = n(703656),
     N = n(706454),
     p = n(933429),
     C = n(395361),
@@ -158,12 +158,12 @@ let L = (e) => {
                         ]
                     });
                 case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, i.jsx)(h.Z, {
+                    return (0, i.jsx)(T.Z, {
                         dismissCurrentNotice: () => a(A.L.UNKNOWN),
                         subscriptionTier: v.Si.TIER_2
                     });
                 case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, i.jsx)(h.Z, {
+                    return (0, i.jsx)(T.Z, {
                         dismissCurrentNotice: () => a(A.L.UNKNOWN),
                         subscriptionTier: v.Si.TIER_0
                     });
@@ -203,7 +203,7 @@ let L = (e) => {
                             (0, i.jsx)(r.PrimaryCTANoticeButton, {
                                 noticeType: L,
                                 onClick: () => {
-                                    (0, T.uL)(x.Z5c.SETTINGS('account'));
+                                    (0, h.uL)(x.Z5c.SETTINGS('account'));
                                 },
                                 children: M.Z.Messages.CHANGE_EMAIL_SHORT
                             })
@@ -222,7 +222,7 @@ let L = (e) => {
                             (0, i.jsx)(r.PrimaryCTANoticeButton, {
                                 noticeType: L,
                                 onClick: () => {
-                                    a(A.L.PRIMARY), (0, T.uL)(1 === N.length ? x.Z5c.GUILD_SETTINGS(N[0], 'role-subscriptions') : x.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
+                                    a(A.L.PRIMARY), (0, h.uL)(1 === N.length ? x.Z5c.GUILD_SETTINGS(N[0], 'role-subscriptions') : x.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
                                 },
                                 children: M.Z.Messages.LETS_GO
                             })

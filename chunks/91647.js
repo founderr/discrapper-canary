@@ -7,24 +7,24 @@ var n = r(101284),
     a = r(696486),
     _ = r(147498),
     o = r(218234),
-    E = r(823878),
-    i = r(939747);
+    i = r(823878),
+    E = r(939747);
 class c {
     constructor(e) {
         (this._client = e), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), _.RF));
     }
     add(e, t, r, o = 'none', c = {}, s = (0, n.ph)()) {
         let l = Math.floor(s),
-            u = (0, i.s3)(t),
-            I = (0, i.Bg)(c),
-            R = (0, i.OC)(o),
-            N = (0, i.Ic)(e, u, R, I),
+            u = (0, E.s3)(t),
+            I = (0, E.Bg)(c),
+            R = (0, E.OC)(o),
+            N = (0, E.Ic)(e, u, R, I),
             A = this._buckets.get(N),
             T = A && e === _.is ? A.metric.weight : 0;
         A
             ? (A.metric.add(r), A.timestamp < l && (A.timestamp = l))
             : ((A = {
-                  metric: new E.ZN[e](r),
+                  metric: new i.ZN[e](r),
                   timestamp: l,
                   metricType: e,
                   name: u,

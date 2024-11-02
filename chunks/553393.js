@@ -249,7 +249,7 @@ t.Z = function (e) {
                                                         gamePublisher: p.config.messages.gamePublisher
                                                     }),
                                                     className: U.assetTile,
-                                                    src: (0, O.fh)(p, O.Bd.GAME_TILE, W).url
+                                                    src: (0, O.fh)(p, O.eC.GAME_TILE, W).url
                                                 }),
                                             'reward' === el.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {

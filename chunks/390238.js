@@ -33,7 +33,7 @@ function v(e) {
         [b, v] = o.useState(null),
         A = o.useRef(new s.qA()),
         S = (0, d.e7)([c.Z], () => c.Z.useReducedMotion),
-        M = o.useMemo(() => (0, _.fh)(C, _.Bd.HERO), [C]),
+        M = o.useMemo(() => (0, _.fh)(C, _.eC.HERO), [C]),
         y = (null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
         [E, T] = o.useState(y ? 'claimed' : 'loading');
     o.useEffect(() => {

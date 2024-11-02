@@ -5,21 +5,21 @@ r.d(t, {
 });
 var n = r(573736),
     a = r(886115);
-function _(e, t, r = 250, _, i, c, s) {
+function _(e, t, r = 250, _, E, c, s) {
     if (!c.exception || !c.exception.values || !s || !(0, n.V9)(s.originalException, Error)) return;
     let l = c.exception.values.length > 0 ? c.exception.values[c.exception.values.length - 1] : void 0;
     l &&
         (c.exception.values = (function (e, t) {
             return e.map((e) => (e.value && (e.value = (0, a.$G)(e.value, t)), e));
         })(
-            (function e(t, r, a, _, i, c, s, l) {
+            (function e(t, r, a, _, E, c, s, l) {
                 if (c.length >= a + 1) return c;
                 let u = [...c];
-                if ((0, n.V9)(_[i], Error)) {
+                if ((0, n.V9)(_[E], Error)) {
                     o(s, l);
-                    let n = t(r, _[i]),
+                    let n = t(r, _[E]),
                         c = u.length;
-                    E(n, i, c, l), (u = e(t, r, a, _[i], i, [n, ...u], n, c));
+                    i(n, E, c, l), (u = e(t, r, a, _[E], E, [n, ...u], n, c));
                 }
                 return (
                     Array.isArray(_.errors) &&
@@ -28,12 +28,12 @@ function _(e, t, r = 250, _, i, c, s) {
                                 o(s, l);
                                 let n = t(r, _),
                                     I = u.length;
-                                E(n, `errors[${c}]`, I, l), (u = e(t, r, a, _, i, [n, ...u], n, I));
+                                i(n, `errors[${c}]`, I, l), (u = e(t, r, a, _, E, [n, ...u], n, I));
                             }
                         }),
                     u
                 );
-            })(e, t, i, s.originalException, _, c.exception.values, l, 0),
+            })(e, t, E, s.originalException, _, c.exception.values, l, 0),
             r
         ));
 }
@@ -48,7 +48,7 @@ function o(e, t) {
             exception_id: t
         });
 }
-function E(e, t, r, n) {
+function i(e, t, r, n) {
     (e.mechanism = e.mechanism || {
         type: 'generic',
         handled: !0

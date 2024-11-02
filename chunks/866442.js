@@ -12,10 +12,10 @@ r.d(t, {
         return I;
     },
     Rf: function () {
-        return i;
+        return E;
     },
     _i: function () {
-        return E;
+        return i;
     },
     br: function () {
         return u;
@@ -36,10 +36,10 @@ let _ = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
 function o(e) {
     return 1 === e.length ? '0'.concat(e) : e;
 }
-function E(e) {
+function i(e) {
     return a()(e).num();
 }
-function i(e) {
+function E(e) {
     return e <= 16777215
         ? '#'
               .concat(o(((e >> 16) & 255).toString(16)))
@@ -57,16 +57,16 @@ function c(e) {
         a = Math.min((t /= 255), (r /= 255), (n /= 255)),
         _ = Math.max(t, r, n),
         o = _ - a,
-        E = 0,
         i = 0,
+        E = 0,
         c = 0;
     return (
-        (E = Math.round(60 * (E = 0 === o ? 0 : _ === t ? ((r - n) / o) % 6 : _ === r ? (n - t) / o + 2 : (t - r) / o + 4))) < 0 && (E += 360),
+        (i = Math.round(60 * (i = 0 === o ? 0 : _ === t ? ((r - n) / o) % 6 : _ === r ? (n - t) / o + 2 : (t - r) / o + 4))) < 0 && (i += 360),
         (c = (_ + a) / 2),
-        (i = +(100 * (i = 0 === o ? 0 : o / (1 - Math.abs(2 * c - 1)))).toFixed(1)),
+        (E = +(100 * (E = 0 === o ? 0 : o / (1 - Math.abs(2 * c - 1)))).toFixed(1)),
         {
-            h: E,
-            s: i,
+            h: i,
+            s: E,
             l: (c = +(100 * c).toFixed(1))
         }
     );

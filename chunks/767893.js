@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var i = n(200651),
@@ -17,16 +17,16 @@ var i = n(200651),
     I = n(430824),
     m = n(689938),
     f = n(239048);
-let h = {
+let T = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function T(e) {
+function h(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
-        offset: h,
+        offset: T,
         children: (0, i.jsxs)('div', {
             className: f.channelHeader,
             'data-recents-channel': t.id,

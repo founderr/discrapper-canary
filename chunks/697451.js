@@ -17,8 +17,8 @@ var i,
     I = n(911969),
     m = n(595519),
     f = n(566620),
-    h = n(403404),
-    T = n(100527),
+    T = n(403404),
+    h = n(100527),
     N = n(906732),
     p = n(783097),
     C = n(581364),
@@ -54,7 +54,7 @@ function j(e) {
 ((i = a || (a = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function U(e, t, n, i, a) {
     var r, l, c;
-    let { message: u, compact: d, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: f, onClickAvatar: h, onUserContextMenu: T, onClickTargetAvatar: N, onTargetUserContextMenu: p, onPopoutRequestClose: C } = e;
+    let { message: u, compact: d, channel: _, isInteractionUserBlocked: I, showAvatarPopout: m, showTargetAvatarPopout: f, onClickAvatar: T, onUserContextMenu: h, onClickTargetAvatar: N, onTargetUserContextMenu: p, onPopoutRequestClose: C } = e;
     if (d && 1 === n) return null;
     if ((d && null == u.activityInstance) || I)
         return (0, s.jsx)('div', {
@@ -88,8 +88,8 @@ function U(e, t, n, i, a) {
                 user: t,
                 guildId: _.guild_id,
                 guildAvatar: g,
-                onClick: 1 === n ? N : h,
-                onContextMenu: 1 === n ? p : T
+                onClick: 1 === n ? N : T,
+                onContextMenu: 1 === n ? p : h
             }),
         A = 1 === n ? f : m;
     return null != a && null != A
@@ -128,7 +128,7 @@ function k(e) {
     var t;
     let n;
     let { message: i, channel: a } = e,
-        { analyticsLocations: l } = (0, N.ZP)(T.Z.EXECUTED_COMMAND),
+        { analyticsLocations: l } = (0, N.ZP)(h.Z.EXECUTED_COMMAND),
         c = r.useMemo(
             () => (e, t, n) => (
                 u()(null != a && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
@@ -165,7 +165,7 @@ function k(e) {
         V = i.interaction;
     if (null == V || null == k) return null;
     let H = () => {
-        let t = U(e, V.user, 0, k, (e) => c(e, V.user, [T.Z.AVATAR])),
+        let t = U(e, V.user, 0, k, (e) => c(e, V.user, [h.Z.AVATAR])),
             n = y(e, V.user, 0, k, (e) => c(e, V.user));
         return (0, s.jsxs)(
             r.Fragment,
@@ -256,7 +256,7 @@ function k(e) {
                           (0, s.jsx)(B, {}),
                           (0, s.jsx)(() => {
                               if (null == O) return null;
-                              let t = U(e, O, 1, G, (e) => c(e, O, [T.Z.AVATAR])),
+                              let t = U(e, O, 1, G, (e) => c(e, O, [h.Z.AVATAR])),
                                   n = y(e, O, 1, G, (e) => c(e, O));
                               return (0, s.jsxs)(
                                   r.Fragment,
@@ -270,7 +270,7 @@ function k(e) {
                   }));
     else {
         let e = () => {
-            (0, h.Z)({
+            (0, T.Z)({
                 channel: a,
                 guildId: a.guild_id,
                 locationObject: {

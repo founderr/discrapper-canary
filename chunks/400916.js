@@ -18,10 +18,10 @@ var a = n(512722),
 function I(e) {
     var t, n, a, I;
     let { guildId: m, productId: f } = e,
-        h = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(f)),
-        T = (null !== (I = null == h ? void 0 : null === (t = h.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
-        N = null == h ? void 0 : null === (a = h.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
-    return T
+        T = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(f)),
+        h = (null !== (I = null == T ? void 0 : null === (t = T.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
+        N = null == T ? void 0 : null === (a = T.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
+    return h
         ? (0, i.jsxs)(l.Button, {
               onClick: function () {
                   u.Z.open({

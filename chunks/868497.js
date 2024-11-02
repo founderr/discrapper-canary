@@ -7,8 +7,8 @@ var n = r(873567),
     a = r(370541),
     _ = r(285883),
     o = r(573736),
-    E = r(263449),
-    i = r(988097),
+    i = r(263449),
+    E = r(988097),
     c = r(73453),
     s = r(696486),
     l = r(789112),
@@ -42,9 +42,9 @@ function N(e, t, r, N, A = 'auto.http.browser') {
             delete N[t]);
         return;
     }
-    let d = (0, E.nZ)(),
-        L = (0, E.s3)(),
-        { method: f, url: O } = e.fetchData,
+    let d = (0, i.nZ)(),
+        f = (0, i.s3)(),
+        { method: L, url: O } = e.fetchData,
         p = (function (e) {
             try {
                 return new URL(e).href;
@@ -57,34 +57,34 @@ function N(e, t, r, N, A = 'auto.http.browser') {
         D =
             T && S
                 ? (0, I.qp)({
-                      name: `${f} ${O}`,
+                      name: `${L} ${O}`,
                       attributes: {
                           url: O,
                           type: 'fetch',
-                          'http.method': f,
+                          'http.method': L,
                           'http.url': p,
                           'server.address': h,
-                          [i.S3]: A,
-                          [i.$J]: 'http.client'
+                          [E.S3]: A,
+                          [E.$J]: 'http.client'
                       }
                   })
                 : new l.b();
-    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && L)) {
+    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && f)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
-        r.headers = (function (e, t, r, n, i) {
+        r.headers = (function (e, t, r, n, E) {
             let {
                     traceId: c,
                     spanId: l,
                     sampled: u,
                     dsc: I
                 } = {
-                    ...(0, E.aF)().getPropagationContext(),
+                    ...(0, i.aF)().getPropagationContext(),
                     ...r.getPropagationContext()
                 },
-                N = i ? (0, s.Hb)(i) : (0, a.$p)(c, l, u),
-                A = (0, _.IQ)(I || (i ? (0, R.jC)(i) : (0, R._l)(c, t))),
+                N = E ? (0, s.Hb)(E) : (0, a.$p)(c, l, u),
+                A = (0, _.IQ)(I || (E ? (0, R.jC)(E) : (0, R._l)(c, t))),
                 T = n.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
             if (!T)
                 return {
@@ -111,7 +111,7 @@ function N(e, t, r, N, A = 'auto.http.browser') {
                     }
                 );
             }
-        })(t, L, d, r, (0, c.z)() && S ? D : void 0);
+        })(t, f, d, r, (0, c.z)() && S ? D : void 0);
     }
     return D;
 }

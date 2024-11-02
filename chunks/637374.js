@@ -13,8 +13,8 @@ var i = n(200651),
     I = n(112724),
     m = n(607070),
     f = n(884697),
-    h = n(600164),
-    T = n(479446),
+    T = n(600164),
+    h = n(479446),
     N = n(930114),
     p = n(981632),
     C = n(108989),
@@ -113,10 +113,10 @@ class V extends a.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(T.Z, {
+            justify: T.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(h.Z, {
+                (0, i.jsxs)(T.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends a.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(h.Z, {
-                    align: h.Z.Align.END,
-                    justify: h.Z.Justify.END,
+                (0, i.jsxs)(T.Z, {
+                    align: T.Z.Align.END,
+                    justify: T.Z.Justify.END,
                     className: k.metadata,
-                    direction: h.Z.Direction.VERTICAL,
+                    direction: T.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -338,7 +338,7 @@ class V extends a.Component {
                         a && (0, i.jsx)(O.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(p.Z, {
-                                defaultAnimationState: e.redeemed ? T.SR.LOOP : T.SR.IDLE,
+                                defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })

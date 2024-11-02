@@ -1,6 +1,6 @@
 r.d(t, {
     dO: function () {
-        return E;
+        return i;
     },
     pq: function () {
         return u;
@@ -12,11 +12,11 @@ var n = r(688619),
 function _(e, t, r) {
     let [n, a] = e,
         [_, o] = t,
-        E = (n + a) / 2;
-    return r === E ? E : r < E ? _ + ((r - n) / (E - n)) * (E - _) : E + ((r - E) / (a - E)) * (o - E);
+        i = (n + a) / 2;
+    return r === i ? i : r < i ? _ + ((r - n) / (i - n)) * (i - _) : i + ((r - i) / (a - i)) * (o - i);
 }
 let o = [0, 2];
-function E(e, t, r) {
+function i(e, t, r) {
     let n = a()(e);
     if ('background' !== t) return n.set('hsl.s', '*'.concat(r)).hex();
     {
@@ -28,7 +28,7 @@ function E(e, t, r) {
         return n.set('hsl.s', '*'.concat(e)).hex();
     }
 }
-let i = [1.3, 0.7],
+let E = [1.3, 0.7],
     c = [0.98, 1],
     s = [0.75, 1.5],
     l = [1.45, 0.45];
@@ -37,7 +37,7 @@ function u(e, t, r, n) {
         case 'background':
         case 'border':
             return a()(e)
-                .set('hsl.l', '*'.concat(_(o, 'light' === r ? c : i, n)))
+                .set('hsl.l', '*'.concat(_(o, 'light' === r ? c : E, n)))
                 .hex();
         case 'text':
             return a()(e)

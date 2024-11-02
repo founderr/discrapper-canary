@@ -1,6 +1,6 @@
 r.d(t, {
     Eg: function () {
-        return U;
+        return P;
     },
     Jd: function () {
         return M;
@@ -12,7 +12,7 @@ r.d(t, {
         return g;
     },
     lA: function () {
-        return P;
+        return U;
     },
     nV: function () {
         return D;
@@ -22,8 +22,8 @@ var n = r(636361),
     a = r(502990),
     _ = r(907765),
     o = r(151122),
-    E = r(511906),
-    i = r(263449),
+    i = r(511906),
+    E = r(263449),
     c = r(233517),
     s = r(510529),
     l = r(622916),
@@ -34,14 +34,14 @@ var n = r(636361),
     A = r(454463),
     T = r(163162),
     d = r(408720),
-    L = r(515737),
-    f = r(804410),
+    f = r(515737),
+    L = r(804410),
     O = r(376457),
     p = r(42367),
     h = r(297117),
     S = r(387486);
 function D(e) {
-    return [(0, n.S)(), (0, a.C)(), (0, L.t)(), (0, d.f)(), (0, f.k)(), (0, p.O)(), (0, _.R)(), (0, O.s)()];
+    return [(0, n.S)(), (0, a.C)(), (0, f.t)(), (0, d.f)(), (0, L.k)(), (0, p.O)(), (0, _.R)(), (0, O.s)()];
 }
 function C(e = {}) {
     let t = (function (e = {}) {
@@ -77,7 +77,7 @@ function C(e = {}) {
             integrations: (0, o.m8)(t),
             transport: t.transport || S.f
         },
-        n = (0, E.M)(N.R, r);
+        n = (0, i.M)(N.R, r);
     return (
         t.autoSessionTracking &&
             (function () {
@@ -99,7 +99,7 @@ function g(e = {}) {
         A.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
-    let t = (0, i.nZ)(),
+    let t = (0, E.nZ)(),
         r = t.getClient(),
         n = r && r.getDsn();
     if (!n) {
@@ -134,11 +134,11 @@ function g(e = {}) {
     let o = T.m9.document.head || T.m9.document.body;
     o ? o.appendChild(a) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function U() {}
-function P(e) {
+function P() {}
+function U(e) {
     e();
 }
 function M(e) {
-    let t = (0, i.s3)();
+    let t = (0, E.s3)();
     t && t.captureUserFeedback(e);
 }

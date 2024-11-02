@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(742989),
     m = n(675478),
     f = n(581883),
-    h = n(585483),
-    T = n(400445),
+    T = n(585483),
+    h = n(400445),
     N = n(153209),
     p = n(956961),
     C = n(903672),
@@ -75,7 +75,7 @@ function R(e) {
         B = a.useCallback(() => {
             b(!Z), Z ? null == n || n() : null == t || t();
         }, [n, t, Z]);
-    a.useEffect(() => (h.S.subscribe(A.CkL.TOGGLE_INBOX, B), () => void h.S.unsubscribe(A.CkL.TOGGLE_INBOX, B)), [B]);
+    a.useEffect(() => (T.S.subscribe(A.CkL.TOGGLE_INBOX, B), () => void T.S.unsubscribe(A.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: k } = I.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: G, inInbox: F } = _.Z.useExperiment({ location: 'RecentsPopout' }),
         w = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(), []) && G && F,
@@ -128,7 +128,7 @@ function R(e) {
                                         closePopout: y
                                     })
                                   : G && F && P === l.X.BOOKMARKS
-                                    ? (0, i.jsx)(T.Z, {
+                                    ? (0, i.jsx)(h.Z, {
                                           setTab: D,
                                           badgeState: v,
                                           closePopout: y

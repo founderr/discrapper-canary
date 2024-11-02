@@ -1,10 +1,10 @@
 r.d(t, {
     Fv: function () {
-        return E;
+        return i;
     },
     Qy: function () {
         return function e(t, r = 3, n = 102400) {
-            let a = E(t, r);
+            let a = i(t, r);
             return (function (e) {
                 return ~-encodeURI(JSON.stringify(e)).split(/%..|./).length;
             })(a) > n
@@ -17,9 +17,9 @@ var n = r(573736),
     a = r(41754),
     _ = r(370336),
     o = r(688838);
-function E(e, t = 100, r = Infinity) {
+function i(e, t = 100, r = Infinity) {
     try {
-        return (function e(t, r, E = Infinity, i = Infinity, c = (0, a.i)()) {
+        return (function e(t, r, i = Infinity, E = Infinity, c = (0, a.i)()) {
             let [s, l] = c;
             if (null == r || (['number', 'boolean', 'string'].includes(typeof r) && !Number.isNaN(r))) return r;
             let u = (function (e, t) {
@@ -47,25 +47,25 @@ function E(e, t = 100, r = Infinity) {
             })(t, r);
             if (!u.startsWith('[object ')) return u;
             if (r.__sentry_skip_normalization__) return r;
-            let I = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : E;
+            let I = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : i;
             if (0 === I) return u.replace('object ', '');
             if (s(r)) return '[Circular ~]';
             if (r && 'function' == typeof r.toJSON)
                 try {
                     let t = r.toJSON();
-                    return e('', t, I - 1, i, c);
+                    return e('', t, I - 1, E, c);
                 } catch (e) {}
             let R = Array.isArray(r) ? [] : {},
                 N = 0,
                 A = (0, _.Sh)(r);
             for (let t in A) {
                 if (!Object.prototype.hasOwnProperty.call(A, t)) continue;
-                if (N >= i) {
+                if (N >= E) {
                     R[t] = '[MaxProperties ~]';
                     break;
                 }
                 let r = A[t];
-                (R[t] = e(t, r, I - 1, i, c)), N++;
+                (R[t] = e(t, r, I - 1, E, c)), N++;
             }
             return l(r), R;
         })('', e, t, r);

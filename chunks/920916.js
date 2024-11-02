@@ -53,7 +53,7 @@ function w(e) {
         g = i.useRef(new o.qA()),
         N = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         v = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
-        L = i.useMemo(() => (0, C.fh)(l, C.Bd.HERO), [l]),
+        L = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
         y = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [M, U] = i.useState(!0 === I || y ? 'claimed' : 'loading');
     i.useEffect(() => {
@@ -112,7 +112,7 @@ function w(e) {
 }
 function x(e) {
     let { quest: t } = e,
-        n = i.useMemo(() => (0, C.fh)(t, C.Bd.LOGO_TYPE, 'dark'), [t]),
+        n = i.useMemo(() => (0, C.fh)(t, C.eC.LOGO_TYPE, 'dark'), [t]),
         a = L.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM];
     return (0, r.jsxs)('div', {
         className: P.additionalRedemptionInstructions,

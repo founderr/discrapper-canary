@@ -19,7 +19,7 @@ var r = n(200651),
 t.Z = function (e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: g = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        N = i.useMemo(() => (0, f.fh)(n, f.Bd.REWARD), [n]),
+        N = i.useMemo(() => (0, f.fh)(n, f.eC.REWARD), [n]),
         R = i.useCallback(
             (t) => {
                 var r;

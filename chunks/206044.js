@@ -73,7 +73,7 @@ t.Z = (e) => {
         { ref: H, width: k, scrollWidth: W } = (0, E.Z)(),
         G = (0, u.e7)([x.Z], () => x.Z.getState().theme),
         z = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
-        V = a.useMemo(() => (0, p.fh)(C, p.Bd.HERO), [C]),
+        V = a.useMemo(() => (0, p.fh)(C, p.eC.HERO), [C]),
         F = a.useRef(null),
         Y = (0, M.uq)(_),
         X = _ === h.jn.QUESTS_EMBED,

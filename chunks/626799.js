@@ -19,8 +19,8 @@ var i,
     I = n(568836),
     m = n(730749),
     f = n(112724),
-    h = n(812206),
-    T = n(283595),
+    T = n(812206),
+    h = n(283595),
     N = n(558314),
     p = n(55563),
     C = n(551428),
@@ -170,18 +170,18 @@ class v extends (i = s.Component) {
     }
 }
 R(v, 'defaultProps', { renderFallback: S.dG4 });
-let M = [p.Z, N.Z, T.Z, C.Z];
+let M = [p.Z, N.Z, h.Z, C.Z];
 function O(e) {
     let { skuId: t } = e,
         n = p.Z.get(t),
-        i = null != n ? h.Z.getApplication(n.applicationId) : null;
+        i = null != n ? T.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
         fetchFailed: p.Z.didFetchingSkuFail(t),
-        inLibrary: null != n && T.Z.hasApplication(n.applicationId, n.applicationId, !0),
+        inLibrary: null != n && h.Z.hasApplication(n.applicationId, n.applicationId, !0),
         storeListing: null != n ? C.Z.getForSKU(n.id) : null,
-        libraryApplication: null != n ? T.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
+        libraryApplication: null != n ? h.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
 let L = (0, f.Z)((0, m.Z)(v));

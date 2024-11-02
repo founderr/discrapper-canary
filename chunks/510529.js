@@ -3,7 +3,7 @@ r.d(t, {
         return o;
     },
     h: function () {
-        return E;
+        return i;
     }
 });
 var n = r(370336),
@@ -14,21 +14,21 @@ function _(e) {
     return `${t}//${e.host}${r}${e.path ? `/${e.path}` : ''}/api/`;
 }
 function o(e, t, r) {
-    var a, o, E;
+    var a, o, i;
     return (
         t ||
         `${((a = e), `${_(a)}${a.projectId}/envelope/`)}?${
             ((o = e),
-            (E = r),
+            (i = r),
             (0, n._j)({
                 sentry_key: o.publicKey,
                 sentry_version: '7',
-                ...(E && { sentry_client: `${E.name}/${E.version}` })
+                ...(i && { sentry_client: `${i.name}/${i.version}` })
             }))
         }`
     );
 }
-function E(e, t) {
+function i(e, t) {
     let r = (0, a.vK)(e);
     if (!r) return '';
     let n = `${_(r)}embed/error-page/`,

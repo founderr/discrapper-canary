@@ -7,11 +7,11 @@ var n = r(622916),
     a = r(394798),
     _ = r(886115),
     o = r(255768),
-    E = r(151122);
-let i = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
-    c = (0, E._I)((e = {}) => ({
+    i = r(151122);
+let E = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
+    c = (0, i._I)((e = {}) => ({
         name: 'InboundFilters',
-        processEvent: (t, r, E) =>
+        processEvent: (t, r, i) =>
             (function (e, t) {
                 return t.ignoreInternal &&
                     (function (e) {
@@ -86,11 +86,11 @@ Url: ${s(e)}`),
                     return {
                         allowUrls: [...(e.allowUrls || []), ...(t.allowUrls || [])],
                         denyUrls: [...(e.denyUrls || []), ...(t.denyUrls || [])],
-                        ignoreErrors: [...(e.ignoreErrors || []), ...(t.ignoreErrors || []), ...(e.disableErrorDefaults ? [] : i)],
+                        ignoreErrors: [...(e.ignoreErrors || []), ...(t.ignoreErrors || []), ...(e.disableErrorDefaults ? [] : E)],
                         ignoreTransactions: [...(e.ignoreTransactions || []), ...(t.ignoreTransactions || [])],
                         ignoreInternal: void 0 === e.ignoreInternal || e.ignoreInternal
                     };
-                })(e, E.getOptions())
+                })(e, i.getOptions())
             )
                 ? null
                 : t

@@ -17,8 +17,8 @@ var i = n(200651),
     I = n(481060),
     m = n(256638),
     f = n(385499),
-    h = n(528011),
-    T = n(533244),
+    T = n(528011),
+    h = n(533244),
     N = n(825829),
     p = n(226192),
     C = n(36459),
@@ -217,7 +217,7 @@ function F(e) {
         { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: f } = (0, N.FL)(n),
         C = (0, _.e7)([x.Z], () => x.Z.getChannel(n.channel_id), [n.channel_id]),
         g = null !== (t = null == C ? void 0 : C.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: S } = (0, h.mI)(g),
+        { shouldShowIncidentActions: S } = (0, T.mI)(g),
         A = (0, O.sR)(n.author.id, n.channel_id),
         R = a.useCallback(() => {
             let e = null == C ? void 0 : C.guild_id;
@@ -273,7 +273,7 @@ function F(e) {
                 ? (0, i.jsx)(I.Text, {
                       variant: 'text-md/normal',
                       color: 'text-muted',
-                      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: l.toLocaleString(D.Z.getLocale(), T.pQ) })
+                      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: l.toLocaleString(D.Z.getLocale(), h.pQ) })
                   })
                 : null,
         footerButtons: S

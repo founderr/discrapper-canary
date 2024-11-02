@@ -1,6 +1,6 @@
 r.d(t, {
     I1: function () {
-        return E;
+        return i;
     },
     YJ: function () {
         return o;
@@ -12,7 +12,7 @@ let a = '_sentryScope',
 function o(e, t, r) {
     e && ((0, n.xp)(e, _, r), (0, n.xp)(e, a, t));
 }
-function E(e) {
+function i(e) {
     return {
         scope: e[a],
         isolationScope: e[_]

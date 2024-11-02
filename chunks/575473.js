@@ -2,8 +2,8 @@ var n = r(466293),
     a = r(139069),
     _ = r(703284),
     o = r(501979),
-    E = r(98368),
-    i = r(433005),
+    i = r(98368),
+    E = r(433005),
     c = n ? n.prototype : void 0,
     s = c ? c.valueOf : void 0;
 e.exports = function (e, t, r, n, c, l, u) {
@@ -24,10 +24,10 @@ e.exports = function (e, t, r, n, c, l, u) {
         case '[object String]':
             return e == t + '';
         case '[object Map]':
-            var I = E;
+            var I = i;
         case '[object Set]':
             var R = 1 & n;
-            if ((I || (I = i), e.size != t.size && !R)) break;
+            if ((I || (I = E), e.size != t.size && !R)) break;
             var N = u.get(e);
             if (N) return N == t;
             (n |= 2), u.set(e, t);

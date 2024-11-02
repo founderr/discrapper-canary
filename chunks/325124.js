@@ -13,8 +13,8 @@ var n = r(650665),
     a = r(423850),
     _ = r(393523),
     o = r(553062),
-    E = r(859502),
-    i = r(988097),
+    i = r(859502),
+    E = r(988097),
     c = r(263449),
     s = r(696486),
     l = r(305625),
@@ -25,8 +25,8 @@ var n = r(650665),
     A = r(467510),
     T = r(454463),
     d = r(163162),
-    L = r(119128),
-    f = r(799033);
+    f = r(119128),
+    L = r(799033);
 let O = {
         ...o.A,
         instrumentNavigation: !0,
@@ -36,10 +36,10 @@ let O = {
         enableLongAnimationFrame: !1,
         enableInp: !0,
         _experiments: {},
-        ...f.k3
+        ...L.k3
     },
     p = (e = {}) => {
-        (0, E.a)();
+        (0, i.a)();
         let {
                 enableInp: t,
                 enableLongTask: r,
@@ -48,8 +48,8 @@ let O = {
                 beforeStartSpan: p,
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: U,
-                markBackgroundSpan: P,
+                childSpanTimeout: P,
+                markBackgroundSpan: U,
                 traceFetch: M,
                 traceXHR: G,
                 shouldCreateSpanForRequest: m,
@@ -70,18 +70,18 @@ let O = {
             let r = 'pageload' === t.op,
                 a = p ? p(t) : t,
                 _ = a.attributes || {};
-            t.name !== a.name && ((_[i.Zj] = 'custom'), (a.attributes = _)), (B.name = a.name), (B.source = _[i.Zj]);
-            let E = (0, o.R)(a, {
+            t.name !== a.name && ((_[E.Zj] = 'custom'), (a.attributes = _)), (B.name = a.name), (B.source = _[E.Zj]);
+            let i = (0, o.R)(a, {
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: U,
+                childSpanTimeout: P,
                 disableAutoFinish: r,
                 beforeSpanEnd: (e) => {
                     w(), (0, n.f7)(e);
                 }
             });
             function c() {
-                ['interactive', 'complete'].includes(d.m9.document.readyState) && e.emit('idleSpanEnableAutoFinish', E);
+                ['interactive', 'complete'].includes(d.m9.document.readyState) && e.emit('idleSpanEnableAutoFinish', i);
             }
             return (
                 r &&
@@ -90,7 +90,7 @@ let O = {
                         c();
                     }),
                     c()),
-                E
+                i
             );
         }
         return {
@@ -135,8 +135,8 @@ let O = {
                                 name: d.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
                                 attributes: {
-                                    [i.Zj]: 'url',
-                                    [i.S3]: 'auto.pageload.browser'
+                                    [E.Zj]: 'url',
+                                    [E.S3]: 'auto.pageload.browser'
                                 }
                             }),
                         v &&
@@ -150,12 +150,12 @@ let O = {
                                     S(e, {
                                         name: d.m9.location.pathname,
                                         attributes: {
-                                            [i.Zj]: 'url',
-                                            [i.S3]: 'auto.navigation.browser'
+                                            [E.Zj]: 'url',
+                                            [E.S3]: 'auto.navigation.browser'
                                         }
                                     }));
                             })),
-                    P && (0, L.j)(),
+                    U && (0, f.j)(),
                     A &&
                         (function (e, t, r, n) {
                             let a;
@@ -164,13 +164,13 @@ let O = {
                                     'click',
                                     () => {
                                         let _ = 'ui.action.click',
-                                            E = (0, s.HN)(),
-                                            c = E && (0, s.Gx)(E);
+                                            i = (0, s.HN)(),
+                                            c = i && (0, s.Gx)(i);
                                         if (c && ['navigation', 'pageload'].includes((0, s.XU)(c).op)) {
                                             T.X && u.kg.warn(`[Tracing] Did not create ${_} span because a pageload or navigation span is in progress.`);
                                             return;
                                         }
-                                        if ((a && (a.setAttribute(i.ju, 'interactionInterrupted'), a.end(), (a = void 0)), !n.name)) {
+                                        if ((a && (a.setAttribute(E.ju, 'interactionInterrupted'), a.end(), (a = void 0)), !n.name)) {
                                             T.X && u.kg.warn(`[Tracing] Did not create ${_} transaction because _latestRouteName is missing.`);
                                             return;
                                         }
@@ -178,7 +178,7 @@ let O = {
                                             {
                                                 name: n.name,
                                                 op: _,
-                                                attributes: { [i.Zj]: n.source || 'url' }
+                                                attributes: { [E.Zj]: n.source || 'url' }
                                             },
                                             {
                                                 idleTimeout: e,
@@ -192,9 +192,9 @@ let O = {
                                         capture: !0
                                     }
                                 );
-                        })(C, g, U, B),
+                        })(C, g, P, B),
                     t && (0, a.D)(),
-                    (0, f.L7)(e, {
+                    (0, L.L7)(e, {
                         traceFetch: M,
                         traceXHR: G,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,

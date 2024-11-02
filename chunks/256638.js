@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(37234),
     m = n(254854),
     f = n(195500),
-    h = n(287734),
-    T = n(205355),
+    T = n(287734),
+    h = n(205355),
     N = n(558381),
     p = n(223245),
     C = n(491428),
@@ -74,8 +74,8 @@ var i = n(200651),
     eI = n(610674),
     em = n(65154),
     ef = n(689938),
-    eh = n(569252);
-let eT = () =>
+    eT = n(569252);
+let eh = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -248,7 +248,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && T.default.selectVoiceChannel(e);
                                   },
                                   noticeType: e_.kVF.VOICE_DISABLED,
                                   children: ef.Z.Messages.RECONNECT
@@ -269,7 +269,7 @@ let eC =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && T.default.selectVoiceChannel(e);
                                   },
                                   noticeType: e_.kVF.VOICE_CONNECTED_LAST_SESSION,
                                   children: ef.Z.Messages.RECONNECT
@@ -287,7 +287,7 @@ let eC =
                               }),
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  className: eh.platformIcon,
+                                  className: eT.platformIcon,
                                   src: eZ.icon.whiteSVG
                               }),
                               ef.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED,
@@ -297,7 +297,7 @@ let eC =
                                   children: ef.Z.Messages.VOICE_SETTINGS
                               }),
                               (0, i.jsx)(c.Anchor, {
-                                  className: eh.textLinkSmall,
+                                  className: eT.textLinkSmall,
                                   href: eo.Z.getArticleURL(e_.BhN.SPOTIFY_AUTO_PAUSED),
                                   target: '_blank',
                                   children: ef.Z.Messages.NOTICE_WHATS_THIS
@@ -342,7 +342,7 @@ let eC =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => T.Z.ackScheduledMaintenance(),
+                                  onClick: () => h.Z.ackScheduledMaintenance(),
                                   noticeType: e_.kVF.SCHEDULED_MAINTENANCE
                               }),
                               ef.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ed.metadata),
@@ -353,7 +353,7 @@ let eC =
                           ]
                       });
                   case e_.kVF.NO_INPUT_DETECTED:
-                      if (!ee.Z.supports(em.AN.LOOPBACK)) return (0, i.jsx)(eT, {});
+                      if (!ee.Z.supports(em.AN.LOOPBACK)) return (0, i.jsx)(eh, {});
                       return (0, i.jsx)(eN, {});
                   case e_.kVF.HARDWARE_MUTE:
                       if (null == ed.metadata) return null;
@@ -429,7 +429,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eh.premiumIcon
+                                  className: eT.premiumIcon
                               }),
                               ef.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
                                   applicationName: ey.name,
@@ -473,7 +473,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eh.premiumIcon
+                                  className: eT.premiumIcon
                               }),
                               ef.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
                                   applicationName: a.name,
@@ -621,7 +621,7 @@ let eC =
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
-                                          className: eh.ellipsis
+                                          className: eT.ellipsis
                                       })
                                   ]
                               })
@@ -653,7 +653,7 @@ let eC =
                                   (0, i.jsx)('div', { children: ef.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({ applicationName: ed.metadata.applicationName }) }),
                                   (0, i.jsx)(eu.Z, {
                                       dropdownSize: eu.E.DropdownSizes.SMALL,
-                                      className: eh.testModeSKUSelector,
+                                      className: eT.testModeSKUSelector,
                                       color: eu.E.Colors.WHITE,
                                       look: eu.E.Looks.OUTLINED,
                                       size: eu.E.Sizes.MIN,
@@ -693,7 +693,7 @@ let eC =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: eh.premiumIcon
+                                  className: eT.premiumIcon
                               }),
                               eR === eE.p9.TIER_1 ? ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }) : eR === eE.p9.TIER_0 ? ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }) : ef.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -822,7 +822,7 @@ let eC =
                   case e_.kVF.QUARANTINED:
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.CUSTOM,
-                          className: eh.quarantineNotice,
+                          className: eT.quarantineNotice,
                           children: [
                               ef.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE,
                               (0, i.jsx)(c.NoticeButtonAnchor, {
@@ -833,7 +833,7 @@ let eC =
                               (0, i.jsx)(c.Anchor, {
                                   href: eo.Z.getArticleURL(e_.BhN.QUARANTINE),
                                   target: '_blank',
-                                  className: eh.quarantineLearnMoreLink,
+                                  className: eT.quarantineLearnMoreLink,
                                   children: ef.Z.Messages.LEARN_MORE
                               })
                           ]

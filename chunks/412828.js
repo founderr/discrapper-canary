@@ -10,17 +10,17 @@ r.d(t, {
 var a = r(622574);
 let _ = 0,
     o = 1 / 0,
-    E = 0,
-    i = (e) => {
+    i = 0,
+    E = (e) => {
         e.forEach((e) => {
-            e.interactionId && ((o = Math.min(o, e.interactionId)), (_ = (E = Math.max(E, e.interactionId)) ? (E - o) / 7 + 1 : 0));
+            e.interactionId && ((o = Math.min(o, e.interactionId)), (_ = (i = Math.max(i, e.interactionId)) ? (i - o) / 7 + 1 : 0));
         });
     },
     c = () => (n ? _ : performance.interactionCount || 0),
     s = () => {
         !('interactionCount' in performance) &&
             !n &&
-            (n = (0, a.N)('event', i, {
+            (n = (0, a.N)('event', E, {
                 type: 'event',
                 buffered: !0,
                 durationThreshold: 0

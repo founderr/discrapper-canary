@@ -1,6 +1,6 @@
 r.d(t, {
     K: function () {
-        return E;
+        return i;
     },
     M: function () {
         return o;
@@ -18,8 +18,8 @@ function o(e, t) {
               })),
         (0, a.nZ)().update(t.initialScope);
     let r = new e(t);
-    return E(r), r.init(), r;
+    return i(r), r.init(), r;
 }
-function E(e) {
+function i(e) {
     (0, a.nZ)().setClient(e);
 }
